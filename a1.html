@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Beginner - El Viaje del Jaguar</title>
+    <meta name="description" content="Level A1: El Despertar del Jaguar - Learn Spanish through immersive adventures in Colombia's Amazon &amp; Andes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --level-dark: #0a2e0a;
+            --level-medium: #1a4d1a;
+            --level-light: #2d6b2d;
+            --level-accent: #27ae60;
+            --level-accent-light: #2ecc71;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --success-green: #4caf50;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--level-dark) 0%, var(--level-medium) 50%, var(--level-light) 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: 1;
+        }
+
+        .float-el {
+            position: absolute;
+            animation: floatDown 20s infinite linear;
+            opacity: 0.5;
+            font-size: 1.5em;
+        }
+
+        @keyframes floatDown {
+            0% { transform: translateY(-100px) translateX(0px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(100vh) translateX(30px) rotate(180deg); opacity: 0; }
+        }
+
+        /* Navigation */
+        .nav-bar {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 1rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(249, 202, 36, 0.2);
+        }
+
+        .nav-brand {
+            display: flex; align-items: center; gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, var(--jaguar-orange), var(--jaguar-gold));
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid rgba(249, 202, 36, 0.5);
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 32px rgba(249, 202, 36, 0.3);
+        }
+
+        .logo svg { width: 70%; height: 70%; }
+
+        .brand-text h1 {
+            color: var(--jaguar-gold); font-weight: 800; font-size: 1.3rem; margin: 0;
+            background: linear-gradient(135deg, var(--jaguar-gold), #ffed4e);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        .brand-text p { color: var(--text-muted); font-size: 0.8rem; margin: 0; }
+
+        .nav-actions { display: flex; gap: 1rem; align-items: center; }
+
+        .nav-link {
+            color: #fff; text-decoration: none; font-weight: 600;
+            padding: 0.5rem 1rem; border-radius: 25px; transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            background: rgba(249, 202, 36, 0.2); color: var(--jaguar-gold);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--jaguar-orange), var(--jaguar-gold));
+            color: white; padding: 0.7rem 1.5rem; border-radius: 25px;
+            text-decoration: none; font-weight: 700; transition: var(--transition);
+            box-shadow: 0 8px 32px rgba(249, 202, 36, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none; flex-direction: column; cursor: pointer; padding: 0.5rem;
+        }
+
+        .menu-bar {
+            width: 25px; height: 3px; background: var(--jaguar-gold);
+            margin: 3px 0; transition: var(--transition); border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none; position: fixed; top: 80px; left: 0; width: 100%;
+            background: rgba(0, 0, 0, 0.98); backdrop-filter: blur(20px);
+            padding: 2rem; border-bottom: 1px solid rgba(249, 202, 36, 0.2); z-index: 999;
+        }
+
+        .mobile-menu.active { display: block; }
+
+        .mobile-menu-item {
+            display: block; color: #fff; text-decoration: none;
+            padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600; transition: var(--transition);
+        }
+
+        .mobile-menu-item:hover { color: var(--jaguar-gold); padding-left: 1rem; }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1100px; margin: 0 auto;
+            padding: 110px 2rem 2rem;
+            position: relative; z-index: 10;
+        }
+
+        /* Level Badge */
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--level-accent), var(--level-accent-light));
+            color: white; padding: 0.5rem 1.5rem; border-radius: 25px;
+            font-weight: 700; font-size: 0.9rem; margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border: 2px solid rgba(249, 202, 36, 0.3);
+            box-shadow: var(--shadow-card);
+            position: relative; overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.05), transparent);
+            z-index: 0;
+        }
+
+        .hero-inner { position: relative; z-index: 1; }
+
+        .jaguar-hero {
+            width: 150px; height: 150px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
+            margin: 0 auto 1.5rem; border: 5px solid var(--jaguar-gold);
+            display: flex; align-items: center; justify-content: center;
+            animation: breathe 6s ease-in-out infinite;
+            box-shadow: 0 12px 40px rgba(249, 202, 36, 0.5);
+            overflow: hidden;
+        }
+
+        .jaguar-hero svg { width: 85%; height: 85%; }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-title {
+            font-size: 3rem; font-weight: 900; margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, var(--jaguar-gold), var(--level-accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.5rem;
+        }
+
+        .region-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--level-accent), var(--level-accent-light));
+            color: white; padding: 0.8rem 2rem; border-radius: 30px;
+            font-weight: 700; font-size: 1.1rem; margin: 1rem 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Region Info Section */
+        .region-info {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 2px solid var(--level-accent);
+            box-shadow: var(--shadow-card);
+        }
+
+        .region-info h2 {
+            color: var(--level-accent);
+            font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .region-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .detail-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px; padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-card h3 {
+            color: var(--jaguar-gold); font-size: 1.1rem;
+            font-weight: 700; margin-bottom: 1rem;
+        }
+
+        .species-tag, .cultural-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem; border-radius: 15px;
+            font-size: 0.85rem; font-weight: 600; margin: 0.25rem;
+        }
+
+        .species-tag {
+            background: rgba(76, 175, 80, 0.2);
+            color: var(--success-green);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+
+        .cultural-tag {
+            background: rgba(249, 202, 36, 0.15);
+            color: var(--jaguar-gold);
+            border: 1px solid rgba(249, 202, 36, 0.3);
+        }
+
+        /* Sub-page Cards (A1 specific) */
+        .subpage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .subpage-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            text-decoration: none; color: white;
+            display: block;
+            position: relative; overflow: hidden;
+        }
+
+        .subpage-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--level-accent), var(--jaguar-gold));
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+
+        .subpage-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--jaguar-gold);
+            box-shadow: 0 15px 40px rgba(249, 202, 36, 0.3);
+        }
+
+        .subpage-card:hover::before { opacity: 1; }
+
+        .subpage-icon {
+            font-size: 3rem; margin-bottom: 1rem;
+            display: block;
+        }
+
+        .subpage-title {
+            font-size: 1.4rem; font-weight: 700;
+            color: var(--jaguar-gold); margin-bottom: 0.3rem;
+        }
+
+        .subpage-subtitle {
+            font-size: 0.95rem; color: var(--text-muted);
+            margin-bottom: 1rem; font-style: italic;
+        }
+
+        .subpage-desc {
+            color: var(--text-light); line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .subpage-meta {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lesson-count {
+            font-weight: 600; color: var(--text-muted); font-size: 0.9rem;
+        }
+
+        .subpage-cta {
+            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
+            color: white; padding: 0.5rem 1.2rem; border-radius: 20px;
+            font-weight: 700; font-size: 0.85rem;
+        }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border: 2px solid rgba(249, 202, 36, 0.2);
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--jaguar-orange), #e74c3c);
+            color: white; padding: 0.6rem 1.5rem; border-radius: 25px;
+            font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(255, 107, 53, 0); }
+        }
+
+        .coming-soon h2 {
+            font-size: 2rem; color: var(--jaguar-gold);
+            margin-bottom: 1rem; font-weight: 800;
+        }
+
+        .coming-soon p {
+            color: var(--text-light); font-size: 1.1rem;
+            max-width: 600px; margin: 0 auto 2rem; line-height: 1.7;
+        }
+
+        /* What You'll Learn */
+        .learn-list {
+            text-align: left; max-width: 600px; margin: 0 auto 2rem;
+            list-style: none;
+        }
+
+        .learn-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex; align-items: flex-start; gap: 0.8rem;
+            color: var(--text-light); font-size: 1rem;
+        }
+
+        .learn-list li::before {
+            content: '✓';
+            color: var(--level-accent); font-weight: 700;
+            font-size: 1.2rem; flex-shrink: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.1), rgba(255, 107, 53, 0.1));
+            border: 2px solid var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem; color: var(--jaguar-gold);
+            margin-bottom: 1rem; font-weight: 800;
+        }
+
+        .cta-section p {
+            color: var(--text-light); margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--jaguar-orange), var(--jaguar-gold));
+            color: white; border: none;
+            padding: 1rem 2rem; border-radius: 50px;
+            font-size: 1.1rem; font-weight: 700; cursor: pointer;
+            transition: var(--transition); text-decoration: none;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            box-shadow: 0 8px 32px rgba(249, 202, 36, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent; color: var(--jaguar-gold);
+            border: 2px solid var(--jaguar-gold);
+            padding: 1rem 2rem; border-radius: 50px;
+            font-size: 1.1rem; font-weight: 700; cursor: pointer;
+            transition: var(--transition); text-decoration: none;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--jaguar-gold); color: var(--level-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            color: var(--jaguar-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--jaguar-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+        }
+
+        .photo-credit {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-actions { display: none; }
+            .mobile-menu-toggle { display: flex; }
+            .main-content { padding: 100px 1rem 1rem; }
+            .hero-section { padding: 2rem; }
+            .hero-title { font-size: 2.2rem; }
+            .jaguar-hero { width: 120px; height: 120px; }
+            .subpage-grid { grid-template-columns: 1fr; }
+            .region-details { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn-primary, .btn-secondary { width: 100%; max-width: 280px; justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 1.8rem; }
+            .hero-section, .region-info, .coming-soon, .cta-section { padding: 1.5rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar" role="navigation">
+        <a href="index.html" class="nav-brand">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Jaguar logo">
+                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+                    <circle cx="38" cy="36" r="5" fill="#1a1a1a"/>
+                    <circle cx="62" cy="36" r="5" fill="#1a1a1a"/>
+                    <circle cx="39" cy="35" r="2" fill="#7fff00"/>
+                    <circle cx="63" cy="35" r="2" fill="#7fff00"/>
+                    <ellipse cx="50" cy="44" rx="5" ry="3" fill="#1a1a1a"/>
+                    <path d="M44 50 Q50 56 56 50" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <h1>El viaje del jaguar</h1>
+                <p>Total Spanish immersion</p>
+            </div>
+        </a>
+
+        <div class="nav-actions">
+            <a href="index.html" class="nav-link">&larr; Home</a>
+            <a href="index.html#precios" class="nav-link">Pricing</a>
+            <a href="login.html" class="nav-link">Student Login</a>
+            <a href="index.html#contacto" class="nav-cta">Start Learning</a>
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-item">&larr; Home</a>
+        <a href="index.html#precios" class="mobile-menu-item">Pricing</a>
+        <a href="index.html#contacto" class="mobile-menu-item">Contact</a>
+        <a href="login.html" class="mobile-menu-item">Student Login</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-inner">
+                <span class="level-badge">A1 BÁSICO</span>
+                <div class="jaguar-hero">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
+                        <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+                        <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                        <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                        <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                        <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                        <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+                        <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
+                        <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
+                        <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                        <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                        <circle cx="40" cy="34" r="1" fill="#fff"/>
+                        <circle cx="64" cy="34" r="1" fill="#fff"/>
+                        <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
+                        <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
+                        <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+                        <circle cx="28" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
+                        <circle cx="72" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
+                        <circle cx="35" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
+                        <circle cx="65" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
+                        <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">El Despertar del Jaguar</h1>
+                <p class="hero-subtitle">A1 Beginner &mdash; Espa&ntilde;ol con Yaguar&aacute;</p>
+                <div class="region-badge">Amazon &amp; Andes &bull; Leticia &amp; Manizales</div>
+            </div>
+        </section>
+
+        <!-- Region Info -->
+        <section class="region-info">
+            <h2>Explore: Amazon &amp; Andes</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 1.5rem; font-style: italic;">
+                Ecosystem: Bosque Tropical Húmedo &amp; Montaña Cafetera
+            </p>
+            <div class="region-details">
+                <div class="detail-card">
+                    <h3>Species You'll Discover</h3>
+                        <span class="species-tag">Jaguar</span>
+                        <span class="species-tag">Anaconda</span>
+                        <span class="species-tag">Guacamaya</span>
+                        <span class="species-tag">Oso de Anteojos</span>
+                        <span class="species-tag">Quetzal</span>
+
+                </div>
+                <div class="detail-card">
+                    <h3>Cultural Elements</h3>
+                        <span class="cultural-tag">Pueblos indígenas</span>
+                        <span class="cultural-tag">Medicina tradicional</span>
+                        <span class="cultural-tag">Río Amazonas</span>
+                        <span class="cultural-tag">Cultura Paisa</span>
+                        <span class="cultural-tag">Café de especialidad</span>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- A1 Sub-pages -->
+        <section>
+            <h2 style="text-align: center; color: var(--jaguar-gold); font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">
+                Choose Your A1 Adventure
+            </h2>
+            <div class="subpage-grid">
+        <a href="a1-amazon.html" class="subpage-card">
+            <span class="subpage-icon">🌳</span>
+            <div class="subpage-title">Selva Amazónica</div>
+            <div class="subpage-subtitle">Leticia, Colombia</div>
+            <p class="subpage-desc">Journey through the Amazon rainforest. Learn basic survival Spanish with Yaguará in the world's largest tropical forest.</p>
+            <div class="subpage-meta">
+                <span class="lesson-count">24 lessons</span>
+                <span class="subpage-cta">Enter &rarr;</span>
+            </div>
+        </a>
+        <a href="a1-andes.html" class="subpage-card">
+            <span class="subpage-icon">⛰️</span>
+            <div class="subpage-title">Cordillera de los Andes</div>
+            <div class="subpage-subtitle">Manizales, Colombia</div>
+            <p class="subpage-desc">Climb the Andes mountains. Explore coffee culture and mountain vocabulary in Colombia's coffee region.</p>
+            <div class="subpage-meta">
+                <span class="lesson-count">32 lessons</span>
+                <span class="subpage-cta">Enter &rarr;</span>
+            </div>
+        </a>
+        <a href="a1-exam.html" class="subpage-card">
+            <span class="subpage-icon">🏆</span>
+            <div class="subpage-title">Examen Final A1</div>
+            <div class="subpage-subtitle">Test your knowledge</div>
+            <p class="subpage-desc">Complete the A1 final exam to unlock permanent access. Prove your beginner Spanish skills!</p>
+            <div class="subpage-meta">
+                <span class="lesson-count">1 lessons</span>
+                <span class="subpage-cta">Enter &rarr;</span>
+            </div>
+        </a>
+            </div>
+        </section>
+
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to start your adventure?</h2>
+            <p>Join thousands of students exploring Colombia while learning Spanish</p>
+            <div class="cta-buttons">
+                <a href="index.html#precios" class="btn-primary">View Pricing</a>
+                <a href="https://wa.me/19173067920?text=Hello,%20I'm%20interested%20in%20A1%20level" class="btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>El Viaje del Jaguar</h3>
+                <p>Learn Spanish through the epic adventures of Yaguar&aacute; in Colombia. Total immersion with game-based learning.</p>
+                <p>Part of the Babel Free Union language learning ecosystem.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Levels Available</h3>
+                <p><a href="a1.html">A1 - Beginner</a></p>
+                <p><a href="a2.html">A2 - Elementary</a></p>
+                <p><a href="b1.html">B1 - Intermediate</a></p>
+                <p><a href="b2.html">B2 - Upper Intermediate</a></p>
+                <p><a href="c1.html">C1 - Advanced</a></p>
+                <p><a href="c2.html">C2 - Mastery</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact &amp; Support</h3>
+                <p><a href="mailto:info@babelfreeunion.com">info@babelfreeunion.com</a></p>
+                <p><a href="https://wa.me/19173067920" target="_blank" rel="noopener noreferrer">WhatsApp: +1 917 306 7920</a></p>
+                <p><a href="index.html">Babel Free Union</a></p>
+                <p><a href="login.html">Student Login</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 El Viaje del Jaguar - Babel Free Union. All rights reserved.</p>
+            <p class="photo-credit">All graphics rendered inline &mdash; no external dependencies</p>
+        </div>
+    </footer>
+
+    <script>
+        // Floating elements
+        (function() {
+            var elements = ['🌳', '🦋', '🌺', '🐦', '🍃', '🌳', '✨', '🦎'];
+            var container = document.getElementById('floatingElements');
+
+            function createEl() {
+                var el = document.createElement('div');
+                el.className = 'float-el';
+                el.textContent = elements[Math.floor(Math.random() * elements.length)];
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.animationDuration = (15 + Math.random() * 10) + 's';
+                el.style.fontSize = (1.2 + Math.random() * 0.8) + 'em';
+                el.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(el);
+                setTimeout(function() {
+                    if (container.contains(el)) container.removeChild(el);
+                }, 25000);
+            }
+
+            for (var i = 0; i < 6; i++) {
+                setTimeout(createEl, i * 800);
+            }
+            setInterval(function() {
+                if (Math.random() < 0.4) createEl();
+            }, 4000);
+        })();
+
+        // Mobile menu
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobileMenu');
+            var toggle = document.querySelector('.mobile-menu-toggle');
+            var bars = toggle.querySelectorAll('.menu-bar');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById('mobileMenu');
+            var toggle = document.querySelector('.mobile-menu-toggle');
+            if (menu.classList.contains('active') && !menu.contains(e.target) && !toggle.contains(e.target)) {
+                menu.classList.remove('active');
+                var bars = toggle.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Examen Final - Yaguará</title>
+    <meta name="description" content="A1 Final Exam - Simple Spanish test with Yaguará">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --exam-dark: #0f2027;
+            --exam-medium: #203a43;
+            --exam-light: #2c5364;
+            --jaguar-gold: #ffd700;
+            --success-green: #00ff88;
+            --exam-blue: #3498db;
+            --deep-purple: #9c27b0;
+            --warm-orange: #ff6b35;
+            --advanced-teal: #00b894;
+            --spiral-purple: #9b59b6;
+            --text-light: #ffffff;
+            --text-muted: #cccccc;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --border-radius: 15px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(0, 184, 148, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(155, 89, 182, 0.06) 0%, transparent 50%);
+            z-index: 1;
+            animation: examAura 40s ease-in-out infinite;
+        }
+
+        @keyframes examAura {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            33% { transform: scale(1.02) rotate(0.3deg); opacity: 1; }
+            66% { transform: scale(0.98) rotate(-0.2deg); opacity: 0.9; }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .exam-element {
+            position: absolute;
+            animation: examFloat 35s infinite linear;
+            opacity: 0.4;
+            font-size: 1.2em;
+        }
+
+        @keyframes examFloat {
+            0% { transform: translateY(-100px) translateX(-30px) rotate(0deg); }
+            100% { transform: translateY(100vh) translateX(60px) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .exam-header {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 3px solid var(--jaguar-gold);
+            margin-bottom: 30px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid var(--jaguar-gold);
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .exam-level-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--deep-purple), var(--spiral-purple));
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(156, 39, 176, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%230f2027" width="1200" height="600"/><circle cx="200" cy="150" r="25" fill="%23ffd700" opacity="0.3"/><circle cx="800" cy="450" r="30" fill="%239c27b0" opacity="0.2"/><circle cx="1000" cy="200" r="20" fill="%2300b894" opacity="0.3"/><circle cx="400" cy="400" r="35" fill="%2300ff88" opacity="0.2"/></svg>') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .jaguar-avatar {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--jaguar-gold), var(--warm-orange));
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--jaguar-gold);
+            position: relative;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5);
+            animation: examPulse 4s ease-in-out infinite;
+        }
+
+        .jaguar-avatar svg {
+            width: 85%;
+            height: 85%;
+        }
+
+        @keyframes examPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 16px 50px rgba(255, 215, 0, 0.7); }
+        }
+
+        .exam-title {
+            font-size: 2.8rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .exam-subtitle {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .mastery-indicator {
+            background: linear-gradient(135deg, rgba(0, 184, 148, 0.15), rgba(155, 89, 182, 0.15));
+            border: 3px solid var(--advanced-teal);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .mastery-title {
+            color: var(--advanced-teal);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .mastery-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .mastery-section {
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .mastery-section.despertar {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid var(--success-green);
+        }
+
+        .mastery-section.exploracion {
+            background: rgba(0, 184, 148, 0.2);
+            border: 2px solid var(--advanced-teal);
+        }
+
+        .mastery-section-title {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .mastery-section.despertar .mastery-section-title {
+            color: var(--success-green);
+        }
+
+        .mastery-section.exploracion .mastery-section-title {
+            color: var(--advanced-teal);
+        }
+
+        .mastery-topics {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .exam-progress {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .progress-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .progress-dot.active {
+            background: var(--jaguar-gold);
+            transform: scale(1.5);
+            box-shadow: 0 0 20px var(--jaguar-gold);
+        }
+
+        .progress-dot.completed {
+            background: var(--success-green);
+            transform: scale(1.2);
+        }
+
+        .progress-line {
+            width: 30px;
+            height: 3px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+        }
+
+        .progress-line.active {
+            background: var(--jaguar-gold);
+            box-shadow: 0 0 10px var(--jaguar-gold);
+        }
+
+        .score-display {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .current-score {
+            font-size: 1.8rem;
+            color: var(--jaguar-gold);
+            font-weight: 800;
+        }
+
+        .score-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .score-item {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .score-value {
+            font-weight: 700;
+            color: var(--jaguar-gold);
+            font-size: 1.2rem;
+        }
+
+        .score-label {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .exam-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 3px solid;
+            display: none;
+            position: relative;
+        }
+
+        .exam-section.active {
+            display: block;
+            animation: sectionSlideIn 0.5s ease-out;
+        }
+
+        @keyframes sectionSlideIn {
+            0% { opacity: 0; transform: translateX(30px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        .exam-section.vocabulary { border-color: var(--success-green); }
+        .exam-section.grammar { border-color: var(--exam-blue); }
+        .exam-section.reading { border-color: var(--deep-purple); }
+        .exam-section.writing { border-color: var(--warm-orange); }
+        .exam-section.integration { border-color: var(--advanced-teal); }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .exam-section.vocabulary .section-title { color: var(--success-green); }
+        .exam-section.vocabulary .section-title::after { background: var(--success-green); }
+        .exam-section.grammar .section-title { color: var(--exam-blue); }
+        .exam-section.grammar .section-title::after { background: var(--exam-blue); }
+        .exam-section.reading .section-title { color: var(--deep-purple); }
+        .exam-section.reading .section-title::after { background: var(--deep-purple); }
+        .exam-section.writing .section-title { color: var(--warm-orange); }
+        .exam-section.writing .section-title::after { background: var(--warm-orange); }
+        .exam-section.integration .section-title { color: var(--advanced-teal); }
+        .exam-section.integration .section-title::after { background: var(--advanced-teal); }
+
+        .section-description {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .simple-instruction {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .instruction-text {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .question-container {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .question-container:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .question-number {
+            background: var(--jaguar-gold);
+            color: #000;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-right: 15px;
+            font-size: 1rem;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .option:hover {
+            border-color: var(--jaguar-gold);
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            border-color: var(--jaguar-gold);
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateX(5px);
+        }
+
+        .option.correct {
+            border-color: var(--success-green);
+            background: rgba(0, 255, 136, 0.2);
+        }
+
+        .option.incorrect {
+            border-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.2);
+        }
+
+        .text-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+            font-size: 1.1rem;
+            font-family: inherit;
+            outline: none;
+            min-height: 120px;
+            resize: vertical;
+            transition: var(--transition);
+            line-height: 1.6;
+        }
+
+        .text-input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.8;
+        }
+
+        .text-input:focus {
+            border-color: var(--jaguar-gold);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .word-bank {
+            background: rgba(255, 215, 0, 0.1);
+            border: 3px dashed var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .bank-header {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .bank-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .bank-section {
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .bank-section.despertar {
+            background: rgba(76, 175, 80, 0.15);
+            border: 2px solid var(--success-green);
+        }
+
+        .bank-section.exploracion {
+            background: rgba(0, 184, 148, 0.15);
+            border: 2px solid var(--advanced-teal);
+        }
+
+        .bank-section-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .bank-section.despertar .bank-section-title {
+            color: var(--success-green);
+        }
+
+        .bank-section.exploracion .bank-section-title {
+            color: var(--advanced-teal);
+        }
+
+        .word-collection {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .available-word {
+            padding: 8px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            user-select: none;
+            font-size: 0.9rem;
+        }
+
+        .bank-section.despertar .available-word {
+            background: var(--success-green);
+            color: white;
+        }
+
+        .bank-section.exploracion .available-word {
+            background: var(--advanced-teal);
+            color: white;
+        }
+
+        .available-word:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .available-word.used {
+            opacity: 0.4;
+            cursor: default;
+            transform: none;
+        }
+
+        .available-word.used:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .reading-passage {
+            background: rgba(156, 39, 176, 0.1);
+            border: 3px solid var(--deep-purple);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            line-height: 2;
+            font-size: 1.1rem;
+        }
+
+        .passage-title {
+            color: var(--deep-purple);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .yaguara-exam-guide {
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.15), rgba(255, 107, 53, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .yaguara-exam-avatar {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--jaguar-gold), var(--warm-orange));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--jaguar-gold);
+            animation: examPulse 4s ease-in-out infinite;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .yaguara-exam-avatar svg {
+            width: 85%;
+            height: 85%;
+        }
+
+        .yaguara-exam-text {
+            padding-top: 5px;
+        }
+
+        .exam-guide-title {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .exam-guide-message {
+            color: var(--text-light);
+            line-height: 2;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .simple-exam-message {
+            margin: 10px 0;
+        }
+
+        .exam-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 18px 35px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            min-width: 160px;
+            text-align: center;
+            background: var(--glass-bg);
+            color: white;
+            border: 2px solid var(--jaguar-gold);
+        }
+
+        .nav-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .nav-button.primary {
+            background: linear-gradient(135deg, var(--jaguar-gold), #ffed4e);
+            color: #000;
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-button:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .exam-complete {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 50px;
+            text-align: center;
+            display: none;
+            border: 3px solid var(--success-green);
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .exam-complete.show {
+            display: block;
+            animation: completionCelebration 1s ease-out;
+        }
+
+        @keyframes completionCelebration {
+            0% { opacity: 0; transform: scale(0.8); }
+            50% { transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .completion-badge {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--success-green), #66bb6a);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            animation: badgeRotate 3s ease-in-out infinite;
+            border: 4px solid var(--success-green);
+        }
+
+        @keyframes badgeRotate {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .completion-score {
+            font-size: 3rem;
+            color: var(--success-green);
+            font-weight: 900;
+            margin: 25px 0;
+        }
+
+        .completion-message {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin: 25px 0;
+            line-height: 1.8;
+        }
+
+        .mastery-summary {
+            background: rgba(255, 215, 0, 0.1);
+            border: 3px solid var(--jaguar-gold);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .mastery-summary h4 {
+            color: var(--jaguar-gold);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .mastery-areas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .mastery-area {
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .mastery-area.despertar {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid var(--success-green);
+        }
+
+        .mastery-area.exploracion {
+            background: rgba(0, 184, 148, 0.2);
+            border: 2px solid var(--advanced-teal);
+        }
+
+        .completion-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .completion-btn {
+            background: var(--success-green);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 180px;
+            font-size: 1rem;
+        }
+
+        .completion-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+        }
+
+        .completion-btn.secondary {
+            background: var(--advanced-teal);
+        }
+
+        .completion-btn.primary {
+            background: linear-gradient(135deg, var(--jaguar-gold), #ffed4e);
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .container { padding: 15px; }
+            .exam-header { padding: 25px 20px; }
+            .exam-section { padding: 25px 20px; }
+            .exam-navigation { flex-direction: column; gap: 15px; }
+            .nav-button { width: 100%; max-width: 300px; }
+            .completion-buttons { flex-direction: column; align-items: center; }
+            .completion-btn { width: 100%; max-width: 280px; }
+            .exam-title { font-size: 2.2rem; }
+            .section-title { font-size: 1.6rem; }
+            .mastery-content, .bank-sections, .mastery-areas { grid-template-columns: 1fr; }
+            .back-btn, .exam-level-indicator { 
+                position: static; 
+                margin: 10px auto; 
+                display: block; 
+                text-align: center; 
+                width: fit-content; 
+            }
+
+            .yaguara-exam-guide {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .yaguara-exam-avatar {
+                margin: 0 auto;
+            }
+
+            .jaguar-avatar {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Exam Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <div class="container">
+        <div class="exam-header">
+            <a href="dashboard.html" class="back-btn">← Volver</a>
+            <div class="exam-level-indicator">A1 EXAMEN</div>
+        </div>
+
+        <!-- HERO SECTION WITH PROPER IMAGE -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="jaguar-avatar"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
+    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
+    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
+    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
+    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
+    <circle cx="40" cy="34" r="1" fill="#fff"/>
+    <circle cx="64" cy="34" r="1" fill="#fff"/>
+    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
+    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
+    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+    <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg></div>
+                <h1 class="exam-title">Mi Examen A1</h1>
+                <p class="exam-subtitle">Español con Yaguará</p>
+                
+                <div class="mastery-indicator">
+                    <div class="mastery-title">📚 Mis palabras:</div>
+                    <div class="mastery-content">
+                        <div class="mastery-section despertar">
+                            <div class="mastery-section-title">🌿 Selva</div>
+                            <div class="mastery-topics">Familia • Animales • Agua • Casa</div>
+                        </div>
+                        <div class="mastery-section exploracion">
+                            <div class="mastery-section-title">🏔️ Montañas</div>
+                            <div class="mastery-topics">Tiempo • Día • Comida • Ropa</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-progress">
+                    <div class="progress-dot active" data-step="1"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-dot" data-step="2"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-dot" data-step="3"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-dot" data-step="4"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-dot" data-step="5"></div>
+                </div>
+                
+                <div class="score-display">
+                    <div class="current-score" id="currentScore">Puntos: 0/100</div>
+                    <div class="score-breakdown">
+                        <div class="score-item">
+                            <div class="score-value" id="vocabularyScore">0</div>
+                            <div class="score-label">Palabras</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-value" id="grammarScore">0</div>
+                            <div class="score-label">Gramática</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-value" id="readingScore">0</div>
+                            <div class="score-label">Leer</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-value" id="writingScore">0</div>
+                            <div class="score-label">Escribir</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-value" id="integrationScore">0</div>
+                            <div class="score-label">Todo junto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIXED YAGUARÁ GUIDE - NO TEXT OVERLAP -->
+        <div class="yaguara-exam-guide">
+            <div class="yaguara-exam-avatar"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
+    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
+    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
+    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
+    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
+    <circle cx="40" cy="34" r="1" fill="#fff"/>
+    <circle cx="64" cy="34" r="1" fill="#fff"/>
+    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
+    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
+    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+    <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg></div>
+            <div class="yaguara-exam-text">
+                <div class="exam-guide-title">Yaguará dice:</div>
+                <div class="exam-guide-message">
+                    <div class="simple-exam-message">📚 Es mi examen.</div>
+                    <div class="simple-exam-message">🐆 Estoy contigo.</div>
+                    <div class="simple-exam-message">💪 Tú puedes.</div>
+                    <div class="simple-exam-message">🏆 ¡Vamos!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1: Simple Vocabulary -->
+        <div class="exam-section vocabulary active" id="section1">
+            <h2 class="section-title">1. 📚 Palabras</h2>
+            <div class="simple-instruction">
+                <div class="instruction-text">🎯 Selecciona una respuesta</div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">1</span>
+                    ¿Qué día viene después del domingo?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">domingo</div>
+                    <div class="option" onclick="selectOption(this, true)">lunes</div>
+                    <div class="option" onclick="selectOption(this, false)">martes</div>
+                    <div class="option" onclick="selectOption(this, false)">sábado</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">2</span>
+                    ¿Qué animal vive en la selva con Yaguará?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">perro</div>
+                    <div class="option" onclick="selectOption(this, true)">mono</div>
+                    <div class="option" onclick="selectOption(this, false)">gato</div>
+                    <div class="option" onclick="selectOption(this, false)">caballo</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">3</span>
+                    ¿Qué bebes cuando tienes sed?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, true)">agua</div>
+                    <div class="option" onclick="selectOption(this, false)">casa</div>
+                    <div class="option" onclick="selectOption(this, false)">familia</div>
+                    <div class="option" onclick="selectOption(this, false)">lunes</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">4</span>
+                    ¿Qué haces por la mañana?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">dormir</div>
+                    <div class="option" onclick="selectOption(this, true)">despertar</div>
+                    <div class="option" onclick="selectOption(this, false)">noche</div>
+                    <div class="option" onclick="selectOption(this, false)">agua</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Simple Grammar -->
+        <div class="exam-section grammar" id="section2">
+            <h2 class="section-title">2. ✏️ Gramática</h2>
+            <div class="simple-instruction">
+                <div class="instruction-text">🎯 Completa</div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">5</span>
+                    Yaguará _____ un jaguar.
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, true)">es</div>
+                    <div class="option" onclick="selectOption(this, false)">está</div>
+                    <div class="option" onclick="selectOption(this, false)">tiene</div>
+                    <div class="option" onclick="selectOption(this, false)">soy</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">6</span>
+                    Me _____ la comida.
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, true)">gusta</div>
+                    <div class="option" onclick="selectOption(this, false)">gustan</div>
+                    <div class="option" onclick="selectOption(this, false)">gustas</div>
+                    <div class="option" onclick="selectOption(this, false)">gusto</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">7</span>
+                    ¿_____ vive Yaguará?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">Qué</div>
+                    <div class="option" onclick="selectOption(this, true)">Dónde</div>
+                    <div class="option" onclick="selectOption(this, false)">Cuándo</div>
+                    <div class="option" onclick="selectOption(this, false)">Cómo</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">8</span>
+                    Yaguará _____ en la selva.
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">es</div>
+                    <div class="option" onclick="selectOption(this, true)">vive</div>
+                    <div class="option" onclick="selectOption(this, false)">tiene</div>
+                    <div class="option" onclick="selectOption(this, false)">come</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Simple Reading -->
+        <div class="exam-section reading" id="section3">
+            <h2 class="section-title">3. 📖 Leer</h2>
+            <div class="simple-instruction">
+                <div class="instruction-text">🎯 Lee</div>
+            </div>
+            
+            <div class="reading-passage">
+                <div class="passage-title">📖 Yaguará</div>
+                Hola. Soy Yaguará.<br>
+                Soy un jaguar. Vivo en Colombia.<br>
+                Mi familia vive en la selva.<br>
+                Bebo agua del río.<br>
+                Como peces y frutas.<br>
+                Me gusta mi casa en la selva.<br><br>
+                
+                Ahora voy a las montañas.<br>
+                Es lunes. Me levanto por la mañana.<br>
+                Desayuno arroz con pollo.<br>
+                Me gusta la comida de las montañas.<br>
+                Tengo una cabeza grande y patas fuertes.<br>
+                Soy un jaguar feliz.
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">9</span>
+                    ¿Dónde vive la familia de Yaguará?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">En las montañas</div>
+                    <div class="option" onclick="selectOption(this, true)">En la selva</div>
+                    <div class="option" onclick="selectOption(this, false)">En la ciudad</div>
+                    <div class="option" onclick="selectOption(this, false)">En el río</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">10</span>
+                    ¿Qué come Yaguará para desayunar?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">Peces y frutas</div>
+                    <div class="option" onclick="selectOption(this, true)">Arroz con pollo</div>
+                    <div class="option" onclick="selectOption(this, false)">Solo agua</div>
+                    <div class="option" onclick="selectOption(this, false)">No come</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">11</span>
+                    ¿Cómo es Yaguará?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">Triste</div>
+                    <div class="option" onclick="selectOption(this, true)">Feliz</div>
+                    <div class="option" onclick="selectOption(this, false)">Enojado</div>
+                    <div class="option" onclick="selectOption(this, false)">Cansado</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Simple Writing -->
+        <div class="exam-section writing" id="section4">
+            <h2 class="section-title">4. ✍️ Escribir</h2>
+            <div class="simple-instruction">
+                <div class="instruction-text">🎯 Usa palabras</div>
+            </div>
+            
+            <div class="word-bank">
+                <div class="bank-header">🎒 Tus palabras</div>
+                <div class="bank-sections">
+                    <div class="bank-section despertar">
+                        <div class="bank-section-title">🌿 Selva</div>
+                        <div class="word-collection">
+                            <span class="available-word" onclick="useWordInStory(this)">familia</span>
+                            <span class="available-word" onclick="useWordInStory(this)">agua</span>
+                            <span class="available-word" onclick="useWordInStory(this)">mono</span>
+                            <span class="available-word" onclick="useWordInStory(this)">casa</span>
+                            <span class="available-word" onclick="useWordInStory(this)">río</span>
+                            <span class="available-word" onclick="useWordInStory(this)">dormir</span>
+                        </div>
+                    </div>
+                    <div class="bank-section exploracion">
+                        <div class="bank-section-title">🏔️ Montañas</div>
+                        <div class="word-collection">
+                            <span class="available-word" onclick="useWordInStory(this)">lunes</span>
+                            <span class="available-word" onclick="useWordInStory(this)">mañana</span>
+                            <span class="available-word" onclick="useWordInStory(this)">despertar</span>
+                            <span class="available-word" onclick="useWordInStory(this)">arroz</span>
+                            <span class="available-word" onclick="useWordInStory(this)">me gusta</span>
+                            <span class="available-word" onclick="useWordInStory(this)">grande</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">12</span>
+                    Escribe sobre Yaguará:
+                </div>
+                <textarea class="text-input" id="storyText" placeholder="Yaguará es... Vive en... Come..."></textarea>
+            </div>
+        </div>
+
+        <!-- Section 5: Simple Integration -->
+        <div class="exam-section integration" id="section5">
+            <h2 class="section-title">5. 🏆 Todo junto</h2>
+            <div class="simple-instruction">
+                <div class="instruction-text">🎯 Eres Yaguará</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">13</span>
+                    🌅 Tu mañana:
+                </div>
+                <textarea class="text-input" placeholder="Es lunes. Me levanto..."></textarea>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">14</span>
+                    🍽️ Tu comida:
+                </div>
+                <textarea class="text-input" placeholder="Me gusta comer..."></textarea>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">15</span>
+                    🌙 Tu noche:
+                </div>
+                <textarea class="text-input" placeholder="Por la noche duermo..."></textarea>
+            </div>
+        </div>
+
+        <div class="exam-navigation">
+            <button class="nav-button" onclick="previousSection()" id="prevBtn" disabled>← Anterior</button>
+            <button class="nav-button primary" onclick="nextSection()" id="nextBtn">Siguiente →</button>
+            <button class="nav-button" onclick="finishExam()" id="finishBtn" style="display:none">🏆 Terminar</button>
+        </div>
+
+        <div class="exam-complete" id="examComplete">
+            <div class="completion-badge">🏆</div>
+            <h2 style="color: var(--success-green); font-size: 2.5rem; margin-bottom: 25px;">¡A1 Completo!</h2>
+            <div class="completion-score" id="finalScore">85/100</div>
+            
+            <div class="completion-message">
+                <strong>¡Felicidades! A1 terminado.</strong><br>
+                Ahora hablas español básico.
+            </div>
+            
+            <div class="mastery-summary">
+                <h4>🎯 Sabes:</h4>
+                <div class="mastery-areas">
+                    <div class="mastery-area despertar">
+                        <div style="color: var(--success-green); font-weight: 700; margin-bottom: 10px;">🌿 Selva</div>
+                        <div style="font-size: 1rem; color: var(--text-light);">
+                            ✓ Familia<br>
+                            ✓ Animales<br>
+                            ✓ Agua<br>
+                            ✓ Casa<br>
+                            ✓ Amigos
+                        </div>
+                    </div>
+                    <div class="mastery-area exploracion">
+                        <div style="color: var(--advanced-teal); font-weight: 700; margin-bottom: 10px;">🏔️ Montañas</div>
+                        <div style="font-size: 1rem; color: var(--text-light);">
+                            ✓ Tiempo<br>
+                            ✓ Mi día<br>
+                            ✓ Comida<br>
+                            ✓ Cuerpo<br>
+                            ✓ Me gusta
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255, 215, 0, 0.1); border: 3px solid var(--jaguar-gold); border-radius: 15px; padding: 25px; margin: 25px 0;">
+                <div style="color: var(--jaguar-gold); font-weight: 700; margin-bottom: 15px; font-size: 1.2rem;">🐆 Yaguará dice:</div>
+                <div style="color: var(--text-light); line-height: 1.8; font-size: 1.1rem;">
+                    <div style="margin: 10px 0;">🎉 ¡Muy bien!</div>
+                    <div style="margin: 10px 0;">📚 Hablas español.</div>
+                    <div style="margin: 10px 0;">🚀 ¿Vienes a A2?</div>
+                    <div style="margin: 10px 0;">❤️ ¡Adiós!</div>
+                </div>
+            </div>
+
+            <div class="completion-buttons">
+                <button class="completion-btn primary" onclick="downloadCertificate()">📜 Mi certificado</button>
+                <button class="completion-btn" onclick="continueToA2()">🚀 A2</button>
+                <button class="completion-btn secondary" onclick="reviewJourney()">📚 Ver</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced exam system - A1 SIMPLIFIED
+        (function() {
+            'use strict';
+            
+            var examData = {
+                section: 1,
+                totalSections: 5,
+                scores: {
+                    vocabulary: 0,
+                    grammar: 0,
+                    reading: 0,
+                    writing: 0,
+                    integration: 0
+                },
+                totalPoints: 0,
+                maxPoints: 100
+            };
+
+            // Create floating exam elements
+            function createExamElements() {
+                const elements = ['📚', '✏️', '🎯', '⭐', '🏆', '📖', '✨', '🎓'];
+                const container = document.getElementById('floatingElements');
+                
+                // Create initial elements
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        createFloatingElement(container, elements);
+                    }, i * 2000);
+                }
+                
+                // Continue creating elements
+                setInterval(() => {
+                    if (Math.random() < 0.2) {
+                        createFloatingElement(container, elements);
+                    }
+                }, 8000);
+            }
+
+            function createFloatingElement(container, elements) {
+                const element = document.createElement('div');
+                element.className = 'exam-element';
+                element.textContent = elements[Math.floor(Math.random() * elements.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.animationDuration = (30 + Math.random() * 10) + 's';
+                element.style.fontSize = (1 + Math.random() * 0.4) + 'em';
+                element.style.animationDelay = Math.random() * 5 + 's';
+                
+                container.appendChild(element);
+                
+                setTimeout(() => {
+                    if (container.contains(element)) {
+                        container.removeChild(element);
+                    }
+                }, 45000);
+            }
+
+            function handleOptionSelect(option, isCorrect) {
+                var container = option.parentElement;
+                var options = container.querySelectorAll('.option');
+                
+                // Clear previous selections
+                for (var i = 0; i < options.length; i++) {
+                    options[i].classList.remove('selected', 'correct', 'incorrect');
+                }
+                
+                option.classList.add('selected');
+                
+                setTimeout(function() {
+                    if (isCorrect) {
+                        option.classList.add('correct');
+                        updateSectionScore(examData.section, 15);
+                    } else {
+                        option.classList.add('incorrect');
+                        // Show correct answer
+                        for (var j = 0; j < options.length; j++) {
+                            var onclickAttr = options[j].getAttribute('onclick') || '';
+                            if (onclickAttr.indexOf('true') !== -1) {
+                                options[j].classList.add('correct');
+                            }
+                        }
+                    }
+                    updateScoreDisplay();
+                }, 500);
+            }
+
+            function handleWordSelection(wordElement) {
+                if (wordElement.classList.contains('used')) return;
+                
+                var storyTextarea = document.getElementById('storyText');
+                if (!storyTextarea) {
+                    // Find any active textarea
+                    var activeTextareas = document.querySelectorAll('.exam-section.active .text-input');
+                    if (activeTextareas.length > 0) {
+                        storyTextarea = activeTextareas[activeTextareas.length - 1];
+                    }
+                }
+                
+                if (!storyTextarea) return;
+                
+                var currentText = storyTextarea.value;
+                var word = wordElement.textContent;
+                
+                if (currentText && !currentText.endsWith(' ')) {
+                    storyTextarea.value = currentText + ' ' + word;
+                } else {
+                    storyTextarea.value = currentText + word;
+                }
+                
+                wordElement.classList.add('used');
+                storyTextarea.focus();
+                storyTextarea.setSelectionRange(storyTextarea.value.length, storyTextarea.value.length);
+            }
+
+            function updateSectionScore(section, points) {
+                var sectionNames = ['', 'vocabulary', 'grammar', 'reading', 'writing', 'integration'];
+                var sectionName = sectionNames[section];
+                
+                if (sectionName && examData.scores[sectionName] !== undefined) {
+                    examData.scores[sectionName] += points;
+                    examData.totalPoints += points;
+                }
+            }
+
+            function updateScoreDisplay() {
+                var currentScoreElement = document.getElementById('currentScore');
+                if (currentScoreElement) {
+                    currentScoreElement.textContent = 'Puntos: ' + examData.totalPoints + '/' + examData.maxPoints;
+                }
+
+                // Update individual section scores
+                for (var section in examData.scores) {
+                    var scoreElement = document.getElementById(section + 'Score');
+                    if (scoreElement) {
+                        scoreElement.textContent = examData.scores[section];
+                    }
+                }
+            }
+
+            function goToNextSection() {
+                if (examData.section < examData.totalSections) {
+                    document.getElementById('section' + examData.section).classList.remove('active');
+                    examData.section++;
+                    document.getElementById('section' + examData.section).classList.add('active');
+                    
+                    updateProgressDots();
+                    updateNavigationButtons();
+                    scrollToTop();
+                }
+            }
+
+            function goToPreviousSection() {
+                if (examData.section > 1) {
+                    document.getElementById('section' + examData.section).classList.remove('active');
+                    examData.section--;
+                    document.getElementById('section' + examData.section).classList.add('active');
+                    
+                    updateProgressDots();
+                    updateNavigationButtons();
+                    scrollToTop();
+                }
+            }
+
+            function updateProgressDots() {
+                var dots = document.querySelectorAll('.progress-dot');
+                var lines = document.querySelectorAll('.progress-line');
+                
+                for (var i = 0; i < dots.length; i++) {
+                    var dotIndex = i + 1;
+                    if (dotIndex < examData.section) {
+                        dots[i].classList.add('completed');
+                        dots[i].classList.remove('active');
+                    } else if (dotIndex === examData.section) {
+                        dots[i].classList.add('active');
+                        dots[i].classList.remove('completed');
+                    } else {
+                        dots[i].classList.remove('active', 'completed');
+                    }
+                }
+
+                for (var j = 0; j < lines.length; j++) {
+                    if (j < examData.section - 1) {
+                        lines[j].classList.add('active');
+                    } else {
+                        lines[j].classList.remove('active');
+                    }
+                }
+            }
+
+            function updateNavigationButtons() {
+                var prevBtn = document.getElementById('prevBtn');
+                var nextBtn = document.getElementById('nextBtn');
+                var finishBtn = document.getElementById('finishBtn');
+                
+                if (prevBtn) prevBtn.disabled = examData.section === 1;
+                
+                if (examData.section === examData.totalSections) {
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    if (finishBtn) finishBtn.style.display = 'inline-block';
+                } else {
+                    if (nextBtn) nextBtn.style.display = 'inline-block';
+                    if (finishBtn) finishBtn.style.display = 'none';
+                }
+            }
+
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function completeExam() {
+                // Calculate final score
+                var finalScore = Math.min(examData.totalPoints, examData.maxPoints);
+                
+                var sections = document.querySelectorAll('.exam-section');
+                for (var i = 0; i < sections.length; i++) {
+                    sections[i].style.display = 'none';
+                }
+                
+                var navigation = document.querySelector('.exam-navigation');
+                if (navigation) navigation.style.display = 'none';
+                
+                var finalScoreElement = document.getElementById('finalScore');
+                if (finalScoreElement) finalScoreElement.textContent = finalScore + '/100';
+                
+                var examComplete = document.getElementById('examComplete');
+                if (examComplete) examComplete.classList.add('show');
+                
+                var dots = document.querySelectorAll('.progress-dot');
+                for (var j = 0; j < dots.length; j++) {
+                    dots[j].classList.add('completed');
+                    dots[j].classList.remove('active');
+                }
+
+                var lines = document.querySelectorAll('.progress-line');
+                for (var k = 0; k < lines.length; k++) {
+                    lines[k].classList.add('active');
+                }
+
+                scrollToTop();
+            }
+
+            function downloadCert() {
+                alert('🎓 ¡Tu certificado A1!\n\nA1 terminado con Yaguará.\n\nSabes:\n🌿 Selva\n🏔️ Montañas\n📚 Gramática\n✍️ Escribir\n\nPuntos: ' + examData.totalPoints + '/100\n\n¡Hablas español!');
+            }
+
+            function goToA2() {
+                alert('🚀 ¡A2 viene!\n\nYaguará te espera en:\n\n🌊 Río\n🏖️ Costa\n🌴 Mar\n\n¡Más aventuras!');
+            }
+
+            function showJourney() {
+                var message = '📚 Tu viaje:\n\n';
+                message += '🌿 SELVA:\n';
+                message += '✓ Familia\n';
+                message += '✓ Animales\n';
+                message += '✓ Agua y casa\n\n';
+                
+                message += '🏔️ MONTAÑAS:\n';
+                message += '✓ Tiempo\n';
+                message += '✓ Comida\n';
+                message += '✓ Cuerpo\n\n';
+                
+                message += '🎯 Puntos: ' + examData.totalPoints + '/100\n\n';
+                message += '¡A1 completo!';
+                
+                alert(message);
+            }
+
+            // Make functions globally available
+            window.selectOption = handleOptionSelect;
+            window.useWordInStory = handleWordSelection;
+            window.nextSection = goToNextSection;
+            window.previousSection = goToPreviousSection;
+            window.finishExam = completeExam;
+            window.downloadCertificate = downloadCert;
+            window.continueToA2 = goToA2;
+            window.reviewJourney = showJourney;
+
+            // Initialize when DOM is ready
+            document.addEventListener('DOMContentLoaded', function() {
+                updateScoreDisplay();
+                updateNavigationButtons();
+                createExamElements();
+                console.log('A1 Final Exam - Ultra-simplified for true beginners');
+            });
+
+        })();
+    </script>
+</body>
+</html>

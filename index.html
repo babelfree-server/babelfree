@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Jaguar - Learn Spanish with Total Immersion</title>
+    <meta name="description" content="Learn Spanish through the adventures of Yaguará in Colombia. Total immersion, game-based learning and authentic storytelling.">
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Payment SDKs -->
+    <script src="https://connect.bolt.com/connect.js" defer></script>
+    <script src="https://sdk.mercadopago.com/js/v2" defer></script>
+
+    <style>
+        :root {
+            --forest-dark: #0a3d0c;
+            --forest-medium: #1a5928;
+            --forest-light: #2d6f3d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --success-green: #4caf50;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --shadow-glow: 0 8px 32px rgba(249, 202, 36, 0.3);
+            --border-radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-medium) 50%, var(--forest-light) 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Simplified Background Graphics */
+        .bg-graphics {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--jaguar-gold), var(--jaguar-orange));
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .bg-circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 15%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .bg-circle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: 25%;
+            right: 20%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+        /* Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 61, 12, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(249, 202, 36, 0.2);
+            transition: var(--transition);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, var(--jaguar-orange), var(--jaguar-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 2px solid rgba(249, 202, 36, 0.5);
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .brand-text h1 {
+            color: var(--jaguar-gold);
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--jaguar-gold), #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .brand-text p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            background: rgba(249, 202, 36, 0.2);
+            color: var(--jaguar-gold);
+            transform: translateY(-2px);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--jaguar-orange), var(--jaguar-gold));
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-bar {
+            width: 25px;
+            height: 3px;
+            background: var(--jaguar-gold);
+            margin: 3px 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 61, 12, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-bottom: 1px solid rgba(249, 202, 36, 0.2);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-menu-item {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-item:hover {
+            color: var(--jaguar-gold);
+            padding-left: 1rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 2rem 40px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 2px solid rgba(249, 202, 36, 0.3);
+            box-shadow: var(--shadow-card);
+        }
+
+        .hero-logo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, var(--jaguar-orange), var(--jaguar-gold), #ff8f00);
+            border: 4px solid rgba(249, 202, 36, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-glow);
+            animation: breathe 6s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-logo::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-logo svg {
+            width: 70%;
+            height: 70%;
+            z-index: 1;
+            filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+        }
+
+        .logo svg {
+            width: 70%;
+            height: 70%;
+        }
+
+        /* Hero Background - Jungle Pattern (pure CSS) */
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.12;
+            z-index: -1;
+            border-radius: 30px;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 80px 60px at 15% 20%, #2d6f3d 60%, transparent 61%),
+                radial-gradient(ellipse 60px 90px at 85% 15%, #1a5928 60%, transparent 61%),
+                radial-gradient(ellipse 70px 50px at 50% 80%, #2d6f3d 60%, transparent 61%),
+                radial-gradient(ellipse 90px 70px at 25% 65%, #1a5928 60%, transparent 61%),
+                radial-gradient(ellipse 50px 80px at 75% 50%, #2d6f3d 60%, transparent 61%),
+                radial-gradient(ellipse 65px 45px at 40% 35%, #0a3d0c 60%, transparent 61%),
+                radial-gradient(ellipse 55px 75px at 60% 70%, #1a5928 60%, transparent 61%),
+                radial-gradient(ellipse 80px 55px at 10% 85%, #2d6f3d 60%, transparent 61%),
+                radial-gradient(ellipse 45px 65px at 90% 80%, #0a3d0c 60%, transparent 61%),
+                linear-gradient(180deg, #0a3d0c 0%, #1a5928 50%, #2d6f3d 100%);
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff, var(--jaguar-gold), var(--jaguar-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .subtitle strong {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(249, 202, 36, 0.3);
+            transition: var(--transition);
+            backdrop-filter: blur(20px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--jaguar-gold);
+            box-shadow: 0 15px 40px rgba(249, 202, 36, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .feature-card:nth-child(2) .feature-icon { animation-delay: 1.3s; }
+        .feature-card:nth-child(3) .feature-icon { animation-delay: 2.6s; }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--jaguar-gold);
+        }
+
+        .feature-desc {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--jaguar-orange), var(--jaguar-gold));
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--jaguar-gold);
+            border: 2px solid var(--jaguar-gold);
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--jaguar-gold);
+            color: var(--forest-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4rem 2rem;
+            backdrop-filter: blur(20px);
+        }
+
+        .pricing-title {
+            font-size: 2.5rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .pricing-subtitle {
+            font-size: 1.2rem;
+            color: var(--success-green);
+            margin-bottom: 3rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--jaguar-gold);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(249, 202, 36, 0.2);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--jaguar-orange);
+            background: rgba(255, 107, 53, 0.15);
+            transform: scale(1.05);
+            box-shadow: 0 25px 80px rgba(255, 107, 53, 0.3);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--success-green), #8bc34a);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--jaguar-gold);
+            margin-bottom: 1rem;
+        }
+
+        .price-desc {
+            color: #ccc;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .price-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .price-features li::before {
+            content: '✅';
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Payment Buttons */
+        .payment-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .payment-btn {
+            background: transparent;
+            border: 2px solid;
+            padding: 0.8rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .bolt-btn {
+            border-color: var(--jaguar-gold);
+            color: var(--jaguar-gold);
+        }
+
+        .bolt-btn:hover {
+            background: var(--jaguar-gold);
+            color: var(--forest-dark);
+            transform: translateY(-2px);
+        }
+
+        .paypal-btn {
+            border-color: #0070ba;
+            color: #0070ba;
+        }
+
+        .paypal-btn:hover {
+            background: #0070ba;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .mercadopago-btn {
+            border-color: #00a650;
+            color: #00a650;
+        }
+
+        .mercadopago-btn:hover {
+            background: #00a650;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .contact-subtitle {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            color: var(--jaguar-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--jaguar-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+        }
+
+        .photo-credit {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Notification System */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(76, 175, 80, 0.95);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: transform 0.4s ease;
+            max-width: 300px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--success-green);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.warning {
+            background: rgba(255, 152, 0, 0.95);
+            border-color: #ff9800;
+        }
+
+        .notification.info {
+            background: rgba(33, 150, 243, 0.95);
+            border-color: #2196f3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero-section {
+                padding: 100px 1rem 40px;
+            }
+
+            .hero-content {
+                padding: 2rem;
+            }
+
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .hero-emoji {
+                font-size: 3rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .notification {
+                right: 10px;
+                max-width: calc(100vw - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .nav-bar {
+                padding: 1rem;
+            }
+
+            .hero-content {
+                padding: 1.5rem;
+            }
+
+            .pricing-section,
+            .about-section,
+            .contact-section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .loading.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .nav-link:focus,
+        .btn-primary:focus,
+        .btn-secondary:focus,
+        .payment-btn:focus {
+            outline: 2px solid var(--jaguar-gold);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Graphics -->
+    <div class="bg-graphics">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar" role="navigation">
+        <div class="nav-brand">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Jaguar logo">
+                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+                    <circle cx="38" cy="36" r="5" fill="#1a1a1a"/>
+                    <circle cx="62" cy="36" r="5" fill="#1a1a1a"/>
+                    <circle cx="39" cy="35" r="2" fill="#7fff00"/>
+                    <circle cx="63" cy="35" r="2" fill="#7fff00"/>
+                    <ellipse cx="50" cy="44" rx="5" ry="3" fill="#1a1a1a"/>
+                    <path d="M44 50 Q50 56 56 50" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+                    <circle cx="30" cy="40" r="2" fill="#c8860a" opacity="0.6"/>
+                    <circle cx="70" cy="40" r="2" fill="#c8860a" opacity="0.6"/>
+                    <circle cx="42" cy="52" r="1.5" fill="#c8860a" opacity="0.5"/>
+                    <circle cx="58" cy="52" r="1.5" fill="#c8860a" opacity="0.5"/>
+                    <path d="M28 48 Q22 52 18 48" stroke="#e8a820" stroke-width="2" fill="none"/>
+                    <path d="M72 48 Q78 52 82 48" stroke="#e8a820" stroke-width="2" fill="none"/>
+                    <path d="M26 52 Q20 56 16 52" stroke="#e8a820" stroke-width="2" fill="none"/>
+                    <path d="M74 52 Q80 56 84 52" stroke="#e8a820" stroke-width="2" fill="none"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <h1>El viaje del jaguar</h1>
+                <p>Total Spanish immersion</p>
+            </div>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">← Back to Babel Free</a></li>
+            <li><a href="#curso" class="nav-link">Course</a></li>
+            <li><a href="#precios" class="nav-link">Pricing</a></li>
+            <li><a href="#contacto" class="nav-link">Contact</a></li>
+            <li><a href="login.html" class="nav-link">Student Login</a></li>
+            <li><a href="#" class="nav-cta" onclick="startFreeTrial()">🎮 Try Free</a></li>
+        </ul>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-item" onclick="closeMobileMenu()">← Back to Babel Free</a>
+        <a href="#curso" class="mobile-menu-item" onclick="closeMobileMenu()">Course</a>
+        <a href="#precios" class="mobile-menu-item" onclick="closeMobileMenu()">Pricing</a>
+        <a href="#contacto" class="mobile-menu-item" onclick="closeMobileMenu()">Contact</a>
+        <a href="login.html" class="mobile-menu-item" onclick="closeMobileMenu()">Student Login</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section loading" id="inicio">
+        <div class="hero-content">
+            <!-- Hero Background - CSS Jungle Pattern -->
+            <div class="hero-bg-pattern"></div>
+
+            <div class="hero-logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Jaguar mascot">
+                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+                    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
+                    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
+                    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                    <circle cx="40" cy="34" r="1" fill="#fff"/>
+                    <circle cx="64" cy="34" r="1" fill="#fff"/>
+                    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
+                    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
+                    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+                    <circle cx="28" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
+                    <circle cx="72" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
+                    <circle cx="35" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
+                    <circle cx="65" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
+                    <circle cx="44" cy="54" r="1.5" fill="#c8860a" opacity="0.4"/>
+                    <circle cx="56" cy="54" r="1.5" fill="#c8860a" opacity="0.4"/>
+                    <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M22 58 Q16 62 11 58" stroke="#e8a820" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M78 58 Q84 62 89 58" stroke="#e8a820" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <text x="50" y="80" text-anchor="middle" font-size="8" font-weight="bold" fill="#f9ca24" font-family="sans-serif">YAGUARÁ</text>
+                </svg>
+            </div>
+            <h1 class="main-title">El viaje del jaguar</h1>
+            <p class="subtitle">
+                Learn Spanish through the epic adventures of Yaguará in Colombia.
+                <strong>Total immersion</strong>, <strong>game-based learning</strong>, and <strong>authentic storytelling</strong>.
+            </p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🎮</span>
+                    <h3 class="feature-title">Interactive Games</h3>
+                    <p class="feature-desc">Learn while playing and solving survival challenges in the Colombian jungle</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🌍</span>
+                    <h3 class="feature-title">Total Immersion</h3>
+                    <p class="feature-desc">100% Spanish from day one, no translations. Experience authentic Colombia</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">📖</span>
+                    <h3 class="feature-title">Epic Story</h3>
+                    <p class="feature-desc">Follow Yaguará across Colombia in a unique adventure that creates emotional connection</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary" onclick="startFreeTrial()">
+                    🎮 Start Free Adventure
+                </a>
+                <a href="#precios" class="btn-secondary">
+                    💰 View Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section loading" id="precios">
+        <h2 class="pricing-title">Choose your learning journey</h2>
+        <p class="pricing-subtitle">🎉 Pass the final exam? Unlock PERMANENT access to that level!</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="discount-badge">2 months access</div>
+                <h3 style="color: var(--jaguar-gold); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700;">Single Level</h3>
+                <div class="price-tag">€15</div>
+                <p class="price-desc">Choose any level (A1, A2, B1, B2, C1, C2)</p>
+                <ul class="price-features">
+                    <li>2 months to complete your chosen level</li>
+                    <li>24 interactive lessons with games</li>
+                    <li>🏆 Pass final exam = PERMANENT ACCESS!</li>
+                    <li>Timer stops once you pass - keep it forever</li>
+                    <li>Practice mode: Review anytime, no scoring</li>
+                </ul>
+                <div class="payment-buttons">
+                    <button class="payment-btn bolt-btn" onclick="payWithBolt('single-level', 15)">
+                        <span>⚡ Pay with Bolt</span>
+                    </button>
+                    <div id="paypal-button-single" class="paypal-container">
+                        <button class="payment-btn paypal-btn" onclick="payWithPayPal('single-level', 15)">
+                            <span>💳 Pay with PayPal</span>
+                        </button>
+                    </div>
+                    <button class="payment-btn mercadopago-btn" onclick="payWithMercadoPago('single-level', 15)">
+                        <span>💳 MercadoPago</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="discount-badge">Best value!</div>
+                <h3 style="color: var(--jaguar-orange); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700;">Complete Course</h3>
+                <div class="price-tag">€55</div>
+                <p class="price-desc">All levels A1-C2 (12 months to complete all)</p>
+                <ul class="price-features">
+                    <li>12 months to complete ALL 6 levels</li>
+                    <li>144+ lessons + 5 exclusive bonus games</li>
+                    <li>🏆 Each passed exam = PERMANENT access to that level!</li>
+                    <li>Pass all 6 exams = Own the entire course forever</li>
+                    <li>Official completion certificate</li>
+                    <li>Build your permanent Spanish library level by level</li>
+                </ul>
+                <div class="payment-buttons">
+                    <button class="payment-btn bolt-btn" onclick="payWithBolt('complete-course', 55)">
+                        <span>⚡ Pay with Bolt</span>
+                    </button>
+                    <div id="paypal-button-complete" class="paypal-container">
+                        <button class="payment-btn paypal-btn" onclick="payWithPayPal('complete-course', 55)">
+                            <span>💳 Pay with PayPal</span>
+                        </button>
+                    </div>
+                    <button class="payment-btn mercadopago-btn" onclick="payWithMercadoPago('complete-course', 55)">
+                        <span>💳 MercadoPago</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="discount-badge">6 months access</div>
+                <h3 style="color: var(--jaguar-gold); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700;">Level Bundle</h3>
+                <div class="price-tag">€35</div>
+                <p class="price-desc">Choose 2-3 consecutive levels for progression</p>
+                <ul class="price-features">
+                    <li>6 months to complete your chosen bundle</li>
+                    <li>Choose: A1+A2, A2+B1+B2, B1+B2+C1, etc.</li>
+                    <li>Pass both levels = Own them forever</li>
+                    <li>Perfect for steady, pressure-free progression</li>
+                </ul>
+                <div class="payment-buttons">
+                    <button class="payment-btn bolt-btn" onclick="payWithBolt('level-bundle', 35)">
+                        <span>⚡ Pay with Bolt</span>
+                    </button>
+                    <div id="paypal-button-bundle" class="paypal-container">
+                        <button class="payment-btn paypal-btn" onclick="payWithPayPal('level-bundle', 35)">
+                            <span>💳 Pay with PayPal</span>
+                        </button>
+                    </div>
+                    <button class="payment-btn mercadopago-btn" onclick="payWithMercadoPago('level-bundle', 35)">
+                        <span>💳 MercadoPago</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section loading" id="curso">
+        <div class="about-content">
+            <h2>What makes El viaje del jaguar unique?</h2>
+            <p>
+                It's not just another Spanish course. It's an immersive experience where you follow the adventures of Yaguará,
+                a young warrior who must travel across Colombia to save his tribe. Each lesson is a new adventure,
+                and each exercise a mission to complete.
+            </p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🗺️</span>
+                    <h3 class="feature-title">Explore Colombia</h3>
+                    <p class="feature-desc">From the Amazon to the Caribbean Coast, discover the real geography, culture and traditions of Colombia</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🏆</span>
+                    <h3 class="feature-title">Achievement System</h3>
+                    <p class="feature-desc">Unlock badges, level up and compete with other students in weekly challenges</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🎭</span>
+                    <h3 class="feature-title">Memorable Characters</h3>
+                    <p class="feature-desc">Meet shamans, merchants, artists, and more characters who will teach you authentic Spanish</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section loading" id="contacto">
+        <div class="contact-container">
+            <h2 class="contact-title">Ready to start your adventure?</h2>
+            <p class="contact-subtitle">
+                Join thousands of students who are already experiencing Colombia while learning Spanish
+            </p>
+            <div class="contact-buttons">
+                <a href="#" class="btn-primary" onclick="startFreeTrial()">🎮 Try Free Lesson</a>
+                <a href="https://wa.me/19173067920?text=Hello,%20I'm%20interested%20in%20learning%20more%20about%20El%20Viaje%20del%20Jaguar"
+                   class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                    <span>📱</span> WhatsApp: +1 917 306 7920
+                </a>
+                <a href="mailto:info@babelfreeunion.com" class="btn-secondary">Contact by Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>El Viaje del Jaguar</h3>
+                <p>Learn Spanish through the epic adventures of Yaguará in Colombia. Total immersion with game-based learning.</p>
+                <p>Part of the Babel Free Union language learning ecosystem.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Levels Available</h3>
+                <p><a href="a1.html">A1 - Beginner</a></p>
+                <p><a href="a2.html">A2 - Elementary</a></p>
+                <p><a href="b1.html">B1 - Intermediate</a></p>
+                <p><a href="b2.html">B2 - Upper Intermediate</a></p>
+                <p><a href="c1.html">C1 - Advanced</a></p>
+                <p><a href="c2.html">C2 - Mastery</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact & Support</h3>
+                <p><a href="mailto:info@babelfreeunion.com">info@babelfreeunion.com</a></p>
+                <p><a href="https://wa.me/19173067920" target="_blank" rel="noopener noreferrer">WhatsApp: +1 917 306 7920</a></p>
+                <p><a href="index.html">Babel Free Union</a></p>
+                <p><a href="login.html">Student Login</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 El Viaje del Jaguar - Babel Free Union. All rights reserved.</p>
+            <p class="photo-credit">All graphics rendered inline — no external dependencies</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+
+            // Animate hamburger menu
+            const bars = menuToggle.querySelectorAll('.menu-bar');
+            if (mobileMenu.classList.contains('active')) {
+                bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const bars = menuToggle.querySelectorAll('.menu-bar');
+
+            mobileMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+
+            bars[0].style.transform = 'none';
+            bars[1].style.opacity = '1';
+            bars[2].style.transform = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fixed Free Trial Function - Now goes to login
+        function startFreeTrial() {
+            showNotification('🐆 ¡Bienvenido!', 'Redirecting to login for your free adventure...', 'info');
+
+            // Set free trial flag
+            localStorage.setItem('startingFreeTrial', 'true');
+            localStorage.setItem('freeTrialTimestamp', new Date().toISOString());
+
+            // Redirect to login page after short delay
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1500);
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.querySelector('.nav-bar').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Close mobile menu if open
+                closeMobileMenu();
+            });
+        });
+
+        // Navigation Scroll Effect
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav-bar');
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 100) {
+                nav.style.background = 'rgba(10, 61, 12, 0.98)';
+            } else {
+                nav.style.background = 'rgba(10, 61, 12, 0.95)';
+            }
+
+            // Hide/show nav on scroll
+            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            lastScrollY = currentScrollY;
+        });
+
+        // Enhanced Payment Functions - Now redirect to login after payment
+        function payWithBolt(plan, amount) {
+            showNotification('⚡ Bolt Payment', `Processing €${amount} for ${plan}...`, 'info');
+
+            setTimeout(() => {
+                const confirmed = confirm(`Confirm payment of €${amount} for ${plan} using Bolt?`);
+                if (confirmed) {
+                    processPayment(plan, amount, 'bolt', 'bolt_token_' + Date.now());
+                }
+            }, 1000);
+        }
+
+        function payWithPayPal(plan, amount) {
+            showNotification('💳 PayPal Payment', `Redirecting to secure PayPal checkout...`, 'info');
+
+            setTimeout(() => {
+                const confirmed = confirm(`Redirect to PayPal to pay €${amount} for ${plan}?`);
+                if (confirmed) {
+                    // In production, this would redirect to actual PayPal
+                    setTimeout(() => {
+                        processPayment(plan, amount, 'paypal', 'paypal_token_' + Date.now());
+                    }, 2000);
+                }
+            }, 1000);
+        }
+
+        function payWithMercadoPago(plan, amount) {
+            showNotification('💳 MercadoPago', `Processing payment for Latin America...`, 'info');
+
+            setTimeout(() => {
+                const confirmed = confirm(`Pay €${amount} for ${plan} using MercadoPago?`);
+                if (confirmed) {
+                    processPayment(plan, amount, 'mercadopago', 'mp_token_' + Date.now());
+                }
+            }, 1000);
+        }
+
+        function processPayment(plan, amount, method, token) {
+            const studentEmail = prompt("Enter your email for account creation:") || 'student@example.com';
+
+            const paymentData = {
+                plan: plan,
+                amount: amount,
+                method: method,
+                token: token,
+                currency: 'EUR',
+                timestamp: new Date().toISOString(),
+                studentEmail: studentEmail,
+                paymentCompleted: true
+            };
+
+            showNotification('✅ Payment Successful!', `Redirecting to login to access your course...`, 'success');
+
+            // Store payment data for retrieval after login
+            localStorage.setItem('pendingPayment', JSON.stringify(paymentData));
+            localStorage.setItem('paymentCompleted', 'true');
+
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 2000);
+        }
+
+        // Enhanced Notification System
+        function showNotification(title, message, type = 'info') {
+            // Remove existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notif => notif.remove());
+
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'polite');
+
+            notification.innerHTML = `
+                <div style="font-size: 1.1em; margin-bottom: 4px; font-weight: 700;">${title}</div>
+                <div style="font-size: 0.9em; opacity: 0.9;">${message}</div>
+            `;
+
+            document.body.appendChild(notification);
+
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+
+            // Hide notification
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 400);
+            }, 4000);
+        }
+
+        // Loading Animation System
+        function initLoadingAnimations() {
+            if ('IntersectionObserver' in window) {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.classList.add('loaded');
+                            }, index * 100); // Stagger animations
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                document.querySelectorAll('.loading').forEach(el => {
+                    observer.observe(el);
+                });
+            } else {
+                // Fallback for older browsers
+                document.querySelectorAll('.loading').forEach(el => {
+                    el.classList.add('loaded');
+                });
+            }
+        }
+
+        // No external images - all graphics are inline SVG/CSS
+
+        // Initialize everything when DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🐆 El Viaje del Jaguar loading...');
+
+            try {
+                // Initialize systems
+                initLoadingAnimations();
+
+                console.log('✅ El Viaje del Jaguar loaded successfully');
+
+                // Show welcome message for first-time visitors
+                if (!localStorage.getItem('visitedBefore')) {
+                    setTimeout(() => {
+                        showNotification('🐆 ¡Bienvenido!', 'Welcome to your Spanish adventure with Yaguará!', 'success');
+                        localStorage.setItem('visitedBefore', 'true');
+                    }, 1000);
+                }
+
+                // Check if user came back from successful payment
+                const paymentCompleted = localStorage.getItem('paymentCompleted');
+                if (paymentCompleted === 'true') {
+                    showNotification('💳 Payment Confirmed', 'Click "Student Login" to access your course!', 'success');
+                }
+            } catch (error) {
+                console.error('Error loading El Viaje del Jaguar:', error);
+                showNotification('⚠️ Loading Error', 'Some features may not work properly. Please refresh the page.', 'warning');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+
+            if (mobileMenu.classList.contains('active') &&
+                !mobileMenu.contains(event.target) &&
+                !menuToggle.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+
+                // Remove any notifications
+                const notifications = document.querySelectorAll('.notification');
+                notifications.forEach(notif => {
+                    notif.classList.remove('show');
+                    setTimeout(() => notif.remove(), 400);
+                });
+            }
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            console.log('🐆 Page fully loaded');
+
+            // Preload login page
+            const loginLink = document.createElement('link');
+            loginLink.rel = 'prefetch';
+            loginLink.href = 'login.html';
+            document.head.appendChild(loginLink);
+        });
+    </script>
+</body>
+</html>

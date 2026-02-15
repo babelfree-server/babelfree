@@ -1,0 +1,2519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta demo - El viaje del jaguar</title>
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a3d0c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --forest-dark: #0a3d0c;
+            --forest-medium: #1a5928;
+            --forest-light: #2d6f3d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --demo-blue: #3498db;
+            --warning-orange: #ff9800;
+            --error-red: #e74c3c;
+            --amazon-green: #0f4c28;
+            --andes-brown: #8b4513;
+            --caribbean-blue: #0077be;
+            --pacific-teal: #008080;
+            --llanos-yellow: #ffd700;
+            --sierra-purple: #663399;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --border-radius: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-medium) 50%, var(--forest-light) 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Colombian Environment Background */
+        .bg-environment {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            pointer-events: none;
+            background: radial-gradient(circle at 30% 70%, rgba(15, 76, 40, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 215, 0, 0.2) 0%, transparent 50%);
+            animation: environmentShift 20s ease-in-out infinite;
+        }
+
+        @keyframes environmentShift {
+            0%, 100% { transform: scale(1) rotate(0deg); filter: hue-rotate(0deg); }
+            33% { transform: scale(1.1) rotate(1deg); filter: hue-rotate(60deg); }
+            66% { transform: scale(0.95) rotate(-1deg); filter: hue-rotate(120deg); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Header with Colombian Branding */
+        .demo-header {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 3px solid var(--demo-blue);
+            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg,
+                rgba(255, 215, 0, 0.1) 0%,
+                rgba(0, 119, 190, 0.1) 50%,
+                rgba(231, 76, 60, 0.1) 100%);
+            z-index: -1;
+        }
+
+        .demo-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--demo-blue), var(--jaguar-gold));
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--demo-blue);
+            animation: jaguarPulse 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-logo svg {
+            width: 90%;
+            height: 90%;
+        }
+
+        @keyframes jaguarPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(52, 152, 219, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(249, 202, 36, 0.8); }
+        }
+
+        .demo-title {
+            font-size: 2.8rem;
+            color: var(--demo-blue);
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .demo-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .colombia-badge {
+            background: linear-gradient(135deg, #ffde00, #0066cc, #cc0000);
+            background-size: 300% 100%;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 10px 0;
+            display: inline-block;
+            animation: colombiaFlag 4s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes colombiaFlag {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Colombian Journey Map */
+        .colombia-journey {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px solid var(--jaguar-gold);
+        }
+
+        .journey-title {
+            color: var(--jaguar-gold);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .journey-map {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .region-card {
+            background: var(--glass-bg);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .region-card.amazon { border-color: var(--amazon-green); }
+        .region-card.andes { border-color: var(--andes-brown); }
+        .region-card.caribbean { border-color: var(--caribbean-blue); }
+        .region-card.pacific { border-color: var(--pacific-teal); }
+        .region-card.llanos { border-color: var(--llanos-yellow); }
+        .region-card.sierra { border-color: var(--sierra-purple); }
+
+        .region-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .region-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .region-level {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--jaguar-gold);
+        }
+
+        .region-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .region-ecosystem {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .region-progress {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 8px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .region-progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.8s ease;
+        }
+
+        .region-progress-fill.amazon { background: linear-gradient(90deg, var(--amazon-green), #2ecc71); }
+        .region-progress-fill.andes { background: linear-gradient(90deg, var(--andes-brown), #d35400); }
+        .region-progress-fill.caribbean { background: linear-gradient(90deg, var(--caribbean-blue), #3498db); }
+        .region-progress-fill.pacific { background: linear-gradient(90deg, var(--pacific-teal), #1abc9c); }
+        .region-progress-fill.llanos { background: linear-gradient(90deg, var(--llanos-yellow), #f39c12); }
+        .region-progress-fill.sierra { background: linear-gradient(90deg, var(--sierra-purple), #9b59b6); }
+
+        /* Enhanced Demo Options */
+        .demo-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .demo-option {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                rgba(255, 215, 0, 0.05) 0%,
+                rgba(76, 175, 80, 0.05) 50%,
+                rgba(52, 152, 219, 0.05) 100%);
+            z-index: -1;
+        }
+
+        .demo-option:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--demo-blue);
+            box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4);
+        }
+
+        .demo-option.recommended {
+            border-color: var(--success-green);
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .demo-option.recommended::after {
+            content: 'Recomendado';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--success-green);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .option-icon {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .option-title {
+            font-size: 1.6rem;
+            color: var(--demo-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .option-description {
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .option-details {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .detail-label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .yaguara-story {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .conservation-impact {
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid var(--success-green);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .conservation-title {
+            color: var(--success-green);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .conservation-stats {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .conservation-stat {
+            text-align: center;
+        }
+
+        .conservation-number {
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .conservation-label {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .option-btn {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            background: linear-gradient(135deg, var(--demo-blue), #5dade2);
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .option-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+        }
+
+        .option-btn.recommended {
+            background: linear-gradient(135deg, var(--success-green), #66bb6a);
+        }
+
+        /* Gaming Elements Integration */
+        .mini-games-preview {
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid var(--jaguar-orange);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .games-title {
+            color: var(--jaguar-orange);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .game-item {
+            background: rgba(255, 107, 53, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .game-item:hover {
+            background: rgba(255, 107, 53, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Enhanced Current Status */
+        .current-demo-status {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 25px;
+            border: 2px solid var(--warning-orange);
+            position: relative;
+        }
+
+        .status-title {
+            color: var(--warning-orange);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-content {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .yaguara-companion {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            animation: jaguarBreathe 4s ease-in-out infinite;
+        }
+
+        @keyframes jaguarBreathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Enhanced Admin Panel */
+        .admin-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+            border: 2px solid rgba(255, 107, 53, 0.4);
+        }
+
+        .admin-title {
+            color: var(--jaguar-orange);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .admin-btn {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(255, 107, 53, 0.2);
+            color: white;
+            border: 2px solid var(--jaguar-orange);
+            font-size: 0.9rem;
+        }
+
+        .admin-btn:hover {
+            background: rgba(255, 107, 53, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .admin-btn.danger {
+            background: rgba(231, 76, 60, 0.2);
+            border-color: #e74c3c;
+        }
+
+        .admin-btn.danger:hover {
+            background: rgba(231, 76, 60, 0.4);
+        }
+
+        /* Enhanced Quick Links */
+        .quick-links {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+            border: 2px solid rgba(249, 202, 36, 0.4);
+        }
+
+        .links-title {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .quick-link {
+            background: rgba(249, 202, 36, 0.1);
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 15px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text-light);
+            text-align: center;
+            transition: var(--transition);
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(249, 202, 36, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .quick-link:hover::before {
+            left: 100%;
+        }
+
+        .quick-link:hover {
+            background: rgba(249, 202, 36, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(249, 202, 36, 0.3);
+        }
+
+        .link-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .link-text {
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .link-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .link-region {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            color: var(--jaguar-gold);
+            display: inline-block;
+        }
+
+        /* Enhanced Notifications */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(52, 152, 219, 0.95);
+            color: white;
+            padding: 1.2rem 1.8rem;
+            border-radius: 15px;
+            font-weight: 600;
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 350px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            background: rgba(76, 175, 80, 0.95);
+            border-color: var(--success-green);
+        }
+
+        .notification.warning {
+            background: rgba(255, 152, 0, 0.95);
+            border-color: var(--warning-orange);
+        }
+
+        .notification.error {
+            background: rgba(231, 76, 60, 0.95);
+            border-color: var(--error-red);
+        }
+
+        .notification.colombia {
+            background: linear-gradient(135deg, #ffde00, #0066cc, #cc0000);
+            border-color: var(--jaguar-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .demo-options {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-map {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-controls {
+                grid-template-columns: 1fr;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .games-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .demo-title {
+                font-size: 2.2rem;
+            }
+
+            .option-title {
+                font-size: 1.3rem;
+            }
+
+            .option-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+            filter: blur(1px);
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            margin: -20px 0 0 -20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid var(--jaguar-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Accessibility Improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus indicators */
+        button:focus,
+        .demo-option:focus,
+        .quick-link:focus {
+            outline: 3px solid var(--jaguar-gold);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --glass-bg: rgba(0, 0, 0, 0.8);
+                --text-light: #ffffff;
+                --text-muted: #cccccc;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-environment"></div>
+
+    <div class="container">
+        <!-- Enhanced Header with Colombian Branding -->
+        <div class="demo-header">
+            <div class="demo-logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
+                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+                    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
+                    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
+                    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                    <circle cx="40" cy="34" r="1" fill="#fff"/>
+                    <circle cx="64" cy="34" r="1" fill="#fff"/>
+                    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
+                    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
+                    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+                    <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h1 class="demo-title">Sistema de demostraci&oacute;n</h1>
+            <p class="demo-subtitle">Experimenta "El viaje del jaguar" por Colombia</p>
+            <div class="colombia-badge">Inmersi&oacute;n cultural colombiana aut&eacute;ntica</div>
+        </div>
+
+        <!-- Colombian Journey Overview -->
+        <div class="colombia-journey">
+            <h2 class="journey-title">
+                El viaje de Yaguar&aacute; por Colombia
+            </h2>
+            <div class="journey-map" id="journeyMap">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="yaguara-story">
+                "Sigue a Yaguar&aacute; en su &eacute;pico viaje por los diversos ecosistemas de Colombia,
+                desde la selva amaz&oacute;nica hasta las monta&ntilde;as de la Sierra Nevada.
+                Cada regi&oacute;n representa un nuevo desaf&iacute;o de supervivencia y una oportunidad
+                para dominar el espa&ntilde;ol colombiano aut&eacute;ntico."
+            </div>
+        </div>
+
+        <!-- Current Demo Status -->
+        <div class="current-demo-status" id="currentStatus">
+            <div class="yaguara-companion">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
+                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
+                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
+                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
+                    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
+                    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
+                    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
+                    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
+                    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
+                    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+                </svg>
+            </div>
+            <div class="status-title">
+                Estado actual de la demo
+            </div>
+            <div class="status-content" id="statusContent">
+                No hay datos de demo activos. Selecciona una opci&oacute;n abajo para comenzar tu viaje con Yaguar&aacute;.
+            </div>
+        </div>
+
+        <!-- Enhanced Demo Options -->
+        <div class="demo-options">
+            <!-- Complete Journey Demo -->
+            <div class="demo-option recommended" onclick="setupDemo('complete')">
+                <div class="option-icon">&#11088;</div>
+                <h3 class="option-title">Viaje completo de Yaguar&aacute;</h3>
+                <p class="option-description">
+                    Experimenta el nivel A1 completo con progreso realista de supervivencia
+                </p>
+
+                <div class="yaguara-story">
+                    "Yaguar&aacute; ha dominado la selva amaz&oacute;nica y est&aacute; listo para nuevos territorios"
+                </div>
+
+                <div class="option-details">
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Regi&oacute;n Actual</span>
+                            <span class="detail-value">Amazon &rarr; Andes</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Progreso A1</span>
+                            <span class="detail-value">75% Leticia</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Especies Aprendidas</span>
+                            <span class="detail-value">45/50</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Supervivencia</span>
+                            <span class="detail-value">850 pts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conservation-impact">
+                    <div class="conservation-title">Impacto de Conservaci&oacute;n</div>
+                    <div class="conservation-stats">
+                        <div class="conservation-stat">
+                            <span class="conservation-number">23</span>
+                            <span class="conservation-label">&Aacute;rboles protegidos</span>
+                        </div>
+                        <div class="conservation-stat">
+                            <span class="conservation-number">12</span>
+                            <span class="conservation-label">Especies salvadas</span>
+                        </div>
+                        <div class="conservation-stat">
+                            <span class="conservation-number">5</span>
+                            <span class="conservation-label">R&iacute;os limpiados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-games-preview">
+                    <div class="games-title">Mini-juegos Incluidos</div>
+                    <div class="games-grid">
+                        <div class="game-item">Navegaci&oacute;n</div>
+                        <div class="game-item">Ecosistemas</div>
+                        <div class="game-item">Di&aacute;logos</div>
+                        <div class="game-item">Patrones</div>
+                        <div class="game-item">Mercado Virtual</div>
+                        <div class="game-item">Radio Selva</div>
+                    </div>
+                </div>
+
+                <button class="option-btn recommended">Iniciar Viaje Completo</button>
+            </div>
+
+            <!-- Beginner Demo -->
+            <div class="demo-option" onclick="setupDemo('beginner')">
+                <div class="option-icon">&#127793;</div>
+                <h3 class="option-title">Yaguar&aacute; cachorro</h3>
+                <p class="option-description">
+                    Comienza desde el nacimiento en la selva amaz&oacute;nica como un jaguar joven
+                </p>
+
+                <div class="yaguara-story">
+                    "Yaguar&aacute; acaba de abrir los ojos en la densa selva de Leticia..."
+                </div>
+
+                <div class="option-details">
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Regi&oacute;n Inicial</span>
+                            <span class="detail-value">Amazon - Leticia</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Progreso A1</span>
+                            <span class="detail-value">0% - Despertar</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Habilidades</span>
+                            <span class="detail-value">B&aacute;sicas</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Primera Misi&oacute;n</span>
+                            <span class="detail-value">Familia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conservation-impact">
+                    <div class="conservation-title">Potencial de Conservaci&oacute;n</div>
+                    <div class="conservation-stats">
+                        <div class="conservation-stat">
+                            <span class="conservation-number">0</span>
+                            <span class="conservation-label">Listo para aprender</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="option-btn">Empezar el Despertar</button>
+            </div>
+
+            <!-- Advanced Student Demo -->
+            <div class="demo-option" onclick="setupDemo('advanced')">
+                <div class="option-icon">&#128640;</div>
+                <h3 class="option-title">Yaguar&aacute; explorador</h3>
+                <p class="option-description">
+                    Experimenta A1 avanzado en la regi&oacute;n cafetera con aprendizaje espiral
+                </p>
+
+                <div class="yaguara-story">
+                    "Yaguar&aacute; domina el Amazon y explora las monta&ntilde;as del Eje Cafetero..."
+                </div>
+
+                <div class="option-details">
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Regi&oacute;n Actual</span>
+                            <span class="detail-value">Andes - Manizales</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">A1 Avanzado</span>
+                            <span class="detail-value">50% Cafetero</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Palabras Dominadas</span>
+                            <span class="detail-value">250+</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Historia Construida</span>
+                            <span class="detail-value">75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conservation-impact">
+                    <div class="conservation-title">Impacto Cafetero</div>
+                    <div class="conservation-stats">
+                        <div class="conservation-stat">
+                            <span class="conservation-number">15</span>
+                            <span class="conservation-label">Fincas protegidas</span>
+                        </div>
+                        <div class="conservation-stat">
+                            <span class="conservation-number">8</span>
+                            <span class="conservation-label">Aves salvadas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="option-btn">Demo Explorador</button>
+            </div>
+
+            <!-- Exam Ready Demo -->
+            <div class="demo-option" onclick="setupDemo('examReady')">
+                <div class="option-icon">&#128218;</div>
+                <h3 class="option-title">Yaguar&aacute; maestro</h3>
+                <p class="option-description">
+                    Experimenta el examen final con dominio completo del ecosistema A1
+                </p>
+
+                <div class="yaguara-story">
+                    "Yaguar&aacute; ha conquistado todos los territorios A1 y est&aacute; listo para el examen de maestr&iacute;a..."
+                </div>
+
+                <div class="option-details">
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Territorios</span>
+                            <span class="detail-value">Amazon + Andes</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Dominio A1</span>
+                            <span class="detail-value">100% Completo</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Vocabulario</span>
+                            <span class="detail-value">75/75 Especies</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Examen Final</span>
+                            <span class="detail-value">Disponible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conservation-impact">
+                    <div class="conservation-title">Legado de Conservaci&oacute;n</div>
+                    <div class="conservation-stats">
+                        <div class="conservation-stat">
+                            <span class="conservation-number">50</span>
+                            <span class="conservation-label">&Aacute;reas protegidas</span>
+                        </div>
+                        <div class="conservation-stat">
+                            <span class="conservation-number">25</span>
+                            <span class="conservation-label">Especies documentadas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="option-btn">Examen de Maestr&iacute;a</button>
+            </div>
+        </div>
+
+        <!-- Enhanced Admin Panel -->
+        <div class="admin-panel">
+            <div class="admin-title">Panel de administraci&oacute;n - Territorio de Yaguar&aacute;</div>
+            <div class="admin-controls">
+                <button class="admin-btn" onclick="viewAllProgress()">Ver Progreso Completo</button>
+                <button class="admin-btn" onclick="exportDemoData()">Exportar Datos del Viaje</button>
+                <button class="admin-btn" onclick="importDemoData()">Importar Progreso</button>
+                <button class="admin-btn" onclick="resetSpecificRegion()">Resetear Regi&oacute;n</button>
+                <button class="admin-btn" onclick="customizeProgress()">Personalizar Viaje</button>
+                <button class="admin-btn" onclick="showConservationImpact()">Impacto Ambiental</button>
+                <button class="admin-btn danger" onclick="clearAllDemoData()">Limpiar Todo</button>
+            </div>
+        </div>
+
+        <!-- Enhanced Quick Links -->
+        <div class="quick-links">
+            <div class="links-title">Territorios de Yaguar&aacute; - Acceso directo</div>
+            <div class="links-grid">
+                <a href="a1-amazon.html" class="quick-link">
+                    <span class="link-icon">&#127968;</span>
+                    <div class="link-text">Centro de Comando A1</div>
+                    <div class="link-desc">Panel principal del territorio</div>
+                    <div class="link-region">Colombia Central</div>
+                </a>
+                <a href="a1-amazon.html" class="quick-link">
+                    <span class="link-icon">&#127793;</span>
+                    <div class="link-text">Amazon - El Despertar</div>
+                    <div class="link-desc">Selva amaz&oacute;nica - Leticia</div>
+                    <div class="link-region">A1 B&aacute;sico</div>
+                </a>
+                <a href="a1-andes.html" class="quick-link">
+                    <span class="link-icon">&#127919;</span>
+                    <div class="link-text">Andes - La Exploraci&oacute;n</div>
+                    <div class="link-desc">Eje Cafetero - Manizales</div>
+                    <div class="link-region">A1 Avanzado</div>
+                </a>
+                <a href="a1-exam.html" class="quick-link">
+                    <span class="link-icon">&#128218;</span>
+                    <div class="link-text">Examen de Maestr&iacute;a</div>
+                    <div class="link-desc">Certificaci&oacute;n de territorio</div>
+                    <div class="link-region">Evaluaci&oacute;n Final</div>
+                </a>
+                <a href="demo.html" class="quick-link">
+                    <span class="link-icon">&#127918;</span>
+                    <div class="link-text">Sistema Demo</div>
+                    <div class="link-desc">Control de cuentas de prueba</div>
+                    <div class="link-region">Administraci&oacute;n</div>
+                </a>
+                <a href="#" class="quick-link" onclick="showBonusGames()">
+                    <span class="link-icon">&#127942;</span>
+                    <div class="link-text">Juegos Bonus</div>
+                    <div class="link-desc">Mercado Virtual, Radio Selva</div>
+                    <div class="link-region">Contenido Extra</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Demo Account System with Colombian Integration
+        class ColombianDemoSystem {
+            constructor() {
+                this.demoProfiles = this.initializeDemoProfiles();
+                this.colombianRegions = this.initializeColombianRegions();
+                this.conservationData = this.initializeConservationData();
+                this.currentDemo = null;
+                this.initializeSystem();
+            }
+
+            initializeColombianRegions() {
+                return {
+                    A1: {
+                        name: "Amazon",
+                        fullName: "Selva Amazónica",
+                        city: "Leticia",
+                        ecosystem: "Bosque Tropical",
+                        story: "El despertar",
+                        challenge: "Supervivencia básica en la selva",
+                        species: ["Jaguar", "Anaconda", "Guacamaya", "Ceiba", "Cacao"],
+                        culturalElements: ["Pueblos indígenas", "Medicina tradicional", "Río Amazonas"],
+                        conservationGoals: { trees: 50, species: 15, rivers: 3 },
+                        completed: false,
+                        progress: 0
+                    },
+                    A2: {
+                        name: "Andes",
+                        fullName: "Cordillera de los Andes",
+                        city: "Manizales",
+                        ecosystem: "Montaña Cafetera",
+                        story: "La exploración",
+                        challenge: "Adaptación a altitudes y clima",
+                        species: ["Oso de Anteojos", "Quetzal", "Café", "Guadua", "Orquídeas"],
+                        culturalElements: ["Cultura Paisa", "Café de especialidad", "Arquitectura colonial"],
+                        conservationGoals: { farms: 20, birds: 25, watersheds: 5 },
+                        completed: false,
+                        progress: 0
+                    },
+                    B1: {
+                        name: "Caribbean",
+                        fullName: "Costa Caribeña",
+                        city: "Cartagena",
+                        ecosystem: "Costa y Manglares",
+                        story: "Los desafíos",
+                        challenge: "Navegación costera y urbana",
+                        species: ["Manatí", "Iguana", "Manglar", "Coral", "Pelícano"],
+                        culturalElements: ["Cultura Afrocaribe", "Música vallenata", "Arquitectura colonial"],
+                        conservationGoals: { mangroves: 30, coral: 15, beaches: 10 },
+                        completed: false,
+                        progress: 0
+                    },
+                    B2: {
+                        name: "Pacific",
+                        fullName: "Costa Pacífica - Chocó",
+                        city: "Quibdó",
+                        ecosystem: "Bosque Húmedo Tropical",
+                        story: "La madurez",
+                        challenge: "Biodiversidad extrema",
+                        species: ["Ballena Jorobada", "Rana Dorada", "Palma", "Heliconias", "Tucán"],
+                        culturalElements: ["Comunidades afro", "Música del Pacífico", "Artesanías"],
+                        conservationGoals: { biodiversity: 100, endemic: 40, forests: 25 },
+                        completed: false,
+                        progress: 0
+                    },
+                    C1: {
+                        name: "Llanos",
+                        fullName: "Llanos Orientales",
+                        city: "Villavicencio",
+                        ecosystem: "Sabana y Ganadería",
+                        story: "El legado",
+                        challenge: "Coexistencia con ganadería",
+                        species: ["Chigüiro", "Caimán", "Palma Moriche", "Garceta", "Venado"],
+                        culturalElements: ["Cultura Llanera", "Joropo", "Ganadería sostenible"],
+                        conservationGoals: { grasslands: 200, wetlands: 15, coexistence: 50 },
+                        completed: false,
+                        progress: 0
+                    },
+                    C2: {
+                        name: "Sierra",
+                        fullName: "Sierra Nevada de Santa Marta",
+                        city: "Santa Marta",
+                        ecosystem: "Montaña Sagrada",
+                        story: "La sabiduría",
+                        challenge: "Conexión espiritual con la naturaleza",
+                        species: ["Cóndor", "Oso Frontino", "Frailejón", "Colibrí", "Orquídea Nativa"],
+                        culturalElements: ["Pueblos ancestrales", "Ciudad Perdida", "Sabiduría indígena"],
+                        conservationGoals: { sacred: 1, wisdom: 1, legacy: 1 },
+                        completed: false,
+                        progress: 0
+                    }
+                };
+            }
+
+            initializeConservationData() {
+                return {
+                    globalImpact: {
+                        treesProtected: 0,
+                        speciesSaved: 0,
+                        riversCleaned: 0,
+                        farmsProtected: 0,
+                        birdsDocumented: 0,
+                        coralsRestored: 0,
+                        biodiversityPreserved: 0
+                    },
+                    milestones: [
+                        { threshold: 10, award: "Guardián Junior", icon: "🌱" },
+                        { threshold: 50, award: "Protector del Bosque", icon: "🌳" },
+                        { threshold: 100, award: "Maestro de la Conservación", icon: "🏆" },
+                        { threshold: 200, award: "Leyenda Ambiental", icon: "🎖️" }
+                    ]
+                };
+            }
+
+            initializeDemoProfiles() {
+                return {
+                    complete: {
+                        name: "Viaje completo de Yaguará",
+                        description: "Progreso realista de un jaguar explorador experimentado",
+                        yaguaraStage: "Explorador dominante del Amazon, listo para los Andes",
+                        basic: {
+                            completedDestinations: { 1: true, 2: true, 3: true },
+                            totalScore: 850,
+                            gamesCompleted: 75,
+                            wordsLearned: 45,
+                            currentStreak: 12,
+                            totalTimeMinutes: 450,
+                            conservationPoints: 150
+                        },
+                        advanced: {
+                            completedDestinations: { 5: true },
+                            totalScore: 350,
+                            gamesCompleted: 35,
+                            newWordsLearned: 25,
+                            wordsReviewed: 15,
+                            currentStreak: 12,
+                            earnedWords: [
+                                'hola', 'soy', 'me llamo', 'azul', 'verde', 'familia', 'madre', 'padre',
+                                'lunes', 'martes', 'enero', 'febrero', 'mañana', 'tarde', 'agua', 'río',
+                                'selva', 'árbol', 'animal', 'jaguar', 'anaconda', 'guacamaya', 'ceiba',
+                                'cacao', 'medicina', 'indígena', 'conservar', 'proteger', 'naturaleza',
+                                'supervivencia', 'territorio', 'caza', 'refugio', 'familia'
+                            ],
+                            storyProgress: 0.75,
+                            wordsNeededForStory: 50,
+                            conservationImpact: {
+                                treesProtected: 23,
+                                speciesSaved: 12,
+                                riversCleaned: 5
+                            }
+                        },
+                        exam: null,
+                        regionProgress: {
+                            Amazon: { completed: true, progress: 100, conservationScore: 150 },
+                            Andes: { completed: false, progress: 25, conservationScore: 45 }
+                        }
+                    },
+                    beginner: {
+                        name: "Yaguará cachorro",
+                        description: "Un jaguar joven que acaba de abrir los ojos en Leticia",
+                        yaguaraStage: "Cachorro recién nacido, aprendiendo supervivencia básica",
+                        basic: {
+                            completedDestinations: {},
+                            totalScore: 0,
+                            gamesCompleted: 0,
+                            wordsLearned: 0,
+                            currentStreak: 0,
+                            totalTimeMinutes: 0,
+                            conservationPoints: 0
+                        },
+                        advanced: null,
+                        exam: null,
+                        regionProgress: {
+                            Amazon: { completed: false, progress: 0, conservationScore: 0 }
+                        }
+                    },
+                    advanced: {
+                        name: "Yaguará explorador",
+                        description: "Jaguar experimentado conquistando la región cafetera",
+                        yaguaraStage: "Explorador hábil, dominando territorios montañosos",
+                        basic: {
+                            completedDestinations: { 1: true, 2: true, 3: true, 4: true },
+                            totalScore: 1000,
+                            gamesCompleted: 100,
+                            wordsLearned: 50,
+                            currentStreak: 15,
+                            totalTimeMinutes: 600,
+                            conservationPoints: 200
+                        },
+                        advanced: {
+                            completedDestinations: { 5: true, 6: true },
+                            totalScore: 500,
+                            gamesCompleted: 60,
+                            newWordsLearned: 35,
+                            wordsReviewed: 25,
+                            currentStreak: 15,
+                            earnedWords: [
+                                'hola', 'soy', 'me llamo', 'azul', 'rojo', 'verde', 'familia', 'madre', 'padre',
+                                'hermano', 'hermana', 'lunes', 'martes', 'miércoles', 'enero', 'febrero', 'marzo',
+                                'hora', 'mañana', 'tarde', 'noche', 'agua', 'café', 'montaña', 'valle',
+                                'finca', 'campesino', 'cosecha', 'grano', 'aroma', 'cultura', 'paisa',
+                                'antioqueño', 'medellín', 'manizales', 'pereira', 'armenia', 'oso', 'anteojos',
+                                'quetzal', 'guadua', 'orquídea', 'conservación', 'sostenible', 'biodiversidad'
+                            ],
+                            storyProgress: 0.80,
+                            wordsNeededForStory: 50,
+                            conservationImpact: {
+                                treesProtected: 45,
+                                speciesSaved: 20,
+                                riversCleaned: 8,
+                                farmsProtected: 15,
+                                birdsDocumented: 8
+                            }
+                        },
+                        exam: null,
+                        regionProgress: {
+                            Amazon: { completed: true, progress: 100, conservationScore: 200 },
+                            Andes: { completed: false, progress: 65, conservationScore: 120 }
+                        }
+                    },
+                    examReady: {
+                        name: "Yaguará maestro",
+                        description: "Jaguar dominante listo para el examen de maestría territorial",
+                        yaguaraStage: "Maestro de territorios, guardián de la sabiduría ancestral",
+                        basic: {
+                            completedDestinations: { 1: true, 2: true, 3: true, 4: true },
+                            totalScore: 1000,
+                            gamesCompleted: 100,
+                            wordsLearned: 50,
+                            currentStreak: 20,
+                            totalTimeMinutes: 800,
+                            conservationPoints: 300
+                        },
+                        advanced: {
+                            completedDestinations: { 5: true, 6: true, 7: true, 8: true },
+                            totalScore: 750,
+                            gamesCompleted: 100,
+                            newWordsLearned: 50,
+                            wordsReviewed: 40,
+                            currentStreak: 20,
+                            earnedWords: [
+                                'selva', 'amazonas', 'río', 'anaconda', 'guacamaya', 'ceiba', 'cacao',
+                                'indígena', 'shamán', 'medicina', 'tradicional', 'yagé', 'ayahuasca',
+                                'montaña', 'café', 'finca', 'campesino', 'cosecha', 'antioquia', 'paisa',
+                                'oso', 'anteojos', 'quetzal', 'guadua', 'orquídea', 'cordillera',
+                                'conservación', 'biodiversidad', 'ecosistema', 'sostenible', 'proteger',
+                                'especies', 'hábitat', 'territorio', 'supervivencia', 'adaptación',
+                                'colombia', 'colombiano', 'cultura', 'tradición', 'ancestral', 'sabiduría',
+                                'comunidad', 'respeto', 'armonía', 'naturaleza', 'pachamama', 'madre tierra'
+                            ],
+                            storyProgress: 1.0,
+                            wordsNeededForStory: 50,
+                            conservationImpact: {
+                                treesProtected: 75,
+                                speciesSaved: 35,
+                                riversCleaned: 12,
+                                farmsProtected: 25,
+                                birdsDocumented: 15,
+                                indigenousCultures: 3,
+                                territoryMastered: 2
+                            }
+                        },
+                        exam: {
+                            available: true,
+                            attempts: 0,
+                            bestScore: null
+                        },
+                        regionProgress: {
+                            Amazon: { completed: true, progress: 100, conservationScore: 300 },
+                            Andes: { completed: true, progress: 100, conservationScore: 250 }
+                        }
+                    }
+                };
+            }
+
+            initializeSystem() {
+                this.loadJourneyMap();
+                this.updateCurrentStatus();
+                this.registerServiceWorker();
+                console.log('Colombian Demo System initialized');
+            }
+
+            registerServiceWorker() {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('Service Worker registered:', registration);
+                        })
+                        .catch(error => {
+                            console.log('Service Worker registration failed:', error);
+                        });
+                }
+            }
+
+            loadJourneyMap() {
+                const journeyMap = document.getElementById('journeyMap');
+                if (!journeyMap) return;
+
+                const regions = this.colombianRegions;
+                journeyMap.innerHTML = '';
+
+                Object.entries(regions).forEach(([level, region]) => {
+                    const regionCard = document.createElement('div');
+                    regionCard.className = `region-card ${region.name.toLowerCase()}`;
+                    regionCard.innerHTML = `
+                        <div class="region-header">
+                            <div>
+                                <div class="region-level">${level}</div>
+                                <div class="region-name">${region.fullName}</div>
+                                <div class="region-ecosystem">${region.city} - ${region.ecosystem}</div>
+                            </div>
+                            <div style="text-align: right; font-size: 2rem;">
+                                ${this.getRegionIcon(region.name)}
+                            </div>
+                        </div>
+                        <div class="region-progress">
+                            <div class="region-progress-fill ${region.name.toLowerCase()}"
+                                 style="width: ${region.progress}%;"></div>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <strong style="color: var(--jaguar-gold);">${region.story}</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">${region.challenge}</span>
+                        </div>
+                        <div style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 5px;">
+                            ${region.species.slice(0, 3).map(species =>
+                                `<span style="background: rgba(255,255,255,0.1); padding: 2px 8px;
+                                 border-radius: 10px; font-size: 0.8rem;">${species}</span>`
+                            ).join('')}
+                        </div>
+                    `;
+                    journeyMap.appendChild(regionCard);
+                });
+            }
+
+            getRegionIcon(regionName) {
+                const icons = {
+                    Amazon: '🌳',
+                    Andes: '⛰️',
+                    Caribbean: '🏖️',
+                    Pacific: '🌊',
+                    Llanos: '🌾',
+                    Sierra: '🏔️'
+                };
+                return icons[regionName] || '🗺️';
+            }
+
+            updateCurrentStatus() {
+                const statusContent = document.getElementById('statusContent');
+                if (!statusContent) return;
+
+                const currentDemo = this.getCurrentDemoStatus();
+
+                if (currentDemo) {
+                    const profile = this.demoProfiles[currentDemo.profileType];
+                    const yaguaraStage = profile?.yaguaraStage || "Explorando territorio";
+
+                    statusContent.innerHTML = `
+                        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: start;">
+                            <div>
+                                <strong style="color: var(--jaguar-gold);">Demo activa:</strong> ${currentDemo.name}<br>
+                                <strong style="color: var(--success-green);">Estado de Yaguará:</strong> ${yaguaraStage}<br>
+                                <strong>Última actualización:</strong> ${new Date(currentDemo.timestamp).toLocaleString()}
+                            </div>
+                            <div style="background: rgba(76, 175, 80, 0.2); padding: 15px; border-radius: 10px;
+                                        border-left: 4px solid var(--success-green);">
+                                <div style="font-weight: 600; margin-bottom: 8px;">Sistema Listo</div>
+                                Navega por los territorios de Colombia<br>
+                                Experimenta mini-juegos de supervivencia<br>
+                                Descubre el impacto de conservación<br>
+                                Aprende español auténtico colombiano
+                            </div>
+                        </div>
+                        ${this.generateConservationSummary(currentDemo.profileType)}
+                    `;
+                } else {
+                    statusContent.innerHTML = `
+                        <div style="background: rgba(255, 152, 0, 0.2); padding: 15px; border-radius: 10px;
+                                    border-left: 4px solid var(--warning-orange);">
+                            <div style="font-weight: 600; margin-bottom: 8px;">No hay demo activa</div>
+                            Selecciona un perfil de Yaguará arriba para comenzar<br>
+                            Experimenta la auténtica Colombia<br>
+                            Descubre el poder del aprendizaje por inmersión
+                        </div>
+                    `;
+                }
+            }
+
+            generateConservationSummary(profileType) {
+                if (!profileType || !this.demoProfiles[profileType]?.advanced?.conservationImpact) {
+                    return '';
+                }
+
+                const impact = this.demoProfiles[profileType].advanced.conservationImpact;
+                return `
+                    <div style="margin-top: 20px; background: rgba(76, 175, 80, 0.1);
+                                border: 2px solid var(--success-green); border-radius: 12px; padding: 15px;">
+                        <div style="color: var(--success-green); font-weight: 600; margin-bottom: 10px; text-align: center;">
+                            Impacto de Conservación de Yaguará
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; text-align: center;">
+                            ${Object.entries(impact).map(([key, value]) => `
+                                <div>
+                                    <div style="color: var(--success-green); font-weight: 700; font-size: 1.1rem;">${value}</div>
+                                    <div style="color: var(--text-muted); font-size: 0.8rem;">${this.getConservationLabel(key)}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            getConservationLabel(key) {
+                const labels = {
+                    treesProtected: 'Árboles',
+                    speciesSaved: 'Especies',
+                    riversCleaned: 'Ríos',
+                    farmsProtected: 'Fincas',
+                    birdsDocumented: 'Aves',
+                    coralsRestored: 'Corales',
+                    indigenousCultures: 'Culturas',
+                    territoryMastered: 'Territorios'
+                };
+                return labels[key] || key;
+            }
+
+            getCurrentDemoStatus() {
+                const demoData = localStorage.getItem('currentDemoProfile');
+                if (demoData) {
+                    try {
+                        return JSON.parse(demoData);
+                    } catch (error) {
+                        console.error('Error loading demo status:', error);
+                    }
+                }
+                return null;
+            }
+
+            setupDemo(profileType) {
+                const profile = this.demoProfiles[profileType];
+                if (!profile) {
+                    this.showNotification('Error', 'Perfil de Yaguará no encontrado', 'error');
+                    return;
+                }
+
+                this.showNotification('Preparando Territorio...', 'Yaguará está explorando...', 'warning');
+
+                const optionElement = document.querySelector(`[onclick="setupDemo('${profileType}')"]`);
+                if (optionElement) {
+                    optionElement.classList.add('loading');
+                }
+
+                this.clearAllData();
+
+                if (profile.basic) {
+                    const basicData = {
+                        gameState: {
+                            ...profile.basic,
+                            location: "Amazon - Leticia",
+                            yaguaraStage: profile.yaguaraStage,
+                            culturalProgress: {
+                                indigenousKnowledge: profile.basic.wordsLearned * 2,
+                                ecosystemUnderstanding: profile.basic.gamesCompleted / 10,
+                                survivalSkills: Math.min(profile.basic.totalScore / 100, 10)
+                            }
+                        },
+                        timestamp: new Date().toISOString()
+                    };
+                    localStorage.setItem('jaguarA1BasicProgress', JSON.stringify(basicData));
+                }
+
+                if (profile.advanced) {
+                    const advancedData = {
+                        ...profile.advanced,
+                        location: "Andes - Manizales",
+                        yaguaraStage: profile.yaguaraStage,
+                        lastPlayed: new Date().toISOString(),
+                        spiralProgress: profile.advanced.storyProgress || 0.5,
+                        culturalImmersion: {
+                            coffeeRegionKnowledge: profile.advanced.wordsReviewed * 3,
+                            paisaCulture: profile.advanced.wordsReviewed * 2,
+                            ecosystemAdaptation: Math.round((profile.advanced.storyProgress || 0.5) * 100)
+                        }
+                    };
+                    localStorage.setItem('jaguarA1AdvancedProgress', JSON.stringify(advancedData));
+                }
+
+                if (profile.exam) {
+                    const examData = {
+                        ...profile.exam,
+                        certificationLevel: "Maestro Territorial Colombiano",
+                        culturalCompetency: "Colombian Spanish A1",
+                        conservationCertification: "Guardián de Ecosistemas"
+                    };
+                    localStorage.setItem('jaguarA1FinalExam', JSON.stringify(examData));
+                }
+
+                const demoStatus = {
+                    name: profile.name,
+                    description: profile.description,
+                    profileType: profileType,
+                    yaguaraStage: profile.yaguaraStage,
+                    timestamp: new Date().toISOString(),
+                    colombianContext: {
+                        currentRegion: profileType === 'beginner' ? 'Amazon' : 'Andes',
+                        culturalProgress: true,
+                        conservationActive: true
+                    }
+                };
+                localStorage.setItem('currentDemoProfile', JSON.stringify(demoStatus));
+
+                localStorage.setItem('isDemoAccount', 'true');
+                localStorage.setItem('demoSetupTime', new Date().toISOString());
+                localStorage.setItem('colombianDemoActive', 'true');
+                localStorage.setItem('yaguaraStage', profile.yaguaraStage);
+
+                setTimeout(() => {
+                    if (optionElement) {
+                        optionElement.classList.remove('loading');
+                    }
+
+                    this.showNotification(
+                        'Territorio Listo!',
+                        `${profile.name} - ${profile.yaguaraStage}`,
+                        'colombia'
+                    );
+                    this.updateCurrentStatus();
+                    this.loadJourneyMap();
+                }, 2000);
+
+                console.log('Colombian Demo setup completed:', {
+                    profileType,
+                    yaguaraStage: profile.yaguaraStage,
+                    conservationEnabled: !!profile.advanced?.conservationImpact,
+                    culturalContext: 'Colombian Spanish',
+                    timestamp: new Date().toISOString()
+                });
+            }
+
+            clearAllData() {
+                const keysToRemove = [
+                    'jaguarA1BasicProgress',
+                    'jaguarA1AdvancedProgress',
+                    'jaguarA1FinalExam',
+                    'jaguarA1ExamProgress',
+                    'a1BasicVisited',
+                    'a1AdvancedVisited',
+                    'a1HubVisited',
+                    'jaguarUserId',
+                    'colombianProgress',
+                    'conservationData',
+                    'yaguaraStage'
+                ];
+
+                keysToRemove.forEach(key => {
+                    localStorage.removeItem(key);
+                });
+
+                console.log('All Colombian demo data cleared');
+            }
+
+            showConservationImpact() {
+                const currentDemo = this.getCurrentDemoStatus();
+                if (!currentDemo) {
+                    this.showNotification('Info', 'No hay demo activa para mostrar impacto', 'warning');
+                    return;
+                }
+
+                const profile = this.demoProfiles[currentDemo.profileType];
+                const impact = profile?.advanced?.conservationImpact;
+
+                if (!impact) {
+                    this.showNotification('Info', 'No hay datos de conservación disponibles', 'warning');
+                    return;
+                }
+
+                const modal = this.createConservationModal(impact, profile.yaguaraStage);
+                document.body.appendChild(modal);
+            }
+
+            createConservationModal(impact, yaguaraStage) {
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                    background: rgba(0, 0, 0, 0.8); z-index: 10000;
+                    display: flex; align-items: center; justify-content: center; padding: 20px;
+                `;
+
+                modal.innerHTML = `
+                    <div style="background: var(--forest-medium); border-radius: 20px; padding: 40px;
+                                max-width: 600px; border: 3px solid var(--success-green);
+                                backdrop-filter: blur(20px);">
+                        <div style="text-align: center; margin-bottom: 30px;">
+                            <h3 style="color: var(--success-green); margin-bottom: 10px; font-size: 1.8rem;">
+                                Impacto de Conservación de Yaguará
+                            </h3>
+                            <p style="color: var(--text-light); font-style: italic;">${yaguaraStage}</p>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                                    gap: 20px; margin-bottom: 30px;">
+                            ${Object.entries(impact).map(([key, value]) => `
+                                <div style="background: rgba(76, 175, 80, 0.1); padding: 20px;
+                                           border-radius: 15px; text-align: center;
+                                           border: 2px solid var(--success-green);">
+                                    <div style="font-size: 2rem; margin-bottom: 10px;">
+                                        ${this.getConservationIcon(key)}
+                                    </div>
+                                    <div style="color: var(--success-green); font-size: 1.5rem;
+                                               font-weight: 700; margin-bottom: 5px;">${value}</div>
+                                    <div style="color: var(--text-muted); font-size: 0.9rem;">
+                                        ${this.getConservationLabel(key)}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <div style="background: rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 15px;
+                                    border: 2px solid var(--jaguar-gold); margin-bottom: 20px;">
+                            <div style="color: var(--jaguar-gold); font-weight: 600; margin-bottom: 10px; text-align: center;">
+                                Logros de Conservación
+                            </div>
+                            <div style="color: var(--text-light); text-align: center; line-height: 1.6;">
+                                Yaguará ha protegido ${Object.values(impact).reduce((a, b) => a + b, 0)} elementos del ecosistema colombiano.
+                                Su legado ayudará a preservar la biodiversidad para futuras generaciones.
+                            </div>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <button onclick="this.closest('.modal-overlay').remove()"
+                                    style="background: var(--success-green); color: white; border: none;
+                                           padding: 15px 30px; border-radius: 25px; cursor: pointer;
+                                           font-weight: 600; font-size: 1rem;">
+                                Continuar Viaje
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                modal.className = 'modal-overlay';
+                return modal;
+            }
+
+            getConservationIcon(key) {
+                const icons = {
+                    treesProtected: '🌳',
+                    speciesSaved: '🦋',
+                    riversCleaned: '🌊',
+                    farmsProtected: '🏞️',
+                    birdsDocumented: '🦅',
+                    coralsRestored: '🪸',
+                    indigenousCultures: '🏛️',
+                    territoryMastered: '🗺️'
+                };
+                return icons[key] || '🌱';
+            }
+
+            showBonusGames() {
+                const bonusGames = [
+                    { name: "El Mercado Virtual", desc: "Simula compras en mercados colombianos", icon: "🏪" },
+                    { name: "Radio Selva", desc: "Comprensión auditiva con sonidos de la selva", icon: "📻" },
+                    { name: "Jaguar Journalist", desc: "Escribe reportes sobre conservación", icon: "📰" },
+                    { name: "Cultural Navigator", desc: "Explora festivales colombianos", icon: "🎭" },
+                    { name: "Ecosystem Architect", desc: "Construye cadenas alimentarias", icon: "🌿" }
+                ];
+
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                    background: rgba(0, 0, 0, 0.8); z-index: 10000;
+                    display: flex; align-items: center; justify-content: center; padding: 20px;
+                `;
+
+                modal.innerHTML = `
+                    <div style="background: var(--forest-medium); border-radius: 20px; padding: 40px;
+                                max-width: 700px; border: 3px solid var(--jaguar-orange);">
+                        <h3 style="color: var(--jaguar-orange); text-align: center; margin-bottom: 30px; font-size: 1.8rem;">
+                            Juegos Bonus - Contenido Extra
+                        </h3>
+
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 30px;">
+                            ${bonusGames.map(game => `
+                                <div style="background: rgba(255, 107, 53, 0.1); padding: 20px; border-radius: 15px;
+                                           border: 2px solid var(--jaguar-orange); cursor: pointer;
+                                           transition: all 0.3s ease;"
+                                     onmouseover="this.style.background='rgba(255, 107, 53, 0.2)'"
+                                     onmouseout="this.style.background='rgba(255, 107, 53, 0.1)'">
+                                    <div style="display: flex; align-items: center; gap: 15px;">
+                                        <div style="font-size: 2rem;">${game.icon}</div>
+                                        <div>
+                                            <div style="color: var(--jaguar-orange); font-weight: 600; margin-bottom: 5px;">
+                                                ${game.name}
+                                            </div>
+                                            <div style="color: var(--text-light); font-size: 0.9rem;">
+                                                ${game.desc}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <div style="text-align: center;">
+                            <button onclick="this.closest('.modal-overlay').remove()"
+                                    style="background: var(--jaguar-orange); color: white; border: none;
+                                           padding: 15px 30px; border-radius: 25px; cursor: pointer;
+                                           font-weight: 600;">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                modal.className = 'modal-overlay';
+                document.body.appendChild(modal);
+            }
+
+            resetSpecificRegion() {
+                const regions = [
+                    { key: 'jaguarA1BasicProgress', name: 'Amazon - A1 Básico', region: 'Leticia' },
+                    { key: 'jaguarA1AdvancedProgress', name: 'Andes - A1 Avanzado', region: 'Manizales' },
+                    { key: 'jaguarA1FinalExam', name: 'Examen Final', region: 'Certificación' },
+                    { key: 'currentDemoProfile', name: 'Estado de Demo', region: 'Sistema' }
+                ];
+
+                const regionOptions = regions.map((region, index) =>
+                    `${index + 1}. ${region.name} (${region.region})`
+                ).join('\n');
+
+                const choice = prompt(`Selecciona región de Yaguará a resetear:\n\n${regionOptions}\n\nEscribe el número:`);
+
+                if (choice && !isNaN(choice)) {
+                    const index = parseInt(choice) - 1;
+                    if (index >= 0 && index < regions.length) {
+                        const region = regions[index];
+                        localStorage.removeItem(region.key);
+                        this.showNotification('Territorio Reseteado', `${region.name} eliminado`, 'success');
+                        this.updateCurrentStatus();
+                    }
+                }
+            }
+
+            customizeProgress() {
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                    background: rgba(0, 0, 0, 0.8); z-index: 10000;
+                    display: flex; align-items: center; justify-content: center; padding: 20px;
+                `;
+
+                modal.innerHTML = `
+                    <div style="background: var(--forest-medium); border-radius: 20px; padding: 40px;
+                                max-width: 600px; border: 3px solid var(--jaguar-gold);">
+                        <h3 style="color: var(--jaguar-gold); margin-bottom: 30px; text-align: center; font-size: 1.6rem;">
+                            Personalizar Viaje de Yaguará
+                        </h3>
+
+                        <div style="margin-bottom: 25px;">
+                            <label style="display: block; color: white; margin-bottom: 8px; font-weight: 600;">
+                                Región Actual de Yaguará:
+                            </label>
+                            <select id="yaguaraRegion" style="width: 100%; padding: 12px; border-radius: 10px;
+                                                           border: 2px solid var(--jaguar-gold); background: rgba(255,255,255,0.1);
+                                                           color: white; font-size: 1rem;">
+                                <option value="amazon">Amazon - Leticia (A1 Básico)</option>
+                                <option value="andes">Andes - Manizales (A1 Avanzado)</option>
+                                <option value="caribbean">Caribe - Cartagena (B1)</option>
+                                <option value="pacific">Pacífico - Chocó (B2)</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <label style="display: block; color: white; margin-bottom: 8px; font-weight: 600;">
+                                Destinos Completados (0-8):
+                            </label>
+                            <input type="number" id="destinationsCompleted" min="0" max="8" value="0"
+                                   style="width: 100%; padding: 12px; border-radius: 10px;
+                                          border: 2px solid var(--jaguar-gold); background: rgba(255,255,255,0.1);
+                                          color: white; font-size: 1rem;">
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <label style="display: block; color: white; margin-bottom: 8px; font-weight: 600;">
+                                Puntos de Conservación (0-500):
+                            </label>
+                            <input type="number" id="conservationPoints" min="0" max="500" value="0"
+                                   style="width: 100%; padding: 12px; border-radius: 10px;
+                                          border: 2px solid var(--jaguar-gold); background: rgba(255,255,255,0.1);
+                                          color: white; font-size: 1rem;">
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <label style="display: block; color: white; margin-bottom: 8px; font-weight: 600;">
+                                Vocabulario Colombiano (separado por comas):
+                            </label>
+                            <textarea id="colombianVocabulary" placeholder="selva,jaguar,café,guacamaya,amazonas,antioquia"
+                                      style="width: 100%; height: 100px; padding: 12px; border-radius: 10px;
+                                             border: 2px solid var(--jaguar-gold); background: rgba(255,255,255,0.1);
+                                             color: white; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+
+                        <div style="display: flex; gap: 15px; justify-content: center;">
+                            <button onclick="demoSystem.applyCustomColombianProgress()"
+                                    style="background: var(--jaguar-gold); color: var(--forest-dark); border: none;
+                                           padding: 15px 25px; border-radius: 15px; cursor: pointer;
+                                           font-weight: 700; font-size: 1rem;">
+                                Aplicar Progreso
+                            </button>
+                            <button onclick="this.closest('.modal-overlay').remove()"
+                                    style="background: var(--text-muted); color: white; border: none;
+                                           padding: 15px 25px; border-radius: 15px; cursor: pointer;
+                                           font-weight: 600;">
+                                Cancelar
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                modal.className = 'modal-overlay';
+                document.body.appendChild(modal);
+            }
+
+            applyCustomColombianProgress() {
+                const region = document.getElementById('yaguaraRegion').value;
+                const destinations = parseInt(document.getElementById('destinationsCompleted').value) || 0;
+                const conservation = parseInt(document.getElementById('conservationPoints').value) || 0;
+                const vocabularyText = document.getElementById('colombianVocabulary').value.trim();
+
+                const vocabulary = vocabularyText ?
+                    vocabularyText.split(',').map(word => word.trim()).filter(word => word) : [];
+
+                const regionData = {
+                    amazon: { name: "Amazon - Leticia", ecosystem: "Selva tropical" },
+                    andes: { name: "Andes - Manizales", ecosystem: "Montaña cafetera" },
+                    caribbean: { name: "Caribe - Cartagena", ecosystem: "Costa caribeña" },
+                    pacific: { name: "Pacífico - Chocó", ecosystem: "Bosque húmedo" }
+                };
+
+                const completedDestinations = {};
+                for (let i = 1; i <= destinations; i++) {
+                    completedDestinations[i] = true;
+                }
+
+                const basicData = {
+                    gameState: {
+                        completedDestinations: completedDestinations,
+                        totalScore: conservation * 3,
+                        gamesCompleted: destinations * 12,
+                        wordsLearned: vocabulary.length,
+                        currentStreak: Math.min(destinations * 2, 15),
+                        totalTimeMinutes: destinations * 90,
+                        conservationPoints: conservation,
+                        location: regionData[region].name,
+                        ecosystem: regionData[region].ecosystem
+                    },
+                    timestamp: new Date().toISOString()
+                };
+
+                localStorage.setItem('jaguarA1BasicProgress', JSON.stringify(basicData));
+
+                if (vocabulary.length > 0) {
+                    const advancedData = {
+                        completedDestinations: destinations >= 4 ? { 5: true, 6: true } : {},
+                        totalScore: Math.floor(conservation * 1.5),
+                        gamesCompleted: Math.floor(vocabulary.length * 2),
+                        newWordsLearned: vocabulary.length,
+                        wordsReviewed: Math.floor(vocabulary.length * 0.7),
+                        currentStreak: Math.min(destinations * 2, 15),
+                        totalTimeMinutes: vocabulary.length * 8,
+                        lastPlayed: new Date().toISOString(),
+                        spiralProgress: vocabulary.length / 50,
+                        earnedWords: vocabulary,
+                        storyProgress: vocabulary.length / 30,
+                        wordsNeededForStory: 50,
+                        location: regionData[region].name,
+                        conservationImpact: {
+                            treesProtected: Math.floor(conservation / 10),
+                            speciesSaved: Math.floor(conservation / 20),
+                            riversCleaned: Math.floor(conservation / 50)
+                        }
+                    };
+
+                    localStorage.setItem('jaguarA1AdvancedProgress', JSON.stringify(advancedData));
+                }
+
+                const demoStatus = {
+                    name: "Viaje Personalizado de Yaguará",
+                    description: `${destinations} destinos, ${vocabulary.length} palabras, ${regionData[region].ecosystem}`,
+                    profileType: "custom",
+                    yaguaraStage: `Explorador de ${regionData[region].name}`,
+                    timestamp: new Date().toISOString(),
+                    colombianContext: {
+                        currentRegion: region,
+                        conservationScore: conservation,
+                        vocabularyLevel: vocabulary.length
+                    }
+                };
+                localStorage.setItem('currentDemoProfile', JSON.stringify(demoStatus));
+                localStorage.setItem('isDemoAccount', 'true');
+                localStorage.setItem('colombianDemoActive', 'true');
+
+                document.querySelector('.modal-overlay').remove();
+                this.showNotification('Territorio Personalizado', `Yaguará en ${regionData[region].name}`, 'colombia');
+                this.updateCurrentStatus();
+                this.loadJourneyMap();
+            }
+
+            clearAllDemoData() {
+                if (confirm('¿Estás seguro de que quieres eliminar TODO el progreso de Yaguará?\n\nEsta acción eliminará:\n- Todos los territorios explorados\n- Todo el impacto de conservación\n- Todo el vocabulario aprendido\n\nEsta acción no se puede deshacer.')) {
+                    this.clearAllData();
+                    localStorage.removeItem('currentDemoProfile');
+                    localStorage.removeItem('isDemoAccount');
+                    localStorage.removeItem('demoSetupTime');
+                    localStorage.removeItem('colombianDemoActive');
+                    localStorage.removeItem('yaguaraStage');
+
+                    this.showNotification('Territorio Limpiado', 'Yaguará regresa al punto de partida', 'success');
+                    this.updateCurrentStatus();
+                    this.loadJourneyMap();
+                }
+            }
+
+            viewAllProgress() {
+                const allProgress = {};
+
+                const keys = [
+                    'jaguarA1BasicProgress',
+                    'jaguarA1AdvancedProgress',
+                    'jaguarA1FinalExam',
+                    'currentDemoProfile',
+                    'isDemoAccount',
+                    'colombianDemoActive',
+                    'yaguaraStage'
+                ];
+
+                keys.forEach(key => {
+                    const data = localStorage.getItem(key);
+                    if (data) {
+                        try {
+                            allProgress[key] = JSON.parse(data);
+                        } catch (error) {
+                            allProgress[key] = data;
+                        }
+                    }
+                });
+
+                const progressText = JSON.stringify(allProgress, null, 2);
+                const modal = this.createProgressModal(progressText);
+                document.body.appendChild(modal);
+
+                this.showNotification('Progreso de Yaguará', 'Datos del viaje mostrados', 'success');
+            }
+
+            createProgressModal(progressText) {
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                    background: rgba(0, 0, 0, 0.8); z-index: 10000;
+                    display: flex; align-items: center; justify-content: center; padding: 20px;
+                `;
+
+                const escapedText = progressText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+                modal.innerHTML = `
+                    <div style="background: var(--forest-medium); border-radius: 20px; padding: 40px;
+                                max-width: 900px; max-height: 80%; overflow: auto;
+                                border: 3px solid var(--demo-blue); backdrop-filter: blur(20px);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <h3 style="color: var(--demo-blue); margin: 0; font-size: 1.6rem;">
+                                Progreso Completo del Viaje de Yaguará
+                            </h3>
+                            <button onclick="this.closest('.modal-overlay').remove()"
+                                    style="background: #e74c3c; color: white; border: none; border-radius: 50%;
+                                           width: 35px; height: 35px; cursor: pointer; font-weight: bold; font-size: 1.2rem;">×</button>
+                        </div>
+
+                        <div style="background: rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 15px;
+                                    margin-bottom: 25px; border: 2px solid var(--jaguar-gold);">
+                            <div style="color: var(--jaguar-gold); font-weight: 600; margin-bottom: 10px; text-align: center;">
+                                Estado Actual de Yaguará
+                            </div>
+                            <div style="color: var(--text-light); text-align: center; line-height: 1.6;">
+                                Este reporte muestra todo el progreso de aprendizaje y conservación de Yaguará
+                                a través de los ecosistemas colombianos.
+                            </div>
+                        </div>
+
+                        <pre style="background: rgba(0, 0, 0, 0.4); padding: 25px; border-radius: 15px;
+                                    color: white; font-size: 12px; line-height: 1.5; overflow: auto;
+                                    max-height: 400px; white-space: pre-wrap; word-wrap: break-word;
+                                    border: 2px solid rgba(255, 255, 255, 0.2);
+                                    font-family: 'Courier New', monospace;">${escapedText}</pre>
+
+                        <div style="margin-top: 25px; text-align: center; display: flex; gap: 15px; justify-content: center;">
+                            <button onclick="navigator.clipboard.writeText(JSON.stringify(JSON.parse(localStorage.getItem('currentDemoProfile') || '{}'), null, 2)).then(() => alert('Datos copiados'))"
+                                    style="background: var(--demo-blue); color: white; border: none;
+                                           padding: 12px 20px; border-radius: 12px; cursor: pointer;
+                                           font-weight: 600;">
+                                Copiar Datos
+                            </button>
+                            <button onclick="demoSystem.downloadProgressReport()"
+                                    style="background: var(--success-green); color: white; border: none;
+                                           padding: 12px 20px; border-radius: 12px; cursor: pointer;
+                                           font-weight: 600;">
+                                Descargar Reporte
+                            </button>
+                            <button onclick="this.closest('.modal-overlay').remove()"
+                                    style="background: var(--text-muted); color: white; border: none;
+                                           padding: 12px 20px; border-radius: 12px; cursor: pointer;
+                                           font-weight: 600;">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                modal.className = 'modal-overlay';
+                return modal;
+            }
+
+            downloadProgressReport() {
+                const currentDemo = this.getCurrentDemoStatus();
+                const reportData = {
+                    timestamp: new Date().toISOString(),
+                    yaguaraStatus: currentDemo?.yaguaraStage || "Sin datos",
+                    colombianContext: currentDemo?.colombianContext || {},
+                    basicProgress: JSON.parse(localStorage.getItem('jaguarA1BasicProgress') || '{}'),
+                    advancedProgress: JSON.parse(localStorage.getItem('jaguarA1AdvancedProgress') || '{}'),
+                    examStatus: JSON.parse(localStorage.getItem('jaguarA1FinalExam') || '{}'),
+                    conservationData: this.conservationData,
+                    colombianRegions: this.colombianRegions
+                };
+
+                const reportText = [
+                    'REPORTE DE PROGRESO - EL VIAJE DEL JAGUAR',
+                    '========================================',
+                    '',
+                    'Fecha: ' + new Date().toLocaleString(),
+                    'Estado de Yaguará: ' + (currentDemo?.yaguaraStage || 'Sin datos'),
+                    '',
+                    'PROGRESO POR REGIONES:',
+                    ...Object.entries(this.colombianRegions).map(([level, region]) =>
+                        `${level}: ${region.fullName} (${region.city}) - ${region.progress}%`
+                    ),
+                    '',
+                    'DATOS TÉCNICOS:',
+                    JSON.stringify(reportData, null, 2)
+                ].join('\n');
+
+                const blob = new Blob([reportText], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `yaguara-progress-report-${new Date().toISOString().split('T')[0]}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                this.showNotification('Reporte Descargado', 'Reporte de progreso de Yaguará guardado', 'success');
+            }
+
+            exportDemoData() {
+                const allData = {};
+
+                const keys = Object.keys(localStorage).filter(key =>
+                    key.includes('jaguar') || key.includes('a1') || key.includes('Demo') ||
+                    key.includes('colombian') || key.includes('yaguara')
+                );
+
+                keys.forEach(key => {
+                    allData[key] = localStorage.getItem(key);
+                });
+
+                const exportData = {
+                    metadata: {
+                        exportDate: new Date().toISOString(),
+                        version: "Colombian Enhanced Demo System v2.0",
+                        yaguaraStage: localStorage.getItem('yaguaraStage'),
+                        conservationEnabled: localStorage.getItem('colombianDemoActive'),
+                        regions: Object.keys(this.colombianRegions)
+                    },
+                    userData: allData,
+                    conservationData: this.conservationData,
+                    colombianRegions: this.colombianRegions
+                };
+
+                const dataString = JSON.stringify(exportData, null, 2);
+                const blob = new Blob([dataString], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `yaguara-demo-backup-${new Date().toISOString().split('T')[0]}.json`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                this.showNotification('Backup Creado', 'Datos de Yaguará exportados', 'colombia');
+            }
+
+            importDemoData() {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = '.json';
+
+                input.onchange = (event) => {
+                    const file = event.target.files[0];
+                    if (!file) return;
+
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        try {
+                            const importData = JSON.parse(e.target.result);
+
+                            if (importData.metadata && importData.metadata.version &&
+                                importData.metadata.version.includes('Colombian')) {
+
+                                if (importData.userData) {
+                                    Object.keys(importData.userData).forEach(key => {
+                                        localStorage.setItem(key, importData.userData[key]);
+                                    });
+                                }
+
+                                if (importData.colombianRegions) {
+                                    this.colombianRegions = importData.colombianRegions;
+                                }
+
+                                if (importData.conservationData) {
+                                    this.conservationData = importData.conservationData;
+                                }
+
+                                this.showNotification('Datos Importados', 'Progreso de Yaguará restaurado', 'colombia');
+                                this.updateCurrentStatus();
+                                this.loadJourneyMap();
+                            } else {
+                                Object.keys(importData).forEach(key => {
+                                    if (typeof importData[key] === 'string') {
+                                        localStorage.setItem(key, importData[key]);
+                                    }
+                                });
+
+                                this.showNotification('Importado (Formato Legado)', 'Datos básicos importados', 'warning');
+                                this.updateCurrentStatus();
+                            }
+                        } catch (error) {
+                            this.showNotification('Error de Importación', 'Archivo JSON inválido', 'error');
+                            console.error('Import error:', error);
+                        }
+                    };
+                    reader.readAsText(file);
+                };
+
+                input.click();
+            }
+
+            showNotification(title, message, type = 'info') {
+                const existingNotifications = document.querySelectorAll('.notification');
+                existingNotifications.forEach(notif => notif.remove());
+
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.setAttribute('role', 'alert');
+                notification.setAttribute('aria-live', 'polite');
+
+                notification.innerHTML = `
+                    <div style="font-size: 1.1em; margin-bottom: 6px; font-weight: 700;">
+                        ${title}
+                    </div>
+                    <div style="font-size: 0.9em; opacity: 0.9; line-height: 1.4;">${message}</div>
+                `;
+
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 100);
+
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (document.body.contains(notification)) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 500);
+                }, 4000);
+            }
+
+            trackUserInteraction(action, data = {}) {
+                const analyticsData = {
+                    timestamp: new Date().toISOString(),
+                    action: action,
+                    yaguaraStage: localStorage.getItem('yaguaraStage'),
+                    colombianContext: this.getCurrentDemoStatus()?.colombianContext,
+                    ...data
+                };
+
+                console.log('Colombian Demo Analytics:', analyticsData);
+
+                const analytics = JSON.parse(localStorage.getItem('colombianDemoAnalytics') || '[]');
+                analytics.push(analyticsData);
+
+                if (analytics.length > 100) {
+                    analytics.splice(0, analytics.length - 100);
+                }
+
+                localStorage.setItem('colombianDemoAnalytics', JSON.stringify(analytics));
+            }
+
+            setupAccessibility() {
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        const modals = document.querySelectorAll('.modal-overlay');
+                        modals.forEach(modal => modal.remove());
+                    }
+                });
+            }
+        }
+
+        // Global instances and functions
+        let demoSystem;
+
+        function setupDemo(profileType) {
+            if (demoSystem) {
+                demoSystem.setupDemo(profileType);
+                demoSystem.trackUserInteraction('demo_setup', { profileType });
+            }
+        }
+
+        function viewAllProgress() {
+            if (demoSystem) {
+                demoSystem.viewAllProgress();
+                demoSystem.trackUserInteraction('view_progress');
+            }
+        }
+
+        function exportDemoData() {
+            if (demoSystem) {
+                demoSystem.exportDemoData();
+                demoSystem.trackUserInteraction('export_data');
+            }
+        }
+
+        function importDemoData() {
+            if (demoSystem) {
+                demoSystem.importDemoData();
+                demoSystem.trackUserInteraction('import_data');
+            }
+        }
+
+        function resetSpecificRegion() {
+            if (demoSystem) {
+                demoSystem.resetSpecificRegion();
+                demoSystem.trackUserInteraction('reset_region');
+            }
+        }
+
+        function customizeProgress() {
+            if (demoSystem) {
+                demoSystem.customizeProgress();
+                demoSystem.trackUserInteraction('customize_progress');
+            }
+        }
+
+        function showConservationImpact() {
+            if (demoSystem) {
+                demoSystem.showConservationImpact();
+                demoSystem.trackUserInteraction('view_conservation');
+            }
+        }
+
+        function showBonusGames() {
+            if (demoSystem) {
+                demoSystem.showBonusGames();
+                demoSystem.trackUserInteraction('view_bonus_games');
+            }
+        }
+
+        function clearAllDemoData() {
+            if (demoSystem) {
+                demoSystem.clearAllDemoData();
+                demoSystem.trackUserInteraction('clear_all_data');
+            }
+        }
+
+        // Initialize when DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                demoSystem = new ColombianDemoSystem();
+                demoSystem.setupAccessibility();
+
+                console.log('Colombian Enhanced Demo System loaded successfully');
+
+            } catch (error) {
+                console.error('Failed to initialize Colombian Demo System:', error);
+
+                const fallbackNotification = document.createElement('div');
+                fallbackNotification.style.cssText = `
+                    position: fixed; top: 20px; right: 20px; background: #e74c3c;
+                    color: white; padding: 15px; border-radius: 10px; z-index: 10000;
+                `;
+                fallbackNotification.textContent = 'Error al cargar el sistema. Recarga la página.';
+                document.body.appendChild(fallbackNotification);
+
+                setTimeout(() => {
+                    if (document.body.contains(fallbackNotification)) {
+                        document.body.removeChild(fallbackNotification);
+                    }
+                }, 5000);
+            }
+        });
+
+        // Error monitoring
+        window.addEventListener('error', (event) => {
+            console.error('Colombian Demo System Error:', event.error);
+
+            if (demoSystem) {
+                demoSystem.trackUserInteraction('system_error', {
+                    error: event.error?.message,
+                    filename: event.filename,
+                    lineno: event.lineno
+                });
+            }
+        });
+
+        // Unload cleanup
+        window.addEventListener('beforeunload', () => {
+            if (demoSystem) {
+                demoSystem.trackUserInteraction('page_unload', {
+                    sessionDuration: Date.now() - (new Date(localStorage.getItem('demoSetupTime') || Date.now())).getTime()
+                });
+            }
+        });
+    </script>
+</body>
+</html>
