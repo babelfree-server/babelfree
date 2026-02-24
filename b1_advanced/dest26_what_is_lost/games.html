@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 26: Lo que se pierde &mdash; Expresar p&eacute;rdida</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest26_what_is_lost/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 26: Lo que se pierde — Games",
+          "url": "https://babelfree.com/b1_advanced/dest26_what_is_lost/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "teaches": ["Present perfect tense", "Basic passive voice", "Expressing loss and consequence"],
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Avanzado", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "Lo que se pierde", "item": "https://babelfree.com/b1_advanced/dest26_what_is_lost/games" },
+            { "@type": "ListItem", "position": 5, "name": "Games" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 26: Lo que se pierde</div>
+            <div class="yg-header-subtitle">Expresar p&eacute;rdida &mdash; Pret&eacute;rito perfecto y voz pasiva</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // =====================================================
+    // GAME 1: NARRATIVE \u2014 The road begins
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el comienzo de la carretera de Don Pr\u00f3spero.',
+        title: 'La carretera comienza',
+        text: 'Las m\u00e1quinas han llegado al borde del bosque. Don Pr\u00f3spero ha dado la orden y los \u00e1rboles han empezado a caer. Donde antes hab\u00eda verde, ahora hay tierra roja y silencio. Yaguar\u00e1 observa desde la colina. Una niebla gris avanza m\u00e1s r\u00e1pido por donde los \u00e1rboles han sido cortados, como si la herida en la tierra la atrajera. El bosque ha perdido su voz en esa zona. Los p\u00e1jaros se han ido. El aire huele a motor y a savia rota.'
+    },
+
+    // =====================================================
+    // GAME 2: NARRATIVE \u2014 The elder\u2019s last word
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la anciana y la palabra que casi se pierde.',
+        title: 'La \u00faltima palabra de la anciana',
+        text: 'En la aldea, una anciana ha muerto esta ma\u00f1ana. Era la \u00faltima persona que recordaba el nombre antiguo de un r\u00edo que pasa detr\u00e1s de la monta\u00f1a. Con ella, ese nombre habr\u00eda desaparecido para siempre. Pero Candelaria estaba all\u00ed. La noche anterior, la anciana le dijo el nombre en voz baja: \u00abYurumangu\u00ed.\u00bb Candelaria lo escribi\u00f3 en su cuaderno justo a tiempo. Ahora entiende algo nuevo: ella no solo dibuja. Ella est\u00e1 salvando palabras. Cada nombre que escribe es un mundo que no se pierde.'
+    },
+
+    // =====================================================
+    // GAME 3: FILL \u2014 Present perfect
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones con el pret\u00e9rito perfecto correcto.',
+        questions: [
+            { sentence: '___ cortado los \u00e1rboles del borde del bosque.', answer: 'Han', options: ['Han', 'Ha', 'Hemos', 'He'] },
+            { sentence: 'Se ___ perdido un nombre que solo la anciana recordaba.', answer: 'ha', options: ['ha', 'han', 'he', 'hemos'] },
+            { sentence: 'Candelaria ___ escrito la palabra justo a tiempo.', answer: 'ha', options: ['ha', 'han', 'hemos', 'he'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 4: PAIR \u2014 Active vs passive voice
+    // =====================================================
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada oraci\u00f3n en voz activa con su equivalente en voz pasiva.',
+        pairs: [
+            ['Cortaron los \u00e1rboles', 'Los \u00e1rboles fueron cortados'],
+            ['La niebla cubri\u00f3 el valle', 'El valle fue cubierto por la niebla'],
+            ['Candelaria escribi\u00f3 el nombre', 'El nombre fue escrito por Candelaria'],
+            ['Las m\u00e1quinas destruyeron el camino', 'El camino fue destruido por las m\u00e1quinas']
+        ]
+    },
+
+    // =====================================================
+    // GAME 5: CONJUGATION \u2014 Present perfect forms
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma correcta del pret\u00e9rito perfecto.',
+        questions: [
+            { verb: 'ver', subject: 'yo', answer: 'he visto', options: ['he visto', 'ha visto', 'hemos visto', 'han visto'] },
+            { verb: 'perder', subject: 't\u00fa', answer: 'has perdido', options: ['has perdido', 'ha perdido', 'he perdido', 'han perdido'] },
+            { verb: 'decir', subject: '\u00e9l', answer: 'ha dicho', options: ['ha dicho', 'he dicho', 'has dicho', 'han dicho'] },
+            { verb: 'escribir', subject: 'nosotros', answer: 'hemos escrito', options: ['hemos escrito', 'han escrito', 'ha escrito', 'he escrito'] },
+            { verb: 'cortar', subject: 'ellos', answer: 'han cortado', options: ['han cortado', 'ha cortado', 'hemos cortado', 'has cortado'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 6: CONVERSATION \u2014 About what has been lost
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con un aldeano sobre los cambios en el pueblo.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Aldeano', text: '\u00bfHas visto lo que ha pasado en el borde del bosque?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, han cortado muchos \u00e1rboles. La niebla gris ha avanzado por donde ya no hay bosque.',
+                    'No he visto nada, estaba durmiendo.',
+                    'Los \u00e1rboles son verdes y grandes.'
+                ],
+                answer: 'S\u00ed, han cortado muchos \u00e1rboles. La niebla gris ha avanzado por donde ya no hay bosque.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Aldeano', text: 'Y la anciana ha muerto esta ma\u00f1ana. \u00bfSab\u00edas que solo ella recordaba el nombre del r\u00edo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, pero Candelaria ha escrito el nombre justo a tiempo. Se ha salvado la palabra.',
+                    'No me importan los r\u00edos.',
+                    'Los r\u00edos no tienen nombre.'
+                ],
+                answer: 'S\u00ed, pero Candelaria ha escrito el nombre justo a tiempo. Se ha salvado la palabra.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Aldeano', text: '\u00bfQu\u00e9 m\u00e1s crees que hemos perdido sin darnos cuenta?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Hemos perdido muchas cosas: nombres, historias, canciones. Todo lo que no ha sido escrito puede desaparecer.',
+                    'No hemos perdido nada.',
+                    'Solo hemos perdido \u00e1rboles.'
+                ],
+                answer: 'Hemos perdido muchas cosas: nombres, historias, canciones. Todo lo que no ha sido escrito puede desaparecer.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 7: CONVERSATION \u2014 Candelaria\u2019s urgency
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con Candelaria sobre su cuaderno y las palabras que salva.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'He entendido algo hoy. Mi cuaderno no es solo para dibujar. \u00bfSabes por qu\u00e9?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Porque tambi\u00e9n has escrito palabras que nadie m\u00e1s recuerda. Est\u00e1s salvando la memoria.',
+                    'Porque los cuadernos son bonitos.',
+                    'No s\u00e9. Los cuadernos sirven para escribir tareas.'
+                ],
+                answer: 'Porque tambi\u00e9n has escrito palabras que nadie m\u00e1s recuerda. Est\u00e1s salvando la memoria.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'La anciana me dijo \u00abYurumangu\u00ed\u00bb y yo lo escrib\u00ed. Si no lo hubiera hecho, el nombre habr\u00eda muerto con ella.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Has hecho algo muy importante. Una palabra que se pierde es un mundo que desaparece.',
+                    'Es solo un nombre de r\u00edo.',
+                    'No entiendo por qu\u00e9 es importante.'
+                ],
+                answer: 'Has hecho algo muy importante. Una palabra que se pierde es un mundo que desaparece.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Voy a hablar con m\u00e1s ancianos. Han vivido mucho y saben cosas que nadie ha escrito todav\u00eda.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Es urgente. Si no lo haces pronto, esas palabras pueden perderse para siempre.',
+                    'Los ancianos hablan mucho.',
+                    'No creo que sea necesario.'
+                ],
+                answer: 'Es urgente. Si no lo haces pronto, esas palabras pueden perderse para siempre.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 8: CULTURA \u2014 The tradition of river names
+    // =====================================================
+    {
+        type: 'cultura',
+        label: 'Cultura',
+        instruction: 'Lee sobre la tradici\u00f3n de nombrar los r\u00edos en el Choc\u00f3.',
+        title: 'Los nombres que llevan memoria',
+        text: 'En Colombia, muchos r\u00edos llevan nombres ind\u00edgenas que guardan la historia del territorio. El r\u00edo Yurumangu\u00ed, en el Valle del Cauca, tiene un nombre de origen ind\u00edgena que significa \u00abr\u00edo de la serpiente\u00bb. Cuando una comunidad pierde el nombre original de un lugar, pierde tambi\u00e9n la historia que ese nombre conta. Los nombres no son solo etiquetas: son mapas de memoria. Cada r\u00edo, cada monta\u00f1a, cada bosque ha sido nombrado por alguien que lo conoci\u00f3 profundamente. Cuando esos nombres desaparecen, la relaci\u00f3n entre la gente y la tierra tambi\u00e9n se pierde.',
+        question: '\u00bfPor qu\u00e9 es importante conservar los nombres originales de los r\u00edos?',
+        options: [
+            'Porque los nombres guardan la historia y la relaci\u00f3n entre la gente y la tierra.',
+            'Porque los nombres son bonitos.',
+            'Porque los mapas necesitan nombres.',
+            'Porque los r\u00edos se enojan si no los nombran.'
+        ],
+        answer: 'Porque los nombres guardan la historia y la relaci\u00f3n entre la gente y la tierra.'
+    },
+
+    // =====================================================
+    // GAME 9: GUARDIAN \u2014 Quick-fire: present perfect vs preterite
+    // =====================================================
+    {
+        type: 'guardian',
+        label: 'Guardi\u00e1n',
+        instruction: 'Identifica r\u00e1pidamente si la forma verbal es pret\u00e9rito perfecto o pret\u00e9rito indefinido.',
+        timeLimit: 8,
+        questions: [
+            { prompt: 'han cortado', answer: 'Pret\u00e9rito perfecto', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'escribi\u00f3', answer: 'Pret\u00e9rito indefinido', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'hemos perdido', answer: 'Pret\u00e9rito perfecto', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'muri\u00f3', answer: 'Pret\u00e9rito indefinido', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'ha dicho', answer: 'Pret\u00e9rito perfecto', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'llegaron', answer: 'Pret\u00e9rito indefinido', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'he visto', answer: 'Pret\u00e9rito perfecto', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'desapareci\u00f3', answer: 'Pret\u00e9rito indefinido', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'has escrito', answer: 'Pret\u00e9rito perfecto', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] },
+            { prompt: 'cayeron', answer: 'Pret\u00e9rito indefinido', options: ['Pret\u00e9rito perfecto', 'Pret\u00e9rito indefinido'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 10: MADGAB \u2014 Phonetic decoding of loss phrases
+    // =====================================================
+    {
+        type: 'madgab',
+        label: 'Madgab',
+        instruction: 'Lee las s\u00edlabas en voz alta r\u00e1pidamente para descubrir la frase oculta.',
+        rounds: [
+            { phonetic: 'SE A PER DI DO UN NOM BRE', answer: 'Se ha perdido un nombre', hint: 'Algo que ya no est\u00e1...' },
+            { phonetic: 'LOS \u00c1R BO LES AN SI DO COR TA DOS', answer: 'Los \u00e1rboles han sido cortados', hint: 'Voz pasiva sobre la destrucci\u00f3n...' },
+            { phonetic: 'CAN DE LA RIA A ES CRI TO LA PA LA BRA', answer: 'Candelaria ha escrito la palabra', hint: 'Ella salv\u00f3 algo...' },
+            { phonetic: 'LA NIE BLA A A VAN SA DO', answer: 'La niebla ha avanzado', hint: 'El gris se mueve...' }
+        ]
+    },
+
+    // =====================================================
+    // GAME 11: MADLIBS \u2014 Fill story about what was lost
+    // =====================================================
+    {
+        type: 'madlibs',
+        label: 'Madlibs',
+        instruction: 'Completa la historia eligiendo la parte del discurso correcta para cada espacio.',
+        template: 'La anciana ha {verbo_1} esta ma\u00f1ana. Solo ella {verbo_2} el nombre del r\u00edo. Era un nombre {adjetivo_1} que ven\u00eda de una lengua {adjetivo_2}. Candelaria lo {verbo_3} en su cuaderno. Sin esa {sustantivo_1}, el nombre habr\u00eda desaparecido como el {sustantivo_2} entre los \u00e1rboles.',
+        blanks: [
+            { id: 'verbo_1', label: 'verbo (participio)', answer: 'muerto', options: ['muerto', 'nombre', 'triste', 'r\u00e1pidamente'] },
+            { id: 'verbo_2', label: 'verbo (imperfecto)', answer: 'recordaba', options: ['recordaba', 'bonito', 'r\u00edo', 'lentamente'] },
+            { id: 'adjetivo_1', label: 'adjetivo', answer: 'antiguo', options: ['antiguo', 'correr', 'palabra', 'aqu\u00ed'] },
+            { id: 'adjetivo_2', label: 'adjetivo', answer: 'ind\u00edgena', options: ['ind\u00edgena', 'escribir', 'cuaderno', 'all\u00ed'] },
+            { id: 'verbo_3', label: 'verbo (pret\u00e9rito)', answer: 'escribi\u00f3', options: ['escribi\u00f3', 'grande', 'memoria', 'ayer'] },
+            { id: 'sustantivo_1', label: 'sustantivo', answer: 'palabra', options: ['palabra', 'correr', 'fr\u00edo', 'r\u00e1pido'] },
+            { id: 'sustantivo_2', label: 'sustantivo', answer: 'humo', options: ['humo', 'perder', 'oscuro', 'siempre'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 12: FILL \u2014 Present perfect additional practice
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta del pret\u00e9rito perfecto.',
+        questions: [
+            { sentence: 'La niebla gris ___ avanzado m\u00e1s r\u00e1pido este mes.', answer: 'ha', options: ['ha', 'han', 'he', 'hemos'] },
+            { sentence: 'Los p\u00e1jaros ___ ido de esa zona del bosque.', answer: 'se han', options: ['se han', 'se ha', 'nos hemos', 'me he'] },
+            { sentence: 'Nosotros ___ perdido demasiadas palabras antiguas.', answer: 'hemos', options: ['hemos', 'han', 'ha', 'he'] }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala del nombre perdido',
+            description: 'Una sala oscura con paredes de piedra. En el centro hay una inscripci\u00f3n borrada por el tiempo. Solo quedan fragmentos de letras. El aire huele a tierra mojada y a tinta vieja.',
+            ambience: 'cave-drip'
+        },
+        puzzles: [
+            {
+                puzzleType: 'extract',
+                prompt: 'La inscripci\u00f3n en la pared est\u00e1 casi borrada. Solo se ven fragmentos.',
+                passage: '\u00abLa anciana ___ que el r\u00edo se llamaba ___. Dijo que su abuela le hab\u00eda ___ el nombre cuando era ni\u00f1a. Ahora ese nombre ha sido ___ en un cuaderno para que no ___ nunca.\u00bb',
+                clue: 'Reconstruye el texto con las palabras correctas: dijo, Yurumangu\u00ed, ense\u00f1ado, escrito, desaparezca.',
+                answer: 'dijo \u2014 Yurumangu\u00ed \u2014 ense\u00f1ado \u2014 escrito \u2014 desaparezca',
+                options: [
+                    'dijo \u2014 Yurumangu\u00ed \u2014 ense\u00f1ado \u2014 escrito \u2014 desaparezca',
+                    'dijo \u2014 Atrato \u2014 contado \u2014 perdido \u2014 vuelva',
+                    'supo \u2014 Yurumangu\u00ed \u2014 dado \u2014 borrado \u2014 regrese',
+                    'cont\u00f3 \u2014 Cauca \u2014 ense\u00f1ado \u2014 pintado \u2014 muera'
+                ],
+                onSolve: 'La inscripci\u00f3n se completa. Las letras brillan en la piedra.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una voz resuena en la sala:',
+                riddle: '\u00abNo soy un objeto, pero puedo perderse. No soy un ser vivo, pero puedo morir. Cuando alguien me olvida, un mundo desaparece. Cuando alguien me escribe, un mundo se salva. \u00bfQu\u00e9 soy?\u00bb',
+                clue: 'Es lo que Candelaria salv\u00f3 en su cuaderno.',
+                answer: 'Una palabra',
+                options: [
+                    'Una palabra',
+                    'Un \u00e1rbol',
+                    'Un animal',
+                    'Una persona'
+                ],
+                onSolve: 'La sala se ilumina con un resplandor c\u00e1lido.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La puerta de piedra tiene una cerradura con siete letras.',
+                clue: '\u00bfQu\u00e9 se pierde cuando nadie recuerda? Lo que Candelaria salva en su cuaderno. Siete letras.',
+                answer: 'memoria',
+                hint: '_ _ _ _ _ _ _',
+                onSolve: 'La cerradura se abre. La puerta revela un fragmento del Mapa de las Voces.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de un r\u00edo cuyo nombre flota sobre el agua como niebla dorada.',
+            questClue: '\u00bfQu\u00e9 se pierde cuando nadie recuerda?',
+            item: 'historia-08'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d26',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest26Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

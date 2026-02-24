@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 24: Las historias que se cruzan</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest24_connected_stories/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 24: Las historias que se cruzan &mdash; Games",
+          "url": "https://babelfree.com/b1_advanced/dest24_connected_stories/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Relative clauses (que, quien, donde)", "Cause and consequence connectors", "Connecting narratives"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Avanzado", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "Las historias que se cruzan", "item": "https://babelfree.com/b1_advanced/dest24_connected_stories/games" },
+            { "@type": "ListItem", "position": 5, "name": "Games" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 24: Las historias que se cruzan</div>
+            <div class="yg-header-subtitle">Conectar narrativas &mdash; Cl&aacute;usulas relativas y causa-consecuencia</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    /* ============================================================
+       1. NARRATIVE \u2014 Stories connect
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre las conexiones entre las historias.',
+        text: 'Yaguar\u00e1 camina por la orilla del Atrato y recuerda tres historias que escuch\u00f3 en su viaje. El pescador que vive junto al r\u00edo cont\u00f3 que el agua baj\u00f3. El llanero que vive en el llano dijo que la lluvia cambi\u00f3. La mujer que vive en la monta\u00f1a explic\u00f3 que la nieve desapareci\u00f3. Tres personas que nunca se conocieron, tres historias que cuentan lo mismo. Yaguar\u00e1 entiende: las historias que parecen diferentes est\u00e1n conectadas por hilos invisibles.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE \u2014 Do\u00f1a Asunci\u00f3n appears
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la aparici\u00f3n de Do\u00f1a Asunci\u00f3n.',
+        text: 'Junto al r\u00edo, Yaguar\u00e1 ve a una mujer peque\u00f1a y fuerte. Tiene el pelo blanco como algod\u00f3n y un pa\u00f1uelo de colores en la cabeza. Sus manos est\u00e1n en el agua del Atrato, como si escuchara algo que el r\u00edo dice. La mujer levanta la mirada y sonr\u00ede. \u00abTe he esperado\u00bb, dice con voz tranquila. \u00abSoy Do\u00f1a Asunci\u00f3n. Soy la \u00faltima escuchadora. Las historias que recoges necesitan a alguien que las conecte. Esa persona eres t\u00fa.\u00bb'
+    },
+
+    /* ============================================================
+       3. FILL \u2014 Relative clauses with "que"
+    ============================================================ */
+    {
+        type: 'fill',
+        label: 'Completar',
+        instruction: 'Completa las oraciones con la cl\u00e1usula relativa correcta usando \u00abque\u00bb.',
+        questions: [
+            { sentence: 'El pescador ___ vive junto al r\u00edo cont\u00f3 la misma historia.', answer: 'que', options: ['que', 'quien', 'donde', 'cual'] },
+            { sentence: 'El llanero ___ vive en el llano tambi\u00e9n habl\u00f3 del cambio.', answer: 'que', options: ['que', 'quien', 'donde', 'cual'] },
+            { sentence: 'La historia ___ cont\u00f3 la mujer de la monta\u00f1a coincide con las otras.', answer: 'que', options: ['que', 'quien', 'donde', 'cual'] }
+        ]
+    },
+
+    /* ============================================================
+       4. FILL \u2014 Cause/consequence connectors
+    ============================================================ */
+    {
+        type: 'fill',
+        label: 'Completar',
+        instruction: 'Completa con el conector de causa o consecuencia adecuado.',
+        questions: [
+            { sentence: 'El r\u00edo baj\u00f3 ___ no llovi\u00f3 durante meses.', answer: 'porque', options: ['porque', 'as\u00ed que', 'por lo tanto', 'sin embargo'] },
+            { sentence: 'Las historias est\u00e1n conectadas, ___ Yaguar\u00e1 decide buscar m\u00e1s.', answer: 'as\u00ed que', options: ['porque', 'as\u00ed que', 'ya que', 'por eso'] },
+            { sentence: '___ las tres comunidades sufrieron el mismo cambio, la causa debe ser com\u00fan.', answer: 'Ya que', options: ['Ya que', 'Por eso', 'As\u00ed que', 'Porque'] }
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR \u2014 Connect the connector to its function
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada conector con su funci\u00f3n.',
+        pairs: [
+            ['porque', 'introduce la raz\u00f3n'],
+            ['as\u00ed que', 'introduce la consecuencia'],
+            ['ya que', 'explica la causa'],
+            ['por eso', 'se\u00f1ala el resultado']
+        ]
+    },
+
+    /* ============================================================
+       6. LISTENING \u2014 Do\u00f1a Asunci\u00f3n\u2019s first words
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha las palabras de Do\u00f1a Asunci\u00f3n y responde.',
+        audio: 'El r\u00edo me cuenta las historias que la gente olvida. Yo escucho porque alguien tiene que recordar. Las palabras que se pierden en el aire quedan en el agua.',
+        question: '\u00bfQu\u00e9 hace Do\u00f1a Asunci\u00f3n seg\u00fan sus palabras?',
+        answer: 'Escucha las historias que la gente olvida',
+        options: ['Escucha las historias que la gente olvida', 'Pesca en el r\u00edo Atrato', 'Escribe libros sobre el agua', 'Ense\u00f1a a los ni\u00f1os del pueblo']
+    },
+
+    /* ============================================================
+       7. BUILDER \u2014 Build a sentence with relative clause
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con cl\u00e1usula relativa.',
+        words: ['La', 'mujer', 'que', 'escucha', 'el', 'r\u00edo', 'es', 'la', '\u00faltima', 'escuchadora'],
+        answer: 'La mujer que escucha el r\u00edo es la \u00faltima escuchadora'
+    },
+
+    /* ============================================================
+       8. CONVERSATION \u2014 Ask about Do\u00f1a Asunci\u00f3n
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Pregunta sobre Do\u00f1a Asunci\u00f3n y su tradici\u00f3n.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfViste a la mujer que estaba junto al r\u00edo? Es Do\u00f1a Asunci\u00f3n.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, la vi. Me dijo que es la \u00faltima escuchadora. \u00bfQu\u00e9 significa eso?',
+                    'No vi a nadie.',
+                    'El r\u00edo es bonito.',
+                    'Me gustan los p\u00e1jaros.'
+                ],
+                answer: 'S\u00ed, la vi. Me dijo que es la \u00faltima escuchadora. \u00bfQu\u00e9 significa eso?'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Una escuchadora es una persona que recoge las historias de las comunidades. Do\u00f1a Asunci\u00f3n es la \u00faltima que queda.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    '\u00bfPor qu\u00e9 es la \u00faltima? \u00bfQu\u00e9 pas\u00f3 con las otras escuchadoras?',
+                    'Eso no me interesa.',
+                    'Yo tambi\u00e9n escucho m\u00fasica.',
+                    'Hace calor hoy.'
+                ],
+                answer: '\u00bfPor qu\u00e9 es la \u00faltima? \u00bfQu\u00e9 pas\u00f3 con las otras escuchadoras?'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Las escuchadoras desaparecieron porque las comunidades se dispersaron. Do\u00f1a Asunci\u00f3n se qued\u00f3 porque cree que las historias son la memoria del territorio.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Entiendo. As\u00ed que Do\u00f1a Asunci\u00f3n guarda la memoria porque nadie m\u00e1s lo hace. Es una responsabilidad enorme.',
+                    'Las comunidades tienen casas.',
+                    'No entiendo nada.',
+                    'Quiero irme.'
+                ],
+                answer: 'Entiendo. As\u00ed que Do\u00f1a Asunci\u00f3n guarda la memoria porque nadie m\u00e1s lo hace. Es una responsabilidad enorme.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Ella dice que Yaguar\u00e1 es quien va a continuar esa tradici\u00f3n. \u00bfQu\u00e9 piensas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Tiene sentido, ya que Yaguar\u00e1 ha recogido historias de muchas comunidades. Por eso Do\u00f1a Asunci\u00f3n la esperaba.',
+                    'Los jaguares no hablan.',
+                    'No s\u00e9.',
+                    'Prefiero los gatos.'
+                ],
+                answer: 'Tiene sentido, ya que Yaguar\u00e1 ha recogido historias de muchas comunidades. Por eso Do\u00f1a Asunci\u00f3n la esperaba.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. CONVERSATION \u2014 Connecting two stories
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Cuenta c\u00f3mo se conectan las historias del pescador y el llanero.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Do\u00f1a Asunci\u00f3n', text: 'Cu\u00e9ntame las historias que escuchaste en tu viaje.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'El pescador que vive junto al r\u00edo me cont\u00f3 que el agua baj\u00f3. El llanero que vive en el llano dijo que la lluvia cambi\u00f3.',
+                    'Escuch\u00e9 cosas.',
+                    'Hac\u00eda calor en el llano.',
+                    'Los pescadores pescan peces.'
+                ],
+                answer: 'El pescador que vive junto al r\u00edo me cont\u00f3 que el agua baj\u00f3. El llanero que vive en el llano dijo que la lluvia cambi\u00f3.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Do\u00f1a Asunci\u00f3n', text: '\u00bfY qu\u00e9 tienen en com\u00fan esas dos historias?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Las dos historias hablan del mismo problema: el agua que cambia. Por eso creo que la causa es com\u00fan, ya que el cambio afecta a todos.',
+                    'Las dos son historias.',
+                    'No tienen nada en com\u00fan.',
+                    'Una es de un pescador y otra de un llanero.'
+                ],
+                answer: 'Las dos historias hablan del mismo problema: el agua que cambia. Por eso creo que la causa es com\u00fan, ya que el cambio afecta a todos.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. CONVERSATION \u2014 About the escuchadora tradition
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa sobre la tradici\u00f3n de las escuchadoras.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Do\u00f1a Asunci\u00f3n', text: 'Una escuchadora es alguien que camina entre las comunidades y recoge las historias que la gente cuenta. \u00bfPor qu\u00e9 crees que es importante?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Es importante porque las historias que se pierden no vuelven. La memoria que guarda una escuchadora conecta el pasado con el presente.',
+                    'No s\u00e9 por qu\u00e9 es importante.',
+                    'Porque es un trabajo.',
+                    'Las historias son aburridas.'
+                ],
+                answer: 'Es importante porque las historias que se pierden no vuelven. La memoria que guarda una escuchadora conecta el pasado con el presente.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Do\u00f1a Asunci\u00f3n', text: 'Exacto. Yo soy la \u00faltima, ya que las nuevas generaciones se fueron a la ciudad. Pero t\u00fa llegaste. \u00bfQu\u00e9 puedes hacer con las historias que recogiste?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Puedo buscar las conexiones entre las historias, as\u00ed que otras personas van a entender que los problemas que afectan a una comunidad afectan a todas.',
+                    'Puedo escribirlas en un cuaderno.',
+                    'No s\u00e9 qu\u00e9 hacer.',
+                    'Puedo contarlas en la ciudad.'
+                ],
+                answer: 'Puedo buscar las conexiones entre las historias, as\u00ed que otras personas van a entender que los problemas que afectan a una comunidad afectan a todas.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       11. CONVERSATION \u2014 Why stories connect
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla sobre los patrones que conectan las historias de diferentes comunidades.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfPor qu\u00e9 crees que comunidades que no se conocen cuentan historias tan parecidas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Porque los problemas que enfrentan son los mismos: el agua que cambia, la tierra que se seca. Por eso las historias se parecen, ya que la causa es compartida.',
+                    'Porque todos hablan espa\u00f1ol.',
+                    'No s\u00e9.',
+                    'Es una coincidencia.'
+                ],
+                answer: 'Porque los problemas que enfrentan son los mismos: el agua que cambia, la tierra que se seca. Por eso las historias se parecen, ya que la causa es compartida.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Do\u00f1a Asunci\u00f3n dice que la persona que conecta las historias tiene un poder especial. \u00bfQu\u00e9 poder es ese?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'El poder de ver lo que otros no ven: los hilos invisibles que unen las historias. As\u00ed que la escuchadora no solo recoge relatos, sino que descubre la verdad que los conecta.',
+                    'El poder de volar.',
+                    'No tiene ning\u00fan poder.',
+                    'El poder de hablar muchos idiomas.'
+                ],
+                answer: 'El poder de ver lo que otros no ven: los hilos invisibles que unen las historias. As\u00ed que la escuchadora no solo recoge relatos, sino que descubre la verdad que los conecta.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. KLOO \u2014 Relative clause card building
+    ============================================================ */
+    {
+        type: 'kloo',
+        label: 'Kloo',
+        instruction: 'Ordena las cartas para formar una oraci\u00f3n con cl\u00e1usula relativa.',
+        cards: [
+            { color: 'red', text: 'La mujer' },
+            { color: 'blue', text: 'que escucha' },
+            { color: 'green', text: 'el r\u00edo' },
+            { color: 'orange', text: 'guarda las historias' }
+        ],
+        answer: 'La mujer que escucha el r\u00edo guarda las historias'
+    },
+
+    /* ============================================================
+       13. BANANAGRAMS \u2014 Connection vocabulary
+    ============================================================ */
+    {
+        type: 'bananagrams',
+        label: 'Bananagrams',
+        instruction: 'Forma palabras relacionadas con la conexi\u00f3n de historias.',
+        letters: ['H','I','S','T','O','R','I','A','C','O','N','E','X','I','\u00d3','N','R','E','L','A','T','O','E','S','C','U','C','H','A','R','R','\u00cd','O','M','E','M','O','R','I','A','T','R','A','D','I','C','I','\u00d3','N'],
+        targetWords: ['historia', 'conexi\u00f3n', 'relato', 'escuchar', 'r\u00edo', 'memoria', 'tradici\u00f3n']
+    },
+
+    /* ============================================================
+       14. CLON \u2014 Direct vs connected perspective
+    ============================================================ */
+    {
+        type: 'clon',
+        label: 'Clon',
+        instruction: 'Compara oraciones simples con oraciones que usan cl\u00e1usulas relativas.',
+        pairs: [
+            { present: 'El pescador cont\u00f3 una historia. Vive junto al r\u00edo.', past: 'El pescador que vive junto al r\u00edo cont\u00f3 una historia.' },
+            { present: 'La mujer escucha el agua. Es la \u00faltima escuchadora.', past: 'La mujer que escucha el agua es la \u00faltima escuchadora.' },
+            { present: 'Las historias se parecen. Vienen de comunidades diferentes.', past: 'Las historias que vienen de comunidades diferentes se parecen.' },
+            { present: 'El r\u00edo lleva las palabras. Las personas las olvidan.', past: 'El r\u00edo lleva las palabras que las personas olvidan.' }
+        ]
+    },
+
+    /* ============================================================
+       15. FLASHNOTE \u2014 Relative clause rule capsule
+    ============================================================ */
+    {
+        type: 'flashnote',
+        label: 'C\u00e1psula',
+        instruction: 'Recuerda esta regla sobre cl\u00e1usulas relativas.',
+        note: 'Las cl\u00e1usulas relativas conectan dos ideas en una sola oraci\u00f3n. Se usan: \u00abque\u00bb (personas y cosas), \u00abquien\u00bb (solo personas, despu\u00e9s de preposici\u00f3n), \u00abdonde\u00bb (lugares). Ejemplo: La mujer que escucha = la mujer + ella escucha.',
+        question: '\u00bfCu\u00e1l es la oraci\u00f3n correcta con cl\u00e1usula relativa?',
+        answer: 'El pueblo donde vive Do\u00f1a Asunci\u00f3n est\u00e1 junto al r\u00edo.',
+        options: ['El pueblo donde vive Do\u00f1a Asunci\u00f3n est\u00e1 junto al r\u00edo.', 'El pueblo que vive Do\u00f1a Asunci\u00f3n est\u00e1 junto al r\u00edo.', 'El pueblo quien vive Do\u00f1a Asunci\u00f3n est\u00e1 junto al r\u00edo.', 'El pueblo cual vive Do\u00f1a Asunci\u00f3n est\u00e1 junto al r\u00edo.']
+    },
+
+    /* ============================================================
+       16. ESCAPEROOM \u2014 La sala de la escuchadora
+    ============================================================ */
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala de la escuchadora',
+            description: 'Una sala subterr\u00e1nea junto al r\u00edo Atrato. Las paredes est\u00e1n cubiertas de palabras escritas con agua. Se escucha el sonido del r\u00edo, como si hablara.',
+            ambience: 'river'
+        },
+        puzzles: [
+            {
+                puzzleType: 'extract',
+                prompt: 'El sonido del agua forma palabras. Escucha con atenci\u00f3n.',
+                passage: '\u00abEl agua que corre lleva las ___ que la gente olvida. La persona que ___ se convierte en puente. El r\u00edo que conecta dos orillas tambi\u00e9n conecta dos ___.\u00bb',
+                clue: 'Las palabras que faltan est\u00e1n relacionadas con lo que hace una escuchadora.',
+                answer: 'historias \u2014 escucha \u2014 memorias',
+                options: [
+                    'historias \u2014 escucha \u2014 memorias',
+                    'piedras \u2014 nada \u2014 corrientes',
+                    'palabras \u2014 habla \u2014 canciones',
+                    'hojas \u2014 camina \u2014 orillas'
+                ],
+                onSolve: 'Las palabras de agua brillan en las paredes.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'En la pared hay cuatro momentos de la tradici\u00f3n de las escuchadoras, pero est\u00e1n desordenados.',
+                clue: 'Ord\u00e9nalos seg\u00fan la l\u00f3gica de la tradici\u00f3n.',
+                items: [
+                    'Una comunidad cuenta sus historias',
+                    'La escuchadora camina y escucha',
+                    'Las historias se conectan entre s\u00ed',
+                    'La memoria del territorio se mantiene viva'
+                ],
+                onSolve: 'Los cuatro momentos se alinean como un r\u00edo que fluye.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el fondo de la sala hay una cerradura de piedra.',
+                clue: '\u00bfQu\u00e9 verbo describe lo que hace una escuchadora? Lo que Do\u00f1a Asunci\u00f3n hace con el r\u00edo. Ocho letras.',
+                answer: 'escuchar',
+                hint: '_ _ _ _ _ _ _ _',
+                onSolve: 'La piedra se abre. El sonido del r\u00edo se convierte en voces que cantan.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de un r\u00edo que se divide en tres brazos, cada uno llevando palabras diferentes que convergen al final.',
+            questClue: '\u00bfQu\u00e9 pasa cuando las historias se encuentran?',
+            item: 'historia-06'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d24',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest24Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

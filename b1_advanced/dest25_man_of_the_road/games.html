@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 25: El hombre del camino</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest25_man_of_the_road/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 25: El hombre del camino &mdash; Games",
+          "url": "https://babelfree.com/b1_advanced/dest25_man_of_the_road/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Concessive structures (aunque, sin embargo)", "Argumentation", "Presenting opposing viewpoints"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Avanzado", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "El hombre del camino", "item": "https://babelfree.com/b1_advanced/dest25_man_of_the_road/games" },
+            { "@type": "ListItem", "position": 5, "name": "Games" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 25: El hombre del camino</div>
+            <div class="yg-header-subtitle">Argumentar &mdash; Estructuras concesivas</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    /* ============================================================
+       1. NARRATIVE \u2014 Don Pr\u00f3spero arrives
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la llegada de Don Pr\u00f3spero al pueblo.',
+        text: 'Don Pr\u00f3spero llega al pueblo que Yaguar\u00e1 quiere. Llega sonriendo, con un traje limpio y un portafolio de cuero. Cita poes\u00eda de Silva y recita estad\u00edsticas de memoria. \u00abEste camino va a conectar al pueblo con el mundo\u00bb, dice mientras muestra planos azules. Conoce cada \u00e1rbol por su nombre \u2014su abuela le ense\u00f1\u00f3\u2014, pero su camino va a pasar por encima de ellos. El pueblo est\u00e1 dividido. Algunos lo escuchan con esperanza; otros, con miedo. Aunque Don Pr\u00f3spero habla con elocuencia, Yaguar\u00e1 siente que algo no est\u00e1 bien. Sin embargo, no puede negar que sus argumentos son fuertes.'
+    },
+
+    /* ============================================================
+       2. FILL \u2014 Concessive structures with aunque
+    ============================================================ */
+    {
+        type: 'fill',
+        label: 'Completar',
+        instruction: 'Completa las oraciones concesivas con \u00abaunque\u00bb y la forma verbal correcta.',
+        questions: [
+            { sentence: '___ Don Pr\u00f3spero habla bien, su camino destruye el bosque.', answer: 'Aunque', options: ['Aunque', 'Porque', 'Ya que', 'Por eso'] },
+            { sentence: 'El pueblo necesita trabajo, ___ el precio es la destrucci\u00f3n del bosque.', answer: 'aunque', options: ['aunque', 'porque', 'ya que', 'por lo tanto'] },
+            { sentence: '___ los planos parecen buenos, muchas familias tienen miedo.', answer: 'Aunque', options: ['Aunque', 'Porque', 'As\u00ed que', 'Por eso'] }
+        ]
+    },
+
+    /* ============================================================
+       3. FILL \u2014 Sin embargo and other connectors
+    ============================================================ */
+    {
+        type: 'fill',
+        label: 'Completar',
+        instruction: 'Completa con el conector concesivo adecuado.',
+        questions: [
+            { sentence: 'Don Pr\u00f3spero promete trabajo. ___, el bosque va a desaparecer.', answer: 'Sin embargo', options: ['Sin embargo', 'Porque', 'Ya que', 'Por eso'] },
+            { sentence: 'El camino trae progreso. ___, tambi\u00e9n destruye el ecosistema.', answer: 'No obstante', options: ['No obstante', 'Porque', 'Ya que', 'As\u00ed que'] },
+            { sentence: 'Los argumentos de Don Pr\u00f3spero son fuertes. ___, Yaguar\u00e1 no conf\u00eda en \u00e9l.', answer: 'A pesar de eso', options: ['A pesar de eso', 'Por eso', 'Ya que', 'Porque'] }
+        ]
+    },
+
+    /* ============================================================
+       4. PAIR \u2014 Arguments for/against the road
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada argumento con su posici\u00f3n.',
+        pairs: [
+            ['El camino trae trabajo', 'A favor del camino'],
+            ['El bosque es el hogar de muchas especies', 'En contra del camino'],
+            ['El pueblo se conecta con la ciudad', 'A favor del camino'],
+            ['Las comunidades pierden su territorio', 'En contra del camino']
+        ]
+    },
+
+    /* ============================================================
+       5. BUILDER \u2014 Build a concessive sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n concesiva.',
+        words: ['Aunque', 'el', 'camino', 'trae', 'trabajo', 'tambi\u00e9n', 'destruye', 'el', 'bosque'],
+        answer: 'Aunque el camino trae trabajo tambi\u00e9n destruye el bosque'
+    },
+
+    /* ============================================================
+       6. CATEGORY \u2014 Classify arguments: a favor / en contra
+    ============================================================ */
+    {
+        type: 'category',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada argumento: \u00bfa favor o en contra del camino?',
+        categories: ['A favor del camino', 'En contra del camino'],
+        items: [
+            { text: 'El camino trae empleo para las familias', category: 'A favor del camino' },
+            { text: 'El bosque es la farmacia de la comunidad', category: 'En contra del camino' },
+            { text: 'Los ni\u00f1os pueden ir a la escuela m\u00e1s f\u00e1cil', category: 'A favor del camino' },
+            { text: 'Los animales pierden su h\u00e1bitat', category: 'En contra del camino' },
+            { text: 'Los productos del pueblo llegan al mercado', category: 'A favor del camino' },
+            { text: 'El r\u00edo se contamina con la construcci\u00f3n', category: 'En contra del camino' },
+            { text: 'Llegan m\u00e9dicos y medicinas', category: 'A favor del camino' },
+            { text: 'La tradici\u00f3n oral se debilita con el ruido', category: 'En contra del camino' }
+        ]
+    },
+
+    /* ============================================================
+       7. CONSEQUENCES \u2014 What happens when the road is built
+    ============================================================ */
+    {
+        type: 'consequences',
+        label: 'Consecuencias',
+        instruction: 'Crea una historia en cadena sobre la construcci\u00f3n del camino.',
+        prompts: [
+            { label: 'Don Pr\u00f3spero empez\u00f3 a construir el camino y...', options: ['los \u00e1rboles cayeron', 'la gente celebr\u00f3', 'el r\u00edo cambi\u00f3 de direcci\u00f3n', 'llegaron las m\u00e1quinas'] },
+            { label: 'Aunque el pueblo ten\u00eda trabajo,...', options: ['el bosque desaparec\u00eda r\u00e1pido', 'los animales huyeron', 'el silencio se perdi\u00f3', 'las familias se dividieron'] },
+            { label: 'Sin embargo,...', options: ['algunos vecinos empezaron a protestar', 'Do\u00f1a Asunci\u00f3n habl\u00f3 con el r\u00edo', 'Yaguar\u00e1 busc\u00f3 una alternativa', 'los ni\u00f1os plantaron \u00e1rboles nuevos'] },
+            { label: 'Al final,...', options: ['el pueblo tuvo que elegir entre el progreso y el bosque', 'Don Pr\u00f3spero escuch\u00f3 a la comunidad', 'la naturaleza encontr\u00f3 un camino propio', 'la historia se repiti\u00f3 en otro pueblo'] }
+        ]
+    },
+
+    /* ============================================================
+       8. CONVERSATION \u2014 Debate about the road
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Escucha el debate entre dos vecinos sobre el camino.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Vecino 1', text: 'El camino es necesario. Aunque perdamos algunos \u00e1rboles, vamos a tener trabajo y acceso a la ciudad. \u00bfT\u00fa qu\u00e9 piensas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Entiendo tu punto. Sin embargo, el bosque no es solo \u00e1rboles: es el hogar de muchas especies y la fuente de agua del pueblo.',
+                    'Tienes raz\u00f3n, hay que construir.',
+                    'No me importa.',
+                    'Los \u00e1rboles son verdes.'
+                ],
+                answer: 'Entiendo tu punto. Sin embargo, el bosque no es solo \u00e1rboles: es el hogar de muchas especies y la fuente de agua del pueblo.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Vecino 2', text: 'Pero mis hijos necesitan ir a la escuela. Aunque amo el bosque, no puedo negarles un futuro. \u00bfHay otra soluci\u00f3n?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Quiz\u00e1s. Aunque el camino es una opci\u00f3n, se podr\u00eda buscar una ruta que no pase por el coraz\u00f3n del bosque. As\u00ed se protege la naturaleza sin negar el progreso.',
+                    'No hay otra soluci\u00f3n.',
+                    'El bosque no importa.',
+                    'Los ni\u00f1os pueden caminar.'
+                ],
+                answer: 'Quiz\u00e1s. Aunque el camino es una opci\u00f3n, se podr\u00eda buscar una ruta que no pase por el coraz\u00f3n del bosque. As\u00ed se protege la naturaleza sin negar el progreso.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. CONVERSATION \u2014 Don Pr\u00f3spero explains his reasons
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Escucha a Don Pr\u00f3spero y responde con argumentos concesivos.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Pr\u00f3spero', text: 'Mi abuela me ense\u00f1\u00f3 el nombre de cada \u00e1rbol de este bosque. Yo los conozco mejor que nadie. Pero el progreso no espera. El camino va a traer hospitales, escuelas, comercio.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Aunque usted conoce los \u00e1rboles, el camino los va a destruir. Sin embargo, entiendo que quiere ayudar al pueblo. \u00bfNo hay otra forma de traer progreso?',
+                    'Tiene raz\u00f3n, construya el camino.',
+                    'Los \u00e1rboles no importan.',
+                    'No le creo nada.'
+                ],
+                answer: 'Aunque usted conoce los \u00e1rboles, el camino los va a destruir. Sin embargo, entiendo que quiere ayudar al pueblo. \u00bfNo hay otra forma de traer progreso?'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Pr\u00f3spero', text: 'Mira, yo no soy el enemigo. He construido caminos en veinte pueblos y todos prosperaron. A pesar de las p\u00e9rdidas iniciales, los resultados son buenos.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Aunque los otros pueblos prosperaron, cada lugar es diferente. No obstante, podr\u00edamos buscar un camino que respete el bosque y tambi\u00e9n conecte al pueblo.',
+                    'Est\u00e1 bien, conf\u00edo en usted.',
+                    'Veinte pueblos es mucho.',
+                    'No me interesan los otros pueblos.'
+                ],
+                answer: 'Aunque los otros pueblos prosperaron, cada lugar es diferente. No obstante, podr\u00edamos buscar un camino que respete el bosque y tambi\u00e9n conecte al pueblo.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. CROSSWORD \u2014 Argumentation vocabulary
+    ============================================================ */
+    {
+        type: 'crossword',
+        label: 'Crucigrama',
+        instruction: 'Lee las definiciones. Escribe la palabra correcta.',
+        clues: [
+            { direction: 'across', number: 1, clue: 'Raz\u00f3n que se presenta para defender una idea', answer: 'argumento' },
+            { direction: 'across', number: 5, clue: 'Conector que introduce una concesi\u00f3n: ___ llueve, salgo', answer: 'aunque' },
+            { direction: 'down', number: 1, clue: 'Conjunto de \u00e1rboles y plantas', answer: 'bosque' },
+            { direction: 'down', number: 2, clue: 'V\u00eda que conecta dos lugares', answer: 'camino' },
+            { direction: 'across', number: 8, clue: 'Conjunto de personas que viven juntas', answer: 'pueblo' },
+            { direction: 'down', number: 3, clue: 'Avance, desarrollo, mejora', answer: 'progreso' },
+            { direction: 'down', number: 4, clue: 'Motivo, causa, explicaci\u00f3n', answer: 'raz\u00f3n' }
+        ]
+    },
+
+    /* ============================================================
+       11. ESCAPEROOM \u2014 La sala del contrato
+    ============================================================ */
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala del contrato',
+            description: 'Una oficina polvorienta con un escritorio de madera vieja. Sobre el escritorio hay un contrato largo y un plano enrollado. Todo parece perfecto, pero algo no encaja.',
+            ambience: 'office'
+        },
+        puzzles: [
+            {
+                puzzleType: 'logic',
+                prompt: 'El contrato de Don Pr\u00f3spero tiene tres cl\u00e1usulas. Lee con atenci\u00f3n.',
+                passage: '\u00abCl\u00e1usula 1: El camino no pasar\u00e1 por zonas protegidas. Cl\u00e1usula 2: La ruta sigue el curso del r\u00edo Atrato. Cl\u00e1usula 3: El r\u00edo Atrato es zona protegida desde 2019.\u00bb',
+                clue: '\u00bfCu\u00e1l es la contradicci\u00f3n?',
+                answer: 'Las cl\u00e1usulas 1 y 2 se contradicen: si el r\u00edo es zona protegida, el camino no puede seguir su curso.',
+                options: [
+                    'Las cl\u00e1usulas 1 y 2 se contradicen: si el r\u00edo es zona protegida, el camino no puede seguir su curso.',
+                    'No hay contradicci\u00f3n, el contrato es correcto.',
+                    'La cl\u00e1usula 3 es la \u00fanica importante.',
+                    'Las tres cl\u00e1usulas dicen lo mismo.'
+                ],
+                onSolve: 'La tinta del contrato cambia de color. Las letras falsas se hacen visibles.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Debajo del escritorio hay una nota escrita a mano:',
+                riddle: '\u00abPuedo nombrar cada \u00e1rbol y aun as\u00ed derribarlo. Puedo amar un r\u00edo y construir sobre \u00e9l. \u00bfQu\u00e9 tipo de persona soy?\u00bb',
+                clue: 'Piensa en alguien que conoce el valor de algo pero elige destruirlo.',
+                answer: 'Una persona que sabe el precio de todo pero no el valor de nada',
+                options: [
+                    'Una persona que sabe el precio de todo pero no el valor de nada',
+                    'Un bi\u00f3logo que estudia los \u00e1rboles',
+                    'Un constructor honesto',
+                    'Un enemigo de la naturaleza'
+                ],
+                onSolve: 'La nota se desdobla y revela un mapa escondido.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'El caj\u00f3n del escritorio tiene una cerradura con letras.',
+                clue: 'Es lo que Don Pr\u00f3spero dice que trae, pero que tambi\u00e9n puede destruir. Ocho letras.',
+                answer: 'progreso',
+                hint: '_ _ _ _ _ _ _ _',
+                onSolve: 'El caj\u00f3n se abre. Dentro hay un jaguar tallado en madera \u2014el que su madre le hizo\u2014 y un fragmento del Mapa de las Voces.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de un camino que se bifurca. Un lado lleva a un bosque verde; el otro, a un desierto gris.',
+            questClue: '\u00bfPuede una persona buena hacer da\u00f1o?',
+            item: 'historia-07'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d25',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest25Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

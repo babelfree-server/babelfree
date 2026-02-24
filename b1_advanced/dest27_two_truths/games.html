@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 27: Dos verdades &mdash; Perspectivas opuestas</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest27_two_truths/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 27: Dos verdades — Games",
+          "url": "https://babelfree.com/b1_advanced/dest27_two_truths/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "teaches": ["Basic subjunctive (quiero que, es importante que)", "Reporting contrasting viewpoints", "Critical thinking in Spanish"],
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Avanzado", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "Dos verdades", "item": "https://babelfree.com/b1_advanced/dest27_two_truths/games" },
+            { "@type": "ListItem", "position": 5, "name": "Games" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 27: Dos verdades</div>
+            <div class="yg-header-subtitle">Perspectivas opuestas &mdash; Subjuntivo b&aacute;sico</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // =====================================================
+    // GAME 1: NARRATIVE \u2014 Don Pr\u00f3spero\u2019s story
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la historia de Don Pr\u00f3spero.',
+        title: 'La historia de Don Pr\u00f3spero',
+        text: 'Yaguar\u00e1 y Candelaria se sientan frente a Don Pr\u00f3spero. \u00c9l no grita. No amenaza. Habla con la voz tranquila de alguien que ha pensado mucho. \u00abNac\u00ed aqu\u00ed, en el Choc\u00f3\u00bb, dice. \u00abMi madre era ind\u00edgena. Muri\u00f3 pobre mientras la tierra a su alrededor era rica. Me fui a Bogot\u00e1, estudi\u00e9, trabaj\u00e9, y volv\u00ed para salvar a mi gente.\u00bb Su l\u00f3gica es coherente. Su dolor es real. Pero sus m\u00e9todos son devastadores. Quiere que la carretera conecte al pueblo con el mundo. Es importante que la gente tenga oportunidades, dice. Pero los \u00e1rboles caen y la niebla gris avanza.'
+    },
+
+    // =====================================================
+    // GAME 2: FILL \u2014 Subjunctive with quiero que / es importante que
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta del subjuntivo despu\u00e9s de \u00abquiero que\u00bb o \u00abes importante que\u00bb.',
+        questions: [
+            { sentence: 'Don Pr\u00f3spero quiere que la carretera ___ al pueblo con la ciudad.', answer: 'conecte', options: ['conecte', 'conecta', 'conect\u00f3', 'conectar\u00e1'] },
+            { sentence: 'Es importante que la gente ___ oportunidades de trabajo.', answer: 'tenga', options: ['tenga', 'tiene', 'tuvo', 'tendr\u00e1'] },
+            { sentence: 'Los ancianos quieren que los j\u00f3venes ___ la historia del territorio.', answer: 'conozcan', options: ['conozcan', 'conocen', 'conocieron', 'conocer\u00e1n'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 3: FILL \u2014 Reporting viewpoints
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones que reportan diferentes perspectivas.',
+        questions: [
+            { sentence: 'Don Pr\u00f3spero dice que la carretera ___ necesaria para el progreso.', answer: 'es', options: ['es', 'sea', 'fue', 'ser\u00e1'] },
+            { sentence: 'Los ancianos creen que el bosque ___ m\u00e1s importante que cualquier carretera.', answer: 'es', options: ['es', 'sea', 'fue', 'ser\u00e1'] },
+            { sentence: 'Candelaria no cree que destruir el bosque ___ la soluci\u00f3n.', answer: 'sea', options: ['sea', 'es', 'fue', 'ser\u00e1'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 4: LISTENING \u2014 Don Pr\u00f3spero speaks
+    // =====================================================
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el argumento de Don Pr\u00f3spero y responde.',
+        audio: 'Quiero que mi pueblo tenga lo que yo no tuve. Es importante que los ni\u00f1os puedan ir a la escuela sin caminar cuatro horas. No quiero que sufran como sufri\u00f3 mi madre.',
+        question: '\u00bfQu\u00e9 quiere Don Pr\u00f3spero para su pueblo?',
+        answer: 'Que los ni\u00f1os tengan acceso a la escuela y no sufran como su madre.',
+        options: [
+            'Que los ni\u00f1os tengan acceso a la escuela y no sufran como su madre.',
+            'Que los \u00e1rboles crezcan m\u00e1s r\u00e1pido.',
+            'Que la gente se vaya del pueblo.',
+            'Que Candelaria deje de escribir.'
+        ]
+    },
+
+    // =====================================================
+    // GAME 5: BOGGLE \u2014 Words about truth and perspective
+    // =====================================================
+    {
+        type: 'boggle',
+        label: 'Boggle',
+        instruction: 'Encuentra palabras sobre verdad y perspectiva en la cuadr\u00edcula de letras.',
+        grid: [
+            ['V', 'E', 'R', 'D', 'A'],
+            ['O', 'P', 'I', 'N', 'D'],
+            ['R', 'A', 'Z', '\u00d3', 'N'],
+            ['D', 'U', 'D', 'A', 'L'],
+            ['C', 'R', 'E', 'E', 'R']
+        ],
+        words: ['VERDAD', 'OPINAR', 'RAZ\u00d3N', 'DUDA', 'CREER'],
+        minWords: 3
+    },
+
+    // =====================================================
+    // GAME 6: CONJURO \u2014 Produce key subjunctive phrases
+    // =====================================================
+    {
+        type: 'conjuro',
+        label: 'Conjuro',
+        instruction: 'Produce las frases en subjuntivo para completar el conjuro. Escribe la forma correcta.',
+        spells: [
+            { prompt: 'Quiero que t\u00fa ___ la verdad.', answer: 'sepas', hint: 'saber \u2192 subjuntivo, t\u00fa' },
+            { prompt: 'Es importante que nosotros ___ ambas perspectivas.', answer: 'escuchemos', hint: 'escuchar \u2192 subjuntivo, nosotros' },
+            { prompt: 'No creo que Don Pr\u00f3spero ___ mala persona.', answer: 'sea', hint: 'ser \u2192 subjuntivo, \u00e9l' },
+            { prompt: 'Quiero que la gente ___ oportunidades.', answer: 'tenga', hint: 'tener \u2192 subjuntivo, la gente' },
+            { prompt: 'Es necesario que todos ___ las consecuencias.', answer: 'entiendan', hint: 'entender \u2192 subjuntivo, todos' }
+        ]
+    },
+
+    // =====================================================
+    // GAME 7: CONVERSATION \u2014 Don Pr\u00f3spero explains himself
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con Don Pr\u00f3spero sobre sus motivaciones.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Pr\u00f3spero', text: 'Mi madre muri\u00f3 porque no hab\u00eda hospital cerca. Quiero que eso no vuelva a pasar. \u00bfEntiendes?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Entiendo tu dolor. Es importante que la gente tenga acceso a salud. Pero no creo que destruir el bosque sea la \u00fanica soluci\u00f3n.',
+                    'No me importa tu historia.',
+                    'Los hospitales no son importantes.'
+                ],
+                answer: 'Entiendo tu dolor. Es importante que la gente tenga acceso a salud. Pero no creo que destruir el bosque sea la \u00fanica soluci\u00f3n.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Pr\u00f3spero', text: 'T\u00fa no creciste aqu\u00ed. No sabes lo que es caminar horas para llegar a cualquier parte. Quiero que el pueblo progrese.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Tienes raz\u00f3n en que el pueblo necesita conexi\u00f3n. Pero es necesario que encontremos un camino que no destruya el bosque.',
+                    'El bosque no importa.',
+                    'No quiero hablar contigo.'
+                ],
+                answer: 'Tienes raz\u00f3n en que el pueblo necesita conexi\u00f3n. Pero es necesario que encontremos un camino que no destruya el bosque.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Pr\u00f3spero', text: '\u00bfY qu\u00e9 propones t\u00fa? Es f\u00e1cil criticar cuando no has sufrido.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Quiero que hablemos con toda la comunidad. Es posible que haya soluciones que no conocemos todav\u00eda.',
+                    'No tengo ninguna idea.',
+                    'Propongo que destruyamos todo.'
+                ],
+                answer: 'Quiero que hablemos con toda la comunidad. Es posible que haya soluciones que no conocemos todav\u00eda.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 8: CONVERSATION \u2014 Candelaria questions Don Pr\u00f3spero
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Escucha c\u00f3mo Candelaria cuestiona a Don Pr\u00f3spero.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Don Pr\u00f3spero, usted dice que quiere salvar al pueblo. Pero los \u00e1rboles caen y la niebla avanza. \u00bfEso es salvar?' },
+                    { speaker: 'B', name: 'Don Pr\u00f3spero', text: '???' }
+                ],
+                options: [
+                    'Es necesario que sacrifiquemos algo para ganar algo m\u00e1s grande. No es f\u00e1cil, pero es el \u00fanico camino que conozco.',
+                    'No me importa la niebla.',
+                    'Los \u00e1rboles volver\u00e1n a crecer solos.'
+                ],
+                answer: 'Es necesario que sacrifiquemos algo para ganar algo m\u00e1s grande. No es f\u00e1cil, pero es el \u00fanico camino que conozco.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Pero la anciana muri\u00f3 ayer. Con ella casi se pierde el nombre del r\u00edo. \u00bfNo cree que tambi\u00e9n estamos perdiendo algo con su carretera?' },
+                    { speaker: 'B', name: 'Don Pr\u00f3spero', text: '???' }
+                ],
+                options: [
+                    'Puede ser. No quiero que se pierdan las palabras antiguas. Pero tambi\u00e9n quiero que los ni\u00f1os tengan futuro.',
+                    'Las palabras no sirven para nada.',
+                    'La anciana ya no importa.'
+                ],
+                answer: 'Puede ser. No quiero que se pierdan las palabras antiguas. Pero tambi\u00e9n quiero que los ni\u00f1os tengan futuro.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfY si las dos cosas son verdad al mismo tiempo? \u00bfSi su dolor es real y el da\u00f1o tambi\u00e9n?' },
+                    { speaker: 'B', name: 'Don Pr\u00f3spero', text: '???' }
+                ],
+                options: [
+                    'Es posible que tengas raz\u00f3n. Quiz\u00e1s es necesario que busquemos un camino donde las dos verdades puedan existir.',
+                    'Solo hay una verdad: la m\u00eda.',
+                    'No entiendo tu pregunta.'
+                ],
+                answer: 'Es posible que tengas raz\u00f3n. Quiz\u00e1s es necesario que busquemos un camino donde las dos verdades puedan existir.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 9: CONVERSATION \u2014 The village debates
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Escucha el debate entre dos aldeanos con opiniones opuestas.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Aldeano 1', text: 'Yo creo que Don Pr\u00f3spero tiene raz\u00f3n. Quiero que mis hijos tengan trabajo.' },
+                    { speaker: 'B', name: 'Aldeano 2', text: '???' }
+                ],
+                options: [
+                    'Entiendo, pero no creo que una carretera que destruye el bosque sea la respuesta. Es posible que haya otras formas de crear trabajo.',
+                    'Don Pr\u00f3spero siempre tiene raz\u00f3n.',
+                    'El trabajo no es importante.'
+                ],
+                answer: 'Entiendo, pero no creo que una carretera que destruye el bosque sea la respuesta. Es posible que haya otras formas de crear trabajo.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Aldeano 1', text: '\u00bfComo cu\u00e1les? Es f\u00e1cil decir \u00abno\u00bb cuando tus hijos tienen comida.' },
+                    { speaker: 'B', name: 'Aldeano 2', text: '???' }
+                ],
+                options: [
+                    'Tienes raz\u00f3n en eso. Es necesario que escuchemos a todos. Pero tambi\u00e9n es importante que pensemos en lo que les dejaremos a nuestros nietos.',
+                    'No me importan tus hijos.',
+                    'Come frutas del bosque.'
+                ],
+                answer: 'Tienes raz\u00f3n en eso. Es necesario que escuchemos a todos. Pero tambi\u00e9n es importante que pensemos en lo que les dejaremos a nuestros nietos.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Aldeano 1', text: 'Quiz\u00e1s los dos tengamos raz\u00f3n. \u00bfEs posible eso?' },
+                    { speaker: 'B', name: 'Aldeano 2', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, creo que es posible que dos verdades existan al mismo tiempo. Quiero que encontremos un camino juntos.',
+                    'No, solo uno puede tener raz\u00f3n.',
+                    'No s\u00e9.'
+                ],
+                answer: 'S\u00ed, creo que es posible que dos verdades existan al mismo tiempo. Quiero que encontremos un camino juntos.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 10: CONVERSATION \u2014 Two truths can exist
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Reflexiona con Yaguar\u00e1 sobre la coexistencia de verdades opuestas.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'Don Pr\u00f3spero sufri\u00f3 de verdad. Y el bosque sufre de verdad. \u00bfQu\u00e9 hacemos cuando dos verdades se contradicen?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Es necesario que aceptemos que las dos verdades son reales. No creo que ignorar una de ellas sea la soluci\u00f3n.',
+                    'Una verdad tiene que ganar y la otra perder.',
+                    'No me importan las verdades.'
+                ],
+                answer: 'Es necesario que aceptemos que las dos verdades son reales. No creo que ignorar una de ellas sea la soluci\u00f3n.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: '\u00bfCrees que es posible que alguien tenga raz\u00f3n y est\u00e9 equivocado al mismo tiempo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed. Es posible que Don Pr\u00f3spero tenga raz\u00f3n sobre el sufrimiento de su pueblo y est\u00e9 equivocado en su m\u00e9todo.',
+                    'No, eso es imposible.',
+                    'No quiero pensar en esto.'
+                ],
+                answer: 'S\u00ed. Es posible que Don Pr\u00f3spero tenga raz\u00f3n sobre el sufrimiento de su pueblo y est\u00e9 equivocado en su m\u00e9todo.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'Entonces, \u00bfqu\u00e9 es m\u00e1s importante: tener raz\u00f3n o encontrar un camino?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Creo que es m\u00e1s importante que encontremos un camino juntos. Quiero que las personas se escuchen antes de decidir.',
+                    'Tener raz\u00f3n es lo m\u00e1s importante.',
+                    'Ni lo uno ni lo otro importa.'
+                ],
+                answer: 'Creo que es m\u00e1s importante que encontremos un camino juntos. Quiero que las personas se escuchen antes de decidir.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 11: FILL \u2014 Subjunctive additional practice
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta del subjuntivo.',
+        questions: [
+            { sentence: 'Es posible que las dos perspectivas ___ v\u00e1lidas.', answer: 'sean', options: ['sean', 'son', 'fueron', 'ser\u00e1n'] },
+            { sentence: 'No creo que la violencia ___ ning\u00fan problema.', answer: 'resuelva', options: ['resuelva', 'resuelve', 'resolvi\u00f3', 'resolver\u00e1'] },
+            { sentence: 'Quiero que la comunidad ___ una decisi\u00f3n juntos.', answer: 'tome', options: ['tome', 'toma', 'tom\u00f3', 'tomar\u00e1'] }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala de las dos puertas',
+            description: 'Una sala con dos puertas. Sobre cada puerta hay una inscripci\u00f3n. Las dos inscripciones se contradicen, pero las dos son verdaderas. Solo puedes avanzar si entiendes c\u00f3mo.',
+            ambience: 'stone-chamber'
+        },
+        puzzles: [
+            {
+                puzzleType: 'logic',
+                prompt: 'La puerta izquierda dice: \u00abLa carretera trae progreso.\u00bb La puerta derecha dice: \u00abLa carretera destruye el bosque.\u00bb',
+                clue: '\u00bfCu\u00e1l de las dos afirmaciones es verdadera?',
+                answer: 'Las dos son verdaderas al mismo tiempo. Una acci\u00f3n puede tener consecuencias positivas y negativas simult\u00e1neamente.',
+                options: [
+                    'Las dos son verdaderas al mismo tiempo. Una acci\u00f3n puede tener consecuencias positivas y negativas simult\u00e1neamente.',
+                    'Solo la puerta izquierda es verdadera.',
+                    'Solo la puerta derecha es verdadera.',
+                    'Las dos son falsas.'
+                ],
+                onSolve: 'Las dos puertas se iluminan. Un camino se abre entre ellas.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Entre las dos puertas aparece una pregunta grabada en piedra:',
+                riddle: '\u00abDon Pr\u00f3spero quiere salvar a su pueblo. Los ancianos quieren salvar al bosque. Los dos quieren salvar algo. \u00bfQu\u00e9 tienen en com\u00fan los que parecen opuestos?\u00bb',
+                clue: 'Piensa en lo que motiva a ambos.',
+                answer: 'Los dos act\u00faan por amor a su tierra y a su gente. Su intenci\u00f3n es la misma, sus m\u00e9todos son diferentes.',
+                options: [
+                    'Los dos act\u00faan por amor a su tierra y a su gente. Su intenci\u00f3n es la misma, sus m\u00e9todos son diferentes.',
+                    'No tienen nada en com\u00fan.',
+                    'Los dos quieren dinero.',
+                    'Los dos quieren destruir algo.'
+                ],
+                onSolve: 'La inscripci\u00f3n brilla. El camino entre las puertas se ensancha.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Al final del camino hay una cerradura. La pista est\u00e1 en la pregunta: \u00bfpuede alguien tener raz\u00f3n y estar equivocado al mismo tiempo?',
+                clue: 'Lo que nos permite ver dos verdades a la vez. Lo que Don Pr\u00f3spero y los ancianos necesitan. Diez letras. Empieza con \u00abcom\u00bb.',
+                answer: 'comprender',
+                hint: '_ _ _ _ _ _ _ _ _ _',
+                onSolve: 'La cerradura se abre. Las dos puertas desaparecen y queda un solo camino iluminado.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de dos caminos que se cruzan y forman un solo sendero.',
+            questClue: '\u00bfPuede alguien tener raz\u00f3n y estar equivocado al mismo tiempo?',
+            item: 'historia-09'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d27',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest27Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>
