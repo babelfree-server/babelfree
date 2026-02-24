@@ -749,6 +749,108 @@
             body { font-size: 11pt; }
         }
 
+        /* --- SCENE CARDS --- */
+        .scene-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 18px 0;
+            position: relative;
+        }
+
+        .scene-card.act-i {
+            border-left: 4px solid var(--forest);
+            background: linear-gradient(135deg, white 0%, #F0F7EC 100%);
+        }
+
+        .scene-card.act-ii {
+            border-left: 4px solid var(--terracotta);
+            background: linear-gradient(135deg, white 0%, #FFF5EE 100%);
+        }
+
+        .scene-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--bark);
+            margin-bottom: 2px;
+        }
+
+        .scene-meta {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .scene-desc {
+            font-size: 0.92rem;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .scene-card h4 {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--bark);
+            margin: 14px 0 6px;
+        }
+
+        .scene-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .scene-card li {
+            padding: 3px 0 3px 18px;
+            position: relative;
+            font-size: 0.88rem;
+        }
+
+        .scene-card li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .scene-characters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .scene-characters span {
+            background: var(--cream-dark);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 3px 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--bark-light);
+        }
+
+        .level-group {
+            margin: 35px 0 15px;
+            padding: 12px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .level-group h3 {
+            margin: 0;
+        }
+
+        .level-group .level-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 4px;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .hero { padding: 50px 20px 40px; }
@@ -782,6 +884,7 @@
         <a href="#references">Style References</a>
         <a href="#schedule">Delivery Schedule</a>
         <a href="#rights">Rights &amp; Usage</a>
+        <a href="#scenes">Key Scenes</a>
     </div>
 </nav>
 
@@ -1544,7 +1647,7 @@
     <h3>Story Fragment Collectibles</h3>
     <p>Small, detailed, precious illustrations &mdash; one unlocked per module. Like pages from a lost book.</p>
     <ul style="margin: 10px 0 0 20px;">
-        <li>Approximately 20&ndash;30 needed for the full game</li>
+        <li><strong>58 total</strong> (one per destination across all 6 CEFR levels)</li>
         <li>Style: more painterly and detailed than the UI art</li>
         <li><strong>Size: 800&times;800px minimum, square format</strong></li>
         <li>Think: botanical illustration meets indigenous codex meets magical realism</li>
@@ -1667,8 +1770,8 @@
         </div>
         <div class="timeline-item priority-3">
             <div class="timeline-label">Phase 8</div>
-            <div class="timeline-title">Story fragment collectibles (20&ndash;30 pieces)</div>
-            <div class="timeline-desc">Square format, painterly style, botanical-codex-magical realism blend.</div>
+            <div class="timeline-title">Story fragment collectibles (58 pieces &mdash; one per destination)</div>
+            <div class="timeline-desc">Square format, painterly style, botanical-codex-magical realism blend. Organized by quest arc: <em>Las ra&iacute;ces</em> (18 pieces, A1&ndash;A2), <em>Las historias</em> (20 pieces, B1&ndash;B2), <em>Las constelaciones</em> (20 pieces, C1&ndash;C2).</div>
         </div>
         <div class="timeline-item priority-3">
             <div class="timeline-label">Phase 9</div>
@@ -1695,12 +1798,383 @@
     </div>
 </section>
 
+<!-- ============================== 11. KEY SCENES ============================== -->
+<section id="scenes">
+    <h2><span class="section-number">11</span> Key Scenes by Destination</h2>
+    <div class="section-subtitle">Specific narrative moments that need illustration &mdash; the visual spine of the game</div>
+
+    <p>Each destination in the game has a pivotal visual moment. These are the scenes the student <em>remembers</em> &mdash; the images that carry emotional weight and anchor the language learning to a story. Below are the key scenes for all destinations built so far (dest1&ndash;23), organized by level. Each scene card describes the composition, characters, setting, and mood the illustrator should aim for.</p>
+
+    <p><strong>Deliverable per scene:</strong> 1200&times;800px (landscape) or 800&times;1200px (portrait), PNG transparent background + source file. These are <em>narrative illustrations</em>, not UI elements &mdash; they should feel like pages from a book.</p>
+
+    <!-- ==================== A1 BASIC ==================== -->
+    <div class="level-group">
+        <h3>A1 Basic &mdash; El despertar (dest1&ndash;6)</h3>
+        <div class="level-desc">Forest, family, naming. The world is small, warm, and beginning to fray at the edges.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest1 &mdash; &ldquo;Viajero, abre los ojos&rdquo;</div>
+        <div class="scene-meta">Scene: First awakening &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Dawn in the Choc&oacute; rainforest. Filtered green-gold light through dense canopy. Yaguar&aacute; is <strong>not fully visible</strong> &mdash; only her eyes (green-amber) gleam from the shadows between buttress roots. The forest is alive: ferns unfurling, a river glinting below, fireflies fading as dawn arrives. The student sees the forest before they see the guide.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Yaguar&aacute;&rsquo;s eyes glowing softly in shadow &mdash; the only warm point in cool green light</li>
+            <li>Massive ceiba roots in foreground, creating a natural frame</li>
+            <li>River visible in the mid-ground, catching first light</li>
+            <li>A single golden frog on a leaf (it will go silent later &mdash; foreshadowing)</li>
+        </ul>
+        <h4>Mood: wonder, invitation, gentle mystery</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute; (eyes only)</span>
+            <span>The forest</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest2 &mdash; &ldquo;Los nombres de las cosas&rdquo;</div>
+        <div class="scene-meta">Scene: Naming makes things glow &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Yaguar&aacute; has emerged. She stands on a mossy root, small and lean, naming the world around her. Each thing she names <strong>glows briefly</strong> &mdash; a tree pulses with golden light, water shimmers, a bird&rsquo;s feathers brighten. But at the edges of the frame, things without names are <strong>fading to grey</strong>. The contrast is subtle but visible: vivid center, dissolving edges.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Yaguar&aacute; in profile, mouth slightly open (speaking), golden light emanating from the things she names</li>
+            <li>Gradient from vivid color (center) to desaturation (edges) &mdash; first hint of El Silencio Gris</li>
+            <li>Named objects with a subtle golden aura: tree, river, frog, flower</li>
+            <li>Rosettes clearly visible on Yaguar&aacute;&rsquo;s fur &mdash; this is the student&rsquo;s first full view of her</li>
+        </ul>
+        <h4>Mood: discovery, gentle urgency, beauty with fragility</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest5 &mdash; &ldquo;Lo que me gusta&rdquo;</div>
+        <div class="scene-meta">Scene: R&iacute;o chases fish &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">The riverbank at midday. R&iacute;o (little brother) leaps after a silver fish, paws splashing, tail arced with joy. Yaguar&aacute; sits behind him, watching &mdash; but her ears are turned away, listening to something the viewer can&rsquo;t hear. The silence is growing, but R&iacute;o doesn&rsquo;t notice. Innocence and awareness, side by side.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>R&iacute;o mid-leap, spray of water droplets catching sunlight &mdash; pure kinetic joy</li>
+            <li>Yaguar&aacute; sitting, body relaxed but ears rotated backward &mdash; she hears something wrong</li>
+            <li>Silver fish leaping out of frame</li>
+            <li>Warm light, green river, mossy rocks &mdash; a safe place that won&rsquo;t stay safe</li>
+        </ul>
+        <h4>Mood: playful joy layered over quiet unease</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>R&iacute;o</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest6 &mdash; &ldquo;Un d&iacute;a en el mundo&rdquo;</div>
+        <div class="scene-meta">Scene: The frog goes silent &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Noon in the forest. A single lily pad on still water, where the golden frog <em>should</em> be sitting. The frog is gone &mdash; or present but colorless, translucent, fading. Yaguar&aacute; crouches at the water&rsquo;s edge, staring at the empty spot. In the far background, barely visible: Mam&aacute; Jaguar watching from a high branch, silhouetted.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>The lily pad with an <strong>absence</strong> &mdash; the frog&rsquo;s shape ghosted, translucent, dissolving into grey</li>
+            <li>Yaguar&aacute; crouching, reflected in the still water &mdash; her reflection clearer than the frog&rsquo;s fading form</li>
+            <li>Mam&aacute; Jaguar in deep background, dark fur against dark canopy, eyes glowing gold</li>
+            <li>Perfect stillness &mdash; no wind, no ripples, no sound</li>
+        </ul>
+        <h4>Mood: loss, first awareness, the weight of silence</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Mam&aacute; Jaguar (distant)</span>
+        </div>
+    </div>
+
+    <!-- ==================== A1 ADVANCED ==================== -->
+    <div class="level-group">
+        <h3>A1 Advanced &mdash; El hogar (dest7&ndash;12)</h3>
+        <div class="level-desc">Family, home, the mentor. The safe world is named &mdash; and leaving it becomes necessary.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest7 &mdash; &ldquo;Comer juntos&rdquo;</div>
+        <div class="scene-meta">Scene: Family meal by the river &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Golden-hour light on the Atrato riverbank. Three jaguars share fish: Mam&aacute; Jaguar sits upright, calm and watchful. R&iacute;o eats messily, fish scales on his nose. Yaguar&aacute; is between them &mdash; eating, but looking out at the river. Mam&aacute; Jaguar&rsquo;s first line: <em>&ldquo;Come. El r&iacute;o da.&rdquo;</em> But the fish are fewer than last season &mdash; only three where there should be many.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Three jaguars in a triangle composition &mdash; family portrait, intimate</li>
+            <li>Mam&aacute; Jaguar&rsquo;s scar across her nose visible in warm light</li>
+            <li>R&iacute;o&rsquo;s lighter fur, playful pose even while eating</li>
+            <li>Few fish bones on the rocks &mdash; subtle scarcity</li>
+            <li>River water reflecting golden sky, green canopy framing from above</li>
+        </ul>
+        <h4>Mood: warmth, belonging, quiet abundance that is quietly thinning</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Mam&aacute; Jaguar</span>
+            <span>R&iacute;o</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest11 &mdash; &ldquo;Todos los verbos del mundo&rdquo;</div>
+        <div class="scene-meta">Scene: Meeting Abuela Ceiba &mdash; Mundo de Abajo</div>
+        <div class="scene-desc"><strong>The defining image of A1.</strong> Yaguar&aacute; approaches Abuela Ceiba for the first time. The ceiba is <em>enormous</em> &mdash; roots like rivers spreading across the forest floor, trunk wider than a house, crown lost in mist above. Fireflies (luci&eacute;rnagas) cluster around her upper branches like suspended stars. The bark-face is barely visible &mdash; pareidolia, not cartoon. Yaguar&aacute; is tiny at the base, looking up. Scale is everything.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li><strong>Extreme scale contrast</strong> &mdash; Yaguar&aacute; small at bottom, ceiba filling the entire frame upward</li>
+            <li>Buttress roots spread like rivers, covered in moss and epiphytes</li>
+            <li>Fireflies creating a warm amber glow in the upper canopy</li>
+            <li>The face in the bark: <em>suggestion only</em> &mdash; if you look, you see it; if you don&rsquo;t look, it&rsquo;s just bark patterns</li>
+            <li>Roots that subtly connect outward &mdash; this tree touches everything</li>
+        </ul>
+        <h4>Mood: awe, humility, encounter with ancient wisdom</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Abuela Ceiba</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest12 &mdash; &ldquo;&iquest;Qui&eacute;n soy yo?&rdquo;</div>
+        <div class="scene-meta">Scene: The seed-word &mdash; A1 culmination &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Yaguar&aacute; stands before Abuela Ceiba, having introduced herself fully. The ceiba gives her a gift &mdash; not a physical seed, but the <strong>word &ldquo;Escucha&rdquo;</strong> (Listen), which appears as a golden glow traveling from the roots up through the trunk and down into Yaguar&aacute;&rsquo;s paws. The constellation mark on her left shoulder pulses faintly. Behind, at a respectful distance, Mam&aacute; Jaguar watches &mdash; proud, sad, knowing her daughter will leave.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Golden energy flowing from roots through Yaguar&aacute;&rsquo;s paws &mdash; the word entering her body</li>
+            <li>Constellation pattern on her left shoulder beginning to glow</li>
+            <li>Mam&aacute; Jaguar in the background, eyes reflecting gold</li>
+            <li>Night setting &mdash; fireflies active, moonlight through canopy</li>
+            <li>The word &ldquo;ESCUCHA&rdquo; could be subtly visible in the root patterns (like text hidden in bark)</li>
+        </ul>
+        <h4>Mood: initiation, departure, the weight of a quest beginning</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Abuela Ceiba</span>
+            <span>Mam&aacute; Jaguar (distant)</span>
+        </div>
+    </div>
+
+    <!-- ==================== A2 BASIC ==================== -->
+    <div class="level-group">
+        <h3>A2 Basic &mdash; La llamada (dest13&ndash;16)</h3>
+        <div class="level-desc">The world changes. A human child appears. Language becomes a bridge between species.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest14 &mdash; &ldquo;Contar lo que pas&oacute;&rdquo;</div>
+        <div class="scene-meta">Scene: First encounter &mdash; Yaguar&aacute; finds Candelaria &mdash; Mundo de Abajo</div>
+        <div class="scene-desc"><strong>A pivotal image.</strong> Near the Atrato River, in a grey-edged clearing. Candelaria (12 years old, Afro-Colombian, school uniform muddy) is lost and afraid, clutching her notebook. Yaguar&aacute; emerges from the forest edge. They stare at each other &mdash; neither can speak the other&rsquo;s language. Two worlds meeting in mutual incomprehension and mutual need. The gap between them is the whole game.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Candelaria and Yaguar&aacute; facing each other across a small clearing &mdash; <strong>equal in frame, neither dominant</strong></li>
+            <li>Candelaria&rsquo;s school uniform: white blouse, blue skirt, muddy. Boots too big. Notebook held like a shield</li>
+            <li>Yaguar&aacute; low, cautious, one paw forward &mdash; curious, not threatening</li>
+            <li>Grey mist visible behind Candelaria (human world&rsquo;s edge) and fading color behind Yaguar&aacute; (forest&rsquo;s edge)</li>
+            <li>Between them: a flower or frog &mdash; something they could both name, if they shared a language</li>
+        </ul>
+        <h4>Mood: tension, hope, the unbearable gap between knowing and saying</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (age 12)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest15 &mdash; &ldquo;Lo que necesito, lo que quiero&rdquo;</div>
+        <div class="scene-meta">Scene: Candelaria draws the jaguar &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Candelaria sits cross-legged on the forest floor, notebook open, drawing Yaguar&aacute;. Yaguar&aacute; watches, still &mdash; she is seeing herself through human eyes for the first time. The drawing in the notebook is visible: a sketch of a jaguar, simple but recognizable, with green-amber eyes. Around them, the forest is calm. Communication happening without shared words &mdash; through art.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Candelaria&rsquo;s notebook open &mdash; the jaguar drawing visible on the page</li>
+            <li>Yaguar&aacute; sitting still (rare for her), watching with intense curiosity</li>
+            <li>Plants growing close around them &mdash; the forest accepting this moment</li>
+            <li>Warm dappled light &mdash; peaceful pause in an anxious journey</li>
+        </ul>
+        <h4>Mood: connection, vulnerability, art as first language</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (age 12)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest16 &mdash; &ldquo;El cielo cambia&rdquo;</div>
+        <div class="scene-meta">Scene: Storm shelter &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">A storm has broken over the forest. Rain, thunder, wind tearing through canopy. Candelaria and Yaguar&aacute; shelter together under a massive fallen tree, pressed close. Neither speaks. They share warmth. Beyond the shelter, visible through the rain: a whole section of forest has <strong>lost all color</strong> &mdash; grey, silent, still. Candelaria sees it too. She writes in her notebook: <em>&ldquo;Aqu&iacute; no hay sonido.&rdquo;</em></div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Fallen tree creating a natural arch/shelter &mdash; roots and moss forming walls</li>
+            <li>Candelaria and Yaguar&aacute; pressed together, warm against cold rain</li>
+            <li>Rain visible as silver streaks, wind bending trees</li>
+            <li><strong>Beyond the rain: desaturated forest</strong> &mdash; the grey mist has advanced visibly</li>
+            <li>Candelaria writing by the dim light &mdash; notebook getting wet at the edges</li>
+        </ul>
+        <h4>Mood: fear, solidarity, storm as threshold</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (age 12)</span>
+            <span>El Silencio Gris (background)</span>
+        </div>
+    </div>
+
+    <!-- ==================== A2 ADVANCED ==================== -->
+    <div class="level-group">
+        <h3>A2 Advanced &mdash; La partida (dest17&ndash;18)</h3>
+        <div class="level-desc">Remembering what was. Crossing the threshold. Leaving home.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest17 &mdash; &ldquo;Recordar c&oacute;mo era el mundo&rdquo;</div>
+        <div class="scene-meta">Scene: Candelaria cries &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Evening by the Atrato. Yaguar&aacute; is trying to describe what the forest <em>used to be</em> &mdash; the imperfect tense made visual. Behind her, a translucent golden overlay shows the old forest: denser, louder, full of color. In front: the current forest, thinner, quieter. Candelaria is crying &mdash; she recognizes this feeling from her grandmother Do&ntilde;a Asunci&oacute;n&rsquo;s stories. Memory and loss, overlaid.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li><strong>Double exposure effect</strong>: the forest &ldquo;now&rdquo; (thinner, paler) overlaid with the forest &ldquo;before&rdquo; (golden, dense, vivid)</li>
+            <li>Candelaria wiping tears, notebook on her lap &mdash; emotion breaking through</li>
+            <li>Yaguar&aacute; looking at Candelaria with concern &mdash; she caused this pain by telling the truth</li>
+            <li>River reflecting both versions of the forest &mdash; water as memory</li>
+        </ul>
+        <h4>Mood: nostalgia, grief, the imperfect tense as an emotion</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (age 12)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest18 &mdash; &ldquo;El mundo completo&rdquo;</div>
+        <div class="scene-meta">Scene: Crossing the threshold &mdash; A2 culmination &mdash; Mundo de Abajo / edge</div>
+        <div class="scene-desc"><strong>The departure scene.</strong> Yaguar&aacute; stands at the edge of the forest, one paw on earth, one paw on road. Beyond: the human world &mdash; distant rooftops, a road, different light. Candelaria walks beside her, side by side. Behind them: Mam&aacute; Jaguar holding R&iacute;o back (he strains forward, wanting to follow). Abuela Ceiba&rsquo;s crown is visible far behind, fireflies glowing. A root vibration &mdash; golden light pulsing through the ground &mdash; carries the message: <em>&ldquo;Ve. Nombra. Escucha. Vuelve.&rdquo;</em></div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li><strong>Threshold composition</strong>: forest (left/behind, green-gold) vs. human world (right/ahead, warmer, more structured)</li>
+            <li>Yaguar&aacute; and Candelaria side by side &mdash; NOT Candelaria leading, NOT Yaguar&aacute; leading &mdash; equal</li>
+            <li>Mam&aacute; Jaguar&rsquo;s paw on R&iacute;o&rsquo;s back, holding him gently. R&iacute;o&rsquo;s wide eyes, wanting to go</li>
+            <li>Golden root-light pulsing in the ground beneath Yaguar&aacute;&rsquo;s paws</li>
+            <li>Ceiba crown in the far background, a beacon</li>
+        </ul>
+        <h4>Mood: bravery, farewell, the point of no return</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (age 12)</span>
+            <span>Mam&aacute; Jaguar</span>
+            <span>R&iacute;o</span>
+            <span>Abuela Ceiba (distant)</span>
+        </div>
+    </div>
+
+    <!-- ==================== B1 BASIC ==================== -->
+    <div class="level-group">
+        <h3>B1 Basic &mdash; El camino (dest19&ndash;23)</h3>
+        <div class="level-desc">The Choc&oacute;, the Andes, the Llanos, the Coast. Four allies, one antagonist. The world expands.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest19 &mdash; &ldquo;Cruzar el umbral&rdquo;</div>
+        <div class="scene-meta">Scene: First village + Don Pr&oacute;spero appears &mdash; Mundo del Medio / Choc&oacute;</div>
+        <div class="scene-desc">A Choc&oacute; village on stilts above the river. Colorful wooden houses, marimba music implied by open doorways, children running, market stalls with fruit and fish. Yaguar&aacute; is partially hidden behind Candelaria (now 13&ndash;14), overwhelmed by the noise and motion. <strong>At the village edge, a separate figure</strong>: Don Pr&oacute;spero, tall, thin, silver-haired, leather portfolio under his arm, talking to village leaders. He is smiling. He is charming. He is quoting poetry. Colibr&iacute; (Zunz&uacute;n) darts above Yaguar&aacute;&rsquo;s head, trailing luminous particles.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Stilt houses, colorful, wooden &mdash; Choc&oacute; architecture (not generic tropical)</li>
+            <li>Yaguar&aacute; slightly behind Candelaria &mdash; she is the one overwhelmed here, Candelaria is the bridge</li>
+            <li>Colibr&iacute; darting with light trail &mdash; impossibly small, impossibly bright</li>
+            <li>Don Pr&oacute;spero in a <strong>separate visual zone</strong> &mdash; same scene but framed apart, his own lighting (cooler, more formal)</li>
+            <li>His leather portfolio and clean hands &mdash; contrast with the village&rsquo;s working hands</li>
+        </ul>
+        <h4>Mood: arrival, sensory overload, two stories beginning at once</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (age 13&ndash;14)</span>
+            <span>Colibr&iacute;</span>
+            <span>Don Pr&oacute;spero</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest20 &mdash; &ldquo;Las historias que escucho&rdquo;</div>
+        <div class="scene-meta">Scene: The storytellers &mdash; Mundo del Medio / Choc&oacute;</div>
+        <div class="scene-desc">A riverside evening. An old fisherman in a weathered canoe tells his story, hands gesturing wide. A grandmother sits on a wooden step, remembering the market of fifty years ago. Candelaria writes furiously in her notebook, trying to capture every word. Yaguar&aacute; listens with her whole body &mdash; ears forward, eyes half-closed. In the deep background: Don Pr&oacute;spero, barely visible, showing blueprints to men who look at the ground.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Warm firelight or lantern light on the storytellers&rsquo; faces</li>
+            <li>The fisherman&rsquo;s weathered hands, wide gestures, canoe pulled onto shore</li>
+            <li>Candelaria&rsquo;s notebook pages filling with words and sketches</li>
+            <li>Yaguar&aacute; in &ldquo;listening&rdquo; pose &mdash; completely still, ears cupped forward</li>
+            <li>Don Pr&oacute;spero as a background shadow, his blueprint a pale rectangle in lamplight</li>
+        </ul>
+        <h4>Mood: oral tradition, warmth, stories as resistance</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria</span>
+            <span>Community elders</span>
+            <span>Don Pr&oacute;spero (background)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest21 &mdash; &ldquo;Subir la monta&ntilde;a&rdquo;</div>
+        <div class="scene-meta">Scene: C&oacute;ndor Viejo&rsquo;s perspective &mdash; Mundo del Medio / Andes</div>
+        <div class="scene-desc">High Andes, above the clouds. P&aacute;ramo landscape: frailejones (silver-green rosette plants), cold mist, vast sky. <strong>C&oacute;ndor Viejo soars</strong> &mdash; seen from below, his massive wingspan fills the upper frame, white collar ruff catching cold light, one clouded eye visible. Below him, far down the valley: a thin line carved through forest &mdash; Don Pr&oacute;spero&rsquo;s road, seen from above. <em>&ldquo;Lo que parece un camino desde abajo, es una herida desde arriba.&rdquo;</em> Yaguar&aacute; and Candelaria are small on a mountain path, looking up.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li><strong>Extreme vertical composition</strong> &mdash; sky and condor above, mountain below, humans tiny in between</li>
+            <li>Frailejones in foreground &mdash; these strange, ancient plants define the p&aacute;ramo</li>
+            <li>The road visible as a <strong>scar</strong> through green forest far below &mdash; perspective makes the metaphor literal</li>
+            <li>C&oacute;ndor&rsquo;s weathered feathers, clouded left eye &mdash; ancient wisdom in every detail</li>
+            <li>Clouds <em>below</em> the viewer &mdash; we are in condor territory</li>
+        </ul>
+        <h4>Mood: vastness, clarity, the power of perspective</h4>
+        <div class="scene-characters">
+            <span>C&oacute;ndor Viejo</span>
+            <span>Yaguar&aacute; (small)</span>
+            <span>Candelaria (small)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest22 &mdash; &ldquo;El llano infinito&rdquo;</div>
+        <div class="scene-meta">Scene: Delf&iacute;n Rosado surfaces &mdash; Mundo del Medio / Llanos</div>
+        <div class="scene-desc">The Orinoco at dusk. Vast golden grassland stretching to the horizon, enormous sky (two-thirds of the image), scattered moriche palms silhouetted. The river cuts through the plain, brown and wide. <strong>Delf&iacute;n Rosado</strong> breaches &mdash; pale pink against brown water, that enigmatic curve of the mouth. Half-submerged, half-revealed, just like his teaching about double meaning. Yaguar&aacute; crouches at the water&rsquo;s edge, exposed &mdash; no canopy, nowhere to hide.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li><strong>Enormous sky</strong> &mdash; golden-orange sunset, the llanos feeling of total exposure</li>
+            <li>Delf&iacute;n half-visible &mdash; pale pink body beneath brown water, only upper head and &ldquo;smile&rdquo; above surface</li>
+            <li>Moriche palms as vertical accents against horizontal grassland</li>
+            <li>Heat shimmer on the horizon &mdash; the edge of the world blurs</li>
+            <li>Yaguar&aacute; looking small and vulnerable &mdash; forest creature in open country</li>
+        </ul>
+        <h4>Mood: exposure, ambiguity, beauty that might be a trick</h4>
+        <div class="scene-characters">
+            <span>Delf&iacute;n Rosado</span>
+            <span>Yaguar&aacute;</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest23 &mdash; &ldquo;La costa y la paciencia&rdquo;</div>
+        <div class="scene-meta">Scene: Tortuga Marina rises &mdash; Mundo del Medio / Costa</div>
+        <div class="scene-desc">Caribbean shore. Turquoise water, coral visible beneath the surface, small colorful fishing boats pulled up on white sand. <strong>Tortuga Marina (Carey)</strong> rises from the sea, ancient and enormous &mdash; her shell covered in barnacles, tiny coral growths, a small anemone. She moves with absolute deliberation. Candelaria (now 14) stands in the shallows, skirt hem wet, notebook held above the water. Yaguar&aacute; on the sand, paws just touching the surf &mdash; her first encounter with the sea.</div>
+        <h4>Key visual elements</h4>
+        <ul>
+            <li>Saturated Caribbean color &mdash; turquoise, white, coral pink, deep blue</li>
+            <li>Carey&rsquo;s shell as a living ecosystem &mdash; barnacles, coral, anemone, tiny fish</li>
+            <li>Candelaria growing up &mdash; taller, more confident, protecting her notebook from water</li>
+            <li>Yaguar&aacute;&rsquo;s first reaction to surf &mdash; cautious, fascinated, one paw testing the wave</li>
+            <li>Fishing boats (small, wooden, colorful) giving human context to the coast</li>
+        </ul>
+        <h4>Mood: patience, ancient time, the sea as teacher</h4>
+        <div class="scene-characters">
+            <span>Tortuga Marina</span>
+            <span>Candelaria (age 14)</span>
+            <span>Yaguar&aacute;</span>
+        </div>
+    </div>
+
+    <p style="margin-top: 30px; font-style: italic; color: var(--text-light);">Scenes for dest24&ndash;58 will be added as those destinations are built. The full game will contain 58 key scene illustrations &mdash; one per destination &mdash; plus the character sheets, environments, UI elements, and story fragments described in earlier sections.</p>
+
+</section>
+
 </div>
 
 <!-- ============================== FOOTER ============================== -->
 <footer class="footer">
     <div class="project">El Viaje del Jaguar</div>
-    <div>Illustrator Creative Brief &mdash; Version 2.0 &mdash; February 2026</div>
+    <div>Illustrator Creative Brief &mdash; Version 3.0 &mdash; February 2026</div>
     <div style="margin-top:10px; font-style:italic; color:#C9A54E;">"No todas las palabras se dicen. Algunas se cuidan."</div>
 </footer>
 

@@ -749,6 +749,108 @@
             body { font-size: 11pt; }
         }
 
+        /* --- SCENE CARDS --- */
+        .scene-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 18px 0;
+            position: relative;
+        }
+
+        .scene-card.act-i {
+            border-left: 4px solid var(--forest);
+            background: linear-gradient(135deg, white 0%, #F0F7EC 100%);
+        }
+
+        .scene-card.act-ii {
+            border-left: 4px solid var(--terracotta);
+            background: linear-gradient(135deg, white 0%, #FFF5EE 100%);
+        }
+
+        .scene-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--bark);
+            margin-bottom: 2px;
+        }
+
+        .scene-meta {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .scene-desc {
+            font-size: 0.92rem;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .scene-card h4 {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--bark);
+            margin: 14px 0 6px;
+        }
+
+        .scene-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .scene-card li {
+            padding: 3px 0 3px 18px;
+            position: relative;
+            font-size: 0.88rem;
+        }
+
+        .scene-card li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .scene-characters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .scene-characters span {
+            background: var(--cream-dark);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 3px 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--bark-light);
+        }
+
+        .level-group {
+            margin: 35px 0 15px;
+            padding: 12px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .level-group h3 {
+            margin: 0;
+        }
+
+        .level-group .level-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 4px;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .hero { padding: 50px 20px 40px; }
@@ -782,6 +884,7 @@
         <a href="#references">Referencias de estilo</a>
         <a href="#schedule">Cronograma de entrega</a>
         <a href="#rights">Derechos y uso</a>
+        <a href="#scenes">Escenas clave</a>
     </div>
 </nav>
 
@@ -1544,7 +1647,7 @@
     <h3>Coleccionables de fragmentos de la historia</h3>
     <p>Peque&ntilde;as ilustraciones detalladas y preciosas &mdash; una se desbloquea por m&oacute;dulo. Como p&aacute;ginas de un libro perdido.</p>
     <ul style="margin: 10px 0 0 20px;">
-        <li>Se necesitan aproximadamente 20&ndash;30 para el juego completo</li>
+        <li><strong>58 en total</strong> (uno por destino a lo largo de los 6 niveles MCER)</li>
         <li>Estilo: m&aacute;s pict&oacute;rico y detallado que el arte de interfaz</li>
         <li><strong>Tama&ntilde;o: 800&times;800px m&iacute;nimo, formato cuadrado</strong></li>
         <li>Pensar en: ilustraci&oacute;n bot&aacute;nica mezclada con c&oacute;dice ind&iacute;gena y realismo m&aacute;gico</li>
@@ -1667,8 +1770,8 @@
         </div>
         <div class="timeline-item priority-3">
             <div class="timeline-label">Fase 8</div>
-            <div class="timeline-title">Coleccionables de fragmentos de la historia (20&ndash;30 piezas)</div>
-            <div class="timeline-desc">Formato cuadrado, estilo pict&oacute;rico, mezcla de bot&aacute;nica-c&oacute;dice-realismo m&aacute;gico.</div>
+            <div class="timeline-title">Coleccionables de fragmentos de la historia (58 piezas &mdash; uno por destino)</div>
+            <div class="timeline-desc">Formato cuadrado, estilo pict&oacute;rico, mezcla de bot&aacute;nica-c&oacute;dice-realismo m&aacute;gico. Organizados por arco de b&uacute;squeda: <em>Las ra&iacute;ces</em> (18 piezas, A1&ndash;A2), <em>Las historias</em> (20 piezas, B1&ndash;B2), <em>Las constelaciones</em> (20 piezas, C1&ndash;C2).</div>
         </div>
         <div class="timeline-item priority-3">
             <div class="timeline-label">Fase 9</div>
@@ -1695,12 +1798,383 @@
     </div>
 </section>
 
+<!-- ============================== 11. ESCENAS CLAVE ============================== -->
+<section id="scenes">
+    <h2><span class="section-number">11</span> Escenas clave por destino</h2>
+    <div class="section-subtitle">Momentos narrativos espec&iacute;ficos que necesitan ilustraci&oacute;n &mdash; la columna visual del juego</div>
+
+    <p>Cada destino del juego tiene un momento visual central. Estas son las escenas que el estudiante <em>recuerda</em> &mdash; las im&aacute;genes que cargan peso emocional y anclan el aprendizaje del idioma a una historia. A continuaci&oacute;n se presentan las escenas clave para todos los destinos construidos hasta ahora (dest1&ndash;23), organizadas por nivel. Cada tarjeta describe la composici&oacute;n, personajes, escenario y ambiente que el ilustrador debe lograr.</p>
+
+    <p><strong>Entregable por escena:</strong> 1200&times;800px (horizontal) o 800&times;1200px (vertical), PNG con fondo transparente + archivo fuente. Estas son <em>ilustraciones narrativas</em>, no elementos de interfaz &mdash; deben sentirse como p&aacute;ginas de un libro.</p>
+
+    <!-- ==================== A1 B&Aacute;SICO ==================== -->
+    <div class="level-group">
+        <h3>A1 B&aacute;sico &mdash; El despertar (dest1&ndash;6)</h3>
+        <div class="level-desc">Bosque, familia, nombrar. El mundo es peque&ntilde;o, c&aacute;lido, y comienza a deshilacharse en los bordes.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest1 &mdash; &ldquo;Viajero, abre los ojos&rdquo;</div>
+        <div class="scene-meta">Escena: Primer despertar &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Amanecer en la selva chocoana. Luz verde-dorada filtrada a trav&eacute;s del dosel denso. Yaguar&aacute; <strong>no es completamente visible</strong> &mdash; solo sus ojos (verde-&aacute;mbar) brillan desde las sombras entre las ra&iacute;ces de soporte. El bosque est&aacute; vivo: helechos despleg&aacute;ndose, un r&iacute;o centelleando abajo, luci&eacute;rnagas que se apagan con el amanecer. El estudiante ve el bosque antes de ver a la gu&iacute;a.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Los ojos de Yaguar&aacute; brillando suavemente en la sombra &mdash; el &uacute;nico punto c&aacute;lido en la luz verde fr&iacute;a</li>
+            <li>Ra&iacute;ces masivas de ceiba en primer plano, creando un marco natural</li>
+            <li>R&iacute;o visible en el plano medio, captando la primera luz</li>
+            <li>Una sola rana dorada en una hoja (se callar&aacute; despu&eacute;s &mdash; presagio)</li>
+        </ul>
+        <h4>Ambiente: asombro, invitaci&oacute;n, misterio suave</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute; (solo ojos)</span>
+            <span>El bosque</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest2 &mdash; &ldquo;Los nombres de las cosas&rdquo;</div>
+        <div class="scene-meta">Escena: Nombrar hace brillar las cosas &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Yaguar&aacute; ha emergido. Est&aacute; de pie sobre una ra&iacute;z cubierta de musgo, peque&ntilde;a y &aacute;gil, nombrando el mundo a su alrededor. Cada cosa que nombra <strong>brilla brevemente</strong> &mdash; un &aacute;rbol pulsa con luz dorada, el agua centellea, las plumas de un p&aacute;jaro se avivan. Pero en los bordes del encuadre, las cosas sin nombre se <strong>desvanecen a gris</strong>. El contraste es sutil pero visible: centro v&iacute;vido, bordes disolvi&eacute;ndose.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Yaguar&aacute; de perfil, boca ligeramente abierta (hablando), luz dorada emanando de las cosas que nombra</li>
+            <li>Gradiente de color v&iacute;vido (centro) a desaturaci&oacute;n (bordes) &mdash; primera pista del Silencio Gris</li>
+            <li>Objetos nombrados con un aura dorada sutil: &aacute;rbol, r&iacute;o, rana, flor</li>
+            <li>Rosetas claramente visibles en el pelaje de Yaguar&aacute; &mdash; esta es la primera vista completa para el estudiante</li>
+        </ul>
+        <h4>Ambiente: descubrimiento, urgencia suave, belleza con fragilidad</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest5 &mdash; &ldquo;Lo que me gusta&rdquo;</div>
+        <div class="scene-meta">Escena: R&iacute;o persigue peces &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">La orilla del r&iacute;o al mediod&iacute;a. R&iacute;o (hermano menor) salta tras un pez plateado, patas salpicando, cola arqueada de alegr&iacute;a. Yaguar&aacute; est&aacute; sentada detr&aacute;s, observando &mdash; pero sus orejas est&aacute;n giradas hacia otro lado, escuchando algo que el espectador no puede o&iacute;r. El silencio crece, pero R&iacute;o no lo nota. Inocencia y conciencia, lado a lado.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>R&iacute;o en medio del salto, gotas de agua atrapando la luz del sol &mdash; pura alegr&iacute;a cin&eacute;tica</li>
+            <li>Yaguar&aacute; sentada, cuerpo relajado pero orejas giradas hacia atr&aacute;s &mdash; escucha algo mal</li>
+            <li>Pez plateado saltando fuera del encuadre</li>
+            <li>Luz c&aacute;lida, r&iacute;o verde, rocas cubiertas de musgo &mdash; un lugar seguro que no seguir&aacute; si&eacute;ndolo</li>
+        </ul>
+        <h4>Ambiente: alegr&iacute;a juguetona sobre inquietud silenciosa</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>R&iacute;o</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest6 &mdash; &ldquo;Un d&iacute;a en el mundo&rdquo;</div>
+        <div class="scene-meta">Escena: La rana enmudece &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Mediod&iacute;a en el bosque. Un solo nenufar sobre agua quieta, donde la rana dorada <em>deber&iacute;a</em> estar. La rana no est&aacute; &mdash; o est&aacute; presente pero sin color, transl&uacute;cida, desvaneciéndose. Yaguar&aacute; se agacha al borde del agua, mirando el lugar vac&iacute;o. En el fondo lejano, apenas visible: Mam&aacute; Jaguar observando desde una rama alta, en silueta.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>El nen&uacute;far con una <strong>ausencia</strong> &mdash; la forma de la rana fantasmal, transl&uacute;cida, disolvi&eacute;ndose en gris</li>
+            <li>Yaguar&aacute; agachada, reflejada en el agua quieta &mdash; su reflejo m&aacute;s claro que la forma desvaneciéndose de la rana</li>
+            <li>Mam&aacute; Jaguar en el fondo profundo, pelaje oscuro contra dosel oscuro, ojos brillando dorado</li>
+            <li>Quietud perfecta &mdash; sin viento, sin ondas, sin sonido</li>
+        </ul>
+        <h4>Ambiente: p&eacute;rdida, primera conciencia, el peso del silencio</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Mam&aacute; Jaguar (distante)</span>
+        </div>
+    </div>
+
+    <!-- ==================== A1 AVANZADO ==================== -->
+    <div class="level-group">
+        <h3>A1 Avanzado &mdash; El hogar (dest7&ndash;12)</h3>
+        <div class="level-desc">Familia, hogar, la mentora. El mundo seguro tiene nombre &mdash; y dejarlo se vuelve necesario.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest7 &mdash; &ldquo;Comer juntos&rdquo;</div>
+        <div class="scene-meta">Escena: Comida familiar junto al r&iacute;o &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Luz dorada de atardecer sobre la orilla del Atrato. Tres jaguares comparten pescado: Mam&aacute; Jaguar est&aacute; erguida, tranquila y vigilante. R&iacute;o come desordenadamente, escamas de pescado en su nariz. Yaguar&aacute; est&aacute; entre ellos &mdash; comiendo, pero mirando hacia el r&iacute;o. La primera l&iacute;nea de Mam&aacute; Jaguar: <em>&ldquo;Come. El r&iacute;o da.&rdquo;</em> Pero hay menos peces que la temporada pasada &mdash; solo tres donde deber&iacute;a haber muchos.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Tres jaguares en composici&oacute;n triangular &mdash; retrato familiar, &iacute;ntimo</li>
+            <li>La cicatriz de Mam&aacute; Jaguar cruzando su nariz visible en la luz c&aacute;lida</li>
+            <li>El pelaje m&aacute;s claro de R&iacute;o, pose juguetona incluso comiendo</li>
+            <li>Pocas espinas de pescado sobre las rocas &mdash; escasez sutil</li>
+            <li>El agua del r&iacute;o reflejando cielo dorado, dosel verde enmarcando desde arriba</li>
+        </ul>
+        <h4>Ambiente: calidez, pertenencia, abundancia que se adelgaza silenciosamente</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Mam&aacute; Jaguar</span>
+            <span>R&iacute;o</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest11 &mdash; &ldquo;Todos los verbos del mundo&rdquo;</div>
+        <div class="scene-meta">Escena: Encuentro con Abuela Ceiba &mdash; Mundo de Abajo</div>
+        <div class="scene-desc"><strong>La imagen definitoria de A1.</strong> Yaguar&aacute; se acerca a Abuela Ceiba por primera vez. La ceiba es <em>enorme</em> &mdash; ra&iacute;ces como r&iacute;os extendi&eacute;ndose por el suelo del bosque, tronco m&aacute;s ancho que una casa, copa perdida en la niebla de arriba. Luci&eacute;rnagas se agrupan alrededor de sus ramas superiores como estrellas suspendidas. El rostro en la corteza es apenas visible &mdash; pareidolia, no caricatura. Yaguar&aacute; es diminuta en la base, mirando hacia arriba. La escala lo es todo.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li><strong>Contraste extremo de escala</strong> &mdash; Yaguar&aacute; peque&ntilde;a abajo, ceiba llenando todo el encuadre hacia arriba</li>
+            <li>Ra&iacute;ces de soporte extendi&eacute;ndose como r&iacute;os, cubiertas de musgo y ep&iacute;fitas</li>
+            <li>Luci&eacute;rnagas creando un brillo &aacute;mbar c&aacute;lido en el dosel superior</li>
+            <li>El rostro en la corteza: <em>solo sugerencia</em> &mdash; si miras, lo ves; si no miras, es solo patr&oacute;n de corteza</li>
+            <li>Ra&iacute;ces que sutilmente conectan hacia afuera &mdash; este &aacute;rbol toca todo</li>
+        </ul>
+        <h4>Ambiente: asombro, humildad, encuentro con sabidur&iacute;a antigua</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Abuela Ceiba</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest12 &mdash; &ldquo;&iquest;Qui&eacute;n soy yo?&rdquo;</div>
+        <div class="scene-meta">Escena: La palabra-semilla &mdash; Culminaci&oacute;n A1 &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Yaguar&aacute; de pie ante Abuela Ceiba, habi&eacute;ndose presentado completamente. La ceiba le da un regalo &mdash; no una semilla f&iacute;sica, sino la <strong>palabra &ldquo;Escucha&rdquo;</strong>, que aparece como un brillo dorado viajando desde las ra&iacute;ces a trav&eacute;s del tronco hasta las patas de Yaguar&aacute;. La marca de constelaci&oacute;n en su hombro izquierdo pulsa d&eacute;bilmente. Detr&aacute;s, a una distancia respetuosa, Mam&aacute; Jaguar observa &mdash; orgullosa, triste, sabiendo que su hija se ir&aacute;.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Energ&iacute;a dorada fluyendo desde las ra&iacute;ces a trav&eacute;s de las patas de Yaguar&aacute; &mdash; la palabra entrando en su cuerpo</li>
+            <li>El patr&oacute;n de constelaci&oacute;n en su hombro izquierdo empezando a brillar</li>
+            <li>Mam&aacute; Jaguar en el fondo, ojos reflejando dorado</li>
+            <li>Escena nocturna &mdash; luci&eacute;rnagas activas, luz de luna a trav&eacute;s del dosel</li>
+            <li>La palabra &ldquo;ESCUCHA&rdquo; podr&iacute;a ser sutilmente visible en los patrones de ra&iacute;ces (como texto oculto en la corteza)</li>
+        </ul>
+        <h4>Ambiente: iniciaci&oacute;n, partida, el peso de una misi&oacute;n que comienza</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Abuela Ceiba</span>
+            <span>Mam&aacute; Jaguar (distante)</span>
+        </div>
+    </div>
+
+    <!-- ==================== A2 B&Aacute;SICO ==================== -->
+    <div class="level-group">
+        <h3>A2 B&aacute;sico &mdash; La llamada (dest13&ndash;16)</h3>
+        <div class="level-desc">El mundo cambia. Aparece una ni&ntilde;a humana. El idioma se convierte en puente entre especies.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest14 &mdash; &ldquo;Contar lo que pas&oacute;&rdquo;</div>
+        <div class="scene-meta">Escena: Primer encuentro &mdash; Yaguar&aacute; encuentra a Candelaria &mdash; Mundo de Abajo</div>
+        <div class="scene-desc"><strong>Una imagen fundamental.</strong> Cerca del r&iacute;o Atrato, en un claro con bordes grises. Candelaria (12 a&ntilde;os, afrocolombiana, uniforme escolar enlodado) est&aacute; perdida y asustada, aferrada a su cuaderno. Yaguar&aacute; emerge del borde del bosque. Se miran &mdash; ninguna puede hablar el idioma de la otra. Dos mundos encontr&aacute;ndose en incomprensi&oacute;n mutua y necesidad mutua. La brecha entre ellas es todo el juego.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Candelaria y Yaguar&aacute; frente a frente en un peque&ntilde;o claro &mdash; <strong>iguales en el encuadre, ninguna dominante</strong></li>
+            <li>Uniforme escolar de Candelaria: blusa blanca, falda azul, enlodado. Botas grandes. Cuaderno sostenido como escudo</li>
+            <li>Yaguar&aacute; baja, cautelosa, una pata adelante &mdash; curiosa, no amenazante</li>
+            <li>Niebla gris visible detr&aacute;s de Candelaria (borde del mundo humano) y color desvaneciéndose detr&aacute;s de Yaguar&aacute; (borde del bosque)</li>
+            <li>Entre ellas: una flor o rana &mdash; algo que ambas podr&iacute;an nombrar, si compartieran un idioma</li>
+        </ul>
+        <h4>Ambiente: tensi&oacute;n, esperanza, la brecha insoportable entre saber y decir</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (12 a&ntilde;os)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest15 &mdash; &ldquo;Lo que necesito, lo que quiero&rdquo;</div>
+        <div class="scene-meta">Escena: Candelaria dibuja al jaguar &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Candelaria sentada con las piernas cruzadas en el suelo del bosque, cuaderno abierto, dibujando a Yaguar&aacute;. Yaguar&aacute; observa, quieta &mdash; se ve a s&iacute; misma a trav&eacute;s de ojos humanos por primera vez. El dibujo en el cuaderno es visible: un boceto de jaguar, simple pero reconocible, con ojos verde-&aacute;mbar. A su alrededor, el bosque est&aacute; tranquilo. Comunicaci&oacute;n sin palabras compartidas &mdash; a trav&eacute;s del arte.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>El cuaderno de Candelaria abierto &mdash; el dibujo del jaguar visible en la p&aacute;gina</li>
+            <li>Yaguar&aacute; sentada quieta (raro en ella), observando con curiosidad intensa</li>
+            <li>Plantas creciendo cerca alrededor de ellas &mdash; el bosque aceptando este momento</li>
+            <li>Luz c&aacute;lida moteada &mdash; pausa pac&iacute;fica en un viaje ansioso</li>
+        </ul>
+        <h4>Ambiente: conexi&oacute;n, vulnerabilidad, el arte como primer idioma</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (12 a&ntilde;os)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest16 &mdash; &ldquo;El cielo cambia&rdquo;</div>
+        <div class="scene-meta">Escena: Refugio de la tormenta &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Una tormenta ha estallado sobre el bosque. Lluvia, truenos, viento desgarrando el dosel. Candelaria y Yaguar&aacute; se refugian juntas bajo un &aacute;rbol enorme ca&iacute;do, apretadas. Ninguna habla. Comparten calor. M&aacute;s all&aacute; del refugio, visible a trav&eacute;s de la lluvia: una secci&oacute;n entera del bosque ha <strong>perdido todo color</strong> &mdash; gris, silenciosa, quieta. Candelaria tambi&eacute;n lo ve. Escribe en su cuaderno: <em>&ldquo;Aqu&iacute; no hay sonido.&rdquo;</em></div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>&Aacute;rbol ca&iacute;do creando un arco/refugio natural &mdash; ra&iacute;ces y musgo formando paredes</li>
+            <li>Candelaria y Yaguar&aacute; apretadas juntas, calor contra lluvia fr&iacute;a</li>
+            <li>Lluvia visible como l&iacute;neas plateadas, viento doblando &aacute;rboles</li>
+            <li><strong>M&aacute;s all&aacute; de la lluvia: bosque desaturado</strong> &mdash; la niebla gris ha avanzado visiblemente</li>
+            <li>Candelaria escribiendo con luz tenue &mdash; cuaderno moj&aacute;ndose en los bordes</li>
+        </ul>
+        <h4>Ambiente: miedo, solidaridad, la tormenta como umbral</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (12 a&ntilde;os)</span>
+            <span>El Silencio Gris (fondo)</span>
+        </div>
+    </div>
+
+    <!-- ==================== A2 AVANZADO ==================== -->
+    <div class="level-group">
+        <h3>A2 Avanzado &mdash; La partida (dest17&ndash;18)</h3>
+        <div class="level-desc">Recordar lo que fue. Cruzar el umbral. Dejar el hogar.</div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest17 &mdash; &ldquo;Recordar c&oacute;mo era el mundo&rdquo;</div>
+        <div class="scene-meta">Escena: Candelaria llora &mdash; Mundo de Abajo</div>
+        <div class="scene-desc">Atardecer junto al Atrato. Yaguar&aacute; intenta describir c&oacute;mo <em>era</em> el bosque &mdash; el pret&eacute;rito imperfecto hecho visual. Detr&aacute;s de ella, una capa dorada translúcida muestra el bosque antiguo: m&aacute;s denso, m&aacute;s ruidoso, lleno de color. Delante: el bosque actual, m&aacute;s delgado, m&aacute;s silencioso. Candelaria llora &mdash; reconoce este sentimiento de las historias de su abuela Do&ntilde;a Asunci&oacute;n. Memoria y p&eacute;rdida, superpuestas.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li><strong>Efecto de doble exposici&oacute;n</strong>: el bosque &ldquo;ahora&rdquo; (m&aacute;s delgado, m&aacute;s p&aacute;lido) superpuesto con el bosque &ldquo;antes&rdquo; (dorado, denso, v&iacute;vido)</li>
+            <li>Candelaria sec&aacute;ndose l&aacute;grimas, cuaderno en su regazo &mdash; la emoci&oacute;n rompiendo</li>
+            <li>Yaguar&aacute; mirando a Candelaria con preocupaci&oacute;n &mdash; ella caus&oacute; este dolor al decir la verdad</li>
+            <li>El r&iacute;o reflejando ambas versiones del bosque &mdash; el agua como memoria</li>
+        </ul>
+        <h4>Ambiente: nostalgia, duelo, el pret&eacute;rito imperfecto como emoci&oacute;n</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (12 a&ntilde;os)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-i">
+        <div class="scene-title">dest18 &mdash; &ldquo;El mundo completo&rdquo;</div>
+        <div class="scene-meta">Escena: Cruzar el umbral &mdash; Culminaci&oacute;n A2 &mdash; Mundo de Abajo / borde</div>
+        <div class="scene-desc"><strong>La escena de partida.</strong> Yaguar&aacute; de pie al borde del bosque, una pata en la tierra, una pata en el camino. M&aacute;s all&aacute;: el mundo humano &mdash; techos distantes, un camino, luz diferente. Candelaria camina a su lado, hombro con hombro. Detr&aacute;s: Mam&aacute; Jaguar conteniendo a R&iacute;o (que se esfuerza hacia adelante, queriendo seguir). La copa de Abuela Ceiba es visible a lo lejos, luci&eacute;rnagas brillando. Una vibraci&oacute;n de ra&iacute;z &mdash; luz dorada pulsando por el suelo &mdash; lleva el mensaje: <em>&ldquo;Ve. Nombra. Escucha. Vuelve.&rdquo;</em></div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li><strong>Composici&oacute;n de umbral</strong>: bosque (izquierda/atr&aacute;s, verde-dorado) vs. mundo humano (derecha/adelante, m&aacute;s c&aacute;lido, m&aacute;s estructurado)</li>
+            <li>Yaguar&aacute; y Candelaria lado a lado &mdash; NO Candelaria guiando, NO Yaguar&aacute; guiando &mdash; iguales</li>
+            <li>La pata de Mam&aacute; Jaguar sobre la espalda de R&iacute;o, conteni&eacute;ndolo suavemente. Los ojos muy abiertos de R&iacute;o, queriendo ir</li>
+            <li>Luz dorada de ra&iacute;ces pulsando en el suelo bajo las patas de Yaguar&aacute;</li>
+            <li>Copa de ceiba en el fondo lejano, un faro</li>
+        </ul>
+        <h4>Ambiente: valent&iacute;a, despedida, el punto de no retorno</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (12 a&ntilde;os)</span>
+            <span>Mam&aacute; Jaguar</span>
+            <span>R&iacute;o</span>
+            <span>Abuela Ceiba (distante)</span>
+        </div>
+    </div>
+
+    <!-- ==================== B1 B&Aacute;SICO ==================== -->
+    <div class="level-group">
+        <h3>B1 B&aacute;sico &mdash; El camino (dest19&ndash;23)</h3>
+        <div class="level-desc">El Choc&oacute;, los Andes, los Llanos, la Costa. Cuatro aliados, un antagonista. El mundo se expande.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest19 &mdash; &ldquo;Cruzar el umbral&rdquo;</div>
+        <div class="scene-meta">Escena: Primer pueblo + Don Pr&oacute;spero aparece &mdash; Mundo del Medio / Choc&oacute;</div>
+        <div class="scene-desc">Un pueblo chocoano sobre palafitos junto al r&iacute;o. Casas de madera coloridas, m&uacute;sica de marimba impl&iacute;cita por puertas abiertas, ni&ntilde;os corriendo, puestos de mercado con fruta y pescado. Yaguar&aacute; est&aacute; parcialmente oculta detr&aacute;s de Candelaria (ahora 13&ndash;14 a&ntilde;os), abrumada por el ruido y el movimiento. <strong>Al borde del pueblo, una figura aparte</strong>: Don Pr&oacute;spero, alto, delgado, pelo plateado, portafolio de cuero bajo el brazo, hablando con l&iacute;deres del pueblo. Sonr&iacute;e. Es encantador. Cita poes&iacute;a. Colibr&iacute; (Zunz&uacute;n) se lanza sobre la cabeza de Yaguar&aacute;, dejando part&iacute;culas luminosas.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Casas sobre palafitos, coloridas, de madera &mdash; arquitectura chocoana (no gen&eacute;rica tropical)</li>
+            <li>Yaguar&aacute; ligeramente detr&aacute;s de Candelaria &mdash; ella es la abrumada, Candelaria es el puente</li>
+            <li>Colibr&iacute; lanz&aacute;ndose con estela de luz &mdash; imposiblemente peque&ntilde;o, imposiblemente brillante</li>
+            <li>Don Pr&oacute;spero en una <strong>zona visual separada</strong> &mdash; misma escena pero enmarcado aparte, su propia iluminaci&oacute;n (m&aacute;s fr&iacute;a, m&aacute;s formal)</li>
+            <li>Su portafolio de cuero y manos limpias &mdash; contraste con las manos trabajadoras del pueblo</li>
+        </ul>
+        <h4>Ambiente: llegada, sobrecarga sensorial, dos historias comenzando a la vez</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria (13&ndash;14 a&ntilde;os)</span>
+            <span>Colibr&iacute;</span>
+            <span>Don Pr&oacute;spero</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest20 &mdash; &ldquo;Las historias que escucho&rdquo;</div>
+        <div class="scene-meta">Escena: Los narradores &mdash; Mundo del Medio / Choc&oacute;</div>
+        <div class="scene-desc">Un atardecer junto al r&iacute;o. Un viejo pescador en una canoa desgastada cuenta su historia, manos gesticulando ampliamente. Una abuela sentada en un escal&oacute;n de madera, recordando el mercado de hace cincuenta a&ntilde;os. Candelaria escribe furiosamente en su cuaderno, tratando de capturar cada palabra. Yaguar&aacute; escucha con todo su cuerpo &mdash; orejas hacia adelante, ojos entrecerrados. En el fondo profundo: Don Pr&oacute;spero, apenas visible, mostrando planos a hombres que miran al suelo.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Luz c&aacute;lida de fogata o linterna en los rostros de los narradores</li>
+            <li>Las manos curtidas del pescador, gestos amplios, canoa en la orilla</li>
+            <li>Las p&aacute;ginas del cuaderno de Candelaria llen&aacute;ndose de palabras y bocetos</li>
+            <li>Yaguar&aacute; en pose de &ldquo;escucha&rdquo; &mdash; completamente quieta, orejas inclinadas hacia adelante</li>
+            <li>Don Pr&oacute;spero como sombra de fondo, su plano un rect&aacute;ngulo p&aacute;lido en la luz de la l&aacute;mpara</li>
+        </ul>
+        <h4>Ambiente: tradici&oacute;n oral, calidez, las historias como resistencia</h4>
+        <div class="scene-characters">
+            <span>Yaguar&aacute;</span>
+            <span>Candelaria</span>
+            <span>Ancianos de la comunidad</span>
+            <span>Don Pr&oacute;spero (fondo)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest21 &mdash; &ldquo;Subir la monta&ntilde;a&rdquo;</div>
+        <div class="scene-meta">Escena: La perspectiva del C&oacute;ndor Viejo &mdash; Mundo del Medio / Andes</div>
+        <div class="scene-desc">Andes altos, sobre las nubes. Paisaje de p&aacute;ramo: frailejones (plantas de roseta verde-plateada), niebla fr&iacute;a, cielo inmenso. <strong>C&oacute;ndor Viejo planea</strong> &mdash; visto desde abajo, su envergadura masiva llena el encuadre superior, gorguera blanca captando luz fr&iacute;a, un ojo nublado visible. Debajo de &eacute;l, lejos en el valle: una l&iacute;nea delgada tallada a trav&eacute;s del bosque &mdash; el camino de Don Pr&oacute;spero, visto desde arriba. <em>&ldquo;Lo que parece un camino desde abajo, es una herida desde arriba.&rdquo;</em> Yaguar&aacute; y Candelaria son peque&ntilde;as en un sendero de monta&ntilde;a, mirando hacia arriba.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li><strong>Composici&oacute;n vertical extrema</strong> &mdash; cielo y c&oacute;ndor arriba, monta&ntilde;a abajo, humanos diminutos en el medio</li>
+            <li>Frailejones en primer plano &mdash; estas plantas extra&ntilde;as y antiguas definen el p&aacute;ramo</li>
+            <li>El camino visible como una <strong>cicatriz</strong> a trav&eacute;s del bosque verde abajo &mdash; la perspectiva hace literal la met&aacute;fora</li>
+            <li>Las plumas curtidas del C&oacute;ndor, ojo izquierdo nublado &mdash; sabidur&iacute;a antigua en cada detalle</li>
+            <li>Nubes <em>debajo</em> del espectador &mdash; estamos en territorio del c&oacute;ndor</li>
+        </ul>
+        <h4>Ambiente: inmensidad, claridad, el poder de la perspectiva</h4>
+        <div class="scene-characters">
+            <span>C&oacute;ndor Viejo</span>
+            <span>Yaguar&aacute; (peque&ntilde;a)</span>
+            <span>Candelaria (peque&ntilde;a)</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest22 &mdash; &ldquo;El llano infinito&rdquo;</div>
+        <div class="scene-meta">Escena: El Delf&iacute;n Rosado emerge &mdash; Mundo del Medio / Llanos</div>
+        <div class="scene-desc">El Orinoco al atardecer. Vasto pastizal dorado extendi&eacute;ndose hasta el horizonte, cielo enorme (dos tercios de la imagen), palmas de moriche dispersas en silueta. El r&iacute;o corta la llanura, marr&oacute;n y ancho. <strong>Delf&iacute;n Rosado</strong> emerge &mdash; rosa p&aacute;lido contra agua marr&oacute;n, esa curva enigm&aacute;tica de la boca. Medio sumergido, medio revelado, igual que su ense&ntilde;anza sobre el doble sentido. Yaguar&aacute; agachada al borde del agua, expuesta &mdash; sin dosel, sin d&oacute;nde esconderse.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li><strong>Cielo enorme</strong> &mdash; atardecer dorado-naranja, la sensaci&oacute;n llanera de exposici&oacute;n total</li>
+            <li>Delf&iacute;n medio visible &mdash; cuerpo rosa p&aacute;lido bajo agua marr&oacute;n, solo parte superior de la cabeza y &ldquo;sonrisa&rdquo; sobre la superficie</li>
+            <li>Palmas de moriche como acentos verticales contra pastizal horizontal</li>
+            <li>Espejismo de calor en el horizonte &mdash; el borde del mundo se difumina</li>
+            <li>Yaguar&aacute; luce peque&ntilde;a y vulnerable &mdash; criatura del bosque en campo abierto</li>
+        </ul>
+        <h4>Ambiente: exposici&oacute;n, ambig&uuml;edad, belleza que podr&iacute;a ser un enga&ntilde;o</h4>
+        <div class="scene-characters">
+            <span>Delf&iacute;n Rosado</span>
+            <span>Yaguar&aacute;</span>
+        </div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest23 &mdash; &ldquo;La costa y la paciencia&rdquo;</div>
+        <div class="scene-meta">Escena: Tortuga Marina emerge &mdash; Mundo del Medio / Costa</div>
+        <div class="scene-desc">Costa caribe&ntilde;a. Agua turquesa, coral visible bajo la superficie, peque&ntilde;os botes de pesca coloridos sobre arena blanca. <strong>Tortuga Marina (Carey)</strong> emerge del mar, antigua y enorme &mdash; su caparaz&oacute;n cubierto de percebes, peque&ntilde;os crecimientos de coral, una peque&ntilde;a an&eacute;mona. Se mueve con deliberaci&oacute;n absoluta. Candelaria (ahora 14 a&ntilde;os) de pie en aguas poco profundas, borde de la falda mojado, cuaderno sostenido sobre el agua. Yaguar&aacute; en la arena, patas apenas tocando la espuma &mdash; su primer encuentro con el mar.</div>
+        <h4>Elementos visuales clave</h4>
+        <ul>
+            <li>Color caribe&ntilde;o saturado &mdash; turquesa, blanco, rosa coral, azul profundo</li>
+            <li>El caparaz&oacute;n de Carey como ecosistema vivo &mdash; percebes, coral, an&eacute;mona, peces diminutos</li>
+            <li>Candelaria creciendo &mdash; m&aacute;s alta, m&aacute;s segura, protegiendo su cuaderno del agua</li>
+            <li>La primera reacci&oacute;n de Yaguar&aacute; al oleaje &mdash; cautelosa, fascinada, una pata probando la ola</li>
+            <li>Botes de pesca (peque&ntilde;os, de madera, coloridos) dando contexto humano a la costa</li>
+        </ul>
+        <h4>Ambiente: paciencia, tiempo antiguo, el mar como maestro</h4>
+        <div class="scene-characters">
+            <span>Tortuga Marina</span>
+            <span>Candelaria (14 a&ntilde;os)</span>
+            <span>Yaguar&aacute;</span>
+        </div>
+    </div>
+
+    <p style="margin-top: 30px; font-style: italic; color: var(--text-light);">Las escenas para dest24&ndash;58 se agregar&aacute;n cuando esos destinos est&eacute;n construidos. El juego completo contendr&aacute; 58 ilustraciones de escenas clave &mdash; una por destino &mdash; adem&aacute;s de las hojas de personajes, ambientes, elementos de interfaz y fragmentos de historia descritos en secciones anteriores.</p>
+
+</section>
+
 </div>
 
 <!-- ============================== FOOTER ============================== -->
 <footer class="footer">
     <div class="project">El Viaje del Jaguar</div>
-    <div>Brief creativo para ilustrador &mdash; Versi&oacute;n 2.0 &mdash; Febrero 2026</div>
+    <div>Brief creativo para ilustrador &mdash; Versi&oacute;n 3.0 &mdash; Febrero 2026</div>
     <div style="margin-top:10px; font-style:italic; color:#C9A54E;">"No todas las palabras se dicen. Algunas se cuidan."</div>
 </footer>
 
