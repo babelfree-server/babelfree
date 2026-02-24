@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 8: La familia junto al r&iacute;o</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest8_family_river/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 8: La familia junto al río — Games",
+                "url": "https://babelfree.com/a1_advanced/dest8_family_river/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Family vocabulary review",
+                    "Introducing family members"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "La familia junto al río",
+                        "item": "https://babelfree.com/a1_advanced/dest8_family_river/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 8: La familia junto al r&iacute;o</div>
+            <div class="yg-header-subtitle">Presentar a la familia</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — La familia de Yaguará
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguará está junto al río con su familia. Su madre se llama Luna. Su padre se llama Sol. Su hermano se llama Río. Su hermana se llama Flor. El río es parte de la familia.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Abuela Ceiba
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Mamá Jaguar dice: «Mira ese árbol grande. Es la Abuela Ceiba. Ella es muy vieja. Ella sabe todos los nombres.» Yaguará mira el árbol. Es enorme.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Los nombres no se pierden
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Mamá Jaguar dice: «Los nombres no se pierden. Se olvidan.» Yaguará no entiende. Pero mira a su familia. Todos tienen un nombre. Todos son importantes.'
+    },
+
+    /* ============================================================
+       4. PAIR — Familia y nombres
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la persona con su nombre.',
+        pairs: [
+            ['la madre', 'Luna'],
+            ['el padre', 'Sol'],
+            ['el hermano', 'Río'],
+            ['la hermana', 'Flor']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Descripciones de la familia
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la persona con la descripción.',
+        pairs: [
+            ['Luna', 'es bonita'],
+            ['Sol', 'es fuerte'],
+            ['Río', 'es pequeño'],
+            ['Abuela Ceiba', 'es grande']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — Posesivos
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la frase.',
+        pairs: [
+            ['mi madre', 'se llama Luna'],
+            ['mi padre', 'se llama Sol'],
+            ['mi hermano', 'se llama Río'],
+            ['la abuela', 'se llama Ceiba']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Ser con la familia
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Mi madre ___ bonita.',
+                answer: 'es',
+                options: ['es', 'soy', 'eres', 'son']
+            },
+            {
+                sentence: 'Mi padre ___ fuerte.',
+                answer: 'es',
+                options: ['soy', 'es', 'somos', 'son']
+            },
+            {
+                sentence: 'Yo ___ Yaguará.',
+                answer: 'soy',
+                options: ['es', 'soy', 'eres', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Llamarse
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Mi hermano se ___ Río.',
+                answer: 'llama',
+                options: ['llamo', 'llama', 'llamas', 'llaman']
+            },
+            {
+                sentence: 'Yo me ___ Yaguará.',
+                answer: 'llamo',
+                options: ['llamo', 'llamas', 'llama', 'llaman']
+            },
+            {
+                sentence: 'Mi hermana se ___ Flor.',
+                answer: 'llama',
+                options: ['llamo', 'llama', 'llamas', 'llaman']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Tener familia
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yo ___ un hermano.',
+                answer: 'tengo',
+                options: ['tengo', 'tiene', 'tienes', 'tienen']
+            },
+            {
+                sentence: 'Yaguará ___ una hermana.',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                sentence: 'La Abuela Ceiba ___ muchos nombres.',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — ¿Quién es?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Ella es mi madre. Se llama Luna. Es bonita.',
+        question: '¿Quién es Luna?',
+        answer: 'la madre',
+        options: ['la hermana', 'la madre', 'la abuela', 'la amiga']
+    },
+
+    /* ============================================================
+       11. LISTENING — ¿Cómo es?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'La Abuela Ceiba es muy grande. Es un árbol enorme.',
+        question: '¿Cómo es la Abuela Ceiba?',
+        answer: 'grande',
+        options: ['pequeña', 'bonita', 'grande', 'nueva']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Ser (repaso)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo ser.',
+        questions: [
+            {
+                verb: 'ser',
+                subject: 'yo',
+                answer: 'soy',
+                options: ['soy', 'es', 'eres', 'somos']
+            },
+            {
+                verb: 'ser',
+                subject: 'ella',
+                answer: 'es',
+                options: ['soy', 'es', 'eres', 'son']
+            },
+            {
+                verb: 'ser',
+                subject: 'nosotros',
+                answer: 'somos',
+                options: ['son', 'soy', 'somos', 'es']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Llamarse
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo llamarse.',
+        questions: [
+            {
+                verb: 'llamarse',
+                subject: 'yo',
+                answer: 'me llamo',
+                options: ['me llamo', 'se llama', 'te llamas', 'nos llamamos']
+            },
+            {
+                verb: 'llamarse',
+                subject: 'tú',
+                answer: 'te llamas',
+                options: ['me llamo', 'te llamas', 'se llama', 'se llaman']
+            },
+            {
+                verb: 'llamarse',
+                subject: 'él',
+                answer: 'se llama',
+                options: ['me llamo', 'te llamas', 'se llama', 'se llaman']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Masculino / femenino
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica las palabras.',
+        categories: ['Masculino', 'Femenino'],
+        items: [
+            { text: 'padre', category: 'Masculino' },
+            { text: 'madre', category: 'Femenino' },
+            { text: 'hermano', category: 'Masculino' },
+            { text: 'hermana', category: 'Femenino' },
+            { text: 'abuelo', category: 'Masculino' },
+            { text: 'abuela', category: 'Femenino' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — ¿Quién es quién?
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: ¿familia de Yaguará o no?',
+        categories: ['Familia de Yaguará', 'No es familia'],
+        items: [
+            { text: 'Luna', category: 'Familia de Yaguará' },
+            { text: 'Sol', category: 'Familia de Yaguará' },
+            { text: 'Río', category: 'Familia de Yaguará' },
+            { text: 'Flor', category: 'Familia de Yaguará' },
+            { text: 'Abuela Ceiba', category: 'No es familia' },
+            { text: 'el pez', category: 'No es familia' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Presentar a alguien
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['madre', 'Mi', 'llama', 'se', 'Luna'],
+        answer: 'Mi madre se llama Luna'
+    },
+
+    /* ============================================================
+       17. BUILDER — Descripción familiar
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['es', 'Abuela', 'La', 'Ceiba', 'grande'],
+        answer: 'La Abuela Ceiba es grande'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — Presentar a la familia
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Abuela Ceiba', text: '¿Quién es tu familia?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Mi madre se llama Luna. Mi padre se llama Sol.', 'Tengo hambre.', 'El río es bonito.', 'Soy grande.'],
+                answer: 'Mi madre se llama Luna. Mi padre se llama Sol.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — ¿Cómo es tu hermano?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mamá Jaguar', text: '¿Cómo se llama tu hermano?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Se llama Río. Es pequeño.', 'Me gusta la fruta.', 'Mi madre es bonita.', 'Tengo sed.'],
+                answer: 'Se llama Río. Es pequeño.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Frase familiar
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Mi familia es grande.',
+        answer: 'Mi familia es grande.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara de la familia',
+            description: 'Una cueva junto al río, debajo de la Abuela Ceiba. En las paredes hay dibujos de una familia de jaguares junto al agua. Las raíces del árbol entran por el techo.',
+            ambience: 'heartbeat'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un dibujo en la pared pregunta:',
+                riddle: '«Es un árbol muy viejo. Es muy grande. Sabe todos los nombres. Las raíces van a todos los lugares. ¿Quién es?»',
+                clue: 'Es la abuela del bosque.',
+                answer: 'Abuela Ceiba',
+                options: ['Abuela Ceiba', 'Mamá Jaguar', 'Luna', 'Flor'],
+                onSolve: 'Las raíces en el techo brillan.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras están dibujadas en las raíces de la cueva.',
+                clue: 'Mamá, papá, hermano, hermana — todos juntos son una...',
+                answer: 'familia',
+                scrambled: 'ilaimfa',
+                onSolve: 'Los dibujos se iluminan.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una cerradura en las raíces.',
+                clue: 'El agua que pasa por la selva. La familia vive junto a él. Tres letras.',
+                answer: 'rio',
+                hint: '_ _ _',
+                onSolve: 'Las raíces se abren. La puerta está adentro. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una raíz con forma de río.',
+            questClue: 'La familia es el agua que conecta todas las raíces.',
+            item: 'raiz-rio'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1d8',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Dest8Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

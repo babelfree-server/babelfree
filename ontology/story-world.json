@@ -1,0 +1,3186 @@
+{
+  "characters": [
+    {
+      "id": "char_yaguara",
+      "type": "Character",
+      "name": "Yaguará",
+      "role": "protagonist",
+      "species": "jaguar",
+      "introducedAt": "A1",
+      "arc": "Young female jaguar-spirit. Not yet a guardian at A1. Mostly listens. By C2, speaks with the weight of all she has learned. Transforms from curious cub to world-guardian.",
+      "visual": "Golden-dark fur, green-amber eyes, small but intense",
+      "relationships": [
+        {
+          "character": "char_mama_jaguar",
+          "relation": "daughter"
+        },
+        {
+          "character": "char_rio",
+          "relation": "older sister"
+        },
+        {
+          "character": "char_abuela_ceiba",
+          "relation": "student/quest-receiver"
+        },
+        {
+          "character": "char_candelaria",
+          "relation": "companion (from A2 Advanced)"
+        },
+        {
+          "character": "myth_sombra_yaguara",
+          "relation": "shadow self (from B2)"
+        }
+      ]
+    },
+    {
+      "id": "char_mama_jaguar",
+      "type": "Character",
+      "name": "Mamá Jaguar (Nakawe)",
+      "role": "mother",
+      "species": "jaguar",
+      "introducedAt": "A1",
+      "arc": "Steady, warm, ancient without being old. The voice Yaguará carries inside her. Speaks in short truths.",
+      "visual": "Larger, darker fur, calm golden eyes. Scarred from old journeys.",
+      "speaksAt": {
+        "A1": "Short truths: 'El río no espera.' 'Los nombres no se pierden. Se olvidan.'"
+      },
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "mother"
+        },
+        {
+          "character": "char_rio",
+          "relation": "mother"
+        },
+        {
+          "character": "char_dona_asuncion",
+          "relation": "parallel figure (human mirror)"
+        }
+      ]
+    },
+    {
+      "id": "char_rio",
+      "type": "Character",
+      "name": "Río",
+      "role": "trickster/heart",
+      "species": "jaguar",
+      "introducedAt": "A1",
+      "arc": "Small, energetic, always getting into trouble. Named after the river because he never stops moving. Comic relief at A1, source of worry at B1, surprise hero at C1.",
+      "visual": "Lighter fur, playful eyes, always mid-leap",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "younger brother"
+        },
+        {
+          "character": "char_mama_jaguar",
+          "relation": "son"
+        },
+        {
+          "character": "char_candelaria",
+          "relation": "playmate (B1, same age)"
+        }
+      ]
+    },
+    {
+      "id": "char_abuela_ceiba",
+      "type": "Character",
+      "name": "Abuela Ceiba",
+      "role": "mentor",
+      "species": "tree",
+      "introducedAt": "A1",
+      "arc": "The great ceiba tree at the center of the forest. Knows all names because all roots pass through her. Gives Yaguará her quest. Appears in dreams at higher levels.",
+      "visual": "Enormous trunk, face barely visible in the bark, fireflies around her crown",
+      "firstMention": "dest8",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "mentor/quest-giver"
+        },
+        {
+          "character": "char_dona_asuncion",
+          "relation": "human mirror (Doña Asunción can feel her wind)"
+        }
+      ]
+    },
+    {
+      "id": "char_colibri",
+      "type": "Character",
+      "name": "Colibrí (Zunzún)",
+      "role": "guide",
+      "species": "bird",
+      "introducedAt": "B1",
+      "arc": "Hummingbird spirit. Fast-talker, knows every flower's name. Teaches that small things hold great power.",
+      "visual": "Iridescent green-blue, impossibly small, trails of light when flying",
+      "ecosystem": "eco_bosque",
+      "languageParallel": "Precision matters",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "guide (rainforest)"
+        }
+      ]
+    },
+    {
+      "id": "char_condor_viejo",
+      "type": "Character",
+      "name": "Cóndor Viejo",
+      "role": "guide",
+      "species": "condor",
+      "introducedAt": "B1",
+      "arc": "Ancient condor. Speaks rarely, sees everything from above. Teaches perspective — same story looks different from above.",
+      "visual": "Massive wingspan, white collar, weathered feathers, one clouded eye",
+      "ecosystem": "eco_sierra",
+      "languageParallel": "Point of view, register",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "guide (Andes)"
+        }
+      ]
+    },
+    {
+      "id": "char_delfin_rosado",
+      "type": "Character",
+      "name": "Delfín Rosado (Boto)",
+      "role": "guide",
+      "species": "dolphin",
+      "introducedAt": "B1",
+      "arc": "Pink river dolphin. Shape-shifter in folklore. Playful but unreliable. Teaches that not all words mean what they say.",
+      "visual": "Pale pink, always half-submerged, smiling in a way you can't quite trust",
+      "ecosystem": "eco_llanos",
+      "languageParallel": "Irony, double meaning, connotation",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "guide (llanos/rivers)"
+        }
+      ]
+    },
+    {
+      "id": "char_tortuga_marina",
+      "type": "Character",
+      "name": "Tortuga Marina (Carey)",
+      "role": "guide",
+      "species": "turtle",
+      "introducedAt": "B1",
+      "arc": "Sea turtle. Has crossed every ocean. Remembers everything. Teaches patience and that some stories take a lifetime to tell.",
+      "visual": "Ancient shell covered in barnacles and small coral, slow deliberate movements",
+      "ecosystem": "eco_costa",
+      "languageParallel": "Extended narrative, complex temporal structures",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "guide (coast)"
+        }
+      ]
+    },
+    {
+      "id": "char_candelaria",
+      "type": "Character",
+      "name": "Candelaria \"Cande\" Arango",
+      "role": "herald/companion",
+      "species": "human",
+      "introducedAt": "A2 Advanced",
+      "firstDestination": "dest14",
+      "arc": "Afro-Colombian girl, 12 at A2, grows to ~18 by C2. A child lost near the Atrato river. Yaguará finds her. Neither can communicate at first — this is why Yaguará must learn human words. By C1-C2, a young woman studying environmental law.",
+      "visual": "Dark skin, curly braids with seeds and small flowers, worn notebook, canvas bag, boots. Glasses from B2 onward.",
+      "origin": "Quibdó, Chocó",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "companion/mirror"
+        },
+        {
+          "character": "char_rio",
+          "relation": "playmate (B1, same age)"
+        },
+        {
+          "character": "char_abuela_ceiba",
+          "relation": "can't see her but feels the wind; learns to hear at C1"
+        },
+        {
+          "character": "char_don_prospero",
+          "relation": "confronts him at C1-C2 (presents his contradictions)"
+        }
+      ]
+    },
+    {
+      "id": "char_don_prospero",
+      "type": "Character",
+      "name": "Don Próspero García",
+      "role": "threshold guardian/shape-shifter",
+      "species": "human",
+      "introducedAt": "B1 Basic",
+      "firstDestination": "dest19",
+      "arc": "Born in Chocó, left for Bogotá, returned as developer. Genuinely believes development saves people. His methods (deforestation, displacement) betray his mother's memory. Never called a villain. Quotes poetry, knows tree names. His name carries ironic weight: prosperity at the cost of everything.",
+      "visual": "Tall, thin, weathered face, expensive but dusty clothing, silver hair combed back, soft hands, leather portfolio. A small carved wooden animal in his pocket (his mother's).",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "antagonist"
+        },
+        {
+          "character": "char_candelaria",
+          "relation": "confronted by her (C1-C2)"
+        },
+        {
+          "character": "myth_silencio_gris",
+          "relation": "doesn't cause it, but benefits from it"
+        }
+      ]
+    },
+    {
+      "id": "char_dona_asuncion",
+      "type": "Character",
+      "name": "Doña Asunción",
+      "role": "bridge",
+      "species": "human",
+      "introducedAt": "A2 Basic",
+      "firstMention": "dest9",
+      "firstAppearance": "B1",
+      "arc": "75-80 years old. Last of the escuchadoras — women who could hear the forest speak. Validates Yaguará's mission. Dies off-screen between B2 and C1 — the catalyst for Act III. Final gift: a word in an indigenous language with no Spanish translation.",
+      "visual": "Small, strong, white hair in colorful pañuelo, deep brown skin, missing two fingers on left hand. Always near water.",
+      "origin": "Quibdó, Chocó",
+      "relationships": [
+        {
+          "character": "char_yaguara",
+          "relation": "validates her mission"
+        },
+        {
+          "character": "char_mama_jaguar",
+          "relation": "parallel mother figure (human mirror)"
+        },
+        {
+          "character": "char_abuela_ceiba",
+          "relation": "human mirror of the tree"
+        }
+      ]
+    }
+  ],
+  "ecosystems": [
+    {
+      "id": "eco_bosque",
+      "type": "Ecosystem",
+      "name": "Bosque del Pacífico",
+      "region": "Chocó/Pacific",
+      "culture": "Afro-Colombian",
+      "guide": "char_colibri",
+      "city": "Quibdó",
+      "signatureFood": "encocado de pescado",
+      "palette": "deep greens, water blues, bioluminescent glow",
+      "soundWorld": "rain, river, drums, night insects",
+      "music": "marimba, currulao, tambor"
+    },
+    {
+      "id": "eco_costa",
+      "type": "Ecosystem",
+      "name": "Costa Caribe",
+      "region": "Caribbean coast",
+      "culture": "Afro-Caribbean",
+      "guide": "char_tortuga_marina",
+      "city": "Cartagena",
+      "signatureFood": "ceviche, arroz con coco",
+      "palette": "turquoise, salt white, coral, sun gold",
+      "soundWorld": "waves, salt wind, cumbia, heat",
+      "music": "cumbia, vallenato, acordeón"
+    },
+    {
+      "id": "eco_sierra",
+      "type": "Ecosystem",
+      "name": "Sierra andina",
+      "region": "Andes/Coffee Region",
+      "culture": "Highland mestizo",
+      "guide": "char_condor_viejo",
+      "city": "Bogotá",
+      "signatureFood": "tamales, chocolate caliente",
+      "palette": "earth tones, cold light, stone grey, coffee brown",
+      "soundWorld": "wind, wind instruments, market voices",
+      "music": "música de cuerda, bambuco"
+    },
+    {
+      "id": "eco_llanos",
+      "type": "Ecosystem",
+      "name": "Llanos orientales",
+      "region": "Orinoco plains",
+      "culture": "Llanero",
+      "guide": "char_delfin_rosado",
+      "city": "Villavicencio",
+      "signatureFood": "mamona, carne en vara",
+      "palette": "gold, open sky, sunset orange, dry green",
+      "soundWorld": "harp, horizon wind, cattle, joropo",
+      "music": "joropo, arpa, copla"
+    },
+    {
+      "id": "eco_desierto",
+      "type": "Ecosystem",
+      "name": "Desierto de La Guajira",
+      "region": "La Guajira",
+      "culture": "Wayúu",
+      "guide": null,
+      "city": "Riohacha",
+      "signatureFood": "friche, suero costeño",
+      "palette": "sand, burnt sienna, desert sky, woven color",
+      "soundWorld": "wind, jayeechi (Wayúu song), silence",
+      "music": "jayeechi, tambor"
+    },
+    {
+      "id": "eco_islas",
+      "type": "Ecosystem",
+      "name": "Islas de San Andrés y Providencia",
+      "region": "San Andrés/Providencia",
+      "culture": "Raizal",
+      "guide": null,
+      "city": "San Andrés",
+      "signatureFood": "rondón",
+      "palette": "seven blues, reef coral, palm green",
+      "soundWorld": "reef, breeze, calypso",
+      "music": "calipso, reggae, mento"
+    },
+    {
+      "id": "eco_nevada",
+      "type": "Ecosystem",
+      "name": "Sierra Nevada de Santa Marta",
+      "region": "Sierra Nevada",
+      "culture": "Kogui/Arhuaco",
+      "guide": null,
+      "city": "Santa Marta",
+      "signatureFood": "trucha, arepa de maíz",
+      "palette": "snow white, sacred stone, moss green, mist",
+      "soundWorld": "ancestral flute, mountain water, silence",
+      "music": "música ancestral, flauta"
+    },
+    {
+      "id": "eco_selva",
+      "type": "Ecosystem",
+      "name": "Selva amazónica",
+      "region": "Amazon",
+      "culture": "Indigenous Amazonian",
+      "guide": null,
+      "city": "Leticia",
+      "signatureFood": "pescado con yuca",
+      "palette": "canopy green, river brown, orchid purple, night black",
+      "soundWorld": "river, canoe, indigenous songs, night chorus",
+      "music": "cantos indígenas, tambor"
+    }
+  ],
+  "places": [
+    {
+      "id": "place_rio_atrato",
+      "type": "Place",
+      "name": "Río Atrato",
+      "ecosystem": "eco_bosque",
+      "significance": "Yaguará's home. The river that speaks. Where the story begins."
+    },
+    {
+      "id": "place_choco",
+      "type": "Place",
+      "name": "Chocó",
+      "ecosystem": "eco_bosque",
+      "significance": "The region. Yaguará's origin. Afro-Colombian and indigenous heartland."
+    },
+    {
+      "id": "place_abuela_ceiba",
+      "type": "Place",
+      "name": "La Abuela Ceiba",
+      "ecosystem": "eco_bosque",
+      "significance": "The great ceiba tree at the center of everything. Knows all names. Quest origin."
+    },
+    {
+      "id": "place_quibdo",
+      "type": "Place",
+      "name": "Quibdó",
+      "ecosystem": "eco_bosque",
+      "significance": "Capital of Chocó. Candelaria's and Doña Asunción's city. Where forest meets human world."
+    },
+    {
+      "id": "place_cartagena",
+      "type": "Place",
+      "name": "Cartagena",
+      "ecosystem": "eco_costa",
+      "significance": "Walled city. Five hundred years of stories. Caribbean gateway."
+    },
+    {
+      "id": "place_ciudad_perdida",
+      "type": "Place",
+      "name": "Ciudad Perdida",
+      "ecosystem": "eco_nevada",
+      "significance": "The Lost City. Ancient Tairona. Where names were first carved in stone."
+    },
+    {
+      "id": "place_rio_amazonas",
+      "type": "Place",
+      "name": "Río Amazonas",
+      "ecosystem": "eco_selva",
+      "significance": "The great river. Connects peoples who guard the oldest names."
+    },
+    {
+      "id": "place_cabo_vela",
+      "type": "Place",
+      "name": "Cabo de la Vela",
+      "ecosystem": "eco_desierto",
+      "significance": "Sacred Wayúu site. Where the desert meets the sea. Place of dreams and weaving."
+    }
+  ],
+  "storyNodes": [
+    {
+      "id": "sn_dest1",
+      "type": "StoryNode",
+      "destination": "dest1",
+      "title": "Viajero, abre los ojos",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Ordinary World",
+      "cefr": "A1",
+      "narrativeBeat": "The student arrives. Yaguará speaks for the first time. She names herself and asks the student to do the same. The forest listens.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "objectives": [
+        "lo_introduce_self"
+      ],
+      "closingQuestion": "¿Quién eres tú?",
+      "escapeRoom": {
+        "name": "La primera puerta",
+        "puzzleTypes": [
+          "wordlock"
+        ],
+        "fragment": "raiz-abrazo"
+      }
+    },
+    {
+      "id": "sn_dest2",
+      "type": "StoryNode",
+      "destination": "dest2",
+      "title": "Los nombres de las cosas",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Ordinary World",
+      "cefr": "A1",
+      "narrativeBeat": "Yaguará emerges and begins naming the world — trees, water, sky, animals. Each thing she names glows briefly, then dims. Things without names are fading at the edges.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "objectives": [
+        "lo_name_objects"
+      ],
+      "closingQuestion": "¿Cómo se llama esto?",
+      "escapeRoom": {
+        "name": "La cámara de los nombres",
+        "puzzleTypes": [
+          "cipher"
+        ],
+        "fragment": "raiz-huella"
+      }
+    },
+    {
+      "id": "sn_dest3",
+      "type": "StoryNode",
+      "destination": "dest3",
+      "title": "¿Cómo es el mundo?",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Ordinary World",
+      "cefr": "A1",
+      "narrativeBeat": "Yaguará describes her world. When the student describes correctly, colors brighten. When silent, colors dim. Beauty and fragility coexist.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "objectives": [
+        "lo_describe_environment"
+      ],
+      "closingQuestion": "¿Cómo es tu mundo?",
+      "escapeRoom": {
+        "name": "La cámara de los colores",
+        "puzzleTypes": [
+          "riddle"
+        ],
+        "fragment": "raiz-ola"
+      }
+    },
+    {
+      "id": "sn_dest4",
+      "type": "StoryNode",
+      "destination": "dest4",
+      "title": "Contar los días",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Ordinary World — first fissure",
+      "cefr": "A1",
+      "narrativeBeat": "Yaguará counts things. She says her age. Time exists here but one day seems shorter than before. Something is eating time at the edges. First mention of Río.",
+      "characters": [
+        "char_yaguara",
+        "char_rio"
+      ],
+      "objectives": [
+        "lo_count_and_time"
+      ],
+      "closingQuestion": "¿Cuántos años tienes?",
+      "escapeRoom": {
+        "name": "La cámara del tiempo",
+        "puzzleTypes": [
+          "wordlock"
+        ],
+        "fragment": "raiz-techo"
+      }
+    },
+    {
+      "id": "sn_dest5",
+      "type": "StoryNode",
+      "destination": "dest5",
+      "title": "Lo que me gusta",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Ordinary World — character has desires",
+      "cefr": "A1",
+      "narrativeBeat": "Yaguará expresses preferences. 'Me gusta el agua fría. No me gusta el silencio.' — the first hint that silence is not neutral here. Río appears for the first time.",
+      "characters": [
+        "char_yaguara",
+        "char_rio"
+      ],
+      "objectives": [
+        "lo_express_preferences"
+      ],
+      "closingQuestion": "¿Qué te gusta a ti?",
+      "escapeRoom": {
+        "name": "La cámara de los gustos",
+        "puzzleTypes": [
+          "riddle"
+        ],
+        "fragment": "raiz-fruta"
+      }
+    },
+    {
+      "id": "sn_dest6",
+      "type": "StoryNode",
+      "destination": "dest6",
+      "title": "Un día en el mundo",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "First seed of the Call",
+      "cefr": "A1",
+      "narrativeBeat": "A full day in Yaguará's life. But one sound is missing — the frog that always sings at noon is silent. Yaguará notices. She just listens harder. First distant glimpse of Mamá Jaguar.",
+      "characters": [
+        "char_yaguara",
+        "char_rio",
+        "char_mama_jaguar"
+      ],
+      "objectives": [
+        "lo_describe_routines"
+      ],
+      "closingQuestion": "¿Qué haces tú todos los días?",
+      "escapeRoom": {
+        "name": "La cámara de la rutina",
+        "puzzleTypes": [
+          "sequence"
+        ],
+        "fragment": "raiz-circulo"
+      }
+    },
+    {
+      "id": "sn_dest7",
+      "type": "StoryNode",
+      "destination": "dest7",
+      "title": "Comer juntos",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Ordinary World — abundance is conditional",
+      "cefr": "A1",
+      "narrativeBeat": "The family eats together by the river. Mamá Jaguar speaks her first line: 'Come. El río da.' Food is community. But the fish are fewer than last season.",
+      "characters": [
+        "char_yaguara",
+        "char_rio",
+        "char_mama_jaguar"
+      ],
+      "objectives": [
+        "lo_order_food"
+      ],
+      "closingQuestion": "¿Qué necesitas?",
+      "escapeRoom": {
+        "name": "La cámara del alimento",
+        "puzzleTypes": [
+          "cipher"
+        ],
+        "fragment": "raiz-alimento"
+      }
+    },
+    {
+      "id": "sn_dest8",
+      "type": "StoryNode",
+      "destination": "dest8",
+      "title": "La familia junto al río",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "The Mentor is named",
+      "cefr": "A1",
+      "narrativeBeat": "Full family portrait. Yaguará introduces everyone — including the river as a relative. First mention of Abuela Ceiba. Mamá Jaguar: 'Los nombres no se pierden. Se olvidan.' — the thesis of the entire story.",
+      "characters": [
+        "char_yaguara",
+        "char_rio",
+        "char_mama_jaguar",
+        "char_abuela_ceiba"
+      ],
+      "objectives": [
+        "lo_introduce_family"
+      ],
+      "closingQuestion": "¿Quién es tu familia?",
+      "escapeRoom": {
+        "name": "La cámara de la familia",
+        "puzzleTypes": [
+          "cipher",
+          "riddle",
+          "wordlock"
+        ],
+        "fragment": "raiz-rio"
+      }
+    },
+    {
+      "id": "sn_dest9",
+      "type": "StoryNode",
+      "destination": "dest9",
+      "title": "Mi casa sobre el río",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Refusal of the Call",
+      "cefr": "A1",
+      "narrativeBeat": "Yaguará shows the student her home beneath the ceiba — the riverbank den, the cool stone, the night sounds. She is content and does not want to leave. Río asks: '¿Hay algo más allá del río?' Yaguará answers: 'No sé.' Grey mist visible at forest edge for the first time. Mamá Jaguar mentions an old human woman by the river named Asunción who still hears the forest. 'Ella es la última.'",
+      "characters": [
+        "char_yaguara",
+        "char_rio",
+        "char_mama_jaguar"
+      ],
+      "mentionedCharacters": [
+        "char_dona_asuncion"
+      ],
+      "objectives": [
+        "lo_describe_home"
+      ],
+      "recycledTargets": {
+        "_note": "Same LTs from dest3 (describir) and dest5 (expresar), new context: describing HOME not world. estar shifts from location to feeling. 'El río es grande' (dest3) becomes 'Mi casa está cerca del río' (dest9). Same grammar, personal attachment.",
+        "targets": [
+          "lt_verb_estar_indicative_present",
+          "lt_vocab_home_rooms",
+          "lt_vocab_feelings_states",
+          "lt_grammar_articles_indefinite"
+        ]
+      },
+      "closingQuestion": "¿Cómo te sientes en tu casa?",
+      "escapeRoom": {
+        "name": "La cámara del hogar",
+        "puzzleTypes": [
+          "wordlock"
+        ],
+        "fragment": "raiz-mano"
+      }
+    },
+    {
+      "id": "sn_dest10",
+      "type": "StoryNode",
+      "destination": "dest10",
+      "title": "El tiempo y los números",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Refusal of the Call",
+      "cefr": "A1",
+      "narrativeBeat": "Yaguará counts the moons since the frog went silent. Four moons. She counts other quiet things — the night bird, the cricket, the wind through a hollow tree. Numbers are small but growing. Río doesn't notice; he counts his fish joyfully. Innocence and loss, side by side. The same numbers that measured abundance now measure absence.",
+      "characters": [
+        "char_yaguara",
+        "char_rio"
+      ],
+      "objectives": [
+        "lo_tell_time_dates"
+      ],
+      "recycledTargets": {
+        "_note": "Same LTs from dest4 (contar). tener + años returns but now measures time PASSING, not age. Numbers 0–31 (dest4) expand to months and 32–100 (dest10). 'Tengo cinco años' (dest4) vs 'Cuatro meses sin la rana' (dest10). Same structure, loss instead of identity.",
+        "targets": [
+          "lt_vocab_months",
+          "lt_vocab_numbers_32_100",
+          "lt_verb_tener_indicative_present",
+          "lt_grammar_tener_expressions"
+        ]
+      },
+      "closingQuestion": "¿Cuánto tiempo ha pasado?",
+      "escapeRoom": {
+        "name": "La cámara del calendario",
+        "puzzleTypes": [
+          "sequence"
+        ],
+        "fragment": "raiz-ojo"
+      }
+    },
+    {
+      "id": "sn_dest11",
+      "type": "StoryNode",
+      "destination": "dest11",
+      "title": "Todos los verbos del mundo",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Meeting the Mentor",
+      "cefr": "A1",
+      "narrativeBeat": "Yaguará visits Abuela Ceiba for the first time. The tree is enormous — roots like rivers, fireflies in the crown. Abuela Ceiba speaks: 'Tú caminas. Tú comes. Tú vives. Estos son los verbos. Los verbos son lo que hacemos para existir.' Without verbs, nothing moves. Things have stopped moving at the forest edges. The grey mist doesn't destroy names — it freezes actions. A named tree with no verb is a tree that cannot grow.",
+      "characters": [
+        "char_yaguara",
+        "char_abuela_ceiba"
+      ],
+      "objectives": [
+        "lo_use_three_verb_groups"
+      ],
+      "recycledTargets": {
+        "_note": "Every A1 verb returns but with new PURPOSE. hablar (dest6 routine) becomes 'Habla — o el bosque se calla.' comer (dest7 family meal) becomes 'El río come piedras — así vive.' vivir/escribir (generic) become existential: verbs are how the world exists. Same conjugation tables, but now the student understands WHY they conjugate. Abuela Ceiba reframes mechanical grammar as survival.",
+        "targets": [
+          "lt_verb_hablar_indicative_present",
+          "lt_verb_comer_indicative_present",
+          "lt_verb_vivir_indicative_present",
+          "lt_verb_escribir_indicative_present",
+          "lt_verb_ir_indicative_present",
+          "lt_grammar_possessives_plural"
+        ]
+      },
+      "closingQuestion": "¿Por qué haces lo que haces?",
+      "escapeRoom": {
+        "name": "La cámara de los verbos",
+        "puzzleTypes": [
+          "cipher"
+        ],
+        "fragment": "raiz-flor"
+      }
+    },
+    {
+      "id": "sn_dest12",
+      "type": "StoryNode",
+      "destination": "dest12",
+      "title": "¿Quién soy yo?",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Mentor gives the gift",
+      "cefr": "A1",
+      "narrativeBeat": "A1 culmination. Yaguará stands before Abuela Ceiba and introduces herself fully — name, family, home, what she likes, what she does, who her people are. The student does the same, using everything learned. Abuela Ceiba says: 'Ahora tienes nombre. Ahora el mundo te ve.' She gives Yaguará a seed — not a literal seed, a word: 'Escucha.' This word will echo through all six levels, growing in meaning. The integration story: 'El viajero del bosque' — the student writes their own A1 portrait. Mamá Jaguar watches from a distance. She is proud, but her eyes show she already knows what comes next.",
+      "characters": [
+        "char_yaguara",
+        "char_abuela_ceiba",
+        "char_mama_jaguar"
+      ],
+      "objectives": [
+        "lo_state_nationality"
+      ],
+      "integrationObjectives": [
+        "lo_introduce_self",
+        "lo_name_objects",
+        "lo_describe_environment",
+        "lo_count_and_time",
+        "lo_express_preferences",
+        "lo_describe_routines",
+        "lo_order_food",
+        "lo_introduce_family",
+        "lo_describe_home",
+        "lo_tell_time_dates",
+        "lo_use_three_verb_groups"
+      ],
+      "recycledTargets": {
+        "_note": "EVERY A1 verb and structure returns. 'Me llamo Yaguará' (dest1) + 'El río es frío' (dest3) + 'Tengo cinco años' (dest4) + 'Me gusta el agua' (dest5) + 'Camino por el bosque' (dest6) + 'Mi madre es fuerte' (dest8) + 'Mi casa está cerca' (dest9) + 'Cuatro meses' (dest10) + 'Tú caminas, tú comes, tú vives' (dest11) = one complete self-portrait. Not review. Integration. The student doesn't repeat — they compose. Same targets, first time used together.",
+        "targets": [
+          "lt_verb_ser_indicative_present",
+          "lt_verb_estar_indicative_present",
+          "lt_verb_tener_indicative_present",
+          "lt_verb_llamarse_indicative_present",
+          "lt_verb_ir_indicative_present",
+          "lt_verb_gustar_indicative_present",
+          "lt_verb_hablar_indicative_present",
+          "lt_verb_comer_indicative_present",
+          "lt_verb_beber_indicative_present",
+          "lt_verb_vivir_indicative_present",
+          "lt_verb_escribir_indicative_present",
+          "lt_verb_haber_impersonal",
+          "lt_grammar_articles_definite",
+          "lt_grammar_articles_indefinite",
+          "lt_grammar_noun_gender",
+          "lt_grammar_noun_number",
+          "lt_grammar_adjective_agreement",
+          "lt_grammar_ser_vs_estar",
+          "lt_grammar_negation",
+          "lt_grammar_questions",
+          "lt_grammar_possessives_singular",
+          "lt_grammar_possessives_plural",
+          "lt_grammar_demonstratives",
+          "lt_grammar_tener_expressions",
+          "lt_grammar_prepositions_basic",
+          "lt_vocab_greetings",
+          "lt_vocab_family",
+          "lt_vocab_colors",
+          "lt_vocab_numbers_0_31",
+          "lt_vocab_numbers_32_100",
+          "lt_vocab_days_of_week",
+          "lt_vocab_months",
+          "lt_vocab_food_drink",
+          "lt_vocab_animals_general",
+          "lt_vocab_home_rooms",
+          "lt_vocab_feelings_states",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_nationalities"
+        ]
+      },
+      "theSeed": {
+        "word": "Escucha",
+        "meaning": "Listen",
+        "givenBy": "char_abuela_ceiba",
+        "significance": "This word returns at every CEFR level with deepening meaning. At A1 it means 'pay attention.' At A2 it means 'hear what others need.' At B1 it means 'understand what happened.' At B2 it means 'hear what is not said.' At C1 it means 'interpret symbol and silence.' At C2 it becomes La Palabra del Corazón — the answer to the entire journey.",
+        "echoesAt": [
+          "dest18",
+          "dest28",
+          "dest38",
+          "dest48",
+          "dest58"
+        ]
+      },
+      "closingQuestion": "¿Quién eres tú, viajero?",
+      "escapeRoom": {
+        "name": "La cámara de la identidad",
+        "puzzleTypes": [
+          "riddle"
+        ],
+        "fragment": "raiz-oreja",
+        "riddle": "¿Quién eres cuando nadie te mira?",
+        "note": "Answer constructed from A1 vocabulary. The root-pattern forms a complete spiral."
+      }
+    },
+    {
+      "_section": "=== A2 BASIC — LA LLAMADA (dest13–dest16) ==="
+    },
+    {
+      "id": "sn_dest13",
+      "type": "StoryNode",
+      "destination": "dest13",
+      "title": "Los ríos que cantan",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "The Call to Adventure",
+      "cefr": "A2",
+      "narrativeBeat": "Time has passed. The forest is more grey at the edges, more silent. But the student understands more. Yaguará says: 'Has vuelto.' She describes routines in detail now — she wakes, she washes her face in the river, she stretches, she walks. Reflexive verbs give her a body: levantarse, bañarse, vestirse. The river still sings, but quieter. Mamá Jaguar tells a story: an old woman by the Atrato puts her hands in the water and listens. 'Ella escucha lo que el río dice. Es la última que puede.' Her name is Asunción.",
+      "characters": [
+        "char_yaguara",
+        "char_mama_jaguar"
+      ],
+      "mentionedCharacters": [
+        "char_dona_asuncion"
+      ],
+      "objectives": [
+        "lo_describe_routines_detail"
+      ],
+      "recycledTargets": {
+        "_note": "A1 verb paradigms return but with reflexive grammar layered on top. 'Hablo' (dest6, routine) becomes 'Me levanto y hablo con el río' (dest13, reflexive + routine). Same present tense, but the student's body is now in the sentence. Estar shifts again — from home-feeling (dest9) to daily state: 'Estoy cansada pero camino.'",
+        "targets": [
+          "lt_verb_hablar_indicative_present",
+          "lt_verb_estar_indicative_present",
+          "lt_verb_ir_indicative_present",
+          "lt_grammar_reflexive_verbs",
+          "lt_grammar_prepositions_basic",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_feelings_states"
+        ]
+      },
+      "closingQuestion": "¿Qué dice el río?",
+      "escapeRoom": {
+        "name": "La cámara del agua",
+        "puzzleTypes": [
+          "wordlock"
+        ],
+        "fragment": "raiz-flecha"
+      }
+    },
+    {
+      "id": "sn_dest14",
+      "type": "StoryNode",
+      "destination": "dest14",
+      "title": "Contar lo que pasó",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "The Call crystallizes",
+      "cefr": "A2",
+      "narrativeBeat": "Yaguará tells her first story in past tense. 'Ayer, la rana cantó. Hoy, no canta.' The past is where sounds still live. Telling what happened keeps it alive. She tells about the night the frog stopped singing — a grey mist came, and the frog's name was... she can't remember. The horror is not the silence but the forgetting. Candelaria is introduced: a human girl, 12 years old, lost near the Atrato. Yaguará finds her. Neither can communicate — Yaguará's sounds and Candelaria's words don't match. They stare at each other. This is why Yaguará must learn human language.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "objectives": [
+        "lo_describe_background"
+      ],
+      "recycledTargets": {
+        "_note": "Every A1 noun the student learned to name (dest2) now has a past. 'El río es frío' (A1 present) becomes 'El río fue frío aquella noche' (A2 preterite). The same vocabulary appears in past-tense frames. tener returns: 'Tengo cinco años' (dest4) echoes in 'La rana tenía nombre' — the expression of possession becomes the expression of loss. Travel vocab enters: Candelaria came from somewhere. She arrived. She left home.",
+        "targets": [
+          "lt_grammar_preterite_regular",
+          "lt_vocab_travel",
+          "lt_verb_tener_indicative_present",
+          "lt_vocab_animals_general",
+          "lt_vocab_nature_landscape",
+          "lt_grammar_negation",
+          "lt_grammar_questions"
+        ]
+      },
+      "closingQuestion": "¿Qué pasó ayer?",
+      "escapeRoom": {
+        "name": "La cámara del pasado",
+        "puzzleTypes": [
+          "cipher"
+        ],
+        "fragment": "raiz-huellas"
+      }
+    },
+    {
+      "id": "sn_dest15",
+      "type": "StoryNode",
+      "destination": "dest15",
+      "title": "Lo que necesito, lo que quiero",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "The Call deepens",
+      "cefr": "A2",
+      "narrativeBeat": "Candelaria is hungry, cold, lost. Yaguará understands the feelings but not the words. She watches Candelaria gesture: necesito agua, quiero ir a casa. Yaguará learns that human words carry needs — not just names but desires, abilities, lacks. She brings Candelaria water. The act of caring is the first bridge. Candelaria draws in her notebook: a picture of a jaguar. Yaguará sees herself through human eyes for the first time. The drawing is more real than a mirror — someone else's need made her visible.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "objectives": [
+        "lo_express_needs_wants"
+      ],
+      "recycledTargets": {
+        "_note": "gustar (dest5, 'me gusta el agua') deepens into querer ('quiero agua' — not preference but need). tener expressions (dest4/7, 'tengo hambre') pair with modal infinitives ('necesito comer'). The A1 preference system upgrades: liking becomes wanting, having becomes needing, knowing becomes being able. Same emotional territory, higher stakes. Comparatives arrive through Candelaria: 'El bosque es más grande que mi ciudad.'",
+        "targets": [
+          "lt_verb_querer_indicative_present",
+          "lt_verb_poder_indicative_present",
+          "lt_verb_necesitar_indicative_present",
+          "lt_grammar_modal_infinitive",
+          "lt_grammar_comparatives",
+          "lt_verb_gustar_indicative_present",
+          "lt_grammar_tener_expressions",
+          "lt_vocab_food_drink",
+          "lt_vocab_feelings_states",
+          "lt_vocab_emotions_expanded"
+        ]
+      },
+      "closingQuestion": "¿Qué necesitas para seguir?",
+      "escapeRoom": {
+        "name": "La cámara de los deseos",
+        "puzzleTypes": [
+          "riddle"
+        ],
+        "fragment": "raiz-hoja"
+      }
+    },
+    {
+      "id": "sn_dest16",
+      "type": "StoryNode",
+      "destination": "dest16",
+      "title": "El cielo cambia",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "The stakes are visible to both worlds",
+      "cefr": "A2",
+      "narrativeBeat": "A storm. The forest breaks open with rain and thunder. Candelaria and Yaguará shelter together under a fallen tree. Neither speaks the other's language, but they share warmth. When the storm passes, the grey mist has advanced — a whole section of forest is now colorless, soundless. Candelaria sees it too. She writes in her notebook: 'Aquí no hay sonido.' Yaguará reads it. She understands a human word for the first time: sonido. A single word crosses the bridge between species. The word was not taught. It was needed.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "implicitPresence": [
+        "myth_silencio_gris"
+      ],
+      "objectives": [
+        "lo_describe_weather_changes"
+      ],
+      "recycledTargets": {
+        "_note": "hay (dest3, 'hay un río') inverts to absence: 'No hay sonido.' estar returns as changing state: 'El cielo está gris' — the same copula that described home (dest9) and feelings (dest13) now describes the world breaking. Nature vocab from dest2 (río, bosque, árbol, lluvia, cielo, sol) reappears in weather context — the same nouns the student named at A1 are now things that change, threaten, shelter. Colors from dest3 drain away. The A1 world is recognizable but damaged.",
+        "targets": [
+          "lt_vocab_weather_seasons",
+          "lt_vocab_emotions_expanded",
+          "lt_verb_estar_indicative_present",
+          "lt_verb_haber_impersonal",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_colors",
+          "lt_grammar_negation",
+          "lt_grammar_adjective_agreement"
+        ]
+      },
+      "closingQuestion": "¿Qué cambia y qué no cambia?",
+      "escapeRoom": {
+        "name": "La cámara del clima",
+        "puzzleTypes": [
+          "wordlock"
+        ],
+        "fragment": "raiz-manos"
+      }
+    },
+    {
+      "_section": "=== A2 ADVANCED — LA PARTIDA (dest17–dest18) ==="
+    },
+    {
+      "id": "sn_dest17",
+      "type": "StoryNode",
+      "destination": "dest17",
+      "title": "Recordar cómo era el mundo",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Refusal of the Call",
+      "cefr": "A2",
+      "narrativeBeat": "Yaguará learns the imperfect tense — and it changes everything. Now she can say not just 'la rana cantó' but 'la rana cantaba todos los días, a mediodía.' The past is not a single event; it's a whole world that existed. She tells Candelaria, in halting simple words, what the forest used to be. Candelaria cries — she recognizes the feeling. Her grandmother, Doña Asunción, used to tell her stories about when the river sang louder. Candelaria says: 'Mi abuela dice que el bosque habla. Pero yo no escucho.' The imperfect gives Yaguará a memory. And memory is the first form of refusal — the world was better, and she knows it now.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "mentionedCharacters": [
+        "char_dona_asuncion"
+      ],
+      "objectives": [
+        "lo_describe_habitual_past"
+      ],
+      "recycledTargets": {
+        "_note": "Every A1 present-tense description gains a shadow in the imperfect. 'El río es frío' (dest3) becomes 'El río era frío... antes.' 'Me gusta el agua' (dest5) becomes 'Me gustaba escuchar la rana.' 'Tengo cinco años' (dest4) becomes 'Cuando tenía cinco años, el bosque cantaba.' The student doesn't learn new vocabulary — they learn that the words they already know have a past tense, and the past was different. Preterite from dest14 contrasts: 'cantaba' (used to sing) vs 'cantó' (sang that last time).",
+        "targets": [
+          "lt_grammar_imperfect_regular",
+          "lt_grammar_preterite_regular",
+          "lt_verb_ser_indicative_present",
+          "lt_verb_estar_indicative_present",
+          "lt_verb_tener_indicative_present",
+          "lt_verb_gustar_indicative_present",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_animals_general",
+          "lt_vocab_family",
+          "lt_vocab_feelings_states",
+          "lt_grammar_ser_vs_estar",
+          "lt_grammar_tener_expressions",
+          "lt_grammar_connectors_basic"
+        ]
+      },
+      "closingQuestion": "¿Cómo era el mundo antes?",
+      "escapeRoom": {
+        "name": "La cámara de la memoria",
+        "puzzleTypes": [
+          "sequence"
+        ],
+        "fragment": "raiz-gota",
+        "note": "Faded murals on stone that the student 'restores' by choosing correct imperfect descriptions. The root-map now shows a path leading outward."
+      }
+    },
+    {
+      "id": "sn_dest18",
+      "type": "StoryNode",
+      "destination": "dest18",
+      "title": "El mundo completo",
+      "act": "I",
+      "world": "mundoDeAbajo",
+      "campbellStage": "Crossing the First Threshold",
+      "cefr": "A2",
+      "narrativeBeat": "A2 culmination. Candelaria takes Yaguará to the edge of the forest — the boundary she has never crossed. Beyond it: the human world. Roads, towns, noise of a different kind. Mamá Jaguar arrives. She says: 'El río no espera.' It is time. Abuela Ceiba sends a message through the roots — a vibration Yaguará feels in her paws: 'Ve. Nombra. Escucha. Vuelve.' Yaguará crosses the threshold. Candelaria walks beside her. Río watches from behind, wanting to follow. Mamá Jaguar holds him back. The integration story: 'Los secretos del bosque' — the student tells the story of what was, what is, what will be.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_mama_jaguar",
+        "char_rio"
+      ],
+      "mentionedCharacters": [
+        "char_abuela_ceiba"
+      ],
+      "objectives": [
+        "lo_integrate_a2"
+      ],
+      "integrationObjectives": [
+        "lo_introduce_self",
+        "lo_name_objects",
+        "lo_describe_environment",
+        "lo_count_and_time",
+        "lo_express_preferences",
+        "lo_describe_routines",
+        "lo_order_food",
+        "lo_introduce_family",
+        "lo_describe_home",
+        "lo_tell_time_dates",
+        "lo_use_three_verb_groups",
+        "lo_state_nationality",
+        "lo_understand_relevant_phrases",
+        "lo_simple_exchange",
+        "lo_describe_background",
+        "lo_give_negative_commands",
+        "lo_describe_routines_detail",
+        "lo_express_needs_wants",
+        "lo_describe_weather_changes",
+        "lo_describe_habitual_past"
+      ],
+      "recycledTargets": {
+        "_note": "EVERY A1 and A2 target converges. The student tells three stories in one: what the world WAS (imperfect — 'El bosque cantaba'), what HAPPENED (preterite — 'La rana se calló'), and what WILL BE (ir a + infinitive — 'Voy a buscar los nombres'). Basic connectors stitch them together: 'El bosque cantaba, pero un día la rana se calló. Entonces voy a buscar los nombres porque el silencio crece.' Every A1 noun, verb, and pattern appears in this temporal weave. Not review. Composition across time.",
+        "targets": [
+          "lt_verb_ser_indicative_present",
+          "lt_verb_estar_indicative_present",
+          "lt_verb_tener_indicative_present",
+          "lt_verb_ir_indicative_present",
+          "lt_verb_llamarse_indicative_present",
+          "lt_verb_gustar_indicative_present",
+          "lt_verb_haber_impersonal",
+          "lt_verb_hablar_indicative_present",
+          "lt_verb_comer_indicative_present",
+          "lt_verb_beber_indicative_present",
+          "lt_verb_vivir_indicative_present",
+          "lt_verb_escribir_indicative_present",
+          "lt_verb_querer_indicative_present",
+          "lt_verb_poder_indicative_present",
+          "lt_verb_necesitar_indicative_present",
+          "lt_verb_tener_imperative_negative",
+          "lt_grammar_articles_definite",
+          "lt_grammar_articles_indefinite",
+          "lt_grammar_noun_gender",
+          "lt_grammar_noun_number",
+          "lt_grammar_adjective_agreement",
+          "lt_grammar_ser_vs_estar",
+          "lt_grammar_negation",
+          "lt_grammar_questions",
+          "lt_grammar_possessives_singular",
+          "lt_grammar_possessives_plural",
+          "lt_grammar_demonstratives",
+          "lt_grammar_tener_expressions",
+          "lt_grammar_prepositions_basic",
+          "lt_grammar_preterite_regular",
+          "lt_grammar_reflexive_verbs",
+          "lt_grammar_object_pronouns",
+          "lt_grammar_imperative_affirmative",
+          "lt_grammar_imperative_negative",
+          "lt_grammar_modal_infinitive",
+          "lt_grammar_comparatives",
+          "lt_grammar_imperfect_regular",
+          "lt_grammar_ir_a_future",
+          "lt_grammar_connectors_basic",
+          "lt_vocab_greetings",
+          "lt_vocab_family",
+          "lt_vocab_colors",
+          "lt_vocab_numbers_0_31",
+          "lt_vocab_numbers_32_100",
+          "lt_vocab_days_of_week",
+          "lt_vocab_months",
+          "lt_vocab_food_drink",
+          "lt_vocab_animals_general",
+          "lt_vocab_home_rooms",
+          "lt_vocab_feelings_states",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_nationalities",
+          "lt_vocab_travel",
+          "lt_vocab_emotions_expanded",
+          "lt_vocab_weather_seasons"
+        ]
+      },
+      "theSeedEcho": {
+        "word": "Escucha",
+        "echoNumber": 1,
+        "spokenBy": "char_abuela_ceiba",
+        "form": "Ve. Nombra. Escucha. Vuelve.",
+        "meaning": "At A2 the seed means: hear what others need. Candelaria needed to be heard. The forest needs to be heard. Yaguará leaves home because listening requires going where the silence is."
+      },
+      "metaQuest": {
+        "questArc": "Las raíces",
+        "status": "complete",
+        "fragments": "raiz-01 through raiz-18",
+        "reward": "First section of El Mapa de las Voces assembled. 18 root-fragments form a complete spiral — the underground network that connects all trees."
+      },
+      "closingQuestion": "¿Qué dejas atrás cuando avanzas?",
+      "escapeRoom": {
+        "name": "La puerta del umbral",
+        "puzzleTypes": [
+          "riddle",
+          "sequence",
+          "wordlock"
+        ],
+        "fragment": "raiz-tambor",
+        "note": "The final underground chamber opens upward. All 18 root-fragments assemble into the first section of the Mapa de las Voces."
+      }
+    },
+    {
+      "_section": "=== ACT II — EL MUNDO DEL MEDIO (B1–B2) ==="
+    },
+    {
+      "_section": "=== B1 BASIC — EL CAMINO (dest19–dest23) ==="
+    },
+    {
+      "id": "sn_dest19",
+      "type": "StoryNode",
+      "destination": "dest19",
+      "title": "Cruzar el umbral",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Crossing the Threshold + first Test",
+      "cefr": "B1",
+      "narrativeBeat": "Yaguará enters the first human community — a village in the Chocó. Everything is louder, faster, more complex than the forest. Candelaria is her translator, her bridge. Yaguará must learn to narrate: 'Ayer llegué a un pueblo. Había casas de colores. La gente hablaba rápido.' She meets Colibrí (Zunzún) — a hummingbird spirit who darts between worlds. Colibrí says: 'Las cosas pequeñas tienen poder. Una palabra exacta vale más que cien palabras vagas.' Don Próspero appears for the first time — standing at the edge of town with a leather portfolio, talking to village leaders about a road that will 'bring prosperity.'",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_colibri",
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_narrate_events"
+      ],
+      "recycledTargets": {
+        "_note": "The A2 preterite/imperfect distinction (dest14/17) becomes B1 narrative competence — not just 'what happened' vs 'how it was' but weaving them into a story. A1 description vocab (dest2/3: río, bosque, casa, colors) reappears in the human world: 'Había casas de colores' uses the same adjective agreement from dest3, the same hay from dest3, but now in imperfect, in a village, not a forest. Connectors stitch the narration: 'Primero llegué, luego vi las casas, entonces escuché una voz.' Same vocabulary, new world, new grammar frame.",
+        "targets": [
+          "lt_grammar_preterite_vs_imperfect",
+          "lt_grammar_connectors_narrative",
+          "lt_vocab_community_society",
+          "lt_grammar_imperfect_regular",
+          "lt_grammar_preterite_regular",
+          "lt_vocab_home_rooms",
+          "lt_vocab_colors",
+          "lt_grammar_adjective_agreement",
+          "lt_verb_haber_impersonal",
+          "lt_verb_ir_indicative_present",
+          "lt_vocab_travel"
+        ]
+      },
+      "closingQuestion": "¿Por qué vino este hombre?",
+      "escapeRoom": {
+        "name": "La sala del mercado",
+        "puzzleTypes": [
+          "sequence"
+        ],
+        "fragment": "historia-bosque-antes"
+      }
+    },
+    {
+      "id": "sn_dest20",
+      "type": "StoryNode",
+      "destination": "dest20",
+      "title": "Las historias que escucho",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Tests — gathering stories is the quest",
+      "cefr": "B1",
+      "narrativeBeat": "Yaguará learns to listen to human stories. An old fisherman tells how the river changed. A grandmother describes the market of fifty years ago. Candelaria writes everything in her notebook. Don Próspero listens too — but he hears opportunity where others hear memory. He knows every tree name (his grandmother taught him), but sees lumber. The student must retell stories they hear, maintaining the thread of cause and effect. Language shifts from first person to third: 'El pescador dijo que el río era más ancho. La abuela contó que el mercado tenía más colores.'",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "implicitPresence": [
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_retell_stories"
+      ],
+      "recycledTargets": {
+        "_note": "Indirect speech reframes everything. A1 present tense ('El río es grande') becomes reported past: 'El pescador dijo que el río era grande.' A2 imperfect ('El bosque cantaba', dest17) becomes someone else's memory reported: 'La abuela contó que el bosque cantaba.' The student's own vocabulary returns in other people's mouths. Family vocab (dest8) returns as community kinship: pescador, abuela, vecino. Narrative connectors from the arc bind the retelling: 'Primero dijo que... luego contó que... finalmente explicó que...'",
+        "targets": [
+          "lt_grammar_indirect_speech_basic",
+          "lt_grammar_connectors_narrative",
+          "lt_grammar_preterite_vs_imperfect",
+          "lt_grammar_imperfect_regular",
+          "lt_vocab_community_society",
+          "lt_vocab_family",
+          "lt_vocab_nature_landscape",
+          "lt_grammar_connectors_basic"
+        ]
+      },
+      "closingQuestion": "¿Qué historia te contaron?",
+      "escapeRoom": {
+        "name": "La sala del pescador",
+        "puzzleTypes": [
+          "riddle"
+        ],
+        "fragment": "historia-cocina"
+      }
+    },
+    {
+      "id": "sn_dest21",
+      "type": "StoryNode",
+      "destination": "dest21",
+      "title": "Subir la montaña",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Allies — each guide teaches through a worldview",
+      "cefr": "B1",
+      "narrativeBeat": "Yaguará and Candelaria travel to the Andes. The air changes. The forest gives way to páramo — frailejones, cold mist, condor territory. They meet Cóndor Viejo — massive, weathered, one clouded eye. He sees everything from above. He says: 'Desde arriba, las cosas se ven diferentes. Lo que parece un camino desde abajo, es una herida desde arriba.' He is talking about Don Próspero's road. The student learns perspective — the same event described from two viewpoints. por vs para crystallizes: 'Lo hace por dinero' vs 'Lo hace para ayudar' — which is true?",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_condor_viejo"
+      ],
+      "objectives": [
+        "lo_explain_opinions"
+      ],
+      "recycledTargets": {
+        "_note": "A1 ser/estar (dest3) returns as perspective: 'Es un camino' (ser = definition) vs 'Está destruyendo el bosque' (estar = consequence). The grammar distinction the student learned for describing a river now distinguishes worldviews. Comparatives (A2 dest15) return as perspective contrast: 'Para Cóndor, el camino es más peligroso que útil. Para Don Próspero, es más necesario que dañino.' Subjunctive enters through opinion: 'Es importante que escuchemos a todos.' por vs para is the grammar of motive.",
+        "targets": [
+          "lt_grammar_subjunctive_present_basic",
+          "lt_grammar_por_vs_para",
+          "lt_grammar_opinion_expressions",
+          "lt_grammar_comparatives",
+          "lt_grammar_ser_vs_estar",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_community_society",
+          "lt_vocab_weather_seasons"
+        ]
+      },
+      "closingQuestion": "¿Cómo se ve el mundo desde arriba?",
+      "escapeRoom": {
+        "name": "La sala de piedra",
+        "puzzleTypes": [
+          "sequence"
+        ],
+        "fragment": "historia-planos"
+      }
+    },
+    {
+      "id": "sn_dest22",
+      "type": "StoryNode",
+      "destination": "dest22",
+      "title": "El llano infinito",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Tests — language is not always honest",
+      "cefr": "B1",
+      "narrativeBeat": "The Llanos — open grassland, enormous sky, horses, harps. Yaguará has never felt so exposed. No canopy, no hiding. Delfín Rosado (Boto) surfaces in the Orinoco — pink, half-submerged, smiling ambiguously. He says: 'No todas las palabras dicen lo que parecen. Algunas palabras sonríen por fuera y muerden por dentro.' He teaches double meaning, irony — the adult layer of language. Don Próspero's name is spoken here too: the llaneros have heard of him. Some say he brings work. Others say he brings the grey mist. The same name, two meanings. The student learns that words are not transparent.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_delfin_rosado"
+      ],
+      "objectives": [
+        "lo_understand_implied_meaning"
+      ],
+      "recycledTargets": {
+        "_note": "Every vocabulary item the student learned 'innocently' at A1 gains a shadow. 'Progreso' (dest19 community vocab) — what does it really mean? 'Camino' — a path through the forest (A1 nature) or a road that destroys it (B1 irony)? 'Grande' (A1 adjective) — is Don Próspero's plan 'grande' as in great or as in dangerous? The same words from A1 and A2 return but the student must now read BETWEEN them. Opinion expressions from dest21 deepen: 'Creo que dice la verdad' vs 'Me parece que miente' — opinion is now suspicion.",
+        "targets": [
+          "lt_grammar_connotation_irony",
+          "lt_grammar_opinion_expressions",
+          "lt_vocab_community_society",
+          "lt_vocab_emotions_expanded",
+          "lt_grammar_negation",
+          "lt_grammar_comparatives",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_animals_general"
+        ]
+      },
+      "closingQuestion": "¿Qué quieres decir realmente?",
+      "escapeRoom": {
+        "name": "La sala del arpa",
+        "puzzleTypes": [
+          "riddle"
+        ],
+        "fragment": "historia-pizarra",
+        "note": "Hidden room under a hato. Riddle: decode a copla's double meaning."
+      }
+    },
+    {
+      "id": "sn_dest23",
+      "type": "StoryNode",
+      "destination": "dest23",
+      "title": "La costa y la paciencia",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Allies — the four guides are gathered",
+      "cefr": "B1",
+      "narrativeBeat": "The Caribbean coast — turquoise water, cumbia, heat, salt, trade. Tortuga Marina (Carey) rises from the sea, ancient shell barnacled and coral-grown. She says: 'Algunas historias necesitan una vida entera para contarse. No tengas prisa.' She teaches Yaguará temporal depth — past, present, and future woven together in sustained discourse. Candelaria, now 14, begins to understand why her grandmother Doña Asunción always said: 'Escucha antes de hablar.' The Seed echoes again — not as a command but as a way of being. The student learns that a story is not a list of events. It is an architecture of time.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_tortuga_marina"
+      ],
+      "mentionedCharacters": [
+        "char_dona_asuncion"
+      ],
+      "objectives": [
+        "lo_sustain_narrative"
+      ],
+      "recycledTargets": {
+        "_note": "Every temporal structure across A1, A2, and B1 converges. Present (A1), preterite (A2 dest14), imperfect (A2 dest17), ir a + future (A2 dest18), preterite vs imperfect (B1 dest19), narrative connectors (B1 dest19-20), temporal framing (new) — all woven into sustained discourse. The turtle teaches what the hummingbird couldn't: not precision but patience. 'Cuando era pequeña, el río cantaba. Un día, la rana se calló. Ahora el silencio crece. Pero voy a buscar los nombres.' Four tenses in four sentences. The student has done this before, piece by piece. Now they sustain it.",
+        "targets": [
+          "lt_grammar_temporal_framing",
+          "lt_grammar_connectors_narrative",
+          "lt_grammar_preterite_vs_imperfect",
+          "lt_grammar_imperfect_regular",
+          "lt_grammar_preterite_regular",
+          "lt_grammar_ir_a_future",
+          "lt_grammar_connectors_basic",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_community_society",
+          "lt_verb_ser_indicative_present",
+          "lt_verb_estar_indicative_present",
+          "lt_verb_tener_indicative_present"
+        ]
+      },
+      "closingQuestion": "¿Cuánto tiempo necesita una historia?",
+      "escapeRoom": {
+        "name": "La sala del coral",
+        "puzzleTypes": [
+          "extract"
+        ],
+        "fragment": "historia-puente"
+      }
+    },
+    {
+      "_section": "=== B1 ADVANCED — LAS VOCES (dest24–dest28) ==="
+    },
+    {
+      "id": "sn_dest24",
+      "type": "StoryNode",
+      "destination": "dest24",
+      "title": "Las historias que se cruzan",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Approach to the Inmost Cave",
+      "cefr": "B1",
+      "narrativeBeat": "Yaguará begins to see connections between the stories she has collected. The fisherman's river connects to the llanero's grassland connects to the mountain's water cycle. Stories are not isolated — they form a web. Relative clauses are the grammar of connection: 'El río que el pescador describió es el mismo río donde Cóndor vio la herida.' Doña Asunción physically appears for the first time — small, strong, white-haired under a colorful pañuelo, hands in the Atrato water. She sees Yaguará. She recognizes her. 'Te he esperado,' she says. Present perfect: she HAS waited. The waiting has consequence.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_dona_asuncion"
+      ],
+      "objectives": [
+        "lo_connect_narratives"
+      ],
+      "recycledTargets": {
+        "_note": "Every story the student retold at dest20 (indirect speech) now connects to every other. The fisherman's 'dijo que el río era más ancho' (dest20) links to Cóndor's 'lo que parece un camino es una herida' (dest21) via relative clause: 'El río que el pescador describió es el río donde Cóndor vio la herida.' Nature vocab (A1), community vocab (B1 dest19), narrative connectors (dest19-23) — all return inside relative clauses and causal chains. The grammar of connection is built on the vocabulary of isolation.",
+        "targets": [
+          "lt_grammar_relative_clauses",
+          "lt_grammar_cause_consequence",
+          "lt_grammar_connectors_narrative",
+          "lt_grammar_indirect_speech_basic",
+          "lt_grammar_present_perfect",
+          "lt_vocab_community_society",
+          "lt_vocab_nature_landscape",
+          "lt_grammar_temporal_framing"
+        ]
+      },
+      "closingQuestion": "¿Qué pasa cuando las historias se encuentran?",
+      "escapeRoom": {
+        "name": "La sala de la escuchadora",
+        "puzzleTypes": [
+          "extract"
+        ],
+        "fragment": "historia-cueva",
+        "note": "Doña Asunción's chamber by the river. Listen to water sounds, identify the words they carry."
+      }
+    },
+    {
+      "id": "sn_dest25",
+      "type": "StoryNode",
+      "destination": "dest25",
+      "title": "El hombre del camino",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Tests and Enemies — but the enemy is not simple",
+      "cefr": "B1",
+      "narrativeBeat": "Full confrontation with Don Próspero. He arrives in a village that Yaguará has come to love. He is polite, eloquent, citing poetry and statistics. He knows every tree by name — 'Mi abuela me enseñó' — but his road will cut through them. The village is divided. Some want jobs. Some want the forest. Don Próspero is not evil; he is the product of a logic that sees land as resource. In his pocket: a small carved wooden jaguar his mother made. He never shows it. The grammar of concession enters: 'Aunque Don Próspero conoce los árboles, quiere cortarlos.' 'Sin embargo, su dolor es real.' Two truths held in one sentence.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_present_arguments"
+      ],
+      "recycledTargets": {
+        "_note": "Opinion expressions from dest21 ('creo que, me parece que') deepen into argumentation with concession. The subjunctive from dest21 ('es importante que escuchemos') returns in emotional context: 'Es terrible que corten los árboles.' por vs para (dest21) becomes the grammar of motive under pressure: 'Dice que lo hace para ayudar, pero lo hace por dinero.' Every A1 nature word (río, bosque, árbol) is now contested territory — named at A1, described at A2, narrated at B1 Basic, argued over at B1 Advanced. Same nouns, incompatible sentences.",
+        "targets": [
+          "lt_grammar_concessive",
+          "lt_grammar_opinion_expressions",
+          "lt_grammar_subjunctive_present_basic",
+          "lt_grammar_por_vs_para",
+          "lt_grammar_cause_consequence",
+          "lt_vocab_community_society",
+          "lt_vocab_nature_landscape",
+          "lt_grammar_comparatives",
+          "lt_vocab_emotions_expanded"
+        ]
+      },
+      "closingQuestion": "¿Puede una persona buena hacer daño?",
+      "escapeRoom": {
+        "name": "La sala del contrato",
+        "puzzleTypes": [
+          "logic"
+        ],
+        "fragment": "historia-cadena",
+        "note": "Hidden room behind Don Próspero's office. Find contradictions in a contract."
+      }
+    },
+    {
+      "id": "sn_dest26",
+      "type": "StoryNode",
+      "destination": "dest26",
+      "title": "Lo que se pierde",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Approach — loss is accelerating",
+      "cefr": "B1",
+      "narrativeBeat": "Don Próspero's road begins. Trees fall. The grey mist advances faster where trees are cut. A community elder dies — and with her, the name of a river that only she remembered. Candelaria writes the name down just in time: Yurumanguí. She looks at her notebook with new urgency — she is not just drawing anymore, she is saving words. Yaguará feels the loss physically — a heaviness, a dimming. The present perfect makes loss present: 'Ha muerto la abuela. Se ha perdido el nombre. Han cortado los árboles.' The passive makes the agent invisible: 'Los árboles fueron cortados. El nombre fue olvidado.' Who did it? The grammar obscures what the story reveals.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "implicitPresence": [
+        "char_don_prospero",
+        "myth_silencio_gris"
+      ],
+      "objectives": [
+        "lo_express_loss_consequence"
+      ],
+      "recycledTargets": {
+        "_note": "The naming ritual from dest2 (A1) inverts. At A1 the student named things and they glowed. Now things lose their names and fade. Same vocabulary, opposite direction. haber impersonal (dest3: 'hay un río') becomes perfect: 'Ha habido un río. Ya no hay.' tener (dest4: 'tengo cinco años') becomes loss: 'La abuela tenía el nombre. Ya no lo tiene nadie.' Family vocab (dest8) returns as death: the community elder who dies IS someone's abuela. Passive voice strips agency from destruction the way silence strips names from things.",
+        "targets": [
+          "lt_grammar_present_perfect",
+          "lt_grammar_passive_basic",
+          "lt_grammar_cause_consequence",
+          "lt_verb_haber_impersonal",
+          "lt_verb_tener_indicative_present",
+          "lt_vocab_family",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_community_society",
+          "lt_grammar_negation",
+          "lt_grammar_preterite_vs_imperfect"
+        ]
+      },
+      "closingQuestion": "¿Qué se pierde cuando nadie recuerda?",
+      "escapeRoom": {
+        "name": "La sala del nombre perdido",
+        "puzzleTypes": [
+          "extract"
+        ],
+        "fragment": "historia-radio",
+        "note": "A chamber where one inscription has been erased. Reconstruct the lost word from surrounding context."
+      }
+    },
+    {
+      "id": "sn_dest27",
+      "type": "StoryNode",
+      "destination": "dest27",
+      "title": "Dos verdades",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Approach — the enemy has depth",
+      "cefr": "B1",
+      "narrativeBeat": "Yaguará and Candelaria sit with Don Próspero. He tells them his story: born in Chocó, his mother indigenous, died poor while the land around them was rich with resources. He left for Bogotá, studied, returned to 'save' his people through development. His logic is coherent. His grief is real. His methods are devastating. The student must understand two opposing truths simultaneously. Indirect speech carries both versions: 'Don Próspero dijo que quería ayudar. Candelaria dijo que estaba destruyendo.' Subjunctive holds the tension: 'Es posible que tenga razón. Es posible que esté equivocado.' Both subjunctives are true. This is the foundation of critical thinking.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_explain_opinions"
+      ],
+      "recycledTargets": {
+        "_note": "Indirect speech (dest20) carries two competing accounts. Opinion expressions (dest21) now hold contradictions: 'Creo que tiene razón Y creo que está equivocado.' Concessive (dest25) becomes structural: 'Aunque su dolor es real, su camino destruye.' The subjunctive from dest21/25 deepens — not just 'es importante que' but 'es posible que tenga razón y esté equivocado al mismo tiempo.' ser vs estar (A1 dest3) reaches full depth: 'Es un hombre bueno' (ser = identity) but 'está haciendo daño' (estar = current action). The copula distinction the student learned for describing a river now distinguishes identity from behavior.",
+        "targets": [
+          "lt_grammar_subjunctive_present_basic",
+          "lt_grammar_indirect_speech_basic",
+          "lt_grammar_concessive",
+          "lt_grammar_opinion_expressions",
+          "lt_grammar_ser_vs_estar",
+          "lt_grammar_cause_consequence",
+          "lt_vocab_community_society",
+          "lt_vocab_emotions_expanded",
+          "lt_grammar_connotation_irony"
+        ]
+      },
+      "closingQuestion": "¿Puede alguien tener razón y estar equivocado al mismo tiempo?",
+      "escapeRoom": {
+        "name": "La sala de las dos puertas",
+        "puzzleTypes": [
+          "logic"
+        ],
+        "fragment": "historia-puente-colgante",
+        "note": "Two doors, each with a true statement that contradicts the other."
+      }
+    },
+    {
+      "id": "sn_dest28",
+      "type": "StoryNode",
+      "destination": "dest28",
+      "title": "La voz de la abuela",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "The Mentor's final teaching before the Ordeal",
+      "cefr": "B1",
+      "narrativeBeat": "Doña Asunción speaks her longest speech — to Candelaria, with Yaguará listening. She tells the story of the escuchadoras: women who listened to the river, the trees, the wind, and translated what they heard for the community. One by one, they died and were not replaced. The bridge between worlds is almost gone. Doña Asunción gives Yaguará a gift: a word in an indigenous language with no Spanish translation. She says: 'Llévala. No la traduzcas. Guárdala.' Yaguará carries this untranslatable word like a coal in her mouth. The student learns that some meaning resists grammar. And that is not failure — it is respect.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria",
+        "char_dona_asuncion"
+      ],
+      "objectives": [
+        "lo_integrate_b1"
+      ],
+      "integrationObjectives": [
+        "lo_introduce_self",
+        "lo_name_objects",
+        "lo_describe_environment",
+        "lo_count_and_time",
+        "lo_express_preferences",
+        "lo_describe_routines",
+        "lo_order_food",
+        "lo_introduce_family",
+        "lo_describe_home",
+        "lo_tell_time_dates",
+        "lo_use_three_verb_groups",
+        "lo_state_nationality",
+        "lo_understand_relevant_phrases",
+        "lo_simple_exchange",
+        "lo_describe_background",
+        "lo_give_negative_commands",
+        "lo_describe_routines_detail",
+        "lo_express_needs_wants",
+        "lo_describe_weather_changes",
+        "lo_describe_habitual_past",
+        "lo_integrate_a2",
+        "lo_narrate_events",
+        "lo_explain_opinions",
+        "lo_travel_situations",
+        "lo_retell_stories",
+        "lo_understand_implied_meaning",
+        "lo_sustain_narrative",
+        "lo_connect_narratives",
+        "lo_present_arguments",
+        "lo_express_loss_consequence"
+      ],
+      "recycledTargets": {
+        "_note": "EVERY A1, A2, and B1 target converges in one listening act. Doña Asunción's monologue uses every register the student has encountered: present tense for truths that still hold ('El río habla'), imperfect for the world that was ('Las escuchadoras escuchaban'), preterite for what happened ('Murieron una por una'), present perfect for consequence ('Se ha roto el puente'), passive for what was done to the world ('Los nombres fueron olvidados'), subjunctive for what must be ('Es necesario que alguien escuche'), relative clauses for connection ('Las mujeres que escuchaban'), concessive for the terrible truth ('Aunque el bosque muere, todavía habla'). And then: one word the grammar cannot hold. The untranslatable word is the final B1 lesson — mastery includes knowing what you cannot translate.",
+        "targets": [
+          "lt_verb_ser_indicative_present",
+          "lt_verb_estar_indicative_present",
+          "lt_verb_tener_indicative_present",
+          "lt_verb_ir_indicative_present",
+          "lt_verb_llamarse_indicative_present",
+          "lt_verb_gustar_indicative_present",
+          "lt_verb_haber_impersonal",
+          "lt_verb_hablar_indicative_present",
+          "lt_verb_comer_indicative_present",
+          "lt_verb_beber_indicative_present",
+          "lt_verb_vivir_indicative_present",
+          "lt_verb_escribir_indicative_present",
+          "lt_verb_querer_indicative_present",
+          "lt_verb_poder_indicative_present",
+          "lt_verb_necesitar_indicative_present",
+          "lt_verb_tener_imperative_negative",
+          "lt_grammar_articles_definite",
+          "lt_grammar_articles_indefinite",
+          "lt_grammar_noun_gender",
+          "lt_grammar_noun_number",
+          "lt_grammar_adjective_agreement",
+          "lt_grammar_ser_vs_estar",
+          "lt_grammar_negation",
+          "lt_grammar_questions",
+          "lt_grammar_possessives_singular",
+          "lt_grammar_possessives_plural",
+          "lt_grammar_demonstratives",
+          "lt_grammar_tener_expressions",
+          "lt_grammar_prepositions_basic",
+          "lt_grammar_preterite_regular",
+          "lt_grammar_reflexive_verbs",
+          "lt_grammar_object_pronouns",
+          "lt_grammar_imperative_affirmative",
+          "lt_grammar_imperative_negative",
+          "lt_grammar_modal_infinitive",
+          "lt_grammar_comparatives",
+          "lt_grammar_imperfect_regular",
+          "lt_grammar_ir_a_future",
+          "lt_grammar_connectors_basic",
+          "lt_grammar_preterite_vs_imperfect",
+          "lt_grammar_subjunctive_present_basic",
+          "lt_grammar_por_vs_para",
+          "lt_grammar_connectors_narrative",
+          "lt_grammar_indirect_speech_basic",
+          "lt_grammar_opinion_expressions",
+          "lt_grammar_connotation_irony",
+          "lt_grammar_temporal_framing",
+          "lt_vocab_community_society",
+          "lt_grammar_relative_clauses",
+          "lt_grammar_cause_consequence",
+          "lt_grammar_concessive",
+          "lt_grammar_present_perfect",
+          "lt_grammar_passive_basic",
+          "lt_grammar_cultural_register",
+          "lt_vocab_greetings",
+          "lt_vocab_family",
+          "lt_vocab_colors",
+          "lt_vocab_numbers_0_31",
+          "lt_vocab_numbers_32_100",
+          "lt_vocab_days_of_week",
+          "lt_vocab_months",
+          "lt_vocab_food_drink",
+          "lt_vocab_animals_general",
+          "lt_vocab_home_rooms",
+          "lt_vocab_feelings_states",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_nationalities",
+          "lt_vocab_travel",
+          "lt_vocab_emotions_expanded",
+          "lt_vocab_weather_seasons"
+        ]
+      },
+      "theSeedEcho": {
+        "word": "Escucha",
+        "echoNumber": 2,
+        "spokenBy": "char_dona_asuncion",
+        "form": "Llévala. No la traduzcas. Guárdala.",
+        "meaning": "At B1 the seed means: understand what happened. Listening is no longer just attention (A1) or hearing what others need (A2). It is receiving a story that cannot be translated and carrying it without reducing it. The untranslatable word IS the lesson. Some meaning can only be held, not decoded."
+      },
+      "closingQuestion": "¿Hay palabras que no se pueden traducir?",
+      "escapeRoom": {
+        "name": "La sala de la escucha",
+        "puzzleTypes": [
+          "synthesis"
+        ],
+        "fragment": "historia-biblioteca",
+        "note": "A silent room. The puzzle IS silence: wait, listen, identify sounds that slowly emerge."
+      }
+    },
+    {
+      "_section": "=== B2 BASIC — LA PRUEBA (dest29–dest33) ==="
+    },
+    {
+      "id": "sn_dest29",
+      "type": "StoryNode",
+      "destination": "dest29",
+      "title": "El silencio avanza",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "The Ordeal approaches — the enemy is existential",
+      "cefr": "B2",
+      "narrativeBeat": "El Silencio Gris is named for the first time — not by Yaguará, but by Cóndor Viejo, who has seen it from above: 'Es gris. No tiene voz. Donde pasa, el mundo se olvida de sí mismo.' It is not a creature. It is an absence — what happens when no one names, no one remembers, no one listens. It has always existed. It is growing because the naming has slowed. Don Próspero's road accelerates it but did not create it. All four guide-animals are gathered for the first time. Colibrí says: 'Si pudiéramos nombrar todo, no avanzaría.' Tortuga Marina says: 'No se puede nombrar todo. Pero se puede escuchar.' The student enters the grammar of hypothesis — if we could, if it were possible, if someone had — the grammar of imagining what is not yet real.",
+      "characters": [
+        "char_yaguara",
+        "char_colibri",
+        "char_condor_viejo",
+        "char_delfin_rosado",
+        "char_tortuga_marina"
+      ],
+      "explicitPresence": [
+        "myth_silencio_gris"
+      ],
+      "objectives": [
+        "lo_hypothesize_abstract"
+      ],
+      "recycledTargets": {
+        "_note": "A1 nature vocabulary (río, bosque, árbol) returns as things threatened by abstraction — not concrete objects anymore but metaphors: 'el bosque se olvida de sí mismo.' Relative clauses from dest24 now describe existential processes: 'el mundo que se olvida.' Present perfect from dest26 (loss) deepens: 'siempre ha existido' — the grey silence isn't new, it's ancient. Conditional from B2 enables first hypotheticals: 'si nadie nombrara, el mundo se olvidaría.' Same vocabulary from A1 naming ritual, now used to describe un-naming. Passive from dest26 returns: 'los nombres son olvidados' — the agent is no one and everyone.",
+        "targets": [
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_conditional",
+          "lt_grammar_relative_clauses",
+          "lt_grammar_cause_consequence",
+          "lt_grammar_present_perfect",
+          "lt_grammar_passive_basic",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_community_society",
+          "lt_vocab_colors"
+        ]
+      },
+      "closingQuestion": "¿Qué pasa cuando el mundo se olvida de sí mismo?",
+      "escapeRoom": {
+        "name": "La sala gris",
+        "puzzleTypes": [
+          "logic"
+        ],
+        "fragment": "historia-casa",
+        "note": "A room that is losing its features as you solve puzzles. Race against fading."
+      }
+    },
+    {
+      "id": "sn_dest30",
+      "type": "StoryNode",
+      "destination": "dest30",
+      "title": "La sombra de Yaguará",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "The Ordeal — inner enemy",
+      "cefr": "B2",
+      "narrativeBeat": "La Sombra appears. Yaguará sees her own reflection in a still pool — but the reflection moves differently. It speaks, but the words are wrong: jumbled grammar, misplaced words, silence where there should be speech. It is her fear of making mistakes, of not being good enough, of failing the quest. The Sombra says: 'No vas a poder. Las palabras no son tuyas. Nunca vas a hablar bien.' Every language learner has met this shadow. The student must answer — not by defeating the shadow, but by speaking DESPITE it. The subjunctive of emotion enters: 'Temo que tenga razón. Pero dudo que el miedo sea más fuerte que la voz.' Fear triggers the subjunctive — doubt, dread, hope — and the student learns that fear is grammatical. It has a structure. And structures can be spoken through.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "explicitPresence": [
+        "myth_sombra_yaguara"
+      ],
+      "objectives": [
+        "lo_express_fears_doubt"
+      ],
+      "recycledTargets": {
+        "_note": "The shadow speaks using the student's own grammar — broken. Every verb the student mastered returns distorted: 'soy' (dest1, identity) becomes 'no eres nada.' 'puedo' (A2 modal) becomes 'no vas a poder.' Negation from A1 (dest5: 'no me gusta el silencio') weaponizes into 'nunca vas a hablar bien.' ser vs estar (A1 dest3) reaches its deepest register: 'soy Yaguará' (identity) vs 'estoy asustada' (state). Hypothetical from dest29 returns in self-doubt: 'si pudiera hablar bien...' The student fights doubt WITH grammar — the same grammar the shadow corrupts.",
+        "targets": [
+          "lt_grammar_conditional",
+          "lt_grammar_hypothetical_basic",
+          "lt_grammar_abstract_metaphorical",
+          "lt_vocab_abstract_inner_world",
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_negation",
+          "lt_grammar_ser_vs_estar",
+          "lt_verb_ser_indicative_present",
+          "lt_verb_poder_indicative_present",
+          "lt_vocab_emotions_expanded"
+        ]
+      },
+      "closingQuestion": "¿Quién habla cuando tú tienes miedo?",
+      "escapeRoom": {
+        "name": "La sala del espejo",
+        "puzzleTypes": [
+          "riddle"
+        ],
+        "fragment": "historia-cruce",
+        "note": "Mirrors everywhere, each showing a distorted version of the student's progress. Riddle: find the true reflection."
+      }
+    },
+    {
+      "id": "sn_dest31",
+      "type": "StoryNode",
+      "destination": "dest31",
+      "title": "Hablar con los demás",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "The Ordeal — public speech, vulnerability",
+      "cefr": "B2",
+      "narrativeBeat": "Yaguará must speak to a village council. She cannot hide behind Candelaria anymore. She must explain what the grey silence is, what it is doing, why it matters. She stumbles. She uses wrong words. She pauses too long. But she speaks. And people listen — not because her Spanish is perfect, but because what she says is true. The Sombra watches from outside the window, getting smaller. Formal register enters: 'En primer lugar, el silencio no es natural. Sin embargo, no es algo que podamos combatir con fuerza. Por otra parte, si no actuamos, avanzará.' The student learns that public discourse has architecture — and that courage is not the absence of mistakes but the willingness to speak despite them.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "implicitPresence": [
+        "myth_sombra_yaguara"
+      ],
+      "objectives": [
+        "lo_formal_argumentation"
+      ],
+      "recycledTargets": {
+        "_note": "The village council requires FORMAL register — the student switches from the intimate register of guides and family (A1–B1) to public discourse. Opinion expressions from dest21 ('creo que') formalize: 'En primer lugar, creo que el silencio es real. Sin embargo, no es algo que podamos ver.' Concessive from dest25 (Don Próspero) returns but now the student uses it: 'Aunque mi español no es perfecto, lo que digo es verdad.' Cause-consequence from B1 structures the argument. Subjunctive emotions from dest30 deploy publicly: 'Es importante que escuchemos.' por vs para (dest21) structures purpose: 'Hablo para que escuchen, no por ganar.' Abstract vocab from dest29 names the invisible threat.",
+        "targets": [
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_conditional",
+          "lt_grammar_subjunctive_emotions",
+          "lt_grammar_abstract_metaphorical",
+          "lt_grammar_concessive",
+          "lt_grammar_opinion_expressions",
+          "lt_grammar_cause_consequence",
+          "lt_vocab_community_society",
+          "lt_vocab_abstract_inner_world",
+          "lt_grammar_por_vs_para"
+        ]
+      },
+      "closingQuestion": "¿Qué pasa cuando hablas aunque tengas miedo?",
+      "escapeRoom": {
+        "name": "La sala del consejo",
+        "puzzleTypes": [
+          "logic"
+        ],
+        "fragment": "historia-hilos",
+        "note": "Round room with seats in a circle, one empty. Logic puzzle: arrange arguments coherently."
+      }
+    },
+    {
+      "id": "sn_dest32",
+      "type": "StoryNode",
+      "destination": "dest32",
+      "title": "¿Quién traicionó a quién?",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "The Ordeal deepens — trust is complicated",
+      "cefr": "B2",
+      "narrativeBeat": "An apparent betrayal. One of the village allies gave Don Próspero information about where the oldest trees are. Or did they? The student must piece together what really happened from conflicting accounts — unreliable narrators, shifted timelines, omitted details. Was it betrayal or desperation? Did Don Próspero trick them or did they choose? Three witnesses, three versions: 'El primero dijo que fue necesario. El segundo contó que fue una traición. El tercero afirmó que habría hecho lo mismo.' The conditional perfect opens unrealized past: '¿Qué habría pasado si no hubiera hablado con Don Próspero?' The student must argue, hypothesize, interpret different perspectives. There is no single answer. Ambiguity is not a failure of language — it is what language was made for.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "implicitPresence": [
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_analyze_ambiguity"
+      ],
+      "recycledTargets": {
+        "_note": "Three witnesses, three stories, zero agreement. Indirect speech from dest20 and reported speech from B2 carry conflicting accounts. Connotation/irony from dest22 (Delfín Rosado's lesson) proves essential: what each witness DOESN'T say matters as much as what they do. preterite vs imperfect from B1 reconstructs the timeline — 'decía que era necesario' (habitual claim) vs 'dijo que fue una traición' (single accusation). Subjunctive emotions from dest30 hold the doubt: 'Dudo que haya traicionado. Temo que haya tenido razón.' Concessive from dest25 returns: 'Aunque parece una traición, quizás fue desesperación.' Same grammar, incompatible truths.",
+        "targets": [
+          "lt_grammar_reported_speech",
+          "lt_grammar_conditional",
+          "lt_grammar_subjunctive_emotions",
+          "lt_grammar_indirect_speech_basic",
+          "lt_grammar_preterite_vs_imperfect",
+          "lt_grammar_connotation_irony",
+          "lt_grammar_concessive",
+          "lt_vocab_community_society",
+          "lt_vocab_abstract_inner_world",
+          "lt_grammar_cause_consequence"
+        ]
+      },
+      "closingQuestion": "¿Cómo sabes qué es verdad cuando todos dicen algo diferente?",
+      "escapeRoom": {
+        "name": "La sala de los testimonios",
+        "puzzleTypes": [
+          "logic"
+        ],
+        "fragment": "historia-puerta",
+        "note": "Three doors, each with a different version of events. Logic puzzle: find what all three agree on."
+      }
+    },
+    {
+      "id": "sn_dest33",
+      "type": "StoryNode",
+      "destination": "dest33",
+      "title": "El lugar donde van los nombres",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "The Supreme Ordeal — entering the abyss",
+      "cefr": "B2",
+      "narrativeBeat": "Yaguará enters the heart of El Silencio Gris — the place where forgotten names go. It is not dark. It is not empty. It is almost something — shapes that were once trees, sounds that were once songs, colors that were once bright. Everything here is on the tip of the tongue. Yaguará must speak names back into existence. Each name she speaks makes one thing real again. But she cannot remember them all. No one can. That is why she needs every story she has collected. The A1 naming ritual inverts and re-inverts: at dest2, things had names and the student learned them. Here, things have LOST names and the student must give them back. 'Esto habría tenido un nombre, pero ahora es casi nada. Si pudiera recordar... Temo que algunos nombres se hayan perdido para siempre. Sin embargo, cada historia que he escuchado tiene un nombre dentro.' Every level's grammar converges in a single act of creative restoration.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "echoedCharacters": [
+        "char_abuela_ceiba",
+        "char_mama_jaguar",
+        "char_candelaria",
+        "char_colibri",
+        "char_condor_viejo",
+        "char_delfin_rosado",
+        "char_tortuga_marina",
+        "char_dona_asuncion"
+      ],
+      "explicitPresence": [
+        "myth_silencio_gris"
+      ],
+      "objectives": [
+        "lo_creative_abstract_expression"
+      ],
+      "recycledTargets": {
+        "_note": "The A1 naming ritual (dest2: 'El río se llama...') inverts and then re-inverts. At dest2, the student named things and they glowed. Here, things have LOST their names and are 'almost something.' The student must speak names back into existence — but using B2 grammar: 'Si pudiera recordar todos los nombres, el mundo volvería' (hypothetical). 'Temo que algunos nombres se hayan perdido para siempre' (emotional subjunctive). 'Esto habría tenido un nombre, pero ahora es casi nada' (conditional perfect for unrealized past). 'Sin embargo, cada historia lleva un nombre' (discourse markers). Every A1 noun (río, bosque, árbol, jaguar) returns as a ghost of itself. Colors from dest3 are almost-colors. Animals from dest2 are almost-shapes. The student's accumulated stories are the only material that can restore them. Not all names can be saved — 'No puedo recordarlos todos. Por eso necesito cada historia que he recogido.' The Supreme Ordeal is not combat. It is memory against forgetting.",
+        "targets": [
+          "lt_grammar_hypothetical_basic",
+          "lt_grammar_subjunctive_emotions",
+          "lt_grammar_conditional_perfect",
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_abstract_metaphorical",
+          "lt_vocab_abstract_inner_world",
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_conditional",
+          "lt_grammar_reported_speech",
+          "lt_grammar_present_perfect",
+          "lt_grammar_passive_basic",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_animals_general",
+          "lt_vocab_colors",
+          "lt_verb_llamarse_indicative_present",
+          "lt_verb_ser_indicative_present"
+        ]
+      },
+      "closingQuestion": "¿Puedes devolver un nombre a lo que ya se olvidó?",
+      "escapeRoom": {
+        "name": "La sala del olvido",
+        "puzzleTypes": [
+          "synthesis"
+        ],
+        "fragment": "historia-barco",
+        "note": "A room of almost-shapes. Synthesis puzzle: name things to make them real. Every correct answer makes the room more vivid. The story-map section begins to show a pattern — it's forming a voice."
+      }
+    },
+    {
+      "_section": "=== B2 ADVANCED — EL LEGADO (dest34–dest38) ==="
+    },
+    {
+      "id": "sn_dest34",
+      "type": "StoryNode",
+      "destination": "dest34",
+      "title": "El río de la memoria",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Reward — the complex voice",
+      "cefr": "B2",
+      "narrativeBeat": "Yaguará arrives at the Cravo Sur river in the Casanare plains. After surviving the Supreme Ordeal, she has earned a reward: the capacity for complex expression. An old llanero teaches her through the river's metaphor — relative clauses are like the river's branches, each one adding precision to the landscape. 'Las oraciones de relativo son como los brazos del río — las que no llevan coma restringen; las que van entre comas añaden.' The grammar of precision enters: cuyo, en el que, con la que. And the critical distinction: indicative for what exists (encontré un guía que conoce estos llanos), subjunctive for what is sought (busco un guía que conozca estos llanos). The river branches. So does meaning.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "mentionedCharacters": [
+        "char_candelaria"
+      ],
+      "objectives": [
+        "lo_complex_relative_description"
+      ],
+      "recycledTargets": {
+        "_note": "B1's basic relative clauses (dest22: que, donde, quien) evolve into complex relatives with prepositions and cuyo. The river metaphor mirrors dest1's naming (what IS) vs dest33's naming (what IS LOST) — here it becomes: what IS KNOWN (indicative) vs what IS SOUGHT (subjunctive). Passive from B1 (dest26) returns in formal description. Subjunctive from B2 (dest29-33) is recycled in a new syntactic environment: relative clauses.",
+        "targets": [
+          "lt_grammar_relative_clauses",
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_passive_basic",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_animals_general"
+        ]
+      },
+      "closingQuestion": "¿Qué diferencia hay entre lo que conoces y lo que buscas?",
+      "escapeRoom": {
+        "name": "La oficina olvidada",
+        "puzzleTypes": [
+          "extract",
+          "wordlock",
+          "logic"
+        ],
+        "fragment": "historia-documento",
+        "note": "Formal vs informal register. The document says one thing in large letters, another in small. Answer: disposición."
+      }
+    },
+    {
+      "id": "sn_dest35",
+      "type": "StoryNode",
+      "destination": "dest35",
+      "title": "Letras de la llanura",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Apotheosis — literature as mirror",
+      "cefr": "B2",
+      "narrativeBeat": "Yaguará discovers the copla llanera — the poetic tradition of the plains. Old copleros sing ballads where the river is time, the horse is freedom, and the plains are solitude stretched to hyperbole. She learns that oral literature transforms daily experience into poetry. Literary analysis enters: metáfora, símil, personificación, hipérbole, alegoría. The subjunctive serves interpretation: 'Es posible que el autor quiera transmitir un tono nostálgico.' 'No es seguro que la personificación del viento sea solo decoración.' Behind every image lies an intention. The student learns to read between lines — and to speak about what they find there.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "objectives": [
+        "lo_literary_analysis"
+      ],
+      "recycledTargets": {
+        "_note": "Abstract metaphorical language from dest29-33 (la prueba) is now analyzed rather than just produced. The student who wrote 'el silencio avanza' now recognizes personification as a device. Subjunctive for emotions (dest30: temo que) extends to subjunctive for interpretation (es posible que el autor quiera). Cultural register from B1 (dest28) deepens — the copla IS the register.",
+        "targets": [
+          "lt_grammar_abstract_metaphorical",
+          "lt_grammar_subjunctive_emotions",
+          "lt_grammar_cultural_register",
+          "lt_vocab_abstract_inner_world"
+        ]
+      },
+      "closingQuestion": "¿Qué esconde una metáfora que las palabras directas no pueden decir?",
+      "escapeRoom": {
+        "name": "El cuarto de los manuscritos",
+        "puzzleTypes": [
+          "extract",
+          "riddle",
+          "wordlock"
+        ],
+        "fragment": "historia-mariposas",
+        "note": "Allegory analysis. A town with only one word. Butterflies escaping from books. Answer: soledad."
+      }
+    },
+    {
+      "id": "sn_dest36",
+      "type": "StoryNode",
+      "destination": "dest36",
+      "title": "Economía de la tierra",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Transformation — entering formal discourse",
+      "cefr": "B2",
+      "narrativeBeat": "Yaguará observes the economic transformation of Casanare. The Cusiana oil field, discovered in the 1990s, altered the region's productive structure. A regional governor presents data: oil represents 62% of departmental income; reserves could be depleted in two decades. The language changes — hedging replaces certainty: 'Podría considerarse que la dependencia constituye un riesgo.' Nominalization replaces action: 'La producción, la distribución, la inversión.' Impersonal se replaces agents: 'Se ha comprobado que...' The student enters formal institutional discourse — the language of power, policy, and caution. Not because it is beautiful, but because it is necessary.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "mentionedCharacters": [
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_formal_institutional_discourse"
+      ],
+      "recycledTargets": {
+        "_note": "Discourse markers from B2 (dest31: sin embargo, por otra parte) now serve institutional argumentation rather than personal. Passive from B1 (dest26: fue destruido) becomes institutional passive (se ha comprobado, se estima). Conditional from B2 (dest29: hablaría) becomes hedging (podría considerarse, sería necesario). The register shift is the lesson: same grammar, different power.",
+        "targets": [
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_passive_basic",
+          "lt_grammar_conditional",
+          "lt_grammar_cause_consequence",
+          "lt_vocab_community_society"
+        ]
+      },
+      "closingQuestion": "¿El lenguaje formal protege o esconde la verdad?",
+      "escapeRoom": {
+        "name": "La galería de los espejos cruzados",
+        "puzzleTypes": [
+          "riddle",
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "historia-espejos",
+        "note": "Cultural relativism. Don Próspero's fallacy: confusing correlation with causation. Answer: the distinction ser/estar reveals how Spanish separates identity from condition."
+      }
+    },
+    {
+      "id": "sn_dest37",
+      "type": "StoryNode",
+      "destination": "dest37",
+      "title": "Biodiversidad en riesgo",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Atonement — synthesis of opposing voices",
+      "cefr": "B2",
+      "narrativeBeat": "Yaguará encounters the biodiversity crisis of Casanare. The Institute Humboldt reports 300+ bird species; the Orinoco caiman is near extinction with 1,500 remaining. Multiple stakeholders speak: biologists argue ecosystem functions, ranchers argue economic necessity, indigenous communities argue cultural and spiritual value. The student must synthesize — not choose a side, but integrate: 'Mientras que los ambientalistas sostienen que la conservación debe ser prioridad, los ganaderos argumentan que su actividad forma parte de la identidad llanera.' Concession before counterargument: 'Si bien es cierto que ambas posturas tienen fundamentos legítimos, no obstante...' Evidence evaluation: 'Resulta convincente' vs 'Carece de fundamento.' The grammar of intellectual honesty.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "mentionedCharacters": [
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_argumentative_synthesis"
+      ],
+      "recycledTargets": {
+        "_note": "Reported speech from B2 (dest32: dijo que) becomes multi-source reporting (según el informe, los expertos advierten). Concessive from B1 (dest25: aunque) becomes full synthesis structure (si bien es cierto que... no obstante). Formal discourse markers (dest31, dest36) serve evaluation (resulta convincente, carece de fundamento). The student who once named animals at A1 (dest2) now argues for their survival.",
+        "targets": [
+          "lt_grammar_reported_speech",
+          "lt_grammar_concessive",
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_conditional",
+          "lt_vocab_animals_general",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_community_society"
+        ]
+      },
+      "closingQuestion": "¿Se puede proteger la naturaleza sin escuchar todas las voces?",
+      "escapeRoom": {
+        "name": "La sala de los ecos del mercado",
+        "puzzleTypes": [
+          "riddle",
+          "extract",
+          "cipher"
+        ],
+        "fragment": "historia-ecos",
+        "note": "Indirect speech transforms stories. Newspaper style creates distance. Answer: indirecto."
+      }
+    },
+    {
+      "id": "sn_dest38",
+      "type": "StoryNode",
+      "destination": "dest38",
+      "title": "El legado que dejas",
+      "act": "II",
+      "world": "mundoDelMedio",
+      "campbellStage": "Crossing the Return Threshold — B2 integration",
+      "cefr": "B2",
+      "narrativeBeat": "Yaguará's last night in Casanare. She reflects: 'Si alguien le hubiera dicho, meses atrás, que llegaría a sentir como propio el olor de la tierra llanera después de la lluvia, no lo habría creído.' The pluperfect subjunctive enters — the grammar of what never happened but could have. Mixed conditionals: if it had happened then, things would be different now. She writes a letter to Casanare. Don Ramón, the old llanero, speaks at a community gathering: 'Mientras los políticos dicen que el progreso requiere cruzar ríos, nosotros los llaneros argumentamos que el progreso sin memoria es destrucción.' He asks his grandson to keep the joropo alive. 'Al integrar nuestra tradición con el conocimiento científico, llegaremos a ser lo que siempre fuimos: guardianes de la sabana.' Every B2 structure converges in a single act of farewell and commitment.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "mentionedCharacters": [
+        "char_dona_asuncion"
+      ],
+      "objectives": [
+        "lo_integrate_b2"
+      ],
+      "recycledTargets": {
+        "_note": "EVERYTHING converges. Hypothetical from dest29 (si pudiera) becomes pluperfect (si hubiera). Conditional from B2 becomes conditional perfect (habría creído). Discourse markers (dest31, dest36) serve final argumentation. Reported speech (dest32) carries community testimony. Formal register (dest36) meets personal reflection. Periphrasis enters naturally: ponerse a escuchar, dejar de buscar, seguir luchando, llegar a comprender, volver a integrar. Passive voice spans all tenses: fue construido, había sido protegido, ha sido destruida. The grammar becomes invisible in the service of meaning — the hallmark of B2 mastery.",
+        "targets": [
+          "lt_grammar_conditional_perfect",
+          "lt_grammar_hypothetical_basic",
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_reported_speech",
+          "lt_grammar_concessive",
+          "lt_grammar_formal_register_features",
+          "lt_grammar_argumentative_synthesis",
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_conditional",
+          "lt_grammar_passive_basic",
+          "lt_vocab_abstract_inner_world",
+          "lt_vocab_nature_landscape",
+          "lt_vocab_community_society"
+        ]
+      },
+      "theSeed": {
+        "echo": "Escucha",
+        "meaning": "At B2: hear what is not said",
+        "moment": "Don Ramón to Yaguará: 'Tú aprendiste a escuchar antes de hablar. Por eso el río te deja pasar.'"
+      },
+      "closingQuestion": "¿Qué legado dejas cuando te vas?",
+      "escapeRoom": {
+        "name": "La sala del tribunal del río",
+        "puzzleTypes": [
+          "sequence",
+          "logic",
+          "riddle"
+        ],
+        "fragment": "historia-tribunal",
+        "note": "Three stones by the river: accuser, defender, judge. Candelaria vs Don Próspero on rights of the river. Doña Asunción's last wisdom: 'The best debate is not won — it changes both debaters.' Answer: escuchar."
+      }
+    },
+    {
+      "_section": "=== C1 Basic — El regreso (dest39–dest43) ==="
+    },
+    {
+      "id": "sn_dest39",
+      "type": "StoryNode",
+      "destination": "dest39",
+      "title": "La voz de la montaña",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Road Back — ascent to the sacred mountain",
+      "cefr": "C1",
+      "narrativeBeat": "Yaguará ascends the Sierra Nevada de Santa Marta and enters the mundoDeArriba for the first time. The air thins. The forest gives way to páramo, then to stone. A Mamo — a Kogi spiritual leader — stands at the path's threshold. He does not greet her; he listens. Then he speaks in sentences that nest within sentences: 'Para que entiendas lo que la montaña dice, sin que el viento te confunda, necesitas escuchar con el cuerpo entero.' Complex subordination is how the mountain speaks — meaning embedded in meaning, like stone layers. Yaguará learns that the simplest ideas require the most complex structures when they matter most.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_complex_subordination"
+      ],
+      "recycledTargets": {
+        "_note": "The A1 naming of things (dest2) returns as naming through nested clauses. What was 'el río' is now 'el río que canta para que nadie olvide lo que el bosque perdió.' Same vocabulary, infinitely deeper structure.",
+        "targets": [
+          "lt_grammar_complex_subordination",
+          "lt_grammar_subjunctive_imperfect",
+          "lt_grammar_si_clauses",
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_concessive",
+          "lt_grammar_temporal_framing",
+          "lt_vocab_nature_landscape"
+        ]
+      },
+      "closingQuestion": "¿Qué dice la montaña cuando nadie simplifica lo que escucha?",
+      "escapeRoom": {
+        "name": "La cueva de las sombras",
+        "puzzleTypes": [
+          "extract",
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "constelacion-ojo"
+      }
+    },
+    {
+      "id": "sn_dest40",
+      "type": "StoryNode",
+      "destination": "dest40",
+      "title": "Palabras de los mayores",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Road Back — learning the language of precision",
+      "cefr": "C1",
+      "narrativeBeat": "The Mamo teaches Yaguará that the elders structure their teaching with academic precision: introduction, evidence, logical progression. 'En primer lugar, la tierra no es nuestra. No obstante, somos responsables de ella. Por consiguiente, cada palabra que decimos sobre la tierra debe ser exacta.' Yaguará understands that academic discourse is not cold — it is respect for complexity. Candelaria, now 16, recognizes this as the language of power: 'Si aprendes a hablar así, te escuchan los que deciden.' Nominalization, hedging, impersonal constructions — the grammar of institutions and the knowledge they guard.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_academic_discourse"
+      ],
+      "recycledTargets": {
+        "_note": "B1's discourse markers (dest31) evolve into full academic register. What was 'en primer lugar' in a village speech is now hedged, nominalized, and formally structured.",
+        "targets": [
+          "lt_vocab_academic_formal",
+          "lt_grammar_register_adaptation",
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_concessive",
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_opinion_expressions"
+        ]
+      },
+      "closingQuestion": "¿Cuándo la precisión se convierte en respeto?",
+      "escapeRoom": {
+        "name": "El laberinto de las razones",
+        "puzzleTypes": [
+          "logic",
+          "sequence",
+          "synthesis"
+        ],
+        "fragment": "constelacion-balanza-c1"
+      }
+    },
+    {
+      "id": "sn_dest41",
+      "type": "StoryNode",
+      "destination": "dest41",
+      "title": "Ecos de todas las tierras",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Road Back — hearing all voices as one language",
+      "cefr": "C1",
+      "narrativeBeat": "Yaguará hears Colombian regional voices: paisa voseo from Medellín, bogotano ustedeo, costeño rhythm with aspirated eses, llanero musicality. An elder who has lived everywhere tells her: 'Cada tierra habla diferente, pero todas dicen la verdad de quien las habita.' Register is not error — it is identity. The student learns to navigate these variations, understanding that 'correct' Spanish is a fiction maintained by those in power. Candelaria switches effortlessly between her costeño home register and the formal Spanish she learned in school. 'No son dos lenguas,' she says. 'Soy yo entera.'",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "objectives": [
+        "lo_register_variation"
+      ],
+      "recycledTargets": {
+        "_note": "B2's cultural register awareness (dest28) deepens into active register navigation. The student no longer just recognizes variation — they adapt to it.",
+        "targets": [
+          "lt_grammar_register_adaptation",
+          "lt_grammar_cultural_register",
+          "lt_grammar_connotation_irony",
+          "lt_vocab_community_society"
+        ]
+      },
+      "closingQuestion": "¿Cuántas voces caben en una lengua?",
+      "escapeRoom": {
+        "name": "El jardín de las expresiones",
+        "puzzleTypes": [
+          "riddle",
+          "extract",
+          "logic"
+        ],
+        "fragment": "constelacion-flor"
+      }
+    },
+    {
+      "id": "sn_dest42",
+      "type": "StoryNode",
+      "destination": "dest42",
+      "title": "El tejido de las palabras",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Road Back — weaving meaning from threads",
+      "cefr": "C1",
+      "narrativeBeat": "Yaguará watches a Kogi master weaver. Each thread crosses dozens of others; the pattern emerges from relationships, not from any single thread. 'El idioma es igual,' the Mamo says. 'Una perífrasis es un hilo que cruza otro.' Verbal periphrasis — ir + gerundio, ponerse a + infinitivo, acabar por + infinitivo — gives texture to speech. And idioms embed culture: 'no dar papaya' is not just words but a worldview about vigilance. The student learns that fluency means internalizing not just grammar but the metaphors and values of a people.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_periphrasis_idioms"
+      ],
+      "recycledTargets": {
+        "_note": "A1's basic verb forms (dest1–6) return as periphrastic construction bases. The same verbs now carry aspectual nuance: 'ir' is no longer just movement — 'ir + gerundio' is gradual unfolding.",
+        "targets": [
+          "lt_grammar_verbal_periphrasis",
+          "lt_grammar_register_adaptation",
+          "lt_grammar_connectors_narrative",
+          "lt_vocab_nature_landscape"
+        ]
+      },
+      "closingQuestion": "¿Qué dice un idioma que la gramática no puede decir sola?",
+      "escapeRoom": {
+        "name": "La sala de los ecos",
+        "puzzleTypes": [
+          "riddle",
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "constelacion-oido"
+      }
+    },
+    {
+      "id": "sn_dest43",
+      "type": "StoryNode",
+      "destination": "dest43",
+      "title": "Hilos de luz",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Road Back — seeing the invisible connections",
+      "cefr": "C1",
+      "narrativeBeat": "The Mamo traces invisible threads in the air between things: between the river and the cloud, between the word and the memory, between the speaker and the listener. 'Cohesión,' he says, 'es lo que hace que un discurso no sea una lista de frases.' Yaguará learns anaphora (dicho plan, lo anterior), cataphora (lo siguiente es crucial), ellipsis (the art of omitting what is understood), and thematic progression — how a text moves from known to new. She understands that a good text, like a good ecosystem, has no loose threads. Everything connects to everything.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_textual_cohesion"
+      ],
+      "recycledTargets": {
+        "_note": "B1's connectors (dest19–23) and B2's discourse markers (dest31) evolve into discourse-level architecture. The student moves from connecting sentences to weaving paragraphs.",
+        "targets": [
+          "lt_grammar_textual_cohesion",
+          "lt_grammar_complex_subordination",
+          "lt_grammar_connectors_narrative",
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_relative_clauses"
+        ]
+      },
+      "closingQuestion": "¿Qué hace que un texto respire como un bosque?",
+      "escapeRoom": {
+        "name": "La cámara de lo invisible",
+        "puzzleTypes": [
+          "synthesis",
+          "logic",
+          "extract"
+        ],
+        "fragment": "constelacion-abstracta"
+      }
+    },
+    {
+      "_section": "=== C1 Advanced — Las voces antiguas (dest44–dest48) ==="
+    },
+    {
+      "id": "sn_dest44",
+      "type": "StoryNode",
+      "destination": "dest44",
+      "title": "El templo del silencio",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Resurrection — what is not said is as powerful as what is spoken",
+      "cefr": "C1",
+      "narrativeBeat": "Yaguará arrives at Teyuna — Ciudad Perdida. The stone terraces rise through mist. The Antiguos are here, not as ghosts but as presences in the architecture itself. A female Antigua speaks: 'Lo que no se dice tiene más peso que lo que se dice.' Discourse analysis: speech acts (assertive, directive, commissive), presupposition (what is taken for granted without being said), implicature (what is meant but not stated), and the pragmatics of silence. Yaguará learns that analyzing discourse is an act of justice — who names, who is silenced, who has the right to speak.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_discourse_analysis"
+      ],
+      "recycledTargets": {
+        "_note": "B1's implied meaning (dest22) and B2's ambiguity analysis (dest32) deepen into systematic discourse pragmatics. What was intuitive becomes analytical.",
+        "targets": [
+          "lt_grammar_discourse_pragmatics",
+          "lt_grammar_register_adaptation",
+          "lt_grammar_connotation_irony",
+          "lt_grammar_reported_speech",
+          "lt_grammar_indirect_speech_basic",
+          "lt_vocab_abstract_inner_world"
+        ]
+      },
+      "closingQuestion": "¿Qué dice el silencio que las palabras no pueden?",
+      "escapeRoom": {
+        "name": "El templo de lo no dicho",
+        "puzzleTypes": [
+          "synthesis",
+          "logic",
+          "extract"
+        ],
+        "fragment": "constelacion-matiz"
+      }
+    },
+    {
+      "id": "sn_dest45",
+      "type": "StoryNode",
+      "destination": "dest45",
+      "title": "La piedra que persuade",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Resurrection — persuasion as architecture",
+      "cefr": "C1",
+      "narrativeBeat": "The stone terraces of Teyuna are a rhetorical argument: each level builds on the last, each turn anticipates the objection. The Antiguos teach Yaguará ethos (credibility), pathos (emotional resonance), logos (logical structure). She hears two speeches: one uses fallacies (false dilemma, ad hominem), the other uses evidence and acknowledgment. She learns the difference between genuine persuasion and manipulation. Then she speaks — defending the conservation of Teyuna before the council, integrating all three appeals. Candelaria watches. She has never heard Yaguará speak like this.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_rhetorical_persuasion"
+      ],
+      "recycledTargets": {
+        "_note": "B1's argumentation (dest25, dest27) and B2's formal speech (dest31) evolve into full rhetorical analysis and production. The student moves from 'although' to ethos/pathos/logos.",
+        "targets": [
+          "lt_grammar_rhetorical_devices",
+          "lt_grammar_concessive",
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_subjunctive_in_clauses",
+          "lt_grammar_conditional",
+          "lt_grammar_opinion_expressions"
+        ]
+      },
+      "closingQuestion": "¿Cuándo persuadir deja de ser manipular?",
+      "escapeRoom": {
+        "name": "La escalera de los argumentos",
+        "puzzleTypes": [
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "constelacion-bifurcacion"
+      }
+    },
+    {
+      "id": "sn_dest46",
+      "type": "StoryNode",
+      "destination": "dest46",
+      "title": "Voces entre las ruinas",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Resurrection — texts speak through other texts",
+      "cefr": "C1",
+      "narrativeBeat": "The ruins of Teyuna are a palimpsest — civilizations written over civilizations. Yaguará discovers that texts speak with voices that are not entirely their own. She encounters references to García Márquez's use of Biblical allusion, how contemporary Colombian writers rewrite colonial chronicles, and how indigenous voices historically silenced are now being reincorporated into literature. 'Citar no es copiar,' an academic visitor explains. 'Es dialogar.' The student learns that every text exists in conversation with the texts that came before it. Even silence is a text — the absence of indigenous voices in colonial archives is itself a kind of writing.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_intertextual_reading"
+      ],
+      "recycledTargets": {
+        "_note": "B1's reported speech (dest20, dest27) evolves into formal citation and attribution. The student moves from 'dijo que' to 'según afirma,' 'como plantea,' 'haciendo eco de.'",
+        "targets": [
+          "lt_grammar_intertextuality",
+          "lt_grammar_textual_cohesion",
+          "lt_grammar_reported_speech",
+          "lt_grammar_indirect_speech_basic",
+          "lt_grammar_discourse_markers_formal"
+        ]
+      },
+      "closingQuestion": "¿Con quién habla un texto cuando parece hablar solo?",
+      "escapeRoom": {
+        "name": "La biblioteca de las voces",
+        "puzzleTypes": [
+          "extract",
+          "synthesis",
+          "logic"
+        ],
+        "fragment": "constelacion-silencio"
+      }
+    },
+    {
+      "id": "sn_dest47",
+      "type": "StoryNode",
+      "destination": "dest47",
+      "title": "El nombre de las cosas",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Resurrection — language makes the world",
+      "cefr": "C1",
+      "narrativeBeat": "A Kogi Mamo tells Yaguará: 'No descubrimos las cosas; las nombramos, y al nombrarlas les damos existencia.' She encounters the Sapir-Whorf hypothesis through a Wayuu linguist: their language has no word for private property because their reality structures land as habitation, not possession. She struggles to describe a sunrise and learns that what cannot be said in one language CAN be sung, danced, or woven in another. A young Kogi named Nabusimake tells her that when his grandfather died, words died with him — not synonyms, but entire ways of seeing. The student learns that the loss of a language is the loss of entire possibilities of thought.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_philosophy_language"
+      ],
+      "recycledTargets": {
+        "_note": "B2's abstract metaphorical language (dest33) and the entire naming arc from A1 (dest2) converge. Naming is now understood as ontological: to name is to create.",
+        "targets": [
+          "lt_grammar_discourse_pragmatics",
+          "lt_vocab_academic_formal",
+          "lt_grammar_register_adaptation",
+          "lt_grammar_abstract_metaphorical",
+          "lt_vocab_abstract_inner_world",
+          "lt_grammar_hypothetical_basic"
+        ]
+      },
+      "closingQuestion": "¿Qué mundo desaparece cuando muere una lengua?",
+      "escapeRoom": {
+        "name": "La sala de los nombres perdidos",
+        "puzzleTypes": [
+          "synthesis",
+          "riddle",
+          "logic"
+        ],
+        "fragment": "constelacion-confluencia"
+      }
+    },
+    {
+      "id": "sn_dest48",
+      "type": "StoryNode",
+      "destination": "dest48",
+      "title": "La estrella que guía",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Return with the Elixir — mastery serves truth, not ego",
+      "cefr": "C1",
+      "narrativeBeat": "The final terrace of Teyuna. A star visible only to those who have completed the journey of knowledge. The Antiguos speak as one voice: 'La producción académica no es para mostrar tu gramática. Es para poner las estructuras complejas al servicio del pensamiento coherente.' Yaguará must write — not as exercise but as act. She defends the conservation of Colombia's linguistic and ecological heritage: an argument that acknowledges objections, cites evidence, integrates indigenous voices, and concludes with implications. All C1 structures converge: subordination, academic register, rhetoric, intertextuality, cohesion. The Antiguos remind her: 'El rigor académico sirve a la verdad, no al ego.' Candelaria, now 17, reads the essay and says: 'Escucha. Esa siempre fue la respuesta.'",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "echoedCharacters": [
+        "char_dona_asuncion",
+        "char_abuela_ceiba",
+        "char_condor_viejo",
+        "char_tortuga_marina",
+        "char_delfin_rosado",
+        "char_colibri"
+      ],
+      "objectives": [
+        "lo_integrate_c1"
+      ],
+      "recycledTargets": {
+        "_note": "Everything converges. A1's naming, A2's routines, B1's narration, B2's argumentation — all serve the final production. The grammar becomes invisible in the service of meaning.",
+        "targets": [
+          "lt_grammar_complex_subordination",
+          "lt_vocab_academic_formal",
+          "lt_grammar_rhetorical_devices",
+          "lt_grammar_intertextuality",
+          "lt_grammar_textual_cohesion",
+          "lt_grammar_register_adaptation",
+          "lt_grammar_subjunctive_imperfect",
+          "lt_grammar_si_clauses",
+          "lt_grammar_discourse_pragmatics",
+          "lt_grammar_verbal_periphrasis"
+        ]
+      },
+      "closingQuestion": "¿Para qué sirve el lenguaje cuando ya no necesitas demostrar nada?",
+      "escapeRoom": {
+        "name": "La estrella final",
+        "puzzleTypes": [
+          "synthesis"
+        ],
+        "fragment": "constelacion-mochila"
+      }
+    },
+    {
+      "_section": "=== C2 Basic — El guardián (dest49–dest53) ==="
+    },
+    {
+      "id": "sn_dest49",
+      "type": "StoryNode",
+      "destination": "dest49",
+      "title": "La ciudad de todas las voces",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Master of Two Worlds — register",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará arrives in Bogotá — the city of all voices. Each neighborhood speaks a different register: the street vendor's diminutives (tintico, regalas), the Congress's institutional formality (de conformidad con lo dispuesto), the poet's literary invention (la lluvia en Bogotá no cae: se demora). She understands that mastery is not speaking one register perfectly — it is navigating all of them. Register transposition becomes her new grammar: the same truth told four ways. 'Language is not one voice,' she realizes. 'It is all the voices, knowing when to use each one.'",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "objectives": [
+        "lo_register_mastery"
+      ],
+      "recycledTargets": {
+        "_note": "C1's register variation (dest41) becomes full register mastery. B2's formal discourse (dest36) is now one register among four. B1's cultural register awareness (dest28) reaches its culmination: the student doesn't just recognize registers — they produce across all of them. Every grammar structure from A1–C1 is potentially active in any register.",
+        "targets": [
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_cultural_register",
+          "lt_grammar_formal_register_features",
+          "lt_grammar_literary_register",
+          "lt_grammar_nuanced_connectors"
+        ]
+      },
+      "closingQuestion": "¿Cuántas voces necesitas para decir una sola verdad?",
+      "escapeRoom": {
+        "name": "La cámara de los registros",
+        "puzzleTypes": [
+          "cipher",
+          "extract",
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "constelacion-pluma",
+        "note": "Four walls, four registers. Same rain described as meteorology, testimony, poem, report. Answer: registro."
+      }
+    },
+    {
+      "id": "sn_dest50",
+      "type": "StoryNode",
+      "destination": "dest50",
+      "title": "Tinta y territorio",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Master of Two Worlds — creation",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará enters a literary workshop in Bogotá. A writer tells her: 'Until now you have read. Now you create.' Narrative voices open: first person (intimate), omniscient (godlike), unreliable narrator (doubt), second person (accusation or invitation). Indirect free discourse blurs narrator and character: 'María looked at the river. It was beautiful. Or maybe not. Maybe it was just familiar.' García Márquez's shadow is everywhere — magical realism not as fantasy but as the only adequate lens for Latin American reality. The student writes, not as exercise, but as act.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "objectives": [
+        "lo_literary_creation"
+      ],
+      "recycledTargets": {
+        "_note": "B2's abstract metaphorical language (dest29-33) and B2 Advanced's literary analysis (dest35) evolve from reception to production. The student who classified metaphor and símil at dest35 now CREATES them. C1's intertextuality (dest46) provides the literary tradition; now the student adds their voice to it.",
+        "targets": [
+          "lt_grammar_abstract_metaphorical",
+          "lt_grammar_literary_analysis",
+          "lt_grammar_literary_register",
+          "lt_grammar_intertextuality"
+        ]
+      },
+      "closingQuestion": "¿Qué historia solo tú puedes contar?",
+      "escapeRoom": {
+        "name": "La biblioteca sin paredes",
+        "puzzleTypes": [
+          "riddle",
+          "extract",
+          "wordlock",
+          "synthesis"
+        ],
+        "fragment": "constelacion-libro",
+        "note": "Books float weightless. Ambiguity is the answer to the first riddle. hielo is the wordlock answer. Creation over comprehension."
+      }
+    },
+    {
+      "id": "sn_dest51",
+      "type": "StoryNode",
+      "destination": "dest51",
+      "title": "El espejo del idioma",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Master of Two Worlds — metalanguage",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará stands before a mirror — but it reflects not her image, only her words. She discovers metalinguistics: language looking at itself. Types of ambiguity reveal how much meaning hides in structure: 'Vi al hombre con el telescopio' (who has it?). Speech acts show that saying IS doing: 'Te prometo' creates a promise by being said. Etymology becomes archaeology: ojalá from Arabic inshallah, chocolate from Nahuatl xocolatl, Yaguará from Guaraní yaguaretté — true fierce one. Wittgenstein's truth arrives: 'Los límites de mi lenguaje son los límites de mi mundo.' Learning a new language literally expands the reality one can perceive.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "objectives": [
+        "lo_metalinguistic_analysis"
+      ],
+      "recycledTargets": {
+        "_note": "C1's philosophy of language (dest47: Sapir-Whorf) reaches full metalinguistic consciousness. B2's ambiguity analysis (dest32) evolves from textual to systematic. Every grammar concept from A1 onward can now be examined AS an object. The ser/estar distinction that was learned at A1 (dest3) is now understood as evidence that Spanish linguistically separates identity from state.",
+        "targets": [
+          "lt_grammar_discourse_pragmatics",
+          "lt_grammar_metalinguistic_analysis",
+          "lt_grammar_nuanced_connectors"
+        ]
+      },
+      "closingQuestion": "¿Qué ve el lenguaje cuando se mira a sí mismo?",
+      "escapeRoom": {
+        "name": "El espejo del lenguaje",
+        "puzzleTypes": [
+          "wordlock",
+          "riddle",
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "constelacion-espejo",
+        "note": "Mirrors reflect words, not images. Self-referential sentence paradox. metalenguaje is the wordlock. Learning expands reality."
+      }
+    },
+    {
+      "id": "sn_dest52",
+      "type": "StoryNode",
+      "destination": "dest52",
+      "title": "Voces que transforman",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Master of Two Worlds — rhetoric",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará stands in a plaza where constellations form words that shift with the wind. Public discourse has always transformed the world — Gaitán's 'La patria es un sentimiento y no una extensión de tierra' changed Colombia in 1948. King's dream changed America. Rhetoric is not manipulation; it is the architecture of shared meaning. Ethos, pathos, logos — the student learns to build speeches that move people not by tricking them, but by connecting abstract truth to lived emotion. A scientist addresses farmers about climate change: she uses their experience, not her terminology. That is rhetoric at its most honest.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "objectives": [
+        "lo_public_rhetoric"
+      ],
+      "recycledTargets": {
+        "_note": "C1's rhetorical devices (dest45: ethos/pathos/logos) evolve from analysis to production. B2's formal argumentation (dest31) and B2 Advanced's argumentative synthesis (dest37) provide the logical scaffolding. Now the student doesn't just argue — they persuade, adapting to audience.",
+        "targets": [
+          "lt_grammar_rhetorical_devices",
+          "lt_grammar_discourse_markers_formal",
+          "lt_grammar_argumentative_synthesis",
+          "lt_grammar_nuanced_connectors"
+        ]
+      },
+      "closingQuestion": "¿Cuándo persuadir se convierte en servir?",
+      "escapeRoom": {
+        "name": "La plaza de las voces",
+        "puzzleTypes": [
+          "cipher",
+          "extract",
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "constelacion-mano",
+        "note": "Four podiums. Gaitán and King use poetic definition. retorica is the cipher. Audience adaptation is the logic answer."
+      }
+    },
+    {
+      "id": "sn_dest53",
+      "type": "StoryNode",
+      "destination": "dest53",
+      "title": "El guardián despierta",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "Freedom to Live — C2 Basic synthesis",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará stands in a spherical chamber — the Observatory of Languages. The floor is a map; the ceiling is the night sky; each constellation represents a language family. Colombia's 70 languages glow — some bright, some fading. A testimony: 'Mi abuela hablaba nasa yuwe. Yo solo hablo español.' A proverb: 'Cada lengua que desaparece es una biblioteca que se quema.' Yaguará understands: she learned Spanish not to communicate information, but to care for the world. Naming was always the first act of care. The guardian awakens — not because she found a word, but because she understood what words are for.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "echoedCharacters": [
+        "char_dona_asuncion",
+        "char_abuela_ceiba"
+      ],
+      "objectives": [
+        "lo_synthesize_c2_basic"
+      ],
+      "recycledTargets": {
+        "_note": "Everything from dest49-52 converges. Register mastery (dest49) serves communication across communities. Literary creation (dest50) gives voice to stories. Metalinguistic awareness (dest51) reveals language as world-construction. Public rhetoric (dest52) transforms understanding into action. The A1 naming ritual (dest2) reaches its final form: naming as care.",
+        "targets": [
+          "lt_grammar_register_mastery",
+          "lt_grammar_literary_creation",
+          "lt_grammar_metalinguistic_analysis",
+          "lt_grammar_public_rhetoric",
+          "lt_grammar_nuanced_connectors",
+          "lt_grammar_literary_register"
+        ]
+      },
+      "closingQuestion": "¿Qué significa cuidar una lengua?",
+      "escapeRoom": {
+        "name": "El observatorio de las lenguas",
+        "puzzleTypes": [
+          "wordlock",
+          "sequence",
+          "synthesis",
+          "logic"
+        ],
+        "fragment": "constelacion-observatorio",
+        "note": "Spherical chamber. Floor = map, ceiling = stars. síntesis is the wordlock. Final logic: learning a language is an act of care. Connects all previous constellations."
+      }
+    },
+    {
+      "_section": "=== C2 Advanced — La palabra del corazón (dest54–dest58) ==="
+    },
+    {
+      "id": "sn_dest54",
+      "type": "StoryNode",
+      "destination": "dest54",
+      "title": "El regreso a la selva",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Teacher — mediation",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará returns to the selva — but now as mediator. An Emberá community and a team of biologists study the same river but see different worlds: 'río' in Emberá means 'camino que respira' (path that breathes), not a water course to be measured. Yaguará must translate between worldviews, not just words. 'Traduttore, traditore' — all translation involves loss. But mediation creates something new: a third space where both truths can coexist. García Márquez's translator Rabassa understood: faithful translation is creative adaptation. The student becomes the bridge.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos"
+      ],
+      "objectives": [
+        "lo_translation_mediation"
+      ],
+      "recycledTargets": {
+        "_note": "C1's register variation (dest41) and C2 Basic's register mastery (dest49) enable cross-cultural mediation. B2 Advanced's argumentative synthesis (dest37) provides the multi-perspective framework. The student who learned to hear all voices now translates between them.",
+        "targets": [
+          "lt_grammar_register_mastery",
+          "lt_grammar_mediation_reformulation",
+          "lt_grammar_argumentative_synthesis",
+          "lt_grammar_nuanced_connectors"
+        ]
+      },
+      "closingQuestion": "¿Qué se pierde y qué se crea cuando traduces un mundo a otro?",
+      "escapeRoom": {
+        "name": "La cámara de los puentes",
+        "puzzleTypes": [
+          "wordlock",
+          "extract",
+          "riddle",
+          "synthesis"
+        ],
+        "fragment": "constelacion-puente",
+        "note": "Bridge between worlds. traduccion is the wordlock. saudade is the untranslatable. Yaguará as mediator between worlds that were once connected."
+      }
+    },
+    {
+      "id": "sn_dest55",
+      "type": "StoryNode",
+      "destination": "dest55",
+      "title": "Crónica de los mundos",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Teacher — craft",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará discovers that writing is not talent but discipline. An editor tells her: 'El primer borrador es una conversación contigo misma. El segundo, con el lector. El tercero, con la verdad.' Professional writing requires genre awareness — chronicle, essay, report, opinion column — each with its own architecture. García Márquez was a journalist first: clarity + brevity + emotional impact. Revision is the true act of writing: eliminating superfluous adjectives is generosity to the reader. Candelaria writes legal reports on deforestation. The word she returns to Don Próspero, transformed as evidence: verdad.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "mentionedCharacters": [
+        "char_don_prospero"
+      ],
+      "objectives": [
+        "lo_professional_writing"
+      ],
+      "recycledTargets": {
+        "_note": "B2 Advanced's formal register (dest36) becomes professional genre mastery. C1's academic discourse (dest40) provides the precision. C2 Basic's literary creation (dest50) contributes style. Now the student writes not to practice but to communicate truth. Every connector from B1 onward serves structure.",
+        "targets": [
+          "lt_grammar_formal_register_features",
+          "lt_grammar_nuanced_connectors",
+          "lt_grammar_literary_register",
+          "lt_grammar_register_mastery"
+        ]
+      },
+      "closingQuestion": "¿Cuándo un borrador se convierte en verdad?",
+      "escapeRoom": {
+        "name": "El archivo de los documentos vivos",
+        "puzzleTypes": [
+          "cipher",
+          "sequence",
+          "logic",
+          "wordlock"
+        ],
+        "fragment": "constelacion-balanza",
+        "note": "precision is the cipher. Report structure sequence. Candelaria's dilemma: objectivity vs urgency. verdad is the final wordlock."
+      }
+    },
+    {
+      "id": "sn_dest56",
+      "type": "StoryNode",
+      "destination": "dest56",
+      "title": "La lengua viva",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Teacher — awareness",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará discovers that Spanish is not one language but many. Colombian Spanish carries 65+ indigenous languages inside it, creoles from both coasts, and dialects that mark geography and class. A sociolinguistic experiment: the same speaker, different accents, and listener perception shifts. 'Colombian Spanish is the best' is not a fact — it is power disguised as preference. The paisa uses vos; the costeño aspirates /s/; the rolo says 'sumercé.' None is wrong. Language attitudes are social attitudes wearing linguistic masks. And beneath the dialectal surface: 65 indigenous languages, each a world at risk.",
+      "characters": [
+        "char_yaguara"
+      ],
+      "objectives": [
+        "lo_sociolinguistic_analysis"
+      ],
+      "recycledTargets": {
+        "_note": "B1's cultural register (dest28) and B2 Advanced's literary analysis of llanero copla (dest35) deepen into full sociolinguistic science. C2 Basic's metalinguistic analysis (dest51) provides the analytical tools. The student who recognized dialect at B1 now classifies it, analyzes attitudes, and diagnoses endangerment.",
+        "targets": [
+          "lt_grammar_cultural_register",
+          "lt_grammar_metalinguistic_analysis",
+          "lt_grammar_register_mastery"
+        ]
+      },
+      "closingQuestion": "¿Quién decide qué español es el correcto?",
+      "escapeRoom": {
+        "name": "La cámara de las mil voces",
+        "puzzleTypes": [
+          "riddle",
+          "extract",
+          "logic",
+          "synthesis"
+        ],
+        "fragment": "constelacion-raices",
+        "note": "Roots don't compete — they interweave. Language displacement cycle. Three voices on linguistic loss. The Mapa de las Voces mission explained."
+      }
+    },
+    {
+      "id": "sn_dest57",
+      "type": "StoryNode",
+      "destination": "dest57",
+      "title": "Guardianes de historias",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Teacher — transmission",
+      "cefr": "C2",
+      "narrativeBeat": "Yaguará becomes a teacher in Ciudad Bolívar, Bogotá. Urban rappers and poets are her students. She must explain complex grammar simply without falsifying it — the subjunctive is 'the mode of wishes and doubts,' not a morphosyntactic rule. Einstein's principle: 'If you can't explain it simply, you don't understand it well enough.' Oral tradition lives here too: vallenato juglares, Pacific decimeros, llanero copla, Emberá sabedores. The tension: preservation vs evolution. Is modernized cumbia authentic? Doña Asunción's answer echoes from B2: knowledge transmitted grows; knowledge hoarded dies. Technology is vehicle, not master.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "echoedCharacters": [
+        "char_dona_asuncion",
+        "char_abuela_ceiba"
+      ],
+      "objectives": [
+        "lo_cultural_transmission"
+      ],
+      "recycledTargets": {
+        "_note": "The student becomes the teacher. Every grammar concept from A1–C1 is now something to EXPLAIN, not just USE. B2 Advanced's formal register (dest36) becomes the medium. C2 Basic's metalinguistic awareness (dest51) provides understanding of what to explain. The naming ritual from dest2 completes its arc: from learning names to teaching others to name.",
+        "targets": [
+          "lt_grammar_pedagogical_discourse",
+          "lt_grammar_mediation_reformulation",
+          "lt_grammar_register_mastery",
+          "lt_grammar_cultural_register"
+        ]
+      },
+      "closingQuestion": "¿Qué pierdes cuando no transmites lo que sabes?",
+      "escapeRoom": {
+        "name": "La cámara de la herencia",
+        "puzzleTypes": [
+          "wordlock",
+          "sequence",
+          "synthesis",
+          "riddle"
+        ],
+        "fragment": "constelacion-hilo",
+        "note": "Thread connecting generations. transmision is the wordlock. Doña Asunción's riddle: shared knowledge grows, hoarded knowledge dies."
+      }
+    },
+    {
+      "id": "sn_dest58",
+      "type": "StoryNode",
+      "destination": "dest58",
+      "title": "El espíritu completo",
+      "act": "III",
+      "world": "mundoDeArriba",
+      "campbellStage": "The Hero Complete — La Palabra del Corazón",
+      "cefr": "C2",
+      "narrativeBeat": "The three worlds converge in a single point. Yaguará stands where the journey began — but transformed. La Sombra (the fear of speaking, from B2 dest30) appears one final time, but now Yaguará speaks TO her, not AGAINST her: 'Siempre fuiste necesaria. Sin el miedo, no habría aprendido a ser valiente con las palabras.' Los Antiguos ask the final question: '¿Para qué sirve el lenguaje?' Not to demonstrate mastery. Not to pass exams. Not to impress. The answer has been there since dest1, since Abuela Ceiba whispered the seed: Escucha. The Espíritu del Jaguar awakens — not a new creature, but the student's own voice, now autonomous, creative, and caring. La Palabra del Corazón is escuchar. The map is complete.",
+      "characters": [
+        "char_yaguara",
+        "char_candelaria"
+      ],
+      "echoedCharacters": [
+        "char_abuela_ceiba",
+        "char_mama_jaguar",
+        "char_dona_asuncion",
+        "char_don_prospero",
+        "char_colibri",
+        "char_condor_viejo",
+        "char_delfin_rosado",
+        "char_tortuga_marina"
+      ],
+      "explicitPresence": [
+        "myth_los_antiguos",
+        "myth_palabra_corazon",
+        "myth_mapa_voces"
+      ],
+      "objectives": [
+        "lo_integrate_c2"
+      ],
+      "recycledTargets": {
+        "_note": "EVERYTHING. Every LinguisticTarget from A1 to C2 is potentially active. The naming from dest1 (Yo soy Yaguará), the questions from dest3 (¿Qué es?), the negation from dest5 (No me gusta el silencio), the reflexive from dest13 (Me levanto), the preterite from dest14 (Ayer caminé), the subjunctive from dest29 (Si pudiera), the pluperfect from dest38 (Si hubiera), the subordination from dest39 (Para que entiendas), the rhetoric from dest45 (La piedra que persuade), the register mastery from dest49 (La ciudad de todas las voces) — all converge in a single act of speaking that IS listening. Grammar becomes invisible. The student is the jaguar.",
+        "targets": [
+          "lt_grammar_total_integration",
+          "lt_grammar_register_mastery",
+          "lt_grammar_literary_creation",
+          "lt_grammar_metalinguistic_analysis",
+          "lt_grammar_public_rhetoric",
+          "lt_grammar_mediation_reformulation",
+          "lt_grammar_pedagogical_discourse",
+          "lt_grammar_nuanced_connectors",
+          "lt_grammar_literary_register"
+        ]
+      },
+      "theSeed": {
+        "echo": "Escucha",
+        "meaning": "At C2: La Palabra del Corazón — the answer to the entire journey",
+        "moment": "Los Antiguos: '¿Para qué sirve el lenguaje?' The student answers: Escuchar."
+      },
+      "closingQuestion": "¿Para qué sirve el lenguaje cuando ya no necesitas demostrar nada?",
+      "escapeRoom": {
+        "name": "La cámara que tú construyes",
+        "puzzleTypes": [
+          "synthesis",
+          "wordlock"
+        ],
+        "fragment": "mapa-completo",
+        "note": "The final chamber. Three quotes from Yaguará at A1, B1-B2, C1-C2. The wordlock answer: escuchar. No hints. Only you know it. The map was never about places — it was about connections. Now it includes the student's voice."
+      }
+    }
+  ],
+  "culturalConcepts": [
+    {
+      "id": "cc_escuchadora",
+      "type": "CulturalConcept",
+      "name": "Escuchadora",
+      "category": "role",
+      "region": "Chocó",
+      "ecosystem": "eco_bosque",
+      "description": "Women who could hear the forest speak. Doña Asunción is the last. The tradition is dying — which is why the bridge between worlds is breaking."
+    },
+    {
+      "id": "cc_marimba",
+      "type": "CulturalConcept",
+      "name": "Marimba de chonta",
+      "category": "music",
+      "region": "Pacific",
+      "ecosystem": "eco_bosque",
+      "description": "Traditional percussion instrument of Afro-Colombian Pacific coast. Made from chonta palm wood. Central to currulao music."
+    },
+    {
+      "id": "cc_currulao",
+      "type": "CulturalConcept",
+      "name": "Currulao",
+      "category": "music",
+      "region": "Pacific",
+      "ecosystem": "eco_bosque",
+      "description": "Traditional dance and music of the Colombian Pacific. Driven by marimba, drums, and chanting. Ancestral Afro-Colombian expression."
+    },
+    {
+      "id": "cc_cumbia",
+      "type": "CulturalConcept",
+      "name": "Cumbia",
+      "category": "music",
+      "region": "Caribbean",
+      "ecosystem": "eco_costa",
+      "description": "Colombian folk music and dance. Blend of Indigenous, African, and European traditions. Symbol of Colombian cultural fusion."
+    },
+    {
+      "id": "cc_vallenato",
+      "type": "CulturalConcept",
+      "name": "Vallenato",
+      "category": "music",
+      "region": "Caribbean",
+      "ecosystem": "eco_costa",
+      "description": "Narrative song tradition from Valledupar. Accordion, caja, guacharaca. Songs tell stories — the bards of the Caribbean coast."
+    },
+    {
+      "id": "cc_joropo",
+      "type": "CulturalConcept",
+      "name": "Joropo",
+      "category": "music",
+      "region": "Llanos",
+      "ecosystem": "eco_llanos",
+      "description": "Music and dance of the llanos. Harp, cuatro, maracas. Songs of open plains, cattle, and frontier life."
+    },
+    {
+      "id": "cc_ceiba",
+      "type": "CulturalConcept",
+      "name": "Ceiba",
+      "category": "belief",
+      "region": "Pan-Colombian",
+      "ecosystem": null,
+      "description": "Sacred tree in many Mesoamerican and South American traditions. Axis mundi — connects underworld, earth, and sky. In the story: Abuela Ceiba knows all names because all roots pass through her."
+    },
+    {
+      "id": "cc_wayuu_weaving",
+      "type": "CulturalConcept",
+      "name": "Tejido Wayúu",
+      "category": "craft",
+      "region": "La Guajira",
+      "ecosystem": "eco_desierto",
+      "description": "Wayúu textile art (mochilas, chinchorros). Colors carry meaning. Weaving is a form of storytelling and knowledge transmission."
+    },
+    {
+      "id": "cc_mamo",
+      "type": "CulturalConcept",
+      "name": "Mamo",
+      "category": "role",
+      "region": "Sierra Nevada",
+      "ecosystem": "eco_nevada",
+      "description": "Spiritual leader of the Kogui and Arhuaco peoples. Keeper of ancient knowledge. Speaks for the earth. Human parallel to Abuela Ceiba's role."
+    },
+    {
+      "id": "cc_encocado",
+      "type": "CulturalConcept",
+      "name": "Encocado de pescado",
+      "category": "food",
+      "region": "Pacific",
+      "ecosystem": "eco_bosque",
+      "description": "Fish cooked in coconut milk. Staple of Afro-Colombian Pacific cuisine. Shared at the river — food as community."
+    }
+  ],
+  "mythologicalEntities": [
+    {
+      "id": "myth_silencio_gris",
+      "type": "MythologicalEntity",
+      "name": "El Silencio Gris",
+      "nature": "The antagonist force. Not evil — simply the absence of naming. Where it passes, colors fade, sounds muffle, words dissolve. Cannot be defeated by force. Can only be countered by speaking, naming, remembering.",
+      "introducedAt": "A1 (implicit), B2 (explicit)",
+      "visual": "Grey mist, static, the feeling of a word on the tip of your tongue",
+      "relationships": [
+        {
+          "entity": "char_don_prospero",
+          "relation": "He doesn't cause it, but benefits from it. Where names are forgotten, land can be taken."
+        }
+      ]
+    },
+    {
+      "id": "myth_sombra_yaguara",
+      "type": "MythologicalEntity",
+      "name": "La Sombra de Yaguará",
+      "nature": "Yaguará's shadow self. Looks exactly like her but speaks in confusion — mixed-up grammar, wrong words, silence where there should be speech. Represents the fear of making mistakes. Must be embraced, not defeated.",
+      "introducedAt": "B2",
+      "visual": "Yaguará's silhouette, slightly distorted, eyes that reflect rather than see"
+    },
+    {
+      "id": "myth_los_antiguos",
+      "type": "MythologicalEntity",
+      "name": "Los Antiguos",
+      "nature": "The Ancestors. Appear as constellations, cave paintings that move, voices in water. Speak in metaphor and poetry. Never give straight answers. The final teachers.",
+      "introducedAt": "C1",
+      "visual": "Luminous outlines, star-patterns, petroglyphs that animate"
+    },
+    {
+      "id": "myth_mapa_voces",
+      "type": "MythologicalEntity",
+      "name": "El Mapa de las Voces",
+      "nature": "The lost map showing how all Colombian languages were once connected. Revealed through 58 escape room fragments. The meta-quest's ultimate reward.",
+      "introducedAt": "A1 (fragments begin)"
+    },
+    {
+      "id": "myth_palabra_corazon",
+      "type": "MythologicalEntity",
+      "name": "La Palabra del Corazón",
+      "nature": "The one word that holds all the others. The student must find it at dest58. The answer is 'escuchar' — to listen. But the journey to understand why is the entire curriculum.",
+      "introducedAt": "C2 (dest58)"
+    }
+  ]
+}

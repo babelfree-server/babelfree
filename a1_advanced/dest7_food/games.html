@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 7: Comer juntos</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest7_food/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 7: Comer juntos — Games",
+                "url": "https://babelfree.com/a1_advanced/dest7_food/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Food and drink vocabulary",
+                    "Expressing needs with tener"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Comer juntos",
+                        "item": "https://babelfree.com/a1_advanced/dest7_food/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 7: Comer juntos</div>
+            <div class="yg-header-subtitle">Comida y necesidades</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — La familia come junto al río
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'La familia come junto al río. Mamá Jaguar dice: «Come. El río da.» Hay pescado y fruta. Yaguará tiene hambre. Río tiene sed.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — El río da comida
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'En el río hay peces. Yaguará come un pez grande. Río come un pez pequeño. Mamá Jaguar come fruta. La familia come junta.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Los peces son menos
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Mamá Jaguar mira el río. Los peces son menos. Antes hay muchos peces. Ahora hay pocos. Mamá Jaguar dice: «El río necesita ayuda.»'
+    },
+
+    /* ============================================================
+       4. PAIR — Comida y bebida
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la comida con su tipo.',
+        pairs: [
+            ['pescado', 'comida'],
+            ['agua', 'bebida'],
+            ['mango', 'comida'],
+            ['jugo', 'bebida']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — ¿Quién come qué?
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la persona con lo que come.',
+        pairs: [
+            ['Yaguará', 'come pescado'],
+            ['Río', 'come un pez pequeño'],
+            ['Mamá Jaguar', 'come fruta'],
+            ['la familia', 'come junta']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — Necesidades
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la frase con su significado.',
+        pairs: [
+            ['tengo hambre', 'necesito comida'],
+            ['tengo sed', 'necesito agua'],
+            ['me gusta', 'es bueno para mí'],
+            ['no me gusta', 'es malo para mí']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Tener hambre / tener sed
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yaguará ___ hambre.',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                sentence: 'Río ___ sed.',
+                answer: 'tiene',
+                options: ['tengo', 'tiene', 'tienes', 'tienen']
+            },
+            {
+                sentence: 'Yo ___ hambre.',
+                answer: 'tengo',
+                options: ['tengo', 'tiene', 'tienes', 'tienen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Comer y beber
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yaguará ___ pescado.',
+                answer: 'come',
+                options: ['como', 'comes', 'come', 'comen']
+            },
+            {
+                sentence: 'Río ___ agua.',
+                answer: 'bebe',
+                options: ['bebo', 'bebes', 'bebe', 'beben']
+            },
+            {
+                sentence: 'Yo ___ fruta.',
+                answer: 'como',
+                options: ['como', 'comes', 'come', 'comen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Gustar con comida
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Me ___ el mango.',
+                answer: 'gusta',
+                options: ['gusta', 'gustan', 'gusto', 'gustas']
+            },
+            {
+                sentence: 'Me ___ los peces.',
+                answer: 'gustan',
+                options: ['gusta', 'gustan', 'gusto', 'gustas']
+            },
+            {
+                sentence: 'No me ___ el agua mala.',
+                answer: 'gusta',
+                options: ['gusta', 'gustan', 'gusto', 'gustas']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — ¿Qué necesita?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Tengo hambre. Quiero pescado.',
+        question: '¿Qué necesita?',
+        answer: 'comida',
+        options: ['agua', 'comida', 'una casa', 'un amigo']
+    },
+
+    /* ============================================================
+       11. LISTENING — ¿Qué come Yaguará?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Yaguará come un pez grande del río.',
+        question: '¿Qué come Yaguará?',
+        answer: 'un pez',
+        options: ['fruta', 'un pez', 'arroz', 'un mango']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Comer (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo comer.',
+        questions: [
+            {
+                verb: 'comer',
+                subject: 'yo',
+                answer: 'como',
+                options: ['como', 'comes', 'come', 'comen']
+            },
+            {
+                verb: 'comer',
+                subject: 'tú',
+                answer: 'comes',
+                options: ['como', 'comes', 'come', 'comen']
+            },
+            {
+                verb: 'comer',
+                subject: 'ella',
+                answer: 'come',
+                options: ['como', 'comes', 'come', 'comen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Beber (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo beber.',
+        questions: [
+            {
+                verb: 'beber',
+                subject: 'yo',
+                answer: 'bebo',
+                options: ['bebo', 'bebes', 'bebe', 'beben']
+            },
+            {
+                verb: 'beber',
+                subject: 'él',
+                answer: 'bebe',
+                options: ['bebo', 'bebes', 'bebe', 'beben']
+            },
+            {
+                verb: 'beber',
+                subject: 'ellos',
+                answer: 'beben',
+                options: ['bebo', 'bebes', 'bebe', 'beben']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Comida / bebida / fruta
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica las palabras.',
+        categories: ['Comida', 'Bebida', 'Fruta'],
+        items: [
+            { text: 'pescado', category: 'Comida' },
+            { text: 'arroz', category: 'Comida' },
+            { text: 'agua', category: 'Bebida' },
+            { text: 'jugo', category: 'Bebida' },
+            { text: 'mango', category: 'Fruta' },
+            { text: 'plátano', category: 'Fruta' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — Tengo hambre / tengo sed
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: ¿hambre o sed?',
+        categories: ['Tengo hambre', 'Tengo sed'],
+        items: [
+            { text: 'como pescado', category: 'Tengo hambre' },
+            { text: 'bebo agua', category: 'Tengo sed' },
+            { text: 'como fruta', category: 'Tengo hambre' },
+            { text: 'bebo jugo', category: 'Tengo sed' },
+            { text: 'como arroz', category: 'Tengo hambre' },
+            { text: 'bebo leche', category: 'Tengo sed' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Frase de necesidad
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['hambre', 'Tengo', 'pescado', 'Como'],
+        answer: 'Tengo hambre Como pescado'
+    },
+
+    /* ============================================================
+       17. BUILDER — Gustar + comida
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['gusta', 'Me', 'la', 'fruta'],
+        answer: 'Me gusta la fruta'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — Pedir comida
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mamá Jaguar', text: '¿Tienes hambre?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Sí, tengo hambre.', 'Mi madre es bonita.', 'El río es grande.', 'Tengo un hermano.'],
+                answer: 'Sí, tengo hambre.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — ¿Qué quieres comer?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Río', text: '¿Te gusta el pescado?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Sí, me gusta el pescado.', 'Soy un jaguar.', 'El agua es grande.', 'Tengo una hermana.'],
+                answer: 'Sí, me gusta el pescado.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Frase de comida
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Tengo hambre.',
+        answer: 'Tengo hambre.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara del alimento',
+            description: 'Una cueva junto al río. En las paredes hay dibujos de peces, frutas y agua. El aire tiene olor a mango.',
+            ambience: 'river'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un dibujo de un pez pregunta:',
+                riddle: '«Vivo en el río. Los jaguares me comen. Soy pequeño o grande. ¿Qué soy?»',
+                clue: 'Es comida del río.',
+                answer: 'Un pez',
+                options: ['Un pez', 'Un mango', 'Un plátano', 'Una flor'],
+                onSolve: 'El dibujo del pez brilla.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras están escritas en frutas que cuelgan de la pared.',
+                clue: 'Cuando tienes hambre, necesitas esto. Tiene ocho letras.',
+                answer: 'alimento',
+                scrambled: 'mtonaile',
+                onSolve: 'Las frutas se iluminan.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una cerradura en una piedra junto al río.',
+                clue: 'La familia hace esto junta. Yaguará lo hace con pescado. Cinco letras.',
+                answer: 'comer',
+                hint: '_ _ _ _ _',
+                onSolve: 'La piedra se abre. La puerta está adentro. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una raíz con forma de alimento.',
+            questClue: 'El río da comida a quien lo cuida.',
+            item: 'raiz-alimento'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1d7',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Dest7Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>
