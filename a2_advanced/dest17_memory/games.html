@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 17: Recordar c&oacute;mo era el mundo</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_advanced/dest17_memory/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 17: Recordar c\u00f3mo era el mundo — Games",
+                "url": "https://babelfree.com/a2_advanced/dest17_memory/games",
+                "educationalLevel": "A2 - Elementary",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Pret\u00e9rito imperfecto",
+                    "Describing habitual past",
+                    "Contrast indefinido vs imperfecto"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/a2-coffee" },
+                    { "@type": "ListItem", "position": 3, "name": "A2 Avanzado", "item": "https://babelfree.com/a2-coffee" },
+                    { "@type": "ListItem", "position": 4, "name": "Recordar c\u00f3mo era el mundo", "item": "https://babelfree.com/a2_advanced/dest17_memory/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-costa-caribena">
+    <header class="yg-header">
+        <a href="/a2-coffee" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 17: Recordar c&oacute;mo era el mundo</div>
+            <div class="yg-header-subtitle">Imperfecto y memoria</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — El imperfecto cambia todo
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 aprende el imperfecto y todo cambia. Ya no dice solo \u00abla rana cant\u00f3\u00bb sino \u00abla rana cantaba todos los d\u00edas, a mediod\u00eda.\u00bb El pasado no es un solo evento. Es un mundo entero que exist\u00eda.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Lo que el bosque era
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 le cuenta a Candelaria c\u00f3mo era el bosque: \u00abEl r\u00edo sonaba m\u00e1s fuerte. Los p\u00e1jaros cantaban. Hab\u00eda m\u00e1s color.\u00bb Candelaria llora. Reconoce el sentimiento. Su abuela, Do\u00f1a Asunci\u00f3n, le contaba historias de cuando el r\u00edo cantaba m\u00e1s fuerte.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — La abuela de Candelaria
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Candelaria dice: \u00abMi abuela dice que el bosque habla. Pero yo no escucho.\u00bb Yaguar\u00e1 la mira. Entiende: el problema no es que el bosque dej\u00f3 de hablar. Es que ya pocos saben escuchar.'
+    },
+
+    /* ============================================================
+       4. PAIR — Pretérito vs imperfecto
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une cada frase con su tiempo verbal.',
+        pairs: [
+            ['La rana cantaba todos los d\u00edas', 'Imperfecto'],
+            ['La rana cant\u00f3 una noche', 'Pret\u00e9rito'],
+            ['El bosque era verde', 'Imperfecto'],
+            ['La niebla lleg\u00f3', 'Pret\u00e9rito']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Antes y ahora
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el antes con el ahora.',
+        pairs: [
+            ['El r\u00edo sonaba fuerte', 'Ahora suena bajo'],
+            ['Hab\u00eda muchos colores', 'Ahora hay menos'],
+            ['Los p\u00e1jaros cantaban', 'Ahora est\u00e1n callados'],
+            ['El bosque era grande', 'Ahora es m\u00e1s peque\u00f1o']
+        ]
+    },
+
+    /* ============================================================
+       6. FIB — Imperfecto regular -AR
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el imperfecto.',
+        questions: [
+            {
+                sentence: 'La rana ___ todos los d\u00edas. (cantar)',
+                answer: 'cantaba',
+                options: ['cantaba', 'cant\u00f3', 'canta', 'cantamos']
+            },
+            {
+                sentence: 'Yo ___ por el bosque cada ma\u00f1ana. (caminar)',
+                answer: 'caminaba',
+                options: ['caminaba', 'camin\u00e9', 'camino', 'caminamos']
+            },
+            {
+                sentence: 'Mam\u00e1 Jaguar ___ con nosotros. (hablar)',
+                answer: 'hablaba',
+                options: ['hablaba', 'habl\u00f3', 'habla', 'hablamos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Imperfecto regular -ER/-IR
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el imperfecto.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ pescado todos los d\u00edas. (comer)',
+                answer: 'com\u00eda',
+                options: ['com\u00eda', 'comi\u00f3', 'come', 'com\u00edamos']
+            },
+            {
+                sentence: 'El r\u00edo ___ m\u00e1s fuerte antes. (sonar)',
+                answer: 'sonaba',
+                options: ['sonaba', 'son\u00f3', 'suena', 'sonamos']
+            },
+            {
+                sentence: 'Los p\u00e1jaros ___ al amanecer. (salir)',
+                answer: 'sal\u00edan',
+                options: ['sal\u00edan', 'salieron', 'salen', 'sal\u00eda']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Imperfecto irregular (ser, ir, ver)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el imperfecto.',
+        questions: [
+            {
+                sentence: 'El bosque ___ verde y grande. (ser)',
+                answer: 'era',
+                options: ['era', 'fue', 'es', '\u00e9ramos']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ al r\u00edo cada tarde. (ir)',
+                answer: 'iba',
+                options: ['iba', 'fue', 'va', '\u00edbamos']
+            },
+            {
+                sentence: 'Candelaria ___ las estrellas todas las noches. (ver)',
+                answer: 've\u00eda',
+                options: ['ve\u00eda', 'vio', 've', 've\u00edamos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Contraste: imperfecto vs pretérito
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: '\u00bfImperfecto o pret\u00e9rito?',
+        questions: [
+            {
+                sentence: 'La rana ___ cuando la niebla ___. (cantar / llegar)',
+                answer: 'cantaba... lleg\u00f3',
+                options: ['cantaba... lleg\u00f3', 'cant\u00f3... llegaba', 'cantaba... llegaba', 'cant\u00f3... lleg\u00f3']
+            },
+            {
+                sentence: 'El bosque ___ tranquilo pero un d\u00eda todo ___. (estar / cambiar)',
+                answer: 'estaba... cambi\u00f3',
+                options: ['estaba... cambi\u00f3', 'estuvo... cambiaba', 'estaba... cambiaba', 'estuvo... cambi\u00f3']
+            },
+            {
+                sentence: 'Yo ___ feliz cuando Candelaria ___. (ser / llegar)',
+                answer: 'era... lleg\u00f3',
+                options: ['era... lleg\u00f3', 'fui... llegaba', 'era... llegaba', 'fui... lleg\u00f3']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — Cómo era el bosque
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Antes, el bosque era verde. Los p\u00e1jaros cantaban. El r\u00edo sonaba fuerte. Hab\u00eda muchos colores.',
+        question: '\u00bfC\u00f3mo era el bosque antes?',
+        answer: 'Era verde con muchos colores',
+        options: ['Era gris y silencioso', 'Era verde con muchos colores', 'Era peque\u00f1o y oscuro', 'Era igual que ahora']
+    },
+
+    /* ============================================================
+       11. LISTENING — Doña Asunción
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'La abuela de Candelaria se llama Do\u00f1a Asunci\u00f3n. Ella contaba historias de cuando el r\u00edo cantaba m\u00e1s fuerte.',
+        question: '\u00bfQu\u00e9 hac\u00eda Do\u00f1a Asunci\u00f3n?',
+        answer: 'Contaba historias del r\u00edo',
+        options: ['Cantaba con la rana', 'Contaba historias del r\u00edo', 'Caminaba por el bosque', 'Pescaba todos los d\u00edas']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Imperfecto -AR (hablar)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga hablar en imperfecto.',
+        questions: [
+            {
+                verb: 'hablar',
+                subject: 'yo',
+                answer: 'hablaba',
+                options: ['hablaba', 'hablabas', 'hablaba', 'habl\u00e1bamos']
+            },
+            {
+                verb: 'hablar',
+                subject: 't\u00fa',
+                answer: 'hablabas',
+                options: ['hablaba', 'hablabas', 'hablaba', 'hablaban']
+            },
+            {
+                verb: 'hablar',
+                subject: 'ellos',
+                answer: 'hablaban',
+                options: ['hablaba', 'hablabas', 'habl\u00e1bamos', 'hablaban']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Imperfecto -ER/-IR (comer/vivir)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga comer y vivir en imperfecto.',
+        questions: [
+            {
+                verb: 'comer',
+                subject: 'yo',
+                answer: 'com\u00eda',
+                options: ['com\u00eda', 'com\u00edas', 'com\u00eda', 'com\u00edamos']
+            },
+            {
+                verb: 'vivir',
+                subject: '\u00e9l',
+                answer: 'viv\u00eda',
+                options: ['viv\u00eda', 'viv\u00edas', 'viv\u00eda', 'viv\u00edan']
+            },
+            {
+                verb: 'vivir',
+                subject: 'nosotros',
+                answer: 'viv\u00edamos',
+                options: ['viv\u00eda', 'viv\u00edas', 'viv\u00edamos', 'viv\u00edan']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Pretérito / imperfecto
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfpret\u00e9rito (una vez) o imperfecto (siempre)?',
+        categories: ['Pret\u00e9rito', 'Imperfecto'],
+        items: [
+            { text: 'La rana cant\u00f3 una noche', category: 'Pret\u00e9rito' },
+            { text: 'La rana cantaba todos los d\u00edas', category: 'Imperfecto' },
+            { text: 'La niebla lleg\u00f3', category: 'Pret\u00e9rito' },
+            { text: 'El bosque era verde', category: 'Imperfecto' },
+            { text: 'Candelaria apareci\u00f3', category: 'Pret\u00e9rito' },
+            { text: 'El r\u00edo sonaba fuerte', category: 'Imperfecto' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — Marcadores temporales
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica los marcadores de tiempo.',
+        categories: ['Imperfecto', 'Pret\u00e9rito'],
+        items: [
+            { text: 'todos los d\u00edas', category: 'Imperfecto' },
+            { text: 'siempre', category: 'Imperfecto' },
+            { text: 'ayer', category: 'Pret\u00e9rito' },
+            { text: 'de repente', category: 'Pret\u00e9rito' },
+            { text: 'normalmente', category: 'Imperfecto' },
+            { text: 'una vez', category: 'Pret\u00e9rito' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Recuerdo con imperfecto
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['Antes', 'el', 'bosque', 'era', 'verde', 'y', 'cantaba'],
+        answer: 'Antes el bosque era verde y cantaba'
+    },
+
+    /* ============================================================
+       17. BUILDER — Contraste temporal
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['La', 'rana', 'cantaba', 'pero', 'un', 'd\u00eda', 'la', 'niebla', 'lleg\u00f3'],
+        answer: 'La rana cantaba pero un d\u00eda la niebla lleg\u00f3'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — ¿Cómo era el bosque antes?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfC\u00f3mo era el bosque antes?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Era verde. Los p\u00e1jaros cantaban. El r\u00edo sonaba fuerte.', 'Ayer camin\u00e9 mucho.', 'Necesito agua.', 'Llueve mucho.'],
+                answer: 'Era verde. Los p\u00e1jaros cantaban. El r\u00edo sonaba fuerte.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — Doña Asunción
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: '\u00bfQu\u00e9 contaba tu abuela?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Mi abuela contaba que el r\u00edo cantaba m\u00e1s fuerte.', 'Tengo hambre.', 'Me levanto temprano.', 'Quiero ir a casa.'],
+                answer: 'Mi abuela contaba que el r\u00edo cantaba m\u00e1s fuerte.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Imperfecto y pretérito
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Antes viv\u00eda en el campo. Un d\u00eda lleg\u00f3 una tormenta.',
+        answer: 'Antes viv\u00eda en el campo. Un d\u00eda lleg\u00f3 una tormenta.'
+    },
+
+    /* ============================================================
+       21. CULTURA — Los Llanos
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Cultura',
+        instruction: 'Lee sobre la cultura colombiana.',
+        text: 'Nota cultural: Los Llanos tienen dos estaciones: sequ\u00eda e inundaci\u00f3n. El joropo es el baile del llanero. Se baila con arpa, cuatro y maracas. El llanero vive entre sol y lluvia.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La c\u00e1mara de la memoria',
+            description: 'Murales descoloridos cubren las paredes. Cada mural muestra un recuerdo del bosque. Debes restaurarlos con las palabras correctas.',
+            ambience: 'memory'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un mural descolorido pregunta:',
+                riddle: '\u00abNo soy el pasado de una vez. Soy el pasado de siempre. Cantaba, era, viv\u00eda. \u00bfQu\u00e9 tiempo verbal soy?\u00bb',
+                clue: 'El pasado habitual. No una acci\u00f3n, sino un mundo.',
+                answer: 'Imperfecto',
+                options: ['Imperfecto', 'Pret\u00e9rito', 'Presente', 'Futuro'],
+                onSolve: 'El primer mural recupera sus colores.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras se ven entre los colores del mural.',
+                clue: 'La abuela de Candelaria. Ella escucha el r\u00edo. Diez letras, empieza con A.',
+                answer: 'Asunci\u00f3n',
+                scrambled: 'unci\u00f3nAs',
+                onSolve: 'El segundo mural brilla con luz dorada.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La puerta tiene una cerradura con un recuerdo.',
+                clue: 'El bosque ___ verde. Dos letras. El verbo ser en imperfecto, tercera persona.',
+                answer: 'era',
+                hint: '_ _ _',
+                onSolve: 'La puerta se abre. Los recuerdos quedan guardados.'
+            }
+        ],
+        fragment: {
+            text: 'Una ra\u00edz con forma de espiral brilla. El mapa muestra un camino que sale del bosque.',
+            questClue: '\u00bfC\u00f3mo era el mundo antes?',
+            item: 'raiz-17'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a2d17',
+        world: 'costaCaribena',
+        storageKey: 'yaguaraA2Dest17Progress',
+        backUrl: '../../a2-coffee.html'
+    });
+</script>
+</body>
+</html>

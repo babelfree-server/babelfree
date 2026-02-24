@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 18: El mundo completo</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_advanced/dest18_threshold/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 18: El mundo completo — Games",
+                "url": "https://babelfree.com/a2_advanced/dest18_threshold/games",
+                "educationalLevel": "A2 - Elementary",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Full A2 integration",
+                    "Three tenses: imperfect, preterite, ir a + infinitive",
+                    "Connecting ideas with connectors"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/a2-coffee" },
+                    { "@type": "ListItem", "position": 3, "name": "A2 Avanzado", "item": "https://babelfree.com/a2-coffee" },
+                    { "@type": "ListItem", "position": 4, "name": "El mundo completo", "item": "https://babelfree.com/a2_advanced/dest18_threshold/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-costa-caribena">
+    <header class="yg-header">
+        <a href="/a2-coffee" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 18: El mundo completo</div>
+            <div class="yg-header-subtitle">Integraci&oacute;n A2 — Cruzar el umbral</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — Es hora de partir
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Candelaria lleva a Yaguar\u00e1 al borde del bosque. M\u00e1s all\u00e1: el mundo humano. Caminos, pueblos, ruido diferente. Mam\u00e1 Jaguar llega y dice: \u00abEl r\u00edo no espera.\u00bb Es la hora.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — El mensaje de Abuela Ceiba
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Abuela Ceiba env\u00eda un mensaje a trav\u00e9s de las ra\u00edces: una vibraci\u00f3n que Yaguar\u00e1 siente en las patas. \u00abVe. Nombra. Escucha. Vuelve.\u00bb Cuatro palabras. Cuatro verbos. Todo lo que necesita.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Cruzar el umbral
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 cruza el borde del bosque. Candelaria camina a su lado. R\u00edo mira desde atr\u00e1s. Quiere seguir, pero Mam\u00e1 Jaguar lo detiene. \u00abTodav\u00eda no, Hijo.\u00bb El A2 termina. Un mundo nuevo empieza.'
+    },
+
+    /* ============================================================
+       4. PAIR — Tres tiempos
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une cada frase con su tiempo verbal.',
+        pairs: [
+            ['El bosque cantaba', 'Imperfecto'],
+            ['La rana se call\u00f3', 'Pret\u00e9rito'],
+            ['Voy a buscar los nombres', 'Futuro (ir a)'],
+            ['Candelaria camina a mi lado', 'Presente']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Personajes y acciones
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une cada personaje con lo que dice o hace.',
+        pairs: [
+            ['Mam\u00e1 Jaguar', 'El r\u00edo no espera'],
+            ['Abuela Ceiba', 'Ve. Nombra. Escucha. Vuelve.'],
+            ['R\u00edo', 'Quiere seguir a Yaguar\u00e1'],
+            ['Candelaria', 'Camina al lado de Yaguar\u00e1']
+        ]
+    },
+
+    /* ============================================================
+       6. FIB — Ir a + infinitivo (futuro cercano)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con ir a + infinitivo.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ buscar los nombres. (ir a)',
+                answer: 'va a',
+                options: ['va a', 'fue a', 'iba a', 'es a']
+            },
+            {
+                sentence: 'Nosotros ___ aprender m\u00e1s. (ir a)',
+                answer: 'vamos a',
+                options: ['vamos a', 'fuimos a', '\u00edbamos a', 'somos a']
+            },
+            {
+                sentence: 'Yo ___ cruzar el bosque. (ir a)',
+                answer: 'voy a',
+                options: ['voy a', 'fui a', 'iba a', 'soy a']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Conectores básicos
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el conector correcto.',
+        questions: [
+            {
+                sentence: 'El bosque cantaba, ___ un d\u00eda la niebla lleg\u00f3.',
+                answer: 'pero',
+                options: ['pero', 'y', 'porque', 'entonces']
+            },
+            {
+                sentence: 'Primero la rana cant\u00f3, ___ la niebla lleg\u00f3.',
+                answer: 'despu\u00e9s',
+                options: ['pero', 'despu\u00e9s', 'porque', 'y']
+            },
+            {
+                sentence: 'La niebla avanz\u00f3, ___ Yaguar\u00e1 decidi\u00f3 actuar.',
+                answer: 'entonces',
+                options: ['pero', 'y', 'porque', 'entonces']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Integración: tres tiempos
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el tiempo verbal correcto.',
+        questions: [
+            {
+                sentence: 'Antes, el bosque ___ verde. (ser)',
+                answer: 'era',
+                options: ['era', 'fue', 'es', 'va a ser']
+            },
+            {
+                sentence: 'Un d\u00eda, la niebla ___. (llegar)',
+                answer: 'lleg\u00f3',
+                options: ['llegaba', 'lleg\u00f3', 'llega', 'va a llegar']
+            },
+            {
+                sentence: 'Ahora Yaguar\u00e1 ___ buscar los nombres. (ir a)',
+                answer: 'va a',
+                options: ['iba a', 'fue a', 'va a', 'era']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. LISTENING — La despedida
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Mam\u00e1 Jaguar dice: el r\u00edo no espera. Abuela Ceiba dice: ve, nombra, escucha, vuelve. R\u00edo quiere ir pero Mam\u00e1 Jaguar dice: todav\u00eda no.',
+        question: '\u00bfQui\u00e9n no puede ir con Yaguar\u00e1?',
+        answer: 'R\u00edo',
+        options: ['Candelaria', 'R\u00edo', 'Mam\u00e1 Jaguar', 'Abuela Ceiba']
+    },
+
+    /* ============================================================
+       10. LISTENING — Las instrucciones de Abuela Ceiba
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Ve. Nombra. Escucha. Vuelve. Cuatro verbos. Todo lo que necesitas.',
+        question: '\u00bfCu\u00e1ntos verbos dice Abuela Ceiba?',
+        answer: 'Cuatro',
+        options: ['Dos', 'Tres', 'Cuatro', 'Cinco']
+    },
+
+    /* ============================================================
+       11. CONJUGATION — Ir a + infinitivo
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga ir a + buscar.',
+        questions: [
+            {
+                verb: 'ir a buscar',
+                subject: 'yo',
+                answer: 'voy a buscar',
+                options: ['voy a buscar', 'vas a buscar', 'va a buscar', 'vamos a buscar']
+            },
+            {
+                verb: 'ir a buscar',
+                subject: 'ella',
+                answer: 'va a buscar',
+                options: ['voy a buscar', 'vas a buscar', 'va a buscar', 'vamos a buscar']
+            },
+            {
+                verb: 'ir a buscar',
+                subject: 'nosotros',
+                answer: 'vamos a buscar',
+                options: ['voy a buscar', 'vas a buscar', 'va a buscar', 'vamos a buscar']
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. SORTING — Tres tiempos
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfpasado habitual, pasado completado o futuro?',
+        categories: ['Imperfecto', 'Pret\u00e9rito', 'Futuro (ir a)'],
+        items: [
+            { text: 'El bosque cantaba', category: 'Imperfecto' },
+            { text: 'La niebla lleg\u00f3', category: 'Pret\u00e9rito' },
+            { text: 'Voy a buscar', category: 'Futuro (ir a)' },
+            { text: 'El r\u00edo sonaba', category: 'Imperfecto' },
+            { text: 'Candelaria apareci\u00f3', category: 'Pret\u00e9rito' },
+            { text: 'Vamos a caminar', category: 'Futuro (ir a)' }
+        ]
+    },
+
+    /* ============================================================
+       13. SORTING — Conectores
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica los conectores.',
+        categories: ['Secuencia', 'Contraste', 'Causa'],
+        items: [
+            { text: 'primero', category: 'Secuencia' },
+            { text: 'despu\u00e9s', category: 'Secuencia' },
+            { text: 'pero', category: 'Contraste' },
+            { text: 'sin embargo', category: 'Contraste' },
+            { text: 'porque', category: 'Causa' },
+            { text: 'entonces', category: 'Secuencia' }
+        ]
+    },
+
+    /* ============================================================
+       14. BUILDER — Tres tiempos en una frase
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena la historia.',
+        words: ['El', 'bosque', 'cantaba', 'pero', 'la', 'niebla', 'lleg\u00f3', 'y', 'ahora', 'voy', 'a', 'buscar'],
+        answer: 'El bosque cantaba pero la niebla lleg\u00f3 y ahora voy a buscar'
+    },
+
+    /* ============================================================
+       15. BUILDER — Abuela Ceiba
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las instrucciones.',
+        words: ['Ve', 'Nombra', 'Escucha', 'Vuelve'],
+        answer: 'Ve Nombra Escucha Vuelve'
+    },
+
+    /* ============================================================
+       16. CONVERSATION — La historia completa
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Cuenta la historia: \u00bfqu\u00e9 era, qu\u00e9 pas\u00f3 y qu\u00e9 vas a hacer?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['El bosque era verde. La niebla lleg\u00f3. Voy a buscar los nombres.', 'Tengo hambre.', 'Me levanto temprano.', 'Llueve mucho.'],
+                answer: 'El bosque era verde. La niebla lleg\u00f3. Voy a buscar los nombres.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       17. CONVERSATION — La despedida
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mam\u00e1 Jaguar', text: 'El r\u00edo no espera. \u00bfEst\u00e1s lista?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['S\u00ed. Voy a ir. Voy a nombrar. Voy a escuchar. Voy a volver.', 'No quiero ir.', 'Ayer camin\u00e9 mucho.', 'El bosque era verde.'],
+                answer: 'S\u00ed. Voy a ir. Voy a nombrar. Voy a escuchar. Voy a volver.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       18. CONVERSATION — ¿Qué dejas atrás?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: '\u00bfQu\u00e9 dejas atr\u00e1s cuando avanzas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Dejo mi familia, pero llevo sus palabras.', 'Necesito agua.', 'La rana cantaba.', 'Hace fr\u00edo.'],
+                answer: 'Dejo mi familia, pero llevo sus palabras.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. DICTATION — Los secretos del bosque
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Ve. Nombra. Escucha. Vuelve.',
+        answer: 'Ve. Nombra. Escucha. Vuelve.'
+    },
+
+    /* ============================================================
+       20. STORY — Integración: Los secretos del bosque
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Historia final',
+        instruction: 'Lee la historia completa del A2.',
+        text: 'Los secretos del bosque: Antes, el bosque cantaba. Los p\u00e1jaros volaban. El r\u00edo sonaba fuerte. Pero un d\u00eda la niebla lleg\u00f3. La rana dej\u00f3 de cantar. Candelaria apareci\u00f3. Yaguar\u00e1 aprendi\u00f3 a necesitar, a querer, a poder. Ahora va a cruzar el umbral. Va a nombrar lo que se perdi\u00f3. Va a escuchar lo que queda. Y va a volver.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la \u00faltima puerta.',
+        room: {
+            name: 'La puerta del umbral',
+            description: 'La \u00faltima c\u00e1mara subterr\u00e1nea se abre hacia arriba. Las 18 ra\u00edces-fragmento se re\u00fanen aqu\u00ed. La luz entra desde afuera.',
+            ambience: 'dawn'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Las ra\u00edces vibran con una pregunta:',
+                riddle: '\u00abTres tiempos forman una historia. El primero describe c\u00f3mo era. El segundo cuenta qu\u00e9 pas\u00f3. El tercero dice qu\u00e9 va a pasar. \u00bfCu\u00e1l es el primero?\u00bb',
+                clue: 'El pasado habitual. C\u00f3mo era el mundo.',
+                answer: 'Imperfecto',
+                options: ['Imperfecto', 'Pret\u00e9rito', 'Futuro', 'Presente'],
+                onSolve: 'Las ra\u00edces brillan con el primer color.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras talladas en la piedra del umbral.',
+                clue: 'Lo que Abuela Ceiba dijo primero. Dos letras. Un imperativo.',
+                answer: 've',
+                scrambled: 'ev',
+                onSolve: 'La piedra se ilumina.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La \u00faltima cerradura. Arriba se ve el cielo.',
+                clue: 'Yaguar\u00e1 cruza este l\u00edmite. Deja el bosque. Entra al mundo humano. Seis letras.',
+                answer: 'umbral',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'La puerta se abre hacia arriba. Luz. Las 18 ra\u00edces forman el primer tramo del Mapa de las Voces.'
+            }
+        ],
+        fragment: {
+            text: 'Las 18 ra\u00edces se unen. El primer tramo del Mapa de las Voces se revela: \u00abLas ra\u00edces.\u00bb La meta-misi\u00f3n Parte 1 est\u00e1 completa.',
+            questClue: '\u00bfQu\u00e9 dejas atr\u00e1s cuando avanzas?',
+            item: 'raiz-18'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a2d18',
+        world: 'costaCaribena',
+        storageKey: 'yaguaraA2Dest18Progress',
+        backUrl: '../../a2-coffee.html'
+    });
+</script>
+</body>
+</html>
