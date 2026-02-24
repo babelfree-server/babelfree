@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 40, Lecci&oacute;n 1 - Los Antiguos hablan</title>
+    <meta name="description" content="C1 Básico - Destino 40 Lección 1: Discurso académico">
+    <link rel="canonical" href="https://babelfree.com/c1_basic/dest40_academic_discourse/lesson1_the_ancients_speak">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 40, Lecci\u00f3n 1 - Los Antiguos hablan",
+                "url": "https://babelfree.com/c1_basic/dest40_academic_discourse/lesson1_the_ancients_speak",
+                "educationalLevel": "C1 - Advanced",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": ["Discurso acad\u00e9mico","Registro formal avanzado","Hedging acad\u00e9mico","Nominalizaci\u00f3n avanzada"],
+                "isAccessibleForFree": true, "inLanguage": "es",
+                "provider": { "@type": "EducationalOrganization", "name": "Babel Free", "url": "https://babelfree.com" },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/c1-santa-marta" },
+                    { "@type": "ListItem", "position": 3, "name": "C1 B\u00e1sico", "item": "https://babelfree.com/c1-santa-marta" },
+                    { "@type": "ListItem", "position": 4, "name": "Los Antiguos hablan", "item": "https://babelfree.com/c1_basic/dest40_academic_discourse/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Lecci\u00f3n 1" }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --ancient-dark: #0d0d2b;
+            --ancient-deep: #1a1a4e;
+            --accent-sapphire: #4169e1;
+            --accent-lapis: #6a8fd8;
+            --accent-stardust: #b8c6db;
+            --success: #2e7d32;
+            --text-light: #e3e8f0;
+            --text-muted: #8fa4c4;
+            --glass-bg: rgba(255,255,255,0.08);
+            --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+            --border-radius: 20px;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:linear-gradient(135deg,#060618 0%,#0d0d2b 30%,#1a1a4e 65%,#0d0d3a 100%); min-height:100vh; color:white; line-height:1.8; font-size:20px; position:relative; overflow-x:hidden; }
+        body::before { content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at 25% 75%,rgba(65,105,225,0.18) 0%,transparent 50%),radial-gradient(circle at 75% 25%,rgba(26,26,78,0.22) 0%,transparent 50%),radial-gradient(circle at 50% 50%,rgba(106,143,216,0.06) 0%,transparent 50%); z-index:1; animation:ancientGlow 32s ease-in-out infinite; }
+        @keyframes ancientGlow { 0%,100% { opacity:0.45; } 50% { opacity:0.9; } }
+        .container { max-width:1000px; margin:0 auto; padding:20px; position:relative; z-index:10; }
+        .lesson-header { background:var(--glass-bg); backdrop-filter:blur(20px); padding:25px; border-radius:var(--border-radius); margin-bottom:30px; border:3px solid var(--ancient-deep); text-align:center; position:relative; }
+        .back-btn { position:absolute; top:20px; left:20px; background:var(--glass-bg); color:white; padding:10px 20px; text-decoration:none; border-radius:25px; border:2px solid var(--ancient-deep); transition:var(--transition); font-weight:600; font-size:0.9rem; }
+        .back-btn:hover { background:rgba(65,105,225,0.25); transform:translateY(-2px); }
+        .lesson-info { position:absolute; top:20px; right:20px; background:var(--accent-sapphire); color:white; padding:8px 16px; border-radius:20px; font-weight:700; font-size:0.8rem; }
+        .lesson-title { font-size:2.2rem; color:var(--accent-lapis); margin-bottom:10px; font-weight:900; }
+        .lesson-subtitle { color:var(--text-light); font-size:1.2rem; font-weight:600; }
+        .progress-bar-container { background:rgba(255,255,255,0.1); border-radius:15px; padding:20px; margin:20px 0; border:2px solid var(--ancient-deep); }
+        .progress-bar { width:100%; height:12px; background:rgba(255,255,255,0.2); border-radius:6px; overflow:hidden; margin-bottom:10px; }
+        .progress-fill { height:100%; background:linear-gradient(90deg,var(--accent-sapphire),var(--accent-lapis)); border-radius:6px; width:0%; transition:width 1s ease; }
+        .progress-text { color:var(--accent-lapis); font-weight:700; text-align:center; font-size:1rem; }
+        .story-section { background:linear-gradient(135deg,rgba(65,105,225,0.12),rgba(26,26,78,0.15)); border:3px solid var(--ancient-deep); border-radius:var(--border-radius); padding:30px; margin:30px 0; text-align:center; }
+        .story-title { color:var(--accent-lapis); font-weight:700; font-size:1.6rem; margin-bottom:20px; }
+        .jaguar-avatar { width:120px; height:120px; overflow:hidden; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; border:4px solid var(--accent-sapphire); animation:breathe 3s ease-in-out infinite; cursor:pointer; box-shadow:0 8px 30px rgba(65,105,225,0.4); }
+        @keyframes breathe { 0%,100% { transform:scale(1); } 50% { transform:scale(1.05); } }
+        .story-text { color:var(--text-light); font-size:1.3rem; line-height:2; margin:20px 0; }
+        .simple-sentence { margin:15px 0; padding:10px 20px; background:rgba(255,255,255,0.08); border-radius:15px; border-left:5px solid var(--accent-sapphire); }
+        .simple-sentence.ancient { border-left-color:var(--accent-lapis); background:rgba(106,143,216,0.1); font-style:italic; }
+        .simple-sentence.companion { border-left-color:var(--accent-stardust); background:rgba(184,198,219,0.1); }
+        .concept-section { background:var(--glass-bg); backdrop-filter:blur(20px); border-radius:var(--border-radius); padding:30px; margin:30px 0; border:3px solid var(--accent-sapphire); }
+        .concept-title { color:var(--accent-lapis); font-weight:700; font-size:1.8rem; margin-bottom:25px; text-align:center; }
+        .concept-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:25px; }
+        .concept-card { background:rgba(255,255,255,0.08); border-radius:20px; padding:25px; text-align:center; border:3px solid transparent; transition:var(--transition); cursor:pointer; }
+        .concept-card:hover { transform:translateY(-5px); border-color:var(--accent-lapis); box-shadow:0 10px 30px rgba(65,105,225,0.3); }
+        .concept-card.tesis { border-color:var(--accent-sapphire); }
+        .concept-card.evidencia { border-color:var(--accent-lapis); }
+        .concept-card.objecion { border-color:var(--ancient-deep); }
+        .concept-card.conclusion { border-color:var(--accent-stardust); }
+        .card-avatar { width:80px; height:80px; border-radius:50%; margin:0 auto 15px; display:flex; align-items:center; justify-content:center; font-size:2.5rem; border:3px solid; }
+        .concept-card.tesis .card-avatar { background:linear-gradient(135deg,var(--accent-sapphire),#5a82e8); border-color:var(--accent-sapphire); }
+        .concept-card.evidencia .card-avatar { background:linear-gradient(135deg,var(--accent-lapis),#8aaee4); border-color:var(--accent-lapis); }
+        .concept-card.objecion .card-avatar { background:linear-gradient(135deg,var(--ancient-deep),#2a2a6e); border-color:var(--ancient-deep); }
+        .concept-card.conclusion .card-avatar { background:linear-gradient(135deg,var(--accent-stardust),#d0daea); border-color:var(--accent-stardust); color:#0d0d2b; }
+        .card-name { font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+        .concept-card.tesis .card-name { color:var(--accent-sapphire); }
+        .concept-card.evidencia .card-name { color:var(--accent-lapis); }
+        .concept-card.objecion .card-name { color:#8a8abe; }
+        .concept-card.conclusion .card-name { color:var(--accent-stardust); }
+        .card-example { color:var(--text-light); font-size:1rem; margin-bottom:10px; font-style:italic; }
+        .card-description { color:var(--text-muted); font-size:0.9rem; line-height:1.6; }
+        .yaguara-guide { background:linear-gradient(135deg,rgba(65,105,225,0.12),rgba(106,143,216,0.1)); border:3px solid var(--accent-sapphire); border-radius:20px; padding:25px; margin:30px 0; display:grid; grid-template-columns:80px 1fr; gap:20px; align-items:start; }
+        .yaguara-small { width:70px; height:70px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:3px solid var(--accent-sapphire); animation:breathe 4s ease-in-out infinite; cursor:pointer; flex-shrink:0; }
+        .yaguara-text { padding-top:5px; }
+        .guide-title { color:var(--accent-lapis); font-weight:700; margin-bottom:10px; font-size:1.1rem; }
+        .guide-message { color:var(--text-light); line-height:1.8; font-size:1rem; }
+        .simple-message { margin:8px 0; }
+        .exercise-section { background:linear-gradient(135deg,rgba(65,105,225,0.15),rgba(26,26,78,0.15)); border:3px solid var(--accent-sapphire); border-radius:var(--border-radius); padding:30px; margin:30px 0; }
+        .exercise-title { color:var(--accent-lapis); font-weight:700; font-size:1.6rem; margin-bottom:20px; text-align:center; }
+        .exercise-instruction { background:rgba(65,105,225,0.15); border:2px solid var(--accent-sapphire); border-radius:15px; padding:20px; margin:20px 0; text-align:center; }
+        .instruction-text { color:var(--accent-lapis); font-weight:600; font-size:1.2rem; }
+        .matching-game { display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:30px; }
+        .words-column,.images-column { background:rgba(255,255,255,0.05); border-radius:15px; padding:20px; }
+        .column-title { color:var(--accent-lapis); font-weight:700; font-size:1.2rem; margin-bottom:20px; text-align:center; }
+        .word-item,.image-item { background:rgba(255,255,255,0.08); border:3px solid transparent; border-radius:12px; padding:15px; margin:10px 0; cursor:pointer; transition:var(--transition); text-align:center; font-weight:600; font-size:1.1rem; }
+        .word-item:hover,.image-item:hover { border-color:var(--accent-sapphire); background:rgba(65,105,225,0.12); transform:translateX(5px); }
+        .word-item.selected,.image-item.selected { border-color:var(--accent-lapis); background:rgba(106,143,216,0.2); transform:scale(1.02); }
+        .word-item.correct,.image-item.correct { border-color:var(--success); background:rgba(46,125,50,0.2); }
+        .word-item.incorrect,.image-item.incorrect { border-color:#e74c3c; background:rgba(231,76,60,0.2); }
+        .success-message { background:linear-gradient(135deg,rgba(46,125,50,0.2),rgba(76,175,80,0.1)); border:3px solid var(--success); border-radius:15px; padding:25px; margin:25px 0; text-align:center; display:none; }
+        .success-message.show { display:block; animation:successSlide 0.5s ease-out; }
+        @keyframes successSlide { 0% { opacity:0; transform:translateY(-20px); } 100% { opacity:1; transform:translateY(0); } }
+        .success-title { color:var(--success); font-weight:700; font-size:1.4rem; margin-bottom:15px; }
+        .success-text { color:var(--text-light); font-size:1.1rem; line-height:1.6; }
+        .lesson-navigation { display:flex; justify-content:center; align-items:center; margin-top:40px; gap:20px; flex-wrap:wrap; }
+        .nav-button { padding:15px 30px; border:none; border-radius:25px; font-size:1.1rem; font-weight:700; cursor:pointer; transition:var(--transition); min-width:150px; text-align:center; }
+        .nav-button.primary { background:linear-gradient(135deg,var(--accent-sapphire),var(--accent-lapis)); color:white; border:2px solid var(--accent-sapphire); }
+        .nav-button.primary:hover { transform:scale(1.05); box-shadow:0 6px 20px rgba(65,105,225,0.4); }
+        .nav-button.secondary { background:var(--glass-bg); color:white; border:2px solid var(--ancient-deep); }
+        .nav-button.secondary:hover { background:rgba(65,105,225,0.2); transform:scale(1.05); }
+        .nav-button:disabled { opacity:0.5; cursor:not-allowed; }
+        .nav-button:disabled:hover { transform:none; box-shadow:none; }
+        @media (max-width:768px) { body { font-size:18px; } .container { padding:15px; } .concept-grid { grid-template-columns:1fr; } .matching-game { grid-template-columns:1fr; gap:20px; } .lesson-title { font-size:1.8rem; } .back-btn,.lesson-info { position:static; margin:10px auto; display:block; width:fit-content; } .yaguara-guide { grid-template-columns:1fr; text-align:center; gap:15px; } .yaguara-small { margin:0 auto; } }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/c1-santa-marta" class="back-btn">&larr; Destinos</a>
+            <div class="lesson-info">C1 B&aacute;sico &mdash; Destino 40</div>
+            <h1 class="lesson-title">Los Antiguos hablan</h1>
+            <p class="lesson-subtitle">Discurso acad&eacute;mico &mdash; estructura del argumento formal</p>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text" id="progressText">Paso 1 de 5</div>
+        </div>
+
+        <!-- STEP 1: REPASO -->
+        <div class="story-section" id="step1">
+            <div class="story-title">Repaso: subordinaci&oacute;n compleja</div>
+            <div class="story-text">
+                <div class="simple-sentence">En el destino anterior aprendiste la subordinaci&oacute;n compleja: para que, sin que, a menos que, a pesar de que + subjuntivo. Ahora avanzamos al discurso acad&eacute;mico.</div>
+                <div class="simple-sentence">Los Antiguos no hablan con palabras simples &mdash; hablan con estructura, con precisi&oacute;n, con capas de significado. El registro acad&eacute;mico exige lo mismo.</div>
+            </div>
+        </div>
+
+        <!-- STEP 2: HISTORIA -->
+        <div class="story-section" id="step2" style="display:none;">
+            <div class="story-title">Los Antiguos hablan</div>
+            <div class="jaguar-avatar" onclick="speakText('Los Antiguos hablan. Su lenguaje es como agua que toma la forma de la piedra: preciso, inevitable.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguar&aacute;" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">Los Antiguos hablan. No usan gritos ni susurros. Su lenguaje es como agua que toma la forma de la piedra: preciso, inevitable.</div>
+                <div class="simple-sentence ancient">&laquo;El agua recuerda la forma de la piedra incluso cuando la piedra ya no est&aacute;. La monta&ntilde;a no ense&ntilde;a &mdash; revela. En primer lugar, escucha. No obstante, no todo lo que escuches ser&aacute; claro.&raquo;</div>
+                <div class="simple-sentence">Yaguar&aacute; entiende cada palabra. Candelaria no. Puede sentir la presencia de Los Antiguos, pero no puede escucharlos. El puente requiere el alma biling&uuml;e de Yaguar&aacute;.</div>
+                <div class="simple-sentence companion">&laquo;S&eacute; que est&aacute;n ah&iacute;. Siento algo. Pero no escucho nada. Trad&uacute;ceme, Yaguar&aacute;.&raquo;</div>
+                <div class="simple-sentence">Yaguar&aacute; traduce. Pero traducir no es solo cambiar palabras. Es cambiar mundos. Para transmitir lo que Los Antiguos dicen, necesita el registro acad&eacute;mico: preciso, estructurado, verificable.</div>
+            </div>
+        </div>
+
+        <!-- STEP 3: CONCEPTOS -->
+        <div class="concept-section" id="step3" style="display:none;">
+            <div class="concept-title">Cuatro claves del discurso acad&eacute;mico</div>
+            <div class="concept-grid">
+                <div class="concept-card tesis" onclick="learnConcept('tesis')">
+                    <div class="card-avatar">&#128220;</div>
+                    <div class="card-name">Tesis y posicionamiento</div>
+                    <div class="card-example">&laquo;Cabe destacar que la biodiversidad de la Sierra Nevada constituye un patrimonio irreemplazable&raquo;</div>
+                    <div class="card-description">La tesis acad&eacute;mica no es una opini&oacute;n. Es una afirmaci&oacute;n sustentada. Cabe destacar, resulta evidente, se ha demostrado. El posicionamiento es claro pero atenuado.</div>
+                </div>
+                <div class="concept-card evidencia" onclick="learnConcept('evidencia')">
+                    <div class="card-avatar">&#128300;</div>
+                    <div class="card-name">Evidencia y sustentaci&oacute;n</div>
+                    <div class="card-example">&laquo;Se ha demostrado que las pr&aacute;cticas ancestrales contribuyen a la conservaci&oacute;n&raquo;</div>
+                    <div class="card-description">La evidencia sustenta la tesis. Se ha demostrado, los datos indican, seg&uacute;n la investigaci&oacute;n. No es opini&oacute;n &mdash; es dato verificable.</div>
+                </div>
+                <div class="concept-card objecion" onclick="learnConcept('objecion')">
+                    <div class="card-avatar">&#9878;</div>
+                    <div class="card-name">Objeci&oacute;n y matiz</div>
+                    <div class="card-example">&laquo;No obstante, cabr&iacute;a considerar que las condiciones han cambiado&raquo;</div>
+                    <div class="card-description">El discurso acad&eacute;mico anticipa objeciones. No obstante, sin embargo, cabr&iacute;a considerar, podr&iacute;a argumentarse. Reconocer la complejidad fortalece el argumento.</div>
+                </div>
+                <div class="concept-card conclusion" onclick="learnConcept('conclusion')">
+                    <div class="card-avatar">&#127891;</div>
+                    <div class="card-name">Conclusi&oacute;n fundamentada</div>
+                    <div class="card-example">&laquo;Por consiguiente, resulta necesario implementar un enfoque integrador&raquo;</div>
+                    <div class="card-description">La conclusi&oacute;n recoge tesis + evidencia + objeci&oacute;n. Por consiguiente, en definitiva, a la luz de lo expuesto. No repite &mdash; sintetiza.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4: YAGUARÁ DICE -->
+        <div class="yaguara-guide" id="step4" style="display:none;">
+            <div class="yaguara-small" onclick="speakText('Los Antiguos hablan como el mejor texto acad\u00e9mico: con estructura, con respeto por la complejidad, sin simplificar.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguar&aacute;" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguar&aacute; dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message"><strong>Tesis</strong>: Cabe destacar que... Resulta evidente que... Se plantea que... La tesis acad&eacute;mica es clara y atenuada al mismo tiempo. Afirma, pero con cautela intelectual.</div>
+                    <div class="simple-message"><strong>Evidencia</strong>: Se ha demostrado que... Los datos indican que... Seg&uacute;n los estudios... La evidencia no es an&eacute;cdota &mdash; es dato verificable, replicable, citado.</div>
+                    <div class="simple-message"><strong>Objeci&oacute;n</strong>: No obstante... Sin embargo... Cabr&iacute;a considerar que... Podr&iacute;a argumentarse que... El mejor argumento es el que ya ha considerado las objeciones.</div>
+                    <div class="simple-message"><strong>Conclusi&oacute;n</strong>: Por consiguiente... En definitiva... A la luz de lo expuesto... La conclusi&oacute;n no repite la tesis &mdash; la eleva con todo lo argumentado.</div>
+                    <div class="simple-message"><strong>Los Antiguos y la academia</strong>: Los Antiguos hablan como el mejor texto acad&eacute;mico: con estructura, con respeto por la complejidad, sin simplificar. La academia formal es otra forma de sabidur&iacute;a antigua.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 5: EJERCICIO — Matching -->
+        <div class="exercise-section" id="step5" style="display:none;">
+            <div class="exercise-title">Pr&aacute;ctica: estructura del argumento acad&eacute;mico</div>
+            <div class="exercise-instruction">
+                <div class="instruction-text">Une cada funci&oacute;n con su expresi&oacute;n acad&eacute;mica.</div>
+            </div>
+            <div class="matching-game">
+                <div class="words-column">
+                    <div class="column-title">Funci&oacute;n</div>
+                    <div class="word-item" onclick="selectWord(this,'pair1')" data-word="pair1">Presentar la tesis</div>
+                    <div class="word-item" onclick="selectWord(this,'pair2')" data-word="pair2">Ofrecer evidencia</div>
+                    <div class="word-item" onclick="selectWord(this,'pair3')" data-word="pair3">Anticipar una objeci&oacute;n</div>
+                    <div class="word-item" onclick="selectWord(this,'pair4')" data-word="pair4">Llegar a la conclusi&oacute;n</div>
+                </div>
+                <div class="images-column">
+                    <div class="column-title">Expresi&oacute;n acad&eacute;mica</div>
+                    <div class="image-item" onclick="selectImage(this,'pair3')" data-image="pair3">No obstante, cabr&iacute;a considerar...</div>
+                    <div class="image-item" onclick="selectImage(this,'pair1')" data-image="pair1">Cabe destacar que...</div>
+                    <div class="image-item" onclick="selectImage(this,'pair4')" data-image="pair4">Por consiguiente, resulta necesario...</div>
+                    <div class="image-item" onclick="selectImage(this,'pair2')" data-image="pair2">Se ha demostrado que...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-title">&#161;Excelente!</div>
+            <div class="success-text">Dominas el discurso acad&eacute;mico. Los Antiguos hablan con la misma estructura que un buen argumento: tesis, evidencia, objeci&oacute;n, conclusi&oacute;n.</div>
+        </div>
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" id="btnPrev" disabled>&larr; Anterior</button>
+            <button class="nav-button primary" id="btnNext">Siguiente &rarr;</button>
+            <button class="nav-button primary" id="btnFinish" style="display:none;">Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+            var lessonData = { currentStep:1, totalSteps:5, selectedWord:null, matchedPairs:0, totalPairs:4, isComplete:false };
+            var concepts = {
+                tesis: "Tesis y posicionamiento. Cabe destacar que. Resulta evidente que. Se plantea que. La tesis acad\u00e9mica es clara y atenuada al mismo tiempo. Afirma, pero con cautela intelectual. No es una opini\u00f3n. Es una afirmaci\u00f3n sustentada.",
+                evidencia: "Evidencia y sustentaci\u00f3n. Se ha demostrado que. Los datos indican que. Seg\u00fan los estudios. Seg\u00fan la investigaci\u00f3n. La evidencia no es an\u00e9cdota. Es dato verificable, replicable, citado.",
+                objecion: "Objeci\u00f3n y matiz. No obstante. Sin embargo. Cabr\u00eda considerar que. Podr\u00eda argumentarse que. El discurso acad\u00e9mico anticipa objeciones. Reconocer la complejidad fortalece el argumento. El mejor argumento es el que ya ha considerado las objeciones.",
+                conclusion: "Conclusi\u00f3n fundamentada. Por consiguiente. En definitiva. A la luz de lo expuesto. La conclusi\u00f3n recoge tesis m\u00e1s evidencia m\u00e1s objeci\u00f3n. No repite. Sintetiza. La conclusi\u00f3n eleva la tesis con todo lo argumentado."
+            };
+
+            function updateProgress() {
+                var p = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var f = document.getElementById('progressFill');
+                var t = document.getElementById('progressText');
+                if (f) f.style.width = p + '%';
+                if (t) t.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(n) {
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var s = document.getElementById('step' + i);
+                    if (s) s.style.display = 'none';
+                }
+                var c = document.getElementById('step' + n);
+                if (c) { c.style.display = 'block'; c.style.animation = 'fadeIn 0.5s ease-in'; }
+                updateNav();
+                updateProgress();
+            }
+
+            function updateNav() {
+                var p = document.getElementById('btnPrev');
+                var n = document.getElementById('btnNext');
+                var f = document.getElementById('btnFinish');
+                if (p) p.disabled = lessonData.currentStep === 1;
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (n) n.style.display = 'none';
+                    if (f) f.style.display = 'inline-block';
+                } else {
+                    if (n) n.style.display = 'inline-block';
+                    if (f) f.style.display = 'none';
+                }
+            }
+
+            function goNext() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function goPrev() {
+                if (lessonData.currentStep > 1) {
+                    lessonData.currentStep--;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function learnConceptFn(id) {
+                var t = concepts[id];
+                if (t) {
+                    speakInSpanish(t);
+                    showNotification('Escucha y repite');
+                }
+            }
+
+            function selectWordFn(el, w) {
+                var all = document.querySelectorAll('.word-item');
+                for (var i = 0; i < all.length; i++) all[i].classList.remove('selected');
+                el.classList.add('selected');
+                lessonData.selectedWord = w;
+            }
+
+            function selectImageFn(el, img) {
+                if (!lessonData.selectedWord) {
+                    showNotification('Primero selecciona una funci\u00f3n');
+                    return;
+                }
+                var ok = lessonData.selectedWord === img;
+                var we = document.querySelector('.word-item[data-word="' + lessonData.selectedWord + '"]');
+                if (ok) {
+                    we.classList.remove('selected');
+                    we.classList.add('correct');
+                    el.classList.add('correct');
+                    lessonData.matchedPairs++;
+                    lessonData.selectedWord = null;
+                    var m = ['Bien', 'Muy bien', 'Excelente', 'Perfecto'];
+                    speakInSpanish(m[lessonData.matchedPairs - 1] || 'Bien');
+                    showNotification(m[lessonData.matchedPairs - 1] || 'Bien');
+                    if (lessonData.matchedPairs === lessonData.totalPairs) {
+                        setTimeout(function() {
+                            var sm = document.getElementById('successMessage');
+                            if (sm) sm.classList.add('show');
+                            speakInSpanish('\u00a1Excelente! Dominas el discurso acad\u00e9mico. Los Antiguos hablan con la misma estructura que un buen argumento: tesis, evidencia, objeci\u00f3n, conclusi\u00f3n.');
+                        }, 1000);
+                    }
+                } else {
+                    we.classList.add('incorrect');
+                    el.classList.add('incorrect');
+                    showNotification('Incorrecto. Intenta otra vez.');
+                    setTimeout(function() {
+                        we.classList.remove('selected', 'incorrect');
+                        el.classList.remove('incorrect');
+                        lessonData.selectedWord = null;
+                    }, 1500);
+                }
+            }
+
+            function speakInSpanish(text) {
+                if (!text || !('speechSynthesis' in window)) return;
+                try {
+                    var u = new SpeechSynthesisUtterance(text);
+                    u.lang = 'es-CO';
+                    u.rate = 0.55;
+                    speechSynthesis.speak(u);
+                } catch (e) {}
+            }
+
+            function showNotification(msg) {
+                var ex = document.querySelector('.temp-notification');
+                if (ex) ex.remove();
+                var n = document.createElement('div');
+                n.className = 'temp-notification';
+                n.style.cssText = 'position:fixed;top:20px;right:20px;background:rgba(65,105,225,0.95);color:white;padding:15px 20px;border-radius:12px;font-weight:600;z-index:10000;max-width:320px;border:2px solid #6a8fd8;box-shadow:0 4px 20px rgba(0,0,0,0.3);animation:slideInRight 0.3s ease-out;';
+                n.innerHTML = '<div style="font-size:1.05rem;color:#e3e8f0;">' + msg + '</div>';
+                document.body.appendChild(n);
+                setTimeout(function() { if (n && n.parentNode) n.parentNode.removeChild(n); }, 3500);
+            }
+
+            function completeLessonFn() {
+                lessonData.isComplete = true;
+                if (typeof JaguarAPI !== 'undefined') JaguarAPI.syncA1Progress('c1_basic', 'dest40');
+                showNotification('Lecci\u00f3n completada');
+                setTimeout(function() { window.location.href = '/c1-santa-marta'; }, 2000);
+            }
+
+            window.learnConcept = learnConceptFn;
+            window.selectWord = selectWordFn;
+            window.selectImage = selectImageFn;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLessonFn;
+
+            var style = document.createElement('style');
+            style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes slideInRight{from{transform:translateX(300px);opacity:0}to{transform:translateX(0);opacity:1}}';
+            document.head.appendChild(style);
+
+            document.addEventListener('DOMContentLoaded', function() {
+                showStep(1);
+                document.getElementById('btnNext').addEventListener('click', goNext);
+                document.getElementById('btnPrev').addEventListener('click', goPrev);
+                document.getElementById('btnFinish').addEventListener('click', completeLessonFn);
+            });
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>
