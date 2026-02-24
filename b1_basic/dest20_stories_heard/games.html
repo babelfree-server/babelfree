@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 20: Las historias que escucho</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest20_stories_heard/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 20: Las historias que escucho — Games",
+                "url": "https://babelfree.com/b1_basic/dest20_stories_heard/games",
+                "educationalLevel": "B1 - Intermediate",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Indirect speech basics",
+                    "Retelling stories",
+                    "Narrative connectors and cause-effect"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 3, "name": "B1 B\u00e1sico", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 4, "name": "Las historias que escucho", "item": "https://babelfree.com/b1_basic/dest20_stories_heard/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 20: Las historias que escucho</div>
+            <div class="yg-header-subtitle">Recontar historias &mdash; Discurso indirecto</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — The fisherman's story
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Un viejo pescador se sienta junto al r\u00edo. Dice: \u00abAntes el r\u00edo era m\u00e1s ancho. Los peces eran m\u00e1s grandes. Pero un d\u00eda cambi\u00f3 todo.\u00bb Yaguar\u00e1 escucha. Candelaria escribe en su cuaderno.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — The grandmother's market
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Una abuela cuenta: \u00abEl mercado de hace cincuenta a\u00f1os ten\u00eda m\u00e1s colores. Ven\u00edan personas de todos los r\u00edos. Se escuchaban canciones diferentes.\u00bb Don Pr\u00f3spero tambi\u00e9n escucha \u2014 pero donde otros oyen memoria, \u00e9l oye oportunidad.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Don Próspero's dual nature
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Don Pr\u00f3spero conoce el nombre de cada \u00e1rbol \u2014 su abuela se lo ense\u00f1\u00f3. Pero donde su abuela ve\u00eda vida, \u00e9l ve madera. Donde ella escuchaba historias, \u00e9l calcula precios. Candelaria nota la diferencia.'
+    },
+
+    /* ============================================================
+       4. LISTENING — The fisherman tells his story
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la historia del pescador y elige.',
+        audio: 'El pescador dijo que antes el r\u00edo era m\u00e1s ancho. Cont\u00f3 que los peces eran m\u00e1s grandes. Dijo que un d\u00eda todo cambi\u00f3 cuando construyeron un puente.',
+        question: '\u00bfQu\u00e9 dijo el pescador que cambi\u00f3 todo?',
+        answer: 'La construcci\u00f3n de un puente',
+        options: ['La lluvia', 'La construcci\u00f3n de un puente', 'La llegada de Yaguar\u00e1', 'Una tormenta']
+    },
+
+    /* ============================================================
+       5. LISTENING — Retell what the grandmother said
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige.',
+        audio: 'La abuela cont\u00f3 que el mercado de antes ten\u00eda m\u00e1s colores. Dijo que ven\u00edan personas de todos los r\u00edos. Explic\u00f3 que se escuchaban canciones diferentes en cada puesto.',
+        question: '\u00bfQu\u00e9 dijo la abuela sobre las personas?',
+        answer: 'Que ven\u00edan de todos los r\u00edos',
+        options: ['Que no hab\u00eda gente', 'Que ven\u00edan de todos los r\u00edos', 'Que eran pescadores', 'Que cantaban vallenato']
+    },
+
+    /* ============================================================
+       6. FILL — Indirect speech
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con discurso indirecto.',
+        questions: [
+            {
+                sentence: 'El pescador dijo que el r\u00edo ___ m\u00e1s ancho. (ser)',
+                answer: 'era',
+                options: ['era', 'es', 'fue', 'ser\u00e1']
+            },
+            {
+                sentence: 'La abuela cont\u00f3 que ___ personas de todos los r\u00edos. (venir)',
+                answer: 'ven\u00edan',
+                options: ['ven\u00edan', 'vienen', 'vinieron', 'vendr\u00e1n']
+            },
+            {
+                sentence: 'Candelaria explic\u00f3 que Don Pr\u00f3spero ___ el nombre de cada \u00e1rbol. (conocer)',
+                answer: 'conoc\u00eda',
+                options: ['conoc\u00eda', 'conoce', 'conoci\u00f3', 'conocer\u00e1']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FILL — Reporting verbs
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el verbo de reporte correcto.',
+        questions: [
+            {
+                sentence: 'El pescador ___ que antes hab\u00eda m\u00e1s peces.',
+                answer: 'dijo',
+                options: ['dijo', 'pregunt\u00f3', 'pidi\u00f3', 'grit\u00f3']
+            },
+            {
+                sentence: 'La abuela ___ c\u00f3mo era el mercado antiguo.',
+                answer: 'cont\u00f3',
+                options: ['cont\u00f3', 'pregunt\u00f3', 'mand\u00f3', 'cant\u00f3']
+            },
+            {
+                sentence: 'Candelaria ___ que Don Pr\u00f3spero no era sincero.',
+                answer: 'explic\u00f3',
+                options: ['explic\u00f3', 'cant\u00f3', 'olvid\u00f3', 'bail\u00f3']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. CONJUGATION — Preterite irregular for reporting
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos de reporte en pret\u00e9rito.',
+        questions: [
+            {
+                verb: 'decir (pret\u00e9rito)',
+                subject: '\u00e9l',
+                answer: 'dijo',
+                options: ['dijo', 'dijeron', 'dec\u00eda', 'dice']
+            },
+            {
+                verb: 'contar (pret\u00e9rito)',
+                subject: 'ella',
+                answer: 'cont\u00f3',
+                options: ['cont\u00f3', 'contaba', 'cuenta', 'contaron']
+            },
+            {
+                verb: 'explicar (pret\u00e9rito)',
+                subject: 'Candelaria',
+                answer: 'explic\u00f3',
+                options: ['explic\u00f3', 'explicaba', 'explica', 'explicaron']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. PAIR — Direct to indirect speech
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el discurso directo con el indirecto.',
+        pairs: [
+            ['\u00abEl r\u00edo es ancho\u00bb', 'Dijo que el r\u00edo era ancho'],
+            ['\u00abVienen personas de lejos\u00bb', 'Cont\u00f3 que ven\u00edan personas de lejos'],
+            ['\u00abTodo cambi\u00f3 un d\u00eda\u00bb', 'Explic\u00f3 que todo cambi\u00f3 un d\u00eda'],
+            ['\u00abEl mercado tiene colores\u00bb', 'Dijo que el mercado ten\u00eda colores']
+        ]
+    },
+
+    /* ============================================================
+       10. PAIR — Who said what?
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: '\u00bfQui\u00e9n dijo qu\u00e9?',
+        pairs: [
+            ['El pescador', 'Dijo que el r\u00edo era m\u00e1s ancho'],
+            ['La abuela', 'Cont\u00f3 que el mercado ten\u00eda m\u00e1s colores'],
+            ['Don Pr\u00f3spero', 'Dijo que el camino traer\u00eda progreso'],
+            ['Candelaria', 'Explic\u00f3 que hab\u00eda que escribir las historias']
+        ]
+    },
+
+    /* ============================================================
+       11. BUILDER — Retelling a story
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las frases para recontar la historia.',
+        words: ['El', 'pescador', 'dijo', 'que', 'el', 'r\u00edo', 'era', 'm\u00e1s', 'ancho'],
+        answer: 'El pescador dijo que el r\u00edo era m\u00e1s ancho'
+    },
+
+    /* ============================================================
+       12. BUILDER — Grandmother's retelling
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena para recontar.',
+        words: ['La', 'abuela', 'cont\u00f3', 'que', 'ven\u00edan', 'personas', 'de', 'todos', 'los', 'r\u00edos'],
+        answer: 'La abuela cont\u00f3 que ven\u00edan personas de todos los r\u00edos'
+    },
+
+    /* ============================================================
+       13. MADLIBS — Create a news story
+    ============================================================ */
+    {
+        type: 'madlibs',
+        label: 'Mad Libs',
+        instruction: 'Crea una noticia absurda del pueblo.',
+        template: 'Ayer un {sustantivo} lleg\u00f3 al pueblo. La gente {verbo_preterito} de sorpresa. El alcalde dijo que {verbo_imperfecto} mucho tiempo que no pasaba algo as\u00ed. Mientras tanto, Don Pr\u00f3spero {verbo_imperfecto} sus planes.',
+        blanks: [
+            { label: 'sustantivo', hint: 'animal, persona u objeto', options: ['jaguar', 'colibr\u00ed', 'fantasma', 'm\u00fasico'] },
+            { label: 'verbo_preterito', hint: 'acci\u00f3n completada', options: ['grit\u00f3', 'salt\u00f3', 'corri\u00f3', 'ri\u00f3'] },
+            { label: 'verbo_imperfecto', hint: 'duraci\u00f3n/contexto', options: ['hac\u00eda', 'era', 'parec\u00eda', 'quer\u00eda'] },
+            { label: 'verbo_imperfecto', hint: 'acci\u00f3n de fondo', options: ['escrib\u00eda', 'planeaba', 'calculaba', 'ocultaba'] }
+        ]
+    },
+
+    /* ============================================================
+       14. CONSEQUENCES — Invented news
+    ============================================================ */
+    {
+        type: 'consequences',
+        label: 'Consecuencias',
+        instruction: 'Crea una historia en cadena.',
+        prompts: [
+            { label: 'Un personaje...', options: ['El pescador', 'La abuela', 'Don Pr\u00f3spero', 'Un colibr\u00ed'] },
+            { label: '...conoci\u00f3 a...', options: ['un viajero misterioso', 'una iguana sabia', 'un ni\u00f1o del r\u00edo', 'una cantante'] },
+            { label: '...mientras estaba en...', options: ['el mercado', 'el r\u00edo', 'la plaza', 'el bosque'] },
+            { label: 'Dijo que...', options: ['el r\u00edo iba a cambiar', 'las historias se perd\u00edan', 'la m\u00fasica volv\u00eda', 'los \u00e1rboles hablaban'] },
+            { label: 'Las consecuencias fueron...', options: ['todos empezaron a contar historias', 'el pueblo se llen\u00f3 de m\u00fasica', 'Don Pr\u00f3spero cambi\u00f3 sus planes', 'el r\u00edo creci\u00f3'] }
+        ]
+    },
+
+    /* ============================================================
+       15. CONVERSATION — Retell the fisherman's story
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfQu\u00e9 te cont\u00f3 el pescador?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Dijo que antes el r\u00edo era m\u00e1s ancho. Cont\u00f3 que los peces eran m\u00e1s grandes. Explic\u00f3 que todo cambi\u00f3 cuando construyeron el puente.', 'Nada interesante.', 'Habl\u00f3 del clima.', 'Me dio un pescado.'],
+                answer: 'Dijo que antes el r\u00edo era m\u00e1s ancho. Cont\u00f3 que los peces eran m\u00e1s grandes. Explic\u00f3 que todo cambi\u00f3 cuando construyeron el puente.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       16. CONVERSATION — About Don Próspero's listening
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Don Pr\u00f3spero tambi\u00e9n escuchaba las historias. \u00bfPor qu\u00e9 crees que escuchaba?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Creo que escuchaba porque quer\u00eda saber d\u00f3nde hab\u00eda recursos. Donde otros o\u00edan memoria, \u00e9l o\u00eda oportunidad.', 'Porque le gustaba la m\u00fasica.', 'Porque ten\u00eda sue\u00f1o.', 'No s\u00e9.'],
+                answer: 'Creo que escuchaba porque quer\u00eda saber d\u00f3nde hab\u00eda recursos. Donde otros o\u00edan memoria, \u00e9l o\u00eda oportunidad.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       17. SENDA — Follow the story path
+    ============================================================ */
+    {
+        type: 'senda',
+        label: 'Senda',
+        instruction: '\u00bfA qui\u00e9n sigues?',
+        scenario: 'Un anciano dijo que fueras por el camino del r\u00edo. Candelaria dijo que no, que tomaras la monta\u00f1a. El pescador dijo que el r\u00edo era m\u00e1s seguro.',
+        choices: [
+            { text: 'Sigo el r\u00edo (el anciano dijo que era m\u00e1s seguro)', consequence: 'El r\u00edo te lleva a una aldea donde cuentan m\u00e1s historias. El pescador ten\u00eda raz\u00f3n.' },
+            { text: 'Subo la monta\u00f1a (Candelaria dijo que era m\u00e1s r\u00e1pido)', consequence: 'La monta\u00f1a es dif\u00edcil pero ves todo desde arriba. Candelaria conoc\u00eda el camino.' }
+        ]
+    },
+
+    /* ============================================================
+       18. CULTURA — Vallenato as chronicle
+    ============================================================ */
+    {
+        type: 'cultura',
+        label: 'Cultura',
+        instruction: 'Escucha y aprende.',
+        text: 'El vallenato naci\u00f3 como forma de contar noticias entre pueblos. Cada canci\u00f3n es una cr\u00f3nica cantada. Los juglares iban de pueblo en pueblo contando lo que pasaba. Dec\u00edan que la m\u00fasica viajaba m\u00e1s r\u00e1pido que las personas.',
+        question: '\u00bfPara qu\u00e9 serv\u00eda el vallenato originalmente?',
+        answer: 'Para contar noticias entre pueblos',
+        options: ['Para bailar', 'Para contar noticias entre pueblos', 'Para dormir a los ni\u00f1os', 'Para espantar animales']
+    },
+
+    /* ============================================================
+       19. SORTING — Reporting verbs
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica los verbos de reporte.',
+        categories: ['Informar', 'Narrar', 'Opinar'],
+        items: [
+            { text: 'dijo que', category: 'Informar' },
+            { text: 'explic\u00f3 que', category: 'Informar' },
+            { text: 'cont\u00f3 que', category: 'Narrar' },
+            { text: 'narr\u00f3 que', category: 'Narrar' },
+            { text: 'cre\u00eda que', category: 'Opinar' },
+            { text: 'pensaba que', category: 'Opinar' }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Indirect speech
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el relato completo.',
+        audio: 'El pescador dijo que el r\u00edo era m\u00e1s ancho. La abuela cont\u00f3 que el mercado ten\u00eda m\u00e1s colores.',
+        answer: 'El pescador dijo que el r\u00edo era m\u00e1s ancho. La abuela cont\u00f3 que el mercado ten\u00eda m\u00e1s colores.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala del pescador',
+            description: 'Dentro de un viejo barco en el r\u00edo hay una sala secreta. Las paredes est\u00e1n cubiertas de historias escritas en tinta azul.',
+            ambience: 'river'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'El barco viejo guarda una pregunta:',
+                riddle: '\u00abCuando alguien te cuenta algo y t\u00fa lo repites con tus propias palabras, usas estas tres palabras m\u00e1gicas: dijo que, cont\u00f3 que, explic\u00f3 que. \u00bfC\u00f3mo se llama esta forma de hablar?\u00bb',
+                clue: 'No son las palabras exactas del otro. Son tus palabras contando lo que el otro dijo.',
+                answer: 'Discurso indirecto',
+                options: ['Discurso directo', 'Discurso indirecto', 'Mon\u00f3logo', 'Di\u00e1logo'],
+                onSolve: 'Las letras azules brillan.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Ordena la cr\u00f3nica del pescador.',
+                items: ['Antes el r\u00edo era ancho.', 'Los peces eran grandes.', 'Un d\u00eda construyeron un puente.', 'Todo cambi\u00f3.'],
+                correctOrder: [0, 1, 2, 3],
+                onSolve: 'El mapa del r\u00edo se ilumina.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La cerradura del barco pide una palabra.',
+                clue: 'Lo que Candelaria escribe en su cuaderno. Las palabras de otros. Ocho letras.',
+                answer: 'historias',
+                hint: '_ _ _ _ _ _ _ _ _',
+                onSolve: 'El barco se abre. Un fragmento de historia aparece flotando.'
+            }
+        ],
+        fragment: {
+            text: 'Fragmento de historia: \u00abLas historias no mueren cuando las cuentas con tus propias palabras. Se transforman.\u00bb',
+            questClue: '\u00bfQu\u00e9 historia te contaron?',
+            item: 'historia-02'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d20',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest20Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

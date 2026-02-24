@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 22: El llano infinito</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest22_grassland/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 22: El llano infinito — Games",
+                "url": "https://babelfree.com/b1_basic/dest22_grassland/games",
+                "educationalLevel": "B1 - Intermediate",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Understanding implied meaning and irony",
+                    "Opinion expressions",
+                    "Connotation and double meaning"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 3, "name": "B1 B\u00e1sico", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 4, "name": "El llano infinito", "item": "https://babelfree.com/b1_basic/dest22_grassland/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 22: El llano infinito</div>
+            <div class="yg-header-subtitle">Doble sentido e iron&iacute;a &mdash; Lo que las palabras esconden</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — The Llanos
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Los Llanos \u2014 pastizal abierto, cielo enorme, caballos, arpas. Yaguar\u00e1 nunca se ha sentido tan expuesta. No hay bosque, no hay d\u00f3nde esconderse. Todo est\u00e1 a la vista. O eso parece.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Delfín Rosado (Boto)
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'En el Orinoco aparece Delf\u00edn Rosado \u2014 rosa, medio sumergido, con una sonrisa ambigua. Dice: \u00abNo todas las palabras dicen lo que parecen. Algunas palabras sonr\u00eden por fuera y muerden por dentro.\u00bb Ense\u00f1a el doble sentido, la iron\u00eda.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Don Próspero's reputation
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Los llaneros tambi\u00e9n conocen a Don Pr\u00f3spero. Algunos dicen que trae trabajo. Otros dicen que trae \u00abla niebla gris.\u00bb Cuando un llanero dice: \u00abDon Pr\u00f3spero es muy generoso con la tierra\u00bb, no es un cumplido. Es iron\u00eda.'
+    },
+
+    /* ============================================================
+       4. LISTENING — What does Delfín really mean?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha lo que dice el personaje. \u00bfQu\u00e9 quiere decir realmente?',
+        audio: 'Delf\u00edn Rosado dice: No todas las palabras dicen lo que parecen. Algunas sonr\u00eden por fuera y muerden por dentro. Cuidado con las palabras bonitas.',
+        question: '\u00bfQu\u00e9 ense\u00f1a Delf\u00edn Rosado?',
+        answer: 'Que las palabras pueden esconder intenciones diferentes',
+        options: ['Que hay que sonre\u00edr siempre', 'Que las palabras pueden esconder intenciones diferentes', 'Que los delfines son peligrosos', 'Que el r\u00edo es profundo']
+    },
+
+    /* ============================================================
+       5. LISTENING — Ironic praise
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige qu\u00e9 quiere decir realmente.',
+        audio: 'Un llanero dice: Don Pr\u00f3spero es muy generoso con la tierra. Le da mucho uso. Tanto uso que los \u00e1rboles ya no caben.',
+        question: '\u00bfQu\u00e9 quiere decir realmente el llanero?',
+        answer: 'Que Don Pr\u00f3spero destruye la tierra',
+        options: ['Que Don Pr\u00f3spero cuida la tierra', 'Que Don Pr\u00f3spero destruye la tierra', 'Que la tierra es grande', 'Que hay muchos \u00e1rboles']
+    },
+
+    /* ============================================================
+       6. FILL — Opinion expressions
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con expresiones de opini\u00f3n.',
+        questions: [
+            {
+                sentence: '___ que Don Pr\u00f3spero no dice la verdad. (opini\u00f3n)',
+                answer: 'Creo',
+                options: ['Creo', 'S\u00e9', 'Digo', 'Hago']
+            },
+            {
+                sentence: '___ que sus palabras esconden algo. (percepci\u00f3n)',
+                answer: 'Me parece',
+                options: ['Me parece', 'Me llamo', 'Me duermo', 'Me voy']
+            },
+            {
+                sentence: 'Es ___ que las personas entiendan la iron\u00eda. (necesidad)',
+                answer: 'necesario',
+                options: ['necesario', 'f\u00e1cil', 'tarde', 'r\u00e1pido']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FILL — What they really mean
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el significado real.',
+        questions: [
+            {
+                sentence: '\u00abDon Pr\u00f3spero es muy generoso con la tierra\u00bb realmente significa que ___.',
+                answer: 'usa demasiado la tierra',
+                options: ['cuida la tierra', 'usa demasiado la tierra', 'regala tierra', 'no tiene tierra']
+            },
+            {
+                sentence: '\u00abAlgunas palabras sonr\u00eden por fuera y muerden por dentro\u00bb significa que ___.',
+                answer: 'las palabras amables pueden esconder malas intenciones',
+                options: ['las palabras son peligrosas', 'las palabras amables pueden esconder malas intenciones', 'hay que sonre\u00edr siempre', 'los delfines muerden']
+            },
+            {
+                sentence: '\u00abDon Pr\u00f3spero trae la niebla gris\u00bb significa que ___.',
+                answer: 'trae destrucci\u00f3n y confusi\u00f3n',
+                options: ['trae lluvia', 'trae destrucci\u00f3n y confusi\u00f3n', 'le gusta el color gris', 'es meteorol\u00f3go']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. PAIR — Literal vs implied meaning
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta lo que se dice con lo que se quiere decir.',
+        pairs: [
+            ['\u00abEs muy generoso con la tierra\u00bb', 'Destruye la tierra'],
+            ['\u00abTrae la niebla gris\u00bb', 'Trae confusi\u00f3n y destrucci\u00f3n'],
+            ['\u00abPalabras que sonr\u00eden\u00bb', 'Mentiras con buenas apariencias'],
+            ['\u00abConoce cada \u00e1rbol\u00bb', 'Sabe lo que vale cada recurso']
+        ]
+    },
+
+    /* ============================================================
+       9. PAIR — Opinion expressions
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada expresi\u00f3n con su uso.',
+        pairs: [
+            ['Creo que...', 'Opini\u00f3n personal'],
+            ['Me parece que...', 'Impresi\u00f3n subjetiva'],
+            ['Es necesario que...', 'Expresi\u00f3n de necesidad + subjuntivo'],
+            ['Pienso que...', 'Reflexi\u00f3n personal']
+        ]
+    },
+
+    /* ============================================================
+       10. CONVERSATION — What do you really mean?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Delf\u00edn Rosado', text: 'Un llanero dice: \u00abDon Pr\u00f3spero es muy generoso con la tierra.\u00bb \u00bfQu\u00e9 opinas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Creo que es iron\u00eda. Me parece que realmente quiere decir que Don Pr\u00f3spero usa demasiado la tierra. Las palabras bonitas esconden la cr\u00edtica.', 'Creo que es un cumplido.', 'No entiendo.', 'El llano es grande.'],
+                answer: 'Creo que es iron\u00eda. Me parece que realmente quiere decir que Don Pr\u00f3spero usa demasiado la tierra. Las palabras bonitas esconden la cr\u00edtica.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       11. CONVERSATION — Your opinion about Don Próspero
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Algunos llaneros dicen que Don Pr\u00f3spero trae trabajo. Otros dicen que trae \u00abla niebla gris.\u00bb \u00bfQu\u00e9 piensas t\u00fa?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Pienso que las dos cosas pueden ser verdad al mismo tiempo. Trae trabajo, pero tambi\u00e9n destrucci\u00f3n. Me parece que \u00abniebla gris\u00bb es una met\u00e1fora de lo que no se ve claramente.', 'No tengo opini\u00f3n.', 'Me gusta el trabajo.', 'La niebla es bonita.'],
+                answer: 'Pienso que las dos cosas pueden ser verdad al mismo tiempo. Trae trabajo, pero tambi\u00e9n destrucci\u00f3n. Me parece que \u00abniebla gris\u00bb es una met\u00e1fora de lo que no se ve claramente.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. BOGGLE — Opinion and irony vocabulary
+    ============================================================ */
+    {
+        type: 'boggle',
+        label: 'Boggle',
+        instruction: 'Busca palabras de opini\u00f3n y significado oculto.',
+        letters: [
+            ['C','R','E','O'],
+            ['I','R','O','N'],
+            ['P','A','R','E'],
+            ['D','O','B','L']
+        ],
+        targetWords: ['creo', 'ironia', 'parece', 'doble', 'opinar'],
+        timeLimit: 90
+    },
+
+    /* ============================================================
+       13. CONJURO — Express your sincere opinion
+    ============================================================ */
+    {
+        type: 'conjuro',
+        label: 'Conjuro',
+        instruction: 'El guardi\u00e1n del puente pide tu opini\u00f3n sincera.',
+        challenge: 'Expresa lo que piensas sobre Don Pr\u00f3spero.',
+        starters: ['Creo que...', 'Me parece que...', 'Pienso que...', 'No creo que...'],
+        evaluation: {
+            required: ['creo', 'parece', 'pienso'],
+            bonus: ['iron\u00eda', 'doble sentido', 'realmente']
+        }
+    },
+
+    /* ============================================================
+       14. SORTING — Literal vs ironic
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfliteral o ir\u00f3nico?',
+        categories: ['Literal (dice lo que significa)', 'Ir\u00f3nico (significa lo contrario)'],
+        items: [
+            { text: 'El r\u00edo es ancho.', category: 'Literal (dice lo que significa)' },
+            { text: 'Don Pr\u00f3spero es muy generoso con la tierra.', category: 'Ir\u00f3nico (significa lo contrario)' },
+            { text: 'El cielo de los Llanos es enorme.', category: 'Literal (dice lo que significa)' },
+            { text: 'Sus palabras sonr\u00eden por fuera.', category: 'Ir\u00f3nico (significa lo contrario)' },
+            { text: 'Los caballos corren r\u00e1pido.', category: 'Literal (dice lo que significa)' },
+            { text: 'Trae la niebla gris.', category: 'Ir\u00f3nico (significa lo contrario)' }
+        ]
+    },
+
+    /* ============================================================
+       15. BUILDER — Express an opinion
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena la opini\u00f3n.',
+        words: ['Me', 'parece', 'que', 'Don', 'Pr\u00f3spero', 'no', 'dice', 'la', 'verdad'],
+        answer: 'Me parece que Don Pr\u00f3spero no dice la verdad'
+    },
+
+    /* ============================================================
+       16. DICTATION — Implied meaning
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'No todas las palabras dicen lo que parecen. Algunas sonr\u00eden por fuera y muerden por dentro.',
+        answer: 'No todas las palabras dicen lo que parecen. Algunas sonr\u00eden por fuera y muerden por dentro.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala del arpa',
+            description: 'Bajo un hato llanero hay una sala oculta. Un arpa silenciosa espera. Las paredes tienen coplas escritas \u2014 cada una con un doble sentido.',
+            ambience: 'plains'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'El arpa toca una copla:',
+                riddle: '\u00abDon Pr\u00f3spero sembr\u00f3 caminos / donde hab\u00eda ra\u00edces viejas. / Dijo que tra\u00eda flores / pero solo trajo rejas.\u00bb \u00bfQu\u00e9 significa \u00abrejas\u00bb en esta copla?',
+                clue: 'Lo contrario de libertad.',
+                answer: 'Limitaciones y control',
+                options: ['Ventanas bonitas', 'Limitaciones y control', 'Jardines nuevos', 'Herramientas de trabajo'],
+                onSolve: 'El arpa suena con la primera nota verdadera.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Otra copla resuena:',
+                riddle: '\u00abCuando el delf\u00edn sonr\u00ede, / no siempre es de alegr\u00eda. / A veces la risa esconde / lo que la boca no dec\u00eda.\u00bb \u00bfQu\u00e9 ense\u00f1a esta copla?',
+                clue: 'Las apariencias enga\u00f1an.',
+                answer: 'Que las apariencias pueden enga\u00f1ar',
+                options: ['Que los delfines son felices', 'Que las apariencias pueden enga\u00f1ar', 'Que hay que re\u00edr siempre', 'Que el r\u00edo es peligroso'],
+                onSolve: 'La segunda nota completa la melod\u00eda.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La cerradura del arpa pide una palabra.',
+                clue: 'Cuando dices lo contrario de lo que piensas, usas esta figura. Seis letras.',
+                answer: 'ironia',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'El arpa toca sola. La puerta se abre. Un fragmento de historia emerge de la m\u00fasica.'
+            }
+        ],
+        fragment: {
+            text: 'Fragmento de historia: \u00abLas palabras tienen dos caras. Aprende a ver la que no se muestra.\u00bb',
+            questClue: '\u00bfQu\u00e9 quieres decir realmente?',
+            item: 'historia-04'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d22',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest22Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

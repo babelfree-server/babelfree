@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 23: La costa y la paciencia</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest23_coast_patience/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 23: La costa y la paciencia — Games",
+                "url": "https://babelfree.com/b1_basic/dest23_coast_patience/games",
+                "educationalLevel": "B1 - Intermediate",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Extended narrative across time frames",
+                    "Temporal framing and subordination",
+                    "Sustained discourse with connectors"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 3, "name": "B1 B\u00e1sico", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 4, "name": "La costa y la paciencia", "item": "https://babelfree.com/b1_basic/dest23_coast_patience/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 23: La costa y la paciencia</div>
+            <div class="yg-header-subtitle">Narrativa extendida &mdash; Tres tiempos en una historia</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — The Caribbean coast
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'La costa caribe\u00f1a \u2014 agua turquesa, cumbia, calor, sal, comercio. Yaguar\u00e1 siente algo diferente aqu\u00ed: el tiempo se mueve de otra manera. M\u00e1s lento. M\u00e1s profundo. Las historias necesitan tiempo.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Tortuga Marina (Carey)
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Tortuga Marina sale del mar. Su caparaz\u00f3n est\u00e1 cubierto de algas y coral \u2014 antig\u00fcedad visible. Dice: \u00abAlgunas historias necesitan una vida entera para contarse. No tengas prisa.\u00bb Ense\u00f1a profundidad temporal: pasado, presente y futuro tejidos juntos.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Candelaria's growth
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Candelaria tiene catorce a\u00f1os ahora. Empieza a entender por qu\u00e9 su abuela Do\u00f1a Asunci\u00f3n siempre dec\u00eda: \u00abEscucha antes de hablar.\u00bb Antes no entend\u00eda. Ahora s\u00ed. Antes ten\u00eda prisa. Ahora aprendi\u00f3 a esperar.'
+    },
+
+    /* ============================================================
+       4. FILL — Temporal framing
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el tiempo verbal correcto.',
+        questions: [
+            {
+                sentence: 'Cuando Yaguar\u00e1 ___ (ser) peque\u00f1a, el bosque ___ (tener) m\u00e1s voces. (imperfecto)',
+                answer: 'era / ten\u00eda',
+                options: ['era / ten\u00eda', 'fue / tuvo', 'es / tiene', 'ser\u00e1 / tendr\u00e1']
+            },
+            {
+                sentence: 'Antes de ___ (salir) del bosque, Yaguar\u00e1 escuch\u00f3 un canto. (infinitivo)',
+                answer: 'salir',
+                options: ['salir', 'sali\u00f3', 'sal\u00eda', 'sale']
+            },
+            {
+                sentence: 'Despu\u00e9s de ___ (conocer) a Tortuga Marina, Yaguar\u00e1 entendi\u00f3 la paciencia. (infinitivo)',
+                answer: 'conocer',
+                options: ['conocer', 'conoci\u00f3', 'conoc\u00eda', 'conoce']
+            }
+        ]
+    },
+
+    /* ============================================================
+       5. FILL — Three time frames
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el tiempo correcto para cada marco temporal.',
+        questions: [
+            {
+                sentence: 'Antes el r\u00edo ___ ancho. (pasado habitual)',
+                answer: 'era',
+                options: ['era', 'fue', 'es', 'ser\u00e1']
+            },
+            {
+                sentence: 'Un d\u00eda ___ la tormenta. (pasado puntual)',
+                answer: 'lleg\u00f3',
+                options: ['llegaba', 'lleg\u00f3', 'llega', 'llegar\u00e1']
+            },
+            {
+                sentence: 'Ahora el r\u00edo ___ peque\u00f1o. (presente)',
+                answer: 'es',
+                options: ['era', 'fue', 'es', 'ser\u00e1']
+            }
+        ]
+    },
+
+    /* ============================================================
+       6. CONJUGATION — Multiple tenses
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga en el tiempo correcto.',
+        questions: [
+            {
+                verb: 'vivir (imperfecto)',
+                subject: 'ella',
+                answer: 'viv\u00eda',
+                options: ['viv\u00eda', 'vivi\u00f3', 'vive', 'vivir\u00e1']
+            },
+            {
+                verb: 'llegar (pret\u00e9rito)',
+                subject: 'la tormenta',
+                answer: 'lleg\u00f3',
+                options: ['llegaba', 'lleg\u00f3', 'llega', 'llegar\u00e1']
+            },
+            {
+                verb: 'recordar (presente)',
+                subject: 'Tortuga Marina',
+                answer: 'recuerda',
+                options: ['recordaba', 'record\u00f3', 'recuerda', 'recordar\u00e1']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. PAIR — Time markers and tenses
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada marcador temporal con su tiempo verbal.',
+        pairs: [
+            ['Antes...', 'Imperfecto (c\u00f3mo era)'],
+            ['Un d\u00eda...', 'Pret\u00e9rito (qu\u00e9 pas\u00f3)'],
+            ['Mientras...', 'Imperfecto (acci\u00f3n de fondo)'],
+            ['Ahora...', 'Presente (c\u00f3mo es)']
+        ]
+    },
+
+    /* ============================================================
+       8. LISTENING — Tortuga Marina's story
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Tortuga Marina dice: Antes el mar era limpio y tranquilo. Los corales ten\u00edan todos los colores. Un d\u00eda llegaron los barcos grandes. Ahora el mar recuerda lo que perdi\u00f3.',
+        question: '\u00bfQu\u00e9 cambi\u00f3 el mar seg\u00fan Tortuga Marina?',
+        answer: 'La llegada de los barcos grandes',
+        options: ['Una tormenta', 'La llegada de los barcos grandes', 'Un terremoto', 'El cambio de temperatura']
+    },
+
+    /* ============================================================
+       9. BUILDER — Sustained narrative
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena la historia completa de Tortuga Marina.',
+        words: ['Antes', 'el', 'r\u00edo', 'era', 'ancho', 'Un', 'd\u00eda', 'lleg\u00f3', 'la', 'sequ\u00eda', 'Ahora', 'el', 'r\u00edo', 'es', 'peque\u00f1o'],
+        answer: 'Antes el r\u00edo era ancho Un d\u00eda lleg\u00f3 la sequ\u00eda Ahora el r\u00edo es peque\u00f1o'
+    },
+
+    /* ============================================================
+       10. BUILDER — Temporal connectors
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena con conectores temporales.',
+        words: ['Cuando', 'Candelaria', 'era', 'ni\u00f1a', 'no', 'entend\u00eda', 'Ahora', 'entiende', 'todo'],
+        answer: 'Cuando Candelaria era ni\u00f1a no entend\u00eda Ahora entiende todo'
+    },
+
+    /* ============================================================
+       11. CONVERSATION — Tell a three-part story
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Tortuga Marina', text: 'Cuenta la historia de un lugar que cambi\u00f3. C\u00f3mo era antes, qu\u00e9 pas\u00f3, c\u00f3mo es ahora.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Antes el bosque era verde y ten\u00eda muchas voces. Un d\u00eda lleg\u00f3 la niebla y los animales se callaron. Ahora el bosque est\u00e1 silencioso, pero Yaguar\u00e1 busca las voces perdidas.', 'El bosque es bonito.', 'Me gusta la playa.', 'Ayer camin\u00e9.'],
+                answer: 'Antes el bosque era verde y ten\u00eda muchas voces. Un d\u00eda lleg\u00f3 la niebla y los animales se callaron. Ahora el bosque est\u00e1 silencioso, pero Yaguar\u00e1 busca las voces perdidas.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. CONVERSATION — Candelaria's grandmother
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Mi abuela Do\u00f1a Asunci\u00f3n siempre dec\u00eda: \u00abEscucha antes de hablar.\u00bb Antes yo no entend\u00eda. \u00bfY t\u00fa? \u00bfEntiendes ahora algo que antes no entend\u00edas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['S\u00ed. Antes pensaba que hablar r\u00e1pido era mejor. Pero ahora entiendo que escuchar primero es m\u00e1s importante. Como dice Tortuga Marina: las historias necesitan tiempo.', 'No s\u00e9.', 'Mi abuela es simpat\u00edca.', 'Me gusta hablar.'],
+                answer: 'S\u00ed. Antes pensaba que hablar r\u00e1pido era mejor. Pero ahora entiendo que escuchar primero es m\u00e1s importante. Como dice Tortuga Marina: las historias necesitan tiempo.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. EXPLORADOR — The river bank
+    ============================================================ */
+    {
+        type: 'explorador',
+        label: 'Explorador',
+        instruction: 'Explora la ribera del r\u00edo. Cada rinc\u00f3n guarda un fragmento temporal.',
+        locations: [
+            { name: 'El muelle viejo', text: 'Antes este muelle recib\u00eda barcos de todo el r\u00edo. La gente ven\u00eda a comerciar. Hab\u00eda m\u00fasica.', question: '\u00bfQu\u00e9 hac\u00eda la gente antes en el muelle?', answer: 'Ven\u00eda a comerciar', options: ['Ven\u00eda a comerciar', 'Nadaba', 'Dorm\u00eda', 'Cocinaba'] },
+            { name: 'La roca del cambio', text: 'Un d\u00eda llegaron las m\u00e1quinas. Cortaron los \u00e1rboles de la orilla. El r\u00edo perdi\u00f3 su sombra.', question: '\u00bfQu\u00e9 pas\u00f3 un d\u00eda?', answer: 'Llegaron las m\u00e1quinas', options: ['Llegaron las m\u00e1quinas', 'Lleg\u00f3 la lluvia', 'Vino Tortuga Marina', 'Se fue el agua'] },
+            { name: 'La orilla actual', text: 'Ahora el r\u00edo es m\u00e1s estrecho. Pero las personas todav\u00eda cuentan historias junto al agua. La memoria permanece.', question: '\u00bfQu\u00e9 permanece?', answer: 'La memoria', options: ['El muelle', 'La memoria', 'Los \u00e1rboles', 'Las m\u00e1quinas'] }
+        ]
+    },
+
+    /* ============================================================
+       14. ECO_RESTAURAR — Restore the river narrative
+    ============================================================ */
+    {
+        type: 'eco_restaurar',
+        label: 'Eco restaurar',
+        instruction: 'La ribera perdi\u00f3 su historia. Narra para restaurar cada escena.',
+        scenes: [
+            { faded: 'El muelle est\u00e1 vac\u00edo.', restored: 'Antes el muelle recib\u00eda barcos. La gente ven\u00eda a comerciar.', prompt: 'Describe c\u00f3mo era el muelle antes.' },
+            { faded: 'La orilla no tiene \u00e1rboles.', restored: 'Un d\u00eda llegaron las m\u00e1quinas y cortaron los \u00e1rboles.', prompt: '\u00bfQu\u00e9 pas\u00f3 con los \u00e1rboles?' },
+            { faded: 'El r\u00edo es estrecho.', restored: 'Ahora el r\u00edo es m\u00e1s peque\u00f1o, pero las historias permanecen.', prompt: '\u00bfC\u00f3mo es el r\u00edo ahora?' }
+        ]
+    },
+
+    /* ============================================================
+       15. SPACEMAN — Temporal expressions
+    ============================================================ */
+    {
+        type: 'spaceman',
+        label: 'Spaceman',
+        instruction: 'Adivina la expresi\u00f3n temporal.',
+        phrases: [
+            { answer: 'antes de salir', hint: 'temporal + infinitivo', revealed: ['_','_','_','_','_',' ','_','_',' ','_','_','_','_','_'] },
+            { answer: 'mientras caminaba', hint: 'dos acciones simult\u00e1neas', revealed: ['_','_','_','_','_','_','_','_',' ','_','_','_','_','_','_','_','_'] },
+            { answer: 'despu\u00e9s de llegar', hint: 'posterioridad + infinitivo', revealed: ['_','_','_','_','_','_','_',' ','_','_',' ','_','_','_','_','_','_'] }
+        ]
+    },
+
+    /* ============================================================
+       16. SORTING — Time frames
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada frase seg\u00fan su marco temporal.',
+        categories: ['Antes (imperfecto)', 'Un d\u00eda (pret\u00e9rito)', 'Ahora (presente)'],
+        items: [
+            { text: 'El bosque ten\u00eda muchas voces', category: 'Antes (imperfecto)' },
+            { text: 'Lleg\u00f3 la niebla', category: 'Un d\u00eda (pret\u00e9rito)' },
+            { text: 'Yaguar\u00e1 busca las voces', category: 'Ahora (presente)' },
+            { text: 'El r\u00edo era ancho', category: 'Antes (imperfecto)' },
+            { text: 'Cortaron los \u00e1rboles', category: 'Un d\u00eda (pret\u00e9rito)' },
+            { text: 'La memoria permanece', category: 'Ahora (presente)' }
+        ]
+    },
+
+    /* ============================================================
+       17. DICTATION — Extended narrative
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la narraci\u00f3n completa.',
+        audio: 'Antes el r\u00edo era ancho. Un d\u00eda lleg\u00f3 la sequ\u00eda. Ahora el r\u00edo es peque\u00f1o. Pero las historias permanecen.',
+        answer: 'Antes el r\u00edo era ancho. Un d\u00eda lleg\u00f3 la sequ\u00eda. Ahora el r\u00edo es peque\u00f1o. Pero las historias permanecen.'
+    },
+
+    /* ============================================================
+       18. NARRATIVE — Final reflection
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Reflexi\u00f3n final',
+        instruction: 'Lee y escucha.',
+        text: 'Cuatro gu\u00edas se han reunido: Colibr\u00ed ense\u00f1\u00f3 precisi\u00f3n. C\u00f3ndor Viejo ense\u00f1\u00f3 perspectiva. Delf\u00edn Rosado ense\u00f1\u00f3 doble sentido. Tortuga Marina ense\u00f1\u00f3 paciencia. Yaguar\u00e1 ha cruzado el Choc\u00f3, los Andes, los Llanos y la costa. Ahora puede contar una historia completa.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la \u00faltima puerta del B1 B\u00e1sico.',
+        room: {
+            name: 'La sala del coral',
+            description: 'Una c\u00e1mara submarina \u2014 o que parece submarina. La luz se mueve como olas en las paredes. Los corales guardan historias de tres tiempos.',
+            ambience: 'underwater'
+        },
+        puzzles: [
+            {
+                puzzleType: 'sequence',
+                prompt: 'Ordena la historia del r\u00edo en tres tiempos.',
+                items: ['Antes el r\u00edo era ancho y ten\u00eda muchos peces.', 'Un d\u00eda llegaron las m\u00e1quinas y cortaron los \u00e1rboles.', 'Ahora el r\u00edo es peque\u00f1o pero las historias permanecen.'],
+                correctOrder: [0, 1, 2],
+                onSolve: 'El primer coral se ilumina con colores del pasado.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Tortuga Marina pregunta:',
+                riddle: '\u00abCuatro gu\u00edas te ense\u00f1aron cuatro cosas: precisi\u00f3n, perspectiva, doble sentido y paciencia. \u00bfQui\u00e9n ense\u00f1\u00f3 paciencia?\u00bb',
+                clue: 'La m\u00e1s antigua. Del mar.',
+                answer: 'Tortuga Marina',
+                options: ['Colibr\u00ed', 'C\u00f3ndor Viejo', 'Delf\u00edn Rosado', 'Tortuga Marina'],
+                onSolve: 'El segundo coral muestra un mapa de la costa.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La cerradura de coral pide una palabra.',
+                clue: 'Lo que las historias necesitan seg\u00fan Tortuga Marina. Algo que Candelaria aprendi\u00f3 de su abuela. Nueve letras.',
+                answer: 'paciencia',
+                hint: '_ _ _ _ _ _ _ _ _',
+                onSolve: 'Los corales cantan. La puerta se abre. El quinto fragmento de historia emerge del mar.'
+            }
+        ],
+        fragment: {
+            text: 'Fragmento de historia: \u00abAlgunas historias necesitan una vida entera. La paciencia es la primera palabra de la sabidur\u00eda.\u00bb',
+            questClue: '\u00bfCu\u00e1nto tiempo necesita una historia?',
+            item: 'historia-05'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d23',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest23Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

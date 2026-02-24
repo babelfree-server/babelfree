@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 19: Cruzar el umbral</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest19_first_village/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 19: Cruzar el umbral — Games",
+                "url": "https://babelfree.com/b1_basic/dest19_first_village/games",
+                "educationalLevel": "B1 - Intermediate",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Preterite vs imperfect contrast",
+                    "Narrative connectors",
+                    "Community and society vocabulary"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 3, "name": "B1 B\u00e1sico", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 4, "name": "Cruzar el umbral", "item": "https://babelfree.com/b1_basic/dest19_first_village/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 19: Cruzar el umbral</div>
+            <div class="yg-header-subtitle">Narrar eventos pasados &mdash; Pret&eacute;rito e imperfecto</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — Arrival at the village
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 entra en el primer pueblo humano \u2014 una aldea en el Choc\u00f3. Todo es m\u00e1s fuerte, m\u00e1s r\u00e1pido, m\u00e1s complejo que el bosque. Candelaria camina a su lado, traduce, explica. Ella es su puente.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Colibrí (Zunzún)
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Un colibr\u00ed aparece entre las flores del pueblo. Es Zunz\u00fan \u2014 un esp\u00edritu que va y viene entre mundos. Dice: \u00abLas cosas peque\u00f1as tienen poder. Una palabra exacta vale m\u00e1s que cien palabras vagas.\u00bb'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Don Próspero arrives
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Al borde del pueblo, un hombre habla con los l\u00edderes de la aldea. Se llama Don Pr\u00f3spero. Tiene un portafolio de cuero. Habla de un camino que \u00abva a traer prosperidad.\u00bb Candelaria observa. Yaguar\u00e1 escucha. Algo no se siente bien.'
+    },
+
+    /* ============================================================
+       4. FILL — Preterite vs imperfect
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el tiempo verbal correcto.',
+        questions: [
+            {
+                sentence: 'Ayer ___ (llegar, yo) a un pueblo. (acci\u00f3n completada)',
+                answer: 'llegu\u00e9',
+                options: ['llegu\u00e9', 'llegaba', 'llego', 'voy a llegar']
+            },
+            {
+                sentence: '___ (haber) casas de colores por todas partes. (descripci\u00f3n)',
+                answer: 'Hab\u00eda',
+                options: ['Hab\u00eda', 'Hubo', 'Hay', 'Va a haber']
+            },
+            {
+                sentence: 'La gente ___ (hablar) r\u00e1pido y yo no ___ (entender) todo. (contexto)',
+                answer: 'hablaba / entend\u00eda',
+                options: ['hablaba / entend\u00eda', 'habl\u00f3 / entendi\u00f3', 'habla / entiende', 'hablaba / entendi\u00f3']
+            }
+        ]
+    },
+
+    /* ============================================================
+       5. FILL — More preterite vs imperfect
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el tiempo verbal correcto.',
+        questions: [
+            {
+                sentence: 'Mientras ___ (caminar, yo) por el mercado, ___ (ver) a Don Pr\u00f3spero.',
+                answer: 'caminaba / vi',
+                options: ['caminaba / vi', 'camin\u00e9 / ve\u00eda', 'camino / veo', 'caminaba / ve\u00eda']
+            },
+            {
+                sentence: 'Don Pr\u00f3spero ___ (hablar) cuando Candelaria ___ (llegar).',
+                answer: 'hablaba / lleg\u00f3',
+                options: ['hablaba / lleg\u00f3', 'habl\u00f3 / llegaba', 'habl\u00f3 / lleg\u00f3', 'hablaba / llegaba']
+            },
+            {
+                sentence: 'El pueblo ___ (ser) peque\u00f1o pero ___ (tener) un mercado grande.',
+                answer: 'era / ten\u00eda',
+                options: ['era / ten\u00eda', 'fue / tuvo', 'es / tiene', 'era / tuvo']
+            }
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — Connectors and their functions
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada conector con su funci\u00f3n.',
+        pairs: [
+            ['primero', 'inicio de la secuencia'],
+            ['mientras', 'dos acciones simult\u00e1neas'],
+            ['despu\u00e9s', 'lo que ocurre a continuaci\u00f3n'],
+            ['finalmente', 'cierre de la secuencia']
+        ]
+    },
+
+    /* ============================================================
+       7. PAIR — Preterite or imperfect?
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une cada frase con su tiempo verbal.',
+        pairs: [
+            ['El pueblo ten\u00eda casas de colores', 'Imperfecto \u2014 descripci\u00f3n'],
+            ['Yaguar\u00e1 lleg\u00f3 al pueblo', 'Pret\u00e9rito \u2014 acci\u00f3n completada'],
+            ['La gente hablaba r\u00e1pido', 'Imperfecto \u2014 contexto habitual'],
+            ['Colibr\u00ed apareci\u00f3 entre las flores', 'Pret\u00e9rito \u2014 evento puntual']
+        ]
+    },
+
+    /* ============================================================
+       8. LISTENING — Yaguará's arrival
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Ayer llegu\u00e9 a un pueblo en el Choc\u00f3. Hab\u00eda casas de colores. La gente hablaba r\u00e1pido. Mientras caminaba por el mercado, vi a un hombre con un portafolio de cuero.',
+        question: '\u00bfQu\u00e9 vio Yaguar\u00e1 en el mercado?',
+        answer: 'Un hombre con un portafolio de cuero',
+        options: ['Un colibr\u00ed entre las flores', 'Un hombre con un portafolio de cuero', 'A Candelaria escribiendo', 'Un r\u00edo grande']
+    },
+
+    /* ============================================================
+       9. LISTENING — Colibrí's wisdom
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Las cosas peque\u00f1as tienen poder. Una palabra exacta vale m\u00e1s que cien palabras vagas. No necesitas muchas palabras. Necesitas las palabras correctas.',
+        question: '\u00bfQu\u00e9 ense\u00f1a Colibr\u00ed?',
+        answer: 'Que una palabra exacta vale m\u00e1s que cien vagas',
+        options: ['Que hay que hablar mucho', 'Que una palabra exacta vale m\u00e1s que cien vagas', 'Que las flores son importantes', 'Que el pueblo es peligroso']
+    },
+
+    /* ============================================================
+       10. CONJUGATION — Preterite irregular
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga en pret\u00e9rito e imperfecto.',
+        questions: [
+            {
+                verb: 'llegar (pret\u00e9rito)',
+                subject: 'yo',
+                answer: 'llegu\u00e9',
+                options: ['llegu\u00e9', 'llegaba', 'lleg\u00f3', 'llegamos']
+            },
+            {
+                verb: 'hablar (imperfecto)',
+                subject: 'la gente',
+                answer: 'hablaba',
+                options: ['habl\u00f3', 'hablaba', 'hablaban', 'hablan']
+            },
+            {
+                verb: 'ver (pret\u00e9rito)',
+                subject: 'yo',
+                answer: 'vi',
+                options: ['vi', 've\u00eda', 'vio', 'vemos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       11. SORTING — Preterite vs imperfect
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfpret\u00e9rito o imperfecto?',
+        categories: ['Pret\u00e9rito (completado)', 'Imperfecto (contexto)'],
+        items: [
+            { text: 'Llegu\u00e9 al pueblo', category: 'Pret\u00e9rito (completado)' },
+            { text: 'Hab\u00eda muchas casas', category: 'Imperfecto (contexto)' },
+            { text: 'Vi a Don Pr\u00f3spero', category: 'Pret\u00e9rito (completado)' },
+            { text: 'La gente hablaba r\u00e1pido', category: 'Imperfecto (contexto)' },
+            { text: 'Colibr\u00ed apareci\u00f3', category: 'Pret\u00e9rito (completado)' },
+            { text: 'El mercado ten\u00eda colores', category: 'Imperfecto (contexto)' }
+        ]
+    },
+
+    /* ============================================================
+       12. BUILDER — Narrate the arrival
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las frases para narrar la llegada.',
+        words: ['Primero', 'llegu\u00e9', 'al', 'pueblo', 'y', 'hab\u00eda', 'casas', 'de', 'colores'],
+        answer: 'Primero llegu\u00e9 al pueblo y hab\u00eda casas de colores'
+    },
+
+    /* ============================================================
+       13. BUILDER — Two actions together
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena la frase con dos tiempos.',
+        words: ['Mientras', 'caminaba', 'por', 'el', 'mercado', 'vi', 'a', 'Don', 'Pr\u00f3spero'],
+        answer: 'Mientras caminaba por el mercado vi a Don Pr\u00f3spero'
+    },
+
+    /* ============================================================
+       14. CONVERSATION — Tell what happened
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Cuenta qu\u00e9 pas\u00f3 cuando llegamos al pueblo.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Llegu\u00e9 al pueblo. Hab\u00eda casas de colores. La gente hablaba r\u00e1pido. Vi a un hombre con un portafolio.', 'El pueblo es bonito.', 'Tengo hambre.', 'Me gusta caminar.'],
+                answer: 'Llegu\u00e9 al pueblo. Hab\u00eda casas de colores. La gente hablaba r\u00e1pido. Vi a un hombre con un portafolio.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       15. CONVERSATION — About Don Próspero
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfQu\u00e9 hac\u00eda ese hombre cuando lo viste?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Hablaba con los l\u00edderes del pueblo. Ten\u00eda un portafolio de cuero. Dec\u00eda que el camino iba a traer prosperidad.', 'No s\u00e9.', 'Estaba lloviendo.', 'Me gusta el pueblo.'],
+                answer: 'Hablaba con los l\u00edderes del pueblo. Ten\u00eda un portafolio de cuero. Dec\u00eda que el camino iba a traer prosperidad.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       16. CROSSWORD — Community vocabulary
+    ============================================================ */
+    {
+        type: 'crossword',
+        label: 'Crucigrama',
+        instruction: 'Lee las definiciones. Escribe la palabra correcta.',
+        clues: [
+            { direction: 'across', number: 1, clue: 'Lugar donde vive mucha gente junta', answer: 'pueblo' },
+            { direction: 'across', number: 4, clue: 'Lugar donde se compran y venden cosas', answer: 'mercado' },
+            { direction: 'down', number: 1, clue: 'V\u00eda que conecta dos lugares', answer: 'camino' },
+            { direction: 'down', number: 2, clue: 'Lo que Don Pr\u00f3spero promete', answer: 'progreso' },
+            { direction: 'across', number: 7, clue: 'Persona que vive cerca de tu casa', answer: 'vecino' }
+        ]
+    },
+
+    /* ============================================================
+       17. DICTATION — Narrating the arrival
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Llegu\u00e9 al pueblo. Hab\u00eda casas de colores. La gente hablaba r\u00e1pido.',
+        answer: 'Llegu\u00e9 al pueblo. Hab\u00eda casas de colores. La gente hablaba r\u00e1pido.'
+    },
+
+    /* ============================================================
+       18. EXPLORADOR — The market
+    ============================================================ */
+    {
+        type: 'explorador',
+        label: 'Explorador',
+        instruction: 'Explora el mercado del pueblo.',
+        locations: [
+            { name: 'Puesto de frutas', text: 'La se\u00f1ora vend\u00eda pl\u00e1tanos. Contaba que antes el mercado era m\u00e1s grande.', question: '\u00bfQu\u00e9 vend\u00eda la se\u00f1ora?', answer: 'pl\u00e1tanos', options: ['pl\u00e1tanos', 'pescado', 'ropa', 'flores'] },
+            { name: 'El pescador', text: 'Un viejo pescador descansaba. Dijo que lleg\u00f3 al pueblo hace cuarenta a\u00f1os.', question: '\u00bfCu\u00e1ndo lleg\u00f3 el pescador?', answer: 'Hace cuarenta a\u00f1os', options: ['Ayer', 'Hace cuarenta a\u00f1os', 'La semana pasada', 'Esta ma\u00f1ana'] },
+            { name: 'La plaza', text: 'Los ni\u00f1os jugaban. Un hombre con portafolio hablaba con el alcalde sobre un camino nuevo.', question: '\u00bfDe qu\u00e9 hablaba el hombre?', answer: 'De un camino nuevo', options: ['De los ni\u00f1os', 'Del mercado', 'De un camino nuevo', 'Del clima'] }
+        ]
+    },
+
+    /* ============================================================
+       19. FLASHNOTE — Preterite vs imperfect capsule
+    ============================================================ */
+    {
+        type: 'flashnote',
+        label: 'C\u00e1psula',
+        instruction: 'Recuerda esta regla.',
+        note: 'Pret\u00e9rito = acci\u00f3n completada (llegu\u00e9, vi, dijo). Imperfecto = contexto, descripci\u00f3n, h\u00e1bito (hab\u00eda, hablaba, ten\u00eda).',
+        question: 'Cuando ___ (caminar) por el mercado, ___ (ver) a Don Pr\u00f3spero.',
+        answer: 'caminaba / vi',
+        options: ['caminaba / vi', 'camin\u00e9 / ve\u00eda', 'caminaba / ve\u00eda', 'camin\u00e9 / vi']
+    },
+
+    /* ============================================================
+       20. KLOO — Narrative sentence building
+    ============================================================ */
+    {
+        type: 'kloo',
+        label: 'Kloo',
+        instruction: 'Ordena las cartas para narrar.',
+        cards: [
+            { color: 'red', text: 'Primero' },
+            { color: 'blue', text: 'camin\u00e9' },
+            { color: 'green', text: 'por el mercado' },
+            { color: 'orange', text: 'mientras llov\u00eda' }
+        ],
+        answer: 'Primero camin\u00e9 por el mercado mientras llov\u00eda'
+    },
+
+    /* ============================================================
+       21. BANANAGRAMS — Community words
+    ============================================================ */
+    {
+        type: 'bananagrams',
+        label: 'Bananagrams',
+        instruction: 'Forma palabras de la comunidad.',
+        letters: ['P','U','E','B','L','O','M','E','R','C','A','D','O','G','E','N','T','E','C','A','S','A','V','E','C','I','N','O'],
+        targetWords: ['pueblo', 'mercado', 'gente', 'casa', 'vecino', 'camino']
+    },
+
+    /* ============================================================
+       22. CLON — Present vs past perspective
+    ============================================================ */
+    {
+        type: 'clon',
+        label: 'Clon',
+        instruction: 'Alterna presente y pasado.',
+        pairs: [
+            { present: 'Camino por el pueblo.', past: 'Caminaba por el pueblo.' },
+            { present: 'Veo casas de colores.', past: 'Ve\u00eda casas de colores.' },
+            { present: 'La gente habla r\u00e1pido.', past: 'La gente hablaba r\u00e1pido.' },
+            { present: 'Hay un mercado grande.', past: 'Hab\u00eda un mercado grande.' }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala del mercado',
+            description: 'Bajo la plaza del mercado hay una sala oculta. Las paredes muestran escenas del pueblo: c\u00f3mo era antes, c\u00f3mo cambi\u00f3.',
+            ambience: 'market'
+        },
+        puzzles: [
+            {
+                puzzleType: 'sequence',
+                prompt: 'Ordena la historia del pueblo.',
+                items: ['Antes el pueblo era peque\u00f1o.', 'Un d\u00eda lleg\u00f3 un hombre con planes.', 'Habl\u00f3 de un camino nuevo.', 'Los l\u00edderes escucharon.'],
+                correctOrder: [0, 1, 2, 3],
+                onSolve: 'La primera pared se ilumina.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Las ra\u00edces del pueblo preguntan:',
+                riddle: '\u00abUn tiempo describe el escenario. Otro tiempo cuenta la acci\u00f3n. El primero es largo como un r\u00edo. El segundo es corto como un rayo. \u00bfC\u00f3mo se llama el largo?\u00bb',
+                clue: 'Describe c\u00f3mo eran las cosas.',
+                answer: 'Imperfecto',
+                options: ['Imperfecto', 'Pret\u00e9rito', 'Presente', 'Futuro'],
+                onSolve: 'La segunda pared muestra un mapa antiguo.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La cerradura final pide una palabra.',
+                clue: 'Don Pr\u00f3spero promete esto. Seis letras. Empieza con C.',
+                answer: 'camino',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'La puerta se abre. El primer fragmento de las historias aparece.'
+            }
+        ],
+        fragment: {
+            text: 'Fragmento de historia: \u00abLas historias empiezan cuando alguien llega a un lugar nuevo y pregunta: \u00bfqu\u00e9 hab\u00eda aqu\u00ed antes?\u00bb',
+            questClue: '\u00bfPor qu\u00e9 vino este hombre?',
+            item: 'historia-01'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d19',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest19Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

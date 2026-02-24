@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 21: Subir la monta&ntilde;a</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest21_mountain/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 21: Subir la monta\u00f1a — Games",
+                "url": "https://babelfree.com/b1_basic/dest21_mountain/games",
+                "educationalLevel": "B1 - Intermediate",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Basic present subjunctive",
+                    "Por vs para distinction",
+                    "Expressing opinions and perspectives"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 3, "name": "B1 B\u00e1sico", "item": "https://babelfree.com/b1-quibdo" },
+                    { "@type": "ListItem", "position": 4, "name": "Subir la monta\u00f1a", "item": "https://babelfree.com/b1_basic/dest21_mountain/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-choco">
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 21: Subir la monta&ntilde;a</div>
+            <div class="yg-header-subtitle">Opinar y explicar &mdash; Subjuntivo b&aacute;sico y por/para</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — Arriving at the Andes
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 y Candelaria viajan a los Andes. El aire cambia. El bosque da paso al p\u00e1ramo \u2014 frailejones, niebla fr\u00eda, territorio de c\u00f3ndores. Todo se ve diferente desde arriba.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Cóndor Viejo
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'C\u00f3ndor Viejo los espera en la cima. Es enorme, con plumas desgastadas y un ojo nublado. Dice: \u00abDesde arriba, las cosas se ven diferentes. Lo que parece un camino desde abajo, es una herida desde arriba.\u00bb Habla del camino de Don Pr\u00f3spero.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Two perspectives
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'C\u00f3ndor Viejo muestra dos formas de ver lo mismo. Desde abajo: \u00abEl camino trae trabajo.\u00bb Desde arriba: \u00abEl camino divide el bosque en dos.\u00bb Es importante que Yaguar\u00e1 vea las dos perspectivas antes de opinar.'
+    },
+
+    /* ============================================================
+       4. FILL — Por vs para
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige por o para.',
+        questions: [
+            {
+                sentence: 'Don Pr\u00f3spero lo hace ___ dinero. (causa/motivo)',
+                answer: 'por',
+                options: ['por', 'para', 'con', 'sin']
+            },
+            {
+                sentence: 'Dice que lo hace ___ ayudar al pueblo. (prop\u00f3sito)',
+                answer: 'para',
+                options: ['por', 'para', 'con', 'sin']
+            },
+            {
+                sentence: 'C\u00f3ndor vuela ___ las monta\u00f1as. (movimiento a trav\u00e9s)',
+                answer: 'por',
+                options: ['por', 'para', 'con', 'sin']
+            }
+        ]
+    },
+
+    /* ============================================================
+       5. FILL — Basic subjunctive
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con subjuntivo.',
+        questions: [
+            {
+                sentence: 'Es importante que Yaguar\u00e1 ___ (ver) el mundo desde arriba.',
+                answer: 'vea',
+                options: ['vea', 've', 'vio', 'ver\u00e1']
+            },
+            {
+                sentence: 'Espero que ___ (entender) la diferencia entre las dos perspectivas.',
+                answer: 'entiendas',
+                options: ['entiendas', 'entiendes', 'entendiste', 'entender\u00e1s']
+            },
+            {
+                sentence: 'Es necesario que el pueblo ___ (decidir) con informaci\u00f3n.',
+                answer: 'decida',
+                options: ['decida', 'decide', 'decidi\u00f3', 'decidir\u00e1']
+            }
+        ]
+    },
+
+    /* ============================================================
+       6. FILL — More subjunctive triggers
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con subjuntivo despu\u00e9s de expresiones de opini\u00f3n.',
+        questions: [
+            {
+                sentence: 'Quiero que las personas ___ (saber) la verdad.',
+                answer: 'sepan',
+                options: ['sepan', 'saben', 'supieron', 'sabr\u00e1n']
+            },
+            {
+                sentence: 'Es mejor que nosotros ___ (escuchar) a C\u00f3ndor Viejo.',
+                answer: 'escuchemos',
+                options: ['escuchemos', 'escuchamos', 'escucharon', 'escucharemos']
+            },
+            {
+                sentence: 'No creo que Don Pr\u00f3spero ___ (querer) ayudar realmente.',
+                answer: 'quiera',
+                options: ['quiera', 'quiere', 'quiso', 'querr\u00e1']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. CATEGORY — Por vs para
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfpor o para?',
+        categories: ['POR (causa/a trav\u00e9s)', 'PARA (prop\u00f3sito/destino)'],
+        items: [
+            { text: 'Lo hace ___ dinero', category: 'POR (causa/a trav\u00e9s)' },
+            { text: 'Lo hace ___ ayudar', category: 'PARA (prop\u00f3sito/destino)' },
+            { text: 'Camina ___ el bosque', category: 'POR (causa/a trav\u00e9s)' },
+            { text: 'Es ___ ma\u00f1ana', category: 'PARA (prop\u00f3sito/destino)' },
+            { text: 'Gracias ___ escuchar', category: 'POR (causa/a trav\u00e9s)' },
+            { text: 'Estudia ___ aprender', category: 'PARA (prop\u00f3sito/destino)' }
+        ]
+    },
+
+    /* ============================================================
+       8. PAIR — Subjunctive triggers
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada expresi\u00f3n con su tipo.',
+        pairs: [
+            ['Es importante que...', 'Necesidad \u2192 subjuntivo'],
+            ['Espero que...', 'Deseo \u2192 subjuntivo'],
+            ['Creo que...', 'Opini\u00f3n \u2192 indicativo'],
+            ['No creo que...', 'Duda \u2192 subjuntivo']
+        ]
+    },
+
+    /* ============================================================
+       9. LISTENING — Cóndor Viejo's perspective
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'C\u00f3ndor Viejo dice: Desde arriba, las cosas se ven diferentes. Lo que parece un camino desde abajo, es una herida desde arriba. Es importante que veas las dos perspectivas.',
+        question: '\u00bfQu\u00e9 parece el camino desde arriba?',
+        answer: 'Una herida',
+        options: ['Un r\u00edo', 'Una herida', 'Una carretera', 'Un puente']
+    },
+
+    /* ============================================================
+       10. CONVERSATION — Express your opinion
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'C\u00f3ndor Viejo', text: '\u00bfDon Pr\u00f3spero hace el camino por dinero o para ayudar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Creo que lo hace por dinero. No creo que quiera ayudar realmente. Es importante que el pueblo sepa la verdad.', 'No s\u00e9.', 'El camino es largo.', 'Me gusta la monta\u00f1a.'],
+                answer: 'Creo que lo hace por dinero. No creo que quiera ayudar realmente. Es importante que el pueblo sepa la verdad.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       11. CONVERSATION — Two perspectives
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfC\u00f3mo se ve el camino de Don Pr\u00f3spero desde las dos perspectivas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Desde abajo parece un camino para el progreso. Pero desde arriba, C\u00f3ndor Viejo dice que es una herida. Es necesario que veamos las dos perspectivas.', 'Es un camino normal.', 'No tengo opini\u00f3n.', 'El c\u00f3ndor es grande.'],
+                answer: 'Desde abajo parece un camino para el progreso. Pero desde arriba, C\u00f3ndor Viejo dice que es una herida. Es necesario que veamos las dos perspectivas.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. GUARDIAN — Subjunctive rapid fire
+    ============================================================ */
+    {
+        type: 'guardian',
+        label: 'Guardi\u00e1n',
+        instruction: '\u00a1Oleada de subjuntivos! Completa antes de que el tiempo se acabe.',
+        timeLimit: 120,
+        waves: [
+            { prompt: 'Es importante que ___ (hablar, t\u00fa)', answer: 'hables', options: ['hables', 'hablas', 'hablaste', 'hablar\u00e1s'] },
+            { prompt: 'Espero que ___ (venir, ella)', answer: 'venga', options: ['venga', 'viene', 'vino', 'vendr\u00e1'] },
+            { prompt: 'Quiero que ___ (ir, nosotros)', answer: 'vayamos', options: ['vayamos', 'vamos', 'fuimos', 'iremos'] },
+            { prompt: 'Es necesario que ___ (saber, ellos)', answer: 'sepan', options: ['sepan', 'saben', 'supieron', 'sabr\u00e1n'] },
+            { prompt: 'No creo que ___ (ser, esto) verdad', answer: 'sea', options: ['sea', 'es', 'fue', 'ser\u00e1'] }
+        ]
+    },
+
+    /* ============================================================
+       13. KLOO — Opinion sentences
+    ============================================================ */
+    {
+        type: 'kloo',
+        label: 'Kloo',
+        instruction: 'Forma oraciones de opini\u00f3n.',
+        cards: [
+            { color: 'red', text: 'Es importante que' },
+            { color: 'blue', text: 'veamos' },
+            { color: 'green', text: 'las dos perspectivas' },
+            { color: 'orange', text: 'para decidir bien' }
+        ],
+        answer: 'Es importante que veamos las dos perspectivas para decidir bien'
+    },
+
+    /* ============================================================
+       14. MADGAB — Opinion phrases
+    ============================================================ */
+    {
+        type: 'madgab',
+        label: 'Mad Gab',
+        instruction: 'Lee las s\u00edlabas y di la frase real.',
+        phrases: [
+            { scrambled: 'ES IM POR TAN TE QUE', answer: 'Es importante que', hint: 'Expresi\u00f3n que activa el subjuntivo' },
+            { scrambled: 'NO CRE O QUE', answer: 'No creo que', hint: 'Duda que activa el subjuntivo' },
+            { scrambled: 'ES PE RO QUE', answer: 'Espero que', hint: 'Deseo que activa el subjuntivo' }
+        ]
+    },
+
+    /* ============================================================
+       15. BUILDER — Opinion with subjunctive
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena la opini\u00f3n.',
+        words: ['Es', 'importante', 'que', 'el', 'pueblo', 'sepa', 'la', 'verdad'],
+        answer: 'Es importante que el pueblo sepa la verdad'
+    },
+
+    /* ============================================================
+       16. CONJUGATION — Subjunctive forms
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga en subjuntivo presente.',
+        questions: [
+            {
+                verb: 'ver (subjuntivo)',
+                subject: 'yo',
+                answer: 'vea',
+                options: ['vea', 'veo', 'vi', 'ver\u00e9']
+            },
+            {
+                verb: 'saber (subjuntivo)',
+                subject: 'ellos',
+                answer: 'sepan',
+                options: ['sepan', 'saben', 'supieron', 'sabr\u00e1n']
+            },
+            {
+                verb: 'ir (subjuntivo)',
+                subject: 'nosotros',
+                answer: 'vayamos',
+                options: ['vayamos', 'vamos', 'fuimos', 'iremos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       17. SORTING — Indicative vs subjunctive triggers
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfindicativo o subjuntivo?',
+        categories: ['Indicativo', 'Subjuntivo'],
+        items: [
+            { text: 'Creo que...', category: 'Indicativo' },
+            { text: 'Es importante que...', category: 'Subjuntivo' },
+            { text: 'S\u00e9 que...', category: 'Indicativo' },
+            { text: 'Espero que...', category: 'Subjuntivo' },
+            { text: 'No creo que...', category: 'Subjuntivo' },
+            { text: 'Es verdad que...', category: 'Indicativo' }
+        ]
+    },
+
+    /* ============================================================
+       18. DICTATION — Opinion sentence
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Es importante que veamos las dos perspectivas. No creo que Don Pr\u00f3spero quiera ayudar.',
+        answer: 'Es importante que veamos las dos perspectivas. No creo que Don Pr\u00f3spero quiera ayudar.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala de piedra',
+            description: 'Dentro de la monta\u00f1a hay una c\u00e1mara de piedra antigua. Las paredes muestran dos mapas: uno desde abajo, otro desde arriba.',
+            ambience: 'mountain'
+        },
+        puzzles: [
+            {
+                puzzleType: 'sequence',
+                prompt: 'Ordena el argumento de C\u00f3ndor Viejo.',
+                items: ['Desde abajo el camino parece bueno.', 'Pero desde arriba se ve la herida.', 'Es importante que veamos las dos perspectivas.', 'Solo as\u00ed podemos decidir bien.'],
+                correctOrder: [0, 1, 2, 3],
+                onSolve: 'El primer mapa se ilumina.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'C\u00f3ndor Viejo pregunta:',
+                riddle: '\u00abUna preposici\u00f3n explica la causa. La otra explica el prop\u00f3sito. Don Pr\u00f3spero lo hace ___ dinero. Dice que lo hace ___ ayudar. \u00bfCu\u00e1l explica la causa real?\u00bb',
+                clue: 'Tres letras. La raz\u00f3n verdadera.',
+                answer: 'por',
+                options: ['por', 'para', 'con', 'sin'],
+                onSolve: 'El segundo mapa se revela.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La cerradura de piedra pide una palabra.',
+                clue: 'Lo que C\u00f3ndor Viejo ve desde arriba cuando mira el camino de Don Pr\u00f3spero. Seis letras.',
+                answer: 'herida',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'La piedra se abre. Un fragmento de historia cae desde lo alto.'
+            }
+        ],
+        fragment: {
+            text: 'Fragmento de historia: \u00abLa misma cosa se ve diferente seg\u00fan desde d\u00f3nde mires. No tengas prisa en opinar.\u00bb',
+            questClue: '\u00bfC\u00f3mo se ve el mundo desde arriba?',
+            item: 'historia-03'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'b1d21',
+        world: 'choco',
+        storageKey: 'yaguaraB1Dest21Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>
