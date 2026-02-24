@@ -3,61 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destino 30: Huellas en la sabana - Per&iacute;frasis verbales</title>
+    <title>Destino 30: La sombra de Yaguar&aacute;</title>
     <link rel="stylesheet" href="../../css/yaguara-game.css">
     <link rel="stylesheet" href="../../luxury.css">
     <link rel="canonical" href="https://babelfree.com/b2_basic/dest30_verbal_periphrasis/games">
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LearningResource",
-          "name": "Destino 30: Huellas en la sabana - Perífrasis verbales",
-          "url": "https://babelfree.com/b2_basic/dest30_verbal_periphrasis/games",
-          "educationalLevel": "B2 - Upper Intermediate",
-          "learningResourceType": "Interactive Game",
-          "isAccessibleForFree": true,
-          "inLanguage": "es",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "Babel Free",
-            "url": "https://babelfree.com"
-          },
-          "dateModified": "2026-02-24",
-          "teaches": ["Verbal periphrasis", "Perífrasis verbales", "Spanish grammar"]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
-            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
-            { "@type": "ListItem", "position": 3, "name": "B2 Basic", "item": "https://babelfree.com/b2-villavicencio" },
-            { "@type": "ListItem", "position": 4, "name": "Huellas en la sabana - Perífrasis verbales" }
-          ]
-        }
-      ]
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 30: La sombra de Yaguar\u00e1 — Games",
+                "url": "https://babelfree.com/b2_basic/dest30_verbal_periphrasis/games",
+                "educationalLevel": "B2 - Upper Intermediate",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Subjunctive with emotions and doubt",
+                    "Expressing fears and self-doubt",
+                    "Internal conflict"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+                    { "@type": "ListItem", "position": 3, "name": "B2 B\u00e1sico", "item": "https://babelfree.com/b2-villavicencio" },
+                    { "@type": "ListItem", "position": 4, "name": "La sombra de Yaguar\u00e1", "item": "https://babelfree.com/b2_basic/dest30_verbal_periphrasis/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Games" }
+                ]
+            }
+        ]
     }
     </script>
 </head>
-<body class="yg-body yg-mundo-de-arriba">
-
+<body class="yg-body yg-llanos">
     <header class="yg-header">
         <a href="/b2-villavicencio" class="yg-back-btn">&#8592; Volver</a>
         <div class="yg-header-info">
-            <div class="yg-header-title">Destino 30: Huellas en la sabana</div>
-            <div class="yg-header-subtitle">Per&iacute;frasis verbales</div>
+            <div class="yg-header-title">Destino 30: La sombra de Yaguar&aacute;</div>
+            <div class="yg-header-subtitle">Miedos y dudas &mdash; Subjuntivo de emoci&oacute;n</div>
         </div>
     </header>
-
     <div class="yg-progress" id="yaguaraProgress"></div>
-
-    <div class="yg-encounter-wrapper">
-        <div class="yg-card" id="yaguaraCard"></div>
-    </div>
-
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
     <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
-
     <nav class="yg-nav" id="yaguaraNav">
         <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
         <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
@@ -65,535 +63,342 @@
 
 <script>
 var games = [
-    // === GAME 1: Narrative \u2014 Amanecer en la sabana ===
+
+    /* ============================================================
+       1. NARRATIVE \u2014 La Sombra appears in the pool
+    ============================================================ */
     {
         type: 'narrative',
         label: 'Narraci\u00f3n',
-        instruction: 'Lee c\u00f3mo Yaguar\u00e1 llega a los Llanos y descubre la vida de los llaneros. Observa las per\u00edfrasis verbales.',
-        text: 'Cuando Yaguar\u00e1 lleg\u00f3 a los Llanos Orientales, el sol estaba empezando a salir sobre la sabana infinita. Un grupo de llaneros llevaba horas cabalgando entre el ganado. Uno de ellos, don Eustaquio, se puso a cantar un joropo mientras gu\u00edaba a las reses hacia el corral. "Aqu\u00ed solemos levantarnos antes del amanecer", le explic\u00f3 a Yaguar\u00e1. "Hay que arrear el ganado temprano, porque luego el calor se vuelve insoportable." Yaguar\u00e1 acababa de llegar, pero ya sent\u00eda que esa tierra ten\u00eda un ritmo propio, marcado por el trabajo, la m\u00fasica y la inmensidad del horizonte.'
+        instruction: 'Lee c\u00f3mo La Sombra aparece por primera vez.',
+        text: 'Yaguar\u00e1 se acerca a una poza en los Llanos. El agua est\u00e1 quieta, oscura, perfecta como un espejo. Ve su reflejo. Pero algo est\u00e1 mal. El reflejo se mueve diferente \u2014 un segundo tarde, como si dudara. Luego habla. Y lo que dice no tiene sentido gramatical: frases rotas, verbos mal conjugados, palabras en orden equivocado. Yaguar\u00e1 retrocede. El reflejo sonr\u00ede. Y entonces habla claro, con su propia voz pero llena de veneno: \u00abNo vas a poder. Las palabras no son tuyas. Nunca vas a hablar bien. Cada vez que abres la boca, todos notan tus errores. \u00bfPor qu\u00e9 sigues intentando?\u00bb Yaguar\u00e1 siente que el est\u00f3mago se le encoge. Conoce esa voz. No viene de afuera \u2014 viene de adentro. Es La Sombra: su propio miedo a equivocarse.'
     },
-    // === GAME 2: FIB \u2014 Elegir la per\u00edfrasis incoativa correcta ===
+
+    /* ============================================================
+       2. FILL \u2014 Subjunctive with emotion: temo que, dudo que
+    ============================================================ */
     {
         type: 'fib',
         label: 'Completar',
-        instruction: 'Elige la per\u00edfrasis incoativa correcta para cada oraci\u00f3n.',
+        instruction: 'Completa con la forma correcta del subjuntivo de emoci\u00f3n o duda.',
         questions: [
             {
-                sentence: 'Al ver la tormenta, los llaneros ___ recoger el ganado lo m\u00e1s r\u00e1pido posible.',
-                answer: 'se pusieron a',
-                options: ['se pusieron a', 'dejaron de', 'acabaron de', 'sol\u00edan']
+                sentence: 'Temo que Yaguar\u00e1 no ___ superar este miedo. La Sombra es muy fuerte.',
+                answer: 'pueda',
+                options: ['pueda', 'puede', 'podr\u00eda', 'pod\u00eda']
             },
             {
-                sentence: 'Yaguar\u00e1 ___ llorar cuando escuch\u00f3 la historia del viejo llanero.',
-                answer: 'se ech\u00f3 a',
-                options: ['se ech\u00f3 a', 'sigui\u00f3', 'termin\u00f3 de', 'volvi\u00f3 a']
+                sentence: 'Dudo que La Sombra ___ la verdad. Solo repite los miedos m\u00e1s profundos.',
+                answer: 'diga',
+                options: ['diga', 'dice', 'dir\u00eda', 'dec\u00eda']
             },
             {
-                sentence: 'Los vaqueros ___ trabajar apenas sali\u00f3 el primer rayo de sol.',
-                answer: 'empezaron a',
-                options: ['empezaron a', 'dejaron de', 'acabaron de', 'llevaban']
-            },
-            {
-                sentence: 'De repente, el caballo ___ correr sin que nadie lo esperara.',
-                answer: 'se puso a',
-                options: ['se puso a', 'dej\u00f3 de', 'sol\u00eda', 'acab\u00f3 de']
+                sentence: 'Me preocupa que el miedo ___ m\u00e1s fuerte que la voluntad de seguir.',
+                answer: 'sea',
+                options: ['sea', 'es', 'ser\u00eda', 'era']
             }
         ]
     },
-    // === GAME 3: FIB \u2014 Per\u00edfrasis durativas ===
+
+    /* ============================================================
+       3. FILL \u2014 Expressing internal doubt
+    ============================================================ */
     {
         type: 'fib',
         label: 'Completar',
-        instruction: 'Selecciona la per\u00edfrasis durativa que completa correctamente cada oraci\u00f3n.',
+        instruction: 'Completa las expresiones de duda interna de Yaguar\u00e1.',
         questions: [
             {
-                sentence: 'Don Eustaquio ___ tres horas cabalgando bajo el sol cuando por fin encontr\u00f3 la res perdida.',
-                answer: 'llevaba',
-                options: ['llevaba', 'empez\u00f3 a', 'dej\u00f3 de', 'volvi\u00f3 a']
+                sentence: 'No creo que ___ suficiente. He llegado lejos, pero \u00bfes bastante?',
+                answer: 'sea',
+                options: ['sea', 'es', 'ser\u00eda', 'fue']
             },
             {
-                sentence: 'A pesar del cansancio, los llaneros ___ arreando el ganado hasta el atardecer.',
-                answer: 'siguieron',
-                options: ['siguieron', 'dejaron de', 'acabaron de', 'se pusieron a']
+                sentence: 'Temo que no ___ hablar bien nunca. Cada error me pesa.',
+                answer: 'pueda',
+                options: ['pueda', 'puede', 'pod\u00eda', 'pude']
             },
             {
-                sentence: 'Yaguar\u00e1 ___ observando las costumbres llaneras con mucha curiosidad.',
-                answer: 'estaba',
-                options: ['estaba', 'acab\u00f3 de', 'se ech\u00f3 a', 'termin\u00f3 de']
-            },
-            {
-                sentence: 'El perro del hato ___ semanas siguiendo al ganado sin descanso.',
-                answer: 'llevaba',
-                options: ['llevaba', 'empez\u00f3', 'dej\u00f3 de', 'volvi\u00f3 a']
+                sentence: 'No estoy segura de que mis palabras ___ lo que quiero decir.',
+                answer: 'digan',
+                options: ['digan', 'dicen', 'dir\u00edan', 'dec\u00edan']
             }
         ]
     },
-    // === GAME 4: Conjugation \u2014 Per\u00edfrasis obligativas en contexto ===
+
+    /* ============================================================
+       4. FILL \u2014 La Sombra says vs Yaguar\u00e1 believes
+    ============================================================ */
     {
-        type: 'conjugation',
-        label: 'Conjugaci\u00f3n',
-        instruction: 'Completa con la forma correcta de la per\u00edfrasis obligativa indicada.',
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Contrasta lo que dice La Sombra (indicativo) con lo que Yaguar\u00e1 elige creer (subjuntivo).',
         questions: [
             {
-                verb: 'tener que + madrugar',
-                subject: 'los llaneros',
-                answer: 'tienen que madrugar',
-                options: ['tienen que madrugar', 'deben de madrugar', 'suelen madrugar', 'acaban de madrugar']
+                sentence: 'La Sombra dice que nunca voy a poder. Pero yo no creo que eso ___ verdad.',
+                answer: 'sea',
+                options: ['sea', 'es', 'ser\u00eda', 'fue']
             },
             {
-                verb: 'deber + cuidar',
-                subject: 'nosotros',
-                answer: 'debemos cuidar',
-                options: ['debemos cuidar', 'solemos cuidar', 'empezamos a cuidar', 'dejamos de cuidar']
+                sentence: 'La Sombra dice que todos notan mis errores. Dudo que todos ___ atenci\u00f3n a cada palabra.',
+                answer: 'presten',
+                options: ['presten', 'prestan', 'prestar\u00edan', 'prestaron']
             },
             {
-                verb: 'haber de + aprender',
-                subject: 'Yaguar\u00e1',
-                answer: 'ha de aprender',
-                options: ['ha de aprender', 'suele aprender', 'lleva aprendiendo', 'vuelve a aprender']
-            },
-            {
-                verb: 'tener que + reparar',
-                subject: 'el caporal',
-                answer: 'tiene que reparar',
-                options: ['tiene que reparar', 'acaba de reparar', 'sigue reparando', 'deja de reparar']
+                sentence: 'La Sombra dice que las palabras no son m\u00edas. Pero no es cierto que las palabras ___ a nadie. Las palabras son de quien las usa.',
+                answer: 'pertenezcan',
+                options: ['pertenezcan', 'pertenecen', 'pertenecer\u00edan', 'pertenec\u00edan']
             }
         ]
     },
-    // === GAME 5: Pair \u2014 Per\u00edfrasis y su significado ===
+
+    /* ============================================================
+       5. PAIR \u2014 Fear statement \u2194 Counter-statement
+    ============================================================ */
     {
         type: 'pair',
         label: 'Emparejar',
-        instruction: 'Conecta cada per\u00edfrasis verbal con su significado.',
+        instruction: 'Conecta cada miedo de La Sombra con su respuesta verdadera.',
         pairs: [
-            ['ponerse a + infinitivo', 'Comenzar una acci\u00f3n de forma repentina'],
-            ['seguir + gerundio', 'Continuar una acci\u00f3n ya iniciada'],
-            ['dejar de + infinitivo', 'Interrumpir o cesar una acci\u00f3n'],
-            ['volver a + infinitivo', 'Repetir una acci\u00f3n'],
-            ['acabar de + infinitivo', 'Expresar que algo ocurri\u00f3 hace muy poco'],
-            ['soler + infinitivo', 'Expresar una acci\u00f3n habitual']
+            ['No vas a poder.', 'Ya he llegado hasta aqu\u00ed.'],
+            ['Las palabras no son tuyas.', 'Las palabras son de quien las usa con intenci\u00f3n.'],
+            ['Nunca vas a hablar bien.', 'Hablar bien no significa hablar perfecto.'],
+            ['Todos notan tus errores.', 'Los errores son parte del camino, no el final.']
         ]
     },
-    // === GAME 6: Conjugation \u2014 Per\u00edfrasis terminativas ===
-    {
-        type: 'conjugation',
-        label: 'Conjugaci\u00f3n',
-        instruction: 'Elige la per\u00edfrasis terminativa correcta seg\u00fan el contexto.',
-        questions: [
-            {
-                verb: 'dejar de + llover',
-                subject: '(impersonal)',
-                answer: 'dej\u00f3 de llover',
-                options: ['dej\u00f3 de llover', 'sigui\u00f3 lloviendo', 'empez\u00f3 a llover', 'volvi\u00f3 a llover']
-            },
-            {
-                verb: 'acabar de + llegar',
-                subject: 'yo',
-                answer: 'acabo de llegar',
-                options: ['acabo de llegar', 'suelo llegar', 'sigo llegando', 'me pongo a llegar']
-            },
-            {
-                verb: 'terminar de + construir',
-                subject: 'ellos',
-                answer: 'terminaron de construir',
-                options: ['terminaron de construir', 'siguieron construyendo', 'empezaron a construir', 'sol\u00edan construir']
-            },
-            {
-                verb: 'dejar de + trabajar',
-                subject: 'nosotros',
-                answer: 'dejamos de trabajar',
-                options: ['dejamos de trabajar', 'seguimos trabajando', 'volvimos a trabajar', 'ten\u00edamos que trabajar']
-            }
-        ]
-    },
-    // === GAME 7: Narrative \u2014 El trabajo del llano ===
-    {
-        type: 'narrative',
-        label: 'Narraci\u00f3n',
-        instruction: 'Lee sobre la rutina diaria de un hato llanero. Identifica las diferentes per\u00edfrasis verbales.',
-        text: 'En el hato de don Eustaquio, el d\u00eda sol\u00eda empezar a las cuatro de la ma\u00f1ana. Los vaqueros ten\u00edan que orde\u00f1ar las vacas antes de que el sol calentara demasiado. Yaguar\u00e1 llevaba tres d\u00edas observando la rutina y empezaba a entender el ritmo de la sabana. Esa ma\u00f1ana, un becerro se puso a correr hacia el r\u00edo y el caporal tuvo que echarse a galopar tras \u00e9l. Cuando por fin terminaron de reunir todo el ganado, don Eustaquio dej\u00f3 de silbar y dijo: "Aqu\u00ed el que se cansa, vuelve a empezar al d\u00eda siguiente. As\u00ed es la vida del llanero. Uno ha de aceptar lo que la sabana le da".'
-    },
-    // === GAME 8: Listening \u2014 Per\u00edfrasis en contexto llanero ===
-    {
-        type: 'listening',
-        label: 'Escuchar',
-        instruction: 'Escucha la narraci\u00f3n sobre la vida en el llano y responde la pregunta.',
-        audio: 'Don Eustaquio llevaba m\u00e1s de cuarenta a\u00f1os trabajando en la sabana. Sol\u00eda decir que el llano no era un lugar para los que se cansaban f\u00e1cil. Cuando empezaba a llover, los vaqueros ten\u00edan que seguir cabalgando, porque el ganado no dejaba de moverse. Acababan de terminar la faena cuando ya deb\u00edan ponerse a preparar la cena.',
-        question: '\u00bfQu\u00e9 hac\u00edan los vaqueros cuando empezaba a llover?',
-        answer: 'Ten\u00edan que seguir cabalgando porque el ganado no dejaba de moverse',
-        options: ['Ten\u00edan que seguir cabalgando porque el ganado no dejaba de moverse', 'Dejaban de trabajar y descansaban', 'Se pon\u00edan a cantar joropo', 'Volvían al hato inmediatamente']
-    },
-    // === GAME 9: FIB \u2014 Per\u00edfrasis repetitivas y resultativas ===
-    {
-        type: 'fib',
-        label: 'Completar',
-        instruction: 'Elige la per\u00edfrasis correcta: repetitiva o resultativa.',
-        questions: [
-            {
-                sentence: 'Despu\u00e9s de muchos intentos, el joven vaquero ___ dominar la t\u00e9cnica del lazo.',
-                answer: 'lleg\u00f3 a',
-                options: ['lleg\u00f3 a', 'dej\u00f3 de', 'se puso a', 'llevaba']
-            },
-            {
-                sentence: 'El r\u00edo creci\u00f3 tanto que los llaneros ___ cruzarlo por el puente viejo.',
-                answer: 'volvieron a',
-                options: ['volvieron a', 'dejaron de', 'acabaron de', 'ten\u00edan que']
-            },
-            {
-                sentence: 'Con los a\u00f1os, don Eustaquio ___ convertirse en el mejor caporal de la regi\u00f3n.',
-                answer: 'lleg\u00f3 a',
-                options: ['lleg\u00f3 a', 'se puso a', 'sigui\u00f3', 'empez\u00f3 a']
-            },
-            {
-                sentence: 'Yaguar\u00e1 ___ preguntarle sobre la vida en la sabana, porque la primera respuesta no le qued\u00f3 clara.',
-                answer: 'volvi\u00f3 a',
-                options: ['volvi\u00f3 a', 'dej\u00f3 de', 'acab\u00f3 de', 'sigui\u00f3']
-            }
-        ]
-    },
-    // === GAME 10: Sorting \u2014 Clasificar por tipo de per\u00edfrasis ===
-    {
-        type: 'sorting',
-        label: 'Clasificar',
-        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan el tipo de per\u00edfrasis verbal que contiene.',
-        categories: ['Incoativa', 'Durativa', 'Terminativa'],
-        items: [
-            { text: 'Los vaqueros se pusieron a cantar alrededor de la fogata.', category: 'Incoativa' },
-            { text: 'Yaguar\u00e1 empez\u00f3 a comprender la cultura llanera.', category: 'Incoativa' },
-            { text: 'Don Eustaquio segu\u00eda cabalgando a pesar de la lluvia.', category: 'Durativa' },
-            { text: 'Llevaban horas arreando el ganado por la sabana.', category: 'Durativa' },
-            { text: 'La tormenta dej\u00f3 de azotar el llano al amanecer.', category: 'Terminativa' },
-            { text: 'Acababan de cruzar el ca\u00f1o cuando apareci\u00f3 un chig\u00fciro.', category: 'Terminativa' },
-            { text: 'El becerro se ech\u00f3 a correr por la sabana abierta.', category: 'Incoativa' },
-            { text: 'Los peones terminaron de reparar la cerca al mediod\u00eda.', category: 'Terminativa' }
-        ]
-    },
-    // === GAME 11: Pair \u2014 Oraci\u00f3n y tipo de per\u00edfrasis ===
-    {
-        type: 'pair',
-        label: 'Emparejar',
-        instruction: 'Conecta cada oraci\u00f3n con el tipo de per\u00edfrasis verbal que utiliza.',
-        pairs: [
-            ['Los llaneros suelen madrugar todos los d\u00edas.', 'Per\u00edfrasis habitual'],
-            ['Tenemos que cruzar el r\u00edo antes del anochecer.', 'Per\u00edfrasis obligativa'],
-            ['El caporal volvi\u00f3 a revisar la cerca.', 'Per\u00edfrasis repetitiva'],
-            ['Yaguar\u00e1 estaba aprendiendo a montar a caballo.', 'Per\u00edfrasis durativa'],
-            ['De repente, se puso a llover con fuerza.', 'Per\u00edfrasis incoativa'],
-            ['El viejo llanero lleg\u00f3 a ser leyenda en toda la regi\u00f3n.', 'Per\u00edfrasis resultativa']
-        ]
-    },
-    // === GAME 12: Conjugation \u2014 Per\u00edfrasis en diferentes tiempos ===
-    {
-        type: 'conjugation',
-        label: 'Conjugaci\u00f3n',
-        instruction: 'Selecciona la forma correcta de la per\u00edfrasis en el tiempo verbal indicado.',
-        questions: [
-            {
-                verb: 'empezar a + cantar (pret\u00e9rito)',
-                subject: 'los llaneros',
-                answer: 'empezaron a cantar',
-                options: ['empezaron a cantar', 'empiezan a cantar', 'empezaban a cantar', 'empezar\u00edan a cantar']
-            },
-            {
-                verb: 'seguir + trabajar (imperfecto)',
-                subject: 'el caporal',
-                answer: 'segu\u00eda trabajando',
-                options: ['segu\u00eda trabajando', 'sigui\u00f3 trabajando', 'sigue trabajando', 'seguir\u00eda trabajando']
-            },
-            {
-                verb: 'tener que + salir (condicional)',
-                subject: 'nosotros',
-                answer: 'tendr\u00edamos que salir',
-                options: ['tendr\u00edamos que salir', 'tenemos que salir', 'ten\u00edamos que salir', 'tuvimos que salir']
-            },
-            {
-                verb: 'volver a + intentar (presente)',
-                subject: 'yo',
-                answer: 'vuelvo a intentar',
-                options: ['vuelvo a intentar', 'volv\u00ed a intentar', 'volv\u00eda a intentar', 'volver\u00eda a intentar']
-            }
-        ]
-    },
-    // === GAME 13: Builder \u2014 Per\u00edfrasis incoativa ===
-    {
-        type: 'builder',
-        label: 'Construir',
-        instruction: 'Ordena las palabras para formar una oraci\u00f3n con per\u00edfrasis verbal.',
-        words: ['Cuando', 'lleg\u00f3', 'la', 'tormenta,', 'los', 'vaqueros', 'se', 'pusieron', 'a', 'buscar', 'refugio', 'para', 'el', 'ganado', 'cerca', 'del', 'r\u00edo.'],
-        answer: 'Cuando lleg\u00f3 la tormenta, los vaqueros se pusieron a buscar refugio para el ganado cerca del r\u00edo.'
-    },
-    // === GAME 14: Listening \u2014 Rutina con per\u00edfrasis ===
-    {
-        type: 'listening',
-        label: 'Escuchar',
-        instruction: 'Escucha la descripci\u00f3n de una jornada en el hato y responde la pregunta.',
-        audio: 'El d\u00eda empez\u00f3 a las cuatro de la ma\u00f1ana. Los vaqueros ten\u00edan que orde\u00f1ar antes del amanecer. Yaguar\u00e1 acababa de despertarse cuando oy\u00f3 que don Eustaquio se puso a silbar un joropo. Llevaban una hora trabajando cuando el sol empez\u00f3 a calentar. A pesar del calor, siguieron arreando el ganado hasta que dejaron de escuchar los mugidos al otro lado del ca\u00f1o.',
-        question: '\u00bfQu\u00e9 pas\u00f3 cuando Yaguar\u00e1 acababa de despertarse?',
-        answer: 'Oy\u00f3 que don Eustaquio se puso a silbar un joropo',
-        options: ['Oy\u00f3 que don Eustaquio se puso a silbar un joropo', 'Los vaqueros dejaron de trabajar', 'Empez\u00f3 a llover sobre la sabana', 'El ganado volvi\u00f3 al corral']
-    },
-    // === GAME 15: Sorting \u2014 Obligativas, habituales y repetitivas ===
-    {
-        type: 'sorting',
-        label: 'Clasificar',
-        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan el tipo de per\u00edfrasis que contiene.',
-        categories: ['Obligativa', 'Habitual', 'Repetitiva'],
-        items: [
-            { text: 'Los vaqueros tienen que madrugar cada d\u00eda.', category: 'Obligativa' },
-            { text: 'Deben proteger al ganado de los depredadores.', category: 'Obligativa' },
-            { text: 'Don Eustaquio suele cantar mientras cabalga.', category: 'Habitual' },
-            { text: 'En los Llanos suelen celebrar fiestas con joropo.', category: 'Habitual' },
-            { text: 'El becerro volvi\u00f3 a escaparse del corral.', category: 'Repetitiva' },
-            { text: 'Yaguar\u00e1 volvi\u00f3 a preguntar por la historia del hato.', category: 'Repetitiva' }
-        ]
-    },
-    // === GAME 16: Narrative \u2014 La noche del joropo ===
-    {
-        type: 'narrative',
-        label: 'Narraci\u00f3n',
-        instruction: 'Lee sobre la noche de fiesta en el hato. Identifica todas las per\u00edfrasis verbales en el texto.',
-        text: 'Esa noche, los llaneros se pusieron a preparar una fiesta. Llevaban semanas planeando el baile y por fin hab\u00eda llegado el momento. Don Eustaquio empez\u00f3 a afinar su arpa mientras los j\u00f3venes terminaban de adornar el patio con faroles. Yaguar\u00e1 sol\u00eda pensar que la m\u00fasica era solo entretenimiento, pero en los Llanos lleg\u00f3 a entender que el joropo era una forma de contar la vida. "Aqu\u00ed la m\u00fasica no deja de sonar hasta que el \u00faltimo bailador se rinde", dijo una mujer mientras segu\u00eda moviendo los pies al comp\u00e1s. Yaguar\u00e1 no pudo resistirse y se ech\u00f3 a bailar. Cuando la fiesta termin\u00f3, los gallos estaban a punto de cantar. Ella acababa de vivir una de las noches m\u00e1s memorables de todo su viaje.'
-    },
-    // === GAME 17: FIB \u2014 Per\u00edfrasis mixtas en contexto ===
-    {
-        type: 'fib',
-        label: 'Completar',
-        instruction: 'Elige la per\u00edfrasis verbal correcta para cada contexto.',
-        questions: [
-            {
-                sentence: 'Yaguar\u00e1 ___ a montar a caballo despu\u00e9s de muchos d\u00edas de pr\u00e1ctica.',
-                answer: 'lleg\u00f3 a aprender',
-                options: ['lleg\u00f3 a aprender', 'dej\u00f3 de aprender', 'se ech\u00f3 a aprender', 'llevaba aprendiendo']
-            },
-            {
-                sentence: 'Los ni\u00f1os del pueblo ___ haciendo preguntas a Yaguar\u00e1 sobre su viaje.',
-                answer: 'siguieron',
-                options: ['siguieron', 'dejaron de', 'acabaron de', 'se pusieron a']
-            },
-            {
-                sentence: 'Ya ___ anochecer y los vaqueros todav\u00eda no hab\u00edan cenado.',
-                answer: 'estaba a punto de',
-                options: ['estaba a punto de', 'acababa de', 'sol\u00eda', 'dejaba de']
-            },
-            {
-                sentence: 'Don Eustaquio ___ explicarle a Yaguar\u00e1 c\u00f3mo naci\u00f3 el joropo.',
-                answer: 'se puso a',
-                options: ['se puso a', 'dej\u00f3 de', 'termin\u00f3 de', 'volvi\u00f3 a']
-            }
-        ]
-    },
-    // === GAME 18: Conjugation \u2014 Per\u00edfrasis en subjuntivo y condicional ===
-    {
-        type: 'conjugation',
-        label: 'Conjugaci\u00f3n',
-        instruction: 'Elige la forma correcta de la per\u00edfrasis verbal en el modo indicado.',
-        questions: [
-            {
-                verb: 'dejar de + contaminar (subjuntivo)',
-                subject: 'las empresas',
-                answer: 'dejen de contaminar',
-                options: ['dejen de contaminar', 'dejan de contaminar', 'dejaron de contaminar', 'dejar\u00edan de contaminar']
-            },
-            {
-                verb: 'tener que + irse (condicional)',
-                subject: 'nosotros',
-                answer: 'tendr\u00edamos que irnos',
-                options: ['tendr\u00edamos que irnos', 'tenemos que irnos', 'ten\u00edamos que irnos', 'tengamos que irnos']
-            },
-            {
-                verb: 'seguir + luchar (subjuntivo)',
-                subject: 'los llaneros',
-                answer: 'sigan luchando',
-                options: ['sigan luchando', 'siguen luchando', 'segu\u00edan luchando', 'seguir\u00edan luchando']
-            },
-            {
-                verb: 'volver a + intentar (condicional)',
-                subject: 'yo',
-                answer: 'volver\u00eda a intentar',
-                options: ['volver\u00eda a intentar', 'vuelvo a intentar', 'volv\u00ed a intentar', 'vuelva a intentar']
-            }
-        ]
-    },
-    // === GAME 19: Translation \u2014 Per\u00edfrasis verbales ===
-    {
-        type: 'translation',
-        label: 'Traducir',
-        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Usa per\u00edfrasis verbales.',
-        source: 'The cowboys started to sing when it stopped raining. They had been riding for hours and they used to rest only at night.',
-        words: ['Los', 'vaqueros', 'se', 'pusieron', 'a', 'cantar', 'cuando', 'dej\u00f3', 'de', 'llover', 'Llevaban', 'horas', 'cabalgando', 'y', 'sol\u00edan', 'descansar', 'solo', 'por', 'la', 'noche'],
-        answer: 'Los vaqueros se pusieron a cantar cuando dej\u00f3 de llover Llevaban horas cabalgando y sol\u00edan descansar solo por la noche'
-    },
-    // === GAME 20: Conversation \u2014 Vida en el llano ===
+
+    /* ============================================================
+       6. CONVERSATION \u2014 Yaguar\u00e1 confronts La Sombra (3 turns)
+    ============================================================ */
     {
         type: 'conversation',
         label: 'Conversaci\u00f3n',
-        instruction: 'Conversa con don Eustaquio sobre la vida en los Llanos usando per\u00edfrasis verbales.',
+        instruction: 'Yaguar\u00e1 enfrenta a La Sombra. Elige las respuestas que contradicen el miedo.',
         turns: [
             {
                 dialogue: [
-                    { speaker: 'A', name: 'Don Eustaquio', text: 'Llevo m\u00e1s de cuarenta a\u00f1os viviendo en la sabana. \u00bfAlguna vez has tenido que adaptarte a un lugar completamente nuevo?' },
-                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    { speaker: 'A', name: 'La Sombra', text: 'M\u00edrate. Llevas meses viajando y todav\u00eda cometes errores b\u00e1sicos. \u00bfDe verdad crees que puedes enfrentar al Silencio Gris si ni siquiera puedes hablar sin tropezar?' },
+                    { speaker: 'B', name: 'Yaguar\u00e1', text: '???' }
                 ],
                 options: [
-                    'S\u00ed, cuando me mud\u00e9 a otra ciudad, tuve que empezar a acostumbrarme a nuevas costumbres. Al principio sol\u00eda extra\u00f1ar mi hogar, pero poco a poco llegu\u00e9 a sentirme parte de la comunidad.',
-                    'No, nunca he viajado.',
-                    'S\u00ed, me gustan los caballos.'
+                    'Los errores no me definen. Cada tropiezo me ha ense\u00f1ado algo. No necesito ser perfecta para ser fuerte.',
+                    'Tienes raz\u00f3n, soy un desastre.',
+                    'No quiero hablar contigo.'
                 ],
-                answer: 'S\u00ed, cuando me mud\u00e9 a otra ciudad, tuve que empezar a acostumbrarme a nuevas costumbres. Al principio sol\u00eda extra\u00f1ar mi hogar, pero poco a poco llegu\u00e9 a sentirme parte de la comunidad.'
+                answer: 'Los errores no me definen. Cada tropiezo me ha ense\u00f1ado algo. No necesito ser perfecta para ser fuerte.'
             },
             {
                 dialogue: [
-                    { speaker: 'A', name: 'Don Eustaquio', text: 'Aqu\u00ed nunca dejamos de trabajar. El ganado no espera. \u00bfQu\u00e9 opinas de ese estilo de vida?' },
-                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    { speaker: 'A', name: 'La Sombra', text: 'Pero dudo que alguien te tome en serio. Cuando hablas, la gente sonr\u00ede por educaci\u00f3n, no porque te entienda. Temo que nunca seas parte de este mundo.' },
+                    { speaker: 'B', name: 'Yaguar\u00e1', text: '???' }
                 ],
                 options: [
-                    'Me parece admirable. Ustedes siguen manteniendo tradiciones que muchos han dejado de valorar. Creo que debemos volver a conectarnos con la naturaleza y el trabajo f\u00edsico.',
-                    'Es demasiado trabajo para m\u00ed.',
-                    'Prefiero la ciudad.'
+                    'No creo que eso sea cierto. Colibr\u00ed me entiende. Tortuga me escucha. Candelaria me habla como a una amiga. No necesito que todo el mundo me entienda \u2014 necesito que las personas que importan me escuchen.',
+                    'Quiz\u00e1s tienes raz\u00f3n.',
+                    'Calla.'
                 ],
-                answer: 'Me parece admirable. Ustedes siguen manteniendo tradiciones que muchos han dejado de valorar. Creo que debemos volver a conectarnos con la naturaleza y el trabajo f\u00edsico.'
+                answer: 'No creo que eso sea cierto. Colibr\u00ed me entiende. Tortuga me escucha. Candelaria me habla como a una amiga. No necesito que todo el mundo me entienda \u2014 necesito que las personas que importan me escuchen.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'La Sombra', text: 'Entonces, \u00bfpor qu\u00e9 tiemblas cuando me oyes? Si fueras tan fuerte, mi voz no te afectar\u00eda.' },
+                    { speaker: 'B', name: 'Yaguar\u00e1', text: '???' }
+                ],
+                options: [
+                    'Tiemblo porque eres parte de m\u00ed. Pero que tiemble no significa que me detenga. El coraje no es la ausencia del miedo \u2014 es caminar a pesar de \u00e9l.',
+                    'Es verdad, me das miedo.',
+                    'Vete.'
+                ],
+                answer: 'Tiemblo porque eres parte de m\u00ed. Pero que tiemble no significa que me detenga. El coraje no es la ausencia del miedo \u2014 es caminar a pesar de \u00e9l.'
             }
         ]
     },
-    // === GAME 21: Builder \u2014 Per\u00edfrasis durativa y terminativa ===
-    {
-        type: 'builder',
-        label: 'Construir',
-        instruction: 'Ordena las palabras para formar una oraci\u00f3n con per\u00edfrasis durativa y terminativa.',
-        words: ['Yaguar\u00e1', 'llevaba', 'd\u00edas', 'aprendiendo', 'a', 'montar', 'cuando', 'por', 'fin', 'termin\u00f3', 'de', 'dominar', 'la', 't\u00e9cnica', 'del', 'galope.'],
-        answer: 'Yaguar\u00e1 llevaba d\u00edas aprendiendo a montar cuando por fin termin\u00f3 de dominar la t\u00e9cnica del galope.'
-    },
-    // === GAME 22: Translation \u2014 Per\u00edfrasis complejas ===
-    {
-        type: 'translation',
-        label: 'Traducir',
-        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Presta atenci\u00f3n a las per\u00edfrasis verbales.',
-        source: 'Don Eustaquio had just finished repairing the fence when the calf ran away again. He had to go back to looking for it across the savanna.',
-        words: ['Don', 'Eustaquio', 'acababa', 'de', 'terminar', 'reparar', 'la', 'cerca', 'cuando', 'el', 'becerro', 'volvi\u00f3', 'a', 'escaparse', 'Tuvo', 'que', 'ponerse', 'buscarlo', 'por', 'toda', 'sabana'],
-        answer: 'Don Eustaquio acababa de terminar de reparar la cerca cuando el becerro volvi\u00f3 a escaparse Tuvo que ponerse a buscarlo por toda la sabana'
-    },
-    // === GAME 23: Conversation \u2014 Reflexi\u00f3n sobre tradiciones ===
+
+    /* ============================================================
+       7. CONVERSATION \u2014 Candelaria encourages Yaguar\u00e1 (2 turns)
+    ============================================================ */
     {
         type: 'conversation',
         label: 'Conversaci\u00f3n',
-        instruction: 'Habla con Yaguar\u00e1 sobre su experiencia en los Llanos usando per\u00edfrasis verbales variadas.',
+        instruction: 'Candelaria anima a Yaguar\u00e1 despu\u00e9s del encuentro con La Sombra.',
         turns: [
             {
                 dialogue: [
-                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'Acabo de pasar una semana incre\u00edble en los Llanos. Los llaneros siguen viviendo como lo hac\u00edan sus abuelos. \u00bfCrees que esas tradiciones pueden llegar a desaparecer?' },
-                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    { speaker: 'A', name: 'Candelaria', text: 'Yaguar\u00e1, todos tenemos una sombra. La m\u00eda me dice que soy demasiado joven para que alguien me escuche. \u00bfSabes qu\u00e9 hago? Le digo: dudo que tengas raz\u00f3n, porque ya he hablado y alguien escuch\u00f3.' },
+                    { speaker: 'B', name: 'Yaguar\u00e1', text: '???' }
                 ],
                 options: [
-                    'Es posible, pero no tiene que ser as\u00ed. Si las nuevas generaciones empiezan a valorar su herencia, pueden seguir manteniendo esas costumbres. No debemos dejar de recordar de d\u00f3nde venimos.',
-                    'S\u00ed, todo desaparece con el tiempo.',
-                    'No s\u00e9, no conozco los Llanos.'
+                    'Gracias, Candelaria. Me alegra que est\u00e9s aqu\u00ed. A veces necesito que alguien me recuerde que la sombra miente.',
+                    'No me importa.',
+                    'Tu sombra es m\u00e1s f\u00e1cil que la m\u00eda.'
                 ],
-                answer: 'Es posible, pero no tiene que ser as\u00ed. Si las nuevas generaciones empiezan a valorar su herencia, pueden seguir manteniendo esas costumbres. No debemos dejar de recordar de d\u00f3nde venimos.'
+                answer: 'Gracias, Candelaria. Me alegra que est\u00e9s aqu\u00ed. A veces necesito que alguien me recuerde que la sombra miente.'
             },
             {
                 dialogue: [
-                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'Lo que m\u00e1s me impresion\u00f3 fue que nunca dejan de trabajar, pero siempre encuentran tiempo para la m\u00fasica. \u00bfQu\u00e9 se puede aprender de eso?' },
-                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    { speaker: 'A', name: 'Candelaria', text: 'No creo que la sombra mienta del todo. Dice verdades a medias. El truco es no dejar que una verdad a medias se convierta en toda tu historia. \u00bfMe entiendes?' },
+                    { speaker: 'B', name: 'Yaguar\u00e1', text: '???' }
                 ],
                 options: [
-                    'Creo que debemos volver a equilibrar el trabajo y la alegr\u00eda. Ellos han llegado a comprender que la vida no puede ser solo obligaciones. Tenemos que empezar a disfrutar de lo que hacemos.',
-                    'No s\u00e9, a m\u00ed no me gusta la m\u00fasica.',
-                    'Es que ellos no tienen televisi\u00f3n.'
+                    'S\u00ed. La Sombra dice que cometo errores, y es verdad. Pero no es verdad que los errores signifiquen fracaso. Es importante que recuerde la diferencia.',
+                    'No entiendo.',
+                    'Me da igual.'
                 ],
-                answer: 'Creo que debemos volver a equilibrar el trabajo y la alegr\u00eda. Ellos han llegado a comprender que la vida no puede ser solo obligaciones. Tenemos que empezar a disfrutar de lo que hacemos.'
+                answer: 'S\u00ed. La Sombra dice que cometo errores, y es verdad. Pero no es verdad que los errores signifiquen fracaso. Es importante que recuerde la diferencia.'
             }
         ]
     },
-    // === GAME 24: Dictation \u2014 Per\u00edfrasis verbales encadenadas ===
+
+    /* ============================================================
+       8. CONVERSATION \u2014 Inner dialogue: fear vs truth (3 turns)
+    ============================================================ */
     {
-        type: 'dictation',
-        label: 'Dictado',
-        instruction: 'Escucha y escribe la oraci\u00f3n exacta. Presta atenci\u00f3n a las per\u00edfrasis verbales.',
-        audio: 'Los llaneros llevaban horas cabalgando y empezaban a sentir el cansancio, pero no dejaban de arrear el ganado porque ten\u00edan que llegar al corral antes del anochecer.',
-        answer: 'Los llaneros llevaban horas cabalgando y empezaban a sentir el cansancio, pero no dejaban de arrear el ganado porque ten\u00edan que llegar al corral antes del anochecer.'
-    },
-    // === GAME 25: Story \u2014 Huellas en la sabana ===
-    {
-        type: 'story',
-        label: 'Lectura',
-        instruction: 'Lee el texto final del viaje de Yaguar\u00e1 por los Llanos y responde las preguntas.',
-        title: 'Huellas en la sabana',
-        text: 'Yaguar\u00e1 acababa de despedirse de don Eustaquio cuando se puso a caminar por la sabana una \u00faltima vez. Llevaba una semana conviviendo con los llaneros y hab\u00eda llegado a entender algo fundamental: la vida en el llano no dejaba de exigir esfuerzo, pero a cambio ofrec\u00eda una libertad que no se encontraba en ning\u00fan otro lugar. Los vaqueros sol\u00edan decir que la sabana era como un libro abierto: hab\u00eda que empezar a leerlo con paciencia para llegar a comprender sus secretos. Don Eustaquio le hab\u00eda dicho que \u00e9l volv\u00eda a enamorarse del llano cada amanecer. Yaguar\u00e1 segu\u00eda pensando en esas palabras mientras el viento le acariciaba el rostro. Ten\u00eda que seguir su camino, pero sab\u00eda que nunca dejar\u00eda de sentir la llamada de aquella tierra inmensa. Antes de irse, se ech\u00f3 a re\u00edr porque un chig\u00fciro acababa de cruzar el sendero con total tranquilidad, como si el mundo entero le perteneciera. Entonces pens\u00f3: "He de volver aqu\u00ed alg\u00fan d\u00eda. Esta sabana ha terminado de ense\u00f1arme que la verdadera fuerza est\u00e1 en la constancia".',
-        questions: [
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Di\u00e1logo interno: lo que dice el miedo frente a lo que es verdad.',
+        turns: [
             {
-                q: '\u00bfQu\u00e9 per\u00edfrasis aparece en "llevaba una semana conviviendo"?',
-                options: ['Per\u00edfrasis durativa (llevar + gerundio)', 'Per\u00edfrasis incoativa (ponerse a + infinitivo)', 'Per\u00edfrasis obligativa (tener que + infinitivo)', 'Per\u00edfrasis terminativa (acabar de + infinitivo)'],
-                answer: 'Per\u00edfrasis durativa (llevar + gerundio)'
+                dialogue: [
+                    { speaker: 'A', name: 'El Miedo', text: 'Nunca vas a ser suficiente. Siempre habr\u00e1 alguien que hable mejor, que sepa m\u00e1s, que no cometa los errores que t\u00fa cometes.' },
+                    { speaker: 'B', name: 'La Verdad', text: '???' }
+                ],
+                options: [
+                    'No necesito ser la mejor. Necesito ser yo misma. Cada palabra que digo es un paso, no una competencia.',
+                    'Es verdad, nunca ser\u00e9 suficiente.',
+                    'No quiero pensar en esto.'
+                ],
+                answer: 'No necesito ser la mejor. Necesito ser yo misma. Cada palabra que digo es un paso, no una competencia.'
             },
             {
-                q: '\u00bfQu\u00e9 significa "volv\u00eda a enamorarse del llano cada amanecer"?',
-                options: ['Que se enamoraba repetidamente, cada d\u00eda', 'Que hab\u00eda dejado de querer el llano', 'Que acababa de llegar al llano', 'Que ten\u00eda la obligaci\u00f3n de quedarse'],
-                answer: 'Que se enamoraba repetidamente, cada d\u00eda'
+                dialogue: [
+                    { speaker: 'A', name: 'El Miedo', text: 'Cuando te equivocas, todos se dan cuenta. El silencio despu\u00e9s de tu error es la prueba de que no perteneces aqu\u00ed.' },
+                    { speaker: 'B', name: 'La Verdad', text: '???' }
+                ],
+                options: [
+                    'El silencio despu\u00e9s de un error no es juicio. A veces es paciencia. A veces es respeto. El miedo convierte el silencio en acusaci\u00f3n, pero eso no es real.',
+                    'S\u00ed, todos me juzgan.',
+                    'Mejor no hablo m\u00e1s.'
+                ],
+                answer: 'El silencio despu\u00e9s de un error no es juicio. A veces es paciencia. A veces es respeto. El miedo convierte el silencio en acusaci\u00f3n, pero eso no es real.'
             },
             {
-                q: '\u00bfQu\u00e9 tipo de per\u00edfrasis es "he de volver"?',
-                options: ['Obligativa (haber de + infinitivo)', 'Durativa (estar + gerundio)', 'Incoativa (empezar a + infinitivo)', 'Resultativa (llegar a + infinitivo)'],
-                answer: 'Obligativa (haber de + infinitivo)'
+                dialogue: [
+                    { speaker: 'A', name: 'El Miedo', text: '\u00bfY si despu\u00e9s de todo este viaje sigues sin hablar perfectamente? \u00bfHabr\u00e1 valido la pena?' },
+                    { speaker: 'B', name: 'La Verdad', text: '???' }
+                ],
+                options: [
+                    'La perfecci\u00f3n no es el objetivo. La conexi\u00f3n s\u00ed. Si al final de este viaje puedo decir lo que siento y alguien me entiende, habr\u00e1 valido cada paso.',
+                    'No, no habr\u00e1 valido la pena.',
+                    'No quiero pensar en el futuro.'
+                ],
+                answer: 'La perfecci\u00f3n no es el objetivo. La conexi\u00f3n s\u00ed. Si al final de este viaje puedo decir lo que siento y alguien me entiende, habr\u00e1 valido cada paso.'
             }
         ]
     },
-    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+
+    /* ============================================================
+       9. CROSSWORD \u2014 Emotion vocabulary
+    ============================================================ */
+    {
+        type: 'crossword',
+        label: 'Crucigrama',
+        instruction: 'Lee las definiciones. Escribe la palabra correcta.',
+        clues: [
+            { direction: 'across', number: 1, clue: 'Sentimiento que aparece ante el peligro o lo desconocido', answer: 'miedo' },
+            { direction: 'across', number: 3, clue: 'Falta de certeza; lo contrario de estar seguro', answer: 'duda' },
+            { direction: 'across', number: 5, clue: 'Sentimiento de que algo bueno puede pasar en el futuro', answer: 'esperanza' },
+            { direction: 'down', number: 1, clue: 'Imagen oscura que proyecta un cuerpo cuando bloquea la luz', answer: 'sombra' },
+            { direction: 'down', number: 2, clue: 'Valor para enfrentar algo dif\u00edcil a pesar del miedo', answer: 'coraje' },
+            { direction: 'down', number: 4, clue: 'Lo que define qui\u00e9n eres; tu esencia', answer: 'identidad' },
+            { direction: 'across', number: 7, clue: 'Lo que no es mentira; lo opuesto de la falsedad', answer: 'verdad' }
+        ]
+    },
+
+    /* ============================================================
+       10. CONJURO \u2014 Produce anti-fear statements
+    ============================================================ */
+    {
+        type: 'conjuro',
+        label: 'Conjuro',
+        instruction: 'La Sombra habla. T\u00fa produces la verdad que la contrarresta.',
+        challenge: 'Di la verdad que contrarresta el miedo de La Sombra. Usa expresiones de emoci\u00f3n con subjuntivo.',
+        starters: ['No creo que...', 'Dudo que...', 'Es importante que...', 'Me alegra que...'],
+        evaluation: {
+            required: ['creo', 'dudo', 'importante', 'alegra'],
+            bonus: ['subjuntivo', 'coraje', 'verdad', 'pueda']
+        }
+    },
+
+    /* ============================================================
+       11. CULTURA \u2014 Every language learner meets their shadow
+    ============================================================ */
+    {
+        type: 'cultura',
+        label: 'Cultura',
+        instruction: 'Escucha y aprende.',
+        text: 'Cada persona que aprende un idioma se enfrenta a su sombra. Los investigadores lo llaman \u00abs\u00edndrome del impostor ling\u00fc\u00edstico\u00bb: la sensaci\u00f3n de que nunca vas a hablar suficientemente bien, de que tus errores te definen, de que los dem\u00e1s te juzgan. Es universal. Aparece en todas las lenguas y en todos los niveles. Incluso hablantes avanzados la sienten. La sombra no desaparece \u2014 pero se puede aprender a caminar con ella. El primer paso es reconocerla: no es la verdad. Es el miedo disfrazado de verdad.',
+        question: '\u00bfQu\u00e9 es el s\u00edndrome del impostor ling\u00fc\u00edstico?',
+        answer: 'La sensaci\u00f3n de que nunca vas a hablar suficientemente bien, com\u00fan en todos los niveles',
+        options: ['La sensaci\u00f3n de que nunca vas a hablar suficientemente bien, com\u00fan en todos los niveles', 'Una enfermedad que afecta a los biling\u00fces', 'Un problema que solo tienen los principiantes', 'La incapacidad de aprender gram\u00e1tica']
+    },
+
+    /* ============================================================
+       12. ESCAPEROOM \u2014 La sala del espejo
+    ============================================================ */
     {
         type: 'escaperoom',
         label: 'Sala de enigmas',
         instruction: 'Resuelve los enigmas para abrir la puerta.',
         room: {
-            name: 'El cruce de caminos',
-            description: 'Un cruce donde cuatro caminos se encuentran en el bosque. Cada camino tiene una inscripción que empieza con "Si...".',
-            ambience: 'forest-path'
+            name: 'La sala del espejo',
+            description: 'Una sala llena de espejos. Cada espejo muestra un reflejo diferente de Yaguar\u00e1: uno que habla perfecto pero no siente nada, uno que siente todo pero no puede hablar, uno que comete errores y sonr\u00ede. Solo un reflejo es el verdadero.',
+            ambience: 'mirrors-whisper'
         },
         puzzles: [
             {
-                puzzleType: 'wordlock',
-                prompt: 'En la piedra del cruce hay una cerradura.',
-                clue: 'Es la estructura gramatical que expresa una condición y su resultado. Empieza con "si" en español.',
-                answer: 'condicional',
-                hint: '_ _ _ _ _ _ _ _ _ _ _',
-                onSolve: 'La piedra se mueve.'
+                puzzleType: 'riddle',
+                prompt: 'Los tres espejos preguntan:',
+                riddle: '\u00abUn reflejo habla sin errores pero tiene los ojos vac\u00edos. Otro reflejo siente pero no puede decir una palabra. El tercero comete errores, pero sus ojos brillan y sigue hablando. \u00bfCu\u00e1l es el reflejo verdadero?\u00bb',
+                clue: 'La perfecci\u00f3n sin alma no es real. El silencio sin voz no es vida.',
+                answer: 'El que comete errores pero sigue hablando con los ojos brillantes',
+                options: [
+                    'El que comete errores pero sigue hablando con los ojos brillantes',
+                    'El que habla perfecto',
+                    'El que siente pero no habla',
+                    'Ninguno es verdadero'
+                ],
+                onSolve: 'Dos espejos se quiebran. Solo queda el reflejo verdadero.'
             },
             {
                 puzzleType: 'sequence',
-                prompt: 'Tres tipos de condicionales están desordenados.',
-                clue: 'Ordénalos del más probable al más imposible.',
+                prompt: 'El reflejo verdadero muestra tres momentos del viaje de Yaguar\u00e1. Ord\u00e9nalos.',
+                clue: 'Ordena del primer paso al \u00faltimo.',
                 items: [
-                    'Si estudias, aprobarás. (real)',
-                    'Si estudiaras más, aprobarías. (hipotético)',
-                    'Si hubieras estudiado, habrías aprobado. (irreal pasado)'
+                    'Yaguar\u00e1 tiene miedo de hablar.',
+                    'Yaguar\u00e1 habla y comete errores.',
+                    'Yaguar\u00e1 acepta los errores y sigue caminando.'
                 ],
-                onSolve: 'Los tres caminos se iluminan en orden.'
+                onSolve: 'El reflejo verdadero sonr\u00ede.'
             },
             {
-                puzzleType: 'logic',
-                prompt: 'Don Próspero dice en la encrucijada:',
-                premises: [
-                    '«Si construimos la carretera, habrá progreso.»',
-                    '«Si no la construimos, la pobreza continuará.»',
-                    'Pero Doña Asunción preguntó: «¿Y si el progreso no necesita una carretera?»'
-                ],
-                clue: '¿Por qué la pregunta de Doña Asunción rompe la lógica de Don Próspero?',
-                answer: 'Porque cuestiona la premisa oculta: que la carretera es la única vía al progreso',
-                options: [
-                    'Porque cuestiona la premisa oculta: que la carretera es la única vía al progreso',
-                    'Porque es una pregunta retórica sin respuesta',
-                    'Porque contradice los hechos',
-                    'Porque no entiende de economía'
-                ],
-                onSolve: 'Un cuarto camino aparece — uno que nadie había visto. La puerta se abre.'
+                puzzleType: 'wordlock',
+                prompt: 'La cerradura final. Una palabra que es lo opuesto al miedo.',
+                clue: 'No es la ausencia del miedo. Es la fuerza de actuar a pesar de \u00e9l. Seis letras.',
+                answer: 'coraje',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'El espejo se rompe. Detr\u00e1s est\u00e1 la puerta abierta y un fragmento de historia flotando en la luz.'
             }
         ],
         fragment: {
-            text: 'Un fragmento del Mapa de las Voces: un dibujo de un cruce de caminos donde uno de los caminos va hacia arriba.',
-            questClue: 'Siempre hay un camino que no se ve a primera vista.',
-            item: 'historia-cruce'
+            text: 'Fragmento de historia: \u00abLa Sombra no miente del todo. Dice verdades a medias. Pero una verdad a medias no es toda la historia. El coraje es caminar con la sombra sin dejar que te detenga.\u00bb',
+            questClue: '\u00bfQu\u00e9 pasa cuando enfrentas a tu propia sombra?',
+            item: 'historia-12'
         }
     }
+
 ];
 </script>
+
 <script src="../../js/jaguar-api.js"></script>
 <script src="../../js/yaguara-engine.js"></script>
 <script>
@@ -602,9 +407,9 @@ var games = [
         container: document.getElementById('yaguaraCard'),
         progressContainer: document.getElementById('yaguaraProgress'),
         yaguaraPanel: document.getElementById('yaguaraPanel'),
-        destinationId: '30',
-        world: 'mundoDeArriba',
-        storageKey: 'yaguaraDest30Progress',
+        destinationId: 'b2d30',
+        world: 'llanos',
+        storageKey: 'yaguaraB2Dest30Progress',
         backUrl: '../../b2-villavicencio.html'
     });
 </script>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 30, Lecci&oacute;n 1 - La sombra de Yaguar&aacute;</title>
+    <meta name="description" content="B2 Básico - Destino 30 Lección 1: Subjuntivo de emoción y duda">
+    <link rel="canonical" href="https://babelfree.com/b2_basic/dest30_verbal_periphrasis/lesson1_shadow_self">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 30, Lecci\u00f3n 1 - La sombra de Yaguar\u00e1",
+                "url": "https://babelfree.com/b2_basic/dest30_verbal_periphrasis/lesson1_shadow_self",
+                "educationalLevel": "B2 - Upper Intermediate Basic",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": ["Temo que + subjuntivo","Dudo que + subjuntivo","Me preocupa que + subjuntivo","Contra-afirmación con aunque + subjuntivo"],
+                "isAccessibleForFree": true, "inLanguage": "es",
+                "provider": { "@type": "EducationalOrganization", "name": "Babel Free", "url": "https://babelfree.com" },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/b2-villavicencio" },
+                    { "@type": "ListItem", "position": 3, "name": "B2 B\u00e1sico", "item": "https://babelfree.com/b2-villavicencio" },
+                    { "@type": "ListItem", "position": 4, "name": "La sombra de Yaguar\u00e1", "item": "https://babelfree.com/b2_basic/dest30_verbal_periphrasis/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Lecci\u00f3n 1" }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --mirror-silver: #78909c;
+            --shadow-black: #212121;
+            --accent-ice: #cfd8dc;
+            --accent-ghost: #90a4ae;
+            --accent-white: #eceff1;
+            --success: #2e7d32;
+            --text-light: #eceff1;
+            --text-muted: #9e9e9e;
+            --glass-bg: rgba(255,255,255,0.06);
+            --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+            --border-radius: 20px;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:linear-gradient(135deg,#000000 0%,var(--shadow-black) 20%,#37474f 50%,var(--mirror-silver) 80%,#455a64 100%); min-height:100vh; color:white; line-height:1.8; font-size:20px; position:relative; overflow-x:hidden; }
+        body::before { content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at 30% 70%,rgba(33,33,33,0.3) 0%,transparent 50%),radial-gradient(circle at 70% 30%,rgba(120,144,156,0.2) 0%,transparent 50%),radial-gradient(circle at 50% 50%,rgba(207,216,220,0.04) 0%,transparent 50%); z-index:1; animation:mirrorPulse 30s ease-in-out infinite; }
+        @keyframes mirrorPulse { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
+        .container { max-width:1000px; margin:0 auto; padding:20px; position:relative; z-index:10; }
+        .lesson-header { background:var(--glass-bg); backdrop-filter:blur(20px); padding:25px; border-radius:var(--border-radius); margin-bottom:30px; border:3px solid var(--mirror-silver); text-align:center; position:relative; }
+        .back-btn { position:absolute; top:20px; left:20px; background:var(--glass-bg); color:white; padding:10px 20px; text-decoration:none; border-radius:25px; border:2px solid var(--mirror-silver); transition:var(--transition); font-weight:600; font-size:0.9rem; }
+        .back-btn:hover { background:rgba(120,144,156,0.25); transform:translateY(-2px); }
+        .lesson-info { position:absolute; top:20px; right:20px; background:var(--shadow-black); color:white; padding:8px 16px; border-radius:20px; font-weight:700; font-size:0.8rem; border:1px solid var(--mirror-silver); }
+        .lesson-title { font-size:2.2rem; color:var(--accent-ice); margin-bottom:10px; font-weight:900; }
+        .lesson-subtitle { color:var(--text-light); font-size:1.2rem; font-weight:600; }
+        .progress-bar-container { background:rgba(255,255,255,0.08); border-radius:15px; padding:20px; margin:20px 0; border:2px solid var(--mirror-silver); }
+        .progress-bar { width:100%; height:12px; background:rgba(255,255,255,0.15); border-radius:6px; overflow:hidden; margin-bottom:10px; }
+        .progress-fill { height:100%; background:linear-gradient(90deg,var(--shadow-black),var(--accent-ice)); border-radius:6px; width:0%; transition:width 1s ease; }
+        .progress-text { color:var(--accent-ice); font-weight:700; text-align:center; font-size:1rem; }
+        .story-section { background:linear-gradient(135deg,rgba(33,33,33,0.2),rgba(120,144,156,0.12)); border:3px solid var(--mirror-silver); border-radius:var(--border-radius); padding:30px; margin:30px 0; text-align:center; }
+        .story-title { color:var(--accent-ice); font-weight:700; font-size:1.6rem; margin-bottom:20px; }
+        .jaguar-avatar { width:120px; height:120px; overflow:hidden; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; border:4px solid var(--accent-ice); animation:breathe 3s ease-in-out infinite; cursor:pointer; box-shadow:0 8px 30px rgba(207,216,220,0.3); }
+        @keyframes breathe { 0%,100% { transform:scale(1); } 50% { transform:scale(1.05); } }
+        .story-text { color:var(--text-light); font-size:1.3rem; line-height:2; margin:20px 0; }
+        .simple-sentence { margin:15px 0; padding:10px 20px; background:rgba(255,255,255,0.06); border-radius:15px; border-left:5px solid var(--shadow-black); }
+        .simple-sentence.shadow { border-left-color:var(--mirror-silver); background:rgba(120,144,156,0.08); font-style:italic; }
+        .concept-section { background:var(--glass-bg); backdrop-filter:blur(20px); border-radius:var(--border-radius); padding:30px; margin:30px 0; border:3px solid var(--shadow-black); }
+        .concept-title { color:var(--accent-ice); font-weight:700; font-size:1.8rem; margin-bottom:25px; text-align:center; }
+        .concept-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:25px; }
+        .concept-card { background:rgba(255,255,255,0.06); border-radius:20px; padding:25px; text-align:center; border:3px solid transparent; transition:var(--transition); cursor:pointer; }
+        .concept-card:hover { transform:translateY(-5px); border-color:var(--accent-ice); box-shadow:0 10px 30px rgba(207,216,220,0.2); }
+        .concept-card.temo { border-color:var(--shadow-black); }
+        .concept-card.dudo { border-color:#546e7a; }
+        .concept-card.preocupa { border-color:var(--mirror-silver); }
+        .concept-card.contra { border-color:var(--accent-ice); }
+        .card-avatar { width:80px; height:80px; border-radius:50%; margin:0 auto 15px; display:flex; align-items:center; justify-content:center; font-size:2.5rem; border:3px solid; }
+        .concept-card.temo .card-avatar { background:linear-gradient(135deg,var(--shadow-black),#424242); border-color:var(--shadow-black); }
+        .concept-card.dudo .card-avatar { background:linear-gradient(135deg,#546e7a,#607d8b); border-color:#546e7a; }
+        .concept-card.preocupa .card-avatar { background:linear-gradient(135deg,var(--mirror-silver),#90a4ae); border-color:var(--mirror-silver); }
+        .concept-card.contra .card-avatar { background:linear-gradient(135deg,var(--accent-ice),#e0e0e0); border-color:var(--accent-ice); color:var(--shadow-black); }
+        .card-name { font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+        .concept-card.temo .card-name { color:#bdbdbd; }
+        .concept-card.dudo .card-name { color:var(--accent-ghost); }
+        .concept-card.preocupa .card-name { color:var(--mirror-silver); }
+        .concept-card.contra .card-name { color:var(--accent-ice); }
+        .card-example { color:var(--text-light); font-size:1rem; margin-bottom:10px; font-style:italic; }
+        .card-description { color:var(--text-muted); font-size:0.9rem; line-height:1.6; }
+        .yaguara-guide { background:linear-gradient(135deg,rgba(207,216,220,0.1),rgba(120,144,156,0.08)); border:3px solid var(--accent-ice); border-radius:20px; padding:25px; margin:30px 0; display:grid; grid-template-columns:80px 1fr; gap:20px; align-items:start; }
+        .yaguara-small { width:70px; height:70px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:3px solid var(--accent-ice); animation:breathe 4s ease-in-out infinite; cursor:pointer; flex-shrink:0; }
+        .yaguara-text { padding-top:5px; }
+        .guide-title { color:var(--accent-ice); font-weight:700; margin-bottom:10px; font-size:1.1rem; }
+        .guide-message { color:var(--text-light); line-height:1.8; font-size:1rem; }
+        .simple-message { margin:8px 0; }
+        .exercise-section { background:linear-gradient(135deg,rgba(33,33,33,0.2),rgba(120,144,156,0.12)); border:3px solid var(--shadow-black); border-radius:var(--border-radius); padding:30px; margin:30px 0; }
+        .exercise-title { color:var(--accent-ice); font-weight:700; font-size:1.6rem; margin-bottom:20px; text-align:center; }
+        .exercise-instruction { background:rgba(33,33,33,0.2); border:2px solid var(--shadow-black); border-radius:15px; padding:20px; margin:20px 0; text-align:center; }
+        .instruction-text { color:var(--accent-ice); font-weight:600; font-size:1.2rem; }
+        .matching-game { display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:30px; }
+        .words-column,.images-column { background:rgba(255,255,255,0.04); border-radius:15px; padding:20px; }
+        .column-title { color:var(--accent-ice); font-weight:700; font-size:1.2rem; margin-bottom:20px; text-align:center; }
+        .word-item,.image-item { background:rgba(255,255,255,0.06); border:3px solid transparent; border-radius:12px; padding:15px; margin:10px 0; cursor:pointer; transition:var(--transition); text-align:center; font-weight:600; font-size:1.1rem; }
+        .word-item:hover,.image-item:hover { border-color:var(--mirror-silver); background:rgba(120,144,156,0.1); transform:translateX(5px); }
+        .word-item.selected,.image-item.selected { border-color:var(--accent-ice); background:rgba(207,216,220,0.15); transform:scale(1.02); }
+        .word-item.correct,.image-item.correct { border-color:var(--success); background:rgba(46,125,50,0.2); }
+        .word-item.incorrect,.image-item.incorrect { border-color:#e74c3c; background:rgba(231,76,60,0.2); }
+        .success-message { background:linear-gradient(135deg,rgba(46,125,50,0.2),rgba(76,175,80,0.1)); border:3px solid var(--success); border-radius:15px; padding:25px; margin:25px 0; text-align:center; display:none; }
+        .success-message.show { display:block; animation:successSlide 0.5s ease-out; }
+        @keyframes successSlide { 0% { opacity:0; transform:translateY(-20px); } 100% { opacity:1; transform:translateY(0); } }
+        .success-title { color:var(--success); font-weight:700; font-size:1.4rem; margin-bottom:15px; }
+        .success-text { color:var(--text-light); font-size:1.1rem; line-height:1.6; }
+        .lesson-navigation { display:flex; justify-content:center; align-items:center; margin-top:40px; gap:20px; flex-wrap:wrap; }
+        .nav-button { padding:15px 30px; border:none; border-radius:25px; font-size:1.1rem; font-weight:700; cursor:pointer; transition:var(--transition); min-width:150px; text-align:center; }
+        .nav-button.primary { background:linear-gradient(135deg,var(--shadow-black),var(--accent-ice)); color:white; border:2px solid var(--mirror-silver); }
+        .nav-button.primary:hover { transform:scale(1.05); box-shadow:0 6px 20px rgba(120,144,156,0.4); }
+        .nav-button.secondary { background:var(--glass-bg); color:white; border:2px solid var(--mirror-silver); }
+        .nav-button.secondary:hover { background:rgba(120,144,156,0.2); transform:scale(1.05); }
+        .nav-button:disabled { opacity:0.5; cursor:not-allowed; }
+        .nav-button:disabled:hover { transform:none; box-shadow:none; }
+        @media (max-width:768px) { body { font-size:18px; } .container { padding:15px; } .concept-grid { grid-template-columns:1fr; } .matching-game { grid-template-columns:1fr; gap:20px; } .lesson-title { font-size:1.8rem; } .back-btn,.lesson-info { position:static; margin:10px auto; display:block; width:fit-content; } .yaguara-guide { grid-template-columns:1fr; text-align:center; gap:15px; } .yaguara-small { margin:0 auto; } }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/b2-villavicencio" class="back-btn">&larr; Destinos</a>
+            <div class="lesson-info">B2 B&aacute;sico &mdash; Destino 30</div>
+            <h1 class="lesson-title">La sombra de Yaguar&aacute;</h1>
+            <p class="lesson-subtitle">Subjuntivo de emoci&oacute;n y duda</p>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text" id="progressText">Paso 1 de 5</div>
+        </div>
+
+        <!-- STEP 1: REVIEW -->
+        <div class="story-section" id="step1">
+            <div class="story-title">Repaso: estructuras hipot&eacute;ticas</div>
+            <div class="story-text">
+                <div class="simple-sentence">En el destino 29 aprendiste a formular <strong>hip&oacute;tesis irreales</strong>: &laquo;Si el mundo olvidara los nombres, todo desaparecer&iacute;a.&raquo; La estructura &laquo;si + imperfecto de subjuntivo + condicional&raquo; te permiti&oacute; imaginar lo que podr&iacute;a ser.</div>
+                <div class="simple-sentence">Ahora vamos m&aacute;s adentro. El subjuntivo no solo sirve para hip&oacute;tesis. Tambi&eacute;n expresa lo que sentimos: miedo, duda, preocupaci&oacute;n, esperanza. Emociones que necesitan su propia gram&aacute;tica.</div>
+            </div>
+        </div>
+
+        <!-- STEP 2: STORY -->
+        <div class="story-section" id="step2" style="display:none;">
+            <div class="story-title">La sombra de Yaguar&aacute;</div>
+            <div class="jaguar-avatar" onclick="speakText('Temo que no pueda hablar bien. Pero aunque tenga miedo, sigo hablando.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguar&aacute;" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">Yaguar&aacute; llega a una poza de agua inmóvil. Se detiene. Ve su reflejo. Pero algo no está bien. El reflejo se mueve diferente. Habla diferente.</div>
+                <div class="simple-sentence shadow">La Sombra habla con gram&aacute;tica rota. Las palabras salen en orden equivocado. Los verbos est&aacute;n mal conjugados. Donde deber&iacute;a haber voz, hay silencio. Es todo lo que Yaguar&aacute; teme ser.</div>
+                <div class="simple-sentence shadow">&laquo;No vas a poder &mdash; dice La Sombra &mdash;. Las palabras no son tuyas. Nunca lo ser&aacute;n. Siempre vas a equivocarte. Siempre van a notarlo.&raquo;</div>
+                <div class="simple-sentence">Yaguar&aacute; siente el miedo. Teme que La Sombra tenga raz&oacute;n. Duda que sea suficiente. Le preocupa que el silencio sea m&aacute;s fuerte que su voz. Pero entonces recuerda algo: La Sombra no es un enemigo. Es una parte de ella misma.</div>
+                <div class="simple-sentence">No hay que derrotar a La Sombra. Hay que abrazarla. &laquo;Aunque tenga miedo &mdash; dice Yaguar&aacute; en voz alta &mdash;, sigo hablando. El coraje no es la ausencia del miedo.&raquo;</div>
+            </div>
+        </div>
+
+        <!-- STEP 3: CONCEPTS -->
+        <div class="concept-section" id="step3" style="display:none;">
+            <div class="concept-title">Cuatro formas de nombrar lo que sentimos</div>
+            <div class="concept-grid">
+                <div class="concept-card temo" onclick="learnConcept('temo')">
+                    <div class="card-avatar">&#128561;</div>
+                    <div class="card-name">Temo que + subjuntivo</div>
+                    <div class="card-example">&laquo;Temo que no pueda hablar bien. Temo que las palabras no sean m&iacute;as&raquo;</div>
+                    <div class="card-description">&laquo;Temo que&raquo; expresa miedo. Lo que sigue va en subjuntivo porque el miedo vive en la incertidumbre, no en los hechos.</div>
+                </div>
+                <div class="concept-card dudo" onclick="learnConcept('dudo')">
+                    <div class="card-avatar">&#10068;</div>
+                    <div class="card-name">Dudo que + subjuntivo</div>
+                    <div class="card-example">&laquo;Dudo que sea suficiente. Dudo que alguien me entienda&raquo;</div>
+                    <div class="card-description">&laquo;Dudo que&raquo; expresa incertidumbre. No negamos. No afirmamos. Vivimos en el espacio intermedio donde todo es posible y nada es seguro.</div>
+                </div>
+                <div class="concept-card preocupa" onclick="learnConcept('preocupa')">
+                    <div class="card-avatar">&#128544;</div>
+                    <div class="card-name">Me preocupa que + subjuntivo</div>
+                    <div class="card-example">&laquo;Me preocupa que el silencio sea m&aacute;s fuerte que mi voz&raquo;</div>
+                    <div class="card-description">&laquo;Me preocupa que&raquo; expresa ansiedad. La preocupaci&oacute;n mira al futuro: algo que podr&iacute;a pasar y no queremos que pase.</div>
+                </div>
+                <div class="concept-card contra" onclick="learnConcept('contra')">
+                    <div class="card-avatar">&#128170;</div>
+                    <div class="card-name">Contra-afirmaci&oacute;n</div>
+                    <div class="card-example">&laquo;Aunque tenga miedo, sigo hablando. El coraje no es la ausencia del miedo&raquo;</div>
+                    <div class="card-description">&laquo;Aunque + subjuntivo&raquo; reconoce el obst&aacute;culo y lo supera en la misma frase. No niega el miedo. Lo acepta y avanza.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4: YAGUARÁ GUIDE -->
+        <div class="yaguara-guide" id="step4" style="display:none;">
+            <div class="yaguara-small" onclick="speakText('Temo que no pueda. Dudo que sea suficiente. Me preocupa que el silencio gane. Pero aunque tenga miedo, sigo hablando. Eso es el subjuntivo de emoción.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguar&aacute;" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguar&aacute; dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message"><strong>Temo que</strong>: expresa miedo. &laquo;Temo que no <em>pueda</em> hablar bien.&raquo; El verbo despu&eacute;s de &laquo;que&raquo; va en subjuntivo presente: pueda, sea, tenga, entienda.</div>
+                    <div class="simple-message"><strong>Dudo que</strong>: expresa incertidumbre. &laquo;Dudo que <em>sea</em> suficiente.&raquo; No es negaci&oacute;n total. Es un espacio entre s&iacute; y no.</div>
+                    <div class="simple-message"><strong>Me preocupa que</strong>: expresa ansiedad. &laquo;Me preocupa que el silencio <em>sea</em> m&aacute;s fuerte.&raquo; Mira al futuro con inquietud.</div>
+                    <div class="simple-message"><strong>Aunque + subjuntivo</strong>: contra-afirmaci&oacute;n. &laquo;Aunque <em>tenga</em> miedo, sigo hablando.&raquo; Reconoce el obst&aacute;culo y sigue adelante.</div>
+                    <div class="simple-message"><strong>La Sombra</strong>: cada estudiante de idiomas tiene una sombra. La voz que dice &laquo;no puedes&raquo;. No se derrota. Se abraza. Hablar con miedo tambi&eacute;n es hablar.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 5: EXERCISE — Matching -->
+        <div class="exercise-section" id="step5" style="display:none;">
+            <div class="exercise-title">Pr&aacute;ctica: estructura &rarr; emoci&oacute;n</div>
+            <div class="exercise-instruction">
+                <div class="instruction-text">Une cada estructura con la emoci&oacute;n que expresa.</div>
+            </div>
+            <div class="matching-game">
+                <div class="words-column">
+                    <div class="column-title">Estructura</div>
+                    <div class="word-item" onclick="selectWord(this,'pair1')" data-word="pair1">Temo que</div>
+                    <div class="word-item" onclick="selectWord(this,'pair2')" data-word="pair2">Dudo que</div>
+                    <div class="word-item" onclick="selectWord(this,'pair3')" data-word="pair3">Me preocupa que</div>
+                    <div class="word-item" onclick="selectWord(this,'pair4')" data-word="pair4">Espero que</div>
+                </div>
+                <div class="images-column">
+                    <div class="column-title">Emoci&oacute;n</div>
+                    <div class="image-item" onclick="selectImage(this,'pair4')" data-image="pair4">expresa esperanza</div>
+                    <div class="image-item" onclick="selectImage(this,'pair2')" data-image="pair2">expresa incertidumbre</div>
+                    <div class="image-item" onclick="selectImage(this,'pair1')" data-image="pair1">expresa miedo</div>
+                    <div class="image-item" onclick="selectImage(this,'pair3')" data-image="pair3">expresa ansiedad</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-title">&#161;Excelente!</div>
+            <div class="success-text">Lecci&oacute;n completa. Sabes expresar miedo, duda, preocupaci&oacute;n y esperanza con subjuntivo.<br>La Sombra no ha desaparecido. Pero t&uacute; sigues hablando. Eso es lo que importa.</div>
+        </div>
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" id="btnPrev" disabled>&larr; Anterior</button>
+            <button class="nav-button primary" id="btnNext">Siguiente &rarr;</button>
+            <button class="nav-button primary" id="btnFinish" style="display:none;">Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+            var lessonData = { currentStep:1, totalSteps:5, selectedWord:null, matchedPairs:0, totalPairs:4, isComplete:false };
+            var concepts = {
+                temo: "Temo que más subjuntivo. Expresa miedo. Temo que no pueda hablar bien. Temo que las palabras no sean mías. El verbo después de que va en subjuntivo presente: pueda, sea, tenga, entienda. El miedo vive en la incertidumbre, no en los hechos. Por eso necesita subjuntivo.",
+                dudo: "Dudo que más subjuntivo. Expresa incertidumbre. Dudo que sea suficiente. Dudo que alguien me entienda. No negamos. No afirmamos. Vivimos en el espacio intermedio donde todo es posible y nada es seguro. La duda no es debilidad. Es honestidad.",
+                preocupa: "Me preocupa que más subjuntivo. Expresa ansiedad. Me preocupa que el silencio sea más fuerte que mi voz. La preocupación mira al futuro. Algo que podría pasar y no queremos que pase. La estructura es igual: me preocupa que más subjuntivo presente.",
+                contra: "Contra-afirmación con aunque más subjuntivo. Aunque tenga miedo, sigo hablando. El coraje no es la ausencia del miedo. Es hablar a pesar del miedo. Aunque más subjuntivo reconoce el obstáculo y lo supera en la misma frase. No niega el miedo. Lo acepta y avanza."
+            };
+
+            function updateProgress() {
+                var p = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var f = document.getElementById('progressFill');
+                var t = document.getElementById('progressText');
+                if (f) f.style.width = p + '%';
+                if (t) t.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(n) {
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var s = document.getElementById('step' + i);
+                    if (s) s.style.display = 'none';
+                }
+                var c = document.getElementById('step' + n);
+                if (c) { c.style.display = 'block'; c.style.animation = 'fadeIn 0.5s ease-in'; }
+                updateNav();
+                updateProgress();
+            }
+
+            function updateNav() {
+                var p = document.getElementById('btnPrev');
+                var n = document.getElementById('btnNext');
+                var f = document.getElementById('btnFinish');
+                if (p) p.disabled = lessonData.currentStep === 1;
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (n) n.style.display = 'none';
+                    if (f) f.style.display = 'inline-block';
+                } else {
+                    if (n) n.style.display = 'inline-block';
+                    if (f) f.style.display = 'none';
+                }
+            }
+
+            function goNext() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function goPrev() {
+                if (lessonData.currentStep > 1) {
+                    lessonData.currentStep--;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function learnConceptFn(id) {
+                var t = concepts[id];
+                if (t) {
+                    speakInSpanish(t);
+                    showNotification('Escucha y repite');
+                }
+            }
+
+            function selectWordFn(el, w) {
+                var all = document.querySelectorAll('.word-item');
+                for (var i = 0; i < all.length; i++) all[i].classList.remove('selected');
+                el.classList.add('selected');
+                lessonData.selectedWord = w;
+            }
+
+            function selectImageFn(el, img) {
+                if (!lessonData.selectedWord) {
+                    showNotification('Primero selecciona una estructura');
+                    return;
+                }
+                var ok = lessonData.selectedWord === img;
+                var we = document.querySelector('.word-item[data-word="' + lessonData.selectedWord + '"]');
+                if (ok) {
+                    we.classList.remove('selected');
+                    we.classList.add('correct');
+                    el.classList.add('correct');
+                    lessonData.matchedPairs++;
+                    lessonData.selectedWord = null;
+                    var m = ['Bien', 'Muy bien', 'Excelente', 'Perfecto'];
+                    speakInSpanish(m[lessonData.matchedPairs - 1] || 'Bien');
+                    showNotification(m[lessonData.matchedPairs - 1] || 'Bien');
+                    if (lessonData.matchedPairs === lessonData.totalPairs) {
+                        setTimeout(function() {
+                            var sm = document.getElementById('successMessage');
+                            if (sm) sm.classList.add('show');
+                            speakInSpanish('Excelente. Sabes expresar miedo, duda y esperanza. Aunque tengas miedo, sigues hablando.');
+                        }, 1000);
+                    }
+                } else {
+                    we.classList.add('incorrect');
+                    el.classList.add('incorrect');
+                    showNotification('Incorrecto. Intenta otra vez.');
+                    setTimeout(function() {
+                        we.classList.remove('selected', 'incorrect');
+                        el.classList.remove('incorrect');
+                        lessonData.selectedWord = null;
+                    }, 1500);
+                }
+            }
+
+            function speakInSpanish(text) {
+                if (!text || !('speechSynthesis' in window)) return;
+                try {
+                    var u = new SpeechSynthesisUtterance(text);
+                    u.lang = 'es-CO';
+                    u.rate = 0.55;
+                    speechSynthesis.speak(u);
+                } catch (e) {}
+            }
+
+            function showNotification(msg) {
+                var ex = document.querySelector('.temp-notification');
+                if (ex) ex.remove();
+                var n = document.createElement('div');
+                n.className = 'temp-notification';
+                n.style.cssText = 'position:fixed;top:20px;right:20px;background:rgba(33,33,33,0.95);color:white;padding:15px 20px;border-radius:12px;font-weight:600;z-index:10000;max-width:320px;border:2px solid #cfd8dc;box-shadow:0 4px 20px rgba(0,0,0,0.4);animation:slideInRight 0.3s ease-out;';
+                n.innerHTML = '<div style="font-size:1.05rem;color:#cfd8dc;">' + msg + '</div>';
+                document.body.appendChild(n);
+                setTimeout(function() { if (n && n.parentNode) n.parentNode.removeChild(n); }, 3500);
+            }
+
+            function completeLessonFn() {
+                lessonData.isComplete = true;
+                if (typeof JaguarAPI !== 'undefined') JaguarAPI.syncA1Progress('b2_basic', 'dest30');
+                showNotification('Lecci\u00f3n completada');
+                setTimeout(function() { window.location.href = '/b2-villavicencio'; }, 2000);
+            }
+
+            window.learnConcept = learnConceptFn;
+            window.selectWord = selectWordFn;
+            window.selectImage = selectImageFn;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLessonFn;
+
+            var style = document.createElement('style');
+            style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes slideInRight{from{transform:translateX(300px);opacity:0}to{transform:translateX(0);opacity:1}}';
+            document.head.appendChild(style);
+
+            document.addEventListener('DOMContentLoaded', function() {
+                showStep(1);
+                document.getElementById('btnNext').addEventListener('click', goNext);
+                document.getElementById('btnPrev').addEventListener('click', goPrev);
+                document.getElementById('btnFinish').addEventListener('click', completeLessonFn);
+            });
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>
