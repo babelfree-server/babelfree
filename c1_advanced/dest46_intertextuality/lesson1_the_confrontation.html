@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 46, Lecci&oacute;n 1 - La confrontaci&oacute;n</title>
+    <meta name="description" content="C1 Avanzado - Destino 46 Lección 1: Intertextualidad — conectar textos y contextos">
+    <link rel="canonical" href="https://babelfree.com/c1_advanced/dest46_intertextuality/lesson1_the_confrontation">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 46, Lecci\u00f3n 1 - La confrontaci\u00f3n",
+                "url": "https://babelfree.com/c1_advanced/dest46_intertextuality/lesson1_the_confrontation",
+                "educationalLevel": "C1 - Advanced",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": ["Intertextualidad","Citaci\u00f3n acad\u00e9mica","Alusi\u00f3n","Par\u00e1frasis"],
+                "isAccessibleForFree": true, "inLanguage": "es",
+                "provider": { "@type": "EducationalOrganization", "name": "Babel Free", "url": "https://babelfree.com" },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/c1-ciudad-perdida" },
+                    { "@type": "ListItem", "position": 3, "name": "C1 Avanzado", "item": "https://babelfree.com/c1-ciudad-perdida" },
+                    { "@type": "ListItem", "position": 4, "name": "La confrontaci\u00f3n", "item": "https://babelfree.com/c1_advanced/dest46_intertextuality/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Lecci\u00f3n 1" }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --contrast-dark: #1a0a0a;
+            --contrast-deep: #3d1a1a;
+            --accent-fire: #ff5722;
+            --accent-ember: #ff8a65;
+            --accent-ash: #bcaaa4;
+            --success: #2e7d32;
+            --text-light: #fbe9e7;
+            --text-muted: #d7ccc8;
+            --glass-bg: rgba(255,255,255,0.08);
+            --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+            --border-radius: 20px;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:linear-gradient(135deg,#0d0505 0%,#1a0a0a 30%,#3d1a1a 65%,#2a1010 100%); min-height:100vh; color:white; line-height:1.8; font-size:20px; position:relative; overflow-x:hidden; }
+        body::before { content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at 30% 70%,rgba(255,87,34,0.14) 0%,transparent 50%),radial-gradient(circle at 70% 30%,rgba(61,26,26,0.25) 0%,transparent 50%),radial-gradient(circle at 50% 50%,rgba(255,138,101,0.07) 0%,transparent 50%); z-index:1; animation:confrontGlow 24s ease-in-out infinite; }
+        @keyframes confrontGlow { 0%,100% { opacity:0.45; } 25% { opacity:0.85; } 50% { opacity:0.5; } 75% { opacity:0.95; } }
+        .container { max-width:1000px; margin:0 auto; padding:20px; position:relative; z-index:10; }
+        .lesson-header { background:var(--glass-bg); backdrop-filter:blur(20px); padding:25px; border-radius:var(--border-radius); margin-bottom:30px; border:3px solid var(--contrast-deep); text-align:center; position:relative; }
+        .back-btn { position:absolute; top:20px; left:20px; background:var(--glass-bg); color:white; padding:10px 20px; text-decoration:none; border-radius:25px; border:2px solid var(--contrast-deep); transition:var(--transition); font-weight:600; font-size:0.9rem; }
+        .back-btn:hover { background:rgba(255,87,34,0.2); transform:translateY(-2px); }
+        .lesson-info { position:absolute; top:20px; right:20px; background:var(--accent-fire); color:white; padding:8px 16px; border-radius:20px; font-weight:700; font-size:0.8rem; }
+        .lesson-title { font-size:2.2rem; color:var(--accent-fire); margin-bottom:10px; font-weight:900; }
+        .lesson-subtitle { color:var(--text-light); font-size:1.2rem; font-weight:600; }
+        .progress-bar-container { background:rgba(255,255,255,0.1); border-radius:15px; padding:20px; margin:20px 0; border:2px solid var(--contrast-deep); }
+        .progress-bar { width:100%; height:12px; background:rgba(255,255,255,0.2); border-radius:6px; overflow:hidden; margin-bottom:10px; }
+        .progress-fill { height:100%; background:linear-gradient(90deg,var(--contrast-deep),var(--accent-fire)); border-radius:6px; width:0%; transition:width 1s ease; }
+        .progress-text { color:var(--accent-ember); font-weight:700; text-align:center; font-size:1rem; }
+        .story-section { background:linear-gradient(135deg,rgba(255,87,34,0.1),rgba(61,26,26,0.15)); border:3px solid var(--contrast-deep); border-radius:var(--border-radius); padding:30px; margin:30px 0; text-align:center; }
+        .story-title { color:var(--accent-fire); font-weight:700; font-size:1.6rem; margin-bottom:20px; }
+        .jaguar-avatar { width:120px; height:120px; overflow:hidden; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; border:4px solid var(--accent-fire); animation:breathe 3s ease-in-out infinite; cursor:pointer; box-shadow:0 8px 30px rgba(255,87,34,0.35); }
+        @keyframes breathe { 0%,100% { transform:scale(1); } 50% { transform:scale(1.05); } }
+        .story-text { color:var(--text-light); font-size:1.3rem; line-height:2; margin:20px 0; }
+        .simple-sentence { margin:15px 0; padding:10px 20px; background:rgba(255,255,255,0.08); border-radius:15px; border-left:5px solid var(--accent-fire); }
+        .simple-sentence.fierce { border-left-color:var(--accent-fire); background:rgba(255,87,34,0.12); color:var(--accent-ember); font-weight:700; }
+        .simple-sentence.antagonist { border-left-color:var(--contrast-deep); background:rgba(61,26,26,0.25); color:var(--text-muted); font-style:italic; }
+        .simple-sentence.key-line { border-left-color:var(--accent-ember); background:rgba(255,138,101,0.1); cursor:pointer; }
+        .concept-section { background:var(--glass-bg); backdrop-filter:blur(20px); border-radius:var(--border-radius); padding:30px; margin:30px 0; border:3px solid var(--accent-fire); }
+        .concept-title { color:var(--accent-fire); font-weight:700; font-size:1.8rem; margin-bottom:25px; text-align:center; }
+        .concept-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:25px; }
+        .concept-card { background:rgba(255,255,255,0.08); border-radius:20px; padding:25px; text-align:center; border:3px solid transparent; transition:var(--transition); cursor:pointer; }
+        .concept-card:hover { transform:translateY(-5px); border-color:var(--accent-fire); box-shadow:0 10px 30px rgba(255,87,34,0.25); }
+        .concept-card.cita { border-color:var(--accent-fire); }
+        .concept-card.parafrasis { border-color:var(--accent-ember); }
+        .concept-card.alusion { border-color:var(--contrast-deep); }
+        .concept-card.metalinguistica { border-color:var(--accent-ash); }
+        .card-avatar { width:80px; height:80px; border-radius:50%; margin:0 auto 15px; display:flex; align-items:center; justify-content:center; font-size:2.5rem; border:3px solid; }
+        .concept-card.cita .card-avatar { background:linear-gradient(135deg,var(--accent-fire),#ff7043); border-color:var(--accent-fire); }
+        .concept-card.parafrasis .card-avatar { background:linear-gradient(135deg,var(--accent-ember),#ffab91); border-color:var(--accent-ember); }
+        .concept-card.alusion .card-avatar { background:linear-gradient(135deg,var(--contrast-deep),#5d2a2a); border-color:var(--contrast-deep); }
+        .concept-card.metalinguistica .card-avatar { background:linear-gradient(135deg,var(--accent-ash),#d7ccc8); border-color:var(--accent-ash); color:#1a0a0a; }
+        .card-name { font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+        .concept-card.cita .card-name { color:var(--accent-fire); }
+        .concept-card.parafrasis .card-name { color:var(--accent-ember); }
+        .concept-card.alusion .card-name { color:#cf8a8a; }
+        .concept-card.metalinguistica .card-name { color:var(--accent-ash); }
+        .card-example { color:var(--text-light); font-size:1rem; margin-bottom:10px; font-style:italic; }
+        .card-description { color:var(--text-muted); font-size:0.9rem; line-height:1.6; }
+        .concept-card.metalinguistica .card-description { color:#4a3535; }
+        .yaguara-guide { background:linear-gradient(135deg,rgba(255,87,34,0.1),rgba(61,26,26,0.12)); border:3px solid var(--accent-fire); border-radius:20px; padding:25px; margin:30px 0; display:grid; grid-template-columns:80px 1fr; gap:20px; align-items:start; }
+        .yaguara-small { width:70px; height:70px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:3px solid var(--accent-fire); animation:breathe 4s ease-in-out infinite; cursor:pointer; flex-shrink:0; }
+        .yaguara-text { padding-top:5px; }
+        .guide-title { color:var(--accent-fire); font-weight:700; margin-bottom:10px; font-size:1.1rem; }
+        .guide-message { color:var(--text-light); line-height:1.8; font-size:1rem; }
+        .simple-message { margin:8px 0; }
+        .exercise-section { background:linear-gradient(135deg,rgba(255,87,34,0.1),rgba(61,26,26,0.15)); border:3px solid var(--accent-fire); border-radius:var(--border-radius); padding:30px; margin:30px 0; }
+        .exercise-title { color:var(--accent-fire); font-weight:700; font-size:1.6rem; margin-bottom:20px; text-align:center; }
+        .exercise-instruction { background:rgba(255,87,34,0.12); border:2px solid var(--accent-fire); border-radius:15px; padding:20px; margin:20px 0; text-align:center; }
+        .instruction-text { color:var(--accent-ember); font-weight:600; font-size:1.2rem; }
+        .matching-game { display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:30px; }
+        .words-column,.images-column { background:rgba(255,255,255,0.05); border-radius:15px; padding:20px; }
+        .column-title { color:var(--accent-fire); font-weight:700; font-size:1.2rem; margin-bottom:20px; text-align:center; }
+        .word-item,.image-item { background:rgba(255,255,255,0.08); border:3px solid transparent; border-radius:12px; padding:15px; margin:10px 0; cursor:pointer; transition:var(--transition); text-align:center; font-weight:600; font-size:1.1rem; }
+        .word-item:hover,.image-item:hover { border-color:var(--accent-fire); background:rgba(255,87,34,0.1); transform:translateX(5px); }
+        .word-item.selected,.image-item.selected { border-color:var(--accent-ember); background:rgba(255,138,101,0.15); transform:scale(1.02); }
+        .word-item.correct,.image-item.correct { border-color:var(--success); background:rgba(46,125,50,0.2); }
+        .word-item.incorrect,.image-item.incorrect { border-color:#e74c3c; background:rgba(231,76,60,0.2); }
+        .success-message { background:linear-gradient(135deg,rgba(46,125,50,0.2),rgba(76,175,80,0.1)); border:3px solid var(--success); border-radius:15px; padding:25px; margin:25px 0; text-align:center; display:none; }
+        .success-message.show { display:block; animation:successSlide 0.5s ease-out; }
+        @keyframes successSlide { 0% { opacity:0; transform:translateY(-20px); } 100% { opacity:1; transform:translateY(0); } }
+        .success-title { color:var(--success); font-weight:700; font-size:1.4rem; margin-bottom:15px; }
+        .success-text { color:var(--text-light); font-size:1.1rem; line-height:1.6; }
+        .lesson-navigation { display:flex; justify-content:center; align-items:center; margin-top:40px; gap:20px; flex-wrap:wrap; }
+        .nav-button { padding:15px 30px; border:none; border-radius:25px; font-size:1.1rem; font-weight:700; cursor:pointer; transition:var(--transition); min-width:150px; text-align:center; }
+        .nav-button.primary { background:linear-gradient(135deg,var(--contrast-deep),var(--accent-fire)); color:white; border:2px solid var(--accent-fire); }
+        .nav-button.primary:hover { transform:scale(1.05); box-shadow:0 6px 20px rgba(255,87,34,0.35); }
+        .nav-button.secondary { background:var(--glass-bg); color:white; border:2px solid var(--contrast-deep); }
+        .nav-button.secondary:hover { background:rgba(255,87,34,0.15); transform:scale(1.05); }
+        .nav-button:disabled { opacity:0.5; cursor:not-allowed; }
+        .nav-button:disabled:hover { transform:none; box-shadow:none; }
+        @media (max-width:768px) { body { font-size:18px; } .container { padding:15px; } .concept-grid { grid-template-columns:1fr; } .matching-game { grid-template-columns:1fr; gap:20px; } .lesson-title { font-size:1.8rem; } .back-btn,.lesson-info { position:static; margin:10px auto; display:block; width:fit-content; } .yaguara-guide { grid-template-columns:1fr; text-align:center; gap:15px; } .yaguara-small { margin:0 auto; } }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/c1-ciudad-perdida" class="back-btn">&larr; Destinos</a>
+            <div class="lesson-info">C1 Avanzado &mdash; Destino 46</div>
+            <h1 class="lesson-title">La confrontaci&oacute;n</h1>
+            <p class="lesson-subtitle">Intertextualidad &mdash; conectar textos y contextos</p>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text" id="progressText">Paso 1 de 5</div>
+        </div>
+
+        <!-- STEP 1: REPASO -->
+        <div class="story-section" id="step1">
+            <div class="story-title">Repaso: el camino hasta aqu&iacute;</div>
+            <div class="story-text">
+                <div class="simple-sentence">En el destino anterior aprendiste ret&oacute;rica: ethos, pathos, logos y la detecci&oacute;n de falacias. Ahora entramos en la intertextualidad &mdash; el di&aacute;logo entre textos.</div>
+                <div class="simple-sentence">Ning&uacute;n texto existe solo. Cada palabra resuena con otras palabras, otros autores, otros contextos. Citar no es copiar. Es dialogar.</div>
+            </div>
+        </div>
+
+        <!-- STEP 2: HISTORIA -->
+        <div class="story-section" id="step2" style="display:none;">
+            <div class="story-title">La confrontaci&oacute;n</div>
+            <div class="jaguar-avatar" onclick="speakText('La confrontaci\u00f3n. Candelaria no grit\u00f3. No insult\u00f3. Solo ley\u00f3 los textos de Don Pr\u00f3spero uno al lado del otro.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguar&aacute;" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">El cl&iacute;max. Candelaria, ahora de 18 a&ntilde;os, confronta a Don Pr&oacute;spero en un foro p&uacute;blico &mdash; no con rabia sino con sus propias palabras.</div>
+                <div class="simple-sentence">Ha recopilado sus discursos, sus contratos, sus poemas. Los lee uno al lado del otro.</div>
+                <div class="simple-sentence fierce">&laquo;Usted escribi&oacute;: &ldquo;Los &aacute;rboles son la memoria de la tierra.&rdquo; Y firm&oacute;: &ldquo;Se autoriza la tala de 200 hect&aacute;reas.&rdquo; Seg&uacute;n afirma usted mismo, los &aacute;rboles son memoria. Como plantea su propio contrato, esa memoria debe destruirse. &iquest;Cu&aacute;l es la verdad, Don Pr&oacute;spero?&raquo;</div>
+                <div class="simple-sentence antagonist">Don Pr&oacute;spero calla. Las contradicciones hablan por s&iacute; mismas. La &uacute;nica derrota que El Silencio Gris ha sufrido desde adentro.</div>
+                <div class="simple-sentence key-line" onclick="speakText('Candelaria no invent\u00f3 nada. Solo conect\u00f3 textos. Eso es intertextualidad: hacer que las palabras de otros revelen lo que el hablante no quiso decir.')">Candelaria no invent&oacute; nada. Solo conect&oacute; textos. Eso es intertextualidad: hacer que las palabras de otros revelen lo que el hablante no quiso decir.</div>
+            </div>
+        </div>
+
+        <!-- STEP 3: CONCEPTOS -->
+        <div class="concept-section" id="step3" style="display:none;">
+            <div class="concept-title">Cuatro formas de di&aacute;logo intertextual</div>
+            <div class="concept-grid">
+                <div class="concept-card cita" onclick="learnConcept('cita')">
+                    <div class="card-avatar">&#128206;</div>
+                    <div class="card-name">Cita directa</div>
+                    <div class="card-example">&laquo;Seg&uacute;n afirma Don Pr&oacute;spero: &ldquo;Los &aacute;rboles son la memoria de la tierra.&rdquo;&raquo;</div>
+                    <div class="card-description">La cita directa reproduce las palabras exactas. Seg&uacute;n afirma, como declar&oacute;, en palabras de. Requiere fidelidad absoluta.</div>
+                </div>
+                <div class="concept-card parafrasis" onclick="learnConcept('parafrasis')">
+                    <div class="card-avatar">&#128260;</div>
+                    <div class="card-name">Par&aacute;frasis</div>
+                    <div class="card-example">&laquo;Don Pr&oacute;spero plantea que los &aacute;rboles constituyen la memoria del territorio&raquo;</div>
+                    <div class="card-description">Reformular con tus propias palabras manteniendo el significado. Seg&uacute;n plantea, como sugiere, en la visi&oacute;n de. Requiere comprensi&oacute;n profunda.</div>
+                </div>
+                <div class="concept-card alusion" onclick="learnConcept('alusion')">
+                    <div class="card-avatar">&#129691;</div>
+                    <div class="card-name">Alusi&oacute;n</div>
+                    <div class="card-example">&laquo;Haciendo eco de esta tradici&oacute;n, Candelaria recoge las voces del r&iacute;o&raquo;</div>
+                    <div class="card-description">La alusi&oacute;n evoca sin nombrar directamente. Haciendo eco de, en la tradici&oacute;n de, como sugiere la historia. El lector completa la conexi&oacute;n.</div>
+                </div>
+                <div class="concept-card metalinguistica" onclick="learnConcept('metalinguistica')">
+                    <div class="card-avatar">&#128300;</div>
+                    <div class="card-name">Atribuci&oacute;n metaling&uuml;&iacute;stica</div>
+                    <div class="card-example">&laquo;El concepto de &ldquo;escuchar&rdquo; tal como lo define Do&ntilde;a Asunci&oacute;n...&raquo;</div>
+                    <div class="card-description">Hablar sobre c&oacute;mo se usa el lenguaje. El concepto de, tal como lo define, en el sentido que le da. La lengua habla de s&iacute; misma.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4: YAGUARÁ DICE -->
+        <div class="yaguara-guide" id="step4" style="display:none;">
+            <div class="yaguara-small" onclick="speakText('La intertextualidad es el arma m\u00e1s poderosa porque deja que las palabras hablen por s\u00ed mismas.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguar&aacute;" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguar&aacute; dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message"><strong>Cita directa</strong>: &laquo;Seg&uacute;n afirma Don Pr&oacute;spero: &ldquo;Los &aacute;rboles son la memoria de la tierra.&rdquo;&raquo; Fidelidad absoluta. Las comillas marcan las palabras exactas.</div>
+                    <div class="simple-message"><strong>Par&aacute;frasis</strong>: Don Pr&oacute;spero plantea que los &aacute;rboles constituyen la memoria del territorio. Sin comillas &mdash; las ideas con tus palabras. M&aacute;s flexible, pero exige comprensi&oacute;n real.</div>
+                    <div class="simple-message"><strong>Alusi&oacute;n</strong>: &laquo;Haciendo eco de esta tradici&oacute;n...&raquo; No cita, no parafrasea &mdash; evoca. El lector debe reconocer la referencia. Es la m&aacute;s elegante y la m&aacute;s arriesgada.</div>
+                    <div class="simple-message"><strong>Atribuci&oacute;n metaling&uuml;&iacute;stica</strong>: &laquo;El concepto de &ldquo;escuchar&rdquo; tal como lo define Do&ntilde;a Asunci&oacute;n...&raquo; La lengua examina la lengua. Nivel meta: no solo usamos palabras, hablamos sobre ellas.</div>
+                    <div class="simple-message"><strong>La confrontaci&oacute;n</strong>: Candelaria no grit&oacute;. No insult&oacute;. Solo ley&oacute; los textos de Don Pr&oacute;spero uno al lado del otro. La intertextualidad es el arma m&aacute;s poderosa porque deja que las palabras hablen por s&iacute; mismas.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 5: EJERCICIO — Matching -->
+        <div class="exercise-section" id="step5" style="display:none;">
+            <div class="exercise-title">Pr&aacute;ctica: tipos de intertextualidad</div>
+            <div class="exercise-instruction">
+                <div class="instruction-text">Une cada ejemplo con su tipo de intertextualidad.</div>
+            </div>
+            <div class="matching-game">
+                <div class="words-column">
+                    <div class="column-title">Ejemplo</div>
+                    <div class="word-item" onclick="selectWord(this,'pair1')" data-word="pair1">Seg&uacute;n afirma: &ldquo;Los &aacute;rboles son memoria&rdquo;</div>
+                    <div class="word-item" onclick="selectWord(this,'pair2')" data-word="pair2">Plantea que los &aacute;rboles constituyen la memoria</div>
+                    <div class="word-item" onclick="selectWord(this,'pair3')" data-word="pair3">Haciendo eco de esta tradici&oacute;n ancestral</div>
+                    <div class="word-item" onclick="selectWord(this,'pair4')" data-word="pair4">El concepto de &ldquo;escuchar&rdquo; tal como lo define...</div>
+                </div>
+                <div class="images-column">
+                    <div class="column-title">Tipo</div>
+                    <div class="image-item" onclick="selectImage(this,'pair3')" data-image="pair3">Alusi&oacute;n</div>
+                    <div class="image-item" onclick="selectImage(this,'pair1')" data-image="pair1">Cita directa</div>
+                    <div class="image-item" onclick="selectImage(this,'pair4')" data-image="pair4">Atribuci&oacute;n metaling&uuml;&iacute;stica</div>
+                    <div class="image-item" onclick="selectImage(this,'pair2')" data-image="pair2">Par&aacute;frasis</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-title">&#161;Excelente!</div>
+            <div class="success-text">Dominas la intertextualidad. Candelaria confront&oacute; a Don Pr&oacute;spero con sus propias palabras &mdash; y t&uacute; ya sabes hacer que los textos dialoguen.</div>
+        </div>
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" id="btnPrev" disabled>&larr; Anterior</button>
+            <button class="nav-button primary" id="btnNext">Siguiente &rarr;</button>
+            <button class="nav-button primary" id="btnFinish" style="display:none;">Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+            var lessonData = { currentStep:1, totalSteps:5, selectedWord:null, matchedPairs:0, totalPairs:4, isComplete:false };
+            var concepts = {
+                cita: "Cita directa. Seg\u00fan afirma Don Pr\u00f3spero: Los \u00e1rboles son la memoria de la tierra. La cita directa reproduce las palabras exactas. Seg\u00fan afirma, como declar\u00f3, en palabras de. Las comillas marcan las palabras exactas. Requiere fidelidad absoluta.",
+                parafrasis: "Par\u00e1frasis. Don Pr\u00f3spero plantea que los \u00e1rboles constituyen la memoria del territorio. Reformular con tus propias palabras manteniendo el significado. Seg\u00fan plantea, como sugiere, en la visi\u00f3n de. Sin comillas. M\u00e1s flexible, pero exige comprensi\u00f3n real.",
+                alusion: "Alusi\u00f3n. Haciendo eco de esta tradici\u00f3n, Candelaria recoge las voces del r\u00edo. La alusi\u00f3n evoca sin nombrar directamente. Haciendo eco de, en la tradici\u00f3n de, como sugiere la historia. El lector completa la conexi\u00f3n. Es la m\u00e1s elegante y la m\u00e1s arriesgada.",
+                metalinguistica: "Atribuci\u00f3n metaling\u00fc\u00edstica. El concepto de escuchar tal como lo define Do\u00f1a Asunci\u00f3n. Hablar sobre c\u00f3mo se usa el lenguaje. El concepto de, tal como lo define, en el sentido que le da. La lengua habla de s\u00ed misma. Nivel meta: no solo usamos palabras, hablamos sobre ellas."
+            };
+
+            function updateProgress() {
+                var p = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var f = document.getElementById('progressFill');
+                var t = document.getElementById('progressText');
+                if (f) f.style.width = p + '%';
+                if (t) t.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(n) {
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var s = document.getElementById('step' + i);
+                    if (s) s.style.display = 'none';
+                }
+                var c = document.getElementById('step' + n);
+                if (c) { c.style.display = 'block'; c.style.animation = 'fadeIn 0.5s ease-in'; }
+                updateNav();
+                updateProgress();
+            }
+
+            function updateNav() {
+                var p = document.getElementById('btnPrev');
+                var n = document.getElementById('btnNext');
+                var f = document.getElementById('btnFinish');
+                if (p) p.disabled = lessonData.currentStep === 1;
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (n) n.style.display = 'none';
+                    if (f) f.style.display = 'inline-block';
+                } else {
+                    if (n) n.style.display = 'inline-block';
+                    if (f) f.style.display = 'none';
+                }
+            }
+
+            function goNext() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function goPrev() {
+                if (lessonData.currentStep > 1) {
+                    lessonData.currentStep--;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function learnConceptFn(id) {
+                var t = concepts[id];
+                if (t) {
+                    speakInSpanish(t);
+                    showNotification('Escucha y repite');
+                }
+            }
+
+            function selectWordFn(el, w) {
+                var all = document.querySelectorAll('.word-item');
+                for (var i = 0; i < all.length; i++) all[i].classList.remove('selected');
+                el.classList.add('selected');
+                lessonData.selectedWord = w;
+            }
+
+            function selectImageFn(el, img) {
+                if (!lessonData.selectedWord) {
+                    showNotification('Primero selecciona un ejemplo');
+                    return;
+                }
+                var ok = lessonData.selectedWord === img;
+                var we = document.querySelector('.word-item[data-word="' + lessonData.selectedWord + '"]');
+                if (ok) {
+                    we.classList.remove('selected');
+                    we.classList.add('correct');
+                    el.classList.add('correct');
+                    lessonData.matchedPairs++;
+                    lessonData.selectedWord = null;
+                    var m = ['Bien', 'Muy bien', 'Excelente', 'Perfecto'];
+                    speakInSpanish(m[lessonData.matchedPairs - 1] || 'Bien');
+                    showNotification(m[lessonData.matchedPairs - 1] || 'Bien');
+                    if (lessonData.matchedPairs === lessonData.totalPairs) {
+                        setTimeout(function() {
+                            var sm = document.getElementById('successMessage');
+                            if (sm) sm.classList.add('show');
+                            speakInSpanish('\u00a1Excelente! Dominas la intertextualidad. Candelaria confront\u00f3 a Don Pr\u00f3spero con sus propias palabras, y t\u00fa ya sabes hacer que los textos dialoguen.');
+                        }, 1000);
+                    }
+                } else {
+                    we.classList.add('incorrect');
+                    el.classList.add('incorrect');
+                    showNotification('Incorrecto. Intenta otra vez.');
+                    setTimeout(function() {
+                        we.classList.remove('selected', 'incorrect');
+                        el.classList.remove('incorrect');
+                        lessonData.selectedWord = null;
+                    }, 1500);
+                }
+            }
+
+            function speakInSpanish(text) {
+                if (!text || !('speechSynthesis' in window)) return;
+                try {
+                    var u = new SpeechSynthesisUtterance(text);
+                    u.lang = 'es-CO';
+                    u.rate = 0.55;
+                    speechSynthesis.speak(u);
+                } catch (e) {}
+            }
+
+            function showNotification(msg) {
+                var ex = document.querySelector('.temp-notification');
+                if (ex) ex.remove();
+                var n = document.createElement('div');
+                n.className = 'temp-notification';
+                n.style.cssText = 'position:fixed;top:20px;right:20px;background:rgba(61,26,26,0.95);color:white;padding:15px 20px;border-radius:12px;font-weight:600;z-index:10000;max-width:320px;border:2px solid #ff5722;box-shadow:0 4px 20px rgba(0,0,0,0.3);animation:slideInRight 0.3s ease-out;';
+                n.innerHTML = '<div style="font-size:1.05rem;color:#fbe9e7;">' + msg + '</div>';
+                document.body.appendChild(n);
+                setTimeout(function() { if (n && n.parentNode) n.parentNode.removeChild(n); }, 3500);
+            }
+
+            function completeLessonFn() {
+                lessonData.isComplete = true;
+                if (typeof JaguarAPI !== 'undefined') JaguarAPI.syncA1Progress('c1_advanced', 'dest46');
+                showNotification('Lecci\u00f3n completada');
+                setTimeout(function() { window.location.href = '/c1-ciudad-perdida'; }, 2000);
+            }
+
+            window.learnConcept = learnConceptFn;
+            window.selectWord = selectWordFn;
+            window.selectImage = selectImageFn;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLessonFn;
+
+            var style = document.createElement('style');
+            style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes slideInRight{from{transform:translateX(300px);opacity:0}to{transform:translateX(0);opacity:1}}';
+            document.head.appendChild(style);
+
+            document.addEventListener('DOMContentLoaded', function() {
+                showStep(1);
+                document.getElementById('btnNext').addEventListener('click', goNext);
+                document.getElementById('btnPrev').addEventListener('click', goPrev);
+                document.getElementById('btnFinish').addEventListener('click', completeLessonFn);
+            });
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>
