@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 46: Voces entre las ruinas - Intertextualidad</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c1_advanced/dest46_intertextuality/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 46: Voces entre las ruinas - Intertextualidad",
+          "url": "https://babelfree.com/c1_advanced/dest46_intertextuality/games",
+          "educationalLevel": "C1 Advanced",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Intertextuality", "Cross-textual analysis", "Spanish literature"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C1 Advanced", "item": "https://babelfree.com/c1-ciudad-perdida" },
+            { "@type": "ListItem", "position": 4, "name": "Voces entre las ruinas - Intertextualidad" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c1-ciudad-perdida" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 46: Voces entre las ruinas</div>
+            <div class="yg-header-subtitle">Intertextualidad</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative \u2014 Piedras que recuerdan otras piedras ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre la intertextualidad al explorar las ruinas de Teyuna. Observa las referencias cruzadas entre textos y tradiciones.',
+        text: 'Yaguar\u00e1 ascendi\u00f3 los \u00faltimos pelda\u00f1os de piedra hacia las terrazas de Teyuna y sinti\u00f3 que las ruinas le hablaban con voces que no eran suyas. En las paredes erosionadas crey\u00f3 leer ecos de otros relatos: la espiral tallada en la roca le record\u00f3 el realismo m\u00e1gico de Garc\u00eda M\u00e1rquez, donde el tiempo tambi\u00e9n se enrolla sobre s\u00ed mismo. Seg\u00fan afirma el antrop\u00f3logo Reichel-Dolmatoff, los tairona conceb\u00edan el universo como un tejido de correspondencias, y cada s\u00edmbolo remit\u00eda a otro anterior. Yaguar\u00e1 comprendi\u00f3 que ning\u00fan texto nace en el vac\u00edo: todo escrito dialoga con los que lo precedieron, ya sea mediante citas directas, alusiones veladas o parodias deliberadas. La ciudad perdida era, en s\u00ed misma, un palimpsesto donde civilizaciones sucesivas hab\u00edan inscrito sus voces sobre las de los antiguos.'
+    },
+    // === GAME 2: Narrative \u2014 El palimpsesto de la selva ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el concepto de palimpsesto aplicado a la literatura colombiana. Identifica las referencias intertextuales.',
+        text: 'Un gu\u00eda kogui le explic\u00f3 a Yaguar\u00e1 que las terrazas de Teyuna hab\u00edan sido construidas sobre cimientos a\u00fan m\u00e1s antiguos, como un manuscrito donde se borra y se reescribe sin destruir por completo lo anterior. En palabras de G\u00e9rard Genette, eso es exactamente un palimpsesto: un texto que se superpone a otro sin ocultarlo del todo. La literatura colombiana funciona de manera semejante. Cuando \u00c1lvaro Mutis describe el tr\u00f3pico en las aventuras de Maqroll el Gaviero, hace eco de las cr\u00f3nicas coloniales, pero las transforma con iron\u00eda y melancol\u00eda moderna. Cuando Laura Restrepo narra la violencia en Delirio, dialoga con la tradici\u00f3n del testimonio latinoamericano y, al mismo tiempo, la subvierte con t\u00e9cnicas de la novela polic\u00edaca. Cada nueva obra es una capa m\u00e1s del palimpsesto, y leer con profundidad significa aprender a descifrar las capas anteriores.'
+    },
+    // === GAME 3: Narrative \u2014 Garc\u00eda M\u00e1rquez y la alusi\u00f3n b\u00edblica ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Cien a\u00f1os de soledad emplea la intertextualidad con fuentes b\u00edblicas y mitol\u00f3gicas.',
+        text: 'Junto a una terraza circular, un profesor de literatura que visitaba Teyuna se sent\u00f3 con Yaguar\u00e1 y le habl\u00f3 de las alusiones en Cien a\u00f1os de soledad. Como plantea el cr\u00edtico Josefina Ludmer, el diluvio que azota Macondo durante cuatro a\u00f1os es una clara referencia al diluvio del G\u00e9nesis, pero invertida: en la Biblia el agua purifica; en Garc\u00eda M\u00e1rquez, el agua trae decadencia. La fundaci\u00f3n de Macondo, con Jos\u00e9 Arcadio Buend\u00eda guiando a un grupo de familias, evoca el \u00e9xodo b\u00edblico, mientras que los pergaminos de Melqu\u00edades funcionan como una met\u00e1fora del texto sagrado que contiene el destino de una civilizaci\u00f3n. Haciendo eco de las profec\u00edas apocal\u00edpticas, la novela cierra con la destrucci\u00f3n total de la estirpe. Garc\u00eda M\u00e1rquez no copia la Biblia: la reescribe desde el Caribe colombiano.'
+    },
+    // === GAME 4: Narrative \u2014 La iron\u00eda como forma intertextual ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la iron\u00eda y la parodia como mecanismos de intertextualidad en la tradici\u00f3n literaria colombiana.',
+        text: 'Yaguar\u00e1 descubri\u00f3 que la iron\u00eda es una de las herramientas intertextuales m\u00e1s sofisticadas. Cuando un autor cita a otro con intenci\u00f3n ir\u00f3nica, no busca homenajear sino cuestionar. En El olvido que seremos, H\u00e9ctor Abad Faciolince toma el verso de Borges \u2014\u00abya somos el olvido que seremos\u00bb\u2014 y lo convierte en el t\u00edtulo de una memoria personal sobre su padre asesinado. La cita deja de ser abstracta y se llena de dolor concreto: es la misma frase, pero el contexto la transforma radicalmente. La parodia opera de forma a\u00fan m\u00e1s expl\u00edcita: imita el estilo de otro texto para producir un efecto c\u00f3mico o cr\u00edtico. Seg\u00fan afirma Linda Hutcheon, la parodia no destruye el original; lo recontextualiza. Las ruinas de Teyuna, pensaba Yaguar\u00e1, tambi\u00e9n pod\u00edan leerse como una parodia involuntaria de la idea de progreso: lo que fue grandeza ahora es fragmento.'
+    },
+    // === GAME 5: Narrative \u2014 Voces ind\u00edgenas en la literatura contempor\u00e1nea ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo las voces ind\u00edgenas se entretejen con la literatura colombiana contempor\u00e1nea mediante la intertextualidad.',
+        text: 'Un mamo kogui le dijo a Yaguar\u00e1: \u00abNosotros no escribimos; tejemos. Cada mochila cuenta una historia que ya contaron nuestros abuelos\u00bb. Esa declaraci\u00f3n era, sin saberlo, una definici\u00f3n perfecta de intertextualidad oral. Cuando William Ospina escribe en El pa\u00eds de la canela, entreteje las cr\u00f3nicas de fray Gaspar de Carvajal con su propia visi\u00f3n po\u00e9tica de la Amazon\u00eda. Las voces ind\u00edgenas, que hab\u00edan sido silenciadas en las cr\u00f3nicas coloniales, reaparecen transformadas en la narrativa actual. Como plantea el te\u00f3rico Mijail Bajt\u00edn, todo enunciado es una respuesta a enunciados anteriores y, a la vez, anticipa enunciados futuros. La literatura colombiana, tejida de hilos ind\u00edgenas, africanos y europeos, es un ejemplo vivo de esa polifon\u00eda. En las ruinas de Teyuna, Yaguar\u00e1 comprendi\u00f3 que escuchar esas m\u00faltiples voces no era un ejercicio acad\u00e9mico, sino un acto de justicia.'
+    },
+    // === GAME 6: Narrative \u2014 El lenguaje de la cita acad\u00e9mica ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el registro acad\u00e9mico para citar y referenciar textos ajenos. Observa las expresiones formales de atribuci\u00f3n.',
+        text: 'Antes de seguir explorando, Yaguar\u00e1 se detuvo a reflexionar sobre c\u00f3mo se cita formalmente en el \u00e1mbito acad\u00e9mico. Seg\u00fan afirma Genette en Palimpsestos, la intertextualidad abarca desde la cita expl\u00edcita hasta la alusi\u00f3n apenas perceptible. Como plantea Bajt\u00edn en su Teor\u00eda de la novela, ning\u00fan discurso es completamente original. En palabras de Borges, \u00abcada escritor crea a sus precursores\u00bb. Haciendo eco de esta idea, la cr\u00edtica colombiana Montserrat Ordob\u00e1s sostiene que la literatura nacional se comprende mejor cuando se rastrean sus fuentes. Estas expresiones \u2014seg\u00fan afirma, como plantea, en palabras de, haciendo eco de\u2014 constituyen el andamiaje retot\u00f3rico que permite al escritor acad\u00e9mico incorporar voces ajenas sin perder la propia. Dominar este registro es indispensable para cualquier an\u00e1lisis intertextual riguroso.'
+    },
+    // === GAME 7: FIB \u2014 Vocabulario de intertextualidad ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con el t\u00e9rmino de intertextualidad correcto.',
+        questions: [
+            {
+                sentence: 'Un ___ es un texto que se escribe sobre otro anterior sin borrar completamente las huellas del primero.',
+                answer: 'palimpsesto',
+                options: ['palimpsesto', 'pastiche', 'par\u00e1frasis', 'par\u00f3nimo']
+            },
+            {
+                sentence: 'La ___ consiste en imitar el estilo de otro autor o texto con intenci\u00f3n cr\u00edtica o humor\u00edstica.',
+                answer: 'parodia',
+                options: ['parodia', 'par\u00e1frasis', 'cita directa', 'met\u00e1fora']
+            },
+            {
+                sentence: 'Una ___ es una referencia indirecta a otro texto que el lector debe reconocer por su cuenta.',
+                answer: 'alusi\u00f3n',
+                options: ['alusi\u00f3n', 'cita textual', 'parodia', 'sinopsis']
+            }
+        ]
+    },
+    // === GAME 8: FIB \u2014 Tipos de referencia intertextual ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el tipo de referencia intertextual que se describe en cada oraci\u00f3n.',
+        questions: [
+            {
+                sentence: 'Reproducir las palabras exactas de otro autor entre comillas es una ___.',
+                answer: 'cita directa',
+                options: ['cita directa', 'alusi\u00f3n', 'parodia', 'pastiche']
+            },
+            {
+                sentence: 'El ___ imita el estilo de varios autores sin intenci\u00f3n cr\u00edtica, buscando crear un efecto de homenaje.',
+                answer: 'pastiche',
+                options: ['pastiche', 'parodia', 'plagio', 'par\u00e1frasis']
+            },
+            {
+                sentence: 'Cuando un autor reformula las ideas de otro con sus propias palabras, realiza una ___.',
+                answer: 'par\u00e1frasis',
+                options: ['par\u00e1frasis', 'cita directa', 'alusi\u00f3n', 'parodia']
+            }
+        ]
+    },
+    // === GAME 9: FIB \u2014 Expresiones acad\u00e9micas de atribuci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la expresi\u00f3n acad\u00e9mica de atribuci\u00f3n adecuada.',
+        questions: [
+            {
+                sentence: '___ Genette, la transtextualidad engloba cinco tipos de relaciones entre textos.',
+                answer: 'Seg\u00fan afirma',
+                options: ['Seg\u00fan afirma', 'Haciendo eco de', 'En parodia de', 'A pesar de']
+            },
+            {
+                sentence: '___ Bajt\u00edn en su teor\u00eda del dialogismo, todo enunciado responde a enunciados previos.',
+                answer: 'Como plantea',
+                options: ['Como plantea', 'Sin embargo', 'Pese a que dice', 'A diferencia de']
+            },
+            {
+                sentence: '___ Borges, \u00abcada escritor crea a sus precursores\u00bb.',
+                answer: 'En palabras de',
+                options: ['En palabras de', 'En contra de', 'A pesar de', 'Con respecto a']
+            },
+            {
+                sentence: '___ la teor\u00eda poscolonial, la cr\u00edtica latinoamericana ha cuestionado el canon europeo.',
+                answer: 'Haciendo eco de',
+                options: ['Haciendo eco de', 'En palabras de', 'Seg\u00fan cita', 'A favor de']
+            }
+        ]
+    },
+    // === GAME 10: FIB \u2014 Figuras ret\u00f3ricas en contexto intertextual ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica la figura ret\u00f3rica o el recurso intertextual en cada fragmento.',
+        questions: [
+            {
+                sentence: 'Llamar \u00abla corona\u00bb al poder real es un ejemplo de ___, donde una parte representa al todo.',
+                answer: 'metonimia',
+                options: ['metonimia', 'met\u00e1fora', 'sinecdoque', 'iron\u00eda']
+            },
+            {
+                sentence: 'Decir \u00abcien bocas que alimentar\u00bb cuando se habla de cien personas es un ejemplo de ___.',
+                answer: 'sin\u00e9cdoque',
+                options: ['sin\u00e9cdoque', 'metonimia', 'hip\u00e9rbole', 'parodia']
+            },
+            {
+                sentence: 'Cuando un personaje dice \u00abqu\u00e9 buen tiempo\u00bb durante una tormenta, emplea ___.',
+                answer: 'iron\u00eda',
+                options: ['iron\u00eda', 'met\u00e1fora', 'alusi\u00f3n', 'pastiche']
+            }
+        ]
+    },
+    // === GAME 11: FIB \u2014 Garc\u00eda M\u00e1rquez: vocabulario del realismo m\u00e1gico ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con el t\u00e9rmino propio del universo garciamarquiano.',
+        questions: [
+            {
+                sentence: 'En Cien a\u00f1os de soledad, la peste del ___ hace que los habitantes de Macondo olviden los nombres de las cosas.',
+                answer: 'insomnio',
+                options: ['insomnio', 'olvido', 'silencio', 'sue\u00f1o']
+            },
+            {
+                sentence: 'El concepto de ___ c\u00edclico en la obra de Garc\u00eda M\u00e1rquez alude a la repetici\u00f3n ineludible de la historia familiar.',
+                answer: 'tiempo',
+                options: ['tiempo', 'espacio', 'destino', 'amor']
+            },
+            {
+                sentence: 'Remedios la Bella asciende al cielo envuelta en s\u00e1banas blancas, una escena que hace eco de la ___ cristiana.',
+                answer: 'ascensi\u00f3n',
+                options: ['ascensi\u00f3n', 'resurrecci\u00f3n', 'creaci\u00f3n', 'revelaci\u00f3n']
+            }
+        ]
+    },
+    // === GAME 12: FIB \u2014 Identificar la fuente intertextual ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica qu\u00e9 tipo de texto fuente subyace en cada fragmento literario.',
+        questions: [
+            {
+                sentence: 'Cuando Garc\u00eda M\u00e1rquez narra un diluvio de cuatro a\u00f1os que destruye Macondo, la fuente intertextual principal es de car\u00e1cter ___.',
+                answer: 'b\u00edblico',
+                options: ['b\u00edblico', 'mitol\u00f3gico griego', 'hist\u00f3rico', 'cient\u00edfico']
+            },
+            {
+                sentence: 'El t\u00edtulo El olvido que seremos de Abad Faciolince proviene de un ___ de Jorge Luis Borges.',
+                answer: 'poema',
+                options: ['poema', 'ensayo', 'cuento', 'discurso']
+            },
+            {
+                sentence: 'Cuando William Ospina reescribe la expedici\u00f3n de Orellana por el Amazonas, su fuente principal son las ___ coloniales.',
+                answer: 'cr\u00f3nicas',
+                options: ['cr\u00f3nicas', 'novelas', 'leyendas', 'canciones']
+            }
+        ]
+    },
+    // === GAME 13: FIB \u2014 Registro acad\u00e9mico en an\u00e1lisis intertextual ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa el fragmento acad\u00e9mico con la estructura de atribuci\u00f3n correcta.',
+        questions: [
+            {
+                sentence: '___ la tesis de Harold Bloom sobre la angustia de las influencias, todo poeta fuerte malinterpreta creativamente a sus predecesores.',
+                answer: 'De acuerdo con',
+                options: ['De acuerdo con', 'A pesar de', 'En contra de', 'Sin relaci\u00f3n con']
+            },
+            {
+                sentence: 'La novela de Restrepo puede interpretarse, ___ la cr\u00edtica feminista, como una subversi\u00f3n del canon patriarcal.',
+                answer: 'a la luz de',
+                options: ['a la luz de', 'en palabras de', 'como plantea', 'haciendo eco de']
+            },
+            {
+                sentence: 'Abad Faciolince ___ el verso de Borges no para rendirle homenaje pasivo, sino para cargarlo de significado autobiogr\u00e1fico.',
+                answer: 'retoma',
+                options: ['retoma', 'plagia', 'ignora', 'destruye']
+            }
+        ]
+    },
+    // === GAME 14: FIB \u2014 Conectores en discurso intertextual ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el conector o la expresi\u00f3n que mejor articula el an\u00e1lisis intertextual.',
+        questions: [
+            {
+                sentence: 'La imagen del hielo en Cien a\u00f1os de soledad remite a lo desconocido; ___, la lluvia interminable evoca el castigo b\u00edblico.',
+                answer: 'de manera an\u00e1loga',
+                options: ['de manera an\u00e1loga', 'sin embargo', 'por el contrario', 'a pesar de ello']
+            },
+            {
+                sentence: '___ ambos autores abordan la violencia colombiana, sus estrategias intertextuales difieren sustancialmente.',
+                answer: 'Si bien',
+                options: ['Si bien', 'Dado que', 'Puesto que', 'Porque']
+            },
+            {
+                sentence: 'La parodia no busca destruir el texto original; ___, lo recontextualiza para generar nuevos significados.',
+                answer: 'antes bien',
+                options: ['antes bien', 'no obstante', 'adem\u00e1s', 'igualmente']
+            }
+        ]
+    },
+    // === GAME 15: Conjugation \u2014 Subjuntivo en an\u00e1lisis cr\u00edtico ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma verbal correcta en oraciones de an\u00e1lisis literario que requieren subjuntivo.',
+        questions: [
+            {
+                verb: 'pretender (presente de subjuntivo)',
+                subject: 'el autor',
+                answer: 'pretenda',
+                options: ['pretenda', 'pretende', 'pretend\u00eda', 'pretender\u00eda']
+            },
+            {
+                verb: 'aludir (imperfecto de subjuntivo)',
+                subject: 'Garc\u00eda M\u00e1rquez',
+                answer: 'aludiera',
+                options: ['aludiera', 'alude', 'alud\u00eda', 'aludir\u00eda']
+            },
+            {
+                verb: 'subvertir (pluscuamperfecto de subjuntivo)',
+                subject: 'la novela',
+                answer: 'hubiera subvertido',
+                options: ['hubiera subvertido', 'habr\u00eda subvertido', 'haya subvertido', 'subvirti\u00f3']
+            },
+            {
+                verb: 'reinterpretar (presente de subjuntivo)',
+                subject: 'nosotros',
+                answer: 'reinterpretemos',
+                options: ['reinterpretemos', 'reinterpretamos', 'reinterpret\u00e1ramos', 'reinterpretar\u00edamos']
+            },
+            {
+                verb: 'constituir (imperfecto de subjuntivo)',
+                subject: 'el poema',
+                answer: 'constituyera',
+                options: ['constituyera', 'constituye', 'constitu\u00eda', 'constituir\u00eda']
+            }
+        ]
+    },
+    // === GAME 16: Conjugation \u2014 Condicionales en hip\u00f3tesis literaria ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Completa las oraciones condicionales propias del an\u00e1lisis literario con la forma verbal adecuada.',
+        questions: [
+            {
+                verb: 'escribir (pluscuamperfecto de subjuntivo)',
+                subject: 'Mutis',
+                answer: 'hubiera escrito',
+                options: ['hubiera escrito', 'habr\u00eda escrito', 'haya escrito', 'escribiera']
+            },
+            {
+                verb: 'carecer (condicional simple)',
+                subject: 'la novela',
+                answer: 'carecer\u00eda',
+                options: ['carecer\u00eda', 'carece', 'carec\u00eda', 'careciera']
+            },
+            {
+                verb: 'poder (condicional compuesto)',
+                subject: 'el lector',
+                answer: 'habr\u00eda podido',
+                options: ['habr\u00eda podido', 'hubiera podido', 'ha podido', 'podr\u00eda haber']
+            },
+            {
+                verb: 'reconocer (imperfecto de subjuntivo)',
+                subject: 'el cr\u00edtico',
+                answer: 'reconociera',
+                options: ['reconociera', 'reconoce', 'reconoc\u00eda', 'reconocer\u00eda']
+            }
+        ]
+    },
+    // === GAME 17: Conjugation \u2014 Verbos de atribuci\u00f3n acad\u00e9mica ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos de atribuci\u00f3n y reporte propios del discurso acad\u00e9mico sobre intertextualidad.',
+        questions: [
+            {
+                verb: 'sostener (presente de indicativo)',
+                subject: 'Bajt\u00edn',
+                answer: 'sostiene',
+                options: ['sostiene', 'sostenga', 'sosten\u00eda', 'sostendr\u00eda']
+            },
+            {
+                verb: 'plantear (pret\u00e9rito indefinido)',
+                subject: 'Genette',
+                answer: 'plante\u00f3',
+                options: ['plante\u00f3', 'plantea', 'planteara', 'plantear\u00eda']
+            },
+            {
+                verb: 'argumentar (presente de subjuntivo)',
+                subject: 'que la cr\u00edtica',
+                answer: 'argumente',
+                options: ['argumente', 'argumenta', 'argumentaba', 'argumentar\u00eda']
+            },
+            {
+                verb: 'refutar (condicional compuesto)',
+                subject: 'los estructuralistas',
+                answer: 'habr\u00edan refutado',
+                options: ['habr\u00edan refutado', 'hubieran refutado', 'refutaron', 'refutar\u00edan']
+            },
+            {
+                verb: 'atribuir (imperfecto de subjuntivo)',
+                subject: 'el ensayista',
+                answer: 'atribuyera',
+                options: ['atribuyera', 'atribuye', 'atribu\u00eda', 'atribuir\u00eda']
+            }
+        ]
+    },
+    // === GAME 18: Conjugation \u2014 Per\u00edfrasis verbales en discurso cr\u00edtico ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Completa la per\u00edfrasis verbal adecuada en el contexto del an\u00e1lisis intertextual.',
+        questions: [
+            {
+                verb: 'llegar a + infinitivo (pret\u00e9rito indefinido)',
+                subject: 'Garc\u00eda M\u00e1rquez',
+                answer: 'lleg\u00f3 a consolidar',
+                options: ['lleg\u00f3 a consolidar', 'llegaba a consolidar', 'llegar\u00eda a consolidar', 'llegue a consolidar']
+            },
+            {
+                verb: 'dejar de + infinitivo (presente perfecto)',
+                subject: 'la cr\u00edtica',
+                answer: 'ha dejado de considerar',
+                options: ['ha dejado de considerar', 'dej\u00f3 de considerar', 'dejar\u00eda de considerar', 'deje de considerar']
+            },
+            {
+                verb: 'volver a + infinitivo (condicional)',
+                subject: 'el lector atento',
+                answer: 'volver\u00eda a descubrir',
+                options: ['volver\u00eda a descubrir', 'volvi\u00f3 a descubrir', 'vuelve a descubrir', 'volviera a descubrir']
+            },
+            {
+                verb: 'seguir + gerundio (imperfecto de subjuntivo)',
+                subject: 'los investigadores',
+                answer: 'siguieran rastreando',
+                options: ['siguieran rastreando', 'segu\u00edan rastreando', 'siguen rastreando', 'seguir\u00edan rastreando']
+            }
+        ]
+    },
+    // === GAME 19: Conjugation \u2014 Voz pasiva en cr\u00edtica literaria ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma verbal en voz pasiva adecuada para el registro acad\u00e9mico.',
+        questions: [
+            {
+                verb: 'considerar (pasiva presente)',
+                subject: 'la alusi\u00f3n b\u00edblica',
+                answer: 'es considerada',
+                options: ['es considerada', 'fue considerada', 'ser\u00eda considerada', 'ha sido considerada']
+            },
+            {
+                verb: 'analizar (pasiva pret\u00e9rito perfecto)',
+                subject: 'la novela',
+                answer: 'ha sido analizada',
+                options: ['ha sido analizada', 'fue analizada', 'es analizada', 'ser\u00eda analizada']
+            },
+            {
+                verb: 'reescribir (pasiva pluscuamperfecto)',
+                subject: 'el mito',
+                answer: 'hab\u00eda sido reescrito',
+                options: ['hab\u00eda sido reescrito', 'fue reescrito', 'ha sido reescrito', 'ser\u00eda reescrito']
+            },
+            {
+                verb: 'interpretar (pasiva condicional compuesto)',
+                subject: 'el pasaje',
+                answer: 'habr\u00eda sido interpretado',
+                options: ['habr\u00eda sido interpretado', 'hubiera sido interpretado', 'fue interpretado', 'es interpretado']
+            }
+        ]
+    },
+    // === GAME 20: Conjugation \u2014 Tiempos integrados en ensayo cr\u00edtico ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Cada pregunta combina m\u00faltiples estructuras C1. Elige la forma correcta.',
+        questions: [
+            {
+                verb: 'caber (condicional simple)',
+                subject: 'impersonal: ___ preguntarse si...',
+                answer: 'cabr\u00eda',
+                options: ['cabr\u00eda', 'cabe', 'cab\u00eda', 'cupiera']
+            },
+            {
+                verb: 'subyacer (presente de subjuntivo)',
+                subject: 'que una intenci\u00f3n parodica',
+                answer: 'subyazca',
+                options: ['subyazca', 'subyace', 'subyac\u00eda', 'subyacer\u00eda']
+            },
+            {
+                verb: 'entrever (pluscuamperfecto de subjuntivo)',
+                subject: 'el lector',
+                answer: 'hubiera entrevisto',
+                options: ['hubiera entrevisto', 'habr\u00eda entrevisto', 'haya entrevisto', 'entrevi\u00f3']
+            },
+            {
+                verb: 'trasgredir (imperfecto de subjuntivo)',
+                subject: 'la obra',
+                answer: 'trasgrediera',
+                options: ['trasgrediera', 'trasgrede', 'trasgredi\u00f3', 'trasgredir\u00eda']
+            }
+        ]
+    },
+    // === GAME 21: Pair \u2014 Tipo de intertextualidad y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada tipo de relaci\u00f3n intertextual con el ejemplo que le corresponde.',
+        pairs: [
+            ['Cita directa', '\u00abYa somos el olvido que seremos\u00bb, escribe Borges.'],
+            ['Alusi\u00f3n', 'El diluvio de Macondo evoca el G\u00e9nesis sin mencionarlo.'],
+            ['Parodia', 'Un autor imita el estilo de las novelas de caballer\u00eda para ridiculizarlas.'],
+            ['Par\u00e1frasis', 'Seg\u00fan Bajt\u00edn, todo enunciado responde a otros previos.'],
+            ['Pastiche', 'Una novela mezcla estilos de varios autores como homenaje.'],
+            ['Iron\u00eda intertextual', 'Usar un verso rom\u00e1ntico en un contexto de violencia urbana.']
+        ]
+    },
+    // === GAME 22: Pair \u2014 Autor colombiano y referencia intertextual ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada autor colombiano con la referencia intertextual que caracteriza su obra.',
+        pairs: [
+            ['Garc\u00eda M\u00e1rquez', 'Reescritura de mitos b\u00edblicos y tragedia griega en el Caribe.'],
+            ['\u00c1lvaro Mutis', 'Eco de las cr\u00f3nicas de viaje y la poes\u00eda simbolista francesa.'],
+            ['Laura Restrepo', 'Di\u00e1logo con el testimonio latinoamericano y la novela polic\u00edaca.'],
+            ['H\u00e9ctor Abad Faciolince', 'Apropiaci\u00f3n de un verso de Borges como t\u00edtulo y leitmotiv.'],
+            ['William Ospina', 'Reescritura de las cr\u00f3nicas coloniales de la conquista amaz\u00f3nica.']
+        ]
+    },
+    // === GAME 23: Pair \u2014 Figura ret\u00f3rica y definici\u00f3n ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada figura ret\u00f3rica con su definici\u00f3n precisa.',
+        pairs: [
+            ['Met\u00e1fora', 'Sustituci\u00f3n de un t\u00e9rmino por otro con el que guarda semejanza impl\u00edcita.'],
+            ['Metonimia', 'Sustituci\u00f3n de un t\u00e9rmino por otro con el que mantiene una relaci\u00f3n de contig\u00fcidad.'],
+            ['Sin\u00e9cdoque', 'Designar el todo por la parte o la parte por el todo.'],
+            ['Iron\u00eda', 'Expresar lo contrario de lo que se quiere dar a entender.'],
+            ['Hip\u00e9rbole', 'Exageraci\u00f3n deliberada para enfatizar una idea.'],
+            ['Personificaci\u00f3n', 'Atribuir cualidades humanas a entidades no humanas.']
+        ]
+    },
+    // === GAME 24: Pair \u2014 Expresi\u00f3n de atribuci\u00f3n y funci\u00f3n ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada expresi\u00f3n de atribuci\u00f3n acad\u00e9mica con la funci\u00f3n que cumple en el discurso.',
+        pairs: [
+            ['Seg\u00fan afirma...', 'Presentar una autoridad como respaldo de la argumentaci\u00f3n.'],
+            ['Como plantea...', 'Introducir una tesis ajena que se va a desarrollar o discutir.'],
+            ['En palabras de...', 'Reproducir una cita textual atribuy\u00e9ndola expl\u00edcitamente.'],
+            ['Haciendo eco de...', 'Se\u00f1alar que una idea retoma o prolonga otra anterior.'],
+            ['A la luz de...', 'Indicar el marco te\u00f3rico desde el cual se interpreta un fen\u00f3meno.'],
+            ['De acuerdo con...', 'Mostrar coincidencia con la postura de otro autor.']
+        ]
+    },
+    // === GAME 25: Pair \u2014 Texto original y su reescritura intertextual ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada fragmento original con la reescritura intertextual que lo transforma.',
+        pairs: [
+            ['G\u00e9nesis: \u00abY llovi\u00f3 sobre la tierra cuarenta d\u00edas y cuarenta noches.\u00bb', 'Garc\u00eda M\u00e1rquez: Un diluvio de cuatro a\u00f1os que hunde Macondo en la decadencia.'],
+            ['Borges: \u00abYa somos el olvido que seremos.\u00bb', 'Abad Faciolince: Un hijo convierte el verso en memoria de su padre asesinado.'],
+            ['Cr\u00f3nicas de Indias: relatos de exploradores espa\u00f1oles.', 'Ospina: El pa\u00eds de la canela reescribe la expedici\u00f3n con voz po\u00e9tica.'],
+            ['S\u00f3focles: Ant\u00edgona desaf\u00eda la ley del Estado.', 'Restrepo: personajes femeninos que desaf\u00edan el orden establecido en Colombia.'],
+            ['Dante: \u00abEn el medio del camino de nuestra vida.\u00bb', 'Mutis: Maqroll como un viajero perdido en un infierno tropical.']
+        ]
+    },
+    // === GAME 26: Pair \u2014 Registro informal y equivalente acad\u00e9mico intertextual ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada expresi\u00f3n informal sobre intertextualidad con su equivalente en registro acad\u00e9mico.',
+        pairs: [
+            ['Garc\u00eda M\u00e1rquez copi\u00f3 la idea de la Biblia.', 'Garc\u00eda M\u00e1rquez reelabora el motivo b\u00edblico del diluvio en clave caribe\u00f1a.'],
+            ['Abad Faciolince us\u00f3 una frase de Borges.', 'Abad Faciolince se apropia de un verso borgiano como eje estructural de su relato.'],
+            ['Esa novela se parece mucho a otra.', 'Dicha novela establece un di\u00e1logo intertextual expl\u00edcito con su predecesora.'],
+            ['El autor se burl\u00f3 de la novela rom\u00e1ntica.', 'El autor parodia las convenciones del g\u00e9nero rom\u00e1ntico.'],
+            ['Habla como si fuera Borges.', 'El texto adopta un pastiche del estilo borgiano.']
+        ]
+    },
+    // === GAME 27: Listening \u2014 Identificar el tipo de referencia intertextual ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento cr\u00edtico y determina qu\u00e9 tipo de relaci\u00f3n intertextual se describe.',
+        audio: 'En Cien a\u00f1os de soledad, el episodio del diluvio que dura cuatro a\u00f1os en Macondo no menciona expl\u00edcitamente el G\u00e9nesis, pero cualquier lector familiarizado con la tradici\u00f3n judeocristiana reconoce la referencia. Garc\u00eda M\u00e1rquez no cita la Biblia; la evoca de manera oblicua, transform\u00e1ndola.',
+        question: '\u00bfQu\u00e9 tipo de relaci\u00f3n intertextual se describe en el fragmento?',
+        answer: 'Alusi\u00f3n',
+        options: ['Alusi\u00f3n', 'Cita directa', 'Parodia', 'Pastiche']
+    },
+    // === GAME 28: Listening \u2014 Reconocer expresiones de atribuci\u00f3n ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento acad\u00e9mico y cuenta cu\u00e1ntas expresiones diferentes de atribuci\u00f3n se emplean.',
+        audio: 'Seg\u00fan afirma G\u00e9rard Genette, toda obra literaria se construye sobre textos anteriores. Como plantea Bajt\u00edn, el lenguaje mismo es un terreno de voces superpuestas. En palabras de Borges, cada escritor crea a sus precursores. Haciendo eco de estas tres perspectivas, la cr\u00edtica colombiana ha desarrollado un aparato te\u00f3rico que permite analizar las m\u00faltiples capas de la literatura nacional.',
+        question: '\u00bfCu\u00e1ntas expresiones de atribuci\u00f3n diferentes se emplean en el fragmento?',
+        answer: 'Cuatro: seg\u00fan afirma, como plantea, en palabras de, haciendo eco de',
+        options: ['Cuatro: seg\u00fan afirma, como plantea, en palabras de, haciendo eco de', 'Tres: seg\u00fan afirma, como plantea, en palabras de', 'Dos: seg\u00fan afirma y como plantea', 'Cinco: se a\u00f1ade adem\u00e1s de acuerdo con']
+    },
+    // === GAME 29: Listening \u2014 Distinguir cita directa de par\u00e1frasis ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha atentamente y determina si el hablante emplea una cita directa o una par\u00e1frasis.',
+        audio: 'Borges escribe textualmente: \u00abYa somos el olvido que seremos\u00bb. Abad Faciolince toma ese verso y lo convierte en el t\u00edtulo de su obra m\u00e1s personal. Seg\u00fan el cr\u00edtico Juan Gabriel V\u00e1squez, la operaci\u00f3n de Abad no es una simple reproducci\u00f3n, sino una resignificaci\u00f3n: las mismas palabras, al cambiar de contexto, adquieren un peso emocional completamente distinto.',
+        question: '\u00bfQu\u00e9 operaci\u00f3n intertextual realiza Abad Faciolince con el verso de Borges, seg\u00fan el fragmento?',
+        answer: 'Resignificaci\u00f3n: reproduce las palabras exactas pero les da un significado nuevo',
+        options: ['Resignificaci\u00f3n: reproduce las palabras exactas pero les da un significado nuevo', 'Par\u00e1frasis: reformula el verso con palabras propias', 'Parodia: se burla del sentido original del verso', 'Alusi\u00f3n: menciona a Borges sin citar sus palabras']
+    },
+    // === GAME 30: Listening \u2014 Polifon\u00eda y dialogismo ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento sobre la teor\u00eda de Bajt\u00edn y responde la pregunta.',
+        audio: 'Bajt\u00edn sostiene que la novela es el g\u00e9nero polif\u00f3nico por excelencia. A diferencia de la poes\u00eda l\u00edrica, donde predomina una sola voz, la novela incorpora m\u00faltiples voces sociales que dialogan entre s\u00ed. Cada personaje trae consigo un lenguaje propio, con sus registros, sus referencias y sus ecos de otros discursos. Seg\u00fan esta teor\u00eda, leer una novela es escuchar una conversaci\u00f3n entre posiciones ideol\u00f3gicas distintas.',
+        question: '\u00bfQu\u00e9 significa \u00abpolifon\u00eda\u00bb en el contexto de la teor\u00eda bajtiniana descrita?',
+        answer: 'La presencia de m\u00faltiples voces sociales e ideol\u00f3gicas que dialogan dentro de la novela',
+        options: ['La presencia de m\u00faltiples voces sociales e ideol\u00f3gicas que dialogan dentro de la novela', 'La repetici\u00f3n de un mismo tema en distintos cap\u00edtulos', 'El uso de m\u00faltiples idiomas en un solo texto', 'La t\u00e9cnica de narrar desde la perspectiva de un solo personaje']
+    },
+    // === GAME 31: Listening \u2014 Metonimia y sin\u00e9cdoque en la literatura ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la explicaci\u00f3n sobre metonimia y sin\u00e9cdoque, luego identifica la diferencia clave.',
+        audio: 'La metonimia y la sin\u00e9cdoque son figuras frecuentemente confundidas. En la metonimia, la sustituci\u00f3n se basa en una relaci\u00f3n de contig\u00fcidad: decimos \u00abla corona\u00bb para referirnos al poder real, porque la corona acompa\u00f1a al rey. En la sin\u00e9cdoque, la sustituci\u00f3n se basa en una relaci\u00f3n de inclusi\u00f3n: decimos \u00abcien bocas\u00bb para referirnos a cien personas, porque la boca es parte del todo. Ambas figuras aparecen con frecuencia en la literatura colombiana, especialmente cuando los autores buscan condensar significados complejos en im\u00e1genes breves.',
+        question: '\u00bfCu\u00e1l es la diferencia fundamental entre metonimia y sin\u00e9cdoque seg\u00fan el fragmento?',
+        answer: 'La metonimia se basa en contig\u00fcidad; la sin\u00e9cdoque, en inclusi\u00f3n parte-todo',
+        options: ['La metonimia se basa en contig\u00fcidad; la sin\u00e9cdoque, en inclusi\u00f3n parte-todo', 'La metonimia es literal; la sin\u00e9cdoque es figurada', 'La metonimia pertenece a la poes\u00eda; la sin\u00e9cdoque, a la prosa', 'No hay diferencia: son sin\u00f3nimos']
+    },
+    // === GAME 32: Listening \u2014 An\u00e1lisis de un pasaje garciamarquiano ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el an\u00e1lisis de un pasaje de Cien a\u00f1os de soledad y responde.',
+        audio: 'Cuando Remedios la Bella asciende al cielo envuelta en s\u00e1banas blancas, Garc\u00eda M\u00e1rquez construye una escena que dialoga simult\u00e1neamente con la tradici\u00f3n b\u00edblica de la ascensi\u00f3n y con las leyendas populares del Caribe colombiano sobre mujeres que desaparecen misteriosamente. La imagen de las s\u00e1banas blancas puede leerse como una metonimia de la pureza, mientras que el acto de elevarse funciona como met\u00e1fora de la trascendencia. Lo extraordinario de este pasaje es que el narrador lo presenta con total naturalidad, t\u00e9cnica que define al realismo m\u00e1gico.',
+        question: '\u00bfCon cu\u00e1ntas tradiciones distintas dialoga la escena de Remedios la Bella, seg\u00fan el an\u00e1lisis?',
+        answer: 'Dos: la tradici\u00f3n b\u00edblica y las leyendas populares del Caribe colombiano',
+        options: ['Dos: la tradici\u00f3n b\u00edblica y las leyendas populares del Caribe colombiano', 'Una: solamente la tradici\u00f3n b\u00edblica', 'Tres: la b\u00edblica, las leyendas caribeas y la mitolog\u00eda griega', 'Ninguna: es una invenci\u00f3n totalmente original']
+    },
+    // === GAME 33: Sorting \u2014 Clasificar por tipo de intertextualidad ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fragmento seg\u00fan el tipo de relaci\u00f3n intertextual que exhibe.',
+        categories: ['Cita directa', 'Alusi\u00f3n', 'Parodia', 'Par\u00e1frasis'],
+        items: [
+            { text: 'Borges escribe: \u00abYa somos el olvido que seremos\u00bb.', category: 'Cita directa' },
+            { text: 'El diluvio interminable de Macondo evoca el castigo divino del G\u00e9nesis.', category: 'Alusi\u00f3n' },
+            { text: 'Un autor imita exageradamente el estilo grandilocuente de la \u00e9pica para producir un efecto c\u00f3mico.', category: 'Parodia' },
+            { text: 'Seg\u00fan Bajt\u00edn, el lenguaje es un espacio donde m\u00faltiples voces coexisten y se responden.', category: 'Par\u00e1frasis' },
+            { text: 'El narrador, sin nombrar a Shakespeare, describe una escena de celos id\u00e9ntica a la de Otelo.', category: 'Alusi\u00f3n' },
+            { text: 'Genette afirma textualmente: \u00abLa hipertextualidad comprende toda relaci\u00f3n que une un texto B a un texto A\u00bb.', category: 'Cita directa' },
+            { text: 'Una novela reproduce el formato del Quijote con un protagonista que lee telenovelas en lugar de novelas de caballer\u00eda.', category: 'Parodia' },
+            { text: 'Bloom sugiere que todo poeta reinterpreta de manera creativa e involuntaria a sus maestros literarios.', category: 'Par\u00e1frasis' }
+        ]
+    },
+    // === GAME 34: Sorting \u2014 Clasificar figuras ret\u00f3ricas ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada ejemplo seg\u00fan la figura ret\u00f3rica que contiene.',
+        categories: ['Met\u00e1fora', 'Metonimia', 'Sin\u00e9cdoque', 'Iron\u00eda'],
+        items: [
+            { text: 'La vida es un r\u00edo que desemboca en el mar del olvido.', category: 'Met\u00e1fora' },
+            { text: 'La Casa Blanca anunci\u00f3 nuevas sanciones.', category: 'Metonimia' },
+            { text: 'Necesitamos m\u00e1s manos para esta cosecha.', category: 'Sin\u00e9cdoque' },
+            { text: 'Despu\u00e9s de perder todo en la inundaci\u00f3n, dijo: \u00abQu\u00e9 d\u00eda m\u00e1s afortunado\u00bb.', category: 'Iron\u00eda' },
+            { text: 'Las canas de la experiencia le daban autoridad.', category: 'Metonimia' },
+            { text: 'Colombia gan\u00f3 el partido. (Todo el pa\u00eds por su equipo.)', category: 'Sin\u00e9cdoque' },
+            { text: 'Sus palabras eran pu\u00f1ales que her\u00edan sin dejar sangre.', category: 'Met\u00e1fora' },
+            { text: 'Vaya que eres generoso \u2014dijo al tacaa\u00f1o que nunca invitaba.', category: 'Iron\u00eda' }
+        ]
+    },
+    // === GAME 35: Sorting \u2014 Clasificar expresiones de atribuci\u00f3n por grado de adhesi\u00f3n ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan el grado de adhesi\u00f3n del escritor a la fuente citada.',
+        categories: ['Adhesi\u00f3n (el autor concuerda)', 'Distancia neutral', 'Distancia cr\u00edtica (el autor cuestiona)'],
+        items: [
+            { text: 'Como bien se\u00f1ala Genette...', category: 'Adhesi\u00f3n (el autor concuerda)' },
+            { text: 'Seg\u00fan afirma Bajt\u00edn...', category: 'Distancia neutral' },
+            { text: 'A pesar de lo que sostiene Bloom...', category: 'Distancia cr\u00edtica (el autor cuestiona)' },
+            { text: 'Resulta acertada la observaci\u00f3n de Ludmer...', category: 'Adhesi\u00f3n (el autor concuerda)' },
+            { text: 'En palabras de Ospina...', category: 'Distancia neutral' },
+            { text: 'Cabr\u00eda cuestionar la tesis de Hutcheon...', category: 'Distancia cr\u00edtica (el autor cuestiona)' }
+        ]
+    },
+    // === GAME 36: Sorting \u2014 Clasificar autores por tradici\u00f3n intertextual ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada autor colombiano seg\u00fan la tradici\u00f3n principal con la que dialoga su obra.',
+        categories: ['Tradici\u00f3n b\u00edblica y mitol\u00f3gica', 'Cr\u00f3nicas coloniales', 'Canon literario universal'],
+        items: [
+            { text: 'Garc\u00eda M\u00e1rquez: diluvio, \u00e9xodo, profec\u00eda apocal\u00edptica.', category: 'Tradici\u00f3n b\u00edblica y mitol\u00f3gica' },
+            { text: 'William Ospina: reescritura de la expedici\u00f3n de Orellana.', category: 'Cr\u00f3nicas coloniales' },
+            { text: 'Abad Faciolince: verso de Borges como eje narrativo.', category: 'Canon literario universal' },
+            { text: 'Mutis: ecos de la poes\u00eda simbolista y la narrativa de viajes.', category: 'Canon literario universal' },
+            { text: 'Garc\u00eda M\u00e1rquez: fundaci\u00f3n de Macondo como nuevo \u00e9xodo.', category: 'Tradici\u00f3n b\u00edblica y mitol\u00f3gica' },
+            { text: 'Ospina: di\u00e1logo con las descripciones de fray Gaspar de Carvajal.', category: 'Cr\u00f3nicas coloniales' }
+        ]
+    },
+    // === GAME 37: Sorting \u2014 Funciones discursivas en el an\u00e1lisis intertextual ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fragmento seg\u00fan su funci\u00f3n dentro de un ensayo de an\u00e1lisis intertextual.',
+        categories: ['Presentar la tesis', 'Aportar evidencia textual', 'Contraargumentar', 'Concluir'],
+        items: [
+            { text: 'La hip\u00f3tesis central de este ensayo es que Garc\u00eda M\u00e1rquez reescribe el G\u00e9nesis desde el Caribe.', category: 'Presentar la tesis' },
+            { text: 'Como evidencia, el diluvio de cuatro a\u00f1os en Macondo reproduce la estructura del castigo divino b\u00edblico.', category: 'Aportar evidencia textual' },
+            { text: 'Si bien algunos cr\u00edticos han descartado la lectura b\u00edblica como simplista, los paralelos textuales resultan innegables.', category: 'Contraargumentar' },
+            { text: 'En definitiva, la novela constituye un palimpsesto donde el mito b\u00edblico y la realidad colombiana se superponen.', category: 'Concluir' },
+            { text: 'Un segundo ejemplo lo encontramos en la ascensi\u00f3n de Remedios la Bella, que alude a la tradici\u00f3n hagogr\u00e1fica.', category: 'Aportar evidencia textual' },
+            { text: 'Frente a quienes reducen la obra a puro entretenimiento, cabe argumentar que su densidad intertextual exige una lectura erudita.', category: 'Contraargumentar' }
+        ]
+    },
+    // === GAME 38: Builder \u2014 Construir un an\u00e1lisis intertextual ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar un p\u00e1rrafo de an\u00e1lisis intertextual que incluya atribuci\u00f3n, evidencia y conclusi\u00f3n.',
+        words: ['Seg\u00fan afirma Genette,', 'toda obra literaria se construye', 'sobre textos anteriores.', 'En el caso de Garc\u00eda M\u00e1rquez,', 'el diluvio de Macondo', 'constituye una alusi\u00f3n evidente', 'al relato b\u00edblico del G\u00e9nesis.', 'Por consiguiente, leer Cien a\u00f1os de soledad', 'sin reconocer estas capas intertextuales', 'empobrece la interpretaci\u00f3n.'],
+        answer: 'Seg\u00fan afirma Genette, toda obra literaria se construye sobre textos anteriores. En el caso de Garc\u00eda M\u00e1rquez, el diluvio de Macondo constituye una alusi\u00f3n evidente al relato b\u00edblico del G\u00e9nesis. Por consiguiente, leer Cien a\u00f1os de soledad sin reconocer estas capas intertextuales empobrece la interpretaci\u00f3n.'
+    },
+    // === GAME 39: Builder \u2014 Construir una contra-argumentaci\u00f3n intertextual ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar un p\u00e1rrafo que presente un contraargumento sobre la intertextualidad en la literatura colombiana.',
+        words: ['Si bien algunos cr\u00edticos', 'han calificado la obra de Abad Faciolince', 'como mera apropiaci\u00f3n del verso borgiano,', 'cabr\u00eda argumentar, por el contrario,', 'que la resignificaci\u00f3n del poema', 'en un contexto de violencia colombiana', 'constituye un acto creativo', 'de profunda originalidad.'],
+        answer: 'Si bien algunos cr\u00edticos han calificado la obra de Abad Faciolince como mera apropiaci\u00f3n del verso borgiano, cabr\u00eda argumentar, por el contrario, que la resignificaci\u00f3n del poema en un contexto de violencia colombiana constituye un acto creativo de profunda originalidad.'
+    },
+    // === GAME 40: Builder \u2014 Construir una cita acad\u00e9mica compleja ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar un fragmento acad\u00e9mico que integre cita directa, par\u00e1frasis y conclusi\u00f3n propia.',
+        words: ['En palabras de Bajt\u00edn,', '\u00abtodo enunciado es un eslab\u00f3n', 'en la cadena de la comunicaci\u00f3n verbal\u00bb.', 'Haciendo eco de esta idea,', 'la cr\u00edtica colombiana sostiene', 'que la literatura nacional es un tejido', 'de voces ind\u00edgenas, africanas y europeas.', 'De lo anterior se deduce', 'que ning\u00fan texto colombiano puede leerse', 'en aislamiento.'],
+        answer: 'En palabras de Bajt\u00edn, \u00abtodo enunciado es un eslab\u00f3n en la cadena de la comunicaci\u00f3n verbal\u00bb. Haciendo eco de esta idea, la cr\u00edtica colombiana sostiene que la literatura nacional es un tejido de voces ind\u00edgenas, africanas y europeas. De lo anterior se deduce que ning\u00fan texto colombiano puede leerse en aislamiento.'
+    },
+    // === GAME 41: Builder \u2014 Construir una hip\u00f3tesis condicional sobre intertextualidad ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar una hip\u00f3tesis condicional irreal sobre la intertextualidad literaria.',
+        words: ['Si Garc\u00eda M\u00e1rquez no hubiera le\u00eddo', 'las cr\u00f3nicas coloniales ni la Biblia,', 'Cien a\u00f1os de soledad carecer\u00eda', 'de la densidad simb\u00f3lica', 'que la convierte en una obra universal.', 'De manera an\u00e1loga,', 'si Abad Faciolince no hubiera conocido', 'la poes\u00eda de Borges,', 'El olvido que seremos habr\u00eda sido', 'un libro completamente distinto.'],
+        answer: 'Si Garc\u00eda M\u00e1rquez no hubiera le\u00eddo las cr\u00f3nicas coloniales ni la Biblia, Cien a\u00f1os de soledad carecer\u00eda de la densidad simb\u00f3lica que la convierte en una obra universal. De manera an\u00e1loga, si Abad Faciolince no hubiera conocido la poes\u00eda de Borges, El olvido que seremos habr\u00eda sido un libro completamente distinto.'
+    },
+    // === GAME 42: Builder \u2014 Construir una s\u00edntesis cr\u00edtica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar una s\u00edntesis que integre m\u00faltiples perspectivas te\u00f3ricas sobre intertextualidad.',
+        words: ['Al integrar las perspectivas', 'de Genette, Bajt\u00edn y Bloom,', 'resulta evidente que la intertextualidad', 'no es un fen\u00f3meno accidental,', 'sino una condici\u00f3n inherente', 'a todo acto de escritura.', 'Por consiguiente,', 'el an\u00e1lisis literario riguroso', 'exige identificar y descifrar', 'las voces que habitan cada texto.'],
+        answer: 'Al integrar las perspectivas de Genette, Bajt\u00edn y Bloom, resulta evidente que la intertextualidad no es un fen\u00f3meno accidental, sino una condici\u00f3n inherente a todo acto de escritura. Por consiguiente, el an\u00e1lisis literario riguroso exige identificar y descifrar las voces que habitan cada texto.'
+    },
+    // === GAME 43: Translation \u2014 An\u00e1lisis intertextual de registro acad\u00e9mico ===
+    {
+        type: 'translation',
+        label: 'Transformar registro',
+        instruction: 'Transforma el siguiente an\u00e1lisis informal en registro acad\u00e9mico usando el banco de palabras.',
+        source: 'Garc\u00eda M\u00e1rquez b\u00e1sicamente copi\u00f3 la idea del diluvio de la Biblia y la puso en Macondo. Eso hace que la novela sea m\u00e1s profunda porque el lector que conoce la Biblia entiende m\u00e1s cosas.',
+        words: ['Garc\u00eda', 'M\u00e1rquez', 'reelabora', 'el', 'motivo', 'b\u00edblico', 'del', 'diluvio', 'y', 'lo', 'resignifica', 'en', 'contexto', 'caribe\u00f1o', 'Esta', 'operaci\u00f3n', 'intertextual', 'enriquece', 'la', 'lectura', 'puesto', 'que', 'lector', 'familiarizado', 'con', 'tradici\u00f3n', 'judeocristiana', 'accede', 'a', 'una', 'capa', 'simb\u00f3lica', 'adicional'],
+        answer: 'Garc\u00eda M\u00e1rquez reelabora el motivo b\u00edblico del diluvio y lo resignifica en contexto caribe\u00f1o Esta operaci\u00f3n intertextual enriquece la lectura puesto que el lector familiarizado con la tradici\u00f3n judeocristiana accede a una capa simb\u00f3lica adicional'
+    },
+    // === GAME 44: Translation \u2014 De registro coloquial a ensayo acad\u00e9mico ===
+    {
+        type: 'translation',
+        label: 'Transformar registro',
+        instruction: 'Transforma la observaci\u00f3n coloquial en una oraci\u00f3n propia de un ensayo acad\u00e9mico sobre intertextualidad.',
+        source: 'Abad Faciolince agarr\u00f3 un verso de Borges y lo us\u00f3 de t\u00edtulo. Eso le cambi\u00f3 el significado al poema porque ahora habla de la muerte de su pap\u00e1.',
+        words: ['Abad', 'Faciolince', 'se', 'apropia', 'de', 'un', 'verso', 'borgiano', 'como', 'eje', 'estructural', 'su', 'relato', 'Mediante', 'esta', 'resignificaci\u00f3n', 'el', 'poema', 'adquiere', 'una', 'dimensi\u00f3n', 'autobiogr\u00e1fica', 'vinculada', 'al', 'asesinato', 'padre'],
+        answer: 'Abad Faciolince se apropia de un verso borgiano como eje estructural de su relato Mediante esta resignificaci\u00f3n el poema adquiere una dimensi\u00f3n autobiogr\u00e1fica vinculada al asesinato de su padre'
+    },
+    // === GAME 45: Translation \u2014 Transformar alusi\u00f3n impl\u00edcita en an\u00e1lisis expl\u00edcito ===
+    {
+        type: 'translation',
+        label: 'Transformar registro',
+        instruction: 'Transforma la descripci\u00f3n coloquial en un an\u00e1lisis formal que nombre expl\u00edcitamente los recursos intertextuales.',
+        source: 'En la novela de Ospina, el autor cuenta otra vez la historia de los espa\u00f1oles en el Amazonas, pero a su manera, con un estilo m\u00e1s po\u00e9tico.',
+        words: ['En', 'El', 'pa\u00eds', 'de', 'la', 'canela', 'Ospina', 'reescribe', 'las', 'cr\u00f3nicas', 'coloniales', 'fray', 'Gaspar', 'Carvajal', 'mediante', 'un', 'pastiche', 'que', 'combina', 'el', 'registro', 'historiogr\u00e1fico', 'con', 'una', 'prosa', 'po\u00e9tica', 'contempor\u00e1nea'],
+        answer: 'En El pa\u00eds de la canela Ospina reescribe las cr\u00f3nicas coloniales de fray Gaspar de Carvajal mediante un pastiche que combina el registro historiogr\u00e1fico con una prosa po\u00e9tica contempor\u00e1nea'
+    },
+    // === GAME 46: Translation \u2014 De observaci\u00f3n a tesis acad\u00e9mica ===
+    {
+        type: 'translation',
+        label: 'Transformar registro',
+        instruction: 'Transforma la observaci\u00f3n simple en una tesis acad\u00e9mica sobre intertextualidad colombiana.',
+        source: 'Los escritores colombianos mezclan cosas de la Biblia, de los ind\u00edgenas y de Europa en sus libros. Eso hace que sus novelas tengan muchas capas.',
+        words: ['La', 'literatura', 'colombiana', 'se', 'configura', 'como', 'un', 'palimpsesto', 'en', 'el', 'que', 'convergen', 'fuentes', 'b\u00edblicas', 'tradiciones', 'orales', 'ind\u00edgenas', 'y', 'referentes', 'del', 'canon', 'europeo', 'Esta', 'confluencia', 'intertextual', 'dota', 'a', 'las', 'obras', 'de', 'una', 'densidad', 'interpretativa', 'excepcional'],
+        answer: 'La literatura colombiana se configura como un palimpsesto en el que convergen fuentes b\u00edblicas tradiciones orales ind\u00edgenas y referentes del canon europeo Esta confluencia intertextual dota a las obras de una densidad interpretativa excepcional'
+    },
+    // === GAME 47: Conversation \u2014 Debate sobre intertextualidad en las ruinas ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate acad\u00e9mico sobre la intertextualidad en la literatura colombiana mientras exploras las ruinas de Teyuna. Usa expresiones de atribuci\u00f3n y an\u00e1lisis cr\u00edtico.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora Vargas', text: 'Yaguar\u00e1, algunos cr\u00edticos dicen que Garc\u00eda M\u00e1rquez simplemente copi\u00f3 la estructura b\u00edblica. \u00bfC\u00f3mo responder\u00edas a esa cr\u00edtica?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Cabr\u00eda argumentar que Garc\u00eda M\u00e1rquez no copia sino que resignifica. Seg\u00fan afirma Genette, la intertextualidad implica transformaci\u00f3n, no mera reproducci\u00f3n. El diluvio b\u00edblico purifica; el de Macondo destruye. Esa inversi\u00f3n demuestra que estamos ante una reelaboraci\u00f3n cr\u00edtica, no ante un calco.',
+                    'Garc\u00eda M\u00e1rquez es original.',
+                    'No creo que haya copiado nada.'
+                ],
+                answer: 'Cabr\u00eda argumentar que Garc\u00eda M\u00e1rquez no copia sino que resignifica. Seg\u00fan afirma Genette, la intertextualidad implica transformaci\u00f3n, no mera reproducci\u00f3n. El diluvio b\u00edblico purifica; el de Macondo destruye. Esa inversi\u00f3n demuestra que estamos ante una reelaboraci\u00f3n cr\u00edtica, no ante un calco.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora Vargas', text: 'Interesante. Y en el caso de Abad Faciolince, \u00bfconsideras que su uso del verso de Borges es un homenaje o una subversi\u00f3n?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'A la luz de la teor\u00eda de Bloom sobre la angustia de las influencias, cabr\u00eda interpretar la operaci\u00f3n de Abad como ambas cosas simult\u00e1neamente. Retoma el verso como homenaje, pero al inscribirlo en el contexto del asesinato de su padre, lo carga de un dolor que Borges no previ\u00f3. En palabras de Hutcheon, toda repetici\u00f3n con diferencia es a la vez tributo y transformaci\u00f3n.',
+                    'Es un homenaje, obviamente.',
+                    'Creo que es las dos cosas.'
+                ],
+                answer: 'A la luz de la teor\u00eda de Bloom sobre la angustia de las influencias, cabr\u00eda interpretar la operaci\u00f3n de Abad como ambas cosas simult\u00e1neamente. Retoma el verso como homenaje, pero al inscribirlo en el contexto del asesinato de su padre, lo carga de un dolor que Borges no previ\u00f3. En palabras de Hutcheon, toda repetici\u00f3n con diferencia es a la vez tributo y transformaci\u00f3n.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora Vargas', text: '\u00bfY c\u00f3mo encajan las voces ind\u00edgenas en este tejido intertextual? Las ruinas que nos rodean pertenecieron a los tairona.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Como plantea Bajt\u00edn, todo enunciado responde a enunciados previos. Las tradiciones orales ind\u00edgenas constituyen un sustrato intertextual que la literatura colombiana ha incorporado, a veces de manera expl\u00edcita, como en Ospina, y a veces de manera velada, como en el tiempo c\u00edclico de Garc\u00eda M\u00e1rquez, que hace eco de cosmovisiones ind\u00edgenas sobre la repetici\u00f3n del universo.',
+                    'Las voces ind\u00edgenas son muy importantes.',
+                    'No s\u00e9 c\u00f3mo se relacionan con la literatura.'
+                ],
+                answer: 'Como plantea Bajt\u00edn, todo enunciado responde a enunciados previos. Las tradiciones orales ind\u00edgenas constituyen un sustrato intertextual que la literatura colombiana ha incorporado, a veces de manera expl\u00edcita, como en Ospina, y a veces de manera velada, como en el tiempo c\u00edclico de Garc\u00eda M\u00e1rquez, que hace eco de cosmovisiones ind\u00edgenas sobre la repetici\u00f3n del universo.'
+            }
+        ]
+    },
+    // === GAME 48: Conversation \u2014 Reflexi\u00f3n con el mamo kogui ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con un mamo kogui sobre c\u00f3mo las historias se repiten y se transforman. Integra conceptos de intertextualidad con la sabidur\u00eda ind\u00edgena.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mamo Jacinto', text: 'Nosotros decimos que las historias caminan en espiral. Cada generaci\u00f3n las cuenta de nuevo, pero nunca son iguales. Tus libros, \u00bfno hacen lo mismo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Exactamente. En la tradici\u00f3n literaria que estudio, eso se llama intertextualidad: cada texto retoma voces anteriores y las transforma. Haciendo eco de lo que usted describe, el te\u00f3rico Bajt\u00edn sostiene que ning\u00fan enunciado nace en el vac\u00edo. Cada historia es, como usted dice, una vuelta m\u00e1s de la espiral.',
+                    'S\u00ed, es parecido a lo que usted dice.',
+                    'Los libros cuentan historias diferentes cada vez.'
+                ],
+                answer: 'Exactamente. En la tradici\u00f3n literaria que estudio, eso se llama intertextualidad: cada texto retoma voces anteriores y las transforma. Haciendo eco de lo que usted describe, el te\u00f3rico Bajt\u00edn sostiene que ning\u00fan enunciado nace en el vac\u00edo. Cada historia es, como usted dice, una vuelta m\u00e1s de la espiral.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mamo Jacinto', text: 'Entonces las piedras de Teyuna tambi\u00e9n cuentan historias que vinieron de antes. \u00bfPuedes leerlas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Leer las piedras requiere el mismo ejercicio que leer un palimpsesto: descifrar las capas sucesivas de significado. Seg\u00fan afirma Genette, un texto siempre oculta otros debajo de s\u00ed. Estas terrazas fueron construidas sobre cimientos m\u00e1s antiguos, y cada capa cuenta algo distinto. Si no aprendo a escuchar todas las voces, la lectura queda incompleta.',
+                    'No s\u00e9 leer piedras, solo libros.',
+                    'S\u00ed, creo que se parecen a los libros.'
+                ],
+                answer: 'Leer las piedras requiere el mismo ejercicio que leer un palimpsesto: descifrar las capas sucesivas de significado. Seg\u00fan afirma Genette, un texto siempre oculta otros debajo de s\u00ed. Estas terrazas fueron construidas sobre cimientos m\u00e1s antiguos, y cada capa cuenta algo distinto. Si no aprendo a escuchar todas las voces, la lectura queda incompleta.'
+            }
+        ]
+    },
+    // === GAME 49: Conversation \u2014 Seminario sobre iron\u00eda y parodia ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un seminario sobre iron\u00eda y parodia como formas de intertextualidad. Defiende tu postura con argumentos cr\u00edticos.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Estudiante Carlos', text: 'Yo opino que la parodia destruye el texto original. Si te burlas de algo, le quitas valor. \u00bfNo est\u00e1s de acuerdo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'No necesariamente. Seg\u00fan afirma Linda Hutcheon, la parodia no destruye sino que recontextualiza. Al imitar un texto con distancia cr\u00edtica, el parodista revela aspectos del original que antes pasaban inadvertidos. De hecho, cabr\u00eda argumentar que la parodia es una forma de homenaje: solo se parodia aquello que se conoce profundamente.',
+                    'Tienes raz\u00f3n, la parodia es destructiva.',
+                    'No estoy segura, es un tema dif\u00edcil.'
+                ],
+                answer: 'No necesariamente. Seg\u00fan afirma Linda Hutcheon, la parodia no destruye sino que recontextualiza. Al imitar un texto con distancia cr\u00edtica, el parodista revela aspectos del original que antes pasaban inadvertidos. De hecho, cabr\u00eda argumentar que la parodia es una forma de homenaje: solo se parodia aquello que se conoce profundamente.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Estudiante Carlos', text: '\u00bfY la iron\u00eda? \u00bfNo es simplemente decir lo contrario de lo que se piensa? \u00bfQu\u00e9 tiene que ver con la intertextualidad?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'La iron\u00eda intertextual va m\u00e1s all\u00e1 de decir lo contrario. Se produce cuando un autor emplea palabras, estructuras o convenciones de otro texto en un contexto que invierte su significado original. Por ejemplo, si un narrador usa el tono solemne de una cr\u00f3nica colonial para describir una situaci\u00f3n absurda, la iron\u00eda nace del choque entre las dos capas textuales. En palabras de Bajt\u00edn, es un di\u00e1logo donde las voces se contradicen deliberadamente.',
+                    'La iron\u00eda es solo un recurso, no tiene que ver con la intertextualidad.',
+                    'S\u00ed, la iron\u00eda es decir lo contrario, nada m\u00e1s.'
+                ],
+                answer: 'La iron\u00eda intertextual va m\u00e1s all\u00e1 de decir lo contrario. Se produce cuando un autor emplea palabras, estructuras o convenciones de otro texto en un contexto que invierte su significado original. Por ejemplo, si un narrador usa el tono solemne de una cr\u00f3nica colonial para describir una situaci\u00f3n absurda, la iron\u00eda nace del choque entre las dos capas textuales. En palabras de Bajt\u00edn, es un di\u00e1logo donde las voces se contradicen deliberadamente.'
+            }
+        ]
+    },
+    // === GAME 50: Dictation \u2014 An\u00e1lisis intertextual de Garc\u00eda M\u00e1rquez ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el texto completo. Presta atenci\u00f3n al vocabulario de an\u00e1lisis intertextual y a las expresiones de atribuci\u00f3n acad\u00e9mica.',
+        audio: 'Seg\u00fan afirma Genette, toda obra se construye sobre textos anteriores. En el caso de Garc\u00eda M\u00e1rquez, el diluvio de Macondo constituye una alusi\u00f3n al relato b\u00edblico del G\u00e9nesis, pero la inversi\u00f3n de su significado demuestra que se trata de una reelaboraci\u00f3n cr\u00edtica, no de una copia.',
+        answer: 'Seg\u00fan afirma Genette, toda obra se construye sobre textos anteriores. En el caso de Garc\u00eda M\u00e1rquez, el diluvio de Macondo constituye una alusi\u00f3n al relato b\u00edblico del G\u00e9nesis, pero la inversi\u00f3n de su significado demuestra que se trata de una reelaboraci\u00f3n cr\u00edtica, no de una copia.'
+    },
+    // === GAME 51: Dictation \u2014 La polifon\u00eda bajtiniana ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el texto completo. Presta atenci\u00f3n a los t\u00e9rminos te\u00f3ricos y a la estructura argumentativa.',
+        audio: 'Como plantea Bajt\u00edn, la novela es el g\u00e9nero polif\u00f3nico por excelencia. Cada personaje trae consigo un lenguaje propio con sus registros y sus ecos de otros discursos. Haciendo eco de esta teor\u00eda, la cr\u00edtica colombiana ha demostrado que las obras de Garc\u00eda M\u00e1rquez, Mutis y Restrepo integran m\u00faltiples voces culturales en un solo tejido narrativo.',
+        answer: 'Como plantea Bajt\u00edn, la novela es el g\u00e9nero polif\u00f3nico por excelencia. Cada personaje trae consigo un lenguaje propio con sus registros y sus ecos de otros discursos. Haciendo eco de esta teor\u00eda, la cr\u00edtica colombiana ha demostrado que las obras de Garc\u00eda M\u00e1rquez, Mutis y Restrepo integran m\u00faltiples voces culturales en un solo tejido narrativo.'
+    },
+    // === GAME 52: Dictation \u2014 El palimpsesto colombiano ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el texto completo. Este dictado integra vocabulario de intertextualidad, figuras ret\u00f3ricas y an\u00e1lisis cultural.',
+        audio: 'La literatura colombiana es un palimpsesto donde convergen tradiciones ind\u00edgenas, africanas y europeas. En palabras de Borges, cada escritor crea a sus precursores. De manera an\u00e1loga, las ruinas de Teyuna son un texto f\u00edsico donde cada civilizaci\u00f3n inscribi\u00f3 su voz sobre la anterior sin borrarla completamente. Leer con profundidad, tanto piedras como novelas, exige descifrar esas capas.',
+        answer: 'La literatura colombiana es un palimpsesto donde convergen tradiciones ind\u00edgenas, africanas y europeas. En palabras de Borges, cada escritor crea a sus precursores. De manera an\u00e1loga, las ruinas de Teyuna son un texto f\u00edsico donde cada civilizaci\u00f3n inscribi\u00f3 su voz sobre la anterior sin borrarla completamente. Leer con profundidad, tanto piedras como novelas, exige descifrar esas capas.'
+    },
+    // === GAME 53: Story \u2014 Fragmento de Macondo y sus ecos ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el siguiente fragmento inspirado en el universo garciamarquiano y responde las preguntas de an\u00e1lisis intertextual.',
+        title: 'La lluvia que no cesaba',
+        text: 'Llovi\u00f3 durante cuatro a\u00f1os, once meses y dos d\u00edas. Al principio, los habitantes de Macondo recibieron la lluvia con alivio despu\u00e9s de la sequ\u00eda; luego, con resignaci\u00f3n; al final, con desesperaci\u00f3n. Las calles se convirtieron en r\u00edos y las casas en islas. El padre Nicanor intent\u00f3 rezar para detener el diluvio, pero sus palabras se perd\u00edan entre el estruendo del agua, como si Dios hubiera decidido no escuchar. Los pergaminos de Melqu\u00edades, mientras tanto, segu\u00edan ah\u00ed, inmunes a la humedad, como un texto sagrado que conten\u00eda el destino de una estirpe condenada a la soledad.',
+        questions: [
+            {
+                q: '\u00bfA qu\u00e9 relato b\u00edblico alude el episodio del diluvio interminable?',
+                options: ['Al diluvio del G\u00e9nesis', 'A la historia de Job', 'Al \u00e9xodo de Egipto', 'A la torre de Babel'],
+                answer: 'Al diluvio del G\u00e9nesis'
+            },
+            {
+                q: '\u00bfQu\u00e9 funci\u00f3n intertextual cumplen los pergaminos de Melqu\u00edades en el fragmento?',
+                options: ['Funcionan como met\u00e1fora de un texto sagrado que contiene la profec\u00eda del destino colectivo', 'Son un simple objeto decorativo sin valor simb\u00f3lico', 'Representan la ciencia moderna frente a la religi\u00f3n', 'Aluden a los manuscritos del mar Muerto'],
+                answer: 'Funcionan como met\u00e1fora de un texto sagrado que contiene la profec\u00eda del destino colectivo'
+            },
+            {
+                q: '\u00bfQu\u00e9 tipo de relaci\u00f3n intertextual predomina en este fragmento?',
+                options: ['Alusi\u00f3n: se evoca la Biblia sin citarla textualmente', 'Cita directa: se reproducen pasajes b\u00edblicos', 'Parodia: se ridiculiza el relato del G\u00e9nesis', 'Pastiche: se imitan varios estilos sin cr\u00edtica'],
+                answer: 'Alusi\u00f3n: se evoca la Biblia sin citarla textualmente'
+            },
+            {
+                q: '\u00bfQu\u00e9 figura ret\u00f3rica aparece en \u00absus palabras se perd\u00edan entre el estruendo del agua, como si Dios hubiera decidido no escuchar\u00bb?',
+                options: ['S\u00edmil con personificaci\u00f3n de Dios como un ser que elige no responder', 'Hip\u00e9rbole sobre el volumen del ruido', 'Metonimia del agua como castigo divino', 'Sin\u00e9cdoque de las palabras del padre'],
+                answer: 'S\u00edmil con personificaci\u00f3n de Dios como un ser que elige no responder'
+            },
+            {
+                q: '\u00bfC\u00f3mo transforma Garc\u00eda M\u00e1rquez el significado original del diluvio b\u00edblico?',
+                options: ['Invierte su funci\u00f3n: en la Biblia purifica, en Macondo destruye sin redenci\u00f3n', 'Lo mantiene id\u00e9ntico: el agua tambi\u00e9n purifica en Macondo', 'Lo elimina: el diluvio en Macondo no tiene relaci\u00f3n con la Biblia', 'Lo amplifica: el castigo en Macondo es m\u00e1s justo que en el G\u00e9nesis'],
+                answer: 'Invierte su funci\u00f3n: en la Biblia purifica, en Macondo destruye sin redenci\u00f3n'
+            }
+        ]
+    },
+    // === GAME 54: Cancion \u2014 Voces que se tejen (canto intertextual) ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Lee la letra de esta canci\u00f3n inspirada en la intertextualidad y las voces de Teyuna. Completa los versos que faltan con la opci\u00f3n correcta.',
+        title: 'Voces que se tejen',
+        text: 'Sobre las piedras de Teyuna\nduermen palabras antiguas,\necos de voces que fueron\n___.\n\nCada escritor que llega\ntrae un hilo de otro cuento,\nteje su voz con las otras\n___.\n\nGarc\u00eda M\u00e1rquez tom\u00f3 del G\u00e9nesis\nel agua que todo inunda,\npero le cambi\u00f3 el destino:\n___.\n\nBorges escribi\u00f3 un verso\nque otro poeta adopt\u00f3,\nlo llen\u00f3 con su dolor\n___.',
+        questions: [
+            {
+                q: 'Completa el primer verso faltante: \u00abecos de voces que fueron ___\u00bb.',
+                options: ['y que a\u00fan no se han callado', 'y que nadie recuerda ya', 'pero ya no significan nada', 'y que nunca existieron'],
+                answer: 'y que a\u00fan no se han callado'
+            },
+            {
+                q: 'Completa el segundo verso faltante: \u00abteje su voz con las otras ___\u00bb.',
+                options: ['y el tejido crece lento', 'pero nadie lo nota', 'sin saber lo que hace', 'y se pierde en el viento'],
+                answer: 'y el tejido crece lento'
+            },
+            {
+                q: 'Completa el tercer verso faltante: \u00abpero le cambi\u00f3 el destino: ___\u00bb.',
+                options: ['en Macondo el agua no redime, solo hunde', 'en Macondo el agua es igual que en la Biblia', 'en Macondo no llovi\u00f3 nunca', 'en Macondo la lluvia trajo paz'],
+                answer: 'en Macondo el agua no redime, solo hunde'
+            },
+            {
+                q: 'Completa el cuarto verso faltante: \u00ablo llen\u00f3 con su dolor ___\u00bb.',
+                options: ['y el olvido se hizo nombre', 'y el poema se perdi\u00f3', 'y Borges lo agradeci\u00f3', 'y las palabras cambiaron de idioma'],
+                answer: 'y el olvido se hizo nombre'
+            }
+        ]
+    },
+    // === GAME 55: Cancion \u2014 Palimpsesto de la Sierra ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Lee la letra de esta canci\u00f3n sobre el palimpsesto cultural de la Sierra Nevada. Responde las preguntas de an\u00e1lisis intertextual.',
+        title: 'Palimpsesto de la Sierra',
+        text: 'Debajo de cada piedra hay otra piedra,\ndebajo de cada voz hay otra voz.\nLos tairona hablaron primero,\nluego vinieron los que escribieron con tinta y con dolor.\n\nEl mamo dice: las historias caminan\nen espiral, nunca en l\u00ednea recta.\nEl cr\u00edtico dice: todo texto dialoga\ncon los fantasmas de su biblioteca.\n\nNo hay palabra que nazca sola,\nno hay piedra que se sostenga sin cimiento.\nLa intertextualidad es la memoria\nque convierte cada voz en un momento.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 concepto de intertextualidad se expresa en \u00abdebajo de cada piedra hay otra piedra, debajo de cada voz hay otra voz\u00bb?',
+                options: ['El palimpsesto: capas de significado superpuestas', 'La parodia: imitaci\u00f3n con intenci\u00f3n cr\u00edtica', 'La cita directa: reproducci\u00f3n textual', 'La iron\u00eda: inversi\u00f3n del significado'],
+                answer: 'El palimpsesto: capas de significado superpuestas'
+            },
+            {
+                q: '\u00bfQu\u00e9 paralelismo establece la canci\u00f3n entre la perspectiva del mamo y la del cr\u00edtico literario?',
+                options: ['Ambos describen la intertextualidad con diferentes met\u00e1foras: espiral y biblioteca', 'El mamo contradice al cr\u00edtico', 'El cr\u00edtico desconoce la sabidur\u00eda ind\u00edgena', 'No hay relaci\u00f3n entre las dos perspectivas'],
+                answer: 'Ambos describen la intertextualidad con diferentes met\u00e1foras: espiral y biblioteca'
+            },
+            {
+                q: '\u00bfQu\u00e9 figura ret\u00f3rica predomina en la \u00faltima estrofa?',
+                options: ['Met\u00e1fora: la intertextualidad como memoria que transforma las voces', 'Hip\u00e9rbole: exageraci\u00f3n del valor de las palabras', 'Parodia: imitaci\u00f3n humor\u00edstica de un estilo acad\u00e9mico', 'Metonimia: sustituci\u00f3n de un t\u00e9rmino por otro contiguo'],
+                answer: 'Met\u00e1fora: la intertextualidad como memoria que transforma las voces'
+            },
+            {
+                q: '\u00bfA qu\u00e9 teor\u00eda hace eco impl\u00edcitamente el verso \u00abtodo texto dialoga con los fantasmas de su biblioteca\u00bb?',
+                options: ['Al dialogismo de Bajt\u00edn: todo enunciado responde a otros previos', 'A la deconstrucci\u00f3n de Derrida: el significado es inestable', 'Al formalismo ruso: la forma define el contenido', 'Al estructuralismo de Saussure: el signo es arbitrario'],
+                answer: 'Al dialogismo de Bajt\u00edn: todo enunciado responde a otros previos'
+            }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara del silencio elocuente',
+            description: 'Una sala donde las palabras escritas se desvanecen lentamente. Lo que queda es lo que nunca se dijo — y eso es lo que importa.',
+            ambience: 'silence'
+        },
+        puzzles: [
+            {
+                puzzleType: 'extract',
+                prompt: 'Un diálogo aparece, pero las palabras se borran dejando solo las intenciones.',
+                passage: '«—¿Viene usted mucho por aquí? —dijo ella mirando al suelo. —No tanto como me gustaría —dijo él mirando a ella.» El texto debajo dice: «Ninguno habla del lugar.»',
+                clue: '¿De qué hablan realmente?',
+                answer: 'De su interés mutuo, comunicado indirectamente a través de una pregunta aparentemente trivial',
+                options: [
+                    'De su interés mutuo, comunicado indirectamente a través de una pregunta aparentemente trivial',
+                    'De la frecuencia con que visitan ese lugar',
+                    'De su rutina diaria',
+                    'De nada importante'
+                ],
+                onSolve: 'Lo implícito se hace visible.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Los Antiguos preguntan:',
+                riddle: '«Cuando Mamá Jaguar dijo "El río no espera", ¿hablaba del río?»',
+                clue: '¿Qué mecanismo comunicativo usa Mamá Jaguar?',
+                answer: 'Habla de la vida a través del río: comunicación implícita mediante metáfora',
+                options: [
+                    'Habla de la vida a través del río: comunicación implícita mediante metáfora',
+                    'Hablaba literalmente del río Atrato',
+                    'Daba un consejo sobre nadar',
+                    'Usaba un proverbio sin significado profundo'
+                ],
+                onSolve: 'El silencio habla más claro que antes.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Dos momentos de la historia resuenan juntos.',
+                sources: [
+                    '«Don Próspero nunca dijo "destruiré el bosque". Dijo "traeré progreso". Las palabras que eligió ocultaban las consecuencias.» — Reflexión',
+                    '«Doña Asunción nunca dijo "te quiero" a Candelaria. Le enseñó a escuchar el río. Eso era más que palabras.» — Yaguará'
+                ],
+                clue: '¿Qué revelan juntos estos dos ejemplos sobre el poder de la comunicación implícita?',
+                answer: 'La comunicación implícita puede ser tanto una herramienta de engaño como de amor profundo — depende de la intención',
+                options: [
+                    'La comunicación implícita puede ser tanto una herramienta de engaño como de amor profundo — depende de la intención',
+                    'Es mejor ser siempre directo',
+                    'Don Próspero es un mentiroso',
+                    'Las acciones son más importantes que las palabras'
+                ],
+                onSolve: 'El silencio se llena de significado. La puerta se abre sin hacer ruido.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: una constelación invisible que solo se ve cuando no la miras directamente.',
+            questClue: 'Lo que no se dice también tiene forma en el mapa.',
+            item: 'constelacion-silencio'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '46',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest46Progress',
+        backUrl: '../../c1-ciudad-perdida.html'
+    });
+</script>
+</body>
+</html>

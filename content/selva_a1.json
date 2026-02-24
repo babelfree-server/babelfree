@@ -1,0 +1,1530 @@
+{
+  "meta": {
+    "ecosystem": "selva",
+    "spiral": "a1",
+    "cefr": "A1",
+    "title": "El despertar en la selva",
+    "encounterCount": 50,
+    "blocks": [
+      { "name": "Despertar", "encounters": "1-5", "grammar": "Greetings, ser + name/origin, question words", "canDo": "Introduce self, ask/answer origin" },
+      { "name": "Nombrar", "encounters": "6-9", "grammar": "Articles, gender, singular/plural, ecosystem nouns", "canDo": "Name objects with correct articles" },
+      { "name": "Describir", "encounters": "10-13", "grammar": "Ser vs estar, hay, adjective agreement, colors", "canDo": "Describe things, say where/whether they exist" },
+      { "name": "Contar", "encounters": "14-17", "grammar": "Numbers 0-31, tener + age, days of the week, time of day", "canDo": "State age, count, name days, basic time" },
+      { "name": "Expresar", "encounters": "18-21", "grammar": "Negation, questions, me gusta, possessives (mi/tu/su)", "canDo": "Express likes, ask questions, negate, possess" },
+      { "name": "Vivir", "encounters": "22-25", "grammar": "Regular -AR conjugation (full paradigm), prepositions, daily routines", "canDo": "Describe routines, use common verbs" },
+      { "name": "Comer", "encounters": "26-29", "grammar": "Food/drink vocabulary, comer/beber (-ER intro), tener hambre/sed/frío/calor", "canDo": "Order food, express physical needs" },
+      { "name": "Familia", "encounters": "30-33", "grammar": "Family members, demonstratives (este/esta), ¿quién?", "canDo": "Introduce family members, ask who" },
+      { "name": "Mi casa", "encounters": "34-37", "grammar": "Rooms, estar for states (bien/mal/cansado/enfermo), un/una", "canDo": "Describe home, express how you feel" },
+      { "name": "El tiempo", "encounters": "38-41", "grammar": "Months, clock time, numbers 32-100, ¿cuándo?", "canDo": "State dates, tell time, count to 100" },
+      { "name": "Conjugar", "encounters": "42-46", "grammar": "-ER/-IR conjugation, ir (destinations), plural possessives, ¿por qué?/porque", "canDo": "Use all 3 verb groups, say where you go, express reasons" },
+      { "name": "Identidad", "encounters": "47-50", "grammar": "Nationality adjectives, expanded colors, A1 integration", "canDo": "State nationality, describe in detail, integrate all A1" }
+    ],
+    "vocabularyFocus": ["saludos", "animales de la selva", "ríos y agua", "plantas", "números", "rutinas", "comida y bebida", "familia", "la casa", "meses y hora", "verbos -ER/-IR", "nacionalidades y colores"],
+    "grammarFocus": ["ser + nombre/origen", "artículos y género", "ser vs estar vs hay", "tener + edad", "me gusta", "conjugación -AR", "comer/beber (-ER)", "tener hambre/sed", "este/esta", "estar + estados", "un/una", "hora y meses", "conjugación -ER/-IR", "ir + destino", "posesivos plurales", "¿por qué?/porque", "nacionalidades"]
+  },
+  "games": [
+    {
+      "type": "narrative",
+      "label": "Yaguará",
+      "title": "El despertar en la selva",
+      "speaker": "yaguara",
+      "block": "Despertar",
+      "grammar": ["greetings", "ser + name"],
+      "sections": [
+        {
+          "body": "<em>Viajero...</em> Abre los ojos. Estás en la selva amazónica. El río suena. Los árboles son muy grandes. El aire es húmedo."
+        },
+        {
+          "body": "Soy <strong>Yaguará</strong>, el jaguar que camina entre los mundos. Voy a caminar contigo por este lugar. Cada palabra es una <em>semilla</em>."
+        },
+        {
+          "heading": "Saludar",
+          "body": "En español, saludamos así:",
+          "pattern": "<strong>Hola</strong> · <strong>Buenos días</strong> · <strong>Buenas tardes</strong> · <strong>Buenas noches</strong>",
+          "examples": [
+            { "es": "Hola, ¿cómo estás?", "gloss": "Hello, how are you?" },
+            { "es": "Buenos días.", "gloss": "Good morning." },
+            { "es": "Buenas noches.", "gloss": "Good evening / Good night." }
+          ]
+        },
+        {
+          "heading": "Yo soy...",
+          "body": "El verbo <strong>ser</strong> dice quién eres:",
+          "pattern": "Yo <strong>soy</strong> · Tú <strong>eres</strong> · Él/Ella <strong>es</strong>",
+          "examples": [
+            { "es": "Yo soy Yaguará.", "gloss": "I am Yaguará." },
+            { "es": "¿Cómo te llamas?", "gloss": "What is your name?" },
+            { "es": "Yo soy de Colombia.", "gloss": "I am from Colombia." },
+            { "es": "¿De dónde eres?", "gloss": "Where are you from?" }
+          ]
+        }
+      ],
+      "button": "Entrar en la selva"
+    },
+
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "block": "Despertar",
+      "grammar": ["greetings"],
+      "vocabulary": ["hola", "buenos días", "buenas tardes", "buenas noches", "adiós", "hasta luego"],
+      "instruction": "Encuentra los pares: <em>saludo ↔ momento del día</em>",
+      "pairs": [
+        ["Hola", "saludo general"],
+        ["Buenos días", "por la mañana"],
+        ["Buenas tardes", "después del mediodía"],
+        ["Buenas noches", "de noche"],
+        ["Adiós", "al final"],
+        ["Hasta luego", "nos vemos después"]
+      ]
+    },
+
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "block": "Despertar",
+      "grammar": ["greetings", "ser + name"],
+      "vocabulary": ["hola", "cómo te llamas", "soy", "de dónde", "bien"],
+      "instruction": "Escucha y selecciona la respuesta correcta.",
+      "questions": [
+        {
+          "audio": "Hola, ¿cómo estás?",
+          "question": "¿Qué pregunta?",
+          "answer": "Cómo estás",
+          "options": ["Cómo estás", "Cómo te llamas", "De dónde eres", "Qué es"]
+        },
+        {
+          "audio": "Me llamo Yaguará.",
+          "question": "¿Cómo se llama?",
+          "answer": "Yaguará",
+          "options": ["Selva", "Yaguará", "Río", "Colombia"]
+        },
+        {
+          "audio": "Yo soy de Colombia.",
+          "question": "¿De dónde es?",
+          "answer": "De Colombia",
+          "options": ["De Brasil", "De Colombia", "De México", "De Perú"]
+        }
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Despertar",
+      "grammar": ["ser + name/origin"],
+      "vocabulary": ["soy", "eres", "es", "de"],
+      "instruction": "Completa con la forma correcta de <em>ser</em>.",
+      "questions": [
+        {
+          "sentence": "Yo ___ Yaguará.",
+          "answer": "soy",
+          "options": ["soy", "eres", "es", "son"]
+        },
+        {
+          "sentence": "¿Cómo te ___?",
+          "answer": "llamas",
+          "options": ["llamas", "llamo", "llama", "llaman"]
+        },
+        {
+          "sentence": "Tú ___ de la selva.",
+          "answer": "eres",
+          "options": ["soy", "eres", "es", "son"]
+        },
+        {
+          "sentence": "Ella ___ de Leticia.",
+          "answer": "es",
+          "options": ["soy", "eres", "es", "somos"]
+        }
+      ]
+    },
+
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "block": "Despertar",
+      "grammar": ["greetings", "ser + name/origin", "question words"],
+      "vocabulary": ["hola", "cómo te llamas", "soy", "de dónde eres", "bien"],
+      "instruction": "Tu primera conversación en la selva.",
+      "turns": [
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¡Hola! ¿Cómo estás?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Estoy bien, gracias.", "Soy un río.", "Es grande."],
+          "answer": "Estoy bien, gracias."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Cómo te llamas?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Me llamo Viajero.", "Buenos días.", "Tengo hambre."],
+          "answer": "Me llamo Viajero."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿De dónde eres?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Soy de lejos.", "Es bonito.", "Hola."],
+          "answer": "Soy de lejos."
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Nombrar el mundo",
+      "speaker": "yaguara",
+      "block": "Nombrar",
+      "grammar": ["articles", "gender", "singular/plural"],
+      "sections": [
+        {
+          "body": "En la selva, todo tiene nombre. Y cada nombre tiene un artículo."
+        },
+        {
+          "heading": "El / La / Los / Las",
+          "body": "Las cosas son <strong>masculinas</strong> (el) o <strong>femeninas</strong> (la). Plural: <strong>los</strong> / <strong>las</strong>.",
+          "pattern": "<strong>el</strong> río → <strong>los</strong> ríos · <strong>la</strong> flor → <strong>las</strong> flores",
+          "examples": [
+            { "es": "el jaguar, el río, el árbol, el sol", "gloss": "masculine" },
+            { "es": "la selva, la flor, la rana, la luna", "gloss": "feminine" },
+            { "es": "los ríos, los jaguares", "gloss": "masculine plural" },
+            { "es": "las flores, las ranas", "gloss": "feminine plural" }
+          ]
+        },
+        {
+          "heading": "Pista",
+          "body": "Muchas palabras con <strong>-o</strong> son masculinas. Muchas palabras con <strong>-a</strong> son femeninas. Pero hay excepciones: <em>el día</em>, <em>la mano</em>."
+        }
+      ],
+      "button": "Nombrar las cosas"
+    },
+
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "block": "Nombrar",
+      "grammar": ["articles", "gender"],
+      "vocabulary": ["jaguar", "río", "selva", "flor", "mono", "rana", "árbol", "serpiente", "luna", "sol", "ceiba", "guacamaya"],
+      "instruction": "Encuentra los pares: <em>nombre ↔ artículo correcto</em>",
+      "pairs": [
+        ["el", "jaguar"],
+        ["la", "selva"],
+        ["el", "río"],
+        ["la", "flor"],
+        ["el", "mono"],
+        ["la", "rana"]
+      ]
+    },
+
+    {
+      "type": "category",
+      "label": "Clasificar",
+      "block": "Nombrar",
+      "grammar": ["gender"],
+      "vocabulary": ["jaguar", "río", "selva", "flor", "mono", "rana", "árbol", "luna"],
+      "instruction": "Clasifica: <em>¿masculino (el) o femenino (la)?</em>",
+      "categories": ["Masculino (el)", "Femenino (la)"],
+      "items": [
+        { "text": "jaguar", "category": "Masculino (el)" },
+        { "text": "selva", "category": "Femenino (la)" },
+        { "text": "río", "category": "Masculino (el)" },
+        { "text": "flor", "category": "Femenino (la)" },
+        { "text": "árbol", "category": "Masculino (el)" },
+        { "text": "rana", "category": "Femenino (la)" },
+        { "text": "mono", "category": "Masculino (el)" },
+        { "text": "luna", "category": "Femenino (la)" }
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Nombrar",
+      "grammar": ["articles", "singular/plural"],
+      "vocabulary": ["jaguar", "flores", "ríos", "rana", "árboles", "selva"],
+      "instruction": "Completa con el artículo correcto.",
+      "questions": [
+        {
+          "sentence": "___ jaguar es grande.",
+          "answer": "El",
+          "options": ["El", "La", "Los", "Las"]
+        },
+        {
+          "sentence": "___ flores son bonitas.",
+          "answer": "Las",
+          "options": ["El", "La", "Los", "Las"]
+        },
+        {
+          "sentence": "___ ríos son largos.",
+          "answer": "Los",
+          "options": ["El", "La", "Los", "Las"]
+        },
+        {
+          "sentence": "___ rana es pequeña.",
+          "answer": "La",
+          "options": ["El", "La", "Los", "Las"]
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Describir el mundo",
+      "speaker": "yaguara",
+      "block": "Describir",
+      "grammar": ["ser vs estar", "hay", "adjective agreement", "colors"],
+      "sections": [
+        {
+          "body": "La selva tiene muchas cosas. ¿Cómo son? ¿Dónde están? ¿Qué hay?"
+        },
+        {
+          "heading": "Ser — cómo es algo",
+          "body": "<strong>Ser</strong> = qué es algo o cómo es:",
+          "examples": [
+            { "es": "El jaguar es grande.", "gloss": "The jaguar is big. (nature)" },
+            { "es": "La flor es roja.", "gloss": "The flower is red. (nature)" }
+          ]
+        },
+        {
+          "heading": "Estar — dónde está algo",
+          "body": "<strong>Estar</strong> = dónde está algo:",
+          "examples": [
+            { "es": "El mono está en el árbol.", "gloss": "The monkey is in the tree. (location)" },
+            { "es": "La rana está en el río.", "gloss": "The frog is in the river. (location)" }
+          ]
+        },
+        {
+          "heading": "Hay — existe",
+          "body": "<strong>Hay</strong> = algo existe:",
+          "examples": [
+            { "es": "Hay un jaguar en la selva.", "gloss": "There is a jaguar in the jungle." },
+            { "es": "Hay muchos árboles.", "gloss": "There are many trees." }
+          ]
+        },
+        {
+          "heading": "Colores",
+          "pattern": "<strong>rojo</strong> · <strong>azul</strong> · <strong>verde</strong> · <strong>amarillo</strong> · <strong>blanco</strong> · <strong>negro</strong>",
+          "body": "Los colores cambian: roj<strong>o</strong> (masculino) / roj<strong>a</strong> (femenino). Pero: <em>verde</em> y <em>azul</em> no cambian."
+        }
+      ],
+      "button": "Describir la selva"
+    },
+
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "block": "Describir",
+      "grammar": ["ser vs estar", "hay", "colors"],
+      "vocabulary": ["grande", "pequeño", "verde", "rojo", "azul", "bonito"],
+      "instruction": "Escucha y selecciona la respuesta correcta.",
+      "questions": [
+        {
+          "audio": "El jaguar es grande y fuerte.",
+          "question": "¿Cómo es el jaguar?",
+          "answer": "Grande y fuerte",
+          "options": ["Pequeño y verde", "Grande y fuerte", "Rojo y bonito", "Azul"]
+        },
+        {
+          "audio": "La rana está en el río.",
+          "question": "¿Dónde está la rana?",
+          "answer": "En el río",
+          "options": ["En el árbol", "En el río", "En la casa", "En el cielo"]
+        },
+        {
+          "audio": "Hay muchas flores rojas en la selva.",
+          "question": "¿De qué color son las flores?",
+          "answer": "Rojas",
+          "options": ["Azules", "Verdes", "Rojas", "Blancas"]
+        }
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Describir",
+      "grammar": ["ser vs estar", "hay"],
+      "vocabulary": ["es", "está", "hay", "son"],
+      "instruction": "Completa con <em>es</em>, <em>está</em> o <em>hay</em>.",
+      "questions": [
+        {
+          "sentence": "El jaguar ___ grande.",
+          "answer": "es",
+          "options": ["es", "está", "hay", "tiene"]
+        },
+        {
+          "sentence": "La rana ___ en el agua.",
+          "answer": "está",
+          "options": ["es", "está", "hay", "son"]
+        },
+        {
+          "sentence": "___ muchos árboles en la selva.",
+          "answer": "Hay",
+          "options": ["Es", "Está", "Hay", "Son"]
+        },
+        {
+          "sentence": "Las flores ___ rojas y bonitas.",
+          "answer": "son",
+          "options": ["es", "están", "hay", "son"]
+        }
+      ]
+    },
+
+    {
+      "type": "builder",
+      "label": "Construir",
+      "block": "Describir",
+      "grammar": ["ser vs estar", "adjective agreement"],
+      "vocabulary": ["jaguar", "grande", "fuerte", "selva", "verde", "bonita"],
+      "instruction": "Ordena las palabras para describir la selva.",
+      "words": ["La", "selva", "es", "grande", "y", "verde"],
+      "answer": "La selva es grande y verde"
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Contar y medir el tiempo",
+      "speaker": "yaguara",
+      "block": "Contar",
+      "grammar": ["numbers", "tener + age", "days of week", "time of day"],
+      "sections": [
+        {
+          "body": "Los números son la voz del tiempo. Escucha."
+        },
+        {
+          "heading": "Números 0–15",
+          "pattern": "0 <strong>cero</strong> · 1 <strong>uno</strong> · 2 <strong>dos</strong> · 3 <strong>tres</strong> · 4 <strong>cuatro</strong> · 5 <strong>cinco</strong>",
+          "examples": [
+            { "es": "6 seis · 7 siete · 8 ocho · 9 nueve · 10 diez", "gloss": "" },
+            { "es": "11 once · 12 doce · 13 trece · 14 catorce · 15 quince", "gloss": "" }
+          ]
+        },
+        {
+          "heading": "Números 16–31",
+          "pattern": "16 <strong>dieciséis</strong> · 20 <strong>veinte</strong> · 21 <strong>veintiuno</strong> · 30 <strong>treinta</strong> · 31 <strong>treinta y uno</strong>"
+        },
+        {
+          "heading": "Tener + edad",
+          "body": "En español, la edad usa <strong>tener</strong> (tener años):",
+          "pattern": "Yo <strong>tengo</strong> · Tú <strong>tienes</strong> · Él/Ella <strong>tiene</strong>",
+          "examples": [
+            { "es": "Yo tengo diez años.", "gloss": "I am ten years old. (lit: I have ten years)" },
+            { "es": "¿Cuántos años tienes?", "gloss": "How old are you?" }
+          ]
+        },
+        {
+          "heading": "Los días de la semana",
+          "pattern": "<strong>lunes</strong> · <strong>martes</strong> · <strong>miércoles</strong> · <strong>jueves</strong> · <strong>viernes</strong> · <strong>sábado</strong> · <strong>domingo</strong>",
+          "body": "En español, los días no tienen mayúscula."
+        },
+        {
+          "heading": "El tiempo del día",
+          "pattern": "<strong>la mañana</strong> · <strong>la tarde</strong> · <strong>la noche</strong>"
+        }
+      ],
+      "button": "Contar"
+    },
+
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "block": "Contar",
+      "grammar": ["numbers"],
+      "vocabulary": ["uno", "dos", "tres", "cinco", "diez", "veinte"],
+      "instruction": "Encuentra los pares: <em>número ↔ palabra</em>",
+      "pairs": [
+        ["1", "uno"],
+        ["5", "cinco"],
+        ["10", "diez"],
+        ["15", "quince"],
+        ["20", "veinte"],
+        ["31", "treinta y uno"]
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Contar",
+      "grammar": ["tener + age", "numbers", "days"],
+      "vocabulary": ["tengo", "tienes", "tiene", "lunes", "viernes"],
+      "instruction": "Completa con <em>tener</em> y los números.",
+      "questions": [
+        {
+          "sentence": "Yo ___ doce años.",
+          "answer": "tengo",
+          "options": ["soy", "tengo", "estoy", "hay"]
+        },
+        {
+          "sentence": "¿Cuántos años ___?",
+          "answer": "tienes",
+          "options": ["tengo", "tienes", "tiene", "tienen"]
+        },
+        {
+          "sentence": "Ella ___ ocho años.",
+          "answer": "tiene",
+          "options": ["tengo", "tienes", "tiene", "es"]
+        },
+        {
+          "sentence": "Hoy es ___. Mañana es martes.",
+          "answer": "lunes",
+          "options": ["lunes", "miércoles", "viernes", "domingo"]
+        }
+      ]
+    },
+
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "block": "Contar",
+      "grammar": ["tener + age", "numbers", "days"],
+      "vocabulary": ["cuántos años", "tengo", "qué día", "hoy"],
+      "instruction": "Conversación: <em>números y tiempo</em>.",
+      "turns": [
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Cuántos años tienes?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Tengo quince años.", "Soy quince.", "Estoy años."],
+          "answer": "Tengo quince años."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Qué día es hoy?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Hoy es lunes.", "Hoy tengo lunes.", "Es de noche."],
+          "answer": "Hoy es lunes."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Cuántos jaguares hay en la selva?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Hay cinco jaguares.", "Son cinco años.", "Tengo jaguares."],
+          "answer": "Hay cinco jaguares."
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Expresar gustos y posesiones",
+      "speaker": "yaguara",
+      "block": "Expresar",
+      "grammar": ["negation", "me gusta", "possessives"],
+      "sections": [
+        {
+          "body": "¿Qué te gusta? ¿Qué es tuyo? ¿Qué no?"
+        },
+        {
+          "heading": "Me gusta / No me gusta",
+          "body": "En español, <strong>gustar</strong> funciona diferente:",
+          "pattern": "<strong>Me gusta</strong> el río. · <strong>Me gustan</strong> las flores.",
+          "examples": [
+            { "es": "Me gusta la selva.", "gloss": "I like the jungle." },
+            { "es": "Me gustan los animales.", "gloss": "I like the animals." },
+            { "es": "No me gusta la lluvia.", "gloss": "I don't like the rain." }
+          ]
+        },
+        {
+          "heading": "Decir no",
+          "body": "Pon <strong>no</strong> antes del verbo:",
+          "examples": [
+            { "es": "No soy de aquí.", "gloss": "I'm not from here." },
+            { "es": "No hay serpientes.", "gloss": "There are no snakes." },
+            { "es": "No estoy triste.", "gloss": "I'm not sad." }
+          ]
+        },
+        {
+          "heading": "Mi / Tu / Su",
+          "body": "Los posesivos dicen de quién es algo:",
+          "pattern": "<strong>mi</strong> casa · <strong>tu</strong> nombre · <strong>su</strong> familia",
+          "examples": [
+            { "es": "Mi nombre es Yaguará.", "gloss": "My name is Yaguará." },
+            { "es": "¿Cuál es tu animal favorito?", "gloss": "What is your favorite animal?" },
+            { "es": "Su casa es grande.", "gloss": "His/her house is big." }
+          ]
+        }
+      ],
+      "button": "Expresar"
+    },
+
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "block": "Expresar",
+      "grammar": ["me gusta", "negation"],
+      "vocabulary": ["gusta", "gustan", "no", "favorito"],
+      "instruction": "Escucha y selecciona la respuesta correcta.",
+      "questions": [
+        {
+          "audio": "Me gusta la selva.",
+          "question": "¿Qué le gusta?",
+          "answer": "La selva",
+          "options": ["El río", "La selva", "La ciudad", "El mar"]
+        },
+        {
+          "audio": "No me gustan las serpientes.",
+          "question": "¿Le gustan las serpientes?",
+          "answer": "No",
+          "options": ["Sí", "No", "Mucho", "Bien"]
+        },
+        {
+          "audio": "Mi animal favorito es el jaguar.",
+          "question": "¿Cuál es su animal favorito?",
+          "answer": "El jaguar",
+          "options": ["La rana", "El mono", "El jaguar", "La guacamaya"]
+        }
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Expresar",
+      "grammar": ["me gusta", "negation", "possessives"],
+      "vocabulary": ["gusta", "gustan", "no", "mi", "tu", "su"],
+      "instruction": "Completa las frases sobre gustos y posesiones.",
+      "questions": [
+        {
+          "sentence": "Me ___ los animales de la selva.",
+          "answer": "gustan",
+          "options": ["gusta", "gustan", "gusto", "gustas"]
+        },
+        {
+          "sentence": "___ me gusta la lluvia fría.",
+          "answer": "No",
+          "options": ["No", "Sí", "Mi", "Es"]
+        },
+        {
+          "sentence": "___ nombre es Yaguará.",
+          "answer": "Mi",
+          "options": ["Mi", "Tu", "Su", "El"]
+        },
+        {
+          "sentence": "¿Cuál es ___ animal favorito?",
+          "answer": "tu",
+          "options": ["mi", "tu", "su", "el"]
+        }
+      ]
+    },
+
+    {
+      "type": "category",
+      "label": "Clasificar",
+      "block": "Expresar",
+      "grammar": ["me gusta"],
+      "vocabulary": ["selva", "flores", "serpientes", "lluvia", "animales", "frío"],
+      "instruction": "Clasifica según la conversación con Yaguará: <em>¿me gusta o no me gusta?</em>",
+      "categories": ["Me gusta", "No me gusta"],
+      "items": [
+        { "text": "la selva", "category": "Me gusta" },
+        { "text": "las flores bonitas", "category": "Me gusta" },
+        { "text": "las serpientes", "category": "No me gusta" },
+        { "text": "los animales", "category": "Me gusta" },
+        { "text": "el frío", "category": "No me gusta" },
+        { "text": "la lluvia fuerte", "category": "No me gusta" }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Vivir en la selva",
+      "speaker": "yaguara",
+      "block": "Vivir",
+      "grammar": ["-AR conjugation", "prepositions", "daily routines"],
+      "sections": [
+        {
+          "body": "Los verbos que terminan en <strong>-AR</strong> son los más comunes. Caminar, nadar, hablar, escuchar..."
+        },
+        {
+          "heading": "Conjugación de verbos -AR",
+          "body": "Ejemplo con <strong>caminar</strong>:",
+          "pattern": "Yo <strong>camino</strong> · Tú <strong>caminas</strong> · Él/Ella <strong>camina</strong> · Nosotros <strong>caminamos</strong> · Ustedes <strong>caminan</strong> · Ellos <strong>caminan</strong>",
+          "examples": [
+            { "es": "Yo camino por la selva.", "gloss": "I walk through the jungle." },
+            { "es": "Tú nadas en el río.", "gloss": "You swim in the river." },
+            { "es": "Ella habla español.", "gloss": "She speaks Spanish." }
+          ]
+        },
+        {
+          "heading": "Preposiciones",
+          "pattern": "<strong>en</strong> (in) · <strong>de</strong> (from/of) · <strong>a</strong> (to) · <strong>con</strong> (with) · <strong>por</strong> (through/by)",
+          "examples": [
+            { "es": "Vivo en la selva.", "gloss": "I live in the jungle." },
+            { "es": "Camino con mi amigo.", "gloss": "I walk with my friend." },
+            { "es": "Nado por el río.", "gloss": "I swim through the river." }
+          ]
+        },
+        {
+          "heading": "Un día en la selva",
+          "body": "Por la mañana: <em>camino</em>. Por la tarde: <em>nado</em>. Por la noche: <em>descanso</em>."
+        }
+      ],
+      "button": "Vivir en la selva"
+    },
+
+    {
+      "type": "conjugation",
+      "label": "Conjugación",
+      "block": "Vivir",
+      "grammar": ["-AR conjugation"],
+      "vocabulary": ["caminar", "nadar", "hablar", "escuchar"],
+      "instruction": "Selecciona la forma correcta del verbo <em>caminar</em>.",
+      "questions": [
+        {
+          "verb": "caminar",
+          "subject": "yo",
+          "answer": "camino",
+          "options": ["camino", "caminas", "camina", "caminan"]
+        },
+        {
+          "verb": "caminar",
+          "subject": "tú",
+          "answer": "caminas",
+          "options": ["camino", "caminas", "camina", "caminamos"]
+        },
+        {
+          "verb": "nadar",
+          "subject": "él",
+          "answer": "nada",
+          "options": ["nado", "nadas", "nada", "nadan"]
+        },
+        {
+          "verb": "hablar",
+          "subject": "nosotros",
+          "answer": "hablamos",
+          "options": ["hablo", "hablas", "habla", "hablamos"]
+        },
+        {
+          "verb": "escuchar",
+          "subject": "ustedes",
+          "answer": "escuchan",
+          "options": ["escucho", "escuchas", "escucha", "escuchan"]
+        }
+      ]
+    },
+
+    {
+      "type": "builder",
+      "label": "Construir",
+      "block": "Vivir",
+      "grammar": ["-AR conjugation", "prepositions"],
+      "vocabulary": ["caminar", "nadar", "selva", "río"],
+      "instruction": "Ordena las palabras para describir una rutina.",
+      "words": ["Yo", "camino", "por", "la", "selva", "con", "mi", "amigo"],
+      "answer": "Yo camino por la selva con mi amigo"
+    },
+
+    {
+      "type": "story",
+      "label": "Lectura",
+      "block": "Vivir",
+      "grammar": ["-AR conjugation", "prepositions", "daily routines", "ser", "estar", "hay", "tener"],
+      "vocabulary": ["caminar", "nadar", "descansar", "hablar", "mañana", "tarde", "noche"],
+      "instruction": "Lee la historia y responde las preguntas.",
+      "title": "Un día en la selva",
+      "text": "Me llamo Yaguará. Soy un jaguar y vivo en la selva amazónica. Por la mañana, camino por el río. El río es grande y verde. Hay muchos peces en el agua. Por la tarde, nado con mi amigo el delfín. No me gustan las serpientes, pero me gustan las ranas. Por la noche, descanso en mi árbol favorito. Tengo cinco años. Mi selva es bonita.",
+      "questions": [
+        {
+          "q": "¿Dónde vive Yaguará?",
+          "options": ["En la ciudad", "En la selva amazónica", "En el mar", "En la montaña"],
+          "answer": "En la selva amazónica"
+        },
+        {
+          "q": "¿Qué hace por la mañana?",
+          "options": ["Nada", "Duerme", "Camina por el río", "Come"],
+          "answer": "Camina por el río"
+        },
+        {
+          "q": "¿Qué animal no le gusta?",
+          "options": ["Las ranas", "Los peces", "Las serpientes", "Los delfines"],
+          "answer": "Las serpientes"
+        },
+        {
+          "q": "¿Cuántos años tiene Yaguará?",
+          "options": ["Tres", "Cinco", "Diez", "Ocho"],
+          "answer": "Cinco"
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Comer en la selva",
+      "speaker": "yaguara",
+      "block": "Comer",
+      "grammar": ["food vocabulary", "comer/beber", "tener hambre/sed/frío/calor"],
+      "sections": [
+        {
+          "body": "El río da comida. La selva da fruta. Ahora aprendes a hablar de <strong>comer</strong> y <strong>beber</strong>."
+        },
+        {
+          "heading": "Comida de la selva",
+          "pattern": "<strong>la yuca</strong> · <strong>el plátano</strong> · <strong>el pescado</strong> · <strong>la fruta</strong> · <strong>el jugo</strong> · <strong>el agua</strong>",
+          "examples": [
+            { "es": "La yuca es blanca.", "gloss": "Yuca is white." },
+            { "es": "El plátano es amarillo.", "gloss": "The plantain is yellow." },
+            { "es": "El pescado es del río.", "gloss": "The fish is from the river." }
+          ]
+        },
+        {
+          "heading": "Comer y beber (-ER)",
+          "body": "Los verbos <strong>comer</strong> y <strong>beber</strong> terminan en <strong>-ER</strong>:",
+          "pattern": "Yo <strong>como</strong> · Tú <strong>comes</strong> · Él/Ella <strong>come</strong> · Nosotros <strong>comemos</strong> · Ustedes <strong>comen</strong>",
+          "examples": [
+            { "es": "Yo como pescado.", "gloss": "I eat fish." },
+            { "es": "Ella bebe jugo de guayaba.", "gloss": "She drinks guava juice." }
+          ]
+        },
+        {
+          "heading": "Tener hambre / sed / frío / calor",
+          "body": "Usamos <strong>tener</strong> para necesidades del cuerpo:",
+          "pattern": "<strong>Tengo hambre</strong> (hunger) · <strong>Tengo sed</strong> (thirst) · <strong>Tengo frío</strong> (cold) · <strong>Tengo calor</strong> (hot)",
+          "examples": [
+            { "es": "Tengo hambre. Como plátano.", "gloss": "I'm hungry. I eat plantain." },
+            { "es": "Tengo sed. Bebo agua.", "gloss": "I'm thirsty. I drink water." },
+            { "es": "Tengo calor. La selva es húmeda.", "gloss": "I'm hot. The jungle is humid." }
+          ]
+        }
+      ],
+      "button": "Comer en la selva"
+    },
+
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "block": "Comer",
+      "grammar": ["food vocabulary"],
+      "vocabulary": ["yuca", "plátano", "pescado", "fruta", "jugo", "agua"],
+      "instruction": "Encuentra los pares: <em>comida ↔ descripción</em>",
+      "pairs": [
+        ["la yuca", "blanca y suave"],
+        ["el plátano", "amarillo y dulce"],
+        ["el pescado", "fresco del río"],
+        ["la fruta", "tropical y dulce"],
+        ["el jugo", "de guayaba"],
+        ["el agua", "fresca del río"]
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Comer",
+      "grammar": ["comer/beber", "tener hambre/sed/frío/calor"],
+      "vocabulary": ["como", "comes", "come", "bebe", "tengo"],
+      "instruction": "Completa con la forma correcta.",
+      "questions": [
+        {
+          "sentence": "Yo ___ pescado con yuca.",
+          "answer": "como",
+          "options": ["como", "comes", "come", "comen"]
+        },
+        {
+          "sentence": "Ella ___ jugo de guayaba.",
+          "answer": "bebe",
+          "options": ["bebo", "bebes", "bebe", "beben"]
+        },
+        {
+          "sentence": "Nosotros ___ fruta tropical.",
+          "answer": "comemos",
+          "options": ["como", "comes", "comemos", "comen"]
+        },
+        {
+          "sentence": "Tengo ___. Bebo mucha agua.",
+          "answer": "sed",
+          "options": ["hambre", "sed", "frío", "calor"]
+        }
+      ]
+    },
+
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "block": "Comer",
+      "grammar": ["food vocabulary", "comer/beber", "tener hambre/sed"],
+      "vocabulary": ["como", "bebo", "hambre", "sed", "yuca", "pescado"],
+      "instruction": "Conversación sobre la comida en la selva.",
+      "turns": [
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Qué comes en la selva?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Como pescado y yuca.", "Soy pescado.", "Es grande."],
+          "answer": "Como pescado y yuca."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Tienes hambre?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Sí, tengo mucha hambre.", "Soy hambre.", "La selva es grande."],
+          "answer": "Sí, tengo mucha hambre."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Qué bebes?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Bebo jugo de guayaba.", "Tengo frío.", "Es bonito."],
+          "answer": "Bebo jugo de guayaba."
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "La familia junto al río",
+      "speaker": "yaguara",
+      "block": "Familia",
+      "grammar": ["family members", "este/esta", "¿quién?"],
+      "sections": [
+        {
+          "body": "Junto al río vive una familia. La abuela pesca. Los niños nadan. Hoy aprendes los nombres de la familia."
+        },
+        {
+          "heading": "La familia",
+          "pattern": "<strong>mamá</strong> · <strong>papá</strong> · <strong>hermano/a</strong> · <strong>abuelo/a</strong> · <strong>hijo/a</strong> · <strong>tío/a</strong>",
+          "examples": [
+            { "es": "Mi mamá es fuerte.", "gloss": "My mom is strong." },
+            { "es": "Mi abuelo es grande.", "gloss": "My grandfather is big." },
+            { "es": "Tengo un hermano y una hermana.", "gloss": "I have a brother and a sister." }
+          ]
+        },
+        {
+          "heading": "Este / Esta",
+          "body": "<strong>Este</strong> (masculino) y <strong>esta</strong> (femenino) presentan a alguien:",
+          "examples": [
+            { "es": "Este es mi hermano.", "gloss": "This is my brother." },
+            { "es": "Esta es mi abuela.", "gloss": "This is my grandmother." }
+          ]
+        },
+        {
+          "heading": "¿Quién?",
+          "body": "<strong>¿Quién?</strong> pregunta por una persona:",
+          "examples": [
+            { "es": "¿Quién es ella? — Es mi mamá.", "gloss": "Who is she? — She's my mom." },
+            { "es": "¿Quién es él? — Es mi abuelo.", "gloss": "Who is he? — He's my grandfather." }
+          ]
+        }
+      ],
+      "button": "Conocer a la familia"
+    },
+
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "block": "Familia",
+      "grammar": ["family members"],
+      "vocabulary": ["mamá", "papá", "hermano", "hermana", "abuelo", "abuela"],
+      "instruction": "Encuentra los pares: <em>persona ↔ descripción</em>",
+      "pairs": [
+        ["mamá", "madre"],
+        ["papá", "padre"],
+        ["hermano", "un chico en tu familia"],
+        ["abuela", "mamá de tu mamá"],
+        ["tío", "hermano de tu mamá"],
+        ["hermana", "una chica en tu familia"]
+      ]
+    },
+
+    {
+      "type": "category",
+      "label": "Clasificar",
+      "block": "Familia",
+      "grammar": ["family members", "gender"],
+      "vocabulary": ["mamá", "papá", "hermano", "hermana", "abuelo", "abuela", "tío", "tía"],
+      "instruction": "Clasifica: <em>¿masculino o femenino?</em>",
+      "categories": ["Masculino", "Femenino"],
+      "items": [
+        { "text": "papá", "category": "Masculino" },
+        { "text": "mamá", "category": "Femenino" },
+        { "text": "hermano", "category": "Masculino" },
+        { "text": "hermana", "category": "Femenino" },
+        { "text": "abuelo", "category": "Masculino" },
+        { "text": "abuela", "category": "Femenino" },
+        { "text": "tío", "category": "Masculino" },
+        { "text": "tía", "category": "Femenino" }
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Familia",
+      "grammar": ["family members", "este/esta", "¿quién?"],
+      "vocabulary": ["este", "esta", "quién", "mi"],
+      "instruction": "Completa las frases sobre la familia.",
+      "questions": [
+        {
+          "sentence": "___ es mi hermano. Se llama Carlos.",
+          "answer": "Este",
+          "options": ["Este", "Esta", "El", "La"]
+        },
+        {
+          "sentence": "___ es mi abuela. Ella pesca en el río.",
+          "answer": "Esta",
+          "options": ["Este", "Esta", "El", "Un"]
+        },
+        {
+          "sentence": "¿___ es ella? — Es mi mamá.",
+          "answer": "Quién",
+          "options": ["Quién", "Qué", "Dónde", "Cómo"]
+        },
+        {
+          "sentence": "Tengo un ___ y una hermana.",
+          "answer": "hermano",
+          "options": ["hermano", "abuelo", "tío", "papá"]
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Mi casa junto al río",
+      "speaker": "yaguara",
+      "block": "Mi casa",
+      "grammar": ["rooms", "estar + states", "un/una"],
+      "sections": [
+        {
+          "body": "En la selva, las casas son de madera y están junto al río. Una maloca es una casa grande. Hoy aprendes las partes de la casa."
+        },
+        {
+          "heading": "Las partes de la casa",
+          "pattern": "<strong>la cocina</strong> · <strong>el dormitorio</strong> · <strong>el baño</strong> · <strong>la sala</strong>",
+          "examples": [
+            { "es": "La cocina es pequeña.", "gloss": "The kitchen is small." },
+            { "es": "El dormitorio es grande.", "gloss": "The bedroom is big." },
+            { "es": "La sala es bonita.", "gloss": "The living room is beautiful." }
+          ]
+        },
+        {
+          "heading": "Estar + estado",
+          "body": "<strong>Estar</strong> también dice cómo te sientes:",
+          "pattern": "Estoy <strong>bien</strong> · Estoy <strong>mal</strong> · Estoy <strong>cansado/a</strong> · Estoy <strong>enfermo/a</strong>",
+          "examples": [
+            { "es": "Estoy bien.", "gloss": "I'm fine." },
+            { "es": "Mi hermano está cansado.", "gloss": "My brother is tired." },
+            { "es": "Mi abuela está enferma.", "gloss": "My grandmother is sick." }
+          ]
+        },
+        {
+          "heading": "Un / Una",
+          "body": "<strong>Un</strong> (masculino) y <strong>una</strong> (femenino) son artículos indefinidos:",
+          "examples": [
+            { "es": "Hay un dormitorio grande.", "gloss": "There is a big bedroom." },
+            { "es": "Hay una cocina pequeña.", "gloss": "There is a small kitchen." },
+            { "es": "Tengo un hermano.", "gloss": "I have a brother." }
+          ]
+        }
+      ],
+      "button": "Entrar en la casa"
+    },
+
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "block": "Mi casa",
+      "grammar": ["rooms", "estar + states"],
+      "vocabulary": ["cocina", "dormitorio", "baño", "sala", "bien", "cansado", "enfermo"],
+      "instruction": "Escucha y selecciona la respuesta correcta.",
+      "questions": [
+        {
+          "audio": "Mi dormitorio es grande y bonito.",
+          "question": "¿Cómo es el dormitorio?",
+          "answer": "Grande y bonito",
+          "options": ["Pequeño y malo", "Grande y bonito", "Nuevo y blanco", "Pequeño y nuevo"]
+        },
+        {
+          "audio": "Estoy muy cansado.",
+          "question": "¿Cómo está?",
+          "answer": "Cansado",
+          "options": ["Bien", "Enfermo", "Cansado", "Feliz"]
+        },
+        {
+          "audio": "La cocina tiene una mesa y un fuego.",
+          "question": "¿Qué tiene la cocina?",
+          "answer": "Una mesa y un fuego",
+          "options": ["Un dormitorio", "Una mesa y un fuego", "Un baño", "Una sala"]
+        }
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Mi casa",
+      "grammar": ["estar + states", "un/una"],
+      "vocabulary": ["estoy", "está", "un", "una"],
+      "instruction": "Completa con <em>estar</em> o <em>un/una</em>.",
+      "questions": [
+        {
+          "sentence": "Yo ___ muy cansado hoy.",
+          "answer": "estoy",
+          "options": ["soy", "estoy", "tengo", "hay"]
+        },
+        {
+          "sentence": "Mi mamá ___ enferma.",
+          "answer": "está",
+          "options": ["es", "está", "tiene", "hay"]
+        },
+        {
+          "sentence": "Hay ___ dormitorio grande en mi casa.",
+          "answer": "un",
+          "options": ["un", "una", "el", "la"]
+        },
+        {
+          "sentence": "Hay ___ cocina pequeña junto al río.",
+          "answer": "una",
+          "options": ["un", "una", "el", "la"]
+        }
+      ]
+    },
+
+    {
+      "type": "builder",
+      "label": "Construir",
+      "block": "Mi casa",
+      "grammar": ["rooms", "un/una"],
+      "vocabulary": ["casa", "cocina", "dormitorio"],
+      "instruction": "Ordena las palabras para describir tu casa.",
+      "words": ["Mi", "casa", "tiene", "una", "cocina", "y", "un", "dormitorio"],
+      "answer": "Mi casa tiene una cocina y un dormitorio"
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "El tiempo y los números",
+      "speaker": "yaguara",
+      "block": "El tiempo",
+      "grammar": ["months", "clock time", "numbers 32-100", "¿cuándo?"],
+      "sections": [
+        {
+          "body": "Ya sabes contar hasta treinta y uno. Ahora vamos más lejos. Y aprendes los meses y la hora."
+        },
+        {
+          "heading": "Números 32–100",
+          "pattern": "32 <strong>treinta y dos</strong> · 40 <strong>cuarenta</strong> · 50 <strong>cincuenta</strong> · 60 <strong>sesenta</strong> · 70 <strong>setenta</strong> · 80 <strong>ochenta</strong> · 90 <strong>noventa</strong> · 100 <strong>cien</strong>",
+          "examples": [
+            { "es": "Hay cuarenta y cinco árboles.", "gloss": "There are forty-five trees." },
+            { "es": "Tengo cien peces.", "gloss": "I have one hundred fish." }
+          ]
+        },
+        {
+          "heading": "Los meses del año",
+          "pattern": "<strong>enero</strong> · <strong>febrero</strong> · <strong>marzo</strong> · <strong>abril</strong> · <strong>mayo</strong> · <strong>junio</strong> · <strong>julio</strong> · <strong>agosto</strong> · <strong>septiembre</strong> · <strong>octubre</strong> · <strong>noviembre</strong> · <strong>diciembre</strong>",
+          "body": "En español, los meses no tienen mayúscula."
+        },
+        {
+          "heading": "¿Qué hora es?",
+          "body": "La hora usa <strong>ser</strong>:",
+          "pattern": "Es la <strong>una</strong>. · Son las <strong>dos</strong>. · Son las <strong>tres</strong>.",
+          "examples": [
+            { "es": "¿Qué hora es? — Son las tres.", "gloss": "What time is it? — It's three o'clock." },
+            { "es": "Es la una de la tarde.", "gloss": "It's one in the afternoon." }
+          ]
+        },
+        {
+          "heading": "¿Cuándo?",
+          "body": "<strong>¿Cuándo?</strong> pregunta por el momento:",
+          "examples": [
+            { "es": "¿Cuándo es tu cumpleaños? — En mayo.", "gloss": "When is your birthday? — In May." }
+          ]
+        }
+      ],
+      "button": "Aprender el tiempo"
+    },
+
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "block": "El tiempo",
+      "grammar": ["months", "numbers 32-100"],
+      "vocabulary": ["cuarenta", "cincuenta", "sesenta", "enero", "junio", "diciembre"],
+      "instruction": "Encuentra los pares: <em>número ↔ palabra</em>",
+      "pairs": [
+        ["40", "cuarenta"],
+        ["60", "sesenta"],
+        ["100", "cien"],
+        ["mes 1", "enero"],
+        ["mes 6", "junio"],
+        ["mes 12", "diciembre"]
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "El tiempo",
+      "grammar": ["clock time", "months", "numbers"],
+      "vocabulary": ["hora", "meses", "números"],
+      "instruction": "Completa las frases sobre el tiempo.",
+      "questions": [
+        {
+          "sentence": "¿Qué hora es? — ___ las tres.",
+          "answer": "Son",
+          "options": ["Es", "Son", "Hay", "Tiene"]
+        },
+        {
+          "sentence": "¿Qué hora es? — ___ la una.",
+          "answer": "Es",
+          "options": ["Es", "Son", "Hay", "Está"]
+        },
+        {
+          "sentence": "Mi cumpleaños es en ___. Es el mes cinco.",
+          "answer": "mayo",
+          "options": ["marzo", "mayo", "julio", "enero"]
+        },
+        {
+          "sentence": "Hay ___ árboles en la selva. (50)",
+          "answer": "cincuenta",
+          "options": ["cuarenta", "cincuenta", "sesenta", "cien"]
+        }
+      ]
+    },
+
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "block": "El tiempo",
+      "grammar": ["clock time", "months", "¿cuándo?"],
+      "vocabulary": ["hora", "mes", "cuándo"],
+      "instruction": "Conversación sobre el tiempo.",
+      "turns": [
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Qué hora es?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Son las cinco de la tarde.", "Tengo cinco.", "Es mayo."],
+          "answer": "Son las cinco de la tarde."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Cuándo es tu cumpleaños?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Es en agosto.", "Son las ocho.", "Tengo años."],
+          "answer": "Es en agosto."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Cuántos animales hay en la selva?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Hay más de cien.", "Son las cien.", "Es cien."],
+          "answer": "Hay más de cien."
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Conjugar todos los verbos",
+      "speaker": "yaguara",
+      "block": "Conjugar",
+      "grammar": ["-ER/-IR conjugation", "ir", "plural possessives", "¿por qué?/porque"],
+      "sections": [
+        {
+          "body": "Ya conoces los verbos <strong>-AR</strong> y los verbos <strong>comer</strong> y <strong>beber</strong>. Ahora aprendes <em>todos</em> los verbos <strong>-ER</strong> y <strong>-IR</strong>."
+        },
+        {
+          "heading": "Verbos -ER: comer",
+          "pattern": "Yo <strong>como</strong> · Tú <strong>comes</strong> · Él/Ella <strong>come</strong> · Nosotros <strong>comemos</strong> · Ustedes <strong>comen</strong> · Ellos <strong>comen</strong>",
+          "examples": [
+            { "es": "Yo como fruta.", "gloss": "I eat fruit." },
+            { "es": "Nosotros comemos pescado.", "gloss": "We eat fish." }
+          ]
+        },
+        {
+          "heading": "Verbos -IR: vivir",
+          "body": "Los verbos <strong>-IR</strong> se conjugan casi igual que los -ER:",
+          "pattern": "Yo <strong>vivo</strong> · Tú <strong>vives</strong> · Él/Ella <strong>vive</strong> · Nosotros <strong>vivimos</strong> · Ustedes <strong>viven</strong> · Ellos <strong>viven</strong>",
+          "examples": [
+            { "es": "Yo vivo en la selva.", "gloss": "I live in the jungle." },
+            { "es": "Ella escribe en su cuaderno.", "gloss": "She writes in her notebook." }
+          ]
+        },
+        {
+          "heading": "Ir — adónde",
+          "body": "El verbo <strong>ir</strong> es irregular. Dice adónde vas:",
+          "pattern": "Yo <strong>voy</strong> · Tú <strong>vas</strong> · Él/Ella <strong>va</strong> · Nosotros <strong>vamos</strong> · Ustedes <strong>van</strong>",
+          "examples": [
+            { "es": "Yo voy al río.", "gloss": "I go to the river." },
+            { "es": "Nosotros vamos a la selva.", "gloss": "We go to the jungle." }
+          ]
+        },
+        {
+          "heading": "Mis, tus, sus, nuestro/a",
+          "body": "Los posesivos también tienen plural:",
+          "pattern": "<strong>mis</strong> hermanos · <strong>tus</strong> amigos · <strong>sus</strong> hijos · <strong>nuestro</strong> río / <strong>nuestra</strong> selva",
+          "examples": [
+            { "es": "Mis hermanos viven en la selva.", "gloss": "My siblings live in the jungle." },
+            { "es": "Nuestra casa es bonita.", "gloss": "Our house is beautiful." }
+          ]
+        },
+        {
+          "heading": "¿Por qué? / Porque",
+          "body": "<strong>¿Por qué?</strong> pregunta la razón. <strong>Porque</strong> da la respuesta:",
+          "examples": [
+            { "es": "¿Por qué vives en la selva? — Porque es bonita.", "gloss": "Why do you live in the jungle? — Because it's beautiful." },
+            { "es": "¿Por qué comes pescado? — Porque tengo hambre.", "gloss": "Why do you eat fish? — Because I'm hungry." }
+          ]
+        }
+      ],
+      "button": "Conjugar verbos"
+    },
+
+    {
+      "type": "conjugation",
+      "label": "Conjugación",
+      "block": "Conjugar",
+      "grammar": ["-ER/-IR conjugation", "ir"],
+      "vocabulary": ["comer", "vivir", "escribir", "ir", "beber"],
+      "instruction": "Selecciona la forma correcta del verbo.",
+      "questions": [
+        {
+          "verb": "comer",
+          "subject": "yo",
+          "answer": "como",
+          "options": ["como", "comes", "come", "comen"]
+        },
+        {
+          "verb": "vivir",
+          "subject": "tú",
+          "answer": "vives",
+          "options": ["vivo", "vives", "vive", "vivimos"]
+        },
+        {
+          "verb": "escribir",
+          "subject": "ella",
+          "answer": "escribe",
+          "options": ["escribo", "escribes", "escribe", "escriben"]
+        },
+        {
+          "verb": "ir",
+          "subject": "nosotros",
+          "answer": "vamos",
+          "options": ["voy", "vas", "va", "vamos"]
+        },
+        {
+          "verb": "beber",
+          "subject": "ustedes",
+          "answer": "beben",
+          "options": ["bebo", "bebes", "bebe", "beben"]
+        }
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Conjugar",
+      "grammar": ["-ER/-IR conjugation", "ir", "¿por qué?/porque"],
+      "vocabulary": ["vivo", "voy", "porque", "mis", "nuestro"],
+      "instruction": "Completa con la forma correcta.",
+      "questions": [
+        {
+          "sentence": "Yo ___ en la selva amazónica.",
+          "answer": "vivo",
+          "options": ["vivo", "vives", "vive", "vivimos"]
+        },
+        {
+          "sentence": "Nosotros ___ al río todos los días.",
+          "answer": "vamos",
+          "options": ["voy", "vas", "va", "vamos"]
+        },
+        {
+          "sentence": "¿Por qué comes pescado? — ___ tengo hambre.",
+          "answer": "Porque",
+          "options": ["Porque", "Por qué", "Qué", "Cómo"]
+        },
+        {
+          "sentence": "___ hermanos comen fruta tropical.",
+          "answer": "Mis",
+          "options": ["Mi", "Mis", "Tu", "Su"]
+        }
+      ]
+    },
+
+    {
+      "type": "builder",
+      "label": "Construir",
+      "block": "Conjugar",
+      "grammar": ["-ER/-IR conjugation", "ir"],
+      "vocabulary": ["vivo", "voy", "selva", "río"],
+      "instruction": "Ordena las palabras para formar la frase.",
+      "words": ["Yo", "vivo", "en", "la", "selva", "y", "voy", "al", "río"],
+      "answer": "Yo vivo en la selva y voy al río"
+    },
+
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "block": "Conjugar",
+      "grammar": ["-ER/-IR conjugation", "ir", "¿por qué?/porque"],
+      "vocabulary": ["vivo", "como", "voy", "porque"],
+      "instruction": "Conversación usando todos los verbos.",
+      "turns": [
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Dónde vives?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Vivo en la selva.", "Como en la selva.", "Soy selva."],
+          "answer": "Vivo en la selva."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Adónde vas por la mañana?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Voy al río.", "Como al río.", "Estoy río."],
+          "answer": "Voy al río."
+        },
+        {
+          "dialogue": [
+            { "speaker": "A", "name": "Yaguará", "text": "¿Por qué te gusta la selva?" },
+            { "speaker": "B", "name": "Tú", "text": "???" }
+          ],
+          "options": ["Porque es bonita y verde.", "Es bonita.", "Tengo selva."],
+          "answer": "Porque es bonita y verde."
+        }
+      ]
+    },
+
+    {
+      "type": "narrative",
+      "label": "Gramática",
+      "title": "Identidad y colores del mundo",
+      "speaker": "yaguara",
+      "block": "Identidad",
+      "grammar": ["nationality adjectives", "expanded colors", "A1 integration"],
+      "sections": [
+        {
+          "body": "La selva tiene personas de muchos países. Los colores de la selva son muchos más. Ahora aprendes a decir de dónde eres y a describir con más colores."
+        },
+        {
+          "heading": "¿De dónde eres? — Nacionalidad",
+          "body": "Las nacionalidades cambian como los adjetivos (masculino/femenino):",
+          "pattern": "<strong>colombiano/a</strong> · <strong>mexicano/a</strong> · <strong>peruano/a</strong> · <strong>brasileño/a</strong> · <strong>ecuatoriano/a</strong>",
+          "examples": [
+            { "es": "Yo soy colombiano.", "gloss": "I am Colombian. (masc.)" },
+            { "es": "Ella es mexicana.", "gloss": "She is Mexican." },
+            { "es": "Él es peruano.", "gloss": "He is Peruvian." }
+          ]
+        },
+        {
+          "heading": "Más colores",
+          "body": "Ya conoces rojo, azul, verde, amarillo, blanco y negro. Ahora más:",
+          "pattern": "<strong>naranja</strong> · <strong>rosa</strong> · <strong>morado/a</strong> · <strong>marrón</strong> · <strong>gris</strong>",
+          "examples": [
+            { "es": "La guacamaya es roja, azul y amarilla.", "gloss": "The macaw is red, blue and yellow." },
+            { "es": "La flor es rosa.", "gloss": "The flower is pink." },
+            { "es": "El tronco es marrón.", "gloss": "The trunk is brown." }
+          ]
+        }
+      ],
+      "button": "Describir el mundo"
+    },
+
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "block": "Identidad",
+      "grammar": ["nationality adjectives"],
+      "vocabulary": ["colombiano", "mexicano", "peruano", "brasileño", "ecuatoriano", "argentino"],
+      "instruction": "Encuentra los pares: <em>país ↔ nacionalidad</em>",
+      "pairs": [
+        ["Colombia", "colombiano/a"],
+        ["México", "mexicano/a"],
+        ["Perú", "peruano/a"],
+        ["Brasil", "brasileño/a"],
+        ["Ecuador", "ecuatoriano/a"],
+        ["Argentina", "argentino/a"]
+      ]
+    },
+
+    {
+      "type": "fill",
+      "label": "Completar",
+      "block": "Identidad",
+      "grammar": ["nationality adjectives", "expanded colors", "A1 integration"],
+      "vocabulary": ["colombiana", "rosa", "marrón", "dónde"],
+      "instruction": "Completa las frases. ¡Usa todo lo que sabes!",
+      "questions": [
+        {
+          "sentence": "Ella es de Colombia. Es ___.",
+          "answer": "colombiana",
+          "options": ["colombiana", "mexicana", "peruana", "brasileña"]
+        },
+        {
+          "sentence": "La flor es de color ___.",
+          "answer": "rosa",
+          "options": ["rosa", "marrón", "gris", "naranja"]
+        },
+        {
+          "sentence": "El tronco del árbol es ___.",
+          "answer": "marrón",
+          "options": ["rosa", "morado", "marrón", "gris"]
+        },
+        {
+          "sentence": "¿___ vives? — Vivo en la selva.",
+          "answer": "Dónde",
+          "options": ["Dónde", "Cuándo", "Quién", "Por qué"]
+        }
+      ]
+    },
+
+    {
+      "type": "story",
+      "label": "Lectura",
+      "block": "Identidad",
+      "grammar": ["A1 integration"],
+      "vocabulary": ["all A1"],
+      "instruction": "Lee la historia final de A1 y responde las preguntas.",
+      "title": "El viajero de la selva",
+      "text": "Me llamo Viajero. Soy colombiano y vivo en la selva amazónica. Mi casa está junto al río. Tiene una cocina pequeña y un dormitorio grande. Mi familia es grande: tengo una mamá, un papá, dos hermanos y una abuela. Mi abuela pesca en el río todos los días. Por la mañana, voy al río con mis hermanos. Comemos pescado y fruta. Bebo jugo de guayaba. Son las tres de la tarde y tengo calor. La selva es verde, grande y bonita. Me gustan los animales: el jaguar, el mono y la guacamaya rosa. ¿Por qué me gusta la selva? Porque es mi casa.",
+      "questions": [
+        {
+          "q": "¿De dónde es el viajero?",
+          "options": ["De México", "De Colombia", "De Perú", "De Brasil"],
+          "answer": "De Colombia"
+        },
+        {
+          "q": "¿Cuántos hermanos tiene?",
+          "options": ["Uno", "Dos", "Tres", "Cuatro"],
+          "answer": "Dos"
+        },
+        {
+          "q": "¿Qué hora es en la historia?",
+          "options": ["La una", "Las dos", "Las tres", "Las cinco"],
+          "answer": "Las tres"
+        },
+        {
+          "q": "¿Por qué le gusta la selva?",
+          "options": ["Porque es grande.", "Porque tiene animales.", "Porque es su casa.", "Porque hace calor."],
+          "answer": "Porque es su casa."
+        }
+      ]
+    }
+  ]
+}

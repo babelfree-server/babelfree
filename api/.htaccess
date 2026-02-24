@@ -1,0 +1,20 @@
+# Rewrite all API requests to front controller
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(config|middleware|models|helpers|routes|vendor)/ - [F,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# Block direct access to PHP files except index.php
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+<Files "index.php">
+    Require all granted
+</Files>
+
+# Block composer files
+<FilesMatch "^composer\.(json|lock)$">
+    Require all denied
+</FilesMatch>

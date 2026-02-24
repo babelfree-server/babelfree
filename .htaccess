@@ -1,0 +1,82 @@
+# Security: Block access to sensitive files
+<FilesMatch "\.(py|pyc)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Redirect www to non-www
+    RewriteCond %{HTTP_HOST} ^www\.babelfree\.com [NC]
+    RewriteRule ^ https://babelfree.com%{REQUEST_URI} [R=301,L]
+
+    # Block __pycache__ directory
+    RewriteRule ^__pycache__/ - [F,L]
+
+    # Block .git directory
+    RewriteRule ^\.git/ - [F,L]
+
+    # API: Block direct access to internal API directories
+    RewriteRule ^api/(config|middleware|models|helpers|routes|vendor)/ - [F,L]
+
+    # Dictionary SPA routes — all serve dictionary.html
+    # New format: /dictionary/{lang}/{word}
+    RewriteRule ^dictionary/?$ dictionary.html [L]
+    RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/?$ dictionary.html [L]
+    RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/(.+)$ dictionary.html [L]
+
+    # Glossary SPA route
+    RewriteRule ^glossary/?$ glossary.html [L]
+
+    # Redirect .html URLs to clean URLs (301)
+    RewriteCond %{THE_REQUEST} \s/([^.?]+)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # Clean URLs: /page → page.html (if file exists)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json text/xml application/xml
+</IfModule>
+
+# Browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+# Manifest MIME type
+<IfModule mod_mime.c>
+    AddType application/manifest+json .json
+</IfModule>
+
+# Service worker: no cache
+<IfModule mod_headers.c>
+    <FilesMatch "service-worker\.js$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

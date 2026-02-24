@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&oacute;dulo 1: Mi familia</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module1_family/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 1: Mi familia — Games",
+                "url": "https://babelfree.com/a1_basic/module1_family/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Family vocabulary practice",
+                    "Verb ser exercises"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Familia",
+                        "item": "https://babelfree.com/a1_basic/module1_family/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">M&oacute;dulo 1: Mi familia</div>
+            <div class="yg-header-subtitle">Presentar personas</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — Meet Yaguar\u00e1
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: '\u00a1Hola! Soy Yaguar\u00e1. Soy una jaguar. Vivo en la selva. Tengo familia. Mi familia es grande.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Yaguar\u00e1\u2019s mother and father
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Mi madre se llama Luna. Ella es bonita. Mi padre se llama Sol. \u00c9l es fuerte. Mi madre y mi padre son buenos.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Yaguar\u00e1\u2019s siblings
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Tengo un hermano. Se llama R\u00edo. \u00c9l es grande. Tengo una hermana. Se llama Flor. Ella es peque\u00f1a. Mi familia es feliz.'
+    },
+
+    /* ============================================================
+       4. PAIR — Family members (Spanish \u2194 meaning)
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la palabra con su significado.',
+        pairs: [
+            ['madre', 'mam\u00e1'],
+            ['padre', 'pap\u00e1'],
+            ['hermano', 'hermano (chico)'],
+            ['hermana', 'hermana (chica)']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Descriptions
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la persona con su descripci\u00f3n.',
+        pairs: [
+            ['Luna', 'es bonita'],
+            ['Sol', 'es fuerte'],
+            ['R\u00edo', 'es grande'],
+            ['Flor', 'es peque\u00f1a']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — Possessives
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la frase con la persona.',
+        pairs: [
+            ['mi madre', 'Luna'],
+            ['mi padre', 'Sol'],
+            ['mi hermano', 'R\u00edo'],
+            ['mi hermana', 'Flor']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Ser/tener with family
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Mi madre ___ bonita.',
+                answer: 'es',
+                options: ['es', 'soy', 'son', 'eres']
+            },
+            {
+                sentence: 'Yo ___ un hermano.',
+                answer: 'tengo',
+                options: ['tengo', 'tiene', 'tienen', 'tienes']
+            },
+            {
+                sentence: 'Mi padre ___ fuerte.',
+                answer: 'es',
+                options: ['soy', 'es', 'somos', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — More family descriptions
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Mi hermana ___ peque\u00f1a.',
+                answer: 'es',
+                options: ['es', 'soy', 'eres', 'somos']
+            },
+            {
+                sentence: 'Mi familia ___ grande.',
+                answer: 'es',
+                options: ['son', 'es', 'soy', 'somos']
+            },
+            {
+                sentence: 'Yo ___ Yaguar\u00e1.',
+                answer: 'soy',
+                options: ['es', 'eres', 'soy', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Tener with family
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yo ___ una hermana.',
+                answer: 'tengo',
+                options: ['tengo', 'tiene', 'tienen', 'tienes']
+            },
+            {
+                sentence: 'Mi madre ___ un hijo.',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                sentence: 'Mi hermano ___ feliz.',
+                answer: 'es',
+                options: ['soy', 'es', 'eres', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — Family description (slow)
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Mi madre es bonita.',
+        question: '\u00bfC\u00f3mo es la madre?',
+        answer: 'bonita',
+        options: ['grande', 'bonita', 'fuerte', 'mala']
+    },
+
+    /* ============================================================
+       11. LISTENING — Who is it?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: '\u00c9l es mi padre. Es fuerte.',
+        question: '\u00bfQui\u00e9n es fuerte?',
+        answer: 'el padre',
+        options: ['la madre', 'el padre', 'el hermano', 'la hermana']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Ser (present tense)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo ser.',
+        questions: [
+            {
+                verb: 'ser',
+                subject: 'yo',
+                answer: 'soy',
+                options: ['soy', 'es', 'eres', 'somos']
+            },
+            {
+                verb: 'ser',
+                subject: 't\u00fa',
+                answer: 'eres',
+                options: ['soy', 'eres', 'es', 'son']
+            },
+            {
+                verb: 'ser',
+                subject: '\u00e9l',
+                answer: 'es',
+                options: ['soy', 'eres', 'es', 'somos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Ser (more forms)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo ser.',
+        questions: [
+            {
+                verb: 'ser',
+                subject: 'ella',
+                answer: 'es',
+                options: ['soy', 'es', 'eres', 'son']
+            },
+            {
+                verb: 'ser',
+                subject: 'nosotros',
+                answer: 'somos',
+                options: ['son', 'soy', 'somos', 'es']
+            },
+            {
+                verb: 'ser',
+                subject: 'ellos',
+                answer: 'son',
+                options: ['somos', 'es', 'soy', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. CONJUGATION — Tener (present tense)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo tener.',
+        questions: [
+            {
+                verb: 'tener',
+                subject: 'yo',
+                answer: 'tengo',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                verb: 'tener',
+                subject: 't\u00fa',
+                answer: 'tienes',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                verb: 'tener',
+                subject: 'ella',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tenemos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — Masculine / feminine family words
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica las palabras.',
+        categories: ['Masculino', 'Femenino'],
+        items: [
+            { text: 'padre', category: 'Masculino' },
+            { text: 'madre', category: 'Femenino' },
+            { text: 'hermano', category: 'Masculino' },
+            { text: 'hermana', category: 'Femenino' },
+            { text: 'hijo', category: 'Masculino' },
+            { text: 'hija', category: 'Femenino' }
+        ]
+    },
+
+    /* ============================================================
+       16. SORTING — Descriptions (bueno/bonito/fuerte/grande)
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfser o tener?',
+        categories: ['Ser', 'Tener'],
+        items: [
+            { text: 'soy bonita', category: 'Ser' },
+            { text: 'tengo un hermano', category: 'Tener' },
+            { text: 'es fuerte', category: 'Ser' },
+            { text: 'tiene familia', category: 'Tener' },
+            { text: 'somos felices', category: 'Ser' },
+            { text: 'tengo una madre', category: 'Tener' }
+        ]
+    },
+
+    /* ============================================================
+       17. BUILDER — Simple sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['madre', 'Mi', 'bonita', 'es'],
+        answer: 'Mi madre es bonita'
+    },
+
+    /* ============================================================
+       18. BUILDER — Another sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['un', 'Tengo', 'hermano'],
+        answer: 'Tengo un hermano'
+    },
+
+    /* ============================================================
+       19. CONVERSATION — Introducing family
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Luna', text: '\u00bfC\u00f3mo se llama tu madre?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Mi madre se llama Luna.', 'Tengo un hermano.', 'Soy grande.', 'Ella es mala.'],
+                answer: 'Mi madre se llama Luna.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. CONVERSATION — Describing family
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'R\u00edo', text: '\u00bfC\u00f3mo es tu padre?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Mi padre es fuerte.', 'Tengo una hermana.', 'Soy peque\u00f1a.', 'Mi madre es bonita.'],
+                answer: 'Mi padre es fuerte.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       21. DICTATION — Simple family sentence
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Mi familia es grande.',
+        answer: 'Mi familia es grande.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de la familia',
+            description: 'Una cueva pequeña y cálida debajo de una ceiba. En las paredes hay dibujos de una familia de jaguares.',
+            ambience: 'heartbeat'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un dibujo en la pared pregunta:',
+                riddle: '«Ella es grande. Ella es fuerte. Ella cuida a sus hijos. ¿Quién es?»',
+                clue: 'Es la mamá de Yaguará.',
+                answer: 'Mamá Jaguar',
+                options: ['Mamá Jaguar', 'Abuela Ceiba', 'Yaguará', 'Río'],
+                onSolve: 'El dibujo se ilumina.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una cerradura en la piedra.',
+                clue: 'Es el hermano pequeño de Yaguará. Su nombre es un lugar con agua.',
+                answer: 'rio',
+                hint: '_ _ _',
+                onSolve: 'La piedra se mueve.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras están dibujadas en la pared de la cueva.',
+                clue: 'Mamá, papá, hermano, hermana, abuelo — todos juntos son una...',
+                answer: 'familia',
+                scrambled: 'ilaimfa',
+                onSolve: 'La cueva brilla con luz dorada. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una raíz con forma de abrazo.',
+            questClue: 'La familia es la primera raíz.',
+            item: 'raiz-abrazo'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1m1',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Module1Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

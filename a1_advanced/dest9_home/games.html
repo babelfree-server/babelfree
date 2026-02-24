@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 9: Mi casa sobre el r&iacute;o</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest9_home/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 9: Mi casa sobre el río — Games",
+                "url": "https://babelfree.com/a1_advanced/dest9_home/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Home and rooms vocabulary",
+                    "Estar with emotional and physical states"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Mi casa sobre el río",
+                        "item": "https://babelfree.com/a1_advanced/dest9_home/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 9: Mi casa sobre el r&iacute;o</div>
+            <div class="yg-header-subtitle">El hogar y los sentimientos</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — La casa de Yaguará
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguará vive debajo de la ceiba, junto al río. Su casa es una cueva grande. Adentro hay una sala, un lugar para dormir y un lugar para comer. La casa está caliente. Yaguará está feliz aquí.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Río pregunta
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Río mira el agua. Dice: «¿Hay algo más allá del río?» Yaguará dice: «No sé.» No quiere ir. Su casa es buena. Pero por la noche, una niebla gris está lejos, en el borde del bosque.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — La abuela del río
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Mamá Jaguar dice: «Hay una mujer vieja junto al río. Se llama Asunción. Ella escucha el bosque. Es la última que puede.» Yaguará no entiende. Pero mira la niebla gris. Está más cerca.'
+    },
+
+    /* ============================================================
+       4. PAIR — Partes de la casa
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la parte de la casa con lo que hay.',
+        pairs: [
+            ['la sala', 'para estar juntos'],
+            ['el lugar para dormir', 'para descansar'],
+            ['el lugar para comer', 'para la comida'],
+            ['la entrada', 'para entrar y salir']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — ¿Cómo está?
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la persona con cómo está.',
+        pairs: [
+            ['Yaguará', 'está feliz'],
+            ['Río', 'está curioso'],
+            ['Mamá Jaguar', 'está tranquila'],
+            ['la casa', 'está caliente']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — Ser vs estar
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la frase con el verbo correcto.',
+        pairs: [
+            ['La casa ___ grande', 'es'],
+            ['La casa ___ caliente', 'está'],
+            ['Yaguará ___ un jaguar', 'es'],
+            ['Yaguará ___ feliz', 'está']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Estar + sentimientos
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yaguará ___ feliz en su casa.',
+                answer: 'está',
+                options: ['es', 'está', 'estoy', 'están']
+            },
+            {
+                sentence: 'Río ___ curioso.',
+                answer: 'está',
+                options: ['estoy', 'estás', 'está', 'están']
+            },
+            {
+                sentence: 'Yo ___ bien en mi casa.',
+                answer: 'estoy',
+                options: ['estoy', 'estás', 'está', 'están']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Estar + lugar
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'La casa ___ junto al río.',
+                answer: 'está',
+                options: ['es', 'está', 'estoy', 'están']
+            },
+            {
+                sentence: 'La niebla ___ lejos.',
+                answer: 'está',
+                options: ['es', 'está', 'estás', 'están']
+            },
+            {
+                sentence: 'Los árboles ___ cerca de la casa.',
+                answer: 'están',
+                options: ['es', 'está', 'estoy', 'están']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Ser vs estar
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige ser o estar.',
+        questions: [
+            {
+                sentence: 'La cueva ___ grande.',
+                answer: 'es',
+                options: ['es', 'está', 'son', 'están']
+            },
+            {
+                sentence: 'Mamá Jaguar ___ tranquila.',
+                answer: 'está',
+                options: ['es', 'está', 'son', 'están']
+            },
+            {
+                sentence: 'Río ___ pequeño.',
+                answer: 'es',
+                options: ['es', 'está', 'soy', 'están']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — ¿Dónde está?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'La casa de Yaguará está junto al río. Es una cueva grande debajo de la ceiba.',
+        question: '¿Dónde está la casa?',
+        answer: 'junto al río',
+        options: ['en la montaña', 'junto al río', 'en la ciudad', 'lejos del bosque']
+    },
+
+    /* ============================================================
+       11. LISTENING — ¿Cómo está Yaguará?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Yaguará está en su casa. Está feliz. La casa está caliente y su familia está cerca.',
+        question: '¿Cómo está Yaguará?',
+        answer: 'feliz',
+        options: ['triste', 'feliz', 'mal', 'lejos']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Estar (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo estar.',
+        questions: [
+            {
+                verb: 'estar',
+                subject: 'yo',
+                answer: 'estoy',
+                options: ['estoy', 'estás', 'está', 'están']
+            },
+            {
+                verb: 'estar',
+                subject: 'tú',
+                answer: 'estás',
+                options: ['estoy', 'estás', 'está', 'están']
+            },
+            {
+                verb: 'estar',
+                subject: 'ella',
+                answer: 'está',
+                options: ['estoy', 'estás', 'está', 'están']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Vivir (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo vivir.',
+        questions: [
+            {
+                verb: 'vivir',
+                subject: 'yo',
+                answer: 'vivo',
+                options: ['vivo', 'vives', 'vive', 'viven']
+            },
+            {
+                verb: 'vivir',
+                subject: 'él',
+                answer: 'vive',
+                options: ['vivo', 'vives', 'vive', 'viven']
+            },
+            {
+                verb: 'vivir',
+                subject: 'ellos',
+                answer: 'viven',
+                options: ['vivo', 'vives', 'vive', 'viven']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Ser / estar
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: ¿ser o estar?',
+        categories: ['Ser', 'Estar'],
+        items: [
+            { text: 'grande', category: 'Ser' },
+            { text: 'feliz (ahora)', category: 'Estar' },
+            { text: 'un jaguar', category: 'Ser' },
+            { text: 'junto al río', category: 'Estar' },
+            { text: 'bonito', category: 'Ser' },
+            { text: 'caliente', category: 'Estar' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — Partes de la casa
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: ¿dentro o fuera de la casa?',
+        categories: ['Dentro', 'Fuera'],
+        items: [
+            { text: 'la sala', category: 'Dentro' },
+            { text: 'el río', category: 'Fuera' },
+            { text: 'el lugar para dormir', category: 'Dentro' },
+            { text: 'la ceiba', category: 'Fuera' },
+            { text: 'el lugar para comer', category: 'Dentro' },
+            { text: 'el bosque', category: 'Fuera' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Describir la casa
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['casa', 'Mi', 'junto', 'está', 'al', 'río'],
+        answer: 'Mi casa está junto al río'
+    },
+
+    /* ============================================================
+       17. BUILDER — Estado emocional
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['feliz', 'Estoy', 'mi', 'en', 'casa'],
+        answer: 'Estoy feliz en mi casa'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — ¿Cómo está tu casa?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mamá Jaguar', text: '¿Cómo es tu casa?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Mi casa es grande. Está junto al río.', 'Tengo hambre.', 'Me llamo Yaguará.', 'El bosque es bonito.'],
+                answer: 'Mi casa es grande. Está junto al río.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — ¿Cómo estás?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Río', text: '¿Cómo estás?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Estoy bien. Estoy feliz.', 'Soy un jaguar.', 'Me gusta el pescado.', 'Mi madre se llama Luna.'],
+                answer: 'Estoy bien. Estoy feliz.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Frase del hogar
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Mi casa está junto al río.',
+        answer: 'Mi casa está junto al río.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara del hogar',
+            description: 'Una cueva pequeña con paredes de barro. En el suelo hay dibujos de una casa con muchas partes. Un fuego pequeño da luz y calor.',
+            ambience: 'fire'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un dibujo en la pared pregunta:',
+                riddle: '«Estoy aquí pero no soy una persona. No me muevo pero te hago feliz. Tienes una sala, un lugar para dormir y un lugar para comer. ¿Qué soy?»',
+                clue: 'Es el lugar donde vives.',
+                answer: 'Una casa',
+                options: ['Una casa', 'Un río', 'Un bosque', 'Un árbol'],
+                onSolve: 'El dibujo de la casa brilla.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Hay letras escritas en piedras junto al fuego.',
+                clue: 'Yaguará vive debajo de un árbol muy grande. Cuatro letras.',
+                answer: 'hogar',
+                scrambled: 'rgoha',
+                onSolve: 'Las piedras se iluminan.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una cerradura en la pared de barro.',
+                clue: 'Yaguará dice: «En mi casa yo estoy...» Cinco letras.',
+                answer: 'feliz',
+                hint: '_ _ _ _ _',
+                onSolve: 'La pared se abre. La puerta está adentro. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una raíz con forma de casa.',
+            questClue: 'El hogar es el primer nombre que no se olvida.',
+            item: 'raiz-hogar'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1d9',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Dest9Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

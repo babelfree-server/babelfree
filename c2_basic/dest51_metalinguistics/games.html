@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 51: El espejo del idioma &mdash; Metalingü&iacute;stica</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_basic/dest51_metalinguistics/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 51: El espejo del idioma — Metalingüística",
+          "url": "https://babelfree.com/c2_basic/dest51_metalinguistics/games",
+          "educationalLevel": "C2 - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Metalinguistic awareness", "Language analysis", "Spanish linguistics"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Basic", "item": "https://babelfree.com/c2-bogota" },
+            { "@type": "ListItem", "position": 4, "name": "El espejo del idioma — Metalingüística" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-bogota" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 51: El espejo del idioma</div>
+            <div class="yg-header-subtitle">Metalingü&iacute;stica</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — El espa\u00f1ol se mira a s\u00ed mismo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre la metalingü\u00edstica: el lenguaje usado para reflexionar sobre el propio lenguaje.',
+        text: 'En la Biblioteca Nacional, Yaguar\u00e1 encontr\u00f3 un libro cuyo t\u00edtulo la detuvo: El espa\u00f1ol habla sobre s\u00ed mismo. Lo abri\u00f3 y ley\u00f3: \u00abLa metalingü\u00edstica es la capacidad de usar la lengua para pensar sobre la lengua. Cuando dices "esa palabra no existe", est\u00e1s usando palabras para negar la existencia de una palabra. Cuando preguntas "\u00bfqu\u00e9 significa significar?", est\u00e1s usando el significado para interrogar al significado mismo. Esta capacidad reflexiva \u2014este espejo ling\u00fc\u00edstico\u2014 es lo que distingue al usuario avanzado del hablante nativo inconsciente: no solo habla la lengua, sino que entiende c\u00f3mo funciona, d\u00f3nde falla, qu\u00e9 puede decir y, sobre todo, qu\u00e9 no puede decir.\u00bb Yaguar\u00e1 comprendi\u00f3 que hab\u00eda llegado al \u00faltimo nivel de profundidad: ya no estaba dentro de la lengua mir\u00e1ndola desde adentro, sino fuera de ella, contemplándola como un objeto de estudio.'
+    },
+    // === GAME 2: Narrative — La ambigüedad como riqueza ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la ambigüedad ling\u00fc\u00edstica y c\u00f3mo revela la complejidad del sistema. Observa los distintos tipos de ambigüedad.',
+        text: '\u00abEl espa\u00f1ol est\u00e1 lleno de trampas\u00bb, le dijo un lingü\u00edsta en un caf\u00e9 del centro. \u00abPero no son defectos: son caracter\u00edsticas. Toma la oraci\u00f3n "Vi al hombre con el telescopio". \u00bfQui\u00e9n tiene el telescopio, t\u00fa o el hombre? La gram\u00e1tica permite ambas lecturas, y solo el contexto resuelve la ambigüedad. O piensa en "Me dijo que ven\u00eda ma\u00f1ana". \u00bfQui\u00e9n viene, \u00e9l o yo? La misma estructura sint\u00e1ctica genera dos significados radicalmente distintos. Y luego est\u00e1n las ambigüedades l\u00e9xicas: "banco" puede ser donde te sientas o donde guardas el dinero; "gato" puede ser un animal, una herramienta mec\u00e1nica o, en Colombia, un hombre atractivo. El hablante C2 no solo identifica estas ambigüedades: las usa deliberadamente, juega con ellas, las explota para crear humor, iron\u00eda o profundidad.\u00bb'
+    },
+    // === GAME 3: Narrative — Los l\u00edmites del lenguaje ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n sobre lo que la lengua no puede expresar. Observa c\u00f3mo los l\u00edmites del lenguaje revelan los l\u00edmites del pensamiento.',
+        text: 'Aquella noche, Yaguar\u00e1 se encontr\u00f3 pensando en las cosas que el espa\u00f1ol no pod\u00eda decir. \u00bfExist\u00eda una palabra para el olor de la tierra despu\u00e9s de la lluvia? S\u00ed: petricor, tomada del griego. Pero \u00bfexist\u00eda una palabra para la melancol\u00eda que produce contemplar algo bello sabiendo que va a desaparecer? En japon\u00e9s s\u00ed: mono no aware. En espa\u00f1ol, necesitamos una oraci\u00f3n entera para decir lo que un idioma expresa con una sola palabra. Y al rev\u00e9s: el espa\u00f1ol distingue entre \u00abser\u00bb y \u00abestar\u00bb \u2014una distinci\u00f3n que la mayor\u00eda de las lenguas del mundo no hacen\u2014, lo cual le permite expresar la diferencia entre una cualidad permanente y un estado transitorio con una precisi\u00f3n que el ingl\u00e9s o el franc\u00e9s simplemente no poseen. \u00abLos l\u00edmites de mi lenguaje son los l\u00edmites de mi mundo\u00bb, hab\u00eda escrito Wittgenstein. Yaguar\u00e1 a\u00f1adi\u00f3 mentalmente: \u00aby cada lengua dibuja un mundo ligeramente distinto\u00bb.'
+    },
+    // === GAME 4: Narrative — La etimolog\u00eda como memoria ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre c\u00f3mo la etimolog\u00eda revela la historia cultural depositada en las palabras.',
+        text: 'En un taller de etimolog\u00eda, Yaguar\u00e1 descubri\u00f3 que las palabras son f\u00f3siles de historia. \u00abOjal\u00e1\u00bb viene del \u00e1rabe \u00abinsh\u00e1llah\u00bb (\u00absi Dios quiere\u00bb), herencia de ocho siglos de presencia musulmana en la pen\u00ednsula ib\u00e9rica. \u00abChocolate\u00bb viene del n\u00e1huatl \u00abxocol\u0101tl\u00bb, testimonio del encuentro entre Mesoam\u00e9rica y Espa\u00f1a. \u00abYaguar\u00bb \u2014su propio nombre\u2014 viene del guaran\u00ed \u00abyaguaret\u00e9\u00bb, que significa \u00abla verdadera fiera\u00bb. Cada palabra del espa\u00f1ol cargaba dentro de s\u00ed una historia de contacto, conquista, resistencia o mestizaje. Conocer la etimolog\u00eda de una palabra no era un ejercicio erudito: era un acto de arqueolog\u00eda cultural que permit\u00eda comprender de d\u00f3nde ven\u00edmos y qu\u00e9 fuerzas hist\u00f3ricas nos hab\u00edan convertido en lo que somos.'
+    },
+    // === GAME 5: Narrative — Pragm\u00e1tica: lo que decimos sin decirlo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la pragm\u00e1tica: la rama de la lingü\u00edstica que estudia lo que comunicamos sin decirlo expl\u00edcitamente.',
+        text: 'El lingü\u00edsta del caf\u00e9 continu\u00f3: \u00abLa pragm\u00e1tica estudia lo que decimos sin decirlo. Cuando alguien pregunta "\u00bfTienes hora?" no quiere saber si posees un reloj: quiere que le digas qu\u00e9 hora es. Cuando un colombiano dice "Ah\u00ed le queda grande", no est\u00e1 hablando de ropa: est\u00e1 diciendo que la persona no tiene la capacidad para algo. Cuando tu jefe dice "Ser\u00eda interesante que revisaras ese informe", no est\u00e1 sugiriendo: te est\u00e1 ordenando, pero disfrazando la orden de sugerencia para preservar la relaci\u00f3n de cortes\u00eda. Esta capa invisible del lenguaje \u2014donde el significado literal y el significado real no coinciden\u2014 es la que m\u00e1s cuesta dominar en un idioma extranjero, porque no se ense\u00f1a en ning\u00fan manual de gram\u00e1tica: se aprende viviendo dentro de la cultura.\u00bb'
+    },
+    // === GAME 6: Narrative — El lenguaje inclusivo: la lengua como campo de batalla ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el debate del lenguaje inclusivo y c\u00f3mo revela la tensi\u00f3n entre la norma ling\u00fc\u00edstica y el cambio social.',
+        text: 'Una ma\u00f1ana, Yaguar\u00e1 vio en la universidad un cartel: \u00abTodes somos bienvenides.\u00bb Un estudiante protest\u00f3: \u00abEso no es espa\u00f1ol.\u00bb Otro respondi\u00f3: \u00abLa lengua la hacen los hablantes, no la Real Academia.\u00bb El debate sobre el lenguaje inclusivo \u2014el uso de \u00abx\u00bb, \u00abe\u00bb o \u00ab@\u00bb para evitar el g\u00e9nero gramatical marcado\u2014 no era un capricho ni una tonter\u00eda: era una ventana a una de las cuestiones m\u00e1s profundas de la lingü\u00edstica: \u00bfla lengua refleja la realidad o la construye? Si el masculino gen\u00e9rico (\u00abtodos\u00bb) verdaderamente incluye a todas las personas, \u00bfpor qu\u00e9 muchas personas no se sienten incluidas? Y si la lengua pertenece a sus hablantes, \u00bfqui\u00e9n tiene autoridad para decidir qu\u00e9 es \u00abcorrecto\u00bb? El hablante C2 no necesitaba tomar partido: necesitaba entender la complejidad del debate y ser capaz de argumentar desde cualquiera de las posiciones.'
+    },
+    // === GAME 7: FIB — Tipos de ambig\u00fcedad ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica el tipo de ambig\u00fcedad presente en cada oraci\u00f3n.',
+        questions: [
+            {
+                sentence: '\u00abVi al hombre con el telescopio.\u00bb Esta oraci\u00f3n presenta ambig\u00fcedad ___.',
+                answer: 'sint\u00e1ctica',
+                options: ['sint\u00e1ctica', 'l\u00e9xica', 'fonol\u00f3gica', 'morfol\u00f3gica']
+            },
+            {
+                sentence: '\u00abFui al banco a sentarme.\u00bb / \u00abFui al banco a depositar.\u00bb La palabra \u00abbanco\u00bb presenta ambig\u00fcedad ___.',
+                answer: 'l\u00e9xica (polisemia)',
+                options: ['l\u00e9xica (polisemia)', 'sint\u00e1ctica', 'pragm\u00e1tica', 'fonol\u00f3gica']
+            },
+            {
+                sentence: '\u00abSer\u00eda interesante que revisaras ese informe.\u00bb El significado literal (sugerencia) difiere del significado real (orden). Esto es ambig\u00fcedad ___.',
+                answer: 'pragm\u00e1tica',
+                options: ['pragm\u00e1tica', 'l\u00e9xica', 'sint\u00e1ctica', 'ortogr\u00e1fica']
+            },
+            {
+                sentence: '\u00abMe dijo que ven\u00eda ma\u00f1ana.\u00bb No queda claro qui\u00e9n viene. Esto es ambig\u00fcedad ___.',
+                answer: 'referencial',
+                options: ['referencial', 'l\u00e9xica', 'fonol\u00f3gica', 'morfol\u00f3gica']
+            }
+        ]
+    },
+    // === GAME 8: FIB — Actos de habla ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica el acto de habla (funci\u00f3n comunicativa real) que se realiza en cada enunciado.',
+        questions: [
+            {
+                sentence: '\u00ab\u00bfTienes hora?\u00bb no es una pregunta sobre posesi\u00f3n, sino un acto de habla ___.',
+                answer: 'indirecto: petici\u00f3n de informaci\u00f3n',
+                options: ['indirecto: petici\u00f3n de informaci\u00f3n', 'directo: pregunta de s\u00ed/no', 'declarativo: afirmaci\u00f3n', 'expresivo: queja']
+            },
+            {
+                sentence: '\u00abQu\u00e9 bonito d\u00eda para quedarse en casa, \u00bfno?\u00bb pronunciado un d\u00eda lluvioso es un acto de habla ___.',
+                answer: 'ir\u00f3nico: queja disfrazada de elogio',
+                options: ['ir\u00f3nico: queja disfrazada de elogio', 'literal: elogio del clima', 'directivo: orden de quedarse', 'comisivo: promesa']
+            },
+            {
+                sentence: '\u00abYo que t\u00fa, lo pensar\u00eda dos veces\u00bb es un acto de habla ___.',
+                answer: 'directivo indirecto: consejo/advertencia',
+                options: ['directivo indirecto: consejo/advertencia', 'expresivo: felicitaci\u00f3n', 'declarativo: informaci\u00f3n', 'comisivo: promesa']
+            },
+            {
+                sentence: '\u00abLos declaro marido y mujer\u00bb es un acto de habla ___.',
+                answer: 'performativo: la enunciaci\u00f3n misma ejecuta la acci\u00f3n',
+                options: ['performativo: la enunciaci\u00f3n misma ejecuta la acci\u00f3n', 'representativo: descripci\u00f3n', 'directivo: orden', 'expresivo: emoci\u00f3n']
+            }
+        ]
+    },
+    // === GAME 9: FIB — Ser y estar: distinciones metalingü\u00edsticas ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Analiza la distinci\u00f3n entre \u00abser\u00bb y \u00abestar\u00bb desde una perspectiva metalingü\u00edstica.',
+        questions: [
+            {
+                sentence: 'La oraci\u00f3n \u00abJuan es aburrido\u00bb describe una ___, mientras que \u00abJuan est\u00e1 aburrido\u00bb describe un ___.',
+                answer: 'caracter\u00edstica permanente / estado transitorio',
+                options: ['caracter\u00edstica permanente / estado transitorio', 'estado transitorio / caracter\u00edstica permanente', 'opini\u00f3n / hecho', 'pasado / presente']
+            },
+            {
+                sentence: 'La distinci\u00f3n ser/estar es un ejemplo de c\u00f3mo el espa\u00f1ol codifica gramaticalmente una diferencia ___ que otras lenguas expresan mediante contexto o adverbios.',
+                answer: 'ontol\u00f3gica',
+                options: ['ontol\u00f3gica', 'fonol\u00f3gica', 'ortogr\u00e1fica', 'tipogr\u00e1fica']
+            },
+            {
+                sentence: '\u00abEst\u00e1 muerto\u00bb usa \u00abestar\u00bb para un estado que es, parad\u00f3jicamente, ___. Esto demuestra que la regla \u00abser = permanente, estar = transitorio\u00bb es una simplificaci\u00f3n pedag\u00f3gica.',
+                answer: 'permanente e irreversible',
+                options: ['permanente e irreversible', 'temporal y reversible', 'opinable y subjetivo', 'imaginario e hipot\u00e9tico']
+            }
+        ]
+    },
+    // === GAME 10: FIB — Falacias l\u00f3gicas en argumentaci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica la falacia l\u00f3gica presente en cada argumento. La competencia metalingü\u00edstica incluye detectar errores de razonamiento.',
+        questions: [
+            {
+                sentence: '\u00abEsa palabra no existe porque no aparece en el diccionario de la RAE.\u00bb Esta es una falacia de ___.',
+                answer: 'apelaci\u00f3n a la autoridad',
+                options: ['apelaci\u00f3n a la autoridad', 'ad hominem', 'falsa dicotom\u00eda', 'generalizaci\u00f3n apresurada']
+            },
+            {
+                sentence: '\u00abSi aceptamos el lenguaje inclusivo, terminaremos destruyendo toda la gram\u00e1tica del espa\u00f1ol.\u00bb Esta es una falacia de ___.',
+                answer: 'pendiente resbaladiza',
+                options: ['pendiente resbaladiza', 'ad hominem', 'petici\u00f3n de principio', 'falso dilema']
+            },
+            {
+                sentence: '\u00abLos j\u00f3venes hablan mal porque usan anglicismos. Mi abuela nunca us\u00f3 anglicismos y hablaba perfectamente.\u00bb Esta es una falacia de ___.',
+                answer: 'generalizaci\u00f3n apresurada con apelaci\u00f3n a la tradici\u00f3n',
+                options: ['generalizaci\u00f3n apresurada con apelaci\u00f3n a la tradici\u00f3n', 'ad hominem', 'falsa causa', 'equivocaci\u00f3n']
+            }
+        ]
+    },
+    // === GAME 11: FIB — Funciones del lenguaje ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica la funci\u00f3n del lenguaje predominante en cada enunciado seg\u00fan el modelo de Jakobson.',
+        questions: [
+            {
+                sentence: '\u00abLa temperatura actual en Bogot\u00e1 es de catorce grados.\u00bb Predomina la funci\u00f3n ___.',
+                answer: 'referencial',
+                options: ['referencial', 'emotiva', 'po\u00e9tica', 'f\u00e1tica']
+            },
+            {
+                sentence: '\u00ab\u00a1Qu\u00e9 rabia me da que llueva otra vez!\u00bb Predomina la funci\u00f3n ___.',
+                answer: 'emotiva',
+                options: ['emotiva', 'referencial', 'conativa', 'metalingü\u00edstica']
+            },
+            {
+                sentence: '\u00abLa palabra "ojal\u00e1" viene del \u00e1rabe.\u00bb Predomina la funci\u00f3n ___.',
+                answer: 'metalingü\u00edstica',
+                options: ['metalingü\u00edstica', 'referencial', 'po\u00e9tica', 'conativa']
+            },
+            {
+                sentence: '\u00abEsta ciudad. Este fr\u00edo que no es fr\u00edo sino distancia.\u00bb Predomina la funci\u00f3n ___.',
+                answer: 'po\u00e9tica',
+                options: ['po\u00e9tica', 'referencial', 'emotiva', 'f\u00e1tica']
+            }
+        ]
+    },
+    // === GAME 12: FIB — Presuposiciones ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica la presuposici\u00f3n impl\u00edcita en cada enunciado. Las presuposiciones son informaciones que el hablante da por sentadas sin afirmarlas expl\u00edcitamente.',
+        questions: [
+            {
+                sentence: '\u00ab\u00bfCu\u00e1ndo dejaste de fumar?\u00bb presupone que el interlocutor ___.',
+                answer: 'fumaba antes',
+                options: ['fumaba antes', 'nunca fum\u00f3', 'quiere fumar', 'est\u00e1 fumando ahora']
+            },
+            {
+                sentence: '\u00abOtra vez lleg\u00f3 tarde.\u00bb presupone que ___.',
+                answer: 'ya hab\u00eda llegado tarde en ocasiones anteriores',
+                options: ['ya hab\u00eda llegado tarde en ocasiones anteriores', 'es la primera vez que llega tarde', 'siempre llega temprano', 'nunca ha venido']
+            },
+            {
+                sentence: '\u00abEl gobierno reconoci\u00f3 su error.\u00bb presupone que ___.',
+                answer: 'el gobierno hab\u00eda cometido un error',
+                options: ['el gobierno hab\u00eda cometido un error', 'el gobierno es perfecto', 'no hubo ning\u00fan error', 'el error fue de otros']
+            }
+        ]
+    },
+    // === GAME 13: Conjugation — Verbos metalingü\u00edsticos ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Los verbos que usamos para hablar sobre el lenguaje mismo requieren precisi\u00f3n. Elige la forma correcta.',
+        questions: [
+            {
+                verb: 'significar (presente de subjuntivo)',
+                subject: 'la expresi\u00f3n \u2014 \u00abNo es evidente que esta expresi\u00f3n... lo que parece.\u00bb',
+                answer: 'signifique',
+                options: ['signifique', 'significa', 'significara', 'significar\u00e1']
+            },
+            {
+                verb: 'connotar (presente)',
+                subject: 'la palabra \u2014 \u00abLa palabra "pueblo"... cosas distintas en contextos pol\u00edticos y geogr\u00e1ficos.\u00bb',
+                answer: 'connota',
+                options: ['connota', 'connote', 'connotaba', 'connotar\u00e1']
+            },
+            {
+                verb: 'denotar vs. connotar (distinci\u00f3n)',
+                subject: '\u00ab"Casa" denota un edificio donde se vive, pero... calidez, familia, refugio.\u00bb',
+                answer: 'connota',
+                options: ['connota', 'denota', 'refiere', 'designa']
+            },
+            {
+                verb: 'lexicalizar (presente perfecto)',
+                subject: 'la expresi\u00f3n \u2014 \u00abLa expresi\u00f3n "dar a luz" se... completamente: ya nadie piensa en la luz literal.\u00bb',
+                answer: 'ha lexicalizado',
+                options: ['ha lexicalizado', 'lexicaliz\u00f3', 'lexicaliza', 'lexicalizar\u00e1']
+            },
+            {
+                verb: 'elidir (presente \u2014 concepto ling\u00fc\u00edstico)',
+                subject: 'el hablante \u2014 \u00abEn espa\u00f1ol, el sujeto se... con frecuencia: "Voy" en lugar de "Yo voy".\u00bb',
+                answer: 'elide',
+                options: ['elide', 'elude', 'elimina', 'evita']
+            }
+        ]
+    },
+    // === GAME 14: Conjugation — Modos y modalidad ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'La modalidad expresa la actitud del hablante ante lo que dice. Elige la forma que expresa la modalidad indicada.',
+        questions: [
+            {
+                verb: 'existir (subjuntivo \u2014 modalidad de duda)',
+                subject: '\u2014 \u00abNo creo que... una sola forma correcta de hablar espa\u00f1ol.\u00bb',
+                answer: 'exista',
+                options: ['exista', 'existe', 'existiera', 'existir\u00e1']
+            },
+            {
+                verb: 'poder + ser (condicional \u2014 modalidad epist\u00e9mica)',
+                subject: '\u2014 \u00abEsa interpretaci\u00f3n... v\u00e1lida, pero requiere m\u00e1s evidencia.\u00bb',
+                answer: 'podr\u00eda ser',
+                options: ['podr\u00eda ser', 'puede ser', 'pudo ser', 'ha podido ser']
+            },
+            {
+                verb: 'deber de + infinitivo (conjetura) vs. deber + infinitivo (obligaci\u00f3n)',
+                subject: '\u2014 Conjetura: \u00abEsa palabra... de venir del \u00e1rabe.\u00bb',
+                answer: 'debe de',
+                options: ['debe de', 'debe', 'podr\u00eda', 'tiene que']
+            },
+            {
+                verb: 'resultar (presente \u2014 modalidad valorativa impersonal)',
+                subject: '\u2014 \u00ab... pertinente examinar las implicaciones de esta distinci\u00f3n.\u00bb',
+                answer: 'Resulta',
+                options: ['Resulta', 'Es', 'Parece', 'Queda']
+            }
+        ]
+    },
+    // === GAME 15: Conjugation — Verbos de lengua y pensamiento ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Los verbos de lengua y pensamiento rigen subjuntivo o indicativo seg\u00fan la modalidad. Elige la forma correcta.',
+        questions: [
+            {
+                verb: 'sostener + que + indicativo (certeza)',
+                subject: 'el lingü\u00edsta \u2014 \u00abEl lingü\u00edsta... que la lengua es un sistema din\u00e1mico.\u00bb',
+                answer: 'sostiene',
+                options: ['sostiene', 'sostenga', 'sostuviera', 'sostedr\u00eda']
+            },
+            {
+                verb: 'negar + que + subjuntivo',
+                subject: 'la acad\u00e9mica \u2014 \u00abLa acad\u00e9mica niega que la RAE... la \u00faltima palabra.\u00bb',
+                answer: 'tenga',
+                options: ['tenga', 'tiene', 'tuviera', 'tendr\u00e1']
+            },
+            {
+                verb: 'insinuar + que + indicativo/subjuntivo (ambigüedad modal)',
+                subject: '\u2014 \u00abInsin\u00faa que el cambio ling\u00fc\u00edstico... inevitable.\u00bb (certeza del hablante)',
+                answer: 'es',
+                options: ['es', 'sea', 'fuera', 'ser\u00eda']
+            },
+            {
+                verb: 'dudar + que + subjuntivo',
+                subject: '\u2014 \u00abDudo que la distinci\u00f3n entre "deber" y "deber de"... en el habla cotidiana.\u00bb',
+                answer: 'sobreviva',
+                options: ['sobreviva', 'sobrevive', 'sobreviviera', 'sobrevivir\u00e1']
+            }
+        ]
+    },
+    // === GAME 16: Pair — Concepto lingü\u00edstico y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada concepto metalingü\u00edstico con el ejemplo que lo ilustra.',
+        pairs: [
+            ['Polisemia', 'La palabra "gato" significa un animal, una herramienta y, coloquialmente, un hombre atractivo.'],
+            ['Homonimia', '"Vino" (bebida) y "vino" (verbo venir) se escriben y pronuncian igual pero tienen or\u00edgenes distintos.'],
+            ['Sinonimia parcial', '"Casa" y "hogar" comparten significado denotativo pero difieren en connotaci\u00f3n emocional.'],
+            ['Anton\u00edmia gradual', '"Fr\u00edo" y "caliente" no son opuestos absolutos: existe un continuo de temperaturas entre ambos.'],
+            ['Hiponimia', '"Rosa" es un hip\u00f3nimo de "flor": todas las rosas son flores, pero no todas las flores son rosas.'],
+            ['Meronimia', '"Dedo" es un mer\u00f3nimo de "mano": el dedo es parte de la mano.']
+        ]
+    },
+    // === GAME 17: Pair — Falacia y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada falacia l\u00f3gica con el ejemplo que la ilustra.',
+        pairs: [
+            ['Ad hominem', '\u00abNo le haga caso a ese lingü\u00edsta: ni siquiera es colombiano.\u00bb'],
+            ['Pendiente resbaladiza', '\u00abSi permitimos los anglicismos, pronto dejaremos de hablar espa\u00f1ol.\u00bb'],
+            ['Falso dilema', '\u00abO hablas bien o hablas mal. No hay punto medio.\u00bb'],
+            ['Apelaci\u00f3n a la tradici\u00f3n', '\u00abAsí se ha dicho siempre, as\u00ed que as\u00ed debe seguir dici\u00e9ndose.\u00bb'],
+            ['Apelaci\u00f3n a la autoridad', '\u00abLa RAE dice que est\u00e1 mal, as\u00ed que est\u00e1 mal.\u00bb']
+        ]
+    },
+    // === GAME 18: Pair — Acto de habla y enunciado ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada tipo de acto de habla con el enunciado que lo realiza.',
+        pairs: [
+            ['Asertivo (informar)', 'La temperatura actual es de catorce grados.'],
+            ['Directivo indirecto (pedir)', '\u00bfSer\u00eda posible que me pasaras la sal?'],
+            ['Comisivo (prometer)', 'Ma\u00f1ana sin falta te devuelvo el libro.'],
+            ['Expresivo (lamentar)', 'Siento much\u00edsimo lo que pas\u00f3.'],
+            ['Performativo (declarar)', 'Queda usted detenido.'],
+            ['Ir\u00f3nico (criticar)', '\u00a1Qu\u00e9 bonita soluci\u00f3n! Solo tard\u00f3 tres a\u00f1os en funcionar.']
+        ]
+    },
+    // === GAME 19: Pair — Etimolog\u00eda y origen ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada palabra del espa\u00f1ol con su lengua de origen.',
+        pairs: [
+            ['Ojal\u00e1', '\u00c1rabe (insh\u0101ll\u0101h: si Dios quiere)'],
+            ['Chocolate', 'N\u00e1huatl (xocol\u0101tl: bebida amarga)'],
+            ['Canoa', 'Tano (kan\u014da: embarcaci\u00f3n)'],
+            ['Jaguar', 'Guaran\u00ed (yaguaret\u00e9: la verdadera fiera)'],
+            ['Almohada', '\u00c1rabe (al-mujadda: el coj\u00edn)'],
+            ['Poncho', 'Mapuche (pontho: manta tejida)']
+        ]
+    },
+    // === GAME 20: Listening — Detectar ambigüedad ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n e identifica la ambigüedad.',
+        audio: 'Pedro le dijo a Juan que su hermano hab\u00eda llegado.',
+        question: '\u00bfD\u00f3nde reside la ambigüedad de esta oraci\u00f3n?',
+        answer: 'En el posesivo "su": no queda claro si el hermano es de Pedro o de Juan',
+        options: ['En el posesivo "su": no queda claro si el hermano es de Pedro o de Juan', 'En el verbo "dijo": no se sabe si lo dijo en voz alta o por escrito', 'En "hab\u00eda llegado": no se sabe cu\u00e1ndo lleg\u00f3', 'No hay ambigüedad: la oraci\u00f3n es perfectamente clara']
+    },
+    // === GAME 21: Listening — Detectar presuposici\u00f3n ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la pregunta y detecta la presuposici\u00f3n que contiene.',
+        audio: '\u00bfPor qu\u00e9 los j\u00f3venes de hoy hablan tan mal?',
+        question: '\u00bfQu\u00e9 presuposici\u00f3n contiene esta pregunta?',
+        answer: 'Presupone que los j\u00f3venes hablan mal, sin haberlo demostrado',
+        options: ['Presupone que los j\u00f3venes hablan mal, sin haberlo demostrado', 'Presupone que solo los j\u00f3venes hablan', 'Presupone que los j\u00f3venes no existen', 'No contiene ninguna presuposici\u00f3n']
+    },
+    // === GAME 22: Listening — Detectar acto de habla indirecto ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el di\u00e1logo e identifica el acto de habla real que se oculta tras el literal.',
+        audio: 'Un jefe le dice a su empleado: \u00abMira, yo no te voy a decir c\u00f3mo hacer tu trabajo, pero si yo fuera t\u00fa, revisar\u00eda ese informe antes de entreg\u00e1rselo al cliente.\u00bb',
+        question: '\u00bfCu\u00e1l es el acto de habla real del jefe?',
+        answer: 'Una orden disfrazada de sugerencia para preservar la imagen de autonom\u00eda del empleado',
+        options: ['Una orden disfrazada de sugerencia para preservar la imagen de autonom\u00eda del empleado', 'Una sugerencia genuina que el empleado puede ignorar libremente', 'Una pregunta sobre el contenido del informe', 'Un elogio al trabajo del empleado']
+    },
+    // === GAME 23: Listening — Iron\u00eda pragm\u00e1tica ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el enunciado en contexto e identifica la iron\u00eda pragm\u00e1tica.',
+        audio: 'Despu\u00e9s de esperar dos horas en la fila de un tr\u00e1mite, un ciudadano dice: \u00abQu\u00e9 eficiente es el Estado colombiano. Da gusto venir a hacer tr\u00e1mites.\u00bb',
+        question: '\u00bfC\u00f3mo funciona la iron\u00eda en este enunciado?',
+        answer: 'El significado literal (elogio a la eficiencia) es exactamente lo contrario del significado intencional (cr\u00edtica a la ineficiencia)',
+        options: ['El significado literal (elogio a la eficiencia) es exactamente lo contrario del significado intencional (cr\u00edtica a la ineficiencia)', 'El hablante genuinamente elogia la eficiencia del Estado', 'El hablante no entiende que el servicio es lento', 'El hablante habla de un Estado diferente']
+    },
+    // === GAME 24: Sorting — Funciones del lenguaje (Jakobson) ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada enunciado seg\u00fan la funci\u00f3n del lenguaje que predomina.',
+        categories: ['Referencial', 'Emotiva', 'Po\u00e9tica', 'Metalingü\u00edstica'],
+        items: [
+            { text: 'Colombia tiene sesenta y cinco lenguas ind\u00edgenas.', category: 'Referencial' },
+            { text: '\u00a1Qu\u00e9 rabia me da la injusticia!', category: 'Emotiva' },
+            { text: 'La lluvia en Bogot\u00e1 no cae: se demora.', category: 'Po\u00e9tica' },
+            { text: 'La palabra "ojal\u00e1" viene del \u00e1rabe.', category: 'Metalingü\u00edstica' },
+            { text: 'La selva cubre el cuarenta por ciento del territorio colombiano.', category: 'Referencial' },
+            { text: '\u00a1Me encanta este pa\u00eds, con todo y su locura!', category: 'Emotiva' },
+            { text: 'Esta ciudad. Este fr\u00edo que no es fr\u00edo sino distancia.', category: 'Po\u00e9tica' },
+            { text: 'El subjuntivo expresa la actitud del hablante ante lo que dice.', category: 'Metalingü\u00edstica' }
+        ]
+    },
+    // === GAME 25: Sorting — Tipo de cambio ling\u00fc\u00edstico ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada ejemplo seg\u00fan el tipo de cambio ling\u00fc\u00edstico que representa.',
+        categories: ['Cambio sem\u00e1ntico', 'Pr\u00e9stamo l\u00e9xico', 'Cambio fonol\u00f3gico', 'Neologismo'],
+        items: [
+            { text: '"Ratón" pas\u00f3 de significar solo un animal a significar tambi\u00e9n un dispositivo de computadora.', category: 'Cambio sem\u00e1ntico' },
+            { text: '"F\u00fatbol" entr\u00f3 al espa\u00f1ol desde el ingl\u00e9s "football".', category: 'Pr\u00e9stamo l\u00e9xico' },
+            { text: 'La "f" inicial latina ("filius") se convirti\u00f3 en "h" en espa\u00f1ol ("hijo").', category: 'Cambio fonol\u00f3gico' },
+            { text: '"Googlear" se cre\u00f3 a partir del nombre propio Google + sufijo verbal.', category: 'Neologismo' },
+            { text: '"Azafata" originalmente significaba "sirviente del rey" y ahora se usa para personal de vuelo.', category: 'Cambio sem\u00e1ntico' },
+            { text: '"Caf\u00e9" entr\u00f3 al espa\u00f1ol desde el \u00e1rabe "qahwa" a trav\u00e9s del turco.', category: 'Pr\u00e9stamo l\u00e9xico' }
+        ]
+    },
+    // === GAME 26: Sorting — Prescriptivismo vs. descriptivismo ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada afirmaci\u00f3n seg\u00fan la postura ling\u00fc\u00edstica que representa.',
+        categories: ['Prescriptivismo', 'Descriptivismo'],
+        items: [
+            { text: 'Decir "haiga" est\u00e1 mal. Lo correcto es "haya".', category: 'Prescriptivismo' },
+            { text: '"Haiga" es una variante dialectal que responde a un patr\u00f3n regular de conjugaci\u00f3n.', category: 'Descriptivismo' },
+            { text: 'Los j\u00f3venes est\u00e1n destruyendo la lengua con sus anglicismos.', category: 'Prescriptivismo' },
+            { text: 'La incorporaci\u00f3n de anglicismos es un fen\u00f3meno natural de contacto ling\u00fc\u00edstico.', category: 'Descriptivismo' },
+            { text: 'La RAE es la m\u00e1xima autoridad sobre lo que es correcto en espa\u00f1ol.', category: 'Prescriptivismo' },
+            { text: 'La RAE registra el uso: no lo crea. La lengua pertenece a sus hablantes.', category: 'Descriptivismo' },
+            { text: 'El le\u00edsmo es un error gramatical inaceptable.', category: 'Prescriptivismo' },
+            { text: 'El le\u00edsmo es un fen\u00f3meno de variaci\u00f3n aceptado en algunas regiones.', category: 'Descriptivismo' }
+        ]
+    },
+    // === GAME 27: Builder — Reflexi\u00f3n metalingü\u00edstica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir una reflexi\u00f3n metalingü\u00edstica sobre los l\u00edmites del lenguaje.',
+        words: ['Los l\u00edmites', 'de mi lenguaje', 'son los l\u00edmites', 'de mi mundo,', 'pero cada lengua', 'que aprendo', 'ensancha', 'el territorio', 'de lo que puedo', 'pensar y sentir.'],
+        answer: 'Los l\u00edmites de mi lenguaje son los l\u00edmites de mi mundo, pero cada lengua que aprendo ensancha el territorio de lo que puedo pensar y sentir.'
+    },
+    // === GAME 28: Builder — Argumento descriptivista ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir un argumento descriptivista sobre el cambio ling\u00fc\u00edstico.',
+        words: ['El cambio ling\u00fc\u00edstico', 'no es una se\u00f1al', 'de decadencia,', 'sino la prueba', 'de que la lengua', 'est\u00e1 viva:', 'solo las lenguas muertas', 'dejan de cambiar.'],
+        answer: 'El cambio ling\u00fc\u00edstico no es una se\u00f1al de decadencia, sino la prueba de que la lengua est\u00e1 viva: solo las lenguas muertas dejan de cambiar.'
+    },
+    // === GAME 29: Builder — Paradoja pragm\u00e1tica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir una paradoja sobre la relaci\u00f3n entre lenguaje y significado.',
+        words: ['Cuando dices', '\u00abesa palabra', 'no existe\u00bb,', 'est\u00e1s usando', 'palabras', 'para negar', 'la existencia', 'de una palabra,', 'lo cual demuestra que', 'el lenguaje puede', 'contradecirse a s\u00ed mismo.'],
+        answer: 'Cuando dices \u00abesa palabra no existe\u00bb, est\u00e1s usando palabras para negar la existencia de una palabra, lo cual demuestra que el lenguaje puede contradecirse a s\u00ed mismo.'
+    },
+    // === GAME 30: Builder — Reflexi\u00f3n sobre ser y estar ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir una reflexi\u00f3n metalingü\u00edstica sobre la distinci\u00f3n ser/estar.',
+        words: ['La distinci\u00f3n', 'entre \u00abser\u00bb y \u00abestar\u00bb', 'revela que el espa\u00f1ol', 'codifica gramaticalmente', 'una diferencia filos\u00f3fica', 'que otras lenguas', 'deben expresar', 'mediante contexto:', 'la diferencia entre', 'lo que algo es', 'y lo que algo est\u00e1 siendo.'],
+        answer: 'La distinci\u00f3n entre \u00abser\u00bb y \u00abestar\u00bb revela que el espa\u00f1ol codifica gramaticalmente una diferencia filos\u00f3fica que otras lenguas deben expresar mediante contexto: la diferencia entre lo que algo es y lo que algo est\u00e1 siendo.'
+    },
+    // === GAME 31: Translation — Reflexi\u00f3n metalingü\u00edstica ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'The limits of my language are the limits of my world, but each language I learn expands the territory of what I can think and feel.',
+        words: ['Los', 'l\u00edmites', 'de', 'mi', 'lenguaje', 'son', 'los', 'mundo', 'pero', 'cada', 'lengua', 'que', 'aprendo', 'ensancha', 'el', 'territorio', 'lo', 'puedo', 'pensar', 'y', 'sentir'],
+        answer: 'Los l\u00edmites de mi lenguaje son los l\u00edmites de mi mundo pero cada lengua que aprendo ensancha el territorio de lo que puedo pensar y sentir'
+    },
+    // === GAME 32: Translation — Sobre la ambig\u00fcedad ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol acad\u00e9mico usando el banco de palabras.',
+        source: 'Ambiguity is not a defect of language but one of its most powerful features: it allows a single sentence to carry multiple meanings simultaneously.',
+        words: ['La', 'ambig\u00fcedad', 'no', 'es', 'un', 'defecto', 'del', 'lenguaje', 'sino', 'una', 'de', 'sus', 'caracter\u00edsticas', 'm\u00e1s', 'poderosas', 'permite', 'que', 'sola', 'oraci\u00f3n', 'porte', 'm\u00faltiples', 'significados', 'simult\u00e1neamente'],
+        answer: 'La ambig\u00fcedad no es un defecto del lenguaje sino una de sus caracter\u00edsticas m\u00e1s poderosas permite que una sola oraci\u00f3n porte m\u00faltiples significados simult\u00e1neamente'
+    },
+    // === GAME 33: Translation — Pragm\u00e1tica ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'Pragmatics studies what we communicate without saying it explicitly: the invisible layer of language where literal meaning and real meaning do not coincide.',
+        words: ['La', 'pragm\u00e1tica', 'estudia', 'lo', 'que', 'comunicamos', 'sin', 'decirlo', 'expl\u00edcitamente', 'la', 'capa', 'invisible', 'del', 'lenguaje', 'donde', 'el', 'significado', 'literal', 'y', 'real', 'no', 'coinciden'],
+        answer: 'La pragm\u00e1tica estudia lo que comunicamos sin decirlo expl\u00edcitamente la capa invisible del lenguaje donde el significado literal y el significado real no coinciden'
+    },
+    // === GAME 34: Conversation — Debate sobre el lenguaje inclusivo ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate acad\u00e9mico sobre el lenguaje inclusivo. Demuestra capacidad de argumentar desde la complejidad, sin simplificar.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora', text: 'Un estudiante me dijo ayer que usar "todos y todas" es "perder el tiempo con tonter\u00edas". Otro dijo que negarse a usar lenguaje inclusivo es "violencia simb\u00f3lica". \u00bfC\u00f3mo abordar\u00edas este debate desde la ling\u00fc\u00edstica?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Desde una perspectiva ling\u00fc\u00edstica rigurosa, ambas posturas simplifican un fen\u00f3meno complejo. Por un lado, es un hecho documentado que el masculino gen\u00e9rico no es percibido como neutro por todos los hablantes: estudios psicoling\u00fc\u00edsticos muestran que al o\u00edr "todos los ciudadanos", muchas personas visualizan exclusivamente a hombres. Por otro lado, la lengua no cambia por decreto: los cambios ling\u00fc\u00edsticos que perduran son aquellos que los hablantes adoptan org\u00e1nicamente. Lo que resulta innegable es que este debate evidencia una tensi\u00f3n productiva entre la norma heredada y las demandas sociales contempor\u00e1neas, y esa tensi\u00f3n es, en s\u00ed misma, un motor del cambio ling\u00fc\u00edstico.',
+                    'El lenguaje inclusivo est\u00e1 bien.',
+                    'El lenguaje inclusivo est\u00e1 mal.'
+                ],
+                answer: 'Desde una perspectiva ling\u00fc\u00edstica rigurosa, ambas posturas simplifican un fen\u00f3meno complejo. Por un lado, es un hecho documentado que el masculino gen\u00e9rico no es percibido como neutro por todos los hablantes: estudios psicoling\u00fc\u00edsticos muestran que al o\u00edr "todos los ciudadanos", muchas personas visualizan exclusivamente a hombres. Por otro lado, la lengua no cambia por decreto: los cambios ling\u00fc\u00edsticos que perduran son aquellos que los hablantes adoptan org\u00e1nicamente. Lo que resulta innegable es que este debate evidencia una tensi\u00f3n productiva entre la norma heredada y las demandas sociales contempor\u00e1neas, y esa tensi\u00f3n es, en s\u00ed misma, un motor del cambio ling\u00fc\u00edstico.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora', text: 'Muy bien. \u00bfY qu\u00e9 papel juega la RAE en todo esto? \u00bfDeber\u00eda aceptar el lenguaje inclusivo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'La RAE cumple una funci\u00f3n espec\u00edfica: registrar y regular el uso, no inventarlo. Hist\u00f3ricamente, la Academia ha terminado aceptando cambios que inicialmente rechaz\u00f3: incluy\u00f3 "almuerzo" como sin\u00f3nimo de "comida del mediod\u00eda" despu\u00e9s de siglos de uso popular. Sin embargo, la pregunta de fondo no es si la RAE "debe" o "no debe" aceptar algo, sino si la comunidad de hablantes adoptar\u00e1 estas formas de manera sostenida. La RAE no es un legislador del idioma: es un cart\u00f3grafo que traza el mapa de c\u00f3mo se habla realmente. Y el mapa siempre va detr\u00e1s del territorio.',
+                    'La RAE debe aceptar todo.',
+                    'La RAE tiene raz\u00f3n en rechazarlo.'
+                ],
+                answer: 'La RAE cumple una funci\u00f3n espec\u00edfica: registrar y regular el uso, no inventarlo. Hist\u00f3ricamente, la Academia ha terminado aceptando cambios que inicialmente rechaz\u00f3: incluy\u00f3 "almuerzo" como sin\u00f3nimo de "comida del mediod\u00eda" despu\u00e9s de siglos de uso popular. Sin embargo, la pregunta de fondo no es si la RAE "debe" o "no debe" aceptar algo, sino si la comunidad de hablantes adoptar\u00e1 estas formas de manera sostenida. La RAE no es un legislador del idioma: es un cart\u00f3grafo que traza el mapa de c\u00f3mo se habla realmente. Y el mapa siempre va detr\u00e1s del territorio.'
+            }
+        ]
+    },
+    // === GAME 35: Conversation — Reflexi\u00f3n filos\u00f3fica sobre el lenguaje ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un di\u00e1logo filos\u00f3fico sobre la relaci\u00f3n entre lenguaje, pensamiento y realidad.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Fil\u00f3sofo', text: '\u00bfCrees que pensamos con palabras o que las palabras vienen despu\u00e9s del pensamiento?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'La respuesta m\u00e1s honesta ser\u00eda que probablemente ambas cosas ocurren simult\u00e1neamente, en una relaci\u00f3n dial\u00e9ctica. Hay evidencia de pensamiento preling\u00fc\u00edstico: los beb\u00e9s resuelven problemas antes de adquirir el lenguaje, y los m\u00fasicos "piensan" en sonidos, no en palabras. Pero tambi\u00e9n es cierto que las categor\u00edas de nuestra lengua influyen en c\u00f3mo percibimos el mundo: el espa\u00f1ol, al distinguir entre "ser" y "estar", nos obliga a clasificar la realidad de un modo que un hablante de ingl\u00e9s no necesita hacer. No creo que el lenguaje sea una prisi\u00f3n, pero s\u00ed es un lente que colorea lo que vemos.',
+                    'Pensamos con palabras, siempre.',
+                    'Las palabras no tienen nada que ver con el pensamiento.'
+                ],
+                answer: 'La respuesta m\u00e1s honesta ser\u00eda que probablemente ambas cosas ocurren simult\u00e1neamente, en una relaci\u00f3n dial\u00e9ctica. Hay evidencia de pensamiento preling\u00fc\u00edstico: los beb\u00e9s resuelven problemas antes de adquirir el lenguaje, y los m\u00fasicos "piensan" en sonidos, no en palabras. Pero tambi\u00e9n es cierto que las categor\u00edas de nuestra lengua influyen en c\u00f3mo percibimos el mundo: el espa\u00f1ol, al distinguir entre "ser" y "estar", nos obliga a clasificar la realidad de un modo que un hablante de ingl\u00e9s no necesita hacer. No creo que el lenguaje sea una prisi\u00f3n, pero s\u00ed es un lente que colorea lo que vemos.'
+            }
+        ]
+    },
+    // === GAME 36: Dictation — Reflexi\u00f3n metalingü\u00edstica ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe esta reflexi\u00f3n metalingü\u00edstica sobre los l\u00edmites del lenguaje.',
+        audio: 'Los l\u00edmites de mi lenguaje son los l\u00edmites de mi mundo, pero cada lengua que aprendo ensancha el territorio de lo que puedo pensar y sentir.',
+        answer: 'Los l\u00edmites de mi lenguaje son los l\u00edmites de mi mundo, pero cada lengua que aprendo ensancha el territorio de lo que puedo pensar y sentir.'
+    },
+    // === GAME 37: Dictation — Sobre la pragm\u00e1tica ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe esta definici\u00f3n de la pragm\u00e1tica ling\u00fc\u00edstica.',
+        audio: 'La pragm\u00e1tica estudia lo que comunicamos sin decirlo expl\u00edcitamente: la capa invisible del lenguaje donde el significado literal y el significado real no coinciden.',
+        answer: 'La pragm\u00e1tica estudia lo que comunicamos sin decirlo expl\u00edcitamente: la capa invisible del lenguaje donde el significado literal y el significado real no coinciden.'
+    },
+    // === GAME 38: Story — El espejo del idioma ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 sobre la metalingü\u00edstica y responde las preguntas de an\u00e1lisis.',
+        title: 'Lo que la lengua sabe sobre s\u00ed misma',
+        text: 'Al final de su exploraci\u00f3n metalingü\u00edstica, Yaguar\u00e1 comprendi\u00f3 algo que ning\u00fan libro le hab\u00eda ense\u00f1ado: la lengua sabe m\u00e1s sobre s\u00ed misma de lo que ning\u00fan hablante individual puede saber. Cada palabra carga una historia etimol\u00f3gica que la mayor\u00eda desconoce; cada estructura gramatical codifica una visi\u00f3n del mundo que sus usuarios dan por sentada; cada acto de habla contiene capas de significado que operan por debajo de la conciencia. El espa\u00f1ol, con su distinci\u00f3n entre ser y estar, su subjuntivo capaz de crear mundos posibles, su sistema de tratamiento que negocia distancias sociales y su riqueza de marcadores discursivos que organizan el pensamiento, no era solo un instrumento de comunicaci\u00f3n: era un ecosistema cognitivo, un museo vivo de ocho siglos de contacto cultural, un espejo donde la humanidad hispanohablante pod\u00eda verse reflejada. Y Yaguar\u00e1, al mirarse en ese espejo, descubri\u00f3 que ya no era una visitante del idioma: era parte de \u00e9l.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 significa la afirmaci\u00f3n "la lengua sabe m\u00e1s sobre s\u00ed misma de lo que ning\u00fan hablante individual puede saber"?',
+                options: ['Que el sistema ling\u00fc\u00edstico contiene informaci\u00f3n hist\u00f3rica, cultural y cognitiva que excede la conciencia de cada hablante', 'Que la lengua es un ser consciente con inteligencia propia', 'Que los hablantes no saben hablar su propio idioma', 'Que solo los ling\u00fcistas entienden la lengua'],
+                answer: 'Que el sistema ling\u00fc\u00edstico contiene informaci\u00f3n hist\u00f3rica, cultural y cognitiva que excede la conciencia de cada hablante'
+            },
+            {
+                q: '\u00bfPor qu\u00e9 el texto describe el espa\u00f1ol como "un museo vivo"?',
+                options: ['Porque las palabras conservan huellas de siglos de historia y contacto cultural mientras siguen en uso activo', 'Porque el espa\u00f1ol es una lengua antigua que ya no cambia', 'Porque el espa\u00f1ol se ense\u00f1a en museos', 'Porque el espa\u00f1ol contiene obras de arte'],
+                answer: 'Porque las palabras conservan huellas de siglos de historia y contacto cultural mientras siguen en uso activo'
+            },
+            {
+                q: '\u00bfQu\u00e9 representa la imagen del "espejo" en el t\u00edtulo y el texto?',
+                options: ['La capacidad metalingü\u00edstica: usar la lengua para reflexionar sobre la lengua misma', 'Un objeto f\u00edsico en la Biblioteca Nacional', 'La vanidad de los hablantes de espa\u00f1ol', 'Un recurso literario sin significado profundo'],
+                answer: 'La capacidad metalingü\u00edstica: usar la lengua para reflexionar sobre la lengua misma'
+            },
+            {
+                q: '\u00bfQu\u00e9 significa que Yaguar\u00e1 "ya no era una visitante del idioma: era parte de \u00e9l"?',
+                options: ['Que ha alcanzado el nivel de dominio donde la lengua deja de ser un objeto externo y se convierte en identidad', 'Que se convirti\u00f3 literalmente en una palabra del diccionario', 'Que decidi\u00f3 quedarse a vivir en Bogot\u00e1', 'Que ya no puede hablar otras lenguas'],
+                answer: 'Que ha alcanzado el nivel de dominio donde la lengua deja de ser un objeto externo y se convierte en identidad'
+            }
+        ]
+    },
+    // === GAME 39: Canci\u00f3n — \u00abMe enamora\u00bb de Juanes ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abMe enamora\u00bb de Juanes y completa los versos. Observa c\u00f3mo la canci\u00f3n usa el lenguaje para construir una experiencia sensorial del enamoramiento: sinestesia, met\u00e1fora e intensificaci\u00f3n.',
+        youtubeId: 'v11BLiNSP9Q',
+        artist: 'Juanes',
+        songTitle: 'Me enamora',
+        lines: [
+            { text: 'Cada d\u00eda que pasa es m\u00e1s ___.', blank: 'dif\u00edcil', options: ['dif\u00edcil', 'f\u00e1cil', 'bonito', 'triste'] },
+            { text: 'Pero no dejar\u00e9 de ___.', blank: 'insistir', options: ['insistir', 'pensar', 'so\u00f1ar', 'creer'] },
+            { text: 'Cada ___ que dices me enamora.', blank: 'blusa', options: ['blusa', 'cosa', 'noche', 'vez'] },
+            { text: 'Me enamora, me en ___.', blank: 'amora', options: ['amora', 'canta', 'enamora', 'sorprende'] },
+            { text: 'Cada ___ que me inventas me enamora.', blank: 'beso', options: ['beso', 'juego', 'cuento', 'gesto'] },
+            { text: 'Yo soy el que te ___ por las noches.', blank: 'busca', options: ['busca', 'llama', 'sue\u00f1a', 'piensa'] },
+            { text: 'Ya te encontr\u00e9, ___ te dejar\u00e9.', blank: 'no', options: ['no', 'ya', 'nunca', 'si'] },
+            { text: 'Porque t\u00fa me ___!', blank: 'enamoras', options: ['enamoras', 'encantas', 'fascinas', 'conquistas'] }
+        ]
+    },
+    // === GAME 40: Canci\u00f3n — \u00abAtrav\u00e9s del vaso\u00bb de Diomedes D\u00edaz ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abA trav\u00e9s del vaso\u00bb de Diomedes D\u00edaz y completa los versos. Reflexiona sobre c\u00f3mo el vallenato usa el lenguaje cotidiano para crear significados profundos: la met\u00e1fora del vaso como espejo distorsionado de la realidad.',
+        youtubeId: 'Y2mLww9gQq4',
+        artist: 'Diomedes D\u00edaz',
+        songTitle: 'A trav\u00e9s del vaso',
+        lines: [
+            { text: 'La ___ se ha hecho grande.', blank: 'pena', options: ['pena', 'vida', 'noche', 'fiesta'] },
+            { text: 'Se me ___ el horizonte.', blank: 'acab\u00f3', options: ['acab\u00f3', 'perdi\u00f3', 'borr\u00f3', 'alej\u00f3'] },
+            { text: 'Se me acabaron las ___.', blank: 'fuerzas', options: ['fuerzas', 'ganas', 'horas', 'l\u00e1grimas'] },
+            { text: 'Estoy viendo a trav\u00e9s del ___.', blank: 'vaso', options: ['vaso', 'tiempo', 'vidrio', 'sue\u00f1o'] },
+            { text: 'Y veo la ___ de otro tama\u00f1o.', blank: 'vida', options: ['vida', 'pena', 'noche', 'gente'] },
+            { text: 'Yo sigo siendo el mismo de ___.', blank: 'ayer', options: ['ayer', 'antes', 'siempre', 'all\u00e1'] },
+            { text: 'El ___ que no cambia.', blank: 'hombre', options: ['hombre', 'mundo', 'tiempo', 'r\u00edo'] },
+            { text: 'Porque el ___ sigue siendo el mismo.', blank: 'amor', options: ['amor', 'dolor', 'canto', 'vaso'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El espejo del lenguaje',
+            description: 'Una cámara circular donde cada superficie es un espejo, pero los espejos no reflejan tu imagen — reflejan tus palabras.',
+            ambience: 'echo'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el centro de la sala hay un pedestal con una cerradura.',
+                clue: 'Es la capacidad de usar el lenguaje para hablar sobre el lenguaje mismo. Empieza con «meta».',
+                answer: 'metalenguaje',
+                hint: '_ _ _ _ _ _ _ _ _ _ _ _',
+                onSolve: 'El pedestal gira y un espejo se ilumina.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un espejo te muestra esta frase:',
+                riddle: '«Esta oración tiene treinta y seis letras.» ¿Es verdadera o falsa?',
+                clue: 'Cuenta las letras de la oración.',
+                answer: 'Verdadera',
+                options: ['Verdadera', 'Falsa', 'Es una paradoja', 'No se puede determinar'],
+                onSolve: 'El espejo se aclara.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Tres afirmaciones aparecen en tres espejos diferentes.',
+                premises: [
+                    '«El español tiene más hablantes nativos que el inglés.»',
+                    '«El inglés tiene más hablantes totales que el español.»',
+                    '«Una lengua con más hablantes no es necesariamente más compleja.»'
+                ],
+                clue: '¿Qué conclusión metalingüística se puede extraer?',
+                answer: 'El número de hablantes no determina las propiedades lingüísticas de un idioma',
+                options: [
+                    'El número de hablantes no determina las propiedades lingüísticas de un idioma',
+                    'El español es más importante que el inglés',
+                    'El inglés es más fácil que el español',
+                    'Todas las lenguas tienen el mismo número de palabras'
+                ],
+                onSolve: 'Los tres espejos se alinean.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Dos textos aparecen, uno en cada lado de la sala.',
+                sources: [
+                    '«Los límites de mi lenguaje son los límites de mi mundo.» — Ludwig Wittgenstein',
+                    '«El lenguaje no solo describe la realidad; la construye.» — Principio del relativismo lingüístico'
+                ],
+                clue: '¿Qué implican estas dos ideas juntas sobre la relación entre lengua y pensamiento?',
+                answer: 'Que aprender una nueva lengua expande literalmente la realidad que podemos percibir y construir',
+                options: [
+                    'Que aprender una nueva lengua expande literalmente la realidad que podemos percibir y construir',
+                    'Que cada idioma describe el mismo mundo de forma diferente',
+                    'Que la gramática es más importante que el vocabulario',
+                    'Que es imposible traducir entre lenguas'
+                ],
+                onSolve: 'Todos los espejos brillan a la vez. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: una constelación con forma de espejo doble.',
+            questClue: 'El espejo refleja lo que las palabras saben sobre sí mismas.',
+            item: 'constelacion-espejo'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '51',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest51Progress',
+        backUrl: '../../c2-bogota.html'
+    });
+</script>
+</body>
+</html>

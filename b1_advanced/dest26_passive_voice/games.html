@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 26: La voz del manglar - Voz pasiva y se impersonal</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest26_passive_voice/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 26: La voz del manglar - Voz pasiva y se impersonal",
+          "url": "https://babelfree.com/b1_advanced/dest26_passive_voice/games",
+          "educationalLevel": "B1 Advanced - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Passive voice", "Impersonal se", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Advanced", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "La voz del manglar - Voz pasiva y se impersonal" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 26: La voz del manglar</div>
+            <div class="yg-header-subtitle">Voz pasiva y se impersonal</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // =====================================================
+    // GAME 1: NARRATIVE — El manglar de Nuqu\u00ed
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 describe el manglar usando la voz pasiva.',
+        title: 'El manglar de Nuqu\u00ed',
+        text: 'Yaguar\u00e1 camina entre las ra\u00edces del manglar. Todo aqu\u00ed tiene una voz diferente. Los manglares de Nuqu\u00ed son considerados uno de los ecosistemas m\u00e1s importantes del Pac\u00edfico colombiano. Las ra\u00edces son utilizadas por los peces como refugio. El agua es filtrada por las hojas y la tierra. Se dice que el manglar es el pulm\u00f3n de la costa. Se sabe que sin \u00e9l, las comunidades perder\u00edan su protecci\u00f3n contra las tormentas.'
+    },
+    // =====================================================
+    // GAME 2: CONJUGATION — Ser + participio pasado
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga la forma pasiva: ser + participio pasado. Presta atenci\u00f3n al sujeto.',
+        questions: [
+            { verb: 'proteger', subject: 'Las tortugas (ser/proteger)', answer: 'son protegidas', options: ['son protegidas', 'es protegida', 'fue protegidos', 'fueron protegida'] },
+            { verb: 'declarar', subject: 'El manglar (ser/declarar)', answer: 'fue declarado', options: ['fue declarado', 'fueron declarados', 'es declarada', 'son declarado'] },
+            { verb: 'construir', subject: 'Las casas (ser/construir)', answer: 'fueron construidas', options: ['fueron construidas', 'fue construido', 'son construida', 'es construidos'] },
+            { verb: 'cultivar', subject: 'El arroz (ser/cultivar)', answer: 'es cultivado', options: ['es cultivado', 'son cultivadas', 'fue cultivada', 'fueron cultivados'] }
+        ]
+    },
+    // =====================================================
+    // GAME 3: FIB — Completar con forma pasiva
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la forma pasiva correcta.',
+        questions: [
+            { sentence: 'El manglar ___ declarado patrimonio natural en 2015.', answer: 'fue', options: ['fue', 'es', 'son', 'fueron'] },
+            { sentence: 'Las playas de Nuqu\u00ed ___ visitadas por miles de turistas cada a\u00f1o.', answer: 'son', options: ['son', 'es', 'fue', 'fueron'] },
+            { sentence: 'La reserva ___ creada por el gobierno para proteger la biodiversidad.', answer: 'fue', options: ['fue', 'es', 'son', 'fueron'] },
+            { sentence: 'Los cangrejos ___ encontrados entre las ra\u00edces del manglar.', answer: 'son', options: ['son', 'es', 'fue', 'fueron'] }
+        ]
+    },
+    // =====================================================
+    // GAME 4: PAIR — Activa \u2194 Pasiva
+    // =====================================================
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada oraci\u00f3n activa con su equivalente en voz pasiva.',
+        pairs: [
+            ['El gobierno protege el manglar', 'El manglar es protegido por el gobierno'],
+            ['Los cient\u00edficos estudiaron las especies', 'Las especies fueron estudiadas por los cient\u00edficos'],
+            ['La comunidad construye las lanchas', 'Las lanchas son construidas por la comunidad'],
+            ['El mar destruy\u00f3 parte de la costa', 'Parte de la costa fue destruida por el mar'],
+            ['Los pescadores recolectan las conchas', 'Las conchas son recolectadas por los pescadores']
+        ]
+    },
+    // =====================================================
+    // GAME 5: NARRATIVE — Se impersonal
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Yaguar\u00e1 explica c\u00f3mo se usa el \u00abse\u00bb impersonal en la vida del manglar.',
+        title: 'Lo que se dice del manglar',
+        text: 'En Nuqu\u00ed se vive con el ritmo del mar. Se pesca al amanecer y se cocina con le\u00f1a. Se dice que el manglar tiene esp\u00edritu propio. Se sabe que sus ra\u00edces protegen la costa de las tormentas. Se puede caminar entre los \u00e1rboles cuando la marea est\u00e1 baja. Se necesita respetar este lugar para que las futuras generaciones tambi\u00e9n lo conozcan.'
+    },
+    // =====================================================
+    // GAME 6: CONJUGATION — Formas con se pasivo
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma correcta de \u00abse + verbo\u00bb seg\u00fan el contexto.',
+        questions: [
+            { verb: 'hablar', subject: 'En Nuqu\u00ed ___ espa\u00f1ol y lenguas afro.', answer: 'se habla', options: ['se habla', 'se hablan', 'se habl\u00f3', 'se hablaron'] },
+            { verb: 'vender', subject: 'En el mercado ___ frutas tropicales.', answer: 'se venden', options: ['se venden', 'se vende', 'se vendi\u00f3', 'se vendieron'] },
+            { verb: 'construir', subject: 'En la costa ___ casas de madera.', answer: 'se construyen', options: ['se construyen', 'se construye', 'se construy\u00f3', 'se construyeron'] },
+            { verb: 'necesitar', subject: 'Para conservar el manglar ___ voluntarios.', answer: 'se necesitan', options: ['se necesitan', 'se necesita', 'se necesit\u00f3', 'se necesitaron'] }
+        ]
+    },
+    // =====================================================
+    // GAME 7: FIB — Se impersonal y se pasivo
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la construcci\u00f3n correcta de \u00abse\u00bb.',
+        questions: [
+            { sentence: '___ que el manglar tiene m\u00e1s de cien especies de peces.', answer: 'Se sabe', options: ['Se sabe', 'Se saben', 'Se puede', 'Se vive'] },
+            { sentence: 'En Nuqu\u00ed ___ al ritmo del oc\u00e9ano Pac\u00edfico.', answer: 'se vive', options: ['se vive', 'se viven', 'se dice', 'se sabe'] },
+            { sentence: 'Aqu\u00ed ___ las mejores empanadas de pescado.', answer: 'se preparan', options: ['se preparan', 'se prepara', 'se dice', 'se puede'] },
+            { sentence: '___ llegar al manglar en lancha o a pie.', answer: 'Se puede', options: ['Se puede', 'Se pueden', 'Se dice', 'Se sabe'] }
+        ]
+    },
+    // =====================================================
+    // GAME 8: SORTING — Activa vs. pasiva vs. se impersonal
+    // =====================================================
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan su estructura gramatical.',
+        categories: ['Voz activa', 'Voz pasiva', 'Se impersonal'],
+        items: [
+            { text: 'Los pescadores recolectan conchas', category: 'Voz activa' },
+            { text: 'Las conchas son recolectadas por los pescadores', category: 'Voz pasiva' },
+            { text: 'Se recolectan conchas en la playa', category: 'Se impersonal' },
+            { text: 'El gobierno cre\u00f3 la reserva', category: 'Voz activa' },
+            { text: 'La reserva fue creada por el gobierno', category: 'Voz pasiva' },
+            { text: 'Se dice que el manglar protege la costa', category: 'Se impersonal' },
+            { text: 'La comunidad cuida el ecosistema', category: 'Voz activa' },
+            { text: 'El ecosistema es cuidado por la comunidad', category: 'Voz pasiva' },
+            { text: 'Se necesita proteger el medio ambiente', category: 'Se impersonal' }
+        ]
+    },
+    // =====================================================
+    // GAME 9: CONJUGATION — Participios irregulares
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige el participio pasado correcto para completar la voz pasiva.',
+        questions: [
+            { verb: 'descubrir', subject: 'Nuevas especies fueron ___ en el manglar.', answer: 'descubiertas', options: ['descubiertas', 'descubridas', 'descubiertos', 'descubrir'] },
+            { verb: 'escribir', subject: 'El informe fue ___ por los bi\u00f3logos.', answer: 'escrito', options: ['escrito', 'escribido', 'escritos', 'escribidos'] },
+            { verb: 'hacer', subject: 'Las canoas son ___ a mano por los artesanos.', answer: 'hechas', options: ['hechas', 'hacidas', 'hechos', 'hacidos'] },
+            { verb: 'romper', subject: 'Las redes fueron ___ por la tormenta.', answer: 'rotas', options: ['rotas', 'rompidas', 'rotos', 'rompidos'] }
+        ]
+    },
+    // =====================================================
+    // GAME 10: BUILDER — Ordenar oraciones pasivas
+    // =====================================================
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n en voz pasiva.',
+        words: ['El', 'manglar', 'fue', 'declarado', 'patrimonio', 'natural', 'por', 'el', 'gobierno'],
+        answer: 'El manglar fue declarado patrimonio natural por el gobierno'
+    },
+    // =====================================================
+    // GAME 11: LISTENING — Identificar voz pasiva
+    // =====================================================
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y elige la estructura gramatical correcta.',
+        audio: 'Las tortugas marinas son protegidas por las comunidades locales de Nuqu\u00ed.',
+        question: '\u00bfQu\u00e9 tipo de construcci\u00f3n gramatical escuchaste?',
+        answer: 'Voz pasiva con ser + participio',
+        options: ['Voz pasiva con ser + participio', 'Se impersonal', 'Voz activa', 'Se pasivo']
+    },
+    // =====================================================
+    // GAME 12: FIB — Transformar activa a pasiva
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Transforma la oraci\u00f3n activa a voz pasiva. Completa el espacio.',
+        questions: [
+            { sentence: 'Los bi\u00f3logos estudian los manglares. \u2192 Los manglares ___ estudiados por los bi\u00f3logos.', answer: 'son', options: ['son', 'fueron', 'es', 'fue'] },
+            { sentence: 'La comunidad plant\u00f3 nuevos \u00e1rboles. \u2192 Nuevos \u00e1rboles ___ plantados por la comunidad.', answer: 'fueron', options: ['fueron', 'son', 'es', 'fue'] },
+            { sentence: 'El oc\u00e9ano alimenta el ecosistema. \u2192 El ecosistema ___ alimentado por el oc\u00e9ano.', answer: 'es', options: ['es', 'son', 'fue', 'fueron'] },
+            { sentence: 'Las mujeres prepararon la comida. \u2192 La comida ___ preparada por las mujeres.', answer: 'fue', options: ['fue', 'es', 'son', 'fueron'] }
+        ]
+    },
+    // =====================================================
+    // GAME 13: PAIR — Se impersonal \u2194 significado
+    // =====================================================
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada construcci\u00f3n con \u00abse\u00bb con su significado.',
+        pairs: [
+            ['Se habla espa\u00f1ol', 'La gente habla espa\u00f1ol'],
+            ['Se necesitan voluntarios', 'Es necesario tener voluntarios'],
+            ['Se dice que el manglar tiene esp\u00edritu', 'La gente dice que el manglar tiene esp\u00edritu'],
+            ['Se puede pescar al amanecer', 'Es posible pescar al amanecer'],
+            ['Se venden frutas en el mercado', 'Alguien vende frutas en el mercado']
+        ]
+    },
+    // =====================================================
+    // GAME 14: TRANSLATION — Oraciones pasivas
+    // =====================================================
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce la oraci\u00f3n al espa\u00f1ol usando voz pasiva.',
+        source: 'The mangrove was declared a natural heritage by the government.',
+        words: ['El', 'manglar', 'fue', 'declarado', 'patrimonio', 'natural', 'por', 'el', 'gobierno'],
+        answer: 'El manglar fue declarado patrimonio natural por el gobierno'
+    },
+    // =====================================================
+    // GAME 15: NARRATIVE — La conservaci\u00f3n
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Yaguar\u00e1 reflexiona sobre la conservaci\u00f3n del manglar.',
+        title: 'Voces que protegen',
+        text: 'La selva tiene muchas voces, pero la voz del manglar es especial. Sus ra\u00edces son habitadas por cangrejos, peces y aves. El ecosistema es mantenido por un equilibrio delicado. Cada a\u00f1o, nuevos \u00e1rboles son plantados por la comunidad. Se organizan jornadas de limpieza. Se invita a los j\u00f3venes a participar. Se cree que si el manglar desaparece, la costa quedar\u00e1 desprotegida. Por eso se trabaja todos los d\u00edas para conservarlo.'
+    },
+    // =====================================================
+    // GAME 16: CONVERSATION — Describir procesos de conservaci\u00f3n
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con una gu\u00eda local sobre la conservaci\u00f3n del manglar.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda', text: '\u00bfSabes c\u00f3mo se protege el manglar en Nuqu\u00ed?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, el manglar es protegido por las comunidades locales. Se organizan jornadas de limpieza.',
+                    'No, el manglar protege solo.',
+                    'Se come pescado en el manglar.'
+                ],
+                answer: 'S\u00ed, el manglar es protegido por las comunidades locales. Se organizan jornadas de limpieza.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda', text: '\u00a1Exacto! \u00bfY qu\u00e9 se hace con las tortugas marinas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Las tortugas comen en la playa.',
+                    'Las tortugas son protegidas durante la temporada de anidaci\u00f3n. Se proh\u00edbe molestarlas.',
+                    'Se venden tortugas en el mercado.'
+                ],
+                answer: 'Las tortugas son protegidas durante la temporada de anidaci\u00f3n. Se proh\u00edbe molestarlas.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda', text: '\u00bfQu\u00e9 se puede hacer como turista para ayudar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Se puede participar en las jornadas de limpieza y se debe respetar las normas de la reserva.',
+                    'Se puede tomar fotos solamente.',
+                    'No se puede hacer nada.'
+                ],
+                answer: 'Se puede participar en las jornadas de limpieza y se debe respetar las normas de la reserva.'
+            }
+        ]
+    },
+    // =====================================================
+    // GAME 17: CONJUGATION — Pasiva en pasado
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma pasiva correcta en pret\u00e9rito.',
+        questions: [
+            { verb: 'construir', subject: 'El puente (ser/construir) en 1998.', answer: 'fue construido', options: ['fue construido', 'fueron construidos', 'es construido', 'son construidas'] },
+            { verb: 'rescatar', subject: 'Las tortugas (ser/rescatar) por los voluntarios.', answer: 'fueron rescatadas', options: ['fueron rescatadas', 'fue rescatado', 'son rescatadas', 'es rescatada'] },
+            { verb: 'publicar', subject: 'El estudio (ser/publicar) el a\u00f1o pasado.', answer: 'fue publicado', options: ['fue publicado', 'fueron publicados', 'es publicado', 'son publicadas'] },
+            { verb: 'inaugurar', subject: 'Las rutas ecol\u00f3gicas (ser/inaugurar) en marzo.', answer: 'fueron inauguradas', options: ['fueron inauguradas', 'fue inaugurado', 'es inaugurada', 'son inaugurados'] }
+        ]
+    },
+    // =====================================================
+    // GAME 18: BUILDER — Construir con se impersonal
+    // =====================================================
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con \u00abse\u00bb impersonal.',
+        words: ['Se', 'dice', 'que', 'el', 'manglar', 'protege', 'la', 'costa', 'de', 'las', 'tormentas'],
+        answer: 'Se dice que el manglar protege la costa de las tormentas'
+    },
+    // =====================================================
+    // GAME 19: LISTENING — Se impersonal
+    // =====================================================
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la oraci\u00f3n que tiene construcci\u00f3n con \u00abse\u00bb impersonal.',
+        audio: 'En Nuqu\u00ed se pesca al amanecer y se cocina con le\u00f1a de los \u00e1rboles secos.',
+        question: '\u00bfCu\u00e1l es la construcci\u00f3n con \u00abse\u00bb que escuchaste?',
+        answer: 'Se pesca al amanecer y se cocina con le\u00f1a',
+        options: ['Se pesca al amanecer y se cocina con le\u00f1a', 'Los pescadores pescan y cocinan', 'El pescado es cocinado por alguien', 'La le\u00f1a fue recogida ayer']
+    },
+    // =====================================================
+    // GAME 20: FIB — Pasiva con agente
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la preposici\u00f3n o el verbo correcto de la voz pasiva.',
+        questions: [
+            { sentence: 'El informe fue escrito ___ los bi\u00f3logos marinos.', answer: 'por', options: ['por', 'para', 'con', 'de'] },
+            { sentence: 'Las conchas son ___ por las mujeres de la comunidad.', answer: 'recolectadas', options: ['recolectadas', 'recolectados', 'recolectada', 'recolectado'] },
+            { sentence: 'La reserva fue ___ para proteger las especies en peligro.', answer: 'creada', options: ['creada', 'creado', 'creadas', 'creados'] },
+            { sentence: 'Los senderos son ___ por los gu\u00edas locales todos los d\u00edas.', answer: 'mantenidos', options: ['mantenidos', 'mantenidas', 'mantenido', 'mantenida'] }
+        ]
+    },
+    // =====================================================
+    // GAME 21: SORTING — Pasiva con se vs. pasiva con ser
+    // =====================================================
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan use pasiva con \u00abser\u00bb o pasiva con \u00abse\u00bb.',
+        categories: ['Pasiva con ser', 'Pasiva con se'],
+        items: [
+            { text: 'El manglar fue declarado patrimonio', category: 'Pasiva con ser' },
+            { text: 'Se construyen casas de madera', category: 'Pasiva con se' },
+            { text: 'Las tortugas son protegidas por la comunidad', category: 'Pasiva con ser' },
+            { text: 'Se venden frutas en el mercado', category: 'Pasiva con se' },
+            { text: 'El puente fue construido en 1998', category: 'Pasiva con ser' },
+            { text: 'Se necesitan m\u00e1s voluntarios', category: 'Pasiva con se' },
+            { text: 'Las redes fueron rotas por la tormenta', category: 'Pasiva con ser' },
+            { text: 'Se organizan jornadas de limpieza', category: 'Pasiva con se' }
+        ]
+    },
+    // =====================================================
+    // GAME 22: TRANSLATION — Con se impersonal
+    // =====================================================
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando la construcci\u00f3n con \u00abse\u00bb.',
+        source: 'It is said that the mangrove has its own spirit.',
+        words: ['Se', 'dice', 'que', 'el', 'manglar', 'tiene', 'su', 'propio', 'esp\u00edritu'],
+        answer: 'Se dice que el manglar tiene su propio esp\u00edritu'
+    },
+    // =====================================================
+    // GAME 23: CONVERSATION — Procesos comunitarios
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con un pescador sobre los procesos del manglar.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Pescador', text: '\u00bfSabes c\u00f3mo se pescan las pianguas aqu\u00ed en el manglar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, las pianguas son recolectadas a mano entre las ra\u00edces del manglar cuando la marea est\u00e1 baja.',
+                    'Se compran pianguas en la tienda.',
+                    'Las pianguas nadan en el r\u00edo.'
+                ],
+                answer: 'S\u00ed, las pianguas son recolectadas a mano entre las ra\u00edces del manglar cuando la marea est\u00e1 baja.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Pescador', text: '\u00a1As\u00ed es! \u00bfY sabes qu\u00e9 se hace con el coco en nuestra comunidad?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'El coco es solo una fruta decorativa.',
+                    'Se usa el coco para cocinar. Se preparan dulces, aceite y leche de coco.',
+                    'No se puede usar el coco para nada.'
+                ],
+                answer: 'Se usa el coco para cocinar. Se preparan dulces, aceite y leche de coco.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Pescador', text: '\u00bfY qu\u00e9 opinas de c\u00f3mo se conserva nuestro manglar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Se hace un excelente trabajo. Se nota que el ecosistema es cuidado con mucho respeto por la comunidad.',
+                    'El manglar no necesita conservaci\u00f3n.',
+                    'Se destruye todo el manglar.'
+                ],
+                answer: 'Se hace un excelente trabajo. Se nota que el ecosistema es cuidado con mucho respeto por la comunidad.'
+            }
+        ]
+    },
+    // =====================================================
+    // GAME 24: PAIR — Activa \u2194 Pasiva (procesos)
+    // =====================================================
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada oraci\u00f3n activa con su forma pasiva equivalente.',
+        pairs: [
+            ['Los artesanos fabrican las canoas', 'Las canoas son fabricadas por los artesanos'],
+            ['Las mujeres recolectaron las pianguas', 'Las pianguas fueron recolectadas por las mujeres'],
+            ['El gobierno fund\u00f3 la reserva natural', 'La reserva natural fue fundada por el gobierno'],
+            ['Los voluntarios limpian las playas', 'Las playas son limpiadas por los voluntarios'],
+            ['La tormenta da\u00f1\u00f3 los senderos', 'Los senderos fueron da\u00f1ados por la tormenta']
+        ]
+    },
+    // =====================================================
+    // GAME 25: DICTATION — Oraci\u00f3n pasiva completa
+    // =====================================================
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha la oraci\u00f3n y escr\u00edbela con precisi\u00f3n.',
+        audio: 'Se dice que el manglar es el pulm\u00f3n de la costa y que debe ser protegido por todos.',
+        answer: 'Se dice que el manglar es el pulm\u00f3n de la costa y que debe ser protegido por todos.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala de radio',
+            description: 'Una vieja estaci\u00f3n de radio en el pueblo. El micr\u00f3fono est\u00e1 encendido, pero nadie habla. Las grabaciones antiguas todav\u00eda suenan si se presiona el bot\u00f3n correcto.',
+            ambience: 'radio-static'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'La radio cruje y una voz pregunta:',
+                riddle: '\u00abCandelaria dijo: "Voy a salvar el bosque." Pero en la radio dijeron: "Candelaria dijo que iba a salvar el bosque." \u00bfQu\u00e9 cambi\u00f3?\u00bb',
+                clue: '\u00bfQu\u00e9 transformaci\u00f3n gramatical ocurri\u00f3?',
+                answer: 'Estilo directo a indirecto: "voy" cambi\u00f3 a "iba", "el bosque" se mantuvo porque no hay ambig\u00fcedad',
+                options: [
+                    'Estilo directo a indirecto: "voy" cambi\u00f3 a "iba", "el bosque" se mantuvo porque no hay ambig\u00fcedad',
+                    'Solo cambi\u00f3 el orden de las palabras',
+                    'Se perdi\u00f3 informaci\u00f3n importante',
+                    'No cambi\u00f3 nada significativo'
+                ],
+                onSolve: 'La radio se sintoniza mejor.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'El micr\u00f3fono tiene una cerradura.',
+                clue: 'Don Pr\u00f3spero dijo: "Construir\u00e9 la carretera." En estilo indirecto: "Don Pr\u00f3spero dijo que ___ la carretera." (condicional de construir)',
+                answer: 'construiria',
+                hint: '_ _ _ _ _ _ _ _ _ _ _',
+                onSolve: 'El micr\u00f3fono se enciende.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Una grabaci\u00f3n antigua se transcribe en la pantalla.',
+                passage: '\u00abDo\u00f1a Asunci\u00f3n dijo que el r\u00edo hablaba todas las noches. Cont\u00f3 que ella escuchaba las historias del agua desde ni\u00f1a. A\u00f1adi\u00f3 que alg\u00fan d\u00eda alguien m\u00e1s aprender\u00eda a escuchar.\u00bb',
+                clue: '\u00bfQu\u00e9 verbos de reporte se usan y qu\u00e9 matiz aporta cada uno?',
+                answer: '"Dijo que" (afirmaci\u00f3n neutra), "Cont\u00f3 que" (narraci\u00f3n), "A\u00f1adi\u00f3 que" (informaci\u00f3n adicional)',
+                options: [
+                    '"Dijo que" (afirmaci\u00f3n neutra), "Cont\u00f3 que" (narraci\u00f3n), "A\u00f1adi\u00f3 que" (informaci\u00f3n adicional)',
+                    'Los tres son sin\u00f3nimos',
+                    'Solo "dijo" es correcto',
+                    '"Cont\u00f3" solo se usa con cuentos'
+                ],
+                onSolve: 'La grabaci\u00f3n termina con la voz de Do\u00f1a Asunci\u00f3n. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de un micr\u00f3fono con ondas que se convierten en palabras.',
+            questClue: 'Las voces grabadas viajan m\u00e1s lejos que las voces habladas.',
+            item: 'historia-radio'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '26',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest26Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 55: Cr&oacute;nica de los mundos &mdash; Escritura profesional</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_advanced/dest55_professional_writing/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 55: Crónica de los mundos — Escritura profesional",
+          "url": "https://babelfree.com/c2_advanced/dest55_professional_writing/games",
+          "educationalLevel": "C2 Advanced - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Professional writing", "Advanced composition", "Spanish written production"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Advanced", "item": "https://babelfree.com/c2-colombia" },
+            { "@type": "ListItem", "position": 4, "name": "Crónica de los mundos — Escritura profesional" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-colombia" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 55: Cr&oacute;nica de los mundos</div>
+            <div class="yg-header-subtitle">Escritura profesional</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — La cr\u00f3nica como oficio ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre que escribir profesionalmente es un oficio que exige disciplina, precisi\u00f3n y una voz propia.',
+        text: 'Yaguar\u00e1 hab\u00eda cruzado tres mundos y acumulado historias suficientes para llenar bibliotecas. Pero una cosa era vivir una historia y otra muy distinta era escribirla de modo que otro pudiera vivirla al leerla. En Bogot\u00e1, una editora le hab\u00eda dicho: \u00abEscribir bien no es cuesti\u00f3n de talento. Es cuesti\u00f3n de oficio. El talento te da la primera frase; el oficio te da las siguientes trescientas.\u00bb Yaguar\u00e1 comprendi\u00f3 que la escritura profesional \u2014la que se publica, la que perdura, la que transforma\u2014 no era expresi\u00f3n espont\u00e1nea: era construcci\u00f3n deliberada. Cada p\u00e1rrafo ten\u00eda una arquitectura. Cada transici\u00f3n, una funci\u00f3n. Cada adjetivo superfluo era una deuda que el lector pagaba con su atenci\u00f3n. Y la atenci\u00f3n del lector era el bien m\u00e1s escaso del siglo XXI.'
+    },
+    // === GAME 2: Narrative — Garc\u00eda M\u00e1rquez periodista ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre Garc\u00eda M\u00e1rquez como periodista y c\u00f3mo el periodismo forj\u00f3 su prosa literaria.',
+        text: 'Antes de Cien a\u00f1os de soledad, Garc\u00eda M\u00e1rquez fue reportero. Y nunca dej\u00f3 de serlo. En una entrevista dec\u00eda: \u00abLa mejor formaci\u00f3n literaria es el periodismo, porque te obliga a ser claro, a ser breve y a no aburrir al lector. Un novelista que aburre puede excusarse con la \u201carte\u201d. Un periodista que aburre pierde su empleo.\u00bb Su cr\u00f3nica \u00abRelato de un n\u00e1ufrago\u00bb \u2014la historia real de un marinero que sobrevivi\u00f3 diez d\u00edas a la deriva\u2014 demostraba que la frontera entre periodismo y literatura no exist\u00eda cuando el escritor dominaba ambos oficios. La prosa era exacta como un bistur\u00ed y emotiva como una canci\u00f3n de cuna. Cada dato era verificable; cada frase, memorable. Yaguar\u00e1 entendi\u00f3 que escribir profesionalmente significaba eso: no elegir entre precisi\u00f3n y belleza, sino exigirse ambas.'
+    },
+    // === GAME 3: Narrative — La arquitectura del ensayo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la estructura del ensayo como g\u00e9nero y las decisiones arquitect\u00f3nicas que implica.',
+        text: 'Un ensayo no era un texto que se escrib\u00eda de principio a fin como quien sigue un r\u00edo: era un edificio que se dise\u00f1aba antes de construirse. La tesis \u2014la idea que el ensayo defend\u00eda\u2014 era la columna vertebral. Los argumentos eran los pilares. Las evidencias eran los cimientos. Las transiciones eran los pasillos que permit\u00edan al lector moverse de una habitaci\u00f3n a otra sin perderse. Y la conclusi\u00f3n no era un resumen: era una ventana que abr\u00eda el texto hacia afuera, dejando al lector con una idea m\u00e1s grande que la suma de sus partes. Yaguar\u00e1 record\u00f3 que C\u00f3ndor Viejo le hab\u00eda ense\u00f1ado a mirar desde arriba. Escribir un ensayo era exactamente eso: tener la visi\u00f3n panor\u00e1mica antes de descender a los detalles.'
+    },
+    // === GAME 4: Narrative — La revisi\u00f3n como escritura ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el proceso de revisi\u00f3n y por qu\u00e9 la verdadera escritura ocurre en la reescritura.',
+        text: 'La editora le dijo a Yaguar\u00e1: \u00abEl primer borrador es una conversaci\u00f3n contigo misma. El segundo borrador es una conversaci\u00f3n con el lector. El tercero es una conversaci\u00f3n con la verdad.\u00bb Borges dec\u00eda que publicaba sus textos no cuando estaban terminados, sino cuando estaba harto de corregirlos. Hemingway afirmaba haber reescrito el final de Adi\u00f3s a las armas treinta y nueve veces. Revisar no era corregir errores: era repensar cada decisi\u00f3n. \u00bfEste adjetivo a\u00f1ade informaci\u00f3n o solo decoraci\u00f3n? \u00bfEsta oraci\u00f3n funcionar\u00eda mejor al principio del p\u00e1rrafo? \u00bfEste dato es necesario o solo demuestra que investigo mucho? La escritura profesional era un acto de generosidad brutal: matar las frases que uno amaba si el texto las necesitaba muertas.'
+    },
+    // === GAME 5: Narrative — La voz propia ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la construcci\u00f3n de una voz propia en la escritura profesional.',
+        text: 'De todas las lecciones, la m\u00e1s dif\u00edcil era esta: encontrar una voz propia. No un estilo llamativo, no una manía gramatical reconocible, sino algo más profundo: la manera en que el escritor ve el mundo reflejada en cómo elige cada palabra, cada ritmo, cada silencio. García Márquez tenía la suya: frases largas como ríos tropicales, con subordinadas que se enroscaban como boas y desembocaban en una imagen tan precisa que el lector sentía el calor. Héctor Abad Faciolince tenía otra: cristalina, íntima, con la contención de quien sabe que la emoción más fuerte es la que no se dice del todo. Yaguará comprendió que la voz no se inventaba: emergía. Aparecía cuando uno dejaba de imitar a los maestros y empezaba a escucharse. Y para escucharse, había que haber escuchado primero a muchos otros. La voz propia era la síntesis de todas las voces leídas, filtradas por la experiencia vivida.'
+    },
+    // === GAME 6: Narrative — Escribir es elegir ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 sobre la escritura como acto de elecci\u00f3n constante.',
+        text: 'Al final, escribir profesionalmente se reduc\u00eda a una sola habilidad: elegir. Elegir qu\u00e9 contar y qu\u00e9 callar. Elegir d\u00f3nde empezar y d\u00f3nde terminar. Elegir la palabra exacta entre diez sin\u00f3nimos que parec\u00edan iguales pero no lo eran. Elegir la longitud de la frase: corta para golpear, larga para envolver. Elegir el tono: distante para analizar, cercano para conmover, ir\u00f3nico para revelar. Elegir cu\u00e1ndo seguir las reglas y cu\u00e1ndo romperlas, sabiendo que solo pod\u00eda romperlas con autoridad quien las conoc\u00eda a la perfecci\u00f3n. Cada decisi\u00f3n era un microcosmos de todo lo aprendido a lo largo de cincuenta y cuatro destinos. Y cada texto terminado era, a su manera, una peque\u00f1a resurrecci\u00f3n: algo que antes no exist\u00eda y que ahora, gracias a las palabras elegidas, exist\u00eda para siempre.'
+    },
+    // === GAME 7: FIB — Vocabulario de la escritura profesional ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones con el t\u00e9rmino de escritura profesional adecuado.',
+        sentences: [
+            { text: 'La ___ es la idea central que el ensayo defiende y que todos los argumentos deben sostener.', blank: 'tesis', options: ['tesis', 'hip\u00f3tesis', 'premisa', 'conclusi\u00f3n'] },
+            { text: 'Un buen ___ conecta dos p\u00e1rrafos manteniendo la coherencia l\u00f3gica del texto.', blank: 'conector', options: ['conector', 'adjetivo', 'verbo', 'pronombre'] },
+            { text: 'La ___ textual asegura que todas las partes del texto se refieran al mismo tema.', blank: 'coherencia', options: ['coherencia', 'cohesi\u00f3n', 'concordancia', 'consistencia'] },
+            { text: 'La ___ textual se logra mediante mecanismos ling\u00fc\u00edsticos como pronombres, sin\u00f3nimos y conectores.', blank: 'cohesi\u00f3n', options: ['cohesi\u00f3n', 'coherencia', 'concordancia', 'coordinaci\u00f3n'] },
+            { text: 'El ___ es la primera versi\u00f3n de un texto, destinada a ser revisada y reescrita.', blank: 'borrador', options: ['borrador', 'manuscrito', 'original', 'esquema'] },
+            { text: 'Un texto con buena ___ gu\u00eda al lector sin que este perciba el esfuerzo del escritor.', blank: 'fluidez', options: ['fluidez', 'complejidad', 'extensi\u00f3n', 'formalidad'] },
+            { text: 'La regla period\u00edstica de la ___ invertida coloca la informaci\u00f3n m\u00e1s importante al principio.', blank: 'pir\u00e1mide', options: ['pir\u00e1mide', 'escalera', 'torre', 'espiral'] },
+            { text: 'Un ___ editorial establece las normas de estilo que todo texto publicado en esa editorial debe seguir.', blank: 'manual', options: ['manual', 'libro', 'diccionario', 'cat\u00e1logo'] }
+        ]
+    },
+    // === GAME 8: FIB — Conectores y transiciones ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el conector o marcador discursivo que mejor articula la relaci\u00f3n entre las ideas.',
+        sentences: [
+            { text: 'La cr\u00f3nica combina rigor period\u00edstico y calidad literaria; ___, su producci\u00f3n exige dominio de ambos oficios.', blank: 'por consiguiente', options: ['por consiguiente', 'sin embargo', 'en cambio', 'adem\u00e1s'] },
+            { text: 'El ensayo acad\u00e9mico requiere objetividad; ___, la columna de opini\u00f3n permite \u2014y exige\u2014 subjetividad expl\u00edcita.', blank: 'en cambio', options: ['en cambio', 'por lo tanto', 'asimismo', 'es decir'] },
+            { text: '___ la brevedad del microrrelato, su construcci\u00f3n suele exigir m\u00e1s revisiones que la de una novela.', blank: 'Pese a', options: ['Pese a', 'Gracias a', 'Debido a', 'Seg\u00fan'] },
+            { text: 'Garc\u00eda M\u00e1rquez fue ante todo periodista; ___, su ficci\u00f3n siempre conserv\u00f3 la precisi\u00f3n del reportaje.', blank: 'de ah\u00ed que', options: ['de ah\u00ed que', 'a pesar de que', 'en caso de que', 'a menos que'] },
+            { text: 'La estructura del texto debe planificarse antes de escribir; ___, la voz emerge durante el proceso de escritura.', blank: 'no obstante', options: ['no obstante', 'por lo tanto', 'en efecto', 'es m\u00e1s'] },
+            { text: 'Un buen t\u00edtulo debe ser informativo, atractivo y breve; ___, debe reflejar con precisi\u00f3n el contenido del texto.', blank: 'ante todo', options: ['ante todo', 'en cambio', 'sin embargo', 'por ejemplo'] },
+            { text: 'La revisi\u00f3n no consiste solo en corregir errores gramaticales; ___, implica repensar la estructura, el tono y la pertinencia de cada p\u00e1rrafo.', blank: 'antes bien', options: ['antes bien', 'por ejemplo', 'en suma', 'por cierto'] },
+            { text: 'Cada g\u00e9nero textual tiene sus propias convenciones; ___, el dominio de esas convenciones es lo que permite al escritor transgredirlas con eficacia.', blank: 'precisamente', options: ['precisamente', 'sin embargo', 'por lo tanto', 'adem\u00e1s'] }
+        ]
+    },
+    // === GAME 9: FIB — Estilo y precisi\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la opci\u00f3n que mejora la precisi\u00f3n y el estilo de cada oraci\u00f3n.',
+        sentences: [
+            { text: 'Es preferible escribir \u00abEl informe ___ que la inversi\u00f3n fue rentable\u00bb a escribir \u00abEl informe dijo que...\u00bb.', blank: 'revel\u00f3', options: ['revel\u00f3', 'dijo', 'habl\u00f3', 'coment\u00f3'] },
+            { text: 'En escritura profesional, \u00abactualmente\u00bb es preferible a \u00aben el momento ___ en que nos encontramos\u00bb.', blank: 'presente', options: ['presente', 'actual', 'vigente', 'hist\u00f3rico'] },
+            { text: 'La voz ___ (\u00abse aprob\u00f3 la ley\u00bb) es \u00fatil para despersonalizar, pero su abuso debilita el texto.', blank: 'pasiva', options: ['pasiva', 'activa', 'media', 'impersonal'] },
+            { text: 'Un p\u00e1rrafo profesional debe tener una sola idea ___ y todas las oraciones deben apoyarla.', blank: 'principal', options: ['principal', 'importante', 'buena', 'grande'] },
+            { text: 'La redundancia \u00absubir para ___\u00bb debe evitarse en escritura cuidada.', blank: 'arriba', options: ['arriba', 'adelante', 'all\u00e1', 'dentro'] },
+            { text: 'El gerundio de ___ (\u00abEl presidente firm\u00f3 la ley, muriendo al d\u00eda siguiente\u00bb) es un error estil\u00edstico frecuente.', blank: 'posterioridad', options: ['posterioridad', 'anterioridad', 'simultaneidad', 'causa'] },
+            { text: 'En periodismo, atribuir la fuente con precisi\u00f3n (\u00abseg\u00fan el informe del DANE\u00bb) refuerza la ___ del texto.', blank: 'credibilidad', options: ['credibilidad', 'longitud', 'complejidad', 'originalidad'] },
+            { text: 'La regla \u00abmostrar, no ___\u00bb es central en la escritura narrativa profesional.', blank: 'decir', options: ['decir', 'pensar', 'sentir', 'ver'] }
+        ]
+    },
+    // === GAME 10: Conjugation — Tiempos narrativos profesionales ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos en los tiempos narrativos que exige la escritura profesional: presente hist\u00f3rico, pret\u00e9ritos, condicional period\u00edstico.',
+        sentences: [
+            { text: 'Garc\u00eda M\u00e1rquez ___ (nacer) en Aracataca en 1927 y ___ (morir) en Ciudad de M\u00e9xico en 2014.', blank: 'naci\u00f3 / muri\u00f3', verb: 'nacer / morir', tense: 'pret\u00e9rito indefinido' },
+            { text: 'Seg\u00fan fuentes oficiales, el acuerdo ___ (incluir) cl\u00e1usulas de protecci\u00f3n ambiental.', blank: 'incluir\u00eda', verb: 'incluir', tense: 'condicional period\u00edstico' },
+            { text: 'Es 1967. Un escritor colombiano ___ (publicar) una novela que cambiar\u00e1 la literatura.', blank: 'publica', verb: 'publicar', tense: 'presente hist\u00f3rico' },
+            { text: 'La investigaci\u00f3n ___ (revelar) que el sesenta por ciento de los encuestados desconfiaba de los medios.', blank: 'revel\u00f3', verb: 'revelar', tense: 'pret\u00e9rito indefinido' },
+            { text: 'Si el gobierno ___ (cumplir) lo prometido, la situaci\u00f3n ser\u00eda distinta.', blank: 'hubiera cumplido', verb: 'cumplir', tense: 'pret\u00e9rito pluscuamperfecto de subjuntivo' },
+            { text: 'Al cierre de esta edici\u00f3n, las negociaciones ___ (continuar) sin resultado.', blank: 'continuaban', verb: 'continuar', tense: 'pret\u00e9rito imperfecto' },
+            { text: 'Los expertos ___ (advertir) desde hace a\u00f1os que esta crisis era previsible.', blank: 'ven\u00edan advirtiendo', verb: 'advertir', tense: 'per\u00edfrasis durativa' },
+            { text: 'El cronista ___ (sentarse) en la plaza y ___ (empezar) a tomar notas.', blank: 'se sent\u00f3 / empez\u00f3', verb: 'sentarse / empezar', tense: 'pret\u00e9rito indefinido' }
+        ]
+    },
+    // === GAME 11: Conjugation — Subjuntivo en la escritura argumentativa ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga en subjuntivo. La escritura argumentativa profesional exige precisi\u00f3n modal.',
+        sentences: [
+            { text: 'Es improbable que el lector ___ (tolerar) p\u00e1rrafos de m\u00e1s de diez l\u00edneas sin punto y aparte.', blank: 'tolere', verb: 'tolerar', tense: 'presente de subjuntivo' },
+            { text: 'El editor solicit\u00f3 que el autor ___ (reescribir) la introducci\u00f3n.', blank: 'reescribiera', verb: 'reescribir', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: 'A menos que se ___ (verificar) la fuente, el dato no debe publicarse.', blank: 'verifique', verb: 'verificar', tense: 'presente de subjuntivo' },
+            { text: 'Si el cronista ___ (poder) entrevistar a todos los testigos, el reportaje habr\u00eda sido m\u00e1s completo.', blank: 'hubiera podido', verb: 'poder', tense: 'pret\u00e9rito pluscuamperfecto de subjuntivo' },
+            { text: 'Es deseable que cada p\u00e1rrafo ___ (contribuir) a la tesis central del ensayo.', blank: 'contribuya', verb: 'contribuir', tense: 'presente de subjuntivo' },
+            { text: 'El manual de estilo exige que las citas ___ (atribuirse) con precisi\u00f3n.', blank: 'se atribuyan', verb: 'atribuirse', tense: 'presente de subjuntivo' },
+            { text: 'No cre\u00eda que un texto tan breve ___ (requerir) tantas revisiones.', blank: 'requiriera', verb: 'requerir', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: 'Ojal\u00e1 que cada estudiante ___ (descubrir) que la escritura es una forma de pensamiento.', blank: 'descubra', verb: 'descubrir', tense: 'presente de subjuntivo' }
+        ]
+    },
+    // === GAME 12: Pair — G\u00e9nero textual y caracter\u00edstica ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada g\u00e9nero de escritura profesional con su caracter\u00edstica definitoria.',
+        pairs: [
+            ['Cr\u00f3nica', 'Combina la investigaci\u00f3n period\u00edstica con recursos narrativos literarios'],
+            ['Ensayo argumentativo', 'Defiende una tesis mediante argumentos l\u00f3gicos y evidencia'],
+            ['Columna de opini\u00f3n', 'Posicionamiento expl\u00edcito con estilo personal e inconfundible'],
+            ['Informe ejecutivo', 'Presenta datos y conclusiones de forma concisa para la toma de decisiones'],
+            ['Rese\u00f1a cr\u00edtica', 'Analiza y valora una obra aportando juicio fundamentado'],
+            ['Perfil period\u00edstico', 'Retrata a una persona combinando datos biogr\u00e1ficos con escenas vivas'],
+            ['Editorial', 'Expresa la posici\u00f3n institucional del medio sobre un tema de actualidad'],
+            ['Microrrelato', 'Narra una historia completa en el m\u00ednimo de palabras posible']
+        ]
+    },
+    // === GAME 13: Pair — Error estil\u00edstico y correcci\u00f3n ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada error de estilo con su versi\u00f3n corregida.',
+        pairs: [
+            ['Redundancia: \u00absubir para arriba\u00bb', 'Correcci\u00f3n: \u00absubir\u00bb'],
+            ['Gerundio de posterioridad: \u00abfirm\u00f3 la ley, muriendo al d\u00eda siguiente\u00bb', 'Correcci\u00f3n: \u00abfirm\u00f3 la ley y muri\u00f3 al d\u00eda siguiente\u00bb'],
+            ['Abuso de pasiva: \u00abfue decidido por el comit\u00e9\u00bb', 'Correcci\u00f3n: \u00abel comit\u00e9 decidi\u00f3\u00bb'],
+            ['Que\u00edsmo: \u00abse dio cuenta que era falso\u00bb', 'Correcci\u00f3n: \u00abse dio cuenta de que era falso\u00bb'],
+            ['Deque\u00edsmo: \u00abpienso de que es correcto\u00bb', 'Correcci\u00f3n: \u00abpienso que es correcto\u00bb'],
+            ['Pleonasmo: \u00abtodos y cada uno sin excepci\u00f3n\u00bb', 'Correcci\u00f3n: \u00abtodos\u00bb o \u00abcada uno\u00bb'],
+            ['Anf\u00edbolog\u00eda: \u00abvi al hombre con el telescopio\u00bb', 'Correcci\u00f3n: \u00abcon el telescopio, vi al hombre\u00bb'],
+            ['Muletilla: \u00aben este sentido, cabe se\u00f1alar que, en definitiva\u00bb', 'Correcci\u00f3n: eliminar muletillas y decir directamente la idea']
+        ]
+    },
+    // === GAME 14: Listening — An\u00e1lisis de estilo en una cr\u00f3nica ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Lee el siguiente fragmento de cr\u00f3nica y analiza las decisiones estil\u00edsticas del autor.',
+        text: 'Eran las seis de la ma\u00f1ana cuando la niebla se levant\u00f3 del r\u00edo Atrato como si alguien hubiera corrido una cortina. Detr\u00e1s apareci\u00f3 un pueblo que no figuraba en ning\u00fan mapa. Las casas, de madera oscurecida por la humedad, se sosten\u00edan sobre pilotes como garzas dormidas. Un hombre remendaba una red. Una mujer tend\u00eda ropa que nunca se secar\u00eda del todo. Un ni\u00f1o miraba el r\u00edo con la atenci\u00f3n de quien espera que pase algo que nunca pasa.',
+        questions: [
+            { q: '\u00bfQu\u00e9 recurso literario emplea el autor en \u00abcomo garzas dormidas\u00bb?', options: ['Un s\u00edmil que animaliza las casas para integrar la arquitectura en el paisaje natural', 'Una met\u00e1fora muerta sin efecto', 'Una hip\u00e9rbole que exagera el tama\u00f1o de las casas', 'Una personificaci\u00f3n del r\u00edo'], answer: 'Un s\u00edmil que animaliza las casas para integrar la arquitectura en el paisaje natural' },
+            { q: '\u00bfPor qu\u00e9 el cronista emplea tres oraciones breves paralelas (\u00abUn hombre... Una mujer... Un ni\u00f1o...\u00bb)?', options: ['Para crear un efecto cinematogr\u00e1fico de planos sucesivos que retratan la cotidianidad del pueblo', 'Porque no sab\u00eda escribir oraciones complejas', 'Para rellenar espacio', 'Porque son tres personajes principales de la historia'], answer: 'Para crear un efecto cinematogr\u00e1fico de planos sucesivos que retratan la cotidianidad del pueblo' },
+            { q: '\u00bfQu\u00e9 efecto produce la \u00faltima frase: \u00abcon la atenci\u00f3n de quien espera que pase algo que nunca pasa\u00bb?', options: ['Condensa la atm\u00f3sfera de espera infinita y aislamiento del pueblo en una sola imagen', 'Es una frase innecesaria que deber\u00eda eliminarse', 'Introduce un elemento de suspenso policial', 'Describe un problema psicol\u00f3gico del ni\u00f1o'], answer: 'Condensa la atm\u00f3sfera de espera infinita y aislamiento del pueblo en una sola imagen' }
+        ]
+    },
+    // === GAME 15: Sorting — Elementos de un ensayo ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada elemento seg\u00fan la secci\u00f3n del ensayo donde debe aparecer.',
+        categories: ['Introducci\u00f3n', 'Desarrollo', 'Conclusi\u00f3n'],
+        items: [
+            { text: 'Planteamiento de la tesis central', category: 'Introducci\u00f3n' },
+            { text: 'Evidencia estad\u00edstica que respalda un argumento', category: 'Desarrollo' },
+            { text: 'S\u00edntesis de los hallazgos principales', category: 'Conclusi\u00f3n' },
+            { text: 'Contextualizaci\u00f3n del problema', category: 'Introducci\u00f3n' },
+            { text: 'Contraargumento y refutaci\u00f3n', category: 'Desarrollo' },
+            { text: 'Apertura hacia futuras l\u00edneas de investigaci\u00f3n', category: 'Conclusi\u00f3n' },
+            { text: 'Pregunta ret\u00f3rica que captura la atenci\u00f3n del lector', category: 'Introducci\u00f3n' },
+            { text: 'An\u00e1lisis detallado de un caso espec\u00edfico', category: 'Desarrollo' },
+            { text: 'Reflexi\u00f3n final que trasciende el tema espec\u00edfico', category: 'Conclusi\u00f3n' }
+        ]
+    },
+    // === GAME 16: Sorting — Conector y funci\u00f3n discursiva ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada conector seg\u00fan su funci\u00f3n discursiva.',
+        categories: ['Adici\u00f3n', 'Contraste', 'Causa-consecuencia', 'Reformulaci\u00f3n'],
+        items: [
+            { text: 'Asimismo', category: 'Adici\u00f3n' },
+            { text: 'Sin embargo', category: 'Contraste' },
+            { text: 'Por consiguiente', category: 'Causa-consecuencia' },
+            { text: 'Es decir', category: 'Reformulaci\u00f3n' },
+            { text: 'Adem\u00e1s', category: 'Adici\u00f3n' },
+            { text: 'No obstante', category: 'Contraste' },
+            { text: 'De ah\u00ed que', category: 'Causa-consecuencia' },
+            { text: 'En otras palabras', category: 'Reformulaci\u00f3n' },
+            { text: 'Por a\u00f1adidura', category: 'Adici\u00f3n' },
+            { text: 'En cambio', category: 'Contraste' },
+            { text: 'Dado que', category: 'Causa-consecuencia' },
+            { text: 'O sea', category: 'Reformulaci\u00f3n' }
+        ]
+    },
+    // === GAME 17: Sorting — Registro apropiado por g\u00e9nero ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fragmento seg\u00fan el g\u00e9nero de escritura profesional al que corresponde.',
+        categories: ['Cr\u00f3nica', 'Informe ejecutivo', 'Columna de opini\u00f3n', 'Ensayo acad\u00e9mico'],
+        items: [
+            { text: 'El sol pegaba en las tejas de zinc como si quisiera derretirlas.', category: 'Cr\u00f3nica' },
+            { text: 'Se recomienda asignar un incremento presupuestario del 15% al \u00e1rea de I+D.', category: 'Informe ejecutivo' },
+            { text: 'Este pa\u00eds tiene la costumbre de indignarse un lunes y olvidar el martes.', category: 'Columna de opini\u00f3n' },
+            { text: 'Los resultados son consistentes con la hip\u00f3tesis planteada por Chomsky (1965).', category: 'Ensayo acad\u00e9mico' },
+            { text: 'Mar\u00eda lleva veinte a\u00f1os vendiendo arepas en la misma esquina. Nadie le pregunta su nombre.', category: 'Cr\u00f3nica' },
+            { text: 'El ROI proyectado para el primer trimestre asciende al 12,3%.', category: 'Informe ejecutivo' },
+            { text: 'Me niego a llamar \u00abprogreso\u00bb a lo que destruye lo que nos hace humanos.', category: 'Columna de opini\u00f3n' },
+            { text: 'La metodolog\u00eda empleada sigue el enfoque cualitativo propuesto por Creswell (2014).', category: 'Ensayo acad\u00e9mico' }
+        ]
+    },
+    // === GAME 18: Builder — P\u00e1rrafo de cr\u00f3nica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar un p\u00e1rrafo de cr\u00f3nica period\u00edstica con estructura narrativa.',
+        words: ['El mercado de Bazurt\u00f3', 'en Cartagena', 'amanece antes que la ciudad:', 'a las cuatro de la ma\u00f1ana,', 'cuando el resto duerme,', 'aqu\u00ed ya huele', 'a pescado fresco,', 'a cilantro', 'y a urgencia.'],
+        answer: 'El mercado de Bazurt\u00f3 en Cartagena amanece antes que la ciudad: a las cuatro de la ma\u00f1ana, cuando el resto duerme, aqu\u00ed ya huele a pescado fresco, a cilantro y a urgencia.'
+    },
+    // === GAME 19: Builder — Tesis de ensayo ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para construir una tesis de ensayo clara y defendible.',
+        words: ['La literatura colombiana', 'contempor\u00e1nea', 'no puede comprenderse', 'sin reconocer', 'que la violencia', 'no es solo un tema recurrente,', 'sino la condici\u00f3n estructural', 'que ha moldeado', 'sus formas narrativas.'],
+        answer: 'La literatura colombiana contempor\u00e1nea no puede comprenderse sin reconocer que la violencia no es solo un tema recurrente, sino la condici\u00f3n estructural que ha moldeado sus formas narrativas.'
+    },
+    // === GAME 20: Builder — Conclusi\u00f3n de ensayo ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una conclusi\u00f3n de ensayo que abra el texto hacia una reflexi\u00f3n m\u00e1s amplia.',
+        words: ['En \u00faltima instancia,', 'la cuesti\u00f3n no es', 'si el espa\u00f1ol debe cambiar', '\u2014porque cambiar\u00e1,', 'con o sin nuestro permiso\u2014,', 'sino qu\u00e9 tipo de hablantes', 'queremos ser:', 'guardianes de una norma fija', 'o testigos l\u00facidos', 'de una lengua viva.'],
+        answer: 'En \u00faltima instancia, la cuesti\u00f3n no es si el espa\u00f1ol debe cambiar \u2014porque cambiar\u00e1, con o sin nuestro permiso\u2014, sino qu\u00e9 tipo de hablantes queremos ser: guardianes de una norma fija o testigos l\u00facidos de una lengua viva.'
+    },
+    // === GAME 21: Translation — Mismo contenido, diferente g\u00e9nero ===
+    {
+        type: 'translation',
+        label: 'Transposici\u00f3n de g\u00e9nero',
+        instruction: 'Empareja cada versi\u00f3n de la misma informaci\u00f3n con el g\u00e9nero de escritura profesional al que pertenece.',
+        pairs: [
+            { source: 'G\u00e9nero: cr\u00f3nica', target: 'Do\u00f1a Carmen lleva cuarenta a\u00f1os cocinando en el mismo fog\u00f3n de le\u00f1a. Cuando le preguntas por qu\u00e9 no usa gas, te mira como si hubieras insultado a su madre.' },
+            { source: 'G\u00e9nero: informe', target: 'El 73% de los hogares rurales del departamento contin\u00faa utilizando biomasa como fuente primaria de energ\u00eda para cocci\u00f3n de alimentos.' },
+            { source: 'G\u00e9nero: columna de opini\u00f3n', target: 'Llamamos \u00abprogreso\u00bb a ponerle gas a la cocina de do\u00f1a Carmen, pero nadie le pregunt\u00f3 si quer\u00eda que le cambiaran el sabor de su vida.' },
+            { source: 'G\u00e9nero: ensayo acad\u00e9mico', target: 'La persistencia de la cocci\u00f3n con le\u00f1a en contextos rurales no puede explicarse \u00fanicamente por factores econ\u00f3micos: implica una dimensi\u00f3n cultural y simb\u00f3lica que las pol\u00edticas de transici\u00f3n energ\u00e9tica suelen ignorar.' }
+        ]
+    },
+    // === GAME 22: Conversation — Reuni\u00f3n editorial ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Est\u00e1s en una reuni\u00f3n editorial donde se discute tu cr\u00f3nica sobre el desplazamiento en el Choc\u00f3. Defiende tus decisiones estil\u00edsticas con argumentos profesionales.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'Editora', text: 'Tu cr\u00f3nica es potente, pero tiene 5000 palabras. Necesitamos cortarla a la mitad. \u00bfQu\u00e9 eliminar\u00edas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Propondr\u00eda conservar las tres escenas centrales y el testimonio de do\u00f1a Luz, que es el hilo conductor. Las secciones de contexto hist\u00f3rico podr\u00edan condensarse en un par de p\u00e1rrafos y el ep\u00edlogo podr\u00eda fusionarse con la escena final.',
+                    'No se puede cortar nada. Todo es importante.',
+                    'Corten lo que quieran. Ustedes saben m\u00e1s que yo.',
+                    'Eliminar\u00eda todos los datos y dejar\u00eda solo las historias personales.'
+                ],
+                correct: 'Propondr\u00eda conservar las tres escenas centrales y el testimonio de do\u00f1a Luz, que es el hilo conductor. Las secciones de contexto hist\u00f3rico podr\u00edan condensarse en un par de p\u00e1rrafos y el ep\u00edlogo podr\u00eda fusionarse con la escena final.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Editora', text: 'La frase \u00abel r\u00edo arrastraba recuerdos como arrastra troncos\u00bb me parece demasiado literaria para una cr\u00f3nica period\u00edstica. \u00bfNo crees?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Entiendo la preocupaci\u00f3n, pero creo que esa imagen cumple una funci\u00f3n: condensa en una l\u00ednea lo que un p\u00e1rrafo explicativo no lograr\u00eda. Si le preocupa el exceso literario, podr\u00edamos revisar otras im\u00e1genes del texto y conservar solo las imprescindibles. Esta es una de ellas.',
+                    'Tiene raz\u00f3n, la elimino.',
+                    'El periodismo literario permite ese tipo de frases. No voy a cambiarla.',
+                    'Puedo cambiarla por algo m\u00e1s t\u00e9cnico si quiere.'
+                ],
+                correct: 'Entiendo la preocupaci\u00f3n, pero creo que esa imagen cumple una funci\u00f3n: condensa en una l\u00ednea lo que un p\u00e1rrafo explicativo no lograr\u00eda. Si le preocupa el exceso literario, podr\u00edamos revisar otras im\u00e1genes del texto y conservar solo las imprescindibles. Esta es una de ellas.'
+            }
+        ]
+    },
+    // === GAME 23: Dictation — Prosa period\u00edstica ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje de prosa period\u00edstica. Presta atenci\u00f3n a la puntuaci\u00f3n y al ritmo.',
+        text: 'La frontera entre el periodismo y la literatura no existe: es una convenci\u00f3n inventada por quienes no dominan ninguno de los dos oficios. El gran cronista es aquel que investiga con la paciencia de un detective, escribe con la precisi\u00f3n de un cirujano y conmueve con la honestidad de quien ha estado ah\u00ed.'
+    },
+    // === GAME 24: Dictation — Prosa ensay\u00edstica ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje ensay\u00edstico. Presta atenci\u00f3n a los conectores y la estructura argumentativa.',
+        text: 'Si bien la brevedad es una virtud en la escritura profesional, no debe confundirse con la superficialidad. Un texto breve puede ser profundo; un texto largo puede ser vac\u00edo. La medida correcta no la da el n\u00famero de palabras, sino la densidad de pensamiento por p\u00e1rrafo.'
+    },
+    // === GAME 25: Story — La cr\u00f3nica como g\u00e9nero ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este texto sobre la cr\u00f3nica como g\u00e9nero y responde las preguntas.',
+        text: 'La cr\u00f3nica latinoamericana vive un momento de esplendor. Autores como Leila Guerriero, Mart\u00edn Caparr\u00f3s, Alberto Salcedo Ramos y Cristian Alarc\u00f3n han demostrado que el g\u00e9nero puede abordar cualquier tema \u2014desde un concurso de belleza en un pueblo perdido hasta la violencia sist\u00e9mica de una ciudad entera\u2014 con una profundidad que la noticia period\u00edstica no puede alcanzar.\n\nLa cr\u00f3nica exige lo que ning\u00fan otro g\u00e9nero exige simult\u00e1neamente: la rigurosidad del reportaje (todo dato debe ser verificable), la estructura del cuento (hay un arco narrativo, personajes, tensi\u00f3n), la profundidad del ensayo (hay una idea que trasciende la an\u00e9cdota) y el estilo del mejor escritor (cada frase debe justificar su existencia). Quien domina la cr\u00f3nica domina, por extensi\u00f3n, toda la escritura profesional.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 cuatro exigencias simult\u00e1neas identifica el texto en la cr\u00f3nica?',
+                options: ['Rigurosidad del reportaje, estructura del cuento, profundidad del ensayo y estilo literario', 'Brevedad, objetividad, formalidad y precisi\u00f3n', 'Entretenimiento, informaci\u00f3n, educaci\u00f3n y persuasi\u00f3n', 'Investigaci\u00f3n, redacci\u00f3n, edici\u00f3n y publicaci\u00f3n'],
+                answer: 'Rigurosidad del reportaje, estructura del cuento, profundidad del ensayo y estilo literario'
+            },
+            {
+                q: '\u00bfPor qu\u00e9 dice el texto que quien domina la cr\u00f3nica domina toda la escritura profesional?',
+                options: ['Porque la cr\u00f3nica integra las competencias de todos los dem\u00e1s g\u00e9neros profesionales', 'Porque la cr\u00f3nica es el g\u00e9nero m\u00e1s f\u00e1cil de escribir', 'Porque todos los escritores empezaron con cr\u00f3nicas', 'Porque la cr\u00f3nica es el g\u00e9nero m\u00e1s antiguo'],
+                answer: 'Porque la cr\u00f3nica integra las competencias de todos los dem\u00e1s g\u00e9neros profesionales'
+            },
+            {
+                q: '\u00bfQu\u00e9 autores menciona el texto como representantes de la cr\u00f3nica latinoamericana contempor\u00e1nea?',
+                options: ['Leila Guerriero, Mart\u00edn Caparr\u00f3s, Alberto Salcedo Ramos y Cristian Alarc\u00f3n', 'Garc\u00eda M\u00e1rquez, Borges, Cort\u00e1zar y Vargas Llosa', 'Shakira, Juanes, Carlos Vives y Calle 13', 'Chomsky, Saussure, Jakobson y Austin'],
+                answer: 'Leila Guerriero, Mart\u00edn Caparr\u00f3s, Alberto Salcedo Ramos y Cristian Alarc\u00f3n'
+            }
+        ]
+    },
+    // === GAME 26: Canci\u00f3n — \u00abPa\u2019 Mayte\u00bb de Carlos Vives ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abPa\u2019 Mayte\u00bb de Carlos Vives y completa los versos. Reflexiona sobre c\u00f3mo la canci\u00f3n funciona como una cr\u00f3nica sentimental: narra, describe un paisaje emocional y construye un personaje en pocas l\u00edneas.',
+        youtubeId: '4lXBHD5bFzI',
+        artist: 'Carlos Vives',
+        songTitle: 'Pa\u2019 Mayte',
+        lines: [
+            { text: 'Y es que yo nac\u00ed en la ___.', blank: 'tierra', options: ['tierra', 'costa', 'selva', 'sierra'] },
+            { text: 'Donde el sol no deja de ___.', blank: 'brillar', options: ['brillar', 'cantar', 'salir', 'quemar'] },
+            { text: 'Donde la ___ es vallenato.', blank: 'vida', options: ['vida', 'm\u00fasica', 'gente', 'fiesta'] },
+            { text: 'Y se canta pa\u2019 ___.', blank: 'enamorar', options: ['enamorar', 'bailar', 'vivir', 'olvidar'] },
+            { text: 'Pa\u2019 Mayte, pa\u2019 mi ___.', blank: 'morena', options: ['morena', 'reina', 'negra', 'bella'] },
+            { text: 'Que me tiene como ___.', blank: 'loco', options: ['loco', 'tonto', 'muerto', 'preso'] },
+            { text: 'Con su forma de ___.', blank: 'caminar', options: ['caminar', 'mirar', 'bailar', 'hablar'] },
+            { text: 'Que me roba el ___.', blank: 'coraz\u00f3n', options: ['coraz\u00f3n', 'sue\u00f1o', 'aliento', 'alma'] }
+        ]
+    },
+    // === GAME 27: Canci\u00f3n — \u00abSobrevivir\u00e9\u00bb de H\u00e9ctor Lavoe ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abEl cantante\u00bb de H\u00e9ctor Lavoe y completa los versos. Reflexiona sobre c\u00f3mo esta canci\u00f3n es en s\u00ed una cr\u00f3nica autobiogr\u00e1fica: el artista narra su propia historia con la honestidad descarnada del mejor periodismo.',
+        youtubeId: 'Rw9fsAz9JnE',
+        artist: 'H\u00e9ctor Lavoe',
+        songTitle: 'El cantante',
+        lines: [
+            { text: 'Yo soy el ___ que hoy les viene a cantar.', blank: 'cantante', options: ['cantante', 'hombre', 'artista', 'so\u00f1ador'] },
+            { text: 'A ustedes una ___ vengo a contar.', blank: 'historia', options: ['historia', 'verdad', 'canci\u00f3n', 'pena'] },
+            { text: 'Que a m\u00ed me ha golpeado muy ___ la vida.', blank: 'cruel', options: ['cruel', 'duro', 'fuerte', 'mal'] },
+            { text: 'Pero sigo aqu\u00ed, de pie, ___.', blank: 'luchando', options: ['luchando', 'cantando', 'viviendo', 'so\u00f1ando'] },
+            { text: 'Y mi voz no se ___.', blank: 'apaga', options: ['apaga', 'calla', 'pierde', 'cansa'] },
+            { text: 'Porque el canto es mi ___.', blank: 'vida', options: ['vida', 'fuerza', 'forma', 'arma'] },
+            { text: 'Yo no vivo de ___.', blank: 'aplausos', options: ['aplausos', 'recuerdos', 'promesas', 'sue\u00f1os'] },
+            { text: 'Vivo de mi ___.', blank: 'voz', options: ['voz', 'arte', 'fe', 'alma'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El archivo de los documentos vivos',
+            description: 'Documentos de todas las épocas flotan como hojas en un viento invisible: contratos, cartas, informes, manifiestos. Algunos sangran tinta.',
+            ambience: 'paper'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Una palabra se ha fragmentado entre varios documentos.',
+                clue: 'Es lo que convierte una idea vaga en un texto que puede cambiar el mundo.',
+                answer: 'precision',
+                scrambled: 'oincrpise',
+                onSolve: 'Los fragmentos se reúnen. El primer sello se abre.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Cuatro secciones de un informe profesional están desordenadas.',
+                clue: 'Ordena las secciones según la estructura estándar de un informe.',
+                items: [
+                    'Resumen ejecutivo',
+                    'Metodología y marco teórico',
+                    'Resultados y análisis',
+                    'Conclusiones y recomendaciones'
+                ],
+                onSolve: 'El informe se organiza. El segundo sello cede.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Un dilema profesional aparece en forma de premisas.',
+                premises: [
+                    'Candelaria debe escribir un informe legal sobre la deforestación en el Chocó.',
+                    'Los datos son devastadores, pero el tono del informe debe ser objetivo.',
+                    'Si usa lenguaje emocional, pierde credibilidad. Si es demasiado fría, pierde urgencia.'
+                ],
+                clue: '¿Cuál es la mejor estrategia de escritura para Candelaria?',
+                answer: 'Dejar que los datos hablen por sí mismos, usando estructura y selección de evidencia para crear urgencia sin emoción explícita',
+                options: [
+                    'Dejar que los datos hablen por sí mismos, usando estructura y selección de evidencia para crear urgencia sin emoción explícita',
+                    'Escribir con pasión para que los lectores sientan la emergencia',
+                    'Usar solo números y gráficos, sin texto',
+                    'Pedir a otra persona que lo escriba'
+                ],
+                onSolve: 'El dilema se resuelve. El tercer sello se abre.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'El último documento es una carta que Candelaria escribe a Don Próspero. En el sobre hay un candado.',
+                clue: 'Es lo que Candelaria le devuelve a Don Próspero: sus propias palabras transformadas en evidencia.',
+                answer: 'verdad',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'La carta se sella. El archivo se ilumina. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: la constelación de la Pluma y la Balanza.',
+            questClue: 'Escribir con precisión es una forma de justicia.',
+            item: 'constelacion-balanza'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '55',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest55Progress',
+        backUrl: '../../c2-colombia.html'
+    });
+</script>
+</body>
+</html>

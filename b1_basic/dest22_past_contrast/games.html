@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 22: La fiesta de San Pacho - Imperfecto vs. indefinido</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest22_past_contrast/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 22: La fiesta de San Pacho - Imperfecto vs. indefinido",
+          "url": "https://babelfree.com/b1_basic/dest22_past_contrast/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Preterite vs imperfect", "Past tense contrast", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Basic", "item": "https://babelfree.com/b1-quibdo" },
+            { "@type": "ListItem", "position": 4, "name": "La fiesta de San Pacho - Imperfecto vs. indefinido" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 22: La fiesta de San Pacho</div>
+            <div class="yg-header-subtitle">Imperfecto vs. indefinido</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative — San Pacho festival introduction ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la historia de Yaguar\u00e1 en la fiesta de San Pacho. Presta atenci\u00f3n a los dos tiempos del pasado.',
+        text: 'Yaguar\u00e1 lleg\u00f3 a Quibd\u00f3 un viernes por la noche. Las calles estaban llenas de gente, la m\u00fasica sonaba por todas partes y el olor a comida llenaba el aire. De repente, un grupo de comparsas pas\u00f3 frente a ella y todo el mundo empez\u00f3 a bailar. Mientras la gente bailaba, Yaguar\u00e1 sinti\u00f3 que el coraz\u00f3n del Choc\u00f3 lat\u00eda en cada tambor.'
+    },
+
+    // === GAME 2: Narrative — mientras + interrupci\u00f3n ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Observa c\u00f3mo el imperfecto describe el fondo y el indefinido cuenta lo que pas\u00f3.',
+        text: 'Era de noche y hac\u00eda mucho calor. Los ni\u00f1os corr\u00edan entre las comparsas mientras los m\u00fasicos tocaban tambores. De pronto, empez\u00f3 a llover con fuerza. La gente grit\u00f3 de alegr\u00eda y sigui\u00f3 bailando bajo la lluvia. Yaguar\u00e1 se refugi\u00f3 debajo de un techo, pero una mujer la tom\u00f3 de la mano y la llev\u00f3 a bailar.'
+    },
+
+    // === GAME 3: Narrative — two tenses explained ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'En espa\u00f1ol usamos dos tiempos para hablar del pasado. Lee con atenci\u00f3n.',
+        text: 'El imperfecto describe situaciones de fondo: c\u00f3mo era todo, qu\u00e9 hac\u00eda la gente, qu\u00e9 tiempo hac\u00eda. Ejemplo: \u00abLlov\u00eda y la gente bailaba\u00bb. El indefinido (pret\u00e9rito) cuenta acciones que empezaron y terminaron. Ejemplo: \u00abYaguar\u00e1 lleg\u00f3 a Quibd\u00f3 y bail\u00f3 toda la noche\u00bb. Muchas veces, el imperfecto pone la escena y el indefinido cuenta qu\u00e9 pas\u00f3 dentro de esa escena.'
+    },
+
+    // === GAME 4: FIB — choose imperfect or preterite ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la forma correcta: \u00bfimperfecto o indefinido?',
+        questions: [
+            { sentence: 'Mientras la gente ___, empez\u00f3 a llover.', answer: 'bailaba', options: ['bail\u00f3', 'bailaba', 'baila', 'bailar'] },
+            { sentence: 'Ayer yo ___ a Quibd\u00f3 para la fiesta.', answer: 'viaj\u00e9', options: ['viajaba', 'viaj\u00e9', 'viajo', 'viajar'] },
+            { sentence: 'Cuando \u00e9ramos ni\u00f1os, siempre ___ a San Pacho.', answer: '\u00edbamos', options: ['fuimos', '\u00edbamos', 'vamos', 'iremos'] },
+            { sentence: 'El m\u00fasico ___ el tambor y todos aplaudieron.', answer: 'toc\u00f3', options: ['tocaba', 'toc\u00f3', 'toca', 'tocar'] }
+        ]
+    },
+
+    // === GAME 5: FIB — imperfect vs preterite in context ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el tiempo verbal correcto seg\u00fan el contexto.',
+        questions: [
+            { sentence: 'La fiesta ___ incre\u00edble. Hab\u00eda m\u00fasica por todas partes.', answer: 'era', options: ['fue', 'era', 'es', 'ser'] },
+            { sentence: 'De repente, un hombre ___ al escenario y cant\u00f3.', answer: 'subi\u00f3', options: ['sub\u00eda', 'subi\u00f3', 'sube', 'subir'] },
+            { sentence: 'Todos los a\u00f1os mi abuela ___ comida para San Pacho.', answer: 'preparaba', options: ['prepar\u00f3', 'preparaba', 'prepara', 'preparar'] },
+            { sentence: 'Anoche mi hermano ___ por primera vez en la comparsa.', answer: 'bail\u00f3', options: ['bailaba', 'bail\u00f3', 'baila', 'bailar'] }
+        ]
+    },
+
+    // === GAME 6: FIB — mientras clauses ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el tiempo correcto. Recuerda: \u00abmientras\u00bb + imperfecto.',
+        questions: [
+            { sentence: 'Mientras yo ___, mi amiga compr\u00f3 un jugo.', answer: 'descansaba', options: ['descans\u00e9', 'descansaba', 'descanso', 'descansar'] },
+            { sentence: 'Mientras ___ sol, todos caminaban por las calles.', answer: 'hac\u00eda', options: ['hizo', 'hac\u00eda', 'hace', 'hacer'] },
+            { sentence: 'Mientras los tambores ___, un ni\u00f1o se perdi\u00f3 entre la gente.', answer: 'sonaban', options: ['sonaron', 'sonaban', 'suenan', 'sonar'] },
+            { sentence: 'Los vendedores ___ fruta mientras la comparsa pasaba.', answer: 'vend\u00edan', options: ['vendieron', 'vend\u00edan', 'venden', 'vender'] }
+        ]
+    },
+
+    // === GAME 7: FIB — mixed signals ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Presta atenci\u00f3n a las palabras clave: \u00abde repente\u00bb, \u00absiempre\u00bb, \u00abun d\u00eda\u00bb, \u00abtodos los a\u00f1os\u00bb.',
+        questions: [
+            { sentence: 'De repente, la lluvia ___ y todos corrieron.', answer: 'empez\u00f3', options: ['empezaba', 'empez\u00f3', 'empieza', 'empezar'] },
+            { sentence: 'Todos los a\u00f1os la fiesta ___ en agosto.', answer: 'empezaba', options: ['empez\u00f3', 'empezaba', 'empieza', 'empezar'] },
+            { sentence: 'Un d\u00eda, Yaguar\u00e1 ___ algo extraordinario en la plaza.', answer: 'vio', options: ['ve\u00eda', 'vio', 've', 'ver'] },
+            { sentence: 'Cuando era joven, mi madre siempre ___ en las comparsas.', answer: 'participaba', options: ['particip\u00f3', 'participaba', 'participa', 'participar'] }
+        ]
+    },
+
+    // === GAME 8: Conjugation — same verb, two tenses ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en el tiempo indicado entre par\u00e9ntesis.',
+        questions: [
+            { verb: 'bailar', subject: 'ella (imperfecto)', answer: 'bailaba', options: ['bail\u00f3', 'bailaba', 'baila', 'bailar\u00e1'] },
+            { verb: 'bailar', subject: 'ella (indefinido)', answer: 'bail\u00f3', options: ['bail\u00f3', 'bailaba', 'baila', 'bailar\u00e1'] },
+            { verb: 'llegar', subject: 'nosotros (indefinido)', answer: 'llegamos', options: ['lleg\u00e1bamos', 'llegamos', 'llegamos', 'llegaremos'] },
+            { verb: 'llegar', subject: 'nosotros (imperfecto)', answer: 'lleg\u00e1bamos', options: ['lleg\u00e1bamos', 'llegamos', 'llegamos', 'llegaremos'] }
+        ]
+    },
+
+    // === GAME 9: Conjugation — irregular verbs in both tenses ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga estos verbos irregulares en el tiempo indicado.',
+        questions: [
+            { verb: 'ser', subject: 'la fiesta (imperfecto)', answer: 'era', options: ['fue', 'era', 'es', 'ser\u00e1'] },
+            { verb: 'ser', subject: 'la fiesta (indefinido)', answer: 'fue', options: ['fue', 'era', 'es', 'ser\u00e1'] },
+            { verb: 'ir', subject: 'yo (imperfecto)', answer: 'iba', options: ['fui', 'iba', 'voy', 'ir\u00e9'] },
+            { verb: 'ir', subject: 'yo (indefinido)', answer: 'fui', options: ['fui', 'iba', 'voy', 'ir\u00e9'] }
+        ]
+    },
+
+    // === GAME 10: Conjugation — estar and tener ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la conjugaci\u00f3n correcta de estar y tener en el tiempo indicado.',
+        questions: [
+            { verb: 'estar', subject: 'las calles (imperfecto)', answer: 'estaban', options: ['estuvieron', 'estaban', 'est\u00e1n', 'estar\u00e1n'] },
+            { verb: 'estar', subject: 'las calles (indefinido)', answer: 'estuvieron', options: ['estuvieron', 'estaban', 'est\u00e1n', 'estar\u00e1n'] },
+            { verb: 'tener', subject: 'la comparsa (imperfecto)', answer: 'ten\u00eda', options: ['tuvo', 'ten\u00eda', 'tiene', 'tendr\u00e1'] },
+            { verb: 'tener', subject: 'la comparsa (indefinido)', answer: 'tuvo', options: ['tuvo', 'ten\u00eda', 'tiene', 'tendr\u00e1'] }
+        ]
+    },
+
+    // === GAME 11: Conjugation — hacer and decir ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga hacer y decir en el tiempo correcto.',
+        questions: [
+            { verb: 'hacer', subject: '(imperfecto, tercera persona): ___ mucho calor', answer: 'hac\u00eda', options: ['hizo', 'hac\u00eda', 'hace', 'har\u00e1'] },
+            { verb: 'hacer', subject: '(indefinido, tercera persona): ___ mucho calor ayer', answer: 'hizo', options: ['hizo', 'hac\u00eda', 'hace', 'har\u00e1'] },
+            { verb: 'decir', subject: 'mi abuela (imperfecto)', answer: 'dec\u00eda', options: ['dijo', 'dec\u00eda', 'dice', 'dir\u00e1'] },
+            { verb: 'decir', subject: 'mi abuela (indefinido)', answer: 'dijo', options: ['dijo', 'dec\u00eda', 'dice', 'dir\u00e1'] }
+        ]
+    },
+
+    // === GAME 12: Pair — situation ↔ correct tense ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada descripci\u00f3n con el tiempo verbal correcto.',
+        pairs: [
+            ['Acci\u00f3n habitual en el pasado', 'Imperfecto'],
+            ['Acci\u00f3n que empez\u00f3 y termin\u00f3', 'Indefinido'],
+            ['Descripci\u00f3n de una escena', 'Imperfecto'],
+            ['Evento \u00fanico de ayer', 'Indefinido'],
+            ['Lo que hac\u00edas siempre de ni\u00f1o', 'Imperfecto'],
+            ['Lo que pas\u00f3 de repente', 'Indefinido']
+        ]
+    },
+
+    // === GAME 13: Pair — sentence ↔ tense name ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada oraci\u00f3n con el tiempo verbal que usa.',
+        pairs: [
+            ['Llov\u00eda mucho esa noche', 'Imperfecto'],
+            ['Yaguar\u00e1 lleg\u00f3 a Quibd\u00f3', 'Indefinido'],
+            ['Los ni\u00f1os jugaban en la calle', 'Imperfecto'],
+            ['El m\u00fasico toc\u00f3 el tambor', 'Indefinido'],
+            ['Hac\u00eda mucho calor', 'Imperfecto'],
+            ['Mi t\u00eda prepar\u00f3 arroz con coco', 'Indefinido']
+        ]
+    },
+
+    // === GAME 14: Pair — imperfect trigger ↔ preterite trigger ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada palabra clave con el tiempo verbal que indica.',
+        pairs: [
+            ['siempre', 'Imperfecto'],
+            ['de repente', 'Indefinido'],
+            ['todos los d\u00edas', 'Imperfecto'],
+            ['ayer', 'Indefinido'],
+            ['mientras', 'Imperfecto'],
+            ['una vez', 'Indefinido']
+        ]
+    },
+
+    // === GAME 15: Sorting — habitual vs single event ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n: \u00bfes una acci\u00f3n habitual (imperfecto) o un evento \u00fanico (indefinido)?',
+        categories: ['Imperfecto (habitual)', 'Indefinido (evento \u00fanico)'],
+        items: [
+            { text: 'Todos los a\u00f1os \u00edbamos a San Pacho', category: 'Imperfecto (habitual)' },
+            { text: 'Anoche bail\u00e9 hasta las tres de la ma\u00f1ana', category: 'Indefinido (evento \u00fanico)' },
+            { text: 'De ni\u00f1a, mi madre siempre cocinaba arroz con coco', category: 'Imperfecto (habitual)' },
+            { text: 'El a\u00f1o pasado la fiesta termin\u00f3 el 20 de septiembre', category: 'Indefinido (evento \u00fanico)' },
+            { text: 'Antes la gente caminaba por las calles sin prisa', category: 'Imperfecto (habitual)' },
+            { text: 'Un d\u00eda un jaguar apareci\u00f3 en la plaza', category: 'Indefinido (evento \u00fanico)' }
+        ]
+    },
+
+    // === GAME 16: Sorting — background description vs completed action ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfla oraci\u00f3n describe el fondo de la escena o cuenta una acci\u00f3n completa?',
+        categories: ['Fondo (imperfecto)', 'Acci\u00f3n completa (indefinido)'],
+        items: [
+            { text: 'Hac\u00eda calor y no hab\u00eda nubes', category: 'Fondo (imperfecto)' },
+            { text: 'Yaguar\u00e1 compr\u00f3 un jugo de borojó', category: 'Acci\u00f3n completa (indefinido)' },
+            { text: 'La m\u00fasica sonaba fuerte en cada esquina', category: 'Fondo (imperfecto)' },
+            { text: 'Un tambor se rompi\u00f3 durante el desfile', category: 'Acci\u00f3n completa (indefinido)' },
+            { text: 'Las luces de colores brillaban en la noche', category: 'Fondo (imperfecto)' },
+            { text: 'Mi amigo me invit\u00f3 a la comparsa', category: 'Acci\u00f3n completa (indefinido)' }
+        ]
+    },
+
+    // === GAME 17: Builder — reorder mixed-tense sentence ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n que mezcla los dos tiempos del pasado.',
+        words: ['Mientras', 'llov\u00eda', 'la', 'gente', 'sigui\u00f3', 'bailando', 'en', 'la', 'calle'],
+        answer: 'Mientras llov\u00eda la gente sigui\u00f3 bailando en la calle'
+    },
+
+    // === GAME 18: Builder — cuando + imperfect + preterite ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras. Recuerda: \u00abcuando\u00bb + imperfecto, despu\u00e9s indefinido.',
+        words: ['Cuando', 'era', 'ni\u00f1a', 'Yaguar\u00e1', 'visit\u00f3', 'Quibd\u00f3', 'por', 'primera', 'vez'],
+        answer: 'Cuando era ni\u00f1a Yaguar\u00e1 visit\u00f3 Quibd\u00f3 por primera vez'
+    },
+
+    // === GAME 19: Listening — identify tense used ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y decide: \u00bfqu\u00e9 tiempo verbal se usa?',
+        audio: 'Cuando yo era peque\u00f1a, siempre iba a la fiesta de San Pacho con mi familia.',
+        question: '\u00bfQu\u00e9 tiempo verbal predomina en esta oraci\u00f3n?',
+        answer: 'Imperfecto, porque describe una acci\u00f3n habitual del pasado',
+        options: ['Indefinido, porque cuenta un evento \u00fanico', 'Imperfecto, porque describe una acci\u00f3n habitual del pasado', 'Presente, porque habla de ahora', 'Futuro, porque habla de planes']
+    },
+
+    // === GAME 20: Listening — identify interrupting action ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y responde: \u00bfqu\u00e9 acci\u00f3n interrumpi\u00f3 la escena?',
+        audio: 'Los m\u00fasicos tocaban los tambores y la gente bailaba cuando de repente empez\u00f3 a llover.',
+        question: '\u00bfQu\u00e9 acci\u00f3n interrumpi\u00f3 la escena?',
+        answer: 'Empez\u00f3 a llover',
+        options: ['Los m\u00fasicos tocaban', 'La gente bailaba', 'Empez\u00f3 a llover', 'Hac\u00eda calor']
+    },
+
+    // === GAME 21: Translation — contrast sentence EN → ES ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce del ingl\u00e9s al espa\u00f1ol usando el banco de palabras.',
+        source: 'While it was raining, the people kept dancing.',
+        words: ['Mientras', 'llov\u00eda', 'la', 'gente', 'sigui\u00f3', 'bailando'],
+        answer: 'Mientras llov\u00eda la gente sigui\u00f3 bailando'
+    },
+
+    // === GAME 22: Translation — two contrasting sentences ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol. Usa imperfecto para el fondo e indefinido para la acci\u00f3n.',
+        source: 'It was hot and the music was playing when Yaguar\u00e1 arrived.',
+        words: ['Hac\u00eda', 'calor', 'y', 'la', 'm\u00fasica', 'sonaba', 'cuando', 'Yaguar\u00e1', 'lleg\u00f3'],
+        answer: 'Hac\u00eda calor y la m\u00fasica sonaba cuando Yaguar\u00e1 lleg\u00f3'
+    },
+
+    // === GAME 23: Conversation — telling a story mixing tenses ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Cuenta tu experiencia en San Pacho mezclando los dos tiempos del pasado.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Amiga', text: '\u00bfFuiste a la fiesta de San Pacho el a\u00f1o pasado?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, fui con mi familia. La fiesta era incre\u00edble.',
+                    'S\u00ed, voy ma\u00f1ana a la fiesta.',
+                    'No, siempre voy al cine los viernes.'
+                ],
+                answer: 'S\u00ed, fui con mi familia. La fiesta era incre\u00edble.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Amiga', text: '\u00bfQu\u00e9 pas\u00f3 cuando llegaste?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Cuando llegu\u00e9, la gente bailaba en las calles y los tambores sonaban.',
+                    'Cuando llego, la gente baila mucho.',
+                    'Ma\u00f1ana voy a llegar temprano a la fiesta.'
+                ],
+                answer: 'Cuando llegu\u00e9, la gente bailaba en las calles y los tambores sonaban.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Amiga', text: '\u00bfY qu\u00e9 hiciste despu\u00e9s?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Mientras bailaba con la comparsa, empez\u00f3 a llover. \u00a1Pero nadie par\u00f3!',
+                    'Todos los d\u00edas bailo en mi casa.',
+                    'Voy a bailar la semana pr\u00f3xima.'
+                ],
+                answer: 'Mientras bailaba con la comparsa, empez\u00f3 a llover. \u00a1Pero nadie par\u00f3!'
+            }
+        ]
+    },
+
+    // === GAME 24: Conversation — grandmother's memories ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con la abuela sobre sus recuerdos de San Pacho. Usa los dos tiempos del pasado.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Abuela', text: 'Cuando yo era joven, San Pacho era diferente. \u00bfSabes c\u00f3mo era?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'No, cu\u00e9nteme. \u00bfC\u00f3mo era la fiesta antes?',
+                    'S\u00ed, yo fui ayer a San Pacho.',
+                    'No me gusta bailar.'
+                ],
+                answer: 'No, cu\u00e9nteme. \u00bfC\u00f3mo era la fiesta antes?'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Abuela', text: 'No hab\u00eda tanta gente, pero la m\u00fasica era m\u00e1s aut\u00e9ntica. Un a\u00f1o pas\u00f3 algo especial. \u00bfQuieres saber qu\u00e9 pas\u00f3?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    '\u00a1S\u00ed! \u00bfQu\u00e9 pas\u00f3 ese a\u00f1o?',
+                    'No, prefiero dormir.',
+                    'Ayer como arroz con coco.'
+                ],
+                answer: '\u00a1S\u00ed! \u00bfQu\u00e9 pas\u00f3 ese a\u00f1o?'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Abuela', text: 'Mientras bail\u00e1bamos en la calle, un jaguar apareci\u00f3 entre la gente. Nadie tuvo miedo. El jaguar bail\u00f3 con nosotros. \u00bfQu\u00e9 piensas de eso?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    '\u00a1Qu\u00e9 historia tan bonita! Mientras ustedes bailaban, el jaguar tambi\u00e9n sinti\u00f3 la magia de San Pacho.',
+                    'Los jaguares siempre bailan en las fiestas.',
+                    'Ayer veo un gato en mi casa.'
+                ],
+                answer: '\u00a1Qu\u00e9 historia tan bonita! Mientras ustedes bailaban, el jaguar tambi\u00e9n sinti\u00f3 la magia de San Pacho.'
+            }
+        ]
+    },
+
+    // === GAME 25: Dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha la oraci\u00f3n y escr\u00edbela exactamente. Presta atenci\u00f3n a los dos tiempos del pasado.',
+        audio: 'Mientras la gente bailaba en las calles de Quibd\u00f3, Yaguar\u00e1 lleg\u00f3 y sinti\u00f3 la magia de San Pacho.',
+        answer: 'Mientras la gente bailaba en las calles de Quibd\u00f3, Yaguar\u00e1 lleg\u00f3 y sinti\u00f3 la magia de San Pacho.'
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La escuela junto al río',
+            description: 'Una escuela pequeña con el techo medio caído. En la pizarra todavía hay una lección escrita. Los pupitres están vacíos pero los cuadernos están abiertos.',
+            ambience: 'school'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra están escritas en los cuadernos abiertos.',
+                clue: 'Es lo que sientes cuando alguien te dice "debes" o "tienes que". Es una palabra de diez letras.',
+                answer: 'obligacion',
+                scrambled: 'gnoilicoba',
+                onSolve: 'Los cuadernos se cierran suavemente.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'La pizarra muestra un diálogo.',
+                passage: '«Candelaria: "Deberías hablar con el alcalde." Doña Asunción: "Tienes que escuchar al río primero." Yaguará piensa: "No sé qué debo hacer."»',
+                clue: '¿Qué tres formas de expresar obligación/consejo aparecen?',
+                answer: '"Deberías" (consejo suave), "Tienes que" (obligación fuerte), "Debo" (obligación personal)',
+                options: [
+                    '"Deberías" (consejo suave), "Tienes que" (obligación fuerte), "Debo" (obligación personal)',
+                    'Las tres expresan lo mismo',
+                    'Solo "tienes que" es obligación',
+                    '"Deberías" es futuro, no consejo'
+                ],
+                onSolve: 'La pizarra se ilumina.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una nota en un pupitre dice:',
+                riddle: '«Don Próspero dice: "Hay que construir la carretera." ¿Es una obligación o una opinión disfrazada?»',
+                clue: '¿Qué hace "hay que" en esta frase?',
+                answer: 'Presenta una opinión personal como si fuera una necesidad universal e impersonal',
+                options: [
+                    'Presenta una opinión personal como si fuera una necesidad universal e impersonal',
+                    'Expresa una obligación real',
+                    'Es una pregunta retórica',
+                    'Es un consejo amable'
+                ],
+                onSolve: 'La nota se despliega. Debajo hay una llave. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de una pizarra con flechas que van del "deber" al "querer".',
+            questClue: 'Entre lo que debemos hacer y lo que queremos hacer, hay un espacio. Las palabras viven ahí.',
+            item: 'historia-pizarra'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '22',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest22Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

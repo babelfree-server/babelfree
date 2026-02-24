@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 18: Rumbo al Eje Cafetero - Maestría A2</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_advanced/dest18_mastery/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 18: Rumbo al Eje Cafetero - Maestría A2",
+          "url": "https://babelfree.com/a2_advanced/dest18_mastery/games",
+          "educationalLevel": "A2 Advanced - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["A2 mastery consolidation", "Integrated skills practice", "Spanish proficiency"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Advanced", "item": "https://babelfree.com/a2-coffee" },
+            { "@type": "ListItem", "position": 4, "name": "Rumbo al Eje Cafetero - Maestría A2" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/a2-coffee" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 18: Rumbo al Eje Cafetero</div>
+            <div class="yg-header-subtitle">Maestría A2</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+            // === GAME 1: Pair Matching - Colombian culture ===
+            {
+                type: "pair_matching",
+                title: "Cultura Colombiana",
+                instruction: "Conecta cada elemento cultural con su descripci\u00f3n correcta.",
+                pairs: [
+                    { left: "Caf\u00e9", right: "La bebida m\u00e1s famosa" },
+                    { left: "Cumbia", right: "M\u00fasica tradicional" },
+                    { left: "Arepa", right: "Comida t\u00edpica" },
+                    { left: "Eje Cafetero", right: "Regi\u00f3n del caf\u00e9" },
+                    { left: "Salsa", right: "Baile popular" },
+                    { left: "Artesan\u00eda", right: "Productos hechos a mano" }
+                ]
+            },
+            // === GAME 2: Fill-in-the-Blank - past + opinion ===
+            {
+                type: "fill_blank_multi",
+                title: "Pasado + Opini\u00f3n",
+                instruction: "Completa las oraciones con las palabras correctas (pret\u00e9rito + opini\u00f3n).",
+                sentence: "Ayer yo _1_ una finca de caf\u00e9 y _2_ que es incre\u00edble.",
+                blanks: {
+                    "_1_": { answer: "visit\u00e9", hint: "visitar - yo, pret\u00e9rito" },
+                    "_2_": { answer: "creo", hint: "creer - yo, presente (opini\u00f3n)" }
+                },
+                explanation: "'Visit\u00e9' es pret\u00e9rito de visitar (yo). 'Creo' expresa opini\u00f3n en presente."
+            },
+            // === GAME 3: Verb Conjugation - mixed tenses ===
+            {
+                type: "verb_conjugation",
+                title: "Conjugaci\u00f3n Mixta",
+                instruction: "Conjuga el verbo en el tiempo correcto.",
+                prompt: "Nosotros siempre ___ (visitar) el Eje Cafetero en enero.",
+                subject: "Nosotros",
+                verb: "visitar",
+                tense: "presente",
+                answer: "visitamos",
+                explanation: "Con 'siempre' (adverbio de frecuencia) usamos el presente: nosotros visitamos."
+            },
+            // === GAME 4: Listening - Eje Cafetero ===
+            {
+                type: "listening",
+                title: "Escucha sobre el Eje Cafetero",
+                instruction: "Escucha la descripci\u00f3n y responde: \u00bfPor qu\u00e9 es famoso el Eje Cafetero?",
+                audioText: "El Eje Cafetero es una regi\u00f3n en Colombia. Es famosa por la producci\u00f3n de caf\u00e9. Tiene monta\u00f1as bonitas, valles verdes y muchos p\u00e1jaros. La gente es muy amable y la comida es deliciosa.",
+                question: "\u00bfPor qu\u00e9 es famoso el Eje Cafetero?",
+                options: [
+                    "Por la producci\u00f3n de caf\u00e9",
+                    "Por las playas bonitas",
+                    "Por los edificios modernos",
+                    "Por la nieve en las monta\u00f1as"
+                ],
+                correctIndex: 0,
+                explanation: "El Eje Cafetero es famoso por la producci\u00f3n de caf\u00e9."
+            },
+            // === GAME 5: Category Sorting ===
+            {
+                type: "category_sort",
+                title: "Clasifica el Vocabulario",
+                instruction: "Clasifica cada palabra en la categor\u00eda correcta.",
+                categories: ["Naturaleza", "Cultura", "Comida"],
+                items: [
+                    { word: "monta\u00f1a", category: "Naturaleza" },
+                    { word: "cumbia", category: "Cultura" },
+                    { word: "arepa", category: "Comida" },
+                    { word: "valle", category: "Naturaleza" },
+                    { word: "fiesta", category: "Cultura" },
+                    { word: "caf\u00e9", category: "Comida" },
+                    { word: "r\u00edo", category: "Naturaleza" },
+                    { word: "artesan\u00eda", category: "Cultura" },
+                    { word: "empanada", category: "Comida" }
+                ]
+            },
+            // === GAME 6: Fill-in-the-Blank - comparison + opinion ===
+            {
+                type: "fill_blank_multi",
+                title: "Comparativos + Opini\u00f3n",
+                instruction: "Completa con las palabras correctas (comparativo + opini\u00f3n).",
+                sentence: "El caf\u00e9 colombiano es _1_ famoso _2_ el caf\u00e9 brasile\u00f1o. \u00bfQu\u00e9 _3_?",
+                blanks: {
+                    "_1_": { answer: "m\u00e1s", hint: "comparativo - m\u00e1s/menos" },
+                    "_2_": { answer: "que", hint: "comparativo - que" },
+                    "_3_": { answer: "piensas", hint: "pensar - t\u00fa (opini\u00f3n)" }
+                },
+                explanation: "'M\u00e1s...que' forma el comparativo. '\u00bfQu\u00e9 piensas?' pide una opini\u00f3n."
+            },
+            // === GAME 7: Sentence Builder - future ===
+            {
+                type: "sentence_builder",
+                title: "Construye el Futuro",
+                instruction: "Ordena las palabras para formar una oraci\u00f3n en futuro.",
+                words: ["Ma\u00f1ana", "vamos", "a", "visitar", "una", "finca", "de", "caf\u00e9"],
+                answer: "Ma\u00f1ana vamos a visitar una finca de caf\u00e9",
+                explanation: "Usamos 'ir + a + infinitivo' para el futuro: vamos a visitar."
+            },
+            // === GAME 8: Verb Conjugation - past vs future ===
+            {
+                type: "fill_blank_multi",
+                title: "Pasado vs. Futuro",
+                instruction: "Completa con el tiempo verbal correcto.",
+                sentence: "Ayer _1_ (llover) pero ma\u00f1ana _2_ (ir) a hacer sol.",
+                blanks: {
+                    "_1_": { answer: "llovi\u00f3", hint: "llover - pret\u00e9rito (3a persona)" },
+                    "_2_": { answer: "va", hint: "ir - 3a persona singular (futuro)" }
+                },
+                explanation: "'Llovi\u00f3' es pret\u00e9rito. 'Va a hacer sol' usa ir+a+infinitivo para el futuro."
+            },
+            // === GAME 9: Translation - word bank ===
+            {
+                type: "translation",
+                title: "Traduce al Espa\u00f1ol",
+                instruction: "Traduce usando el banco de palabras.",
+                source: "Yesterday we visited a coffee farm and it was wonderful.",
+                words: ["Ayer", "visitamos", "una", "finca", "de", "caf\u00e9", "y", "fue", "maravilloso"],
+                answer: "Ayer visitamos una finca de caf\u00e9 y fue maravilloso",
+                explanation: "'Visitamos' (pret\u00e9rito nosotros) y 'fue' (pret\u00e9rito de ser)."
+            },
+            // === GAME 10: Conversation - opinion ===
+            {
+                type: "conversation",
+                title: "Opini\u00f3n sobre el Eje Cafetero",
+                instruction: "Responde las preguntas del gu\u00eda tur\u00edstico.",
+                turns: [
+                    {
+                        npc: "\u00a1Bienvenido al Eje Cafetero! \u00bfQu\u00e9 piensas de esta regi\u00f3n?",
+                        options: [
+                            "En mi opini\u00f3n, es la regi\u00f3n m\u00e1s bonita de Colombia.",
+                            "Yo pienso que llover ma\u00f1ana.",
+                            "Creo que el caf\u00e9 est\u00e1 en la playa."
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        npc: "\u00a1Qu\u00e9 bien! \u00bfQu\u00e9 te gust\u00f3 m\u00e1s de tu visita ayer?",
+                        options: [
+                            "Ayer voy a la finca de caf\u00e9.",
+                            "Me gust\u00f3 mucho la cosecha de caf\u00e9. Fue una experiencia incre\u00edble.",
+                            "Ayer llueve mucho en la monta\u00f1a."
+                        ],
+                        correctIndex: 1
+                    },
+                    {
+                        npc: "\u00bfVas a recomendar el Eje Cafetero a tus amigos?",
+                        options: [
+                            "S\u00ed, voy a recomendar esta regi\u00f3n. Creo que es perfecta para visitar.",
+                            "S\u00ed, ayer recomend\u00e9 el parque.",
+                            "No, prefiero la monta\u00f1a es bonita."
+                        ],
+                        correctIndex: 0
+                    }
+                ]
+            },
+            // === GAME 11: Sentence Builder - opinion + superlative ===
+            {
+                type: "sentence_builder",
+                title: "Opini\u00f3n con Superlativo",
+                instruction: "Ordena las palabras para formar una oraci\u00f3n con opini\u00f3n y superlativo.",
+                words: ["En", "mi", "opini\u00f3n", "el", "Eje Cafetero", "es", "la", "regi\u00f3n", "m\u00e1s", "bonita", "de", "Colombia"],
+                answer: "En mi opini\u00f3n el Eje Cafetero es la regi\u00f3n m\u00e1s bonita de Colombia",
+                explanation: "'En mi opini\u00f3n' introduce la opini\u00f3n. 'La m\u00e1s bonita de' es superlativo."
+            },
+            // === GAME 12: Translation - future + shopping ===
+            {
+                type: "translation",
+                title: "Futuro + Compras",
+                instruction: "Traduce usando el banco de palabras.",
+                source: "We are going to buy coffee at the market. How much does it cost?",
+                words: ["Vamos", "a", "comprar", "caf\u00e9", "en", "el", "mercado", "\u00bfCu\u00e1nto", "cuesta"],
+                answer: "Vamos a comprar caf\u00e9 en el mercado \u00bfCu\u00e1nto cuesta",
+                explanation: "'Vamos a comprar' es futuro (ir+a+inf). '\u00bfCu\u00e1nto cuesta?' es vocabulario de compras."
+            },
+            // === GAME 13: Conversation - multi-turn arrival ===
+            {
+                type: "conversation",
+                title: "Llegando al Eje Cafetero",
+                instruction: "Participa en la conversaci\u00f3n: pide direcciones, da opiniones y haz planes.",
+                turns: [
+                    {
+                        npc: "\u00a1Hola! \u00bfAdonde vas?",
+                        options: [
+                            "Voy a ir a una finca de caf\u00e9. \u00bfPuede decirme c\u00f3mo llegar, por favor?",
+                            "Ayer fui al mercado y compr\u00e9 granos.",
+                            "Hace mucho calor hoy."
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        npc: "Claro, sigue recto y gira a la derecha. La finca est\u00e1 a cinco minutos. \u00bfVisitaste el valle ayer?",
+                        options: [
+                            "S\u00ed, visit\u00e9 el valle ayer. Fue m\u00e1s bonito que la ciudad.",
+                            "S\u00ed, voy a visitar el valle ayer.",
+                            "No, el valle est\u00e1 a la izquierda."
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        npc: "\u00a1Qu\u00e9 bien! \u00bfQu\u00e9 vas a hacer despu\u00e9s de la finca?",
+                        options: [
+                            "Ayer compr\u00e9 artesan\u00edas en el mercado.",
+                            "Voy a comprar artesan\u00edas en el mercado. \u00bfCu\u00e1nto cuestan normalmente?",
+                            "Pienso que las monta\u00f1as son bonitas."
+                        ],
+                        correctIndex: 1
+                    },
+                    {
+                        npc: "Depende. Las artesan\u00edas cuestan entre diez mil y cincuenta mil pesos. \u00bfQu\u00e9 opinas del Eje Cafetero?",
+                        options: [
+                            "Creo que es la regi\u00f3n m\u00e1s interesante de Colombia. \u00a1Me encanta!",
+                            "Ma\u00f1ana va a llover mucho aqu\u00ed.",
+                            "Yo compr\u00e9 un caf\u00e9 ayer en la tienda."
+                        ],
+                        correctIndex: 0
+                    }
+                ]
+            },
+            // === GAME 14: Dictation ===
+            {
+                type: "dictation",
+                title: "Dictado: Gram\u00e1tica Mixta",
+                instruction: "Escucha y escribe la oraci\u00f3n exacta.",
+                audioText: "Ayer visit\u00e9 una finca y ma\u00f1ana voy a comprar caf\u00e9 en el mercado.",
+                answer: "Ayer visit\u00e9 una finca y ma\u00f1ana voy a comprar caf\u00e9 en el mercado.",
+                explanation: "Esta oraci\u00f3n combina pret\u00e9rito (visit\u00e9) y futuro (voy a comprar)."
+            },
+            // === GAME 15: Story Comprehension ===
+            {
+                type: "story",
+                title: "La Aventura de Yaguar\u00e1 en el Eje Cafetero",
+                story: "Yaguar\u00e1, el jaguar, viaj\u00f3 al Eje Cafetero la semana pasada. Primero visit\u00f3 una finca de caf\u00e9 donde un campesino amable le explic\u00f3 la cosecha. En su opini\u00f3n, el caf\u00e9 colombiano es el m\u00e1s delicioso del mundo. Ayer llovi\u00f3 mucho, pero hoy hace sol. Ma\u00f1ana Yaguar\u00e1 va a caminar por las monta\u00f1as y va a comprar artesan\u00edas en el mercado. Siempre le gusta explorar nuevos lugares. \u00a1El Eje Cafetero es m\u00e1s bonito que cualquier otra regi\u00f3n!",
+                questions: [
+                    {
+                        question: "\u00bfQu\u00e9 visit\u00f3 Yaguar\u00e1 primero?",
+                        options: ["Una monta\u00f1a", "Una finca de caf\u00e9", "Un mercado", "Un r\u00edo"],
+                        correctIndex: 1
+                    },
+                    {
+                        question: "\u00bfQu\u00e9 opina Yaguar\u00e1 del caf\u00e9 colombiano?",
+                        options: ["Es malo", "Es caro", "Es el m\u00e1s delicioso del mundo", "Es igual que otros"],
+                        correctIndex: 2
+                    },
+                    {
+                        question: "\u00bfQu\u00e9 va a hacer Yaguar\u00e1 ma\u00f1ana?",
+                        options: ["Va a visitar otra finca", "Va a caminar y comprar artesan\u00edas", "Va a dormir todo el d\u00eda", "Va a volver a casa"],
+                        correctIndex: 1
+                    }
+                ]
+            },
+            // === GAME 16: Pair Matching - past <-> future ===
+            {
+                type: "pair_matching",
+                title: "Pasado y Futuro",
+                instruction: "Conecta cada experiencia pasada con el plan futuro relacionado.",
+                pairs: [
+                    { left: "Ayer visit\u00e9 una finca", right: "Ma\u00f1ana voy a visitar el parque" },
+                    { left: "Compr\u00e9 caf\u00e9 en el mercado", right: "Voy a comprar artesan\u00edas" },
+                    { left: "Bail\u00e9 salsa en la fiesta", right: "Vamos a bailar cumbia" },
+                    { left: "Camin\u00e9 por el valle", right: "Voy a caminar por la monta\u00f1a" },
+                    { left: "Prob\u00e9 la arepa colombiana", right: "Vamos a probar el caf\u00e9 tostado" },
+                    { left: "Vi muchos p\u00e1jaros ayer", right: "Ma\u00f1ana voy a ver la selva" }
+                ]
+            },
+            // === GAME 17: Listening - story + 3 questions ===
+            {
+                type: "listening_multi",
+                title: "Un D\u00eda en el Eje Cafetero",
+                instruction: "Escucha la historia y responde las tres preguntas.",
+                audioText: "Esta ma\u00f1ana Juan se levant\u00f3 temprano. Visit\u00f3 una finca de caf\u00e9 y compr\u00f3 granos tostados. En su opini\u00f3n, el caf\u00e9 de aqu\u00ed es mejor que el caf\u00e9 de su ciudad. Por la tarde va a caminar por el valle porque hace buen tiempo. Siempre le gusta estar en la naturaleza.",
+                questions: [
+                    {
+                        question: "\u00bfQu\u00e9 hizo Juan esta ma\u00f1ana?",
+                        options: ["Durmi\u00f3 mucho", "Visit\u00f3 una finca y compr\u00f3 granos", "Camin\u00f3 por el valle", "Bail\u00f3 cumbia"],
+                        correctIndex: 1
+                    },
+                    {
+                        question: "\u00bfQu\u00e9 piensa Juan del caf\u00e9 de aqu\u00ed?",
+                        options: ["Es peor que el de su ciudad", "Es igual", "Es mejor que el de su ciudad", "No le gusta"],
+                        correctIndex: 2
+                    },
+                    {
+                        question: "\u00bfQu\u00e9 va a hacer Juan por la tarde?",
+                        options: ["Va a comprar m\u00e1s caf\u00e9", "Va a dormir", "Va a caminar por el valle", "Va a volver a casa"],
+                        correctIndex: 2
+                    }
+                ]
+            },
+            // === GAME 18: Category Sorting - by tense/grammar ===
+            {
+                type: "category_sort",
+                title: "Clasifica por Gram\u00e1tica",
+                instruction: "Clasifica cada oraci\u00f3n seg\u00fan su estructura gramatical.",
+                categories: ["Pasado", "Presente", "Futuro", "Opini\u00f3n"],
+                items: [
+                    { word: "Visit\u00e9 la finca ayer", category: "Pasado" },
+                    { word: "Siempre tomo caf\u00e9", category: "Presente" },
+                    { word: "Voy a comprar granos", category: "Futuro" },
+                    { word: "Creo que es bonito", category: "Opini\u00f3n" },
+                    { word: "Bail\u00e9 salsa anoche", category: "Pasado" },
+                    { word: "Hoy hace buen tiempo", category: "Presente" },
+                    { word: "Vamos a caminar ma\u00f1ana", category: "Futuro" },
+                    { word: "Me parece incre\u00edble", category: "Opini\u00f3n" }
+                ]
+            },
+            // === GAME 19: Dictation - complex ===
+            {
+                type: "dictation",
+                title: "Dictado Complejo",
+                instruction: "Escucha y escribe la oraci\u00f3n. Presta atenci\u00f3n a la gram\u00e1tica mixta.",
+                audioText: "En mi opini\u00f3n, el Eje Cafetero es m\u00e1s bonito que Bogot\u00e1 porque tiene monta\u00f1as verdes.",
+                answer: "En mi opini\u00f3n, el Eje Cafetero es m\u00e1s bonito que Bogot\u00e1 porque tiene monta\u00f1as verdes.",
+                explanation: "Combina opini\u00f3n (en mi opini\u00f3n), comparativo (m\u00e1s...que) y descripci\u00f3n."
+            },
+            // === GAME 20: Story Comprehension - full integration ===
+            {
+                type: "story",
+                title: "Un Fin de Semana en el Eje Cafetero",
+                story: "El s\u00e1bado pasado, mi familia y yo viajamos al Eje Cafetero. Llegamos por la ma\u00f1ana y visitamos una finca donde un campesino nos ense\u00f1\u00f3 c\u00f3mo se cultiva el caf\u00e9. Normalmente nosotros tomamos caf\u00e9 todos los d\u00edas, pero este caf\u00e9 fue m\u00e1s rico que el caf\u00e9 de casa. Hoy hace mucho sol y el paisaje es el m\u00e1s hermoso de Colombia. Mi madre piensa que las monta\u00f1as son incre\u00edbles. Ma\u00f1ana vamos a comprar granos de caf\u00e9 tostado en el mercado y artesan\u00edas para nuestros amigos. \u00bfCu\u00e1nto van a costar? \u00a1Esperamos que no mucho! Para llegar al mercado tenemos que ir recto y girar a la izquierda.",
+                questions: [
+                    {
+                        question: "\u00bfCu\u00e1ndo viaj\u00f3 la familia al Eje Cafetero?",
+                        options: ["Hoy", "El s\u00e1bado pasado", "Ma\u00f1ana", "La semana pr\u00f3xima"],
+                        correctIndex: 1
+                    },
+                    {
+                        question: "\u00bfC\u00f3mo es el caf\u00e9 del Eje Cafetero comparado con el de casa?",
+                        options: ["Es igual", "Es peor", "Es m\u00e1s rico", "Es m\u00e1s barato"],
+                        correctIndex: 2
+                    },
+                    {
+                        question: "\u00bfQu\u00e9 opina la madre sobre las monta\u00f1as?",
+                        options: ["Son aburridas", "Son peligrosas", "Son incre\u00edbles", "Son peque\u00f1as"],
+                        correctIndex: 2
+                    },
+                    {
+                        question: "\u00bfC\u00f3mo se llega al mercado?",
+                        options: ["Girar a la derecha", "Ir recto y girar a la izquierda", "Est\u00e1 al lado de la finca", "Tomar el autob\u00fas"],
+                        correctIndex: 1
+                    }
+                ]
+            },
+            // === GAME 21: Fill-in-the-Blank - complex paragraph ===
+            {
+                type: "fill_blank_multi",
+                title: "P\u00e1rrafo de Maestr\u00eda",
+                instruction: "Completa el p\u00e1rrafo con las palabras correctas. Usa toda la gram\u00e1tica A2.",
+                sentence: "La semana pasada yo _1_ al Eje Cafetero. El caf\u00e9 colombiano es _2_ delicioso _3_ el caf\u00e9 de mi pa\u00eds. Ma\u00f1ana _4_ a visitar una finca porque _5_ que va a ser incre\u00edble.",
+                blanks: {
+                    "_1_": { answer: "viaj\u00e9", hint: "viajar - yo, pret\u00e9rito" },
+                    "_2_": { answer: "m\u00e1s", hint: "comparativo" },
+                    "_3_": { answer: "que", hint: "comparativo - que" },
+                    "_4_": { answer: "voy", hint: "ir - yo (futuro)" },
+                    "_5_": { answer: "creo", hint: "creer - yo (opini\u00f3n)" }
+                },
+                explanation: "Integra pret\u00e9rito (viaj\u00e9), comparativo (m\u00e1s...que), futuro (voy a) y opini\u00f3n (creo)."
+            },
+            // === GAME 22: Sentence Builder - 10 words ===
+            {
+                type: "sentence_builder",
+                title: "Oraci\u00f3n Compleja",
+                instruction: "Ordena las palabras para formar una oraci\u00f3n con gram\u00e1tica mixta.",
+                words: ["Creo", "que", "el", "Eje Cafetero", "va", "a", "ser", "la", "mejor", "experiencia"],
+                answer: "Creo que el Eje Cafetero va a ser la mejor experiencia",
+                explanation: "'Creo que' introduce opini\u00f3n. 'Va a ser' es futuro. 'La mejor' es superlativo."
+            },
+            // === GAME 23: Verb Conjugation - rapid fire all tenses ===
+            {
+                type: "verb_conjugation_multi",
+                title: "Conjugaci\u00f3n R\u00e1pida: Todos los Tiempos",
+                instruction: "Conjuga los verbos en el tiempo indicado. \u00a1R\u00e1pido!",
+                items: [
+                    { prompt: "Yo ___ (visitar) - pret\u00e9rito", answer: "visit\u00e9", hint: "visitar, yo, pasado" },
+                    { prompt: "T\u00fa ___ (ir) a bailar - futuro", answer: "vas", hint: "ir, t\u00fa, presente para futuro" },
+                    { prompt: "Ella siempre ___ (tomar) caf\u00e9 - presente", answer: "toma", hint: "tomar, ella, presente" },
+                    { prompt: "Nosotros ___ (comprar) artesan\u00edas - pret\u00e9rito", answer: "compramos", hint: "comprar, nosotros, pasado" },
+                    { prompt: "Ellos ___ (pensar) que es bonito - presente", answer: "piensan", hint: "pensar, ellos, presente" }
+                ]
+            },
+            // === GAME 24: Translation - full paragraph ===
+            {
+                type: "translation",
+                title: "Traducci\u00f3n: Aventura Colombiana",
+                instruction: "Traduce el texto completo usando el banco de palabras.",
+                source: "Last week I traveled to the Coffee Region. Tomorrow I am going to buy coffee because I think it is the best.",
+                words: ["La", "semana", "pasada", "viaj\u00e9", "al", "Eje Cafetero", "Ma\u00f1ana", "voy", "a", "comprar", "caf\u00e9", "porque", "creo", "que", "es", "el", "mejor"],
+                answer: "La semana pasada viaj\u00e9 al Eje Cafetero Ma\u00f1ana voy a comprar caf\u00e9 porque creo que es el mejor",
+                explanation: "Combina pret\u00e9rito (viaj\u00e9), futuro (voy a comprar), opini\u00f3n (creo que) y superlativo (el mejor)."
+            },
+            // === GAME 25: Conversation - complete role-play ===
+            {
+                type: "conversation",
+                title: "Experiencia Completa en el Eje Cafetero",
+                instruction: "Conversaci\u00f3n completa: planificar, viajar, explorar, comprar y opinar sobre el Eje Cafetero.",
+                turns: [
+                    {
+                        npc: "\u00a1Hola! \u00bfQu\u00e9 planes tienes para este fin de semana?",
+                        options: [
+                            "Voy a viajar al Eje Cafetero. Quiero visitar una finca de caf\u00e9.",
+                            "Ayer viaj\u00e9 a la playa y nad\u00e9 mucho.",
+                            "Siempre como arepas los lunes."
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        npc: "\u00a1Excelente! \u00bfSabes c\u00f3mo llegar? La finca est\u00e1 en las monta\u00f1as.",
+                        options: [
+                            "S\u00ed, tengo que ir recto por esta carretera y luego girar a la derecha. \u00bfEst\u00e1 lejos?",
+                            "No, ayer no fui a la monta\u00f1a.",
+                            "Las monta\u00f1as son m\u00e1s bonitas que el valle."
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        npc: "Est\u00e1 a treinta minutos. Hay un mercado de artesan\u00edas al lado. \u00bfTe gustar\u00eda comprar algo?",
+                        options: [
+                            "Ayer compr\u00e9 muchas cosas en la tienda.",
+                            "S\u00ed, voy a comprar caf\u00e9 tostado y artesan\u00edas. \u00bfCu\u00e1nto cuestan los granos de caf\u00e9?",
+                            "No, nunca compro nada en los mercados."
+                        ],
+                        correctIndex: 1
+                    },
+                    {
+                        npc: "Los granos cuestan veinte mil pesos el kilo. Es m\u00e1s barato que en la ciudad. \u00bfYa visitaste el Eje Cafetero antes?",
+                        options: [
+                            "S\u00ed, visit\u00e9 el Eje Cafetero el a\u00f1o pasado. Fue la experiencia m\u00e1s bonita de mi vida.",
+                            "S\u00ed, voy a visitar el Eje Cafetero ma\u00f1ana.",
+                            "No, el caf\u00e9 cuesta mucho dinero."
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        npc: "\u00a1Qu\u00e9 maravilla! \u00bfQu\u00e9 opinas del Eje Cafetero en general?",
+                        options: [
+                            "Hace mucho calor aqu\u00ed y llueve a veces.",
+                            "En mi opini\u00f3n, es la regi\u00f3n m\u00e1s hermosa de Colombia. El caf\u00e9 es mejor que en cualquier otro lugar, la naturaleza es incre\u00edble y la gente es muy amable. \u00a1Siempre voy a recomendar este destino!",
+                            "Creo que las monta\u00f1as son grandes."
+                        ],
+                        correctIndex: 1
+                    }
+                ]
+            },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de la fiesta',
+            description: 'Una cueva decorada con colores. Hay restos de una celebraci\u00f3n antigua: flores secas, m\u00e1scaras, instrumentos musicales de madera.',
+            ambience: 'drums'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una m\u00e1scara habla:',
+                riddle: '\u00abEn Colombia hay una fiesta donde la gente baila en las calles con disfraces de colores. Dura cuatro d\u00edas. \u00bfQu\u00e9 fiesta es?\u00bb',
+                clue: 'Es la fiesta m\u00e1s famosa de Barranquilla.',
+                answer: 'El Carnaval de Barranquilla',
+                options: ['El Carnaval de Barranquilla', 'La Navidad', 'El D\u00eda de los Muertos', 'La Semana Santa'],
+                onSolve: 'La m\u00e1scara sonr\u00ede.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Los pasos de una celebraci\u00f3n est\u00e1n desordenados.',
+                clue: 'Ord\u00e9nalos del principio al final.',
+                items: [
+                    'Preparar la comida y la decoraci\u00f3n',
+                    'Invitar a los amigos y la familia',
+                    'Celebrar juntos con m\u00fasica y baile',
+                    'Recordar la fiesta con fotos y historias'
+                ],
+                onSolve: 'Los instrumentos suenan solos.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Un tambor tiene una cerradura escondida.',
+                clue: 'Es lo que sientes cuando est\u00e1s en una fiesta con amigos y familia. Siete letras.',
+                answer: 'alegria',
+                hint: '_ _ _ _ _ _ _',
+                onSolve: 'El tambor suena fuerte. La cueva se llena de m\u00fasica. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de tambor.',
+            questClue: 'La m\u00fasica es una ra\u00edz que conecta a todos.',
+            item: 'raiz-tambor'
+        }
+    }
+        ];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '18',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest18Progress',
+        backUrl: '../../a2-coffee.html'
+    });
+</script>
+</body>
+</html>

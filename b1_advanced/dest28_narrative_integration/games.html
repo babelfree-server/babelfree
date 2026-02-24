@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 28: La historia que llevas - Integraci&oacute;n narrativa</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest28_narrative_integration/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 28: La historia que llevas - Integración narrativa",
+          "url": "https://babelfree.com/b1_advanced/dest28_narrative_integration/games",
+          "educationalLevel": "B1 Advanced - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Narrative integration", "Storytelling", "Spanish proficiency"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Advanced", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "La historia que llevas - Integración narrativa" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 28: La historia que llevas</div>
+            <div class="yg-header-subtitle">Integraci&oacute;n narrativa</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative \u2014 El comienzo del viaje ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo comenz\u00f3 el viaje de Yaguar\u00e1 por el Choc\u00f3. Observa la mezcla de tiempos verbales y estructuras.',
+        text: 'Cuando Yaguar\u00e1 lleg\u00f3 al Choc\u00f3, no sab\u00eda qu\u00e9 esperar. Hab\u00eda o\u00eddo historias sobre la selva, pero nunca la hab\u00eda visto con sus propios ojos. Al principio, todo le parec\u00eda enorme y misterioso. Sin embargo, poco a poco, empez\u00f3 a entender los sonidos del bosque y los ritmos del r\u00edo. Es posible que aquel primer d\u00eda haya sido el m\u00e1s importante de su vida, porque fue entonces cuando decidi\u00f3 que no volver\u00eda atr\u00e1s.'
+    },
+    // === GAME 2: Sorting \u2014 Identificar tipos de gram\u00e1tica ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan la estructura gramatical que utiliza.',
+        categories: ['Imperfecto', 'Subjuntivo', 'Condicional', 'Voz pasiva'],
+        items: [
+            { text: 'Yaguar\u00e1 caminaba por la selva todas las ma\u00f1anas.', category: 'Imperfecto' },
+            { text: 'Quer\u00eda que sus amigos la acompa\u00f1aran.', category: 'Subjuntivo' },
+            { text: 'Si tuviera m\u00e1s tiempo, explorar\u00eda todo el r\u00edo.', category: 'Condicional' },
+            { text: 'La selva era protegida por las comunidades locales.', category: 'Voz pasiva' },
+            { text: 'De ni\u00f1a, siempre jugaba cerca del agua.', category: 'Imperfecto' },
+            { text: 'Es importante que cuidemos la naturaleza.', category: 'Subjuntivo' },
+            { text: 'Si llueve ma\u00f1ana, nos quedar\u00edamos en la caba\u00f1a.', category: 'Condicional' },
+            { text: 'La marimba fue construida por un maestro artesano.', category: 'Voz pasiva' }
+        ]
+    },
+    // === GAME 3: FIB \u2014 Imperfecto vs. pret\u00e9rito ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la forma verbal correcta: imperfecto o pret\u00e9rito.',
+        questions: [
+            {
+                sentence: 'Mientras Yaguar\u00e1 ___ por la selva, encontr\u00f3 una cueva escondida.',
+                answer: 'caminaba',
+                options: ['caminaba', 'camin\u00f3', 'camina', 'caminar\u00eda']
+            },
+            {
+                sentence: 'Todos los d\u00edas, las aves ___ al amanecer, pero esa ma\u00f1ana hubo silencio.',
+                answer: 'cantaban',
+                options: ['cantaban', 'cantaron', 'cantar\u00edan', 'canten']
+            },
+            {
+                sentence: 'La anciana le ___ una historia cuando de repente se apagaron las velas.',
+                answer: 'contaba',
+                options: ['contaba', 'cont\u00f3', 'cuente', 'contar\u00eda']
+            }
+        ]
+    },
+    // === GAME 4: Conjugation \u2014 Presente de subjuntivo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en presente de subjuntivo.',
+        questions: [
+            {
+                verb: 'proteger',
+                subject: 'nosotros',
+                answer: 'protejamos',
+                options: ['protejamos', 'protegemos', 'proteger\u00edamos', 'proteg\u00edamos']
+            },
+            {
+                verb: 'tener',
+                subject: 'ella',
+                answer: 'tenga',
+                options: ['tenga', 'tiene', 'tendr\u00eda', 'ten\u00eda']
+            },
+            {
+                verb: 'poder',
+                subject: 'yo',
+                answer: 'pueda',
+                options: ['pueda', 'puedo', 'podr\u00eda', 'pod\u00eda']
+            },
+            {
+                verb: 'seguir',
+                subject: 't\u00fa',
+                answer: 'sigas',
+                options: ['sigas', 'sigues', 'seguir\u00edas', 'segu\u00edas']
+            }
+        ]
+    },
+    // === GAME 5: Pair \u2014 Estructura gramatical y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada estructura gramatical con su ejemplo correcto.',
+        pairs: [
+            ['Imperfecto', 'De ni\u00f1a, Yaguar\u00e1 corr\u00eda por la selva.'],
+            ['Subjuntivo con emoci\u00f3n', 'Me alegra que hayas llegado.'],
+            ['Condicional', 'Si pudiera, vivir\u00eda en el Choc\u00f3.'],
+            ['Voz pasiva', 'El r\u00edo fue declarado patrimonio.'],
+            ['Discurso reportado', 'La abuela dijo que la selva era sagrada.'],
+            ['Conector de contraste', 'Es dif\u00edcil; sin embargo, no se rinden.']
+        ]
+    },
+    // === GAME 6: Story \u2014 El r\u00edo que recuerda ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee la historia completa y responde las preguntas.',
+        title: 'El r\u00edo que recuerda',
+        text: 'Cuando Yaguar\u00e1 lleg\u00f3 al r\u00edo Atrato, una anciana le dijo que el r\u00edo ten\u00eda memoria. Le cont\u00f3 que, hace muchos a\u00f1os, las comunidades viv\u00edan en armon\u00eda con el agua. Sin embargo, con el tiempo, la miner\u00eda contamin\u00f3 las aguas y los peces empezaron a desaparecer. La anciana quer\u00eda que Yaguar\u00e1 entendiera algo importante: si no proteg\u00edamos el r\u00edo, perder\u00edamos nuestra propia historia. Por lo tanto, en 2016 el r\u00edo fue declarado sujeto de derechos. Es posible que esa decisi\u00f3n haya salvado no solo el agua, sino tambi\u00e9n la identidad de todo un pueblo.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 le dijo la anciana a Yaguar\u00e1 sobre el r\u00edo?',
+                options: ['Que el r\u00edo ten\u00eda memoria', 'Que el r\u00edo estaba seco', 'Que el r\u00edo era peligroso', 'Que el r\u00edo no exist\u00eda antes'],
+                answer: 'Que el r\u00edo ten\u00eda memoria'
+            },
+            {
+                q: '\u00bfQu\u00e9 estructura gramatical aparece en "quer\u00eda que Yaguar\u00e1 entendiera"?',
+                options: ['Subjuntivo con imperfecto', 'Condicional simple', 'Voz pasiva', 'Discurso directo'],
+                answer: 'Subjuntivo con imperfecto'
+            },
+            {
+                q: '\u00bfQu\u00e9 ocurri\u00f3 en 2016 seg\u00fan el texto?',
+                options: ['El r\u00edo fue declarado sujeto de derechos', 'La miner\u00eda fue prohibida', 'Yaguar\u00e1 lleg\u00f3 al Choc\u00f3', 'Las comunidades abandonaron el r\u00edo'],
+                answer: 'El r\u00edo fue declarado sujeto de derechos'
+            }
+        ]
+    },
+    // === GAME 7: Listening \u2014 Narraci\u00f3n mixta ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la narraci\u00f3n y responde la pregunta.',
+        audio: 'Yaguar\u00e1 caminaba por la selva cuando escuch\u00f3 un sonido extra\u00f1o. Se detuvo y mir\u00f3 a su alrededor. Una mujer le dijo que no tuviera miedo, que los esp\u00edritus del bosque la proteg\u00edan. Si Yaguar\u00e1 hubiera corrido, nunca habr\u00eda conocido esa historia.',
+        question: '\u00bfQu\u00e9 le dijo la mujer a Yaguar\u00e1?',
+        answer: 'Que no tuviera miedo porque los esp\u00edritus la proteg\u00edan',
+        options: ['Que no tuviera miedo porque los esp\u00edritus la proteg\u00edan', 'Que corriera r\u00e1pido', 'Que la selva era peligrosa', 'Que volviera a casa']
+    },
+    // === GAME 8: FIB \u2014 Subjuntivo con emociones ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta del subjuntivo.',
+        questions: [
+            {
+                sentence: 'Me alegra que Yaguar\u00e1 ___ completar su viaje por el Choc\u00f3.',
+                answer: 'haya podido',
+                options: ['haya podido', 'pudo', 'pod\u00eda', 'podr\u00eda']
+            },
+            {
+                sentence: 'Es una l\u00e1stima que muchas especies ___ en peligro de extinci\u00f3n.',
+                answer: 'est\u00e9n',
+                options: ['est\u00e9n', 'est\u00e1n', 'estaban', 'estar\u00edan']
+            },
+            {
+                sentence: 'Nos sorprende que las comunidades ___ tantas tradiciones vivas.',
+                answer: 'mantengan',
+                options: ['mantengan', 'mantienen', 'manten\u00edan', 'mantendr\u00edan']
+            }
+        ]
+    },
+    // === GAME 9: Narrative \u2014 Las voces del camino ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 recuerda a las personas que conoci\u00f3 en su viaje.',
+        text: 'A lo largo de su viaje, Yaguar\u00e1 conoci\u00f3 a muchas personas que le ense\u00f1aron algo valioso. La abuela del r\u00edo le cont\u00f3 que antes las noches eran m\u00e1s oscuras y las estrellas se ve\u00edan mejor. Un pescador le explic\u00f3 que, aunque el trabajo fuera duro, no cambiar\u00eda su vida por nada. Una maestra le dijo que esperaba que los ni\u00f1os aprendieran a valorar su cultura. Todas esas voces se convirtieron en parte de la historia que Yaguar\u00e1 lleva consigo. Por eso, cada vez que alguien le pregunta por su viaje, ella responde: "No fui yo quien cambi\u00f3; fue el camino el que me transform\u00f3".'
+    },
+    // === GAME 10: Conjugation \u2014 Tiempos mixtos en contexto ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la conjugaci\u00f3n correcta seg\u00fan el contexto de la oraci\u00f3n.',
+        questions: [
+            {
+                verb: 'vivir (imperfecto)',
+                subject: 'las comunidades',
+                answer: 'viv\u00edan',
+                options: ['viv\u00edan', 'vivieron', 'vivan', 'vivir\u00edan']
+            },
+            {
+                verb: 'esperar (subjuntivo)',
+                subject: 'la maestra',
+                answer: 'espere',
+                options: ['espere', 'espera', 'esperaba', 'esperar\u00eda']
+            },
+            {
+                verb: 'poder (condicional)',
+                subject: 'nosotros',
+                answer: 'podr\u00edamos',
+                options: ['podr\u00edamos', 'podemos', 'pudi\u00e9ramos', 'pod\u00edamos']
+            },
+            {
+                verb: 'ser (imperfecto)',
+                subject: 'las noches',
+                answer: 'eran',
+                options: ['eran', 'fueron', 'sean', 'ser\u00edan']
+            }
+        ]
+    },
+    // === GAME 11: Builder \u2014 Oraci\u00f3n condicional compleja ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n condicional completa.',
+        words: ['Si', 'Yaguar\u00e1', 'no', 'hubiera', 'viajado', 'al', 'Choc\u00f3,', 'nunca', 'habr\u00eda', 'conocido', 'la', 'verdadera', 'fuerza', 'de', 'sus', 'comunidades.'],
+        answer: 'Si Yaguar\u00e1 no hubiera viajado al Choc\u00f3, nunca habr\u00eda conocido la verdadera fuerza de sus comunidades.'
+    },
+    // === GAME 12: FIB \u2014 Conectores y condicionales ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la opci\u00f3n correcta.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 dijo que ___ volver al Choc\u00f3 alg\u00fan d\u00eda.',
+                answer: 'le gustar\u00eda',
+                options: ['le gustar\u00eda', 'le gusta', 'le gust\u00f3', 'le guste']
+            },
+            {
+                sentence: '___ la situaci\u00f3n es dif\u00edcil, las comunidades siguen luchando.',
+                answer: 'Aunque',
+                options: ['Aunque', 'Por lo tanto', 'Adem\u00e1s', 'En cambio']
+            },
+            {
+                sentence: 'Si todos ___ el medio ambiente, el futuro ser\u00eda diferente.',
+                answer: 'protegi\u00e9ramos',
+                options: ['protegi\u00e9ramos', 'protegemos', 'proteg\u00edamos', 'protegeremos']
+            }
+        ]
+    },
+    // === GAME 13: Conversation \u2014 Reflexi\u00f3n sobre el viaje ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con Yaguar\u00e1 sobre su viaje usando diferentes estructuras gramaticales.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'Cuando llegu\u00e9 al Choc\u00f3, no sab\u00eda qu\u00e9 esperar. \u00bfAlguna vez te ha pasado algo parecido?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, una vez viaj\u00e9 a un lugar desconocido y al principio ten\u00eda miedo, pero despu\u00e9s me alegr\u00e9 de haberlo hecho.',
+                    'No, nunca viajo.',
+                    'S\u00ed, el Choc\u00f3 es bonito.'
+                ],
+                answer: 'S\u00ed, una vez viaj\u00e9 a un lugar desconocido y al principio ten\u00eda miedo, pero despu\u00e9s me alegr\u00e9 de haberlo hecho.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'La abuela del r\u00edo me dijo que era importante que conoci\u00e9ramos nuestra historia. \u00bfQu\u00e9 opinas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Estoy de acuerdo. Si no conoci\u00e9ramos nuestra historia, no podr\u00edamos construir un futuro mejor. Adem\u00e1s, es necesario que las nuevas generaciones la valoren.',
+                    'No s\u00e9, no me interesa la historia.',
+                    'S\u00ed, las abuelas son sabias.'
+                ],
+                answer: 'Estoy de acuerdo. Si no conoci\u00e9ramos nuestra historia, no podr\u00edamos construir un futuro mejor. Adem\u00e1s, es necesario que las nuevas generaciones la valoren.'
+            }
+        ]
+    },
+    // === GAME 14: Translation \u2014 Narraci\u00f3n con gram\u00e1tica mixta ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'When Yaguar\u00e1 arrived at the river, the old woman told her that the water was sacred. If we don\'t protect it, we would lose our history.',
+        words: ['Cuando', 'Yaguar\u00e1', 'lleg\u00f3', 'al', 'r\u00edo', 'la', 'anciana', 'le', 'dijo', 'que', 'el', 'agua', 'era', 'sagrada', 'Si', 'no', 'lo', 'protegemos', 'perder\u00edamos', 'nuestra', 'historia'],
+        answer: 'Cuando Yaguar\u00e1 lleg\u00f3 al r\u00edo la anciana le dijo que el agua era sagrada Si no lo protegemos perder\u00edamos nuestra historia'
+    },
+    // === GAME 15: Sorting \u2014 Clasificar oraciones por tipo gramatical ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan el tipo de estructura que contiene.',
+        categories: ['Discurso reportado', 'Subjuntivo', 'Argumentaci\u00f3n'],
+        items: [
+            { text: 'La maestra dijo que los ni\u00f1os necesitaban m\u00e1s libros.', category: 'Discurso reportado' },
+            { text: 'El pescador cont\u00f3 que antes hab\u00eda m\u00e1s peces.', category: 'Discurso reportado' },
+            { text: 'Espero que las comunidades reciban m\u00e1s apoyo.', category: 'Subjuntivo' },
+            { text: 'Es necesario que protejamos la selva.', category: 'Subjuntivo' },
+            { text: 'Por un lado, el turismo genera empleo; por otro, puede da\u00f1ar el ecosistema.', category: 'Argumentaci\u00f3n' },
+            { text: 'En conclusi\u00f3n, la conservaci\u00f3n debe ser una prioridad.', category: 'Argumentaci\u00f3n' }
+        ]
+    },
+    // === GAME 16: Listening \u2014 Discurso reportado y condicional ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la narraci\u00f3n y responde la pregunta.',
+        audio: 'Un l\u00edder comunitario le dijo a Yaguar\u00e1 que la selva hab\u00eda sido devastada por la miner\u00eda ilegal. Le explic\u00f3 que, si el gobierno no tomara medidas urgentes, muchas especies desaparecer\u00edan para siempre. Sin embargo, tambi\u00e9n le dijo que ten\u00eda esperanza, porque las comunidades estaban organizadas y luchaban cada d\u00eda.',
+        question: '\u00bfQu\u00e9 dijo el l\u00edder comunitario sobre el futuro?',
+        answer: 'Que si el gobierno no tomara medidas, muchas especies desaparecer\u00edan',
+        options: ['Que si el gobierno no tomara medidas, muchas especies desaparecer\u00edan', 'Que la selva estaba bien', 'Que no hab\u00eda soluci\u00f3n', 'Que la miner\u00eda era buena']
+    },
+    // === GAME 17: Conjugation \u2014 Condicional e imperfecto de subjuntivo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma correcta del condicional o del imperfecto de subjuntivo.',
+        questions: [
+            {
+                verb: 'hacer (condicional)',
+                subject: 'yo',
+                answer: 'har\u00eda',
+                options: ['har\u00eda', 'hago', 'hice', 'hiciera']
+            },
+            {
+                verb: 'saber (imperfecto subj.)',
+                subject: 't\u00fa',
+                answer: 'supieras',
+                options: ['supieras', 'sabes', 'sab\u00edas', 'sabr\u00edas']
+            },
+            {
+                verb: 'decir (condicional)',
+                subject: 'ellos',
+                answer: 'dir\u00edan',
+                options: ['dir\u00edan', 'dicen', 'dec\u00edan', 'dijeran']
+            },
+            {
+                verb: 'querer (imperfecto subj.)',
+                subject: 'nosotros',
+                answer: 'quisi\u00e9ramos',
+                options: ['quisi\u00e9ramos', 'queremos', 'quer\u00edamos', 'querr\u00edamos']
+            }
+        ]
+    },
+    // === GAME 18: Builder \u2014 Argumento con m\u00faltiples estructuras ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar un argumento completo con diferentes estructuras gramaticales.',
+        words: ['Es necesario que', 'las comunidades sean escuchadas.', 'Sin embargo,', 'muchas veces sus voces son ignoradas', 'por las autoridades.', 'Si se les diera m\u00e1s participaci\u00f3n,', 'la situaci\u00f3n mejorar\u00eda.'],
+        answer: 'Es necesario que las comunidades sean escuchadas. Sin embargo, muchas veces sus voces son ignoradas por las autoridades. Si se les diera m\u00e1s participaci\u00f3n, la situaci\u00f3n mejorar\u00eda.'
+    },
+    // === GAME 19: Story \u2014 La \u00faltima noche en Nuqu\u00ed ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee la historia sobre la \u00faltima noche de Yaguar\u00e1 en Nuqu\u00ed y responde las preguntas.',
+        title: 'La \u00faltima noche en Nuqu\u00ed',
+        text: 'Era la \u00faltima noche de Yaguar\u00e1 en Nuqu\u00ed. Mientras las olas golpeaban la playa, ella reflexionaba sobre todo lo que hab\u00eda aprendido. Record\u00f3 que la abuela le hab\u00eda dicho que la selva siempre encontraba la manera de renacer. Un pescador le hab\u00eda explicado que, aunque la vida fuera dif\u00edcil, la comunidad era su mayor fortaleza. Yaguar\u00e1 pens\u00f3: "Si no hubiera venido aqu\u00ed, no habr\u00eda entendido que la verdadera riqueza no se encuentra en las minas, sino en las personas". Al d\u00eda siguiente, cuando el sol fue visto por primera vez entre las nubes, Yaguar\u00e1 se levant\u00f3 con una certeza nueva. Esperaba que su historia inspirara a otros a conocer el Choc\u00f3. Por lo tanto, decidi\u00f3 que la compartir\u00eda con el mundo.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 tipo de oraci\u00f3n es "si no hubiera venido aqu\u00ed, no habr\u00eda entendido"?',
+                options: ['Condicional irreal del pasado', 'Condicional real del presente', 'Subjuntivo con emoci\u00f3n', 'Voz pasiva'],
+                answer: 'Condicional irreal del pasado'
+            },
+            {
+                q: '\u00bfQu\u00e9 le hab\u00eda explicado el pescador a Yaguar\u00e1?',
+                options: ['Que aunque la vida fuera dif\u00edcil, la comunidad era su mayor fortaleza', 'Que la pesca era f\u00e1cil', 'Que el mar era peligroso', 'Que deb\u00eda irse pronto'],
+                answer: 'Que aunque la vida fuera dif\u00edcil, la comunidad era su mayor fortaleza'
+            },
+            {
+                q: '\u00bfQu\u00e9 estructura aparece en "el sol fue visto por primera vez"?',
+                options: ['Voz pasiva', 'Imperfecto', 'Subjuntivo', 'Discurso reportado'],
+                answer: 'Voz pasiva'
+            }
+        ]
+    },
+    // === GAME 20: Pair \u2014 Discurso directo y discurso reportado ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada frase en discurso directo con su equivalente en discurso reportado.',
+        pairs: [
+            ['"La selva es sagrada" \u2014 la abuela', 'La abuela dijo que la selva era sagrada.'],
+            ['"Proteger\u00e9 el r\u00edo" \u2014 el pescador', 'El pescador dijo que proteger\u00eda el r\u00edo.'],
+            ['"Tengo esperanza" \u2014 la maestra', 'La maestra dijo que ten\u00eda esperanza.'],
+            ['"Vengan a conocer el Choc\u00f3" \u2014 el l\u00edder', 'El l\u00edder pidi\u00f3 que fueran a conocer el Choc\u00f3.'],
+            ['"No destruyan la selva" \u2014 Yaguar\u00e1', 'Yaguar\u00e1 pidi\u00f3 que no destruyeran la selva.'],
+            ['"Hemos luchado mucho" \u2014 las mujeres', 'Las mujeres dijeron que hab\u00edan luchado mucho.']
+        ]
+    },
+    // === GAME 21: Conversation \u2014 Despedida con gram\u00e1tica integrada ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Mant\u00e9n una conversaci\u00f3n de despedida con una amiga del Choc\u00f3 usando todas las estructuras B1.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Luc\u00eda', text: 'Ya te vas, Yaguar\u00e1. \u00bfQu\u00e9 fue lo que m\u00e1s te gust\u00f3 de tu tiempo aqu\u00ed?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Lo que m\u00e1s me gust\u00f3 fue conocer a las comunidades. Cuando llegaba a cada pueblo, la gente me recib\u00eda como si fuera de la familia.',
+                    'Todo estuvo bien.',
+                    'Me gust\u00f3 la playa.'
+                ],
+                answer: 'Lo que m\u00e1s me gust\u00f3 fue conocer a las comunidades. Cuando llegaba a cada pueblo, la gente me recib\u00eda como si fuera de la familia.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Luc\u00eda', text: 'Me alegra mucho que hayas tenido esa experiencia. \u00bfQu\u00e9 har\u00edas si pudieras quedarte m\u00e1s tiempo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si pudiera quedarme, aprender\u00eda a tocar la marimba y ayudar\u00eda en los proyectos de conservaci\u00f3n. Espero que alg\u00fan d\u00eda pueda volver.',
+                    'No s\u00e9, descansar\u00eda.',
+                    'Me quedar\u00eda en la playa todos los d\u00edas.'
+                ],
+                answer: 'Si pudiera quedarme, aprender\u00eda a tocar la marimba y ayudar\u00eda en los proyectos de conservaci\u00f3n. Espero que alg\u00fan d\u00eda pueda volver.'
+            }
+        ]
+    },
+    // === GAME 22: Translation \u2014 P\u00e1rrafo argumentativo ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'It is important that we protect the environment. If we don\'t act now, many species would disappear. Therefore, conservation should be a priority.',
+        words: ['Es', 'importante', 'que', 'protejamos', 'el', 'medio', 'ambiente', 'Si', 'no', 'actuamos', 'ahora', 'muchas', 'especies', 'desaparecer\u00edan', 'Por', 'lo', 'tanto', 'la', 'conservaci\u00f3n', 'deber\u00eda', 'ser', 'una', 'prioridad'],
+        answer: 'Es importante que protejamos el medio ambiente Si no actuamos ahora muchas especies desaparecer\u00edan Por lo tanto la conservaci\u00f3n deber\u00eda ser una prioridad'
+    },
+    // === GAME 23: Dictation \u2014 Integraci\u00f3n narrativa ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n exacta. Incluye todas las estructuras gramaticales correctamente.',
+        audio: 'La abuela le dijo a Yaguar\u00e1 que era importante que conociera la historia de su pueblo. Si no la recordaban, perder\u00edan su identidad.',
+        answer: 'La abuela le dijo a Yaguar\u00e1 que era importante que conociera la historia de su pueblo. Si no la recordaban, perder\u00edan su identidad.'
+    },
+    // === GAME 24: Narrative \u2014 El legado del viaje ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 sobre su viaje completo por el Choc\u00f3.',
+        text: 'Yaguar\u00e1 mir\u00f3 hacia atr\u00e1s y pens\u00f3 en todo lo que hab\u00eda vivido. Cuando era peque\u00f1a, so\u00f1aba con conocer el mundo, pero no sab\u00eda que el mundo la estaba esperando aqu\u00ed, en el Choc\u00f3. Una anciana le dijo que la selva no era un lugar, sino una forma de vida. Un m\u00fasico le ense\u00f1\u00f3 que los ritmos del Pac\u00edfico eran la voz de los ancestros. Es posible que Yaguar\u00e1 no haya encontrado todas las respuestas, pero s\u00ed encontr\u00f3 las preguntas correctas. Si alguien le preguntara qu\u00e9 aprendi\u00f3, ella dir\u00eda: "Aprend\u00ed que cada persona lleva una historia, y que esas historias deben ser contadas y escuchadas. Por lo tanto, ahora yo tambi\u00e9n tengo algo que contar".'
+    },
+    // === GAME 25: Story \u2014 La historia que llevas ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el texto final del viaje de Yaguar\u00e1 y responde las preguntas de comprensi\u00f3n.',
+        title: 'La historia que llevas',
+        text: 'Yaguar\u00e1 sali\u00f3 del Choc\u00f3 una ma\u00f1ana de lluvia. Llevaba consigo una mochila ligera, pero su coraz\u00f3n estaba lleno de historias. Record\u00f3 que al principio ten\u00eda miedo: la selva le parec\u00eda inmensa y los sonidos eran desconocidos. Sin embargo, con el tiempo, aprendi\u00f3 que esos sonidos contaban historias antiguas. Las comunidades le hab\u00edan ense\u00f1ado que, aunque la vida fuera dif\u00edcil, la esperanza se constru\u00eda cada d\u00eda. Un l\u00edder le hab\u00eda dicho que el r\u00edo hab\u00eda sido declarado sujeto de derechos y que eso era una victoria de todos. Si ella pudiera cambiar algo del mundo, proteger\u00eda cada selva, cada r\u00edo, cada voz que necesita ser escuchada. Es probable que este viaje haya sido solo el comienzo. Por lo tanto, Yaguar\u00e1 prometi\u00f3 que volver\u00eda, porque sab\u00eda que la historia nunca termina: solo cambia de narrador.',
+        questions: [
+            {
+                q: '\u00bfC\u00f3mo se sent\u00eda Yaguar\u00e1 al principio de su viaje?',
+                options: ['Ten\u00eda miedo porque la selva le parec\u00eda inmensa', 'Estaba feliz y relajada', 'Quer\u00eda volver a casa', 'No sent\u00eda nada en particular'],
+                answer: 'Ten\u00eda miedo porque la selva le parec\u00eda inmensa'
+            },
+            {
+                q: '\u00bfQu\u00e9 estructura gramatical aparece en "cada voz que necesita ser escuchada"?',
+                options: ['Voz pasiva con infinitivo', 'Imperfecto', 'Discurso reportado', 'Condicional simple'],
+                answer: 'Voz pasiva con infinitivo'
+            },
+            {
+                q: '\u00bfQu\u00e9 prometi\u00f3 Yaguar\u00e1 al final del texto?',
+                options: ['Que volver\u00eda, porque la historia nunca termina', 'Que se olvidar\u00eda del Choc\u00f3', 'Que escribir\u00eda un libro', 'Que se quedar\u00eda para siempre'],
+                answer: 'Que volver\u00eda, porque la historia nunca termina'
+            }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La biblioteca del pueblo',
+            description: 'La biblioteca del pueblo est\u00e1 cerrada, pero alguien dej\u00f3 la puerta trasera abierta. Los estantes est\u00e1n llenos de libros sobre el Choc\u00f3: su historia, su gente, su r\u00edo.',
+            ambience: 'library'
+        },
+        puzzles: [
+            {
+                puzzleType: 'extract',
+                prompt: 'Un libro abierto muestra un p\u00e1rrafo subrayado.',
+                passage: '\u00abEl Choc\u00f3 es uno de los departamentos m\u00e1s biodiversos del mundo. Sin embargo, tambi\u00e9n es uno de los m\u00e1s pobres de Colombia. Esta contradicci\u00f3n no es natural \u2014 es el resultado de siglos de abandono. El bosque tiene riqueza; las personas que lo habitan, no.\u00bb',
+                clue: '\u00bfCu\u00e1l es la idea principal del p\u00e1rrafo?',
+                answer: 'La pobreza del Choc\u00f3 es una injusticia hist\u00f3rica, no una condici\u00f3n natural, a pesar de su riqueza biol\u00f3gica',
+                options: [
+                    'La pobreza del Choc\u00f3 es una injusticia hist\u00f3rica, no una condici\u00f3n natural, a pesar de su riqueza biol\u00f3gica',
+                    'El Choc\u00f3 es un lugar pobre',
+                    'El bosque es rico pero in\u00fatil',
+                    'Colombia no cuida sus departamentos'
+                ],
+                onSolve: 'El libro pasa de p\u00e1gina solo.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Las ideas del texto deben ordenarse l\u00f3gicamente.',
+                clue: 'Ord\u00e9nalas del dato al an\u00e1lisis.',
+                items: [
+                    'El Choc\u00f3 es megadiverso (dato)',
+                    'El Choc\u00f3 es muy pobre (dato contrastante)',
+                    'Esta contradicci\u00f3n es hist\u00f3rica (an\u00e1lisis)',
+                    'Se necesita justicia, no solo caridad (conclusi\u00f3n)'
+                ],
+                onSolve: 'Los libros se ordenan en los estantes.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Un libro cerrado tiene una cerradura de letras.',
+                clue: 'Es lo que necesitas para entender un texto: no solo leer las palabras, sino entender su significado profundo.',
+                answer: 'comprension',
+                hint: '_ _ _ _ _ _ _ _ _ _ _',
+                onSolve: 'El libro se abre. En la \u00faltima p\u00e1gina hay una puerta dibujada. Se hace real. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de una biblioteca donde los libros son puertas a otros mundos.',
+            questClue: 'Cada libro es una puerta. Pero solo se abre si comprendes sus palabras.',
+            item: 'historia-biblioteca'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '28',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest28Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 53: El guardi&aacute;n despierta &mdash; S&iacute;ntesis total</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_basic/dest53_total_synthesis/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 53: El guardián despierta — Síntesis total",
+          "url": "https://babelfree.com/c2_basic/dest53_total_synthesis/games",
+          "educationalLevel": "C2 - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Total synthesis", "Integrated language skills", "Spanish mastery"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Basic", "item": "https://babelfree.com/c2-bogota" },
+            { "@type": "ListItem", "position": 4, "name": "El guardián despierta — Síntesis total" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-bogota" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 53: El guardi&aacute;n despierta</div>
+            <div class="yg-header-subtitle">S&iacute;ntesis total</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — El peso de cincuenta y dos destinos ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 contempla el camino recorrido y comprende que la integraci\u00f3n es la \u00faltima prueba. Observa las referencias a los tres mundos.',
+        text: 'Yaguar\u00e1 subi\u00f3 al cerro de Monserrate y, desde la cima, contempl\u00f3 Bogot\u00e1 envuelta en su niebla perpetua. Llevaba cincuenta y dos destinos dentro del pecho: el Choc\u00f3, donde hab\u00eda aprendido a nombrar; los Andes, donde hab\u00eda aprendido a narrar; los Llanos, donde hab\u00eda aprendido a interpretar; la costa, donde hab\u00eda aprendido a argumentar; Santa Marta, donde hab\u00eda aprendido a analizar; Ciudad Perdida, donde hab\u00eda aprendido a producir; y Bogot\u00e1, donde hab\u00eda aprendido que el dominio del idioma no resid\u00eda en ninguna de estas habilidades por separado, sino en la capacidad de integrarlas todas en un solo acto de habla. Mir\u00f3 la ciudad y supo que le quedaba una \u00faltima prueba: demostrar que no solo conoc\u00eda cada registro, cada recurso, cada estructura, cada matiz, sino que pod\u00eda tejerlos todos en una voz que fuera, al mismo tiempo, suya e inconfundible.'
+    },
+    // === GAME 2: Narrative — Las voces que lleva dentro ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre las voces que Yaguar\u00e1 ha integrado a lo largo de su viaje. Observa c\u00f3mo cada aliado representa una competencia ling\u00fc\u00edstica.',
+        text: 'Cerr\u00f3 los ojos y escuch\u00f3 las voces que la habitaban. La de Mam\u00e1 Jaguar, que le hab\u00eda ense\u00f1ado que nombrar era el primer acto de existencia: \u00abLo que no se nombra, desaparece.\u00bb La de Colibr\u00ed, que le hab\u00eda ense\u00f1ado que la precisi\u00f3n era una forma de respeto: cada palabra justa, ni una m\u00e1s, ni una menos. La de C\u00f3ndor Viejo, que le hab\u00eda ense\u00f1ado que la misma historia cambia seg\u00fan la altura desde la que se mira: registro, perspectiva, punto de vista. La de Delf\u00edn Rosado, que le hab\u00eda ense\u00f1ado que las palabras mienten tanto como revelan: iron\u00eda, connotaci\u00f3n, doble sentido. La de Tortuga Marina, que le hab\u00eda ense\u00f1ado que algunas historias necesitan una vida entera para contarse: la paciencia de la subordinaci\u00f3n compleja, del texto que se despliega lentamente. La de su propia Sombra, que le hab\u00eda ense\u00f1ado que el miedo al error es el verdadero enemigo del hablante. Y la de Los Antiguos, que le hab\u00edan ense\u00f1ado que interpretar es un acto de creaci\u00f3n. Todas esas voces eran ahora una sola: la suya.'
+    },
+    // === GAME 3: Narrative — La prueba de Los Antiguos ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Los Antiguos proponen la prueba final. Observa que la integraci\u00f3n no es acumulaci\u00f3n, sino transformaci\u00f3n.',
+        text: 'Esa noche, las constelaciones sobre Bogot\u00e1 comenzaron a moverse. Los Antiguos se manifestaron: no como voces en el agua ni como petroglifos animados, sino como una presencia que ocupaba todo el cielo. \u00abYaguar\u00e1 \u2014dijeron, y su voz era el viento que baja del p\u00e1ramo\u2014, te hemos observado a lo largo de tres mundos. Has nombrado, has narrado, has argumentado, has analizado, has creado. Pero un guardi\u00e1n no es alguien que sabe hacer muchas cosas por separado: es alguien que, al hablar, las hace todas a la vez sin que se note el esfuerzo. Cuando un maestro del idioma escribe una columna de opini\u00f3n, no piensa: ahora uso ethos, ahora pathos, ahora un hip\u00e9rbaton. Simplemente habla, y todo est\u00e1 ah\u00ed porque se ha convertido en parte de su respiraci\u00f3n ling\u00fc\u00edstica. Esa es la prueba: no demostrar lo que sabes, sino olvidarlo para que hable a trav\u00e9s de ti.\u00bb'
+    },
+    // === GAME 4: Narrative — El fracaso necesario ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el intento fallido de Yaguar\u00e1 y lo que aprende del fracaso. Observa la diferencia entre conocimiento y sabidur\u00eda ling\u00fc\u00edstica.',
+        text: 'Yaguar\u00e1 intent\u00f3. Se sent\u00f3 en la Plaza de Bol\u00edvar con un cuaderno y trat\u00f3 de escribir un texto que lo contuviera todo: una prosa con precisi\u00f3n acad\u00e9mica y vuelo literario, con la calidez del registro coloquial y la autoridad del formal, con conciencia metaling\u00fc\u00edstica y fuerza ret\u00f3rica. El resultado fue un monstruo: un texto correcto en cada frase pero falso en su conjunto, un ejercicio de acumulaci\u00f3n que no dec\u00eda nada porque intentaba decirlo todo. Yaguar\u00e1 llor\u00f3 de frustraci\u00f3n. Y entonces, una anciana que vend\u00eda arom\u00e1ticas en la plaza le dijo, sin saber a qui\u00e9n le hablaba ni por qu\u00e9 lloraba: \u00abMija, uno no habla para demostrar lo que sabe. Uno habla para que el otro entienda lo que uno siente.\u00bb Yaguar\u00e1 comprendi\u00f3: la s\u00edntesis no era sumar competencias; era tener tantas herramientas que una pod\u00eda elegir, en cada instante, la exacta, sin alarde, sin esfuerzo visible, como respira quien ya no piensa en respirar.'
+    },
+    // === GAME 5: Narrative — La Palabra del Coraz\u00f3n ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el concepto de la Palabra del Coraz\u00f3n: la palabra que contiene todas las dem\u00e1s. Observa c\u00f3mo el texto vincula lenguaje, identidad y memoria.',
+        text: 'Los Antiguos regresaron al amanecer. \u00abCada guardi\u00e1n \u2014dijeron\u2014 lleva dentro una Palabra del Coraz\u00f3n: un t\u00e9rmino que, para esa persona, contiene todos los dem\u00e1s. No es una palabra m\u00e1gica ni secreta; es simplemente la palabra que, al pronunciarla, activa todo lo aprendido, todo lo vivido, todo lo sentido. Para Garc\u00eda M\u00e1rquez fue \u201csoledad\u201d: una palabra que, en su boca, conten\u00eda Macondo, las guerras, el amor, el tiempo circular, la memoria y el olvido. Para la vendedora de arom\u00e1ticas de la plaza, quiz\u00e1 sea \u201cmija\u201d: dos s\u00edlabas que contienen afecto, proximidad, jerarqu\u00eda invertida y toda una filosof\u00eda del cuidado. La Palabra del Coraz\u00f3n no se busca: se reconoce. Aparece cuando uno deja de intentar hablar perfectamente y empieza a hablar con verdad.\u00bb Yaguar\u00e1 mir\u00f3 la ciudad una vez m\u00e1s y supo que su palabra estaba cerca, pero que no era ella quien deb\u00eda encontrarla.'
+    },
+    // === GAME 6: Narrative — El guardi\u00e1n despierta ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la transformaci\u00f3n final de Yaguar\u00e1. Observa que el final no es un cierre, sino una apertura.',
+        text: 'Yaguar\u00e1 no se transform\u00f3. No hubo rayo de luz ni metamorfosis espectacular. Simplemente, al bajar de Monserrate esa ma\u00f1ana, se dio cuenta de que ya no traduc\u00eda el mundo al caminar por \u00e9l: lo habitaba. Escuchaba a los vendedores y entend\u00eda no solo lo que dec\u00edan, sino por qu\u00e9 lo dec\u00edan as\u00ed y no de otra manera. Le\u00eda las noticias y ve\u00eda las estrategias ret\u00f3ricas como quien ve las corrientes en un r\u00edo: no para analizarlas, sino porque forman parte del paisaje. Pod\u00eda escribir un poema o un informe, consolar a un amigo o interpelar a un auditorio, y en cada caso la lengua le respond\u00eda como responde el cuerpo a quien lleva toda una vida bailando. El guardi\u00e1n no era alguien que sab\u00eda m\u00e1s que los dem\u00e1s: era alguien que hab\u00eda aprendido a escuchar lo que el idioma quiere decir cuando lo dejamos hablar. Se volvi\u00f3 hacia ti \u2014s\u00ed, hacia ti, que has llegado hasta aqu\u00ed\u2014 y pregunt\u00f3: \u00abYo encontr\u00e9 mi palabra. \u00bfCu\u00e1l es la tuya?\u00bb'
+    },
+    // === GAME 7: FIB — Integraci\u00f3n registro + gram\u00e1tica + cultura ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n eligiendo la palabra que integra correctamente el registro, la gram\u00e1tica y el contexto cultural.',
+        sentences: [
+            { text: 'El ponente solicit\u00f3 que se ___ en acta su objeci\u00f3n al proyecto de ley.', blank: 'hiciera constar', options: ['hiciera constar', 'pusiera', 'escribiera', 'anotara'] },
+            { text: 'Si Gabo no ___ escrito Cien a\u00f1os de soledad, la literatura latinoamericana ser\u00eda otra.', blank: 'hubiera', options: ['hubiera', 'habr\u00eda', 'hubiese', 'habr\u00e1'] },
+            { text: '\u00a1Quihubo, parcero! \u00bfUsted ya se ___ de lo que pas\u00f3 en la plaza?', blank: 'enter\u00f3', options: ['enter\u00f3', 'inform\u00f3', 'percat\u00f3', 'notific\u00f3'] },
+            { text: 'La correlaci\u00f3n entre ambas variables ___ estad\u00edsticamente significativa (p < 0,05).', blank: 'result\u00f3', options: ['result\u00f3', 'fue', 'sali\u00f3', 'qued\u00f3'] },
+            { text: 'Fuera yo p\u00e1jaro, ___ por sobre los p\u00e1ramos sin que nadie me detuviera.', blank: 'volar\u00eda', options: ['volar\u00eda', 'volar\u00e9', 'vuelo', 'volara'] },
+            { text: 'El vallenato, como ___ discursivo, cumple funciones de memoria colectiva que trascienden lo meramente musical.', blank: 'g\u00e9nero', options: ['g\u00e9nero', 'tipo', 'estilo', 'modo'] },
+            { text: 'No me ___ un tintico, \u00bfs\u00ed?, que esta tarde est\u00e1 helada.', blank: 'regala', options: ['regala', 'da', 'ofrece', 'vende'] },
+            { text: 'La met\u00e1fora no ___ el significado: lo transforma.', blank: 'sustituye', options: ['sustituye', 'cambia', 'reemplaza', 'borra'] }
+        ]
+    },
+    // === GAME 8: FIB — Recursos literarios en contextos reales ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones que aplican recursos literarios y ling\u00fc\u00edsticos en contextos comunicativos reales.',
+        sentences: [
+            { text: 'La an\u00e1fora en el discurso pol\u00edtico funciona como un ___ r\u00edtmico que refuerza la idea central.', blank: 'martillo', options: ['martillo', 'espejo', 'puente', 'muro'] },
+            { text: 'Garc\u00eda M\u00e1rquez empleaba el ___ indirecto libre para borrar la frontera entre narrador y personaje.', blank: 'estilo', options: ['estilo', 'discurso', 'modo', 'recurso'] },
+            { text: 'En pragm\u00e1tica, un acto de habla ___ no solo describe la realidad: la modifica.', blank: 'performativo', options: ['performativo', 'descriptivo', 'expresivo', 'comunicativo'] },
+            { text: 'El registro coloquial bogotano emplea el ___ como estrategia de atenuaci\u00f3n cort\u00e9s.', blank: 'diminutivo', options: ['diminutivo', 'eufemismo', 'adverbio', 'vocativo'] },
+            { text: 'Un texto acad\u00e9mico requiere ___ expl\u00edcitas para que el lector pueda verificar las fuentes.', blank: 'referencias', options: ['referencias', 'notas', 'citas', 'pruebas'] },
+            { text: 'La funci\u00f3n ___ del lenguaje, seg\u00fan Jakobson, es la que se centra en el propio c\u00f3digo ling\u00fc\u00edstico.', blank: 'metaling\u00fc\u00edstica', options: ['metaling\u00fc\u00edstica', 'referencial', 'po\u00e9tica', 'conativa'] },
+            { text: 'Un quiasmo invierte la estructura sint\u00e1ctica para crear un efecto de ___ conceptual.', blank: 'espejo', options: ['espejo', 'contraste', 'repetici\u00f3n', 'ritmo'] },
+            { text: 'La ambig\u00fcedad ___ surge cuando una misma estructura sint\u00e1ctica admite dos interpretaciones.', blank: 'estructural', options: ['estructural', 'l\u00e9xica', 'pragm\u00e1tica', 'fonol\u00f3gica'] }
+        ]
+    },
+    // === GAME 9: FIB — Conciencia metaling\u00fc\u00edstica aplicada ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones que requieren conciencia metaling\u00fc\u00edstica activa.',
+        sentences: [
+            { text: 'La diferencia entre \u00abser aburrido\u00bb y \u00abestar aburrido\u00bb ilustra la distinci\u00f3n entre propiedad ___ y estado transitorio.', blank: 'inherente', options: ['inherente', 'permanente', 'esencial', 'natural'] },
+            { text: 'La falacia ad hominem ataca al ___, no al argumento.', blank: 'emisor', options: ['emisor', 'receptor', 'mensaje', 'tema'] },
+            { text: 'El subjuntivo en espa\u00f1ol codifica gramaticalmente la ___ del hablante respecto a la proposici\u00f3n.', blank: 'actitud', options: ['actitud', 'opini\u00f3n', 'duda', 'emoci\u00f3n'] },
+            { text: 'Un eufemismo institucional como \u00abda\u00f1os colaterales\u00bb busca ___ la realidad que nombra.', blank: 'atenuar', options: ['atenuar', 'ocultar', 'cambiar', 'explicar'] },
+            { text: 'La etimolog\u00eda de \u00abpalabra\u00bb (del lat\u00edn parab\u014fla, del griego \u03c0\u03b1\u03c1\u03b1\u03b2\u03bf\u03bb\u03ae) revela que hablar es, etimol\u00f3gicamente, ___.', blank: 'comparar', options: ['comparar', 'crear', 'repetir', 'ordenar'] },
+            { text: 'El prescriptivismo establece c\u00f3mo se ___ hablar; el descriptivismo documenta c\u00f3mo se habla de hecho.', blank: 'debe', options: ['debe', 'puede', 'quiere', 'suele'] },
+            { text: 'Una presuposici\u00f3n es informaci\u00f3n que el hablante da por ___ sin afirmarla expl\u00edcitamente.', blank: 'sentada', options: ['sentada', 'cierta', 'conocida', 'verdadera'] },
+            { text: 'El framing consiste en presentar la misma realidad a trav\u00e9s de ___ conceptuales diferentes.', blank: 'marcos', options: ['marcos', 'palabras', 'puntos', 'filtros'] }
+        ]
+    },
+    // === GAME 10: FIB — Discurso p\u00fablico y creaci\u00f3n literaria ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones que integran elementos de discurso p\u00fablico y creaci\u00f3n literaria.',
+        sentences: [
+            { text: 'Garc\u00eda M\u00e1rquez, en su discurso de aceptaci\u00f3n del Nobel, emple\u00f3 el ___ m\u00e1gico como argumento pol\u00edtico.', blank: 'realismo', options: ['realismo', 'recurso', 'estilo', 'g\u00e9nero'] },
+            { text: 'Una cr\u00f3nica period\u00edstica de calidad literaria logra que el lector ___ los hechos en lugar de solo conocerlos.', blank: 'experimente', options: ['experimente', 'comprenda', 'acepte', 'recuerde'] },
+            { text: 'El ethos del orador se construye tanto por lo que dice como por lo que ___ decir.', blank: 'elige no', options: ['elige no', 'quiere', 'puede', 'sabe'] },
+            { text: 'La literatura de testimonio convierte la experiencia individual en ___ colectivo.', blank: 'documento', options: ['documento', 'recuerdo', 's\u00edmbolo', 'relato'] },
+            { text: 'En un debate, el logos sin pathos convence pero no ___; el pathos sin logos conmueve pero no convence.', blank: 'moviliza', options: ['moviliza', 'importa', 'funciona', 'sirve'] },
+            { text: 'El \u00abNocturno\u00bb de Silva demuestra que la prosodia puede ser un ___ de significado tan poderoso como el l\u00e9xico.', blank: 'veh\u00edculo', options: ['veh\u00edculo', 'ejemplo', 'tipo', 'reflejo'] },
+            { text: 'Una columna de opini\u00f3n eficaz condensa una idea compleja en una ___ que se le clava al lector en la memoria.', blank: 'imagen', options: ['imagen', 'frase', 'idea', 'palabra'] },
+            { text: 'El juglar vallenato y el columnista de prensa comparten una funci\u00f3n social: ser ___ de la comunidad.', blank: 'cronistas', options: ['cronistas', 'l\u00edderes', 'voceros', 'cr\u00edticos'] }
+        ]
+    },
+    // === GAME 11: Conjugation — Dominio total del indicativo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos en el tiempo del indicativo que exija el contexto. Este ejercicio recorre todos los tiempos del indicativo.',
+        sentences: [
+            { text: 'Yaguar\u00e1 ___ (llegar) a Bogot\u00e1 despu\u00e9s de recorrer tres mundos.', blank: 'lleg\u00f3', verb: 'llegar', tense: 'pret\u00e9rito indefinido' },
+            { text: 'Mientras los vendedores ___ (pregonar), ella observaba cada detalle.', blank: 'pregonaban', verb: 'pregonar', tense: 'pret\u00e9rito imperfecto' },
+            { text: 'Cuando termines este destino, ___ (haber) completado el ciclo b\u00e1sico del C2.', blank: 'habr\u00e1s', verb: 'haber', tense: 'futuro perfecto' },
+            { text: 'Hasta ese momento, Yaguar\u00e1 nunca ___ (sentir) esa certeza.', blank: 'hab\u00eda sentido', verb: 'sentir', tense: 'pret\u00e9rito pluscuamperfecto' },
+            { text: 'El guardi\u00e1n ___ (ser) quien integra todas las voces.', blank: 'es', verb: 'ser', tense: 'presente' },
+            { text: 'Sin la gu\u00eda de Los Antiguos, Yaguar\u00e1 no ___ (encontrar) la respuesta.', blank: 'habr\u00eda encontrado', verb: 'encontrar', tense: 'condicional compuesto' },
+            { text: 'Esta ma\u00f1ana, Yaguar\u00e1 ___ (comprender) al fin lo que significaba ser guardi\u00e1n.', blank: 'ha comprendido', verb: 'comprender', tense: 'pret\u00e9rito perfecto' },
+            { text: 'Ma\u00f1ana ___ (comenzar) una nueva etapa del viaje.', blank: 'comenzar\u00e1', verb: 'comenzar', tense: 'futuro simple' }
+        ]
+    },
+    // === GAME 12: Conjugation — Dominio total del subjuntivo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos en el tiempo del subjuntivo que exija el contexto, incluido el futuro de subjuntivo (uso jur\u00eddico).',
+        sentences: [
+            { text: 'Los Antiguos pidieron que Yaguar\u00e1 ___ (hablar) con verdad.', blank: 'hablara', verb: 'hablar', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: 'Es fundamental que cada hablante ___ (reconocer) su propia voz.', blank: 'reconozca', verb: 'reconocer', tense: 'presente de subjuntivo' },
+            { text: 'Ojal\u00e1 que para entonces ya ___ (encontrar, t\u00fa) tu Palabra del Coraz\u00f3n.', blank: 'hayas encontrado', verb: 'encontrar', tense: 'pret\u00e9rito perfecto de subjuntivo' },
+            { text: 'Si Yaguar\u00e1 ___ (poder) elegir de nuevo, recorrer\u00eda el mismo camino.', blank: 'pudiera', verb: 'poder', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: 'Quien ___ (incumplir) lo dispuesto en el presente art\u00edculo ser\u00e1 sancionado conforme a la ley.', blank: 'incumpliere', verb: 'incumplir', tense: 'futuro de subjuntivo' },
+            { text: 'No cre\u00eda que la anciana le ___ (dar) la clave sin saberlo.', blank: 'hubiera dado', verb: 'dar', tense: 'pret\u00e9rito pluscuamperfecto de subjuntivo' },
+            { text: 'Necesitamos que la lengua nos ___ (pertenecer) y no al rev\u00e9s.', blank: 'pertenezca', verb: 'pertenecer', tense: 'presente de subjuntivo' },
+            { text: 'Aunque ___ (llover) toda la noche, ella permaneci\u00f3 en la plaza.', blank: 'lloviera', verb: 'llover', tense: 'pret\u00e9rito imperfecto de subjuntivo' }
+        ]
+    },
+    // === GAME 13: Conjugation — Modos cruzados ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga cada verbo en el modo y tiempo correctos. Cada oraci\u00f3n exige un modo diferente: indicativo, subjuntivo, imperativo o condicional.',
+        sentences: [
+            { text: '___ (Escuchar, t\u00fa) con atenci\u00f3n antes de responder.', blank: 'Escucha', verb: 'escuchar', tense: 'imperativo' },
+            { text: 'Si tuviera que elegir una sola palabra, ___ (elegir, yo) \u00abra\u00edz\u00bb.', blank: 'elegir\u00eda', verb: 'elegir', tense: 'condicional simple' },
+            { text: 'Los datos ___ (demostrar) que la inmersi\u00f3n ling\u00fc\u00edstica es m\u00e1s eficaz que la instrucci\u00f3n expl\u00edcita.', blank: 'demuestran', verb: 'demostrar', tense: 'presente de indicativo' },
+            { text: 'No ___ (creer, t\u00fa) que basta con saber gram\u00e1tica para dominar un idioma.', blank: 'creas', verb: 'creer', tense: 'presente de subjuntivo' },
+            { text: 'Yaguar\u00e1 ___ (haber) preferido quedarse en el Choc\u00f3, pero el r\u00edo no espera.', blank: 'habr\u00eda', verb: 'haber', tense: 'condicional compuesto' },
+            { text: '___ (Decir, t\u00fa) lo que piensas, pero con la palabra justa.', blank: 'Di', verb: 'decir', tense: 'imperativo' },
+            { text: 'Todo indica que la lengua ___ (evolucionar) m\u00e1s r\u00e1pido de lo que los gram\u00e1ticos quisieran.', blank: 'evoluciona', verb: 'evolucionar', tense: 'presente de indicativo' },
+            { text: 'Si Los Antiguos no ___ (intervenir), ella no habr\u00eda encontrado la respuesta.', blank: 'hubieran intervenido', verb: 'intervenir', tense: 'pret\u00e9rito pluscuamperfecto de subjuntivo' }
+        ]
+    },
+    // === GAME 14: Conjugation — Per\u00edfrasis verbales integradas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Completa con la per\u00edfrasis verbal adecuada al contexto y al registro.',
+        sentences: [
+            { text: 'El ponente ___ (estar a punto de + presentar) su tesis cuando se cort\u00f3 la electricidad.', blank: 'estaba a punto de presentar', verb: 'estar a punto de + presentar', tense: 'per\u00edfrasis incoativa' },
+            { text: 'Yaguar\u00e1 ___ (llevar + recorrer) cincuenta y dos destinos cuando lleg\u00f3 a este punto.', blank: 'llevaba recorridos', verb: 'llevar + recorrer', tense: 'per\u00edfrasis resultativa' },
+            { text: 'Hay que ___ (dejar de + pensar) que la gram\u00e1tica y la creatividad son incompatibles.', blank: 'dejar de pensar', verb: 'dejar de + pensar', tense: 'per\u00edfrasis terminativa' },
+            { text: 'Desde la publicaci\u00f3n del informe, los investigadores ___ (venir + insistir) en la necesidad de reformas.', blank: 'vienen insistiendo', verb: 'venir + insistir', tense: 'per\u00edfrasis durativa' },
+            { text: 'Los resultados ___ (acabar de + confirmar) la hip\u00f3tesis inicial.', blank: 'acaban de confirmar', verb: 'acabar de + confirmar', tense: 'per\u00edfrasis de anterioridad inmediata' },
+            { text: 'No ___ (ir a + resolver, nosotros) nada con discursos vac\u00edos.', blank: 'vamos a resolver', verb: 'ir a + resolver', tense: 'per\u00edfrasis de futuro pr\u00f3ximo' },
+            { text: 'La lengua ___ (seguir + transformarse) con o sin la aprobaci\u00f3n de la RAE.', blank: 'sigue transform\u00e1ndose', verb: 'seguir + transformarse', tense: 'per\u00edfrasis continuativa' },
+            { text: 'El problema ___ (tener que + abordarse) desde una perspectiva interdisciplinaria.', blank: 'tiene que abordarse', verb: 'tener que + abordarse', tense: 'per\u00edfrasis de obligaci\u00f3n' }
+        ]
+    },
+    // === GAME 15: Pair — Competencia CEFR y aplicaci\u00f3n real ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada competencia del marco CEFR con su aplicaci\u00f3n en la vida real.',
+        pairs: [
+            ['Nombrar objetos y personas (A1)', 'Presentarse en una reuni\u00f3n social'],
+            ['Narrar eventos pasados (B1)', 'Contar una an\u00e9cdota en una cena'],
+            ['Argumentar una posici\u00f3n (B2)', 'Defender una tesis en un debate'],
+            ['Producir textos acad\u00e9micos (C1)', 'Redactar un art\u00edculo de investigaci\u00f3n'],
+            ['Alternar registros con fluidez (C2)', 'Moderar un panel con expertos y p\u00fablico general'],
+            ['Expresar necesidades b\u00e1sicas (A2)', 'Pedir indicaciones en una ciudad desconocida'],
+            ['Analizar estrategias ret\u00f3ricas (C2)', 'Evaluar cr\u00edticamente un discurso pol\u00edtico'],
+            ['Interpretar textos complejos (C1)', 'Leer y comentar una novela contempor\u00e1nea']
+        ]
+    },
+    // === GAME 16: Pair — Recurso ret\u00f3rico y efecto ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada recurso ret\u00f3rico-literario con el efecto que produce en el discurso p\u00fablico.',
+        pairs: [
+            ['An\u00e1fora', 'Crear ritmo y fijar una idea mediante repetici\u00f3n'],
+            ['Ant\u00edtesis', 'Clarificar un argumento por contraste entre opuestos'],
+            ['Hip\u00e9rbole', 'Amplificar una emoci\u00f3n para movilizar al auditorio'],
+            ['Pregunta ret\u00f3rica', 'Involucrar al oyente sin esperar respuesta'],
+            ['Quiasmo', 'Crear simetr\u00eda invertida para producir efecto de cierre'],
+            ['Eufemismo', 'Atenuar la percepci\u00f3n de una realidad inc\u00f3moda'],
+            ['Met\u00e1fora', 'Hacer tangible un concepto abstracto'],
+            ['Iron\u00eda', 'Decir lo contrario de lo que se piensa para se\u00f1alar una contradicci\u00f3n']
+        ]
+    },
+    // === GAME 17: Pair — Registro y contexto pragm\u00e1tico ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada fragmento con el contexto comunicativo al que pertenece.',
+        pairs: [
+            ['\u00abDe conformidad con el art\u00edculo 67...\u00bb', 'Audiencia en el Congreso de la Rep\u00fablica'],
+            ['\u00abOiga, parcero, \u00bfusted qu\u00e9 opina?\u00bb', 'Conversaci\u00f3n entre amigos en la Candelaria'],
+            ['\u00abLos datos revelan una correlaci\u00f3n significativa...\u00bb', 'Defensa de tesis doctoral'],
+            ['\u00abY el silencio cay\u00f3 como un p\u00e1jaro herido\u00bb', 'Poema o texto literario'],
+            ['\u00abEstimados televidentes, a continuaci\u00f3n...\u00bb', 'Presentaci\u00f3n de noticias en televisi\u00f3n'],
+            ['\u00abMija, t\u00f3mese esta ag\u00fcita que le quita el fr\u00edo\u00bb', 'Puesto de arom\u00e1ticas en la plaza'],
+            ['\u00abEl suscrito, en ejercicio de sus funciones...\u00bb', 'Documento notarial o jur\u00eddico'],
+            ['\u00ab\u00a1Eso, hermano! \u00a1Dele, que usted puede!\u00bb', 'Hinchada en un estadio de f\u00fatbol']
+        ]
+    },
+    // === GAME 18: Listening — Identificar cambios de registro ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Lee el siguiente texto en voz alta e identifica los cambios de registro que contiene.',
+        text: '\u00abConforme a lo dispuesto en la sentencia T-025 de 2004, el Estado colombiano tiene la obligaci\u00f3n de garantizar los derechos fundamentales de la poblaci\u00f3n desplazada.\u00bb Ahora imagina que la misma persona, al salir de la audiencia, le dice a su colega: \u00abParcero, la sentencia esa nos da la raz\u00f3n. \u00bfNos tomamos un tinto para celebrar?\u00bb',
+        questions: [
+            { q: '\u00bfCu\u00e1ntos registros diferentes aparecen en este pasaje?', options: ['Dos: formal jur\u00eddico y coloquial bogotano', 'Tres: formal, informal y literario', 'Uno: formal con variaciones', 'Dos: acad\u00e9mico y period\u00edstico'], answer: 'Dos: formal jur\u00eddico y coloquial bogotano' },
+            { q: '\u00bfQu\u00e9 elemento marca el cambio de registro?', options: ['El vocativo \u00abparcero\u00bb y el diminutivo \u00abtinto\u00bb', 'El cambio de tema', 'El uso de n\u00fameros y cifras', 'La menci\u00f3n de la sentencia'], answer: 'El vocativo \u00abparcero\u00bb y el diminutivo \u00abtinto\u00bb' },
+            { q: '\u00bfQu\u00e9 demuestra la capacidad de alternar registros en una misma persona?', options: ['Dominio ling\u00fc\u00edstico C2: el hablante elige el registro seg\u00fan el contexto sin perder autenticidad', 'Que el hablante no sabe mantener la formalidad', 'Que el registro coloquial es m\u00e1s natural que el formal', 'Que los abogados no respetan el lenguaje jur\u00eddico'], answer: 'Dominio ling\u00fc\u00edstico C2: el hablante elige el registro seg\u00fan el contexto sin perder autenticidad' }
+        ]
+    },
+    // === GAME 19: Listening — Estrategias ret\u00f3ricas integradas ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Lee el siguiente fragmento de discurso y analiza las estrategias ret\u00f3ricas que emplea.',
+        text: '\u00abComo m\u00e9dica rural que ha trabajado veinte a\u00f1os en el Choc\u00f3, he visto morir ni\u00f1os por enfermedades que en Bogot\u00e1 se curan con una pastilla. No vengo a hablarles de estad\u00edsticas, aunque las tengo: la mortalidad infantil en el Pac\u00edfico colombiano triplica la media nacional. Vengo a hablarles de Mar\u00eda, de Tom\u00e1s, de Luc\u00eda. De nombres que ya no podr\u00e1n pronunciarse. Les pregunto: \u00bfcu\u00e1ntos nombres m\u00e1s necesitamos perder para que esto deje de ser una cifra y empiece a ser una verg\u00fcenza?\u00bb',
+        questions: [
+            { q: '\u00bfQu\u00e9 estrategia de ethos emplea la oradora?', options: ['Credenciales profesionales y experiencia directa: \u00abComo m\u00e9dica rural que ha trabajado veinte a\u00f1os en el Choc\u00f3\u00bb', 'Citar autoridades acad\u00e9micas', 'Mencionar su formaci\u00f3n universitaria', 'Invocar su posici\u00f3n pol\u00edtica'], answer: 'Credenciales profesionales y experiencia directa: \u00abComo m\u00e9dica rural que ha trabajado veinte a\u00f1os en el Choc\u00f3\u00bb' },
+            { q: '\u00bfC\u00f3mo integra logos y pathos en un mismo movimiento?', options: ['Presenta el dato estad\u00edstico y luego lo humaniza con nombres propios: Mar\u00eda, Tom\u00e1s, Luc\u00eda', 'Solo usa emociones sin datos', 'Presenta gr\u00e1ficos y tablas', 'Cita un estudio cient\u00edfico sin conexi\u00f3n emocional'], answer: 'Presenta el dato estad\u00edstico y luego lo humaniza con nombres propios: Mar\u00eda, Tom\u00e1s, Luc\u00eda' },
+            { q: '\u00bfQu\u00e9 recurso ret\u00f3rico cierra el fragmento?', options: ['Una pregunta ret\u00f3rica que obliga al auditorio a posicionarse moralmente', 'Una cita de Garc\u00eda M\u00e1rquez', 'Un llamado directo a la acci\u00f3n', 'Una estad\u00edstica final contundente'], answer: 'Una pregunta ret\u00f3rica que obliga al auditorio a posicionarse moralmente' }
+        ]
+    },
+    // === GAME 20: Sorting — Clasificar por nivel CEFR ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada tarea comunicativa seg\u00fan el nivel CEFR m\u00ednimo que requiere.',
+        categories: ['A1\u2013A2', 'B1\u2013B2', 'C1\u2013C2'],
+        items: [
+            { text: 'Presentarse y decir de d\u00f3nde eres', category: 'A1\u2013A2' },
+            { text: 'Escribir una columna de opini\u00f3n con estilo propio', category: 'C1\u2013C2' },
+            { text: 'Contar lo que hiciste el fin de semana', category: 'B1\u2013B2' },
+            { text: 'Analizar las estrategias ret\u00f3ricas de un discurso pol\u00edtico', category: 'C1\u2013C2' },
+            { text: 'Pedir comida en un restaurante', category: 'A1\u2013A2' },
+            { text: 'Defender una tesis con contraargumentos', category: 'B1\u2013B2' },
+            { text: 'Alternar entre registro formal y coloquial con fluidez', category: 'C1\u2013C2' },
+            { text: 'Describir tu casa y tu familia', category: 'A1\u2013A2' },
+            { text: 'Negociar un acuerdo en un contexto profesional', category: 'B1\u2013B2' },
+            { text: 'Escribir un microrrelato con voz narrativa propia', category: 'C1\u2013C2' }
+        ]
+    },
+    // === GAME 21: Sorting — Fen\u00f3menos ling\u00fc\u00edsticos por dominio ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fen\u00f3meno ling\u00fc\u00edstico seg\u00fan el dominio al que pertenece.',
+        categories: ['Gram\u00e1tica', 'Pragm\u00e1tica', 'Ret\u00f3rica', 'Metaling\u00fc\u00edstica'],
+        items: [
+            { text: 'La concordancia de tiempos en oraciones subordinadas', category: 'Gram\u00e1tica' },
+            { text: 'El uso del diminutivo como estrategia de cortes\u00eda', category: 'Pragm\u00e1tica' },
+            { text: 'La an\u00e1fora como recurso de persuasi\u00f3n', category: 'Ret\u00f3rica' },
+            { text: 'La reflexi\u00f3n sobre por qu\u00e9 ser y estar son dos verbos en espa\u00f1ol', category: 'Metaling\u00fc\u00edstica' },
+            { text: 'La distinci\u00f3n entre indicativo y subjuntivo', category: 'Gram\u00e1tica' },
+            { text: 'La implicatura conversacional de Grice', category: 'Pragm\u00e1tica' },
+            { text: 'El framing como herramienta de persuasi\u00f3n pol\u00edtica', category: 'Ret\u00f3rica' },
+            { text: 'El debate entre prescriptivismo y descriptivismo', category: 'Metaling\u00fc\u00edstica' },
+            { text: 'Las per\u00edfrasis verbales de obligaci\u00f3n', category: 'Gram\u00e1tica' },
+            { text: 'La teor\u00eda de los actos de habla de Austin', category: 'Pragm\u00e1tica' },
+            { text: 'La construcci\u00f3n del ethos del orador', category: 'Ret\u00f3rica' },
+            { text: 'La etimolog\u00eda como herramienta de an\u00e1lisis sem\u00e1ntico', category: 'Metaling\u00fc\u00edstica' }
+        ]
+    },
+    // === GAME 22: Sorting — Tipos de discurso por funci\u00f3n ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada tipo de texto seg\u00fan su funci\u00f3n comunicativa principal.',
+        categories: ['Persuadir', 'Informar', 'Crear', 'Analizar'],
+        items: [
+            { text: 'Columna de opini\u00f3n', category: 'Persuadir' },
+            { text: 'Informe cient\u00edfico', category: 'Informar' },
+            { text: 'Microrrelato literario', category: 'Crear' },
+            { text: 'Ensayo metaling\u00fc\u00edstico', category: 'Analizar' },
+            { text: 'Discurso pol\u00edtico electoral', category: 'Persuadir' },
+            { text: 'Noticia period\u00edstica', category: 'Informar' },
+            { text: 'Poema', category: 'Crear' },
+            { text: 'Rese\u00f1a cr\u00edtica de una novela', category: 'Analizar' },
+            { text: 'Manifiesto social', category: 'Persuadir' },
+            { text: 'Manual de instrucciones', category: 'Informar' },
+            { text: 'Cr\u00f3nica literaria', category: 'Crear' },
+            { text: 'Art\u00edculo de an\u00e1lisis del discurso', category: 'Analizar' }
+        ]
+    },
+    // === GAME 23: Sorting — Tipos de error ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada error seg\u00fan su tipo. Un guardi\u00e1n no solo evita errores: los identifica y los nombra.',
+        categories: ['Gramatical', 'Pragm\u00e1tico', 'De registro', 'Estil\u00edstico'],
+        items: [
+            { text: '\u00abSi yo tendr\u00eda dinero, viajar\u00eda\u00bb (por \u00abSi yo tuviera\u00bb)', category: 'Gramatical' },
+            { text: 'Tutear al juez en una audiencia formal', category: 'De registro' },
+            { text: 'Usar cinco adjetivos seguidos donde bastar\u00eda uno', category: 'Estil\u00edstico' },
+            { text: 'Decir \u00abT\u00fa deber\u00edas perder peso\u00bb a alguien que no pidi\u00f3 consejo', category: 'Pragm\u00e1tico' },
+            { text: '\u00abHab\u00edan muchas personas\u00bb (por \u00abHab\u00eda muchas personas\u00bb)', category: 'Gramatical' },
+            { text: 'Usar jerga callejera en una tesis doctoral', category: 'De registro' },
+            { text: 'Repetir la misma estructura sint\u00e1ctica en cada oraci\u00f3n de un p\u00e1rrafo', category: 'Estil\u00edstico' },
+            { text: 'Responder \u00abBien\u00bb cuando alguien pregunta \u00ab\u00bfMe puedes pasar la sal?\u00bb', category: 'Pragm\u00e1tico' },
+            { text: '\u00abLe dije a ellos\u00bb (por \u00abLes dije\u00bb)', category: 'Gramatical' },
+            { text: 'Escribir \u00abEstimado se\u00f1or\u00bb en un mensaje de WhatsApp a un amigo', category: 'De registro' },
+            { text: 'Abusar de la voz pasiva en un texto que requiere dinamismo', category: 'Estil\u00edstico' },
+            { text: 'Hacer una broma sobre la muerte en un funeral', category: 'Pragm\u00e1tico' }
+        ]
+    },
+    // === GAME 24: Builder — Oraci\u00f3n literaria compleja ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una oraci\u00f3n literaria con subordinaci\u00f3n compleja.',
+        words: ['Yaguar\u00e1 comprendi\u00f3', 'que el idioma', 'no era una herramienta', 'que se domina,', 'sino un territorio', 'que se habita', 'con la humildad', 'de quien sabe', 'que nunca terminar\u00e1', 'de explorarlo.'],
+        answer: 'Yaguar\u00e1 comprendi\u00f3 que el idioma no era una herramienta que se domina, sino un territorio que se habita con la humildad de quien sabe que nunca terminar\u00e1 de explorarlo.'
+    },
+    // === GAME 25: Builder — Registro jur\u00eddico-formal ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una oraci\u00f3n de registro jur\u00eddico-formal correctamente estructurada.',
+        words: ['De conformidad', 'con lo dispuesto', 'en el art\u00edculo 20', 'de la Constituci\u00f3n Pol\u00edtica,', 'se garantiza', 'a toda persona', 'la libertad de expresar', 'y difundir', 'su pensamiento y opiniones', 'sin censura previa.'],
+        answer: 'De conformidad con lo dispuesto en el art\u00edculo 20 de la Constituci\u00f3n Pol\u00edtica, se garantiza a toda persona la libertad de expresar y difundir su pensamiento y opiniones sin censura previa.'
+    },
+    // === GAME 26: Builder — Argumento acad\u00e9mico ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para construir un argumento acad\u00e9mico con estructura l\u00f3gica y conectores apropiados.',
+        words: ['Si bien', 'el enfoque prescriptivista', 'ha contribuido', 'a la estandarizaci\u00f3n de la lengua,', 'no es menos cierto que', 'el descriptivismo', 'ha permitido comprender', 'la variaci\u00f3n ling\u00fc\u00edstica', 'como un fen\u00f3meno inherente', 'a toda lengua viva.'],
+        answer: 'Si bien el enfoque prescriptivista ha contribuido a la estandarizaci\u00f3n de la lengua, no es menos cierto que el descriptivismo ha permitido comprender la variaci\u00f3n ling\u00fc\u00edstica como un fen\u00f3meno inherente a toda lengua viva.'
+    },
+    // === GAME 27: Translation — La misma idea en cuatro registros ===
+    {
+        type: 'translation',
+        label: 'Traducci\u00f3n de registros',
+        instruction: 'Selecciona la versi\u00f3n que corresponde al registro indicado. Todas expresan la misma idea: \u00abEs necesario invertir en educaci\u00f3n.\u00bb',
+        pairs: [
+            { source: 'Registro coloquial bogotano', target: 'Oiga, parcero, si no le metemos plata a la educaci\u00f3n, esto no va a cambiar nunca.' },
+            { source: 'Registro formal institucional', target: 'Resulta imperativo destinar recursos presupuestarios adicionales al sector educativo.' },
+            { source: 'Registro literario', target: 'Sin la semilla de la educaci\u00f3n, el jard\u00edn de la rep\u00fablica se marchita en silencio.' },
+            { source: 'Registro acad\u00e9mico', target: 'Los datos emp\u00edricos respaldan la hip\u00f3tesis de que la inversi\u00f3n en capital humano genera retornos socioecon\u00f3micos significativos.' }
+        ]
+    },
+    // === GAME 28: Translation — De literario a acad\u00e9mico ===
+    {
+        type: 'translation',
+        label: 'Transposici\u00f3n',
+        instruction: 'Empareja cada oraci\u00f3n literaria con su equivalente en registro acad\u00e9mico.',
+        pairs: [
+            { source: '\u00abLas palabras no nombran las cosas: las despiertan.\u00bb', target: 'El lenguaje no posee una funci\u00f3n meramente referencial, sino que participa activamente en la construcci\u00f3n cognitiva de la realidad.' },
+            { source: '\u00abMacondo no est\u00e1 en ning\u00fan mapa porque los mapas no saben dibujar la soledad.\u00bb', target: 'El espacio ficcional en la obra de Garc\u00eda M\u00e1rquez trasciende la cartograf\u00eda realista para funcionar como representaci\u00f3n simb\u00f3lica del aislamiento.' },
+            { source: '\u00abEl silencio entre dos personas puede ser m\u00e1s elocuente que mil discursos.\u00bb', target: 'La comunicaci\u00f3n no verbal, y en particular el silencio pragm\u00e1tico, puede transmitir significados de mayor densidad informativa que el discurso verbal expl\u00edcito.' },
+            { source: '\u00abLa gram\u00e1tica es el esqueleto de la lengua; el estilo es su forma de bailar.\u00bb', target: 'Las estructuras morfosint\u00e1cticas constituyen el sistema formal de la lengua, mientras que las elecciones estil\u00edsticas representan la dimensi\u00f3n expresiva del uso individual.' }
+        ]
+    },
+    // === GAME 29: Translation — De coloquial a formal ===
+    {
+        type: 'translation',
+        label: 'Transposici\u00f3n',
+        instruction: 'Empareja cada expresi\u00f3n coloquial colombiana con su equivalente en registro formal.',
+        pairs: [
+            { source: '\u00abEso es una rumba tenaz, parcero.\u00bb', target: 'Se trata de un evento festivo de considerable envergadura.' },
+            { source: '\u00abMe tiene mamado que no hagan nada por los r\u00edos.\u00bb', target: 'Resulta exasperante la inacci\u00f3n institucional respecto a la protecci\u00f3n de los recursos h\u00eddricos.' },
+            { source: '\u00abEse man habla m\u00e1s que un loro y no dice nada.\u00bb', target: 'El mencionado interlocutor se caracteriza por una producci\u00f3n discursiva prolija carente de contenido sustantivo.' },
+            { source: '\u00ab\u00a1Qu\u00e9 nota! Se ganaron la beca todos los pelados.\u00bb', target: 'Es motivo de satisfacci\u00f3n que la totalidad de los j\u00f3venes haya resultado beneficiaria de la beca.' }
+        ]
+    },
+    // === GAME 30: Conversation — Entrevista laboral ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en una entrevista laboral para una ONG cultural en Bogot\u00e1. Demuestra capacidad de alternar entre registros seg\u00fan el momento.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'Entrevistadora', text: 'Buenos d\u00edas. Cu\u00e9ntenos, \u00bfpor qu\u00e9 le interesa trabajar en nuestra organizaci\u00f3n?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Me interesa porque su organizaci\u00f3n integra la preservaci\u00f3n cultural con el desarrollo comunitario, lo cual considero fundamental para el fortalecimiento del tejido social colombiano.',
+                    'Porque me gustan las culturas y eso.',
+                    'Habiendo analizado el impacto de sus intervenciones socioculturales, considero que mi perfil profesional se adecua \u00f3ptimamente a los requerimientos del cargo.',
+                    'Pues, la verdad, necesito un trabajo y este me quedaba cerquita.'
+                ],
+                correct: 'Me interesa porque su organizaci\u00f3n integra la preservaci\u00f3n cultural con el desarrollo comunitario, lo cual considero fundamental para el fortalecimiento del tejido social colombiano.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Entrevistadora', text: 'Interesante. Cu\u00e9nteme una situaci\u00f3n dif\u00edcil que haya manejado en su trabajo anterior.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'En mi puesto anterior, coordin\u00e9 un proyecto intercultural con comunidades way\u00fau. Surgieron tensiones entre los protocolos institucionales y las pr\u00e1cticas comunitarias, y logr\u00e9 mediar proponiendo un marco de trabajo que respetara ambas l\u00f3gicas.',
+                    'Una vez tuve un jefe que era muy dif\u00edcil y me toc\u00f3 aguant\u00e1rmelo.',
+                    'Implement\u00e9 un paradigma de gesti\u00f3n interseccional que optimiz\u00f3 sinergias organizacionales.',
+                    'Pues, o sea, una vez hubo un problema con unos ind\u00edgenas, pero yo lo arregl\u00e9.'
+                ],
+                correct: 'En mi puesto anterior, coordin\u00e9 un proyecto intercultural con comunidades way\u00fau. Surgieron tensiones entre los protocolos institucionales y las pr\u00e1cticas comunitarias, y logr\u00e9 mediar proponiendo un marco de trabajo que respetara ambas l\u00f3gicas.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Entrevistadora', text: 'Excelente. Antes de terminar, \u00bfquiere tomar un caf\u00e9? Aqu\u00ed el tinto es sagrado.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    '\u00a1Claro, con mucho gusto! Me han dicho que el tinto de esta oficina es famoso. Muchas gracias.',
+                    'Proceder\u00e9 a aceptar su ofrecimiento de una infusi\u00f3n de caf\u00e9 conforme a las pr\u00e1cticas consuetudinarias de la instituci\u00f3n.',
+                    'Bueno, yo solo tomo caf\u00e9 org\u00e1nico.',
+                    'No, gracias, estoy bien as\u00ed.'
+                ],
+                correct: '\u00a1Claro, con mucho gusto! Me han dicho que el tinto de esta oficina es famoso. Muchas gracias.'
+            }
+        ]
+    },
+    // === GAME 31: Conversation — Mediaci\u00f3n cultural ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Un visitante extranjero te pide que le expliques aspectos de la cultura colombiana. Demuestra capacidad de explicar conceptos complejos con claridad y sensibilidad cultural.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'Visitante', text: 'He escuchado mucho sobre Garc\u00eda M\u00e1rquez. \u00bfPor qu\u00e9 es tan importante para Colombia?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Garc\u00eda M\u00e1rquez le dio a Colombia \u2014y a toda Latinoam\u00e9rica\u2014 un lenguaje para contar su propia realidad. El realismo m\u00e1gico no fue un capricho est\u00e9tico: fue la \u00fanica forma honesta de narrar un continente donde lo extraordinario y lo cotidiano conviven sin que nadie se asombre.',
+                    'Escribi\u00f3 Cien a\u00f1os de soledad. Es un libro muy famoso.',
+                    'Fue un escritor que gan\u00f3 el Nobel. Sal\u00eda en los billetes de antes.',
+                    'Gabo represent\u00f3 la culminaci\u00f3n del boom latinoamericano como movimiento literario poscolonial de mediados del siglo XX.'
+                ],
+                correct: 'Garc\u00eda M\u00e1rquez le dio a Colombia \u2014y a toda Latinoam\u00e9rica\u2014 un lenguaje para contar su propia realidad. El realismo m\u00e1gico no fue un capricho est\u00e9tico: fue la \u00fanica forma honesta de narrar un continente donde lo extraordinario y lo cotidiano conviven sin que nadie se asombre.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Visitante', text: '\u00bfY qu\u00e9 es eso del vallenato? He visto que la gente lo toma muy en serio.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'El vallenato naci\u00f3 en la costa caribe\u00f1a como forma de contar la vida: amores, duelos, viajes, chismes de pueblo. El juglar vallenato era el periodista, el poeta y el historiador de la comunidad. Cuando un colombiano escucha un vallenato, no solo oye m\u00fasica: oye la voz de su propia memoria.',
+                    'Es un tipo de m\u00fasica colombiana con acorde\u00f3n.',
+                    'Es Patrimonio Inmaterial de la Humanidad seg\u00fan la UNESCO desde 2015.',
+                    'El vallenato constituye una expresi\u00f3n art\u00edstico-musical cuya g\u00e9nesis se remonta a las tradiciones orales del Caribe colombiano.'
+                ],
+                correct: 'El vallenato naci\u00f3 en la costa caribe\u00f1a como forma de contar la vida: amores, duelos, viajes, chismes de pueblo. El juglar vallenato era el periodista, el poeta y el historiador de la comunidad. Cuando un colombiano escucha un vallenato, no solo oye m\u00fasica: oye la voz de su propia memoria.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Visitante', text: 'Una \u00faltima cosa: \u00bfpor qu\u00e9 los colombianos dicen \u00ab\u00bfme regala un caf\u00e9?\u00bb en vez de \u00ab\u00bfme da un caf\u00e9?\u00bb?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Es una estrategia pragm\u00e1tica fascinante: al usar \u00abregalar\u00bb en lugar de \u00abdar\u00bb, el hablante aten\u00faa la imposici\u00f3n de la petici\u00f3n y la convierte en un acto de generosidad del interlocutor. No es que espere que sea gratis; es que la cortes\u00eda colombiana construye la transacci\u00f3n como un gesto de afecto, no como un intercambio comercial.',
+                    'Es solo una forma de hablar. No significa que sea gratis.',
+                    'Es un colombianismo. Es incorrecto gramaticalmente.',
+                    'Porque en Colombia todo el mundo es muy amable.'
+                ],
+                correct: 'Es una estrategia pragm\u00e1tica fascinante: al usar \u00abregalar\u00bb en lugar de \u00abdar\u00bb, el hablante aten\u00faa la imposici\u00f3n de la petici\u00f3n y la convierte en un acto de generosidad del interlocutor. No es que espere que sea gratis; es que la cortes\u00eda colombiana construye la transacci\u00f3n como un gesto de afecto, no como un intercambio comercial.'
+            }
+        ]
+    },
+    // === GAME 32: Conversation — Defensa acad\u00e9mica ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Defiendes una tesis sobre la relaci\u00f3n entre lengua e identidad en Colombia. El tribunal te hace preguntas dif\u00edciles. Responde con rigor acad\u00e9mico, claridad y compostura.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'Tribunal', text: '\u00bfNo cree usted que su tesis sobrevalora el papel del lenguaje en la construcci\u00f3n de la identidad nacional? Al fin y al cabo, hay factores econ\u00f3micos y pol\u00edticos mucho m\u00e1s determinantes.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Entiendo la objeci\u00f3n y la considero pertinente. No planteo que el lenguaje sea el factor determinante, sino que es el medio a trav\u00e9s del cual los factores econ\u00f3micos y pol\u00edticos adquieren significado social. Sin el discurso que los nombra y los interpreta, esos factores carecen de articulaci\u00f3n simb\u00f3lica.',
+                    'No, mi tesis no sobrevalora nada. El lenguaje es lo m\u00e1s importante.',
+                    'Tiene raz\u00f3n, quiz\u00e1 deber\u00eda cambiar mi hip\u00f3tesis.',
+                    'Los factores socioecon\u00f3micos a los que alude operan dentro de marcos discursivos que los constituyen ontol\u00f3gicamente como realidades socialmente compartidas.'
+                ],
+                correct: 'Entiendo la objeci\u00f3n y la considero pertinente. No planteo que el lenguaje sea el factor determinante, sino que es el medio a trav\u00e9s del cual los factores econ\u00f3micos y pol\u00edticos adquieren significado social. Sin el discurso que los nombra y los interpreta, esos factores carecen de articulaci\u00f3n simb\u00f3lica.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Tribunal', text: 'Su marco te\u00f3rico se apoya mucho en autores europeos. \u00bfNo es contradictorio usar herramientas te\u00f3ricas del centro para analizar la periferia?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Es una tensi\u00f3n que reconozco expl\u00edcitamente en el cap\u00edtulo metodol\u00f3gico. Mi enfoque no aplica acr\u00edticamente marcos europeos, sino que los pone en di\u00e1logo con pensadores latinoamericanos como \u00c1ngel Rama, Mignolo y Garc\u00eda Canclini. La herramienta importa menos que la pregunta que la gu\u00eda, y mi pregunta es inequ\u00edvocamente colombiana.',
+                    'No creo que sea contradictorio porque la ciencia es universal.',
+                    'S\u00ed, tiene raz\u00f3n, deber\u00eda haber usado solo autores colombianos.',
+                    'Pues, los europeos son los que m\u00e1s han escrito sobre el tema, \u00bfqu\u00e9 m\u00e1s se puede hacer?'
+                ],
+                correct: 'Es una tensi\u00f3n que reconozco expl\u00edcitamente en el cap\u00edtulo metodol\u00f3gico. Mi enfoque no aplica acr\u00edticamente marcos europeos, sino que los pone en di\u00e1logo con pensadores latinoamericanos como \u00c1ngel Rama, Mignolo y Garc\u00eda Canclini. La herramienta importa menos que la pregunta que la gu\u00eda, y mi pregunta es inequ\u00edvocamente colombiana.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Tribunal', text: 'Para terminar: si tuviera que resumir su contribuci\u00f3n en una sola frase, \u00bfcu\u00e1l ser\u00eda?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Que la identidad colombiana no se expresa a trav\u00e9s del espa\u00f1ol: se construye en \u00e9l, con \u00e9l y, a veces, a pesar de \u00e9l.',
+                    'Que el lenguaje es muy importante para Colombia.',
+                    'Que mi tesis demuestra que la lengua y la identidad est\u00e1n correlacionadas positivamente.',
+                    'Que todo lo que somos est\u00e1 en las palabras que usamos.'
+                ],
+                correct: 'Que la identidad colombiana no se expresa a trav\u00e9s del espa\u00f1ol: se construye en \u00e9l, con \u00e9l y, a veces, a pesar de \u00e9l.'
+            }
+        ]
+    },
+    // === GAME 33: Dictation — Pasaje literario ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje. Presta atenci\u00f3n a la puntuaci\u00f3n, las tildes y la estructura de las oraciones subordinadas.',
+        text: 'Yaguar\u00e1 comprendi\u00f3, con la certeza que solo otorgan los viajes largos, que dominar una lengua no consist\u00eda en acumular reglas, sino en saber cu\u00e1ndo romperlas; no en hablar sin errores, sino en elegir cada palabra como quien elige una piedra para cruzar un r\u00edo.'
+    },
+    // === GAME 34: Dictation — Pasaje acad\u00e9mico ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje acad\u00e9mico. Presta especial atenci\u00f3n a los t\u00e9rminos t\u00e9cnicos, los conectores y la puntuaci\u00f3n.',
+        text: 'La competencia pragm\u00e1tica, a diferencia de la competencia gramatical, no puede evaluarse exclusivamente mediante pruebas de correcci\u00f3n formal, ya que implica la capacidad del hablante para adecuar su discurso al contexto sociocultural, anticipar implicaturas y negociar significados en tiempo real.'
+    },
+    // === GAME 35: Story — Lectura integradora ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este texto que integra todos los temas del nivel C2 b\u00e1sico y responde las preguntas de comprensi\u00f3n.',
+        text: 'Cuando Yaguar\u00e1 intent\u00f3 explicarle a un ni\u00f1o de la Candelaria por qu\u00e9 hab\u00eda viajado tanto, se dio cuenta de que la respuesta m\u00e1s honesta era la m\u00e1s simple: porque las palabras no son las mismas en todas partes. No porque cambien de idioma \u2014eso ya lo sab\u00eda antes de partir\u2014, sino porque la misma palabra, \u00abagua\u00bb, por ejemplo, suena distinta en boca de un pescador del Pac\u00edfico que en un informe de la ONU sobre recursos h\u00eddricos. Y esa diferencia no es solo de registro: es de mundo. El pescador dice \u00abagua\u00bb y ve el mar que lo alimenta; el funcionario dice \u00abrecursos h\u00eddricos\u00bb y ve una gr\u00e1fica presupuestaria. Ninguno de los dos miente, pero tampoco dicen lo mismo.\n\nLa ling\u00fc\u00edstica le hab\u00eda ense\u00f1ado que este fen\u00f3meno tiene nombre: polisemia pragm\u00e1tica, variaci\u00f3n diastr\u00e1tica, framing. Pero los nombres t\u00e9cnicos, descubri\u00f3 Yaguar\u00e1, eran como los mapas: \u00fatiles para orientarse, insuficientes para conocer el territorio. Conocer el territorio significaba haber caminado por \u00e9l: haber escuchado al vendedor y al senador, al poeta y al cient\u00edfico, a la abuela que dice \u00abmija\u00bb y al juez que dice \u00abel suscrito\u00bb. Y haber entendido que todos ellos hablan el mismo idioma y, al mismo tiempo, no.\n\nEl ni\u00f1o la mir\u00f3 con sus ojos enormes y pregunt\u00f3: \u00ab\u00bfY ya encontraste la palabra m\u00e1s importante?\u00bb Yaguar\u00e1 sonri\u00f3. \u00abTodav\u00eda no \u2014dijo\u2014. Pero creo que est\u00e1 cerca. Y creo que es diferente para cada persona.\u00bb',
+        questions: [
+            {
+                q: '\u00bfPor qu\u00e9 dice el texto que \u00abagua\u00bb suena distinta en boca de un pescador y en un informe de la ONU?',
+                options: ['Porque cada registro carga la palabra con un marco conceptual diferente: la experiencia vivida frente a la abstracci\u00f3n institucional', 'Porque son dialectos diferentes del espa\u00f1ol', 'Porque el pescador pronuncia mal la palabra', 'Porque la ONU usa un idioma diferente'],
+                answer: 'Porque cada registro carga la palabra con un marco conceptual diferente: la experiencia vivida frente a la abstracci\u00f3n institucional'
+            },
+            {
+                q: '\u00bfQu\u00e9 quiere decir Yaguar\u00e1 cuando afirma que los nombres t\u00e9cnicos son \u00abcomo los mapas\u00bb?',
+                options: ['Que la terminolog\u00eda ling\u00fc\u00edstica orienta pero no puede sustituir la experiencia directa con la lengua viva', 'Que la ling\u00fc\u00edstica es una ciencia geogr\u00e1fica', 'Que los mapas y las palabras son la misma cosa', 'Que los t\u00e9rminos t\u00e9cnicos son m\u00e1s precisos que la experiencia'],
+                answer: 'Que la terminolog\u00eda ling\u00fc\u00edstica orienta pero no puede sustituir la experiencia directa con la lengua viva'
+            },
+            {
+                q: '\u00bfQu\u00e9 concepto metaling\u00fc\u00edstico se ilustra con el ejemplo del pescador y el funcionario?',
+                options: ['Que el significado de una palabra depende no solo de su denotaci\u00f3n sino de su contexto pragm\u00e1tico, sociocultural y registro', 'Que existen sin\u00f3nimos perfectos en espa\u00f1ol', 'Que el lenguaje t\u00e9cnico es superior al coloquial', 'Que los pescadores no entienden los informes oficiales'],
+                answer: 'Que el significado de una palabra depende no solo de su denotaci\u00f3n sino de su contexto pragm\u00e1tico, sociocultural y registro'
+            },
+            {
+                q: '\u00bfC\u00f3mo se interpreta la idea de que \u00abtodos hablan el mismo idioma y, al mismo tiempo, no\u00bb?',
+                options: ['Que el espa\u00f1ol es un sistema unitario cuya realizaci\u00f3n var\u00eda profundamente seg\u00fan el registro, el contexto y la identidad del hablante', 'Que en Colombia se hablan muchos idiomas distintos', 'Que los colombianos no se entienden entre s\u00ed', 'Que el espa\u00f1ol deber\u00eda unificarse para evitar malentendidos'],
+                answer: 'Que el espa\u00f1ol es un sistema unitario cuya realizaci\u00f3n var\u00eda profundamente seg\u00fan el registro, el contexto y la identidad del hablante'
+            },
+            {
+                q: '\u00bfQu\u00e9 relaci\u00f3n tiene la pregunta final del ni\u00f1o con el concepto de la Palabra del Coraz\u00f3n?',
+                options: ['Conecta directamente: la Palabra del Coraz\u00f3n es esa palabra m\u00e1s importante que es diferente para cada persona y que se encuentra al final del viaje ling\u00fc\u00edstico', 'No tiene relaci\u00f3n; es un detalle decorativo de la narraci\u00f3n', 'Se refiere al vocabulario m\u00e1s frecuente del espa\u00f1ol', 'Se refiere a la palabra \u00abagua\u00bb del principio del texto'],
+                answer: 'Conecta directamente: la Palabra del Coraz\u00f3n es esa palabra m\u00e1s importante que es diferente para cada persona y que se encuentra al final del viaje ling\u00fc\u00edstico'
+            }
+        ]
+    },
+    // === GAME 36: Story — Texto acad\u00e9mico integrador ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este fragmento de ensayo acad\u00e9mico sobre competencia ling\u00fc\u00edstica avanzada y responde las preguntas.',
+        text: 'La noci\u00f3n de \u00abhablante nativo\u00bb ha sido cuestionada en las \u00faltimas d\u00e9cadas desde m\u00faltiples perspectivas. En primer lugar, la socioling\u00fc\u00edstica ha demostrado que ning\u00fan hablante domina todos los registros de su propia lengua con igual competencia: un abogado puede ser ling\u00fc\u00edsticamente torpe en un contexto coloquial, y un vendedor ambulante puede ser incapaz de producir un texto acad\u00e9mico, sin que ninguno de los dos deje por ello de ser \u00abnativo\u00bb. En segundo lugar, la pragm\u00e1tica intercultural ha evidenciado que la competencia comunicativa incluye dimensiones \u2014como la negociaci\u00f3n de significados, la gesti\u00f3n de la cortes\u00eda y la interpretaci\u00f3n de implicaturas\u2014 que no se adquieren autom\u00e1ticamente por el hecho de crecer en un entorno hispanohablante.\n\nEstas observaciones no invalidan el concepto de competencia nativa, pero lo obligan a redefinirse: no como un estado fijo que se posee por nacimiento, sino como un horizonte din\u00e1mico que se construye a lo largo de toda la vida. El nivel C2 del MCER no describe a un hablante nativo ideal, sino a un usuario que ha desarrollado la capacidad de operar eficazmente en cualquier contexto comunicativo, adaptando su registro, su estrategia ret\u00f3rica y su nivel de complejidad a las exigencias de cada situaci\u00f3n. En este sentido, un hablante no nativo que alcanza el C2 puede superar, en ciertos dominios, a muchos hablantes nativos que jam\u00e1s han reflexionado sobre su propia competencia.',
+        questions: [
+            {
+                q: '\u00bfCu\u00e1l es el argumento principal del texto contra la noci\u00f3n tradicional de \u00abhablante nativo\u00bb?',
+                options: ['Que ning\u00fan hablante domina todos los registros y dimensiones comunicativas de su lengua por el simple hecho de ser nativo', 'Que los hablantes nativos hablan peor que los no nativos', 'Que el concepto de hablante nativo es completamente in\u00fatil', 'Que solo los ling\u00fcistas pueden ser verdaderos hablantes nativos'],
+                answer: 'Que ning\u00fan hablante domina todos los registros y dimensiones comunicativas de su lengua por el simple hecho de ser nativo'
+            },
+            {
+                q: '\u00bfC\u00f3mo redefine el texto el concepto de competencia nativa?',
+                options: ['Como un horizonte din\u00e1mico que se construye a lo largo de la vida, no como un estado fijo de nacimiento', 'Como algo que solo los extranjeros pueden alcanzar', 'Como sin\u00f3nimo de correcci\u00f3n gramatical perfecta', 'Como una habilidad innata que no puede aprenderse'],
+                answer: 'Como un horizonte din\u00e1mico que se construye a lo largo de la vida, no como un estado fijo de nacimiento'
+            },
+            {
+                q: '\u00bfQu\u00e9 implica la afirmaci\u00f3n de que un hablante C2 no nativo puede superar a muchos nativos?',
+                options: ['Que la competencia ling\u00fc\u00edstica avanzada depende m\u00e1s de la reflexi\u00f3n consciente y la pr\u00e1ctica deliberada que del entorno de adquisici\u00f3n', 'Que aprender espa\u00f1ol es m\u00e1s f\u00e1cil de lo que parece', 'Que los nativos no deber\u00edan ense\u00f1ar espa\u00f1ol', 'Que el MCER es un sistema injusto con los hablantes nativos'],
+                answer: 'Que la competencia ling\u00fc\u00edstica avanzada depende m\u00e1s de la reflexi\u00f3n consciente y la pr\u00e1ctica deliberada que del entorno de adquisici\u00f3n'
+            },
+            {
+                q: '\u00bfQu\u00e9 conectores emplea el texto para estructurar la argumentaci\u00f3n?',
+                options: ['\u00abEn primer lugar... En segundo lugar... Estas observaciones... pero... En este sentido\u00bb: secuencia, concesi\u00f3n y reformulaci\u00f3n', 'Solo usa \u00aby\u00bb para conectar ideas', 'No emplea conectores; las ideas est\u00e1n yuxtapuestas', 'Usa exclusivamente conectores causales como \u00abporque\u00bb y \u00abya que\u00bb'],
+                answer: '\u00abEn primer lugar... En segundo lugar... Estas observaciones... pero... En este sentido\u00bb: secuencia, concesi\u00f3n y reformulaci\u00f3n'
+            }
+        ]
+    },
+    // === GAME 37: Canci\u00f3n — \u00abA Dios le pido\u00bb de Juanes ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abA Dios le pido\u00bb de Juanes y completa los versos. Reflexiona sobre c\u00f3mo la canci\u00f3n funciona como s\u00edntesis emocional: un acto de habla (pedir), un registro (\u00edntimo-espiritual), una funci\u00f3n ret\u00f3rica (pathos) y un posicionamiento cultural (fe colombiana) integrados en una sola voz.',
+        youtubeId: 'KNYCNU1YnvA',
+        artist: 'Juanes',
+        songTitle: 'A Dios le pido',
+        lines: [
+            { text: 'Que mis ojos se despierten con la ___ de tu mirada.', blank: 'luz', options: ['luz', 'fuerza', 'paz', 'voz'] },
+            { text: 'Yo a Dios le pido que mi madre no se ___.', blank: 'muera', options: ['muera', 'vaya', 'canse', 'pierda'] },
+            { text: 'Y que mi padre me ___ desde el cielo.', blank: 'cuide', options: ['cuide', 'mire', 'espere', 'llame'] },
+            { text: 'Yo a Dios le pido un segundo m\u00e1s de ___.', blank: 'vida', options: ['vida', 'tiempo', 'fuerza', 'calma'] },
+            { text: 'Para darte y mi pueblo no ___ tanta sangre.', blank: 'derrame', options: ['derrame', 'pierda', 'tenga', 'llore'] },
+            { text: 'Y poder sembrarte un ___ con mis manos.', blank: 'beso', options: ['beso', '\u00e1rbol', 'sue\u00f1o', 'jard\u00edn'] },
+            { text: 'Yo a Dios le pido que mi alma no ___.', blank: 'descanse', options: ['descanse', 'se pierda', 'se muera', 'se apague'] },
+            { text: 'Cuando de amarte se ___.', blank: 'trate', options: ['trate', 'canse', 'olvide', 'acabe'] }
+        ]
+    },
+    // === GAME 38: Canci\u00f3n — \u00abVolv\u00ed a nacer\u00bb de Carlos Vives ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abVolv\u00ed a nacer\u00bb de Carlos Vives y completa los versos. Esta canci\u00f3n cierra el ciclo C2 b\u00e1sico con su tema de renacimiento: Yaguar\u00e1 no termina su viaje, sino que vuelve a empezar, transformada, como el guardi\u00e1n que despierta.',
+        youtubeId: '2hFKpNOAiDU',
+        artist: 'Carlos Vives',
+        songTitle: 'Volv\u00ed a nacer',
+        lines: [
+            { text: 'Hoy volv\u00ed a ___.', blank: 'nacer', options: ['nacer', 'vivir', 'creer', 'so\u00f1ar'] },
+            { text: 'Y es tan lindo este ___.', blank: 'amanecer', options: ['amanecer', 'momento', 'sentimiento', 'renacer'] },
+            { text: 'Que el sol brilla m\u00e1s ___.', blank: 'fuerte', options: ['fuerte', 'bonito', 'claro', 'alto'] },
+            { text: 'Para alumbrar mi ___.', blank: 'suerte', options: ['suerte', 'vida', 'mente', 'gente'] },
+            { text: 'Desde que ___ encontr\u00e9.', blank: 'te', options: ['te', 'me', 'la', 'lo'] },
+            { text: 'Todo cambi\u00f3 de ___.', blank: 'color', options: ['color', 'rumbo', 'lugar', 'forma'] },
+            { text: 'Me despert\u00f3 tu ___.', blank: 'voz', options: ['voz', 'amor', 'luz', 'paz'] },
+            { text: 'Y ahora brilla el ___.', blank: 'sol', options: ['sol', 'mar', 'cielo', 'd\u00eda'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El observatorio de las lenguas',
+            description: 'Una cámara esférica donde el suelo es un mapa y el techo es el cielo. Cada constelación corresponde a una familia lingüística.',
+            ambience: 'stars'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el centro del observatorio, una esfera de cristal muestra una cerradura.',
+                clue: 'Es el proceso de combinar conocimientos de diferentes fuentes para crear algo nuevo. La palabra tiene ocho letras.',
+                answer: 'sintesis',
+                hint: '_ _ _ _ _ _ _ _',
+                onSolve: 'La esfera gira y revela un mapa interno.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Cuatro fragmentos de conocimiento deben ordenarse para formar una argumentación coherente.',
+                clue: 'Ordena del planteamiento general a la conclusión específica.',
+                items: [
+                    'Las lenguas indígenas de Colombia están en peligro',
+                    'Cuando muere una lengua, muere una forma de entender el mundo',
+                    'El español colombiano incorpora palabras de lenguas indígenas',
+                    'Proteger las lenguas indígenas enriquece al español mismo'
+                ],
+                onSolve: 'Los fragmentos se conectan como constelaciones.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Tres voces suenan simultáneamente en el observatorio.',
+                sources: [
+                    '«En Colombia se hablan 70 lenguas.» — Dato lingüístico',
+                    '«Mi abuela hablaba nasa yuwe. Yo solo hablo español.» — Testimonio personal',
+                    '«Cada lengua que desaparece es una biblioteca que se quema.» — Proverbio'
+                ],
+                clue: '¿Qué argumento construyen estas tres voces juntas?',
+                answer: 'La pérdida lingüística no es abstracta: tiene rostros, memorias, y consecuencias culturales irreversibles',
+                options: [
+                    'La pérdida lingüística no es abstracta: tiene rostros, memorias, y consecuencias culturales irreversibles',
+                    'Colombia necesita más profesores de lenguas indígenas',
+                    'El español reemplazará todas las lenguas eventualmente',
+                    'Los proverbios son más importantes que los datos'
+                ],
+                onSolve: 'Las tres voces se unen en una sola. El observatorio vibra.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Una última pregunta brilla en el mapa del suelo.',
+                premises: [
+                    'Yaguará aprendió español para comunicarse con los humanos.',
+                    'Los humanos dejaron de escuchar la selva cuando dejaron de nombrarla.',
+                    'Nombrar es el primer acto de cuidar.'
+                ],
+                clue: '¿Qué implica esto para el estudiante que está jugando ahora mismo?',
+                answer: 'Que aprender una lengua no es solo comunicación: es un acto de cuidado del mundo',
+                options: [
+                    'Que aprender una lengua no es solo comunicación: es un acto de cuidado del mundo',
+                    'Que todos deberían aprender español',
+                    'Que los animales también hablan',
+                    'Que los juegos educativos son efectivos'
+                ],
+                onSolve: 'El mapa del suelo se completa. La puerta se abre hacia las estrellas.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: la constelación del Observatorio, que conecta todas las demás.',
+            questClue: 'Desde aquí se ven todas las puertas. El mapa empieza a tener sentido.',
+            item: 'constelacion-observatorio'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '53',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest53Progress',
+        backUrl: '../../c2-bogota.html'
+    });
+</script>
+</body>
+</html>

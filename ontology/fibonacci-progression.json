@@ -1,0 +1,181 @@
+{
+  "_purpose": "Map Fibonacci growth to ontology entities. How LTs scale, recur, and deepen across spirals.",
+
+  "spirals": [
+    {
+      "spiral": 1,
+      "cefr": "A1",
+      "fibonacci": 5,
+      "gameInstances": 5,
+      "world": "mundoDeAbajo",
+      "motto": "Nombrar el mundo",
+      "newLTsIntroduced": 5,
+      "activitiesPerNewLT": 1,
+      "recycledLTs": 0,
+      "totalLTTouches": 5,
+      "storyDepth": "single scene, present tense, one character speaks",
+      "archetypes": ["NamingRitual", "GuidedMovement"],
+      "note": "Maximum repetition. Each game introduces 1 new LT. The student hears, selects, names."
+    },
+    {
+      "spiral": 2,
+      "cefr": "A2",
+      "fibonacci": 8,
+      "gameInstances": 8,
+      "world": "mundoDeAbajo",
+      "motto": "Nombrar el mundo (expanded)",
+      "newLTsIntroduced": 3,
+      "activitiesPerNewLT": 1,
+      "recycledLTs": 5,
+      "totalLTTouches": 8,
+      "storyDepth": "multi-scene, simple past introduced, two characters interact",
+      "archetypes": ["NamingRitual", "GuidedMovement", "StoryWeaving"],
+      "note": "5 of 8 games revisit A1 LTs in new contexts (new ecosystem, new characters). 3 games introduce A2-specific targets (preterite, reflexives, imperative). Same form, richer situation."
+    },
+    {
+      "spiral": 3,
+      "cefr": "B1",
+      "fibonacci": 13,
+      "gameInstances": 13,
+      "world": "mundoDelMedio",
+      "motto": "Contar lo vivido",
+      "newLTsIntroduced": 5,
+      "activitiesPerNewLT": "1-2",
+      "recycledLTs": 8,
+      "totalLTTouches": 13,
+      "storyDepth": "narrated past, cause-effect, allies and enemies, community conflict",
+      "archetypes": ["NamingRitual(past)", "GuidedMovement(narrated)", "StoryWeaving(full)"],
+      "note": "8 of 13 games recycle A1+A2 targets with the TIME dimension. 'El río es frío' (A1) becomes 'El río era frío cuando Yaguará llegó' (B1). Same LT, new tense, same ecosystem. 5 games introduce B1-specific targets (preterite vs imperfect, subjunctive basic, por/para)."
+    },
+    {
+      "spiral": 4,
+      "cefr": "B2",
+      "fibonacci": 21,
+      "gameInstances": 21,
+      "world": "mundoDelMedio",
+      "motto": "La prueba",
+      "newLTsIntroduced": 8,
+      "activitiesPerNewLT": "1-2",
+      "recycledLTs": 13,
+      "totalLTTouches": 21,
+      "storyDepth": "perspective shifts, reported speech, hypothetical, the shadow self",
+      "archetypes": ["all previous", "DialogueWithLivingWorld"],
+      "note": "13 of 21 games recycle ALL prior LTs in argumentative/perspective contexts. 'No tengas miedo' (A2 imperative) becomes 'Don Próspero dijo que no tuviéramos miedo del progreso' (B2 reported speech + imperfect subjunctive). Same root imperative, but now filtered through another voice. 8 games introduce B2-specific targets."
+    },
+    {
+      "spiral": 5,
+      "cefr": "C1",
+      "fibonacci": 34,
+      "gameInstances": 34,
+      "world": "mundoDeArriba",
+      "motto": "El regreso",
+      "newLTsIntroduced": 13,
+      "activitiesPerNewLT": "2-3",
+      "recycledLTs": 21,
+      "totalLTTouches": 34,
+      "storyDepth": "symbolic, metaphorical, dream-logic, register shifts, ancestors speak in poetry",
+      "archetypes": ["all previous", "SymbolInterpretation"],
+      "note": "21 of 34 games revisit ALL prior LTs in abstract/symbolic contexts. The student doesn't learn new grammar for old forms — they learn to USE old forms in new registers. Fewer new words, more interpretation. 13 games introduce C1-specific targets (imperfect subjunctive, si clauses, register adaptation)."
+    },
+    {
+      "spiral": 6,
+      "cefr": "C2",
+      "fibonacci": 55,
+      "gameInstances": 55,
+      "world": "mundoDeArriba",
+      "motto": "La palabra del corazón",
+      "newLTsIntroduced": 21,
+      "activitiesPerNewLT": "2-3",
+      "recycledLTs": 34,
+      "totalLTTouches": 55,
+      "storyDepth": "authorial, the student creates language, mediates between voices, writes myth",
+      "archetypes": ["all previous", "RestoringBalance"],
+      "note": "34 of 55 games revisit ALL prior LTs. The student now USES the entire grammar system to create, mediate, and resolve. The 21 new C2-specific targets are discourse-level (literary register, nuanced connectors, mediation/reformulation). Mastery is not new grammar — it's what you DO with all the grammar."
+    }
+  ],
+
+  "fibonacciRule": {
+    "law": "Each spiral has approximately as many game instances as ALL previous spirals combined",
+    "proof": "5, 8≈5+3, 13≈8+5, 21≈13+8, 34≈21+13, 55≈34+21",
+    "consequence": "At every new level, there is ROOM to revisit every prior LT at least once, plus introduce new ones. This is spiral learning by construction, not by hope."
+  },
+
+  "recyclingRule": {
+    "law": "A recycled LT keeps its ontology ID but gains new context from the StoryNode",
+    "mechanism": [
+      "Same lt_verb_tener_indicative_present at A1: 'Tengo cinco años' (stating age)",
+      "Same LT at A2: 'Tengo miedo del bosque' (expressing fear — tener expression)",
+      "Same LT at B1: 'Yaguará tenía miedo cuando era pequeña' (narrating past — NEW tense wraps OLD target)",
+      "Same LT at B2: 'Dijo que tenía miedo, pero no le creí' (reported speech — ANOTHER voice wraps it)",
+      "Same LT at C1: 'Si tuviera miedo, no hablaría' (hypothetical — the form bends into subjunctive)",
+      "Same LT at C2: 'El miedo es la raíz de todas las puertas que no abrimos' (the concept transcends grammar)"
+    ],
+    "ontologyLink": "The LT ID stays the same. The StoryNode provides the new context. The LearningObjective at each level provides the new can-do. Grammar is the constant; meaning is the variable."
+  },
+
+  "workedExample": {
+    "target": "lt_grammar_imperative_negative",
+    "form": "no + subjunctive present",
+    "concreteForm": "no tengas (miedo)",
+
+    "stages": [
+      {
+        "spiral": 2,
+        "cefr": "A2",
+        "fibonacci": 8,
+        "encounter": "1 of 8",
+        "gameType": "fill",
+        "inputMode": "choice",
+        "storyNode": "sn_dest14 (Candelaria's first appearance)",
+        "context": "Yaguará finds Candelaria lost by the river at night. Candelaria is afraid. Yaguará must tell her not to be afraid — but in human words.",
+        "prompt": "Completa: ¡No ___ miedo, Cande!",
+        "options": ["tengas", "tienes", "tiene", "ten"],
+        "answer": "tengas",
+        "storyDepth": "Simple command. One speaker, one listener. Present moment.",
+        "culturalConcept": null,
+        "whatStudentLearns": "The FORM: no + subjunctive present = negative command"
+      },
+      {
+        "spiral": 3,
+        "cefr": "B1",
+        "fibonacci": 13,
+        "encounter": "7 of 13",
+        "gameType": "conversation",
+        "inputMode": "choice",
+        "storyNode": "sn_dest21 (Don Próspero's road threatens the forest)",
+        "context": "Don Próspero tells the community: 'No tengan miedo del progreso.' Candelaria whispers to Yaguará: 'No le tengas confianza.' Two negative commands — one public, one private. Who is right?",
+        "prompt": "¿Qué responde Candelaria?",
+        "options": ["No le tengas confianza.", "No le tienes confianza.", "No tiene confianza."],
+        "answer": "No le tengas confianza.",
+        "storyDepth": "The SAME form now carries social weight. Two people use the same grammar for opposite purposes. The student sees: language is power.",
+        "culturalConcept": "cc_escuchadora (Doña Asunción warned about men like Próspero)",
+        "whatStudentLearns": "The CONTEXT: same form, but WHO gives the command and WHY changes everything"
+      },
+      {
+        "spiral": 4,
+        "cefr": "B2",
+        "fibonacci": 21,
+        "encounter": "15 of 21",
+        "gameType": "story",
+        "inputMode": "typing",
+        "storyNode": "sn_dest34 (La Sombra de Yaguará appears)",
+        "context": "La Sombra speaks in confused grammar: 'No tienes miedo... no ten miedo... no...' The student must recognize which forms are correct and which are the Shadow's confusion. Then write the correct command to dispel the Shadow.",
+        "prompt": "La Sombra dice: 'No tienes miedo del silencio.' ¿Es correcto? Escribe la forma correcta.",
+        "answer": "No tengas miedo del silencio.",
+        "storyDepth": "The Shadow is the student's own fear of making mistakes. To correct the Shadow, you must KNOW the form AND have the courage to speak it. The grammar becomes psychological.",
+        "culturalConcept": "myth_sombra_yaguara",
+        "whatStudentLearns": "The MASTERY: the student corrects broken language. They are now the authority. Same form, but the student's relationship to it has inverted — from receiver to speaker to teacher."
+      }
+    ],
+
+    "summary": "3 Fibonacci stages. Same ontology ID (lt_grammar_imperative_negative). Same grammatical form (no tengas). Three completely different experiences. The grammar didn't change. The student did."
+  },
+
+  "totals": {
+    "gameInstancesPerEcosystem": "5 + 8 + 13 + 21 + 34 + 55 = 136",
+    "ecosystems": 8,
+    "totalActivities": "136 × 8 = 1,088 (original plan: ~544 with 4 ecosystems; scaled to 8)",
+    "uniqueGameTemplates": "30-40 (reused across spirals with different parameters)",
+    "totalLinguisticTargets": "~55 across all levels (current ontology seed: 49)"
+  }
+}

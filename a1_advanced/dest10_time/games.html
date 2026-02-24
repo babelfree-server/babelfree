@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 10: El tiempo y los n&uacute;meros</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest10_time/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 10: El tiempo y los números — Games",
+                "url": "https://babelfree.com/a1_advanced/dest10_time/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Months and dates",
+                    "Clock time and numbers 32-100"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "El tiempo y los números",
+                        "item": "https://babelfree.com/a1_advanced/dest10_time/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 10: El tiempo y los n&uacute;meros</div>
+            <div class="yg-header-subtitle">Meses, horas y n&uacute;meros</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — La rana no canta
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguará cuenta las lunas. Cuatro lunas desde el silencio de la rana. Antes, la rana canta todas las noches. Ahora no canta. Yaguará cuenta: una luna, dos lunas, tres lunas, cuatro lunas de silencio.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Río cuenta sus peces
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Río no sabe del silencio. Él cuenta sus peces: «¡Uno, dos, tres, cuatro... cinco!» Está feliz. Yaguará mira a su hermano. Él no sabe que el bosque está más callado.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — El tiempo pasa
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'El tiempo pasa en el bosque. Enero, febrero, marzo. Cada mes, un sonido menos. El pájaro de la noche ya no canta. El grillo ya no canta. Yaguará cuenta los meses. Son cuatro meses de silencio.'
+    },
+
+    /* ============================================================
+       4. PAIR — Los meses del año
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el número con el mes.',
+        pairs: [
+            ['1', 'enero'],
+            ['4', 'abril'],
+            ['7', 'julio'],
+            ['12', 'diciembre']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — La hora
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la hora con la frase.',
+        pairs: [
+            ['8:00', 'Son las ocho'],
+            ['1:00', 'Es la una'],
+            ['12:00', 'Son las doce'],
+            ['3:30', 'Son las tres y media']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — Números grandes
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el número con la palabra.',
+        pairs: [
+            ['40', 'cuarenta'],
+            ['50', 'cincuenta'],
+            ['75', 'setenta y cinco'],
+            ['100', 'cien']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Los meses
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'El primer mes del año es ___.',
+                answer: 'enero',
+                options: ['enero', 'marzo', 'junio', 'diciembre']
+            },
+            {
+                sentence: 'El mes número doce es ___.',
+                answer: 'diciembre',
+                options: ['octubre', 'noviembre', 'diciembre', 'enero']
+            },
+            {
+                sentence: 'Después de marzo es ___.',
+                answer: 'abril',
+                options: ['febrero', 'abril', 'mayo', 'junio']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — ¿Qué hora es?
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: '___ las ocho de la mañana.',
+                answer: 'Son',
+                options: ['Es', 'Son', 'Está', 'Están']
+            },
+            {
+                sentence: '___ la una de la tarde.',
+                answer: 'Es',
+                options: ['Es', 'Son', 'Está', 'Están']
+            },
+            {
+                sentence: 'Son las cinco y ___.',
+                answer: 'media',
+                options: ['media', 'medio', 'cuarto', 'mucho']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Números 32-100
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el número correcto.',
+        questions: [
+            {
+                sentence: '30 + 5 = ___',
+                answer: 'treinta y cinco',
+                options: ['treinta y tres', 'treinta y cinco', 'cuarenta y cinco', 'veinticinco']
+            },
+            {
+                sentence: '50 + 50 = ___',
+                answer: 'cien',
+                options: ['noventa', 'cien', 'cincuenta', 'sesenta']
+            },
+            {
+                sentence: '60 + 2 = ___',
+                answer: 'sesenta y dos',
+                options: ['setenta y dos', 'cincuenta y dos', 'sesenta y dos', 'sesenta y tres']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — ¿Cuántas lunas?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'La rana no canta. Cuatro lunas de silencio. El grillo no canta. Cuatro meses.',
+        question: '¿Cuántas lunas de silencio hay?',
+        answer: 'cuatro',
+        options: ['dos', 'tres', 'cuatro', 'cinco']
+    },
+
+    /* ============================================================
+       11. LISTENING — ¿Qué hora es?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Son las tres de la tarde. Yaguará descansa junto al río.',
+        question: '¿Qué hora es?',
+        answer: 'las tres',
+        options: ['las dos', 'las tres', 'las cinco', 'las ocho']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Contar (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo contar.',
+        questions: [
+            {
+                verb: 'contar',
+                subject: 'yo',
+                answer: 'cuento',
+                options: ['cuento', 'cuentas', 'cuenta', 'cuentan']
+            },
+            {
+                verb: 'contar',
+                subject: 'tú',
+                answer: 'cuentas',
+                options: ['cuento', 'cuentas', 'cuenta', 'cuentan']
+            },
+            {
+                verb: 'contar',
+                subject: 'ella',
+                answer: 'cuenta',
+                options: ['cuento', 'cuentas', 'cuenta', 'cuentan']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Cantar (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo cantar.',
+        questions: [
+            {
+                verb: 'cantar',
+                subject: 'yo',
+                answer: 'canto',
+                options: ['canto', 'cantas', 'canta', 'cantan']
+            },
+            {
+                verb: 'cantar',
+                subject: 'él',
+                answer: 'canta',
+                options: ['canto', 'cantas', 'canta', 'cantan']
+            },
+            {
+                verb: 'cantar',
+                subject: 'ellos',
+                answer: 'cantan',
+                options: ['canto', 'cantas', 'canta', 'cantan']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Meses por estación
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica los meses.',
+        categories: ['Enero a junio', 'Julio a diciembre'],
+        items: [
+            { text: 'marzo', category: 'Enero a junio' },
+            { text: 'septiembre', category: 'Julio a diciembre' },
+            { text: 'mayo', category: 'Enero a junio' },
+            { text: 'noviembre', category: 'Julio a diciembre' },
+            { text: 'febrero', category: 'Enero a junio' },
+            { text: 'agosto', category: 'Julio a diciembre' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — Números grandes / pequeños
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: ¿más de 50 o menos de 50?',
+        categories: ['Menos de 50', 'Más de 50'],
+        items: [
+            { text: 'treinta y dos', category: 'Menos de 50' },
+            { text: 'setenta', category: 'Más de 50' },
+            { text: 'cuarenta y cinco', category: 'Menos de 50' },
+            { text: 'ochenta y tres', category: 'Más de 50' },
+            { text: 'treinta y ocho', category: 'Menos de 50' },
+            { text: 'cien', category: 'Más de 50' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Decir la hora
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['las', 'Son', 'de', 'ocho', 'la', 'mañana'],
+        answer: 'Son las ocho de la mañana'
+    },
+
+    /* ============================================================
+       17. BUILDER — Decir la fecha
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['es', 'Hoy', 'cinco', 'de', 'marzo'],
+        answer: 'Hoy es cinco de marzo'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — ¿Qué hora es?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Río', text: '¿Qué hora es?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Son las tres de la tarde.', 'Tengo hambre.', 'Me llamo Yaguará.', 'Estoy bien.'],
+                answer: 'Son las tres de la tarde.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — ¿Cuántos meses?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguará', text: '¿Cuántos meses de silencio hay?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Hay cuatro meses de silencio.', 'Me gusta el río.', 'Son las ocho.', 'Mi casa es grande.'],
+                answer: 'Hay cuatro meses de silencio.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Frase del tiempo
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Son las ocho de la mañana.',
+        answer: 'Son las ocho de la mañana.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara del calendario',
+            description: 'Una cueva redonda con un disco de piedra en el suelo. El disco tiene marcas, pero faltan números. La luz entra por un agujero en el techo y marca la hora.',
+            ambience: 'wind'
+        },
+        puzzles: [
+            {
+                puzzleType: 'sequence',
+                prompt: 'El disco de piedra tiene meses escritos, pero faltan tres.',
+                clue: 'Enero, febrero, ___, abril, ___, junio, ___, agosto...',
+                answer: 'marzo mayo julio',
+                options: ['marzo mayo julio', 'abril junio agosto', 'febrero abril junio', 'marzo junio septiembre'],
+                onSolve: 'Los meses brillan en el disco.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Hay letras escritas en la pared con luz de sol.',
+                clue: 'Yaguará cuenta las lunas. Cada luna es un... Tiene tres letras.',
+                answer: 'mes',
+                scrambled: 'sme',
+                onSolve: 'Las letras brillan.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una cerradura en el centro del disco.',
+                clue: 'Yaguará escucha el silencio. Cuenta cuatro de estos. Son redondas en el cielo. Cuatro letras.',
+                answer: 'luna',
+                hint: '_ _ _ _',
+                onSolve: 'El disco gira. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una raíz en forma de espiral de tiempo.',
+            questClue: 'El tiempo marca lo que desaparece y lo que queda.',
+            item: 'raiz-tiempo'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1d10',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Dest10Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

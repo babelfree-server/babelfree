@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="{{lang_attr}}" dir="{{dir}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://babelfree.com/es-{{lang_code}}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://babelfree.com/es-{{lang_code}}">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{og_description}}">
+    <meta property="og:site_name" content="El Viaje del Jaguar">
+    <meta property="og:locale" content="{{lang_attr}}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{twitter_description}}">
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="El Viaje del Jaguar">
+    <meta name="theme-color" content="#1a1208">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F406;</text></svg>">
+
+    <!-- Hreflang -->
+{{hreflang_tags}}
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "El Viaje del Jaguar - Spanish Course",
+      "description": "{{meta_description}}",
+      "provider": {
+        "@type": "Organization",
+        "name": "El Viaje del Jaguar",
+        "url": "https://babelfree.com/"
+      },
+      "educationalLevel": ["Beginner", "Intermediate", "Advanced"],
+      "teaches": "Spanish language",
+      "inLanguage": "es",
+      "isAccessibleForFree": true
+    }
+    </script>
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --earth-deep: #1a1208;
+            --earth-warm: #2d1f0e;
+            --earth-medium: #4a3520;
+            --terracotta: #c67a4a;
+            --ochre: #c9a227;
+            --amber: #d4913a;
+            --sand: #e8d5b7;
+            --clay-light: #f0e6d3;
+            --moss: #5a6e4a;
+            --river-dark: #2a3a4a;
+            --jaguar-gold: #c9a227;
+            --jaguar-orange: #c67a4a;
+            --glass-bg: rgba(26, 18, 8, 0.7);
+            --text-light: #f0e6d3;
+            --text-muted: #b8a88a;
+            --success-green: #5a6e4a;
+            --transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-slow: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            --shadow-card: 0 8px 32px rgba(26, 18, 8, 0.4);
+            --shadow-warm: 0 8px 24px rgba(198, 122, 74, 0.15);
+            --border-radius: 24px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            background: linear-gradient(145deg, #0d0a06 0%, #1a1208 40%, #2d1f0e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .bg-graphics { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; opacity: 0.1; }
+        .bg-circle { position: absolute; border-radius: 50%; background: radial-gradient(circle, var(--ochre), var(--terracotta)); animation: float 20s ease-in-out infinite; }
+        .bg-circle:nth-child(1) { width: 300px; height: 300px; top: 15%; left: 15%; }
+        .bg-circle:nth-child(2) { width: 200px; height: 200px; bottom: 25%; right: 20%; animation-delay: 10s; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
+        .nav-bar { position: fixed; top: 0; width: 100%; background: rgba(26, 18, 8, 0.95); backdrop-filter: blur(20px); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid rgba(249, 202, 36, 0.2); transition: var(--transition); }
+        .nav-brand { display: flex; align-items: center; gap: 1rem; }
+        .logo { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid rgba(249, 202, 36, 0.5); transition: var(--transition); overflow: hidden; }
+        .logo:hover { transform: scale(1.1); box-shadow: var(--shadow-warm); }
+        .logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        .brand-text h1 { color: var(--jaguar-gold); font-weight: 800; font-size: 1.3rem; margin: 0; background: linear-gradient(135deg, var(--jaguar-gold), #ffed4e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .brand-text p { color: var(--text-muted); font-size: 0.8rem; margin: 0; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-link { color: #fff; text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 25px; transition: var(--transition); }
+        .nav-link:hover { background: rgba(249, 202, 36, 0.2); color: var(--jaguar-gold); transform: translateY(-2px); }
+        .nav-cta { background: linear-gradient(135deg, var(--jaguar-orange), var(--jaguar-gold)); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 700; transition: var(--transition); box-shadow: var(--shadow-warm); }
+        .nav-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(198, 122, 74, 0.25); }
+        .mobile-menu-toggle { display: none; flex-direction: column; cursor: pointer; padding: 0.5rem; }
+        .menu-bar { width: 25px; height: 3px; background: var(--jaguar-gold); margin: 3px 0; transition: var(--transition); border-radius: 2px; }
+        .mobile-menu { display: none; position: fixed; top: 80px; left: 0; width: 100%; background: rgba(26, 18, 8, 0.98); backdrop-filter: blur(20px); padding: 2rem; border-bottom: 1px solid rgba(249, 202, 36, 0.2); z-index: 999; }
+        .mobile-menu.active { display: block; animation: slideDown 0.3s ease; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .mobile-menu-item { display: block; color: #fff; text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-weight: 600; transition: var(--transition); }
+        .mobile-menu-item:hover { color: var(--jaguar-gold); padding-left: 1rem; }
+        .hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 2rem 40px; }
+        .hero-content { max-width: 900px; text-align: center; padding: 3rem; background: rgba(26, 18, 8, 0.85); backdrop-filter: blur(20px); border-radius: 30px; border: 2px solid rgba(249, 202, 36, 0.3); box-shadow: var(--shadow-card); }
+        .hero-logo { width: 180px; height: 180px; margin: 0 auto 2rem; border-radius: 50%; border: 4px solid rgba(249, 202, 36, 0.7); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-warm); animation: breathe 6s ease-in-out infinite; overflow: hidden; }
+        @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .main-title { font-size: 3.5rem; font-weight: 700; font-family: var(--font-display); margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff, var(--jaguar-gold), var(--jaguar-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2; }
+        .subtitle { font-size: 1.3rem; margin-bottom: 3rem; color: var(--text-light); line-height: 1.7; }
+        .subtitle strong { color: var(--jaguar-gold); font-weight: 700; }
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin: 3rem auto; max-width: 1000px; perspective: 1000px; }
+        .feature-card { background: linear-gradient(145deg, rgba(20, 20, 20, 0.85), rgba(10, 10, 10, 0.95)); border-radius: 20px; padding: 2.5rem 2rem; text-align: center; border: 1px solid rgba(212, 168, 67, 0.2); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); backdrop-filter: blur(24px); position: relative; overflow: hidden; }
+        .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--jaguar-gold), transparent); opacity: 0; transition: opacity 0.5s ease; }
+        .feature-card::after { content: ''; position: absolute; inset: 0; border-radius: 20px; background: radial-gradient(ellipse at 50% 0%, rgba(212, 168, 67, 0.06) 0%, transparent 70%); pointer-events: none; }
+        .feature-card:hover { transform: translateY(-4px); border-color: rgba(212, 168, 67, 0.5); box-shadow: 0 12px 32px rgba(26, 18, 8, 0.5); }
+        .feature-card:hover::before { opacity: 1; }
+        .feature-card:nth-child(1) { animation: cardReveal 1.2s ease-out 0.2s both; }
+        .feature-card:nth-child(2) { animation: cardReveal 1.2s ease-out 0.5s both; }
+        .feature-card:nth-child(3) { animation: cardReveal 1.2s ease-out 0.8s both; }
+        @keyframes cardReveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .feature-icon { font-size: 3.2rem; margin-bottom: 1.2rem; display: block; animation: float 4s ease-in-out infinite; filter: drop-shadow(0 4px 12px rgba(212, 168, 67, 0.3)); }
+        .feature-card:nth-child(2) .feature-icon { animation-delay: 1.3s; }
+        .feature-card:nth-child(3) .feature-icon { animation-delay: 2.6s; }
+        .feature-title { font-size: 1.3rem; font-weight: 600; font-family: var(--font-display); margin-bottom: 1rem; color: var(--jaguar-gold); letter-spacing: 0.03em; }
+        .feature-desc { color: rgba(224, 224, 224, 0.85); line-height: 1.7; font-size: 0.95rem; }
+        .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; margin: 3rem 0; flex-wrap: wrap; }
+        .btn-primary { background: linear-gradient(135deg, var(--jaguar-orange), var(--jaguar-gold)); color: white; border: none; padding: 1.2rem 2.5rem; border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: var(--shadow-warm); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(198, 122, 74, 0.25); }
+        .btn-secondary { background: transparent; color: var(--jaguar-gold); border: 2px solid var(--jaguar-gold); padding: 1.2rem 2.5rem; border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn-secondary:hover { background: var(--jaguar-gold); color: var(--earth-deep); transform: translateY(-3px); }
+        .free-section { background: rgba(0, 0, 0, 0.6); padding: 4rem 2rem; backdrop-filter: blur(20px); text-align: center; }
+        .free-title { font-size: 2.5rem; font-family: var(--font-display); color: var(--jaguar-gold); margin-bottom: 1rem; font-weight: 800; }
+        .free-subtitle { font-size: 1.3rem; color: var(--success-green); margin-bottom: 1rem; font-weight: 600; }
+        .free-desc { font-size: 1.1rem; color: #e0e0e0; max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.8; }
+        .free-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 2.5rem; text-align: left; }
+        .free-feature { background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: var(--border-radius); padding: 1.5rem; border: 1px solid rgba(76, 175, 80, 0.3); display: flex; align-items: flex-start; gap: 0.8rem; font-size: 1rem; color: var(--text-light); }
+        .free-feature-icon { font-size: 1.3rem; flex-shrink: 0; }
+        .about-section { padding: 4rem 2rem; text-align: center; background: rgba(255, 255, 255, 0.03); }
+        .about-content { max-width: 800px; margin: 0 auto; }
+        .about-content h2 { font-size: 2.5rem; color: var(--jaguar-gold); margin-bottom: 2rem; font-weight: 800; }
+        .about-content p { font-size: 1.1rem; color: #e0e0e0; margin-bottom: 3rem; line-height: 1.8; }
+        .contact-section { background: rgba(26, 18, 8, 0.85); padding: 4rem 2rem; text-align: center; }
+        .contact-container { max-width: 800px; margin: 0 auto; }
+        .contact-title { font-size: 2.5rem; font-family: var(--font-display); color: var(--jaguar-gold); margin-bottom: 1rem; font-weight: 800; }
+        .contact-subtitle { font-size: 1.2rem; color: #e0e0e0; margin-bottom: 2rem; }
+        .contact-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .footer { background: rgba(0, 0, 0, 0.9); padding: 3rem 2rem 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto 2rem; text-align: left; }
+        .footer-section h3 { color: var(--jaguar-gold); margin-bottom: 1rem; font-size: 1.2rem; font-weight: 700; }
+        .footer-section p { color: #ccc; line-height: 1.6; margin-bottom: 0.5rem; }
+        .footer-section a { color: #ccc; text-decoration: none; transition: var(--transition); }
+        .footer-section a:hover { color: var(--jaguar-gold); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #999; }
+        .photo-credit { color: #666; font-size: 0.8rem; margin-top: 1rem; opacity: 0.7; }
+        .notification { position: fixed; top: 100px; right: 20px; background: rgba(76, 175, 80, 0.95); color: white; padding: 1rem 1.5rem; border-radius: 10px; font-weight: 600; z-index: 10000; transform: translateX(400px); transition: transform 0.4s ease; max-width: 300px; box-shadow: var(--shadow-card); border: 1px solid var(--success-green); }
+        .notification.show { transform: translateX(0); }
+        .notification.info { background: rgba(33, 150, 243, 0.95); border-color: #2196f3; }
+        .loading { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+        .loading.loaded { opacity: 1; transform: translateY(0); }
+        @media (max-width: 960px) { .features { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 100%; } }
+        @media (max-width: 768px) { .nav-menu { display: none; } .mobile-menu-toggle { display: flex; } .hero-section { padding: 100px 1rem 40px; } .hero-content { padding: 2rem; } .main-title { font-size: 2.5rem; } .subtitle { font-size: 1.1rem; } .hero-logo { width: 120px; height: 120px; } .features { grid-template-columns: 1fr; gap: 1.5rem; } .cta-buttons { flex-direction: column; align-items: center; } .btn-primary, .btn-secondary { width: 100%; max-width: 280px; } .free-features { grid-template-columns: 1fr; } .contact-buttons { flex-direction: column; align-items: center; } .notification { right: 10px; max-width: calc(100vw - 20px); } }
+        @media (max-width: 480px) { .main-title { font-size: 2rem; } .nav-bar { padding: 1rem; } .hero-content { padding: 1.5rem; } .free-section, .about-section, .contact-section { padding: 3rem 1rem; } }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
+        .nav-link:focus, .btn-primary:focus, .btn-secondary:focus { outline: 2px solid var(--jaguar-gold); outline-offset: 2px; }
+    </style>
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body>
+    <div class="bg-graphics">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <nav class="nav-bar" role="navigation">
+        <div class="nav-brand">
+            <div class="logo">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguará" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <div class="brand-text">
+                <h1>El viaje del jaguar</h1>
+                <p>{{brand_subtitle}}</p>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/languages" class="nav-link">{{nav_languages}}</a></li>
+            <li><a href="#curso" class="nav-link">{{nav_journey}}</a></li>
+            <li><a href="#contacto" class="nav-link">{{nav_contact}}</a></li>
+            <li><a href="/login" class="nav-link">{{nav_login}}</a></li>
+            <li><a href="#" class="nav-cta" onclick="startFreeTrial()">{{nav_start}}</a></li>
+        </ul>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/languages" class="mobile-menu-item" onclick="closeMobileMenu()">{{nav_languages}}</a>
+        <a href="#curso" class="mobile-menu-item" onclick="closeMobileMenu()">{{nav_journey}}</a>
+        <a href="#contacto" class="mobile-menu-item" onclick="closeMobileMenu()">{{nav_contact}}</a>
+        <a href="/login" class="mobile-menu-item" onclick="closeMobileMenu()">{{nav_login}}</a>
+    </div>
+
+    <section class="hero-section loading" id="inicio">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguará" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <h1 class="main-title">El viaje del jaguar</h1>
+            <p class="subtitle">{{hero_subtitle}}</p>
+            <div class="features">
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🌱</span>
+                    <h3 class="feature-title">{{feature1_title}}</h3>
+                    <p class="feature-desc">{{feature1_desc}}</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🌊</span>
+                    <h3 class="feature-title">{{feature2_title}}</h3>
+                    <p class="feature-desc">{{feature2_desc}}</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🐆</span>
+                    <h3 class="feature-title">{{feature3_title}}</h3>
+                    <p class="feature-desc">{{feature3_desc}}</p>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary" onclick="startFreeTrial()">{{cta_begin}}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="free-section loading" id="precios">
+        <h2 class="free-title">{{free_title}}</h2>
+        <p class="free-subtitle">{{free_subtitle}}</p>
+        <p class="free-desc">{{free_desc}}</p>
+        <div class="free-features">
+            <div class="free-feature"><span class="free-feature-icon">🌱</span><span>{{free_feature1}}</span></div>
+            <div class="free-feature"><span class="free-feature-icon">🌊</span><span>{{free_feature2}}</span></div>
+            <div class="free-feature"><span class="free-feature-icon">🐆</span><span>{{free_feature3}}</span></div>
+            <div class="free-feature"><span class="free-feature-icon">🌿</span><span>{{free_feature4}}</span></div>
+        </div>
+        <div class="cta-buttons">
+            <a href="#" class="btn-primary" onclick="startFreeTrial()">{{cta_begin}}</a>
+        </div>
+    </section>
+
+    <section class="about-section loading" id="curso">
+        <div class="about-content">
+            <h2>{{about_title}}</h2>
+            <p>{{about_desc}}</p>
+            <div class="features">
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🌎</span>
+                    <h3 class="feature-title">{{about_feature1_title}}</h3>
+                    <p class="feature-desc">{{about_feature1_desc}}</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🌱</span>
+                    <h3 class="feature-title">{{about_feature2_title}}</h3>
+                    <p class="feature-desc">{{about_feature2_desc}}</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🔥</span>
+                    <h3 class="feature-title">{{about_feature3_title}}</h3>
+                    <p class="feature-desc">{{about_feature3_desc}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section loading" id="contacto">
+        <div class="contact-container">
+            <h2 class="contact-title">{{contact_title}}</h2>
+            <p class="contact-subtitle">{{contact_subtitle}}</p>
+            <div class="contact-buttons">
+                <a href="#" class="btn-primary" onclick="startFreeTrial()">{{contact_cta}}</a>
+                <a href="mailto:info@babelfree.com" class="btn-secondary">{{contact_write}}</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>El Viaje del Jaguar</h3>
+                <p>{{footer_desc}}</p>
+                <p>{{footer_available}}</p>
+            </div>
+            <div class="footer-section">
+                <h3>{{footer_worlds}}</h3>
+                <p><a href="/a1">El Mundo de Abajo &mdash; Ra&iacute;ces</a></p>
+                <p><a href="/a2">El Mundo de Abajo &mdash; Agua</a></p>
+                <p><a href="/b1">El Mundo del Medio &mdash; Memoria</a></p>
+                <p><a href="/b2">El Mundo del Medio &mdash; Historia</a></p>
+                <p><a href="/c1">El Mundo de Arriba &mdash; Sue&ntilde;os</a></p>
+                <p><a href="/c2">El Mundo de Arriba &mdash; Destino</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>{{footer_contact}}</h3>
+                <p><a href="mailto:info@babelfree.com">info@babelfree.com</a></p>
+                <p><a href="/languages">{{footer_languages}}</a></p>
+                <p><a href="/login">{{footer_login}}</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Viaje del Jaguar &middot; <a href="/privacy">Privacy</a></p>
+            <p class="photo-credit">Jaguar photos by Evgeniy Zabrodin and Nick N&uacute;&ntilde;ez on Pexels (free license)</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const m = document.getElementById('mobileMenu');
+            const t = document.querySelector('.mobile-menu-toggle');
+            m.classList.toggle('active');
+            const b = t.querySelectorAll('.menu-bar');
+            if (m.classList.contains('active')) {
+                b[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                b[1].style.opacity = '0';
+                b[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                b[0].style.transform = 'none'; b[1].style.opacity = '1'; b[2].style.transform = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        function closeMobileMenu() {
+            const m = document.getElementById('mobileMenu');
+            const t = document.querySelector('.mobile-menu-toggle');
+            m.classList.remove('active');
+            const b = t.querySelectorAll('.menu-bar');
+            b[0].style.transform = 'none'; b[1].style.opacity = '1'; b[2].style.transform = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        function startFreeTrial() {
+            showNotification('{{welcome_title}}', '{{welcome_message}}', 'info');
+            localStorage.setItem('startingFreeTrial', 'true');
+            localStorage.setItem('freeTrialTimestamp', new Date().toISOString());
+            setTimeout(function() { window.location.href = 'login.html'; }, 1500);
+        }
+        document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) { window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' }); }
+                closeMobileMenu();
+            });
+        });
+        function showNotification(title, message, type) {
+            document.querySelectorAll('.notification').forEach(function(n) { n.remove(); });
+            var n = document.createElement('div');
+            n.className = 'notification ' + (type || 'info');
+            n.setAttribute('role', 'alert');
+            n.innerHTML = '<div style="font-size:1.1em;margin-bottom:4px;font-weight:700;">' + title + '</div><div style="font-size:0.9em;opacity:0.9;">' + message + '</div>';
+            document.body.appendChild(n);
+            setTimeout(function() { n.classList.add('show'); }, 100);
+            setTimeout(function() { n.classList.remove('show'); setTimeout(function() { if (document.body.contains(n)) document.body.removeChild(n); }, 400); }, 4000);
+        }
+        if ('IntersectionObserver' in window) {
+            var obs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e, i) { if (e.isIntersecting) { setTimeout(function() { e.target.classList.add('loaded'); }, i * 100); obs.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.loading').forEach(function(el) { obs.observe(el); });
+        } else { document.querySelectorAll('.loading').forEach(function(el) { el.classList.add('loaded'); }); }
+        document.addEventListener('click', function(e) {
+            var m = document.getElementById('mobileMenu'), t = document.querySelector('.mobile-menu-toggle');
+            if (m.classList.contains('active') && !m.contains(e.target) && !t.contains(e.target)) closeMobileMenu();
+        });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMobileMenu(); });
+    </script>
+</body>
+</html>

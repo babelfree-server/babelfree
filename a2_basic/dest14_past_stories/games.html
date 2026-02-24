@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 14: Contar lo que pas&oacute;</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest14_past_stories/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 14: Contar lo que pas\u00f3 — Games",
+                "url": "https://babelfree.com/a2_basic/dest14_past_stories/games",
+                "educationalLevel": "A2 - Elementary",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Preterite indefinido",
+                    "Narrating completed past actions",
+                    "Candelaria introduction"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A2",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Contar lo que pas\u00f3",
+                        "item": "https://babelfree.com/a2_basic/dest14_past_stories/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-costa-caribena">
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 14: Contar lo que pas&oacute;</div>
+            <div class="yg-header-subtitle">Pret&eacute;rito y narraciones</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — La rana que dejó de cantar
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 cuenta su primera historia en pasado: \u00abAyer, la rana cant\u00f3. Hoy, no canta.\u00bb El pasado es donde los sonidos todav\u00eda viven. Si puedes contar lo que pas\u00f3, lo mantienes vivo.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — La noche de la niebla
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 cuenta la noche en que la rana dej\u00f3 de cantar. Una niebla gris lleg\u00f3. El nombre de la rana era... no lo recuerda. Eso es lo terrible: no el silencio, sino el olvido.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Candelaria aparece
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 encontr\u00f3 a una ni\u00f1a humana cerca del Atrato. Se llama Candelaria. Tiene doce a\u00f1os. Est\u00e1 perdida. Tiene miedo. Tiene un cuaderno en la mano. Yaguar\u00e1 y Candelaria se miran. No pueden comunicarse. Los sonidos de Yaguar\u00e1 y las palabras de Candelaria no coinciden.'
+    },
+
+    /* ============================================================
+       4. PAIR — Presente vs. pretérito
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la forma presente con su pret\u00e9rito.',
+        pairs: [
+            ['canta', 'cant\u00f3'],
+            ['llega', 'lleg\u00f3'],
+            ['camina', 'camin\u00f3'],
+            ['habla', 'habl\u00f3']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — ¿Qué pasó?
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une lo que pas\u00f3 con qui\u00e9n.',
+        pairs: [
+            ['La rana', 'cant\u00f3 y dej\u00f3 de cantar'],
+            ['La niebla', 'lleg\u00f3 por la noche'],
+            ['Candelaria', 'apareci\u00f3 cerca del r\u00edo'],
+            ['Yaguar\u00e1', 'encontr\u00f3 a la ni\u00f1a']
+        ]
+    },
+
+    /* ============================================================
+       6. FIB — Pretérito regular -AR
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el pret\u00e9rito.',
+        questions: [
+            {
+                sentence: 'La rana ___ toda la noche. (cantar)',
+                answer: 'cant\u00f3',
+                options: ['canta', 'cant\u00f3', 'cantar\u00e1', 'cantamos']
+            },
+            {
+                sentence: 'Yo ___ por el bosque ayer. (caminar)',
+                answer: 'camin\u00e9',
+                options: ['camino', 'camin\u00e9', 'camin\u00f3', 'caminamos']
+            },
+            {
+                sentence: 'Nosotros ___ con Mam\u00e1 Jaguar. (hablar)',
+                answer: 'hablamos',
+                options: ['hablamos', 'habl\u00e9', 'habl\u00f3', 'hablaron']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Pretérito regular -ER/-IR
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el pret\u00e9rito.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ pescado ayer. (comer)',
+                answer: 'comi\u00f3',
+                options: ['come', 'comi\u00f3', 'com\u00ed', 'comimos']
+            },
+            {
+                sentence: 'Candelaria ___ del r\u00edo. (beber)',
+                answer: 'bebi\u00f3',
+                options: ['bebe', 'beb\u00ed', 'bebi\u00f3', 'bebimos']
+            },
+            {
+                sentence: 'Yo ___ un sonido en la noche. (o\u00edr)',
+                answer: 'o\u00ed',
+                options: ['oigo', 'o\u00ed', 'oy\u00f3', 'o\u00edmos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Pretérito irregular (ir, ser)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el pret\u00e9rito.',
+        questions: [
+            {
+                sentence: 'Candelaria ___ al bosque. (ir)',
+                answer: 'fue',
+                options: ['va', 'fue', 'fui', 'fuimos']
+            },
+            {
+                sentence: 'La noche ___ muy oscura. (ser)',
+                answer: 'fue',
+                options: ['es', 'fue', 'era', 'son']
+            },
+            {
+                sentence: 'Yo ___ al r\u00edo ayer. (ir)',
+                answer: 'fui',
+                options: ['voy', 'fui', 'fue', 'fuimos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. LISTENING — La historia de la rana
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Ayer, la rana cant\u00f3 toda la noche. Una niebla gris lleg\u00f3. La rana dej\u00f3 de cantar.',
+        question: '\u00bfQu\u00e9 pas\u00f3 primero?',
+        answer: 'La rana cant\u00f3',
+        options: ['La niebla lleg\u00f3', 'La rana cant\u00f3', 'Candelaria apareci\u00f3', 'El r\u00edo se sec\u00f3']
+    },
+
+    /* ============================================================
+       10. LISTENING — Candelaria
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Candelaria lleg\u00f3 de lejos. Camin\u00f3 mucho. Est\u00e1 perdida cerca del Atrato.',
+        question: '\u00bfC\u00f3mo lleg\u00f3 Candelaria?',
+        answer: 'Camin\u00f3 mucho',
+        options: ['Camin\u00f3 mucho', 'Nad\u00f3 por el r\u00edo', 'Lleg\u00f3 en carro', 'Vol\u00f3']
+    },
+
+    /* ============================================================
+       11. CONJUGATION — Cantar (pretérito)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga cantar en pret\u00e9rito.',
+        questions: [
+            {
+                verb: 'cantar',
+                subject: 'yo',
+                answer: 'cant\u00e9',
+                options: ['cant\u00e9', 'cantaste', 'cant\u00f3', 'cantaron']
+            },
+            {
+                verb: 'cantar',
+                subject: 't\u00fa',
+                answer: 'cantaste',
+                options: ['cant\u00e9', 'cantaste', 'cant\u00f3', 'cantaron']
+            },
+            {
+                verb: 'cantar',
+                subject: 'ella',
+                answer: 'cant\u00f3',
+                options: ['cant\u00e9', 'cantaste', 'cant\u00f3', 'cantaron']
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Comer (pretérito)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga comer en pret\u00e9rito.',
+        questions: [
+            {
+                verb: 'comer',
+                subject: 'yo',
+                answer: 'com\u00ed',
+                options: ['com\u00ed', 'comiste', 'comi\u00f3', 'comieron']
+            },
+            {
+                verb: 'comer',
+                subject: '\u00e9l',
+                answer: 'comi\u00f3',
+                options: ['com\u00ed', 'comiste', 'comi\u00f3', 'comieron']
+            },
+            {
+                verb: 'comer',
+                subject: 'ellos',
+                answer: 'comieron',
+                options: ['com\u00ed', 'comiste', 'comi\u00f3', 'comieron']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. SORTING — Presente / pretérito
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfpresente o pret\u00e9rito?',
+        categories: ['Presente', 'Pret\u00e9rito'],
+        items: [
+            { text: 'canta', category: 'Presente' },
+            { text: 'cant\u00f3', category: 'Pret\u00e9rito' },
+            { text: 'llega', category: 'Presente' },
+            { text: 'lleg\u00f3', category: 'Pret\u00e9rito' },
+            { text: 'come', category: 'Presente' },
+            { text: 'comi\u00f3', category: 'Pret\u00e9rito' }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — ¿Quién hizo qué?
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfqui\u00e9n hizo qu\u00e9?',
+        categories: ['Yaguar\u00e1', 'Candelaria', 'La rana'],
+        items: [
+            { text: 'encontr\u00f3 a una ni\u00f1a', category: 'Yaguar\u00e1' },
+            { text: 'camin\u00f3 mucho', category: 'Candelaria' },
+            { text: 'cant\u00f3 toda la noche', category: 'La rana' },
+            { text: 'dej\u00f3 de cantar', category: 'La rana' },
+            { text: 'tiene un cuaderno', category: 'Candelaria' },
+            { text: 'no puede comunicarse', category: 'Yaguar\u00e1' }
+        ]
+    },
+
+    /* ============================================================
+       15. BUILDER — Narración en pasado
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['rana', 'La', 'cant\u00f3', 'la', 'noche', 'toda'],
+        answer: 'La rana cant\u00f3 toda la noche'
+    },
+
+    /* ============================================================
+       16. BUILDER — Candelaria llegó
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['Candelaria', 'del', 'lleg\u00f3', 'cerca', 'r\u00edo'],
+        answer: 'Candelaria lleg\u00f3 cerca del r\u00edo'
+    },
+
+    /* ============================================================
+       17. CONVERSATION — ¿Qué pasó ayer?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfQu\u00e9 pas\u00f3 con la rana?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['La rana cant\u00f3 y despu\u00e9s la niebla lleg\u00f3.', 'La rana es grande.', 'Tengo hambre.', 'Me levanto temprano.'],
+                answer: 'La rana cant\u00f3 y despu\u00e9s la niebla lleg\u00f3.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       18. CONVERSATION — Contar tu día de ayer
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: '\u00bfQu\u00e9 hiciste ayer?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Camin\u00e9 por el bosque y com\u00ed fruta.', 'Me llamo Yaguar\u00e1.', 'El r\u00edo canta.', 'Tengo sed.'],
+                answer: 'Camin\u00e9 por el bosque y com\u00ed fruta.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. DICTATION — Pretérito
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'La rana cant\u00f3 toda la noche.',
+        answer: 'La rana cant\u00f3 toda la noche.'
+    },
+
+    /* ============================================================
+       20. CULTURA — La marimba de chonta
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Cultura',
+        instruction: 'Lee sobre la cultura colombiana.',
+        text: 'Nota cultural: La marimba de chonta es Patrimonio de la Humanidad. Se toca en celebraciones y funerales del Pac\u00edfico colombiano. Se hace con madera de palma de chonta. Conecta la alegr\u00eda y el duelo.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La c\u00e1mara del pasado',
+            description: 'Un friso de piedra muestra una secuencia de eventos. Las figuras est\u00e1n quietas, esperando que alguien cuente su historia.',
+            ambience: 'stone'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las figuras del friso tienen letras en el pecho.',
+                clue: 'Pon la historia en orden. La rana hizo esto toda la noche. Seis letras.',
+                answer: 'cant\u00f3',
+                scrambled: 'tocanx',
+                onSolve: 'La primera figura se mueve.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'La segunda figura pregunta:',
+                riddle: '\u00abLlegu\u00e9 sin invitaci\u00f3n. Soy gris. Trai\u0067o silencio. \u00bfQu\u00e9 soy?\u00bb',
+                clue: 'Algo gris que lleg\u00f3 y trajo silencio.',
+                answer: 'La niebla',
+                options: ['La niebla', 'La lluvia', 'El sol', 'El r\u00edo'],
+                onSolve: 'La segunda figura se\u00f1ala la puerta.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En la puerta hay una cerradura con s\u00edmbolos del tiempo.',
+                clue: 'Lo contrario de hoy. Ayer todo ___. Cinco letras.',
+                answer: 'pas\u00f3',
+                hint: '_ _ _ _ _',
+                onSolve: 'La puerta se abre. El pasado queda guardado.'
+            }
+        ],
+        fragment: {
+            text: 'Una ra\u00edz con forma de reloj de arena brilla en el friso.',
+            questClue: 'Contar lo que pas\u00f3 es mantenerlo vivo.',
+            item: 'raiz-14'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a2d14',
+        world: 'costaCaribena',
+        storageKey: 'yaguaraA2Dest14Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

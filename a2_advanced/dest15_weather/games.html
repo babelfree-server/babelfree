@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 15: ¿Qué tiempo hace? - El Clima</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_advanced/dest15_weather/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 15: ¿Qué tiempo hace? - El Clima",
+          "url": "https://babelfree.com/a2_advanced/dest15_weather/games",
+          "educationalLevel": "A2 Advanced - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Weather vocabulary", "Climate expressions", "Spanish vocabulary"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Advanced", "item": "https://babelfree.com/a2-coffee" },
+            { "@type": "ListItem", "position": 4, "name": "¿Qué tiempo hace? - El Clima" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/a2-coffee" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 15: ¿Qué tiempo hace?</div>
+            <div class="yg-header-subtitle">El Clima</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+            // === GAME 1: Pair Matching - Weather expressions + emoji ===
+            {
+                type: 'pair-matching',
+                title: 'Une cada expresi\u00f3n con su emoji',
+                instruction: 'Haz clic en una expresi\u00f3n y luego en su emoji correspondiente.',
+                pairs: [
+                    { a: 'Hace sol', b: '\u2600\uFE0F' },
+                    { a: 'Llueve', b: '\uD83C\uDF27\uFE0F' },
+                    { a: 'Hace fr\u00edo', b: '\u2744\uFE0F' },
+                    { a: 'Hace calor', b: '\uD83D\uDD25' },
+                    { a: 'Est\u00e1 nublado', b: '\u2601\uFE0F' },
+                    { a: 'Hace viento', b: '\uD83D\uDCA8' }
+                ]
+            },
+
+            // === GAME 2: Fill-in-the-Blank ===
+            {
+                type: 'fill-blank',
+                title: 'Completa la oraci\u00f3n',
+                sentence: 'Hoy ___ mucho calor en Cartagena.',
+                answer: 'hace',
+                hint: 'Expresi\u00f3n de clima con "hacer"',
+                options: ['hace', 'est\u00e1', 'hay', 'tiene']
+            },
+
+            // === GAME 3: Verb Conjugation ===
+            {
+                type: 'verb-conjugation',
+                title: 'Conjuga el verbo correctamente',
+                sentence: 'En Bogot\u00e1 ___ (llover) mucho.',
+                verb: 'llover',
+                answer: 'llueve',
+                hint: 'Llover es un verbo impersonal con cambio de ra\u00edz o\u2192ue'
+            },
+
+            // === GAME 4: Listening ===
+            {
+                type: 'listening',
+                title: 'Escucha y selecciona',
+                instruction: 'Escucha la oraci\u00f3n y elige el clima correcto.',
+                listenText: 'Hace mucho sol hoy.',
+                options: [
+                    { text: '\u2600\uFE0F Hace sol', correct: true },
+                    { text: '\uD83C\uDF27\uFE0F Llueve', correct: false },
+                    { text: '\u2744\uFE0F Hace fr\u00edo', correct: false },
+                    { text: '\u2601\uFE0F Est\u00e1 nublado', correct: false }
+                ]
+            },
+
+            // === GAME 5: Category Sorting ===
+            {
+                type: 'category-sort',
+                title: 'Clasifica el vocabulario',
+                instruction: 'Arrastra cada palabra a la categor\u00eda correcta.',
+                categories: ['Tiempo caliente', 'Tiempo fr\u00edo'],
+                items: [
+                    { text: 'Hace sol', category: 'Tiempo caliente' },
+                    { text: 'Hace calor', category: 'Tiempo caliente' },
+                    { text: 'Temperatura alta', category: 'Tiempo caliente' },
+                    { text: 'Hace fr\u00edo', category: 'Tiempo fr\u00edo' },
+                    { text: 'Nieva', category: 'Tiempo fr\u00edo' },
+                    { text: 'Hay helada', category: 'Tiempo fr\u00edo' }
+                ]
+            },
+
+            // === GAME 6: Fill-in-the-Blank ===
+            {
+                type: 'fill-blank',
+                title: 'Completa la oraci\u00f3n',
+                sentence: 'Cuando ___, necesito un paraguas.',
+                answer: 'llueve',
+                hint: 'Verbo "llover" en presente impersonal',
+                options: ['llueve', 'nieva', 'hace sol', 'hace viento']
+            },
+
+            // === GAME 7: Sentence Builder ===
+            {
+                type: 'sentence-builder',
+                title: 'Ordena las palabras',
+                instruction: 'Forma una oraci\u00f3n correcta con estas palabras.',
+                words: ['Hoy', 'hace', 'mucho', 'calor', 'en', 'Cartagena'],
+                answer: 'Hoy hace mucho calor en Cartagena'
+            },
+
+            // === GAME 8: Verb Conjugation ===
+            {
+                type: 'verb-conjugation',
+                title: 'Conjuga el verbo correctamente',
+                sentence: 'En invierno siempre ___ (nevar).',
+                verb: 'nevar',
+                answer: 'nieva',
+                hint: 'Nevar es impersonal con cambio de ra\u00edz e\u2192ie'
+            },
+
+            // === GAME 9: Translation ===
+            {
+                type: 'translation',
+                title: 'Traduce al espa\u00f1ol',
+                source: 'It\'s very hot today in Colombia.',
+                wordBank: ['Hoy', 'hace', 'mucho', 'calor', 'en', 'Colombia', 'muy', 'est\u00e1'],
+                answer: 'Hoy hace mucho calor en Colombia'
+            },
+
+            // === GAME 10: Conversation ===
+            {
+                type: 'conversation',
+                title: '\u00bfQu\u00e9 respondes?',
+                instruction: 'Elige la mejor respuesta para continuar la conversaci\u00f3n.',
+                dialogue: [
+                    { speaker: 'Ana', text: '\u00bfQu\u00e9 tiempo hace hoy?' }
+                ],
+                options: [
+                    { text: 'Hace mucho sol y calor.', correct: true },
+                    { text: 'Tengo veinte a\u00f1os.', correct: false },
+                    { text: 'Me gusta el caf\u00e9.', correct: false }
+                ],
+                correctResponse: '\u00a1Genial! Entonces vamos a la playa.'
+            },
+
+            // === GAME 11: Sentence Builder ===
+            {
+                type: 'sentence-builder',
+                title: 'Ordena las palabras',
+                instruction: 'Forma una oraci\u00f3n correcta. Integra opiniones y futuro.',
+                words: ['Creo', 'que', 'ma\u00f1ana', 'va', 'a', 'llover', 'mucho'],
+                answer: 'Creo que ma\u00f1ana va a llover mucho'
+            },
+
+            // === GAME 12: Translation ===
+            {
+                type: 'translation',
+                title: 'Traduce al espa\u00f1ol',
+                source: 'When it rains, I always take an umbrella.',
+                wordBank: ['Cuando', 'llueve', 'siempre', 'llevo', 'un', 'paraguas', 'yo', 'tomo'],
+                answer: 'Cuando llueve siempre llevo un paraguas'
+            },
+
+            // === GAME 13: Conversation (multi-turn) ===
+            {
+                type: 'conversation',
+                title: 'Conversaci\u00f3n sobre el clima y planes',
+                instruction: 'Elige la mejor respuesta en cada turno.',
+                dialogue: [
+                    { speaker: 'Carlos', text: '\u00bfQu\u00e9 tiempo hace hoy en Medell\u00edn?' },
+                    { speaker: 'T\u00fa', text: '(responde)' }
+                ],
+                options: [
+                    { text: 'Est\u00e1 nublado y hace un poco de fr\u00edo.', correct: true },
+                    { text: 'Me gustan los gatos.', correct: false },
+                    { text: 'Son las tres de la tarde.', correct: false }
+                ],
+                correctResponse: 'Entonces mejor llevamos un abrigo. \u00bfVamos al centro comercial?'
+            },
+
+            // === GAME 14: Dictation ===
+            {
+                type: 'dictation',
+                title: 'Escucha y escribe',
+                instruction: 'Escucha la oraci\u00f3n y escr\u00edbela exactamente.',
+                listenText: 'Hoy hace mucho fr\u00edo y est\u00e1 nublado.',
+                answer: 'Hoy hace mucho fr\u00edo y est\u00e1 nublado.'
+            },
+
+            // === GAME 15: Story Comprehension ===
+            {
+                type: 'story',
+                title: 'Lee y responde',
+                story: 'El clima en Colombia es muy variado. En la costa caribe\u00f1a hace mucho calor todo el a\u00f1o y la temperatura puede llegar a 35 grados. En Bogot\u00e1, la capital, hace fr\u00edo porque est\u00e1 a 2.600 metros de altura. All\u00ed llueve mucho, especialmente en abril y octubre. En el Eje Cafetero el clima es templado y agradable, perfecto para el cultivo del caf\u00e9.',
+                questions: [
+                    {
+                        question: '\u00bfC\u00f3mo es el clima en la costa caribe\u00f1a?',
+                        options: ['Hace mucho calor', 'Hace mucho fr\u00edo', 'Nieva frecuentemente'],
+                        correct: 0
+                    },
+                    {
+                        question: '\u00bfPor qu\u00e9 hace fr\u00edo en Bogot\u00e1?',
+                        options: ['Porque est\u00e1 cerca del mar', 'Porque est\u00e1 a gran altura', 'Porque nieva mucho'],
+                        correct: 1
+                    },
+                    {
+                        question: '\u00bfC\u00f3mo es el clima en el Eje Cafetero?',
+                        options: ['Muy caliente', 'Muy fr\u00edo', 'Templado y agradable'],
+                        correct: 2
+                    }
+                ]
+            },
+
+            // === GAME 16: Pair Matching - Weather + clothing/activity ===
+            {
+                type: 'pair-matching',
+                title: 'Une el clima con la ropa o actividad correcta',
+                instruction: 'Haz clic en un clima y luego en la ropa o actividad apropiada.',
+                pairs: [
+                    { a: 'Hace mucho sol', b: 'Gafas de sol' },
+                    { a: 'Llueve', b: 'Paraguas' },
+                    { a: 'Hace fr\u00edo', b: 'Abrigo' },
+                    { a: 'Nieva', b: 'Bufanda' },
+                    { a: 'Hace calor', b: 'Ir a la playa' },
+                    { a: 'Hace viento', b: 'Chaqueta' }
+                ]
+            },
+
+            // === GAME 17: Listening - Weather forecast ===
+            {
+                type: 'listening',
+                title: 'Escucha el pron\u00f3stico del tiempo',
+                instruction: 'Escucha el pron\u00f3stico y responde la pregunta.',
+                listenText: 'Ma\u00f1ana va a llover por la ma\u00f1ana, pero por la tarde va a hacer sol.',
+                question: '\u00bfQu\u00e9 tiempo va a hacer por la tarde?',
+                options: [
+                    { text: '\uD83C\uDF27\uFE0F Va a llover', correct: false },
+                    { text: '\u2600\uFE0F Va a hacer sol', correct: true },
+                    { text: '\u2744\uFE0F Va a nevar', correct: false },
+                    { text: '\uD83C\uDF2A\uFE0F Va a haber tormenta', correct: false }
+                ]
+            },
+
+            // === GAME 18: Category Sorting - Seasons in Colombia ===
+            {
+                type: 'category-sort',
+                title: 'Clasifica por estaci\u00f3n',
+                instruction: 'Clasifica estas actividades y climas seg\u00fan la \u00e9poca del a\u00f1o en Colombia.',
+                categories: ['\u00c9poca seca (verano)', '\u00c9poca de lluvias (invierno)'],
+                items: [
+                    { text: 'Ir a la playa', category: '\u00c9poca seca (verano)' },
+                    { text: 'Hace mucho sol', category: '\u00c9poca seca (verano)' },
+                    { text: 'Cielo despejado', category: '\u00c9poca seca (verano)' },
+                    { text: 'Llevar paraguas', category: '\u00c9poca de lluvias (invierno)' },
+                    { text: 'Est\u00e1 nublado', category: '\u00c9poca de lluvias (invierno)' },
+                    { text: 'Hay tormentas', category: '\u00c9poca de lluvias (invierno)' }
+                ]
+            },
+
+            // === GAME 19: Dictation - Longer description ===
+            {
+                type: 'dictation',
+                title: 'Escucha y escribe',
+                instruction: 'Escucha la descripci\u00f3n del clima y escr\u00edbela.',
+                listenText: 'En Cartagena siempre hace calor y la temperatura es de treinta grados.',
+                answer: 'En Cartagena siempre hace calor y la temperatura es de treinta grados.'
+            },
+
+            // === GAME 20: Story Comprehension ===
+            {
+                type: 'story',
+                title: 'Lee y responde',
+                story: 'Un viaje por las regiones de Colombia es un viaje por muchos climas. En la selva amaz\u00f3nica hace mucho calor y llueve casi todos los d\u00edas. La humedad es muy alta. En la Sierra Nevada de Santa Marta hay nieve en las monta\u00f1as altas y hace mucho fr\u00edo. En Cali, el clima es c\u00e1lido y agradable, con temperaturas de 25 grados. En los Llanos Orientales hace mucho calor durante el d\u00eda, pero por la noche la temperatura baja y hace m\u00e1s fresco.',
+                questions: [
+                    {
+                        question: '\u00bfC\u00f3mo es el clima en la selva amaz\u00f3nica?',
+                        options: ['Fr\u00edo y seco', 'Caliente y lluvioso', 'Templado'],
+                        correct: 1
+                    },
+                    {
+                        question: '\u00bfD\u00f3nde hay nieve en Colombia?',
+                        options: ['En Cali', 'En los Llanos', 'En la Sierra Nevada de Santa Marta'],
+                        correct: 2
+                    },
+                    {
+                        question: '\u00bfCu\u00e1l es la temperatura en Cali?',
+                        options: ['35 grados', '25 grados', '15 grados'],
+                        correct: 1
+                    },
+                    {
+                        question: '\u00bfQu\u00e9 pasa por la noche en los Llanos Orientales?',
+                        options: ['Hace m\u00e1s calor', 'La temperatura baja', 'Llueve mucho'],
+                        correct: 1
+                    }
+                ]
+            },
+
+            // === GAME 21: Fill-in-the-Blank (mixed) ===
+            {
+                type: 'fill-blank',
+                title: 'Completa con la expresi\u00f3n correcta',
+                sentence: 'Creo que hoy ___ mucho viento; mejor no vamos al parque.',
+                answer: 'hace',
+                hint: 'Expresi\u00f3n de clima: hacer + sustantivo',
+                options: ['hace', 'est\u00e1', 'hay', 'es']
+            },
+
+            // === GAME 22: Sentence Builder (complex) ===
+            {
+                type: 'sentence-builder',
+                title: 'Ordena las palabras',
+                instruction: 'Forma una oraci\u00f3n compleja sobre el clima.',
+                words: ['Cuando', 'hace', 'fr\u00edo', 'me', 'gusta', 'tomar', 'chocolate', 'caliente'],
+                answer: 'Cuando hace fr\u00edo me gusta tomar chocolate caliente'
+            },
+
+            // === GAME 23: Verb Conjugation (rapid-fire) ===
+            {
+                type: 'verb-conjugation',
+                title: 'Expresiones de clima: completa r\u00e1pido',
+                sentence: 'En la costa siempre ___ (hacer) calor y nunca ___ (nevar).',
+                verb: 'hacer / nevar',
+                answer: 'hace, nieva',
+                hint: 'Dos verbos impersonales: hacer y nevar',
+                multiBlank: true,
+                blanks: [
+                    { sentence_part: 'En la costa siempre', answer: 'hace' },
+                    { sentence_part: 'calor y nunca', answer: 'nieva' }
+                ]
+            },
+
+            // === GAME 24: Translation (paragraph) ===
+            {
+                type: 'translation',
+                title: 'Traduce al espa\u00f1ol',
+                source: 'Colombia\'s climate is very varied. On the coast it is hot and on the mountains it is cold.',
+                wordBank: ['El', 'clima', 'de', 'Colombia', 'es', 'muy', 'variado', 'En', 'la', 'costa', 'hace', 'calor', 'y', 'en', 'las', 'monta\u00f1as', 'fr\u00edo'],
+                answer: 'El clima de Colombia es muy variado En la costa hace calor y en las monta\u00f1as hace fr\u00edo'
+            },
+
+            // === GAME 25: Conversation (role-play) ===
+            {
+                type: 'conversation',
+                title: 'Planifica actividades seg\u00fan el clima',
+                instruction: 'Elige la mejor respuesta para planificar el d\u00eda.',
+                dialogue: [
+                    { speaker: 'Mar\u00eda', text: 'Mira el pron\u00f3stico: ma\u00f1ana va a llover todo el d\u00eda. \u00bfQu\u00e9 hacemos?' },
+                    { speaker: 'T\u00fa', text: '(responde)' }
+                ],
+                options: [
+                    { text: 'Podemos ir al museo o al centro comercial. Lleva paraguas por si acaso.', correct: true },
+                    { text: 'Vamos a la playa a tomar el sol.', correct: false },
+                    { text: 'No me gusta la comida italiana.', correct: false }
+                ],
+                correctResponse: '\u00a1Buena idea! Vamos al Museo del Oro. Llevo mi abrigo porque tambi\u00e9n va a hacer fr\u00edo.'
+            },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de las plantas',
+            description: 'Una cueva llena de plantas medicinales. Cada planta tiene un nombre y una funci\u00f3n. El aire huele a hierbas.',
+            ambience: 'herbs'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una planta susurra:',
+                riddle: '\u00abSi te duele la cabeza, yo te ayudo. Si tienes fiebre, yo te refresco. Soy verde y crezco junto al r\u00edo. \u00bfQu\u00e9 soy?\u00bb',
+                clue: 'Es una planta medicinal com\u00fan.',
+                answer: 'Una hierba medicinal',
+                options: ['Una hierba medicinal', 'Un \u00e1rbol frutal', 'Una flor decorativa', 'Un cactus'],
+                onSolve: 'La planta brilla suavemente.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra est\u00e1n en las hojas de las plantas.',
+                clue: 'Es la parte del cuerpo que usas para pensar.',
+                answer: 'cabeza',
+                scrambled: 'azbcae',
+                onSolve: 'Las hojas se mueven.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Entre las ra\u00edces de una planta grande hay una cerradura.',
+                clue: 'Cuando no est\u00e1s enfermo, est\u00e1s ___. Cuatro letras.',
+                answer: 'sano',
+                hint: '_ _ _ _',
+                onSolve: 'Las ra\u00edces se abren. La puerta aparece.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de hoja curativa.',
+            questClue: 'La selva tiene medicina para todo. Solo hay que saber preguntar.',
+            item: 'raiz-hoja'
+        }
+    }
+        ];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '15',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest15Progress',
+        backUrl: '../../a2-coffee.html'
+    });
+</script>
+</body>
+</html>

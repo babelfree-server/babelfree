@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 11: Mañana voy a... - Futuro con ir + a + infinitivo</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest11_future/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 11: Mañana voy a... - Futuro con ir + a + infinitivo",
+          "url": "https://babelfree.com/a2_basic/dest11_future/games",
+          "educationalLevel": "A2 - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Future tense", "Ir + a + infinitivo", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Basic", "item": "https://babelfree.com/a2-caribbean" },
+            { "@type": "ListItem", "position": 4, "name": "Mañana voy a... - Futuro con ir + a + infinitivo" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 11: Mañana voy a...</div>
+            <div class="yg-header-subtitle">Futuro con ir + a + infinitivo</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+  {type:"pair_matching",title:"Conecta: Sujeto \u2194 forma de IR",description:"Conecta cada sujeto con la forma correcta del verbo IR.",pairs:[{left:"Yo",right:"voy"},{left:"T\u00fa",right:"vas"},{left:"\u00c9l / Ella",right:"va"},{left:"Nosotros",right:"vamos"},{left:"Ellos / Ellas",right:"van"},{left:"Usted",right:"va"}]},
+  {type:"fill_blank",title:"Completa la oraci\u00f3n",description:"Escribe la forma correcta del verbo IR.",sentences:[{text:"Ma\u00f1ana yo ___ a comer pizza.",answer:"voy"},{text:"T\u00fa ___ a estudiar espa\u00f1ol.",answer:"vas"},{text:"Ella ___ a visitar a su abuela.",answer:"va"},{text:"Nosotros ___ a jugar f\u00fatbol.",answer:"vamos"},{text:"Ellos ___ a viajar a M\u00e9xico.",answer:"van"}]},
+  {type:"conjugation",title:"Conjugaci\u00f3n de IR",description:"Selecciona la forma correcta de IR para cada sujeto.",items:[{subject:"Nosotros ___ a estudiar",answer:"vamos",options:["voy","vas","va","vamos","van"]},{subject:"Yo ___ a dormir temprano",answer:"voy",options:["voy","vas","va","vamos","van"]},{subject:"T\u00fa ___ a cocinar la cena",answer:"vas",options:["voy","vas","va","vamos","van"]},{subject:"\u00c9l ___ a trabajar ma\u00f1ana",answer:"va",options:["voy","vas","va","vamos","van"]},{subject:"Ellas ___ a bailar salsa",answer:"van",options:["voy","vas","va","vamos","van"]},{subject:"Usted ___ a hablar con el jefe",answer:"va",options:["voy","vas","va","vamos","van"]}]},
+  {type:"listening",title:"Escucha y selecciona",description:"Escucha la oraci\u00f3n y selecciona la respuesta correcta.",audio_text:"Ma\u00f1ana voy a viajar a Bogot\u00e1.",question:"\u00bfQu\u00e9 va a hacer ma\u00f1ana?",options:["Va a viajar a Bogot\u00e1.","Va a comer en Bogot\u00e1.","Va a estudiar en Bogot\u00e1.","Va a trabajar en Bogot\u00e1."],correct:0},
+  {type:"category_sort",title:"Clasifica: Presente vs Futuro",description:"Clasifica cada expresi\u00f3n en la categor\u00eda correcta.",categories:["Presente","Futuro (ir + a + inf)"],items:[{text:"Como pizza",category:0},{text:"Voy a comer pizza",category:1},{text:"Estudio espa\u00f1ol",category:0},{text:"Voy a estudiar espa\u00f1ol",category:1},{text:"Trabajo en la oficina",category:0},{text:"Vamos a trabajar en la oficina",category:1},{text:"Viajan a Per\u00fa",category:0},{text:"Van a viajar a Per\u00fa",category:1}]},
+  {type:"fill_blank_multi",title:"Completa los planes",description:"Escribe las palabras que faltan en cada oraci\u00f3n.",sentences:[{text:"Este fin de semana nosotros _1_ a _2_ la playa.",answers:["vamos","visitar"]},{text:"Ma\u00f1ana yo _1_ a _2_ un libro.",answers:["voy","leer"]},{text:"El pr\u00f3ximo mes ellos _1_ a _2_ una casa nueva.",answers:["van","comprar"]},{text:"Esta noche t\u00fa _1_ a _2_ una pel\u00edcula.",answers:["vas","ver"]}]},
+  {type:"sentence_builder",title:"Construye la oraci\u00f3n",description:"Ordena las palabras para formar una oraci\u00f3n correcta.",words:["Ma\u00f1ana","yo","voy","a","estudiar","espa\u00f1ol"],correct:"Ma\u00f1ana yo voy a estudiar espa\u00f1ol"},
+  {type:"conjugation",title:"Conjuga: IR + a + infinitivo",description:"Selecciona la forma correcta para completar cada oraci\u00f3n.",items:[{subject:"Yo ___ a aprender guitarra",answer:"voy",options:["voy","vas","va","vamos","van"]},{subject:"T\u00fa ___ a preparar la cena",answer:"vas",options:["voy","vas","va","vamos","van"]},{subject:"Mar\u00eda ___ a escribir una carta",answer:"va",options:["voy","vas","va","vamos","van"]},{subject:"Nosotros ___ a correr en el parque",answer:"vamos",options:["voy","vas","va","vamos","van"]},{subject:"Los ni\u00f1os ___ a jugar en el jard\u00edn",answer:"van",options:["voy","vas","va","vamos","van"]},{subject:"Ustedes ___ a cantar en el concierto",answer:"van",options:["voy","vas","va","vamos","van"]}]},
+  {type:"translation",title:"Traduce al espa\u00f1ol",description:"Usa el banco de palabras para traducir la oraci\u00f3n.",english:"Tomorrow I am going to visit my family.",words:["Ma\u00f1ana","yo","voy","a","visitar","mi","familia","su","vamos"],correct:"Ma\u00f1ana yo voy a visitar mi familia"},
+  {type:"conversation",title:"Conversaci\u00f3n: Planes para ma\u00f1ana",description:"Selecciona la mejor respuesta.",exchanges:[{npc:"\u00a1Hola! \u00bfQu\u00e9 vas a hacer ma\u00f1ana?",options:["Ma\u00f1ana voy a ir al cine con mis amigos.","Ayer fui al parque.","Me gusta comer pizza.","Estoy en mi casa ahora."],correct:0},{npc:"\u00a1Qu\u00e9 divertido! \u00bfY qu\u00e9 pel\u00edcula van a ver?",options:["Vamos a ver una pel\u00edcula de aventuras.","Fui al cine ayer.","No me gusta el cine.","Estudio mucho."],correct:0}]},
+  {type:"sentence_builder",title:"Construye la oraci\u00f3n",description:"Ordena las palabras para formar una oraci\u00f3n correcta.",words:["El","pr\u00f3ximo","mes","nosotros","vamos","a","viajar","a","Cartagena"],correct:"El pr\u00f3ximo mes nosotros vamos a viajar a Cartagena"},
+  {type:"translation",title:"Traduce al espa\u00f1ol",description:"Usa el banco de palabras para traducir la oraci\u00f3n.",english:"They are going to eat dinner at eight.",words:["Ellos","van","a","cenar","las","ocho","a","comer","voy"],correct:"Ellos van a cenar a las ocho"},
+  {type:"conversation",title:"Conversaci\u00f3n: Planes del fin de semana",description:"Selecciona la mejor respuesta para cada turno.",exchanges:[{npc:"\u00bfQu\u00e9 van a hacer este fin de semana?",options:["Vamos a ir a la playa.","Fuimos a la playa la semana pasada.","Estamos en la playa ahora.","La playa es bonita."],correct:0},{npc:"\u00a1Qu\u00e9 bien! \u00bfVan a nadar en el mar?",options:["S\u00ed, vamos a nadar y a tomar el sol.","Nadamos ayer.","No s\u00e9 nadar.","El mar es azul."],correct:0},{npc:"\u00bfA qu\u00e9 hora van a salir?",options:["Vamos a salir a las siete de la ma\u00f1ana.","Salimos a las siete ayer.","Son las siete.","Me gusta salir."],correct:0}]},
+  {type:"dictation",title:"Dictado: Escucha y escribe",description:"Escucha la oraci\u00f3n y escr\u00edbela exactamente.",audio_text:"Este fin de semana voy a visitar a mi abuela.",answer:"Este fin de semana voy a visitar a mi abuela."},
+  {type:"story",title:"Lee la historia: Los planes de Yaguar\u00e1",story:"Yaguar\u00e1 est\u00e1 muy emocionado. Ma\u00f1ana va a empezar una aventura nueva. Primero, va a caminar por la selva. Despu\u00e9s, va a nadar en el r\u00edo. Por la tarde, va a descansar bajo un \u00e1rbol grande. Sus amigos van a venir a visitarlo por la noche. Juntos van a comer frutas y van a contar historias.",questions:[{q:"\u00bfQu\u00e9 va a hacer Yaguar\u00e1 primero?",options:["Va a caminar por la selva.","Va a nadar en el r\u00edo.","Va a descansar.","Va a comer frutas."],correct:0},{q:"\u00bfQui\u00e9nes van a venir por la noche?",options:["Sus amigos","Su familia","Sus profesores","Nadie"],correct:0},{q:"\u00bfQu\u00e9 van a hacer juntos?",options:["Comer frutas y contar historias","Nadar en el r\u00edo","Caminar por la selva","Dormir bajo el \u00e1rbol"],correct:0}]},
+  {type:"pair_matching",title:"Conecta preguntas y respuestas",description:"Conecta cada pregunta con su respuesta sobre planes futuros.",pairs:[{left:"\u00bfQu\u00e9 vas a hacer ma\u00f1ana?",right:"Voy a estudiar."},{left:"\u00bfAd\u00f3nde van a viajar?",right:"Vamos a viajar a Colombia."},{left:"\u00bfQui\u00e9n va a cocinar?",right:"Mi mam\u00e1 va a cocinar."},{left:"\u00bfCu\u00e1ndo van a llegar?",right:"Van a llegar a las tres."},{left:"\u00bfVas a trabajar hoy?",right:"No, voy a descansar."},{left:"\u00bfVamos a salir esta noche?",right:"S\u00ed, vamos a ir al cine."}]},
+  {type:"listening",title:"Escucha los planes",description:"Escucha y responde las preguntas.",audio_text:"El pr\u00f3ximo fin de semana mi familia y yo vamos a ir a la playa. Vamos a nadar y vamos a comer mariscos. Mi hermana va a tomar el sol.",question:"\u00bfQu\u00e9 va a hacer la familia el pr\u00f3ximo fin de semana?",options:["Van a ir a la playa.","Van a ir a la monta\u00f1a.","Van a quedarse en casa.","Van a ir al cine."],correct:0},
+  {type:"category_sort_three",title:"Clasifica las expresiones de tiempo",description:"Clasifica cada expresi\u00f3n en la categor\u00eda correcta.",categories:["Pasado","Presente","Futuro"],items:[{text:"Ayer",category:0},{text:"La semana pasada",category:0},{text:"Ahora",category:1},{text:"Hoy",category:1},{text:"Ma\u00f1ana",category:2},{text:"La pr\u00f3xima semana",category:2},{text:"El a\u00f1o que viene",category:2},{text:"Anoche",category:0},{text:"En este momento",category:1}]},
+  {type:"dictation",title:"Dictado: Escucha y escribe",description:"Escucha la oraci\u00f3n y escr\u00edbela exactamente.",audio_text:"El pr\u00f3ximo mes vamos a viajar a Cartagena y vamos a visitar el centro hist\u00f3rico.",answer:"El pr\u00f3ximo mes vamos a viajar a Cartagena y vamos a visitar el centro hist\u00f3rico."},
+  {type:"story",title:"Lee la historia: Vacaciones en el Caribe",story:"La familia Rodr\u00edguez va a tener unas vacaciones incre\u00edbles. El lunes van a volar a Cartagena. El martes van a visitar el Castillo de San Felipe. El mi\u00e9rcoles van a ir a las Islas del Rosario y van a hacer esn\u00f3rquel. El jueves van a caminar por la ciudad amurallada y van a comprar recuerdos. El viernes van a descansar en el hotel antes de regresar a casa.",questions:[{q:"\u00bfCu\u00e1ndo van a volar a Cartagena?",options:["El lunes","El martes","El mi\u00e9rcoles","El viernes"],correct:0},{q:"\u00bfQu\u00e9 van a hacer el mi\u00e9rcoles?",options:["Ir a las Islas del Rosario y hacer esn\u00f3rquel","Visitar el Castillo","Comprar recuerdos","Descansar en el hotel"],correct:0},{q:"\u00bfQu\u00e9 van a comprar el jueves?",options:["Recuerdos","Comida","Ropa","Libros"],correct:0},{q:"\u00bfQu\u00e9 van a hacer el viernes?",options:["Descansar en el hotel","Ir a la playa","Visitar museos","Nadar en el mar"],correct:0}]},
+  {type:"fill_blank",title:"Completa: Presente, pasado y futuro",description:"Escribe la forma correcta del verbo entre par\u00e9ntesis.",sentences:[{text:"Ayer yo com\u00ed pizza. Ma\u00f1ana yo ___ a comer tacos. (ir)",answer:"voy"},{text:"Ahora estudio ingl\u00e9s. La pr\u00f3xima semana ___ a estudiar franc\u00e9s. (ir, yo)",answer:"voy"},{text:"La semana pasada viajamos a Lima. El pr\u00f3ximo mes ___ a viajar a Bogot\u00e1. (ir, nosotros)",answer:"vamos"},{text:"Hoy ella trabaja en casa. Ma\u00f1ana ella ___ a trabajar en la oficina. (ir)",answer:"va"},{text:"Anoche ellos durmieron tarde. Esta noche ___ a dormir temprano. (ir, ellos)",answer:"van"}]},
+  {type:"sentence_builder",title:"Construye la oraci\u00f3n",description:"Ordena las palabras para formar una oraci\u00f3n correcta.",words:["El","a\u00f1o","que","viene","mi","familia","va","a","mudarse","a","otra","ciudad"],correct:"El a\u00f1o que viene mi familia va a mudarse a otra ciudad"},
+  {type:"conjugation",title:"Conjugaci\u00f3n r\u00e1pida: IR + a + infinitivo",description:"Selecciona la forma correcta de IR lo m\u00e1s r\u00e1pido posible.",items:[{subject:"Yo ___ a leer un libro",answer:"voy",options:["voy","vas","va","vamos","van"]},{subject:"T\u00fa ___ a hacer ejercicio",answer:"vas",options:["voy","vas","va","vamos","van"]},{subject:"Pedro ___ a llamar por tel\u00e9fono",answer:"va",options:["voy","vas","va","vamos","van"]},{subject:"Nosotras ___ a organizar la fiesta",answer:"vamos",options:["voy","vas","va","vamos","van"]},{subject:"Ustedes ___ a terminar el proyecto",answer:"van",options:["voy","vas","va","vamos","van"]},{subject:"Ella ___ a empezar la universidad",answer:"va",options:["voy","vas","va","vamos","van"]},{subject:"Yo ___ a aprender a cocinar",answer:"voy",options:["voy","vas","va","vamos","van"]},{subject:"Mis padres ___ a pintar la casa",answer:"van",options:["voy","vas","va","vamos","van"]}]},
+  {type:"translation",title:"Traduce al espa\u00f1ol",description:"Usa el banco de palabras para traducir la oraci\u00f3n.",english:"Next week we are going to travel to Colombia and we are going to visit Bogot\u00e1.",words:["La","pr\u00f3xima","semana","vamos","a","viajar","a","Colombia","y","vamos","a","visitar","Bogot\u00e1","el"],correct:"La pr\u00f3xima semana vamos a viajar a Colombia y vamos a visitar Bogot\u00e1"},
+  {type:"conversation",title:"Conversaci\u00f3n: Planear un viaje",description:"Est\u00e1s planeando un viaje con un amigo. Selecciona la mejor respuesta.",exchanges:[{npc:"\u00a1Hola! \u00bfVamos a planear las vacaciones? \u00bfAd\u00f3nde vamos a ir?",options:["Vamos a ir a Cartagena. Va a ser incre\u00edble.","Fui a Cartagena el a\u00f1o pasado.","No me gustan las vacaciones.","Estoy cansado."],correct:0},{npc:"\u00a1Perfecto! \u00bfCu\u00e1ndo vamos a viajar?",options:["Vamos a viajar el pr\u00f3ximo mes.","Viaj\u00e9 en enero.","Viajo mucho.","No s\u00e9."],correct:0},{npc:"\u00bfD\u00f3nde vamos a quedarnos?",options:["Vamos a quedarnos en un hotel cerca de la playa.","Me qued\u00e9 en un hotel bonito.","Los hoteles son caros.","No tengo dinero."],correct:0},{npc:"\u00bfQu\u00e9 actividades vamos a hacer?",options:["Vamos a nadar, a hacer esn\u00f3rquel y a visitar la ciudad vieja.","Hice muchas actividades ayer.","Las actividades son divertidas.","No me gusta nadar."],correct:0}]},
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de los colores',
+            description: 'Una cueva con musgo que brilla en colores. Cada color tiene una forma diferente: azul como agua, verde como hojas, dorado como el sol.',
+            ambience: 'glow'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'El musgo azul pregunta:',
+                riddle: '\u00abSoy grande, tengo cuatro patas, soy dorada y tengo manchas. Vivo en la selva. \u00bfQui\u00e9n soy?\u00bb',
+                clue: 'Es un animal que conoces bien.',
+                answer: 'Yaguar\u00e1',
+                options: ['Yaguar\u00e1', 'Un perro', 'Una vaca', 'Un colibr\u00ed'],
+                onSolve: 'El musgo azul brilla m\u00e1s fuerte.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'El musgo verde forma una cerradura.',
+                clue: 'Es lo contrario de "grande".',
+                answer: 'peque\u00f1o',
+                hint: '_ _ _ _ _ _ _',
+                onSolve: 'El musgo verde cambia de forma.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras doradas flotan en el aire de la cueva.',
+                clue: 'Es un adjetivo que describe algo que te gusta mucho ver.',
+                answer: 'bonito',
+                scrambled: 'nitboo',
+                onSolve: 'La cueva entera brilla. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de flor.',
+            questClue: 'La flor subterr\u00e1nea no necesita sol. Tiene su propia luz.',
+            item: 'raiz-flor'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '11',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraDest11Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

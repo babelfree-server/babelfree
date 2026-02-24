@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 5, Lección 1 - Jaguar hambriento</title>
+    <meta name="description" content="A1 Basic - Module 5 Lesson 1: Yaguará learns about food and eating">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module5_food/lesson1_hungry_jaguar">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 5, Lección 1 - Jaguar hambriento",
+                "url": "https://babelfree.com/a1_basic/module5_food/lesson1_hungry_jaguar",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": [
+                    "Food vocabulary",
+                    "Verb gustar",
+                    "Expressing preferences"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Comida",
+                        "item": "https://babelfree.com/a1_basic/module5_food/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Lesson 1"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --amazon-dark: #0a2e0a;
+            --amazon-medium: #1a4d1a;
+            --amazon-light: #2d6b2d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --food-red: #d32f2f;
+            --fruit-orange: #ff9800;
+            --fish-blue: #1976d2;
+            --hungry-yellow: #fbc02d;
+            --delicious-pink: #e91e63;
+            --mango-yellow: #ffb300;
+            --plantain-green: #689f38;
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--amazon-dark) 0%, var(--food-red) 50%, var(--fruit-orange) 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            font-size: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(211, 47, 47, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255, 152, 0, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(25, 118, 210, 0.1) 0%, transparent 50%);
+            z-index: 1;
+            animation: hungerWaves 45s ease-in-out infinite;
+        }
+
+        @keyframes hungerWaves {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            25% { transform: scale(1.03) rotate(0.3deg); opacity: 1; }
+            50% { transform: scale(0.97) rotate(-0.2deg); opacity: 0.9; }
+            75% { transform: scale(1.01) rotate(0.1deg); opacity: 1; }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .lesson-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 3px solid var(--food-red);
+            text-align: center;
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid var(--food-red);
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(211, 47, 47, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .lesson-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--hungry-yellow);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .lesson-title {
+            font-size: 2.2rem;
+            color: var(--food-red);
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .lesson-subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .progress-bar-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--food-red);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--food-red), var(--fruit-orange));
+            border-radius: 6px;
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .progress-text {
+            color: var(--food-red);
+            font-weight: 700;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* REVIEW SECTION */
+        .review-section {
+            background: linear-gradient(135deg, rgba(123, 31, 162, 0.15), rgba(93, 64, 55, 0.1));
+            border: 3px solid var(--hungry-yellow);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .review-title {
+            color: var(--hungry-yellow);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .review-text {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            line-height: 2;
+            margin: 15px 0;
+        }
+
+        /* HUNGRY STORY SECTION */
+        .story-section {
+            background: linear-gradient(135deg, rgba(251, 192, 45, 0.15), rgba(211, 47, 47, 0.1));
+            border: 3px solid var(--hungry-yellow);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .story-title {
+            color: var(--hungry-yellow);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .jaguar-hungry {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 4px solid var(--hungry-yellow);
+            animation: hungryBounce 3s ease-in-out infinite;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(251, 192, 45, 0.4);
+            position: relative;
+        }
+
+        @keyframes hungryBounce {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.05) rotate(-2deg); }
+            50% { transform: scale(1.1); }
+            75% { transform: scale(1.05) rotate(2deg); }
+        }
+
+        .story-text {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            line-height: 2;
+            margin: 20px 0;
+        }
+
+        .simple-sentence {
+            margin: 15px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid var(--hungry-yellow);
+        }
+
+        /* FOOD CONCEPTS SECTION */
+        .food-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            border: 3px solid var(--food-red);
+        }
+
+        .food-title {
+            color: var(--food-red);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .food-concept {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .food-concept:hover {
+            transform: translateY(-5px);
+            border-color: var(--food-red);
+            box-shadow: 0 10px 30px rgba(211, 47, 47, 0.3);
+        }
+
+        .food-concept.pez {
+            border-color: var(--fish-blue);
+        }
+
+        .food-concept.mango {
+            border-color: var(--mango-yellow);
+        }
+
+        .food-concept.plantano {
+            border-color: var(--plantain-green);
+        }
+
+        .food-concept.comer {
+            border-color: var(--food-red);
+        }
+
+        .food-concept.gusta {
+            border-color: var(--delicious-pink);
+        }
+
+        .concept-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            border: 3px solid;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .food-concept.pez .concept-avatar {
+            background: linear-gradient(135deg, var(--fish-blue), #42a5f5);
+            border-color: var(--fish-blue);
+        }
+
+        .food-concept.mango .concept-avatar {
+            background: linear-gradient(135deg, var(--mango-yellow), #ffcc02);
+            border-color: var(--mango-yellow);
+        }
+
+        .food-concept.plantano .concept-avatar {
+            background: linear-gradient(135deg, var(--plantain-green), #8bc34a);
+            border-color: var(--plantain-green);
+        }
+
+        .food-concept.comer .concept-avatar {
+            background: linear-gradient(135deg, var(--food-red), #e57373);
+            border-color: var(--food-red);
+        }
+
+        .food-concept.gusta .concept-avatar {
+            background: linear-gradient(135deg, var(--delicious-pink), #f06292);
+            border-color: var(--delicious-pink);
+        }
+
+        .concept-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .food-concept.pez .concept-name { color: var(--fish-blue); }
+        .food-concept.mango .concept-name { color: var(--mango-yellow); }
+        .food-concept.plantano .concept-name { color: var(--plantain-green); }
+        .food-concept.comer .concept-name { color: var(--food-red); }
+        .food-concept.gusta .concept-name { color: var(--delicious-pink); }
+
+        .concept-action {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .concept-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* FOOD SPARKLE EFFECT */
+        .food-sparkle {
+            position: absolute;
+            top: 20%;
+            right: 20%;
+            width: 15px;
+            height: 15px;
+            background: var(--hungry-yellow);
+            border-radius: 50%;
+            opacity: 0;
+            animation: sparkle 3s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.5) rotate(180deg); }
+        }
+
+        .food-concept:hover .food-sparkle {
+            animation-play-state: running;
+        }
+
+        /* INTERACTIVE FOOD EXERCISE */
+        .food-exercise-section {
+            background: linear-gradient(135deg, rgba(211, 47, 47, 0.15), rgba(233, 30, 99, 0.1));
+            border: 3px solid var(--food-red);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .exercise-title {
+            color: var(--food-red);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .exercise-instruction {
+            background: rgba(211, 47, 47, 0.1);
+            border: 2px solid var(--food-red);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .instruction-text {
+            color: var(--food-red);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .food-matching-game {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .foods-column, .actions-column {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .column-title {
+            color: var(--food-red);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .food-item, .action-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid transparent;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .food-item:hover, .action-item:hover {
+            border-color: var(--food-red);
+            background: rgba(211, 47, 47, 0.1);
+            transform: translateX(5px);
+        }
+
+        .food-item.selected, .action-item.selected {
+            border-color: var(--food-red);
+            background: rgba(211, 47, 47, 0.2);
+            transform: scale(1.02);
+        }
+
+        .food-item.correct, .action-item.correct {
+            border-color: var(--success-green);
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .food-item.incorrect, .action-item.incorrect {
+            border-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.2);
+        }
+
+        /* YAGUARÁ FOOD GUIDE */
+        .yaguara-guide {
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.15), rgba(255, 107, 53, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .yaguara-avatar {
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 3px solid var(--jaguar-gold);
+            animation: hungryBounce 4s ease-in-out infinite;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .yaguara-text {
+            padding-top: 5px;
+        }
+
+        .guide-title {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .guide-message {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .simple-message {
+            margin: 8px 0;
+        }
+
+        /* LESSON NAVIGATION */
+        .lesson-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .nav-button.primary {
+            background: linear-gradient(135deg, var(--food-red), var(--fruit-orange));
+            color: white;
+            border: 2px solid var(--food-red);
+        }
+
+        .nav-button.primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: var(--glass-bg);
+            color: white;
+            border: 2px solid var(--food-red);
+        }
+
+        .nav-button.secondary:hover {
+            background: rgba(211, 47, 47, 0.2);
+            transform: scale(1.05);
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-button:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* SUCCESS MESSAGE */
+        .success-message {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(129, 199, 132, 0.1));
+            border: 3px solid var(--success-green);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: successSlide 0.5s ease-out;
+        }
+
+        @keyframes successSlide {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-title {
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .success-text {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 18px; padding: 15px; }
+            .container { padding: 15px; }
+            .lesson-header { padding: 20px; }
+            .food-grid { grid-template-columns: 1fr; }
+            .food-matching-game { grid-template-columns: 1fr; gap: 20px; }
+            .lesson-title { font-size: 1.8rem; }
+            .back-btn, .lesson-info { 
+                position: static; 
+                margin: 10px auto; 
+                display: block; 
+                width: fit-content; 
+            }
+            .yaguara-guide {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
+            }
+            .yaguara-avatar { margin: 0 auto; }
+        }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/a1-amazon" class="back-btn">← Módulos</a>
+            <div class="lesson-info">Módulo 5 • Lección 1</div>
+            <h1 class="lesson-title">🍖 Jaguar hambriento</h1>
+            <p class="lesson-subtitle">Yaguará busca comida</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Paso 1 de 5</div>
+        </div>
+
+        <!-- REVIEW PREVIOUS LESSON -->
+        <div class="review-section" id="step1">
+            <div class="review-title">📚 Yaguará aprende</div>
+            <div class="review-text">
+                Yaguará vive con su familia. Escucha sonidos. Busca agua. Bebe agua. Busca casa. Encuentra una cueva.
+            </div>
+            <div class="review-text">
+                Ahora Yaguará sabe buscar casa segura.
+            </div>
+        </div>
+
+        <!-- HUNGRY STORY INTRODUCTION -->
+        <div class="story-section" id="step2" style="display:none;">
+            <div class="story-title">🍽️ Yaguará tiene hambre</div>
+            <div class="jaguar-hungry" onclick="speakText('Tengo hambre. Busco comida.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">🍽️ Yaguará tiene hambre.</div>
+                <div class="simple-sentence">🍖 Busca comida.</div>
+                <div class="simple-sentence">🐟 Ve peces en el río.</div>
+                <div class="simple-sentence">🥭 Ve frutas en los árboles.</div>
+            </div>
+        </div>
+
+        <!-- FOOD CONCEPTS -->
+        <div class="food-section" id="step3" style="display:none;">
+            <div class="food-title">🍖 Comida de Colombia</div>
+            
+            <div class="food-grid">
+                <div class="food-concept pez" onclick="learnFoodConcept('pez')">
+                    <div class="concept-avatar">
+                        🐟
+                        <div class="food-sparkle"></div>
+                    </div>
+                    <div class="concept-name">Pez</div>
+                    <div class="concept-action">Vive en el río</div>
+                    <div class="concept-description">Yaguará come peces.</div>
+                </div>
+
+                <div class="food-concept mango" onclick="learnFoodConcept('mango')">
+                    <div class="concept-avatar">
+                        🥭
+                        <div class="food-sparkle"></div>
+                    </div>
+                    <div class="concept-name">Mango</div>
+                    <div class="concept-action">Fruta de Colombia</div>
+                    <div class="concept-description">El mango es dulce.</div>
+                </div>
+
+                <div class="food-concept plantano" onclick="learnFoodConcept('plantano')">
+                    <div class="concept-avatar">
+                        🍌
+                        <div class="food-sparkle"></div>
+                    </div>
+                    <div class="concept-name">Plátano</div>
+                    <div class="concept-action">Fruta amarilla</div>
+                    <div class="concept-description">El plátano es bueno.</div>
+                </div>
+
+                <div class="food-concept comer" onclick="learnFoodConcept('comer')">
+                    <div class="concept-avatar">
+                        🍽️
+                        <div class="food-sparkle"></div>
+                    </div>
+                    <div class="concept-name">Comer</div>
+                    <div class="concept-action">Tomar comida</div>
+                    <div class="concept-description">Tengo hambre. Como.</div>
+                </div>
+
+                <div class="food-concept gusta" onclick="learnFoodConcept('gusta')">
+                    <div class="concept-avatar">
+                        😋
+                        <div class="food-sparkle"></div>
+                    </div>
+                    <div class="concept-name">Me gusta</div>
+                    <div class="concept-action">Está rico</div>
+                    <div class="concept-description">Me gusta. Es bueno.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YAGUARÁ FOOD GUIDE -->
+        <div class="yaguara-guide" id="step4" style="display:none;">
+            <div class="yaguara-avatar" onclick="speakText('Como peces del río. Me gusta el mango.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguará dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message">🍽️ Tengo hambre.</div>
+                    <div class="simple-message">🐟 Como peces del río.</div>
+                    <div class="simple-message">🥭 Me gusta el mango.</div>
+                    <div class="simple-message">🍌 Como plátano también.</div>
+                    <div class="simple-message">😋 La comida está rica.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE FOOD EXERCISE -->
+        <div class="food-exercise-section" id="step5" style="display:none;">
+            <div class="exercise-title">🎯 Práctica: ¿Qué come?</div>
+            
+            <div class="exercise-instruction">
+                <div class="instruction-text">Escucha. ¿Qué hace Yaguará?</div>
+            </div>
+
+            <div class="food-matching-game">
+                <div class="foods-column">
+                    <div class="column-title">🍖 Comidas</div>
+                    <div class="food-item" onclick="selectFood(this, 'pez')" data-food="pez">🐟 Pez</div>
+                    <div class="food-item" onclick="selectFood(this, 'mango')" data-food="mango">🥭 Mango</div>
+                    <div class="food-item" onclick="selectFood(this, 'agua')" data-food="agua">💧 Agua</div>
+                    <div class="food-item" onclick="selectFood(this, 'plantano')" data-food="plantano">🍌 Plátano</div>
+                </div>
+
+                <div class="actions-column">
+                    <div class="column-title">😋 ¿Qué hacer?</div>
+                    <div class="action-item" onclick="selectAction(this, 'comer')" data-action="comer">🍽️ Comer</div>
+                    <div class="action-item" onclick="selectAction(this, 'me_gusta')" data-action="me_gusta">😋 Me gusta</div>
+                    <div class="action-item" onclick="selectAction(this, 'beber')" data-action="beber">🥤 Beber</div>
+                    <div class="action-item" onclick="selectAction(this, 'comer_rico')" data-action="comer_rico">🤤 Comer rico</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-message" id="successMessage">
+            <div class="success-title">🎉 ¡Muy bien!</div>
+            <div class="success-text">
+                Yaguará aprende sobre comida.<br>
+                Yaguará come peces y frutas.<br>
+                Yaguará come bien.
+            </div>
+        </div>
+
+        <!-- LESSON NAVIGATION -->
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" onclick="previousStep()" id="prevBtn" disabled>← Anterior</button>
+            <button class="nav-button primary" onclick="nextStep()" id="nextBtn">Siguiente →</button>
+            <button class="nav-button primary" onclick="finishLesson()" id="finishBtn" style="display:none;">✅ Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        // Lesson Management System
+        (function() {
+            'use strict';
+            
+            var lessonData = {
+                currentStep: 1,
+                totalSteps: 5,
+                selectedFood: null,
+                matchedPairs: 0,
+                totalPairs: 4,
+                isComplete: false,
+                gamePoints: 0
+            };
+
+            // SIMPLIFIED FOOD CONCEPTS BASED ON PDF RECOMMENDATIONS
+            var foodConcepts = {
+                pez: "El pez vive en el río. Yaguará come peces.",
+                mango: "El mango es dulce. Yaguará come mango.",
+                plantano: "El plátano es amarillo. Es bueno.",
+                comer: "Tengo hambre. Como comida.",
+                gusta: "La comida es buena. Estoy feliz."
+            };
+
+            // IMPROVED FOOD MATCHING BASED ON PDF RECOMMENDATIONS
+            var foodMatches = {
+                pez: 'comer',          // Pez → Comer
+                mango: 'me_gusta',     // Mango → Me gusta
+                agua: 'beber',         // Agua → Beber
+                plantano: 'comer_rico' // Plátano → Comer rico
+            };
+
+            function updateProgress() {
+                var percentage = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var progressFill = document.getElementById('progressFill');
+                var progressText = document.getElementById('progressText');
+                
+                if (progressFill) progressFill.style.width = percentage + '%';
+                if (progressText) progressText.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(stepNumber) {
+                // Hide all steps
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var step = document.getElementById('step' + i);
+                    if (step) step.style.display = 'none';
+                }
+                
+                // Show current step
+                var currentStep = document.getElementById('step' + stepNumber);
+                if (currentStep) {
+                    currentStep.style.display = 'block';
+                    currentStep.style.animation = 'fadeIn 0.5s ease-in';
+                }
+                
+                updateNavigationButtons();
+                updateProgress();
+            }
+
+            function updateNavigationButtons() {
+                var prevBtn = document.getElementById('prevBtn');
+                var nextBtn = document.getElementById('nextBtn');
+                var finishBtn = document.getElementById('finishBtn');
+                
+                if (prevBtn) prevBtn.disabled = lessonData.currentStep === 1;
+                
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    if (finishBtn) finishBtn.style.display = 'inline-block';
+                } else {
+                    if (nextBtn) nextBtn.style.display = 'inline-block';
+                    if (finishBtn) finishBtn.style.display = 'none';
+                }
+            }
+
+            function goToNextStep() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                    if (window.JaguarAPI) JaguarAPI.syncA1Progress('module5_food', 'lesson1_hungry_jaguar', { currentStep: lessonData.currentStep, totalSteps: lessonData.totalSteps, isComplete: false, matchedPairs: lessonData.matchedPairs });
+                }
+            }
+
+            function goToPreviousStep() {
+                if (lessonData.currentStep > 1) {
+                    lessonData.currentStep--;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function learnFoodConceptFunction(concept) {
+                var explanation = foodConcepts[concept];
+                if (explanation) {
+                    speakText(explanation);
+                    showNotification('🍖 ' + concept.charAt(0).toUpperCase() + concept.slice(1), explanation);
+                }
+            }
+
+            function selectFoodInGame(foodElement, food) {
+                // Clear previous selections
+                var allFoods = document.querySelectorAll('.food-item');
+                for (var i = 0; i < allFoods.length; i++) {
+                    allFoods[i].classList.remove('selected');
+                }
+                
+                foodElement.classList.add('selected');
+                lessonData.selectedFood = food;
+                
+                // Speak the food with simplified A1 language
+                var foodTexts = {
+                    pez: "Pez del río",
+                    mango: "Mango dulce",
+                    agua: "Agua del río",
+                    plantano: "Plátano amarillo"
+                };
+                
+                var text = foodTexts[food];
+                if (text) {
+                    speakText(text);
+                    showNotification('🍖 Comida:', text);
+                }
+            }
+
+            function selectActionInGame(actionElement, action) {
+                if (!lessonData.selectedFood) {
+                    showNotification('⚠️ Primero:', 'Escucha una comida');
+                    return;
+                }
+                
+                var correctAction = foodMatches[lessonData.selectedFood];
+                var isCorrect = action === correctAction;
+                var foodElement = document.querySelector('.food-item[data-food="' + lessonData.selectedFood + '"]');
+                
+                if (isCorrect) {
+                    // Correct match with improved feedback
+                    foodElement.classList.remove('selected');
+                    foodElement.classList.add('correct');
+                    actionElement.classList.add('correct');
+                    
+                    lessonData.matchedPairs++;
+                    lessonData.gamePoints += 10;
+                    lessonData.selectedFood = null;
+
+                    var celebration = getSuccessCelebration(lessonData.matchedPairs);
+                    showNotification('✅ ' + celebration, 'Yaguará come bien');
+                    speakText(celebration);
+                    
+                    if (lessonData.matchedPairs === lessonData.totalPairs) {
+                        setTimeout(function() {
+                            var successMessage = document.getElementById('successMessage');
+                            if (successMessage) successMessage.classList.add('show');
+                            speakText('Muy bien. Yaguará come bien.');
+                        }, 1000);
+                    }
+                } else {
+                    // Incorrect match with simple feedback
+                    foodElement.classList.add('incorrect');
+                    actionElement.classList.add('incorrect');
+                    
+                    showNotification('❌ No', 'Escucha otra vez');
+                    
+                    setTimeout(function() {
+                        foodElement.classList.remove('selected', 'incorrect');
+                        actionElement.classList.remove('incorrect');
+                        lessonData.selectedFood = null;
+                    }, 1500);
+                }
+            }
+
+            // IMPROVED SUCCESS CELEBRATIONS FROM PDF
+            function getSuccessCelebration(correctCount) {
+                switch(correctCount) {
+                    case 1: return '¡Bien!';
+                    case 2: return '¡Muy bien!';
+                    case 3: return '¡Excelente!';
+                    case 4: return '¡Perfecto!';
+                    default: return '¡Bien!';
+                }
+            }
+
+            function speakInSpanish(text) {
+                if ('speechSynthesis' in window) {
+                    var utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'es-CO'; // Colombian Spanish
+                    utterance.rate = 0.6; // Slower for A1 learners
+                    speechSynthesis.speak(utterance);
+                }
+            }
+
+            function showNotification(title, message) {
+                // Create temporary notification
+                var notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: rgba(211, 47, 47, 0.9);
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    z-index: 10000;
+                    max-width: 300px;
+                    border: 2px solid #d32f2f;
+                    animation: slideInRight 0.3s ease-out;
+                `;
+
+                notification.innerHTML = `
+                    <div style="font-weight: 700; margin-bottom: 5px;">${title}</div>
+                    <div style="font-size: 0.9rem;">${message}</div>
+                `;
+
+                document.body.appendChild(notification);
+
+                setTimeout(function() {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 3000);
+            }
+
+            function completeLesson() {
+                lessonData.isComplete = true;
+                if (window.JaguarAPI) JaguarAPI.syncA1Progress('module5_food', 'lesson1_hungry_jaguar', { currentStep: lessonData.totalSteps, totalSteps: lessonData.totalSteps, isComplete: true, matchedPairs: lessonData.matchedPairs });
+                showNotification('🎓 Lección completa', 'Yaguará come bien');
+
+                setTimeout(function() {
+                    if (confirm('¡Muy bien!\n\nYaguará come bien.\n\n¿Siguiente lección?')) {
+                        // For now, go back to module dashboard
+                        window.location.href = '/a1-amazon';
+                    }
+                }, 2000);
+            }
+
+            // Make functions globally available
+            window.nextStep = goToNextStep;
+            window.previousStep = goToPreviousStep;
+            window.learnFoodConcept = learnFoodConceptFunction;
+            window.selectFood = selectFoodInGame;
+            window.selectAction = selectActionInGame;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLesson;
+
+            // Add CSS for animations
+            var style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                @keyframes slideInRight {
+                    from { transform: translateX(300px); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Initialize lesson
+            document.addEventListener('DOMContentLoaded', function() {
+                showStep(1);
+                console.log('Module 5, Lesson 1: Hungry Jaguar - Improved Version Loaded');
+            });
+
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>

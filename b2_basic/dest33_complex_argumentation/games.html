@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 33: Tejer el legado - Argumentaci&oacute;n compleja</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b2_basic/dest33_complex_argumentation/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 33: Tejer el legado - Argumentación compleja",
+          "url": "https://babelfree.com/b2_basic/dest33_complex_argumentation/games",
+          "educationalLevel": "B2 - Upper Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Complex argumentation", "Critical thinking", "Spanish discourse"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B2 Basic", "item": "https://babelfree.com/b2-villavicencio" },
+            { "@type": "ListItem", "position": 4, "name": "Tejer el legado - Argumentación compleja" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/b2-villavicencio" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 33: Tejer el legado</div>
+            <div class="yg-header-subtitle">Argumentaci&oacute;n compleja</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative \u2014 El hilo del legado ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 reflexiona sobre el legado de los Llanos. Observa las estructuras argumentativas y el uso del subjuntivo pasado.',
+        text: 'Yaguar\u00e1 hab\u00eda recorrido los Llanos de punta a punta. Cada amanecer le hab\u00eda tra\u00eddo una lecci\u00f3n distinta: la fuerza del joropo, la paciencia del llanero, la sabidur\u00eda de quienes cuidan la tierra. Ahora, sentada junto al r\u00edo Meta, comprend\u00eda que, si no hubiera emprendido este viaje, jam\u00e1s habr\u00eda entendido lo que significa pertenecer a un territorio. A pesar de que el progreso amenazaba las tradiciones, las comunidades segu\u00edan tejiendo su legado con cada canci\u00f3n, cada faena, cada historia contada al atardecer. De ah\u00ed que Yaguar\u00e1 sintiera la urgencia de defender esas voces. Dado que el futuro de los Llanos depend\u00eda de decisiones colectivas, ella sab\u00eda que no pod\u00eda quedarse en silencio. En definitiva, tejer el legado no era solo recordar el pasado, sino construir un argumento vivo para el ma\u00f1ana.'
+    },
+    // === GAME 2: Sorting \u2014 Tipos de marcadores discursivos ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan su funci\u00f3n argumentativa.',
+        categories: ['Concesivo', 'Causal', 'Conclusivo'],
+        items: [
+            { text: 'A pesar de que la miner\u00eda generaba empleo, destru\u00eda los r\u00edos.', category: 'Concesivo' },
+            { text: 'Si bien el turismo crec\u00eda, las comunidades no recib\u00edan beneficios.', category: 'Concesivo' },
+            { text: 'Dado que la deforestaci\u00f3n avanzaba, los animales perd\u00edan su h\u00e1bitat.', category: 'Causal' },
+            { text: 'Puesto que no exist\u00edan pol\u00edticas claras, la situaci\u00f3n empeoraba.', category: 'Causal' },
+            { text: 'De ah\u00ed que las comunidades exigieran cambios urgentes.', category: 'Conclusivo' },
+            { text: 'De modo que la asamblea aprob\u00f3 una nueva resoluci\u00f3n.', category: 'Conclusivo' },
+            { text: 'Aunque los j\u00f3venes quisieran quedarse, la falta de oportunidades los obligaba a emigrar.', category: 'Concesivo' },
+            { text: 'Teniendo en cuenta que el agua era un recurso limitado, se propuso un plan de gesti\u00f3n.', category: 'Causal' }
+        ]
+    },
+    // === GAME 3: FIB \u2014 Imperfecto de subjuntivo en argumentaci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada argumento con la forma correcta del imperfecto de subjuntivo.',
+        questions: [
+            {
+                sentence: 'A pesar de que el gobierno ___ m\u00e1s fondos, la situaci\u00f3n no mejor\u00f3.',
+                answer: 'destinara',
+                options: ['destinara', 'destina', 'destin\u00f3', 'destinar\u00eda']
+            },
+            {
+                sentence: 'Los l\u00edderes ped\u00edan que se ___ una consulta popular antes de aprobar el proyecto.',
+                answer: 'realizara',
+                options: ['realizara', 'realiza', 'realizar\u00eda', 'realiz\u00f3']
+            },
+            {
+                sentence: 'Era fundamental que las voces locales ___ representadas en el debate.',
+                answer: 'estuvieran',
+                options: ['estuvieran', 'est\u00e1n', 'estar\u00edan', 'estuvieron']
+            }
+        ]
+    },
+    // === GAME 4: Conjugation \u2014 Condicional perfecto en hip\u00f3tesis ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma correcta del condicional perfecto para completar la hip\u00f3tesis.',
+        questions: [
+            {
+                verb: 'haber + proteger',
+                subject: 'nosotros',
+                answer: 'habr\u00edamos protegido',
+                options: ['habr\u00edamos protegido', 'proteger\u00edamos', 'hubi\u00e9ramos protegido', 'protegimos']
+            },
+            {
+                verb: 'haber + conservar',
+                subject: 'las comunidades',
+                answer: 'habr\u00edan conservado',
+                options: ['habr\u00edan conservado', 'conservar\u00edan', 'hubieran conservado', 'conservaron']
+            },
+            {
+                verb: 'haber + evitar',
+                subject: 'el gobierno',
+                answer: 'habr\u00eda evitado',
+                options: ['habr\u00eda evitado', 'evitar\u00eda', 'hubiera evitado', 'evit\u00f3']
+            },
+            {
+                verb: 'haber + resolver',
+                subject: 'yo',
+                answer: 'habr\u00eda resuelto',
+                options: ['habr\u00eda resuelto', 'resolver\u00eda', 'hubiera resuelto', 'resolv\u00ed']
+            }
+        ]
+    },
+    // === GAME 5: Story \u2014 El debate sobre el futuro de los Llanos ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el texto sobre el debate en Villavicencio y responde las preguntas.',
+        title: 'El debate sobre el futuro de los Llanos',
+        text: 'En la asamblea comunitaria de Villavicencio, tres voces se enfrentaron. El ganadero argument\u00f3 que, si bien la ganader\u00eda extensiva generaba impacto ambiental, tambi\u00e9n era el sustento de miles de familias. La bi\u00f3loga sostuvo que, dado que los ecosistemas llaneros estaban en peligro, era imprescindible que se implementaran zonas de protecci\u00f3n. El alcalde, por su parte, afirm\u00f3 que, a pesar de que ambas posturas tuvieran m\u00e9rito, se necesitaba un plan que integrara la econom\u00eda y la conservaci\u00f3n. Si se hubiera escuchado a las comunidades ind\u00edgenas desde el principio, se habr\u00eda evitado la p\u00e9rdida de biodiversidad. De ah\u00ed que todos coincidieran en algo: el di\u00e1logo era la \u00fanica v\u00eda. En definitiva, el futuro de los Llanos depend\u00eda de tejer acuerdos, no de imponer decisiones.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 tipo de marcador es "si bien" en el argumento del ganadero?',
+                options: ['Concesivo', 'Causal', 'Conclusivo', 'Temporal'],
+                answer: 'Concesivo'
+            },
+            {
+                q: '\u00bfQu\u00e9 estructura aparece en "si se hubiera escuchado... se habr\u00eda evitado"?',
+                options: ['Condicional irreal del pasado (mixta)', 'Presente de subjuntivo', 'Per\u00edfrasis verbal', 'Voz pasiva simple'],
+                answer: 'Condicional irreal del pasado (mixta)'
+            },
+            {
+                q: '\u00bfQu\u00e9 funci\u00f3n cumple "de ah\u00ed que" en el texto?',
+                options: ['Introduce una conclusi\u00f3n con subjuntivo', 'Introduce una causa', 'Introduce una concesi\u00f3n', 'Introduce una condici\u00f3n'],
+                answer: 'Introduce una conclusi\u00f3n con subjuntivo'
+            }
+        ]
+    },
+    // === GAME 6: FIB \u2014 Per\u00edfrasis verbales en argumentaci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la per\u00edfrasis verbal adecuada seg\u00fan el contexto argumentativo.',
+        questions: [
+            {
+                sentence: 'Las comunidades ___ exigiendo mejores condiciones desde hace a\u00f1os, pero nadie las escuchaba.',
+                answer: 'llevaban',
+                options: ['llevaban', 'iban', 'acababan de', 'sol\u00edan']
+            },
+            {
+                sentence: 'El proyecto ___ aprobarse cuando surgi\u00f3 una nueva objeci\u00f3n legal.',
+                answer: 'estaba a punto de',
+                options: ['estaba a punto de', 'acababa de', 'sol\u00eda', 'iba']
+            },
+            {
+                sentence: 'Si se ___ implementando esa pol\u00edtica, los da\u00f1os habr\u00edan sido irreversibles.',
+                answer: 'hubiera seguido',
+                options: ['hubiera seguido', 'sigue', 'sigui\u00f3', 'seguir\u00eda']
+            }
+        ]
+    },
+    // === GAME 7: Conjugation \u2014 Imperfecto de subjuntivo con concesivas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en imperfecto de subjuntivo para completar la cl\u00e1usula concesiva.',
+        questions: [
+            {
+                verb: 'tener',
+                subject: 'el proyecto',
+                answer: 'tuviera',
+                options: ['tuviera', 'tiene', 'ten\u00eda', 'tendr\u00eda']
+            },
+            {
+                verb: 'ofrecer',
+                subject: 'la empresa',
+                answer: 'ofreciera',
+                options: ['ofreciera', 'ofrece', 'ofrec\u00eda', 'ofrecer\u00eda']
+            },
+            {
+                verb: 'prometer',
+                subject: 'los pol\u00edticos',
+                answer: 'prometieran',
+                options: ['prometieran', 'prometen', 'promet\u00edan', 'prometer\u00edan']
+            },
+            {
+                verb: 'ser',
+                subject: 'la propuesta',
+                answer: 'fuera',
+                options: ['fuera', 'es', 'era', 'ser\u00eda']
+            }
+        ]
+    },
+    // === GAME 8: Pair \u2014 Marcador discursivo y funci\u00f3n ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada marcador discursivo con su funci\u00f3n argumentativa.',
+        pairs: [
+            ['A pesar de que', 'Introduce una concesi\u00f3n con subjuntivo'],
+            ['Dado que', 'Introduce una causa conocida o aceptada'],
+            ['De ah\u00ed que', 'Introduce una conclusi\u00f3n con subjuntivo'],
+            ['Si bien', 'Concede un punto antes de contraargumentar'],
+            ['Teniendo en cuenta que', 'Introduce un hecho como base del argumento'],
+            ['En definitiva', 'Cierra un argumento con una s\u00edntesis final']
+        ]
+    },
+    // === GAME 9: Listening \u2014 Argumento sobre ganader\u00eda sostenible ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el argumento y responde la pregunta.',
+        audio: 'Dado que la ganader\u00eda extensiva ha sido la principal causa de deforestaci\u00f3n en los Llanos, resulta urgente que se adopten pr\u00e1cticas sostenibles. Si se hubieran implementado pol\u00edticas de ganader\u00eda silvopastoril hace veinte a\u00f1os, habr\u00edamos conservado miles de hect\u00e1reas de bosque. A pesar de que algunos ganaderos se resistan al cambio, la evidencia demuestra que la transici\u00f3n es posible y rentable. De modo que el debate ya no deber\u00eda girar en torno a si cambiar o no, sino a c\u00f3mo hacerlo.',
+        question: '\u00bfCu\u00e1l es la conclusi\u00f3n principal del argumento?',
+        answer: 'El debate debe centrarse en c\u00f3mo hacer la transici\u00f3n, no en si hacerla',
+        options: ['El debate debe centrarse en c\u00f3mo hacer la transici\u00f3n, no en si hacerla', 'La ganader\u00eda debe eliminarse por completo', 'Los ganaderos no quieren cambiar', 'La deforestaci\u00f3n no tiene soluci\u00f3n']
+    },
+    // === GAME 10: Builder \u2014 Argumento concesivo complejo ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los fragmentos para formar un argumento concesivo completo.',
+        words: ['A pesar de que', 'el turismo pudiera generar', 'ingresos para la regi\u00f3n,', 'ser\u00eda necesario que', 'se regulara de manera estricta,', 'puesto que', 'un crecimiento descontrolado', 'habr\u00eda da\u00f1ado', 'los ecosistemas de manera irreversible.'],
+        answer: 'A pesar de que el turismo pudiera generar ingresos para la regi\u00f3n, ser\u00eda necesario que se regulara de manera estricta, puesto que un crecimiento descontrolado habr\u00eda da\u00f1ado los ecosistemas de manera irreversible.'
+    },
+    // === GAME 11: FIB \u2014 Condicionales mixtas en debate ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada condicional mixta con la forma verbal correcta.',
+        questions: [
+            {
+                sentence: 'Si las autoridades hubieran actuado a tiempo, hoy ___ m\u00e1s biodiversidad en la regi\u00f3n.',
+                answer: 'habr\u00eda',
+                options: ['habr\u00eda', 'hay', 'hab\u00eda', 'hubiera']
+            },
+            {
+                sentence: 'Si los j\u00f3venes ___ m\u00e1s oportunidades en los Llanos, no habr\u00edan emigrado a las ciudades.',
+                answer: 'tuvieran',
+                options: ['tuvieran', 'tienen', 'ten\u00edan', 'tendr\u00edan']
+            },
+            {
+                sentence: 'Los r\u00edos estar\u00edan m\u00e1s limpios si no se ___ permitido la miner\u00eda ilegal durante d\u00e9cadas.',
+                answer: 'hubiera',
+                options: ['hubiera', 'ha', 'hab\u00eda', 'habr\u00eda']
+            }
+        ]
+    },
+    // === GAME 12: Narrative \u2014 Las voces del r\u00edo Meta ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo las distintas voces de los Llanos construyen un argumento colectivo sobre el territorio.',
+        text: 'Junto al r\u00edo Meta, Yaguar\u00e1 escuch\u00f3 las voces que hab\u00edan tejido su viaje. La llanera mayor dijo que, si bien la modernidad tra\u00eda ventajas, tambi\u00e9n estaba borrando la memoria de los mayores. El baquiano argument\u00f3 que, dado que los caminos ancestrales eran la \u00fanica gu\u00eda confiable en la sabana, era imperativo que se preservaran. La maestra afirm\u00f3 que habr\u00eda sido un error que los ni\u00f1os crecieran sin conocer el joropo, puesto que la m\u00fasica era el alma del llano. Yaguar\u00e1 comprendi\u00f3 que cada argumento, aunque partiera de una experiencia distinta, llegaba a la misma conclusi\u00f3n: en definitiva, el legado de los Llanos no se tejaba con una sola voz, sino con todas las voces juntas. De ah\u00ed que ella decidiera que su misi\u00f3n no era hablar por los dem\u00e1s, sino asegurarse de que todos pudieran ser escuchados.'
+    },
+    // === GAME 13: Translation \u2014 Argumento con causales y concesivas ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'Even though the communities had fewer resources, they managed to protect their territory. Given that the government did not offer support, they organized on their own.',
+        words: ['A', 'pesar', 'de', 'que', 'las', 'comunidades', 'tuvieran', 'menos', 'recursos', 'lograron', 'proteger', 'su', 'territorio', 'Dado', 'el', 'gobierno', 'no', 'ofreci\u00f3', 'apoyo', 'se', 'organizaron', 'por', 'cuenta', 'propia'],
+        answer: 'A pesar de que las comunidades tuvieran menos recursos lograron proteger su territorio Dado que el gobierno no ofreci\u00f3 apoyo se organizaron por cuenta propia'
+    },
+    // === GAME 14: Conjugation \u2014 Tiempos mixtos en argumentaci\u00f3n ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma verbal correcta para completar el argumento.',
+        questions: [
+            {
+                verb: 'implementar (pluscuamperfecto subj.)',
+                subject: 'el gobierno',
+                answer: 'hubiera implementado',
+                options: ['hubiera implementado', 'implement\u00f3', 'implementar\u00eda', 'implemente']
+            },
+            {
+                verb: 'sobrevivir (condicional perfecto)',
+                subject: 'las tradiciones',
+                answer: 'habr\u00edan sobrevivido',
+                options: ['habr\u00edan sobrevivido', 'sobrevivir\u00edan', 'sobrevivieron', 'hubieran sobrevivido']
+            },
+            {
+                verb: 'exigir (imperfecto subj.)',
+                subject: 'las comunidades',
+                answer: 'exigieran',
+                options: ['exigieran', 'exigen', 'exig\u00edan', 'exigir\u00edan']
+            },
+            {
+                verb: 'resultar (presente subj.)',
+                subject: 'la soluci\u00f3n',
+                answer: 'resulte',
+                options: ['resulte', 'resulta', 'result\u00f3', 'resultar\u00eda']
+            }
+        ]
+    },
+    // === GAME 15: Conversation \u2014 Debate estructurado sobre desarrollo ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate estructurado sobre el desarrollo de los Llanos. Usa marcadores argumentativos y subjuntivo.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Moderador', text: 'Se ha propuesto construir una carretera que atraviese la reserva natural. \u00bfCu\u00e1l es su posici\u00f3n?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si bien la carretera mejorar\u00eda la conectividad, ser\u00eda imprescindible que se realizara un estudio de impacto ambiental. Dado que la reserva alberga especies en peligro, no se deber\u00eda aprobar sin garant\u00edas.',
+                    'No, las carreteras son malas.',
+                    'S\u00ed, hay que construirla porque el progreso es importante.'
+                ],
+                answer: 'Si bien la carretera mejorar\u00eda la conectividad, ser\u00eda imprescindible que se realizara un estudio de impacto ambiental. Dado que la reserva alberga especies en peligro, no se deber\u00eda aprobar sin garant\u00edas.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Moderador', text: 'El representante de la empresa dice que, si no se hubiera propuesto esta carretera, la regi\u00f3n seguir\u00eda aislada. \u00bfQu\u00e9 responde?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'A pesar de que ese argumento tuviera validez, habr\u00eda que considerar alternativas. Teniendo en cuenta que existen rutas que no atraviesan la reserva, de ah\u00ed que proponga un trazado diferente que respete el ecosistema.',
+                    'Tiene raz\u00f3n, no hab\u00eda pensado en eso.',
+                    'No importa, los animales pueden irse a otro lugar.'
+                ],
+                answer: 'A pesar de que ese argumento tuviera validez, habr\u00eda que considerar alternativas. Teniendo en cuenta que existen rutas que no atraviesan la reserva, de ah\u00ed que proponga un trazado diferente que respete el ecosistema.'
+            }
+        ]
+    },
+    // === GAME 16: Sorting \u2014 Registro formal vs. informal en argumentaci\u00f3n ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan su nivel de registro en un contexto argumentativo.',
+        categories: ['Registro formal', 'Registro informal'],
+        items: [
+            { text: 'Cabe se\u00f1alar que las consecuencias ser\u00edan irreversibles.', category: 'Registro formal' },
+            { text: 'O sea, si no hacemos nada, todo se va a da\u00f1ar.', category: 'Registro informal' },
+            { text: 'Resulta imperativo que se adopten medidas inmediatas.', category: 'Registro formal' },
+            { text: 'B\u00e1sicamente, hay que actuar ya o perdemos todo.', category: 'Registro informal' },
+            { text: 'En virtud de lo expuesto, se recomienda replantear el proyecto.', category: 'Registro formal' },
+            { text: 'La cosa es que nadie est\u00e1 haciendo nada por los r\u00edos.', category: 'Registro informal' }
+        ]
+    },
+    // === GAME 17: FIB \u2014 Marcadores conclusivos con subjuntivo ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el marcador conclusivo o la forma verbal que corresponda.',
+        questions: [
+            {
+                sentence: '___ la comunidad no ha recibido respuesta del gobierno, ha decidido organizarse aut\u00f3nomamente.',
+                answer: 'Puesto que',
+                options: ['Puesto que', 'A pesar de que', 'En definitiva', 'Si bien']
+            },
+            {
+                sentence: 'La contaminaci\u00f3n del r\u00edo ha aumentado cada a\u00f1o. De ah\u00ed que las comunidades ___ intervenci\u00f3n inmediata.',
+                answer: 'exijan',
+                options: ['exijan', 'exigen', 'exigieron', 'exigir\u00edan']
+            },
+            {
+                sentence: 'Se han presentado pruebas contundentes sobre el da\u00f1o ambiental. ___, el proyecto deber\u00eda ser suspendido.',
+                answer: 'En definitiva',
+                options: ['En definitiva', 'A pesar de que', 'Dado que', 'Aunque']
+            }
+        ]
+    },
+    // === GAME 18: Listening \u2014 An\u00e1lisis de argumento extendido ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el argumento extendido y responde la pregunta.',
+        audio: 'Si bien la producci\u00f3n de arroz es fundamental para la econom\u00eda de los Llanos, teniendo en cuenta que los m\u00e9todos actuales consumen cantidades excesivas de agua, resulta urgente que se invirtiera en tecnolog\u00edas de riego eficiente. Si se hubiera hecho esta inversi\u00f3n hace una d\u00e9cada, los acu\u00edferos no habr\u00edan llegado a niveles cr\u00edticos. De ah\u00ed que los expertos propongan un plan de transici\u00f3n gradual que no ponga en riesgo a los agricultores.',
+        question: '\u00bfQu\u00e9 habr\u00eda pasado si se hubiera invertido antes en riego eficiente?',
+        answer: 'Los acu\u00edferos no habr\u00edan llegado a niveles cr\u00edticos',
+        options: ['Los acu\u00edferos no habr\u00edan llegado a niveles cr\u00edticos', 'La producci\u00f3n de arroz habr\u00eda desaparecido', 'Los agricultores habr\u00edan perdido sus tierras', 'El agua habr\u00eda sido privatizada']
+    },
+    // === GAME 19: Builder \u2014 Cadena causal completa ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los fragmentos para formar una cadena causal argumentativa completa.',
+        words: ['Dado que', 'la deforestaci\u00f3n ha reducido', 'las fuentes de agua,', 'y puesto que', 'las comunidades dependen', 'de esos r\u00edos para sobrevivir,', 'de modo que', 'resulta imperativo que', 'se implementen pol\u00edticas', 'de reforestaci\u00f3n inmediata.'],
+        answer: 'Dado que la deforestaci\u00f3n ha reducido las fuentes de agua, y puesto que las comunidades dependen de esos r\u00edos para sobrevivir, de modo que resulta imperativo que se implementen pol\u00edticas de reforestaci\u00f3n inmediata.'
+    },
+    // === GAME 20: Translation \u2014 Condicional irreal con conclusi\u00f3n ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'If the government had listened to the communities, the situation would not have reached this point. Therefore, it is essential that a new dialogue be established.',
+        words: ['Si', 'el', 'gobierno', 'hubiera', 'escuchado', 'a', 'las', 'comunidades', 'la', 'situaci\u00f3n', 'no', 'habr\u00eda', 'llegado', 'este', 'punto', 'Por', 'lo', 'tanto', 'es', 'fundamental', 'que', 'se', 'establezca', 'un', 'nuevo', 'di\u00e1logo'],
+        answer: 'Si el gobierno hubiera escuchado a las comunidades la situaci\u00f3n no habr\u00eda llegado a este punto Por lo tanto es fundamental que se establezca un nuevo di\u00e1logo'
+    },
+    // === GAME 21: Pair \u2014 Argumento y contraargumento ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada argumento con su contraargumento correspondiente.',
+        pairs: [
+            ['La miner\u00eda genera empleo en la regi\u00f3n.', 'Sin embargo, contamina los r\u00edos de los que dependen las comunidades.'],
+            ['El turismo podr\u00eda reemplazar actividades extractivas.', 'A pesar de eso, si no se regulara, causar\u00eda da\u00f1os similares al ecosistema.'],
+            ['Las carreteras mejorar\u00edan el acceso a servicios b\u00e1sicos.', 'No obstante, si se construyeran sin planificaci\u00f3n, fragmentar\u00edan los h\u00e1bitats.'],
+            ['La tecnolog\u00eda agr\u00edcola aumentar\u00eda la producci\u00f3n.', 'Aunque fuera cierto, desplazar\u00eda las pr\u00e1cticas tradicionales que sostienen la identidad cultural.'],
+            ['La educaci\u00f3n virtual resolver\u00eda el aislamiento educativo.', 'Si bien es una opci\u00f3n, no reemplazar\u00eda el valor de la ense\u00f1anza comunitaria presencial.'],
+            ['Las reservas naturales limitan el desarrollo econ\u00f3mico.', 'Dado que protegen los recursos h\u00eddricos, en realidad garantizan la sostenibilidad a largo plazo.']
+        ]
+    },
+    // === GAME 22: Dictation \u2014 Argumento formal con m\u00faltiples estructuras ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n exacta. Presta atenci\u00f3n a los marcadores discursivos y las formas verbales.',
+        audio: 'A pesar de que el proyecto hubiera tra\u00eddo beneficios econ\u00f3micos, dado que no se consult\u00f3 a las comunidades, de ah\u00ed que la asamblea decidiera rechazarlo.',
+        answer: 'A pesar de que el proyecto hubiera tra\u00eddo beneficios econ\u00f3micos, dado que no se consult\u00f3 a las comunidades, de ah\u00ed que la asamblea decidiera rechazarlo.'
+    },
+    // === GAME 23: Conversation \u2014 Defensa del territorio en debate ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate sobre la defensa del territorio llanero. Integra todas las estructuras B2 Basic.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Periodista', text: 'Las empresas petroleras dicen que, si se detuviera la exploraci\u00f3n, la econom\u00eda regional colapsar\u00eda. \u00bfC\u00f3mo responde a eso?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si bien la industria petrolera ha generado empleo, habr\u00eda que considerar que, teniendo en cuenta que los recursos f\u00f3siles se agotan, es imperativo que se invirtiera en econom\u00edas alternativas. Si se hubiera diversificado antes, hoy no depender\u00edamos de un solo sector.',
+                    'Tienen raz\u00f3n, necesitamos el petr\u00f3leo.',
+                    'No, el petr\u00f3leo es malo.'
+                ],
+                answer: 'Si bien la industria petrolera ha generado empleo, habr\u00eda que considerar que, teniendo en cuenta que los recursos f\u00f3siles se agotan, es imperativo que se invirtiera en econom\u00edas alternativas. Si se hubiera diversificado antes, hoy no depender\u00edamos de un solo sector.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Periodista', text: '\u00bfCu\u00e1l ser\u00eda su propuesta concreta para el futuro de los Llanos?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'En definitiva, propondr\u00eda un modelo de desarrollo que integrara la conservaci\u00f3n ambiental con las necesidades econ\u00f3micas. Dado que las comunidades son quienes mejor conocen el territorio, ser\u00eda fundamental que participaran en la toma de decisiones. De ah\u00ed que insista en que el di\u00e1logo sea la base de cualquier pol\u00edtica.',
+                    'No tengo una propuesta espec\u00edfica.',
+                    'Habr\u00eda que cerrar todas las empresas.'
+                ],
+                answer: 'En definitiva, propondr\u00eda un modelo de desarrollo que integrara la conservaci\u00f3n ambiental con las necesidades econ\u00f3micas. Dado que las comunidades son quienes mejor conocen el territorio, ser\u00eda fundamental que participaran en la toma de decisiones. De ah\u00ed que insista en que el di\u00e1logo sea la base de cualquier pol\u00edtica.'
+            }
+        ]
+    },
+    // === GAME 24: Story \u2014 El manifiesto del r\u00edo ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el manifiesto que las comunidades redactaron sobre el r\u00edo Meta y responde las preguntas.',
+        title: 'El manifiesto del r\u00edo',
+        text: 'Las comunidades ribere\u00f1as del r\u00edo Meta redactaron un manifiesto que dec\u00eda: "Dado que este r\u00edo ha sido nuestra fuente de vida durante generaciones, y puesto que su contaminaci\u00f3n amenaza la supervivencia de nuestros pueblos, exigimos que se tomen medidas inmediatas. A pesar de que las autoridades hubieran prometido soluciones en repetidas ocasiones, ninguna se ha cumplido. Si se hubiera actuado cuando denunciamos los primeros vertidos, miles de familias no habr\u00edan perdido su medio de sustento. Si bien comprendemos la importancia del desarrollo econ\u00f3mico, este no puede construirse sobre la destrucci\u00f3n de nuestros r\u00edos. De ah\u00ed que solicitemos una moratoria de toda actividad extractiva hasta que se garantice la recuperaci\u00f3n del ecosistema. En definitiva, el r\u00edo Meta no es un recurso que se explota; es un ser vivo que se cuida".',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 estructura combina "a pesar de que las autoridades hubieran prometido"?',
+                options: ['Concesiva con pluscuamperfecto de subjuntivo', 'Causal con indicativo', 'Conclusiva con subjuntivo', 'Condicional irreal del presente'],
+                answer: 'Concesiva con pluscuamperfecto de subjuntivo'
+            },
+            {
+                q: '\u00bfQu\u00e9 habr\u00eda pasado si se hubiera actuado a tiempo?',
+                options: ['Miles de familias no habr\u00edan perdido su medio de sustento', 'El r\u00edo habr\u00eda desaparecido', 'Las empresas habr\u00edan cerrado', 'Las comunidades habr\u00edan emigrado'],
+                answer: 'Miles de familias no habr\u00edan perdido su medio de sustento'
+            },
+            {
+                q: '\u00bfQu\u00e9 funci\u00f3n cumple "en definitiva" al final del manifiesto?',
+                options: ['Sintetiza el argumento central del documento', 'Introduce una nueva idea', 'Contradice lo anterior', 'A\u00f1ade una causa adicional'],
+                answer: 'Sintetiza el argumento central del documento'
+            }
+        ]
+    },
+    // === GAME 25: Narrative \u2014 El legado tejido ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 al completar su recorrido por los Llanos. Observa c\u00f3mo se integran todas las estructuras B2 Basic.',
+        text: 'Yaguar\u00e1 se puso de pie y mir\u00f3 la sabana por \u00faltima vez. Hab\u00eda llegado a los Llanos sin saber argumentar, sin conocer los matices del lenguaje que permiten defender una idea, conceder un punto al adversario y construir una conclusi\u00f3n que conmueva. Ahora comprend\u00eda que, si no hubiera aprendido a escuchar todas las voces \u2014la del ganadero, la de la bi\u00f3loga, la del maestro, la de la abuela\u2014, jam\u00e1s habr\u00eda podido tejer un argumento verdaderamente completo. A pesar de que el camino hubiera sido largo y a veces confuso, cada conversaci\u00f3n le hab\u00eda dado un hilo nuevo. Dado que el futuro de cualquier territorio depende de quienes lo habitan, era fundamental que cada persona pudiera expresar sus ideas con precisi\u00f3n y respeto. Si bien la despedida le dol\u00eda, sab\u00eda que llevaba consigo algo m\u00e1s valioso que recuerdos: llevaba la capacidad de argumentar, de persuadir, de defender lo justo. De ah\u00ed que Yaguar\u00e1 prometiera que, donde fuera, usar\u00eda su voz no para imponer, sino para tejer. En definitiva, el legado de los Llanos no estaba en la tierra ni en el agua, sino en las palabras que aprendimos a decir juntos.'
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La biblioteca del barco',
+            description: 'Un cuarto secreto dentro de un barco abandonado en el río Atrato. Libros empapados, mapas borrosos. Pero las palabras que sobreviven al agua son las que importan.',
+            ambience: 'boat'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras mojadas flotan sobre un mapa borroso.',
+                clue: 'Es la propiedad de un texto donde todas las partes están conectadas lógicamente.',
+                answer: 'coherencia',
+                scrambled: 'ichaoneer',
+                onSolve: 'Las letras se secan y brillan.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Cuatro párrafos de un texto sobre el río Atrato están desordenados.',
+                clue: 'Ordénalos para que el texto tenga coherencia y cohesión.',
+                items: [
+                    'El río Atrato es uno de los más caudalosos de Colombia.',
+                    'Sin embargo, sus comunidades ribereñas son de las más empobrecidas del país.',
+                    'Esta contradicción se explica por siglos de abandono estatal.',
+                    'Por eso, Candelaria decidió estudiar derecho: para que el río tuviera una voz en los tribunales.'
+                ],
+                onSolve: 'El texto se reconstruye. Las páginas se secan.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Un texto aparece con conectores borrados.',
+                passage: '«Doña Asunción vivió junto al río toda su vida. ___, nunca aprendió a nadar. ___, decía que el río no se cruza — se escucha. ___, para ella, el agua no era un obstáculo ___ un maestro.»',
+                clue: 'Los conectores correctos son: "Sin embargo", "De hecho", "En resumen", "sino".',
+                answer: 'Sin embargo — De hecho — En resumen — sino',
+                options: [
+                    'Sin embargo — De hecho — En resumen — sino',
+                    'Además — Por ejemplo — Finalmente — y',
+                    'Porque — También — Por último — pero',
+                    'Entonces — Así que — En conclusión — o'
+                ],
+                onSolve: 'El texto queda completo. El barco cruje. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de un barco con las velas hechas de páginas escritas.',
+            questClue: 'Las historias son barcos. Los conectores son el viento que los mueve.',
+            item: 'historia-barco'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '33',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest33Progress',
+        backUrl: '../../b2-villavicencio.html'
+    });
+</script>
+</body>
+</html>

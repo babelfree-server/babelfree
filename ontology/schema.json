@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "project": "El viaje del jaguar",
+    "version": "0.1.0",
+    "note": "Living ontology. Grows with the curriculum. Don't overformalize."
+  },
+  "types": {
+    "LinguisticTarget": {
+      "prefix": "lt",
+      "description": "Atomic language item: a verb form, grammar pattern, or vocabulary unit",
+      "fields": {
+        "id": "lt_{category}_{item}_{features}",
+        "category": "verb | grammar | vocab | phonology",
+        "lexicalItem": "{ type, lemma, reflexive? } for verbs, { type, items[] } for vocab groups, { type, pattern } for grammar — reflexive: true means the verb is reflexive (lemma stores the base form, e.g. 'llamar' not 'llamarse')",
+        "features": "object — mood, tense, person, number, gender, function, etc.",
+        "cefr": "A1 | A2 | B1 | B2 | C1 | C2",
+        "tags": "string[] — free-form labels for grouping and content-file bridge"
+      }
+    },
+    "LearningObjective": {
+      "prefix": "lo",
+      "description": "CEFR can-do statement linked to linguistic targets and skills",
+      "fields": {
+        "id": "lo_{slug}",
+        "description": "what the student can do after mastering this",
+        "canDo": "official CEFR can-do wording",
+        "targets": "LinguisticTarget IDs",
+        "skills": "subset of [listening, speaking, reading, writing]",
+        "cefr": "string",
+        "block": "content-file block name (Despertar, Nombrar, etc.)",
+        "gameAction": "what the student does in the game",
+        "evidence": "what the system observes",
+        "requires": "{ linguisticTargets: LT IDs[], skills: string[], minEvidence: number, contexts: string[] } — what evidence satisfies this can-do. Formula: evidence[] filtered by (target ∈ linguisticTargets AND skill ∈ skills AND context ∈ contexts).length >= minEvidence → canDoSatisfied"
+      }
+    },
+    "Activity": {
+      "prefix": "act",
+      "description": "Lean pedagogical unit — what to practice, how, and at what difficulty. Story context comes from the StoryNode at the linked destination.",
+      "fields": {
+        "id": "act_{dest}_{gameType}_{slug}",
+        "gameType": "narrative | pair | fill | conjugation | listening | category | builder | translation | conversation | dictation | story | cancion | escaperoom | crossword | bingo | scrabble | madlibs | kloo | boggle | spaceman | bananagrams | consequences | madgab | conjuro | explorador | senda | guardian | clon | eco_restaurar | flashnote | cultura",
+        "practices": "LinguisticTarget IDs",
+        "objective": "LearningObjective ID",
+        "inputMode": "choice | typing | voice | drag | listen | self_correction",
+        "cefr": "A1 | A2 | B1 | B2 | C1 | C2",
+        "destination": "dest1..dest58 — links Activity to its StoryNode for narrative context",
+        "prompt": "user-facing instruction tied to story context",
+        "feedback": "{ onCorrect: string, onIncorrect: string }",
+        "difficulty": "guided | semi_guided | open",
+        "targetPerson": "optional — narrows a paradigm LT to one person (yo, tú, él/ella/usted, nosotros, ellos/ellas/ustedes)",
+        "scaffoldable": "boolean — true if adapt_scaffold_input_mode may promote this activity's inputMode. Set on activities with inputMode choice or typing. NOT set on listen, drag, voice, self_correction (mode is inherent to game mechanic or already terminal)."
+      }
+    },
+    "EvidenceEvent": {
+      "prefix": "ee",
+      "description": "Runtime record of a learner interacting with an Activity. Written by the engine, read by adaptivity rules. Not authored — generated at runtime.",
+      "fields": {
+        "id": "ee_{timestamp}_{random}",
+        "learner": "user ID",
+        "activity": "Activity ID",
+        "linguisticTarget": "LinguisticTarget ID (the specific target assessed)",
+        "skill": "listening | speaking | reading | writing",
+        "context": "string — story context identifier (destination or narrative moment)",
+        "inputMode": "choice | typing | voice | self_correction",
+        "outcome": "correct | incorrect | partial",
+        "selfCorrection": "boolean — did the learner self-correct?",
+        "timestamp": "ISO 8601"
+      },
+      "note": "EvidenceEvent is runtime-only. It is defined here for documentation and schema validation, but no authored instances exist in the ontology files."
+    },
+    "Character": {
+      "prefix": "char",
+      "description": "A character in the story world",
+      "fields": {
+        "id": "char_{name}",
+        "name": "display name",
+        "role": "Campbell archetype (protagonist, mentor, herald, shadow, etc.)",
+        "species": "jaguar | human | bird | dolphin | turtle | condor | tree | force",
+        "introducedAt": "CEFR level or destination ID",
+        "arc": "character development summary",
+        "relationships": "array of { character: ID, relation: string }"
+      }
+    },
+    "Ecosystem": {
+      "prefix": "eco",
+      "description": "A Colombian ecosystem / game world",
+      "fields": {
+        "id": "eco_{slug}",
+        "name": "display name",
+        "region": "geographic region",
+        "culture": "cultural context",
+        "guide": "Character ID",
+        "city": "reference city",
+        "signatureFood": "string",
+        "palette": "color description",
+        "soundWorld": "string",
+        "music": "string"
+      }
+    },
+    "Place": {
+      "prefix": "place",
+      "description": "A specific location in the story world",
+      "fields": {
+        "id": "place_{slug}",
+        "name": "display name",
+        "ecosystem": "Ecosystem ID",
+        "significance": "narrative/cultural significance"
+      }
+    },
+    "StoryNode": {
+      "prefix": "sn",
+      "description": "A narrative beat at a specific destination",
+      "fields": {
+        "id": "sn_{dest}",
+        "destination": "dest1..dest58",
+        "title": "narrative title",
+        "act": "I | II | III",
+        "world": "mundoDeAbajo | mundoDelMedio | mundoDeArriba",
+        "campbellStage": "Hero's Journey stage",
+        "cefr": "string",
+        "narrativeBeat": "what happens",
+        "characters": "Character IDs",
+        "closingQuestion": "every module ends with a question",
+        "escapeRoom": "{ name, fragment, item }"
+      }
+    },
+    "CulturalConcept": {
+      "prefix": "cc",
+      "description": "A Colombian cultural concept woven into the curriculum",
+      "fields": {
+        "id": "cc_{slug}",
+        "name": "display name",
+        "category": "music | food | tradition | craft | belief | role",
+        "region": "string",
+        "ecosystem": "Ecosystem ID (if specific)",
+        "description": "string"
+      }
+    },
+    "MythologicalEntity": {
+      "prefix": "myth",
+      "description": "A mythological or symbolic force in the story",
+      "fields": {
+        "id": "myth_{slug}",
+        "name": "display name",
+        "nature": "what it represents",
+        "introducedAt": "CEFR level",
+        "description": "string"
+      }
+    }
+  },
+  "idConventions": {
+    "separator": "_",
+    "style": "lowercase_snake",
+    "examples": [
+      "lt_verb_ser_indicative_present",
+      "lt_grammar_articles_definite",
+      "lt_vocab_greetings",
+      "lo_introduce_self",
+      "act_dest1_pair_greetings",
+      "char_yaguara",
+      "eco_bosque",
+      "place_rio_atrato",
+      "sn_dest1",
+      "cc_marimba",
+      "myth_silencio_gris"
+    ]
+  },
+  "designInvariants": {
+    "_note": "Locked rules. Violations break coherence at scale. Do not relax.",
+    "rules": [
+      {
+        "id": "inv_activity_destination",
+        "rule": "Every Activity belongs to a Destination",
+        "rationale": "No free-floating activities. Destinations are where meaning accumulates. An activity without a destination has no story context, no spiral position, and no CEFR anchor."
+      },
+      {
+        "id": "inv_lt_paradigm_level",
+        "rule": "LinguisticTargets are paradigm-level, not person-specific",
+        "rationale": "The ontology stores lt_verb_gustar_indicative_present, not lt_verb_gustar_indicative_present_yo. Person-narrowing is done via targetPerson on Activity. This prevents LT explosion (6 persons × N verbs × M tenses) and keeps the evidence pipeline clean — evidence accrues to the paradigm, not to one cell."
+      },
+      {
+        "id": "inv_scaffolding_global",
+        "rule": "Scaffolding is global, not authored per-variant",
+        "rationale": "Activities declare scaffoldable: true. adapt_scaffold_input_mode governs promotion (choice → typing → voice). Do NOT author separate activities for each inputMode of the same meaning. One activity per destination/meaning; the engine adapts."
+      },
+      {
+        "id": "inv_rules_no_content",
+        "rule": "Adaptivity rules never hard-code content",
+        "rationale": "Rules operate on ontology state (targetHistory, CEFR rank, inputModeLadder), not on specific IDs or strings. Adding a new LinguisticTarget or Activity automatically makes it available to all rules. No rule should contain 'if targetId === lt_verb_...'."
+      }
+    ]
+  },
+  "relationships": {
+    "note": "Expressed through ID references in entity fields. No separate graph layer.",
+    "links": [
+      "LearningObjective.targets → LinguisticTarget[]",
+      "Activity.practices → LinguisticTarget[]",
+      "Activity.objective → LearningObjective",
+      "Activity.destination → StoryNode (via dest field)",
+      "EvidenceEvent.activity → Activity",
+      "EvidenceEvent.linguisticTarget → LinguisticTarget",
+      "StoryNode.characters → Character[]",
+      "Ecosystem.guide → Character",
+      "Character.relationships → Character[]"
+    ]
+  }
+}

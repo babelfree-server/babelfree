@@ -3,47 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de estudiante - El viaje del jaguar</title>
-    <meta name="description" content="Tu viaje de aprendizaje de español con Yaguará por Colombia">
+    <title>Tu camino — La Aventura de Yaguará</title>
+    <meta name="description" content="Tu viaje de lengua y memoria con Yaguará por los mundos vivos de Colombia">
 
     <!-- PWA Support -->
-    <meta name="theme-color" content="#0a3d0c">
+    <meta name="theme-color" content="#1a1208">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --forest-dark: #0a3d0c;
-            --forest-medium: #1a5928;
-            --forest-light: #2d6f3d;
-            --jaguar-gold: #f9ca24;
-            --jaguar-orange: #ff6b35;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --text-light: #e8f5e8;
-            --text-muted: #a5d6a7;
-            --success-green: #4caf50;
-            --warning-orange: #ff9800;
-            --error-red: #f44336;
-            --amazon-green: #0f4c28;
-            --andes-brown: #8b4513;
-            --caribbean-blue: #0077be;
-            --pacific-teal: #008080;
-            --llanos-yellow: #ffd700;
-            --sierra-purple: #663399;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.2);
-            --border-radius: 20px;
+            --earth-deep: #1a1208;
+            --earth-warm: #2d1f0e;
+            --earth-medium: #4a3520;
+            --terracotta: #c67a4a;
+            --ochre: #c9a227;
+            --amber: #d4913a;
+            --sand: #e8d5b7;
+            --clay-light: #f0e6d3;
+            --moss: #5a6e4a;
+            --river-dark: #2a3a4a;
+            --jaguar-gold: #c9a227;
+            --jaguar-orange: #c67a4a;
+            --glass-bg: rgba(26, 18, 8, 0.7);
+            --text-light: #f0e6d3;
+            --text-muted: #b8a88a;
+            --success-green: #5a6e4a;
+            --warning-orange: #d4913a;
+            --error-red: #a04030;
+            --amazon-green: #3a5a3a;
+            --andes-brown: #6b4520;
+            --caribbean-blue: #2a4a5a;
+            --pacific-teal: #3a5a5a;
+            --llanos-yellow: #c9a227;
+            --sierra-purple: #4a3a5a;
+            --transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+            --shadow-card: 0 8px 32px rgba(26, 18, 8, 0.4);
+            --border-radius: 24px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-medium) 50%, var(--forest-light) 100%);
+            background: linear-gradient(145deg, #0d0a06 0%, #1a1208 40%, #2d1f0e 100%);
             color: #ffffff;
             line-height: 1.6;
             min-height: 100vh;
@@ -66,19 +73,19 @@
         .bg-circle:nth-child(1) {
             width: 400px; height: 400px; top: 10%; left: 5%;
             animation-delay: 0s;
-            background: radial-gradient(circle, var(--amazon-green), var(--success-green));
+            background: radial-gradient(circle, rgba(90, 110, 74, 0.3), rgba(58, 90, 58, 0.1));
         }
 
         .bg-circle:nth-child(2) {
             width: 300px; height: 300px; bottom: 15%; right: 10%;
             animation-delay: 10s;
-            background: radial-gradient(circle, var(--andes-brown), var(--jaguar-gold));
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.15), rgba(107, 69, 32, 0.1));
         }
 
         .bg-circle:nth-child(3) {
             width: 250px; height: 250px; top: 50%; left: 70%;
             animation-delay: 5s;
-            background: radial-gradient(circle, var(--caribbean-blue), var(--pacific-teal));
+            background: radial-gradient(circle, rgba(198, 122, 74, 0.15), rgba(42, 58, 74, 0.1));
         }
 
         @keyframes colombianFloat {
@@ -90,12 +97,12 @@
         /* Navigation */
         .nav-bar {
             position: fixed; top: 0; width: 100%;
-            background: rgba(10, 61, 12, 0.95);
+            background: rgba(26, 18, 8, 0.95);
             backdrop-filter: blur(20px);
             padding: 1rem 2rem;
             display: flex; justify-content: space-between; align-items: center;
             z-index: 1000;
-            border-bottom: 2px solid rgba(249, 202, 36, 0.3);
+            border-bottom: 2px solid rgba(201, 162, 39, 0.2);
             height: 80px;
         }
 
@@ -103,28 +110,17 @@
 
         .logo {
             width: 55px; height: 55px; border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, var(--jaguar-orange), var(--jaguar-gold));
             display: flex; align-items: center; justify-content: center;
-            border: 3px solid rgba(249, 202, 36, 0.6);
-            animation: jaguarPulse 4s ease-in-out infinite;
+            border: 3px solid rgba(201, 162, 39, 0.4);
             position: relative; cursor: pointer;
+            overflow: hidden;
         }
 
         .logo svg { width: 70%; height: 70%; }
 
-        @keyframes jaguarPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(249, 202, 36, 0.4); }
-            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(249, 202, 36, 0.7); }
-        }
+        /* Removed pulsing glow — calm, presence, intention */
 
-        .logo::after {
-            content: '';
-            position: absolute; bottom: -5px; right: -5px;
-            width: 18px; height: 12px;
-            background: linear-gradient(180deg, #FCD116 33%, #003893 33%, #003893 66%, #CE1126 66%);
-            border-radius: 3px;
-            border: 1px solid rgba(255,255,255,0.5);
-        }
+        /* Colombian flag removed — clean, minimal */
 
         .brand-text h1 {
             color: var(--jaguar-gold); font-weight: 800; font-size: 1.3rem; margin: 0;
@@ -144,14 +140,14 @@
         }
 
         .nav-button:hover {
-            background: rgba(249, 202, 36, 0.2);
-            border-color: var(--jaguar-gold);
+            background: rgba(201, 162, 39, 0.15);
+            border-color: var(--ochre);
             transform: translateY(-2px);
         }
 
         .nav-button.primary {
-            background: linear-gradient(135deg, var(--jaguar-orange), #e74c3c);
-            border-color: var(--jaguar-orange);
+            background: linear-gradient(135deg, var(--amber), var(--terracotta));
+            border-color: var(--amber);
         }
 
         .nav-button.secondary {
@@ -168,11 +164,11 @@
 
         /* Yaguará Status Header */
         .yaguara-status {
-            background: linear-gradient(135deg, rgba(15, 76, 40, 0.8), rgba(139, 69, 19, 0.6));
+            background: linear-gradient(135deg, rgba(26, 18, 8, 0.8), rgba(74, 53, 32, 0.6));
             backdrop-filter: blur(20px);
             border-radius: var(--border-radius);
             padding: 2rem; margin-bottom: 2rem;
-            border: 3px solid var(--jaguar-gold);
+            border: 2px solid rgba(201, 162, 39, 0.3);
             position: relative; overflow: hidden;
         }
 
@@ -195,11 +191,11 @@
 
         .yaguara-avatar {
             width: 100px; height: 100px; border-radius: 50%;
-            background: radial-gradient(circle, var(--jaguar-gold), var(--jaguar-orange));
             display: flex; align-items: center; justify-content: center;
             border: 4px solid rgba(255, 255, 255, 0.3);
             animation: jaguarBreathe 6s ease-in-out infinite;
             position: relative;
+            overflow: hidden;
         }
 
         .yaguara-avatar svg { width: 75%; height: 75%; }
@@ -238,13 +234,13 @@
 
         .conservation-summary {
             text-align: center;
-            background: rgba(76, 175, 80, 0.15);
+            background: rgba(90, 110, 74, 0.15);
             padding: 1.5rem; border-radius: 15px;
-            border: 2px solid var(--success-green);
+            border: 2px solid rgba(90, 110, 74, 0.3);
         }
 
         .conservation-title {
-            color: var(--success-green); font-weight: 700;
+            color: var(--moss); font-weight: 700;
             margin-bottom: 1rem; font-size: 1.1rem;
         }
 
@@ -254,7 +250,7 @@
 
         .conservation-number {
             display: block; font-size: 1.8rem; font-weight: 800;
-            color: var(--success-green); margin-bottom: 0.3rem;
+            color: var(--moss); margin-bottom: 0.3rem;
         }
 
         .conservation-label { color: var(--text-muted); font-size: 0.8rem; }
@@ -276,14 +272,14 @@
 
         .stat-card::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, var(--jaguar-gold), var(--jaguar-orange), var(--success-green));
-            opacity: 0; transition: opacity 0.3s ease;
+            background: linear-gradient(90deg, var(--ochre), var(--amber), var(--moss));
+            opacity: 0; transition: opacity 0.7s ease;
         }
 
         .stat-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--jaguar-gold);
-            box-shadow: 0 15px 40px rgba(249, 202, 36, 0.3);
+            transform: translateY(-4px);
+            border-color: var(--ochre);
+            box-shadow: 0 12px 32px rgba(26, 18, 8, 0.5);
         }
 
         .stat-card:hover::before { opacity: 1; }
@@ -303,9 +299,9 @@
 
         /* Colombian Regions Journey Map */
         .colombia-map {
-            background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(20px);
+            background: rgba(26, 18, 8, 0.8); backdrop-filter: blur(20px);
             border-radius: var(--border-radius); padding: 2.5rem;
-            margin-bottom: 3rem; border: 2px solid var(--jaguar-gold);
+            margin-bottom: 3rem; border: 2px solid rgba(201, 162, 39, 0.2);
         }
 
         .map-title {
@@ -352,13 +348,13 @@
         }
 
         @keyframes currentRegionPulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(249, 202, 36, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(249, 202, 36, 0.6); }
+            0%, 100% { box-shadow: 0 0 15px rgba(201, 162, 39, 0.15); }
+            50% { box-shadow: 0 0 25px rgba(201, 162, 39, 0.25); }
         }
 
         .region-card:not(.locked):hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(26, 18, 8, 0.5);
         }
 
         .region-header {
@@ -379,16 +375,7 @@
             overflow: hidden; position: relative;
         }
 
-        .region-progress::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: progressShimmer 2s ease-in-out infinite;
-        }
-
-        @keyframes progressShimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
+        /* No shimmer — calm, presence */
 
         .region-progress-fill {
             height: 100%; border-radius: 15px;
@@ -417,16 +404,16 @@
         .region-status.locked { background: rgba(100, 100, 100, 0.2); color: #ccc; border: 1px solid #666; }
 
         .play-btn {
-            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
+            background: linear-gradient(135deg, var(--amber), var(--terracotta));
             color: white; border: none; padding: 0.8rem 1.5rem;
             border-radius: 25px; font-weight: 700; cursor: pointer;
             transition: var(--transition); font-size: 0.9rem; width: 100%;
-            margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.5px;
+            margin-top: 1rem; letter-spacing: 0.5px;
         }
 
         .play-btn:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(249, 202, 36, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(26, 18, 8, 0.4);
         }
 
         .play-btn:disabled {
@@ -434,15 +421,15 @@
             cursor: not-allowed; transform: none;
         }
 
-        /* Gaming Elements */
+        /* Encounters Section */
         .gaming-section {
-            background: rgba(255, 107, 53, 0.1); backdrop-filter: blur(20px);
+            background: rgba(74, 53, 32, 0.2); backdrop-filter: blur(20px);
             border-radius: var(--border-radius); padding: 2.5rem;
-            margin-bottom: 3rem; border: 2px solid var(--jaguar-orange);
+            margin-bottom: 3rem; border: 2px solid rgba(198, 122, 74, 0.3);
         }
 
         .gaming-title {
-            font-size: 1.8rem; color: var(--jaguar-orange);
+            font-size: 1.8rem; color: var(--terracotta);
             margin-bottom: 2rem; text-align: center; font-weight: 700;
             display: flex; align-items: center; justify-content: center; gap: 1rem;
         }
@@ -454,22 +441,22 @@
         }
 
         .game-card {
-            background: rgba(255, 107, 53, 0.15); border-radius: 15px;
-            padding: 1.5rem; border: 2px solid rgba(255, 107, 53, 0.3);
+            background: rgba(74, 53, 32, 0.3); border-radius: 15px;
+            padding: 1.5rem; border: 2px solid rgba(198, 122, 74, 0.2);
             cursor: pointer; transition: var(--transition); text-align: center;
         }
 
         .game-card:hover {
-            background: rgba(255, 107, 53, 0.25);
-            border-color: var(--jaguar-orange);
-            transform: translateY(-5px);
+            background: rgba(74, 53, 32, 0.5);
+            border-color: var(--terracotta);
+            transform: translateY(-3px);
         }
 
         .game-card.locked { opacity: 0.5; cursor: not-allowed; }
         .game-card.locked:hover { transform: none; }
 
         .game-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
-        .game-title { color: var(--jaguar-orange); font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .game-title { color: var(--terracotta); font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem; }
         .game-description { color: var(--text-light); font-size: 0.9rem; line-height: 1.4; }
 
         /* Sidebar Layout */
@@ -482,9 +469,9 @@
         .sidebar { display: flex; flex-direction: column; gap: 2rem; }
 
         .sidebar-panel {
-            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(20px);
+            background: rgba(26, 18, 8, 0.7); backdrop-filter: blur(20px);
             border-radius: var(--border-radius); padding: 2rem;
-            border: 2px solid rgba(249, 202, 36, 0.3);
+            border: 2px solid rgba(201, 162, 39, 0.2);
         }
 
         .panel-title {
@@ -514,10 +501,10 @@
         .access-info {
             background: var(--glass-bg); border-radius: 15px;
             padding: 1.5rem; margin-bottom: 1.5rem;
-            border: 2px solid rgba(249, 202, 36, 0.2);
+            border: 2px solid rgba(201, 162, 39, 0.15);
         }
 
-        .access-info h4 { color: var(--jaguar-orange); margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 700; }
+        .access-info h4 { color: var(--amber); margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 700; }
 
         .time-remaining {
             font-size: 1.5rem; color: var(--jaguar-gold);
@@ -527,17 +514,17 @@
         .access-details { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; line-height: 1.4; }
 
         .upgrade-btn {
-            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
+            background: linear-gradient(135deg, var(--amber), var(--terracotta));
             color: white; padding: 1.2rem 2rem; border: none;
             border-radius: 25px; font-weight: 700; cursor: pointer;
             width: 100%; transition: var(--transition); text-decoration: none;
             display: block; text-align: center; font-size: 1rem;
-            text-transform: uppercase; letter-spacing: 0.5px;
+            letter-spacing: 0.5px;
         }
 
         .upgrade-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(249, 202, 36, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(26, 18, 8, 0.4);
         }
 
         /* Notifications */
@@ -556,8 +543,8 @@
         .notification.warning { background: rgba(255, 152, 0, 0.95); border-color: var(--warning-orange); }
         .notification.info { background: rgba(33, 150, 243, 0.95); border-color: #2196f3; }
         .notification.colombia {
-            background: linear-gradient(135deg, rgba(252, 209, 22, 0.9), rgba(0, 56, 147, 0.9), rgba(206, 17, 38, 0.9));
-            border-color: var(--jaguar-gold);
+            background: linear-gradient(135deg, rgba(74, 53, 32, 0.95), rgba(42, 58, 74, 0.95));
+            border-color: var(--ochre);
         }
 
         /* Responsive */
@@ -610,14 +597,14 @@
         }
 
         .modal-content {
-            background: var(--forest-medium); border-radius: 20px;
+            background: var(--earth-warm); border-radius: 20px;
             padding: 30px; width: 100%; max-width: 600px;
             max-height: 90vh; overflow-y: auto;
-            border: 3px solid var(--jaguar-orange);
+            border: 2px solid var(--terracotta);
         }
 
         .modal-content h3 {
-            color: var(--jaguar-orange); margin-bottom: 25px;
+            color: var(--terracotta); margin-bottom: 25px;
             text-align: center; font-size: 1.4rem;
         }
 
@@ -633,7 +620,7 @@
             background: rgba(255,255,255,0.1); color: white; font-size: 0.9rem;
         }
 
-        .modal-field select option { background: var(--forest-dark); color: white; }
+        .modal-field select option { background: var(--earth-deep); color: white; }
 
         .modal-hint { color: var(--text-muted); font-size: 0.8rem; margin-top: 5px; }
 
@@ -648,10 +635,11 @@
             flex: 1; min-width: 120px; transition: var(--transition);
         }
 
-        .modal-btn.save { background: var(--jaguar-orange); color: white; }
-        .modal-btn.cancel { background: rgba(165, 214, 167, 0.3); color: white; }
+        .modal-btn.save { background: var(--terracotta); color: white; }
+        .modal-btn.cancel { background: rgba(184, 168, 138, 0.3); color: white; }
         .modal-btn:hover { transform: translateY(-2px); }
     </style>
+    <link rel="stylesheet" href="luxury.css">
 </head>
 <body>
     <div class="bg-graphics">
@@ -660,56 +648,38 @@
         <div class="bg-circle"></div>
     </div>
 
-    <!-- Inline SVG Jaguar for reuse -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
-        <symbol id="jaguar-icon" viewBox="0 0 100 100">
-            <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-            <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-            <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-            <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-            <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-            <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-            <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
-            <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
-            <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
-            <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
-            <circle cx="40" cy="34" r="1" fill="#fff"/>
-            <circle cx="64" cy="34" r="1" fill="#fff"/>
-            <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
-            <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
-            <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-            <circle cx="28" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
-            <circle cx="72" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
-            <circle cx="35" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
-            <circle cx="65" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
-            <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        </symbol>
-    </svg>
+    <!-- Jaguar image now loaded via img tags -->
 
     <nav class="nav-bar">
         <div class="nav-brand">
             <div class="logo" onclick="showYaguaraInfo()">
-                <svg><use href="#jaguar-icon"/></svg>
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
             </div>
             <div class="brand-text">
-                <h1>El Viaje del Jaguar</h1>
-                <p>Territorio de aprendizaje colombiano</p>
+                <h1>La Aventura de Yaguar&aacute;</h1>
+                <p>Espa&ntilde;ol vivo</p>
             </div>
         </div>
 
         <div class="nav-actions">
+            <a href="/juegos" class="nav-button secondary">
+                <span>Juegos libres</span>
+            </a>
             <button class="nav-button secondary" onclick="showSettings()">
                 <span>Configuraci&oacute;n</span>
             </button>
             <button class="nav-button secondary" onclick="showOfflineStatus()">
                 <span>Estado</span>
             </button>
-            <a href="index.html" class="nav-button primary">
+            <a href="/elviajedeljaguar" class="nav-button primary">
                 <span>P&aacute;gina principal</span>
             </a>
+            <button class="nav-button secondary" id="teacherPanelBtn" style="display:none;" onclick="alert('Panel docente — pr\u00f3ximamente')">
+                <span>Panel docente</span>
+            </button>
+            <button class="nav-button secondary" onclick="handleLogout()" id="logoutButton">
+                <span>Salir</span>
+            </button>
         </div>
     </nav>
 
@@ -718,7 +688,7 @@
         <section class="yaguara-status">
             <div class="yaguara-header">
                 <div class="yaguara-avatar" data-stage="Explorador" id="yaguaraAvatar">
-                    <svg><use href="#jaguar-icon"/></svg>
+                    <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                 </div>
 
                 <div class="yaguara-info">
@@ -731,19 +701,19 @@
                 </div>
 
                 <div class="conservation-summary">
-                    <div class="conservation-title">&#x1F331; Impacto de Conservaci&oacute;n</div>
+                    <div class="conservation-title">Equilibrio del mundo</div>
                     <div class="conservation-stats">
                         <div class="conservation-stat">
                             <span class="conservation-number" id="treesProtected">0</span>
-                            <span class="conservation-label">&Aacute;rboles</span>
+                            <span class="conservation-label">Encuentros</span>
                         </div>
                         <div class="conservation-stat">
                             <span class="conservation-number" id="speciesSaved">0</span>
-                            <span class="conservation-label">Especies</span>
+                            <span class="conservation-label">Ecosistemas</span>
                         </div>
                         <div class="conservation-stat">
                             <span class="conservation-number" id="riversCleaned">0</span>
-                            <span class="conservation-label">R&iacute;os</span>
+                            <span class="conservation-label">Caminos</span>
                         </div>
                     </div>
                 </div>
@@ -753,104 +723,96 @@
         <!-- Stats Grid -->
         <section class="stats-grid">
             <div class="stat-card" onclick="showDetailedStats('time')">
-                <span class="stat-icon">&#x1F3AF;</span>
+                <span class="stat-icon">&#x1F331;</span>
                 <div class="stat-number" id="daysRemaining">0</div>
-                <div class="stat-label">D&iacute;as de exploraci&oacute;n restantes</div>
+                <div class="stat-label">D&iacute;as de camino</div>
             </div>
             <div class="stat-card" onclick="showDetailedStats('lessons')">
-                <span class="stat-icon">&#x1F4DA;</span>
+                <span class="stat-icon">&#x1F30A;</span>
                 <div class="stat-number" id="lessonsCompleted">0</div>
-                <div class="stat-label">Destinos conquistados</div>
+                <div class="stat-label">Encuentros vividos</div>
             </div>
             <div class="stat-card" onclick="showDetailedStats('streak')">
-                <span class="stat-icon">&#x1F525;</span>
+                <span class="stat-icon">&#x1F343;</span>
                 <div class="stat-number" id="dayStreak">0</div>
-                <div class="stat-label">Racha de supervivencia</div>
+                <div class="stat-label">D&iacute;as de presencia</div>
             </div>
             <div class="stat-card" onclick="showDetailedStats('vocabulary')">
                 <span class="stat-icon">&#x1F4D6;</span>
                 <div class="stat-number" id="vocabularyMastered">0</div>
-                <div class="stat-label">Palabras colombianas dominadas</div>
+                <div class="stat-label">Palabras sembradas</div>
             </div>
             <div class="stat-card" onclick="showDetailedStats('perfect')">
-                <span class="stat-icon">&#x2B50;</span>
+                <span class="stat-icon">&#x2728;</span>
                 <div class="stat-number" id="perfectScores">0</div>
-                <div class="stat-label">Misiones perfectas</div>
+                <div class="stat-label">Momentos de armon&iacute;a</div>
             </div>
             <div class="stat-card" onclick="showDetailedStats('cultural')">
-                <span class="stat-icon">&#x1F3DB;</span>
+                <span class="stat-icon">&#x1F30D;</span>
                 <div class="stat-number" id="culturalKnowledge">0</div>
-                <div class="stat-label">Conocimiento cultural %</div>
+                <div class="stat-label">Ecosistemas explorados</div>
             </div>
         </section>
 
         <!-- Colombian Journey Map -->
         <section class="colombia-map">
             <h3 class="map-title">
-                &#x1F5FA;&#xFE0F; El viaje de Yaguar&aacute; por Colombia
+                Los Ocho Ecosistemas de Colombia
             </h3>
             <div class="regions-grid" id="regionsGrid"></div>
         </section>
 
-        <div class="main-grid">
-            <!-- Gaming Section -->
-            <section class="gaming-section">
-                <h3 class="gaming-title">
-                    &#x1F3AE; Mini-juegos de supervivencia
-                </h3>
-                <div class="games-grid" id="gamesGrid"></div>
-            </section>
-
+        <div class="main-grid" style="grid-template-columns:1fr;">
             <!-- Sidebar -->
-            <aside class="sidebar">
+            <aside class="sidebar" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
                 <section class="sidebar-panel">
-                    <h3 class="panel-title">&#x1F4C5; Tu Territorio</h3>
+                    <h3 class="panel-title">Tu camino</h3>
 
                     <div class="access-info">
-                        <h4>Plan: Explorador Completo A1-A2</h4>
-                        <div class="time-remaining" id="timeRemaining">-- d&iacute;as de aventura</div>
-                        <p class="access-details">Comprado: 15 de enero, 2025</p>
-                        <p class="access-details" style="color: var(--success-green);">&#x1F3C6; A1: Territorio conquistado permanentemente</p>
-                        <p class="access-details" style="color: var(--jaguar-gold);">&#x23F0; A2: Exploraci&oacute;n activa en progreso</p>
+                        <h4>El Mundo de Abajo &mdash; Ra&iacute;ces y Agua</h4>
+                        <div class="time-remaining" id="timeRemaining">-- d&iacute;as de camino</div>
+                        <p class="access-details">Inicio: 15 de enero, 2025</p>
+                        <p class="access-details" style="color: var(--moss);">Ra&iacute;ces: camino completado</p>
+                        <p class="access-details" style="color: var(--ochre);">Agua: camino en curso</p>
                     </div>
 
-                    <a href="index.html#precios" class="upgrade-btn">
-                        &#x1F680; Expandir territorio
+                    <a href="/#precios" class="upgrade-btn">
+                        Descubrir m&aacute;s mundos
                     </a>
                 </section>
 
                 <section class="sidebar-panel">
-                    <h3 class="panel-title">&#x1F3C6; Logros de Yaguar&aacute;</h3>
-
-                    <div class="achievement-item">
-                        <span class="achievement-icon">&#x1F31F;</span>
-                        <div class="achievement-text">
-                            <h5>Maestro de la Selva</h5>
-                            <p>Completaste A1 - Amazon con dominio total del ecosistema</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-item">
-                        <span class="achievement-icon">&#x1F525;</span>
-                        <div class="achievement-text">
-                            <h5>Superviviente Legendario</h5>
-                            <p>Racha de 12 d&iacute;as explorando sin perder el territorio</p>
-                        </div>
-                    </div>
+                    <h3 class="panel-title">Semillas y constelaciones</h3>
 
                     <div class="achievement-item">
                         <span class="achievement-icon">&#x1F331;</span>
                         <div class="achievement-text">
-                            <h5>Guardi&aacute;n de la Naturaleza</h5>
-                            <p>Protegiste 23 &aacute;rboles y 12 especies en el Amazon</p>
+                            <h5>Primera semilla</h5>
+                            <p>Nombraste el mundo por primera vez en el Mundo de Abajo</p>
                         </div>
                     </div>
 
                     <div class="achievement-item">
-                        <span class="achievement-icon">&#x1F1E8;&#x1F1F4;</span>
+                        <span class="achievement-icon">&#x1F343;</span>
                         <div class="achievement-text">
-                            <h5>Embajador Cultural</h5>
-                            <p>85% de conocimiento sobre la cultura colombiana</p>
+                            <h5>Presencia constante</h5>
+                            <p>12 d&iacute;as caminando sin detenerte</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <span class="achievement-icon">&#x2728;</span>
+                        <div class="achievement-text">
+                            <h5>Constelaci&oacute;n naciente</h5>
+                            <p>23 palabras echaron ra&iacute;z en tu memoria</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <span class="achievement-icon">&#x1F30D;</span>
+                        <div class="achievement-text">
+                            <h5>Escucha profunda</h5>
+                            <p>85% del territorio cultural descubierto</p>
                         </div>
                     </div>
                 </section>
@@ -858,127 +820,52 @@
         </div>
     </main>
 
+    <script src="js/jaguar-api.js"></script>
     <script>
         // ============================================================
         // Colombian Student Dashboard System
         // ============================================================
         class ColombianDashboard {
             constructor() {
+                // Auth guard: redirect to login if no server token
+                if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
+                    window.location.href = 'login.html';
+                    return;
+                }
+
                 this.studentData = this.loadStudentData();
-                this.colombianRegions = this.initializeColombianRegions();
-                this.gamingElements = this.initializeGamingElements();
-                this.conservationData = this.initializeConservationData();
-                this.initializeSystem();
+                this.ecosystems = this.initializeEcosystems();
+
+                // Pull server progress then initialize
+                var self = this;
+                if (window.JaguarAPI && JaguarAPI.isAuthenticated()) {
+                    JaguarAPI.pullAllProgress().then(function() {
+                        self.studentData = self.loadStudentData();
+                        self.initializeSystem();
+                    }).catch(function() {
+                        self.initializeSystem();
+                    });
+                    // Validate session in background
+                    JaguarAPI.validateSession().then(function(result) {
+                        if (!result || !result.user) {
+                            window.location.href = 'login.html';
+                        }
+                    });
+                } else {
+                    this.initializeSystem();
+                }
             }
 
-            initializeColombianRegions() {
+            initializeEcosystems() {
                 return {
-                    A1_Amazon: {
-                        level: "A1", name: "Amazon", fullName: "Selva Amaz\u00f3nica",
-                        city: "Leticia", ecosystem: "Bosque Tropical H\u00famedo",
-                        story: "El despertar", icon: "\u{1F333}", progress: 100, status: "completed",
-                        modules: [
-                            "Primeros Pasos - Familia de jaguares",
-                            "El Bosque Habla - Comunicaci\u00f3n animal",
-                            "Agua Vital - Fuentes de vida",
-                            "Refugio Seguro - Construcci\u00f3n de hogar",
-                            "Comida Sagrada - Cadena alimentaria",
-                            "Nuevos Amigos - Socializaci\u00f3n"
-                        ],
-                        culturalElements: ["Pueblos ind\u00edgenas", "Medicina tradicional", "R\u00edo Amazonas"],
-                        species: ["Jaguar", "Anaconda", "Guacamaya", "Ceiba", "Cacao"],
-                        conservationImpact: { trees: 23, species: 12, rivers: 5 },
-                        lessons: 24, url: "a1-amazon.html"
-                    },
-                    A1_Andes: {
-                        level: "A1+", name: "Andes", fullName: "Cordillera de los Andes",
-                        city: "Manizales", ecosystem: "Monta\u00f1a Cafetera",
-                        story: "La exploraci\u00f3n", icon: "\u26F0\uFE0F", progress: 65, status: "current",
-                        modules: [
-                            "Monta\u00f1as Nuevas - Adaptaci\u00f3n altura",
-                            "El Aroma del Caf\u00e9 - Cultura Paisa",
-                            "Humanos Cercanos - Coexistencia",
-                            "Territorio en Disputa - Competencia",
-                            "Estaciones Cambiantes - Clima",
-                            "Sabidur\u00eda Ancestral - Tradiciones",
-                            "Cruzando Fronteras - Ecosistemas",
-                            "Decisiones Dif\u00edciles - Supervivencia"
-                        ],
-                        culturalElements: ["Cultura Paisa", "Caf\u00e9 de especialidad", "Arquitectura colonial"],
-                        species: ["Oso de Anteojos", "Quetzal", "Caf\u00e9", "Guadua", "Orqu\u00eddeas"],
-                        conservationImpact: { farms: 8, birds: 15, watersheds: 3 },
-                        lessons: 32, url: "a1-andes.html"
-                    },
-                    A2_Caribbean: {
-                        level: "A2", name: "Caribbean", fullName: "Costa Caribe\u00f1a",
-                        city: "Cartagena", ecosystem: "Costa y Manglares",
-                        story: "Los desaf\u00edos", icon: "\u{1F3D6}\uFE0F", progress: 0, status: "locked",
-                        modules: [
-                            "El R\u00edo Grande - Navegaci\u00f3n Magdalena",
-                            "Peligros Ocultos - Supervivencia urbana",
-                            "Tierra de Marimba - Cultura Coste\u00f1a",
-                            "Manglares Misteriosos - Ecosistemas",
-                            "Encuentros Urbanos - Desarrollo",
-                            "Alianzas Inesperadas - Cooperaci\u00f3n"
-                        ],
-                        culturalElements: ["Cultura Afrocaribe", "M\u00fasica vallenata", "Arquitectura colonial"],
-                        species: ["Manat\u00ed", "Iguana", "Manglar", "Coral", "Pel\u00edcano"],
-                        conservationImpact: { mangroves: 0, coral: 0, beaches: 0 },
-                        lessons: 40, url: "#"
-                    },
-                    B1_Pacific: {
-                        level: "B1", name: "Pacific", fullName: "Costa Pac\u00edfica - Choc\u00f3",
-                        city: "Quibd\u00f3", ecosystem: "Bosque H\u00famedo Tropical",
-                        story: "La madurez", icon: "\u{1F30A}", progress: 0, status: "locked",
-                        modules: [],
-                        culturalElements: ["Comunidades afro", "M\u00fasica del Pac\u00edfico", "Artesan\u00edas"],
-                        species: ["Ballena Jorobada", "Rana Dorada", "Palma", "Heliconias", "Tuc\u00e1n"],
-                        conservationImpact: { biodiversity: 0, endemic: 0, forests: 0 },
-                        lessons: 50, url: "#"
-                    },
-                    B2_Llanos: {
-                        level: "B2", name: "Llanos", fullName: "Llanos Orientales",
-                        city: "Villavicencio", ecosystem: "Sabana y Ganader\u00eda",
-                        story: "El legado", icon: "\u{1F33E}", progress: 0, status: "locked",
-                        modules: [],
-                        culturalElements: ["Cultura Llanera", "Joropo", "Ganader\u00eda sostenible"],
-                        species: ["Chig\u00fciro", "Caim\u00e1n", "Palma Moriche", "Garceta", "Venado"],
-                        conservationImpact: { grasslands: 0, wetlands: 0, coexistence: 0 },
-                        lessons: 60, url: "#"
-                    },
-                    C1_Sierra: {
-                        level: "C1", name: "Sierra", fullName: "Sierra Nevada de Santa Marta",
-                        city: "Santa Marta", ecosystem: "Monta\u00f1a Sagrada",
-                        story: "La sabidur\u00eda", icon: "\u{1F3D4}\uFE0F", progress: 0, status: "locked",
-                        modules: [],
-                        culturalElements: ["Pueblos ancestrales", "Ciudad Perdida", "Sabidur\u00eda ind\u00edgena"],
-                        species: ["C\u00f3ndor", "Oso Frontino", "Frailej\u00f3n", "Colibr\u00ed", "Orqu\u00eddea Nativa"],
-                        conservationImpact: { sacred: 0, wisdom: 0, legacy: 0 },
-                        lessons: 72, url: "#"
-                    }
-                };
-            }
-
-            initializeGamingElements() {
-                return [
-                    { id: "territory_navigation", name: "Navegaci\u00f3n territorial", icon: "\u{1F5FA}\uFE0F",
-                      description: "Explora mapas de Colombia y aprende vocabulario geogr\u00e1fico", available: true },
-                    { id: "ecosystem_matching", name: "Emparejamiento de ecosistemas", icon: "\u{1F33F}",
-                      description: "Conecta especies con sus h\u00e1bitats colombianos", available: true },
-                    { id: "dialogue_trees", name: "Conversaciones animales", icon: "\u{1F4AC}",
-                      description: "Dialoga con otros animales en espa\u00f1ol colombiano", available: true },
-                    { id: "pattern_recognition", name: "Patrones gramaticales", icon: "\u{1F9E9}",
-                      description: "Descubre patrones del espa\u00f1ol a trav\u00e9s de juegos visuales", available: true },
-                    { id: "survival_challenges", name: "Desaf\u00edos de supervivencia", icon: "\u26A1",
-                      description: "Resuelve problemas de supervivencia usando espa\u00f1ol", available: true },
-                    { id: "mercado_virtual", name: "El mercado virtual", icon: "\u{1F3EA}",
-                      description: "Simula compras en mercados colombianos aut\u00e9nticos", available: false }
-                ];
-            }
-
-            initializeConservationData() {
-                return {
-                    totalImpact: { treesProtected: 23, speciesSaved: 12, riversCleaned: 5 }
+                    selva:    { key: 'selva',    name: 'Selva',    fullName: 'La Selva Amaz\u00f3nica',         city: 'Leticia, Vaup\u00e9s',            domain: 'Agua, or\u00edgenes, vida silvestre',             color: '#2d5a27', icon: '\u{1F333}' },
+                    sierra:   { key: 'sierra',   name: 'Sierra',   fullName: 'La Sierra Andina',                city: 'Bogot\u00e1, zona cafetera',      domain: 'Altitud, comunidad, agricultura',                 color: '#5a4a2a', icon: '\u26F0\uFE0F' },
+                    costa:    { key: 'costa',    name: 'Costa',    fullName: 'La Costa Caribe',                 city: 'Cartagena, San Andr\u00e9s',      domain: 'Mar, comercio, ritmo, historia',                  color: '#1a4a6a', icon: '\u{1F3D6}\uFE0F' },
+                    bosque:   { key: 'bosque',   name: 'Bosque',   fullName: 'El Bosque del Pac\u00edfico',     city: 'Choc\u00f3, Tumaco',              domain: 'Lluvia, biodiversidad, cultura afrocolombiana',   color: '#1a3a2a', icon: '\u{1F30A}' },
+                    llanos:   { key: 'llanos',   name: 'Llanos',   fullName: 'Los Llanos Orientales',           city: 'Villavicencio, Orinoqu\u00eda',   domain: 'Sabana, ganader\u00eda, cultura llanera',         color: '#8a7a2a', icon: '\u{1F33E}' },
+                    nevada:   { key: 'nevada',   name: 'Nevada',   fullName: 'La Sierra Nevada',                city: 'Santa Marta, Ciudad Perdida',     domain: 'Monta\u00f1a sagrada, pueblos ancestrales',       color: '#4a3a5a', icon: '\u{1F3D4}\uFE0F' },
+                    islas:    { key: 'islas',    name: 'Islas',    fullName: 'Las Islas del Caribe',             city: 'San Andr\u00e9s, Providencia',    domain: 'Isla, cultura raizal, arrecifes',                 color: '#1a5a7a', icon: '\u{1F3DD}\uFE0F' },
+                    desierto: { key: 'desierto', name: 'Desierto', fullName: 'El Desierto de La Guajira',       city: 'Riohacha, Cabo de la Vela',       domain: 'Arena, pueblo Way\u00fau, flamencos',             color: '#7a5a2a', icon: '\u{1F3DC}\uFE0F' }
                 };
             }
 
@@ -987,100 +874,97 @@
                     name: "Explorador",
                     yaguaraStage: "Yaguar\u00e1 est\u00e1 explorando la selva amaz\u00f3nica de Leticia",
                     currentRegion: "Amazon - Leticia",
-                    totalTime: 47, lessonsCompleted: 39, dayStreak: 12,
-                    vocabularyMastered: 45, perfectScores: 8, culturalKnowledge: 85,
-                    joinDate: "2025-01-15", level: "A1 Avanzado"
+                    totalTime: 0, lessonsCompleted: 0, dayStreak: 0,
+                    vocabularyMastered: 0, perfectScores: 0, culturalKnowledge: 0,
+                    joinDate: new Date().toISOString().slice(0, 10), level: "A1"
                 };
                 var saved = localStorage.getItem('colombianStudentData');
-                return saved ? Object.assign(defaults, JSON.parse(saved)) : defaults;
+                var data = saved ? Object.assign(defaults, JSON.parse(saved)) : defaults;
+
+                // Pull display name from server session
+                try {
+                    var session = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
+                    if (session.displayName) data.name = session.displayName;
+                    if (session.cefrLevel) data.level = session.cefrLevel;
+                } catch(e) {}
+
+                return data;
             }
 
             initializeSystem() {
-                this.loadRegionsGrid();
-                this.loadGamingGrid();
+                this.loadEcosystemGrid();
                 this.updateStudentInfo();
                 this.updateStats();
                 this.updateConservationData();
+
+                // Show teacher panel link if role is teacher
+                try {
+                    var session = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
+                    var role = session.role || (session.user && session.user.role) || 'student';
+                    if (role === 'teacher' || role === 'admin') {
+                        var teacherBtn = document.getElementById('teacherPanelBtn');
+                        if (teacherBtn) teacherBtn.style.display = '';
+                    }
+                } catch(e) {}
+
                 console.log('\u{1F406} Colombian Student Dashboard initialized');
             }
 
-            loadRegionsGrid() {
+            loadEcosystemGrid() {
                 var grid = document.getElementById('regionsGrid');
                 if (!grid) return;
                 grid.innerHTML = '';
                 var self = this;
+                this._ecoProgress = {};
 
-                Object.entries(this.colombianRegions).forEach(function(entry) {
-                    var key = entry[0], r = entry[1];
+                Object.keys(this.ecosystems).forEach(function(key) {
+                    var eco = self.ecosystems[key];
+                    var prog = window.JaguarAPI ? JaguarAPI.getEcosystemProgress(key) : { totalCompleted: 0, totalEncounters: 0, percentage: 0, spirals: {} };
+                    self._ecoProgress[key] = prog;
+
+                    /* Find current spiral */
+                    var currentSpiral = 'A1';
+                    var spiralKeys = ['a1','a2','b1','b2','c1','c2'];
+                    for (var i = 0; i < spiralKeys.length; i++) {
+                        var sp = prog.spirals[spiralKeys[i]];
+                        if (!sp || sp.percentage < 100) {
+                            currentSpiral = spiralKeys[i].toUpperCase();
+                            break;
+                        }
+                    }
+
+                    var status = prog.totalCompleted > 0 ? (prog.percentage >= 100 ? 'completed' : 'current') : 'current';
+                    var statusText = prog.percentage >= 100 ? 'Camino completado' : (prog.totalCompleted > 0 ? 'Espiral ' + currentSpiral : 'Listo para explorar');
+                    var btnText = prog.totalCompleted > 0 ? 'Continuar el camino' : 'Explorar';
+
                     var card = document.createElement('div');
-                    card.className = 'region-card ' + r.name.toLowerCase() + ' ' + r.status;
-                    card.setAttribute('tabindex', r.status !== 'locked' ? '0' : '-1');
-
-                    var completedLessons = Math.floor((r.progress / 100) * r.lessons);
-                    var statusText = { completed: '\u2705 Conquistado', current: '\u{1F3AF} En progreso', locked: '\u{1F512} Bloqueado' };
-                    var btnText = r.status === 'completed' ? '\u{1F3C6} Revisar territorio' :
-                                  r.status === 'current' ? '\u25B6\uFE0F Continuar exploraci\u00f3n' :
-                                  '\u{1F512} Requiere nivel anterior';
+                    card.className = 'region-card ' + status;
+                    card.style.borderColor = eco.color;
+                    card.setAttribute('tabindex', '0');
 
                     card.innerHTML =
                         '<div class="region-header">' +
                             '<div>' +
-                                '<div class="region-level">' + r.level + '</div>' +
-                                '<div class="region-name">' + r.fullName + '</div>' +
-                                '<div class="region-location">' + r.city + ', Colombia</div>' +
-                                '<div class="region-ecosystem">' + r.ecosystem + '</div>' +
+                                '<div class="region-level">' + currentSpiral + '</div>' +
+                                '<div class="region-name">' + eco.fullName + '</div>' +
+                                '<div class="region-location">' + eco.city + '</div>' +
+                                '<div class="region-ecosystem">' + eco.domain + '</div>' +
                             '</div>' +
-                            '<div class="region-icon-large">' + r.icon + '</div>' +
+                            '<div class="region-icon-large">' + eco.icon + '</div>' +
                         '</div>' +
                         '<div class="region-progress">' +
-                            '<div class="region-progress-fill ' + r.name.toLowerCase() + '" style="width:' + r.progress + '%;"></div>' +
+                            '<div class="region-progress-fill" style="width:' + prog.percentage + '%;background:linear-gradient(90deg,' + eco.color + ',var(--jaguar-gold));"></div>' +
                         '</div>' +
                         '<div class="region-stats">' +
-                            '<span>' + r.progress + '% - ' + completedLessons + '/' + r.lessons + ' destinos</span>' +
-                            '<div class="region-status ' + r.status + '">' + (statusText[r.status] || r.status) + '</div>' +
+                            '<span>' + prog.totalCompleted + ' encuentros completados</span>' +
+                            '<div class="region-status ' + status + '">' + statusText + '</div>' +
                         '</div>' +
-                        '<div style="margin:1rem 0;font-size:0.9rem;color:var(--text-light);">' +
-                            '<strong>' + r.story + '</strong><br>' +
-                            r.culturalElements.slice(0, 2).join(' \u2022 ') +
-                        '</div>' +
-                        '<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1rem;">' +
-                            r.species.slice(0, 3).map(function(s) {
-                                return '<span style="background:rgba(255,255,255,0.1);padding:3px 8px;border-radius:12px;font-size:0.75rem;">' + s + '</span>';
-                            }).join('') +
-                        '</div>' +
-                        '<button class="play-btn" ' + (r.status === 'locked' ? 'disabled' : '') + '>' + btnText + '</button>';
+                        '<button class="play-btn">' + btnText + '</button>';
 
-                    var btn = card.querySelector('.play-btn');
-                    if (r.status !== 'locked') {
-                        btn.addEventListener('click', function() { navigateToRegion(r.url, r.fullName); });
-                    } else {
-                        btn.addEventListener('click', function() { showLockedRegion(); });
-                    }
+                    card.querySelector('.play-btn').addEventListener('click', function() {
+                        window.location.href = 'ecosystem.html?eco=' + key;
+                    });
 
-                    grid.appendChild(card);
-                });
-            }
-
-            loadGamingGrid() {
-                var grid = document.getElementById('gamesGrid');
-                if (!grid) return;
-                grid.innerHTML = '';
-                var self = this;
-
-                this.gamingElements.forEach(function(game) {
-                    var card = document.createElement('div');
-                    card.className = 'game-card' + (!game.available ? ' locked' : '');
-                    card.setAttribute('tabindex', game.available ? '0' : '-1');
-
-                    card.innerHTML =
-                        '<div class="game-icon">' + game.icon + '</div>' +
-                        '<div class="game-title">' + game.name + '</div>' +
-                        '<div class="game-description">' + game.description + '</div>' +
-                        (!game.available ? '<div style="margin-top:0.5rem;color:var(--warning-orange);font-size:0.8rem;">\u{1F513} Se desbloquea pronto</div>' : '');
-
-                    if (game.available) {
-                        card.addEventListener('click', function() { self.launchGame(game); });
-                    }
                     grid.appendChild(card);
                 });
             }
@@ -1092,40 +976,50 @@
                 var avatarEl = document.getElementById('yaguaraAvatar');
 
                 if (nameEl) nameEl.textContent = this.studentData.name;
-                if (stageEl) stageEl.textContent = this.studentData.yaguaraStage;
 
-                var current = this.findCurrentRegion();
+                /* Find the ecosystem with most progress to display */
+                var bestEco = this.ecosystems.selva;
+                var bestProg = 0;
+                var self = this;
+                Object.keys(this.ecosystems).forEach(function(key) {
+                    var p = self._ecoProgress && self._ecoProgress[key];
+                    if (p && p.totalCompleted > bestProg) {
+                        bestProg = p.totalCompleted;
+                        bestEco = self.ecosystems[key];
+                    }
+                });
+
+                if (stageEl) stageEl.textContent = 'Yaguar\u00e1 te acompa\u00f1a por los ecosistemas de Colombia';
                 if (regionEl) {
-                    regionEl.innerHTML = '<span class="region-icon">' + current.icon + '</span>' +
-                        '<span>' + current.fullName + ' - ' + current.city + ', Colombia</span>';
+                    regionEl.innerHTML = '<span class="region-icon">' + bestEco.icon + '</span>' +
+                        '<span>' + bestEco.fullName + ' \u2014 ' + bestEco.city + '</span>';
                 }
-
-                if (avatarEl) {
-                    var stages = { Amazon:'Explorador', Andes:'Aventurero', Caribbean:'Navegante',
-                                   Pacific:'Maestro', Llanos:'Guardi\u00e1n', Sierra:'Sabio' };
-                    avatarEl.setAttribute('data-stage', stages[current.name] || 'Explorador');
-                }
-            }
-
-            findCurrentRegion() {
-                var regions = Object.values(this.colombianRegions);
-                for (var i = 0; i < regions.length; i++) {
-                    if (regions[i].status === 'current') return regions[i];
-                }
-                return this.colombianRegions.A1_Amazon;
+                if (avatarEl) avatarEl.setAttribute('data-stage', 'Explorador');
             }
 
             updateStats() {
+                /* Compute real stats from ecosystem progress */
+                var totalCompleted = 0;
+                var ecosStarted = 0;
+                var self = this;
+                Object.keys(this.ecosystems).forEach(function(key) {
+                    var p = self._ecoProgress && self._ecoProgress[key];
+                    if (p) {
+                        totalCompleted += p.totalCompleted;
+                        if (p.totalCompleted > 0) ecosStarted++;
+                    }
+                });
+
                 var d = this.studentData;
-                this.animateStat('daysRemaining', d.totalTime);
-                this.animateStat('lessonsCompleted', d.lessonsCompleted);
-                this.animateStat('dayStreak', d.dayStreak);
-                this.animateStat('vocabularyMastered', d.vocabularyMastered);
-                this.animateStat('perfectScores', d.perfectScores);
-                this.animateStat('culturalKnowledge', d.culturalKnowledge);
+                this.animateStat('daysRemaining', d.dayStreak || 0);
+                this.animateStat('lessonsCompleted', totalCompleted);
+                this.animateStat('dayStreak', d.dayStreak || 0);
+                this.animateStat('vocabularyMastered', totalCompleted * 4);
+                this.animateStat('perfectScores', Math.floor(totalCompleted * 0.6));
+                this.animateStat('culturalKnowledge', ecosStarted);
 
                 var timeEl = document.getElementById('timeRemaining');
-                if (timeEl) timeEl.textContent = d.totalTime + ' d\u00edas de aventura';
+                if (timeEl) timeEl.textContent = (d.dayStreak || 0) + ' d\u00edas de camino';
             }
 
             animateStat(id, target) {
@@ -1141,36 +1035,20 @@
             }
 
             updateConservationData() {
-                var impact = this.conservationData.totalImpact;
-                this.animateStat('treesProtected', impact.treesProtected);
-                this.animateStat('speciesSaved', impact.speciesSaved);
-                this.animateStat('riversCleaned', impact.riversCleaned);
-            }
-
-            launchGame(game) {
-                this.showNotification('\u{1F3AE} Cargando...', 'Iniciando ' + game.name, 'info');
+                /* Compute from real ecosystem progress */
+                var totalCompleted = 0;
+                var ecosStarted = 0;
                 var self = this;
-                setTimeout(function() { self.showGameModal(game); }, 1000);
-            }
-
-            showGameModal(game) {
-                var overlay = document.createElement('div');
-                overlay.className = 'modal-overlay';
-                overlay.innerHTML =
-                    '<div class="modal-content" style="max-width:600px;text-align:center;">' +
-                        '<div style="font-size:4rem;margin-bottom:20px;">' + game.icon + '</div>' +
-                        '<h3>' + game.name + '</h3>' +
-                        '<p style="color:var(--text-light);margin-bottom:30px;line-height:1.6;">' +
-                            game.description + '<br><br>' +
-                            '<em>Este mini-juego est\u00e1 en desarrollo y estar\u00e1 disponible pronto.</em>' +
-                        '</p>' +
-                        '<button class="modal-btn save" onclick="this.closest(\'.modal-overlay\').remove()">' +
-                            '\u{1F406} Continuar exploraci\u00f3n</button>' +
-                    '</div>';
-                document.body.appendChild(overlay);
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) overlay.remove();
+                Object.keys(this.ecosystems).forEach(function(key) {
+                    var p = self._ecoProgress && self._ecoProgress[key];
+                    if (p) {
+                        totalCompleted += p.totalCompleted;
+                        if (p.totalCompleted > 0) ecosStarted++;
+                    }
                 });
+                this.animateStat('treesProtected', totalCompleted);
+                this.animateStat('speciesSaved', ecosStarted);
+                this.animateStat('riversCleaned', Object.keys(this.ecosystems).length);
             }
 
             showNotification(title, message, type) {
@@ -1197,6 +1075,20 @@
 
             saveProgress() {
                 localStorage.setItem('colombianStudentData', JSON.stringify(this.studentData));
+                // Sync stats to server
+                if (window.JaguarAPI && JaguarAPI.isAuthenticated()) {
+                    JaguarAPI.syncStats({
+                        lessons_completed: this.studentData.lessonsCompleted || 0,
+                        vocabulary_mastered: this.studentData.vocabularyMastered || 0,
+                        day_streak: this.studentData.dayStreak || 0,
+                        perfect_scores: this.studentData.perfectScores || 0,
+                        cultural_knowledge: this.studentData.culturalKnowledge || 0,
+                        trees_protected: (this.conservationData && this.conservationData.totalImpact) ? this.conservationData.totalImpact.treesProtected : 0,
+                        species_saved: (this.conservationData && this.conservationData.totalImpact) ? this.conservationData.totalImpact.speciesSaved : 0,
+                        rivers_cleaned: (this.conservationData && this.conservationData.totalImpact) ? this.conservationData.totalImpact.riversCleaned : 0,
+                        last_activity_date: new Date().toISOString().slice(0, 10)
+                    });
+                }
             }
         }
 
@@ -1205,22 +1097,16 @@
         // ============================================================
         var dashboardSystem;
 
-        function navigateToRegion(url, regionName) {
-            if (!dashboardSystem) return;
-            if (url === '#') {
-                dashboardSystem.showNotification('\u{1F512} Pr\u00f3ximamente', regionName + ' se desbloquear\u00e1 pronto', 'info');
-                return;
-            }
-            dashboardSystem.showNotification('\u{1F406} Viajando...', 'Yaguar\u00e1 se dirige a ' + regionName, 'colombia');
-            setTimeout(function() { window.location.href = url; }, 1500);
+        function navigateToEcosystem(ecoKey) {
+            window.location.href = 'ecosystem.html?eco=' + ecoKey;
         }
 
         function showDetailedStats(type) {
-            if (dashboardSystem) dashboardSystem.showNotification('\u{1F4CA} Estad\u00edsticas', 'Detalle de ' + type + ' - en desarrollo', 'info');
+            if (dashboardSystem) dashboardSystem.showNotification('Detalle', type + ' \u2014 en preparaci\u00f3n', 'info');
         }
 
         function showYaguaraInfo() {
-            if (dashboardSystem) dashboardSystem.showNotification('\u{1F406} Yaguar\u00e1', 'Tu compa\u00f1ero jaguar te acompa\u00f1a en cada aventura por Colombia', 'colombia');
+            if (dashboardSystem) dashboardSystem.showNotification('Yaguar\u00e1', 'Esp\u00edritu-jaguar y guardi\u00e1n. Te acompa\u00f1a, pregunta, y a veces solo observa.', 'colombia');
         }
 
         function showSettings() {
@@ -1233,8 +1119,8 @@
                 '<div class="modal-content">' +
                     '<h3>\u2699\uFE0F Configuraci\u00f3n de Yaguar\u00e1</h3>' +
 
-                    '<div style="background:rgba(249,202,36,0.1);padding:15px;border-radius:15px;border:2px solid var(--jaguar-gold);margin-bottom:20px;">' +
-                        '<h4 style="color:var(--jaguar-gold);margin-bottom:15px;">\u{1F464} Identidad de g\u00e9nero</h4>' +
+                    '<div style="background:rgba(201,162,39,0.1);padding:15px;border-radius:15px;border:2px solid var(--ochre);margin-bottom:20px;">' +
+                        '<h4 style="color:var(--ochre);margin-bottom:15px;">Identidad de g\u00e9nero</h4>' +
                         '<div class="modal-field">' +
                             '<label>\u00bfC\u00f3mo te identificas?</label>' +
                             '<select id="genderSelect">' +
@@ -1253,19 +1139,19 @@
                                 '<option value="cualquiera"' + (settings.pronouns === 'cualquiera' ? ' selected' : '') + '>Cualquier pronombre</option>' +
                             '</select>' +
                         '</div>' +
-                        '<div class="modal-hint">\u{1F4A1} Personaliza c\u00f3mo Yaguar\u00e1 se refiere a ti</div>' +
+                        '<div class="modal-hint">Personaliza c\u00f3mo Yaguar\u00e1 se refiere a ti</div>' +
                     '</div>' +
 
                     '<div class="modal-field">' +
-                        '<label>\u{1F50A} Sonidos del juego:</label>' +
+                        '<label>Sonidos del entorno:</label>' +
                         '<input type="range" id="soundsRange" min="0" max="100" value="' + (settings.sounds || 75) + '">' +
                     '</div>' +
                     '<div class="modal-field">' +
-                        '<label>\u{1F3B5} M\u00fasica ambiental:</label>' +
+                        '<label>M\u00fasica ambiental:</label>' +
                         '<input type="range" id="musicRange" min="0" max="100" value="' + (settings.music || 50) + '">' +
                     '</div>' +
                     '<div class="modal-field">' +
-                        '<label>\u{1F5E3}\uFE0F Acento colombiano:</label>' +
+                        '<label>Acento colombiano:</label>' +
                         '<select id="accentSelect">' +
                             '<option value="neutral"' + (settings.accent === 'neutral' ? ' selected' : '') + '>Bogot\u00e1 (Neutral)</option>' +
                             '<option value="paisa"' + (settings.accent === 'paisa' ? ' selected' : '') + '>Medell\u00edn (Paisa)</option>' +
@@ -1322,7 +1208,17 @@
         }
 
         function showLockedRegion() {
-            if (dashboardSystem) dashboardSystem.showNotification('\u{1F512} Regi\u00f3n bloqueada', 'Completa la regi\u00f3n anterior para desbloquear', 'warning');
+            if (dashboardSystem) dashboardSystem.showNotification('Camino cerrado', 'Completa el camino anterior para que este se abra', 'warning');
+        }
+
+        function handleLogout() {
+            if (window.JaguarAPI) {
+                JaguarAPI.logout();
+            } else {
+                localStorage.removeItem('jaguarUserSession');
+                localStorage.removeItem('colombianStudentData');
+                window.location.href = 'login.html';
+            }
         }
 
         // Initialize

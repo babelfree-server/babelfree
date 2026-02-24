@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 17: ¿Cuánto cuesta? - De Compras</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_advanced/dest17_shopping/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 17: ¿Cuánto cuesta? - De Compras",
+          "url": "https://babelfree.com/a2_advanced/dest17_shopping/games",
+          "educationalLevel": "A2 Advanced - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Shopping vocabulary", "Prices and numbers", "Spanish communication"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Advanced", "item": "https://babelfree.com/a2-coffee" },
+            { "@type": "ListItem", "position": 4, "name": "¿Cuánto cuesta? - De Compras" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/a2-coffee" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 17: ¿Cuánto cuesta?</div>
+            <div class="yg-header-subtitle">De Compras</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+  // ===== GAME 1: Pair Matching - Shopping items and prices =====
+  {
+    type:"pair",
+    title:"Emparejar: Art\u00edculos y precios",
+    instruction:"Empareja cada art\u00edculo con su precio en pesos colombianos.",
+    pairs:[
+      ["Camisa","$50.000"],
+      ["Zapatos","$120.000"],
+      ["Sombrero","$30.000"],
+      ["Bolso","$80.000"],
+      ["Pantal\u00f3n","$60.000"],
+      ["Frutas (1 kg)","$5.000"]
+    ]
+  },
+  // ===== GAME 2: Fill-in-the-Blank =====
+  {
+    type:"fill",
+    title:"Completar: Preguntas de compras",
+    instruction:"Completa las preguntas y frases de compras.",
+    sentences:[
+      {text:"\u00bf___ cuesta esta camisa?",blank:"Cu\u00e1nto",options:["Cu\u00e1nto","Cu\u00e1ndo","Cu\u00e1l","C\u00f3mo"]},
+      {text:"Quisiera ___ estos zapatos.",blank:"comprar",options:["comprar","compro","comprando","compras"]},
+      {text:"\u00bfTiene esta camisa en talla ___?",blank:"mediana",options:["mediana","media","medio","medianos"]},
+      {text:"\u00bfPuedo pagar con ___?",blank:"tarjeta",options:["tarjeta","tarja","carta","papel"]},
+      {text:"\u00bfMe puede dar el ___, por favor?",blank:"recibo",options:["recibo","recibe","recibir","cambio"]}
+    ]
+  },
+  // ===== GAME 3: Verb Conjugation - Shopping verbs =====
+  {
+    type:"conjugation",
+    title:"Conjugar: Verbos de compras",
+    instruction:"Conjuga los verbos de compras en presente.",
+    verb:"querer",
+    forms:[
+      {pronoun:"Yo (querer)",answer:"quiero"},
+      {pronoun:"T\u00fa (querer)",answer:"quieres"},
+      {pronoun:"\u00c9l/Ella (poder)",answer:"puede"},
+      {pronoun:"Nosotros (necesitar)",answer:"necesitamos"},
+      {pronoun:"Ellos (comprar)",answer:"compran"}
+    ]
+  },
+  // ===== GAME 4: Listening =====
+  {
+    type:"listening",
+    title:"Escuchar: \u00bfCu\u00e1nto cuesta?",
+    instruction:"Escucha y selecciona el precio correcto.",
+    listenText:"Esta camisa cuesta treinta mil pesos.",
+    question:"\u00bfCu\u00e1nto cuesta la camisa?",
+    options:["$30.000","$13.000","$300.000","$3.000"],
+    correct:0
+  },
+  // ===== GAME 5: Category Sorting =====
+  {
+    type:"category",
+    title:"Clasificar: Ropa vs Comida",
+    instruction:"Clasifica los art\u00edculos en la categor\u00eda correcta.",
+    categories:["Ropa","Comida"],
+    items:[
+      {text:"camisa",cat:0},
+      {text:"zapatos",cat:0},
+      {text:"pantal\u00f3n",cat:0},
+      {text:"sombrero",cat:0},
+      {text:"frutas",cat:1},
+      {text:"pan",cat:1},
+      {text:"queso",cat:1},
+      {text:"carne",cat:1}
+    ]
+  },
+  // ===== GAME 6: Fill-in-the-Blank - Dialogue =====
+  {
+    type:"fill",
+    title:"Completar: Di\u00e1logo en la tienda",
+    instruction:"Completa el di\u00e1logo de compras.",
+    sentences:[
+      {text:"Me ___ comprar esta camisa.",blank:"gustar\u00eda",options:["gustar\u00eda","gusta","gusto","gustando"]},
+      {text:"\u00bfTiene ___ en azul?",blank:"esta",options:["esta","este","estos","estas"]},
+      {text:"\u00bfCu\u00e1nto ___ los zapatos negros?",blank:"cuestan",options:["cuestan","cuesta","costar","costando"]},
+      {text:"Quisiera ___ con efectivo.",blank:"pagar",options:["pagar","pago","pagando","pagas"]},
+      {text:"\u00bfMe da un ___, por favor?",blank:"descuento",options:["descuento","descuentos","precio","cambio"]}
+    ]
+  },
+  // ===== GAME 7: Sentence Builder =====
+  {
+    type:"builder",
+    title:"Construir: Frases de compras",
+    instruction:"Ordena las palabras para formar frases de compras.",
+    sentences:[
+      {words:["Quisiera","comprar","estos","zapatos","por","favor"],answer:"Quisiera comprar estos zapatos por favor"},
+      {words:["\u00bfCu\u00e1nto","cuesta","esta","camisa","roja?"],answer:"\u00bfCu\u00e1nto cuesta esta camisa roja?"},
+      {words:["Me","gustar\u00eda","ver","esos","sombreros"],answer:"Me gustar\u00eda ver esos sombreros"}
+    ]
+  },
+  // ===== GAME 8: Conjugation - Demonstratives =====
+  {
+    type:"conjugation",
+    title:"Demostrativos: este, esta, estos, estas",
+    instruction:"Escribe el demostrativo correcto seg\u00fan el sustantivo.",
+    verb:"demostrativos",
+    forms:[
+      {pronoun:"___ camisa (fem. sing.)",answer:"esta"},
+      {pronoun:"___ zapatos (masc. pl.)",answer:"estos"},
+      {pronoun:"___ bolso (masc. sing.)",answer:"este"},
+      {pronoun:"___ faldas (fem. pl.)",answer:"estas"},
+      {pronoun:"___ sombrero (masc. sing.)",answer:"ese"}
+    ]
+  },
+  // ===== GAME 9: Translation =====
+  {
+    type:"translation",
+    title:"Traducir: De compras",
+    instruction:"Traduce al espa\u00f1ol usando el banco de palabras.",
+    sentences:[
+      {english:"How much does this shirt cost?",words:["\u00bfCu\u00e1nto","cuesta","esta","camisa?"],answer:"\u00bfCu\u00e1nto cuesta esta camisa?"},
+      {english:"I would like to buy these shoes.",words:["Me","gustar\u00eda","comprar","estos","zapatos"],answer:"Me gustar\u00eda comprar estos zapatos"},
+      {english:"Can I pay with a card?",words:["\u00bfPuedo","pagar","con","tarjeta?"],answer:"\u00bfPuedo pagar con tarjeta?"}
+    ]
+  },
+  // ===== GAME 10: Conversation =====
+  {
+    type:"conversation",
+    title:"Conversar: En la tienda",
+    instruction:"Responde al vendedor en la tienda de ropa.",
+    steps:[
+      {npc:"Buenos d\u00edas, \u00bfen qu\u00e9 le puedo ayudar?",options:["Quisiera ver las camisas, por favor","Me gusta el gato","Tengo sue\u00f1o"],correct:0},
+      {npc:"\u00bfDe qu\u00e9 color la busca?",options:["Quiero una camisa azul, por favor","Me gusta nadar","Tengo tres hermanos"],correct:0},
+      {npc:"Esta azul cuesta cuarenta mil pesos. \u00bfLe gusta?",options:["S\u00ed, me la llevo. \u00bfPuedo pagar con tarjeta?","No me gusta el f\u00fatbol","Quiero dormir"],correct:0}
+    ]
+  },
+  // ===== GAME 11: Sentence Builder - Comparisons =====
+  {
+    type:"builder",
+    title:"Construir: Comparar precios",
+    instruction:"Ordena las palabras para comparar productos.",
+    sentences:[
+      {words:["Estos","zapatos","son","m\u00e1s","caros","que","esos"],answer:"Estos zapatos son m\u00e1s caros que esos"},
+      {words:["Esta","camisa","es","m\u00e1s","bonita","que","esa"],answer:"Esta camisa es m\u00e1s bonita que esa"},
+      {words:["El","bolso","negro","es","menos","caro","que","el","rojo"],answer:"El bolso negro es menos caro que el rojo"}
+    ]
+  },
+  // ===== GAME 12: Translation =====
+  {
+    type:"translation",
+    title:"Traducir: Compras complejas",
+    instruction:"Traduce al espa\u00f1ol.",
+    sentences:[
+      {english:"I would like to buy this bag, how much is it?",words:["Quisiera","comprar","este","bolso","\u00bfcu\u00e1nto","cuesta?"],answer:"Quisiera comprar este bolso \u00bfcu\u00e1nto cuesta?"},
+      {english:"These pants are too expensive, do you have a discount?",words:["Estos","pantalones","son","muy","caros","\u00bftiene","descuento?"],answer:"Estos pantalones son muy caros \u00bftiene descuento?"},
+      {english:"I prefer that hat because it is cheaper.",words:["Prefiero","ese","sombrero","porque","es","m\u00e1s","barato"],answer:"Prefiero ese sombrero porque es m\u00e1s barato"}
+    ]
+  },
+  // ===== GAME 13: Conversation - Full shopping =====
+  {
+    type:"conversation",
+    title:"Conversar: Di\u00e1logo de compras completo",
+    instruction:"Completa un di\u00e1logo de compras con el vendedor.",
+    steps:[
+      {npc:"\u00a1Bienvenido al mercado! \u00bfQu\u00e9 busca hoy?",options:["Necesito comprar ropa para un viaje","Me gusta el color azul del cielo","Tengo un perro grande"],correct:0},
+      {npc:"Tenemos camisas, pantalones y sombreros. \u00bfQu\u00e9 talla usa?",options:["Uso talla mediana. \u00bfCu\u00e1nto cuesta esta camisa?","Me gusta bailar salsa","Tengo hambre"],correct:0},
+      {npc:"Esta camisa cuesta cuarenta mil pesos. \u00bfQuiere ver otra?",options:["Me gusta el f\u00fatbol","S\u00ed, \u00bftiene en otro color? Me gustar\u00eda ver la roja","Voy al parque"],correct:1},
+      {npc:"La roja cuesta treinta y cinco mil. Es m\u00e1s barata.",options:["Perfecto, me la llevo. \u00bfPuedo pagar con tarjeta?","No me gusta cocinar","Quiero dormir"],correct:0}
+    ]
+  },
+  // ===== GAME 14: Dictation =====
+  {
+    type:"dictation",
+    title:"Dictado: Frases de compras",
+    instruction:"Escucha y escribe la frase que oyes.",
+    sentences:[
+      {text:"\u00bfCu\u00e1nto cuesta esta camisa azul?",hint:"\u00bfCu\u00e1nto cuesta..."},
+      {text:"Me gustar\u00eda comprar estos zapatos negros.",hint:"Me gustar\u00eda..."},
+      {text:"\u00bfTiene descuento si pago con efectivo?",hint:"\u00bfTiene descuento..."}
+    ]
+  },
+  // ===== GAME 15: Story Comprehension =====
+  {
+    type:"story",
+    title:"Leer: Yaguar\u00e1 va de compras",
+    instruction:"Lee la historia y responde las preguntas.",
+    story:"Yaguar\u00e1 necesita ropa nueva para su viaje a Medell\u00edn. Va al centro comercial y entra en una tienda de ropa.\n\nEl vendedor le dice: \u00abBuenos d\u00edas, \u00bfen qu\u00e9 le puedo ayudar?\u00bb Yaguar\u00e1 responde: \u00abQuisiera ver las camisas, por favor.\u00bb\n\nEl vendedor le muestra varias camisas. Una camisa verde cuesta cincuenta mil pesos y una camisa amarilla cuesta treinta y cinco mil pesos. Yaguar\u00e1 dice: \u00abLa amarilla es m\u00e1s barata. Me la llevo.\u00bb\n\nDespu\u00e9s, Yaguar\u00e1 tambi\u00e9n compra unos zapatos negros por ochenta mil pesos. Paga con tarjeta y el vendedor le da el recibo.",
+    questions:[
+      {q:"\u00bfPor qu\u00e9 va Yaguar\u00e1 de compras?",options:["Porque tiene hambre","Porque necesita ropa para su viaje","Porque quiere ver al vendedor","Porque est\u00e1 aburrido"],correct:1},
+      {q:"\u00bfCu\u00e1nto cuesta la camisa amarilla?",options:["$50.000","$35.000","$80.000","$30.000"],correct:1},
+      {q:"\u00bfC\u00f3mo paga Yaguar\u00e1?",options:["Con efectivo","Con descuento","Con tarjeta","No paga"],correct:2}
+    ]
+  },
+  // ===== GAME 16: Pair Matching - Questions and Answers =====
+  {
+    type:"pair",
+    title:"Emparejar: Preguntas y respuestas",
+    instruction:"Empareja cada pregunta del cliente con la respuesta del vendedor.",
+    pairs:[
+      ["\u00bfCu\u00e1nto cuesta?","Cuesta treinta mil pesos"],
+      ["\u00bfTiene talla grande?","S\u00ed, aqu\u00ed tiene"],
+      ["\u00bfPuedo pagar con tarjeta?","S\u00ed, por supuesto"],
+      ["\u00bfTiene descuento?","S\u00ed, hoy hay 20% de descuento"],
+      ["\u00bfMe da el recibo?","Claro, aqu\u00ed est\u00e1 su recibo"]
+    ]
+  },
+  // ===== GAME 17: Listening - Shopping dialogue =====
+  {
+    type:"listening",
+    title:"Escuchar: \u00bfQu\u00e9 compr\u00f3?",
+    instruction:"Escucha el di\u00e1logo y responde la pregunta.",
+    listenText:"Fui al mercado y compr\u00e9 una camisa azul por cuarenta mil pesos y unos zapatos negros por cien mil pesos. Pagu\u00e9 con tarjeta.",
+    question:"\u00bfCu\u00e1nto gast\u00f3 en total?",
+    options:["$140.000","$40.000","$100.000","$240.000"],
+    correct:0
+  },
+  // ===== GAME 18: Category Sorting - Demonstratives =====
+  {
+    type:"category",
+    title:"Clasificar: Demostrativos",
+    instruction:"Clasifica los demostrativos en \u00abCerca\u00bb o \u00abLejos\u00bb.",
+    categories:["Cerca (este/esta)","Lejos (ese/esa)"],
+    items:[
+      {text:"este",cat:0},
+      {text:"esta",cat:0},
+      {text:"estos",cat:0},
+      {text:"estas",cat:0},
+      {text:"ese",cat:1},
+      {text:"esa",cat:1},
+      {text:"esos",cat:1},
+      {text:"esas",cat:1}
+    ]
+  },
+  // ===== GAME 19: Dictation - Full shopping exchange =====
+  {
+    type:"dictation",
+    title:"Dictado: Intercambio de compras",
+    instruction:"Escucha y escribe la oraci\u00f3n completa.",
+    sentences:[
+      {text:"Quisiera comprar estos pantalones. \u00bfCu\u00e1nto cuestan?",hint:"Quisiera comprar..."},
+      {text:"Estos zapatos son m\u00e1s caros que esos sombreros.",hint:"Estos zapatos..."},
+      {text:"Me gustar\u00eda pagar con tarjeta. \u00bfMe da el recibo?",hint:"Me gustar\u00eda pagar..."}
+    ]
+  },
+  // ===== GAME 20: Story Comprehension =====
+  {
+    type:"story",
+    title:"Leer: El mercado de Medell\u00edn",
+    instruction:"Lee sobre la experiencia de compras y responde las preguntas.",
+    story:"Mar\u00eda y su amiga Luisa van al Mercado del R\u00edo en Medell\u00edn. Es un mercado grande con mucha ropa, comida y artesan\u00edas.\n\nPrimero, Mar\u00eda ve una camisa bonita. Pregunta: \u00ab\u00bfCu\u00e1nto cuesta esta camisa?\u00bb El vendedor dice: \u00abCuesta cuarenta y cinco mil pesos, pero si compra dos, le hago descuento.\u00bb\n\nLuisa quiere comprar un bolso. Ve uno rojo por sesenta mil pesos y uno azul por cuarenta mil. Dice: \u00abEl rojo es m\u00e1s caro que el azul, pero es m\u00e1s bonito. Me llevo el rojo.\u00bb\n\nAl final, van a la secci\u00f3n de comida y compran frutas frescas: mangos, pi\u00f1as y bananos. Todo cuesta diez mil pesos. Pagan con efectivo y est\u00e1n muy contentas con sus compras.",
+    questions:[
+      {q:"\u00bfD\u00f3nde van de compras Mar\u00eda y Luisa?",options:["Al centro comercial","Al Mercado del R\u00edo en Medell\u00edn","A una tienda online","Al supermercado"],correct:1},
+      {q:"\u00bfQu\u00e9 bolso compra Luisa?",options:["El azul porque es m\u00e1s barato","No compra ninguno","El rojo porque es m\u00e1s bonito","Compra los dos"],correct:2},
+      {q:"\u00bfCu\u00e1nto cuestan las frutas?",options:["$45.000","$60.000","$40.000","$10.000"],correct:3},
+      {q:"\u00bfC\u00f3mo pagan las frutas?",options:["Con tarjeta","Con descuento","Con efectivo","No pagan"],correct:2}
+    ]
+  },
+  // ===== GAME 21: Fill-in-the-Blank - Mixed =====
+  {
+    type:"fill",
+    title:"Completar: Compras mixtas",
+    instruction:"Completa las oraciones con la palabra correcta.",
+    sentences:[
+      {text:"Ayer ___ una camisa muy bonita en el mercado.",blank:"compr\u00e9",options:["compr\u00e9","compro","comprar\u00e9","comprando"]},
+      {text:"___ zapatos son m\u00e1s baratos que ___.",blank:"Estos",options:["Estos","Este","Esta","Estas"]},
+      {text:"Siempre ___ de compras los s\u00e1bados.",blank:"voy",options:["voy","fui","ir\u00e9","ir"]},
+      {text:"Me gustar\u00eda ___ ese sombrero para mi viaje.",blank:"comprar",options:["comprar","comprando","compro","compr\u00e9"]},
+      {text:"Creo que ___ tienda tiene los mejores precios.",blank:"esta",options:["esta","este","estos","esas"]}
+    ]
+  },
+  // ===== GAME 22: Sentence Builder - Complex =====
+  {
+    type:"builder",
+    title:"Construir: Oraciones de compras complejas",
+    instruction:"Ordena las palabras para formar oraciones complejas.",
+    sentences:[
+      {words:["Ayer","compr\u00e9","una","camisa","que","cuesta","menos","que","esta"],answer:"Ayer compr\u00e9 una camisa que cuesta menos que esta"},
+      {words:["Siempre","voy","de","compras","al","mercado","los","s\u00e1bados"],answer:"Siempre voy de compras al mercado los s\u00e1bados"},
+      {words:["Ma\u00f1ana","voy","a","comprar","un","regalo","para","mi","mam\u00e1"],answer:"Ma\u00f1ana voy a comprar un regalo para mi mam\u00e1"}
+    ]
+  },
+  // ===== GAME 23: Conjugation - Polite forms =====
+  {
+    type:"conjugation",
+    title:"Conjugar: Formas de cortes\u00eda",
+    instruction:"Escribe la forma correcta para ser cort\u00e9s en las compras.",
+    verb:"cortes\u00eda",
+    forms:[
+      {pronoun:"Yo (querer, condicional)",answer:"quisiera"},
+      {pronoun:"A m\u00ed me (gustar, condicional)",answer:"gustar\u00eda"},
+      {pronoun:"Usted (poder, condicional)",answer:"podr\u00eda"},
+      {pronoun:"___ camisa (fem. sing. cerca)",answer:"esta"},
+      {pronoun:"___ zapatos (masc. pl. lejos)",answer:"esos"}
+    ]
+  },
+  // ===== GAME 24: Translation - Paragraph =====
+  {
+    type:"translation",
+    title:"Traducir: P\u00e1rrafo de compras",
+    instruction:"Traduce cada oraci\u00f3n al espa\u00f1ol.",
+    sentences:[
+      {english:"Yesterday I went shopping and I bought a red shirt.",words:["Ayer","fui","de","compras","y","compr\u00e9","una","camisa","roja"],answer:"Ayer fui de compras y compr\u00e9 una camisa roja"},
+      {english:"This bag is more expensive than that one.",words:["Este","bolso","es","m\u00e1s","caro","que","ese"],answer:"Este bolso es m\u00e1s caro que ese"},
+      {english:"Tomorrow I am going to buy shoes at the market.",words:["Ma\u00f1ana","voy","a","comprar","zapatos","en","el","mercado"],answer:"Ma\u00f1ana voy a comprar zapatos en el mercado"}
+    ]
+  },
+  // ===== GAME 25: Conversation - Full market roleplay =====
+  {
+    type:"conversation",
+    title:"Conversar: En el mercado colombiano",
+    instruction:"Completa la conversaci\u00f3n en el mercado de Medell\u00edn.",
+    steps:[
+      {npc:"\u00a1Buenos d\u00edas! Bienvenido al mercado. Tenemos ropa, comida y artesan\u00edas. \u00bfQu\u00e9 busca?",options:["Quisiera ver las camisas y los sombreros, por favor","Me gusta el color verde","Tengo un gato"],correct:0},
+      {npc:"Estas camisas cuestan cuarenta mil pesos y esos sombreros treinta mil. \u00bfQu\u00e9 le parece?",options:["Duermo mucho","Creo que la camisa es bonita pero un poco cara. \u00bfTiene descuento?","Voy al parque"],correct:1},
+      {npc:"S\u00ed, si compra la camisa y el sombrero juntos, le hago un descuento de diez mil pesos.",options:["\u00a1Perfecto! Me llevo los dos. \u00bfPuedo pagar con tarjeta?","No me gusta leer","Tengo tres hermanos"],correct:0},
+      {npc:"S\u00ed, aceptamos tarjeta. \u00bfNecesita algo m\u00e1s?",options:["Estudio matem\u00e1ticas","Me gusta el arroz","Tambi\u00e9n quisiera comprar frutas. \u00bfCu\u00e1nto cuestan los mangos?"],correct:2},
+      {npc:"Los mangos cuestan cinco mil pesos el kilo. Son los mejores de Medell\u00edn.",options:["Me llevo dos kilos, por favor. Muchas gracias por todo.","No tengo hambre","Quiero dormir"],correct:0}
+    ]
+  },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de la lluvia',
+            description: 'Una cueva donde el agua cae del techo como lluvia. Las gotas forman palabras antes de tocar el suelo.',
+            ambience: 'rain'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las gotas de agua forman letras.',
+                clue: 'Es lo que cae del cielo cuando hay nubes grises.',
+                answer: 'lluvia',
+                scrambled: 'ilvlau',
+                onSolve: 'La lluvia cambia de ritmo.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una gota grande pregunta:',
+                riddle: '\u00abEn el Choc\u00f3 llueve casi todos los d\u00edas. Los \u00e1rboles necesitan la lluvia. Los r\u00edos nacen de la lluvia. \u00bfLa lluvia es buena o mala?\u00bb',
+                clue: 'Piensa en la perspectiva del bosque.',
+                answer: 'Es buena para el bosque \u2014 sin lluvia no hay selva, no hay r\u00edos, no hay vida',
+                options: [
+                    'Es buena para el bosque \u2014 sin lluvia no hay selva, no hay r\u00edos, no hay vida',
+                    'Es mala porque moja todo',
+                    'No es ni buena ni mala',
+                    'Depende de la estaci\u00f3n'
+                ],
+                onSolve: 'La lluvia canta.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Donde la lluvia cae m\u00e1s fuerte hay una cerradura.',
+                clue: 'Es el fen\u00f3meno cuando la luz del sol y la lluvia se combinan. Tiene diez letras en espa\u00f1ol.',
+                answer: 'arcoiris',
+                hint: '_ _ _ _ _ _ _ _',
+                onSolve: 'Un arco\u00edris aparece en la cueva. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de gota de agua.',
+            questClue: 'El agua conoce todos los caminos de la tierra.',
+            item: 'raiz-gota'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '17',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest17Progress',
+        backUrl: '../../a2-coffee.html'
+    });
+</script>
+</body>
+</html>

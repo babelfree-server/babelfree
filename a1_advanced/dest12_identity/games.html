@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 12: &iquest;Qui&eacute;n soy yo?</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest12_identity/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 12: ¿Quién soy yo? — Games",
+                "url": "https://babelfree.com/a1_advanced/dest12_identity/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Full A1 integration",
+                    "Self-introduction and detailed description"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "¿Quién soy yo?",
+                        "item": "https://babelfree.com/a1_advanced/dest12_identity/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 12: &iquest;Qui&eacute;n soy yo?</div>
+            <div class="yg-header-subtitle">Integraci&oacute;n A1</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — Yaguará se presenta
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguará está frente a la Abuela Ceiba. Es el momento. Dice: «Soy Yaguará. Soy un jaguar. Tengo cinco años. Vivo junto al río con mi familia. Mi madre se llama Luna. Mi hermano se llama Río. Me gusta caminar por el bosque.»'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Abuela Ceiba responde
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Abuela Ceiba dice: «Ahora tienes nombre. Ahora el mundo te ve.» Le da una palabra a Yaguará. No es una cosa. Es un verbo: «Escucha.» Yaguará no entiende todavía. Pero guarda la palabra.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — El viajero del bosque
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Ahora es tu momento. ¿Quién eres tú, viajero? Tienes un nombre. Tienes una familia. Tienes cosas que te gustan. Vives en un lugar. Eres alguien. Abuela Ceiba escucha. El bosque escucha.'
+    },
+
+    /* ============================================================
+       4. PAIR — Repaso: todo lo aprendido
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la pregunta con la respuesta.',
+        pairs: [
+            ['¿Cómo te llamas?', 'Me llamo Yaguará.'],
+            ['¿Cuántos años tienes?', 'Tengo cinco años.'],
+            ['¿Dónde vives?', 'Vivo junto al río.'],
+            ['¿Qué te gusta?', 'Me gusta el bosque.']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Verbos y personas
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la persona con el verbo.',
+        pairs: [
+            ['yo', 'soy / estoy / tengo'],
+            ['tú', 'eres / estás / tienes'],
+            ['ella', 'es / está / tiene'],
+            ['nosotros', 'somos / estamos / tenemos']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — Descripción completa
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une para describir a Yaguará.',
+        pairs: [
+            ['Nombre', 'Yaguará'],
+            ['Familia', 'Luna, Sol, Río, Flor'],
+            ['Casa', 'junto al río'],
+            ['Le gusta', 'caminar por el bosque']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Ser (repaso integrado)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yo ___ de Colombia.',
+                answer: 'soy',
+                options: ['soy', 'estoy', 'tengo', 'voy']
+            },
+            {
+                sentence: 'Ella ___ mi madre.',
+                answer: 'es',
+                options: ['es', 'está', 'tiene', 'va']
+            },
+            {
+                sentence: 'Nosotros ___ una familia.',
+                answer: 'somos',
+                options: ['somos', 'estamos', 'tenemos', 'vamos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Estar (repaso integrado)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yo ___ feliz.',
+                answer: 'estoy',
+                options: ['soy', 'estoy', 'tengo', 'voy']
+            },
+            {
+                sentence: 'Mi casa ___ junto al río.',
+                answer: 'está',
+                options: ['es', 'está', 'tiene', 'va']
+            },
+            {
+                sentence: 'Mis hermanos ___ bien.',
+                answer: 'están',
+                options: ['son', 'están', 'tienen', 'van']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Todo junto: ser, estar, tener, ir
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el verbo correcto.',
+        questions: [
+            {
+                sentence: 'Yaguará ___ cinco años.',
+                answer: 'tiene',
+                options: ['es', 'está', 'tiene', 'va']
+            },
+            {
+                sentence: 'Yaguará ___ a caminar por el bosque.',
+                answer: 'va',
+                options: ['es', 'está', 'tiene', 'va']
+            },
+            {
+                sentence: 'Yaguará ___ un jaguar.',
+                answer: 'es',
+                options: ['es', 'está', 'tiene', 'va']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — ¿Quién es Yaguará?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Soy Yaguará. Tengo cinco años. Vivo junto al río con mi familia. Me gusta caminar.',
+        question: '¿Cuántos años tiene Yaguará?',
+        answer: 'cinco',
+        options: ['tres', 'cuatro', 'cinco', 'seis']
+    },
+
+    /* ============================================================
+       11. LISTENING — ¿Qué dice Abuela Ceiba?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Ahora tienes nombre. Ahora el mundo te ve. Escucha.',
+        question: '¿Qué palabra da Abuela Ceiba a Yaguará?',
+        answer: 'escucha',
+        options: ['camina', 'come', 'escucha', 'corre']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Ir (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo ir.',
+        questions: [
+            {
+                verb: 'ir',
+                subject: 'yo',
+                answer: 'voy',
+                options: ['voy', 'vas', 'va', 'van']
+            },
+            {
+                verb: 'ir',
+                subject: 'tú',
+                answer: 'vas',
+                options: ['voy', 'vas', 'va', 'van']
+            },
+            {
+                verb: 'ir',
+                subject: 'nosotros',
+                answer: 'vamos',
+                options: ['voy', 'va', 'vamos', 'van']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Tener (repaso)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo tener.',
+        questions: [
+            {
+                verb: 'tener',
+                subject: 'yo',
+                answer: 'tengo',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                verb: 'tener',
+                subject: 'ella',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                verb: 'tener',
+                subject: 'ustedes',
+                answer: 'tienen',
+                options: ['tengo', 'tiene', 'tenemos', 'tienen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Ser / estar / tener / ir
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica la frase con el verbo correcto.',
+        categories: ['Ser', 'Estar', 'Tener'],
+        items: [
+            { text: 'Soy un jaguar', category: 'Ser' },
+            { text: 'Estoy feliz', category: 'Estar' },
+            { text: 'Tengo cinco años', category: 'Tener' },
+            { text: 'Es mi madre', category: 'Ser' },
+            { text: 'Está junto al río', category: 'Estar' },
+            { text: 'Tiene hambre', category: 'Tener' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — Pregunta y respuesta
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: ¿pregunta o respuesta?',
+        categories: ['Pregunta', 'Respuesta'],
+        items: [
+            { text: '¿Cómo te llamas?', category: 'Pregunta' },
+            { text: 'Me llamo Yaguará.', category: 'Respuesta' },
+            { text: '¿Cuántos años tienes?', category: 'Pregunta' },
+            { text: 'Tengo cinco años.', category: 'Respuesta' },
+            { text: '¿Dónde vives?', category: 'Pregunta' },
+            { text: 'Vivo junto al río.', category: 'Respuesta' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Presentación completa 1
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['Soy', 'Yaguará', 'Tengo', 'cinco', 'años'],
+        answer: 'Soy Yaguará Tengo cinco años'
+    },
+
+    /* ============================================================
+       17. BUILDER — Presentación completa 2
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['junto', 'al', 'Vivo', 'río', 'con', 'mi', 'familia'],
+        answer: 'Vivo junto al río con mi familia'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — Presentación completa
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Abuela Ceiba', text: '¿Quién eres tú, viajero?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Soy Yaguará. Tengo cinco años. Vivo junto al río. Me gusta el bosque.', 'Es la una.', 'Mi casa está lejos.', 'Los verbos son lo que hacemos.'],
+                answer: 'Soy Yaguará. Tengo cinco años. Vivo junto al río. Me gusta el bosque.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — ¿Por qué estás aquí?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Abuela Ceiba', text: '¿Por qué estás aquí?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Porque quiero aprender. Porque me gusta el bosque.', 'Son las ocho.', 'Tengo un hermano.', 'La casa es grande.'],
+                answer: 'Porque quiero aprender. Porque me gusta el bosque.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — La palabra de Abuela Ceiba
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Ahora tienes nombre. Escucha.',
+        answer: 'Ahora tienes nombre. Escucha.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara de la identidad',
+            description: 'Una cueva profunda entre las raíces de la Abuela Ceiba. En el centro hay una piedra pulida como un espejo. Cuando miras, ves tu reflejo. Las paredes tienen dibujos de todo el viaje: la familia, la casa, los animales, los verbos.',
+            ambience: 'heartbeat'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'El espejo de piedra pregunta:',
+                riddle: '«Tienes un nombre. Tienes una familia. Tienes una casa. Tienes verbos. ¿Quién eres cuando nadie te mira?»',
+                clue: 'La respuesta eres tú.',
+                answer: 'Yo soy yo',
+                options: ['Yo soy yo', 'Soy un animal', 'Soy un nombre', 'Soy un verbo'],
+                onSolve: 'El espejo brilla con luz dorada.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Hay letras en las raíces alrededor del espejo.',
+                clue: 'La palabra que Abuela Ceiba da a Yaguará. Es un verbo. Siete letras.',
+                answer: 'escucha',
+                scrambled: 'cuhceas',
+                onSolve: 'Las raíces brillan.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una última cerradura debajo del espejo.',
+                clue: 'Todo empieza con esto. Abuela Ceiba dice: «Ahora tienes _____.» Seis letras.',
+                answer: 'nombre',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'El espejo se abre. Una luz sale del centro. La espiral de raíces está completa.'
+            }
+        ],
+        fragment: {
+            text: 'La espiral de raíces se completa. Doce raíces forman un círculo. En el centro, una palabra brilla: Escucha.',
+            questClue: 'Quien tiene nombre existe. Quien escucha, entiende.',
+            item: 'raiz-identidad'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1d12',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Dest12Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

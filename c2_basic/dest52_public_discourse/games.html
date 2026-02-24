@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 52: Voces que transforman &mdash; Discurso p&uacute;blico</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_basic/dest52_public_discourse/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 52: Voces que transforman — Discurso público",
+          "url": "https://babelfree.com/c2_basic/dest52_public_discourse/games",
+          "educationalLevel": "C2 - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Public discourse", "Public speaking", "Spanish oratory"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Basic", "item": "https://babelfree.com/c2-bogota" },
+            { "@type": "ListItem", "position": 4, "name": "Voces que transforman — Discurso público" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-bogota" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 52: Voces que transforman</div>
+            <div class="yg-header-subtitle">Discurso p&uacute;blico</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — El poder de la palabra p\u00fablica ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre que el discurso p\u00fablico no solo comunica: transforma. Observa la diferencia entre informar y persuadir.',
+        text: 'En la Plaza de Bol\u00edvar, Yaguar\u00e1 presenci\u00f3 algo que la detuvo: un joven con un meg\u00e1fono le\u00eda un manifiesto ante un centenar de personas que escuchaban en silencio. No les estaba informando de nada que no supieran; les estaba dando las palabras para nombrar lo que sent\u00edan. Y en ese acto \u2014dar nombre a lo innombrado\u2014 resid\u00eda todo el poder del discurso p\u00fablico. Una conferencia, un manifiesto, una columna de opini\u00f3n, un discurso pol\u00edtico: todos compart\u00edan la misma ambici\u00f3n: no solo comunicar una idea, sino transformar la perspectiva de quien escucha. El orador no hablaba para s\u00ed mismo; hablaba para que el mundo, al escucharlo, fuera ligeramente distinto al mundo de antes. Yaguar\u00e1 comprendi\u00f3 que el dominio del discurso p\u00fablico era la prueba final de la competencia C2: la capacidad de usar la lengua no como espejo, sino como palanca.'
+    },
+    // === GAME 2: Narrative — La ret\u00f3rica cl\u00e1sica y el discurso moderno ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre los tres pilares de la ret\u00f3rica cl\u00e1sica y c\u00f3mo operan en el discurso p\u00fablico contempor\u00e1neo.',
+        text: 'En una clase de oratoria en la Universidad Nacional, Yaguar\u00e1 aprendi\u00f3 que Arist\u00f3teles hab\u00eda identificado tres herramientas de persuasi\u00f3n que, veinticuatro siglos despu\u00e9s, segu\u00edan vigentes. El ethos: la credibilidad del orador. Antes de escuchar lo que dices, el p\u00fablico eval\u00faa qui\u00e9n eres. Un m\u00e9dico que habla de salud tiene ethos; un pol\u00edtico corrupto que habla de honestidad, no. El pathos: la emoci\u00f3n. Un argumento que solo apela a la raz\u00f3n convence, pero no moviliza. Las historias personales, las im\u00e1genes vívidas, las met\u00e1foras que golpean la sensibilidad son las que hacen que el p\u00fablico no solo entienda, sino que sienta. Y el logos: la estructura l\u00f3gica. Sin evidencia, sin datos, sin razonamiento coherente, el discurso m\u00e1s emotivo se convierte en demagogia. El orador maestro integra los tres en una sola voz: es cre\u00edble, conmueve y razona.'
+    },
+    // === GAME 3: Narrative — La columna de opini\u00f3n como g\u00e9nero ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la columna de opini\u00f3n como g\u00e9nero que combina an\u00e1lisis, posicionamiento y estilo personal.',
+        text: 'Al d\u00eda siguiente, Yaguar\u00e1 ley\u00f3 una columna de opini\u00f3n en un peri\u00f3dico bogotano. La columnista escrib\u00eda: \u00abEl problema de Colombia no es la violencia, sino la costumbre de la violencia. Nos hemos acostumbrado a contar muertos como quien cuenta lluvia: con resignaci\u00f3n meteorol\u00f3gica, como si fuera un fen\u00f3meno natural y no una decisi\u00f3n pol\u00edtica.\u00bb La columna de opini\u00f3n, comprendi\u00f3 Yaguar\u00e1, no era un art\u00edculo period\u00edstico ni un ensayo acad\u00e9mico: era un h\u00edbrido que exig\u00eda posicionamiento expl\u00edcito, brevedad argumentativa, estilo personal inconfundible y una capacidad para condensar una idea compleja en una imagen que se le clavara al lector en la memoria. No bastaba con tener raz\u00f3n: hab\u00eda que tenerla de un modo que resultara imposible de ignorar.'
+    },
+    // === GAME 4: Narrative — El discurso pol\u00edtico: estrategias de persuasi\u00f3n ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre las estrategias ling\u00fc\u00edsticas del discurso pol\u00edtico. Observa c\u00f3mo las palabras se eligen para construir realidades.',
+        text: 'En el Congreso, Yaguar\u00e1 observ\u00f3 c\u00f3mo los pol\u00edticos no usaban el lenguaje para describir la realidad, sino para construirla. Un senador dec\u00eda \u00abajuste fiscal\u00bb donde un ciudadano dec\u00eda \u00abrecorte de presupuesto\u00bb. Una congresista hablaba de \u00abda\u00f1os colaterales\u00bb donde una v\u00edctima hablaba de \u00abmuertos inocentes\u00bb. El eufemismo pol\u00edtico no era un descuido: era una estrategia deliberada para controlar la percepci\u00f3n. Quien nombraba, controlaba. El hablante C2 no solo deb\u00eda reconocer estas estrategias \u2014el framing, la nominalizaci\u00f3n, la pasivizaci\u00f3n (\u00abse cometieron errores\u00bb en lugar de \u00abnosotros cometimos errores\u00bb), el uso de primera persona plural inclusiva (\u00abtodos debemos hacer sacrificios\u00bb)\u2014, sino ser capaz de emplearlas y, sobre todo, de desmontarlas cr\u00edticamente.'
+    },
+    // === GAME 5: Narrative — Garc\u00eda M\u00e1rquez ante la Academia ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el discurso de Gabriel Garc\u00eda M\u00e1rquez ante la Real Academia de la Lengua y su propuesta de simplificar la ortograf\u00eda.',
+        text: 'Aquella noche, Yaguar\u00e1 encontr\u00f3 el texto de un discurso legendario: el que Garc\u00eda M\u00e1rquez pronunci\u00f3 en el Primer Congreso Internacional de la Lengua Espa\u00f1ola en 1997. El Nobel colombiano hab\u00eda propuesto, con su iron\u00eda caracter\u00edstica, \u00abjubilar la ortograf\u00eda, terror del ser humano desde la cuna\u00bb. Ped\u00eda eliminar las letras mudas, simplificar las reglas de acentuaci\u00f3n y liberar al espa\u00f1ol de \u00ablos grilletes normativos\u00bb. El discurso hab\u00eda generado un esc\u00e1ndalo precisamente porque cumpli\u00f3 la funci\u00f3n de todo gran discurso p\u00fablico: no buscaba tener raz\u00f3n, sino provocar un debate que obligara a la sociedad a pensar sobre algo que daba por sentado. Un discurso que no incomoda a nadie, comprendi\u00f3 Yaguar\u00e1, es un discurso in\u00fatil.'
+    },
+    // === GAME 6: Narrative — La oratoria como acto de justicia ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final sobre el discurso p\u00fablico como herramienta de justicia social. Observa c\u00f3mo la palabra puede ser un instrumento de transformaci\u00f3n.',
+        text: 'Al final de la semana, Yaguar\u00e1 asisti\u00f3 a una audiencia de la Comisi\u00f3n de la Verdad donde una l\u00edder ind\u00edgena del Cauca tom\u00f3 el micr\u00f3fono y dijo: \u00abNosotras no pedimos venganza. Pedimos que nos escuchen. Que las palabras que decimos hoy no se pierdan como se perdieron las de nuestras abuelas. Que este pa\u00eds entienda que la paz no se firma: se habla. Y para hablarla, primero hay que aprender a escuchar a quienes nunca tuvieron voz.\u00bb El silencio que sigui\u00f3 no fue vac\u00edo: fue el sonido de un centenar de personas replanteando lo que cre\u00edan saber sobre la justicia. Yaguar\u00e1 entendi\u00f3 que el discurso p\u00fablico, en su forma m\u00e1s pura, no era un ejercicio de poder sino un acto de justicia: devolver la palabra a quienes hab\u00edan sido obligados al silencio.'
+    },
+    // === GAME 7: FIB — Estrategias ret\u00f3ricas ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica la estrategia ret\u00f3rica empleada en cada fragmento de discurso p\u00fablico.',
+        questions: [
+            {
+                sentence: '\u00abComo m\u00e9dico con treinta a\u00f1os de experiencia en salud p\u00fablica, puedo asegurarles que...\u00bb Esta estrategia construye ___.',
+                answer: 'ethos (credibilidad del orador)',
+                options: ['ethos (credibilidad del orador)', 'pathos (emoci\u00f3n)', 'logos (l\u00f3gica)', 'iron\u00eda']
+            },
+            {
+                sentence: '\u00abImaginen a una ni\u00f1a de siete a\u00f1os caminando tres horas para llegar a una escuela que no tiene ni techo.\u00bb Esta estrategia apela al ___.',
+                answer: 'pathos (emoci\u00f3n a trav\u00e9s de imagen vívida)',
+                options: ['pathos (emoci\u00f3n a trav\u00e9s de imagen vívida)', 'ethos (autoridad)', 'logos (dato estad\u00edstico)', 'humor']
+            },
+            {
+                sentence: '\u00abSeg\u00fan el DANE, el 39,3 por ciento de la poblaci\u00f3n colombiana vive en condiciones de pobreza multidimensional.\u00bb Esta estrategia emplea ___.',
+                answer: 'logos (evidencia estad\u00edstica)',
+                options: ['logos (evidencia estad\u00edstica)', 'pathos (emoci\u00f3n)', 'ethos (credibilidad)', 'falacia']
+            },
+            {
+                sentence: '\u00abO estamos con la paz o estamos contra Colombia.\u00bb Esta construcci\u00f3n emplea un ___.',
+                answer: 'falso dilema (falacia l\u00f3gica)',
+                options: ['falso dilema (falacia l\u00f3gica)', 'silogismo v\u00e1lido', 'argumento de autoridad', 'hedging acad\u00e9mico']
+            }
+        ]
+    },
+    // === GAME 8: FIB — Eufemismo pol\u00edtico y lenguaje directo ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada par de eufemismo pol\u00edtico y su equivalente en lenguaje directo.',
+        questions: [
+            {
+                sentence: 'Eufemismo: \u00abAjuste fiscal.\u00bb → Directo: \u00ab___.\u00bb',
+                answer: 'Recorte de presupuesto',
+                options: ['Recorte de presupuesto', 'M\u00e1s impuestos', 'Bonanza econ\u00f3mica', 'Inversi\u00f3n social']
+            },
+            {
+                sentence: 'Eufemismo: \u00abDa\u00f1os colaterales.\u00bb → Directo: \u00ab___.\u00bb',
+                answer: 'V\u00edctimas civiles inocentes',
+                options: ['V\u00edctimas civiles inocentes', 'Gastos adicionales', 'Errores menores', 'Efectos secundarios']
+            },
+            {
+                sentence: 'Eufemismo: \u00abSe cometieron errores.\u00bb → Directo: \u00ab___.\u00bb',
+                answer: 'El gobierno cometi\u00f3 errores',
+                options: ['El gobierno cometi\u00f3 errores', 'Hubo problemas', 'La situaci\u00f3n fue compleja', 'Nadie tuvo la culpa']
+            },
+            {
+                sentence: 'Eufemismo: \u00abCrecimiento negativo.\u00bb → Directo: \u00ab___.\u00bb',
+                answer: 'Recesi\u00f3n econ\u00f3mica',
+                options: ['Recesi\u00f3n econ\u00f3mica', 'Crecimiento lento', 'Estabilidad', 'Progreso moderado']
+            }
+        ]
+    },
+    // === GAME 9: FIB — Recursos de la oratoria ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica el recurso orat\u00f3rico empleado en cada fragmento de discurso p\u00fablico.',
+        questions: [
+            {
+                sentence: '\u00abYo tengo un sue\u00f1o... Yo tengo un sue\u00f1o... Yo tengo un sue\u00f1o...\u00bb Este recurso se llama ___.',
+                answer: 'an\u00e1fora (repetici\u00f3n al inicio)',
+                options: ['an\u00e1fora (repetici\u00f3n al inicio)', 'ep\u00edfora', 'paralelismo', 'antítesis']
+            },
+            {
+                sentence: '\u00abNo pregunten qu\u00e9 puede hacer su pa\u00eds por ustedes, sino qu\u00e9 pueden hacer ustedes por su pa\u00eds.\u00bb Este recurso se llama ___.',
+                answer: 'quiasmo (inversi\u00f3n sim\u00e9trica)',
+                options: ['quiasmo (inversi\u00f3n sim\u00e9trica)', 'an\u00e1fora', 'met\u00e1fora', 'hip\u00e9rbole']
+            },
+            {
+                sentence: '\u00abVengo del pueblo, hablo como el pueblo, lucho por el pueblo.\u00bb Este recurso combina ___.',
+                answer: 'an\u00e1fora con ep\u00edfora (repetici\u00f3n al inicio y al final)',
+                options: ['an\u00e1fora con ep\u00edfora (repetici\u00f3n al inicio y al final)', 'solo met\u00e1fora', 'solo iron\u00eda', 'solo hip\u00e9rbole']
+            },
+            {
+                sentence: '\u00abEs hora de menos palabras y m\u00e1s hechos, menos promesas y m\u00e1s resultados.\u00bb Este recurso se llama ___.',
+                answer: 'antítesis (contraste de opuestos)',
+                options: ['antítesis (contraste de opuestos)', 'hip\u00e9rbole', 'personificaci\u00f3n', 'metonimia']
+            }
+        ]
+    },
+    // === GAME 10: FIB — An\u00e1lisis cr\u00edtico del discurso ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Analiza cr\u00edticamente las estrategias ling\u00fc\u00edsticas del discurso pol\u00edtico.',
+        questions: [
+            {
+                sentence: 'Cuando un pol\u00edtico dice \u00abtodos debemos hacer sacrificios\u00bb, el uso del pronombre \u00abtodos\u00bb cumple la funci\u00f3n de ___ la responsabilidad.',
+                answer: 'diluir',
+                options: ['diluir', 'concentrar', 'eliminar', 'transferir']
+            },
+            {
+                sentence: 'La nominalizaci\u00f3n \u00abla destrucci\u00f3n del ecosistema\u00bb oculta al ___ de la acci\u00f3n al eliminar el verbo conjugado.',
+                answer: 'agente',
+                options: ['agente', 'paciente', 'destinatario', 'beneficiario']
+            },
+            {
+                sentence: 'En el framing, elegir entre \u00abinmigrante ilegal\u00bb o \u00abpersona en situaci\u00f3n migratoria irregular\u00bb cambia la ___ del receptor hacia el mismo fen\u00f3meno.',
+                answer: 'percepci\u00f3n',
+                options: ['percepci\u00f3n', 'informaci\u00f3n', 'gram\u00e1tica', 'pronunciaci\u00f3n']
+            }
+        ]
+    },
+    // === GAME 11: FIB — Conectores argumentativos en el discurso p\u00fablico ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el conector argumentativo que mejor articula cada fragmento de discurso p\u00fablico.',
+        questions: [
+            {
+                sentence: 'La econom\u00eda ha crecido un tres por ciento. ___, la desigualdad se ha profundizado.',
+                answer: 'Sin embargo',
+                options: ['Sin embargo', 'Por lo tanto', 'En efecto', 'Adem\u00e1s']
+            },
+            {
+                sentence: 'No se trata \u00fanicamente de un problema econ\u00f3mico. ___, es una cuesti\u00f3n de derechos humanos.',
+                answer: 'Ante todo',
+                options: ['Ante todo', 'No obstante', 'En cambio', 'A pesar de ello']
+            },
+            {
+                sentence: 'La evidencia es contundente; ___, no podemos seguir postergando la acci\u00f3n.',
+                answer: 'por consiguiente',
+                options: ['por consiguiente', 'sin embargo', 'a pesar de todo', 'en cambio']
+            },
+            {
+                sentence: 'Se nos ha dicho que no hay alternativa. ___ que s\u00ed la hay, y est\u00e1 en nuestras manos construirla.',
+                answer: 'Pues bien, yo afirmo',
+                options: ['Pues bien, yo afirmo', 'No obstante, acepto', 'En efecto, confirmo', 'Sin embargo, dudo']
+            }
+        ]
+    },
+    // === GAME 12: Conjugation — Verbos performativos en el discurso p\u00fablico ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Los verbos performativos ejecutan una acci\u00f3n al ser pronunciados. Elige la forma correcta para cada acto de habla p\u00fablico.',
+        questions: [
+            {
+                verb: 'declarar (presente performativo)',
+                subject: 'el presidente \u2014 \u00abPor la presente, ... el estado de emergencia en la zona afectada.\u00bb',
+                answer: 'declaro',
+                options: ['declaro', 'declar\u00e9', 'declarar\u00eda', 'declare']
+            },
+            {
+                verb: 'comprometerse (presente performativo)',
+                subject: 'la candidata \u2014 \u00abAnte ustedes, me ... a gobernar con transparencia.\u00bb',
+                answer: 'comprometo',
+                options: ['comprometo', 'compro\u00ed', 'comprometer\u00eda', 'comprometa']
+            },
+            {
+                verb: 'exhortar (presente)',
+                subject: 'el orador \u2014 \u00ab... a todos los ciudadanos a ejercer su derecho al voto.\u00bb',
+                answer: 'Exhorto',
+                options: ['Exhorto', 'Exhort\u00e9', 'Exhortar\u00eda', 'Exhorte']
+            },
+            {
+                verb: 'denunciar (presente)',
+                subject: 'la activista \u2014 \u00abDesde esta tribuna, ... la impunidad que ampara a los responsables.\u00bb',
+                answer: 'denuncio',
+                options: ['denuncio', 'denunci\u00e9', 'denunciar\u00eda', 'denuncie']
+            }
+        ]
+    },
+    // === GAME 13: Conjugation — Subjuntivo en apelaciones p\u00fablicas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'El subjuntivo en el discurso p\u00fablico expresa deseo, demanda y posibilidad. Elige la forma correcta.',
+        questions: [
+            {
+                verb: 'escuchar (presente de subjuntivo)',
+                subject: '\u2014 \u00abEs imperativo que el gobierno... a las comunidades antes de legislar.\u00bb',
+                answer: 'escuche',
+                options: ['escuche', 'escucha', 'escuchara', 'escuchar\u00e1']
+            },
+            {
+                verb: 'prevalecer (presente de subjuntivo)',
+                subject: '\u2014 \u00abExigimos que la justicia... sobre la impunidad.\u00bb',
+                answer: 'prevalezca',
+                options: ['prevalezca', 'prevalece', 'prevaleciera', 'prevalecer\u00e1']
+            },
+            {
+                verb: 'haber (imperfecto de subjuntivo)',
+                subject: '\u2014 \u00abSi... verdadera voluntad pol\u00edtica, la paz ser\u00eda posible.\u00bb',
+                answer: 'hubiera',
+                options: ['hubiera', 'hay', 'haya', 'habr\u00eda']
+            },
+            {
+                verb: 'invertir (pluscuamperfecto de subjuntivo)',
+                subject: '\u2014 \u00abSi el Estado... en educaci\u00f3n hace treinta a\u00f1os, no estar\u00edamos lamentando esta crisis.\u00bb',
+                answer: 'hubiera invertido',
+                options: ['hubiera invertido', 'ha invertido', 'invirtiera', 'invertir\u00eda']
+            }
+        ]
+    },
+    // === GAME 14: Conjugation — Tiempos del discurso pol\u00edtico ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'El discurso pol\u00edtico manipula los tiempos verbales estrat\u00e9gicamente. Elige la forma que produce el efecto indicado.',
+        questions: [
+            {
+                verb: 'llegar (presente hist\u00f3rico \u2014 dramatizaci\u00f3n)',
+                subject: '\u2014 \u00abA\u00f1o 1991. Colombia... a un momento decisivo. Se convoca una Asamblea Constituyente.\u00bb',
+                answer: 'llega',
+                options: ['llega', 'lleg\u00f3', 'hab\u00eda llegado', 'llegar\u00e1']
+            },
+            {
+                verb: 'construir (futuro \u2014 promesa pol\u00edtica)',
+                subject: '\u2014 \u00abJuntos... el pa\u00eds que nuestros hijos merecen.\u00bb',
+                answer: 'construiremos',
+                options: ['construiremos', 'constru\u00edamos', 'construyamos', 'construir\u00edamos']
+            },
+            {
+                verb: 'poder (condicional \u2014 posibilidad contrafactual)',
+                subject: '\u2014 \u00abCon una inversi\u00f3n del dos por ciento del PIB, se... erradicar la pobreza extrema en una d\u00e9cada.\u00bb',
+                answer: 'podr\u00eda',
+                options: ['podr\u00eda', 'puede', 'pudo', 'pudiera']
+            },
+            {
+                verb: 'exigir (imperativo colectivo \u2014 movilizaci\u00f3n)',
+                subject: '\u2014 \u00ab\u00a1... lo que nos pertenece por derecho!\u00bb',
+                answer: 'Exijamos',
+                options: ['Exijamos', 'Exijan', 'Exigiremos', 'Exig\u00edamos']
+            }
+        ]
+    },
+    // === GAME 15: Conjugation — Verbos de opini\u00f3n en columnas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'En las columnas de opini\u00f3n, los verbos de posicionamiento marcan el grado de compromiso del autor. Elige la forma adecuada.',
+        questions: [
+            {
+                verb: 'considerar (presente \u2014 posicionamiento moderado)',
+                subject: 'el columnista \u2014 \u00ab... que la propuesta merece un an\u00e1lisis m\u00e1s profundo.\u00bb',
+                answer: 'Considero',
+                options: ['Considero', 'Consideraba', 'Considerara', 'Considerar\u00e9']
+            },
+            {
+                verb: 'resultar + inadmisible (presente \u2014 posicionamiento fuerte)',
+                subject: '\u2014 \u00ab... que un pa\u00eds con la riqueza de Colombia tenga \u00edndices de desnutrici\u00f3n infantil del diecis\u00e9is por ciento.\u00bb',
+                answer: 'Resulta inadmisible',
+                options: ['Resulta inadmisible', 'Resultar\u00eda inadmisible', 'Resulta normal', 'Result\u00f3 inadmisible']
+            },
+            {
+                verb: 'caber + preguntarse (presente impersonal)',
+                subject: '\u2014 \u00ab... si las pol\u00edticas actuales responden verdaderamente a las necesidades de la poblaci\u00f3n.\u00bb',
+                answer: 'Cabe preguntarse',
+                options: ['Cabe preguntarse', 'Hay que preguntar', 'Me pregunto', 'Se pregunta']
+            }
+        ]
+    },
+    // === GAME 16: Pair — Estrategia ret\u00f3rica y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada estrategia ret\u00f3rica con el ejemplo que la ilustra.',
+        pairs: [
+            ['Ethos (credibilidad)', '\u00abComo sobreviviente de la violencia, s\u00e9 de lo que hablo cuando pido reconciliaci\u00f3n.\u00bb'],
+            ['Pathos (emoci\u00f3n)', '\u00abCierren los ojos e imaginen que ma\u00f1ana su hijo no puede ir a la escuela porque la cerraron por falta de fondos.\u00bb'],
+            ['Logos (evidencia)', '\u00abSeg\u00fan el informe del Banco Mundial, cada a\u00f1o de educaci\u00f3n adicional incrementa los ingresos en un diez por ciento.\u00bb'],
+            ['An\u00e1fora (repetici\u00f3n)', '\u00abQueremos paz. Queremos justicia. Queremos dignidad. Y no vamos a dejar de pedirlo.\u00bb'],
+            ['Antítesis (contraste)', '\u00abNo pedimos caridad: pedimos derechos. No suplicamos: exigimos.\u00bb'],
+            ['Pregunta ret\u00f3rica', '\u00ab\u00bfHasta cu\u00e1ndo vamos a tolerar que la impunidad sea la regla y la justicia la excepci\u00f3n?\u00bb']
+        ]
+    },
+    // === GAME 17: Pair — Framing: misma realidad, distinto encuadre ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada encuadre (framing) con la perspectiva ideol\u00f3gica que favorece.',
+        pairs: [
+            ['\u00abInmigrante ilegal\u00bb', 'Criminaliza a la persona, favorece pol\u00edticas restrictivas'],
+            ['\u00abPersona en situaci\u00f3n migratoria irregular\u00bb', 'Humaniza al individuo, favorece pol\u00edticas de acogida'],
+            ['\u00abFlexibilizaci\u00f3n laboral\u00bb', 'Presenta la reducci\u00f3n de derechos laborales como modernizaci\u00f3n'],
+            ['\u00abPrecarizaci\u00f3n del empleo\u00bb', 'Presenta la misma medida como deterioro de las condiciones de trabajo'],
+            ['\u00abSeguridad democr\u00e1tica\u00bb', 'Asocia las pol\u00edticas militares con la defensa de la democracia'],
+            ['\u00abMilitarizaci\u00f3n del conflicto\u00bb', 'Presenta las mismas pol\u00edticas como escalada b\u00e9lica']
+        ]
+    },
+    // === GAME 18: Pair — Funci\u00f3n del recurso en el discurso ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada recurso del discurso p\u00fablico con su funci\u00f3n comunicativa principal.',
+        pairs: [
+            ['Pregunta ret\u00f3rica', 'Dirigir la conclusi\u00f3n del oyente sin afirmarla expl\u00edcitamente'],
+            ['An\u00e9cdota personal', 'Generar empat\u00eda y hacer tangible un problema abstracto'],
+            ['Dato estad\u00edstico', 'Dar respaldo emp\u00edrico a una afirmaci\u00f3n y reforzar el logos'],
+            ['Cita de autoridad', 'Transferir la credibilidad de una fuente respetada al propio argumento'],
+            ['Enumeraci\u00f3n triple', 'Crear ritmo, sensaci\u00f3n de completitud y memorizabilidad']
+        ]
+    },
+    // === GAME 19: Listening — An\u00e1lisis de discurso pol\u00edtico ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento de discurso pol\u00edtico e identifica la estrategia ret\u00f3rica principal.',
+        audio: 'Compatriotas: hoy no vengo a hablarles como presidente, sino como un colombiano m\u00e1s que, igual que ustedes, se levanta cada ma\u00f1ana con la esperanza de un pa\u00eds mejor. Porque yo tambi\u00e9n soy hijo de esta tierra, yo tambi\u00e9n he sufrido, yo tambi\u00e9n he llorado. Y por eso les digo: juntos, solo juntos, podremos construir la Colombia que so\u00f1amos.',
+        question: '\u00bfQu\u00e9 estrategias ret\u00f3ricas combina este fragmento?',
+        answer: 'Ethos (identificaci\u00f3n con el oyente), pathos (apelaci\u00f3n emocional) y an\u00e1fora (\u00abyo tambi\u00e9n\u00bb)',
+        options: ['Ethos (identificaci\u00f3n con el oyente), pathos (apelaci\u00f3n emocional) y an\u00e1fora (\u00abyo tambi\u00e9n\u00bb)', 'Solo logos (datos estad\u00edsticos)', 'Solo iron\u00eda y humor', 'Ninguna estrategia reconocible']
+    },
+    // === GAME 20: Listening — Detectar manipulaci\u00f3n ling\u00fc\u00edstica ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento y detecta la estrategia de manipulaci\u00f3n ling\u00fc\u00edstica.',
+        audio: 'Lamentablemente, se cometieron errores que afectaron a la poblaci\u00f3n civil. El gobierno lamenta profundamente las consecuencias no deseadas de las operaciones de seguridad.',
+        question: '\u00bfQu\u00e9 estrategia ling\u00fc\u00edstica usa este comunicado para evadir la responsabilidad?',
+        answer: 'Pasivizaci\u00f3n (\u00abse cometieron errores\u00bb oculta al agente) y eufemismo (\u00abconsecuencias no deseadas\u00bb en lugar de \u00abv\u00edctimas\u00bb)',
+        options: ['Pasivizaci\u00f3n (\u00abse cometieron errores\u00bb oculta al agente) y eufemismo (\u00abconsecuencias no deseadas\u00bb en lugar de \u00abv\u00edctimas\u00bb)', 'Iron\u00eda deliberada para provocar al p\u00fablico', 'Uso de datos estad\u00edsticos para confundir', 'Apelaci\u00f3n directa a la emoci\u00f3n del oyente']
+    },
+    // === GAME 21: Listening — Columna de opini\u00f3n ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento de columna de opini\u00f3n e identifica la tesis del autor.',
+        audio: 'El problema de Colombia no es la violencia, sino la costumbre de la violencia. Nos hemos acostumbrado a contar muertos como quien cuenta lluvia: con resignaci\u00f3n meteorol\u00f3gica, como si fuera un fen\u00f3meno natural y no una decisi\u00f3n pol\u00edtica. Y esa costumbre, esa normalizaci\u00f3n del horror, es quiz\u00e1s m\u00e1s da\u00f1ina que la violencia misma.',
+        question: '\u00bfCu\u00e1l es la tesis central de este fragmento?',
+        answer: 'Que la normalizaci\u00f3n de la violencia es m\u00e1s peligrosa que la violencia misma',
+        options: ['Que la normalizaci\u00f3n de la violencia es m\u00e1s peligrosa que la violencia misma', 'Que Colombia es un pa\u00eds violento', 'Que la lluvia es un problema en Colombia', 'Que los colombianos no saben contar']
+    },
+    // === GAME 22: Listening — Discurso de aceptaci\u00f3n ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha un fragmento inspirado en discursos de aceptaci\u00f3n de premios y analiza su estructura.',
+        audio: 'Recibo este reconocimiento no como un premio personal, sino como un homenaje a las miles de voces que nunca fueron escuchadas, a los nombres que el viento se llev\u00f3, a las historias que se quedaron atrapadas en el silencio. Si mi voz ha servido de algo, ha sido porque tuvo el privilegio de hacerse eco de quienes no pudieron hablar. Este premio no es m\u00edo: es de ellos.',
+        question: '\u00bfQu\u00e9 recurso ret\u00f3rico principal emplea el orador?',
+        answer: 'Humildad estrat\u00e9gica: redirige el m\u00e9rito personal hacia un colectivo, reforzando su ethos moral',
+        options: ['Humildad estrat\u00e9gica: redirige el m\u00e9rito personal hacia un colectivo, reforzando su ethos moral', 'Falsa modestia sin prop\u00f3sito ret\u00f3rico', 'Queja p\u00fablica sobre la falta de reconocimiento', 'Rechazo del premio por motivos ideol\u00f3gicos']
+    },
+    // === GAME 23: Sorting — Tipo de discurso p\u00fablico ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fragmento seg\u00fan el tipo de discurso p\u00fablico al que pertenece.',
+        categories: ['Discurso pol\u00edtico', 'Columna de opini\u00f3n', 'Manifiesto', 'Conferencia acad\u00e9mica'],
+        items: [
+            { text: 'Compatriotas, hoy nuestro pa\u00eds se enfrenta a un momento decisivo en su historia.', category: 'Discurso pol\u00edtico' },
+            { text: 'Resulta inadmisible que, en pleno siglo veintiuno, la desigualdad siga siendo la constante y no la excepci\u00f3n.', category: 'Columna de opini\u00f3n' },
+            { text: 'Declaramos que la educaci\u00f3n es un derecho, no un privilegio, y exigimos su garant\u00eda universal e incondicional.', category: 'Manifiesto' },
+            { text: 'Los datos del estudio longitudinal revelan una correlaci\u00f3n significativa entre acceso a la educaci\u00f3n y movilidad social.', category: 'Conferencia acad\u00e9mica' },
+            { text: 'Les pido su voto no para beneficio propio, sino para construir juntos el futuro que merecemos.', category: 'Discurso pol\u00edtico' },
+            { text: 'Confieso que este pa\u00eds me produce una mezcla de rabia y ternura que no logro resolver en ninguna columna.', category: 'Columna de opini\u00f3n' },
+            { text: 'Nos negamos a aceptar que la pobreza sea un destino. Nos levantamos hoy para exigir dignidad.', category: 'Manifiesto' },
+            { text: 'Cabe se\u00f1alar que la hip\u00f3tesis de Sapir-Whorf ha sido matizada por investigaciones recientes.', category: 'Conferencia acad\u00e9mica' }
+        ]
+    },
+    // === GAME 24: Sorting — Estrategia de persuasi\u00f3n ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada recurso seg\u00fan el pilar ret\u00f3rico al que pertenece.',
+        categories: ['Ethos (credibilidad)', 'Pathos (emoci\u00f3n)', 'Logos (l\u00f3gica)'],
+        items: [
+            { text: 'Como m\u00e9dico con treinta a\u00f1os de experiencia, puedo afirmar que...', category: 'Ethos (credibilidad)' },
+            { text: 'Imaginen el rostro de esa madre que no tiene c\u00f3mo alimentar a sus hijos esta noche.', category: 'Pathos (emoci\u00f3n)' },
+            { text: 'El informe del DANE demuestra que la tasa de desempleo juvenil supera el veintitr\u00e9s por ciento.', category: 'Logos (l\u00f3gica)' },
+            { text: 'He dedicado mi vida a esta causa, y no pienso detenerme ahora.', category: 'Ethos (credibilidad)' },
+            { text: '\u00bfC\u00f3mo pueden dormir tranquilos sabiendo que miles de ni\u00f1os pasan hambre?', category: 'Pathos (emoci\u00f3n)' },
+            { text: 'Si cada a\u00f1o de educaci\u00f3n incrementa los ingresos en un diez por ciento, invertir en educaci\u00f3n es la pol\u00edtica m\u00e1s rentable.', category: 'Logos (l\u00f3gica)' }
+        ]
+    },
+    // === GAME 25: Sorting — Manipulaci\u00f3n ling\u00fc\u00edstica vs. persuasi\u00f3n leg\u00edtima ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada recurso seg\u00fan si constituye persuasi\u00f3n leg\u00edtima o manipulaci\u00f3n ling\u00fc\u00edstica.',
+        categories: ['Persuasi\u00f3n leg\u00edtima', 'Manipulaci\u00f3n ling\u00fc\u00edstica'],
+        items: [
+            { text: 'Presentar datos estad\u00edsticos de una fuente confiable para respaldar el argumento.', category: 'Persuasi\u00f3n leg\u00edtima' },
+            { text: 'Usar eufemismos como \u00abda\u00f1os colaterales\u00bb para ocultar la gravedad de los hechos.', category: 'Manipulaci\u00f3n ling\u00fc\u00edstica' },
+            { text: 'Contar una historia personal para generar empat\u00eda con el oyente.', category: 'Persuasi\u00f3n leg\u00edtima' },
+            { text: 'Usar pasivizaci\u00f3n (\u00abse cometieron errores\u00bb) para evitar nombrar al responsable.', category: 'Manipulaci\u00f3n ling\u00fc\u00edstica' },
+            { text: 'Citar a expertos reconocidos para dar autoridad al argumento.', category: 'Persuasi\u00f3n leg\u00edtima' },
+            { text: 'Plantear un falso dilema (\u00abo est\u00e1s conmigo o est\u00e1s contra el pa\u00eds\u00bb).', category: 'Manipulaci\u00f3n ling\u00fc\u00edstica' },
+            { text: 'Usar una pregunta ret\u00f3rica para invitar a la reflexi\u00f3n.', category: 'Persuasi\u00f3n leg\u00edtima' },
+            { text: 'Generalizar a partir de un solo caso (\u00abmi vecino no paga impuestos, luego nadie los paga\u00bb).', category: 'Manipulaci\u00f3n ling\u00fc\u00edstica' }
+        ]
+    },
+    // === GAME 26: Builder — Construir un argumento con ethos, pathos y logos ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir un argumento que integra los tres pilares ret\u00f3ricos.',
+        words: ['Como educadora', 'con veinte a\u00f1os de experiencia,', 'he visto c\u00f3mo', 'un ni\u00f1o pasa de la desesperanza', 'a la confianza', 'con el simple acto', 'de aprender a leer.', 'Los datos confirman', 'que la alfabetizaci\u00f3n temprana', 'reduce la pobreza en un treinta por ciento.'],
+        answer: 'Como educadora con veinte a\u00f1os de experiencia, he visto c\u00f3mo un ni\u00f1o pasa de la desesperanza a la confianza con el simple acto de aprender a leer. Los datos confirman que la alfabetizaci\u00f3n temprana reduce la pobreza en un treinta por ciento.'
+    },
+    // === GAME 27: Builder — Construir una tesis de columna de opini\u00f3n ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir la tesis de una columna de opini\u00f3n con imagen memorable.',
+        words: ['El problema de Colombia', 'no es la violencia,', 'sino la costumbre', 'de la violencia:', 'nos hemos acostumbrado', 'a contar muertos', 'como quien cuenta lluvia,', 'con resignaci\u00f3n meteorol\u00f3gica,', 'como si fuera', 'un fen\u00f3meno natural', 'y no una decisi\u00f3n pol\u00edtica.'],
+        answer: 'El problema de Colombia no es la violencia, sino la costumbre de la violencia: nos hemos acostumbrado a contar muertos como quien cuenta lluvia, con resignaci\u00f3n meteorol\u00f3gica, como si fuera un fen\u00f3meno natural y no una decisi\u00f3n pol\u00edtica.'
+    },
+    // === GAME 28: Builder — Construir una apelaci\u00f3n con an\u00e1fora ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir una apelaci\u00f3n p\u00fablica con an\u00e1fora y cl\u00edmax.',
+        words: ['Pedimos que nos escuchen.', 'Pedimos que las palabras', 'que decimos hoy', 'no se pierdan', 'como se perdieron', 'las de nuestras abuelas.', 'Pedimos que este pa\u00eds', 'entienda que la paz', 'no se firma:', 'se habla.'],
+        answer: 'Pedimos que nos escuchen. Pedimos que las palabras que decimos hoy no se pierdan como se perdieron las de nuestras abuelas. Pedimos que este pa\u00eds entienda que la paz no se firma: se habla.'
+    },
+    // === GAME 29: Translation — Discurso p\u00fablico ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol de discurso p\u00fablico usando el banco de palabras.',
+        source: 'We do not ask for charity: we demand rights. We do not beg: we claim what belongs to us by virtue of our dignity as human beings.',
+        words: ['No', 'pedimos', 'caridad', 'exigimos', 'derechos', 'suplicamos', 'reclamamos', 'lo', 'que', 'nos', 'pertenece', 'en', 'virtud', 'de', 'nuestra', 'dignidad', 'como', 'seres', 'humanos'],
+        answer: 'No pedimos caridad exigimos derechos No suplicamos reclamamos lo que nos pertenece en virtud de nuestra dignidad como seres humanos'
+    },
+    // === GAME 30: Translation — Columna de opini\u00f3n ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol de columna de opini\u00f3n usando el banco de palabras.',
+        source: 'It is unacceptable that a country with the wealth of Colombia has child malnutrition rates of sixteen percent. We cannot continue looking the other way.',
+        words: ['Resulta', 'inadmisible', 'que', 'un', 'pa\u00eds', 'con', 'la', 'riqueza', 'de', 'Colombia', 'tenga', '\u00edndices', 'desnutrici\u00f3n', 'infantil', 'del', 'diecis\u00e9is', 'por', 'ciento', 'No', 'podemos', 'seguir', 'mirando', 'hacia', 'otro', 'lado'],
+        answer: 'Resulta inadmisible que un pa\u00eds con la riqueza de Colombia tenga \u00edndices de desnutrici\u00f3n infantil del diecis\u00e9is por ciento No podemos seguir mirando hacia otro lado'
+    },
+    // === GAME 31: Translation — An\u00e1lisis cr\u00edtico ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol de an\u00e1lisis cr\u00edtico del discurso usando el banco de palabras.',
+        source: 'When a politician says "mistakes were made", the passive voice deliberately hides the agent of the action, allowing the speaker to acknowledge the error without assuming responsibility.',
+        words: ['Cuando', 'un', 'pol\u00edtico', 'dice', 'se', 'cometieron', 'errores', 'la', 'voz', 'pasiva', 'oculta', 'deliberadamente', 'al', 'agente', 'de', 'acci\u00f3n', 'permitiendo', 'que', 'el', 'orador', 'reconozca', 'error', 'sin', 'asumir', 'responsabilidad'],
+        answer: 'Cuando un pol\u00edtico dice se cometieron errores la voz pasiva oculta deliberadamente al agente de la acci\u00f3n permitiendo que el orador reconozca el error sin asumir la responsabilidad'
+    },
+    // === GAME 32: Conversation — Debate p\u00fablico sobre educaci\u00f3n ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate p\u00fablico sobre educaci\u00f3n en Colombia. Integra ethos, pathos y logos en tus intervenciones.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Moderador', text: 'La pregunta central de este debate es: \u00bfdeber\u00eda Colombia invertir m\u00e1s en educaci\u00f3n o en seguridad? El presupuesto es limitado. \u00bfCu\u00e1l es su posici\u00f3n?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Con el debido respeto, considero que el planteamiento mismo de la pregunta es problem\u00e1tico, porque presenta un falso dilema: la educaci\u00f3n no compite con la seguridad; la educa\u00e7i\u00f3n es seguridad. Los datos del Departamento Nacional de Planeaci\u00f3n demuestran que cada a\u00f1o adicional de escolaridad reduce la probabilidad de participaci\u00f3n en actividades il\u00edcitas en un catorce por ciento. Invertir en educaci\u00f3n es, en t\u00e9rminos econ\u00f3micos, la pol\u00edtica de seguridad m\u00e1s rentable y, en t\u00e9rminos \u00e9ticos, la m\u00e1s justa.',
+                    'Hay que invertir m\u00e1s en seguridad.',
+                    'Hay que invertir m\u00e1s en educaci\u00f3n.'
+                ],
+                answer: 'Con el debido respeto, considero que el planteamiento mismo de la pregunta es problem\u00e1tico, porque presenta un falso dilema: la educaci\u00f3n no compite con la seguridad; la educa\u00e7i\u00f3n es seguridad. Los datos del Departamento Nacional de Planeaci\u00f3n demuestran que cada a\u00f1o adicional de escolaridad reduce la probabilidad de participaci\u00f3n en actividades il\u00edcitas en un catorce por ciento. Invertir en educaci\u00f3n es, en t\u00e9rminos econ\u00f3micos, la pol\u00edtica de seguridad m\u00e1s rentable y, en t\u00e9rminos \u00e9ticos, la m\u00e1s justa.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Oponente', text: 'Eso suena muy bonito en teor\u00eda, pero la gente necesita seguridad hoy, no educaci\u00f3n para dentro de veinte a\u00f1os.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Entiendo la urgencia que plantea, y la comparto. Pero permítame se\u00f1alar que ese argumento parte de una premisa cuestionable: que la seguridad solo se logra con m\u00e1s polic\u00eda y m\u00e1s c\u00e1rceles. Llevamos d\u00e9cadas apostando por esa estrategia, y los resultados est\u00e1n a la vista. \u00bfNo ser\u00eda hora de preguntarnos si hacer lo mismo esperando resultados distintos no es, como dijo alguien c\u00e9lebre, la definici\u00f3n de la locura? La educaci\u00f3n no da resultados inmediatos, es cierto. Pero la estrategia de seguridad sin educaci\u00f3n tampoco los ha dado en sesenta a\u00f1os.',
+                    'Usted no entiende nada de educaci\u00f3n.',
+                    'Tiene raz\u00f3n, la seguridad es m\u00e1s importante.'
+                ],
+                answer: 'Entiendo la urgencia que plantea, y la comparto. Pero permítame se\u00f1alar que ese argumento parte de una premisa cuestionable: que la seguridad solo se logra con m\u00e1s polic\u00eda y m\u00e1s c\u00e1rceles. Llevamos d\u00e9cadas apostando por esa estrategia, y los resultados est\u00e1n a la vista. \u00bfNo ser\u00eda hora de preguntarnos si hacer lo mismo esperando resultados distintos no es, como dijo alguien c\u00e9lebre, la definici\u00f3n de la locura? La educaci\u00f3n no da resultados inmediatos, es cierto. Pero la estrategia de seguridad sin educaci\u00f3n tampoco los ha dado en sesenta a\u00f1os.'
+            }
+        ]
+    },
+    // === GAME 33: Conversation — Escribir una columna de opini\u00f3n ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Un editor te pide que redactes el cierre de una columna de opini\u00f3n sobre la conservaci\u00f3n ling\u00fc\u00edstica. Elige la mejor opci\u00f3n.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Editor', text: 'Tu columna sobre la desaparici\u00f3n de lenguas ind\u00edgenas en Colombia est\u00e1 casi lista. Solo falta el cierre. Necesito algo que se le quede al lector: una imagen, una pregunta, algo que no pueda olvidar. \u00bfQu\u00e9 propones?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Cada vez que una lengua desaparece, no muere un c\u00f3digo de comunicaci\u00f3n: muere una forma de so\u00f1ar, de nombrar las estrellas, de decirle al mundo que existe algo que ninguna otra lengua puede decir. Colombia tiene sesenta y cinco lenguas ind\u00edgenas. Cuando este siglo termine, \u00bfcu\u00e1ntas quedar\u00e1n? Y lo que es m\u00e1s importante: \u00bfqui\u00e9n se har\u00e1 responsable de cada silencio?',
+                    'En conclusi\u00f3n, hay que proteger las lenguas ind\u00edgenas.',
+                    'Las lenguas se mueren y eso es triste.'
+                ],
+                answer: 'Cada vez que una lengua desaparece, no muere un c\u00f3digo de comunicaci\u00f3n: muere una forma de so\u00f1ar, de nombrar las estrellas, de decirle al mundo que existe algo que ninguna otra lengua puede decir. Colombia tiene sesenta y cinco lenguas ind\u00edgenas. Cuando este siglo termine, \u00bfcu\u00e1ntas quedar\u00e1n? Y lo que es m\u00e1s importante: \u00bfqui\u00e9n se har\u00e1 responsable de cada silencio?'
+            }
+        ]
+    },
+    // === GAME 34: Dictation — Fragmento de discurso p\u00fablico ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe este fragmento de discurso p\u00fablico con an\u00e1fora y antítesis.',
+        audio: 'No pedimos caridad: exigimos derechos. No suplicamos: reclamamos lo que nos pertenece en virtud de nuestra dignidad como seres humanos.',
+        answer: 'No pedimos caridad: exigimos derechos. No suplicamos: reclamamos lo que nos pertenece en virtud de nuestra dignidad como seres humanos.'
+    },
+    // === GAME 35: Dictation — Cierre de columna de opini\u00f3n ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe este cierre de columna de opini\u00f3n con imagen memorable y pregunta ret\u00f3rica.',
+        audio: 'Cada vez que una lengua desaparece, no muere un c\u00f3digo de comunicaci\u00f3n: muere una forma de so\u00f1ar. Colombia tiene sesenta y cinco lenguas ind\u00edgenas. Cuando este siglo termine, \u00bfcu\u00e1ntas quedar\u00e1n?',
+        answer: 'Cada vez que una lengua desaparece, no muere un c\u00f3digo de comunicaci\u00f3n: muere una forma de so\u00f1ar. Colombia tiene sesenta y cinco lenguas ind\u00edgenas. Cuando este siglo termine, \u00bfcu\u00e1ntas quedar\u00e1n?'
+    },
+    // === GAME 36: Story — Voces que transforman ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el texto sobre la experiencia de Yaguar\u00e1 con el discurso p\u00fablico y responde las preguntas de an\u00e1lisis.',
+        title: 'La palabra como palanca',
+        text: 'Al final de su semana dedicada al discurso p\u00fablico, Yaguar\u00e1 hab\u00eda escuchado a pol\u00edticos mentir con elegancia, a periodistas iluminar con precisi\u00f3n, a activistas conmover con verdad y a acad\u00e9micos convencer con datos. Hab\u00eda aprendido a detectar la pasivizaci\u00f3n que oculta al responsable, el eufemismo que suaviza lo inadmisible, el framing que construye la realidad antes de que el oyente pueda cuestionarla. Pero, sobre todo, hab\u00eda comprendido que el discurso p\u00fablico no era un lujo de la democracia, sino su condici\u00f3n de existencia. Sin ciudadanos capaces de analizar cr\u00edticamente lo que escuchan, la democracia se convierte en demagogia. Sin voces dispuestas a nombrar lo que el poder prefiere callar, la justicia se convierte en ficci\u00f3n. El dominio del discurso p\u00fablico, comprendi\u00f3 Yaguar\u00e1, no era solo una competencia ling\u00fc\u00edstica: era un deber c\u00edvico.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 cuatro tipos de oradores menciona el texto?',
+                options: ['Pol\u00edticos, periodistas, activistas y acad\u00e9micos', 'Profesores, estudiantes, padres e hijos', 'Cantantes, actores, poetas y novelistas', 'Jueces, abogados, fiscales y testigos'],
+                answer: 'Pol\u00edticos, periodistas, activistas y acad\u00e9micos'
+            },
+            {
+                q: '\u00bfQu\u00e9 tres estrategias de manipulaci\u00f3n ling\u00fc\u00edstica menciona expl\u00edcitamente el texto?',
+                options: ['Pasivizaci\u00f3n, eufemismo y framing', 'Met\u00e1fora, iron\u00eda y personificaci\u00f3n', 'An\u00e1fora, antítesis y quiasmo', 'Silogismo, inducci\u00f3n y deducci\u00f3n'],
+                answer: 'Pasivizaci\u00f3n, eufemismo y framing'
+            },
+            {
+                q: '\u00bfPor qu\u00e9 el texto afirma que el discurso p\u00fablico es \u00abcondici\u00f3n de existencia de la democracia\u00bb?',
+                options: ['Porque sin an\u00e1lisis cr\u00edtico del discurso, los ciudadanos no pueden ejercer su soberan\u00eda informada', 'Porque solo los oradores profesionales pueden gobernar', 'Porque la democracia solo existe en los discursos', 'Porque los pol\u00edticos siempre dicen la verdad'],
+                answer: 'Porque sin an\u00e1lisis cr\u00edtico del discurso, los ciudadanos no pueden ejercer su soberan\u00eda informada'
+            },
+            {
+                q: '\u00bfQu\u00e9 significa que el dominio del discurso p\u00fablico sea \u00abun deber c\u00edvico\u00bb?',
+                options: ['Que todo ciudadano tiene la responsabilidad de saber producir y analizar cr\u00edticamente el discurso p\u00fablico', 'Que solo los pol\u00edticos deben aprender oratoria', 'Que es obligatorio dar discursos en p\u00fablico', 'Que el gobierno debe censurar los discursos incorrectos'],
+                answer: 'Que todo ciudadano tiene la responsabilidad de saber producir y analizar cr\u00edticamente el discurso p\u00fablico'
+            }
+        ]
+    },
+    // === GAME 37: Canci\u00f3n — \u00abEl testamento\u00bb de Rafael Escalona ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abEl testamento\u00bb de Rafael Escalona (interpretada por Carlos Vives) y completa los versos. Observa c\u00f3mo el vallenato funciona como discurso p\u00fablico comunitario: el juglar narra, opina y construye memoria colectiva.',
+        youtubeId: 'WYtR4JKc6OU',
+        artist: 'Carlos Vives (de Rafael Escalona)',
+        songTitle: 'El testamento',
+        lines: [
+            { text: 'Oye, Moralito, voy a hacerte un ___.', blank: 'cuento', options: ['cuento', 'testamento', 'regalo', 'pedido'] },
+            { text: 'Mi compadre Emiliano que se muri\u00f3 antes de ___.', blank: 'ayer', options: ['ayer', 'hoy', 'tiempo', 'nacer'] },
+            { text: 'Me dej\u00f3 en el testamento un ___.', blank: 'acordeón', options: ['acorde\u00f3n', 'sombrero', 'caballo', 'terreno'] },
+            { text: 'Pa\u2019 que me acompa\u00f1e en la ___.', blank: 'parranda', options: ['parranda', 'monta\u00f1a', 'tristeza', 'vida'] },
+            { text: 'Y un ___ que tiene la caja morada.', blank: 'burro', options: ['burro', 'carro', 'tren', 'barco'] },
+            { text: 'Tengo para rato ___ con mi acordeón.', blank: 'cantando', options: ['cantando', 'bailando', 'viviendo', 'andando'] },
+            { text: 'Pero si me muero, quiero que lo ___.', blank: 'toquen', options: ['toquen', 'guarden', 'vendan', 'rompan'] },
+            { text: 'Porque el vallenato es ___ del alma.', blank: 'cosa', options: ['cosa', 'parte', 'voz', 'canto'] }
+        ]
+    },
+    // === GAME 38: Canci\u00f3n — \u00abLa tierra del olvido\u00bb (reprise reflexiva) ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abLa tierra del olvido\u00bb de Carlos Vives una vez m\u00e1s. Esta vez, analiza c\u00f3mo la canci\u00f3n funciona como discurso p\u00fablico: construye identidad nacional, nombra lo perdido y convoca a la memoria colectiva.',
+        youtubeId: 'RVEQ2I7BHOQ',
+        artist: 'Carlos Vives',
+        songTitle: 'La tierra del olvido',
+        lines: [
+            { text: 'Yo me qued\u00e9 sin tierra, sin ___.', blank: 'agua', options: ['agua', 'vida', 'alma', 'casa'] },
+            { text: 'Sin \u00e1rboles, sin piedra, sin ___.', blank: 'nada', options: ['nada', 'todo', 'nadie', 'suelo'] },
+            { text: 'Hasta los recuerdos los borr\u00f3 la ___.', blank: 'arena', options: ['arena', 'lluvia', 'noche', 'guerra'] },
+            { text: 'Y me qued\u00e9 dormido en la tierra del ___.', blank: 'olvido', options: ['olvido', 'silencio', 'pasado', 'destino'] },
+            { text: 'Y de la tierra del olvido al ___ llegu\u00e9.', blank: 'Valle', options: ['Valle', 'llano', 'monte', 'pueblo'] },
+            { text: 'Y el tambor de la ___ me volvi\u00f3 a llamar.', blank: 'alegr\u00eda', options: ['alegr\u00eda', 'esperanza', 'tristeza', 'nostalgia'] },
+            { text: 'Donde cantan los ___, encontr\u00e9 mi voz.', blank: 'gallos', options: ['gallos', 'p\u00e1jaros', 'r\u00edos', 'vientos'] },
+            { text: 'Y esta tierra del olvido ya la recuerdo ___.', blank: 'yo', options: ['yo', 'hoy', 'bien', 'aqu\u00ed'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La plaza de las voces',
+            description: 'Una plaza abierta al cielo nocturno. En cada esquina, un podio vacío. Las constelaciones forman palabras que cambian con el viento.',
+            ambience: 'crowd'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras dispersas flotan sobre uno de los podios.',
+                clue: 'Es lo que usamos cuando queremos convencer a una audiencia, no solo informarla.',
+                answer: 'retorica',
+                scrambled: 'acroiter',
+                onSolve: 'Las letras se organizan y el primer podio se ilumina.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Un discurso aparece grabado en las piedras de la plaza.',
+                passage: '«Compatriotas: no les pido que confíen en mí. Les pido que confíen en ustedes mismos. Porque un país no lo construye un líder, sino un pueblo que decide levantarse cada mañana con dignidad.»',
+                clue: '¿Qué estrategia retórica predomina en este fragmento?',
+                answer: 'Apelación al ethos colectivo y la identidad compartida',
+                options: [
+                    'Apelación al ethos colectivo y la identidad compartida',
+                    'Uso de datos estadísticos',
+                    'Apelación al miedo',
+                    'Repetición simple de una idea'
+                ],
+                onSolve: 'El segundo podio se ilumina.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Tres premisas aparecen escritas en el suelo.',
+                premises: [
+                    'Todo discurso público busca persuadir.',
+                    'La persuasión requiere adaptar el mensaje a la audiencia.',
+                    'Un científico habla ante un grupo de agricultores sobre el cambio climático.'
+                ],
+                clue: '¿Qué debe priorizar el científico?',
+                answer: 'Usar ejemplos concretos de su experiencia agrícola, no terminología técnica',
+                options: [
+                    'Usar ejemplos concretos de su experiencia agrícola, no terminología técnica',
+                    'Usar la mayor cantidad de datos posible',
+                    'Hablar lentamente porque no son expertos',
+                    'Evitar el tema por ser demasiado complejo'
+                ],
+                onSolve: 'El tercer podio brilla.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Dos fragmentos de discursos famosos aparecen en las constelaciones.',
+                sources: [
+                    '«I have a dream...» — Martin Luther King Jr. (1963)',
+                    '«La patria es un sentimiento y no una extensión de tierra.» — Jorge Eliécer Gaitán (Colombia, 1948)'
+                ],
+                clue: '¿Qué técnica retórica comparten ambos oradores?',
+                answer: 'Ambos usan la definición poética para transformar un concepto abstracto en una emoción compartida',
+                options: [
+                    'Ambos usan la definición poética para transformar un concepto abstracto en una emoción compartida',
+                    'Ambos hablan de política',
+                    'Ambos usan el mismo idioma',
+                    'Ambos se dirigen a su propio país'
+                ],
+                onSolve: 'Los cuatro podios brillan juntos. La plaza se transforma. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: una constelación con forma de mano abierta.',
+            questClue: 'La mano señala donde las voces se multiplican para hacerse escuchar.',
+            item: 'constelacion-mano'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '52',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest52Progress',
+        backUrl: '../../c2-bogota.html'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 11, Lecci&oacute;n 1 - Todos los verbos del mundo</title>
+    <meta name="description" content="A1 Advanced - Destination 11 Lesson 1: Full verb conjugation, ir a + infinitive, Abuela Ceiba">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest11_verbs/lesson1_all_verbs">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 11, Lección 1 - Todos los verbos del mundo",
+                "url": "https://babelfree.com/a1_advanced/dest11_verbs/lesson1_all_verbs",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": [
+                    "Full -AR/-ER/-IR conjugation",
+                    "Ir a + infinitive",
+                    "Asking and answering why"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Todos los verbos del mundo",
+                        "item": "https://babelfree.com/a1_advanced/dest11_verbs/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Lesson 1"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --amazon-dark: #0a2e0a;
+            --amazon-medium: #1a4d1a;
+            --amazon-light: #2d6b2d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --ceiba-green: #1b5e20;
+            --ceiba-bark: #3e2723;
+            --root-amber: #ff8f00;
+            --firefly-light: #c6ff00;
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 20px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--amazon-dark) 0%, var(--ceiba-green) 50%, var(--ceiba-bark) 100%);
+            min-height: 100vh; color: white; line-height: 1.8; font-size: 20px;
+            position: relative; overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background:
+                radial-gradient(circle at 30% 80%, rgba(27, 94, 32, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 20%, rgba(198, 255, 0, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(62, 39, 35, 0.1) 0%, transparent 50%);
+            z-index: 1; animation: fireflyDrift 20s ease-in-out infinite;
+        }
+        @keyframes fireflyDrift { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; position: relative; z-index: 10; }
+
+        .lesson-header { background: var(--glass-bg); backdrop-filter: blur(20px); padding: 25px; border-radius: var(--border-radius); margin-bottom: 30px; border: 3px solid var(--ceiba-green); text-align: center; position: relative; }
+        .back-btn { position: absolute; top: 20px; left: 20px; background: var(--glass-bg); color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; border: 2px solid var(--ceiba-green); transition: var(--transition); font-weight: 600; font-size: 0.9rem; }
+        .back-btn:hover { background: rgba(27, 94, 32, 0.2); transform: translateY(-2px); }
+        .lesson-info { position: absolute; top: 20px; right: 20px; background: var(--ceiba-green); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; }
+        .lesson-title { font-size: 2.2rem; color: var(--firefly-light); margin-bottom: 10px; font-weight: 900; }
+        .lesson-subtitle { color: var(--text-light); font-size: 1.2rem; font-weight: 600; }
+
+        .progress-bar-container { background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; margin: 20px 0; border: 2px solid var(--ceiba-green); }
+        .progress-bar { width: 100%; height: 12px; background: rgba(255,255,255,0.2); border-radius: 6px; overflow: hidden; margin-bottom: 10px; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--ceiba-green), var(--firefly-light)); border-radius: 6px; width: 0%; transition: width 1s ease; }
+        .progress-text { color: var(--firefly-light); font-weight: 700; text-align: center; font-size: 1rem; }
+
+        .story-section { background: linear-gradient(135deg, rgba(27,94,32,0.15), rgba(62,39,35,0.1)); border: 3px solid var(--ceiba-green); border-radius: var(--border-radius); padding: 30px; margin: 30px 0; text-align: center; }
+        .story-title { color: var(--firefly-light); font-weight: 700; font-size: 1.6rem; margin-bottom: 20px; }
+        .jaguar-avatar { width: 120px; height: 120px; overflow: hidden; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; border: 4px solid var(--jaguar-gold); animation: breathe 3s ease-in-out infinite; cursor: pointer; box-shadow: 0 8px 30px rgba(249,202,36,0.4); }
+        @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .story-text { color: var(--text-light); font-size: 1.3rem; line-height: 2; margin: 20px 0; }
+        .simple-sentence { margin: 15px 0; padding: 10px 20px; background: rgba(255,255,255,0.1); border-radius: 15px; border-left: 5px solid var(--ceiba-green); }
+
+        .concept-section { background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: var(--border-radius); padding: 30px; margin: 30px 0; border: 3px solid var(--root-amber); }
+        .concept-title { color: var(--root-amber); font-weight: 700; font-size: 1.8rem; margin-bottom: 25px; text-align: center; }
+        .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 25px; }
+
+        .concept-card { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; text-align: center; border: 3px solid transparent; transition: var(--transition); cursor: pointer; }
+        .concept-card:hover { transform: translateY(-5px); border-color: var(--jaguar-gold); box-shadow: 0 10px 30px rgba(249,202,36,0.3); }
+        .concept-card.ar { border-color: var(--success-green); }
+        .concept-card.er { border-color: var(--root-amber); }
+        .concept-card.ir { border-color: var(--ceiba-green); }
+        .concept-card.ira { border-color: var(--firefly-light); }
+
+        .card-avatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 3px solid; }
+        .concept-card.ar .card-avatar { background: linear-gradient(135deg, var(--success-green), #66bb6a); border-color: var(--success-green); }
+        .concept-card.er .card-avatar { background: linear-gradient(135deg, var(--root-amber), #ffb300); border-color: var(--root-amber); }
+        .concept-card.ir .card-avatar { background: linear-gradient(135deg, var(--ceiba-green), #2e7d32); border-color: var(--ceiba-green); }
+        .concept-card.ira .card-avatar { background: linear-gradient(135deg, var(--firefly-light), #d4e157); border-color: var(--firefly-light); }
+
+        .card-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+        .concept-card.ar .card-name { color: var(--success-green); }
+        .concept-card.er .card-name { color: var(--root-amber); }
+        .concept-card.ir .card-name { color: var(--ceiba-green); }
+        .concept-card.ira .card-name { color: var(--firefly-light); }
+        .card-example { color: var(--text-light); font-size: 1rem; margin-bottom: 10px; font-style: italic; }
+        .card-description { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+        .yaguara-guide { background: linear-gradient(135deg, rgba(249,202,36,0.15), rgba(255,107,53,0.1)); border: 3px solid var(--jaguar-gold); border-radius: 20px; padding: 25px; margin: 30px 0; display: grid; grid-template-columns: 80px 1fr; gap: 20px; align-items: start; }
+        .yaguara-small { width: 70px; height: 70px; overflow: hidden; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 3px solid var(--jaguar-gold); animation: breathe 4s ease-in-out infinite; cursor: pointer; flex-shrink: 0; }
+        .yaguara-text { padding-top: 5px; }
+        .guide-title { color: var(--jaguar-gold); font-weight: 700; margin-bottom: 10px; font-size: 1.1rem; }
+        .guide-message { color: var(--text-light); line-height: 1.8; font-size: 1rem; }
+        .simple-message { margin: 8px 0; }
+
+        .exercise-section { background: linear-gradient(135deg, rgba(27,94,32,0.15), rgba(62,39,35,0.1)); border: 3px solid var(--ceiba-green); border-radius: var(--border-radius); padding: 30px; margin: 30px 0; }
+        .exercise-title { color: var(--firefly-light); font-weight: 700; font-size: 1.6rem; margin-bottom: 20px; text-align: center; }
+        .exercise-instruction { background: rgba(27,94,32,0.1); border: 2px solid var(--ceiba-green); border-radius: 15px; padding: 20px; margin: 20px 0; text-align: center; }
+        .instruction-text { color: var(--firefly-light); font-weight: 600; font-size: 1.2rem; }
+
+        .matching-game { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        .words-column, .images-column { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 20px; }
+        .column-title { color: var(--firefly-light); font-weight: 700; font-size: 1.2rem; margin-bottom: 20px; text-align: center; }
+        .word-item, .image-item { background: rgba(255,255,255,0.1); border: 3px solid transparent; border-radius: 12px; padding: 15px; margin: 10px 0; cursor: pointer; transition: var(--transition); text-align: center; font-weight: 600; font-size: 1.1rem; }
+        .word-item:hover, .image-item:hover { border-color: var(--ceiba-green); background: rgba(27,94,32,0.1); transform: translateX(5px); }
+        .word-item.selected, .image-item.selected { border-color: var(--ceiba-green); background: rgba(27,94,32,0.2); transform: scale(1.02); }
+        .word-item.correct, .image-item.correct { border-color: var(--success-green); background: rgba(76,175,80,0.2); }
+        .word-item.incorrect, .image-item.incorrect { border-color: #e74c3c; background: rgba(231,76,60,0.2); }
+
+        .success-message { background: linear-gradient(135deg, rgba(76,175,80,0.2), rgba(129,199,132,0.1)); border: 3px solid var(--success-green); border-radius: 15px; padding: 25px; margin: 25px 0; text-align: center; display: none; }
+        .success-message.show { display: block; animation: successSlide 0.5s ease-out; }
+        @keyframes successSlide { 0% { opacity: 0; transform: translateY(-20px); } 100% { opacity: 1; transform: translateY(0); } }
+        .success-title { color: var(--success-green); font-weight: 700; font-size: 1.4rem; margin-bottom: 15px; }
+        .success-text { color: var(--text-light); font-size: 1.1rem; line-height: 1.6; }
+
+        .lesson-navigation { display: flex; justify-content: center; align-items: center; margin-top: 40px; gap: 20px; flex-wrap: wrap; }
+        .nav-button { padding: 15px 30px; border: none; border-radius: 25px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: var(--transition); min-width: 150px; text-align: center; }
+        .nav-button.primary { background: linear-gradient(135deg, var(--ceiba-green), var(--root-amber)); color: white; border: 2px solid var(--ceiba-green); }
+        .nav-button.primary:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(27,94,32,0.4); }
+        .nav-button.secondary { background: var(--glass-bg); color: white; border: 2px solid var(--ceiba-green); }
+        .nav-button.secondary:hover { background: rgba(27,94,32,0.2); transform: scale(1.05); }
+        .nav-button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .nav-button:disabled:hover { transform: none; box-shadow: none; }
+
+        @media (max-width: 768px) {
+            body { font-size: 18px; }
+            .container { padding: 15px; }
+            .concept-grid { grid-template-columns: 1fr; }
+            .matching-game { grid-template-columns: 1fr; gap: 20px; }
+            .lesson-title { font-size: 1.8rem; }
+            .back-btn, .lesson-info { position: static; margin: 10px auto; display: block; width: fit-content; }
+            .yaguara-guide { grid-template-columns: 1fr; text-align: center; gap: 15px; }
+            .yaguara-small { margin: 0 auto; }
+        }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/a1-amazon" class="back-btn">&larr; Destinos</a>
+            <div class="lesson-info">Destino 11 &bull; Lecci&oacute;n 1</div>
+            <h1 class="lesson-title">Todos los verbos del mundo</h1>
+            <p class="lesson-subtitle">Conjugaci&oacute;n completa y por qu&eacute;</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text" id="progressText">Paso 1 de 5</div>
+        </div>
+
+        <!-- STEP 1: REVIEW -->
+        <div class="story-section" id="step1">
+            <div class="story-title">Yaguar&aacute; aprende</div>
+            <div class="story-text">
+                Yaguar&aacute; sabe los meses, la hora y los n&uacute;meros. Cuenta cuatro lunas de silencio. El bosque est&aacute; m&aacute;s callado.
+            </div>
+            <div class="story-text">
+                Ahora Yaguar&aacute; visita a la Abuela Ceiba.
+            </div>
+        </div>
+
+        <!-- STEP 2: STORY — Meeting Abuela Ceiba -->
+        <div class="story-section" id="step2" style="display:none;">
+            <div class="story-title">Abuela Ceiba habla</div>
+            <div class="jaguar-avatar" onclick="speakText('Los verbos son lo que hacemos. Caminar, comer, vivir.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">Yaguar&aacute; camina hacia la Abuela Ceiba. El &aacute;rbol es enorme.</div>
+                <div class="simple-sentence">Abuela Ceiba dice: &laquo;T&uacute; caminas. T&uacute; comes. T&uacute; vives. Estos son los verbos.&raquo;</div>
+                <div class="simple-sentence">&laquo;Los verbos son lo que hacemos. Sin verbos, nada se mueve.&raquo;</div>
+                <div class="simple-sentence">Yaguar&aacute; pregunta: &laquo;&iquest;Por qu&eacute;?&raquo; Abuela Ceiba dice: &laquo;Porque olvidan los verbos.&raquo;</div>
+            </div>
+        </div>
+
+        <!-- STEP 3: CONCEPTS — Verb groups -->
+        <div class="concept-section" id="step3" style="display:none;">
+            <div class="concept-title">Los tres grupos de verbos</div>
+            <div class="concept-grid">
+                <div class="concept-card ar" onclick="learnConcept('ar')">
+                    <div class="card-avatar">&#127939;</div>
+                    <div class="card-name">Verbos -AR</div>
+                    <div class="card-example">caminar, hablar, cantar</div>
+                    <div class="card-description">Yo camino, t&uacute; caminas, &eacute;l camina, nosotros caminamos, ellos caminan.</div>
+                </div>
+                <div class="concept-card er" onclick="learnConcept('er')">
+                    <div class="card-avatar">&#127860;</div>
+                    <div class="card-name">Verbos -ER</div>
+                    <div class="card-example">comer, beber, correr</div>
+                    <div class="card-description">Yo como, t&uacute; comes, &eacute;l come, nosotros comemos, ellos comen.</div>
+                </div>
+                <div class="concept-card ir" onclick="learnConcept('ir')">
+                    <div class="card-avatar">&#127793;</div>
+                    <div class="card-name">Verbos -IR</div>
+                    <div class="card-example">vivir, escribir, abrir</div>
+                    <div class="card-description">Yo vivo, t&uacute; vives, &eacute;l vive, nosotros vivimos, ellos viven.</div>
+                </div>
+                <div class="concept-card ira" onclick="learnConcept('ira')">
+                    <div class="card-avatar">&#10145;&#65039;</div>
+                    <div class="card-name">Ir a + verbo</div>
+                    <div class="card-example">Voy a caminar</div>
+                    <div class="card-description">Yo voy a comer. T&uacute; vas a vivir. Ella va a cantar.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4: YAGUARÁ GUIDE — Por qué / porque -->
+        <div class="yaguara-guide" id="step4" style="display:none;">
+            <div class="yaguara-small" onclick="speakText('¿Por qué caminas? Porque me gusta el bosque.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguar&aacute; dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message"><strong>-AR</strong>: caminar &rarr; camino, caminas, camina, caminamos, caminan.</div>
+                    <div class="simple-message"><strong>-ER</strong>: comer &rarr; como, comes, come, comemos, comen.</div>
+                    <div class="simple-message"><strong>-IR</strong>: vivir &rarr; vivo, vives, vive, vivimos, viven.</div>
+                    <div class="simple-message"><strong>Ir a</strong>: Voy a caminar. Vas a comer. Va a vivir.</div>
+                    <div class="simple-message"><strong>&iquest;Por qu&eacute;?</strong> &rarr; <strong>Porque</strong>: &laquo;&iquest;Por qu&eacute; caminas?&raquo; &laquo;Porque me gusta el bosque.&raquo;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 5: EXERCISE — Match verbs to groups -->
+        <div class="exercise-section" id="step5" style="display:none;">
+            <div class="exercise-title">Pr&aacute;ctica: grupos de verbos</div>
+            <div class="exercise-instruction">
+                <div class="instruction-text">Une el verbo con su grupo.</div>
+            </div>
+            <div class="matching-game">
+                <div class="words-column">
+                    <div class="column-title">Verbo</div>
+                    <div class="word-item" onclick="selectWord(this, 'ar')" data-word="ar">hablar</div>
+                    <div class="word-item" onclick="selectWord(this, 'er')" data-word="er">correr</div>
+                    <div class="word-item" onclick="selectWord(this, 'ir')" data-word="ir">escribir</div>
+                    <div class="word-item" onclick="selectWord(this, 'ira')" data-word="ira">Voy a comer</div>
+                </div>
+                <div class="images-column">
+                    <div class="column-title">Grupo</div>
+                    <div class="image-item" onclick="selectImage(this, 'ir')" data-image="ir">-IR</div>
+                    <div class="image-item" onclick="selectImage(this, 'ira')" data-image="ira">Ir a + verbo</div>
+                    <div class="image-item" onclick="selectImage(this, 'ar')" data-image="ar">-AR</div>
+                    <div class="image-item" onclick="selectImage(this, 'er')" data-image="er">-ER</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-title">&#161;Excelente!</div>
+            <div class="success-text">
+                Lecci&oacute;n completa.<br>
+                Sabes los tres grupos de verbos y &laquo;ir a&raquo;.<br>
+                Abuela Ceiba dice: &laquo;Los verbos son las ra&iacute;ces que mueven el mundo.&raquo;
+            </div>
+        </div>
+
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" onclick="previousStep()" id="prevBtn" disabled>&larr; Anterior</button>
+            <button class="nav-button primary" onclick="nextStep()" id="nextBtn">Siguiente &rarr;</button>
+            <button class="nav-button primary" onclick="finishLesson()" id="finishBtn" style="display:none;">Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+            var lessonData = { currentStep: 1, totalSteps: 5, selectedWord: null, matchedPairs: 0, totalPairs: 4, isComplete: false };
+
+            var concepts = {
+                ar: "Verbos que terminan en A R. Caminar: camino, caminas, camina, caminamos, caminan.",
+                er: "Verbos que terminan en E R. Comer: como, comes, come, comemos, comen.",
+                ir: "Verbos que terminan en I R. Vivir: vivo, vives, vive, vivimos, viven.",
+                ira: "Ir a más un verbo. Voy a caminar. Vas a comer. Va a vivir."
+            };
+
+            function updateProgress() { var p = (lessonData.currentStep / lessonData.totalSteps) * 100; var f = document.getElementById('progressFill'); var t = document.getElementById('progressText'); if (f) f.style.width = p + '%'; if (t) t.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps; }
+            function showStep(n) { for (var i = 1; i <= lessonData.totalSteps; i++) { var s = document.getElementById('step' + i); if (s) s.style.display = 'none'; } var c = document.getElementById('step' + n); if (c) { c.style.display = 'block'; c.style.animation = 'fadeIn 0.5s ease-in'; } updateNav(); updateProgress(); }
+            function updateNav() { var p = document.getElementById('prevBtn'); var n = document.getElementById('nextBtn'); var f = document.getElementById('finishBtn'); if (p) p.disabled = lessonData.currentStep === 1; if (lessonData.currentStep === lessonData.totalSteps) { if (n) n.style.display = 'none'; if (f) f.style.display = 'inline-block'; } else { if (n) n.style.display = 'inline-block'; if (f) f.style.display = 'none'; } }
+            function goNext() { if (lessonData.currentStep < lessonData.totalSteps) { lessonData.currentStep++; showStep(lessonData.currentStep); if (window.JaguarAPI) JaguarAPI.syncA1Progress('dest11_verbs', 'lesson1_all_verbs', { currentStep: lessonData.currentStep, totalSteps: lessonData.totalSteps, isComplete: false }); } }
+            function goPrev() { if (lessonData.currentStep > 1) { lessonData.currentStep--; showStep(lessonData.currentStep); } }
+            function learnConceptFn(c) { var t = concepts[c]; if (t) { speakInSpanish(t); showNotification('Verbos:', t); } }
+
+            function selectWordFn(el, w) { var all = document.querySelectorAll('.word-item'); for (var i = 0; i < all.length; i++) all[i].classList.remove('selected'); el.classList.add('selected'); lessonData.selectedWord = w; }
+            function selectImageFn(el, img) {
+                if (!lessonData.selectedWord) { showNotification('Primero:', 'Selecciona un verbo'); return; }
+                var ok = lessonData.selectedWord === img;
+                var we = document.querySelector('.word-item[data-word="' + lessonData.selectedWord + '"]');
+                if (ok) {
+                    we.classList.remove('selected'); we.classList.add('correct'); el.classList.add('correct');
+                    lessonData.matchedPairs++; lessonData.selectedWord = null;
+                    var m = ['Bien', 'Muy bien', 'Excelente', 'Perfecto'];
+                    speakInSpanish(m[lessonData.matchedPairs - 1] || 'Bien');
+                    showNotification('Correcto', m[lessonData.matchedPairs - 1] || 'Bien');
+                    if (lessonData.matchedPairs === lessonData.totalPairs) { setTimeout(function() { var sm = document.getElementById('successMessage'); if (sm) sm.classList.add('show'); speakInSpanish('Excelente. Lección completa.'); }, 1000); }
+                } else {
+                    we.classList.add('incorrect'); el.classList.add('incorrect');
+                    showNotification('Incorrecto', 'Intenta otra vez');
+                    setTimeout(function() { we.classList.remove('selected', 'incorrect'); el.classList.remove('incorrect'); lessonData.selectedWord = null; }, 1500);
+                }
+            }
+
+            function speakInSpanish(t) { if (!t || !('speechSynthesis' in window)) return; try { var u = new SpeechSynthesisUtterance(t); u.lang = 'es-CO'; u.rate = 0.55; speechSynthesis.speak(u); } catch(e) {} }
+            function showNotification(title, msg) { var ex = document.querySelector('.temp-notification'); if (ex) ex.remove(); var n = document.createElement('div'); n.className = 'temp-notification'; n.style.cssText = 'position:fixed;top:20px;right:20px;background:rgba(27,94,32,0.95);color:white;padding:15px 20px;border-radius:12px;font-weight:600;z-index:10000;max-width:320px;border:2px solid #1b5e20;box-shadow:0 4px 20px rgba(0,0,0,0.3);animation:slideInRight 0.3s ease-out;'; n.innerHTML = '<div style="font-weight:700;margin-bottom:5px;font-size:1.1rem;">' + title + '</div><div style="font-size:0.9rem;opacity:0.9;">' + msg + '</div>'; document.body.appendChild(n); setTimeout(function() { if (n && n.parentNode) n.parentNode.removeChild(n); }, 3500); }
+            function completeLessonFn() { lessonData.isComplete = true; if (window.JaguarAPI) JaguarAPI.syncA1Progress('dest11_verbs', 'lesson1_all_verbs', { currentStep: lessonData.totalSteps, totalSteps: lessonData.totalSteps, isComplete: true }); showNotification('Lecci&oacute;n completa', 'Sabes conjugar los tres grupos de verbos'); setTimeout(function() { if (confirm('Lección completa.\n\nSabes los tres grupos de verbos.\n\n¿Continuar?')) { window.location.href = '/a1-amazon'; } }, 2000); }
+
+            window.nextStep = goNext; window.previousStep = goPrev; window.learnConcept = learnConceptFn; window.selectWord = selectWordFn; window.selectImage = selectImageFn; window.speakText = speakInSpanish; window.finishLesson = completeLessonFn;
+            var style = document.createElement('style'); style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes slideInRight{from{transform:translateX(300px);opacity:0}to{transform:translateX(0);opacity:1}}'; document.head.appendChild(style);
+            document.addEventListener('DOMContentLoaded', function() { showStep(1); });
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>

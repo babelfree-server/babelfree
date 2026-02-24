@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" data-ai-locale="auto">
+<html lang="es" data-ai-locale="auto">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión - El viaje del jaguar enhanced</title>
+    <title>Inicio de sesión — La Aventura de Yaguará</title>
+    <link rel="canonical" href="https://babelfree.com/login">
     
     <!-- PWA Support -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0a3d0c">
+    <meta name="theme-color" content="#1a1208">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon" href="assets/icon-192.png">
-    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "name": "Login — El Viaje del Jaguar",
+                "description": "Inicia sesión en El Viaje del Jaguar, el programa inmersivo de aprendizaje de español de Babel Free.",
+                "url": "https://babelfree.com/login",
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/login"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Login",
+                        "item": "https://babelfree.com/login"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -20,25 +58,32 @@
         }
 
         :root {
-            --forest-dark: #0a3d0c;
-            --forest-medium: #1a5928;
-            --forest-light: #2d6f3d;
-            --jaguar-gold: #f9ca24;
-            --jaguar-orange: #ff6b35;
-            --success-green: #4caf50;
-            --warning-orange: #ff9800;
-            --error-red: #f44336;
-            --demo-blue: #3498db;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --text-light: #e8f5e8;
-            --text-muted: #a5d6a7;
-            --border-radius: 20px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --earth-deep: #1a1208;
+            --earth-warm: #2d1f0e;
+            --earth-medium: #4a3520;
+            --terracotta: #c67a4a;
+            --ochre: #c9a227;
+            --amber: #d4913a;
+            --sand: #e8d5b7;
+            --clay-light: #f0e6d3;
+            --moss: #5a6e4a;
+            --river-dark: #2a3a4a;
+            --jaguar-gold: #c9a227;
+            --jaguar-orange: #c67a4a;
+            --success-green: #5a6e4a;
+            --warning-orange: #d4913a;
+            --error-red: #a64232;
+
+            --glass-bg: rgba(26, 18, 8, 0.7);
+            --text-light: #f0e6d3;
+            --text-muted: #b8a88a;
+            --border-radius: 24px;
+            --transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-medium) 50%, var(--forest-light) 100%);
+            background: linear-gradient(145deg, #0d0a06 0%, #1a1208 40%, #2d1f0e 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -49,7 +94,7 @@
             padding: 20px 0;
         }
 
-        /* Enhanced Colombian Background */
+        /* Earth tone background */
         body::before {
             content: '';
             position: fixed;
@@ -57,23 +102,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(15, 76, 40, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 60% 70%, rgba(0, 119, 190, 0.1) 0%, transparent 50%);
+            background:
+                radial-gradient(circle at 20% 80%, rgba(74, 53, 32, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201, 162, 39, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 60% 70%, rgba(42, 58, 74, 0.1) 0%, transparent 50%);
             z-index: -1;
-            animation: colombianAmbience 25s ease-in-out infinite;
+            animation: earthAmbience 30s ease-in-out infinite;
         }
 
-        @keyframes colombianAmbience {
-            0%, 100% { transform: scale(1) rotate(0deg); filter: hue-rotate(0deg); }
-            25% { transform: scale(1.1) rotate(1deg); filter: hue-rotate(30deg); }
-            50% { transform: scale(0.95) rotate(-1deg); filter: hue-rotate(60deg); }
-            75% { transform: scale(1.05) rotate(0.5deg); filter: hue-rotate(30deg); }
+        @keyframes earthAmbience {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
         }
 
-        /* Floating Colombian Elements */
+        /* Floating Nature Elements */
         .floating-elements {
             position: fixed;
             top: 0;
@@ -87,30 +130,30 @@
         .floating-element {
             position: absolute;
             font-size: 2em;
-            animation: floatColombianElement 20s infinite linear;
+            animation: floatNatureElement 20s infinite linear;
             opacity: 0.4;
         }
 
-        @keyframes floatColombianElement {
+        @keyframes floatNatureElement {
             0% { transform: translateY(-100px) translateX(0px) rotate(0deg); opacity: 0; }
             10% { opacity: 0.6; }
             90% { opacity: 0.6; }
             100% { transform: translateY(100vh) translateX(100px) rotate(360deg); opacity: 0; }
         }
 
-        /* Enhanced Login Container */
+        /* Login Container */
         .login-container {
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(26, 18, 8, 0.9);
             border-radius: 30px;
             padding: 50px;
             backdrop-filter: blur(25px);
-            border: 3px solid rgba(255, 215, 0, 0.5);
+            border: 2px solid rgba(201, 162, 39, 0.3);
             max-width: 650px;
             width: 90%;
             position: relative;
             z-index: 10;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
-            animation: loginSlideIn 1s ease-out;
+            box-shadow: 0 25px 80px rgba(26, 18, 8, 0.6);
+            animation: loginSlideIn 1.2s ease-out;
             margin: auto;
             max-height: 95vh;
             overflow-y: auto;
@@ -128,12 +171,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, 
-                rgba(255, 215, 0, 0.05) 0%, 
-                rgba(76, 175, 80, 0.05) 25%,
-                rgba(52, 152, 219, 0.05) 50%,
-                rgba(231, 76, 60, 0.05) 75%,
-                rgba(255, 215, 0, 0.05) 100%);
+            background: linear-gradient(135deg,
+                rgba(201, 162, 39, 0.03) 0%,
+                rgba(198, 122, 74, 0.03) 50%,
+                rgba(201, 162, 39, 0.03) 100%);
             border-radius: 30px;
             z-index: -1;
         }
@@ -162,56 +203,41 @@
         }
 
         .back-button:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.15);
             transform: translateY(-2px);
-            border-color: var(--jaguar-gold);
+            border-color: var(--ochre);
         }
 
-        /* Enhanced Jaguar Logo */
+        /* Yaguará Logo */
         .jaguar-logo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin: 0 auto 30px;
-            border: 4px solid #ffd700;
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+            border: 3px solid rgba(201, 162, 39, 0.4);
+            box-shadow: 0 8px 32px rgba(26, 18, 8, 0.5);
             position: relative;
-            animation: jaguarLogoAnimation 4s ease-in-out infinite;
-            background: linear-gradient(135deg, #ffd700, #ffed4e, #f39c12);
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             overflow: hidden;
+            transition: var(--transition);
         }
 
-        @keyframes jaguarLogoAnimation {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
-            50% { transform: scale(1.05); box-shadow: 0 0 60px rgba(255, 215, 0, 0.9); }
+        .jaguar-logo:hover {
+            border-color: rgba(201, 162, 39, 0.6);
+            box-shadow: 0 12px 40px rgba(26, 18, 8, 0.6);
         }
 
-        .jaguar-logo::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.1) 50%, transparent 51%);
-            animation: logoShine 3s ease-in-out infinite;
-        }
-
-        @keyframes logoShine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
-
-        .jaguar-logo svg {
-            width: 85%;
-            height: 85%;
+        .jaguar-logo img {
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             display: block;
             z-index: 1;
+            object-fit: cover;
         }
 
         .jaguar-logo::after {
@@ -220,34 +246,21 @@
         }
 
         .colombia-flag {
-            position: absolute;
-            bottom: -10px;
-            right: -10px;
-            width: 40px;
-            height: 30px;
-            background: linear-gradient(to bottom, #ffde00 33%, #0066cc 33%, #0066cc 66%, #cc0000 66%);
-            border-radius: 8px;
-            border: 2px solid white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            animation: flagWave 2s ease-in-out infinite;
-        }
-
-        @keyframes flagWave {
-            0%, 100% { transform: rotate(-2deg); }
-            50% { transform: rotate(2deg); }
+            display: none;
         }
 
         .login-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 2.8rem;
-            color: #ffd700;
+            color: var(--ochre);
             margin-bottom: 15px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            font-weight: 700;
             letter-spacing: 1px;
         }
 
         .login-subtitle {
-            color: #a0e4d0;
+            color: var(--text-muted);
             font-size: 1.2rem;
             margin-bottom: 30px;
             line-height: 1.4;
@@ -262,9 +275,9 @@
         }
 
         .lang-toggle {
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 215, 0, 0.4);
-            color: white;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(201, 162, 39, 0.3);
+            color: var(--text-light);
             padding: 12px 18px;
             border-radius: 25px;
             cursor: pointer;
@@ -279,24 +292,24 @@
         }
 
         .lang-toggle:hover {
-            background: rgba(255, 215, 0, 0.25);
-            border-color: #ffd700;
+            background: rgba(201, 162, 39, 0.15);
+            border-color: var(--ochre);
             transform: translateY(-2px);
         }
 
         .lang-toggle.active {
-            background: rgba(255, 215, 0, 0.8);
-            color: #1a5f3f;
-            border-color: #ffd700;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            background: rgba(201, 162, 39, 0.6);
+            color: var(--earth-deep);
+            border-color: var(--ochre);
+            box-shadow: 0 4px 16px rgba(201, 162, 39, 0.3);
         }
 
         .lang-dropdown {
             position: absolute;
             top: 110%;
             right: 0;
-            background: rgba(0, 0, 0, 0.95);
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            background: rgba(26, 18, 8, 0.95);
+            border: 2px solid rgba(201, 162, 39, 0.3);
             border-radius: 20px;
             backdrop-filter: blur(25px);
             padding: 20px;
@@ -306,7 +319,7 @@
             visibility: hidden;
             transform: translateY(-15px);
             transition: var(--transition);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 15px 40px rgba(26, 18, 8, 0.8);
         }
 
         .lang-dropdown.show {
@@ -316,24 +329,83 @@
         }
 
         .lang-dropdown h4 {
-            color: #ffd700;
+            color: var(--ochre);
             margin-bottom: 15px;
             font-size: 1rem;
             text-align: center;
-            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            border-bottom: 2px solid rgba(201, 162, 39, 0.2);
             padding-bottom: 10px;
+        }
+
+        .lang-search {
+            width: 100%;
+            padding: 10px 15px;
+            border: 2px solid rgba(201, 162, 39, 0.2);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-light);
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .lang-search:focus {
+            border-color: var(--ochre);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-search::placeholder {
+            color: rgba(255, 255, 255, 0.5);
         }
 
         .lang-options {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 8px;
+            max-height: 320px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .lang-options::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .lang-options::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        .lang-options::-webkit-scrollbar-thumb {
+            background: rgba(201, 162, 39, 0.3);
+            border-radius: 3px;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] .login-container {
+            text-align: right;
+        }
+
+        [dir="rtl"] .language-selector {
+            right: auto;
+            left: 25px;
+        }
+
+        [dir="rtl"] .lang-dropdown {
+            right: auto;
+            left: 0;
+        }
+
+        [dir="rtl"] .back-button {
+            right: auto;
+            left: auto;
         }
 
         .lang-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            color: white;
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px solid rgba(201, 162, 39, 0.2);
+            color: var(--text-light);
             padding: 10px 15px;
             border-radius: 15px;
             cursor: pointer;
@@ -345,40 +417,40 @@
         }
 
         .lang-btn:hover {
-            background: rgba(255, 215, 0, 0.2);
-            border-color: rgba(255, 215, 0, 0.6);
+            background: rgba(201, 162, 39, 0.15);
+            border-color: rgba(201, 162, 39, 0.4);
             transform: translateY(-2px);
         }
 
         .lang-btn.active {
-            background: rgba(255, 215, 0, 0.8);
-            color: #1a5f3f;
-            border-color: #ffd700;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            background: rgba(201, 162, 39, 0.6);
+            color: var(--earth-deep);
+            border-color: var(--ochre);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
         }
 
         .lang-btn.auto {
             grid-column: 1 / -1;
-            background: rgba(0, 255, 136, 0.15);
-            border-color: rgba(0, 255, 136, 0.4);
-            color: #a0ffc5;
+            background: rgba(90, 110, 74, 0.15);
+            border-color: rgba(90, 110, 74, 0.4);
+            color: var(--sand);
         }
 
         .lang-btn.auto:hover {
-            background: rgba(0, 255, 136, 0.25);
-            border-color: rgba(0, 255, 136, 0.6);
+            background: rgba(90, 110, 74, 0.25);
+            border-color: rgba(90, 110, 74, 0.6);
         }
 
         .lang-btn.auto.active {
-            background: rgba(0, 255, 136, 0.8);
-            color: #1a5f3f;
-            border-color: #00ff88;
+            background: rgba(90, 110, 74, 0.6);
+            color: var(--clay-light);
+            border-color: var(--moss);
         }
 
-        /* Enhanced Version Selector */
+        /* Version Selector */
         .version-selector {
-            background: rgba(0, 184, 148, 0.15);
-            border: 3px solid rgba(0, 184, 148, 0.4);
+            background: rgba(74, 53, 32, 0.15);
+            border: 2px solid rgba(201, 162, 39, 0.2);
             border-radius: 20px;
             padding: 30px;
             margin-bottom: 30px;
@@ -387,25 +459,10 @@
             overflow: hidden;
         }
 
-        .version-selector::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.05) 50%, transparent 51%);
-            animation: versionShine 4s ease-in-out infinite;
-        }
-
-        @keyframes versionShine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
-
         .version-selector h4 {
-            color: #00b894;
+            color: var(--ochre);
             margin-bottom: 25px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 1.3rem;
             font-weight: 700;
             position: relative;
@@ -437,9 +494,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 184, 148, 0.1), rgba(255, 215, 0, 0.1));
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.08), rgba(198, 122, 74, 0.08));
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.7s ease;
         }
 
         .version-option:hover::before {
@@ -447,16 +504,16 @@
         }
 
         .version-option:hover {
-            border-color: #00b894;
-            background: rgba(0, 184, 148, 0.2);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 184, 148, 0.3);
+            border-color: var(--ochre);
+            background: rgba(201, 162, 39, 0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(26, 18, 8, 0.4);
         }
 
         .version-option.selected {
-            border-color: #00b894;
-            background: rgba(0, 184, 148, 0.25);
-            box-shadow: 0 0 25px rgba(0, 184, 148, 0.4);
+            border-color: var(--ochre);
+            background: rgba(201, 162, 39, 0.15);
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.2);
         }
 
         .version-option.selected::after {
@@ -464,8 +521,8 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background: #00b894;
-            color: white;
+            background: var(--moss);
+            color: var(--clay-light);
             width: 25px;
             height: 25px;
             border-radius: 50%;
@@ -484,14 +541,14 @@
         }
 
         .version-option h5 {
-            color: #00b894;
+            color: var(--ochre);
             margin-bottom: 10px;
             font-size: 1.1rem;
             font-weight: 700;
         }
 
         .version-option p {
-            color: #a0e4d0;
+            color: var(--text-muted);
             font-size: 0.9rem;
             margin-bottom: 15px;
             line-height: 1.4;
@@ -510,71 +567,6 @@
             text-align: left;
         }
 
-        /* Enhanced Demo Credentials */
-        .demo-credentials {
-            background: rgba(255, 215, 0, 0.15);
-            border: 3px solid rgba(255, 215, 0, 0.4);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .demo-credentials::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.05) 50%, transparent 51%);
-            animation: demoShine 5s ease-in-out infinite;
-        }
-
-        @keyframes demoShine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
-
-        .demo-credentials h4 {
-            color: #ffd700;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .demo-version-specific {
-            position: relative;
-            z-index: 1;
-        }
-
-        .demo-individual,
-        .demo-classroom {
-            transition: var(--transition);
-        }
-
-        .demo-credentials p {
-            color: #a0e4d0;
-            font-size: 0.95rem;
-            margin: 8px 0;
-            font-weight: 500;
-        }
-
-        .demo-credentials p strong {
-            color: #ffd700;
-        }
-
-        .demo-guest-option {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 2px solid rgba(255, 215, 0, 0.3);
-            font-style: italic;
-            color: #a0e4d0;
-        }
 
         /* Enhanced Form Styling */
         .login-form {
@@ -590,7 +582,7 @@
 
         .form-label {
             display: block;
-            color: #ffd700;
+            color: var(--ochre);
             font-weight: 700;
             margin-bottom: 10px;
             font-size: 1rem;
@@ -599,10 +591,10 @@
         .form-input {
             width: 100%;
             padding: 18px 25px;
-            border: 3px solid rgba(255, 215, 0, 0.4);
+            border: 2px solid rgba(201, 162, 39, 0.25);
             border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-light);
             font-size: 1.1rem;
             outline: none;
             transition: var(--transition);
@@ -610,13 +602,13 @@
         }
 
         .form-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(240, 230, 211, 0.4);
         }
 
         .form-input:focus {
-            border-color: #ffd700;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
-            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--ochre);
+            box-shadow: 0 4px 16px rgba(201, 162, 39, 0.15);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .password-toggle {
@@ -634,8 +626,8 @@
         }
 
         .password-toggle:hover {
-            color: #ffd700;
-            transform: translateY(-50%) scale(1.1);
+            color: var(--ochre);
+            transform: translateY(-50%) scale(1.05);
         }
 
         .forgot-password {
@@ -644,7 +636,7 @@
         }
 
         .forgot-password a {
-            color: #a0e4d0;
+            color: var(--text-muted);
             text-decoration: none;
             font-size: 0.9rem;
             transition: var(--transition);
@@ -652,14 +644,14 @@
         }
 
         .forgot-password a:hover {
-            color: #ffd700;
+            color: var(--ochre);
             text-decoration: underline;
         }
 
         .login-button {
             width: 100%;
-            background: linear-gradient(135deg, #ffd700, #ffed4e, #f39c12);
-            color: #1a5f3f;
+            background: linear-gradient(135deg, var(--ochre), var(--amber));
+            color: var(--earth-deep);
             border: none;
             padding: 20px;
             border-radius: 15px;
@@ -668,14 +660,14 @@
             cursor: pointer;
             transition: var(--transition);
             margin-bottom: 25px;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.2);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .login-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(255, 215, 0, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(201, 162, 39, 0.3);
         }
 
         .login-button:active {
@@ -712,51 +704,31 @@
             font-weight: 600;
         }
 
-        .guest-access {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            padding: 18px;
-            border-radius: 15px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-bottom: 25px;
-            backdrop-filter: blur(10px);
-        }
-
-        .guest-access:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-3px);
-        }
 
         .signup-link {
             text-align: center;
             margin-top: 25px;
-            color: #a0e4d0;
+            color: var(--text-muted);
             font-size: 0.95rem;
         }
 
         .signup-link a {
-            color: #ffd700;
+            color: var(--ochre);
             text-decoration: none;
             font-weight: 700;
             transition: var(--transition);
         }
 
         .signup-link a:hover {
-            color: #ffed4e;
+            color: var(--amber);
             text-decoration: underline;
         }
 
-        /* Enhanced Messages */
+        /* Messages */
         .error-message {
-            background: rgba(255, 107, 53, 0.2);
-            border: 3px solid #ff6b35;
-            color: #ffaa80;
+            background: rgba(166, 66, 50, 0.15);
+            border: 2px solid rgba(166, 66, 50, 0.5);
+            color: #d4917a;
             padding: 18px;
             border-radius: 15px;
             margin-bottom: 25px;
@@ -767,9 +739,9 @@
         }
 
         .success-message {
-            background: rgba(0, 255, 136, 0.2);
-            border: 3px solid #00ff88;
-            color: #a0ffc5;
+            background: rgba(90, 110, 74, 0.15);
+            border: 2px solid rgba(90, 110, 74, 0.5);
+            color: var(--sand);
             padding: 18px;
             border-radius: 15px;
             margin-bottom: 25px;
@@ -779,23 +751,23 @@
             backdrop-filter: blur(10px);
         }
 
-        /* Enhanced Notifications */
+        /* Notifications */
         .notification {
             position: fixed;
             top: 100px;
             right: 20px;
-            background: rgba(52, 152, 219, 0.95);
-            color: white;
+            background: rgba(74, 53, 32, 0.95);
+            color: var(--text-light);
             padding: 1.5rem 2rem;
             border-radius: 15px;
             font-weight: 600;
             z-index: 10000;
             transform: translateX(400px);
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
             max-width: 350px;
-            border: 3px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(201, 162, 39, 0.3);
             backdrop-filter: blur(20px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 50px rgba(26, 18, 8, 0.5);
         }
 
         .notification.show {
@@ -803,36 +775,36 @@
         }
 
         .notification.success {
-            background: rgba(76, 175, 80, 0.95);
-            border-color: var(--success-green);
+            background: rgba(90, 110, 74, 0.95);
+            border-color: var(--moss);
         }
 
         .notification.warning {
-            background: rgba(255, 152, 0, 0.95);
-            border-color: var(--warning-orange);
+            background: rgba(212, 145, 58, 0.95);
+            border-color: var(--amber);
         }
 
         .notification.error {
-            background: rgba(231, 76, 60, 0.95);
+            background: rgba(166, 66, 50, 0.95);
             border-color: var(--error-red);
         }
 
         .notification.colombia {
-            background: linear-gradient(135deg, #ffde00, #0066cc, #cc0000);
-            border-color: var(--jaguar-gold);
+            background: rgba(74, 53, 32, 0.95);
+            border-color: var(--ochre);
         }
 
         /* Language Detection Banner */
         .language-detection-banner {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(255, 215, 0, 0.2));
-            border: 3px solid rgba(0, 255, 136, 0.5);
+            background: rgba(90, 110, 74, 0.12);
+            border: 2px solid rgba(90, 110, 74, 0.3);
             border-radius: 20px;
             padding: 20px;
             margin-bottom: 25px;
             text-align: center;
             font-size: 0.95rem;
-            color: #a0ffc5;
-            animation: fadeInSlide 1s ease-out;
+            color: var(--sand);
+            animation: fadeInSlide 1.2s ease-out;
             backdrop-filter: blur(10px);
         }
 
@@ -842,27 +814,27 @@
         }
 
         .lang-switch-suggestion {
-            background: rgba(255, 215, 0, 0.15);
-            border: 3px solid rgba(255, 215, 0, 0.5);
+            background: rgba(201, 162, 39, 0.1);
+            border: 2px solid rgba(201, 162, 39, 0.3);
             border-radius: 15px;
             padding: 15px;
             margin-bottom: 20px;
             text-align: center;
             font-size: 0.9rem;
-            color: #ffd700;
+            color: var(--ochre);
             cursor: pointer;
             transition: var(--transition);
             backdrop-filter: blur(10px);
         }
 
         .lang-switch-suggestion:hover {
-            background: rgba(255, 215, 0, 0.25);
+            background: rgba(201, 162, 39, 0.18);
             transform: translateY(-2px);
         }
 
         .registration-preference {
-            background: rgba(255, 215, 0, 0.15);
-            border: 3px solid rgba(255, 215, 0, 0.4);
+            background: rgba(201, 162, 39, 0.1);
+            border: 2px solid rgba(201, 162, 39, 0.25);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 25px;
@@ -871,36 +843,12 @@
         }
 
         .registration-preference h4 {
-            color: #ffd700;
+            color: var(--ochre);
             margin-bottom: 15px;
             font-size: 1.1rem;
             font-weight: 700;
         }
 
-        .preferred-lang-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 215, 0, 0.4);
-            color: white;
-            padding: 10px 18px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin: 5px;
-            transition: var(--transition);
-            display: inline-block;
-            font-weight: 600;
-        }
-
-        .preferred-lang-btn:hover {
-            background: rgba(255, 215, 0, 0.2);
-            border-color: #ffd700;
-        }
-
-        .preferred-lang-btn.selected {
-            background: rgba(255, 215, 0, 0.8);
-            color: #1a5f3f;
-            border-color: #ffd700;
-        }
 
         /* PWA Install Banner */
         .pwa-install-banner {
@@ -908,8 +856,8 @@
             bottom: 20px;
             left: 20px;
             right: 20px;
-            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
-            color: white;
+            background: linear-gradient(135deg, var(--earth-medium), var(--earth-warm));
+            color: var(--text-light);
             padding: 20px;
             border-radius: 20px;
             z-index: 9999;
@@ -917,8 +865,8 @@
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(26, 18, 8, 0.5);
+            border: 2px solid rgba(201, 162, 39, 0.3);
             backdrop-filter: blur(20px);
         }
 
@@ -947,8 +895,8 @@
         }
 
         .pwa-install-btn {
-            background: white;
-            color: var(--jaguar-orange);
+            background: var(--ochre);
+            color: var(--earth-deep);
             border: none;
             padding: 10px 20px;
             border-radius: 25px;
@@ -1000,10 +948,6 @@
             .jaguar-logo {
                 width: 120px;
                 height: 120px;
-            }
-
-            .jaguar-logo::after {
-                font-size: 3.5rem;
             }
 
             .language-selector {
@@ -1079,11 +1023,6 @@
                 overflow-y: auto;
             }
             
-            .demo-credentials {
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-            
             .form-group {
                 margin-bottom: 20px;
             }
@@ -1106,7 +1045,7 @@
         input:focus,
         .version-option:focus,
         .lang-btn:focus {
-            outline: 3px solid var(--jaguar-gold);
+            outline: 3px solid var(--ochre);
             outline-offset: 2px;
         }
 
@@ -1130,83 +1069,52 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="luxury.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Floating Colombian elements -->
+    <!-- Floating nature elements -->
     <div class="floating-elements" id="floatingElements"></div>
 
     <!-- PWA Install Banner -->
     <div class="pwa-install-banner" id="pwaInstallBanner">
         <div class="pwa-install-content">
-            <div class="pwa-install-title">📱 Instalar El viaje del jaguar</div>
-            <div class="pwa-install-desc">Yaguará siempre contigo - Funciona offline</div>
+            <div class="pwa-install-title">Instalar La Aventura de Yaguará</div>
+            <div class="pwa-install-desc">Yaguará siempre contigo — Funciona sin conexión</div>
         </div>
         <div class="pwa-install-actions">
-            <button class="pwa-install-btn" id="pwaInstallBtn">🐆 Instalar</button>
+            <button class="pwa-install-btn" id="pwaInstallBtn">Instalar</button>
             <button class="pwa-close-btn" id="pwaCloseBtn">×</button>
         </div>
     </div>
 
     <div class="login-container">
-        <a href="index.html" class="back-button" id="backButton" data-ai-translate="nav.back" data-ai-context="navigation">← Volver</a>
+        <a href="/elviajedeljaguar" class="back-button" id="backButton" data-ai-translate="nav.back" data-ai-context="navigation">← Volver</a>
         
         <!-- Enhanced Language Selector -->
         <div class="language-selector">
             <button class="lang-toggle" id="langToggle">
                 <span id="currentLangFlag">🌐</span>
-                <span id="currentLangText" data-ai-translate="ui.auto-detect">Auto</span>
+                <span id="currentLangText" data-ai-translate="ui.auto-detect">Automático</span>
                 <span>▼</span>
             </button>
             <div class="lang-dropdown" id="langDropdown">
                 <h4 id="selectLanguageTitle" data-ai-translate="ui.select-language">Seleccionar Idioma</h4>
-                <div class="lang-options">
-                    <button class="lang-btn auto active" data-lang="auto" id="autoBtn">
-                        🌐 <span data-ai-translate="ui.auto-detect">Auto-Detectar</span>
-                    </button>
-                    <button class="lang-btn" data-lang="en" id="enBtn">🇺🇸 English</button>
-                    <button class="lang-btn" data-lang="es" id="esBtn">🇪🇸 Español</button>
-                    <button class="lang-btn" data-lang="pt" id="ptBtn">🇧🇷 Português</button>
-                    <button class="lang-btn" data-lang="fr" id="frBtn">🇫🇷 Français</button>
-                    <button class="lang-btn" data-lang="de" id="deBtn">🇩🇪 Deutsch</button>
-                    <button class="lang-btn" data-lang="it" id="itBtn">🇮🇹 Italiano</button>
-                    <button class="lang-btn" data-lang="zh" id="zhBtn">🇨🇳 中文</button>
-                    <button class="lang-btn" data-lang="ja" id="jaBtn">🇯🇵 日本語</button>
-                    <button class="lang-btn" data-lang="ko" id="koBtn">🇰🇷 한국어</button>
-                    <button class="lang-btn" data-lang="ar" id="arBtn">🇸🇦 العربية</button>
-                    <button class="lang-btn" data-lang="hi" id="hiBtn">🇮🇳 हिन्दी</button>
-                    <button class="lang-btn" data-lang="ru" id="ruBtn">🇷🇺 Русский</button>
+                <input type="text" class="lang-search" id="langSearch" placeholder="Buscar..." autocomplete="off">
+                <div class="lang-options" id="langOptions">
+                    <!-- Populated dynamically from LOGIN_LANGUAGES -->
                 </div>
             </div>
         </div>
         
         <div class="login-header">
             <div class="jaguar-logo" onclick="showJaguarInfo()">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguará" role="img">
-                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-                    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
-                    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
-                    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                    <circle cx="40" cy="34" r="1" fill="#fff"/>
-                    <circle cx="64" cy="34" r="1" fill="#fff"/>
-                    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
-                    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
-                    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-                    <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                    <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                    <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                    <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                </svg>
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguará el Jaguar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                 <div class="colombia-flag"></div>
             </div>
             <h1 class="login-title" id="welcomeTitle" data-ai-translate="auth.welcome" data-ai-context="greeting">¡Bienvenido!</h1>
             <p class="login-subtitle" id="welcomeSubtitle" data-ai-translate="auth.subtitle" data-ai-context="brand-message">
-                Continúa tu aventura con Yaguará por los ecosistemas colombianos
+                Yaguará te espera. Continúa tu viaje por los mundos vivos de Colombia.
             </p>
         </div>
 
@@ -1220,25 +1128,14 @@
             <span id="suggestionText" data-ai-translate="ui.lang-suggestion">💡 ¿Prefieres continuar en tu idioma nativo?</span>
         </div>
 
-        <!-- Registration Language Preference -->
-        <div class="registration-preference" id="registrationPreference" style="display: none;">
-            <h4 id="prefTitle" data-ai-translate="registration.pref-title">📚 Selecciona tu idioma de aprendizaje preferido</h4>
-            <div>
-                <button class="preferred-lang-btn" data-pref-lang="en" id="prefEn">🇺🇸 English</button>
-                <button class="preferred-lang-btn" data-pref-lang="es" id="prefEs">🇪🇸 Español</button>
-                <button class="preferred-lang-btn" data-pref-lang="pt" id="prefPt">🇧🇷 Português</button>
-                <button class="preferred-lang-btn" data-pref-lang="fr" id="prefFr">🇫🇷 Français</button>
-            </div>
-        </div>
-
         <!-- Enhanced Version Selection -->
         <div class="version-selector" id="versionSelector">
-            <h4 id="versionTitle" data-ai-translate="version.title">🎯 Elige tu camino de aprendizaje con Yaguará</h4>
+            <h4 id="versionTitle" data-ai-translate="version.title">Elige tu camino con Yaguará</h4>
             <div class="version-options">
                 <div class="version-option individual" onclick="selectVersion('individual')">
-                    <div class="version-icon">🎒</div>
-                    <h5 id="individualTitle" data-ai-translate="version.individual-title">Viaje individual</h5>
-                    <p id="individualDesc" data-ai-translate="version.individual-desc">Aventura personal con Yaguará por Colombia</p>
+                    <div class="version-icon">🌱</div>
+                    <h5 id="individualTitle" data-ai-translate="version.individual-title">Camino individual</h5>
+                    <p id="individualDesc" data-ai-translate="version.individual-desc">Tu viaje personal con Yaguará por los mundos vivos</p>
                     <div class="version-features">
                         <span class="feature">✓ Aprendizaje a tu propio ritmo</span>
                         <span class="feature">✓ Progreso personal rastreado</span>
@@ -1247,9 +1144,9 @@
                     </div>
                 </div>
                 <div class="version-option classroom" onclick="selectVersion('classroom')">
-                    <div class="version-icon">👥</div>
-                    <h5 id="classroomTitle" data-ai-translate="version.classroom-title">Edición aula</h5>
-                    <p id="classroomDesc" data-ai-translate="version.classroom-desc">Aprendizaje estructurado para educadores</p>
+                    <div class="version-icon">🌿</div>
+                    <h5 id="classroomTitle" data-ai-translate="version.classroom-title">Camino de aula</h5>
+                    <p id="classroomDesc" data-ai-translate="version.classroom-desc">Acompañamiento estructurado para educadores</p>
                     <div class="version-features">
                         <span class="feature">✓ Panel de control docente</span>
                         <span class="feature">✓ Gestión de clase</span>
@@ -1260,23 +1157,6 @@
             </div>
         </div>
 
-        <!-- Enhanced Demo credentials info -->
-        <div class="demo-credentials">
-            <h4 id="demoAccessTitle" data-ai-translate="demo.title">🎯 Acceso de demostración</h4>
-            <div class="demo-version-specific">
-                <div class="demo-individual">
-                    <p><strong><span id="emailIndividual" data-ai-translate="form.email">Email</span>:</strong> student@yaguara.com</p>
-                    <p><strong><span id="passwordIndividual" data-ai-translate="form.password">Contraseña</span>:</strong> yaguara123</p>
-                </div>
-                <div class="demo-classroom" style="display: none;">
-                    <p><strong><span id="emailTeacher" data-ai-translate="form.email">Email</span>:</strong> teacher@yaguara.com</p>
-                    <p><strong><span id="passwordTeacher" data-ai-translate="form.password">Contraseña</span>:</strong> educator123</p>
-                </div>
-            </div>
-            <div class="demo-guest-option">
-                <p id="guestOptionText" data-ai-translate="demo.guest-option">O explora como invitado sin registrarte</p>
-            </div>
-        </div>
 
         <!-- Error/Success messages -->
         <div class="error-message" id="errorMessage"></div>
@@ -1284,7 +1164,7 @@
 
         <form class="login-form" id="loginForm">
             <div class="form-group">
-                <label for="email" class="form-label" id="emailLabel" data-ai-translate="form.email-label">📧 Dirección de Email</label>
+                <label for="email" class="form-label" id="emailLabel" data-ai-translate="form.email-label">Dirección de email</label>
                 <input 
                     type="email" 
                     id="email" 
@@ -1298,7 +1178,7 @@
             </div>
 
             <div class="form-group">
-                <label for="password" class="form-label" id="passwordLabel" data-ai-translate="form.password-label">🔒 Contraseña</label>
+                <label for="password" class="form-label" id="passwordLabel" data-ai-translate="form.password-label">Contraseña</label>
                 <div style="position: relative;">
                     <input 
                         type="password" 
@@ -1321,213 +1201,319 @@
             </div>
 
             <button type="submit" class="login-button" id="loginButton">
-                🐆 <span id="loginButtonText" data-ai-translate="auth.login-button">Comenzar Aventura</span>
+                <span id="loginButtonText" data-ai-translate="auth.login-button">Entrar</span>
             </button>
         </form>
 
-        <div class="divider">
-            <span id="orText" data-ai-translate="ui.or">o</span>
-        </div>
 
-        <button class="guest-access" id="guestButton">
-            🌟 <span id="guestAccessText" data-ai-translate="auth.guest-access">Acceso como Invitado</span>
-        </button>
-
-        <div class="signup-link">
+        <div class="signup-link" id="signupLinkContainer">
             <span id="signupPrompt" data-ai-translate="auth.signup-prompt">¿No tienes cuenta?</span>
             <a href="#" id="signupLink" data-ai-translate="auth.signup-link">Regístrate aquí</a>
         </div>
+
+        <!-- Registration Form (hidden by default) -->
+        <form class="login-form" id="registerForm" style="display:none;">
+            <div class="form-group">
+                <label for="regName" class="form-label" data-ai-translate="form.name-label">Nombre</label>
+                <input type="text" id="regName" name="regName" class="form-input" placeholder="Tu nombre" required autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="regEmail" class="form-label" data-ai-translate="form.email-label">Dirección de email</label>
+                <input type="email" id="regEmail" name="regEmail" class="form-input" placeholder="tu@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="regPassword" class="form-label" data-ai-translate="form.password-label">Contraseña</label>
+                <input type="password" id="regPassword" name="regPassword" class="form-input" placeholder="Mínimo 8 caracteres" required autocomplete="new-password" minlength="8">
+            </div>
+            <div class="form-group">
+                <label for="regPasswordConfirm" class="form-label" data-ai-translate="form.password-confirm-label">Confirmar contraseña</label>
+                <input type="password" id="regPasswordConfirm" name="regPasswordConfirm" class="form-input" placeholder="Repite tu contraseña" required autocomplete="new-password" minlength="8">
+            </div>
+            <button type="submit" class="login-button" id="registerButton">
+                <span id="registerButtonText" data-ai-translate="auth.register-button">Crear cuenta</span>
+            </button>
+        </form>
+        <div class="signup-link" id="backToLoginContainer" style="display:none;">
+            <span data-ai-translate="auth.have-account">¿Ya tienes cuenta?</span>
+            <a href="#" id="backToLoginLink" data-ai-translate="auth.back-to-login">Inicia sesión</a>
+        </div>
+
+        <!-- Forgot Password Form (hidden by default) -->
+        <form class="login-form" id="forgotForm" style="display:none;">
+            <div class="form-group">
+                <label for="forgotEmail" class="form-label" data-ai-translate="form.email-label">Dirección de email</label>
+                <input type="email" id="forgotEmail" name="forgotEmail" class="form-input" placeholder="tu@email.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="login-button" id="forgotButton">
+                <span data-ai-translate="auth.send-reset">Enviar enlace</span>
+            </button>
+        </form>
+        <div class="signup-link" id="backFromForgotContainer" style="display:none;">
+            <a href="#" id="backFromForgotLink" data-ai-translate="auth.back-to-login">Volver al inicio de sesión</a>
+        </div>
+
+        <!-- Password Reset Form (hidden by default, shown when ?reset= in URL) -->
+        <form class="login-form" id="resetForm" style="display:none;">
+            <div class="form-group">
+                <label for="resetPassword" class="form-label" data-ai-translate="form.new-password-label">Nueva contraseña</label>
+                <input type="password" id="resetPassword" name="resetPassword" class="form-input" placeholder="Mínimo 8 caracteres" required autocomplete="new-password" minlength="8">
+            </div>
+            <div class="form-group">
+                <label for="resetPasswordConfirm" class="form-label" data-ai-translate="form.password-confirm-label">Confirmar contraseña</label>
+                <input type="password" id="resetPasswordConfirm" name="resetPasswordConfirm" class="form-input" placeholder="Repite tu contraseña" required autocomplete="new-password" minlength="8">
+            </div>
+            <button type="submit" class="login-button" id="resetButton">
+                <span data-ai-translate="auth.reset-password-button">Restablecer contraseña</span>
+            </button>
+        </form>
     </div>
 
+    <script src="login_lang_data.js"></script>
+    <script src="js/jaguar-api.js"></script>
     <script>
-        // Enhanced Colombian Login System with PWA and Dual Architecture
+        // Yaguará Login System with PWA and Dual Architecture
         class ColombianLoginSystem {
             constructor() {
                 this.translations = this.initializeTranslations();
+                this._mergeAuthTranslations();
                 this.currentLanguage = 'auto';
                 this.detectedLanguage = null;
-                this.preferredLearningLanguage = null;
                 this.userLanguagePreference = null;
                 this.isAutoMode = true;
                 this.selectedVersion = 'individual';
-                this.demoUsers = this.initializeDemoUsers();
                 this.deferredPrompt = null;
                 this.initializeSystem();
             }
 
             initializeTranslations() {
+                // Use externally loaded translations from login_lang_data.js
+                if (window.LOGIN_TRANSLATIONS) {
+                    return window.LOGIN_TRANSLATIONS;
+                }
+                // Minimal fallback if external file fails to load
                 return {
-                    auto: {
-                        "nav.back": "← Volver",
-                        "ui.auto-detect": "Auto",
-                        "ui.select-language": "Seleccionar Idioma",
-                        "auth.welcome": "¡Bienvenido!",
-                        "auth.subtitle": "Continúa tu aventura con Yaguará por los ecosistemas colombianos",
-                        "ui.lang-detected": "🌍 Idioma detectado automáticamente",
-                        "ui.lang-suggestion": "💡 ¿Prefieres continuar en tu idioma nativo?",
-                        "version.title": "🎯 Elige tu camino de aprendizaje con Yaguará",
-                        "version.individual-title": "Viaje individual",
-                        "version.individual-desc": "Aventura personal con Yaguará por Colombia",
-                        "version.classroom-title": "Edición aula",
-                        "version.classroom-desc": "Aprendizaje estructurado para educadores",
-                        "registration.pref-title": "📚 Selecciona tu idioma de aprendizaje preferido",
-                        "demo.title": "🎯 Acceso de demostración",
-                        "form.email": "Email",
-                        "form.password": "Contraseña",
-                        "demo.guest-option": "O explora como invitado sin registrarte",
-                        "form.email-label": "📧 Dirección de Email",
-                        "form.password-label": "🔒 Contraseña",
-                        "auth.forgot-password": "¿Olvidaste tu contraseña?",
-                        "auth.login-button": "Comenzar Aventura",
-                        "ui.or": "o",
-                        "auth.guest-access": "Acceso como Invitado",
-                        "auth.signup-prompt": "¿No tienes cuenta?",
-                        "auth.signup-link": "Regístrate aquí"
+                    "auto": null,
+                    "en": {
+                        "nav.back": "← Back", "ui.auto-detect": "Auto", "ui.select-language": "Select Language",
+                        "auth.welcome": "Welcome!", "auth.subtitle": "Yaguará awaits. Continue your journey through the living worlds of Colombia.",
+                        "ui.lang-detected": "Language detected automatically", "ui.lang-suggestion": "Would you prefer to continue in your native language?",
+                        "version.title": "Choose your path with Yaguará", "version.individual-title": "Individual Path",
+                        "version.individual-desc": "Your personal journey with Yaguará through living worlds", "version.classroom-title": "Classroom Path",
+                        "version.classroom-desc": "Structured guidance for educators",                        "demo.title": "Demo Access", "form.email": "Email", "form.password": "Password",
+                        "demo.guest-option": "Or explore as a guest without registration", "form.email-label": "Email address",
+                        "form.password-label": "Password", "auth.forgot-password": "Forgot your password?",
+                        "auth.login-button": "Enter", "ui.or": "or", "auth.guest-access": "Guest Access",
+                        "auth.signup-prompt": "Don't have an account?", "auth.signup-link": "Sign up here",
+                        "notify.version-selected": "Path Selected", "notify.version-configured": "configured",
+                        "notify.credentials-loaded": "Credentials Loaded", "notify.credentials-filled": "Demo data filled",
+                        "error.fill-all-fields": "Please fill in all fields.", "error.invalid-credentials": "Invalid credentials for the selected path.",
+                        "error.wrong-version": "This email is for the {version} path. Please select the correct one.",
+                        "login.redirecting-student": "Welcome! Entering your world...",
+                        "login.redirecting-teacher": "Welcome! Entering the classroom...",
+                        "guest.accessing": "Entering as guest...", "session.active-redirecting": "Active session detected. Returning...",
+                        "placeholder.email": "your@email.com", "placeholder.password": "Your password"
                     },
-                    en: {
-                        "nav.back": "← Back",
-                        "ui.auto-detect": "Auto",
-                        "ui.select-language": "Select Language",
-                        "auth.welcome": "Welcome!",
-                        "auth.subtitle": "Continue your adventure with Yaguará through Colombian ecosystems",
-                        "ui.lang-detected": "🌍 Language detected automatically",
-                        "ui.lang-suggestion": "💡 Would you prefer to continue in your native language?",
-                        "version.title": "🎯 Choose your learning path with Yaguará",
-                        "version.individual-title": "Individual Journey",
-                        "version.individual-desc": "Personal adventure with Yaguará through Colombia",
-                        "version.classroom-title": "Classroom Edition",
-                        "version.classroom-desc": "Structured learning for educators",
-                        "registration.pref-title": "📚 Select your preferred learning language",
-                        "demo.title": "🎯 Demo Access",
-                        "form.email": "Email",
-                        "form.password": "Password",
-                        "demo.guest-option": "Or explore as a guest without registration",
-                        "form.email-label": "📧 Email Address",
-                        "form.password-label": "🔒 Password",
-                        "auth.forgot-password": "Forgot your password?",
-                        "auth.login-button": "Start Adventure",
-                        "ui.or": "or",
-                        "auth.guest-access": "Guest Access",
-                        "auth.signup-prompt": "Don't have an account?",
-                        "auth.signup-link": "Sign up here"
-                    },
-                    es: {
-                        "nav.back": "← Volver",
-                        "ui.auto-detect": "Automático",
-                        "ui.select-language": "Seleccionar Idioma",
-                        "auth.welcome": "¡Bienvenido!",
-                        "auth.subtitle": "Continúa tu aventura con Yaguará por los ecosistemas colombianos",
-                        "ui.lang-detected": "🌍 Idioma detectado automáticamente",
-                        "ui.lang-suggestion": "💡 ¿Prefieres continuar en tu idioma nativo?",
-                        "version.title": "🎯 Elige tu camino de aprendizaje con Yaguará",
-                        "version.individual-title": "Viaje individual",
-                        "version.individual-desc": "Aventura personal con Yaguará por Colombia",
-                        "version.classroom-title": "Edición aula",
-                        "version.classroom-desc": "Aprendizaje estructurado para educadores",
-                        "registration.pref-title": "📚 Selecciona tu idioma de aprendizaje preferido",
-                        "demo.title": "🎯 Acceso de demostración",
-                        "form.email": "Email",
-                        "form.password": "Contraseña",
-                        "demo.guest-option": "O explora como invitado sin registrarte",
-                        "form.email-label": "📧 Dirección de Email",
-                        "form.password-label": "🔒 Contraseña",
-                        "auth.forgot-password": "¿Olvidaste tu contraseña?",
-                        "auth.login-button": "Comenzar Aventura",
-                        "ui.or": "o",
-                        "auth.guest-access": "Acceso como Invitado",
-                        "auth.signup-prompt": "¿No tienes cuenta?",
-                        "auth.signup-link": "Regístrate aquí"
-                    },
-                    pt: {
-                        "nav.back": "← Voltar",
-                        "ui.auto-detect": "Automático",
-                        "ui.select-language": "Selecionar Idioma",
-                        "auth.welcome": "Bem-vindo!",
-                        "auth.subtitle": "Continue sua aventura com Yaguará pelos ecossistemas colombianos",
-                        "ui.lang-detected": "🌍 Idioma detectado automaticamente",
-                        "ui.lang-suggestion": "💡 Prefere continuar no seu idioma nativo?",
-                        "version.title": "🎯 Escolha seu caminho de aprendizado com Yaguará",
-                        "version.individual-title": "Jornada Individual",
-                        "version.individual-desc": "Aventura pessoal com Yaguará pela Colômbia",
-                        "version.classroom-title": "Edição Sala de Aula",
-                        "version.classroom-desc": "Aprendizado estruturado para educadores",
-                        "registration.pref-title": "📚 Selecione seu idioma de aprendizado preferido",
-                        "demo.title": "🎯 Acesso de Demonstração",
-                        "form.email": "Email",
-                        "form.password": "Senha",
-                        "demo.guest-option": "Ou explore como convidado sem registro",
-                        "form.email-label": "📧 Endereço de Email",
-                        "form.password-label": "🔒 Senha",
-                        "auth.forgot-password": "Esqueceu sua senha?",
-                        "auth.login-button": "Começar Aventura",
-                        "ui.or": "ou",
-                        "auth.guest-access": "Acesso como Convidado",
-                        "auth.signup-prompt": "Não tem uma conta?",
-                        "auth.signup-link": "Cadastre-se aqui"
-                    },
-                    fr: {
-                        "nav.back": "← Retour",
-                        "ui.auto-detect": "Automatique",
-                        "ui.select-language": "Sélectionner la Langue",
-                        "auth.welcome": "Bienvenue!",
-                        "auth.subtitle": "Continuez votre aventure avec Yaguará à travers les écosystèmes colombiens",
-                        "ui.lang-detected": "🌍 Langue détectée automatiquement",
-                        "ui.lang-suggestion": "💡 Préférez-vous continuer dans votre langue maternelle?",
-                        "version.title": "🎯 Choisissez votre parcours d'apprentissage avec Yaguará",
-                        "version.individual-title": "Voyage Individuel",
-                        "version.individual-desc": "Aventure personnelle avec Yaguará en Colombie",
-                        "version.classroom-title": "Édition Classe",
-                        "version.classroom-desc": "Apprentissage structuré pour éducateurs",
-                        "registration.pref-title": "📚 Sélectionnez votre langue d'apprentissage préférée",
-                        "demo.title": "🎯 Accès de Démonstration",
-                        "form.email": "Email",
-                        "form.password": "Mot de passe",
-                        "demo.guest-option": "Ou explorez comme invité sans inscription",
-                        "form.email-label": "📧 Adresse Email",
-                        "form.password-label": "🔒 Mot de passe",
-                        "auth.forgot-password": "Mot de passe oublié?",
-                        "auth.login-button": "Commencer l'Aventure",
-                        "ui.or": "ou",
-                        "auth.guest-access": "Accès Invité",
-                        "auth.signup-prompt": "Pas de compte?",
-                        "auth.signup-link": "Inscrivez-vous ici"
+                    "es": {
+                        "nav.back": "← Volver", "ui.auto-detect": "Automático", "ui.select-language": "Seleccionar idioma",
+                        "auth.welcome": "¡Bienvenido!", "auth.subtitle": "Yaguará te espera. Continúa tu viaje por los mundos vivos de Colombia.",
+                        "ui.lang-detected": "Idioma detectado automáticamente", "ui.lang-suggestion": "¿Prefieres continuar en tu idioma nativo?",
+                        "version.title": "Elige tu camino con Yaguará", "version.individual-title": "Camino individual",
+                        "version.individual-desc": "Tu viaje personal con Yaguará por los mundos vivos", "version.classroom-title": "Camino de aula",
+                        "version.classroom-desc": "Acompañamiento estructurado para educadores",                        "demo.title": "Acceso de demostración", "form.email": "Email", "form.password": "Contraseña",
+                        "demo.guest-option": "O explora como invitado sin registrarte", "form.email-label": "Dirección de email",
+                        "form.password-label": "Contraseña", "auth.forgot-password": "¿Olvidaste tu contraseña?",
+                        "auth.login-button": "Entrar", "ui.or": "o", "auth.guest-access": "Acceso como invitado",
+                        "auth.signup-prompt": "¿No tienes cuenta?", "auth.signup-link": "Regístrate aquí",
+                        "notify.version-selected": "Camino seleccionado", "notify.version-configured": "configurado",
+                        "notify.credentials-loaded": "Credenciales cargadas", "notify.credentials-filled": "Datos de demo rellenados",
+                        "error.fill-all-fields": "Por favor completa todos los campos.", "error.invalid-credentials": "Credenciales inválidas para el camino seleccionado.",
+                        "error.wrong-version": "Este email es para el camino {version}. Por favor selecciona el correcto.",
+                        "login.redirecting-student": "¡Bienvenido! Entrando a tu mundo...",
+                        "login.redirecting-teacher": "¡Bienvenido! Entrando al aula...",
+                        "guest.accessing": "Entrando como invitado...", "session.active-redirecting": "Sesión activa detectada. Volviendo...",
+                        "placeholder.email": "tu@correo.com", "placeholder.password": "Tu contraseña"
                     }
                 };
             }
 
-            initializeDemoUsers() {
-                return {
-                    individual: {
-                        'student@yaguara.com': 'yaguara123',
-                        'demo@yaguara.com': 'yaguara123',
-                        'learner@test.com': 'test123',
-                        'explorer@colombia.com': 'colombia123'
+            // Translation helper — get translated string with fallback chain
+            _mergeAuthTranslations() {
+                const extra = {
+                    'es': {
+                        'form.name-label': 'Nombre',
+                        'form.password-confirm-label': 'Confirmar contraseña',
+                        'form.new-password-label': 'Nueva contraseña',
+                        'auth.register-button': 'Crear cuenta',
+                        'auth.have-account': '¿Ya tienes cuenta?',
+                        'auth.back-to-login': 'Inicia sesión',
+                        'auth.send-reset': 'Enviar enlace',
+                        'auth.reset-password-button': 'Restablecer contraseña',
+                        'error.password-too-short': 'La contraseña debe tener al menos 8 caracteres',
+                        'error.passwords-no-match': 'Las contraseñas no coinciden',
+                        'error.connection': 'Error de conexión. Intenta de nuevo.',
+                        'register.check-email': 'Cuenta creada. Revisa tu correo para verificar tu cuenta.',
+                        'forgot.check-email': 'Si el email existe, recibirás un enlace para restablecer tu contraseña.',
                     },
-                    classroom: {
-                        'teacher@yaguara.com': 'educator123',
-                        'instructor@yaguara.com': 'classroom456',
-                        'educator@test.com': 'teach123',
-                        'professor@colombia.com': 'professor123'
-                    }
+                    'en': {
+                        'form.name-label': 'Name',
+                        'form.password-confirm-label': 'Confirm password',
+                        'form.new-password-label': 'New password',
+                        'auth.register-button': 'Create account',
+                        'auth.have-account': 'Already have an account?',
+                        'auth.back-to-login': 'Log in',
+                        'auth.send-reset': 'Send link',
+                        'auth.reset-password-button': 'Reset password',
+                        'error.password-too-short': 'Password must be at least 8 characters',
+                        'error.passwords-no-match': 'Passwords do not match',
+                        'error.connection': 'Connection error. Please try again.',
+                        'register.check-email': 'Account created. Check your email to verify your account.',
+                        'forgot.check-email': 'If the email exists, you will receive a reset link.',
+                    },
+                    'pt': {
+                        'form.name-label': 'Nome',
+                        'form.password-confirm-label': 'Confirmar senha',
+                        'form.new-password-label': 'Nova senha',
+                        'auth.register-button': 'Criar conta',
+                        'auth.have-account': 'Já tem uma conta?',
+                        'auth.back-to-login': 'Entrar',
+                        'auth.send-reset': 'Enviar link',
+                        'auth.reset-password-button': 'Redefinir senha',
+                        'error.password-too-short': 'A senha deve ter pelo menos 8 caracteres',
+                        'error.passwords-no-match': 'As senhas não coincidem',
+                        'error.connection': 'Erro de conexão. Tente novamente.',
+                        'register.check-email': 'Conta criada. Verifique seu email para confirmar.',
+                        'forgot.check-email': 'Se o email existir, você receberá um link de redefinição.',
+                    },
+                    'fr': {
+                        'form.name-label': 'Nom',
+                        'form.password-confirm-label': 'Confirmer le mot de passe',
+                        'form.new-password-label': 'Nouveau mot de passe',
+                        'auth.register-button': 'Créer un compte',
+                        'auth.have-account': 'Vous avez déjà un compte?',
+                        'auth.back-to-login': 'Se connecter',
+                        'auth.send-reset': 'Envoyer le lien',
+                        'auth.reset-password-button': 'Réinitialiser le mot de passe',
+                        'error.password-too-short': 'Le mot de passe doit contenir au moins 8 caractères',
+                        'error.passwords-no-match': 'Les mots de passe ne correspondent pas',
+                        'error.connection': 'Erreur de connexion. Veuillez réessayer.',
+                        'register.check-email': 'Compte créé. Vérifiez votre email pour confirmer.',
+                        'forgot.check-email': 'Si l\'email existe, vous recevrez un lien de réinitialisation.',
+                    },
                 };
+                for (const lang in extra) {
+                    if (this.translations[lang]) {
+                        Object.assign(this.translations[lang], extra[lang]);
+                    }
+                }
             }
+
+            t(key) {
+                const lang = this.currentLanguage === 'auto' ? (this.detectedLanguage || 'es') : this.currentLanguage;
+                const langData = this.translations[lang];
+                if (langData && langData[key]) return langData[key];
+                // Fallback to Spanish
+                const es = this.translations['es'];
+                if (es && es[key]) return es[key];
+                // Last resort: English
+                const en = this.translations['en'];
+                if (en && en[key]) return en[key];
+                return key;
+            }
+
+            // Detect student level from localStorage
+            detectStudentLevel() {
+                try {
+                    const data = JSON.parse(localStorage.getItem('colombianStudentData') || '{}');
+                    const level = (data.level || '').toUpperCase();
+                    if (level.match(/^(A2\s*(AVANZADO|ADVANCED|ADV)|B[12]|C[12])/)) {
+                        return 'advanced';
+                    }
+                } catch(e) {}
+                return 'beginner';
+            }
+
+            // Get language direction from LOGIN_LANGUAGES
+            getLanguageDirection(code) {
+                if (window.LOGIN_LANGUAGES) {
+                    const entry = window.LOGIN_LANGUAGES.find(l => l.code === code);
+                    if (entry) return entry.dir || 'ltr';
+                }
+                const rtlLangs = ['ar', 'he', 'fa', 'ps', 'ur', 'sd', 'ug'];
+                return rtlLangs.includes(code) ? 'rtl' : 'ltr';
+            }
+
+            // Render language dropdown from LOGIN_LANGUAGES data
+            renderLanguageDropdown() {
+                const container = document.getElementById('langOptions');
+                if (!container) return;
+
+                const languages = window.LOGIN_LANGUAGES || [
+                    { code: 'auto', name: 'Detección automática', native: 'Automático', flag: '🌐', dir: 'ltr' },
+                    { code: 'en', name: 'Inglés', native: 'English', flag: '🇺🇸', dir: 'ltr' },
+                    { code: 'es', name: 'Español', native: 'Español', flag: '🇪🇸', dir: 'ltr' }
+                ];
+
+                container.innerHTML = '';
+                languages.forEach(lang => {
+                    const btn = document.createElement('button');
+                    btn.className = 'lang-btn' + (lang.code === 'auto' ? ' auto' : '') + (lang.code === this.currentLanguage ? ' active' : '');
+                    btn.setAttribute('data-lang', lang.code);
+                    btn.setAttribute('data-name', lang.name.toLowerCase());
+                    btn.setAttribute('data-native', lang.native.toLowerCase());
+                    btn.id = lang.code + 'Btn';
+                    btn.textContent = lang.flag + ' ' + lang.native;
+                    btn.addEventListener('click', () => this.setLanguage(lang.code));
+                    container.appendChild(btn);
+                });
+            }
+
+            // Filter languages in dropdown by search term
+            filterLanguages(query) {
+                const q = query.toLowerCase().trim();
+                const buttons = document.querySelectorAll('#langOptions .lang-btn');
+                buttons.forEach(btn => {
+                    if (!q) {
+                        btn.style.display = '';
+                        return;
+                    }
+                    const name = btn.getAttribute('data-name') || '';
+                    const native = btn.getAttribute('data-native') || '';
+                    const code = btn.getAttribute('data-lang') || '';
+                    btn.style.display = (name.includes(q) || native.includes(q) || code.includes(q)) ? '' : 'none';
+                });
+            }
+
 
             initializeSystem() {
+                this.studentLevel = this.detectStudentLevel();
+                this.renderLanguageDropdown();
                 this.createFloatingElements();
                 this.setupEventListeners();
-                this.loadLanguagePreferences();
+
+                // A2 Advanced+ students: force Spanish, hide language selector
+                if (this.studentLevel === 'advanced') {
+                    this.currentLanguage = 'es';
+                    this.isAutoMode = false;
+                    const langSelector = document.querySelector('.language-selector');
+                    if (langSelector) langSelector.style.display = 'none';
+                    this.updateAllText();
+                } else {
+                    this.loadLanguagePreferences();
+                }
+
+                this.handleUrlActions();
                 this.checkExistingSession();
                 this.setupPWA();
                 this.setupAccessibility();
-                console.log('🐆 Colombian Login System initialized');
+                console.log('Yaguará Login — ' + (window.LOGIN_LANGUAGES ? window.LOGIN_LANGUAGES.length : 3) + ' languages loaded');
             }
 
             createFloatingElements() {
-                const elements = ['🍃', '🦋', '🌺', '🌿', '✨', '🇨🇴', '🐆', '🌳', '🌸', '🦜'];
+                const elements = ['🍃', '🦋', '🌿', '🌳', '🌾', '🪶', '🌙', '✧'];
                 const container = document.getElementById('floatingElements');
                 
                 setInterval(() => {
-                    if (Math.random() < 0.4) {
+                    if (Math.random() < 0.25) {
                         const element = document.createElement('div');
                         element.className = 'floating-element';
                         element.textContent = elements[Math.floor(Math.random() * elements.length)];
@@ -1553,13 +1539,12 @@
                     langToggle.addEventListener('click', () => this.toggleLanguageDropdown());
                 }
 
-                // Language buttons
-                document.querySelectorAll('.lang-btn').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const lang = btn.getAttribute('data-lang');
-                        this.setLanguage(lang);
-                    });
-                });
+                // Language search filter
+                const langSearch = document.getElementById('langSearch');
+                if (langSearch) {
+                    langSearch.addEventListener('input', (e) => this.filterLanguages(e.target.value));
+                    langSearch.addEventListener('click', (e) => e.stopPropagation());
+                }
 
                 // Version selection
                 document.querySelectorAll('.version-option').forEach(option => {
@@ -1573,12 +1558,6 @@
                 const loginForm = document.getElementById('loginForm');
                 if (loginForm) {
                     loginForm.addEventListener('submit', (e) => this.handleLogin(e));
-                }
-
-                // Guest access
-                const guestButton = document.getElementById('guestButton');
-                if (guestButton) {
-                    guestButton.addEventListener('click', () => this.guestAccess());
                 }
 
                 // Password toggle
@@ -1598,13 +1577,27 @@
                     this.showSignup();
                 });
 
+                // Registration form
+                document.getElementById('registerForm')?.addEventListener('submit', (e) => this.handleRegister(e));
+
+                // Forgot password form
+                document.getElementById('forgotForm')?.addEventListener('submit', (e) => this.handleForgot(e));
+
+                // Reset password form
+                document.getElementById('resetForm')?.addEventListener('submit', (e) => this.handleReset(e));
+
+                // Back to login links
+                document.getElementById('backToLoginLink')?.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.showLoginForm();
+                });
+                document.getElementById('backFromForgotLink')?.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.showLoginForm();
+                });
+
                 // Keyboard shortcuts
                 document.addEventListener('keydown', (e) => {
-                    if ((e.ctrlKey || e.metaKey) && e.key === 'd') {
-                        e.preventDefault();
-                        this.fillDemoCredentials();
-                    }
-                    
                     if (e.key === 'Escape') {
                         this.closeDropdowns();
                     }
@@ -1613,14 +1606,6 @@
                 // Language suggestion
                 document.getElementById('langSwitchSuggestion')?.addEventListener('click', () => {
                     this.acceptLanguageSuggestion();
-                });
-
-                // Preferred language buttons
-                document.querySelectorAll('.preferred-lang-btn').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const lang = btn.getAttribute('data-pref-lang');
-                        this.selectPreferredLanguage(lang);
-                    });
                 });
 
                 // Jaguar logo easter egg
@@ -1634,10 +1619,10 @@
                 if ('serviceWorker' in navigator) {
                     navigator.serviceWorker.register('/sw.js')
                         .then(registration => {
-                            console.log('✅ SW registered:', registration);
+                            console.log('SW registered:', registration);
                         })
                         .catch(error => {
-                            console.log('❌ SW registration failed:', error);
+                            console.log('SW registration failed:', error);
                         });
                 }
 
@@ -1663,7 +1648,7 @@
                 // Track PWA usage
                 window.addEventListener('appinstalled', () => {
                     this.trackEvent('pwa_installed');
-                    this.showNotification('🎉 ¡Instalación Exitosa!', 'Yaguará ahora vive en tu dispositivo', 'colombia');
+                    this.showNotification('Instalación exitosa', 'Yaguará ahora vive en tu dispositivo', 'success');
                 });
             }
 
@@ -1728,29 +1713,27 @@
                     }, 1000);
                 }
                 
-                if (savedLearningLanguage) {
-                    this.preferredLearningLanguage = savedLearningLanguage;
-                    this.selectPreferredLanguage(savedLearningLanguage);
-                }
             }
 
             detectUserLanguage() {
-                const browserLang = navigator.language || navigator.userLanguage;
-                const langCode = browserLang.toLowerCase().substring(0, 2);
-                
-                const supportedLanguages = {
-                    'es': 'es', 'pt': 'pt', 'fr': 'fr', 'en': 'en',
-                    'de': 'de', 'it': 'it', 'zh': 'zh', 'ja': 'ja',
-                    'ko': 'ko', 'ar': 'ar', 'hi': 'hi', 'ru': 'ru'
-                };
-                
-                this.detectedLanguage = supportedLanguages[langCode] || 'en';
-                
+                const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                // Try full code first (e.g. zh-tw), then 2-letter prefix
+                const fullCode = browserLang.replace('_', '-');
+                const shortCode = browserLang.substring(0, 2);
+
+                if (this.translations[fullCode]) {
+                    this.detectedLanguage = fullCode;
+                } else if (this.translations[shortCode]) {
+                    this.detectedLanguage = shortCode;
+                } else {
+                    this.detectedLanguage = 'en';
+                }
+
                 if (this.isAutoMode) {
                     this.setLanguage(this.detectedLanguage, true);
                     this.showLanguageDetection();
                 }
-                
+
                 return this.detectedLanguage;
             }
 
@@ -1778,43 +1761,41 @@
             }
 
             closeDropdowns() {
-                const dropdown = document.getElementById('languageDropdown');
-                if (dropdown) {
-                    dropdown.classList.remove('show');
-                }
-                const langOptions = document.querySelectorAll('.lang-options');
-                langOptions.forEach(opt => opt.classList.remove('show'));
+                const dropdown = document.getElementById('langDropdown');
+                const toggle = document.getElementById('langToggle');
+                if (dropdown) dropdown.classList.remove('show');
+                if (toggle) toggle.classList.remove('active');
             }
 
             updateLanguageToggle(lang) {
-                const languageData = {
-                    'auto': { flag: '🌐', name: 'Auto' },
-                    'en': { flag: '🇺🇸', name: 'English' },
-                    'es': { flag: '🇪🇸', name: 'Español' },
-                    'pt': { flag: '🇧🇷', name: 'Português' },
-                    'fr': { flag: '🇫🇷', name: 'Français' },
-                    'de': { flag: '🇩🇪', name: 'Deutsch' },
-                    'it': { flag: '🇮🇹', name: 'Italiano' },
-                    'zh': { flag: '🇨🇳', name: '中文' },
-                    'ja': { flag: '🇯🇵', name: '日本語' },
-                    'ko': { flag: '🇰🇷', name: '한국어' },
-                    'ar': { flag: '🇸🇦', name: 'العربية' },
-                    'hi': { flag: '🇮🇳', name: 'हिन्दी' },
-                    'ru': { flag: '🇷🇺', name: 'Русский' }
-                };
-
                 const flagElement = document.getElementById('currentLangFlag');
                 const textElement = document.getElementById('currentLangText');
-                
-                if (flagElement && textElement && languageData[lang]) {
-                    flagElement.textContent = languageData[lang].flag;
-                    textElement.textContent = languageData[lang].name;
+                if (!flagElement || !textElement) return;
+
+                if (lang === 'auto') {
+                    flagElement.textContent = '🌐';
+                    textElement.textContent = 'Auto';
+                    return;
                 }
+
+                // Look up from LOGIN_LANGUAGES
+                if (window.LOGIN_LANGUAGES) {
+                    const entry = window.LOGIN_LANGUAGES.find(l => l.code === lang);
+                    if (entry) {
+                        flagElement.textContent = entry.flag;
+                        textElement.textContent = entry.native;
+                        return;
+                    }
+                }
+
+                // Fallback
+                flagElement.textContent = '🌐';
+                textElement.textContent = lang.toUpperCase();
             }
 
             setLanguage(lang, isAutoDetected = false) {
                 this.closeDropdowns();
-                
+
                 if (lang === 'auto') {
                     this.isAutoMode = true;
                     this.currentLanguage = 'auto';
@@ -1827,33 +1808,31 @@
                     this.currentLanguage = lang;
                     this.userLanguagePreference = lang;
                 }
-                
+
                 this.updateButtonStates(lang);
                 this.updateLanguageToggle(lang);
-                
+
                 if (this.translations[lang]) {
                     this.updateAllText();
                 } else {
                     this.currentLanguage = 'en';
                     this.updateAllText();
-                    this.showNotification(`Idioma configurado a ${lang}`, 'Interfaz en inglés', 'warning');
+                    this.showNotification(this.t('notify.version-selected'), lang.toUpperCase(), 'warning');
                 }
-                
+
+                // Set RTL/LTR direction
+                const dir = this.getLanguageDirection(lang);
+                document.documentElement.dir = dir;
+                document.documentElement.lang = lang;
+
                 if (!isAutoDetected) {
                     localStorage.setItem('jaguarInterfaceLanguage', lang);
-                    
+
                     if (this.announceToScreenReader) {
-                        this.announceToScreenReader(`Idioma cambiado a ${lang}`);
+                        this.announceToScreenReader(lang);
                     }
                 }
-                
-                document.documentElement.lang = lang;
-                
-                if (!isAutoDetected && !this.preferredLearningLanguage) {
-                    setTimeout(() => {
-                        this.showRegistrationPreference();
-                    }, 1000);
-                }
+
             }
 
             updateButtonStates(activeLang) {
@@ -1871,9 +1850,8 @@
                 const banner = document.getElementById('langDetectionBanner');
                 const detectionText = document.getElementById('detectionText');
                 
-                const currentLang = this.isAutoMode ? this.detectedLanguage : this.currentLanguage;
-                if (detectionText && this.translations[currentLang]) {
-                    detectionText.textContent = this.translations[currentLang]["ui.lang-detected"];
+                if (detectionText) {
+                    detectionText.textContent = this.t('ui.lang-detected');
                 }
                 
                 if (banner) {
@@ -1891,17 +1869,18 @@
                 if (this.detectedLanguage && this.detectedLanguage !== this.currentLanguage) {
                     const suggestion = document.getElementById('langSwitchSuggestion');
                     const suggestionText = document.getElementById('suggestionText');
-                    
-                    const languageData = {
-                        'en': 'English', 'es': 'Español', 'pt': 'Português', 'fr': 'Français',
-                        'de': 'Deutsch', 'it': 'Italiano', 'zh': '中文', 'ja': '日本語',
-                        'ko': '한국어', 'ar': 'العربية', 'hi': 'हिन्दी', 'ru': 'Русский'
-                    };
-                    
-                    if (suggestionText && this.translations[this.currentLanguage]) {
-                        suggestionText.textContent = `💡 ${this.translations[this.currentLanguage]["ui.lang-suggestion"]} (${languageData[this.detectedLanguage]})`;
+
+                    // Get native name from LOGIN_LANGUAGES
+                    let detectedName = this.detectedLanguage;
+                    if (window.LOGIN_LANGUAGES) {
+                        const entry = window.LOGIN_LANGUAGES.find(l => l.code === this.detectedLanguage);
+                        if (entry) detectedName = entry.native;
                     }
-                    
+
+                    if (suggestionText) {
+                        suggestionText.textContent = `${this.t('ui.lang-suggestion')} (${detectedName})`;
+                    }
+
                     if (suggestion) {
                         suggestion.style.display = 'block';
                     }
@@ -1918,82 +1897,28 @@
                     if (suggestion) suggestion.style.display = 'none';
                     if (banner) banner.style.display = 'none';
                     
-                    setTimeout(() => {
-                        this.showRegistrationPreference();
-                    }, 1000);
                 }
-            }
-
-            showRegistrationPreference() {
-                const preference = document.getElementById('registrationPreference');
-                if (preference) {
-                    preference.style.display = 'block';
-                    
-                    if (this.detectedLanguage) {
-                        const prefBtn = document.getElementById(`pref${this.detectedLanguage.charAt(0).toUpperCase() + this.detectedLanguage.slice(1)}`);
-                        if (prefBtn) {
-                            prefBtn.style.animation = 'pulse 2s ease-in-out 3';
-                        }
-                    }
-                }
-            }
-
-            selectPreferredLanguage(lang) {
-                this.preferredLearningLanguage = lang;
-                
-                document.querySelectorAll('.preferred-lang-btn').forEach(btn => {
-                    btn.classList.remove('selected');
-                });
-                
-                const selectedBtn = document.getElementById(`pref${lang.charAt(0).toUpperCase() + lang.slice(1)}`);
-                if (selectedBtn) {
-                    selectedBtn.classList.add('selected');
-                }
-                
-                localStorage.setItem('jaguarLearningLanguage', lang);
-                
-                this.showNotification('Preferencia Guardada', 'Idioma de aprendizaje configurado ✓', 'success');
-                
-                setTimeout(() => {
-                    const preference = document.getElementById('registrationPreference');
-                    if (preference) {
-                        preference.style.display = 'none';
-                    }
-                }, 2000);
             }
 
             updateAllText() {
-                const texts = this.translations[this.currentLanguage] || this.translations['en'];
-                
+                // Update all data-ai-translate elements
                 document.querySelectorAll('[data-ai-translate]').forEach(element => {
                     const key = element.getAttribute('data-ai-translate');
-                    if (texts[key]) {
-                        element.textContent = texts[key];
+                    const val = this.t(key);
+                    if (val && val !== key) {
+                        element.textContent = val;
                     }
                 });
-                
-                // Update placeholders
+
+                // Update placeholders using translation keys
                 const emailInput = document.getElementById('email');
                 const passwordInput = document.getElementById('password');
-                
+
                 if (emailInput) {
-                    const placeholders = {
-                        'es': 'tu@correo.com',
-                        'pt': 'seu@email.com',
-                        'fr': 'votre@email.com',
-                        'en': 'your@email.com'
-                    };
-                    emailInput.placeholder = placeholders[this.currentLanguage] || 'your@email.com';
+                    emailInput.placeholder = this.t('placeholder.email');
                 }
-                
                 if (passwordInput) {
-                    const placeholders = {
-                        'es': 'Tu contraseña',
-                        'pt': 'Sua senha',
-                        'fr': 'Votre mot de passe',
-                        'en': 'Your password'
-                    };
-                    passwordInput.placeholder = placeholders[this.currentLanguage] || 'Your password';
+                    passwordInput.placeholder = this.t('placeholder.password');
                 }
             }
 
@@ -2006,18 +1931,6 @@
                 
                 document.querySelector(`.version-option.${version}`).classList.add('selected');
                 
-                // Update demo credentials display
-                const demoIndividual = document.querySelector('.demo-individual');
-                const demoClassroom = document.querySelector('.demo-classroom');
-                
-                if (version === 'individual') {
-                    if (demoIndividual) demoIndividual.style.display = 'block';
-                    if (demoClassroom) demoClassroom.style.display = 'none';
-                } else {
-                    if (demoIndividual) demoIndividual.style.display = 'none';
-                    if (demoClassroom) demoClassroom.style.display = 'block';
-                }
-                
                 // Clear form
                 const emailInput = document.getElementById('email');
                 const passwordInput = document.getElementById('password');
@@ -2025,147 +1938,98 @@
                 if (passwordInput) passwordInput.value = '';
                 
                 const versionNames = {
-                    'individual': 'Viaje individual',
-                    'classroom': 'Edición aula'
+                    'individual': this.t('version.individual-title'),
+                    'classroom': this.t('version.classroom-title')
                 };
-                
-                this.showNotification('Versión Seleccionada', `${versionNames[version]} configurada`, 'success');
+
+                this.showNotification(this.t('notify.version-selected'), `${versionNames[version]} ${this.t('notify.version-configured')}`, 'success');
                 this.trackEvent('version_selected', { version });
             }
 
-            handleLogin(e) {
+            async handleLogin(e) {
                 e.preventDefault();
-                
+
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('password').value;
-                
+
                 this.hideMessages();
-                
+
                 if (!email || !password) {
-                    this.showError('Por favor completa todos los campos.');
+                    this.showError(this.t('error.fill-all-fields'));
                     return;
                 }
-                
-                const validation = this.validateLogin(email, password);
-                
-                if (validation.success) {
-                    this.successfulLogin(email, validation.userType);
-                } else if (validation.suggestedVersion) {
-                    this.showError(validation.error);
-                    setTimeout(() => {
-                        if (confirm(`¿Cambiar a versión ${validation.suggestedVersion}?`)) {
-                            this.selectVersion(validation.suggestedVersion);
-                        }
-                    }, 2000);
-                } else {
-                    this.showError(validation.error);
-                }
-            }
 
-            validateLogin(email, password) {
-                const versionUsers = this.demoUsers[this.selectedVersion];
-                
-                if (versionUsers && versionUsers[email] && versionUsers[email] === password) {
-                    return { success: true, userType: this.selectedVersion };
-                }
-                
-                const otherVersion = this.selectedVersion === 'individual' ? 'classroom' : 'individual';
-                const otherVersionUsers = this.demoUsers[otherVersion];
-                
-                if (otherVersionUsers && otherVersionUsers[email]) {
-                    return { 
-                        success: false, 
-                        error: `Este email es para la versión ${otherVersion}. Por favor selecciona la versión correcta.`,
-                        suggestedVersion: otherVersion
-                    };
-                }
-                
-                return { success: false, error: 'Credenciales inválidas para la versión seleccionada.' };
-            }
-
-            successfulLogin(email, userType = 'individual') {
-                const successMessages = {
-                    'individual': '🐆 ¡Bienvenido! Redirigiendo al panel de estudiante...',
-                    'classroom': '👨‍🏫 ¡Bienvenido! Redirigiendo al panel de profesor...'
-                };
-                
-                this.showSuccess(successMessages[userType]);
-                
                 // Disable login button
                 const loginButton = document.getElementById('loginButton');
                 if (loginButton) {
                     loginButton.disabled = true;
-                    loginButton.innerHTML = '🔄 Iniciando sesión...';
+                    loginButton.innerHTML = 'Entrando...';
                 }
-                
-                // Save user session with enhanced data
+
+                try {
+                    const res = await JaguarAPI.login(email, password);
+                    if (res.success) {
+                        this.successfulLogin(email, res.data.user, res.data.token);
+                    } else {
+                        this.showError(res.error || this.t('error.invalid-credentials'));
+                        if (loginButton) {
+                            loginButton.disabled = false;
+                            loginButton.innerHTML = '<span>' + this.t('auth.login-button') + '</span>';
+                        }
+                    }
+                } catch(err) {
+                    this.showError(this.t('error.connection') || 'Error de conexión. Intenta de nuevo.');
+                    if (loginButton) {
+                        loginButton.disabled = false;
+                        loginButton.innerHTML = '<span>' + this.t('auth.login-button') + '</span>';
+                    }
+                }
+            }
+
+            successfulLogin(email, serverUser, serverToken) {
+                const userType = serverUser.user_type || this.selectedVersion;
+                const successMessages = {
+                    'individual': this.t('login.redirecting-student'),
+                    'classroom': this.t('login.redirecting-teacher')
+                };
+
+                this.showSuccess(successMessages[userType] || successMessages['individual']);
+
+                // Save user session with server data
                 const userData = {
                     email: email,
+                    serverToken: serverToken,
+                    userId: serverUser.id,
+                    displayName: serverUser.display_name,
+                    cefrLevel: serverUser.cefr_level,
                     userType: userType,
+                    role: serverUser.role || (userType === 'classroom' ? 'teacher' : 'student'),
+                    tier: serverUser.tier || 'free',
                     version: this.selectedVersion,
                     loginTime: new Date().toISOString(),
                     sessionId: this.generateSessionId(),
-                    interfaceLanguage: this.userLanguagePreference || this.currentLanguage,
-                    learningLanguage: this.preferredLearningLanguage || this.detectedLanguage || this.currentLanguage,
-                    detectedLanguage: this.detectedLanguage,
+                    interfaceLanguage: serverUser.interface_lang || this.userLanguagePreference || this.currentLanguage,
+                    learningLanguage: 'es',
+                    detectedLanguage: serverUser.detected_lang || this.detectedLanguage,
+                    emailVerified: serverUser.email_verified,
+                    immersionLocked: serverUser.immersion_locked,
+                    user: serverUser,
                     colombianContext: {
                         culturalImmersion: true,
                         ecosystemLearning: true,
                         conservationTracking: true
                     }
                 };
-                
+
                 localStorage.setItem('jaguarUserSession', JSON.stringify(userData));
-                localStorage.setItem('isDemoAccount', 'true');
-                localStorage.setItem('colombianDemoActive', 'true');
-                
                 this.trackEvent('login_success', { userType, version: this.selectedVersion });
-                
-                // Redirect based on user type
+
+                // Redirect
                 setTimeout(() => {
-                    if (userType === 'classroom') {
-                        window.location.href = 'dashboard.html';
-                    } else {
-                        window.location.href = 'dashboard.html';
-                    }
+                    window.location.href = 'dashboard.html';
                 }, 2000);
             }
 
-            guestAccess() {
-                this.showSuccess('🌟 Accediendo como invitado...');
-                
-                // Save guest session
-                const guestData = {
-                    email: 'guest@yaguara.com',
-                    isGuest: true,
-                    userType: this.selectedVersion,
-                    version: this.selectedVersion,
-                    loginTime: new Date().toISOString(),
-                    sessionId: this.generateSessionId(),
-                    interfaceLanguage: this.userLanguagePreference || this.currentLanguage,
-                    learningLanguage: this.preferredLearningLanguage || this.detectedLanguage || this.currentLanguage,
-                    detectedLanguage: this.detectedLanguage,
-                    colombianContext: {
-                        culturalImmersion: true,
-                        ecosystemLearning: true,
-                        conservationTracking: true
-                    }
-                };
-                
-                localStorage.setItem('jaguarUserSession', JSON.stringify(guestData));
-                localStorage.setItem('isDemoAccount', 'true');
-                localStorage.setItem('colombianDemoActive', 'true');
-                
-                this.trackEvent('guest_access', { version: this.selectedVersion });
-                
-                setTimeout(() => {
-                    if (this.selectedVersion === 'classroom') {
-                        window.location.href = 'dashboard.html';
-                    } else {
-                        window.location.href = 'dashboard.html';
-                    }
-                }, 1500);
-            }
 
             togglePassword() {
                 const passwordInput = document.getElementById('password');
@@ -2184,79 +2048,215 @@
                 }
             }
 
-            fillDemoCredentials() {
-                const emailField = document.getElementById('email');
-                const passwordField = document.getElementById('password');
-                
-                if (this.selectedVersion === 'individual') {
-                    if (emailField) emailField.value = 'student@yaguara.com';
-                    if (passwordField) passwordField.value = 'yaguara123';
-                } else {
-                    if (emailField) emailField.value = 'teacher@yaguara.com';
-                    if (passwordField) passwordField.value = 'educator123';
-                }
-                
-                this.showNotification('Credenciales Cargadas', 'Datos de demo rellenados', 'success');
-            }
 
             showForgotPassword() {
-                const messages = {
-                    'en': '🔐 Password Recovery\n\nContact support:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\nSupport hours: 9 AM - 6 PM EST',
-                    'es': '🔐 Recuperación de Contraseña\n\nContacta soporte:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\nHorario: 9 AM - 6 PM EST',
-                    'pt': '🔐 Recuperação de Senha\n\nContate o suporte:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\nHorário: 9h - 18h EST',
-                    'fr': '🔐 Récupération de Mot de Passe\n\nContactez le support:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\nHeures: 9h - 18h EST'
-                };
-                
-                alert(messages[this.currentLanguage] || messages['en']);
+                this.hideMessages();
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('signupLinkContainer').style.display = 'none';
+                document.getElementById('registerForm').style.display = 'none';
+                document.getElementById('backToLoginContainer').style.display = 'none';
+                document.getElementById('forgotForm').style.display = '';
+                document.getElementById('backFromForgotContainer').style.display = '';
+                document.getElementById('forgotEmail').focus();
             }
 
             showSignup() {
-                const messages = {
-                    'en': '🎓 Join El Viaje del Jaguar!\n\nTo register:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\n✨ Or try Guest Access!',
-                    'es': '🎓 ¡Únete a El Viaje del Jaguar!\n\nPara registrarte:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\n✨ ¡O prueba Acceso Invitado!',
-                    'pt': '🎓 Junte-se ao El Viaje del Jaguar!\n\nPara se registrar:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\n✨ Ou experimente Acesso Convidado!',
-                    'fr': '🎓 Rejoignez El Viaje del Jaguar!\n\nPour vous inscrire:\n📱 WhatsApp: +1 917 306 7920\n📧 Email: info@babelfreeunion.com\n\n✨ Ou essayez l\'Accès Invité!'
-                };
-                
-                alert(messages[this.currentLanguage] || messages['en']);
+                this.hideMessages();
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('signupLinkContainer').style.display = 'none';
+                document.getElementById('forgotForm').style.display = 'none';
+                document.getElementById('backFromForgotContainer').style.display = 'none';
+                document.getElementById('registerForm').style.display = '';
+                document.getElementById('backToLoginContainer').style.display = '';
+                document.getElementById('regName').focus();
+            }
+
+            showLoginForm() {
+                this.hideMessages();
+                document.getElementById('registerForm').style.display = 'none';
+                document.getElementById('backToLoginContainer').style.display = 'none';
+                document.getElementById('forgotForm').style.display = 'none';
+                document.getElementById('backFromForgotContainer').style.display = 'none';
+                document.getElementById('resetForm').style.display = 'none';
+                document.getElementById('loginForm').style.display = '';
+                document.getElementById('signupLinkContainer').style.display = '';
+            }
+
+            async handleRegister(e) {
+                e.preventDefault();
+                this.hideMessages();
+
+                const name = document.getElementById('regName').value.trim();
+                const email = document.getElementById('regEmail').value.trim();
+                const password = document.getElementById('regPassword').value;
+                const confirm = document.getElementById('regPasswordConfirm').value;
+
+                if (!name || !email || !password || !confirm) {
+                    this.showError(this.t('error.fill-all-fields'));
+                    return;
+                }
+                if (password.length < 8) {
+                    this.showError(this.t('error.password-too-short') || 'La contraseña debe tener al menos 8 caracteres');
+                    return;
+                }
+                if (password !== confirm) {
+                    this.showError(this.t('error.passwords-no-match') || 'Las contraseñas no coinciden');
+                    return;
+                }
+
+                const btn = document.getElementById('registerButton');
+                if (btn) { btn.disabled = true; btn.innerHTML = 'Creando...'; }
+
+                try {
+                    const role = this.selectedVersion === 'classroom' ? 'teacher' : 'student';
+                    const res = await JaguarAPI.register(
+                        email, password, name, this.selectedVersion,
+                        this.userLanguagePreference || this.currentLanguage,
+                        this.detectedLanguage,
+                        role
+                    );
+                    if (res.success) {
+                        this.showSuccess(res.data.message || this.t('register.check-email') || 'Cuenta creada. Revisa tu correo para verificar tu cuenta.');
+                        setTimeout(() => this.showLoginForm(), 3000);
+                    } else {
+                        this.showError(res.error || 'Error al crear la cuenta');
+                    }
+                } catch(err) {
+                    this.showError(this.t('error.connection') || 'Error de conexión');
+                }
+                if (btn) { btn.disabled = false; btn.innerHTML = '<span>' + this.t('auth.register-button') + '</span>'; }
+            }
+
+            async handleForgot(e) {
+                e.preventDefault();
+                this.hideMessages();
+
+                const email = document.getElementById('forgotEmail').value.trim();
+                if (!email) { this.showError(this.t('error.fill-all-fields')); return; }
+
+                const btn = document.getElementById('forgotButton');
+                if (btn) { btn.disabled = true; }
+
+                try {
+                    const res = await JaguarAPI.forgotPassword(email);
+                    this.showSuccess(res.data?.message || this.t('forgot.check-email') || 'Si el email existe, recibirás un enlace para restablecer tu contraseña.');
+                } catch(err) {
+                    this.showSuccess(this.t('forgot.check-email') || 'Si el email existe, recibirás un enlace.');
+                }
+                if (btn) { btn.disabled = false; }
+            }
+
+            async handleReset(e) {
+                e.preventDefault();
+                this.hideMessages();
+
+                const password = document.getElementById('resetPassword').value;
+                const confirm = document.getElementById('resetPasswordConfirm').value;
+                const token = this._resetToken;
+
+                if (!password || !confirm) { this.showError(this.t('error.fill-all-fields')); return; }
+                if (password.length < 8) {
+                    this.showError(this.t('error.password-too-short') || 'La contraseña debe tener al menos 8 caracteres');
+                    return;
+                }
+                if (password !== confirm) {
+                    this.showError(this.t('error.passwords-no-match') || 'Las contraseñas no coinciden');
+                    return;
+                }
+
+                const btn = document.getElementById('resetButton');
+                if (btn) { btn.disabled = true; }
+
+                try {
+                    const res = await JaguarAPI.resetPassword(token, password);
+                    if (res.success) {
+                        this.showSuccess(res.data.message || 'Contraseña actualizada. Inicia sesión con tu nueva contraseña.');
+                        setTimeout(() => this.showLoginForm(), 3000);
+                    } else {
+                        this.showError(res.error || 'Error al restablecer la contraseña');
+                    }
+                } catch(err) {
+                    this.showError(this.t('error.connection') || 'Error de conexión');
+                }
+                if (btn) { btn.disabled = false; }
+            }
+
+            handleUrlActions() {
+                const params = new URLSearchParams(window.location.search);
+
+                // Email verification
+                const verifyToken = params.get('verify');
+                if (verifyToken) {
+                    fetch('/api/auth/verify?token=' + encodeURIComponent(verifyToken))
+                        .then(r => r.json())
+                        .then(res => {
+                            if (res.success) {
+                                this.showSuccess(res.data.message || 'Email verificado correctamente.');
+                            } else {
+                                this.showError(res.error || 'Enlace de verificación inválido o expirado.');
+                            }
+                        })
+                        .catch(() => this.showError('Error de conexión'));
+                    // Clean URL
+                    window.history.replaceState({}, '', '/login.html');
+                    return;
+                }
+
+                // Password reset
+                const resetToken = params.get('reset');
+                if (resetToken) {
+                    this._resetToken = resetToken;
+                    document.getElementById('loginForm').style.display = 'none';
+                    document.getElementById('signupLinkContainer').style.display = 'none';
+                    document.getElementById('resetForm').style.display = '';
+                    document.getElementById('resetPassword').focus();
+                    window.history.replaceState({}, '', '/login.html');
+                }
             }
 
             showJaguarInfo() {
-                const infoMessages = {
-                    'en': '🐆 Meet Yaguará!\n\nYaguará is a young jaguar who will guide you through the diverse ecosystems of Colombia while you learn authentic Spanish.\n\nFrom the Amazon rainforest to the Andean mountains, from the Caribbean coast to the Pacific jungle, Yaguará will be your companion in this incredible linguistic and cultural adventure.',
-                    'es': '🐆 ¡Conoce a Yaguará!\n\nYaguará es un joven jaguar que te guiará por los diversos ecosistemas de Colombia mientras aprendes español auténtico.\n\nDesde la selva amazónica hasta las montañas andinas, desde la costa caribeña hasta la selva del Pacífico, Yaguará será tu compañero en esta increíble aventura lingüística y cultural.',
-                    'pt': '🐆 Conheça Yaguará!\n\nYaguará é um jovem jaguar que o guiará pelos diversos ecossistemas da Colômbia enquanto aprende espanhol autêntico.\n\nDa selva amazônica às montanhas andinas, da costa caribenha à selva do Pacífico, Yaguará será seu companheiro nesta incrível aventura linguística e cultural.',
-                    'fr': '🐆 Rencontrez Yaguará!\n\nYaguará est un jeune jaguar qui vous guidera à travers les divers écosystèmes de la Colombie pendant que vous apprenez l\'espagnol authentique.\n\nDe la forêt amazonienne aux montagnes andines, de la côte caribéenne à la jungle du Pacifique, Yaguará sera votre compagnon dans cette incroyable aventure linguistique et culturelle.'
+                const messages = {
+                    'en': 'Yaguará\n\nJaguar-spirit and guardian between worlds. Yaguará guides you through the living worlds of Colombia — asks questions instead of giving answers, appears and disappears.\n\nFrom the rivers of the Amazon to the peaks of the Andes, from the Caribbean coast to the Pacific jungle — Yaguará is your companion in this journey of language and memory.',
+                    'es': 'Yaguará\n\nEspíritu-jaguar y guardián entre mundos. Yaguará te guía por los mundos vivos de Colombia — pregunta en vez de responder, aparece y desaparece.\n\nDesde los ríos del Amazonas hasta las cumbres de los Andes, desde la costa caribeña hasta la selva del Pacífico — Yaguará es tu compañero en este viaje de lengua y memoria.',
+                    'pt': 'Yaguará\n\nEspírito-jaguar e guardião entre mundos. Yaguará o guia pelos mundos vivos da Colômbia — faz perguntas em vez de dar respostas, aparece e desaparece.\n\nDos rios da Amazônia aos picos dos Andes, da costa caribenha à selva do Pacífico — Yaguará é seu companheiro nesta jornada de língua e memória.',
+                    'fr': 'Yaguará\n\nEsprit-jaguar et gardien entre les mondes. Yaguará vous guide à travers les mondes vivants de la Colombie — pose des questions au lieu de donner des réponses, apparaît et disparaît.\n\nDes rivières de l\'Amazonie aux sommets des Andes, de la côte caribéenne à la jungle du Pacifique — Yaguará est votre compagnon dans ce voyage de langue et de mémoire.'
                 };
-                
-                alert(infoMessages[this.currentLanguage] || infoMessages['en']);
+                alert(messages[this.currentLanguage] || messages['es']);
                 this.trackEvent('jaguar_info_viewed');
             }
 
             checkExistingSession() {
                 const session = localStorage.getItem('jaguarUserSession');
-                if (session) {
-                    try {
-                        const userData = JSON.parse(session);
-                        const loginTime = new Date(userData.loginTime);
-                        const now = new Date();
-                        const hoursDiff = (now - loginTime) / (1000 * 60 * 60);
-                        
-                        if (hoursDiff < 24) {
-                            this.showSuccess('🐆 Sesión activa detectada. Redirigiendo...');
-                            setTimeout(() => {
-                                if (userData.userType === 'classroom') {
-                                    window.location.href = 'dashboard.html';
+                if (!session) return;
+
+                try {
+                    const userData = JSON.parse(session);
+
+                    // Has server token — validate against server
+                    if (userData.serverToken) {
+                        JaguarAPI.validateSession().then(result => {
+                            if (result && result.user) {
+                                this.showSuccess(this.t('session.active-redirecting'));
+                                setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);
+                            } else {
+                                // Server rejected or unreachable — fallback to local timestamp
+                                const loginTime = new Date(userData.loginTime);
+                                const daysDiff = (Date.now() - loginTime.getTime()) / (1000 * 60 * 60 * 24);
+                                if (daysDiff < 30) {
+                                    this.showSuccess(this.t('session.active-redirecting'));
+                                    setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);
                                 } else {
-                                    window.location.href = 'dashboard.html';
+                                    localStorage.removeItem('jaguarUserSession');
                                 }
-                            }, 1500);
-                        } else {
-                            localStorage.removeItem('jaguarUserSession');
-                        }
-                    } catch (e) {
-                        localStorage.removeItem('jaguarUserSession');
+                            }
+                        });
+                        return;
                     }
+
+                    // Legacy session (no serverToken) — clear it
+                    localStorage.removeItem('jaguarUserSession');
+                } catch (e) {
+                    localStorage.removeItem('jaguarUserSession');
                 }
             }
 
@@ -2280,10 +2280,10 @@
                     this.deferredPrompt.prompt();
                     this.deferredPrompt.userChoice.then((result) => {
                         if (result.outcome === 'accepted') {
-                            console.log('✅ User accepted Colombian PWA install');
+                            console.log('User accepted PWA install');
                             this.trackEvent('pwa_install_accepted');
                         } else {
-                            console.log('❌ User declined Colombian PWA install');
+                            console.log('User declined PWA install');
                             this.trackEvent('pwa_install_declined');
                         }
                         this.deferredPrompt = null;
@@ -2329,16 +2329,16 @@
                 notification.setAttribute('aria-live', 'polite');
                 
                 const icons = {
-                    info: '💼',
-                    success: '✅',
-                    warning: '⚠️',
-                    error: '❌',
-                    colombia: '🇨🇴'
+                    info: '·',
+                    success: '✓',
+                    warning: '·',
+                    error: '·',
+                    colombia: '·'
                 };
 
                 notification.innerHTML = `
                     <div style="font-size: 1.1em; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
-                        <span>${icons[type] || '💼'}</span>
+                        <span>${icons[type] || '·'}</span>
                         ${title}
                     </div>
                     <div style="font-size: 0.9em; opacity: 0.9; line-height: 1.4;">${message}</div>
@@ -2374,7 +2374,7 @@
                     ...data
                 };
 
-                console.log('📊 Colombian Login Analytics:', eventData);
+                console.log('Login Analytics:', eventData);
                 
                 // Store analytics locally
                 const analytics = JSON.parse(localStorage.getItem('colombianLoginAnalytics') || '[]');
@@ -2422,13 +2422,13 @@
                     window.performance.mark('colombian-login-system-loaded');
                 }
                 
-                console.log('🐆 Colombian Enhanced Login System loaded successfully');
-                console.log('🇨🇴 Multilingual support active');
-                console.log('🎯 Dual version architecture enabled');
-                console.log('📱 PWA installation ready');
+                console.log('Yaguará Login System loaded');
+                console.log('Multilingual support active');
+                console.log('Dual path architecture enabled');
+                console.log('PWA ready');
                 
             } catch (error) {
-                console.error('❌ Failed to initialize Colombian Login System:', error);
+                console.error('Failed to initialize login system:', error);
                 
                 // Fallback notification
                 const fallbackNotification = document.createElement('div');
@@ -2451,19 +2451,19 @@
         // Online/offline detection
         window.addEventListener('online', () => {
             if (loginSystem) {
-                loginSystem.showNotification('🟢 Conectado', 'Conexión a internet restaurada', 'success');
+                loginSystem.showNotification('Conectado', 'Conexión a internet restaurada', 'success');
             }
         });
 
         window.addEventListener('offline', () => {
             if (loginSystem) {
-                loginSystem.showNotification('🔴 Sin Conexión', 'Modo offline activado', 'warning');
+                loginSystem.showNotification('Sin conexión', 'Modo sin conexión activado', 'warning');
             }
         });
 
         // Performance and error monitoring
         window.addEventListener('error', (event) => {
-            console.error('Colombian Login System Error:', event.error);
+            console.error('Login System Error:', event.error);
             
             if (loginSystem) {
                 loginSystem.trackEvent('system_error', {
@@ -2491,15 +2491,9 @@
             }
         });
 
-        // Colombian Audio System (placeholder)
-        // - Jungle sounds for background
-        // - Animal calls for interactions
-        // - Traditional Colombian music
-        
-        // Placeholder for audio context
+        // Nature sounds placeholder
         if (typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined') {
-            // Audio context available for future Colombian ambient sounds
-            console.log('🎵 Audio context available for Colombian ambient sounds');
+            console.log('Audio context available for nature sounds');
         }
     </script>
 </body>

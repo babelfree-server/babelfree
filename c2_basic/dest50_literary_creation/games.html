@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 50: Tinta y territorio &mdash; Creaci&oacute;n literaria</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_basic/dest50_literary_creation/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 50: Tinta y territorio — Creación literaria",
+          "url": "https://babelfree.com/c2_basic/dest50_literary_creation/games",
+          "educationalLevel": "C2 - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Literary creation", "Creative writing", "Spanish literature"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Basic", "item": "https://babelfree.com/c2-bogota" },
+            { "@type": "ListItem", "position": 4, "name": "Tinta y territorio — Creación literaria" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-bogota" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 50: Tinta y territorio</div>
+            <div class="yg-header-subtitle">Creaci&oacute;n literaria</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — Yaguar\u00e1 descubre la tradici\u00f3n literaria colombiana ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre que Colombia es un pa\u00eds de escritores y que el dominio C2 implica la capacidad de crear, no solo comprender.',
+        text: 'En una librer\u00eda de la calle veintiuno, Yaguar\u00e1 encontr\u00f3 un letrero que rezaba: \u00abColombia: donde cada r\u00edo tiene un poeta y cada monta\u00f1a, un narrador.\u00bb Hasta ahora, su viaje hab\u00eda consistido en comprender \u2014escuchar, analizar, interpretar\u2014, pero la estrella gu\u00eda le palpitaba con un mensaje distinto: ya no bastaba con entender las palabras ajenas; hab\u00eda llegado el momento de crear las propias. La creaci\u00f3n literaria \u2014el cuento, la cr\u00f3nica, el poema, el ensayo con aspiraci\u00f3n est\u00e9tica\u2014 no era un lujo reservado a los escritores profesionales, sino la forma m\u00e1s alta de dominio ling\u00fc\u00edstico: aquella en la que el hablante ya no reproduce la lengua, sino que la inventa, la tuerce, la obliga a decir lo que nunca hab\u00eda dicho antes.'
+    },
+    // === GAME 2: Narrative — La voz narrativa ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la lecci\u00f3n sobre las voces narrativas en la literatura. Observa c\u00f3mo cada voz implica una relaci\u00f3n distinta entre el narrador y el mundo narrado.',
+        text: 'En el taller literario del barrio La Macarena, una escritora explicaba: \u00abCada historia exige una voz, y elegir mal la voz es como ponerse la ropa de otro: todo queda inc\u00f3modo. La primera persona \u2014"yo vi, yo sent\u00ed"\u2014 crea intimidad pero limita la perspectiva: solo puedes contar lo que tu narrador sabe. La tercera persona omnisciente \u2014"ella pens\u00f3, sin saber que \u00e9l tambi\u00e9n pensaba lo mismo"\u2014 lo ve todo, pero corre el riesgo de parecer un dios aburrido. La segunda persona \u2014"caminas por la calle y no sabes que alguien te observa"\u2014 es rara, arriesgada, pero cuando funciona, atrapa al lector dentro de la historia como una trampa. Y luego est\u00e1 el narrador no fiable, ese que miente sin decirte que miente, y que te obliga a leer entre l\u00edneas para descubrir la verdad que sus palabras esconden.\u00bb'
+    },
+    // === GAME 3: Narrative — Los recursos literarios como herramientas ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre los recursos literarios y su funci\u00f3n en la creaci\u00f3n de significado. Observa que cada recurso no es un adorno, sino una herramienta de pensamiento.',
+        text: 'La escritora continu\u00f3: \u00abUn recurso literario no es un adorno que se pega al texto como una calcoman\u00eda: es una herramienta de pensamiento. La met\u00e1fora \u2014"el tiempo es un r\u00edo"\u2014 no compara dos cosas, sino que funde dos campos sem\u00e1nticos para crear un significado que no exist\u00eda antes de la fusi\u00f3n. La iron\u00eda \u2014decir lo contrario de lo que se quiere decir\u2014 obliga al lector a pensar activamente, a desconfiar de la superficie. La sinestesia \u2014"un silencio \u00e1spero", "un color ruidoso"\u2014 cruza los sentidos para describir experiencias que el lenguaje ordinario no puede capturar. Y la elipsis \u2014lo que no se dice\u2014 es quiz\u00e1s el recurso m\u00e1s poderoso de todos: porque lo que se calla a veces grita m\u00e1s fuerte que lo que se pronuncia.\u00bb'
+    },
+    // === GAME 4: Narrative — El realismo m\u00e1gico como lecci\u00f3n de lenguaje ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 comprende que el realismo m\u00e1gico no es un g\u00e9nero sino una forma de nombrar la realidad latinoamericana.',
+        text: 'Aquella noche, Yaguar\u00e1 ley\u00f3 por primera vez el inicio de Cien a\u00f1os de soledad: \u00abMuchos a\u00f1os despu\u00e9s, frente al pelot\u00f3n de fusilamiento, el coronel Aureliano Buend\u00eda hab\u00eda de recordar aquella tarde remota en que su padre lo llev\u00f3 a conocer el hielo.\u00bb En una sola oraci\u00f3n, Garc\u00eda M\u00e1rquez condensaba tres tiempos verbales, anticipaba una muerte, evocaba una infancia y convert\u00eda algo tan ordinario como el hielo en un prodigio. El realismo m\u00e1gico, comprendi\u00f3 Yaguar\u00e1, no era una invenci\u00f3n de lo imposible, sino una forma de mirar la realidad con la intensidad suficiente para que lo cotidiano revelara su lado extraordinario. Y eso era exactamente lo que la creaci\u00f3n literaria exig\u00eda: no inventar mundos nuevos, sino ver el mundo existente con ojos nuevos y encontrar las palabras precisas para que otros lo vieran tambi\u00e9n.'
+    },
+    // === GAME 5: Narrative — La cr\u00f3nica como g\u00e9nero h\u00edbrido ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la cr\u00f3nica como g\u00e9nero que fusiona periodismo y literatura. Observa la tensi\u00f3n productiva entre verdad f\u00e1ctica y verdad narrativa.',
+        text: 'En una mesa redonda de la Feria del Libro, Yaguar\u00e1 escuch\u00f3 a un cronista colombiano decir: \u00abLa cr\u00f3nica es el g\u00e9nero m\u00e1s generoso de la literatura porque acepta todo: la precisi\u00f3n del periodismo, la profundidad del ensayo, la libertad de la novela y la intensidad del poema. Un buen cronista sabe que los hechos no hablan por s\u00ed solos; necesitan una voz que los organice, un ritmo que los haga respirar y una mirada que les otorgue sentido. Cuando Alberto Salcedo Ramos escribe sobre un boxeador de Cartagena, no est\u00e1 haciendo periodismo deportivo: est\u00e1 usando el boxeo como lente para ver la pobreza, la dignidad y la resistencia de un pa\u00eds entero. La cr\u00f3nica no informa: ilumina.\u00bb'
+    },
+    // === GAME 6: Narrative — La poes\u00eda como concentraci\u00f3n m\u00e1xima del lenguaje ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n sobre la poes\u00eda como la forma m\u00e1s concentrada del lenguaje. Observa c\u00f3mo el ritmo y el silencio son parte del significado.',
+        text: 'Al final de la mesa, un poeta joven ley\u00f3 un solo verso y se sent\u00f3: \u00abLa palabra justa es la que, al ser pronunciada, vuelve innecesarias todas las dem\u00e1s.\u00bb Nadie aplaudi\u00f3 inmediatamente; el silencio que sigui\u00f3 al verso era parte del poema. Yaguar\u00e1 comprendi\u00f3 que la poes\u00eda era el registro m\u00e1s radical de la lengua: all\u00ed donde la prosa pod\u00eda darse el lujo de la redundancia, el poema exig\u00eda que cada s\u00edlaba cargara con el peso m\u00e1ximo de significado. Un poema no se le\u00eda: se habitaba. No comunicaba informaci\u00f3n: creaba una experiencia que solo exist\u00eda en el encuentro entre el texto y quien lo recib\u00eda. Por eso la poes\u00eda era la prueba definitiva del dominio ling\u00fc\u00edstico: porque pon\u00eda al descubierto no solo lo que el hablante sab\u00eda decir, sino lo que era capaz de callar.'
+    },
+    // === GAME 7: FIB — Recursos literarios: identificaci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica el recurso literario empleado en cada fragmento.',
+        questions: [
+            {
+                sentence: '\u00abEl silencio era tan espeso que se pod\u00eda cortar con un cuchillo.\u00bb Este fragmento emplea una ___.',
+                answer: 'hip\u00e9rbole con sinestesia',
+                options: ['hip\u00e9rbole con sinestesia', 'metonimia', 'antítesis', 'aliteraci\u00f3n']
+            },
+            {
+                sentence: '\u00abSus ojos eran dos pozos de agua negra donde se ahogaban las preguntas.\u00bb Este fragmento emplea una ___.',
+                answer: 'met\u00e1fora extendida',
+                options: ['met\u00e1fora extendida', 'comparaci\u00f3n simple', 'personificaci\u00f3n', 'ox\u00edmoron']
+            },
+            {
+                sentence: '\u00abLa ciudad dorm\u00eda, respiraba, so\u00f1aba con semáforos verdes.\u00bb Este fragmento emplea una ___.',
+                answer: 'personificaci\u00f3n',
+                options: ['personificaci\u00f3n', 'met\u00e1fora', 'iron\u00eda', 'elipsis']
+            },
+            {
+                sentence: '\u00abFue un accidente afortunado, una cat\u00e1strofe bendita, un desastre lleno de gracia.\u00bb Este fragmento emplea un ___.',
+                answer: 'ox\u00edmoron encadenado',
+                options: ['ox\u00edmoron encadenado', 'pleonasmo', 'paralelismo simple', 'hip\u00e9rbaton']
+            }
+        ]
+    },
+    // === GAME 8: FIB — Voces narrativas ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Identifica la voz narrativa empleada en cada fragmento literario.',
+        questions: [
+            {
+                sentence: '\u00abYo no supe qu\u00e9 decir. Me qued\u00e9 callado, mirando c\u00f3mo se iba sin despedirse.\u00bb Est\u00e1 narrado en ___.',
+                answer: 'primera persona protagonista',
+                options: ['primera persona protagonista', 'tercera persona omnisciente', 'segunda persona', 'primera persona testigo']
+            },
+            {
+                sentence: '\u00abElla pens\u00f3 que \u00e9l la amaba, pero \u00e9l pensaba en otra cosa: en el olor de los eucaliptos y en una deuda que no pod\u00eda pagar.\u00bb Est\u00e1 narrado en ___.',
+                answer: 'tercera persona omnisciente',
+                options: ['tercera persona omnisciente', 'primera persona', 'tercera persona limitada', 'segunda persona']
+            },
+            {
+                sentence: '\u00abCaminas por la S\u00e9ptima sin saber que alguien te sigue. Aprietas el paso. No miras atr\u00e1s.\u00bb Est\u00e1 narrado en ___.',
+                answer: 'segunda persona',
+                options: ['segunda persona', 'primera persona', 'tercera persona', 'narrador impersonal']
+            },
+            {
+                sentence: '\u00abYo vi todo lo que pas\u00f3 aquella noche, aunque nadie me pidi\u00f3 que contara. Los otros protagonistas ya no pueden hacerlo.\u00bb Est\u00e1 narrado en ___.',
+                answer: 'primera persona testigo',
+                options: ['primera persona testigo', 'primera persona protagonista', 'tercera persona omnisciente', 'narrador no fiable']
+            }
+        ]
+    },
+    // === GAME 9: FIB — Completar con recurso literario adecuado ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada fragmento literario con la expresi\u00f3n que emplea el recurso m\u00e1s eficaz.',
+        questions: [
+            {
+                sentence: 'La monta\u00f1a no se mov\u00eda, pero ___ (personificaci\u00f3n).',
+                answer: 'miraba con paciencia de siglos',
+                options: ['miraba con paciencia de siglos', 'era muy grande', 'ten\u00eda muchos \u00e1rboles', 'estaba lejos']
+            },
+            {
+                sentence: 'El caf\u00e9 sab\u00eda a ___ (sinestesia).',
+                answer: 'madrugada y despedida',
+                options: ['madrugada y despedida', 'caf\u00e9 normal', 'bebida caliente', 'l\u00edquido oscuro']
+            },
+            {
+                sentence: 'Bogot\u00e1 crec\u00eda como ___ (s\u00edmil revelador).',
+                answer: 'una pregunta que nadie sabe responder',
+                options: ['una pregunta que nadie sabe responder', 'una ciudad grande', 'un lugar con edificios', 'algo muy poblado']
+            }
+        ]
+    },
+    // === GAME 10: FIB — Estilo indirecto libre ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'El estilo indirecto libre funde la voz del narrador con el pensamiento del personaje. Identifica el recurso en cada fragmento.',
+        questions: [
+            {
+                sentence: '\u00abSali\u00f3 a la calle. No, no iba a volver. Que se quedara ella con la casa, con los muebles, con todo. \u00c9l ya no necesitaba nada.\u00bb Este fragmento emplea ___.',
+                answer: 'estilo indirecto libre',
+                options: ['estilo indirecto libre', 'di\u00e1logo directo', 'narraci\u00f3n pura', 'mon\u00f3logo interior']
+            },
+            {
+                sentence: 'El estilo indirecto libre permite que la voz del narrador y la del personaje se ___ sin marcas gr\u00e1ficas como comillas o verbos de habla.',
+                answer: 'fusionen',
+                options: ['fusionen', 'separen', 'contradigan', 'eliminen']
+            },
+            {
+                sentence: 'En \u00abElla mir\u00f3 el reloj. Las tres. \u00bfPor qu\u00e9 no llegaba?\u00bb, la pregunta \u00ab\u00bfPor qu\u00e9 no llegaba?\u00bb pertenece al ___ de la protagonista, filtrada por la voz del narrador.',
+                answer: 'pensamiento',
+                options: ['pensamiento', 'di\u00e1logo', 'discurso p\u00fablico', 'gesto']
+            }
+        ]
+    },
+    // === GAME 11: FIB — Tiempos verbales en narraci\u00f3n literaria ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Los tiempos verbales en la narraci\u00f3n literaria crean efectos espec\u00edficos. Elige el tiempo verbal que produce el efecto indicado.',
+        questions: [
+            {
+                sentence: 'Para crear tensi\u00f3n dram\u00e1tica con presente hist\u00f3rico: \u00abEl coronel ___ la carta. La abre. Lee tres l\u00edneas. Se sienta.\u00bb',
+                answer: 'recibe',
+                options: ['recibe', 'recibi\u00f3', 'hab\u00eda recibido', 'recibir\u00eda']
+            },
+            {
+                sentence: 'Para crear distancia temporal: \u00abMuchos a\u00f1os despu\u00e9s, el coronel ___ recordar aquella tarde.\u00bb',
+                answer: 'hab\u00eda de',
+                options: ['hab\u00eda de', 'pod\u00eda', 'quer\u00eda', 'sol\u00eda']
+            },
+            {
+                sentence: 'Para narrar acciones habituales en el pasado: \u00abTodas las ma\u00f1anas ___ al r\u00edo y se ___ las manos en el agua fr\u00eda.\u00bb',
+                answer: 'bajaba / lavaba',
+                options: ['bajaba / lavaba', 'baj\u00f3 / lav\u00f3', 'baja / lava', 'habr\u00eda bajado / habr\u00eda lavado']
+            }
+        ]
+    },
+    // === GAME 12: FIB — Ritmo y prosodia en la prosa ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'La prosa literaria tiene ritmo. Elige la opci\u00f3n que mejor mantiene el ritmo del fragmento.',
+        questions: [
+            {
+                sentence: 'Llov\u00eda. ___ . Todo callaba.',
+                answer: 'Nadie sal\u00eda',
+                options: ['Nadie sal\u00eda', 'Las personas no quer\u00edan salir de sus casas porque hac\u00eda mucho fr\u00edo', 'La gente se quedaba adentro', 'No hab\u00eda nadie fuera']
+            },
+            {
+                sentence: 'Camin\u00f3 hasta el borde. Mir\u00f3 el abismo. ___.',
+                answer: 'Salt\u00f3',
+                options: ['Salt\u00f3', 'Decidi\u00f3 que iba a saltar hacia el vac\u00edo que se extend\u00eda ante \u00e9l', 'Entonces dio un salto', 'Se tir\u00f3 al vac\u00edo profundo']
+            },
+            {
+                sentence: 'La ciudad se extend\u00eda como un ___: inmensa, peligrosa, llena de promesas que no pensaba cumplir.',
+                answer: 'mapa de mentiras',
+                options: ['mapa de mentiras', 'lugar bastante grande y complejo', 'sitio con muchos edificios', 'territorio extenso']
+            }
+        ]
+    },
+    // === GAME 13: Conjugation — Tiempos literarios: pret\u00e9rito anterior y formas cultas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'La narraci\u00f3n literaria emplea tiempos verbales que no aparecen en el habla cotidiana. Elige la forma correcta.',
+        questions: [
+            {
+                verb: 'haber + participio (pret\u00e9rito anterior)',
+                subject: 'ella \u2014 \u00abNo bien... terminado de hablar, se arrepinti\u00f3.\u00bb',
+                answer: 'hubo',
+                options: ['hubo', 'hab\u00eda', 'ha', 'haya']
+            },
+            {
+                verb: 'decir (futuro de subjuntivo \u2014 registro literario-legal)',
+                subject: '\u2014 \u00abSea lo que fuere y diga lo que... la ley.\u00bb',
+                answer: 'dijere',
+                options: ['dijere', 'diga', 'dijera', 'dir\u00e1']
+            },
+            {
+                verb: 'haber de + infinitivo (condicional \u2014 destino literario)',
+                subject: 'el coronel \u2014 \u00abEl coronel... morir sin saber la verdad.\u00bb',
+                answer: 'hab\u00eda de',
+                options: ['hab\u00eda de', 'ten\u00eda que', 'iba a', 'deb\u00eda']
+            },
+            {
+                verb: 'querer (imperfecto de subjuntivo en -se \u2014 variante literaria)',
+                subject: 'ella \u2014 \u00abComo si... decir algo y no encontrase las palabras.\u00bb',
+                answer: 'quisiese',
+                options: ['quisiese', 'quisiera', 'quiere', 'querr\u00eda']
+            },
+            {
+                verb: 'amanecer (pret\u00e9rito impersonal \u2014 apertura narrativa)',
+                subject: '\u2014 \u00ab... con niebla y olor a tierra mojada.\u00bb',
+                answer: 'Amaneci\u00f3',
+                options: ['Amaneci\u00f3', 'Amanec\u00eda', 'Ha amanecido', 'Amanecer\u00e1']
+            }
+        ]
+    },
+    // === GAME 14: Conjugation — Subjuntivo en contextos literarios ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'El subjuntivo en la literatura crea mundos posibles, deseos y realidades alternativas. Elige la forma correcta.',
+        questions: [
+            {
+                verb: 'ser (imperfecto de subjuntivo en -se)',
+                subject: 'la noche \u2014 \u00abSo\u00f1aba como si la noche... eterna.\u00bb',
+                answer: 'fuese',
+                options: ['fuese', 'fuera', 'sea', 'ser\u00eda']
+            },
+            {
+                verb: 'haber (pluscuamperfecto de subjuntivo)',
+                subject: 'la historia \u2014 \u00abSi la historia... sido otra, quiz\u00e1s yo no estar\u00eda cont\u00e1ndola.\u00bb',
+                answer: 'hubiera',
+                options: ['hubiera', 'hab\u00eda', 'haya', 'habr\u00eda']
+            },
+            {
+                verb: 'ver (imperfecto de subjuntivo)',
+                subject: '\u2014 \u00abMiraba el paisaje como si lo... por primera y \u00faltima vez.\u00bb',
+                answer: 'viera',
+                options: ['viera', 've\u00eda', 'viese', 'ver\u00eda']
+            },
+            {
+                verb: 'poder (imperfecto de subjuntivo en -se)',
+                subject: '\u2014 \u00abEscrib\u00eda como si cada palabra... ser la \u00faltima.\u00bb',
+                answer: 'pudiese',
+                options: ['pudiese', 'pudiera', 'puede', 'podr\u00eda']
+            }
+        ]
+    },
+    // === GAME 15: Conjugation — Verbos de percepci\u00f3n en la descripci\u00f3n literaria ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'En la descripci\u00f3n literaria, los verbos de percepci\u00f3n crean la experiencia sensorial del lector. Elige la forma que mejor funciona en cada contexto.',
+        questions: [
+            {
+                verb: 'oler (imperfecto \u2014 descripci\u00f3n ambiental)',
+                subject: 'la calle \u2014 \u00abLa calle... a pan reci\u00e9n hecho y a infancia.\u00bb',
+                answer: 'ol\u00eda',
+                options: ['ol\u00eda', 'oli\u00f3', 'huele', 'oler\u00eda']
+            },
+            {
+                verb: 'entrever (pret\u00e9rito)',
+                subject: 'ella \u2014 \u00ab... entre la niebla una silueta que podr\u00eda haber sido un recuerdo.\u00bb',
+                answer: 'Entrevi\u00f3',
+                options: ['Entrevi\u00f3', 'Entreve\u00eda', 'Entrevio', 'Entrev\u00eda']
+            },
+            {
+                verb: 'percibir (gerundio compuesto)',
+                subject: '\u2014 \u00ab... un cambio sutil en la luz, supo que amanec\u00eda.\u00bb',
+                answer: 'Habiendo percibido',
+                options: ['Habiendo percibido', 'Percibiendo', 'Al percibir', 'Siendo percibido']
+            }
+        ]
+    },
+    // === GAME 16: Pair — Recurso literario y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada recurso literario con el ejemplo que mejor lo ilustra.',
+        pairs: [
+            ['Met\u00e1fora', 'Sus palabras eran cuchillos que cortaban el silencio.'],
+            ['S\u00edmil', 'Caminaba como quien ha olvidado ad\u00f3nde iba.'],
+            ['Sinestesia', 'La m\u00fasica ten\u00eda un sabor \u00e1cido, casi met\u00e1lico.'],
+            ['Iron\u00eda', '\u00abQu\u00e9 puntual\u00bb, dijo al verlo llegar dos horas tarde.'],
+            ['Ox\u00edmoron', 'Era una oscuridad luminosa, un silencio que gritaba.'],
+            ['Elipsis', 'Le dijo que se iba. Ella no contest\u00f3. Al d\u00eda siguiente, la casa estaba vac\u00eda.']
+        ]
+    },
+    // === GAME 17: Pair — Escritor colombiano y estilo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada escritor colombiano con el rasgo estil\u00edstico que mejor lo define.',
+        pairs: [
+            ['Gabriel Garc\u00eda M\u00e1rquez', 'Oraciones largas y envolventes donde lo m\u00e1gico y lo cotidiano se funden sin transici\u00f3n.'],
+            ['\u00c1lvaro Mutis', 'Prosa marinera y melanc\u00f3lica que narra el desgaste del aventurero perpetuo.'],
+            ['Piedad Bonnett', 'Poes\u00eda \u00edntima y contenida que explora el dolor con precisi\u00f3n quir\u00fargica.'],
+            ['Juan Gabriel V\u00e1squez', 'Narraci\u00f3n hist\u00f3rica que interroga c\u00f3mo el pasado habita el presente.'],
+            ['Fernando Vallejo', 'Prosa r\u00e1bica y musical que convierte la ira en un arte de la digresi\u00f3n.']
+        ]
+    },
+    // === GAME 18: Pair — Primera l\u00ednea y obra ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada c\u00e9lebre primera l\u00ednea con la obra a la que pertenece.',
+        pairs: [
+            ['Muchos a\u00f1os despu\u00e9s, frente al pelot\u00f3n de fusilamiento, el coronel Aureliano Buend\u00eda hab\u00eda de recordar aquella tarde remota en que su padre lo llev\u00f3 a conocer el hielo.', 'Cien a\u00f1os de soledad \u2014 Gabriel Garc\u00eda M\u00e1rquez'],
+            ['El coronel destap\u00f3 el tarro del caf\u00e9 y comprob\u00f3 que no hab\u00eda m\u00e1s de una cucharadita.', 'El coronel no tiene quien le escriba \u2014 Gabriel Garc\u00eda M\u00e1rquez'],
+            ['El d\u00eda en que lo iban a matar, Santiago Nasar se levant\u00f3 a las cinco y media de la ma\u00f1ana para esperar el buque en que llegaba el obispo.', 'Cr\u00f3nica de una muerte anunciada \u2014 Gabriel Garc\u00eda M\u00e1rquez'],
+            ['La \u00faltima vez que vine a este aeropuerto fue para recoger a una persona que llevaba mucho tiempo fuera.', 'El ruido de las cosas al caer \u2014 Juan Gabriel V\u00e1squez']
+        ]
+    },
+    // === GAME 19: Pair — Tipo de narrador y efecto ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada tipo de narrador con el efecto que produce en el lector.',
+        pairs: [
+            ['Primera persona protagonista', 'Crea intimidad y empat\u00eda, pero limita la informaci\u00f3n a lo que el personaje sabe.'],
+            ['Tercera persona omnisciente', 'Ofrece una visi\u00f3n total del mundo narrado, pero puede reducir la tensi\u00f3n dram\u00e1tica.'],
+            ['Segunda persona', 'Involucra al lector directamente en la acci\u00f3n, creando incomodidad productiva.'],
+            ['Narrador no fiable', 'Obliga al lector a leer entre l\u00edneas y reconstruir la verdad oculta.'],
+            ['Primera persona testigo', 'Narra desde la periferia, generando misterio sobre las motivaciones del protagonista.']
+        ]
+    },
+    // === GAME 20: Listening — An\u00e1lisis de un fragmento literario ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento literario e identifica el recurso principal.',
+        audio: 'El pueblo se llamaba Macondo y era una aldea de veinte casas de barro y ca\u00f1abrava construidas a la orilla de un r\u00edo de aguas diáfanas que se precipitaban por un lecho de piedras pulidas, blancas y enormes como huevos prehist\u00f3ricos. El mundo era tan reciente que muchas cosas carec\u00edan de nombre, y para mencionarlas hab\u00eda que se\u00f1alarlas con el dedo.',
+        question: '\u00bfQu\u00e9 efecto crea la imagen \u00abel mundo era tan reciente que muchas cosas carec\u00edan de nombre\u00bb?',
+        answer: 'Sit\u00faa la narraci\u00f3n en un tiempo m\u00edtico donde el acto de nombrar equivale al acto de crear',
+        options: ['Sit\u00faa la narraci\u00f3n en un tiempo m\u00edtico donde el acto de nombrar equivale al acto de crear', 'Indica que los personajes no ten\u00edan educaci\u00f3n', 'Describe una sociedad primitiva sin cultura', 'Muestra que el narrador no conoce bien el pueblo']
+    },
+    // === GAME 21: Listening — Ritmo en la prosa ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento y presta atenci\u00f3n al ritmo de la prosa.',
+        audio: 'Llov\u00eda. Nadie sal\u00eda. Las calles de Bogot\u00e1 se vac\u00edaron como si la ciudad hubiera recibido una orden secreta de desaparecer. Solo los perros, que no entienden de \u00f3rdenes, segu\u00edan caminando con esa dignidad mojada que solo los perros poseen.',
+        question: '\u00bfQu\u00e9 efecto crea el uso de oraciones cortas al inicio seguidas de oraciones largas?',
+        answer: 'Un ritmo de contracci\u00f3n y expansi\u00f3n que imita el efecto de la lluvia sobre la percepci\u00f3n',
+        options: ['Un ritmo de contracci\u00f3n y expansi\u00f3n que imita el efecto de la lluvia sobre la percepci\u00f3n', 'Una falta de coherencia estil\u00edstica', 'Un error de redacci\u00f3n en la estructura del p\u00e1rrafo', 'Una t\u00e9cnica para confundir al lector']
+    },
+    // === GAME 22: Listening — Estilo indirecto libre ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento e identifica d\u00f3nde la voz del narrador se funde con el pensamiento del personaje.',
+        audio: 'Mar\u00eda abri\u00f3 la puerta y encontr\u00f3 la casa vac\u00eda. Claro. \u00c9l se hab\u00eda ido. Siempre se iba. Pero esta vez hab\u00eda algo distinto: hab\u00eda dejado la luz de la cocina encendida, como si quisiera decirle que pensaba volver. O como si no hubiera tenido tiempo de apagarla. Qué más daba.',
+        question: '\u00bfEn qu\u00e9 oraciones se emplea el estilo indirecto libre?',
+        answer: 'En \u00abClaro. \u00c9l se hab\u00eda ido. Siempre se iba\u00bb y \u00abQu\u00e9 m\u00e1s daba\u00bb, donde el pensamiento de Mar\u00eda se filtra sin marcas de discurso',
+        options: ['En \u00abClaro. \u00c9l se hab\u00eda ido. Siempre se iba\u00bb y \u00abQu\u00e9 m\u00e1s daba\u00bb, donde el pensamiento de Mar\u00eda se filtra sin marcas de discurso', 'En todo el fragmento por igual', 'Solo en la primera oraci\u00f3n', 'En ninguna: todo es narraci\u00f3n pura']
+    },
+    // === GAME 23: Listening — Reconocer la voz de un autor ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento e identifica qu\u00e9 rasgos estil\u00edsticos sugieren la tradici\u00f3n de Garc\u00eda M\u00e1rquez.',
+        audio: 'La tarde en que Remedios la Bella subi\u00f3 al cielo, nadie en el pueblo se sorprendi\u00f3 demasiado. Despu\u00e9s de todo, ya era sabido que las mujeres de esa familia ten\u00edan la costumbre de hacer cosas imposibles los martes, especialmente cuando el viento soplaba del norte y ol\u00eda a jazmines maduros.',
+        question: '\u00bfQu\u00e9 rasgo estil\u00edstico del realismo m\u00e1gico est\u00e1 presente en este fragmento?',
+        answer: 'Lo extraordinario se narra con la naturalidad de lo cotidiano, sin asombro ni explicaci\u00f3n',
+        options: ['Lo extraordinario se narra con la naturalidad de lo cotidiano, sin asombro ni explicaci\u00f3n', 'El uso exclusivo de tiempos verbales en presente', 'La ausencia total de descripciones sensoriales', 'La narraci\u00f3n en segunda persona']
+    },
+    // === GAME 24: Sorting — Clasificar por g\u00e9nero literario ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fragmento seg\u00fan el g\u00e9nero literario al que pertenece.',
+        categories: ['Cuento', 'Cr\u00f3nica', 'Poema en prosa', 'Ensayo literario'],
+        items: [
+            { text: 'El hombre entr\u00f3 al bar, pidi\u00f3 un aguardiente y dijo: \u00abVengo a matar al que me rob\u00f3 el nombre.\u00bb', category: 'Cuento' },
+            { text: 'Son las seis de la ma\u00f1ana en la plaza de Paloquemao y los camiones descargan la Colombia que se come: pl\u00e1tano del Quind\u00edo, papa de Boyac\u00e1, pescado del Pac\u00edfico.', category: 'Cr\u00f3nica' },
+            { text: 'Esta ciudad. Este fr\u00edo que no es fr\u00edo sino distancia. Esta lluvia que no moja: bautiza.', category: 'Poema en prosa' },
+            { text: 'Escribir en Colombia siempre ha sido un acto de resistencia, no porque el escritor se oponga al poder, sino porque la escritura misma es un ejercicio de memoria en un pa\u00eds que tiende al olvido.', category: 'Ensayo literario' },
+            { text: 'Cuando volvieron a abrir la puerta del cuarto, la mujer ya no estaba. Solo quedaba el olor a gardenia y una carta que nadie se atrevi\u00f3 a leer.', category: 'Cuento' },
+            { text: 'Juan Esteban tiene catorce a\u00f1os, rapea en los buses de TransMilenio y sue\u00f1a con que algún d\u00eda una productora lo escuche. Hoy, martes de lluvia, sus \u00fanicos oyentes son tres pasajeros con aud\u00edfonos.', category: 'Cr\u00f3nica' },
+            { text: 'La palabra justa. La que llega como un p\u00e1jaro a la rama exacta. La que no pesa ni sobra ni falta. Esa.', category: 'Poema en prosa' },
+            { text: 'La cr\u00f3nica latinoamericana ha logrado lo que la ficci\u00f3n muchas veces no puede: hacer que la realidad resulte m\u00e1s extra\u00f1a y m\u00e1s bella que cualquier invenci\u00f3n.', category: 'Ensayo literario' }
+        ]
+    },
+    // === GAME 25: Sorting — Recurso literario: met\u00e1fora, comparaci\u00f3n o literal ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan el tipo de lenguaje que emplea.',
+        categories: ['Met\u00e1fora', 'Comparaci\u00f3n (s\u00edmil)', 'Lenguaje literal'],
+        items: [
+            { text: 'La ciudad es una selva de concreto.', category: 'Met\u00e1fora' },
+            { text: 'La ciudad se extiende como una selva de concreto.', category: 'Comparaci\u00f3n (s\u00edmil)' },
+            { text: 'La ciudad tiene muchos edificios altos.', category: 'Lenguaje literal' },
+            { text: 'Sus ojos eran dos ventanas cerradas.', category: 'Met\u00e1fora' },
+            { text: 'Sus ojos brillaban como ventanas al sol.', category: 'Comparaci\u00f3n (s\u00edmil)' },
+            { text: 'Sus ojos eran de color caf\u00e9 oscuro.', category: 'Lenguaje literal' }
+        ]
+    },
+    // === GAME 26: Sorting — Efecto del tiempo verbal en la narraci\u00f3n ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada uso del tiempo verbal seg\u00fan el efecto narrativo que produce.',
+        categories: ['Inmediatez/tensi\u00f3n', 'Distancia/reflexi\u00f3n', 'H\u00e1bito/atm\u00f3sfera', 'Anticipaci\u00f3n/destino'],
+        items: [
+            { text: 'Abre la puerta. Mira. No hay nadie. (Presente hist\u00f3rico)', category: 'Inmediatez/tensi\u00f3n' },
+            { text: 'Muchos a\u00f1os despu\u00e9s, recordar\u00eda aquel momento. (Condicional)', category: 'Distancia/reflexi\u00f3n' },
+            { text: 'Todas las tardes bajaba al r\u00edo y se sentaba a esperar. (Imperfecto)', category: 'H\u00e1bito/atm\u00f3sfera' },
+            { text: 'Hab\u00eda de morir en ese pueblo, aunque a\u00fan no lo sab\u00eda. (Haber de + infinitivo)', category: 'Anticipaci\u00f3n/destino' },
+            { text: 'Entra. Se sienta. Pide un caf\u00e9. Espera. (Presente)', category: 'Inmediatez/tensi\u00f3n' },
+            { text: 'Hab\u00eda vivido en esa casa durante cuarenta a\u00f1os cuando decidi\u00f3 irse. (Pluscuamperfecto)', category: 'Distancia/reflexi\u00f3n' },
+            { text: 'La lluvia ca\u00eda siempre a las tres, como una cita que la ciudad nunca olvidaba. (Imperfecto)', category: 'H\u00e1bito/atm\u00f3sfera' },
+            { text: 'A\u00fan no sab\u00eda que esa carta habr\u00eda de cambiar su vida. (Haber de)', category: 'Anticipaci\u00f3n/destino' }
+        ]
+    },
+    // === GAME 27: Builder — Construir una imagen literaria con met\u00e1fora ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir una imagen literaria que emplea met\u00e1fora y personificaci\u00f3n.',
+        words: ['La noche', 'se sent\u00f3', 'sobre Bogot\u00e1', 'como un p\u00e1jaro negro', 'que no piensa irse,', 'y la ciudad,', 'acostumbrada a ese peso,', 'se dej\u00f3 cubrir', 'sin quejarse.'],
+        answer: 'La noche se sent\u00f3 sobre Bogot\u00e1 como un p\u00e1jaro negro que no piensa irse, y la ciudad, acostumbrada a ese peso, se dej\u00f3 cubrir sin quejarse.'
+    },
+    // === GAME 28: Builder — Construir una oraci\u00f3n al estilo de Garc\u00eda M\u00e1rquez ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir una oraci\u00f3n con la estructura temporal caracter\u00edstica de Garc\u00eda M\u00e1rquez: anticipaci\u00f3n + recuerdo.',
+        words: ['Muchos a\u00f1os despu\u00e9s,', 'frente a la puerta cerrada', 'de la librer\u00eda que ya no exist\u00eda,', 'Yaguar\u00e1 hab\u00eda de recordar', 'aquella tarde luminosa', 'en que descubri\u00f3', 'que las palabras', 'pod\u00edan construir mundos.'],
+        answer: 'Muchos a\u00f1os despu\u00e9s, frente a la puerta cerrada de la librer\u00eda que ya no exist\u00eda, Yaguar\u00e1 hab\u00eda de recordar aquella tarde luminosa en que descubri\u00f3 que las palabras pod\u00edan construir mundos.'
+    },
+    // === GAME 29: Builder — Construir un p\u00e1rrafo de cr\u00f3nica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir un p\u00e1rrafo de cr\u00f3nica que combina dato period\u00edstico con mirada literaria.',
+        words: ['Son las cinco', 'de la ma\u00f1ana', 'en Paloquemao', 'y los camiones descargan', 'la Colombia que se come:', 'pl\u00e1tano del Quind\u00edo,', 'papa de Boyac\u00e1,', 'pescado del Pac\u00edfico.', 'Un pa\u00eds entero cabe', 'en un mercado.'],
+        answer: 'Son las cinco de la ma\u00f1ana en Paloquemao y los camiones descargan la Colombia que se come: pl\u00e1tano del Quind\u00edo, papa de Boyac\u00e1, pescado del Pac\u00edfico. Un pa\u00eds entero cabe en un mercado.'
+    },
+    // === GAME 30: Builder — Construir un fragmento po\u00e9tico ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para construir un fragmento en registro po\u00e9tico con sinestesia y ritmo.',
+        words: ['La m\u00fasica', 'del vallenato', 'sab\u00eda a sal', 'y a distancia,', 'como si cada nota', 'hubiera caminado', 'descalza', 'desde el mar', 'hasta el coraz\u00f3n', 'de quien la escuchaba.'],
+        answer: 'La m\u00fasica del vallenato sab\u00eda a sal y a distancia, como si cada nota hubiera caminado descalza desde el mar hasta el coraz\u00f3n de quien la escuchaba.'
+    },
+    // === GAME 31: Translation — Prosa literaria ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol literario usando el banco de palabras. Busca la imagen m\u00e1s evocadora.',
+        source: 'Many years later, in front of the closed bookshop, Yaguará would remember that luminous afternoon when she discovered that words could build worlds.',
+        words: ['Muchos', 'a\u00f1os', 'despu\u00e9s', 'frente', 'a', 'la', 'librer\u00eda', 'cerrada', 'Yaguar\u00e1', 'hab\u00eda', 'de', 'recordar', 'aquella', 'tarde', 'luminosa', 'en', 'que', 'descubri\u00f3', 'las', 'palabras', 'pod\u00edan', 'construir', 'mundos'],
+        answer: 'Muchos a\u00f1os despu\u00e9s frente a la librer\u00eda cerrada Yaguar\u00e1 hab\u00eda de recordar aquella tarde luminosa en que descubri\u00f3 que las palabras pod\u00edan construir mundos'
+    },
+    // === GAME 32: Translation — Cr\u00f3nica ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol de cr\u00f3nica period\u00edstica usando el banco de palabras.',
+        source: 'It is five in the morning at Paloquemao and the trucks unload the Colombia that feeds itself: plantains from Quindío, potatoes from Boyacá, fish from the Pacific. An entire country fits in one market.',
+        words: ['Son', 'las', 'cinco', 'de', 'la', 'ma\u00f1ana', 'en', 'Paloquemao', 'y', 'los', 'camiones', 'descargan', 'Colombia', 'que', 'se', 'come', 'pl\u00e1tano', 'del', 'Quind\u00edo', 'papa', 'Boyac\u00e1', 'pescado', 'Pac\u00edfico', 'Un', 'pa\u00eds', 'entero', 'cabe', 'un', 'mercado'],
+        answer: 'Son las cinco de la ma\u00f1ana en Paloquemao y los camiones descargan la Colombia que se come pl\u00e1tano del Quind\u00edo papa de Boyac\u00e1 pescado del Pac\u00edfico Un pa\u00eds entero cabe en un mercado'
+    },
+    // === GAME 33: Translation — Poema en prosa ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol po\u00e9tico usando el banco de palabras.',
+        source: 'This city. This cold that is not cold but distance. This rain that does not wet: it baptizes.',
+        words: ['Esta', 'ciudad', 'Este', 'fr\u00edo', 'que', 'no', 'es', 'sino', 'distancia', 'lluvia', 'moja', 'bautiza'],
+        answer: 'Esta ciudad Este fr\u00edo que no es fr\u00edo sino distancia Esta lluvia que no moja bautiza'
+    },
+    // === GAME 34: Translation — Ensayo literario ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol de ensayo literario usando el banco de palabras.',
+        source: 'Writing in Colombia has always been an act of resistance, not because the writer opposes power, but because writing itself is an exercise of memory in a country that tends toward oblivion.',
+        words: ['Escribir', 'en', 'Colombia', 'siempre', 'ha', 'sido', 'un', 'acto', 'de', 'resistencia', 'no', 'porque', 'el', 'escritor', 'se', 'oponga', 'al', 'poder', 'sino', 'la', 'escritura', 'misma', 'es', 'ejercicio', 'memoria', 'pa\u00eds', 'que', 'tiende', 'olvido'],
+        answer: 'Escribir en Colombia siempre ha sido un acto de resistencia no porque el escritor se oponga al poder sino porque la escritura misma es un ejercicio de memoria en un pa\u00eds que tiende al olvido'
+    },
+    // === GAME 35: Conversation — Taller literario ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un taller literario. La escritora te pide que analices y comentes fragmentos con vocabulario de cr\u00edtica literaria.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Escritora', text: 'Acabo de leer un cuento de un alumno que empieza as\u00ed: \u00abEl hombre era triste. Estaba en su casa. Llov\u00eda.\u00bb \u00bfQu\u00e9 le dir\u00edas a este alumno para mejorar su apertura?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Le dir\u00eda que la apertura tiene un problema de \u00abmostrar versus contar\u00bb: nos dice que el hombre era triste, pero no nos lo muestra. En lugar de \u00abera triste\u00bb, podr\u00eda describir un gesto, un objeto, un detalle sensorial que le permita al lector inferir la tristeza. Por ejemplo: \u00abEl hombre mir\u00f3 el caf\u00e9 fr\u00edo sobre la mesa y no se molest\u00f3 en calentarlo.\u00bb La lluvia puede funcionar, pero como ambiente, no como informaci\u00f3n: que llueva dentro de la escena, que el lector la sienta caer.',
+                    'Est\u00e1 mal escrito, deber\u00eda usar palabras m\u00e1s bonitas.',
+                    'Le dir\u00eda que est\u00e1 bien as\u00ed.'
+                ],
+                answer: 'Le dir\u00eda que la apertura tiene un problema de \u00abmostrar versus contar\u00bb: nos dice que el hombre era triste, pero no nos lo muestra. En lugar de \u00abera triste\u00bb, podr\u00eda describir un gesto, un objeto, un detalle sensorial que le permita al lector inferir la tristeza. Por ejemplo: \u00abEl hombre mir\u00f3 el caf\u00e9 fr\u00edo sobre la mesa y no se molest\u00f3 en calentarlo.\u00bb La lluvia puede funcionar, pero como ambiente, no como informaci\u00f3n: que llueva dentro de la escena, que el lector la sienta caer.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Escritora', text: 'Excelente. Ahora, \u00bfc\u00f3mo reescribir\u00edas la apertura del cuento usando las t\u00e9cnicas que acabas de mencionar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'El caf\u00e9 se hab\u00eda enfriado sobre la mesa y \u00e9l no se molest\u00f3 en calentarlo. Afuera, la lluvia ca\u00eda con esa insistencia de las cosas que nadie ha pedido, y el agua resbalaba por la ventana como l\u00e1grimas de un edificio que tambi\u00e9n estaba cansado de estar ah\u00ed. No hab\u00eda encendido la luz. No hab\u00eda raz\u00f3n para hacerlo.',
+                    'El hombre estaba muy triste y sol\u00edo en su casa lloviendo mucho.',
+                    'Hab\u00eda un se\u00f1or que no estaba contento.'
+                ],
+                answer: 'El caf\u00e9 se hab\u00eda enfriado sobre la mesa y \u00e9l no se molest\u00f3 en calentarlo. Afuera, la lluvia ca\u00eda con esa insistencia de las cosas que nadie ha pedido, y el agua resbalaba por la ventana como l\u00e1grimas de un edificio que tambi\u00e9n estaba cansado de estar ah\u00ed. No hab\u00eda encendido la luz. No hab\u00eda raz\u00f3n para hacerlo.'
+            }
+        ]
+    },
+    // === GAME 36: Conversation — Debate literario ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate sobre el valor de la literatura en la era digital. Argumenta con precisi\u00f3n y vocabulario de cr\u00edtica cultural.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Cr\u00edtico', text: 'Algunos dicen que la literatura ha perdido relevancia en la era de las redes sociales. \u00bfQu\u00e9 opinas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Cabr\u00eda argumentar que la literatura no ha perdido relevancia, sino que ha cambiado de h\u00e1bitat. Las redes sociales han creado una cultura de la brevedad y la inmediatez que, paradr\u00f3jicamente, hace m\u00e1s necesaria que nunca la capacidad de la literatura para ralentizar el pensamiento, profundizar en la complejidad y sostener la ambig\u00fcedad. Un tuit puede informar; un cuento puede transformar. No compiten: operan en dimensiones distintas de la experiencia humana.',
+                    'La literatura est\u00e1 muerta, nadie lee.',
+                    'Las redes sociales son malas para la cultura.'
+                ],
+                answer: 'Cabr\u00eda argumentar que la literatura no ha perdido relevancia, sino que ha cambiado de h\u00e1bitat. Las redes sociales han creado una cultura de la brevedad y la inmediatez que, paradr\u00f3jicamente, hace m\u00e1s necesaria que nunca la capacidad de la literatura para ralentizar el pensamiento, profundizar en la complejidad y sostener la ambig\u00fcedad. Un tuit puede informar; un cuento puede transformar. No compiten: operan en dimensiones distintas de la experiencia humana.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Cr\u00edtico', text: 'Interesante. Pero entonces, \u00bfqu\u00e9 rol juega la literatura colombiana espec\u00edficamente en un pa\u00eds con los niveles de violencia y desigualdad que tiene Colombia?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'En Colombia, la literatura ha cumplido hist\u00f3ricamente una funci\u00f3n que trasciende lo est\u00e9tico: ha sido un mecanismo de memoria colectiva en un pa\u00eds donde la violencia tiende a borrar el pasado. Desde Garc\u00eda M\u00e1rquez hasta las cr\u00f3nicas contempor\u00e1neas sobre el conflicto armado, la literatura colombiana ha dado nombre y forma a experiencias que el discurso oficial no pod\u00eda o no quer\u00eda articular. Escribir en Colombia no es solo un acto est\u00e9tico: es un acto de resistencia contra el olvido institucionalizado.',
+                    'Colombia necesita menos libros y m\u00e1s acci\u00f3n.',
+                    'La literatura no tiene nada que ver con la pol\u00edtica.'
+                ],
+                answer: 'En Colombia, la literatura ha cumplido hist\u00f3ricamente una funci\u00f3n que trasciende lo est\u00e9tico: ha sido un mecanismo de memoria colectiva en un pa\u00eds donde la violencia tiende a borrar el pasado. Desde Garc\u00eda M\u00e1rquez hasta las cr\u00f3nicas contempor\u00e1neas sobre el conflicto armado, la literatura colombiana ha dado nombre y forma a experiencias que el discurso oficial no pod\u00eda o no quer\u00eda articular. Escribir en Colombia no es solo un acto est\u00e9tico: es un acto de resistencia contra el olvido institucionalizado.'
+            }
+        ]
+    },
+    // === GAME 37: Dictation — Prosa literaria con subordinaci\u00f3n compleja ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe este fragmento de prosa literaria. Presta atenci\u00f3n a la estructura temporal y la puntuaci\u00f3n.',
+        audio: 'Muchos a\u00f1os despu\u00e9s, frente a la puerta cerrada de la librer\u00eda que ya no exist\u00eda, Yaguar\u00e1 hab\u00eda de recordar aquella tarde luminosa en que descubri\u00f3 que las palabras pod\u00edan construir mundos.',
+        answer: 'Muchos a\u00f1os despu\u00e9s, frente a la puerta cerrada de la librer\u00eda que ya no exist\u00eda, Yaguar\u00e1 hab\u00eda de recordar aquella tarde luminosa en que descubri\u00f3 que las palabras pod\u00edan construir mundos.'
+    },
+    // === GAME 38: Dictation — Poema en prosa ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe este poema en prosa. Cada pausa es parte del ritmo.',
+        audio: 'Esta ciudad. Este fr\u00edo que no es fr\u00edo sino distancia. Esta lluvia que no moja: bautiza. Esta soledad que no duele: ense\u00f1a.',
+        answer: 'Esta ciudad. Este fr\u00edo que no es fr\u00edo sino distancia. Esta lluvia que no moja: bautiza. Esta soledad que no duele: ense\u00f1a.'
+    },
+    // === GAME 39: Story — El cuento que Yaguar\u00e1 escribe ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el microcuento que Yaguar\u00e1 escribe como prueba de creaci\u00f3n literaria y responde las preguntas de an\u00e1lisis.',
+        title: 'El \u00faltimo nombre',
+        text: 'Hab\u00eda una vez una palabra que nadie pronunciaba. Viv\u00eda en el fondo de un r\u00edo, debajo de las piedras, donde la corriente no pod\u00eda arrastrarla. Los peces la rodeaban sin verla; las ra\u00edces de los \u00e1rboles la tocaban sin sentirla. La palabra no estaba triste: estaba esperando. Sab\u00eda que, tarde o temprano, alguien llegar\u00eda al r\u00edo con la sed exacta que solo ella pod\u00eda calmar. Un d\u00eda, una jaguar baj\u00f3 a beber. El agua le toc\u00f3 los labios y, en ese contacto, la palabra subi\u00f3 desde el fondo como una burbuja de luz. La jaguar no la escuch\u00f3: la sinti\u00f3. No la dijo: la fue. Desde entonces, cada vez que alguien le preguntaba su nombre, la jaguar sonre\u00eda y callaba, porque el verdadero nombre es el que no necesita ser dicho para existir.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 recurso narrativo emplea el cuento al comenzar con \u00abHab\u00eda una vez\u00bb?',
+                options: ['La f\u00f3rmula del cuento tradicional, que sit\u00faa la historia en un tiempo m\u00edtico', 'Un error del autor al usar una f\u00f3rmula infantil', 'Una iron\u00eda que parodia los cuentos de hadas', 'Una t\u00e9cnica period\u00edstica de apertura'],
+                answer: 'La f\u00f3rmula del cuento tradicional, que sit\u00faa la historia en un tiempo m\u00edtico'
+            },
+            {
+                q: '\u00bfQu\u00e9 representa la \u00abpalabra que nadie pronunciaba\u00bb en el contexto del viaje de Yaguar\u00e1?',
+                options: ['El conocimiento profundo que solo se revela a quien ha completado el viaje', 'Un vocabulario dif\u00edcil que la jaguar no conoc\u00eda', 'Una palabra prohibida por las autoridades', 'Un nombre propio de un personaje secundario'],
+                answer: 'El conocimiento profundo que solo se revela a quien ha completado el viaje'
+            },
+            {
+                q: '\u00bfQu\u00e9 significan las l\u00edneas \u00abNo la escuch\u00f3: la sinti\u00f3. No la dijo: la fue\u00bb?',
+                options: ['Que el dominio total de una lengua trasciende la expresi\u00f3n verbal y se convierte en identidad', 'Que la jaguar no sab\u00eda hablar', 'Que la palabra era inaudible por un defecto f\u00edsico', 'Que el r\u00edo hac\u00eda demasiado ruido para escuchar'],
+                answer: 'Que el dominio total de una lengua trasciende la expresi\u00f3n verbal y se convierte en identidad'
+            },
+            {
+                q: '\u00bfQu\u00e9 tipo de final tiene este cuento?',
+                options: ['Un final abierto-filos\u00f3fico que plantea una paradoja sobre el lenguaje', 'Un final cerrado donde se resuelve el conflicto', 'Un final triste donde la jaguar pierde la palabra', 'Un final c\u00f3mico que rompe la tensi\u00f3n'],
+                answer: 'Un final abierto-filos\u00f3fico que plantea una paradoja sobre el lenguaje'
+            }
+        ]
+    },
+    // === GAME 40: Canci\u00f3n — \u00abLa invitaci\u00f3n\u00bb de Shakira ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abLa invitaci\u00f3n\u00bb de Shakira con Calle 13 y completa los versos. Observa c\u00f3mo la canci\u00f3n combina registro coloquial caribeno con im\u00e1genes po\u00e9ticas.',
+        youtubeId: 'gJyoDF5VNjI',
+        artist: 'Shakira ft. Calle 13',
+        songTitle: 'La invitaci\u00f3n',
+        lines: [
+            { text: 'Si me voy, \u00bfqui\u00e9n te ___?', blank: 'besa', options: ['besa', 'cuida', 'llama', 'busca'] },
+            { text: 'Si me voy, \u00bfqui\u00e9n te ___?', blank: 'abraza', options: ['abraza', 'extraña', 'ama', 'encuentra'] },
+            { text: 'Y si ___ me voy, \u00bfqui\u00e9n te enamora?', blank: 'un d\u00eda', options: ['un d\u00eda', 'ahora', 'de pronto', 'ma\u00f1ana'] },
+            { text: '\u00bfQui\u00e9n te pone a ___ a deshora?', blank: 'bailar', options: ['bailar', 'cantar', 'so\u00f1ar', 'llorar'] },
+            { text: 'Esto es una ___, una invitaci\u00f3n.', blank: 'provocaci\u00f3n', options: ['provocaci\u00f3n', 'celebraci\u00f3n', 'declaraci\u00f3n', 'tentaci\u00f3n'] },
+            { text: 'Ven aqu\u00ed, que esta canci\u00f3n es ___.', blank: 'pa ti', options: ['pa ti', 'para m\u00ed', 'de amor', 'muy buena'] },
+            { text: 'Ven que el ___ quiere fiesta.', blank: 'barrio', options: ['barrio', 'pueblo', 'mundo', 'ritmo'] },
+            { text: 'Que esta noche se ___!', blank: 'presta', options: ['presta', 'acaba', 'alarga', 'repite'] }
+        ]
+    },
+    // === GAME 41: Canci\u00f3n — \u00abLa gota fr\u00eda\u00bb de Carlos Vives ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abLa gota fr\u00eda\u00bb de Carlos Vives y completa los versos. Observa c\u00f3mo el vallenato transforma la experiencia amorosa en narrativa oral con recursos literarios: hip\u00e9rbole, met\u00e1fora y repetici\u00f3n ritual.',
+        youtubeId: 'NILOBZbjp04',
+        artist: 'Carlos Vives',
+        songTitle: 'La gota fr\u00eda',
+        lines: [
+            { text: 'Me lleva a m\u00ed o me ___ yo a \u00e9l.', blank: 'llevo', options: ['llevo', 'gano', 'pierdo', 'venzo'] },
+            { text: 'Pero esta gota fr\u00eda no me la ___ nadie.', blank: 'gana', options: ['gana', 'quita', 'tumba', 'roba'] },
+            { text: 'Recuerdo que Emer se disfraz\u00f3 de ___.', blank: 'diablo', options: ['diablo', 'tigre', 'payaso', 'santo'] },
+            { text: 'Pa\u2019 asustar a ___.', blank: 'Moralito', options: ['Moralito', 'la gente', 'los ni\u00f1os', 'su mam\u00e1'] },
+            { text: 'Y se ___ sobre la tarima.', blank: 'subi\u00f3', options: ['subi\u00f3', 'mont\u00f3', 'trep\u00f3', 'par\u00f3'] },
+            { text: 'Y empez\u00f3 a ___ su tambor.', blank: 'tocar', options: ['tocar', 'golpear', 'sonar', 'romper'] },
+            { text: 'Pero la gota fr\u00eda ___ a ganar.', blank: 'volvi\u00f3', options: ['volvi\u00f3', 'empez\u00f3', 'acab\u00f3', 'sali\u00f3'] },
+            { text: 'Porque el vallenato ___ en el alma.', blank: 'vive', options: ['vive', 'nace', 'muere', 'canta'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La biblioteca sin paredes',
+            description: 'Libros flotan en un espacio sin gravedad. Cada libro abierto proyecta un fragmento de historia que nunca fue terminada.',
+            ambience: 'pages'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una voz antigua pregunta:',
+                riddle: '«Soy lo que el autor calla para que el lector hable. Soy el espacio entre las líneas. Sin mí, la literatura es solo información.»',
+                clue: '¿Qué soy?',
+                answer: 'La ambigüedad',
+                options: ['La ambigüedad', 'La metáfora', 'La puntuación', 'El narrador'],
+                onSolve: 'El primer libro se cierra suavemente.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Un manuscrito aparece con un párrafo tachado.',
+                passage: '«El viejo pescador miró el mar. No, el viejo pescador escuchó el mar. No — el viejo pescador <em>era</em> el mar.» Debajo: «¿Cuál versión es la más literaria y por qué?»',
+                clue: 'La respuesta está en la relación entre el personaje y su mundo.',
+                answer: 'La tercera, porque transforma la descripción en metáfora',
+                options: [
+                    'La tercera, porque transforma la descripción en metáfora',
+                    'La primera, porque es la más simple',
+                    'La segunda, porque usa un sentido diferente',
+                    'Todas son igualmente literarias'
+                ],
+                onSolve: 'El manuscrito se despliega completamente.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el lomo de un libro cerrado hay un candado de letras.',
+                clue: 'García Márquez dijo que su obra maestra comenzó con una imagen: un abuelo que lleva a un niño a conocer esto.',
+                answer: 'hielo',
+                hint: '_ _ _ _ _',
+                onSolve: 'El libro se abre y revela una página en blanco que brilla.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Tres fragmentos literarios aparecen, todos de autores colombianos.',
+                sources: [
+                    '«Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota...» — Gabriel García Márquez',
+                    '«La poesía es un atentado celeste.» — Raúl Gómez Jattin',
+                    '«¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión.» — Adaptación libre'
+                ],
+                clue: '¿Qué técnica comparten estos tres textos?',
+                answer: 'Comienzan con una pregunta o tensión que obliga al lector a seguir leyendo',
+                options: [
+                    'Comienzan con una pregunta o tensión que obliga al lector a seguir leyendo',
+                    'Todos usan rima',
+                    'Todos están en primera persona',
+                    'Todos describen la muerte'
+                ],
+                onSolve: 'Los fragmentos se unen en un solo rayo de luz. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: una constelación con forma de libro abierto.',
+            questClue: 'Las páginas del libro señalan historias que aún no han sido escritas.',
+            item: 'constelacion-libro'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '50',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest50Progress',
+        backUrl: '../../c2-bogota.html'
+    });
+</script>
+</body>
+</html>

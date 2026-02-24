@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 13: Viaje a Medellín - Transporte e Integración</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest13_transport/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 13: Viaje a Medellín - Transporte e Integración",
+          "url": "https://babelfree.com/a2_basic/dest13_transport/games",
+          "educationalLevel": "A2 - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Transport vocabulary", "Travel expressions", "Spanish vocabulary"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Basic", "item": "https://babelfree.com/a2-caribbean" },
+            { "@type": "ListItem", "position": 4, "name": "Viaje a Medellín - Transporte e Integración" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 13: Viaje a Medellín</div>
+            <div class="yg-header-subtitle">Transporte e Integración</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+  {id:1,type:"pairs",title:"Medios de Transporte",badge:"Emparejar",instruction:"Une cada medio de transporte con su descripci\u00f3n.",pairs:[{a:"Avi\u00f3n",b:"\u2708\ufe0f Por el aire"},{a:"Bus",b:"\ud83d\ude8c Por la carretera"},{a:"Tren",b:"\ud83d\ude82 Por rieles"},{a:"Taxi",b:"\ud83d\ude95 Servicio privado"},{a:"Metro",b:"\ud83d\ude87 Bajo tierra"},{a:"Bicicleta",b:"\ud83d\udeb2 Con pedales"}]},
+  {id:2,type:"fill",title:"Viaj\u00e9 a Medell\u00edn",badge:"Completar",prompt:"Yo viaj\u00e9 a Medell\u00edn en ___.",answer:"avi\u00f3n",choices:["avi\u00f3n","zapato","silla","l\u00e1piz"],hint:"Un medio de transporte que vuela."},
+  {id:3,type:"fill",title:"Conjugaci\u00f3n en Pasado",badge:"Conjugar",prompt:"Nosotros ___ (viajar) a Cartagena el a\u00f1o pasado.",answer:"viajamos",choices:["viajamos","viaj\u00f3","viajaron","viaj\u00e9"],hint:"Nosotros + viajar en pret\u00e9rito."},
+  {id:4,type:"listening",title:"Escucha y Elige",badge:"Escuchar",listenText:"Tom\u00e9 el metro para ir al centro.",question:"\u00bfQu\u00e9 transporte us\u00f3?",answer:"El metro",choices:["El bus","El metro","El taxi","El avi\u00f3n"]},
+  {id:5,type:"sort",title:"P\u00fablico vs Privado",badge:"Clasificar",instruction:"Clasifica cada transporte.",categories:["Transporte p\u00fablico","Transporte privado"],items:[{text:"Bus",cat:"Transporte p\u00fablico"},{text:"Metro",cat:"Transporte p\u00fablico"},{text:"Tren",cat:"Transporte p\u00fablico"},{text:"Taxi",cat:"Transporte privado"},{text:"Carro",cat:"Transporte privado"},{text:"Bicicleta",cat:"Transporte privado"}]},
+  {id:6,type:"fill",title:"Futuro con ir + a + infinitivo",badge:"Completar",prompt:"Ma\u00f1ana ___ a tomar el bus para ir al trabajo.",answer:"voy",choices:["voy","fui","iba","ir\u00e9"],hint:"ir + a + infinitivo: Yo ___."},
+  {id:7,type:"build",title:"Construye la Oraci\u00f3n",badge:"Ordenar",instruction:"Ordena las palabras para formar la oraci\u00f3n correcta.",words:["Ayer","tom\u00e9","el","metro","para","ir","al","centro"],answer:"Ayer tom\u00e9 el metro para ir al centro"},
+  {id:8,type:"fill",title:"Conjugaci\u00f3n Mixta",badge:"Conjugar",prompt:"Ella siempre ___ (tomar) el bus para ir a la universidad.",answer:"toma",choices:["toma","tom\u00f3","tomar\u00e1","tom\u00e9"],hint:"'Siempre' indica presente habitual."},
+  {id:9,type:"build",title:"Traduce al Espa\u00f1ol",badge:"Traducir",instruction:"\"Yesterday I took the bus to go to work.\"",words:["Ayer","tom\u00e9","el","bus","para","ir","al","trabajo"],answer:"Ayer tom\u00e9 el bus para ir al trabajo"},
+  {id:10,type:"conversation",title:"\u00bfC\u00f3mo llegas al trabajo?",badge:"Conversar",exchanges:[{npc:"\u00bfC\u00f3mo llegas al trabajo todos los d\u00edas?",options:["Tomo el metro.","Yo gustar metro.","Metro tomar yo."],correct:0},{npc:"\u00bfY cu\u00e1nto tiempo tarda el viaje?",options:["Tarda unos treinta minutos.","Treinta el viaje.","Minutos mucho tarda."],correct:0},{npc:"\u00bfPrefieres el metro o el bus?",options:["Prefiero el metro porque es m\u00e1s r\u00e1pido.","Metro r\u00e1pido m\u00e1s.","Yo preferir metro bus."],correct:0}]},
+  {id:11,type:"build",title:"Comparaciones de Transporte",badge:"Ordenar",instruction:"Ordena las palabras para formar una comparaci\u00f3n.",words:["El","avi\u00f3n","es","m\u00e1s","r\u00e1pido","que","el","bus"],answer:"El avi\u00f3n es m\u00e1s r\u00e1pido que el bus"},
+  {id:12,type:"build",title:"Traduce al Espa\u00f1ol",badge:"Traducir",instruction:"\"We are going to travel by train next week.\"",words:["Vamos","a","viajar","en","tren","la","pr\u00f3xima","semana"],answer:"Vamos a viajar en tren la pr\u00f3xima semana"},
+  {id:13,type:"conversation",title:"Planificando un Viaje a Medell\u00edn",badge:"Conversar",exchanges:[{npc:"\u00bfC\u00f3mo vamos a viajar a Medell\u00edn?",options:["Vamos a tomar el avi\u00f3n.","Avi\u00f3n tomar vamos.","Yo querer avi\u00f3n ir."],correct:0},{npc:"\u00bfCu\u00e1ndo fue la \u00faltima vez que viajaste en avi\u00f3n?",options:["Viaj\u00e9 en avi\u00f3n el mes pasado.","Avi\u00f3n mes viaj\u00e9 pasado.","Yo viajar avi\u00f3n pasado."],correct:0},{npc:"\u00bfQu\u00e9 transporte es mejor para moverse en la ciudad?",options:["El metro es m\u00e1s barato que el taxi.","Metro barato taxi m\u00e1s.","Taxi no metro s\u00ed."],correct:0},{npc:"\u00bfCon qu\u00e9 frecuencia usas transporte p\u00fablico?",options:["Siempre uso el transporte p\u00fablico.","P\u00fablico transporte siempre.","Yo usar siempre p\u00fablico."],correct:0}]},
+  {id:14,type:"dictation",title:"Dictado de Transporte",badge:"Dictado",listenText:"Ayer viaj\u00e9 en tren a Medell\u00edn.",answer:"Ayer viaj\u00e9 en tren a Medell\u00edn."},
+  {id:15,type:"story",title:"El viaje de Yaguar\u00e1 a Medell\u00edn",badge:"Lectura",story:"Yaguar\u00e1 viaj\u00f3 de Cartagena a Medell\u00edn. Primero tom\u00f3 un taxi al aeropuerto. Despu\u00e9s subi\u00f3 al avi\u00f3n y vol\u00f3 una hora. Cuando lleg\u00f3 a Medell\u00edn, baj\u00f3 del avi\u00f3n y tom\u00f3 el metro para ir al centro de la ciudad. El metro fue m\u00e1s barato que el taxi.",questions:[{q:"\u00bfC\u00f3mo lleg\u00f3 Yaguar\u00e1 al aeropuerto?",options:["En taxi","En bus","En metro","Caminando"],correct:0},{q:"\u00bfCu\u00e1nto dur\u00f3 el vuelo?",options:["Dos horas","Una hora","Treinta minutos","Tres horas"],correct:1},{q:"\u00bfQu\u00e9 transporte us\u00f3 en Medell\u00edn?",options:["Bus","Taxi","Bicicleta","Metro"],correct:3}]},
+  {id:16,type:"pairs",title:"Preguntas y Respuestas de Viaje",badge:"Emparejar",instruction:"Une cada pregunta con su respuesta.",pairs:[{a:"\u00bfC\u00f3mo viajaste?",b:"Viaj\u00e9 en avi\u00f3n."},{a:"\u00bfA d\u00f3nde fuiste?",b:"Fui a Medell\u00edn."},{a:"\u00bfCu\u00e1nto tard\u00f3?",b:"Tard\u00f3 una hora."},{a:"\u00bfCon qui\u00e9n viajaste?",b:"Viaj\u00e9 con mi familia."},{a:"\u00bfTe gust\u00f3 el viaje?",b:"S\u00ed, me gust\u00f3 mucho."},{a:"\u00bfVas a volver?",b:"S\u00ed, voy a volver pronto."}]},
+  {id:17,type:"listening",title:"Historia de Viaje",badge:"Escuchar",listenText:"El a\u00f1o pasado viaj\u00e9 a Medell\u00edn en avi\u00f3n. El vuelo tard\u00f3 dos horas. En la ciudad us\u00e9 el metro todos los d\u00edas.",question:"\u00bfCu\u00e1nto tard\u00f3 el vuelo?",answer:"Dos horas",choices:["Una hora","Dos horas","Tres horas","Cuatro horas"]},
+  {id:18,type:"sort",title:"Pasado, Presente o Futuro",badge:"Clasificar",instruction:"Clasifica cada expresi\u00f3n por su tiempo verbal.",categories:["Pasado","Presente","Futuro"],items:[{text:"Viaj\u00e9 en avi\u00f3n",cat:"Pasado"},{text:"Tom\u00e9 el bus ayer",cat:"Pasado"},{text:"Siempre tomo el metro",cat:"Presente"},{text:"Camino al trabajo",cat:"Presente"},{text:"Voy a viajar ma\u00f1ana",cat:"Futuro"},{text:"Vamos a tomar el tren",cat:"Futuro"}]},
+  {id:19,type:"dictation",title:"Dictado Avanzado",badge:"Dictado",listenText:"Ma\u00f1ana voy a tomar el bus porque es m\u00e1s barato que el taxi.",answer:"Ma\u00f1ana voy a tomar el bus porque es m\u00e1s barato que el taxi."},
+  {id:20,type:"story",title:"Un D\u00eda en Medell\u00edn",badge:"Lectura",story:"Ayer fue un d\u00eda muy activo en Medell\u00edn. Por la ma\u00f1ana tom\u00e9 el metro para ir al centro. El metro es m\u00e1s r\u00e1pido que el bus. Despu\u00e9s camin\u00e9 al Parque Berr\u00edo y visit\u00e9 el museo. A veces uso la bicicleta, pero ayer llovi\u00f3. Por la tarde fui al Poblado en taxi. Ma\u00f1ana voy a tomar el telef\u00e9rico para ver la ciudad desde arriba.",questions:[{q:"\u00bfQu\u00e9 transporte us\u00f3 por la ma\u00f1ana?",options:["Bus","Metro","Taxi","Bicicleta"],correct:1},{q:"\u00bfPor qu\u00e9 no us\u00f3 la bicicleta?",options:["Estaba cansado","Llovi\u00f3","No tiene bicicleta","Era lejos"],correct:1},{q:"\u00bfQu\u00e9 es m\u00e1s r\u00e1pido seg\u00fan el texto?",options:["El bus","El taxi","El metro","La bicicleta"],correct:2},{q:"\u00bfQu\u00e9 va a hacer ma\u00f1ana?",options:["Ir al museo","Tomar el metro","Tomar el telef\u00e9rico","Caminar al parque"],correct:2}]},
+  {id:21,type:"fill",title:"Integraci\u00f3n Gramatical",badge:"Completar",prompt:"El avi\u00f3n es m\u00e1s r\u00e1pido ___ el tren.",answer:"que",choices:["que","de","como","con"],hint:"Estructura comparativa: m\u00e1s + adjetivo + ___."},
+  {id:22,type:"build",title:"Oraci\u00f3n Compleja",badge:"Ordenar",instruction:"Forma una oraci\u00f3n que use pasado y comparaci\u00f3n.",words:["Ayer","tom\u00e9","el","metro","porque","es","m\u00e1s","r\u00e1pido","que","el","bus"],answer:"Ayer tom\u00e9 el metro porque es m\u00e1s r\u00e1pido que el bus"},
+  {id:23,type:"conversation",title:"Conjugaci\u00f3n R\u00e1pida",badge:"Conjugar",exchanges:[{npc:"Yo ___ (viajar) ayer. \u00bfPret\u00e9rito?",options:["viaj\u00e9","viajo","viajar\u00e9"],correct:0},{npc:"T\u00fa ___ (salir) todos los d\u00edas. \u00bfPresente?",options:["saliste","sales","saldr\u00e1s"],correct:1},{npc:"Nosotros ___ (ir) a viajar. \u00bfFuturo?",options:["fuimos","vamos","iremos"],correct:1},{npc:"Ella ___ (llegar) ayer. \u00bfPret\u00e9rito?",options:["llega","lleg\u00f3","llegar\u00e1"],correct:1},{npc:"\u00c9l ___ (tomar) el bus ma\u00f1ana. \u00bfFuturo: ir+a+inf?",options:["tom\u00f3","toma","va a tomar"],correct:2}]},
+  {id:24,type:"build",title:"Traduce el P\u00e1rrafo",badge:"Traducir",instruction:"\"Last year I traveled to Medell\u00edn by plane and it was faster than the bus.\"",words:["El","a\u00f1o","pasado","viaj\u00e9","a","Medell\u00edn","en","avi\u00f3n","y","fue","m\u00e1s","r\u00e1pido","que","el","bus"],answer:"El a\u00f1o pasado viaj\u00e9 a Medell\u00edn en avi\u00f3n y fue m\u00e1s r\u00e1pido que el bus"},
+  {id:25,type:"conversation",title:"Planificando y Recordando un Viaje",badge:"Conversar",exchanges:[{npc:"\u00bfCu\u00e1ndo fuiste a Medell\u00edn?",options:["Fui el mes pasado.","Ir mes pasado yo.","Medell\u00edn mes fui."],correct:0},{npc:"\u00bfC\u00f3mo viajaste?",options:["Tom\u00e9 el avi\u00f3n desde Bogot\u00e1.","Avi\u00f3n Bogot\u00e1 tomar.","Yo tomar avi\u00f3n."],correct:0},{npc:"\u00bfQu\u00e9 transporte usaste all\u00ed?",options:["Us\u00e9 el metro porque es m\u00e1s barato que el taxi.","Metro taxi barato.","Usar metro yo barato."],correct:0},{npc:"\u00bfCon qu\u00e9 frecuencia tomabas el metro?",options:["Lo tomaba todos los d\u00edas.","Todos d\u00edas metro tomar.","Frecuencia metro mucho."],correct:0},{npc:"\u00bfVas a volver a Medell\u00edn?",options:["S\u00ed, voy a volver el pr\u00f3ximo a\u00f1o.","S\u00ed volver a\u00f1o pr\u00f3ximo ir.","Yo querer volver Medell\u00edn."],correct:0}]},
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva del mapa',
+            description: 'Una cueva con un mapa gigante dibujado en el suelo. Los r\u00edos brillan en azul. Los caminos brillan en dorado.',
+            ambience: 'map'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra est\u00e1n dispersas en el mapa.',
+                clue: 'Es a donde vas cuando est\u00e1s enfermo. Tiene ocho letras.',
+                answer: 'hospital',
+                scrambled: 'opisthal',
+                onSolve: 'El mapa muestra un camino.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'El mapa pregunta:',
+                riddle: '\u00abPara ir a la escuela, caminas derecho dos cuadras, giras a la izquierda y caminas una cuadra m\u00e1s. \u00bfEn qu\u00e9 direcci\u00f3n est\u00e1 la escuela?\u00bb',
+                clue: 'Piensa en las direcciones.',
+                answer: 'A la izquierda, dos cuadras adelante',
+                options: [
+                    'A la izquierda, dos cuadras adelante',
+                    'A la derecha',
+                    'Detr\u00e1s de ti',
+                    'Enfrente, una cuadra'
+                ],
+                onSolve: 'El mapa muestra otro camino.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el centro del mapa hay una cerradura.',
+                clue: 'Es el lugar donde vives. Tu ___.',
+                answer: 'casa',
+                hint: '_ _ _ _',
+                onSolve: 'El mapa brilla entero. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de flecha que apunta en cuatro direcciones.',
+            questClue: 'La ra\u00edz conoce todos los caminos, incluso los que ya no existen.',
+            item: 'raiz-flecha'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '13',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraDest13Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

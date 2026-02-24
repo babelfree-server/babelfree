@@ -5,7 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A1 Avanzado - El Viaje Personal de Yaguará</title>
     <meta name="description" content="A1 Advanced - Personal journey with spiral learning approach">
-    
+    <link rel="canonical" href="https://babelfree.com/a1-andes">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "A1 Avanzado - El Viaje Personal de Yaguara",
+          "description": "A1 Advanced Spanish course module set in the Colombian Andes mountains. Expand present tense mastery, learn possessives, form questions, describe daily routines, and express preferences through spiral learning with Yaguara. Destinations 7-12 of El Viaje del Jaguar.",
+          "url": "https://babelfree.com/a1-andes",
+          "educationalLevel": "A1 Advanced",
+          "learningResourceType": "Interactive Course Module",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": [
+            "Expanded present tense",
+            "Possessives",
+            "Question formation",
+            "Daily routines",
+            "Expressing preferences"
+          ]
+        },
+        {
+          "@type": "Place",
+          "name": "Sierra Andina",
+          "description": "The Andes Mountains of Colombia, stretching through the heart of the country with three cordilleras. A region of cloud forests, paramos, and highland valleys rich in indigenous and campesino culture.",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 5.0,
+            "longitude": -73.5
+          },
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Colombia"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "A1",
+              "item": "https://babelfree.com/a1-andes"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Andes"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --forest-dark: #0a3d0c;
@@ -524,12 +597,12 @@
         .yaguara-avatar {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 3px solid var(--jaguar-gold);
+            overflow: hidden;
             animation: breathe 4s ease-in-out infinite;
             cursor: pointer;
             flex-shrink: 0;
@@ -641,6 +714,20 @@
 
         .exploration-status {
             font-size: 2rem;
+        }
+
+        .exploration-icon {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: var(--advanced-teal);
+        }
+        .exploration-icon svg {
+            width: 48px;
+            height: 48px;
+        }
+        .exploration-card.locked .exploration-icon {
+            opacity: 0.4;
         }
 
         .exploration-title {
@@ -901,6 +988,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="luxury.css">
 </head>
 <body>
     <!-- Mountain/Coffee Region Floating Elements -->
@@ -908,34 +996,14 @@
 
     <div class="container">
         <div class="header">
-            <a href="dashboard.html" class="back-btn">← Volver</a>
+            <a href="/a1" class="back-btn">← Volver</a>
             <div class="level-indicator">A1 AVANZADO</div>
         </div>
 
         <!-- HERO SECTION WITH PROPER IMAGE -->
         <div class="hero-section">
             <div class="hero-content">
-                <div class="jaguar-hero" onclick="speakYaguara()"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
-    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
-    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
-    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
-    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
-    <circle cx="40" cy="34" r="1" fill="#fff"/>
-    <circle cx="64" cy="34" r="1" fill="#fff"/>
-    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
-    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
-    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-    <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-</svg></div>
+                <div class="jaguar-hero" onclick="speakYaguara()"><img src="img/jaguar-hero-full.jpg" alt="Yaguara the Jaguar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
                 <h1 class="title">El Viaje Personal de Yaguará</h1>
                 <p class="subtitle">A1 avanzado - Más palabras con Yaguará</p>
                 <div class="advanced-badge">🏔️ Montañas • Eje Cafetero, Colombia</div>
@@ -1040,27 +1108,7 @@
 
         <!-- FIXED YAGUARÁ GUIDE - NO TEXT OVERLAP -->
         <div class="yaguara-personal-guide">
-            <div class="yaguara-avatar" onclick="speakYaguara()"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
-    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
-    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
-    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
-    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
-    <circle cx="40" cy="34" r="1" fill="#fff"/>
-    <circle cx="64" cy="34" r="1" fill="#fff"/>
-    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
-    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
-    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-    <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-</svg></div>
+            <div class="yaguara-avatar" onclick="speakYaguara()"><img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
             <div class="yaguara-text">
                 <div class="guide-title">Yaguará dice:</div>
                 <div class="guide-message">
@@ -1079,6 +1127,7 @@
                     <span class="exploration-number">Lección 1</span>
                     <span class="exploration-status">✅</span>
                 </div>
+                <div class="exploration-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                 <h3 class="exploration-title">🕐 Tiempo</h3>
                 <p class="exploration-theme">NUEVO: Días, horas</p>
                 <p class="exploration-desc">Yaguará aprende tiempo. Días de la semana. Horas del día.</p>
@@ -1128,6 +1177,7 @@
                     <span class="exploration-number">Lección 2</span>
                     <span class="exploration-status">🎯</span>
                 </div>
+                <div class="exploration-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 10v9a1 1 0 001 1h12a1 1 0 001-1v-9"/><rect x="9" y="14" width="6" height="6" rx="0.5"/></svg></div>
                 <h3 class="exploration-title">🌅 Mi Día</h3>
                 <p class="exploration-theme">NUEVO: Rutinas diarias</p>
                 <p class="exploration-desc">Yaguará hace cosas cada día. Despertar, comer, dormir.</p>
@@ -1177,6 +1227,7 @@
                     <span class="exploration-number">Lección 3</span>
                     <span class="exploration-status">🔒</span>
                 </div>
+                <div class="exploration-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M12 7V3"/><path d="M15 5c0 0-1.5 2-3 2S9 5 9 5"/></svg></div>
                 <h3 class="exploration-title">🍖 Comida</h3>
                 <p class="exploration-theme">NUEVO: Comida, gustos</p>
                 <p class="exploration-desc">Yaguará come. Comida rica. "Me gusta" y "no me gusta".</p>
@@ -1226,6 +1277,7 @@
                     <span class="exploration-number">Lección 4</span>
                     <span class="exploration-status">🔒</span>
                 </div>
+                <div class="exploration-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 2L2 6l3 1v13h14V7l3-1L17.5 2 14 5h-4L6.5 2z"/></svg></div>
                 <h3 class="exploration-title">👕 Ropa</h3>
                 <p class="exploration-theme">NUEVO: Cuerpo, ropa</p>
                 <p class="exploration-desc">Yaguará tiene cuerpo. Usa ropa. Grande, pequeño, bonito.</p>

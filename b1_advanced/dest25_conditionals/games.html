@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 25: Guardianes de la selva - Oraciones condicionales</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest25_conditionals/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 25: Guardianes de la selva - Oraciones condicionales",
+          "url": "https://babelfree.com/b1_advanced/dest25_conditionals/games",
+          "educationalLevel": "B1 Advanced - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Conditional structures", "If-clauses", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Advanced", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "Guardianes de la selva - Oraciones condicionales" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 25: Guardianes de la selva</div>
+            <div class="yg-header-subtitle">Oraciones condicionales</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // =====================================================
+    // GAME 1: Narrative — Los guardianes del Choc\u00f3
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee con atenci\u00f3n esta introducci\u00f3n sobre los guardianes de la selva.',
+        text: 'En las profundidades de la selva del Choc\u00f3, las comunidades ember\u00e1 han protegido el bosque durante siglos. Yaguar\u00e1 camina entre los \u00e1rboles y escucha a una anciana ember\u00e1: \u00abSi protegemos el bosque, los animales sobreviven. Si cortamos los \u00e1rboles, la selva muere.\u00bb Estas palabras revelan una verdad simple: cada acci\u00f3n tiene una consecuencia. En espa\u00f1ol, expresamos estas relaciones con oraciones condicionales. Si estudias este destino, aprender\u00e1s a hablar sobre causas, consecuencias y posibilidades.'
+    },
+
+    // =====================================================
+    // GAME 2: Narrative — Condicionales reales (tipo 1)
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Aprende c\u00f3mo funcionan las oraciones condicionales reales.',
+        text: 'Las oraciones condicionales de tipo 1 expresan situaciones reales o probables. Se forman con: SI + presente, presente o futuro. Ejemplos: \u00abSi llueve, el r\u00edo crece.\u00bb \u00abSi protegemos la rana dorada, la especie sobrevivir\u00e1.\u00bb La condici\u00f3n (si llueve) es posible, y el resultado (el r\u00edo crece) es la consecuencia natural. Los guardianes ember\u00e1 usan este tipo de l\u00f3gica todos los d\u00edas: si cuidas la tierra, la tierra te cuida.'
+    },
+
+    // =====================================================
+    // GAME 3: Narrative — Condicionales hipot\u00e9ticos (tipo 2)
+    // =====================================================
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Descubre las oraciones condicionales hipot\u00e9ticas.',
+        text: 'Las oraciones condicionales de tipo 2 expresan situaciones hipot\u00e9ticas o imaginarias. Se forman con: SI + imperfecto de subjuntivo (-ara/-iera), condicional (-\u00eda). Ejemplos: \u00abSi protegi\u00e9ramos m\u00e1s la selva, habr\u00eda m\u00e1s biodiversidad.\u00bb \u00abSi yo viviera en el Choc\u00f3, trabajar\u00eda con las comunidades ember\u00e1.\u00bb La condici\u00f3n no es real ahora, pero imaginamos qu\u00e9 pasar\u00eda. El condicional se forma con el infinitivo + las terminaciones: -\u00eda, -\u00edas, -\u00eda, -\u00edamos, -\u00edan. El imperfecto de subjuntivo usa las formas -ara o -iera: protegiera, viviera, hablara.'
+    },
+
+    // =====================================================
+    // GAME 4: Conjugation — Condicional simple
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos en condicional simple (-\u00eda).',
+        questions: [
+            { verb: 'proteger', subject: 'yo', answer: 'proteger\u00eda', options: ['proteger\u00eda', 'protejo', 'proteg\u00ed', 'protegiera'] },
+            { verb: 'hablar', subject: 't\u00fa', answer: 'hablar\u00edas', options: ['hablar\u00edas', 'hablas', 'hablaste', 'hablaras'] },
+            { verb: 'vivir', subject: '\u00e9l', answer: 'vivir\u00eda', options: ['vivir\u00eda', 'vive', 'vivi\u00f3', 'viviera'] },
+            { verb: 'cuidar', subject: 'nosotros', answer: 'cuidar\u00edamos', options: ['cuidar\u00edamos', 'cuidamos', 'cuid\u00e1ramos', 'cuidemos'] },
+            { verb: 'tener', subject: 'ellos', answer: 'tendr\u00edan', options: ['tendr\u00edan', 'tienen', 'tuvieron', 'tuvieran'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 5: Conjugation — Imperfecto de subjuntivo (-ara)
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos en imperfecto de subjuntivo (-ara/-iera).',
+        questions: [
+            { verb: 'proteger', subject: 'yo', answer: 'protegiera', options: ['protegiera', 'proteger\u00eda', 'protejo', 'proteg\u00ed'] },
+            { verb: 'hablar', subject: 't\u00fa', answer: 'hablaras', options: ['hablaras', 'hablar\u00edas', 'hablas', 'hablaste'] },
+            { verb: 'vivir', subject: 'ella', answer: 'viviera', options: ['viviera', 'vivir\u00eda', 'vive', 'vivi\u00f3'] },
+            { verb: 'poder', subject: 'nosotros', answer: 'pudi\u00e9ramos', options: ['pudi\u00e9ramos', 'podr\u00edamos', 'podemos', 'pudimos'] },
+            { verb: 'saber', subject: 'ellos', answer: 'supieran', options: ['supieran', 'sabr\u00edan', 'saben', 'supieron'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 6: Conjugation — Condicional de verbos irregulares
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga estos verbos irregulares en condicional.',
+        questions: [
+            { verb: 'hacer', subject: 'yo', answer: 'har\u00eda', options: ['har\u00eda', 'hac\u00eda', 'hice', 'hiciera'] },
+            { verb: 'decir', subject: 't\u00fa', answer: 'dir\u00edas', options: ['dir\u00edas', 'dec\u00edas', 'dijiste', 'dijeras'] },
+            { verb: 'salir', subject: '\u00e9l', answer: 'saldr\u00eda', options: ['saldr\u00eda', 'sal\u00eda', 'sali\u00f3', 'saliera'] },
+            { verb: 'poner', subject: 'nosotros', answer: 'pondr\u00edamos', options: ['pondr\u00edamos', 'pon\u00edamos', 'pusimos', 'pusi\u00e9ramos'] },
+            { verb: 'querer', subject: 'ellos', answer: 'querr\u00edan', options: ['querr\u00edan', 'quer\u00edan', 'quisieron', 'quisieran'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 7: Conjugation — Imperfecto de subjuntivo irregular
+    // =====================================================
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga estos verbos irregulares en imperfecto de subjuntivo.',
+        questions: [
+            { verb: 'ir', subject: 'yo', answer: 'fuera', options: ['fuera', 'ir\u00eda', 'fui', 'iba'] },
+            { verb: 'ser', subject: 't\u00fa', answer: 'fueras', options: ['fueras', 'ser\u00edas', 'fuiste', 'eras'] },
+            { verb: 'tener', subject: '\u00e9l', answer: 'tuviera', options: ['tuviera', 'tendr\u00eda', 'tuvo', 'ten\u00eda'] },
+            { verb: 'hacer', subject: 'nosotros', answer: 'hici\u00e9ramos', options: ['hici\u00e9ramos', 'har\u00edamos', 'hicimos', 'hac\u00edamos'] },
+            { verb: 'decir', subject: 'ellos', answer: 'dijeran', options: ['dijeran', 'dir\u00edan', 'dijeron', 'dec\u00edan'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 8: FIB — Condicional tipo 1 (elegir forma correcta)
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones condicionales de tipo 1 con la forma verbal correcta.',
+        questions: [
+            { sentence: 'Si los guardianes ___ el bosque, los animales sobreviven.', answer: 'protegen', options: ['protegen', 'protegieran', 'proteger\u00edan', 'protegieron'] },
+            { sentence: 'Si ___ mucho, el r\u00edo se desborda.', answer: 'llueve', options: ['llueve', 'lloviera', 'llover\u00eda', 'llovi\u00f3'] },
+            { sentence: 'Si los ember\u00e1 cuidan la rana dorada, la especie no ___.', answer: 'desaparece', options: ['desaparece', 'desapareciera', 'desaparecer\u00eda', 'desapareci\u00f3'] },
+            { sentence: 'Si t\u00fa visitas el Choc\u00f3, ___ la biodiversidad m\u00e1s rica del mundo.', answer: 'ver\u00e1s', options: ['ver\u00e1s', 'vieras', 'ver\u00edas', 'ves'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 9: FIB — Condicional tipo 2 (elegir forma correcta)
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones condicionales de tipo 2 con la forma verbal correcta.',
+        questions: [
+            { sentence: 'Si ___ m\u00e1s \u00e1rboles, habr\u00eda m\u00e1s ox\u00edgeno.', answer: 'plant\u00e1ramos', options: ['plant\u00e1ramos', 'plantamos', 'plantar\u00edamos', 'plantemos'] },
+            { sentence: 'Si yo ___ en la selva, proteger\u00eda a las ranas doradas.', answer: 'viviera', options: ['viviera', 'vivo', 'vivir\u00eda', 'viv\u00ed'] },
+            { sentence: 'Si las empresas no ___ los \u00e1rboles, la selva estar\u00eda sana.', answer: 'cortaran', options: ['cortaran', 'cortan', 'cortar\u00edan', 'cortaron'] },
+            { sentence: 'Si todos ___ el medio ambiente, el planeta ser\u00eda diferente.', answer: 'respetaran', options: ['respetaran', 'respetan', 'respetar\u00edan', 'respetaron'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 10: FIB — Mezcla tipo 1 y tipo 2
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la forma correcta. Presta atenci\u00f3n al tipo de condicional.',
+        questions: [
+            { sentence: 'Si estudias los condicionales, los ___ bien. (tipo 1)', answer: 'entender\u00e1s', options: ['entender\u00e1s', 'entendieras', 'entender\u00edas', 'entiendes'] },
+            { sentence: 'Si ___ un jaguar en la selva, me quedar\u00eda muy quieto. (tipo 2)', answer: 'viera', options: ['viera', 'veo', 'ver\u00eda', 'ver\u00e9'] },
+            { sentence: 'Si reciclas el pl\u00e1stico, ___ al medio ambiente. (tipo 1)', answer: 'ayudas', options: ['ayudas', 'ayudaras', 'ayudar\u00edas', 'ayudaste'] },
+            { sentence: 'Si todos ___ menos agua, no habr\u00eda escasez. (tipo 2)', answer: 'consumieran', options: ['consumieran', 'consumen', 'consumir\u00edan', 'consumieron'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 11: FIB — Resultado de la condicional
+    // =====================================================
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa el resultado de cada oraci\u00f3n condicional.',
+        questions: [
+            { sentence: 'Si los guardianes no protegieran la selva, muchas especies ___.', answer: 'desaparecer\u00edan', options: ['desaparecer\u00edan', 'desaparecen', 'desaparecieran', 'desaparecieron'] },
+            { sentence: 'Si encuentras una rana dorada, no la ___ porque es venenosa.', answer: 'toques', options: ['toques', 'tocar\u00edas', 'tocas', 'tocaras'] },
+            { sentence: 'Si el gobierno invirtiera en conservaci\u00f3n, la biodiversidad ___.', answer: 'aumentar\u00eda', options: ['aumentar\u00eda', 'aumenta', 'aumentara', 'aument\u00f3'] },
+            { sentence: 'Si visitamos la selva del Choc\u00f3, ___ especies \u00fanicas.', answer: 'conoceremos', options: ['conoceremos', 'conoci\u00e9ramos', 'conocer\u00edamos', 'conocimos'] }
+        ]
+    },
+
+    // =====================================================
+    // GAME 12: Pair — Condici\u00f3n y resultado (tipo 1)
+    // =====================================================
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada condici\u00f3n con su resultado correcto (condicionales reales).',
+        pairs: [
+            ['Si llueve mucho', 'el r\u00edo crece'],
+            ['Si protegemos la selva', 'los animales sobreviven'],
+            ['Si no reciclas', 'contaminas el planeta'],
+            ['Si visitas el Choc\u00f3', 'conoces la biodiversidad'],
+            ['Si cuidas el agua', 'las plantas crecen'],
+            ['Si los ember\u00e1 ense\u00f1an', 'todos aprendemos']
+        ]
+    },
+
+    // =====================================================
+    // GAME 13: Pair — Condici\u00f3n y resultado (tipo 2)
+    // =====================================================
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada condici\u00f3n hipot\u00e9tica con su resultado.',
+        pairs: [
+            ['Si plant\u00e1ramos m\u00e1s \u00e1rboles', 'habr\u00eda m\u00e1s ox\u00edgeno'],
+            ['Si yo viviera en el Choc\u00f3', 'proteger\u00eda la selva'],
+            ['Si no existieran los guardianes', 'la selva desaparecer\u00eda'],
+            ['Si pudi\u00e9ramos hablar con los animales', 'entender\u00edamos la naturaleza'],
+            ['Si todos reciclaran', 'el planeta estar\u00eda m\u00e1s limpio'],
+            ['Si no lloviera tanto', 'la selva no ser\u00eda tan verde']
+        ]
+    },
+
+    // =====================================================
+    // GAME 14: Pair — Subjuntivo e condicional (formas)
+    // =====================================================
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada forma del imperfecto de subjuntivo con su condicional correspondiente.',
+        pairs: [
+            ['protegiera', 'proteger\u00eda'],
+            ['hablara', 'hablar\u00eda'],
+            ['viviera', 'vivir\u00eda'],
+            ['tuviera', 'tendr\u00eda'],
+            ['hiciera', 'har\u00eda'],
+            ['pudiera', 'podr\u00eda']
+        ]
+    },
+
+    // =====================================================
+    // GAME 15: Sorting — Real vs. hipot\u00e9tico
+    // =====================================================
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n como condicional real (tipo 1) o hipot\u00e9tica (tipo 2).',
+        categories: ['Tipo 1 (real)', 'Tipo 2 (hipot\u00e9tica)'],
+        items: [
+            { text: 'Si llueve, el r\u00edo crece.', category: 'Tipo 1 (real)' },
+            { text: 'Si plant\u00e1ramos \u00e1rboles, habr\u00eda m\u00e1s ox\u00edgeno.', category: 'Tipo 2 (hipot\u00e9tica)' },
+            { text: 'Si visitas el Choc\u00f3, ver\u00e1s ranas doradas.', category: 'Tipo 1 (real)' },
+            { text: 'Si yo fuera guardi\u00e1n, cuidar\u00eda la selva.', category: 'Tipo 2 (hipot\u00e9tica)' },
+            { text: 'Si no reciclas, contaminas el planeta.', category: 'Tipo 1 (real)' },
+            { text: 'Si pudi\u00e9ramos volar, ver\u00edamos toda la selva.', category: 'Tipo 2 (hipot\u00e9tica)' },
+            { text: 'Si proteges las especies, la biodiversidad se mantiene.', category: 'Tipo 1 (real)' },
+            { text: 'Si todos respetaran la naturaleza, el mundo ser\u00eda mejor.', category: 'Tipo 2 (hipot\u00e9tica)' }
+        ]
+    },
+
+    // =====================================================
+    // GAME 16: Sorting — Condici\u00f3n vs. resultado
+    // =====================================================
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fragmento como condici\u00f3n (si...) o resultado.',
+        categories: ['Condici\u00f3n', 'Resultado'],
+        items: [
+            { text: 'Si protegi\u00e9ramos la selva', category: 'Condici\u00f3n' },
+            { text: 'los animales sobrevivir\u00edan', category: 'Resultado' },
+            { text: 'Si los ember\u00e1 ense\u00f1an', category: 'Condici\u00f3n' },
+            { text: 'todos aprendemos', category: 'Resultado' },
+            { text: 'Si lloviera menos', category: 'Condici\u00f3n' },
+            { text: 'la selva no ser\u00eda tan verde', category: 'Resultado' },
+            { text: 'Si cuidas el agua', category: 'Condici\u00f3n' },
+            { text: 'las plantas crecen sanas', category: 'Resultado' }
+        ]
+    },
+
+    // =====================================================
+    // GAME 17: Builder — Condicional tipo 1
+    // =====================================================
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n condicional real.',
+        words: ['Si', 'protegemos', 'la', 'selva', 'los', 'animales', 'sobreviven'],
+        answer: 'Si protegemos la selva los animales sobreviven'
+    },
+
+    // =====================================================
+    // GAME 18: Builder — Condicional tipo 2
+    // =====================================================
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n condicional hipot\u00e9tica.',
+        words: ['Si', 'yo', 'viviera', 'en', 'el', 'Choc\u00f3', 'proteger\u00eda', 'la', 'rana', 'dorada'],
+        answer: 'Si yo viviera en el Choc\u00f3 proteger\u00eda la rana dorada'
+    },
+
+    // =====================================================
+    // GAME 19: Listening — Identificar tipo de condicional
+    // =====================================================
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y decide qu\u00e9 tipo de condicional es.',
+        audio: 'Si los guardianes protegieran toda la regi\u00f3n, habr\u00eda m\u00e1s especies.',
+        question: '\u00bfQu\u00e9 tipo de condicional es esta oraci\u00f3n?',
+        answer: 'Tipo 2: hipot\u00e9tica (si + imperfecto de subjuntivo, condicional)',
+        options: ['Tipo 1: real (si + presente, presente/futuro)', 'Tipo 2: hipot\u00e9tica (si + imperfecto de subjuntivo, condicional)', 'No es una oraci\u00f3n condicional', 'Tipo 1: real (si + pasado, futuro)']
+    },
+
+    // =====================================================
+    // GAME 20: Listening — Identificar tipo de condicional (2)
+    // =====================================================
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y decide qu\u00e9 tipo de condicional es.',
+        audio: 'Si visitas la selva del Choc\u00f3, conocer\u00e1s la rana dorada.',
+        question: '\u00bfQu\u00e9 tipo de condicional es esta oraci\u00f3n?',
+        answer: 'Tipo 1: real (si + presente, futuro)',
+        options: ['Tipo 1: real (si + presente, futuro)', 'Tipo 2: hipot\u00e9tica (si + imperfecto de subjuntivo, condicional)', 'No es una oraci\u00f3n condicional', 'Tipo 2: hipot\u00e9tica (si + presente, condicional)']
+    },
+
+    // =====================================================
+    // GAME 21: Translation — Condicional tipo 1
+    // =====================================================
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce esta oraci\u00f3n condicional al espa\u00f1ol usando el banco de palabras.',
+        source: 'If we protect the forest, the animals survive.',
+        words: ['Si', 'protegemos', 'el', 'bosque', 'los', 'animales', 'sobreviven'],
+        answer: 'Si protegemos el bosque los animales sobreviven'
+    },
+
+    // =====================================================
+    // GAME 22: Translation — Condicional tipo 2
+    // =====================================================
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce esta oraci\u00f3n condicional hipot\u00e9tica al espa\u00f1ol.',
+        source: 'If I lived in the jungle, I would protect the golden frog.',
+        words: ['Si', 'yo', 'viviera', 'en', 'la', 'selva', 'proteger\u00eda', 'la', 'rana', 'dorada'],
+        answer: 'Si yo viviera en la selva proteger\u00eda la rana dorada'
+    },
+
+    // =====================================================
+    // GAME 23: Conversation — \u00bfQu\u00e9 pasar\u00eda si...?
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con una gu\u00eda ember\u00e1 sobre qu\u00e9 pasar\u00eda si no cuid\u00e1ramos la selva.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda ember\u00e1', text: '\u00bfSabes qu\u00e9 pasar\u00eda si no cuid\u00e1ramos la selva?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si no cuid\u00e1ramos la selva, muchas especies desaparecer\u00edan.',
+                    'Si no cuidamos la selva, muchas especies desaparecieron.',
+                    'Si no cuidar la selva, muchas especies desaparecer.'
+                ],
+                answer: 'Si no cuid\u00e1ramos la selva, muchas especies desaparecer\u00edan.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda ember\u00e1', text: 'Exacto. Y si la rana dorada desapareciera, \u00bfqu\u00e9 pasar\u00eda?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si la rana dorada desapareci\u00f3, el ecosistema cambia.',
+                    'Si la rana dorada desapareciera, el ecosistema perder\u00eda el equilibrio.',
+                    'Si la rana dorada desaparece, el ecosistema perdiera el equilibrio.'
+                ],
+                answer: 'Si la rana dorada desapareciera, el ecosistema perder\u00eda el equilibrio.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda ember\u00e1', text: '\u00bfQu\u00e9 har\u00edas t\u00fa si pudieras ayudar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si pudiera ayudar, trabajar\u00eda con las comunidades ember\u00e1 para proteger la selva.',
+                    'Si puedo ayudar, trabajar\u00e9 con las comunidades ember\u00e1.',
+                    'Si pudiera ayudar, trabajo con las comunidades ember\u00e1.'
+                ],
+                answer: 'Si pudiera ayudar, trabajar\u00eda con las comunidades ember\u00e1 para proteger la selva.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 24: Conversation — Planes de conservaci\u00f3n
+    // =====================================================
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con un bi\u00f3logo sobre la conservaci\u00f3n de la selva usando oraciones condicionales.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Bi\u00f3logo', text: 'Si seguimos destruyendo la selva, \u00bfqu\u00e9 crees que va a pasar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si seguimos destruyendo la selva, perderemos miles de especies.',
+                    'Si seguimos destruyendo la selva, perdi\u00e9ramos miles de especies.',
+                    'Si sigui\u00e9ramos destruyendo la selva, perdemos miles de especies.'
+                ],
+                answer: 'Si seguimos destruyendo la selva, perderemos miles de especies.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Bi\u00f3logo', text: 'Tienes raz\u00f3n. \u00bfY si tuvieras los recursos, qu\u00e9 proyecto crear\u00edas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si tengo los recursos, creo un proyecto de reforestaci\u00f3n.',
+                    'Si tuviera los recursos, crear\u00eda un proyecto de reforestaci\u00f3n en el Choc\u00f3.',
+                    'Si tendr\u00eda los recursos, creara un proyecto de reforestaci\u00f3n.'
+                ],
+                answer: 'Si tuviera los recursos, crear\u00eda un proyecto de reforestaci\u00f3n en el Choc\u00f3.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Bi\u00f3logo', text: '\u00bfCrees que si educamos a la gente, la situaci\u00f3n mejorar\u00eda?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, si educamos a la gente, la situaci\u00f3n mejora seguro.',
+                    'S\u00ed, si educ\u00e1ramos a la gente, la situaci\u00f3n mejorar\u00eda mucho.',
+                    'S\u00ed, si educamos a la gente, la situaci\u00f3n mejorar\u00eda mucho.'
+                ],
+                answer: 'S\u00ed, si educamos a la gente, la situaci\u00f3n mejorar\u00eda mucho.'
+            }
+        ]
+    },
+
+    // =====================================================
+    // GAME 25: Dictation — Oraci\u00f3n condicional completa
+    // =====================================================
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n condicional completa.',
+        audio: 'Si protegi\u00e9ramos la selva del Choc\u00f3, las comunidades ember\u00e1 y los animales vivir\u00edan en armon\u00eda.',
+        answer: 'Si protegi\u00e9ramos la selva del Choc\u00f3, las comunidades ember\u00e1 y los animales vivir\u00edan en armon\u00eda.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El invernadero roto',
+            description: 'Un invernadero viejo con los cristales rotos. Algunas plantas sobreviven; otras murieron. Las etiquetas explican por qu\u00e9.',
+            ambience: 'greenhouse'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra est\u00e1n dispersas entre las macetas.',
+                clue: 'Es lo que conecta un evento con el resultado que produce.',
+                answer: 'causa',
+                scrambled: 'ucasa',
+                onSolve: 'Las macetas se alinean.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Una etiqueta grande explica una cadena de eventos.',
+                passage: '\u00abLa carretera de Don Pr\u00f3spero cort\u00f3 el r\u00edo. Como resultado, los peces no pudieron migrar. Por eso, los pescadores perdieron su sustento. En consecuencia, muchas familias abandonaron el pueblo.\u00bb',
+                clue: '\u00bfCu\u00e1ntos conectores de causa-efecto hay y cu\u00e1les son?',
+                answer: 'Tres: "Como resultado", "Por eso", "En consecuencia"',
+                options: [
+                    'Tres: "Como resultado", "Por eso", "En consecuencia"',
+                    'Uno: "Por eso"',
+                    'Dos: "Como resultado", "Por eso"',
+                    'Cuatro: "cort\u00f3", "Como resultado", "Por eso", "En consecuencia"'
+                ],
+                onSolve: 'La cadena de eventos se ilumina.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una planta seca tiene una nota:',
+                riddle: '\u00abDon Pr\u00f3spero dice que la carretera trae progreso. Pero \u00bfqu\u00e9 pasa si el "progreso" causa m\u00e1s da\u00f1o que la pobreza? \u00bfPuede un efecto ser peor que su causa?\u00bb',
+                clue: '\u00bfQu\u00e9 responde el invernadero?',
+                answer: 'S\u00ed \u2014 una causa "buena" puede tener efectos destructivos si no se consideran todas las consecuencias',
+                options: [
+                    'S\u00ed \u2014 una causa "buena" puede tener efectos destructivos si no se consideran todas las consecuencias',
+                    'No \u2014 el progreso siempre es positivo',
+                    'Las causas y los efectos no se pueden juzgar',
+                    'Solo Don Pr\u00f3spero puede decidir'
+                ],
+                onSolve: 'La planta seca florece. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de una cadena donde cada eslab\u00f3n es una palabra.',
+            questClue: 'Cada acci\u00f3n tiene eco. Las palabras que elegimos determinan qu\u00e9 eco escuchamos.',
+            item: 'historia-cadena'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '25',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest25Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

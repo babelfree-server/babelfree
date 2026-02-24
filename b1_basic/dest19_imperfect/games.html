@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 19: El r&iacute;o cuenta - Pret&eacute;rito imperfecto</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest19_imperfect/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 19: El río cuenta - Pretérito imperfecto",
+          "url": "https://babelfree.com/b1_basic/dest19_imperfect/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Imperfect tense", "Pretérito imperfecto", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Basic", "item": "https://babelfree.com/b1-quibdo" },
+            { "@type": "ListItem", "position": 4, "name": "El río cuenta - Pretérito imperfecto" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 19: El r&iacute;o cuenta</div>
+            <div class="yg-header-subtitle">Pret&eacute;rito imperfecto</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+    var games = [
+        // === GAME 1: narrative — Introduction to imperfect via river memories ===
+        {
+            type: 'narrative',
+            label: 'Narraci\u00f3n',
+            instruction: 'Lee esta historia sobre los recuerdos del r\u00edo Atrato.',
+            text: 'Yaguar\u00e1 lleg\u00f3 a Quibd\u00f3, la capital del Choc\u00f3. El r\u00edo Atrato era enorme y sus aguas oscuras brillaban bajo el sol. Una mujer mayor estaba sentada cerca del r\u00edo. Ella miraba el agua y sonre\u00eda. \u00abCuando yo era ni\u00f1a, el r\u00edo nos daba todo\u00bb, dijo. \u00abNos\u00e1bamos al r\u00edo todos los d\u00edas. Mi abuela cantaba mientras lavaba la ropa. La vida era tranquila.\u00bb Yaguar\u00e1 escuchaba con atenci\u00f3n. En el Choc\u00f3, el pasado viv\u00eda en cada palabra.'
+        },
+        // === GAME 2: conjugation — Regular -ar verbs in imperfect ===
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Conjuga los verbos en <em>pret&eacute;rito imperfecto</em>. Los verbos en -ar usan: -aba, -abas, -aba, -&aacute;bamos, -aban.',
+            questions: [
+                { verb: 'caminar', subject: 'yo', answer: 'caminaba', options: ['caminaba', 'camin\u00e9', 'camino', 'caminar\u00e9'] },
+                { verb: 'hablar', subject: 't\u00fa', answer: 'hablabas', options: ['hablabas', 'hablaste', 'hablas', 'hablar\u00e1s'] },
+                { verb: 'cantar', subject: '\u00e9l/ella', answer: 'cantaba', options: ['cant\u00f3', 'cantaba', 'canta', 'cantar\u00e1'] },
+                { verb: 'jugar', subject: 'nosotros', answer: 'jug\u00e1bamos', options: ['jugamos', 'jug\u00e1bamos', 'jugaremos', 'jugaron'] },
+                { verb: 'nadar', subject: 'ellos', answer: 'nadaban', options: ['nadan', 'nadaron', 'nadaban', 'nadar\u00e1n'] }
+            ]
+        },
+        // === GAME 3: fib — Imperfect in context: childhood memories ===
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa con la forma correcta del <em>pret&eacute;rito imperfecto</em>.',
+            questions: [
+                { sentence: 'Cuando era ni\u00f1o, yo ___ al r\u00edo todos los d\u00edas.', answer: 'iba', options: ['fui', 'iba', 'voy', 'ir\u00e9'] },
+                { sentence: 'Mi abuela ___ historias por la noche.', answer: 'contaba', options: ['cont\u00f3', 'contaba', 'cuenta', 'contar\u00e1'] },
+                { sentence: 'Los ni\u00f1os ___ en el agua hasta el atardecer.', answer: 'jugaban', options: ['jugaron', 'jugaban', 'juegan', 'jugar\u00e1n'] }
+            ]
+        },
+        // === GAME 4: pair — Infinitive ↔ imperfect yo forms ===
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>infinitivo &#8594; yo (imperfecto)</em>',
+            pairs: [
+                ['caminar', 'caminaba'],
+                ['comer', 'com\u00eda'],
+                ['vivir', 'viv\u00eda'],
+                ['hablar', 'hablaba'],
+                ['escribir', 'escrib\u00eda'],
+                ['cantar', 'cantaba']
+            ]
+        },
+        // === GAME 5: conjugation — Regular -er/-ir verbs in imperfect ===
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Conjuga los verbos en <em>pret&eacute;rito imperfecto</em>. Los verbos en -er/-ir usan: -&iacute;a, -&iacute;as, -&iacute;a, -&iacute;amos, -&iacute;an.',
+            questions: [
+                { verb: 'comer', subject: 'yo', answer: 'com\u00eda', options: ['com\u00eda', 'com\u00ed', 'como', 'comer\u00e9'] },
+                { verb: 'vivir', subject: 't\u00fa', answer: 'viv\u00edas', options: ['viv\u00edas', 'viviste', 'vives', 'vivir\u00e1s'] },
+                { verb: 'tener', subject: '\u00e9l/ella', answer: 'ten\u00eda', options: ['tuvo', 'ten\u00eda', 'tiene', 'tendr\u00e1'] },
+                { verb: 'hacer', subject: 'nosotros', answer: 'hac\u00edamos', options: ['hicimos', 'hac\u00edamos', 'hacemos', 'haremos'] },
+                { verb: 'salir', subject: 'ellos', answer: 'sal\u00edan', options: ['salieron', 'sal\u00edan', 'salen', 'saldr\u00e1n'] }
+            ]
+        },
+        // === GAME 6: listening — Imperfect narration about daily routines ===
+        {
+            type: 'listening',
+            label: 'Escuchar',
+            instruction: 'Escucha la narraci&oacute;n y selecciona la respuesta correcta.',
+            audio: 'Cuando yo era ni\u00f1a, viv\u00eda en Quibd\u00f3. Todos los d\u00edas caminaba al r\u00edo con mi madre. Ella lavaba la ropa y yo jugaba en el agua.',
+            question: '\u00bfQu\u00e9 hac\u00eda la madre en el r\u00edo?',
+            answer: 'Lavaba la ropa.',
+            options: ['Lavaba la ropa.', 'Pescaba.', 'Nadaba.', 'Cantaba canciones.']
+        },
+        // === GAME 7: fib — Imperfect for descriptions ===
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa las descripciones en imperfecto. Recuerda: el imperfecto describe c&oacute;mo <em>eran</em> las cosas.',
+            questions: [
+                { sentence: 'El r\u00edo Atrato ___ muy ancho y profundo.', answer: 'era', options: ['fue', 'era', 'es', 'ser\u00e1'] },
+                { sentence: 'Las noches en Quibd\u00f3 ___ calientes y h\u00famedas.', answer: 'eran', options: ['fueron', 'eran', 'son', 'ser\u00e1n'] },
+                { sentence: 'La selva ___ sonidos por todas partes.', answer: 'ten\u00eda', options: ['tuvo', 'ten\u00eda', 'tiene', 'tendr\u00e1'] }
+            ]
+        },
+        // === GAME 8: sorting — Pretérito indefinido vs imperfecto usage ===
+        {
+            type: 'sorting',
+            label: 'Clasificar',
+            instruction: 'Clasifica cada frase: &iquest;usa <em>pret&eacute;rito indefinido</em> (acci&oacute;n completa) o <em>imperfecto</em> (habitual/descripci&oacute;n)?',
+            categories: ['Pret\u00e9rito indefinido', 'Imperfecto'],
+            items: [
+                { text: 'Ayer com\u00ed pescado.', category: 'Pret\u00e9rito indefinido' },
+                { text: 'De ni\u00f1o com\u00eda pescado todos los d\u00edas.', category: 'Imperfecto' },
+                { text: 'El lunes fui al mercado.', category: 'Pret\u00e9rito indefinido' },
+                { text: 'Siempre iba al mercado los lunes.', category: 'Imperfecto' },
+                { text: 'Mi abuela cantaba por las ma\u00f1anas.', category: 'Imperfecto' },
+                { text: 'Mi abuela cant\u00f3 una canci\u00f3n anoche.', category: 'Pret\u00e9rito indefinido' }
+            ]
+        },
+        // === GAME 9: builder — Reorder imperfect sentence ===
+        {
+            type: 'builder',
+            label: 'Construir',
+            instruction: 'Ordena las palabras para formar una frase en imperfecto.',
+            words: ['Cuando', 'era', 'ni\u00f1o', 'jugaba', 'en', 'el', 'r\u00edo', 'todos', 'los', 'd\u00edas'],
+            answer: 'Cuando era ni\u00f1o jugaba en el r\u00edo todos los d\u00edas'
+        },
+        // === GAME 10: narrative — The river's voice: habitual past ===
+        {
+            type: 'narrative',
+            label: 'Narraci\u00f3n',
+            instruction: 'Lee sobre la vida cotidiana en el Choc&oacute;. Observa los verbos en imperfecto.',
+            text: 'La mujer continu\u00f3 su historia: \u00abAntes, la vida aqu\u00ed era diferente. Mi padre pescaba en el Atrato todas las ma\u00f1anas. Sal\u00eda de la casa cuando todav\u00eda estaba oscuro. Mi madre preparaba el desayuno mientras nosotros dorm\u00edamos. Despu\u00e9s, \u00edbamos a la escuela. El maestro nos ense\u00f1aba con mucha paciencia. Por las tardes, los vecinos se reun\u00edan y hablaban de todo. La comunidad era como una gran familia.\u00bb'
+        },
+        // === GAME 11: conjugation — Irregular verbs: ser, ir, ver ===
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Conjuga los verbos <em>irregulares</em> en imperfecto. Solo tres verbos son irregulares: <strong>ser</strong> (era), <strong>ir</strong> (iba), <strong>ver</strong> (ve&iacute;a).',
+            questions: [
+                { verb: 'ser', subject: 'yo', answer: 'era', options: ['era', 'fui', 'soy', 'ser\u00e9'] },
+                { verb: 'ir', subject: 't\u00fa', answer: 'ibas', options: ['ibas', 'fuiste', 'vas', 'ir\u00e1s'] },
+                { verb: 'ver', subject: '\u00e9l/ella', answer: 've\u00eda', options: ['vio', 've\u00eda', 've', 'ver\u00e1'] },
+                { verb: 'ser', subject: 'nosotros', answer: '\u00e9ramos', options: ['fuimos', '\u00e9ramos', 'somos', 'seremos'] },
+                { verb: 'ir', subject: 'ellos', answer: 'iban', options: ['fueron', 'iban', 'van', 'ir\u00e1n'] },
+                { verb: 'ver', subject: 'yo', answer: 've\u00eda', options: ['vi', 've\u00eda', 'veo', 'ver\u00e9'] }
+            ]
+        },
+        // === GAME 12: fib — Imperfect with time markers ===
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa con imperfecto. Recuerda: <em>siempre, todos los d&iacute;as, de ni&ntilde;o, antes</em> indican acci&oacute;n habitual.',
+            questions: [
+                { sentence: 'Antes, mi familia ___ cerca del r\u00edo.', answer: 'viv\u00eda', options: ['vivi\u00f3', 'viv\u00eda', 'vive', 'vivir\u00e1'] },
+                { sentence: 'De ni\u00f1o, yo siempre ___ temprano.', answer: 'me despertaba', options: ['me despert\u00e9', 'me despertaba', 'me despierto', 'me despertar\u00e9'] },
+                { sentence: 'Todos los domingos, nosotros ___ a la iglesia.', answer: '\u00edbamos', options: ['fuimos', '\u00edbamos', 'vamos', 'iremos'] }
+            ]
+        },
+        // === GAME 13: translation — Imperfect sentence ===
+        {
+            type: 'translation',
+            label: 'Traducir',
+            instruction: 'Traduce al espa&ntilde;ol usando las palabras disponibles.',
+            source: 'When I was a child, I used to play in the river every day.',
+            words: ['Cuando', 'era', 'ni\u00f1o', 'jugaba', 'en', 'el', 'r\u00edo', 'todos', 'los', 'd\u00edas'],
+            answer: 'Cuando era ni\u00f1o jugaba en el r\u00edo todos los d\u00edas'
+        },
+        // === GAME 14: listening — Descriptions in imperfect ===
+        {
+            type: 'listening',
+            label: 'Escuchar',
+            instruction: 'Escucha la descripci&oacute;n y responde la pregunta.',
+            audio: 'Mi abuelo era un hombre alto y fuerte. Ten\u00eda el pelo blanco y los ojos oscuros. Siempre llevaba un sombrero. Caminaba despacio y hablaba con una voz suave.',
+            question: '\u00bfC\u00f3mo era el abuelo?',
+            answer: 'Alto y fuerte.',
+            options: ['Bajo y delgado.', 'Alto y fuerte.', 'Joven y r\u00e1pido.', 'Peque\u00f1o y callado.']
+        },
+        // === GAME 15: pair — Infinitive ↔ imperfect él forms ===
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>infinitivo &#8594; &eacute;l/ella (imperfecto)</em>',
+            pairs: [
+                ['ser', 'era'],
+                ['ir', 'iba'],
+                ['ver', 've\u00eda'],
+                ['tener', 'ten\u00eda'],
+                ['hacer', 'hac\u00eda'],
+                ['poder', 'pod\u00eda']
+            ]
+        },
+        // === GAME 16: conversation — Talking about past routines ===
+        {
+            type: 'conversation',
+            label: 'Conversaci&oacute;n',
+            instruction: 'Completa la conversaci&oacute;n sobre rutinas del pasado.',
+            turns: [
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Do\u00f1a Carmen', text: '\u00bfD\u00f3nde viv\u00edas cuando eras ni\u00f1o?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Viv\u00eda cerca del r\u00edo Atrato.', 'Viv\u00ed cerca del r\u00edo.', 'Vivo cerca del r\u00edo.'],
+                    answer: 'Viv\u00eda cerca del r\u00edo Atrato.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Do\u00f1a Carmen', text: '\u00bfQu\u00e9 hac\u00edas despu\u00e9s de la escuela?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Jugaba con mis amigos en el r\u00edo.', 'Jugu\u00e9 con mis amigos.', 'Juego con mis amigos.'],
+                    answer: 'Jugaba con mis amigos en el r\u00edo.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Do\u00f1a Carmen', text: '\u00bfC\u00f3mo era tu casa?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Era peque\u00f1a pero muy bonita.', 'Fue peque\u00f1a pero bonita.', 'Es peque\u00f1a y bonita.'],
+                    answer: 'Era peque\u00f1a pero muy bonita.'
+                }
+            ]
+        },
+        // === GAME 17: sorting — Imperfect signals vs indefinido signals ===
+        {
+            type: 'sorting',
+            label: 'Clasificar',
+            instruction: 'Clasifica: &iquest;qu&eacute; expresiones de tiempo indican <em>imperfecto</em> y cu&aacute;les <em>pret&eacute;rito indefinido</em>?',
+            categories: ['Imperfecto', 'Pret\u00e9rito indefinido'],
+            items: [
+                { text: 'siempre', category: 'Imperfecto' },
+                { text: 'todos los d\u00edas', category: 'Imperfecto' },
+                { text: 'de ni\u00f1o', category: 'Imperfecto' },
+                { text: 'antes', category: 'Imperfecto' },
+                { text: 'ayer', category: 'Pret\u00e9rito indefinido' },
+                { text: 'el lunes pasado', category: 'Pret\u00e9rito indefinido' },
+                { text: 'anoche', category: 'Pret\u00e9rito indefinido' },
+                { text: 'normalmente', category: 'Imperfecto' }
+            ]
+        },
+        // === GAME 18: fib — Imperfect for interrupted actions ===
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa con imperfecto. Usa el imperfecto para la acci&oacute;n de fondo que <em>estaba pasando</em>.',
+            questions: [
+                { sentence: 'Yo ___ por la selva cuando empez\u00f3 a llover.', answer: 'caminaba', options: ['camin\u00e9', 'caminaba', 'camino', 'caminar\u00e9'] },
+                { sentence: 'Ella ___ una canci\u00f3n cuando lleg\u00f3 su hermano.', answer: 'cantaba', options: ['cant\u00f3', 'cantaba', 'canta', 'cantar\u00e1'] },
+                { sentence: 'Nosotros ___ en el r\u00edo cuando o\u00edmos un ruido.', answer: 'nad\u00e1bamos', options: ['nadamos', 'nad\u00e1bamos', 'nadaremos', 'nadaron'] }
+            ]
+        },
+        // === GAME 19: builder — Reorder imperfect description ===
+        {
+            type: 'builder',
+            label: 'Construir',
+            instruction: 'Ordena las palabras para describir una escena del pasado.',
+            words: ['Mi', 'abuela', 'siempre', 'cantaba', 'mientras', 'preparaba', 'la', 'comida'],
+            answer: 'Mi abuela siempre cantaba mientras preparaba la comida'
+        },
+        // === GAME 20: conjugation — Mixed regular and irregular imperfect ===
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Conjuga en <em>pret&eacute;rito imperfecto</em>: mezcla de verbos regulares e irregulares.',
+            questions: [
+                { verb: 'ir', subject: 'yo', answer: 'iba', options: ['iba', 'fui', 'voy', 'ir\u00e9'] },
+                { verb: 'cocinar', subject: 't\u00fa', answer: 'cocinabas', options: ['cocinaste', 'cocinabas', 'cocinas', 'cocinar\u00e1s'] },
+                { verb: 'ser', subject: '\u00e9l/ella', answer: 'era', options: ['fue', 'era', 'es', 'ser\u00e1'] },
+                { verb: 'dormir', subject: 'nosotros', answer: 'dorm\u00edamos', options: ['dormimos', 'dorm\u00edamos', 'dormiremos', 'dormieron'] },
+                { verb: 'ver', subject: 'ellos', answer: 've\u00edan', options: ['vieron', 've\u00edan', 'ven', 'ver\u00e1n'] }
+            ]
+        },
+        // === GAME 21: narrative — The river remembers ===
+        {
+            type: 'narrative',
+            label: 'Narraci\u00f3n',
+            instruction: 'Lee c&oacute;mo el r&iacute;o conecta el pasado con el presente.',
+            text: 'Do\u00f1a Carmen cerr\u00f3 los ojos y continu\u00f3: \u00abEn aquellos tiempos, el r\u00edo era nuestro camino. No hab\u00eda carreteras. Los pescadores iban y ven\u00edan en sus canoas. Por las noches, las familias se sentaban afuera. Los viejos contaban historias y los ni\u00f1os escuchaban con los ojos muy abiertos. Yo quer\u00eda ser como mi abuela: ella sab\u00eda el nombre de cada planta. El Atrato lo ve\u00eda todo, lo escuchaba todo. El r\u00edo era nuestra memoria.\u00bb Yaguar\u00e1 entendi\u00f3: el imperfecto era la voz del r\u00edo \u2014 contaba lo que siempre pasaba, lo que no terminaba nunca.'
+        },
+        // === GAME 22: pair — Habitual past expressions ===
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>expresi&oacute;n de tiempo &#8594; frase en imperfecto</em>',
+            pairs: [
+                ['todos los d\u00edas', 'caminaba al r\u00edo'],
+                ['siempre', 'cantaba por las ma\u00f1anas'],
+                ['de ni\u00f1o', 'jugaba con mis amigos'],
+                ['cada verano', 'nad\u00e1bamos en el Atrato'],
+                ['antes', 'la vida era tranquila'],
+                ['normalmente', 'com\u00edamos pescado']
+            ]
+        },
+        // === GAME 23: translation — Describing past habits ===
+        {
+            type: 'translation',
+            label: 'Traducir',
+            instruction: 'Traduce al espa&ntilde;ol usando las palabras disponibles.',
+            source: 'My grandmother always sang while she cooked.',
+            words: ['Mi', 'abuela', 'siempre', 'cantaba', 'mientras', 'cocinaba'],
+            answer: 'Mi abuela siempre cantaba mientras cocinaba'
+        },
+        // === GAME 24: conversation — Sharing childhood memories ===
+        {
+            type: 'conversation',
+            label: 'Conversaci&oacute;n',
+            instruction: 'Completa la conversaci&oacute;n sobre recuerdos de la infancia.',
+            turns: [
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Do\u00f1a Carmen', text: '\u00bfC\u00f3mo era tu pueblo cuando eras ni\u00f1o?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Era un pueblo peque\u00f1o y tranquilo.', 'Fue un pueblo peque\u00f1o.', 'Es un pueblo tranquilo.'],
+                    answer: 'Era un pueblo peque\u00f1o y tranquilo.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Do\u00f1a Carmen', text: '\u00bfQu\u00e9 hac\u00edan tus padres?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Mi padre pescaba y mi madre cocinaba.', 'Mi padre pesc\u00f3 y mi madre cocin\u00f3.', 'Mi padre pesca y mi madre cocina.'],
+                    answer: 'Mi padre pescaba y mi madre cocinaba.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Do\u00f1a Carmen', text: '\u00bfIbas al r\u00edo tambi\u00e9n?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['S\u00ed, iba al r\u00edo todas las tardes con mis amigos.', 'S\u00ed, fui al r\u00edo una vez.', 'S\u00ed, voy al r\u00edo.'],
+                    answer: 'S\u00ed, iba al r\u00edo todas las tardes con mis amigos.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Do\u00f1a Carmen', text: '\u00bfExtrañas esos tiempos?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['S\u00ed, la vida era m\u00e1s tranquila antes.', 'S\u00ed, la vida fue tranquila.', 'S\u00ed, la vida es tranquila.'],
+                    answer: 'S\u00ed, la vida era m\u00e1s tranquila antes.'
+                }
+            ]
+        },
+        // === GAME 25: dictation — Imperfect narration ===
+        {
+            type: 'dictation',
+            label: 'Dictado',
+            instruction: 'Escucha y escribe la frase que oyes.',
+            audio: 'Cuando era ni\u00f1a, mi abuela me contaba historias del r\u00edo.',
+            answer: 'Cuando era ni\u00f1a, mi abuela me contaba historias del r\u00edo'
+        },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El sótano de la alcaldía',
+            description: 'Bajo la alcaldía del pueblo hay un sótano que nadie usa. En las paredes hay mapas viejos del bosque, antes de la carretera.',
+            ambience: 'underground'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Un armario viejo tiene una cerradura de letras.',
+                clue: 'Es el tiempo verbal que usamos para contar historias del pasado. Tiene nueve letras, empieza con "p".',
+                answer: 'preterito',
+                hint: '_ _ _ _ _ _ _ _ _',
+                onSolve: 'El armario se abre. Dentro hay un mapa viejo.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'El mapa cuenta una historia en imágenes, pero están desordenadas.',
+                clue: 'Ordena los eventos de la historia del bosque.',
+                items: [
+                    'El bosque estaba completo y el río corría libre',
+                    'Llegó un hombre con mapas y contratos',
+                    'Las máquinas cortaron los primeros árboles',
+                    'Los animales buscaron nuevos caminos'
+                ],
+                onSolve: 'El mapa se completa. Muestra dónde estaba el bosque antes.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una nota doblada cae del mapa. Dice:',
+                riddle: '«Un hombre llegó con promesas. Dijo que traía progreso. Pero el bosque ya tenía todo lo que necesitaba. ¿Quién fue ese hombre?»',
+                clue: 'Su nombre significa riqueza.',
+                answer: 'Don Próspero',
+                options: ['Don Próspero', 'El alcalde', 'Un turista', 'Un científico'],
+                onSolve: 'La nota revela un nombre. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo del bosque antes de la carretera.',
+            questClue: 'El mapa recuerda lo que el bosque ya olvidó.',
+            item: 'historia-bosque-antes'
+        }
+    }
+    ];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '19',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest19Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

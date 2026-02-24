@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosistema | El Viaje del Jaguar</title>
+    <link rel="canonical" href="https://babelfree.com/ecosystem">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "name": "Ecosistema — El Viaje del Jaguar",
+                "description": "Explora los ecosistemas colombianos en El Viaje del Jaguar. Un entorno de aprendizaje interactivo e inmersivo para estudiantes de español de todos los niveles.",
+                "url": "https://babelfree.com/ecosystem",
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "LearningResource",
+                "name": "Ecosistema — El Viaje del Jaguar",
+                "educationalLevel": "A1-C2",
+                "learningResourceType": "Interactive Learning Environment",
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/login"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Ecosystem",
+                        "item": "https://babelfree.com/ecosystem"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --eco-primary: #2d5a27;
+            --eco-secondary: #4a8a3f;
+            --eco-glow: rgba(45, 90, 39, 0.4);
+            --jaguar-gold: #c9a227;
+            --jaguar-gold-glow: rgba(201, 162, 39, 0.35);
+            --success-green: #4caf50;
+            --earth-deep: #1a1208;
+            --earth-mid: #2a1f10;
+            --sand: #e8d5b7;
+            --sand-muted: #b8a48a;
+            --glass-bg: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(160deg, var(--earth-deep) 0%, var(--earth-mid) 40%, #1f2a1a 70%, #1a2520 100%);
+            color: var(--sand);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(90, 110, 74, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 75% 15%, rgba(201, 162, 39, 0.06) 0%, transparent 50%);
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(26, 18, 8, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+            padding: 12px 20px;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--sand);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateX(-3px);
+        }
+
+        .eco-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px var(--eco-glow);
+        }
+
+        .eco-badge .eco-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--jaguar-gold);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.3); }
+        }
+
+        /* Main content */
+        .main-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px 30px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .hero-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            border: 4px solid var(--eco-primary);
+            overflow: hidden;
+            animation: avatar-float 4s ease-in-out infinite;
+            box-shadow: 0 12px 40px var(--eco-glow);
+        }
+
+        .hero-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @keyframes avatar-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--sand);
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--sand-muted);
+            font-weight: 500;
+        }
+
+        .hero-geography {
+            font-size: 0.9rem;
+            color: var(--sand-muted);
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        /* Progress overview */
+        .progress-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease-out 0.15s both;
+        }
+
+        .progress-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--sand);
+        }
+
+        .overview-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .overview-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--eco-primary), var(--jaguar-gold));
+            border-radius: 4px;
+            transition: width 0.8s ease;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: var(--sand-muted);
+            font-weight: 600;
+        }
+
+        /* Yaguara guide */
+        .guide-section {
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.08), rgba(90, 110, 74, 0.08));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            animation: fadeInUp 0.6s ease-out 0.25s both;
+        }
+
+        .guide-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid var(--jaguar-gold);
+        }
+
+        .guide-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .guide-bubble {
+            flex: 1;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--sand);
+        }
+
+        .guide-name {
+            font-weight: 700;
+            color: var(--jaguar-gold);
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        /* Spirals section */
+        .spirals-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out 0.35s both;
+        }
+
+        .spirals-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--sand);
+        }
+
+        .spirals-count {
+            font-size: 0.8rem;
+            color: var(--sand-muted);
+            font-weight: 500;
+        }
+
+        /* Mundo divider */
+        .mundo-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 28px 0 16px;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .mundo-divider::before,
+        .mundo-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(201, 162, 39, 0.2);
+        }
+
+        .mundo-label {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            color: var(--jaguar-gold);
+            font-weight: 600;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        /* Spiral cards */
+        .spiral-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: var(--transition);
+            cursor: pointer;
+            animation: fadeInUp 0.6s ease-out both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spiral-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px;
+            height: 100%;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .spiral-card.unlocked::before {
+            background: linear-gradient(180deg, var(--eco-primary), var(--jaguar-gold));
+        }
+
+        .spiral-card.locked::before {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .spiral-card.completed::before {
+            background: linear-gradient(180deg, var(--success-green), var(--jaguar-gold));
+        }
+
+        .spiral-card.unlocked:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card);
+            border-color: rgba(201, 162, 39, 0.25);
+        }
+
+        .spiral-card.locked {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .spiral-card.locked:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .spiral-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .spiral-info { flex: 1; }
+
+        .spiral-cefr {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--eco-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .spiral-card.locked .spiral-cefr {
+            color: var(--sand-muted);
+        }
+
+        .spiral-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--sand);
+        }
+
+        .spiral-desc {
+            font-size: 0.88rem;
+            color: var(--sand-muted);
+            line-height: 1.5;
+        }
+
+        .spiral-status {
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+
+        .spiral-progress {
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        .spiral-progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--sand-muted);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .spiral-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .spiral-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--eco-primary), var(--jaguar-gold));
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        .spiral-card.completed .spiral-progress-fill {
+            background: linear-gradient(90deg, var(--success-green), var(--jaguar-gold));
+        }
+
+        .spiral-encounters {
+            font-size: 0.78rem;
+            color: var(--sand-muted);
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .spiral-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 12px;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+            margin-top: 6px;
+        }
+
+        .spiral-btn.active {
+            background: linear-gradient(135deg, var(--eco-primary), var(--eco-secondary));
+            color: white;
+            box-shadow: 0 4px 15px var(--eco-glow);
+        }
+
+        .spiral-btn.active:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--eco-glow);
+        }
+
+        .spiral-btn.locked-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--sand-muted);
+            cursor: default;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(26, 18, 8, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            border-radius: 16px;
+            padding: 16px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--sand);
+            z-index: 200;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+            max-width: 90vw;
+        }
+
+        .notification.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.5rem; }
+            .guide-section { flex-direction: column; align-items: center; text-align: center; }
+            .spiral-header { flex-direction: column; }
+            .spiral-status { margin-left: 0; margin-top: 4px; order: -1; }
+            .header-content { gap: 8px; }
+            .back-btn .back-text { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <a href="/elviajedeljaguar" class="back-btn">
+                <span>&#8592;</span>
+                <span class="back-text">Volver</span>
+            </a>
+            <div class="eco-badge" id="ecoBadge">
+                <span class="eco-dot"></span>
+                <span id="ecoBadgeText">Ecosistema</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-avatar"><img src="img/jaguar-hero-full.jpg" alt="Yaguar&aacute;"></div>
+            <h1 id="heroTitle">Cargando...</h1>
+            <p class="hero-subtitle" id="heroSubtitle"></p>
+            <p class="hero-geography" id="heroGeography"></p>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-title">Progreso general</div>
+            <div class="overview-bar">
+                <div class="overview-bar-fill" id="overviewFill" style="width:0%"></div>
+            </div>
+            <div class="stats-row">
+                <span id="statsEncounters">0 encuentros completados</span>
+                <span id="statsPercent">0%</span>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <div class="guide-avatar"><img src="img/jaguar-hero-full.jpg" alt="Yaguar&aacute;"></div>
+            <div class="guide-bubble">
+                <div class="guide-name">Yaguar&aacute; dice:</div>
+                <span id="guideText">Bienvenido a este lugar...</span>
+            </div>
+        </section>
+
+        <div class="spirals-header">
+            <h2>Espirales</h2>
+            <span class="spirals-count" id="spiralsCount"></span>
+        </div>
+
+        <div id="spiralsList"></div>
+    </main>
+
+    <div class="notification" id="notification"></div>
+
+<script src="js/jaguar-api.js"></script>
+<script>
+(function() {
+    'use strict';
+
+    /* Auth guard */
+    if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
+        window.location.href = 'login.html';
+        return;
+    }
+
+    /* ---- Data ---- */
+    var ECOSYSTEMS = {
+        selva:    { name: 'Selva',    fullName: 'La Selva Amaz\u00f3nica',         geography: 'Leticia, Vaup\u00e9s',            domain: 'Agua, or\u00edgenes, vida silvestre',             color: '#2d5a27', colorAlt: '#4a8a3f', guide: 'El r\u00edo te llama. Cada palabra que nombres despertar\u00e1 la selva.' },
+        sierra:   { name: 'Sierra',   fullName: 'La Sierra Andina',              geography: 'Bogot\u00e1, zona cafetera',      domain: 'Altitud, comunidad, agricultura',                 color: '#5a4a2a', colorAlt: '#8a7a4f', guide: 'El camino sube. Con cada paso, la monta\u00f1a se revela.' },
+        costa:    { name: 'Costa',    fullName: 'La Costa Caribe',               geography: 'Cartagena, San Andr\u00e9s',      domain: 'Mar, comercio, ritmo, historia',                  color: '#1a4a6a', colorAlt: '#2a7aaa', guide: 'Las olas traen palabras. Escucha el ritmo del Caribe.' },
+        bosque:   { name: 'Bosque',   fullName: 'El Bosque del Pac\u00edfico',   geography: 'Choc\u00f3, Tumaco',              domain: 'Lluvia, biodiversidad, cultura afrocolombiana',   color: '#1a3a2a', colorAlt: '#2a5a3a', guide: 'La lluvia canta. El bosque tiene mil voces.' },
+        llanos:   { name: 'Llanos',   fullName: 'Los Llanos Orientales',         geography: 'Villavicencio, Orinoqu\u00eda',   domain: 'Sabana, ganader\u00eda, cultura llanera',         color: '#8a7a2a', colorAlt: '#aaa040', guide: 'La sabana se extiende. El horizonte es infinito.' },
+        nevada:   { name: 'Nevada',   fullName: 'La Sierra Nevada',              geography: 'Santa Marta, Ciudad Perdida',     domain: 'Monta\u00f1a sagrada, pueblos ancestrales',       color: '#4a3a5a', colorAlt: '#6a5a7a', guide: 'La monta\u00f1a guarda secretos. Escucha con respeto.' },
+        islas:    { name: 'Islas',    fullName: 'Las Islas del Caribe',           geography: 'San Andr\u00e9s, Providencia',    domain: 'Isla, cultura raizal, arrecifes',                 color: '#1a5a7a', colorAlt: '#2a7a9a', guide: 'El mar rodea todo. Las islas cantan con voz propia.' },
+        desierto: { name: 'Desierto', fullName: 'El Desierto de La Guajira',     geography: 'Riohacha, Cabo de la Vela',       domain: 'Arena, pueblo Way\u00fau, flamencos',             color: '#7a5a2a', colorAlt: '#aa8a4a', guide: 'El viento trae arena y memoria. El desierto habla bajo.' }
+    };
+
+    var SPIRALS = [
+        { key: 'a1', cefr: 'A1', mundo: 'mundoDeAbajo', mundoLabel: 'Mundo de Abajo \u2014 Nombrar el mundo', encounters: 50 },
+        { key: 'a2', cefr: 'A2', mundo: 'mundoDeAbajo', mundoLabel: 'Mundo de Abajo \u2014 Nombrar el mundo', encounters: 80 },
+        { key: 'b1', cefr: 'B1', mundo: 'mundoDelMedio', mundoLabel: 'Mundo del Medio \u2014 Contar lo vivido', encounters: 100 },
+        { key: 'b2', cefr: 'B2', mundo: 'mundoDelMedio', mundoLabel: 'Mundo del Medio \u2014 Contar lo vivido', encounters: 100 },
+        { key: 'c1', cefr: 'C1', mundo: 'mundoDeArriba', mundoLabel: 'Mundo de Arriba \u2014 Cuidar la palabra', encounters: 170 },
+        { key: 'c2', cefr: 'C2', mundo: 'mundoDeArriba', mundoLabel: 'Mundo de Arriba \u2014 Cuidar la palabra', encounters: 275 }
+    ];
+
+    /* Existing A2 hub pages — these already have content */
+    var A2_LEGACY_ROUTES = {
+        costa: 'a2-caribbean.html',
+        sierra: 'a2-coffee.html'
+    };
+
+    var SPIRAL_TITLES = {
+        selva:    { a1: 'El despertar en la selva', a2: 'Voces del r\u00edo', b1: 'Historias del agua', b2: 'El esp\u00edritu del jaguar', c1: 'Tejer la selva', c2: 'Guardar la palabra' },
+        sierra:   { a1: 'El camino de la monta\u00f1a', a2: 'El valle despierta', b1: 'Senderos y comunidades', b2: 'Ra\u00edces de la sierra', c1: 'Ecos de la cumbre', c2: 'La voz de la piedra' },
+        costa:    { a1: 'Las olas del Caribe', a2: 'Sal y ritmo', b1: 'Mareas e historias', b2: 'Corrientes profundas', c1: 'El horizonte habla', c2: 'Memoria del mar' },
+        bosque:   { a1: 'La voz del bosque', a2: 'Los r\u00edos que cantan', b1: 'Las voces del camino', b2: 'El silencio y la palabra', c1: 'Tejido de niebla', c2: 'El silencio fecundo' },
+        llanos:   { a1: 'El canto del llano', a2: 'Horizontes abiertos', b1: 'Caminos de sabana', b2: 'El esp\u00edritu llanero', c1: 'Ra\u00edces del joropo', c2: 'La tierra sin fin' },
+        nevada:   { a1: 'La monta\u00f1a sagrada', a2: 'Senderos ancestrales', b1: 'Voces de la cumbre', b2: 'El coraz\u00f3n del mundo', c1: 'Guardianes de la nieve', c2: 'La ley de origen' },
+        islas:    { a1: 'El mar de siete colores', a2: 'Ritmo isle\u00f1o', b1: 'Historias del arrecife', b2: 'Corrientes y ra\u00edces', c1: 'La voz del coral', c2: 'Memoria raizal' },
+        desierto: { a1: 'El viento de La Guajira', a2: 'Arena y estrellas', b1: 'Caminos del Way\u00fau', b2: 'El silencio del desierto', c1: 'Hilos y sue\u00f1os', c2: 'La palabra tejida' }
+    };
+
+    var SPIRAL_DESCS = {
+        a1: 'Primeras palabras. Nombrar lo que ves, lo que sientes, lo que hay.',
+        a2: 'Conectar ideas. Hablar de h\u00e1bitos, planes y experiencias simples.',
+        b1: 'Narrar historias. Expresar opiniones y describir con detalle.',
+        b2: 'Argumentar y debatir. Comprender textos complejos.',
+        c1: 'Interpretar y crear. Usar la lengua con precisi\u00f3n y matiz.',
+        c2: 'Dominar y cuidar. La lengua como herramienta de pensamiento.'
+    };
+
+    /* ---- Init ---- */
+    var params = new URLSearchParams(window.location.search);
+    var ecoKey = (params.get('eco') || '').toLowerCase();
+    var eco = ECOSYSTEMS[ecoKey];
+
+    if (!eco) {
+        document.querySelector('.main-content').innerHTML =
+            '<div style="text-align:center;padding:4rem 1.5rem;">' +
+            '<p style="font-size:1.2rem;color:var(--sand-muted);margin-bottom:1.5rem;">Ecosistema no encontrado.</p>' +
+            '<a href="/elviajedeljaguar" style="color:var(--jaguar-gold);text-decoration:underline;">Volver al inicio</a></div>';
+        return;
+    }
+
+    /* Apply ecosystem colors */
+    document.documentElement.style.setProperty('--eco-primary', eco.color);
+    document.documentElement.style.setProperty('--eco-secondary', eco.colorAlt);
+    document.documentElement.style.setProperty('--eco-glow', eco.color.replace(')', ', 0.4)').replace('rgb', 'rgba').replace('#', ''));
+
+    /* ---- Populate header & hero ---- */
+    document.title = eco.fullName + ' \u2014 El Viaje del Jaguar';
+    document.getElementById('ecoBadgeText').textContent = eco.name;
+    document.getElementById('heroTitle').textContent = eco.fullName;
+    document.getElementById('heroSubtitle').textContent = eco.domain;
+    document.getElementById('heroGeography').textContent = eco.geography;
+    document.getElementById('guideText').textContent = eco.guide;
+
+    /* ---- Read progress from localStorage ---- */
+    function getSpiralProgress(spiralKey) {
+        try {
+            var raw = localStorage.getItem('yaguara_' + ecoKey + '_' + spiralKey + '_progress');
+            if (!raw) return { completed: 0, total: 0, percentage: 0 };
+            var data = JSON.parse(raw);
+            var completed = 0;
+            if (data.completedMap) {
+                for (var i = 0; i < data.completedMap.length; i++) {
+                    if (data.completedMap[i]) completed++;
+                }
+            } else {
+                completed = data.completedCount || 0;
+            }
+            var total = data.completedMap ? data.completedMap.length : (completed || 0);
+            return { completed: completed, total: total, percentage: total > 0 ? Math.round((completed / total) * 100) : 0 };
+        } catch (e) { return { completed: 0, total: 0, percentage: 0 }; }
+    }
+
+    /* ---- Build spiral cards ---- */
+    var list = document.getElementById('spiralsList');
+    var totalCompleted = 0;
+    var totalEncounters = 0;
+    var spiralsUnlocked = 0;
+    var lastMundo = '';
+
+    for (var i = 0; i < SPIRALS.length; i++) {
+        var s = SPIRALS[i];
+        var prog = getSpiralProgress(s.key);
+        totalCompleted += prog.completed;
+        totalEncounters += s.encounters;
+
+        /* Unlock logic: A1 always unlocked, rest need 80% of previous */
+        var isUnlocked = (i === 0);
+        if (i > 0) {
+            var prevProg = getSpiralProgress(SPIRALS[i - 1].key);
+            if (prevProg.percentage >= 80) isUnlocked = true;
+        }
+        /* Also unlocked if it has any progress */
+        if (prog.completed > 0) isUnlocked = true;
+
+        var isCompleted = (prog.percentage >= 100 && prog.completed > 0);
+        if (isUnlocked) spiralsUnlocked++;
+
+        /* Mundo divider */
+        if (s.mundoLabel !== lastMundo) {
+            lastMundo = s.mundoLabel;
+            var divider = document.createElement('div');
+            divider.className = 'mundo-divider';
+            divider.style.animationDelay = (0.4 + i * 0.08) + 's';
+            divider.innerHTML = '<span class="mundo-label">' + s.mundoLabel + '</span>';
+            list.appendChild(divider);
+        }
+
+        /* Card */
+        var card = document.createElement('div');
+        var stateClass = isCompleted ? 'completed' : (isUnlocked ? 'unlocked' : 'locked');
+        card.className = 'spiral-card ' + stateClass;
+        card.style.animationDelay = (0.45 + i * 0.08) + 's';
+
+        var statusIcon = isCompleted ? '&#9989;' : (isUnlocked ? '&#127775;' : '&#128274;');
+        var title = (SPIRAL_TITLES[ecoKey] && SPIRAL_TITLES[ecoKey][s.key]) || (eco.fullName + ' \u2014 ' + s.cefr);
+
+        var btnHtml;
+        if (isCompleted) {
+            btnHtml = '<button class="spiral-btn active">&#128257; Repasar</button>';
+        } else if (isUnlocked) {
+            btnHtml = prog.completed > 0
+                ? '<button class="spiral-btn active">&#9654;&#65039; Continuar</button>'
+                : '<button class="spiral-btn active">&#9654;&#65039; Comenzar</button>';
+        } else {
+            btnHtml = '<button class="spiral-btn locked-btn">&#128274; Bloqueado</button>';
+        }
+
+        var progressPct = prog.percentage || 0;
+        var progressText = prog.completed + '/' + s.encounters + ' encuentros';
+
+        card.innerHTML =
+            '<div class="spiral-header">' +
+                '<div class="spiral-info">' +
+                    '<div class="spiral-cefr">Espiral ' + s.cefr + '</div>' +
+                    '<div class="spiral-title">' + title + '</div>' +
+                    '<div class="spiral-desc">' + (SPIRAL_DESCS[s.key] || '') + '</div>' +
+                '</div>' +
+                '<div class="spiral-status">' + statusIcon + '</div>' +
+            '</div>' +
+            '<div class="spiral-progress">' +
+                '<div class="spiral-progress-label">' +
+                    '<span>Progreso</span>' +
+                    '<span>' + progressText + '</span>' +
+                '</div>' +
+                '<div class="spiral-progress-bar">' +
+                    '<div class="spiral-progress-fill" style="width:' + progressPct + '%"></div>' +
+                '</div>' +
+            '</div>' +
+            btnHtml;
+
+        /* Click handler */
+        (function(spiralKey, unlocked) {
+            card.addEventListener('click', function() {
+                if (!unlocked) {
+                    showNotification('Completa la espiral anterior para desbloquear esta.');
+                    return;
+                }
+                /* Check for legacy A2 route */
+                if (spiralKey === 'a2' && A2_LEGACY_ROUTES[ecoKey]) {
+                    window.location.href = A2_LEGACY_ROUTES[ecoKey];
+                    return;
+                }
+                window.location.href = 'play.html?eco=' + ecoKey + '&spiral=' + spiralKey;
+            });
+        })(s.key, isUnlocked);
+
+        list.appendChild(card);
+    }
+
+    /* ---- Overall progress ---- */
+    var overallPct = totalEncounters > 0 ? Math.round((totalCompleted / totalEncounters) * 100) : 0;
+    document.getElementById('overviewFill').style.width = overallPct + '%';
+    document.getElementById('statsEncounters').textContent = totalCompleted + ' encuentros completados';
+    document.getElementById('statsPercent').textContent = overallPct + '%';
+    document.getElementById('spiralsCount').textContent = spiralsUnlocked + ' de 6 desbloqueadas';
+
+    /* ---- Notification ---- */
+    function showNotification(msg) {
+        var el = document.getElementById('notification');
+        el.textContent = msg;
+        el.classList.add('show');
+        setTimeout(function() { el.classList.remove('show'); }, 3000);
+    }
+
+    /* ---- Refresh on focus ---- */
+    window.addEventListener('focus', function() { window.location.reload(); });
+})();
+</script>
+</body>
+</html>

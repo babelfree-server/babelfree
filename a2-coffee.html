@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Jaguar - A2 Avanzado</title>
+    <meta name="description" content="A2 Advanced - Second half of A2 content with comprehensive spiral learning">
+    <link rel="canonical" href="https://babelfree.com/a2-coffee">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "El Viaje del Jaguar - A2 Avanzado",
+          "description": "A2 Advanced Spanish course module set in Colombia's Coffee Region (Eje Cafetero). Learn to express opinions, discuss weather, give directions, handle shopping situations, and achieve A2 mastery through comprehensive spiral learning with Yaguara. Destinations 14-18 of El Viaje del Jaguar.",
+          "url": "https://babelfree.com/a2-coffee",
+          "educationalLevel": "A2 Advanced",
+          "learningResourceType": "Interactive Course Module",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": [
+            "Expressing opinions",
+            "Weather vocabulary",
+            "Giving directions",
+            "Shopping situations",
+            "A2 mastery consolidation"
+          ]
+        },
+        {
+          "@type": "Place",
+          "name": "Eje Cafetero",
+          "description": "Colombia's Coffee Region, a UNESCO World Heritage cultural landscape in the central Andes. Rolling hills of coffee plantations, colorful towns like Salento, and the Cocora Valley with its towering wax palms.",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 4.5,
+            "longitude": -75.7
+          },
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Colombia"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "A2",
+              "item": "https://babelfree.com/a2-coffee"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Coffee Region"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --forest-dark: #0a3d0c;
+            --forest-medium: #1a5928;
+            --forest-light: #2d6f3d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --a2-teal: #1dd1a1;
+            --a2-purple: #8e44ad;
+            --a2-coral: #fd79a8;
+            --a2-advanced-blue: #3742fa;
+            --a2-advanced-orange: #ff5722;
+            --spiral-purple: #9b59b6;
+            --mastery-gold: #ffa502;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-medium) 50%, var(--forest-light) 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 2px solid rgba(55, 66, 250, 0.4);
+            box-shadow: var(--shadow-card);
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: var(--glass-bg);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(55, 66, 250, 0.4);
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: rgba(55, 66, 250, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .jaguar-hero {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid var(--a2-advanced-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            animation: breathe 6s ease-in-out infinite;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(55, 66, 250, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jaguar-hero:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(55, 66, 250, 0.6);
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: var(--a2-advanced-blue);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .a2-advanced-badge {
+            background: linear-gradient(135deg, var(--a2-advanced-blue), var(--mastery-gold));
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 10px 0;
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(55, 66, 250, 0.4);
+        }
+
+        .mastery-journey {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1), rgba(255, 165, 2, 0.1));
+            border: 2px solid var(--mastery-gold);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .mastery-title {
+            color: var(--mastery-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .journey-complete-map {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .region-completed {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid var(--success-green);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .region-current {
+            background: rgba(55, 66, 250, 0.2);
+            border: 2px solid var(--a2-advanced-blue);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        .region-upcoming {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--text-muted);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            opacity: 0.6;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .region-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .region-status {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .spiral-mastery-section {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1), rgba(55, 66, 250, 0.1));
+            border: 2px solid var(--spiral-purple);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .spiral-mastery-title {
+            color: var(--spiral-purple);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .spiral-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .spiral-level {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid;
+            transition: var(--transition);
+        }
+
+        .spiral-level.a1 {
+            border-color: var(--success-green);
+        }
+
+        .spiral-level.a2-basic {
+            border-color: var(--a2-teal);
+        }
+
+        .spiral-level.a2-advanced {
+            border-color: var(--a2-advanced-blue);
+        }
+
+        .spiral-level:hover {
+            transform: translateY(-3px);
+        }
+
+        .spiral-level-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .spiral-level.a1 .spiral-level-title {
+            color: var(--success-green);
+        }
+
+        .spiral-level.a2-basic .spiral-level-title {
+            color: var(--a2-teal);
+        }
+
+        .spiral-level.a2-advanced .spiral-level-title {
+            color: var(--a2-advanced-blue);
+        }
+
+        .spiral-content {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .new-advanced-section {
+            background: linear-gradient(135deg, rgba(55, 66, 250, 0.1), rgba(255, 87, 34, 0.1));
+            border: 2px solid var(--a2-advanced-orange);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .new-advanced-title {
+            color: var(--a2-advanced-orange);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .advanced-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .advanced-skill {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--a2-advanced-orange);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .advanced-skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 87, 34, 0.2);
+        }
+
+        .skill-name {
+            color: var(--a2-advanced-orange);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .skill-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-example {
+            background: rgba(255, 87, 34, 0.2);
+            color: var(--text-light);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .skill-level {
+            background: var(--a2-advanced-blue);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .progress-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 2px solid rgba(55, 66, 250, 0.3);
+            box-shadow: var(--shadow-card);
+        }
+
+        .progress-title {
+            color: var(--a2-advanced-blue);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .mastery-progress {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .progress-mastery {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: conic-gradient(var(--mastery-gold) 75deg, rgba(255, 255, 255, 0.2) 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .progress-mastery::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: var(--forest-medium);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .progress-description {
+            color: var(--text-light);
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .stat:hover {
+            transform: translateY(-3px);
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            color: var(--a2-advanced-blue);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .yaguara-personality {
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.1), rgba(255, 107, 53, 0.1));
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .yaguara-personality::before {
+            content: '🐆';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: var(--forest-medium);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+        }
+
+        .yaguara-message {
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .comprehensive-collection-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 25px;
+            border: 2px solid rgba(249, 202, 36, 0.3);
+        }
+
+        .collection-title {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .vocabulary-mastery {
+            background: rgba(249, 202, 36, 0.1);
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .mastery-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .mastery-title-small {
+            color: var(--jaguar-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .total-word-count {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .vocab-categories-complete {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .vocab-category-complete {
+            text-align: center;
+            padding: 8px;
+            border-radius: 10px;
+            border: 2px solid;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .vocab-category-complete.a1 {
+            background: rgba(76, 175, 80, 0.2);
+            border-color: var(--success-green);
+            color: var(--success-green);
+        }
+
+        .vocab-category-complete.a2-basic {
+            background: rgba(29, 209, 161, 0.2);
+            border-color: var(--a2-teal);
+            color: var(--a2-teal);
+        }
+
+        .vocab-category-complete.a2-advanced {
+            background: rgba(55, 66, 250, 0.2);
+            border-color: var(--a2-advanced-blue);
+            color: var(--a2-advanced-blue);
+        }
+
+        .vocab-category-complete.locked {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--text-muted);
+            color: var(--text-muted);
+        }
+
+        .story-mastery-progress {
+            margin-top: 15px;
+        }
+
+        .progress-bar-mastery {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-fill-mastery {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success-green), var(--a2-teal), var(--a2-advanced-blue));
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .mastery-text {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .destination {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .destination:hover {
+            transform: translateY(-8px);
+            border-color: var(--a2-advanced-blue);
+        }
+
+        .destination.locked {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .destination.locked:hover {
+            transform: none;
+            border-color: transparent;
+        }
+
+        .destination.recommended {
+            border-color: var(--a2-advanced-blue);
+        }
+
+        .destination.recommended::after {
+            content: '🎓 Avanzado';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--a2-advanced-blue);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .dest-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .dest-number {
+            background: linear-gradient(135deg, var(--a2-advanced-blue), var(--mastery-gold));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+        }
+
+        .dest-status {
+            font-size: 2rem;
+        }
+
+        .dest-title {
+            font-size: 1.6rem;
+            color: var(--a2-advanced-blue);
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .dest-topic {
+            color: var(--a2-advanced-blue);
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .dest-desc {
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .dest-location {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .spiral-comprehensive {
+            background: rgba(155, 89, 182, 0.2);
+            border: 1px solid var(--spiral-purple);
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--spiral-purple);
+        }
+
+        .word-rewards {
+            background: rgba(249, 202, 36, 0.1);
+            border: 1px solid var(--jaguar-gold);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .reward-header {
+            color: var(--jaguar-gold);
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .reward-words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .reward-word {
+            background: var(--jaguar-gold);
+            color: var(--forest-dark);
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .reward-word.a2-advanced {
+            background: var(--a2-advanced-blue);
+            color: white;
+        }
+
+        .dest-progress {
+            text-align: center;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .dest-progress.active {
+            color: var(--a2-advanced-blue);
+        }
+
+        .dest-progress.locked {
+            color: var(--text-muted);
+        }
+
+        .dest-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dest-btn.recommended {
+            background: linear-gradient(135deg, var(--a2-advanced-blue), var(--mastery-gold));
+            color: white;
+        }
+
+        .dest-btn.recommended:hover {
+            transform: scale(1.02);
+        }
+
+        .dest-btn:disabled {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--text-muted);
+            cursor: not-allowed;
+        }
+
+        .dest-btn:disabled:hover {
+            transform: none;
+        }
+
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(55, 66, 250, 0.9);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            max-width: 250px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 768px) {
+            .destinations {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .spiral-levels {
+                grid-template-columns: 1fr;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .jaguar-hero {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+            
+            .advanced-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-complete-map {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .vocab-categories-complete {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/a2" class="back-btn">← Volver a Sierra</a>
+            <div class="jaguar-hero" onclick="speakYaguara()"><img src="img/jaguar-hero-full.jpg" alt="Yaguara the Jaguar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <h1 class="title">El viaje del jaguar</h1>
+            <p class="subtitle">A2 avanzado - Dominando el español intermedio</p>
+            <div class="a2-advanced-badge">🎓 A2 Segunda fase + Repaso completo</div>
+            <p class="subtitle">5 destinos finales • Gramática compleja • Historia épica</p>
+        </div>
+
+        <div class="mastery-journey">
+            <div class="mastery-title">🏆 El gran viaje de Yaguará por Colombia</div>
+            <div class="journey-complete-map">
+                <div class="region-completed">
+                    <div class="region-name" style="color: var(--success-green);">✅ Bogotá</div>
+                    <div class="region-status">A1 - Dominado</div>
+                </div>
+                <div class="region-completed">
+                    <div class="region-name" style="color: var(--success-green);">✅ Cartagena</div>
+                    <div class="region-status">A1 - Dominado</div>
+                </div>
+                <div class="region-completed">
+                    <div class="region-name" style="color: var(--a2-teal);">✅ Valle del Cauca</div>
+                    <div class="region-status">A2 - Completado</div>
+                </div>
+                <div class="region-current">
+                    <div class="region-name" style="color: var(--a2-advanced-blue);">🎯 Antioquia</div>
+                    <div class="region-status">A2 - Explorando</div>
+                </div>
+                <div class="region-upcoming">
+                    <div class="region-name">🔒 Eje Cafetero</div>
+                    <div class="region-status">A2 - Pendiente</div>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--text-light); margin-top: 15px; font-style: italic;">
+                Yaguará ha recorrido medio país y ahora explora las montañas de Antioquia con habilidades avanzadas
+            </p>
+        </div>
+
+        <div class="spiral-mastery-section">
+            <div class="spiral-mastery-title">🌀 Aprendizaje en espiral - Dominio completo</div>
+            <div class="spiral-levels">
+                <div class="spiral-level a1">
+                    <div class="spiral-level-title">🌱 Fundación A1</div>
+                    <div class="spiral-content">
+                        <strong>DOMINADO:</strong> Saludos, números, colores, familia, tiempo, rutinas, comida, cuerpo.
+                        <br><em>Repasas constantemente estas bases.</em>
+                    </div>
+                </div>
+                
+                <div class="spiral-level a2-basic">
+                    <div class="spiral-level-title">🎯 A2 Básico</div>
+                    <div class="spiral-content">
+                        <strong>APRENDIDO:</strong> Pasado, futuro, opiniones, comparaciones.
+                        <br><em>Integras con A1 en contextos más complejos.</em>
+                    </div>
+                </div>
+                
+                <div class="spiral-level a2-advanced">
+                    <div class="spiral-level-title">🎓 A2 Avanzado</div>
+                    <div class="spiral-content">
+                        <strong>APRENDIENDO:</strong> Subjuntivo básico, condicional, conectores, expresiones complejas.
+                        <br><em>Usas TODA tu gramática anterior.</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="new-advanced-section">
+            <div class="new-advanced-title">🚀 A2 avanzado - Últimas habilidades del nivel intermedio</div>
+            <div class="advanced-skills">
+                <div class="advanced-skill" onclick="exploreSkill('opinions')">
+                    <div class="skill-name">Expresar opiniones <span class="skill-level">A2</span></div>
+                    <div class="skill-examples">
+                        <span class="skill-example">creo que</span>
+                        <span class="skill-example">me parece</span>
+                        <span class="skill-example">pienso que</span>
+                    </div>
+                </div>
+                
+                <div class="advanced-skill" onclick="exploreSkill('weather')">
+                    <div class="skill-name">Tiempo y clima <span class="skill-level">A2</span></div>
+                    <div class="skill-examples">
+                        <span class="skill-example">hace calor</span>
+                        <span class="skill-example">está lloviendo</span>
+                        <span class="skill-example">buen tiempo</span>
+                    </div>
+                </div>
+                
+                <div class="advanced-skill" onclick="exploreSkill('directions')">
+                    <div class="skill-name">Direcciones <span class="skill-level">A2</span></div>
+                    <div class="skill-examples">
+                        <span class="skill-example">a la derecha</span>
+                        <span class="skill-example">todo recto</span>
+                        <span class="skill-example">cerca de</span>
+                    </div>
+                </div>
+
+                <div class="advanced-skill" onclick="exploreSkill('shopping')">
+                    <div class="skill-name">Compras y dinero <span class="skill-level">A2</span></div>
+                    <div class="skill-examples">
+                        <span class="skill-example">¿cuánto cuesta?</span>
+                        <span class="skill-example">es caro</span>
+                        <span class="skill-example">me gusta este</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-title">Progreso A2 avanzado: 0/5 destinos • 0/170 juegos</div>
+            
+            <div class="mastery-progress">
+                <div class="progress-mastery">85%</div>
+                <div class="progress-description">
+                    En A2 avanzado, DOMINAS el español básico e intermedio mientras aprendes estructuras complejas.
+                    Como Yaguará que conoce perfectamente su territorio y explora nuevas fronteras.
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">450</div>
+                    <div class="stat-label">Puntos totales</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Juegos avanzados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">120</div>
+                    <div class="stat-label">Palabras dominadas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Expresiones nuevas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Días seguidos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="yaguara-personality">
+            <div class="yaguara-message">
+                "¡Muy bien! Ahora que sabes hablar del pasado y el futuro, vamos a Medellín 
+                a aprender a dar opiniones, hablar del clima y pedir direcciones. ¡Ya casi terminas A2! 🐆"
+            </div>
+        </div>
+
+        <div class="comprehensive-collection-section">
+            <div class="collection-title">📚 Colección completa de vocabulario de Yaguará</div>
+            <div class="vocabulary-mastery">
+                <div class="mastery-header">
+                    <span class="mastery-title-small">🎒 Vocabulario total acumulado</span>
+                    <span class="total-word-count">120/170 palabras</span>
+                </div>
+                <div class="vocab-categories-complete">
+                    <div class="vocab-category-complete a1">A1: 70 palabras</div>
+                    <div class="vocab-category-complete a2-basic">A2 básico: 50</div>
+                    <div class="vocab-category-complete a2-advanced">A2 avanzado: 0</div>
+                    <div class="vocab-category-complete locked">Expresiones: 0</div>
+                </div>
+                <div class="story-mastery-progress">
+                    <div class="progress-bar-mastery">
+                        <div class="progress-fill-mastery" style="width: 70%"></div>
+                    </div>
+                    <div class="mastery-text">
+                        170 palabras total para la historia épica completa de Yaguará
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="destinations">
+            <div class="destination recommended" onclick="startDestination(14)">
+                <div class="dest-header">
+                    <span class="dest-number">Destino 14</span>
+                    <span class="dest-status">🎯</span>
+                </div>
+                <h3 class="dest-title">¿Qué opinas?</h3>
+                <p class="dest-topic">A2: Opiniones - Creo que, me parece</p>
+                <p class="dest-desc">Yaguará conoce Medellín y da sus opiniones. Aprende a expresar lo que piensas sobre lugares y situaciones.</p>
+                <p class="dest-location">📍 Medellín, Antioquia, Colombia</p>
+                <div class="spiral-comprehensive">🌀 Usa TODO: A1 + A2 básico + opiniones nuevas</div>
+                <div class="word-rewards">
+                    <div class="reward-header">🎁 Expresiones de opinión que dominarás:</div>
+                    <div class="reward-words">
+                        <span class="reward-word a2-advanced">creo que</span>
+                        <span class="reward-word a2-advanced">me parece</span>
+                        <span class="reward-word a2-advanced">pienso que</span>
+                        <span class="reward-word a2-advanced">es bonito</span>
+                        <span class="reward-word a2-advanced">me gusta</span>
+                        <span class="reward-word a2-advanced">paisa</span>
+                        <span class="reward-word a2-advanced">metro</span>
+                        <span class="reward-word a2-advanced">montaña</span>
+                        <span class="reward-word a2-advanced">ciudad</span>
+                        <span class="reward-word a2-advanced">centro</span>
+                    </div>
+                </div>
+                <div class="dest-progress active">
+     <button class="dest-btn recommended">🎮 Expresar opiniones con Yaguará</button>
+            </div>
+
+            <div class="destination locked">
+                <div class="dest-header">
+                    <span class="dest-number">Destino 15</span>
+                    <span class="dest-status">🔒</span>
+                </div>
+                <h3 class="dest-title">¿Qué tiempo hace?</h3>
+                <p class="dest-topic">A2: Tiempo y clima - Hace calor, está lloviendo</p>
+                <p class="dest-desc">Yaguará describe el clima de Medellín y compara con otras ciudades. Habla del tiempo meteorológico.</p>
+                <p class="dest-location">📍 Cerro Nutibara, Medellín</p>
+                <div class="spiral-comprehensive">🌀 Integra: opiniones + clima + todo anterior</div>
+                <div class="word-rewards">
+                    <div class="reward-header">🎁 Vocabulario de clima:</div>
+                    <div class="reward-words">
+                        <span class="reward-word a2-advanced">hace calor</span>
+                        <span class="reward-word a2-advanced">hace frío</span>
+                        <span class="reward-word a2-advanced">está lloviendo</span>
+                        <span class="reward-word a2-advanced">hace sol</span>
+                        <span class="reward-word a2-advanced">está nublado</span>
+                        <span class="reward-word a2-advanced">buen tiempo</span>
+                        <span class="reward-word a2-advanced">mal tiempo</span>
+                        <span class="reward-word a2-advanced">lluvia</span>
+                        <span class="reward-word a2-advanced">sol</span>
+                        <span class="reward-word a2-advanced">temperatura</span>
+                    </div>
+                </div>
+                <div class="dest-progress locked">
+                    <strong>0/34 juegos</strong> • ✨ 10 palabras clima
+                </div>
+                <button class="dest-btn" disabled>🔒 Domina las opiniones primero</button>
+            </div>
+
+            <div class="destination locked">
+                <div class="dest-header">
+                    <span class="dest-number">Destino 16</span>
+                    <span class="dest-status">🔒</span>
+                </div>
+                <h3 class="dest-title">¿Dónde está...?</h3>
+                <p class="dest-topic">A2: Direcciones - A la derecha, todo recto</p>
+                <p class="dest-desc">Yaguará pregunta y da direcciones en Medellín. Aprende a navegar por la ciudad como un local.</p>
+                <p class="dest-location">📍 Pueblito Paisa, Medellín</p>
+                <div class="spiral-comprehensive">🌀 Combina: clima + direcciones + todas las estructuras</div>
+                <div class="word-rewards">
+                    <div class="reward-header">🎁 Direcciones y ubicación:</div>
+                    <div class="reward-words">
+                        <span class="reward-word a2-advanced">a la derecha</span>
+                        <span class="reward-word a2-advanced">a la izquierda</span>
+                        <span class="reward-word a2-advanced">todo recto</span>
+                        <span class="reward-word a2-advanced">cerca de</span>
+                        <span class="reward-word a2-advanced">lejos de</span>
+                        <span class="reward-word a2-advanced">al lado de</span>
+                        <span class="reward-word a2-advanced">enfrente de</span>
+                        <span class="reward-word a2-advanced">detrás de</span>
+                        <span class="reward-word a2-advanced">plaza</span>
+                        <span class="reward-word a2-advanced">calle</span>
+                    </div>
+                </div>
+                <div class="dest-progress locked">
+                    <strong>0/34 juegos</strong> • ✨ 10 palabras direcciones
+                </div>
+                <button class="dest-btn" disabled>🔒 Domina el clima primero</button>
+            </div>
+
+            <div class="destination locked">
+                <div class="dest-header">
+                    <span class="dest-number">Destino 17</span>
+                    <span class="dest-status">🔒</span>
+                </div>
+                <h3 class="dest-title">¿Cuánto cuesta?</h3>
+                <p class="dest-topic">A2: Compras y dinero - Es caro, está barato</p>
+                <p class="dest-desc">Yaguará va de compras en Medellín. Aprende vocabulario de precios, tiendas y transacciones.</p>
+                <p class="dest-location">📍 Mercado de San Alejo, Medellín</p>
+                <div class="spiral-comprehensive">🌀 Perfecciona: direcciones + compras + comunicación completa</div>
+                <div class="word-rewards">
+                    <div class="reward-header">🎁 Compras y precios:</div>
+                    <div class="reward-words">
+                        <span class="reward-word a2-advanced">¿cuánto cuesta?</span>
+                        <span class="reward-word a2-advanced">es caro</span>
+                        <span class="reward-word a2-advanced">está barato</span>
+                        <span class="reward-word a2-advanced">tienda</span>
+                        <span class="reward-word a2-advanced">mercado</span>
+                        <span class="reward-word a2-advanced">dinero</span>
+                        <span class="reward-word a2-advanced">precio</span>
+                        <span class="reward-word a2-advanced">comprar</span>
+                        <span class="reward-word a2-advanced">vender</span>
+                        <span class="reward-word a2-advanced">descuento</span>
+                    </div>
+                </div>
+                <div class="dest-progress locked">
+                    <strong>0/34 juegos</strong> • ✨ 10 palabras compras
+                </div>
+                <button class="dest-btn" disabled>🔒 Domina las direcciones primero</button>
+            </div>
+
+            <div class="destination locked">
+                <div class="dest-header">
+                    <span class="dest-number">Destino 18</span>
+                    <span class="dest-status">🔒</span>
+                </div>
+                <h3 class="dest-title">Rumbo al Eje Cafetero</h3>
+                <p class="dest-topic">MAESTRÍA: Integración total A2</p>
+                <p class="dest-desc">Yaguará se prepara para la aventura final. Demuestra dominio completo de A2 en conversaciones fluidas y naturales.</p>
+                <p class="dest-location">📍 Terminal del Norte, Medellín</p>
+                <div class="spiral-comprehensive">🌀 MAESTRÍA: A1 + A2 básico + A2 avanzado = Fluidez intermedia</div>
+                <div class="word-rewards">
+                    <div class="reward-header">🎁 Vocabulario de integración:</div>
+                    <div class="reward-words">
+                        <span class="reward-word a2-advanced">café</span>
+                        <span class="reward-word a2-advanced">hacienda</span>
+                        <span class="reward-word a2-advanced">paisaje</span>
+                        <span class="reward-word a2-advanced">aventura</span>
+                        <span class="reward-word a2-advanced">despedida</span>
+                        <span class="reward-word a2-advanced">recuerdo</span>
+                        <span class="reward-word a2-advanced">experiencia</span>
+                        <span class="reward-word a2-advanced">preparar</span>
+                        <span class="reward-word a2-advanced">emocionar</span>
+                        <span class="reward-word a2-advanced">terminal</span>
+                    </div>
+                </div>
+                <div class="dest-progress locked">
+                    <strong>0/34 juegos</strong> • ✨ 10 palabras maestría
+                </div>
+                <button class="dest-btn" disabled>🔒 Domina las compras primero</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function speakYaguara() {
+            const greetings = [
+                "¡Excelente! Ahora dominamos el A2 avanzado",
+                "¡Medellín nos espera con nuevos desafíos!",
+                "¡Vamos a aprender a dar opiniones y hablar del clima!"
+            ];
+            
+            const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+            
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(greeting);
+                utterance.lang = 'es-CO';
+                utterance.rate = 0.8;
+                speechSynthesis.speak(utterance);
+            }
+            
+            showNotification('🐆 Yaguará dice', greeting);
+        }
+
+        function exploreSkill(skillType) {
+            const skills = {
+                opinions: { name: 'Expresar opiniones', desc: 'Creo que es bonito, me parece bien, pienso que sí' },
+                weather: { name: 'Tiempo y clima', desc: 'Hace calor, está lloviendo, buen tiempo, mucho sol' },
+                directions: { name: 'Direcciones', desc: 'A la derecha, todo recto, cerca de la plaza' },
+                shopping: { name: 'Compras y dinero', desc: '¿Cuánto cuesta?, es caro, me gusta este' }
+            };
+            
+            const selected = skills[skillType];
+            if (selected) {
+                showNotification(`🎓 ${selected.name}`, selected.desc);
+            }
+        }
+
+        // Destination routes
+        var destinationRoutes = {
+            14: { url: "a2_advanced/dest14_opinions/games.html", title: "¿Qué opinas?", available: true },
+            15: { url: "a2_advanced/dest15_weather/games.html", title: "¿Qué tiempo hace?", available: true },
+            16: { url: "a2_advanced/dest16_directions/games.html", title: "¿Dónde está...?", available: true },
+            17: { url: "a2_advanced/dest17_shopping/games.html", title: "¿Cuánto cuesta?", available: true },
+            18: { url: "a2_advanced/dest18_mastery/games.html", title: "Rumbo al Eje Cafetero", available: true }
+        };
+
+        function startDestination(id) {
+            var route = destinationRoutes[id];
+            if (!route) return;
+
+            // Check if destination is unlocked
+            var progress = loadA2AdvancedProgress();
+            var isUnlocked = isDestinationUnlocked(id, progress);
+
+            if (!isUnlocked) {
+                showNotification("Bloqueado", "Completa el destino anterior para desbloquear este.");
+                return;
+            }
+
+            if (route.available) {
+                showNotification("Cargando...", route.title);
+                setTimeout(function() {
+                    window.location.href = route.url;
+                }, 500);
+            } else {
+                showNotification("En construcción", "Este destino estará disponible pronto.");
+            }
+        }
+
+        function isDestinationUnlocked(id, progress) {
+            if (id === 14) return true; // First destination always unlocked
+            var prevDest = progress.destinations && progress.destinations[id - 1];
+            if (prevDest && prevDest.completed) return true;
+            var currentDest = progress.destinations && progress.destinations[id];
+            if (currentDest && currentDest.gamesCompleted > 0) return true;
+            return false;
+        }
+
+        function loadA2AdvancedProgress() {
+            try {
+                var data = localStorage.getItem('jaguarA2AdvancedProgress');
+                if (data) {
+                    var parsed = JSON.parse(data);
+                    return parsed.gameState || { destinations: {} };
+                }
+            } catch(e) {}
+            return { destinations: {} };
+        }
+
+        function showNotification(title, message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <div style="font-weight: 700; margin-bottom: 2px;">${title}</div>
+                <div style="font-size: 0.8em; opacity: 0.9;">${message}</div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 4000);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('A2 Advanced loaded successfully');
+        });
+    </script>
+</body>
+</html>

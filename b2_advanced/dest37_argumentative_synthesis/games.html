@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 37: Biodiversidad en riesgo - S&iacute;ntesis argumentativa</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b2_advanced/dest37_argumentative_synthesis/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 37: Biodiversidad en riesgo - Síntesis argumentativa",
+          "url": "https://babelfree.com/b2_advanced/dest37_argumentative_synthesis/games",
+          "educationalLevel": "B2 Advanced - Upper Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Argumentative synthesis", "Evidence-based reasoning", "Spanish discourse"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B2 Advanced", "item": "https://babelfree.com/b2-casanare" },
+            { "@type": "ListItem", "position": 4, "name": "Biodiversidad en riesgo - Síntesis argumentativa" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/b2-casanare" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 37: Biodiversidad en riesgo</div>
+            <div class="yg-header-subtitle">S&iacute;ntesis argumentativa</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative \u2014 La llanura amenazada ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre la crisis de biodiversidad en los llanos de Casanare. Observa las expresiones de s\u00edntesis argumentativa.',
+        text: 'Cuando Yaguar\u00e1 lleg\u00f3 a los llanos de Casanare, se encontr\u00f3 con un paisaje dividido entre la vida silvestre y la industria. Seg\u00fan el informe del Instituto Humboldt, Casanare alberga m\u00e1s de trescientas especies de aves y es el h\u00e1bitat principal del chigu\u00edro. Sin embargo, los expertos advierten que la expansi\u00f3n petrolera y la ganader\u00eda intensiva ponen en riesgo este ecosistema. Mientras que los ambientalistas sostienen que la conservaci\u00f3n debe ser prioridad, los ganaderos argumentan que su actividad tambi\u00e9n forma parte de la identidad llanera. En s\u00edntesis, al integrar estas perspectivas, Yaguar\u00e1 comprendi\u00f3 que el verdadero desaf\u00edo no es elegir entre naturaleza y desarrollo, sino encontrar un equilibrio que respete ambas realidades.'
+    },
+    // === GAME 2: Narrative \u2014 Voces del llano ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee las diferentes perspectivas que Yaguar\u00e1 recogi\u00f3 sobre la biodiversidad en Casanare.',
+        text: 'En su recorrido por los llanos, Yaguar\u00e1 escuch\u00f3 voces muy distintas. Un bi\u00f3logo le explic\u00f3 que, seg\u00fan estudios recientes, la poblaci\u00f3n de caimanes del Orinoco se hab\u00eda reducido un setenta por ciento en las \u00faltimas d\u00e9cadas. El estudio concluye que la caza ilegal y la p\u00e9rdida de h\u00e1bitat son las causas principales. Por otro lado, un ganadero local argument\u00f3 que las restricciones ambientales afectaban su sustento y que resultaba necesario buscar alternativas econ\u00f3micas. Si bien es cierto que ambas posturas tienen fundamentos leg\u00edtimos, no obstante, de lo anterior se deduce que una pol\u00edtica de conservaci\u00f3n efectiva debe incluir soluciones econ\u00f3micas para las comunidades rurales.'
+    },
+    // === GAME 3: Narrative \u2014 La palma moriche ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la importancia ecol\u00f3gica de la palma moriche y las diferentes fuentes que Yaguar\u00e1 consult\u00f3.',
+        text: 'La palma moriche es el coraz\u00f3n de los humedales llaneros. Seg\u00fan un informe de la Corporaci\u00f3n Aut\u00f3noma Regional, los morichales funcionan como reguladores h\u00eddricos y refugio de fauna. Los expertos advierten que la deforestaci\u00f3n de morichales ha aumentado en los \u00faltimos a\u00f1os debido a la expansi\u00f3n agr\u00edcola. Mientras que las comunidades ind\u00edgenas sostienen que la palma moriche tiene un valor cultural y espiritual insustituible, las empresas agr\u00edcolas argumentan que sus terrenos son necesarios para la producci\u00f3n de alimentos. Tomando en cuenta ambas posturas, resulta convincente la propuesta de crear zonas de amortiguamiento que protejan los morichales sin eliminar la actividad productiva. Por consiguiente, Yaguar\u00e1 comprendi\u00f3 que la s\u00edntesis de perspectivas diversas es la base de cualquier soluci\u00f3n duradera.'
+    },
+    // === GAME 4: Story \u2014 El debate sobre el chigu\u00edro ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee los diferentes puntos de vista sobre la caza del chigu\u00edro y responde las preguntas.',
+        title: 'El debate sobre el chigu\u00edro',
+        text: 'Yaguar\u00e1 asisti\u00f3 a una reuni\u00f3n comunitaria donde se discut\u00eda la caza del chigu\u00edro en Casanare. Seg\u00fan el informe del Ministerio de Ambiente, la caza estacional regulada podr\u00eda ser sostenible si se respetan las cuotas establecidas. Sin embargo, los expertos advierten que la supervisi\u00f3n es insuficiente y que muchos cazadores exceden los l\u00edmites permitidos. Mientras que los ganaderos sostienen que la poblaci\u00f3n de chigu\u00edros da\u00f1a sus cultivos y que la caza es una tradici\u00f3n llanera, los bi\u00f3logos argumentan que el chigu\u00edro cumple una funci\u00f3n ecol\u00f3gica esencial en los humedales. El estudio concluye que, sin regulaci\u00f3n efectiva, la especie podr\u00eda enfrentar un declive cr\u00edtico. En s\u00edntesis, al integrar estas perspectivas, resulta evidente que se necesita un modelo de gesti\u00f3n que combine el conocimiento cient\u00edfico con las pr\u00e1cticas tradicionales.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 dice el informe del Ministerio de Ambiente sobre la caza?',
+                options: ['Que la caza regulada podr\u00eda ser sostenible con cuotas', 'Que la caza debe prohibirse totalmente', 'Que la caza no afecta al chigu\u00edro', 'Que los ganaderos tienen raz\u00f3n'],
+                answer: 'Que la caza regulada podr\u00eda ser sostenible con cuotas'
+            },
+            {
+                q: '\u00bfQu\u00e9 expresi\u00f3n se usa para contrastar las dos posturas principales?',
+                options: ['Mientras que... argumentan que...', 'Seg\u00fan el informe', 'El estudio concluye que', 'En s\u00edntesis'],
+                answer: 'Mientras que... argumentan que...'
+            },
+            {
+                q: '\u00bfCu\u00e1l es la conclusi\u00f3n sint\u00e9tica del texto?',
+                options: ['Se necesita un modelo que combine ciencia y tradici\u00f3n', 'Los ganaderos deben dejar de cazar', 'Los bi\u00f3logos tienen toda la raz\u00f3n', 'La caza debe aumentarse'],
+                answer: 'Se necesita un modelo que combine ciencia y tradici\u00f3n'
+            }
+        ]
+    },
+    // === GAME 5: Story \u2014 Petr\u00f3leo y humedales ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee las fuentes sobre el impacto petrolero en Casanare y responde las preguntas de s\u00edntesis.',
+        title: 'Petr\u00f3leo y humedales',
+        text: 'Casanare es una de las principales regiones petroleras de Colombia. Seg\u00fan el informe de la Agencia Nacional de Hidrocarburos, la actividad petrolera genera empleo y regal\u00edas que financian la infraestructura local. No obstante, un estudio de la Universidad Nacional concluye que los derrames y la alteraci\u00f3n del suelo han contaminado fuentes h\u00eddricas y afectado la fauna acu\u00e1tica. Los expertos advierten que los humedales de Casanare est\u00e1n entre los ecosistemas m\u00e1s vulnerables del pa\u00eds. Mientras que las empresas petroleras sostienen que han implementado protocolos ambientales rigurosos, las comunidades locales argumentan que los da\u00f1os persisten y que las compensaciones son insuficientes. Si bien es cierto que el petr\u00f3leo ha tra\u00eddo desarrollo econ\u00f3mico, la evidencia cient\u00edfica se sustenta en datos que demuestran un deterioro ambiental progresivo. De lo anterior se deduce que la transici\u00f3n energ\u00e9tica no es solo una opci\u00f3n, sino una necesidad urgente.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 expresi\u00f3n introduce la posici\u00f3n de las empresas petroleras?',
+                options: ['Las empresas petroleras sostienen que', 'Seg\u00fan el informe', 'Los expertos advierten que', 'De lo anterior se deduce que'],
+                answer: 'Las empresas petroleras sostienen que'
+            },
+            {
+                q: '\u00bfQu\u00e9 funci\u00f3n cumple "si bien es cierto que... no obstante" en el texto?',
+                options: ['Hacer una concesi\u00f3n antes de contraargumentar', 'Presentar una conclusi\u00f3n final', 'Citar una fuente acad\u00e9mica', 'Resumir las ideas principales'],
+                answer: 'Hacer una concesi\u00f3n antes de contraargumentar'
+            },
+            {
+                q: '\u00bfCu\u00e1l es la conclusi\u00f3n que se deduce del an\u00e1lisis de fuentes?',
+                options: ['La transici\u00f3n energ\u00e9tica es una necesidad urgente', 'El petr\u00f3leo debe continuar sin cambios', 'Las comunidades deben aceptar la contaminaci\u00f3n', 'Los humedales no son importantes'],
+                answer: 'La transici\u00f3n energ\u00e9tica es una necesidad urgente'
+            }
+        ]
+    },
+    // === GAME 6: Story \u2014 El futuro del caim\u00e1n ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee las perspectivas sobre la conservaci\u00f3n del caim\u00e1n del Orinoco y sintetiza la informaci\u00f3n.',
+        title: 'El futuro del caim\u00e1n',
+        text: 'El caim\u00e1n del Orinoco es una de las especies m\u00e1s amenazadas de Am\u00e9rica Latina. Seg\u00fan el informe de la Uni\u00f3n Internacional para la Conservaci\u00f3n de la Naturaleza, quedan menos de mil quinientos ejemplares en estado silvestre. El estudio concluye que la principal amenaza es la destrucci\u00f3n de su h\u00e1bitat por la ganader\u00eda extensiva. Los expertos advierten que, sin intervenci\u00f3n inmediata, la especie podr\u00eda extinguirse en las pr\u00f3ximas d\u00e9cadas. Mientras que los programas de cr\u00eda en cautiverio sostienen que han logrado avances significativos, las organizaciones ambientales argumentan que la liberaci\u00f3n de ejemplares carece de fundamento si no se protege primero el h\u00e1bitat natural. Tomando en cuenta ambas posturas, resulta convincente que la estrategia m\u00e1s efectiva combina la cr\u00eda en cautiverio con la restauraci\u00f3n de los ecosistemas ribere\u00f1os. Por consiguiente, la conservaci\u00f3n del caim\u00e1n exige una visi\u00f3n integral.',
+        questions: [
+            {
+                q: '\u00bfCu\u00e1ntos caimanes del Orinoco quedan en estado silvestre seg\u00fan el informe?',
+                options: ['Menos de mil quinientos', 'M\u00e1s de cinco mil', 'Aproximadamente diez mil', 'No se especifica'],
+                answer: 'Menos de mil quinientos'
+            },
+            {
+                q: '\u00bfQu\u00e9 argumento "carece de fundamento" seg\u00fan las organizaciones ambientales?',
+                options: ['La liberaci\u00f3n de ejemplares sin proteger el h\u00e1bitat', 'La cr\u00eda en cautiverio en general', 'La investigaci\u00f3n cient\u00edfica', 'La ganader\u00eda extensiva'],
+                answer: 'La liberaci\u00f3n de ejemplares sin proteger el h\u00e1bitat'
+            },
+            {
+                q: '\u00bfQu\u00e9 expresi\u00f3n se usa para evaluar positivamente la propuesta final?',
+                options: ['Resulta convincente que', 'Carece de fundamento', 'Los expertos advierten que', 'El estudio concluye que'],
+                answer: 'Resulta convincente que'
+            }
+        ]
+    },
+    // === GAME 7: FIB \u2014 Reportar desde fuentes ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la expresi\u00f3n correcta para reportar informaci\u00f3n de fuentes.',
+        questions: [
+            {
+                sentence: '___ del Instituto Humboldt, Casanare alberga m\u00e1s de trescientas especies de aves.',
+                answer: 'Seg\u00fan el informe',
+                options: ['Seg\u00fan el informe', 'En s\u00edntesis', 'No obstante', 'Por consiguiente']
+            },
+            {
+                sentence: '___ la deforestaci\u00f3n ha destruido el cuarenta por ciento de los morichales.',
+                answer: 'El estudio concluye que',
+                options: ['El estudio concluye que', 'Si bien es cierto que', 'Resulta convincente', 'Tomando en cuenta']
+            },
+            {
+                sentence: '___ la actividad petrolera sin regulaci\u00f3n podr\u00eda causar da\u00f1os irreversibles.',
+                answer: 'Los expertos advierten que',
+                options: ['Los expertos advierten que', 'En s\u00edntesis', 'Mientras que', 'De lo anterior']
+            }
+        ]
+    },
+    // === GAME 8: FIB \u2014 Contrastar fuentes ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la expresi\u00f3n correcta para contrastar fuentes o perspectivas.',
+        questions: [
+            {
+                sentence: '___ los ambientalistas sostienen que la conservaci\u00f3n es prioritaria, los ganaderos argumentan que necesitan m\u00e1s tierra.',
+                answer: 'Mientras que',
+                options: ['Mientras que', 'Seg\u00fan el informe', 'Por consiguiente', 'En s\u00edntesis']
+            },
+            {
+                sentence: '___ la ganader\u00eda genera empleo, ___ su impacto ambiental es significativo.',
+                answer: 'Si bien es cierto que... no obstante',
+                options: ['Si bien es cierto que... no obstante', 'Seg\u00fan... por consiguiente', 'Mientras que... en s\u00edntesis', 'El estudio... de lo anterior']
+            },
+            {
+                sentence: 'La propuesta del gobierno ___, pero la de las comunidades ind\u00edgenas ___ datos m\u00e1s s\u00f3lidos.',
+                answer: 'carece de fundamento... se sustenta en',
+                options: ['carece de fundamento... se sustenta en', 'resulta convincente... carece de', 'se sustenta en... resulta', 'es cierto... no obstante']
+            }
+        ]
+    },
+    // === GAME 9: FIB \u2014 Sintetizar y concluir ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la expresi\u00f3n correcta para sintetizar informaci\u00f3n o sacar conclusiones.',
+        questions: [
+            {
+                sentence: '___, la protecci\u00f3n del chigu\u00edro requiere tanto regulaci\u00f3n como educaci\u00f3n comunitaria.',
+                answer: 'En s\u00edntesis',
+                options: ['En s\u00edntesis', 'Mientras que', 'Seg\u00fan el informe', 'Los expertos advierten que']
+            },
+            {
+                sentence: '___, la conservaci\u00f3n y el desarrollo pueden coexistir si se planifican adecuadamente.',
+                answer: 'Al integrar estas perspectivas',
+                options: ['Al integrar estas perspectivas', 'Seg\u00fan el informe', 'Los expertos advierten que', 'Mientras que']
+            },
+            {
+                sentence: '___ que la biodiversidad de Casanare necesita un plan de acci\u00f3n integral.',
+                answer: 'De lo anterior se deduce',
+                options: ['De lo anterior se deduce', 'Mientras que se sostiene', 'Si bien es cierto', 'Seg\u00fan el informe']
+            }
+        ]
+    },
+    // === GAME 10: FIB \u2014 Evaluar evidencia ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la expresi\u00f3n adecuada para evaluar la calidad de la evidencia.',
+        questions: [
+            {
+                sentence: 'La investigaci\u00f3n de la universidad ___ porque incluye datos de campo recopilados durante diez a\u00f1os.',
+                answer: 'resulta convincente',
+                options: ['resulta convincente', 'carece de fundamento', 'no obstante', 'en s\u00edntesis']
+            },
+            {
+                sentence: 'El argumento de que la contaminaci\u00f3n no afecta la fauna ___ porque contradice la evidencia cient\u00edfica.',
+                answer: 'carece de fundamento',
+                options: ['carece de fundamento', 'resulta convincente', 'se sustenta en', 'al integrar']
+            },
+            {
+                sentence: 'La propuesta de crear corredores ecol\u00f3gicos ___ estudios que demuestran su eficacia en otros pa\u00edses.',
+                answer: 'se sustenta en',
+                options: ['se sustenta en', 'carece de fundamento', 'no obstante', 'mientras que']
+            }
+        ]
+    },
+    // === GAME 11: Pair \u2014 Fuente y s\u00edntesis ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada cita de fuente con la expresi\u00f3n de s\u00edntesis correspondiente.',
+        pairs: [
+            ['Seg\u00fan el informe, la poblaci\u00f3n disminuye.', 'El estudio concluye que la especie est\u00e1 en peligro.'],
+            ['Los ganaderos sostienen que necesitan m\u00e1s tierra.', 'Mientras que los ambientalistas argumentan que hay alternativas.'],
+            ['La evidencia cient\u00edfica muestra da\u00f1os.', 'De lo anterior se deduce que hay que actuar.'],
+            ['Si bien la miner\u00eda genera empleo...', '...no obstante, el costo ambiental es alto.'],
+            ['Ambos estudios presentan datos v\u00e1lidos.', 'Tomando en cuenta ambas posturas, se requiere di\u00e1logo.'],
+            ['La propuesta incluye datos de campo.', 'Resulta convincente porque se sustenta en evidencia.']
+        ]
+    },
+    // === GAME 12: Pair \u2014 Afirmaci\u00f3n y tipo de s\u00edntesis ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada afirmaci\u00f3n con el tipo de operaci\u00f3n argumentativa que representa.',
+        pairs: [
+            ['Seg\u00fan el informe del Humboldt...', 'Reportar desde una fuente'],
+            ['Mientras que X sostiene..., Y argumenta...', 'Contrastar perspectivas'],
+            ['En s\u00edntesis, al integrar estas perspectivas...', 'Sintetizar informaci\u00f3n'],
+            ['Resulta convincente porque se sustenta en...', 'Evaluar evidencia'],
+            ['Si bien es cierto que..., no obstante...', 'Argumentaci\u00f3n concesiva'],
+            ['De lo anterior se deduce que...', 'Sacar conclusiones de la evidencia']
+        ]
+    },
+    // === GAME 13: Pair \u2014 Problema ambiental y fuente ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada problema ambiental de Casanare con la expresi\u00f3n que mejor lo introduce.',
+        pairs: [
+            ['Reducci\u00f3n de caimanes', 'Los expertos advierten que la poblaci\u00f3n ha ca\u00eddo un setenta por ciento.'],
+            ['Deforestaci\u00f3n de morichales', 'El estudio concluye que la expansi\u00f3n agr\u00edcola es la causa principal.'],
+            ['Contaminaci\u00f3n de humedales', 'Seg\u00fan el informe, los derrames petroleros han afectado las fuentes h\u00eddricas.'],
+            ['Caza excesiva de chigu\u00edros', 'Si bien es cierto que existe regulaci\u00f3n, no obstante es insuficiente.'],
+            ['P\u00e9rdida de corredores biol\u00f3gicos', 'Al integrar estas perspectivas, la fragmentaci\u00f3n del h\u00e1bitat es la mayor amenaza.'],
+            ['Conflicto entre conservaci\u00f3n y desarrollo', 'Tomando en cuenta ambas posturas, se necesita un equilibrio.']
+        ]
+    },
+    // === GAME 14: Sorting \u2014 Evidencia a favor vs. en contra ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada evidencia seg\u00fan si apoya o se opone a la expansi\u00f3n ganadera en Casanare.',
+        categories: ['Apoya la expansi\u00f3n', 'Se opone a la expansi\u00f3n'],
+        items: [
+            { text: 'La ganader\u00eda genera empleo para miles de familias llaneras.', category: 'Apoya la expansi\u00f3n' },
+            { text: 'La tradici\u00f3n ganadera es parte de la identidad cultural de Casanare.', category: 'Apoya la expansi\u00f3n' },
+            { text: 'Las exportaciones de carne contribuyen a la econom\u00eda regional.', category: 'Apoya la expansi\u00f3n' },
+            { text: 'La ganader\u00eda extensiva destruye los humedales y morichales.', category: 'Se opone a la expansi\u00f3n' },
+            { text: 'El estudio concluye que la compactaci\u00f3n del suelo reduce la biodiversidad.', category: 'Se opone a la expansi\u00f3n' },
+            { text: 'Los expertos advierten que el h\u00e1bitat del caim\u00e1n ha disminuido por la ganader\u00eda.', category: 'Se opone a la expansi\u00f3n' },
+            { text: 'Seg\u00fan el informe, la deforestaci\u00f3n por pastizales aumenta cada a\u00f1o.', category: 'Se opone a la expansi\u00f3n' },
+            { text: 'Las fincas ganaderas tecnificadas pueden coexistir con \u00e1reas protegidas.', category: 'Apoya la expansi\u00f3n' }
+        ]
+    },
+    // === GAME 15: Sorting \u2014 Tipos de expresiones argumentativas ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan su funci\u00f3n en la s\u00edntesis argumentativa.',
+        categories: ['Reportar fuentes', 'Contrastar', 'Sintetizar', 'Evaluar'],
+        items: [
+            { text: 'Seg\u00fan el informe', category: 'Reportar fuentes' },
+            { text: 'El estudio concluye que', category: 'Reportar fuentes' },
+            { text: 'Mientras que X sostiene..., Y argumenta que...', category: 'Contrastar' },
+            { text: 'Si bien es cierto que..., no obstante...', category: 'Contrastar' },
+            { text: 'En s\u00edntesis', category: 'Sintetizar' },
+            { text: 'Al integrar estas perspectivas', category: 'Sintetizar' },
+            { text: 'Resulta convincente', category: 'Evaluar' },
+            { text: 'Carece de fundamento', category: 'Evaluar' }
+        ]
+    },
+    // === GAME 16: Builder \u2014 S\u00edntesis de dos fuentes ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar una s\u00edntesis argumentativa completa.',
+        words: ['Mientras que', 'los ganaderos sostienen', 'que necesitan m\u00e1s pastizales,', 'los bi\u00f3logos argumentan que', 'los humedales deben protegerse.', 'En s\u00edntesis,', 'se necesita un modelo', 'que equilibre ambas necesidades.'],
+        answer: 'Mientras que los ganaderos sostienen que necesitan m\u00e1s pastizales, los bi\u00f3logos argumentan que los humedales deben protegerse. En s\u00edntesis, se necesita un modelo que equilibre ambas necesidades.'
+    },
+    // === GAME 17: Builder \u2014 Argumentaci\u00f3n concesiva ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar una argumentaci\u00f3n concesiva sobre la biodiversidad de Casanare.',
+        words: ['Si bien es cierto que', 'la industria petrolera', 'genera regal\u00edas para la regi\u00f3n,', 'no obstante,', 'los da\u00f1os ambientales', 'a los humedales', 'resultan irreversibles.', 'Por consiguiente,', 'la transici\u00f3n energ\u00e9tica', 'es urgente.'],
+        answer: 'Si bien es cierto que la industria petrolera genera regal\u00edas para la regi\u00f3n, no obstante, los da\u00f1os ambientales a los humedales resultan irreversibles. Por consiguiente, la transici\u00f3n energ\u00e9tica es urgente.'
+    },
+    // === GAME 18: Listening \u2014 Reportar desde fuentes ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la narraci\u00f3n y responde la pregunta sobre s\u00edntesis argumentativa.',
+        audio: 'Seg\u00fan el informe del Instituto Humboldt, los llanos de Casanare albergan una de las mayores concentraciones de biodiversidad del pa\u00eds. El estudio concluye que m\u00e1s de trescientas especies de aves dependen de los humedales para su supervivencia. Sin embargo, los expertos advierten que la expansi\u00f3n agr\u00edcola ha reducido estos h\u00e1bitats en un cuarenta por ciento.',
+        question: '\u00bfQu\u00e9 advierten los expertos sobre los humedales?',
+        answer: 'Que la expansi\u00f3n agr\u00edcola ha reducido los h\u00e1bitats en un cuarenta por ciento',
+        options: ['Que la expansi\u00f3n agr\u00edcola ha reducido los h\u00e1bitats en un cuarenta por ciento', 'Que los humedales est\u00e1n en perfecto estado', 'Que las aves han aumentado su poblaci\u00f3n', 'Que la ganader\u00eda no afecta la biodiversidad']
+    },
+    // === GAME 19: Listening \u2014 Sintetizar perspectivas ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la s\u00edntesis argumentativa y responde la pregunta.',
+        audio: 'Mientras que las empresas petroleras sostienen que han reducido su impacto ambiental mediante nuevas tecnolog\u00edas, las comunidades locales argumentan que los r\u00edos siguen contaminados. Si bien es cierto que la producci\u00f3n petrolera es importante para la econom\u00eda, no obstante, de lo anterior se deduce que las medidas actuales son insuficientes. Tomando en cuenta ambas posturas, resulta necesario implementar sistemas de monitoreo independientes.',
+        question: '\u00bfCu\u00e1l es la conclusi\u00f3n sint\u00e9tica del argumento?',
+        answer: 'Que se necesitan sistemas de monitoreo independientes',
+        options: ['Que se necesitan sistemas de monitoreo independientes', 'Que las empresas petroleras tienen raz\u00f3n', 'Que las comunidades exageran el problema', 'Que la producci\u00f3n debe detenerse inmediatamente']
+    },
+    // === GAME 20: Translation \u2014 S\u00edntesis argumentativa ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Usa expresiones de s\u00edntesis argumentativa.',
+        source: 'According to the report, biodiversity is decreasing. The experts warn that the situation is critical. In synthesis, an action plan is needed.',
+        words: ['Seg\u00fan', 'el', 'informe', 'la', 'biodiversidad', 'est\u00e1', 'disminuyendo', 'Los', 'expertos', 'advierten', 'que', 'situaci\u00f3n', 'es', 'cr\u00edtica', 'En', 's\u00edntesis', 'se', 'necesita', 'un', 'plan', 'de', 'acci\u00f3n'],
+        answer: 'Seg\u00fan el informe la biodiversidad est\u00e1 disminuyendo Los expertos advierten que la situaci\u00f3n es cr\u00edtica En s\u00edntesis se necesita un plan de acci\u00f3n'
+    },
+    // === GAME 21: Translation \u2014 Argumentaci\u00f3n concesiva ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Incluye la estructura concesiva.',
+        source: 'While it is true that cattle ranching generates employment, nevertheless, the environmental damage to the wetlands is significant. Consequently, sustainable alternatives must be found.',
+        words: ['Si', 'bien', 'es', 'cierto', 'que', 'la', 'ganader\u00eda', 'genera', 'empleo', 'no', 'obstante', 'el', 'da\u00f1o', 'ambiental', 'a', 'los', 'humedales', 'significativo', 'Por', 'consiguiente', 'se', 'deben', 'buscar', 'alternativas', 'sostenibles'],
+        answer: 'Si bien es cierto que la ganader\u00eda genera empleo no obstante el da\u00f1o ambiental a los humedales es significativo Por consiguiente se deben buscar alternativas sostenibles'
+    },
+    // === GAME 22: Conversation \u2014 Presentar una s\u00edntesis ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con un bi\u00f3logo sobre la biodiversidad en Casanare. Usa expresiones de s\u00edntesis argumentativa.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Bi\u00f3logo', text: 'Yaguar\u00e1, has le\u00eddo los informes sobre la biodiversidad en Casanare. \u00bfQu\u00e9 dicen las fuentes principales?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Seg\u00fan el informe del Instituto Humboldt, Casanare alberga m\u00e1s de trescientas especies de aves. Adem\u00e1s, el estudio concluye que los humedales son esenciales para la fauna acu\u00e1tica.',
+                    'Hay muchos animales en Casanare.',
+                    'No recuerdo bien los informes.'
+                ],
+                answer: 'Seg\u00fan el informe del Instituto Humboldt, Casanare alberga m\u00e1s de trescientas especies de aves. Adem\u00e1s, el estudio concluye que los humedales son esenciales para la fauna acu\u00e1tica.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Bi\u00f3logo', text: 'Interesante. Pero los ganaderos dicen que la conservaci\u00f3n limita su trabajo. \u00bfC\u00f3mo sintetizar\u00edas ambas perspectivas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Mientras que los ganaderos sostienen que las restricciones afectan su sustento, los bi\u00f3logos argumentan que la biodiversidad es irreemplazable. Tomando en cuenta ambas posturas, resulta necesario crear modelos de ganader\u00eda sostenible.',
+                    'Los ganaderos tienen raz\u00f3n, necesitan trabajar.',
+                    'La conservaci\u00f3n es m\u00e1s importante que la ganader\u00eda.'
+                ],
+                answer: 'Mientras que los ganaderos sostienen que las restricciones afectan su sustento, los bi\u00f3logos argumentan que la biodiversidad es irreemplazable. Tomando en cuenta ambas posturas, resulta necesario crear modelos de ganader\u00eda sostenible.'
+            }
+        ]
+    },
+    // === GAME 23: Conversation \u2014 Evaluar y concluir ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Discute con una l\u00edder comunitaria sobre las propuestas para proteger la biodiversidad. Eval\u00faa la evidencia y saca conclusiones.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'L\u00edder', text: 'El gobierno propone crear m\u00e1s \u00e1reas protegidas, pero sin presupuesto suficiente. Las empresas proponen autoregularse. \u00bfQu\u00e9 opinas de estas propuestas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si bien es cierto que crear \u00e1reas protegidas es un paso positivo, no obstante, sin presupuesto, la propuesta carece de fundamento pr\u00e1ctico. La autoregulaci\u00f3n empresarial tampoco resulta convincente porque no incluye supervisi\u00f3n independiente.',
+                    'Ambas propuestas son buenas.',
+                    'No creo que funcione ninguna.'
+                ],
+                answer: 'Si bien es cierto que crear \u00e1reas protegidas es un paso positivo, no obstante, sin presupuesto, la propuesta carece de fundamento pr\u00e1ctico. La autoregulaci\u00f3n empresarial tampoco resulta convincente porque no incluye supervisi\u00f3n independiente.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'L\u00edder', text: 'Entonces, \u00bfqu\u00e9 conclusi\u00f3n sacar\u00edas al integrar toda la informaci\u00f3n que has recogido?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'De lo anterior se deduce que la protecci\u00f3n de la biodiversidad en Casanare requiere una estrategia integral. Por consiguiente, al integrar estas perspectivas, la soluci\u00f3n debe combinar financiamiento p\u00fablico, participaci\u00f3n comunitaria y monitoreo cient\u00edfico independiente.',
+                    'Se necesita m\u00e1s dinero.',
+                    'Es un problema muy dif\u00edcil de resolver.'
+                ],
+                answer: 'De lo anterior se deduce que la protecci\u00f3n de la biodiversidad en Casanare requiere una estrategia integral. Por consiguiente, al integrar estas perspectivas, la soluci\u00f3n debe combinar financiamiento p\u00fablico, participaci\u00f3n comunitaria y monitoreo cient\u00edfico independiente.'
+            }
+        ]
+    },
+    // === GAME 24: Dictation \u2014 S\u00edntesis argumentativa ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n exacta. Presta atenci\u00f3n a las expresiones de s\u00edntesis argumentativa.',
+        audio: 'Seg\u00fan el informe, los humedales de Casanare est\u00e1n en peligro. Los expertos advierten que, si no se toman medidas, la biodiversidad sufrir\u00e1 da\u00f1os irreversibles. De lo anterior se deduce que la acci\u00f3n inmediata es imprescindible.',
+        answer: 'Seg\u00fan el informe, los humedales de Casanare est\u00e1n en peligro. Los expertos advierten que, si no se toman medidas, la biodiversidad sufrir\u00e1 da\u00f1os irreversibles. De lo anterior se deduce que la acci\u00f3n inmediata es imprescindible.'
+    },
+    // === GAME 25: Conjugation \u2014 Verbos en contexto argumentativo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma verbal correcta en el contexto de la s\u00edntesis argumentativa.',
+        questions: [
+            {
+                verb: 'sostener (presente)',
+                subject: 'los ambientalistas',
+                answer: 'sostienen',
+                options: ['sostienen', 'sostuvieron', 'sostengan', 'sostendr\u00edan']
+            },
+            {
+                verb: 'advertir (presente)',
+                subject: 'los expertos',
+                answer: 'advierten',
+                options: ['advierten', 'advirtieron', 'adviertan', 'advertir\u00edan']
+            },
+            {
+                verb: 'deducir (presente)',
+                subject: 'se (impersonal)',
+                answer: 'se deduce',
+                options: ['se deduce', 'se dedujo', 'se deduzca', 'se deducir\u00eda']
+            },
+            {
+                verb: 'sustentar (presente)',
+                subject: 'la propuesta (reflexivo)',
+                answer: 'se sustenta',
+                options: ['se sustenta', 'se sustent\u00f3', 'se sustente', 'se sustentar\u00eda']
+            }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala de los ecos del mercado',
+            description: 'Bajo la plaza del mercado hay una cámara secreta. Las voces de arriba llegan distorsionadas — nunca se sabe quién dijo qué ni cuándo.',
+            ambience: 'market'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una voz distorsionada pregunta:',
+                riddle: '«Candelaria dijo: "Protegeré este bosque." Pero cuando lo cuentan, dicen: "Candelaria dijo que protegería ese bosque." ¿Qué cambió, y qué se perdió?»',
+                clue: '¿Qué se pierde en el paso del discurso directo al indirecto?',
+                answer: 'Se pierde la inmediatez y el compromiso personal — el "yo" y el "este" se distancian',
+                options: [
+                    'Se pierde la inmediatez y el compromiso personal — el "yo" y el "este" se distancian',
+                    'No se pierde nada, es la misma información',
+                    'Se pierde el tiempo verbal',
+                    'Se pierde el nombre de quien habla'
+                ],
+                onSolve: 'Un eco se clarifica.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Un periódico viejo tiene una noticia sobre Don Próspero.',
+                passage: '«El empresario Próspero García aseguró que "el proyecto beneficiaría a miles de familias" y que "no habría impacto ambiental significativo". Fuentes de la comunidad señalaron que García "había prometido lo mismo en otro departamento, donde el río quedó contaminado".»',
+                clue: '¿Cómo usa el periódico el estilo indirecto para crear distancia y duda?',
+                answer: 'Las comillas y los verbos de reporte ("aseguró", "señalaron") presentan las afirmaciones como declaraciones, no como hechos',
+                options: [
+                    'Las comillas y los verbos de reporte ("aseguró", "señalaron") presentan las afirmaciones como declaraciones, no como hechos',
+                    'El periódico apoya a Don Próspero',
+                    'El periódico es neutral y objetivo',
+                    'Las comillas son errores de edición'
+                ],
+                onSolve: 'Más voces se aclaran.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Una palabra se ha fragmentado entre los ecos.',
+                clue: 'Cuando reportas lo que alguien dijo sin usar sus palabras exactas, usas el estilo...',
+                answer: 'indirecto',
+                scrambled: 'recidoint',
+                onSolve: 'Los ecos se silencian. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de voces que rebotan en las paredes de un mercado.',
+            questClue: 'Las historias cambian cada vez que alguien las cuenta. El mapa guarda la primera versión.',
+            item: 'historia-ecos'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '37',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest37Progress',
+        backUrl: '../../b2-casanare.html'
+    });
+</script>
+</body>
+</html>

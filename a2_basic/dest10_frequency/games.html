@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 10: Siempre y nunca - Adverbios de Frecuencia</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest10_frequency/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 10: Siempre y nunca - Adverbios de Frecuencia",
+          "url": "https://babelfree.com/a2_basic/dest10_frequency/games",
+          "educationalLevel": "A2 - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Frequency adverbs", "Spanish vocabulary", "Adverb usage"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Basic", "item": "https://babelfree.com/a2-caribbean" },
+            { "@type": "ListItem", "position": 4, "name": "Siempre y nunca - Adverbios de Frecuencia" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 10: Siempre y nunca</div>
+            <div class="yg-header-subtitle">Adverbios de Frecuencia</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+  {
+    type:"pair",
+    title:"Empareja el adverbio con su significado",
+    instruction:"Conecta cada adverbio de frecuencia con su porcentaje o significado.",
+    pairs:[
+      {a:"siempre",b:"100%"},
+      {a:"casi siempre",b:"90%"},
+      {a:"normalmente",b:"80%"},
+      {a:"a veces",b:"50%"},
+      {a:"casi nunca",b:"10%"},
+      {a:"nunca",b:"0%"}
+    ]
+  },
+  {
+    type:"fill",
+    title:"Completa con el adverbio correcto",
+    instruction:"Escribe el adverbio de frecuencia que falta.",
+    sentences:[
+      {text:"Yo ___ desayuno a las 7. (100% del tiempo)",answer:"siempre",hint:"100% = ..."},
+      {text:"Ella ___ come comida r\u00e1pida. (0% del tiempo)",answer:"nunca",hint:"0% = ..."},
+      {text:"Nosotros ___ vamos al cine los s\u00e1bados. (50%)",answer:"a veces",hint:"50% = ..."},
+      {text:"T\u00fa ___ llegas tarde a clase. (80%)",answer:"normalmente",hint:"80% = ..."},
+      {text:"Ellos ___ estudian por la noche. (90%)",answer:"casi siempre",hint:"90% = ..."}
+    ]
+  },
+  {
+    type:"conjugation",
+    title:"Conjuga el verbo en presente",
+    instruction:"Escribe la forma correcta del verbo en presente. El adverbio de frecuencia ya est\u00e1 incluido.",
+    prompts:[
+      {subject:"Ella siempre",verb:"estudiar",context:"todos los d\u00edas",answer:"estudia"},
+      {subject:"Yo nunca",verb:"cenar",context:"tarde",answer:"ceno"},
+      {subject:"Nosotros a veces",verb:"cocinar",context:"juntos",answer:"cocinamos"},
+      {subject:"T\u00fa normalmente",verb:"leer",context:"por la noche",answer:"lees"},
+      {subject:"Ellos casi siempre",verb:"hacer",context:"ejercicio",answer:"hacen"}
+    ]
+  },
+  {
+    type:"listening",
+    title:"Escucha e identifica la frecuencia",
+    instruction:"Escucha la oraci\u00f3n y selecciona el adverbio de frecuencia que escuchas.",
+    questions:[
+      {audio:"Yo siempre como frutas por la ma\u00f1ana.",options:["siempre","nunca","a veces","casi nunca"],correct:0},
+      {audio:"Ella nunca bebe caf\u00e9 por la noche.",options:["normalmente","casi siempre","nunca","a veces"],correct:2},
+      {audio:"Nosotros a veces vamos al parque.",options:["siempre","a veces","casi nunca","nunca"],correct:1},
+      {audio:"T\u00fa casi siempre llegas temprano.",options:["a veces","nunca","casi siempre","normalmente"],correct:2}
+    ]
+  },
+  {
+    type:"category",
+    title:"Clasifica los adverbios",
+    instruction:"Clasifica cada adverbio en alta frecuencia o baja frecuencia.",
+    categories:["Alta frecuencia","Baja frecuencia"],
+    items:[
+      {text:"siempre",correct:0},
+      {text:"casi siempre",correct:0},
+      {text:"normalmente",correct:0},
+      {text:"frecuentemente",correct:0},
+      {text:"nunca",correct:1},
+      {text:"casi nunca",correct:1},
+      {text:"raramente",correct:1},
+      {text:"de vez en cuando",correct:1}
+    ]
+  },
+  {
+    type:"fill",
+    title:"Completa los di\u00e1logos",
+    instruction:"Escribe el adverbio de frecuencia que mejor completa cada di\u00e1logo.",
+    sentences:[
+      {text:"\u00bfCon qu\u00e9 frecuencia haces ejercicio? \u2014 ___ hago ejercicio, cinco d\u00edas a la semana.",answer:"casi siempre",hint:"5 de 7 d\u00edas = ..."},
+      {text:"\u00bfDesayunas en casa? \u2014 S\u00ed, ___ desayuno en casa.",answer:"siempre",hint:"100% = ..."},
+      {text:"\u00bfCocinas los fines de semana? \u2014 ___, solo cuando tengo tiempo.",answer:"a veces",hint:"No siempre, no nunca..."},
+      {text:"\u00bfVas al gimnasio? \u2014 No, ___ voy al gimnasio.",answer:"nunca",hint:"0% = ..."},
+      {text:"\u00bfLees antes de dormir? \u2014 S\u00ed, ___ leo un poco.",answer:"normalmente",hint:"Casi siempre, es mi costumbre..."}
+    ]
+  },
+  {
+    type:"builder",
+    title:"Construye la oraci\u00f3n",
+    instruction:"Ordena las palabras para formar oraciones correctas.",
+    sentences:[
+      {words:["Yo","siempre","desayuno","a las siete"],correct:"Yo siempre desayuno a las siete"},
+      {words:["Ella","nunca","come","comida r\u00e1pida"],correct:"Ella nunca come comida r\u00e1pida"},
+      {words:["Nosotros","a veces","estudiamos","en la biblioteca"],correct:"Nosotros a veces estudiamos en la biblioteca"},
+      {words:["T\u00fa","normalmente","trabajas","por la ma\u00f1ana"],correct:"T\u00fa normalmente trabajas por la ma\u00f1ana"}
+    ]
+  },
+  {
+    type:"conjugation",
+    title:"Conjuga para todas las personas",
+    instruction:"Escribe la conjugaci\u00f3n correcta del verbo entre par\u00e9ntesis.",
+    prompts:[
+      {subject:"Nosotros siempre",verb:"comer",context:"juntos",answer:"comemos"},
+      {subject:"Ustedes a veces",verb:"escribir",context:"cartas",answer:"escriben"},
+      {subject:"Yo casi siempre",verb:"limpiar",context:"mi cuarto",answer:"limpio"},
+      {subject:"\u00c9l normalmente",verb:"almorzar",context:"a las doce",answer:"almuerza"},
+      {subject:"T\u00fa nunca",verb:"cocinar",context:"los lunes",answer:"cocinas"},
+      {subject:"Ellas frecuentemente",verb:"hacer",context:"ejercicio",answer:"hacen"}
+    ]
+  },
+  {
+    type:"translation",
+    title:"Traduce al espa\u00f1ol",
+    instruction:"Usa el banco de palabras para construir la traducci\u00f3n correcta.",
+    sentences:[
+      {english:"I always eat breakfast at seven.",words:["Yo","siempre","desayuno","a las","siete","nunca","como"],correct:"Yo siempre desayuno a las siete"},
+      {english:"She never studies at night.",words:["Ella","nunca","estudia","siempre","por","la noche","lee"],correct:"Ella nunca estudia por la noche"},
+      {english:"We sometimes cook together.",words:["Nosotros","a veces","cocinamos","juntos","nunca","siempre","comen"],correct:"Nosotros a veces cocinamos juntos"},
+      {english:"They normally work in the morning.",words:["Ellos","normalmente","trabajan","por","la ma\u00f1ana","nunca","tarde"],correct:"Ellos normalmente trabajan por la ma\u00f1ana"}
+    ]
+  },
+  {
+    type:"conversation",
+    title:"Elige la mejor respuesta",
+    instruction:"Lee la conversaci\u00f3n y elige la respuesta m\u00e1s apropiada.",
+    exchanges:[
+      {
+        context:[{speaker:"Ana",text:"\u00bfQu\u00e9 haces normalmente los fines de semana?"}],
+        options:["Normalmente descanso y a veces voy al cine.","Yo comer ayer en casa.","Ella siempre trabaja los lunes."],
+        correct:0
+      },
+      {
+        context:[{speaker:"Carlos",text:"\u00bfCon qu\u00e9 frecuencia haces ejercicio?"},{speaker:"T\u00fa",text:"Casi siempre hago ejercicio por la ma\u00f1ana."},{speaker:"Carlos",text:"\u00a1Qu\u00e9 bien! \u00bfY qu\u00e9 tipo de ejercicio haces?"}],
+        options:["Normalmente corro en el parque.","Yo siempre desayuno a las ocho.","Nunca como frutas."],
+        correct:0
+      },
+      {
+        context:[{speaker:"Mar\u00eda",text:"\u00bfT\u00fa cocinas en casa?"},{speaker:"T\u00fa",text:"S\u00ed, casi siempre cocino."},{speaker:"Mar\u00eda",text:"\u00bfQu\u00e9 cocinas normalmente?"}],
+        options:["Nunca limpio la casa.","Normalmente cocino arroz con pollo.","Yo estudi\u00e9 mucho ayer."],
+        correct:1
+      }
+    ]
+  },
+  {
+    type:"builder",
+    title:"Construye oraciones m\u00e1s largas",
+    instruction:"Ordena las palabras para formar oraciones completas sobre h\u00e1bitos.",
+    sentences:[
+      {words:["Mi familia","casi siempre","cena","junta","a las ocho"],correct:"Mi familia casi siempre cena junta a las ocho"},
+      {words:["Los estudiantes","normalmente","estudian","en la biblioteca","por la tarde"],correct:"Los estudiantes normalmente estudian en la biblioteca por la tarde"},
+      {words:["Yo","de vez en cuando","leo","un libro","antes de dormir"],correct:"Yo de vez en cuando leo un libro antes de dormir"},
+      {words:["Mis amigos","frecuentemente","hacen","ejercicio","en el parque"],correct:"Mis amigos frecuentemente hacen ejercicio en el parque"}
+    ]
+  },
+  {
+    type:"translation",
+    title:"Traduce al espa\u00f1ol",
+    instruction:"Construye la traducci\u00f3n usando el banco de palabras.",
+    sentences:[
+      {english:"We never eat dinner late.",words:["Nosotros","nunca","cenamos","tarde","siempre","comemos","temprano"],correct:"Nosotros nunca cenamos tarde"},
+      {english:"They almost always read at night.",words:["Ellos","casi siempre","leen","por","la noche","nunca","libros"],correct:"Ellos casi siempre leen por la noche"},
+      {english:"I sometimes clean my room on Saturdays.",words:["Yo","a veces","limpio","mi cuarto","los s\u00e1bados","siempre","casa"],correct:"Yo a veces limpio mi cuarto los s\u00e1bados"},
+      {english:"She frequently writes letters.",words:["Ella","frecuentemente","escribe","cartas","nunca","lee","libros"],correct:"Ella frecuentemente escribe cartas"}
+    ]
+  },
+  {
+    type:"conversation",
+    title:"Conversaci\u00f3n: Rutinas diarias",
+    instruction:"Participa en la conversaci\u00f3n sobre rutinas y h\u00e1bitos.",
+    exchanges:[
+      {
+        context:[{speaker:"Pedro",text:"Hola, \u00bfqu\u00e9 haces todos los d\u00edas por la ma\u00f1ana?"}],
+        options:["Siempre desayuno y a veces hago ejercicio.","Yo cen\u00e9 ayer a las diez.","Ella nunca cocina."],
+        correct:0
+      },
+      {
+        context:[{speaker:"Pedro",text:"Interesante. \u00bfCon qu\u00e9 frecuencia cocinas en casa?"}],
+        options:["Casi siempre cocino. Normalmente preparo arroz.","Yo siempre duermo temprano.","Nunca leo libros de ciencia."],
+        correct:0
+      },
+      {
+        context:[{speaker:"Pedro",text:"\u00bfY qu\u00e9 haces normalmente los fines de semana?"}],
+        options:["A veces voy al cine y casi siempre descanso.","Yo trabajo todos los lunes.","Ella frecuentemente estudia."],
+        correct:0
+      },
+      {
+        context:[{speaker:"Pedro",text:"\u00bfHaces ejercicio frecuentemente?"}],
+        options:["Nunca como verduras.","S\u00ed, casi siempre corro por la ma\u00f1ana.","Ella normalmente lee por la noche."],
+        correct:1
+      }
+    ]
+  },
+  {
+    type:"dictation",
+    title:"Escucha y escribe",
+    instruction:"Escucha la oraci\u00f3n y escr\u00edbela exactamente como la escuchas.",
+    sentences:[
+      {audio:"Yo siempre estudio por la noche.",answer:"Yo siempre estudio por la noche."},
+      {audio:"Ella nunca come comida r\u00e1pida.",answer:"Ella nunca come comida r\u00e1pida."},
+      {audio:"Nosotros a veces cocinamos juntos.",answer:"Nosotros a veces cocinamos juntos."},
+      {audio:"Ellos casi siempre hacen ejercicio.",answer:"Ellos casi siempre hacen ejercicio."}
+    ]
+  },
+  {
+    type:"story",
+    title:"La rutina de Yaguar\u00e1",
+    instruction:"Lee la historia sobre las rutinas de Yaguar\u00e1 y responde las preguntas.",
+    text:"Yaguar\u00e1 es un jaguar que vive en la selva de Colombia. \u00c9l siempre se despierta temprano, a las cinco de la ma\u00f1ana. Normalmente camina por la selva y busca comida. Casi siempre come pescado del r\u00edo. A veces come frutas tambi\u00e9n. Yaguar\u00e1 nunca come por la noche porque descansa. De vez en cuando juega con otros jaguares en la tarde. Frecuentemente nada en el r\u00edo cuando hace calor.",
+    questions:[
+      {q:"\u00bfCon qu\u00e9 frecuencia se despierta temprano Yaguar\u00e1?",options:["A veces","Siempre","Nunca","Casi nunca"],correct:1},
+      {q:"\u00bfQu\u00e9 come casi siempre Yaguar\u00e1?",options:["Frutas","Carne","Pescado del r\u00edo","Insectos"],correct:2},
+      {q:"\u00bfCu\u00e1ndo nunca come Yaguar\u00e1?",options:["Por la ma\u00f1ana","Por la tarde","Al mediod\u00eda","Por la noche"],correct:3}
+    ]
+  },
+  {
+    type:"pair",
+    title:"Empareja preguntas y respuestas",
+    instruction:"Conecta cada pregunta con su respuesta apropiada.",
+    pairs:[
+      {a:"\u00bfCon qu\u00e9 frecuencia lees?",b:"Casi siempre leo por la noche."},
+      {a:"\u00bfDesayunas todos los d\u00edas?",b:"S\u00ed, siempre desayuno."},
+      {a:"\u00bfVas al gimnasio?",b:"Nunca voy al gimnasio."},
+      {a:"\u00bfCocinas en casa?",b:"A veces cocino los fines de semana."},
+      {a:"\u00bfHaces ejercicio?",b:"Normalmente corro por la ma\u00f1ana."},
+      {a:"\u00bfEstudias los domingos?",b:"Casi nunca estudio los domingos."}
+    ]
+  },
+  {
+    type:"listening",
+    title:"Escucha sobre la rutina de Luc\u00eda",
+    instruction:"Escucha el p\u00e1rrafo y responde las preguntas.",
+    questions:[
+      {audio:"Luc\u00eda siempre se despierta a las seis. Normalmente desayuna cereal con leche. Ella casi siempre va al trabajo en bus. A veces almuerza en un restaurante. Nunca cena despu\u00e9s de las nueve.",options:["\u00bfC\u00f3mo va al trabajo Luc\u00eda? \u2014 En bus","\u00bfC\u00f3mo va al trabajo Luc\u00eda? \u2014 En carro","\u00bfC\u00f3mo va al trabajo Luc\u00eda? \u2014 Caminando","\u00bfC\u00f3mo va al trabajo Luc\u00eda? \u2014 En bicicleta"],correct:0},
+      {audio:"Luc\u00eda siempre se despierta a las seis. Normalmente desayuna cereal con leche. Ella casi siempre va al trabajo en bus. A veces almuerza en un restaurante. Nunca cena despu\u00e9s de las nueve.",options:["\u00bfCon qu\u00e9 frecuencia almuerza en restaurante? \u2014 Siempre","\u00bfCon qu\u00e9 frecuencia almuerza en restaurante? \u2014 Nunca","\u00bfCon qu\u00e9 frecuencia almuerza en restaurante? \u2014 A veces","\u00bfCon qu\u00e9 frecuencia almuerza en restaurante? \u2014 Casi nunca"],correct:2},
+      {audio:"Luc\u00eda siempre se despierta a las seis. Normalmente desayuna cereal con leche. Ella casi siempre va al trabajo en bus. A veces almuerza en un restaurante. Nunca cena despu\u00e9s de las nueve.",options:["\u00bfCu\u00e1ndo nunca cena Luc\u00eda? \u2014 Antes de las siete","\u00bfCu\u00e1ndo nunca cena Luc\u00eda? \u2014 Despu\u00e9s de las nueve","\u00bfCu\u00e1ndo nunca cena Luc\u00eda? \u2014 A las ocho","\u00bfCu\u00e1ndo nunca cena Luc\u00eda? \u2014 Al mediod\u00eda"],correct:1}
+    ]
+  },
+  {
+    type:"category",
+    title:"Clasifica las actividades",
+    instruction:"Clasifica cada actividad seg\u00fan la frecuencia indicada.",
+    categories:["Todos los d\u00edas","A veces","Nunca"],
+    items:[
+      {text:"desayunar (siempre)",correct:0},
+      {text:"estudiar (siempre)",correct:0},
+      {text:"trabajar (todos los d\u00edas)",correct:0},
+      {text:"cocinar (a veces)",correct:1},
+      {text:"ir al cine (de vez en cuando)",correct:1},
+      {text:"leer revistas (a veces)",correct:1},
+      {text:"fumar (nunca)",correct:2},
+      {text:"llegar tarde (nunca)",correct:2},
+      {text:"comer insectos (nunca)",correct:2}
+    ]
+  },
+  {
+    type:"dictation",
+    title:"Dictado: oraciones m\u00e1s largas",
+    instruction:"Escucha y escribe las oraciones completas.",
+    sentences:[
+      {audio:"Yo normalmente estudio espa\u00f1ol por la noche.",answer:"Yo normalmente estudio espa\u00f1ol por la noche."},
+      {audio:"Mis amigos casi siempre almuerzan en la cafeter\u00eda.",answer:"Mis amigos casi siempre almuerzan en la cafeter\u00eda."},
+      {audio:"De vez en cuando mi familia cocina comida colombiana.",answer:"De vez en cuando mi familia cocina comida colombiana."},
+      {audio:"Ella frecuentemente hace ejercicio en el parque.",answer:"Ella frecuentemente hace ejercicio en el parque."}
+    ]
+  },
+  {
+    type:"story",
+    title:"Un d\u00eda t\u00edpico en Colombia",
+    instruction:"Lee sobre un d\u00eda t\u00edpico en Colombia y responde las preguntas.",
+    text:"En Colombia, la gente normalmente se despierta temprano. Casi siempre desayunan con caf\u00e9 colombiano, huevos y arepa. Los colombianos frecuentemente almuerzan un plato grande al mediod\u00eda. A veces el almuerzo incluye sopa, arroz, carne y ensalada. La gente casi nunca cena mucho por la noche; normalmente comen algo ligero. Los fines de semana, las familias casi siempre se re\u00fanen y a veces cocinan bandeja paisa. Los colombianos siempre son muy amables con los visitantes.",
+    questions:[
+      {q:"\u00bfQu\u00e9 incluye casi siempre el desayuno colombiano?",options:["Pizza y hamburguesas","Caf\u00e9, huevos y arepa","Solo frutas","Pan con mantequilla"],correct:1},
+      {q:"\u00bfC\u00f3mo es la cena normalmente en Colombia?",options:["Muy grande y pesada","Igual que el almuerzo","Algo ligero","No cenan nunca"],correct:2},
+      {q:"\u00bfQu\u00e9 hacen las familias casi siempre los fines de semana?",options:["Trabajan","Se re\u00fanen","Van al gimnasio","Estudian"],correct:1},
+      {q:"\u00bfC\u00f3mo son los colombianos siempre con los visitantes?",options:["Serios","Indiferentes","Muy amables","Estrictos"],correct:2}
+    ]
+  },
+  {
+    type:"fill",
+    title:"Completa con el adverbio correcto",
+    instruction:"Lee el contexto y escribe el adverbio de frecuencia m\u00e1s l\u00f3gico.",
+    sentences:[
+      {text:"Mar\u00eda va al gimnasio los lunes, mi\u00e9rcoles y viernes. Ella ___ hace ejercicio.",answer:"frecuentemente",hint:"3 veces por semana = ..."},
+      {text:"Juan no come carne. \u00c9l ___ come carne.",answer:"nunca",hint:"No come carne = 0%..."},
+      {text:"Cada ma\u00f1ana tomo caf\u00e9. Yo ___ tomo caf\u00e9 por la ma\u00f1ana.",answer:"siempre",hint:"Cada ma\u00f1ana = 100%..."},
+      {text:"No estudio mucho los fines de semana, solo un poco. ___ estudio los domingos.",answer:"casi nunca",hint:"Solo un poco = muy baja frecuencia..."},
+      {text:"Uno o dos s\u00e1bados al mes voy al cine. ___ voy al cine los s\u00e1bados.",answer:"de vez en cuando",hint:"1-2 veces al mes = ..."}
+    ]
+  },
+  {
+    type:"builder",
+    title:"Construye oraciones completas",
+    instruction:"Ordena las palabras para formar oraciones de 6 a 8 palabras.",
+    sentences:[
+      {words:["Mis padres","siempre","cenan","juntos","a las","ocho","de la noche"],correct:"Mis padres siempre cenan juntos a las ocho de la noche"},
+      {words:["Yo","casi nunca","como","comida r\u00e1pida","los d\u00edas","de semana"],correct:"Yo casi nunca como comida r\u00e1pida los d\u00edas de semana"},
+      {words:["Los ni\u00f1os","frecuentemente","juegan","en el parque","por","la tarde"],correct:"Los ni\u00f1os frecuentemente juegan en el parque por la tarde"},
+      {words:["Nosotros","de vez en cuando","vamos","al restaurante","los","s\u00e1bados"],correct:"Nosotros de vez en cuando vamos al restaurante los s\u00e1bados"}
+    ]
+  },
+  {
+    type:"conjugation",
+    title:"Conjugaci\u00f3n r\u00e1pida",
+    instruction:"Conjuga r\u00e1pidamente cada verbo en presente con el adverbio dado.",
+    prompts:[
+      {subject:"Yo siempre",verb:"desayunar",context:"temprano",answer:"desayuno"},
+      {subject:"T\u00fa casi nunca",verb:"limpiar",context:"tu cuarto",answer:"limpias"},
+      {subject:"\u00c9l normalmente",verb:"escribir",context:"correos",answer:"escribe"},
+      {subject:"Nosotros a veces",verb:"almorzar",context:"en casa",answer:"almorzamos"},
+      {subject:"Ustedes frecuentemente",verb:"leer",context:"el peri\u00f3dico",answer:"leen"},
+      {subject:"Ellas nunca",verb:"cenar",context:"tarde",answer:"cenan"},
+      {subject:"Yo de vez en cuando",verb:"cocinar",context:"pasta",answer:"cocino"},
+      {subject:"T\u00fa siempre",verb:"hacer",context:"ejercicio",answer:"haces"}
+    ]
+  },
+  {
+    type:"translation",
+    title:"Traducci\u00f3n de p\u00e1rrafos",
+    instruction:"Traduce cada oraci\u00f3n al espa\u00f1ol usando el banco de palabras.",
+    sentences:[
+      {english:"I always eat breakfast at seven in the morning.",words:["Yo","siempre","desayuno","a las","siete","de la ma\u00f1ana","nunca","como","noche"],correct:"Yo siempre desayuno a las siete de la ma\u00f1ana"},
+      {english:"My family almost always eats dinner together.",words:["Mi familia","casi siempre","cena","junta","nunca","come","sola"],correct:"Mi familia casi siempre cena junta"},
+      {english:"We sometimes study Spanish on weekends.",words:["Nosotros","a veces","estudiamos","espa\u00f1ol","los fines de semana","siempre","trabajan","ingl\u00e9s"],correct:"Nosotros a veces estudiamos espa\u00f1ol los fines de semana"},
+      {english:"He never cooks at home.",words:["\u00c9l","nunca","cocina","en casa","siempre","ella","trabaja","restaurante"],correct:"\u00c9l nunca cocina en casa"}
+    ]
+  },
+  {
+    type:"conversation",
+    title:"Planifica tu semana",
+    instruction:"Participa en una conversaci\u00f3n sobre la planificaci\u00f3n de tu semana.",
+    exchanges:[
+      {
+        context:[{speaker:"Amiga",text:"Hola, \u00bfqu\u00e9 haces normalmente los lunes?"}],
+        options:["Normalmente trabajo y siempre estudio por la noche.","Yo comer ayer mucho.","Ella a veces limpia."],
+        correct:0
+      },
+      {
+        context:[{speaker:"Amiga",text:"\u00bfY los mi\u00e9rcoles? \u00bfHaces ejercicio?"}],
+        options:["Nunca estudio los lunes.","S\u00ed, casi siempre hago ejercicio los mi\u00e9rcoles.","Ella normalmente cocina."],
+        correct:1
+      },
+      {
+        context:[{speaker:"Amiga",text:"\u00bfQu\u00e9 haces los fines de semana?"}],
+        options:["A veces voy al cine y normalmente descanso los domingos.","Yo siempre trabajo los lunes.","Nunca desayuno."],
+        correct:0
+      },
+      {
+        context:[{speaker:"Amiga",text:"\u00bfCon qu\u00e9 frecuencia cocinas en casa?"}],
+        options:["Yo siempre estudio ingl\u00e9s.","Frecuentemente cocino. Casi siempre preparo la cena.","Nunca hago ejercicio los s\u00e1bados."],
+        correct:1
+      },
+      {
+        context:[{speaker:"Amiga",text:"\u00a1Qu\u00e9 buena rutina tienes! \u00bfHay algo que nunca haces?"}],
+        options:["Nunca llego tarde al trabajo y casi nunca como comida r\u00e1pida.","A veces desayuno.","Siempre ceno a las ocho."],
+        correct:0
+      }
+    ]
+  },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de los recuerdos',
+            description: 'Una cueva donde las piedras guardan recuerdos. Si tocas una piedra, escuchas una voz del pasado.',
+            ambience: 'echo'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una piedra habla:',
+                riddle: '\u00abAyer fui al r\u00edo. La semana pasada vi un jaguar. El a\u00f1o pasado viaj\u00e9 a Quibd\u00f3. \u00bfQu\u00e9 tienen en com\u00fan estas tres frases?\u00bb',
+                clue: 'Mira los verbos.',
+                answer: 'Todas usan el pret\u00e9rito: fui, vi, viaj\u00e9',
+                options: [
+                    'Todas usan el pret\u00e9rito: fui, vi, viaj\u00e9',
+                    'Todas hablan del futuro',
+                    'Todas tienen verbos regulares',
+                    'Todas mencionan el agua'
+                ],
+                onSolve: 'La piedra deja de hablar y se ilumina.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Otra piedra tiene una cerradura.',
+                clue: 'Completa: \u00abYaguar\u00e1 ___ a la cueva ayer.\u00bb (pret\u00e9rito de venir)',
+                answer: 'vino',
+                hint: '_ _ _ _',
+                onSolve: 'La segunda piedra se ilumina.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra est\u00e1n en las piedras iluminadas.',
+                clue: 'Es lo que guardamos del pasado: memorias, historias, experiencias.',
+                answer: 'recuerdo',
+                scrambled: 'drroeuce',
+                onSolve: 'Todas las piedras brillan. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de ojo cerrado.',
+            questClue: 'El ojo cerrado ve lo que pas\u00f3, no lo que pasa.',
+            item: 'raiz-ojo'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '10',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraDest10Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

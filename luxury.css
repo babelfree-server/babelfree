@@ -1,0 +1,1082 @@
+/* ═══════════════════════════════════════════════════════════════
+   EL VIAJE DEL JAGUAR — Luxury Design System
+   Premium feel throughout: typography, depth, texture, motion
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Premium Font Import ─── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ─── Luxury CSS Variables ─── */
+:root {
+    /* Metallic gold palette */
+    --lux-gold: #d4a843;
+    --lux-gold-light: #f0d68a;
+    --lux-gold-dark: #8B6914;
+    --lux-gold-shimmer: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    --lux-gold-subtle: rgba(212, 168, 67, 0.08);
+
+    /* Depth shadows */
+    --lux-shadow-sm: 0 2px 8px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.12);
+    --lux-shadow-md: 0 8px 30px rgba(0,0,0,0.25), 0 4px 12px rgba(0,0,0,0.15);
+    --lux-shadow-lg: 0 20px 60px rgba(0,0,0,0.35), 0 8px 24px rgba(0,0,0,0.2);
+    --lux-shadow-xl: 0 30px 80px rgba(0,0,0,0.4), 0 12px 36px rgba(0,0,0,0.25);
+    --lux-shadow-glow: 0 0 40px rgba(212, 168, 67, 0.2), 0 0 80px rgba(212, 168, 67, 0.08);
+    --lux-shadow-inset: inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.15);
+
+    /* Premium glass */
+    --lux-glass: rgba(255, 255, 255, 0.06);
+    --lux-glass-border: rgba(255, 255, 255, 0.1);
+    --lux-glass-highlight: rgba(255, 255, 255, 0.15);
+
+    /* Typography */
+    --font-display: 'Playfair Display', 'Georgia', serif;
+    --font-elegant: 'Cormorant Garamond', 'Georgia', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Refined transitions */
+    --lux-ease: cubic-bezier(0.23, 1, 0.32, 1);
+    --lux-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --lux-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --lux-duration: 0.4s;
+    --lux-duration-slow: 0.7s;
+}
+
+/* ─── Jaguar Watermark Overlay ─── */
+body::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: url('img/jaguar-hero-full.jpg') center / cover no-repeat !important;
+    opacity: 0.12 !important;
+    z-index: 500 !important;
+    pointer-events: none !important;
+}
+
+/* ─── Global Texture Overlay ─── */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0.018;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+}
+
+/* ─── Premium Scrollbar ─── */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--lux-gold-dark), var(--lux-gold), var(--lux-gold-dark));
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--lux-gold), var(--lux-gold-light), var(--lux-gold));
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--lux-gold-dark) rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Selection Color ─── */
+::selection {
+    background: rgba(212, 168, 67, 0.35);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(212, 168, 67, 0.35);
+    color: #fff;
+}
+
+/* ─── Typography Elevation ─── */
+h1, .title, .hero-title {
+    font-family: var(--font-display) !important;
+    letter-spacing: -0.02em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+h2, h3, .module-title, .guide-title, .story-title, .section-title,
+.progress-title, .region-title, .dest-name {
+    font-family: var(--font-display) !important;
+    letter-spacing: -0.01em;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* ─── Premium Glass Cards ─── */
+.hero-section,
+.progress-section,
+.story-intro,
+.yaguara-guide,
+.region-info,
+.coming-soon,
+.cta-section,
+.yaguara-status {
+    background: var(--lux-glass) !important;
+    backdrop-filter: blur(24px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
+    border: 1px solid var(--lux-glass-border) !important;
+    box-shadow: var(--lux-shadow-md), var(--lux-shadow-inset) !important;
+    transition: box-shadow var(--lux-duration) var(--lux-ease),
+                transform var(--lux-duration) var(--lux-ease),
+                border-color var(--lux-duration) var(--lux-ease) !important;
+}
+
+.hero-section {
+    border: 1px solid rgba(212, 168, 67, 0.25) !important;
+    box-shadow: var(--lux-shadow-lg), var(--lux-shadow-glow), var(--lux-shadow-inset) !important;
+}
+
+/* ─── Luxury Module/Destination Cards ─── */
+.module-card,
+.destination-card,
+.subpage-card,
+.level-card {
+    background: var(--lux-glass) !important;
+    backdrop-filter: blur(20px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.3) !important;
+    border: 1px solid var(--lux-glass-border) !important;
+    box-shadow: var(--lux-shadow-md), var(--lux-shadow-inset) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-card:hover,
+.destination-card:hover,
+.subpage-card:hover,
+.level-card:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    border-color: rgba(212, 168, 67, 0.4) !important;
+    box-shadow: var(--lux-shadow-lg), 0 0 30px rgba(212, 168, 67, 0.15), var(--lux-shadow-inset) !important;
+}
+
+/* Top gold accent line on hover */
+.module-card::before,
+.destination-card::before,
+.subpage-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: var(--lux-gold-shimmer) !important;
+    background-size: 200% 100% !important;
+    opacity: 0 !important;
+    transition: opacity var(--lux-duration) var(--lux-ease) !important;
+    animation: shimmerSlide 3s linear infinite !important;
+    animation-play-state: paused !important;
+}
+
+.module-card:hover::before,
+.destination-card:hover::before,
+.subpage-card:hover::before {
+    opacity: 1 !important;
+    animation-play-state: running !important;
+}
+
+@keyframes shimmerSlide {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* ─── Luxury Stat/Metric Blocks ─── */
+.stat,
+.stat-box,
+.metric-card {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: var(--lux-shadow-sm), var(--lux-shadow-inset) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat:hover,
+.stat-box:hover,
+.metric-card:hover {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: rgba(212, 168, 67, 0.3) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 20px rgba(212, 168, 67, 0.1) !important;
+}
+
+.stat-value,
+.stat-number {
+    background: linear-gradient(135deg, var(--lux-gold-light), var(--lux-gold), var(--lux-gold-dark)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 800 !important;
+}
+
+/* ─── Premium Buttons ─── */
+.btn-primary,
+.nav-cta,
+.module-number,
+.amazon-badge,
+.level-badge,
+.region-badge,
+[class*="btn-start"],
+[class*="btn-play"] {
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+/* Shimmer sweep on buttons */
+.btn-primary::after,
+.nav-cta::after,
+.amazon-badge::after,
+.level-badge::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 60% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent) !important;
+    transform: skewX(-20deg) !important;
+    transition: left 0.6s var(--lux-ease) !important;
+    pointer-events: none !important;
+}
+
+.btn-primary:hover::after,
+.nav-cta:hover::after,
+.amazon-badge:hover::after,
+.level-badge:hover::after {
+    left: 120% !important;
+}
+
+.btn-primary:hover,
+.nav-cta:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 25px rgba(212, 168, 67, 0.3) !important;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    border-color: rgba(212, 168, 67, 0.5) !important;
+    box-shadow: var(--lux-shadow-sm), 0 0 15px rgba(212, 168, 67, 0.15) !important;
+}
+
+/* ─── Navigation Bar Premium ─── */
+.nav-bar,
+.header {
+    backdrop-filter: blur(30px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(1.5) !important;
+    border-bottom: 1px solid rgba(212, 168, 67, 0.15) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.brand-text h1,
+.nav-brand h1 {
+    font-family: var(--font-display) !important;
+    background: linear-gradient(135deg, var(--lux-gold-light) 0%, var(--lux-gold) 50%, var(--lux-gold-dark) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    letter-spacing: 0.01em !important;
+}
+
+.nav-link {
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+    position: relative !important;
+}
+
+.nav-link::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 1px !important;
+    background: var(--lux-gold) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+    transform: translateX(-50%) !important;
+}
+
+.nav-link:hover::after {
+    width: 70% !important;
+}
+
+/* ─── Logo Premium Glow ─── */
+.logo {
+    box-shadow: 0 0 15px rgba(212, 168, 67, 0.3), var(--lux-shadow-sm) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+.logo:hover {
+    box-shadow: 0 0 25px rgba(212, 168, 67, 0.5), 0 0 50px rgba(212, 168, 67, 0.2), var(--lux-shadow-md) !important;
+    transform: scale(1.05) !important;
+}
+
+/* ─── Jaguar Hero Premium ─── */
+.jaguar-hero,
+.hero-logo,
+.jaguar-logo,
+.jaguar {
+    background: #0a0a0a !important;
+    box-shadow: 0 0 40px rgba(212, 168, 67, 0.4), 0 0 80px rgba(212, 168, 67, 0.15), var(--lux-shadow-lg) !important;
+    border: 3px solid rgba(212, 168, 67, 0.6) !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+    transition: all var(--lux-duration-slow) var(--lux-ease) !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    display: block !important;
+    position: relative !important;
+}
+
+/* Kill the rotating glow pseudo-element */
+.jaguar-hero::after,
+.hero-logo::after,
+.jaguar-logo::after,
+.jaguar::after {
+    display: none !important;
+}
+
+.jaguar-hero img,
+.hero-logo img,
+.jaguar-logo img,
+.jaguar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 11% !important;
+    border-radius: 0 !important;
+    display: block !important;
+    transform: scale(1.9) !important;
+    transition: transform 0.6s var(--lux-ease) !important;
+}
+
+.jaguar-hero:hover img,
+.hero-logo:hover img,
+.jaguar-logo:hover img,
+.jaguar:hover img {
+    transform: scale(1.06) !important;
+}
+
+.jaguar-hero:hover,
+.hero-logo:hover,
+.jaguar-logo:hover,
+.jaguar:hover {
+    box-shadow: 0 0 50px rgba(212, 168, 67, 0.6), 0 0 100px rgba(212, 168, 67, 0.25), var(--lux-shadow-xl) !important;
+    border-color: rgba(212, 168, 67, 0.8) !important;
+}
+
+/* Logo with photo */
+.logo {
+    background: #0a0a0a !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    display: block !important;
+    position: relative !important;
+}
+
+.logo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 11% !important;
+    border-radius: 0 !important;
+    display: block !important;
+    transform: scale(1.9) !important;
+    transition: transform 0.6s var(--lux-ease) !important;
+}
+
+/* Yaguara avatar with photo */
+.yaguara-avatar {
+    background: #0a0a0a !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    display: block !important;
+    position: relative !important;
+}
+
+.yaguara-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 11% !important;
+    border-radius: 0 !important;
+    display: block !important;
+    transform: scale(1.9) !important;
+    transition: transform 0.6s var(--lux-ease) !important;
+}
+
+/* ─── Gold Gradient Text for Titles ─── */
+.title,
+.hero-title {
+    background: linear-gradient(135deg, #fff 0%, var(--lux-gold-light) 30%, var(--lux-gold) 60%, #fff 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    background-size: 200% 200% !important;
+    animation: titleShimmer 6s ease-in-out infinite !important;
+}
+
+@keyframes titleShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* ─── Premium Progress Bars ─── */
+.progress-bar,
+.progress-fill,
+[class*="progress"] > div {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.progress-fill::after,
+[class*="progress-bar-fill"]::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 50% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent) !important;
+    animation: progressShimmer 2.5s ease-in-out infinite !important;
+}
+
+@keyframes progressShimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+/* ─── Premium Borders with Gold Glow ─── */
+.hero-section,
+.yaguara-guide,
+.yaguara-status {
+    border-image: linear-gradient(135deg, rgba(212,168,67,0.4), rgba(212,168,67,0.15), rgba(212,168,67,0.4)) 1 !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-radius: 20px !important;
+    /* border-image breaks border-radius, so use outline trick */
+    border-image: none !important;
+    border: 1px solid rgba(212, 168, 67, 0.25) !important;
+    outline: 1px solid rgba(212, 168, 67, 0.08) !important;
+    outline-offset: 3px !important;
+}
+
+/* ─── Luxury Dividers ─── */
+hr {
+    border: none !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.4), transparent) !important;
+    margin: 2rem 0 !important;
+}
+
+/* ─── Premium Footer ─── */
+.footer {
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid rgba(212, 168, 67, 0.2) !important;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.footer h3 {
+    font-family: var(--font-display) !important;
+    background: linear-gradient(135deg, var(--lux-gold-light), var(--lux-gold)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.footer a {
+    transition: all 0.3s var(--lux-ease) !important;
+    position: relative !important;
+}
+
+.footer a:hover {
+    color: var(--lux-gold-light) !important;
+    text-shadow: 0 0 10px rgba(212, 168, 67, 0.3) !important;
+}
+
+/* ─── Premium Input Fields ─── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #fff !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+    box-shadow: var(--lux-shadow-inset) !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: rgba(212, 168, 67, 0.5) !important;
+    box-shadow: var(--lux-shadow-inset), 0 0 20px rgba(212, 168, 67, 0.15) !important;
+    outline: none !important;
+}
+
+/* ─── Premium Link Hover ─── */
+a {
+    transition: color 0.3s var(--lux-ease), text-shadow 0.3s var(--lux-ease) !important;
+}
+
+/* ─── Floating Elements Refinement ─── */
+.floating-elements,
+.bg-graphics {
+    opacity: 0.5 !important;
+}
+
+.forest-element,
+.float-el {
+    opacity: 0.35 !important;
+    filter: blur(0.5px) !important;
+}
+
+/* ─── Premium Tooltip / Toast Styles ─── */
+.notification,
+.toast,
+[class*="notification"],
+[class*="toast"] {
+    backdrop-filter: blur(20px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.5) !important;
+    border: 1px solid rgba(212, 168, 67, 0.2) !important;
+    box-shadow: var(--lux-shadow-lg) !important;
+}
+
+/* ─── Premium Completed State ─── */
+.module-card.completed,
+.destination-card.completed {
+    border-color: rgba(76, 175, 80, 0.35) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 20px rgba(76, 175, 80, 0.1) !important;
+}
+
+.module-card.completed:hover,
+.destination-card.completed:hover {
+    border-color: rgba(76, 175, 80, 0.5) !important;
+    box-shadow: var(--lux-shadow-lg), 0 0 30px rgba(76, 175, 80, 0.15) !important;
+}
+
+/* ─── Current / Active Card Premium Pulse ─── */
+.module-card.current,
+.destination-card.current,
+.destination-card.available {
+    border-color: rgba(212, 168, 67, 0.4) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 25px rgba(212, 168, 67, 0.15) !important;
+    animation: luxPulse 4s ease-in-out infinite !important;
+}
+
+@keyframes luxPulse {
+    0%, 100% { box-shadow: var(--lux-shadow-md), 0 0 25px rgba(212, 168, 67, 0.15); }
+    50% { box-shadow: var(--lux-shadow-md), 0 0 40px rgba(212, 168, 67, 0.25); }
+}
+
+/* ─── Locked Card Elegance ─── */
+.module-card.locked,
+.destination-card.locked {
+    opacity: 0.5 !important;
+    filter: saturate(0.4) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+/* ─── Premium Back Button ─── */
+.back-btn,
+[class*="back-btn"],
+[class*="btn-back"] {
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+.back-btn:hover,
+[class*="back-btn"]:hover,
+[class*="btn-back"]:hover {
+    border-color: rgba(212, 168, 67, 0.4) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 15px rgba(212, 168, 67, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ─── Premium Mobile Menu ─── */
+.mobile-menu {
+    background: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(30px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(1.5) !important;
+    border-bottom: 1px solid rgba(212, 168, 67, 0.15) !important;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+.mobile-menu-item:hover {
+    color: var(--lux-gold-light) !important;
+    padding-left: 1.5rem !important;
+    text-shadow: 0 0 10px rgba(212, 168, 67, 0.3) !important;
+}
+
+.menu-bar {
+    background: linear-gradient(135deg, var(--lux-gold-light), var(--lux-gold)) !important;
+    border-radius: 3px !important;
+}
+
+/* ─── Vocabulary / Word Preview Blocks ─── */
+.vocabulary-preview,
+.vocab-container,
+[class*="vocab"] {
+    border: 1px solid rgba(76, 175, 80, 0.2) !important;
+    background: rgba(76, 175, 80, 0.05) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+}
+
+/* ─── Page Load Entrance Animation ─── */
+@keyframes luxFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section,
+.hero-content,
+.main-content > section,
+.main-content > .hero-section {
+    animation: luxFadeUp 0.8s var(--lux-ease) both !important;
+}
+
+.progress-section,
+.story-intro,
+.yaguara-guide {
+    animation: luxFadeUp 0.8s var(--lux-ease) 0.15s both !important;
+}
+
+.lesson-modules,
+.destinations-grid,
+.subpage-grid {
+    animation: luxFadeUp 0.8s var(--lux-ease) 0.3s both !important;
+}
+
+.module-card:nth-child(1) { animation: luxFadeUp 0.6s var(--lux-ease) 0.35s both !important; }
+.module-card:nth-child(2) { animation: luxFadeUp 0.6s var(--lux-ease) 0.4s both !important; }
+.module-card:nth-child(3) { animation: luxFadeUp 0.6s var(--lux-ease) 0.45s both !important; }
+.module-card:nth-child(4) { animation: luxFadeUp 0.6s var(--lux-ease) 0.5s both !important; }
+.module-card:nth-child(5) { animation: luxFadeUp 0.6s var(--lux-ease) 0.55s both !important; }
+.module-card:nth-child(6) { animation: luxFadeUp 0.6s var(--lux-ease) 0.6s both !important; }
+
+.destination-card:nth-child(1) { animation: luxFadeUp 0.6s var(--lux-ease) 0.35s both !important; }
+.destination-card:nth-child(2) { animation: luxFadeUp 0.6s var(--lux-ease) 0.4s both !important; }
+.destination-card:nth-child(3) { animation: luxFadeUp 0.6s var(--lux-ease) 0.45s both !important; }
+.destination-card:nth-child(4) { animation: luxFadeUp 0.6s var(--lux-ease) 0.5s both !important; }
+.destination-card:nth-child(5) { animation: luxFadeUp 0.6s var(--lux-ease) 0.55s both !important; }
+
+/* ─── Premium Focus States (Accessibility) ─── */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--lux-gold) !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 4px rgba(212, 168, 67, 0.2) !important;
+}
+
+/* ─── Luxury Game Modal (A2 Advanced Pattern) ─── */
+.game-modal,
+.modal,
+[class*="modal"] {
+    backdrop-filter: blur(25px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(1.3) !important;
+}
+
+.modal-content,
+.game-modal-content,
+[class*="modal-content"] {
+    border: 1px solid rgba(212, 168, 67, 0.2) !important;
+    box-shadow: var(--lux-shadow-xl), 0 0 60px rgba(212, 168, 67, 0.1) !important;
+}
+
+/* ─── Game Grid Cards ─── */
+.game-card,
+[class*="game-card"],
+.game-btn {
+    background: var(--lux-glass) !important;
+    border: 1px solid var(--lux-glass-border) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+.game-card:hover,
+[class*="game-card"]:hover,
+.game-btn:hover {
+    transform: translateY(-4px) scale(1.02) !important;
+    border-color: rgba(212, 168, 67, 0.3) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 20px rgba(212, 168, 67, 0.1) !important;
+}
+
+/* ─── Matching Game Pairs Premium ─── */
+.match-card,
+.pair-card,
+[class*="match-item"],
+[class*="pair-item"] {
+    transition: all var(--lux-duration) var(--lux-bounce) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+}
+
+.match-card:hover,
+.pair-card:hover,
+[class*="match-item"]:hover,
+[class*="pair-item"]:hover {
+    transform: scale(1.03) translateY(-2px) !important;
+    box-shadow: var(--lux-shadow-md) !important;
+}
+
+/* ─── Word Bank Premium ─── */
+.word-bank-item,
+.word-option,
+[class*="word-btn"],
+[class*="option-btn"],
+.option {
+    transition: all 0.25s var(--lux-bounce) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+}
+
+.word-bank-item:hover,
+.word-option:hover,
+[class*="word-btn"]:hover,
+[class*="option-btn"]:hover,
+.option:hover {
+    transform: translateY(-3px) scale(1.04) !important;
+    box-shadow: var(--lux-shadow-md) !important;
+}
+
+/* ─── Correct/Incorrect State Premium ─── */
+.correct,
+[class*="correct"] {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3), var(--lux-shadow-sm) !important;
+}
+
+.incorrect,
+.wrong,
+[class*="incorrect"],
+[class*="wrong"] {
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.3), var(--lux-shadow-sm) !important;
+}
+
+/* ─── Vignette Depth Effect ─── */
+body {
+    background-attachment: fixed !important;
+}
+
+/* Subtle vignette for cinematic depth */
+.main-content,
+.main,
+.container {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* ─── Language Cards Polish (languages.html) ─── */
+.lc {
+    background: var(--lux-glass) !important;
+    backdrop-filter: blur(16px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(1.3) !important;
+    border: 1px solid var(--lux-glass-border) !important;
+    box-shadow: var(--lux-shadow-sm), var(--lux-shadow-inset) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+.lc:hover {
+    transform: translateY(-6px) scale(1.03) !important;
+    border-color: rgba(212, 168, 67, 0.5) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 25px rgba(212, 168, 67, 0.2) !important;
+}
+
+.ln {
+    font-family: var(--font-display) !important;
+    background: linear-gradient(135deg, var(--lux-gold-light), var(--lux-gold)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ─── Feature Cards Polish ─── */
+.features {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2.5rem !important;
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.feature-card,
+.feat {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.85), rgba(10, 10, 10, 0.95)) !important;
+    backdrop-filter: blur(24px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.3) !important;
+    border: 1px solid rgba(212, 168, 67, 0.2) !important;
+    border-radius: 20px !important;
+    box-shadow: var(--lux-shadow-sm), var(--lux-shadow-inset) !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.feature-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, transparent, var(--lux-gold), transparent) !important;
+    opacity: 0 !important;
+    transition: opacity 0.5s ease !important;
+}
+
+.feature-card::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    border-radius: 20px !important;
+    background: radial-gradient(ellipse at 50% 0%, rgba(212, 168, 67, 0.06) 0%, transparent 70%) !important;
+    pointer-events: none !important;
+}
+
+.feature-card:hover,
+.feat:hover {
+    transform: translateY(-12px) !important;
+    border-color: rgba(212, 168, 67, 0.5) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 168, 67, 0.12) !important;
+}
+
+.feature-card:hover::before {
+    opacity: 1 !important;
+}
+
+.feature-icon {
+    filter: drop-shadow(0 4px 12px rgba(212, 168, 67, 0.3)) !important;
+}
+
+.feature-title,
+.feat h3 {
+    font-family: var(--font-display) !important;
+    letter-spacing: 0.03em !important;
+}
+
+.feature-desc {
+    color: rgba(224, 224, 224, 0.85) !important;
+    line-height: 1.7 !important;
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ─── Free Badge & Badges Polish ─── */
+.free-badge,
+.level-badge,
+.region-badge,
+.coming-soon-badge {
+    box-shadow: var(--lux-shadow-sm), 0 0 15px rgba(212, 168, 67, 0.15) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+/* ─── Hero Avatar / Guide Avatar Polish ─── */
+.hero-avatar,
+.guide-avatar {
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    position: relative !important;
+}
+
+.hero-avatar img,
+.guide-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 15% !important;
+    border-radius: 0 !important;
+    display: block !important;
+    transform: scale(1.0) !important;
+    transition: transform 0.6s var(--lux-ease) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.hero-avatar:hover img,
+.guide-avatar:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* ─── Free Section / About Section Depth ─── */
+.free-section,
+.about-section,
+.contact-section {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.free-feature {
+    background: var(--lux-glass) !important;
+    border: 1px solid var(--lux-glass-border) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+.free-feature:hover {
+    border-color: rgba(212, 168, 67, 0.3) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: var(--lux-shadow-md) !important;
+}
+
+/* ─── Search Box Polish ─── */
+.search-box input {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 2px solid rgba(212, 168, 67, 0.2) !important;
+    box-shadow: var(--lux-shadow-inset) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+.search-box input:focus {
+    border-color: rgba(212, 168, 67, 0.6) !important;
+    box-shadow: var(--lux-shadow-inset), 0 0 30px rgba(212, 168, 67, 0.15) !important;
+}
+
+/* ─── Detail Cards Polish ─── */
+.detail-card {
+    background: var(--lux-glass) !important;
+    border: 1px solid var(--lux-glass-border) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+}
+
+.detail-card:hover {
+    border-color: rgba(212, 168, 67, 0.3) !important;
+    box-shadow: var(--lux-shadow-md) !important;
+}
+
+.species-tag,
+.cultural-tag {
+    transition: all 0.25s var(--lux-ease) !important;
+}
+
+.species-tag:hover,
+.cultural-tag:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--lux-shadow-sm) !important;
+}
+
+/* ─── Nav Style for Translation/Language Pages ─── */
+.nav {
+    backdrop-filter: blur(30px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(1.5) !important;
+    border-bottom: 1px solid rgba(212, 168, 67, 0.15) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.nav .brand h1 {
+    font-family: var(--font-display) !important;
+    background: linear-gradient(135deg, var(--lux-gold-light) 0%, var(--lux-gold) 50%, var(--lux-gold-dark) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ─── CTA Button Deep Polish ─── */
+.btn,
+.cta {
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all var(--lux-duration) var(--lux-ease) !important;
+    box-shadow: var(--lux-shadow-sm), 0 0 20px rgba(212, 168, 67, 0.2) !important;
+}
+
+.btn:hover,
+.cta:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: var(--lux-shadow-md), 0 0 30px rgba(212, 168, 67, 0.3) !important;
+}
+
+.btn::after,
+.cta::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 60% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent) !important;
+    transform: skewX(-20deg) !important;
+    transition: left 0.6s var(--lux-ease) !important;
+    pointer-events: none !important;
+}
+
+.btn:hover::after,
+.cta:hover::after {
+    left: 120% !important;
+}
+
+/* ─── Hero Section Enhancement ─── */
+.hero {
+    position: relative !important;
+}
+
+.hero h1,
+.main-title {
+    font-family: var(--font-display) !important;
+    letter-spacing: -0.02em !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+/* ─── Reduced Motion Respect ─── */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.15s !important;
+    }
+}
+
+/* ─── Print Styles ─── */
+@media print {
+    body::before,
+    body::after,
+    .floating-elements,
+    .bg-graphics,
+    .nav-bar {
+        display: none !important;
+    }
+}

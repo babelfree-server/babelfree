@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 58: El esp&iacute;ritu completo &mdash; Maestr&iacute;a total</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_advanced/dest58_total_mastery/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 58: El espíritu completo — Maestría total",
+          "url": "https://babelfree.com/c2_advanced/dest58_total_mastery/games",
+          "educationalLevel": "C2 Advanced - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Total mastery", "Complete language proficiency", "Spanish fluency"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Advanced", "item": "https://babelfree.com/c2-colombia" },
+            { "@type": "ListItem", "position": 4, "name": "El espíritu completo — Maestría total" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-colombia" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 58: El esp&iacute;ritu completo</div>
+            <div class="yg-header-subtitle">Maestr&iacute;a total</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — Los tres mundos convergen ===
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee cómo los tres mundos del viaje convergen en un solo punto.',
+        text: 'Yaguará estaba de pie en un lugar que no pertenecía a ningún mapa: un claro donde la selva del Chocó se fundía con las cumbres andinas, donde el río Amazonas desembocaba en el mar Caribe y donde las estrellas del llano brillaban a pleno día. Era imposible, y sin embargo estaba ocurriendo. Los tres mundos —el de Abajo, el del Medio, el de Arriba— habían convergido. Porque así funciona el dominio de una lengua: no es un camino lineal de lo simple a lo complejo, sino una espiral que regresa siempre a las mismas palabras, pero cada vez con más profundidad. El «hola» que Yaguará había aprendido en su primer destino no era el mismo «hola» que pronunciaba ahora. Contenía cincuenta y siete destinos de significado. Contenía familia, sonidos, agua, casa, comida, amigos. Contenía mercados, viajes, fiestas, historias, problemas, sueños. Contenía opiniones, trabajos, tradiciones, descubrimientos, conflictos, horizontes. Contenía interpretaciones, debates, metáforas, estructuras, análisis, síntesis. Contenía traducciones, crónicas, variaciones, guardianes. Un solo «hola» que era todos los mundos a la vez.'
+    },
+    // === GAME 2: Narrative — La prueba final de Los Antiguos ===
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee sobre la última prueba que Los Antiguos le proponen a Yaguará.',
+        text: 'Los Antiguos aparecieron por última vez. No como constelaciones ni como pinturas rupestres: esta vez se materializaron como lo que siempre habían sido: voces. Voces sin cuerpo, que hablaban desde todas las direcciones a la vez. «Hemos venido a hacerte una sola pregunta», dijeron. «No es sobre gramática. No es sobre vocabulario. No es sobre cultura ni sobre retórica. Es más sencilla que todo eso, y más difícil.» Yaguará esperó. «La pregunta es: ¿para qué sirve una lengua?» Y Yaguará comprendió que no había una respuesta correcta. Que la respuesta dependía de quién la pronunciara. Para un niño, una lengua servía para pedir agua. Para un poeta, para crear mundos. Para un abogado, para defender derechos. Para una madre, para cantar una nana. Para un médico, para nombrar el dolor. Para un maestro, para encender la comprensión. Para un traductor, para tender puentes. Para un lingüista, para entender la mente humana. «¿Y para ti?», preguntaron Los Antiguos. «¿Para qué sirve tu lengua?»'
+    },
+    // === GAME 3: Narrative — La Sombra habla por última vez ===
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee el último encuentro de Yaguará con La Sombra, su miedo a hablar.',
+        text: 'Antes de que Yaguará pudiera responder, La Sombra apareció. Pero ya no era la figura oscura y amenazante de los primeros destinos. Era una silueta translúcida, casi invisible, que hablaba con voz suave: «¿Recuerdas cuando tenías miedo de equivocarte? ¿Cuando cada error te parecía una catástrofe? ¿Cuando no hablabas porque temías que se rieran de ti?». Yaguará recordaba. «Yo soy ese miedo», continuó La Sombra. «Y quiero que sepas que no voy a desaparecer. Incluso ahora, incluso después de cincuenta y ocho destinos, seguiré aquí. Cada vez que hables ante un público, cada vez que escribas algo importante, cada vez que intentes una palabra nueva en un contexto desconocido, yo estaré ahí. Pero ya no soy tu enemiga. Soy la señal de que lo que dices te importa. El miedo no es lo contrario del dominio: es su compañero. Solo tiene miedo quien tiene algo que decir.» Y La Sombra, por primera vez, sonrió. Y Yaguará la abrazó.'
+    },
+    // === GAME 4: Narrative — La Palabra del Corazón ===
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee sobre La Palabra del Corazón: la palabra que contiene todas las demás.',
+        text: 'Los Antiguos repitieron la pregunta: «¿Para qué sirve tu lengua?». Y Yaguará, en lugar de responder con una frase, respondió con una sola palabra. No la dijo en voz alta: la pensó, y el mundo entero la escuchó. Era La Palabra del Corazón. La tradición decía que cada guardián tenía una: la palabra que contenía todas las demás, la palabra que resumía todo lo aprendido, todo lo vivido, todo lo sentido. Para Abuela Ceiba era «raíz». Para Cóndor Viejo era «horizonte». Para Delfín Rosado era «corriente». Para Mamá Jaguar era «cría». ¿Cuál era la de Yaguará? Eso nunca se reveló, porque La Palabra del Corazón era intransferible. Cada guardián debía encontrar la suya. Y cada estudiante que completara este viaje también tendría una. No hacía falta buscarla: ya estaba ahí, desde el primer destino, esperando ser reconocida. La Palabra del Corazón no se aprendía: se descubría.'
+    },
+    // === GAME 5: Narrative — La Resurrección: el Espíritu del Jaguar ===
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee la transformación final de Yaguará: la Resurrección.',
+        text: 'Cuando Yaguará pronunció su Palabra del Corazón, el claro donde convergían los tres mundos se llenó de luz. No era la luz del sol ni de las estrellas: era la luz de todas las palabras que Yaguará había aprendido, desde «mamá» hasta «metalingüístico», desde «agua» hasta «intertextualidad», desde «hola» hasta «la condición humana se define por su capacidad de narrar». Cada palabra brillaba como una luciérnaga, y juntas formaban una constelación que tenía la forma de un jaguar. El Espíritu del Jaguar. No era un animal: era un símbolo. Era la prueba de que una lengua, cuando se domina de verdad, no es solo un instrumento de comunicación: es una forma de ser. Yaguará ya no era la cachorra tímida del primer destino. Ya no era la aprendiz que confundía «ser» y «estar». Ya no era la viajera que buscaba nombres perdidos. Era una guardiana. Y como toda guardiana, su misión no era guardar el conocimiento para sí misma: era transmitirlo.'
+    },
+    // === GAME 6: Narrative — El adiós de Yaguará ===
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee las últimas palabras de Yaguará. El final del viaje es el principio del tuyo.',
+        text: 'Yaguará miró al estudiante —a ti, que has llegado hasta aquí— y habló por última vez: «Cuando empezamos, yo no sabía hablar y tú no sabías español. Ahora los dos sabemos algo que va más allá de las palabras: sabemos que una lengua es un mundo entero. Que aprender español no era aprender reglas ni vocabulario: era aprender a pensar como piensan millones de personas, a sentir lo que sienten, a reír con sus chistes, a llorar con sus canciones, a discutir con sus argumentos, a soñar con sus metáforas. Yo encontré mi Palabra del Corazón. Ahora te toca a ti encontrar la tuya. No está en un diccionario. No está en una gramática. Está en el momento exacto en que una palabra deja de ser un sonido y se convierte en algo que sientes. Ese momento ya ocurrió. Solo tienes que recordar cuándo.» Y Yaguará, el Espíritu del Jaguar, se convirtió en luz y entró en las palabras. Todas las palabras. Para siempre.'
+    },
+    // === GAME 7: FIB — Integración de todos los dominios lingüísticos ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa oraciones que integran todos los dominios lingüísticos del viaje.',
+        sentences: [
+            { text: 'La ___ es la rama de la lingüística que estudia los sonidos de una lengua, mientras que la morfología estudia la estructura de las palabras.', blank: 'fonología', options: ['fonología', 'sintaxis', 'semántica', 'pragmática'] },
+            { text: 'El ___ comunicativo incluye no solo la gramática sino también la competencia sociolingüística, discursiva y estratégica.', blank: 'enfoque', options: ['enfoque', 'método', 'sistema', 'modelo'] },
+            { text: 'Un texto ___ combina elementos narrativos, descriptivos, expositivos y argumentativos para crear un efecto estético.', blank: 'literario', options: ['literario', 'académico', 'periodístico', 'jurídico'] },
+            { text: 'La ___ intercultural implica no solo traducir palabras sino adaptar significados, registros y referencias culturales.', blank: 'mediación', options: ['mediación', 'traducción', 'interpretación', 'comunicación'] },
+            { text: 'El Marco Común Europeo de Referencia establece seis ___ de competencia lingüística, desde A1 hasta C2.', blank: 'niveles', options: ['niveles', 'grados', 'etapas', 'categorías'] },
+            { text: 'La variación ___ se refiere a los cambios en la lengua según la región geográfica del hablante.', blank: 'diatópica', options: ['diatópica', 'diastrática', 'diafásica', 'diacrónica'] }
+        ]
+    },
+    // === GAME 8: FIB — Maestría retórica y estilística ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa oraciones sobre recursos retóricos, estilísticos y discursivos.',
+        sentences: [
+            { text: 'La ___ consiste en repetir una palabra o estructura al inicio de frases consecutivas para crear ritmo y énfasis.', blank: 'anáfora', options: ['anáfora', 'antítesis', 'metáfora', 'elipsis'] },
+            { text: 'El registro ___ se caracteriza por léxico especializado, sintaxis compleja y un tono impersonal y objetivo.', blank: 'académico', options: ['académico', 'literario', 'coloquial', 'periodístico'] },
+            { text: 'Un ___ es un recurso argumentativo que apela a la credibilidad y autoridad del emisor.', blank: 'argumento de autoridad', options: ['argumento de autoridad', 'silogismo', 'ejemplo', 'dato estadístico'] },
+            { text: 'La ___ es la disciplina que estudia el significado de las palabras y las relaciones entre ellas (sinonimia, antonimia, polisemia).', blank: 'semántica', options: ['semántica', 'sintaxis', 'pragmática', 'morfología'] },
+            { text: 'En un ensayo argumentativo, la ___ presenta la idea central que el autor defenderá a lo largo del texto.', blank: 'tesis', options: ['tesis', 'introducción', 'conclusión', 'hipótesis'] },
+            { text: 'El ___ periodístico exige objetividad, precisión y la estructura de pirámide invertida: lo más importante primero.', blank: 'estilo', options: ['estilo', 'género', 'formato', 'registro'] }
+        ]
+    },
+    // === GAME 9: FIB — Cultura, identidad y lengua ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa oraciones que integran cultura colombiana, identidad y competencia lingüística.',
+        sentences: [
+            { text: 'Colombia tiene más de 65 lenguas ___ además del español, pertenecientes a familias como la chibcha, la arawak y la tucano.', blank: 'indígenas', options: ['indígenas', 'oficiales', 'regionales', 'criollas'] },
+            { text: 'El ___ es un fenómeno lingüístico del español rioplatense y de algunas regiones colombianas que usa «vos» en lugar de «tú».', blank: 'voseo', options: ['voseo', 'tuteo', 'ustedeo', 'loísmo'] },
+            { text: 'Gabriel García Márquez recibió el Premio Nobel de Literatura en 1982 por su obra maestra, Cien años de ___.', blank: 'soledad', options: ['soledad', 'silencio', 'historia', 'memoria'] },
+            { text: 'La cumbia, el vallenato, la salsa y el ___ son géneros musicales que reflejan la diversidad cultural de Colombia.', blank: 'currulao', options: ['currulao', 'reggaetón', 'bolero', 'tango'] },
+            { text: 'El concepto de «hablante ___» ha sido cuestionado por la sociolingüística moderna, que prefiere hablar de «hablante competente».', blank: 'nativo', options: ['nativo', 'ideal', 'fluido', 'bilingüe'] },
+            { text: 'La tradición oral colombiana incluye formas como el alabao, la décima, la copla y la ___ vallenata.', blank: 'piqueria', options: ['piqueria', 'cumbia', 'gaita', 'champeta'] }
+        ]
+    },
+    // === GAME 10: FIB — Metalingüística y análisis del discurso ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa oraciones sobre análisis metalingüístico y discursivo.',
+        sentences: [
+            { text: 'La ___ es la capacidad de usar la lengua para hablar sobre la propia lengua: analizar, describir y reflexionar sobre su funcionamiento.', blank: 'competencia metalingüística', options: ['competencia metalingüística', 'competencia comunicativa', 'competencia cultural', 'competencia estratégica'] },
+            { text: 'Un acto de ___ indirecto ocurre cuando el significado literal de una oración no coincide con la intención del hablante.', blank: 'habla', options: ['habla', 'lengua', 'discurso', 'comunicación'] },
+            { text: 'La ___ del discurso estudia cómo los textos se organizan más allá de la oración: cohesión, coherencia, estructura temática.', blank: 'lingüística', options: ['lingüística', 'gramática', 'retórica', 'estilística'] },
+            { text: 'Las ___ conversacionales de Grice (cantidad, calidad, relación, manera) describen los principios implícitos que rigen la comunicación cooperativa.', blank: 'máximas', options: ['máximas', 'reglas', 'normas', 'leyes'] },
+            { text: 'La ___ es un cambio de código que ocurre cuando un hablante bilingüe alterna entre dos lenguas dentro de una misma conversación.', blank: 'alternancia', options: ['alternancia', 'interferencia', 'transferencia', 'mezcla'] }
+        ]
+    },
+    // === GAME 11: Conjugation — Dominio absoluto del indicativo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga los verbos en el tiempo de indicativo correcto según el contexto.',
+        sentences: [
+            { text: 'Yaguará ___ (ser) una cachorra cuando empezó el viaje.', answer: 'era' },
+            { text: 'Cuando llegue a la cima, ___ (haber) recorrido tres mundos enteros.', answer: 'habrá' },
+            { text: 'Los Antiguos le ___ (decir) que la prueba final no era sobre gramática.', answer: 'dijeron' },
+            { text: 'Si Yaguará no ___ (haber) aprendido a escuchar, no habría entendido a La Sombra.', answer: 'hubiera' },
+            { text: 'Antes de encontrar su Palabra del Corazón, Yaguará ya ___ (atravesar) todos los ecosistemas.', answer: 'había atravesado' },
+            { text: 'En este momento, millones de personas ___ (hablar) español en el mundo.', answer: 'hablan' },
+            { text: 'Mañana, cuando mires atrás, ___ (comprender) cuánto has aprendido.', answer: 'comprenderás' },
+            { text: 'Para el año 2050, el español ___ (ser) la segunda lengua materna más hablada del planeta.', answer: 'será' }
+        ]
+    },
+    // === GAME 12: Conjugation — Dominio absoluto del subjuntivo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga los verbos en el tiempo de subjuntivo correcto según el contexto.',
+        sentences: [
+            { text: 'Los Antiguos pidieron que Yaguará ___ (encontrar) su Palabra del Corazón.', answer: 'encontrara' },
+            { text: 'Es fundamental que todo hablante ___ (conocer) la diferencia entre registro formal e informal.', answer: 'conozca' },
+            { text: 'Ojalá que esta lengua ___ (seguir) viva dentro de cien años.', answer: 'siga' },
+            { text: 'Si la última hablante del tinigua no ___ (haber) muerto, la lengua aún existiría.', answer: 'hubiera' },
+            { text: 'Es posible que el español ___ (tener) más de 600 millones de hablantes en 2060.', answer: 'tenga' },
+            { text: 'Abuela Ceiba quería que Yaguará ___ (aprender) a dar, no solo a tener.', answer: 'aprendiera' },
+            { text: 'No creo que ___ (existir) una lengua más fácil o más difícil que otra: todas son complejas a su manera.', answer: 'exista' },
+            { text: 'Cuando ___ (terminar) este destino, habrás completado todo el viaje.', answer: 'termines' }
+        ]
+    },
+    // === GAME 13: Conjugation — Indicativo vs. subjuntivo: la elección final ===
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Elige entre indicativo y subjuntivo según lo que exija cada contexto.',
+        sentences: [
+            { text: 'Es evidente que el español ___ (ser) una lengua de enorme riqueza dialectal.', answer: 'es' },
+            { text: 'No es evidente que el español ___ (ser) más fácil que otras lenguas.', answer: 'sea' },
+            { text: 'Yaguará sabía que La Sombra ___ (ir) a aparecer una última vez.', answer: 'iba' },
+            { text: 'Yaguará esperaba que La Sombra no ___ (volver) a asustarla.', answer: 'volviera' },
+            { text: 'Aunque el viaje ___ (haber) terminado, el aprendizaje continúa.', answer: 'ha' },
+            { text: 'Aunque el viaje ___ (ser) difícil, Yaguará nunca se rindió.', answer: 'fue' },
+            { text: 'Busco una palabra que ___ (contener) todo lo que he aprendido.', answer: 'contenga' },
+            { text: 'Encontré la palabra que ___ (contener) todo lo que he aprendido.', answer: 'contiene' }
+        ]
+    },
+    // === GAME 14: Conjugation — Perífrasis, voz pasiva y construcciones complejas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Completa con la forma verbal compleja adecuada: perífrasis, pasiva o construcción compuesta.',
+        sentences: [
+            { text: 'Las lenguas indígenas de Colombia ___ (deber / ser protegidas) por el Estado.', answer: 'deben ser protegidas' },
+            { text: 'Yaguará ___ (acabar de / completar) el viaje más largo de su vida.', answer: 'acaba de completar' },
+            { text: 'La tradición oral ___ (ir / desaparecer) si no se transmite a las nuevas generaciones.', answer: 'va a desaparecer' },
+            { text: 'La Palabra del Corazón no ___ (poder / ser enseñada): solo puede ser descubierta.', answer: 'puede ser enseñada' },
+            { text: 'Después de cincuenta y ocho destinos, el estudiante ___ (haber / demostrar) dominio en todos los niveles.', answer: 'ha demostrado' },
+            { text: 'Este viaje ___ (venir / transformar) nuestra comprensión de lo que significa aprender una lengua.', answer: 'viene transformando' }
+        ]
+    },
+    // === GAME 15: Pair — El viaje completo: nivel CEFR ↔ lo que Yaguará aprendió ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada nivel del viaje con lo que Yaguará aprendió en él.',
+        pairs: [
+            { left: 'A1 — La selva (familias, sonidos, necesidades)', right: 'Nombrar el mundo: decir quién soy, qué necesito, dónde vivo' },
+            { left: 'A2 — El río (mercados, viajes, fiestas)', right: 'Interactuar con el mundo: comprar, viajar, participar' },
+            { left: 'B1 — La montaña (opiniones, trabajo, tradiciones)', right: 'Opinar sobre el mundo: argumentar, explicar, comparar' },
+            { left: 'B2 — El mar (descubrimientos, conflictos, horizontes)', right: 'Analizar el mundo: debatir, investigar, sintetizar' },
+            { left: 'C1 — Las nubes (interpretación, estructuras, creación)', right: 'Interpretar el mundo: leer entre líneas, crear, persuadir' },
+            { left: 'C2 — Las estrellas (maestría, transmisión, identidad)', right: 'Transformar el mundo: mediar, enseñar, escribir, ser guardián' }
+        ]
+    },
+    // === GAME 16: Pair — Personaje ↔ lección que dejó ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada personaje del viaje con la lección fundamental que enseñó.',
+        pairs: [
+            { left: 'Mamá Jaguar', right: 'El amor es la primera razón para aprender a hablar' },
+            { left: 'Abuela Ceiba', right: 'Saber no es tener; saber es poder dar' },
+            { left: 'Colibrí', right: 'Ser pequeño no impide ser preciso y veloz' },
+            { left: 'Cóndor Viejo', right: 'Desde la altura se ven todas las conexiones' },
+            { left: 'La Sombra', right: 'El miedo a hablar es la señal de que tienes algo que decir' },
+            { left: 'Los Antiguos', right: 'La pregunta más difícil es la más sencilla' }
+        ]
+    },
+    // === GAME 17: Pair — Competencia lingüística ↔ ejemplo en la vida real ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada competencia lingüística con su manifestación en la vida real.',
+        pairs: [
+            { left: 'Competencia gramatical', right: 'Elegir entre indicativo y subjuntivo sin pensar' },
+            { left: 'Competencia sociolingüística', right: 'Adaptar el registro al interlocutor y al contexto' },
+            { left: 'Competencia discursiva', right: 'Organizar un texto con cohesión y coherencia' },
+            { left: 'Competencia estratégica', right: 'Reformular cuando el interlocutor no entiende' },
+            { left: 'Competencia intercultural', right: 'Entender el humor, la ironía y las referencias culturales' },
+            { left: 'Competencia metalingüística', right: 'Explicar por qué una oración es gramaticalmente incorrecta' }
+        ]
+    },
+    // === GAME 18: Listening — Análisis integral de un discurso complejo ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha este fragmento de un discurso de Gabriel García Márquez. Identifica los recursos retóricos, el registro y la intención comunicativa.',
+        transcript: '«Un día como hoy, mi maestro William Faulkner dijo en este lugar: "Me niego a admitir el fin del hombre". No me sentiría digno de ocupar este sitio que fue suyo si no tuviera la conciencia plena de que, por primera vez desde los orígenes de la humanidad, el desastre colosal que él se negaba a admitir hace treinta y dos años es ahora nada más que una simple posibilidad científica.»',
+        questions: [
+            { question: '¿Qué recurso retórico usa García Márquez al iniciar con una cita de Faulkner?', options: ['Argumento de autoridad e intertextualidad', 'Metáfora extendida', 'Anáfora', 'Ironía socrática'], answer: 'Argumento de autoridad e intertextualidad' },
+            { question: '¿Qué registro predomina en este fragmento?', options: ['Formal-académico con elementos literarios', 'Coloquial con toques de humor', 'Periodístico objetivo', 'Jurídico-administrativo'], answer: 'Formal-académico con elementos literarios' },
+            { question: '¿Qué efecto produce la estructura «No me sentiría digno... si no tuviera la conciencia»?', options: ['Un condicional irreal que expresa humildad retórica mientras afirma autoridad moral', 'Una negación simple que minimiza al orador', 'Una exageración humorística', 'Una pregunta retórica implícita'], answer: 'Un condicional irreal que expresa humildad retórica mientras afirma autoridad moral' },
+            { question: '¿Cuál es la intención comunicativa principal de este fragmento?', options: ['Establecer continuidad histórica para introducir una advertencia sobre el presente', 'Homenajear a William Faulkner', 'Describir un evento científico', 'Narrar una anécdota personal'], answer: 'Establecer continuidad histórica para introducir una advertencia sobre el presente' }
+        ]
+    },
+    // === GAME 19: Listening — Identificación de variación sociolingüística ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha estas cuatro versiones de la misma petición. Identifica el registro, la variedad y la estrategia comunicativa de cada una.',
+        transcript: 'Versión 1: «Oiga, hermano, ¿me hace un favor? Necesito que me preste una lucita ahí.» Versión 2: «Disculpe, señor, ¿sería tan amable de prestarme su encendedor un momento?» Versión 3: «Estimado señor, me permito solicitarle, si no es inconveniente, el préstamo temporal de su instrumento de ignición.» Versión 4: «Parcero, ¿tiene candela?»',
+        questions: [
+            { question: '¿Qué versión representa el registro coloquial bogotano con marcadores de cortesía?', options: ['Versión 1', 'Versión 2', 'Versión 3', 'Versión 4'], answer: 'Versión 1' },
+            { question: '¿Qué versión es una parodia del registro hiperformal o burocrático?', options: ['Versión 3', 'Versión 1', 'Versión 2', 'Versión 4'], answer: 'Versión 3' },
+            { question: '¿Qué versión usa «parcero» y «candela», marcadores del español coloquial colombiano urbano?', options: ['Versión 4', 'Versión 1', 'Versión 2', 'Versión 3'], answer: 'Versión 4' },
+            { question: '¿Qué fenómeno sociolingüístico ilustran las cuatro versiones juntas?', options: ['La variación diafásica: el mismo contenido cambia de registro según el contexto', 'La variación diatópica: cada versión es de una región diferente', 'La variación diacrónica: cada versión es de una época diferente', 'El bilingüismo: cada versión mezcla dos lenguas'], answer: 'La variación diafásica: el mismo contenido cambia de registro según el contexto' }
+        ]
+    },
+    // === GAME 20: Sorting — Fenómenos lingüísticos por dominio ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fenómeno lingüístico en el dominio al que pertenece.',
+        categories: ['Fonología', 'Morfología', 'Sintaxis', 'Semántica', 'Pragmática'],
+        items: [
+            { text: 'El seseo: pronunciar «c» y «z» como /s/', category: 'Fonología' },
+            { text: 'La formación de diminutivos con -ito, -ico, -illo', category: 'Morfología' },
+            { text: 'El orden sujeto-verbo-objeto como estructura básica del español', category: 'Sintaxis' },
+            { text: 'La polisemia de «banco» (asiento, institución financiera, banco de peces)', category: 'Semántica' },
+            { text: 'Entender «¿Tienes hora?» como una petición, no como una pregunta literal', category: 'Pragmática' },
+            { text: 'La aspiración de la /s/ final en el español caribeño', category: 'Fonología' },
+            { text: 'El uso del subjuntivo después de verbos de deseo, duda y emoción', category: 'Sintaxis' },
+            { text: 'Que «fresco» signifique «tranquilo» en Colombia pero «insolente» en otros países', category: 'Semántica' },
+            { text: 'Usar «usted» entre parejas en Bogotá como marca de intimidad', category: 'Pragmática' },
+            { text: 'La conjugación irregular del verbo «ir»: voy, fui, iba, iré', category: 'Morfología' }
+        ]
+    },
+    // === GAME 21: Sorting — Expresiones colombianas por región ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresión o fenómeno cultural en la región colombiana a la que pertenece.',
+        categories: ['Costa Caribe', 'Región Andina', 'Pacífico', 'Llanos Orientales', 'Amazonía'],
+        items: [
+            { text: 'El vallenato y la leyenda de Francisco el Hombre', category: 'Costa Caribe' },
+            { text: 'El uso de «sumercé» como forma de tratamiento respetuosa', category: 'Región Andina' },
+            { text: 'El currulao y el alabao como expresiones musicales afrocolombianas', category: 'Pacífico' },
+            { text: 'El joropo y la copla como tradición oral del llano', category: 'Llanos Orientales' },
+            { text: 'Las lenguas tucano y la tradición multilingüe del Vaupés', category: 'Amazonía' },
+            { text: 'La cumbia como danza de origen mestizo e indígena', category: 'Costa Caribe' },
+            { text: 'El bambuco y la guabina como géneros musicales de la cordillera', category: 'Región Andina' },
+            { text: 'La marimba de chonta como instrumento emblemático', category: 'Pacífico' },
+            { text: 'El contrapunteo y la poesía improvisada de los copleros', category: 'Llanos Orientales' },
+            { text: 'Los mitos de Yuruparí y la tradición oral de los pueblos indígenas', category: 'Amazonía' }
+        ]
+    },
+    // === GAME 22: Sorting — Técnicas de escritura por género ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada técnica de escritura en el género donde es más característica.',
+        categories: ['Crónica periodística', 'Ensayo académico', 'Texto literario', 'Texto jurídico'],
+        items: [
+            { text: 'Uso de la primera persona para crear inmersión en la escena', category: 'Crónica periodística' },
+            { text: 'Citas en formato APA o MLA para respaldar argumentos', category: 'Ensayo académico' },
+            { text: 'Uso del monólogo interior para revelar la psicología del personaje', category: 'Texto literario' },
+            { text: 'Empleo de fórmulas como «en virtud de lo anterior» y «considerando que»', category: 'Texto jurídico' },
+            { text: 'Estructura de pirámide invertida: lo más importante al inicio', category: 'Crónica periodística' },
+            { text: 'Hipótesis, marco teórico, análisis de datos, conclusiones', category: 'Ensayo académico' },
+            { text: 'Metáfora, metonimia, sinestesia y otros tropos como herramientas centrales', category: 'Texto literario' },
+            { text: 'Lenguaje prescriptivo con verbos en futuro de obligación («se procederá», «deberá»)', category: 'Texto jurídico' }
+        ]
+    },
+    // === GAME 23: Sorting — Estrategias comunicativas por nivel CEFR ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada estrategia comunicativa en el nivel CEFR donde se espera que el estudiante la domine.',
+        categories: ['A1–A2', 'B1–B2', 'C1–C2'],
+        items: [
+            { text: 'Usar gestos y palabras sueltas para compensar vacíos léxicos', category: 'A1–A2' },
+            { text: 'Pedir repetición y aclaración con fórmulas básicas', category: 'A1–A2' },
+            { text: 'Reformular una idea cuando el interlocutor no entiende', category: 'B1–B2' },
+            { text: 'Adaptar el registro según la formalidad de la situación', category: 'B1–B2' },
+            { text: 'Usar la ironía, la atenuación y la cortesía negativa con precisión', category: 'C1–C2' },
+            { text: 'Mediar entre interlocutores de diferentes niveles culturales y lingüísticos', category: 'C1–C2' },
+            { text: 'Memorizar frases hechas para situaciones predecibles', category: 'A1–A2' },
+            { text: 'Negociar significados en conversaciones sobre temas abstractos', category: 'B1–B2' },
+            { text: 'Construir argumentos complejos con contraargumentos anticipados', category: 'C1–C2' }
+        ]
+    },
+    // === GAME 24: Builder — Párrafo que integra tres registros ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los fragmentos para construir un párrafo que transita del registro coloquial al literario al académico.',
+        fragments: [
+            'La verdad es que cuando uno escucha hablar a la gente en la calle,',
+            'se da cuenta de que el español no es una sola lengua sino mil lenguas vivas.',
+            'Como escribió Octavio Paz: «Cada lengua es una visión del mundo',
+            'y cada visión del mundo es una creación del espíritu».',
+            'La sociolingüística contemporánea confirma esta intuición:',
+            'la variación no es un defecto del sistema sino su condición de existencia',
+            '(Labov, 1972; Silva-Corvalán, 2001).'
+        ],
+        correctOrder: [0, 1, 2, 3, 4, 5, 6]
+    },
+    // === GAME 25: Builder — Reflexión metalingüística sobre el propio aprendizaje ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los fragmentos para construir una reflexión sobre lo que significa dominar una lengua.',
+        fragments: [
+            'Dominar una lengua no significa conocer todas sus palabras',
+            'ni conjugar todos sus verbos sin error.',
+            'Significa poder expresar exactamente lo que uno piensa,',
+            'adaptar el mensaje al interlocutor y al contexto,',
+            'entender lo que no se dice tanto como lo que se dice,',
+            'y saber que siempre queda algo por aprender,',
+            'porque una lengua viva nunca deja de cambiar.'
+        ],
+        correctOrder: [0, 1, 2, 3, 4, 5, 6]
+    },
+    // === GAME 26: Builder — Declaración sobre identidad lingüística ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los fragmentos para construir una declaración sobre la identidad lingüística del hablante de español.',
+        fragments: [
+            'Hablar español es pertenecer a una comunidad',
+            'de más de 500 millones de personas',
+            'que comparten una gramática común',
+            'pero la transforman cada día con sus acentos,',
+            'sus expresiones, sus silencios y sus canciones,',
+            'porque la lengua no pertenece a ninguna academia:',
+            'pertenece a quien la habla.'
+        ],
+        correctOrder: [0, 1, 2, 3, 4, 5, 6]
+    },
+    // === GAME 27: Translation — Mismo contenido en cinco registros ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Reescribe esta idea en los cinco registros indicados. Idea original: «Aprender una lengua cambia la forma en que ves el mundo.»',
+        tasks: [
+            { source: 'Registro coloquial colombiano', target: 'Ejemplo: «Parce, cuando uno aprende otra lengua, todo se ve distinto, ¿me entiende?»' },
+            { source: 'Registro formal estándar', target: 'Ejemplo: «El aprendizaje de una lengua extranjera transforma la percepción que el individuo tiene del mundo.»' },
+            { source: 'Registro literario', target: 'Ejemplo: «Cada lengua nueva es un par de ojos que no sabías que tenías.»' },
+            { source: 'Registro académico', target: 'Ejemplo: «La evidencia empírica sugiere que el bilingüismo incide significativamente en los procesos de categorización cognitiva (Boroditsky, 2011).»' },
+            { source: 'Registro periodístico', target: 'Ejemplo: «Estudios recientes confirman lo que los políglotas siempre supieron: hablar otra lengua cambia literalmente la forma de pensar.»' }
+        ]
+    },
+    // === GAME 28: Translation — Adaptar sin perder identidad ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Adapta este texto colombiano para un público hispanohablante internacional sin perder su identidad cultural.',
+        tasks: [
+            { source: 'Original colombiano: «El man se fue pa\' la finca con toda la gallada y armaron un sancocho que quedó de pelos. La pasaron bacano hasta que empezó a llover y les tocó guardarse.»', target: 'Reescribe conservando la esencia pero haciéndolo comprensible para cualquier hispanohablante.' },
+            { source: 'Reflexión: ¿Qué se pierde cuando «traducimos» dentro del mismo idioma?', target: 'Explica qué elementos culturales, afectivos o identitarios se transforman al adaptar el registro.' }
+        ]
+    },
+    // === GAME 29: Conversation — Escenario de maestría total ===
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Estás en una conferencia internacional sobre diversidad lingüística. Un colega europeo afirma que «el español de España es el verdadero español y las variedades latinoamericanas son dialectos derivados». Responde con argumentos sociolingüísticos, ejemplos concretos y cortesía académica.',
+        context: 'Conferencia sobre diversidad lingüística. Tu interlocutor tiene una posición eurocéntrica común. Debes refutar sin ser agresivo, usando evidencia lingüística.',
+        prompts: [
+            'Colega: «Creo que el español peninsular es la norma y las demás son variantes regionales.»',
+            'Colega: «Pero la RAE está en España, y España es donde nació el idioma.»',
+            'Colega: «¿No crees que tener una norma única facilita la comunicación?»',
+            'Colega: «Interesante. ¿Puedes darme un ejemplo concreto de una variedad que aporte algo que la norma peninsular no tiene?»'
+        ]
+    },
+    // === GAME 30: Conversation — La despedida: el estudiante habla por Yaguará ===
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Esta es la última conversación del viaje. Un niño te pregunta: «¿Cómo se aprende español?». Responde como lo haría Yaguará: con sabiduría, sencillez y calidez. Eres el Guardián de Historias.',
+        context: 'Un niño de 8 años, curioso e inteligente, quiere aprender español. Tú, que has completado los 58 destinos, le explicas el camino con la misma calidez que Abuela Ceiba usaba con Yaguará.',
+        prompts: [
+            'Niño: «¿Es muy difícil aprender español?»',
+            'Niño: «¿Y cómo empiezo?»',
+            'Niño: «¿Y si me equivoco?»',
+            'Niño: «¿Cuándo voy a saber que ya lo aprendí?»'
+        ]
+    },
+    // === GAME 31: Dictation — Pasaje literario sobre la lengua ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe este pasaje que reflexiona sobre la naturaleza del lenguaje humano.',
+        text: 'Una lengua no es un código que se descifra ni un sistema que se memoriza. Es un organismo vivo que nace, crece, se transforma y, a veces, muere. Cada palabra que pronunciamos lleva dentro de sí la historia de todas las bocas que la dijeron antes: las madres que la usaron para calmar, los poetas que la deformaron para crear, los niños que la inventaron para jugar, los ancianos que la repitieron para no olvidar. Hablar es participar en esa cadena. Y dominar una lengua es ser consciente de cada eslabón.'
+    },
+    // === GAME 32: Dictation — Pasaje académico sobre el dominio lingüístico ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe este pasaje sobre lo que significa alcanzar el dominio de una lengua.',
+        text: 'El nivel C2 del Marco Común Europeo de Referencia no describe a un hablante perfecto sino a un hablante que puede comprender con facilidad prácticamente todo lo que oye o lee, resumir información de diversas fuentes reconstruyendo argumentos y relatos de manera coherente, y expresarse de forma espontánea con gran fluidez y precisión, distinguiendo matices sutiles de significado incluso en situaciones complejas. En otras palabras, el nivel C2 no es el final del aprendizaje: es el punto en que el aprendiz se convierte en usuario autónomo de la lengua.'
+    },
+    // === GAME 33: Story — Reflexión sobre el viaje completo ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee esta reflexión sobre lo que significa haber completado el viaje de los tres mundos.',
+        title: 'Cincuenta y ocho ventanas',
+        paragraphs: [
+            'Imagina que cada destino de este viaje fue una ventana. No una puerta —una puerta te deja pasar y se cierra detrás de ti—, sino una ventana: algo que se abre y te deja ver sin obligarte a elegir entre dentro y fuera.',
+            'La primera ventana, allá en el Destino 1, mostraba algo muy sencillo: una familia de jaguares, unos nombres, unos sonidos. La ventana era pequeña y el paisaje, limitado. Pero era suficiente para despertar la curiosidad.',
+            'Con cada destino, las ventanas se hicieron más grandes. Mostraban mercados, fiestas, opiniones, conflictos, poemas, leyes, canciones, dialectos, tradiciones, silencios. Y en algún momento —imposible saber exactamente cuándo— dejaste de mirar por las ventanas y empezaste a vivir dentro del paisaje.',
+            'Eso es dominar una lengua: el momento en que dejas de traducir y empiezas a pensar, a sentir, a soñar en ella. El momento en que una palabra deja de ser un sonido extranjero y se convierte en algo tuyo. No porque la hayas memorizado, sino porque la has vivido.',
+            'Cincuenta y ocho ventanas. Tres mundos. Una lengua. Y ahora, la ventana más importante de todas: la que tú abras mañana, cuando uses este español para algo que ni Yaguará ni este viaje podían prever. Porque el español ya no es de Yaguará. Es tuyo.'
+        ],
+        questions: [
+            { question: '¿Por qué el autor elige la metáfora de la «ventana» en lugar de la «puerta»?', options: ['Porque la ventana permite ver sin obligar a dejar atrás lo anterior, sugiriendo acumulación', 'Porque las ventanas son más bonitas que las puertas', 'Porque las puertas representan el fracaso', 'Porque es una referencia a la arquitectura colombiana'], answer: 'Porque la ventana permite ver sin obligar a dejar atrás lo anterior, sugiriendo acumulación' },
+            { question: '¿Qué significa «dejaste de mirar por las ventanas y empezaste a vivir dentro del paisaje»?', options: ['El momento en que el aprendiz pasa de observar la lengua desde fuera a usarla como propia', 'Que el estudiante se mudó a un país hispanohablante', 'Que las ventanas desaparecieron', 'Que el paisaje cambió de forma literal'], answer: 'El momento en que el aprendiz pasa de observar la lengua desde fuera a usarla como propia' },
+            { question: '¿Cuál es la función retórica de la última línea: «El español ya no es de Yaguará. Es tuyo»?', options: ['Transferir la agencia del personaje ficticio al estudiante real, completando la transformación pedagógica', 'Indicar que Yaguará ha muerto', 'Sugerir que el español no tiene dueño', 'Criticar la propiedad intelectual sobre las lenguas'], answer: 'Transferir la agencia del personaje ficticio al estudiante real, completando la transformación pedagógica' }
+        ]
+    },
+    // === GAME 34: Story — El mito del hablante perfecto ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este texto sobre el mito del hablante perfecto y la realidad del dominio lingüístico.',
+        title: 'No existe el hablante perfecto',
+        paragraphs: [
+            'Uno de los mitos más persistentes sobre el aprendizaje de lenguas es la idea de que existe un «hablante perfecto»: alguien que nunca comete errores, que conoce todas las palabras, que domina todos los registros, que puede comunicarse con cualquier persona en cualquier situación sin el más mínimo tropiezo.',
+            'Ese hablante no existe. Ni siquiera entre los hablantes nativos. Un profesor universitario de Bogotá puede no entender el argot de los pescadores de Tumaco. Un abogado de Medellín puede sentirse perdido ante un poema de Raúl Gómez Jattin. Un niño de Leticia puede usar formas gramaticales que no aparecen en ninguna gramática normativa y que son, sin embargo, perfectamente válidas en su comunidad.',
+            'Lo que sí existe es el hablante competente: aquel que puede funcionar eficazmente en los contextos que necesita, que reconoce sus limitaciones y sabe compensarlas, que sigue aprendiendo cada día porque entiende que una lengua viva nunca se termina de aprender.',
+            'El nivel C2 no es la perfección. Es la autonomía. Es la capacidad de seguir aprendiendo solo, sin maestro, sin guía, sin Yaguará. Es el momento en que el estudiante se convierte en su propio guardián.',
+            'Y ese momento es ahora.'
+        ],
+        questions: [
+            { question: '¿Cuál es la tesis central de este texto?', options: ['El dominio de una lengua no es perfección sino autonomía y competencia contextual', 'Que los hablantes nativos son superiores a los no nativos', 'Que el nivel C2 es inalcanzable', 'Que no vale la pena intentar dominar una lengua'], answer: 'El dominio de una lengua no es perfección sino autonomía y competencia contextual' },
+            { question: '¿Qué función cumplen los tres ejemplos del segundo párrafo (profesor, abogado, niño)?', options: ['Demostrar que incluso los hablantes nativos tienen limitaciones contextuales', 'Criticar el sistema educativo colombiano', 'Mostrar que Colombia es un país diverso', 'Comparar tres profesiones diferentes'], answer: 'Demostrar que incluso los hablantes nativos tienen limitaciones contextuales' },
+            { question: '¿Qué efecto produce la oración final: «Y ese momento es ahora»?', options: ['Rompe la cuarta pared para situar al lector en el presente y marcar el final del viaje como un comienzo', 'Es una frase hecha sin significado especial', 'Indica que el texto ha terminado', 'Crea un efecto de suspenso narrativo'], answer: 'Rompe la cuarta pared para situar al lector en el presente y marcar el final del viaje como un comienzo' }
+        ]
+    },
+    // === GAME 35: Story — Carta de Yaguará al estudiante que empieza ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee la carta que Yaguará le escribiría a alguien que apenas empieza a aprender español.',
+        title: 'Carta a quien empieza',
+        paragraphs: [
+            'Querido viajero que apenas empieza:',
+            'No voy a mentirte: el camino es largo. Hay días en que sentirás que no avanzas, que las palabras se te escapan, que la gramática es un laberinto sin salida. Habrá momentos en que querrás rendirte. En que La Sombra —tu miedo a equivocarte— te dirá que no eres suficiente, que nunca vas a hablar bien, que los demás se van a reír.',
+            'No le hagas caso. La Sombra miente. Cada error es una lección. Cada palabra nueva es una ventana. Cada conversación, por torpe que parezca, es un acto de valentía. Porque hablar en una lengua que no es la tuya es ponerte en una posición vulnerable, y no hay nada más valiente que la vulnerabilidad.',
+            'Te voy a contar un secreto: yo tampoco sabía hablar al principio. Era una cachorra que solo sabía rugir. Y ahora puedo escribirte esta carta. ¿Sabes qué cambió? No fue talento. No fue inteligencia. Fue constancia. Fue curiosidad. Fue la decisión de seguir caminando aunque el camino fuera difícil.',
+            'Un día, sin darte cuenta, dejarás de pensar en español y empezarás a sentir en español. Ese día no habrá fanfarria ni diploma. Solo una sonrisa silenciosa, tuya, que nadie más verá. Y será el mejor día del viaje.',
+            'Te espero en el Destino 58. Tómate tu tiempo. No hay prisa. El jaguar sabe esperar.'
+        ],
+        questions: [
+            { question: '¿Qué registro usa Yaguará en esta carta?', options: ['Íntimo y cálido, con tuteo y vocabulario emocional accesible', 'Formal académico con estructuras complejas', 'Coloquial con jerga colombiana', 'Literario con abundantes figuras retóricas'], answer: 'Íntimo y cálido, con tuteo y vocabulario emocional accesible' },
+            { question: '¿Por qué la carta es eficaz como texto pedagógico?', options: ['Porque anticipa los obstáculos emocionales del aprendiz y los normaliza con empatía', 'Porque explica las reglas gramaticales con claridad', 'Porque usa muchos ejemplos de vocabulario', 'Porque tiene una estructura académica formal'], answer: 'Porque anticipa los obstáculos emocionales del aprendiz y los normaliza con empatía' },
+            { question: '¿Qué significa la frase final: «El jaguar sabe esperar»?', options: ['Que el proceso de aprendizaje no tiene fecha límite y la paciencia es una fortaleza', 'Que los jaguares son animales pacientes por naturaleza', 'Que Yaguará estará esperando literalmente en el destino 58', 'Que el estudiante debe apresurarse para llegar'], answer: 'Que el proceso de aprendizaje no tiene fecha límite y la paciencia es una fortaleza' }
+        ]
+    },
+    // === GAME 36: Canción — "La tierra del olvido" de Carlos Vives ===
+    {
+        type: 'cancion',
+        label: 'Canción',
+        instruction: 'Escucha "La tierra del olvido" de Carlos Vives y completa la letra. Esta canción habla de la memoria, la identidad y el regreso a las raíces: el mismo viaje que Yaguará ha completado.',
+        youtubeId: 'IV_2LaADgg4',
+        title: 'La tierra del olvido — Carlos Vives',
+        lines: [
+            { text: 'Yo soy de una ___ que no puedo olvidar.', blank: 'tierra', options: ['tierra', 'patria', 'casa', 'época'] },
+            { text: 'De esa ___ vengo yo.', blank: 'tierra', options: ['tierra', 'parte', 'calle', 'selva'] },
+            { text: 'Se quedó mi ___ sembrado.', blank: 'corazón', options: ['corazón', 'sueño', 'nombre', 'canto'] },
+            { text: 'Se quedó mi ___ esperando.', blank: 'amor', options: ['amor', 'alma', 'vida', 'voz'] },
+            { text: 'Y hoy la llevo en mi ___.', blank: 'canción', options: ['canción', 'corazón', 'memoria', 'camino'] },
+            { text: 'Aquella ___ del olvido.', blank: 'tierra', options: ['tierra', 'noche', 'hora', 'gente'] }
+        ]
+    },
+    // === GAME 37: Canción — "Me enamora" de Juanes ===
+    {
+        type: 'cancion',
+        label: 'Canción',
+        instruction: 'Escucha "Me enamora" de Juanes para cerrar el viaje. Porque al final, dominar una lengua es enamorarse de ella: de sus sonidos, sus ritmos, sus historias y su gente.',
+        youtubeId: 'iKBGkBMNJPs',
+        title: 'Me enamora — Juanes',
+        lines: [
+            { text: 'Cada ___ que miro tu retrato.', blank: 'día', options: ['día', 'vez', 'noche', 'instante'] },
+            { text: 'Cada ___ que tu me miras y me haces sentir.', blank: 'vez', options: ['vez', 'día', 'noche', 'momento'] },
+            { text: 'Que soy ___ del planeta.', blank: 'dueño', options: ['dueño', 'parte', 'hijo', 'amigo'] },
+            { text: 'Me ___ tu sonrisa.', blank: 'enamora', options: ['enamora', 'encanta', 'alegra', 'fascina'] },
+            { text: 'Cada ___ que estás conmigo.', blank: 'momento', options: ['momento', 'segundo', 'día', 'instante'] },
+            { text: 'Todo mi ___ se ilumina.', blank: 'mundo', options: ['mundo', 'cielo', 'camino', 'día'] }
+        ]
+    },
+    // === GAME 38: Narrative — Epílogo: el viaje no termina ===
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee el epílogo del viaje. Estas son las últimas palabras.',
+        text: 'Este es el Destino 58. El último. Pero un viaje de verdad no tiene último destino: tiene el lugar donde decides dejar de ser turista y empezar a ser habitante. El español ya no es un idioma que estás aprendiendo. Es un idioma que hablas, que piensas, que sientes. Es parte de ti, como tu nombre, como tu risa, como la forma en que miras el mundo. Yaguará completó su viaje. Encontró su Palabra del Corazón. Se convirtió en el Espíritu del Jaguar. Pero tú no eres Yaguará. Tú eres algo mejor: eres real. Y en el mundo real, las palabras que dices tienen peso, tienen consecuencia, tienen poder. Usa ese poder. Habla. Escribe. Lee. Escucha. Discute. Canta. Enseña. Traduce. Media. Crea. Y cuando alguien te pregunte «¿hablas español?», no digas «sí». Di: «Soy guardián de historias. Y esta es mi lengua.»'
+    },
+    // --- SALA DE ENIGMAS FINAL (Meta-quest: Las puertas de la memoria — La última puerta) ---
+    {
+        type: 'escaperoom',
+        label: 'La última puerta',
+        instruction: 'Has llegado al final del camino. Esta puerta solo se abre desde dentro.',
+        room: {
+            name: 'La cámara que tú construyes',
+            description: 'La sala está vacía. No hay paredes, no hay techo, no hay suelo — solo la luz de todas las constelaciones que has reunido. El Mapa de las Voces flota incompleto ante ti. Falta un solo fragmento: el tuyo.',
+            ambience: 'silence'
+        },
+        puzzles: [
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Yaguará habla por última vez — o quizás eres tú quien habla por ella.',
+                sources: [
+                    '«Empecé sin palabras. Luego aprendí a nombrar: familia, agua, casa, comida, amigos.» — Yaguará, A1',
+                    '«Crucé el umbral. Conocí a Candelaria. Escuché a Doña Asunción. Vi lo que Don Próspero no podía ver.» — Yaguará, B1-B2',
+                    '«Entré en los sueños de Los Antiguos. Descubrí que el Mapa de las Voces no era un mapa de lenguas — era un mapa de conexiones entre todo lo vivo.» — Yaguará, C1-C2'
+                ],
+                clue: '¿Qué ha aprendido Yaguará — y qué has aprendido tú?',
+                answer: 'Que aprender una lengua es aprender a escuchar, y escuchar es el primer paso para cuidar lo que existe',
+                options: [
+                    'Que aprender una lengua es aprender a escuchar, y escuchar es el primer paso para cuidar lo que existe',
+                    'Que el español es un idioma útil para viajar',
+                    'Que los juegos son una buena forma de estudiar',
+                    'Que la gramática es la base de todo'
+                ],
+                onSolve: 'Las constelaciones se mueven. El Mapa de las Voces está casi completo.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'El último espacio del mapa brilla, esperando una palabra. No hay pista. No hay opciones. Solo tú sabes cuál es.',
+                clue: 'La Palabra del Corazón. Yaguará la descubrió en su viaje. Es lo que el bosque necesita de los humanos. Es lo que tú has hecho durante todo este camino.',
+                answer: 'escuchar',
+                hint: '',
+                onSolve: 'El mapa acepta tu palabra. Todas las constelaciones brillan juntas.'
+            }
+        ],
+        fragment: {
+            text: 'El Mapa de las Voces se completa. No era un mapa de un lugar — era un mapa de todo lo que las voces del mundo han intentado decir desde el principio. Y ahora incluye la tuya.',
+            questClue: 'No hay más puertas. Solo un camino de regreso, con los ojos nuevos.',
+            item: 'mapa-completo'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '58',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest58Progress',
+        backUrl: '../../c2-colombia.html'
+    });
+</script>
+</body>
+</html>

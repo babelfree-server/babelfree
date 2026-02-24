@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 15: Lo que necesito, lo que quiero</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest15_needs_wants/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 15: Lo que necesito, lo que quiero — Games",
+                "url": "https://babelfree.com/a2_basic/dest15_needs_wants/games",
+                "educationalLevel": "A2 - Elementary",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Modal verbs: querer, poder, necesitar + infinitive",
+                    "Expressing needs and wants",
+                    "Comparatives"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A2",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Lo que necesito, lo que quiero",
+                        "item": "https://babelfree.com/a2_basic/dest15_needs_wants/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-costa-caribena">
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 15: Lo que necesito, lo que quiero</div>
+            <div class="yg-header-subtitle">Necesidades, deseos y comparaciones</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — Candelaria tiene frío
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Candelaria tiene fr\u00edo, tiene hambre, est\u00e1 perdida. Yaguar\u00e1 entiende los sentimientos pero no las palabras. Candelaria dice con gestos: \u00abnecesito agua, quiero ir a casa.\u00bb Yaguar\u00e1 empieza a entender que las palabras humanas llevan deseos.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — El puente del cuidado
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 le trae agua a Candelaria. El acto de cuidar es el primer puente entre ellas. Candelaria dibuja en su cuaderno: un jaguar. Yaguar\u00e1 se ve a s\u00ed misma a trav\u00e9s de ojos humanos por primera vez.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Las palabras llevan necesidades
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Candelaria dice: \u00abNecesito comer. Quiero descansar. Puedo caminar un poco m\u00e1s.\u00bb Tres verbos, tres fuerzas: la necesidad, el deseo, la capacidad. Yaguar\u00e1 aprende que cada verbo abre una puerta diferente.'
+    },
+
+    /* ============================================================
+       4. PAIR — Necesitar / querer / poder
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el verbo con su significado.',
+        pairs: [
+            ['necesitar', 'no tienes opci\u00f3n'],
+            ['querer', 'es un deseo'],
+            ['poder', 'tienes la capacidad'],
+            ['deber', 'es una obligaci\u00f3n']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Modal + infinitivo
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la frase con su final.',
+        pairs: [
+            ['Necesito', 'comer algo'],
+            ['Quiero', 'ir a casa'],
+            ['Puedo', 'caminar un poco'],
+            ['Debo', 'descansar']
+        ]
+    },
+
+    /* ============================================================
+       6. FIB — Necesitar + infinitivo
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta.',
+        questions: [
+            {
+                sentence: 'Candelaria ___ comer. (necesitar)',
+                answer: 'necesita',
+                options: ['necesito', 'necesitas', 'necesita', 'necesitamos']
+            },
+            {
+                sentence: 'Yo ___ agua. (necesitar)',
+                answer: 'necesito',
+                options: ['necesito', 'necesitas', 'necesita', 'necesitamos']
+            },
+            {
+                sentence: 'Nosotros ___ descansar. (necesitar)',
+                answer: 'necesitamos',
+                options: ['necesito', 'necesitas', 'necesita', 'necesitamos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Querer + infinitivo
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ ayudar. (querer)',
+                answer: 'quiere',
+                options: ['quiero', 'quieres', 'quiere', 'queremos']
+            },
+            {
+                sentence: 'T\u00fa ___ ir a casa. (querer)',
+                answer: 'quieres',
+                options: ['quiero', 'quieres', 'quiere', 'queremos']
+            },
+            {
+                sentence: 'Yo ___ aprender m\u00e1s. (querer)',
+                answer: 'quiero',
+                options: ['quiero', 'quieres', 'quiere', 'queremos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Poder + infinitivo
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta.',
+        questions: [
+            {
+                sentence: 'Candelaria ___ caminar un poco. (poder)',
+                answer: 'puede',
+                options: ['puedo', 'puedes', 'puede', 'podemos']
+            },
+            {
+                sentence: 'Yo ___ nadar en el r\u00edo. (poder)',
+                answer: 'puedo',
+                options: ['puedo', 'puedes', 'puede', 'podemos']
+            },
+            {
+                sentence: 'Ellos no ___ hablar juntos todav\u00eda. (poder)',
+                answer: 'pueden',
+                options: ['puedo', 'puede', 'podemos', 'pueden']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Comparativos
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con m\u00e1s...que o menos...que.',
+        questions: [
+            {
+                sentence: 'El bosque es ___ grande ___ la ciudad.',
+                answer: 'm\u00e1s... que',
+                options: ['m\u00e1s... que', 'menos... que', 'tan... como', 'igual... que']
+            },
+            {
+                sentence: 'Candelaria est\u00e1 ___ asustada ___ ayer.',
+                answer: 'menos... que',
+                options: ['m\u00e1s... que', 'menos... que', 'tan... como', 'igual... que']
+            },
+            {
+                sentence: 'El r\u00edo es ___ largo ___ el camino.',
+                answer: 'm\u00e1s... que',
+                options: ['m\u00e1s... que', 'menos... que', 'tan... como', 'igual... que']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — ¿Qué necesita Candelaria?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Necesito agua. Quiero ir a casa. Puedo caminar un poco m\u00e1s.',
+        question: '\u00bfQu\u00e9 necesita Candelaria?',
+        answer: 'Agua',
+        options: ['Comida', 'Agua', 'Un cuaderno', 'Una casa']
+    },
+
+    /* ============================================================
+       11. LISTENING — El dibujo
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Candelaria dibuja en su cuaderno. Dibuja un jaguar. Yaguar\u00e1 se ve a s\u00ed misma por primera vez.',
+        question: '\u00bfQu\u00e9 dibuja Candelaria?',
+        answer: 'Un jaguar',
+        options: ['Un r\u00edo', 'Un \u00e1rbol', 'Un jaguar', 'Una casa']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Querer (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo querer.',
+        questions: [
+            {
+                verb: 'querer',
+                subject: 'yo',
+                answer: 'quiero',
+                options: ['quiero', 'quieres', 'quiere', 'queremos']
+            },
+            {
+                verb: 'querer',
+                subject: 't\u00fa',
+                answer: 'quieres',
+                options: ['quiero', 'quieres', 'quiere', 'queremos']
+            },
+            {
+                verb: 'querer',
+                subject: 'ella',
+                answer: 'quiere',
+                options: ['quiero', 'quieres', 'quiere', 'queremos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Poder (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo poder.',
+        questions: [
+            {
+                verb: 'poder',
+                subject: 'yo',
+                answer: 'puedo',
+                options: ['puedo', 'puedes', 'puede', 'podemos']
+            },
+            {
+                verb: 'poder',
+                subject: '\u00e9l',
+                answer: 'puede',
+                options: ['puedo', 'puedes', 'puede', 'podemos']
+            },
+            {
+                verb: 'poder',
+                subject: 'ustedes',
+                answer: 'pueden',
+                options: ['puedo', 'puede', 'podemos', 'pueden']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Necesidad / deseo / capacidad
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada frase.',
+        categories: ['Necesidad', 'Deseo', 'Capacidad'],
+        items: [
+            { text: 'Necesito agua', category: 'Necesidad' },
+            { text: 'Quiero ir a casa', category: 'Deseo' },
+            { text: 'Puedo caminar', category: 'Capacidad' },
+            { text: 'Necesito descansar', category: 'Necesidad' },
+            { text: 'Quiero aprender', category: 'Deseo' },
+            { text: 'Puedo nadar', category: 'Capacidad' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — Más / menos / tan
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfm\u00e1s, menos o igual?',
+        categories: ['M\u00e1s', 'Menos', 'Igual'],
+        items: [
+            { text: 'El bosque es m\u00e1s grande', category: 'M\u00e1s' },
+            { text: 'Candelaria est\u00e1 menos asustada', category: 'Menos' },
+            { text: 'Son tan fuertes como antes', category: 'Igual' },
+            { text: 'El r\u00edo es m\u00e1s largo', category: 'M\u00e1s' },
+            { text: 'Tiene menos hambre', category: 'Menos' },
+            { text: 'Es tan importante como escuchar', category: 'Igual' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Necesidad
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['Necesito', 'agua', 'para', 'beber'],
+        answer: 'Necesito agua para beber'
+    },
+
+    /* ============================================================
+       17. BUILDER — Comparativo
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['bosque', 'El', 'es', 'm\u00e1s', 'grande', 'que', 'la', 'ciudad'],
+        answer: 'El bosque es m\u00e1s grande que la ciudad'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — ¿Qué necesitas?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfQu\u00e9 necesitas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Necesito descansar.', 'La rana cant\u00f3.', 'Me levanto temprano.', 'Es mi hermano.'],
+                answer: 'Necesito descansar.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — ¿Qué quieres hacer?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: '\u00bfQu\u00e9 quieres hacer?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Quiero aprender m\u00e1s espa\u00f1ol.', 'La rana no canta.', 'Ayer camin\u00e9.', 'Me ba\u00f1o en el r\u00edo.'],
+                answer: 'Quiero aprender m\u00e1s espa\u00f1ol.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Modal + infinitivo
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Necesito agua. Quiero ir a casa.',
+        answer: 'Necesito agua. Quiero ir a casa.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La c\u00e1mara de los deseos',
+            description: 'Manos talladas en piedra se extienden hacia s\u00edmbolos: agua, fuego, camino, casa. Cada mano quiere algo diferente.',
+            ambience: 'cave'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una mano se\u00f1ala un s\u00edmbolo de agua:',
+                riddle: '\u00abNo es un deseo. No es una capacidad. Es algo que tu cuerpo pide. \u00bfQu\u00e9 tipo de verbo soy?\u00bb',
+                clue: 'Cuando tu cuerpo pide algo, t\u00fa...',
+                answer: 'Necesitar',
+                options: ['Necesitar', 'Querer', 'Poder', 'Deber'],
+                onSolve: 'La mano del agua brilla.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras talladas en las palmas de las manos de piedra.',
+                clue: 'Lo opuesto de necesitar. Viene del coraz\u00f3n, no del cuerpo. Seis letras.',
+                answer: 'querer',
+                scrambled: 'reerqu',
+                onSolve: 'Las manos se abren.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La puerta tiene tres cerraduras. La \u00faltima dice: "Yo ___."',
+                clue: 'El verbo que dice "tengo la capacidad." Cinco letras.',
+                answer: 'puedo',
+                hint: '_ _ _ _ _',
+                onSolve: 'La puerta se abre. Los deseos encuentran camino.'
+            }
+        ],
+        fragment: {
+            text: 'Una ra\u00edz con forma de mano abierta brilla entre las piedras.',
+            questClue: 'Necesitar, querer, poder: tres ra\u00edces del mismo \u00e1rbol.',
+            item: 'raiz-15'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a2d15',
+        world: 'costaCaribena',
+        storageKey: 'yaguaraA2Dest15Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

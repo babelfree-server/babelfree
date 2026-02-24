@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 13: Los r&iacute;os que cantan</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest13_rivers_sing/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 13: Los r\u00edos que cantan — Games",
+                "url": "https://babelfree.com/a2_basic/dest13_rivers_sing/games",
+                "educationalLevel": "A2 - Elementary",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Reflexive verbs",
+                    "Describing daily routines in detail",
+                    "Preterite introduction"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A2",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Los r\u00edos que cantan",
+                        "item": "https://babelfree.com/a2_basic/dest13_rivers_sing/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-costa-caribena">
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 13: Los r&iacute;os que cantan</div>
+            <div class="yg-header-subtitle">Verbos reflexivos y rutinas</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — El tiempo ha pasado
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Ha pasado el tiempo. El bosque est\u00e1 diferente: m\u00e1s gris en los bordes, m\u00e1s silencio. Pero Yaguar\u00e1 entiende m\u00e1s. Ella dice: \u00abHas vuelto.\u00bb El r\u00edo todav\u00eda canta, pero m\u00e1s bajo.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — La rutina de Yaguará
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 describe su d\u00eda con m\u00e1s detalle: se levanta temprano, se ba\u00f1a en el r\u00edo, camina por el bosque. Se viste de luz. Se siente fuerte.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — Doña Asunción
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Mam\u00e1 Jaguar cuenta una historia: hay una mujer vieja que se sienta junto al Atrato y pone las manos en el agua para escuchar. Se llama Do\u00f1a Asunci\u00f3n. \u00abElla escucha lo que el r\u00edo dice. Es la \u00faltima que puede.\u00bb'
+    },
+
+    /* ============================================================
+       4. PAIR — Verbos reflexivos
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el verbo reflexivo con su significado.',
+        pairs: [
+            ['levantarse', 'salir de la cama'],
+            ['ba\u00f1arse', 'lavarse con agua'],
+            ['vestirse', 'ponerse ropa'],
+            ['sentarse', 'estar en una silla']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Pronombres reflexivos
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el pronombre con la persona.',
+        pairs: [
+            ['me', 'yo'],
+            ['te', 't\u00fa'],
+            ['se', '\u00e9l / ella'],
+            ['nos', 'nosotros']
+        ]
+    },
+
+    /* ============================================================
+       6. FIB — Verbos reflexivos básicos
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el pronombre reflexivo.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ levanta temprano.',
+                answer: 'se',
+                options: ['me', 'te', 'se', 'nos']
+            },
+            {
+                sentence: 'Yo ___ ba\u00f1o en el r\u00edo.',
+                answer: 'me',
+                options: ['me', 'te', 'se', 'nos']
+            },
+            {
+                sentence: 'T\u00fa ___ vistes r\u00e1pido.',
+                answer: 'te',
+                options: ['me', 'te', 'se', 'nos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Rutinas con reflexivos
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Ella ___ sienta junto al r\u00edo.',
+                answer: 'se',
+                options: ['me', 'te', 'se', 'nos']
+            },
+            {
+                sentence: 'Nosotros ___ levantamos temprano.',
+                answer: 'nos',
+                options: ['me', 'te', 'se', 'nos']
+            },
+            {
+                sentence: 'Do\u00f1a Asunci\u00f3n ___ llama as\u00ed desde siempre.',
+                answer: 'se',
+                options: ['me', 'te', 'se', 'nos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. LISTENING — La rutina de Yaguará
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Yaguar\u00e1 se levanta, se ba\u00f1a en el r\u00edo y camina por el bosque.',
+        question: '\u00bfQu\u00e9 hace Yaguar\u00e1 primero?',
+        answer: 'Se levanta',
+        options: ['Se ba\u00f1a', 'Se levanta', 'Camina', 'Se sienta']
+    },
+
+    /* ============================================================
+       9. LISTENING — ¿Quién escucha el río?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Do\u00f1a Asunci\u00f3n se sienta junto al Atrato. Pone las manos en el agua. Escucha lo que el r\u00edo dice.',
+        question: '\u00bfQui\u00e9n escucha el r\u00edo?',
+        answer: 'Do\u00f1a Asunci\u00f3n',
+        options: ['Yaguar\u00e1', 'Mam\u00e1 Jaguar', 'Do\u00f1a Asunci\u00f3n', 'R\u00edo']
+    },
+
+    /* ============================================================
+       10. CONJUGATION — Levantarse (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo levantarse.',
+        questions: [
+            {
+                verb: 'levantarse',
+                subject: 'yo',
+                answer: 'me levanto',
+                options: ['me levanto', 'te levantas', 'se levanta', 'nos levantamos']
+            },
+            {
+                verb: 'levantarse',
+                subject: 't\u00fa',
+                answer: 'te levantas',
+                options: ['me levanto', 'te levantas', 'se levanta', 'nos levantamos']
+            },
+            {
+                verb: 'levantarse',
+                subject: 'ella',
+                answer: 'se levanta',
+                options: ['me levanto', 'te levantas', 'se levanta', 'nos levantamos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       11. CONJUGATION — Bañarse (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo ba\u00f1arse.',
+        questions: [
+            {
+                verb: 'ba\u00f1arse',
+                subject: 'yo',
+                answer: 'me ba\u00f1o',
+                options: ['me ba\u00f1o', 'te ba\u00f1as', 'se ba\u00f1a', 'nos ba\u00f1amos']
+            },
+            {
+                verb: 'ba\u00f1arse',
+                subject: '\u00e9l',
+                answer: 'se ba\u00f1a',
+                options: ['me ba\u00f1o', 'te ba\u00f1as', 'se ba\u00f1a', 'nos ba\u00f1amos']
+            },
+            {
+                verb: 'ba\u00f1arse',
+                subject: 'nosotros',
+                answer: 'nos ba\u00f1amos',
+                options: ['me ba\u00f1o', 'te ba\u00f1as', 'se ba\u00f1a', 'nos ba\u00f1amos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. SORTING — Reflexivos / no reflexivos
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfes reflexivo o no?',
+        categories: ['Reflexivo', 'No reflexivo'],
+        items: [
+            { text: 'levantarse', category: 'Reflexivo' },
+            { text: 'ba\u00f1arse', category: 'Reflexivo' },
+            { text: 'vestirse', category: 'Reflexivo' },
+            { text: 'caminar', category: 'No reflexivo' },
+            { text: 'comer', category: 'No reflexivo' },
+            { text: 'escuchar', category: 'No reflexivo' }
+        ]
+    },
+
+    /* ============================================================
+       13. SORTING — Rutina: mañana / tarde / noche
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada actividad.',
+        categories: ['Ma\u00f1ana', 'Tarde', 'Noche'],
+        items: [
+            { text: 'me levanto', category: 'Ma\u00f1ana' },
+            { text: 'me ba\u00f1o', category: 'Ma\u00f1ana' },
+            { text: 'camino por el bosque', category: 'Tarde' },
+            { text: 'como con la familia', category: 'Tarde' },
+            { text: 'me siento junto al r\u00edo', category: 'Noche' },
+            { text: 'me acuesto', category: 'Noche' }
+        ]
+    },
+
+    /* ============================================================
+       14. BUILDER — Rutina completa
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena la rutina de Yaguar\u00e1.',
+        words: ['Se', 'levanta', 'se', 'ba\u00f1a', 'y', 'camina'],
+        answer: 'Se levanta se ba\u00f1a y camina'
+    },
+
+    /* ============================================================
+       15. BUILDER — Doña Asunción
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['se', 'sienta', 'Ella', 'junto', 'al', 'r\u00edo'],
+        answer: 'Ella se sienta junto al r\u00edo'
+    },
+
+    /* ============================================================
+       16. CONVERSATION — Tu rutina
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mam\u00e1 Jaguar', text: '\u00bfQu\u00e9 haces cuando te levantas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Me levanto y me ba\u00f1o.', 'El r\u00edo es grande.', 'Tengo hambre.', 'Es mi hermano.'],
+                answer: 'Me levanto y me ba\u00f1o.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       17. CONVERSATION — ¿Cómo te sientes?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: '\u00bfC\u00f3mo te sientes hoy?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Me siento bien, gracias.', 'Me llamo Yaguar\u00e1.', 'Son las tres.', 'Hay un r\u00edo.'],
+                answer: 'Me siento bien, gracias.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       18. CONVERSATION — Doña Asunción
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mam\u00e1 Jaguar', text: '\u00bfQui\u00e9n es Do\u00f1a Asunci\u00f3n?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Es una mujer que escucha el r\u00edo.', 'Es mi hermana.', 'Tiene hambre.', 'Camina por el bosque.'],
+                answer: 'Es una mujer que escucha el r\u00edo.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. DICTATION — Reflexivos
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Me levanto temprano.',
+        answer: 'Me levanto temprano.'
+    },
+
+    /* ============================================================
+       20. FIB — Pretérito introducción
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el pret\u00e9rito.',
+        questions: [
+            {
+                sentence: 'Ayer yo ___ por el bosque. (caminar)',
+                answer: 'camin\u00e9',
+                options: ['camino', 'camin\u00e9', 'caminas', 'caminamos']
+            },
+            {
+                sentence: 'Ella ___ al r\u00edo ayer. (llegar)',
+                answer: 'lleg\u00f3',
+                options: ['llega', 'llegamos', 'lleg\u00f3', 'llego']
+            },
+            {
+                sentence: 'Nosotros ___ juntos. (comer)',
+                answer: 'comimos',
+                options: ['comemos', 'comieron', 'com\u00ed', 'comimos']
+            }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La c\u00e1mara del agua',
+            description: 'Una caverna subterr\u00e1nea. Un lago refleja el techo tallado. El sonido del agua llena el silencio.',
+            ambience: 'water'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el techo hay una pregunta tallada:',
+                riddle: '\u00abCada ma\u00f1ana salgo de donde duermo. El agua me toca. Es lo primero. \u00bfQu\u00e9 hago?\u00bb',
+                clue: 'Un verbo reflexivo. Lo haces al comenzar el d\u00eda.',
+                answer: 'levantarse',
+                hint: '_ _ _ _ _ _ _ _ _ _',
+                onSolve: 'El agua del lago brilla.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras flotan en el agua, moviéndose despacio.',
+                clue: 'Ella escucha el r\u00edo. Pone las manos en el agua. Es la \u00faltima que puede.',
+                answer: 'escuchar',
+                scrambled: 'charesku',
+                onSolve: 'Las letras se ordenan en el agua.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una voz sale del agua:',
+                riddle: '\u00abMe levanto, me ba\u00f1o, me visto. El pronombre cambia conmigo. \u00bfQu\u00e9 tipo de verbo soy?\u00bb',
+                clue: 'Un tipo de verbo que usa me, te, se.',
+                answer: 'Reflexivo',
+                options: ['Reflexivo', 'Irregular', 'Regular', 'Infinitivo'],
+                onSolve: 'El agua se calma. La puerta aparece en el reflejo.'
+            }
+        ],
+        fragment: {
+            text: 'En el fondo del agua brilla una ra\u00edz con forma de ola.',
+            questClue: 'El r\u00edo canta para quien escucha.',
+            item: 'raiz-13'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a2d13',
+        world: 'costaCaribena',
+        storageKey: 'yaguaraA2Dest13Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

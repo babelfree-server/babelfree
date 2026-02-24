@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&oacute;dulo 2: Sonidos de la selva</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module2_animals/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 2: Sonidos — Games",
+                "url": "https://babelfree.com/a1_basic/module2_animals/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Animal vocabulary practice",
+                    "Sound identification"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Sonidos",
+                        "item": "https://babelfree.com/a1_basic/module2_animals/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">M&oacute;dulo 2: Sonidos de la selva</div>
+            <div class="yg-header-subtitle">Identificar animales</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+    var games = [
+        // === GAME 1: narrative — Welcome to the jungle ===
+        {
+            type: 'narrative',
+            label: 'Narraci\u00f3n',
+            instruction: 'Lee sobre la selva.',
+            text: 'Yaguar\u00e1 est\u00e1 en la selva. La selva es grande. Hay muchos animales. Yaguar\u00e1 es fuerte y bonita. Ella tiene buenos amigos en la selva.'
+        },
+        // === GAME 2: narrative — Sounds in the jungle ===
+        {
+            type: 'narrative',
+            label: 'Narraci\u00f3n',
+            instruction: 'Lee sobre los sonidos de la selva.',
+            text: 'La selva tiene muchos sonidos. Hay un mono en el \u00e1rbol. Hay un p\u00e1jaro en el cielo. Hay una rana en el agua. Los animales son bonitos.'
+        },
+        // === GAME 3: narrative — Yaguará meets animals ===
+        {
+            type: 'narrative',
+            label: 'Narraci\u00f3n',
+            instruction: 'Lee sobre Yaguar\u00e1 y los animales.',
+            text: 'Yaguar\u00e1 est\u00e1 feliz. Hay un pez en el r\u00edo. Hay una serpiente en la selva. El jaguar es grande y fuerte. La rana es peque\u00f1a y bonita.'
+        },
+        // === GAME 4: pair — Animal names ===
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>animal &#8594; descripci&oacute;n</em>',
+            pairs: [
+                ['el mono', 'est\u00e1 en el \u00e1rbol'],
+                ['el pez', 'est\u00e1 en el r\u00edo'],
+                ['el p\u00e1jaro', 'est\u00e1 en el cielo'],
+                ['la rana', 'est\u00e1 en el agua'],
+                ['la serpiente', 'est\u00e1 en la selva'],
+                ['el jaguar', 'es grande y fuerte']
+            ]
+        },
+        // === GAME 5: pair — Identify animals ===
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>pregunta &#8594; respuesta</em>',
+            pairs: [
+                ['\u00bfQu\u00e9 es?', 'Es un mono.'],
+                ['\u00bfEs grande?', 'S\u00ed, es grande.'],
+                ['\u00bfEs peque\u00f1o?', 'S\u00ed, es peque\u00f1o.']
+            ]
+        },
+        // === GAME 6: pair — Big and small animals ===
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>animal &#8594; tama&ntilde;o</em>',
+            pairs: [
+                ['el jaguar', 'grande'],
+                ['la rana', 'peque\u00f1a'],
+                ['la serpiente', 'grande'],
+                ['el pez', 'peque\u00f1o'],
+                ['el mono', 'peque\u00f1o'],
+                ['el p\u00e1jaro', 'peque\u00f1o']
+            ]
+        },
+        // === GAME 7: fib — "Hay" + animals ===
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa la frase.',
+            questions: [
+                { sentence: 'En la selva hay un ___.', answer: 'mono', options: ['mono', 'casa', 'libro', 'mesa'] },
+                { sentence: 'En el r\u00edo hay un ___.', answer: 'pez', options: ['pez', '\u00e1rbol', 'sol', 'pan'] }
+            ]
+        },
+        // === GAME 8: fib — Animal descriptions ===
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa la frase con la palabra correcta.',
+            questions: [
+                { sentence: 'El mono es ___.', answer: 'peque\u00f1o', options: ['peque\u00f1o', 'malo', 'nuevo', 'fuerte'] },
+                { sentence: 'El jaguar es ___.', answer: 'grande', options: ['grande', 'peque\u00f1o', 'malo', 'nuevo'] }
+            ]
+        },
+        // === GAME 9: fib — More hay + animals ===
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa la frase.',
+            questions: [
+                { sentence: 'Hay una ___ en el agua.', answer: 'rana', options: ['rana', 'casa', 'mesa', 'silla'] },
+                { sentence: 'Hay un ___ en el cielo.', answer: 'p\u00e1jaro', options: ['p\u00e1jaro', 'pez', 'libro', 'pan'] },
+                { sentence: 'La serpiente es ___.', answer: 'grande', options: ['grande', 'nuevo', 'feliz', 'malo'] }
+            ]
+        },
+        // === GAME 10: listening — Identify the animal ===
+        {
+            type: 'listening',
+            label: 'Escuchar',
+            instruction: 'Escucha la frase y selecciona la opci&oacute;n correcta.',
+            audio: 'Es un mono.',
+            question: '\u00bfQu\u00e9 animal es?',
+            answer: 'Un mono',
+            options: ['Un mono', 'Un pez', 'Una rana', 'Un p\u00e1jaro']
+        },
+        // === GAME 11: listening — Where is the animal? ===
+        {
+            type: 'listening',
+            label: 'Escuchar',
+            instruction: 'Escucha la frase y selecciona la opci&oacute;n correcta.',
+            audio: 'La rana est\u00e1 en el agua.',
+            question: '\u00bfD\u00f3nde est\u00e1 la rana?',
+            answer: 'En el agua',
+            options: ['En el agua', 'En el \u00e1rbol', 'En el cielo', 'En la selva']
+        },
+        // === GAME 12: conjugation — Ser with animals ===
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Selecciona la forma correcta del verbo <em>ser</em>.',
+            questions: [
+                { verb: 'ser', subject: 'el jaguar', answer: 'es', options: ['es', 'son', 'soy', 'eres'] },
+                { verb: 'ser', subject: 'las ranas', answer: 'son', options: ['es', 'son', 'soy', 'somos'] },
+                { verb: 'ser', subject: 'el mono', answer: 'es', options: ['soy', 'es', 'son', 'eres'] }
+            ]
+        },
+        // === GAME 13: conjugation — Estar with animals ===
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Selecciona la forma correcta del verbo <em>estar</em>.',
+            questions: [
+                { verb: 'estar', subject: 'la rana', answer: 'est\u00e1', options: ['est\u00e1', 'est\u00e1n', 'estoy', 'est\u00e1s'] },
+                { verb: 'estar', subject: 'los peces', answer: 'est\u00e1n', options: ['est\u00e1', 'est\u00e1n', 'estamos', 'estoy'] },
+                { verb: 'estar', subject: 'el p\u00e1jaro', answer: 'est\u00e1', options: ['estoy', 'est\u00e1s', 'est\u00e1', 'est\u00e1n'] }
+            ]
+        },
+        // === GAME 14: sorting — Grande vs pequeño ===
+        {
+            type: 'sorting',
+            label: 'Clasificar',
+            instruction: 'Clasifica los animales: <em>grande</em> o <em>peque&ntilde;o</em>.',
+            categories: ['Grande', 'Peque\u00f1o'],
+            items: [
+                { text: 'el jaguar', category: 'Grande' },
+                { text: 'la rana', category: 'Peque\u00f1o' },
+                { text: 'la serpiente', category: 'Grande' },
+                { text: 'el pez', category: 'Peque\u00f1o' },
+                { text: 'el mono', category: 'Peque\u00f1o' },
+                { text: 'el p\u00e1jaro', category: 'Peque\u00f1o' }
+            ]
+        },
+        // === GAME 15: sorting — Where do they live? ===
+        {
+            type: 'sorting',
+            label: 'Clasificar',
+            instruction: 'Clasifica: <em>\u00bfen el agua o en la selva?</em>',
+            categories: ['En el agua', 'En la selva'],
+            items: [
+                { text: 'el pez', category: 'En el agua' },
+                { text: 'la rana', category: 'En el agua' },
+                { text: 'el mono', category: 'En la selva' },
+                { text: 'el jaguar', category: 'En la selva' },
+                { text: 'la serpiente', category: 'En la selva' },
+                { text: 'el p\u00e1jaro', category: 'En la selva' }
+            ]
+        },
+        // === GAME 16: builder — Simple animal sentence ===
+        {
+            type: 'builder',
+            label: 'Construir',
+            instruction: 'Ordena las palabras para formar una frase correcta.',
+            words: ['El', 'jaguar', 'es', 'grande'],
+            answer: 'El jaguar es grande'
+        },
+        // === GAME 17: builder — Hay + animal ===
+        {
+            type: 'builder',
+            label: 'Construir',
+            instruction: 'Ordena las palabras para formar una frase correcta.',
+            words: ['Hay', 'un', 'mono', 'en', 'el', '\u00e1rbol'],
+            answer: 'Hay un mono en el \u00e1rbol'
+        },
+        // === GAME 18: conversation — Identifying animals ===
+        {
+            type: 'conversation',
+            label: 'Conversaci&oacute;n',
+            instruction: 'Completa la conversaci&oacute;n. Identifica el animal.',
+            turns: [
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amigo', text: '\u00bfQu\u00e9 es?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Es un mono.', 'Es una casa.', 'Es un libro.'],
+                    answer: 'Es un mono.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amigo', text: '\u00bfEs grande o peque\u00f1o?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Es peque\u00f1o.', 'Es nuevo.', 'Es malo.'],
+                    answer: 'Es peque\u00f1o.'
+                }
+            ]
+        },
+        // === GAME 19: conversation — Animals in the jungle ===
+        {
+            type: 'conversation',
+            label: 'Conversaci&oacute;n',
+            instruction: 'Completa la conversaci&oacute;n sobre los animales de la selva.',
+            turns: [
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amiga', text: '\u00bfHay animales en la selva?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['S\u00ed, hay muchos animales.', 'No, hay libros.', 'S\u00ed, hay mesas.'],
+                    answer: 'S\u00ed, hay muchos animales.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amiga', text: '\u00bfEl jaguar es grande?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['S\u00ed, el jaguar es grande y fuerte.', 'No, el jaguar es nuevo.', 'S\u00ed, el jaguar es malo.'],
+                    answer: 'S\u00ed, el jaguar es grande y fuerte.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amiga', text: '\u00bfD\u00f3nde est\u00e1 la rana?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['La rana est\u00e1 en el agua.', 'La rana est\u00e1 en el cielo.', 'La rana es grande.'],
+                    answer: 'La rana est\u00e1 en el agua.'
+                }
+            ]
+        },
+        // === GAME 20: dictation — Animal sentence ===
+        {
+            type: 'dictation',
+            label: 'Dictado',
+            instruction: 'Escucha y escribe la frase que oyes.',
+            audio: 'Hay un p\u00e1jaro bonito en el \u00e1rbol.',
+            answer: 'Hay un p\u00e1jaro bonito en el \u00e1rbol'
+        },
+
+        // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+        {
+            type: 'escaperoom',
+            label: 'Sala de enigmas',
+            instruction: 'Resuelve los enigmas para abrir la puerta.',
+            room: {
+                name: 'La cueva de los animales',
+                description: 'Una cueva con sonidos de animales. En las paredes hay dibujos de animales de la selva.',
+                ambience: 'jungle'
+            },
+            puzzles: [
+                {
+                    puzzleType: 'riddle',
+                    prompt: 'Un sonido de pájaro y una pregunta:',
+                    riddle: '«Soy muy pequeño. Tengo alas de colores. Vuelo muy rápido. Bebo de las flores. ¿Qué animal soy?»',
+                    clue: 'Es un pájaro muy pequeño.',
+                    answer: 'Un colibrí',
+                    options: ['Un colibrí', 'Un cóndor', 'Un loro', 'Una mariposa'],
+                    onSolve: 'El dibujo del colibrí brilla.'
+                },
+                {
+                    puzzleType: 'cipher',
+                    prompt: 'Letras están en las huellas de animales en la pared.',
+                    clue: 'Es un animal grande que vive en el río. Es de color rosa.',
+                    answer: 'delfin',
+                    scrambled: 'lfdnie',
+                    onSolve: 'Las huellas se iluminan.'
+                },
+                {
+                    puzzleType: 'wordlock',
+                    prompt: 'Una huella de jaguar tiene una cerradura.',
+                    clue: 'Es el animal más grande de la selva colombiana. Tiene manchas doradas.',
+                    answer: 'jaguar',
+                    hint: '_ _ _ _ _ _',
+                    onSolve: 'La huella brilla. La puerta se abre.'
+                }
+            ],
+            fragment: {
+                text: 'Un dibujo brilla: una raíz con forma de huella de jaguar.',
+                questClue: 'La huella del jaguar está en todas las raíces del bosque.',
+                item: 'raiz-huella'
+            }
+        }
+    ];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1m2',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Module2Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C1 Avanzado - Ciudad Perdida | La Aventura de Yaguara</title>
+    <meta name="description" content="C1 Avanzado - Teyuna, Ciudad Perdida. Destinos 44-48 de La Aventura de Yaguara. Retorica, produccion academica, analisis del discurso en la Sierra Nevada.">
+    <link rel="canonical" href="https://babelfree.com/c1-ciudad-perdida">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "C1 Avanzado - Ciudad Perdida | La Aventura de Yaguara",
+          "description": "C1 Advanced Spanish course module set in Teyuna (Ciudad Perdida), the Lost City of Colombia's Sierra Nevada. Master discourse analysis, rhetoric and persuasion, intertextuality, philosophy of language, and academic production through archaeological discovery with Yaguara. Destinations 44-48 of El Viaje del Jaguar.",
+          "url": "https://babelfree.com/c1-ciudad-perdida",
+          "educationalLevel": "C1 Advanced",
+          "learningResourceType": "Interactive Course Module",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": [
+            "Discourse analysis",
+            "Rhetoric and persuasion",
+            "Intertextuality",
+            "Philosophy of language",
+            "Academic production"
+          ]
+        },
+        {
+          "@type": "Place",
+          "name": "Teyuna (Ciudad Perdida)",
+          "description": "An ancient city built by the Tairona civilization around 800 CE in the Sierra Nevada de Santa Marta. Predating Machu Picchu by 650 years, this archaeological site features stone terraces, plazas, and paths hidden in dense tropical jungle.",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 11.04,
+            "longitude": -73.93
+          },
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Colombia"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "C1",
+              "item": "https://babelfree.com/c1-ciudad-perdida"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Ciudad Perdida"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F406;</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1-deep: #0d001a;
+            --c1-medium: #1a0033;
+            --c1-accent: #7c4dff;
+            --c1-accent-light: #b388ff;
+            --c1-glow: #e040fb;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-light: #ede7f6;
+            --text-muted: #b39ddb;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--c1-deep) 0%, var(--c1-medium) 40%, #0a0020 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background — cosmic shimmer */
+        .bg-cosmos {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cosmos-wave {
+            position: absolute;
+            width: 200%;
+            height: 250px;
+            background: rgba(124, 77, 255, 0.04);
+            border-radius: 45%;
+            animation: cosmos-swell 12s infinite ease-in-out;
+        }
+
+        .cosmos-wave:nth-child(1) {
+            bottom: -100px;
+            animation-duration: 10s;
+        }
+
+        .cosmos-wave:nth-child(2) {
+            bottom: -140px;
+            animation-duration: 14s;
+            animation-delay: -3s;
+            background: rgba(179, 136, 255, 0.03);
+        }
+
+        .cosmos-wave:nth-child(3) {
+            bottom: -180px;
+            animation-duration: 18s;
+            animation-delay: -7s;
+            background: rgba(224, 64, 251, 0.03);
+        }
+
+        @keyframes cosmos-swell {
+            0%, 100% { transform: translateX(0) scaleY(1); }
+            50% { transform: translateX(-15%) scaleY(1.15); }
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(13, 0, 26, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(124, 77, 255, 0.3);
+            padding: 12px 20px;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: var(--glass-bg);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-3px);
+        }
+
+        .back-arrow {
+            font-size: 1.2rem;
+        }
+
+        .level-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--c1-accent), var(--c1-accent-light));
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(124, 77, 255, 0.4);
+        }
+
+        .level-badge .level-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--jaguar-gold);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.3); }
+        }
+
+        /* Main content */
+        .main-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px 30px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .hero-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            border: 4px solid var(--c1-accent-light);
+            overflow: hidden;
+            animation: avatar-breathe 5s ease-in-out infinite;
+            box-shadow: 0 12px 40px rgba(124, 77, 255, 0.4);
+        }
+
+        @keyframes avatar-breathe {
+            0%, 100% { transform: scale(1); box-shadow: 0 12px 40px rgba(124, 77, 255, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 16px 50px rgba(124, 77, 255, 0.5); }
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff, var(--c1-accent-light), var(--c1-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .hero-subtitle .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--c1-accent-light);
+            margin: 0 8px;
+            vertical-align: middle;
+        }
+
+        /* Story intro */
+        .story-intro {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+
+        .story-intro p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .story-intro .story-emoji {
+            font-size: 1.4rem;
+            margin: 0 4px;
+        }
+
+        /* Progress section */
+        .progress-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .progress-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 16px 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--c1-accent-light);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        /* Yaguara guide */
+        .guide-section {
+            background: linear-gradient(135deg, rgba(124, 77, 255, 0.15), rgba(179, 136, 255, 0.1));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(124, 77, 255, 0.25);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        .guide-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid var(--c1-accent-light);
+        }
+
+        .guide-messages {
+            flex: 1;
+        }
+
+        .guide-bubble {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 14px 18px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+        }
+
+        .guide-bubble:last-child {
+            margin-bottom: 0;
+        }
+
+        .guide-bubble .guide-name {
+            font-weight: 700;
+            color: var(--jaguar-gold);
+            margin-bottom: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Destinations section */
+        .destinations-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .destinations-header h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dest-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Destination cards */
+        .destination-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: var(--transition);
+            cursor: pointer;
+            animation: fadeInUp 0.6s ease-out both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .destination-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .destination-card.recommended::before {
+            background: linear-gradient(180deg, var(--c1-accent), var(--c1-accent-light));
+        }
+
+        .destination-card.locked::before {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .destination-card.completed::before {
+            background: linear-gradient(180deg, var(--success-green), var(--c1-accent-light));
+        }
+
+        .destination-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card);
+            border-color: rgba(179, 136, 255, 0.3);
+        }
+
+        .destination-card.locked {
+            opacity: 0.6;
+        }
+
+        .destination-card.locked:hover {
+            transform: none;
+            box-shadow: none;
+            cursor: default;
+        }
+
+        .dest-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .dest-info {
+            flex: 1;
+        }
+
+        .dest-number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--c1-accent-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .dest-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-light);
+        }
+
+        .dest-topic {
+            font-size: 0.85rem;
+            color: var(--c1-accent-light);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .dest-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .dest-status {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+
+        /* Progress bar in card */
+        .dest-progress {
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        .dest-progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .dest-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .dest-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--c1-accent), var(--c1-accent-light));
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        /* Game types preview */
+        .game-types {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .game-type-icon {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 6px 10px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .game-type-icon .gt-emoji {
+            font-size: 0.9rem;
+        }
+
+        /* Start button */
+        .dest-start-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .dest-start-btn.active {
+            background: linear-gradient(135deg, var(--c1-accent), var(--c1-accent-light));
+            color: white;
+            box-shadow: 0 4px 15px rgba(124, 77, 255, 0.4);
+        }
+
+        .dest-start-btn.active:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(124, 77, 255, 0.5);
+        }
+
+        .dest-start-btn.locked-btn {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-muted);
+            cursor: default;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dest-start-btn .btn-icon {
+            font-size: 1rem;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(13, 0, 26, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(124, 77, 255, 0.4);
+            border-radius: 16px;
+            padding: 16px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-light);
+            z-index: 200;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 90vw;
+            white-space: nowrap;
+        }
+
+        .notification.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .notification .notif-icon {
+            font-size: 1.3rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guide-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .dest-header {
+                flex-direction: column;
+            }
+
+            .dest-status {
+                margin-left: 0;
+                margin-top: 8px;
+                order: -1;
+            }
+
+            .game-types {
+                justify-content: flex-start;
+            }
+
+            .header-content {
+                gap: 8px;
+            }
+
+            .back-btn span.back-text {
+                display: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body>
+
+    <!-- Animated background -->
+    <div class="bg-cosmos">
+        <div class="cosmos-wave"></div>
+        <div class="cosmos-wave"></div>
+        <div class="cosmos-wave"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/c1" class="back-btn">
+                <span class="back-arrow">&#8592;</span>
+                <span class="back-text">Volver a C1</span>
+            </a>
+            <div class="level-badge">
+                <span class="level-dot"></span>
+                C1 Avanzado
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="hero-avatar"><img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <h1>La Sabiduria del Jaguar &mdash; Ciudad Perdida</h1>
+            <p class="hero-subtitle">C1 Avanzado <span class="dot"></span> Destinos 44-48</p>
+        </section>
+
+        <!-- Story intro -->
+        <section class="story-intro">
+            <p>
+                <span class="story-emoji">&#127959;</span>
+                Yaguara llega a Teyuna, la Ciudad Perdida. Entre las piedras ancestrales y la selva que devora el tiempo, el jaguar comprende que la verdadera sabiduria esta en saber escuchar lo que las palabras no dicen.
+                <span class="story-emoji">&#128056;</span>
+            </p>
+        </section>
+
+        <!-- Progress section -->
+        <section class="progress-section">
+            <div class="progress-title">
+                <span>&#128202;</span> Tu Progreso &mdash; Ciudad Perdida
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-destinations">0/5</span>
+                    <span class="stat-label">Destinos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-score">0</span>
+                    <span class="stat-label">Puntos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-games">0</span>
+                    <span class="stat-label">Juegos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-words">0</span>
+                    <span class="stat-label">Palabras</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yaguara guide -->
+        <section class="guide-section">
+            <div class="guide-avatar"><img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <div class="guide-messages">
+                <div class="guide-bubble">
+                    <div class="guide-name">Yaguara dice:</div>
+                    &#127959; Has llegado al punto mas alto del viaje.
+                    Aqui no solo usas el idioma &mdash; lo dominas. Deconstruyes la retorica, analizas el poder en el discurso y produces textos que transforman la comprension.
+                </div>
+                <div class="guide-bubble">
+                    &#128056; Ciudad Perdida es el lugar donde todos los caminos convergen.
+                    Cada habilidad que has desarrollado &mdash; narracion, argumentacion, analisis &mdash; se integra en dominio.
+                    La sabiduria del jaguar es saber cuando hablar y cuando guardar silencio.
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations -->
+        <div class="destinations-header">
+            <h2><span>&#10024;</span> Destinos</h2>
+            <span class="dest-count" id="dest-count-label">0 de 5 completados</span>
+        </div>
+
+        <!-- Destination 44: El templo del silencio -->
+        <div class="destination-card recommended" onclick="startDestination(44)" style="animation-delay: 0.5s;">
+            <div class="dest-header">
+                <div class="dest-info">
+                    <div class="dest-number">Destino 44</div>
+                    <div class="dest-title">El templo del silencio</div>
+                    <div class="dest-topic">Analisis del discurso &mdash; Deconstruir textos complejos</div>
+                    <div class="dest-desc">En Teyuna, el silencio ensena mas que las palabras. Aprende a deconstruir discursos politicos, mediaticos y academicos para revelar las estructuras de poder que los sostienen.</div>
+                </div>
+                <div class="dest-status">&#127775;</div>
+            </div>
+            <div class="dest-progress">
+                <div class="dest-progress-label">
+                    <span>Progreso</span>
+                    <span id="dest44-progress-text">0/55 juegos</span>
+                </div>
+                <div class="dest-progress-bar">
+                    <div class="dest-progress-fill" id="dest44-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="game-types">
+                <div class="game-type-icon"><span class="gt-emoji">&#128269;</span> Analisis</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#128161;</span> Interpretacion</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#9878;&#65039;</span> Debate</div>
+            </div>
+            <button class="dest-start-btn active">
+                <span class="btn-icon">&#9654;&#65039;</span> Comenzar
+            </button>
+        </div>
+
+        <!-- Destination 45: La piedra que persuade -->
+        <div class="destination-card locked" onclick="startDestination(45)" style="animation-delay: 0.6s;">
+            <div class="dest-header">
+                <div class="dest-info">
+                    <div class="dest-number">Destino 45</div>
+                    <div class="dest-title">La piedra que persuade</div>
+                    <div class="dest-topic">Retorica y persuasion &mdash; Construir discursos convincentes</div>
+                    <div class="dest-desc">Las piedras de Teyuna han convencido al tiempo. Domina las tecnicas retoricas: ethos, pathos, logos. Construye discursos que persuaden con elegancia y rigor.</div>
+                </div>
+                <div class="dest-status">&#128274;</div>
+            </div>
+            <div class="dest-progress">
+                <div class="dest-progress-label">
+                    <span>Progreso</span>
+                    <span id="dest45-progress-text">0/55 juegos</span>
+                </div>
+                <div class="dest-progress-bar">
+                    <div class="dest-progress-fill" id="dest45-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="game-types">
+                <div class="game-type-icon"><span class="gt-emoji">&#9878;&#65039;</span> Debate</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#128221;</span> Ensayo</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#128269;</span> Analisis</div>
+            </div>
+            <button class="dest-start-btn locked-btn">
+                <span class="btn-icon">&#128274;</span> Bloqueado
+            </button>
+        </div>
+
+        <!-- Destination 46: Voces entre las ruinas -->
+        <div class="destination-card locked" onclick="startDestination(46)" style="animation-delay: 0.7s;">
+            <div class="dest-header">
+                <div class="dest-info">
+                    <div class="dest-number">Destino 46</div>
+                    <div class="dest-title">Voces entre las ruinas</div>
+                    <div class="dest-topic">Intertextualidad &mdash; Conectar textos y contextos</div>
+                    <div class="dest-desc">Cada texto dialoga con otros textos. Identifica referencias, alusiones y conexiones intertextuales que enriquecen la comprension y la produccion escrita.</div>
+                </div>
+                <div class="dest-status">&#128274;</div>
+            </div>
+            <div class="dest-progress">
+                <div class="dest-progress-label">
+                    <span>Progreso</span>
+                    <span id="dest46-progress-text">0/55 juegos</span>
+                </div>
+                <div class="dest-progress-bar">
+                    <div class="dest-progress-fill" id="dest46-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="game-types">
+                <div class="game-type-icon"><span class="gt-emoji">&#128161;</span> Interpretacion</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#128269;</span> Analisis</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#127926;</span> Cultura</div>
+            </div>
+            <button class="dest-start-btn locked-btn">
+                <span class="btn-icon">&#128274;</span> Bloqueado
+            </button>
+        </div>
+
+        <!-- Destination 47: El nombre de las cosas -->
+        <div class="destination-card locked" onclick="startDestination(47)" style="animation-delay: 0.8s;">
+            <div class="dest-header">
+                <div class="dest-info">
+                    <div class="dest-number">Destino 47</div>
+                    <div class="dest-title">El nombre de las cosas</div>
+                    <div class="dest-topic">Filosofia del lenguaje &mdash; Explorar el significado profundo</div>
+                    <div class="dest-desc">Los Kogi dicen que nombrar es crear. Explora como el lenguaje construye la realidad, como las metaforas moldean el pensamiento y como las palabras crean mundos.</div>
+                </div>
+                <div class="dest-status">&#128274;</div>
+            </div>
+            <div class="dest-progress">
+                <div class="dest-progress-label">
+                    <span>Progreso</span>
+                    <span id="dest47-progress-text">0/55 juegos</span>
+                </div>
+                <div class="dest-progress-bar">
+                    <div class="dest-progress-fill" id="dest47-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="game-types">
+                <div class="game-type-icon"><span class="gt-emoji">&#128161;</span> Interpretacion</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#128221;</span> Ensayo</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#9878;&#65039;</span> Debate</div>
+            </div>
+            <button class="dest-start-btn locked-btn">
+                <span class="btn-icon">&#128274;</span> Bloqueado
+            </button>
+        </div>
+
+        <!-- Destination 48: La estrella que guia -->
+        <div class="destination-card locked" onclick="startDestination(48)" style="animation-delay: 0.9s;">
+            <div class="dest-header">
+                <div class="dest-info">
+                    <div class="dest-number">Destino 48</div>
+                    <div class="dest-title">La estrella que guia</div>
+                    <div class="dest-topic">Produccion academica &mdash; Integrar todas las competencias</div>
+                    <div class="dest-desc">Todo lo que has aprendido culmina aqui. Produce ensayos academicos, analisis criticos y textos argumentativos que demuestran dominio total del espanol avanzado.</div>
+                </div>
+                <div class="dest-status">&#128274;</div>
+            </div>
+            <div class="dest-progress">
+                <div class="dest-progress-label">
+                    <span>Progreso</span>
+                    <span id="dest48-progress-text">0/55 juegos</span>
+                </div>
+                <div class="dest-progress-bar">
+                    <div class="dest-progress-fill" id="dest48-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="game-types">
+                <div class="game-type-icon"><span class="gt-emoji">&#128221;</span> Ensayo</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#128269;</span> Analisis</div>
+                <div class="game-type-icon"><span class="gt-emoji">&#9878;&#65039;</span> Debate</div>
+            </div>
+            <button class="dest-start-btn locked-btn">
+                <span class="btn-icon">&#128274;</span> Bloqueado
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span class="notif-icon" id="notif-icon">&#128276;</span>
+        <span id="notif-text">Notificacion</span>
+    </div>
+
+    <script>
+        // Destination routes
+        var destinationRoutes = {
+            44: { url: "c1_advanced/dest44_discourse_analysis/games.html", title: "El templo del silencio", available: true },
+            45: { url: "c1_advanced/dest45_rhetoric_persuasion/games.html", title: "La piedra que persuade", available: true },
+            46: { url: "c1_advanced/dest46_intertextuality/games.html", title: "Voces entre las ruinas", available: true },
+            47: { url: "c1_advanced/dest47_philosophy_language/games.html", title: "El nombre de las cosas", available: true },
+            48: { url: "c1_advanced/dest48_academic_production/games.html", title: "La estrella que guia", available: true }
+        };
+
+        // Start destination
+        function startDestination(id) {
+            var route = destinationRoutes[id];
+            if (!route) return;
+
+            var progress = loadProgress();
+            var isUnlocked = isDestinationUnlocked(id, progress);
+
+            if (!isUnlocked) {
+                showNotification("&#128274;", "Completa el destino anterior para desbloquear este.");
+                return;
+            }
+
+            if (route.available) {
+                showNotification("&#128640;", "Cargando: " + route.title + "...");
+                setTimeout(function() {
+                    window.location.href = route.url;
+                }, 500);
+            } else {
+                showNotification("&#128679;", "Este destino estara disponible pronto.");
+            }
+        }
+
+        // Check if destination is unlocked
+        function isDestinationUnlocked(id, progress) {
+            if (id === 44) return true;
+            var prevDest = progress.destinations && progress.destinations[id - 1];
+            if (prevDest && prevDest.completed) return true;
+            var currentDest = progress.destinations && progress.destinations[id];
+            if (currentDest && currentDest.gamesCompleted > 0) return true;
+            return false;
+        }
+
+        // Show notification
+        function showNotification(icon, message) {
+            var notification = document.getElementById('notification');
+            var notifIcon = document.getElementById('notif-icon');
+            var notifText = document.getElementById('notif-text');
+
+            notifIcon.innerHTML = icon;
+            notifText.textContent = message;
+            notification.classList.add('show');
+
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Load progress from localStorage
+        function loadProgress() {
+            try {
+                var saved = localStorage.getItem('jaguarC1AdvancedProgress');
+                if (saved) {
+                    return JSON.parse(saved);
+                }
+            } catch (e) {
+                console.error('Error loading progress:', e);
+            }
+            return {
+                destinations: {},
+                totalScore: 0,
+                totalGames: 0,
+                totalWords: 0,
+                completedDestinations: 0
+            };
+        }
+
+        // Update UI with progress
+        function updateProgressUI() {
+            var progress = loadProgress();
+
+            document.getElementById('stat-destinations').textContent = (progress.completedDestinations || 0) + '/5';
+            document.getElementById('stat-score').textContent = progress.totalScore || 0;
+            document.getElementById('stat-games').textContent = progress.totalGames || 0;
+            document.getElementById('stat-words').textContent = progress.totalWords || 0;
+            document.getElementById('dest-count-label').textContent = (progress.completedDestinations || 0) + ' de 5 completados';
+
+            for (var id = 44; id <= 48; id++) {
+                var destData = progress.destinations && progress.destinations[id];
+                var gamesCompleted = destData ? (destData.gamesCompleted || 0) : 0;
+                var totalGames = 55;
+                var percentage = Math.round((gamesCompleted / totalGames) * 100);
+
+                var progressText = document.getElementById('dest' + id + '-progress-text');
+                var progressFill = document.getElementById('dest' + id + '-progress-fill');
+
+                if (progressText) {
+                    progressText.textContent = gamesCompleted + '/' + totalGames + ' juegos';
+                }
+                if (progressFill) {
+                    progressFill.style.width = percentage + '%';
+                }
+
+                var cards = document.querySelectorAll('.destination-card');
+                var cardIndex = id - 44;
+                var card = cards[cardIndex];
+
+                if (card) {
+                    var isUnlocked = isDestinationUnlocked(id, progress);
+                    var isCompleted = destData && destData.completed;
+
+                    card.classList.remove('recommended', 'locked', 'completed');
+
+                    if (isCompleted) {
+                        card.classList.add('completed');
+                        var statusEl = card.querySelector('.dest-status');
+                        if (statusEl) statusEl.innerHTML = '&#9989;';
+                        var btnEl = card.querySelector('.dest-start-btn');
+                        if (btnEl) {
+                            btnEl.className = 'dest-start-btn active';
+                            btnEl.innerHTML = '<span class="btn-icon">&#128257;</span> Repasar';
+                        }
+                    } else if (isUnlocked) {
+                        card.classList.add('recommended');
+                        var statusEl = card.querySelector('.dest-status');
+                        if (statusEl) statusEl.innerHTML = '&#127775;';
+                        var btnEl = card.querySelector('.dest-start-btn');
+                        if (btnEl) {
+                            btnEl.className = 'dest-start-btn active';
+                            if (gamesCompleted > 0) {
+                                btnEl.innerHTML = '<span class="btn-icon">&#9654;&#65039;</span> Continuar';
+                            } else {
+                                btnEl.innerHTML = '<span class="btn-icon">&#9654;&#65039;</span> Comenzar';
+                            }
+                        }
+                    } else {
+                        card.classList.add('locked');
+                        var statusEl = card.querySelector('.dest-status');
+                        if (statusEl) statusEl.innerHTML = '&#128274;';
+                        var btnEl = card.querySelector('.dest-start-btn');
+                        if (btnEl) {
+                            btnEl.className = 'dest-start-btn locked-btn';
+                            btnEl.innerHTML = '<span class="btn-icon">&#128274;</span> Bloqueado';
+                        }
+                    }
+                }
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressUI();
+        });
+
+        window.addEventListener('focus', function() {
+            updateProgressUI();
+        });
+
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'jaguarC1AdvancedProgress') {
+                updateProgressUI();
+            }
+        });
+    </script>
+</body>
+</html>

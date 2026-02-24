@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 9, Lecci&oacute;n 1 - Mi casa sobre el r&iacute;o</title>
+    <meta name="description" content="A1 Advanced - Destination 9 Lesson 1: Yaguará's home by the river, estar + states">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest9_home/lesson1_my_home">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 9, Lección 1 - Mi casa sobre el río",
+                "url": "https://babelfree.com/a1_advanced/dest9_home/lesson1_my_home",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": [
+                    "Home and rooms vocabulary",
+                    "Verb estar with states and locations",
+                    "Ser vs estar distinction"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Mi casa sobre el río",
+                        "item": "https://babelfree.com/a1_advanced/dest9_home/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Lesson 1"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --amazon-dark: #0a2e0a;
+            --amazon-medium: #1a4d1a;
+            --amazon-light: #2d6b2d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --home-brown: #5d4037;
+            --home-warm: #8d6e63;
+            --river-blue: #1565c0;
+            --mist-gray: #78909c;
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 20px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--amazon-dark) 0%, var(--home-brown) 50%, var(--amazon-medium) 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            font-size: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background:
+                radial-gradient(circle at 25% 75%, rgba(93, 64, 55, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(21, 101, 192, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(46, 125, 50, 0.1) 0%, transparent 50%);
+            z-index: 1;
+            animation: homeGlow 30s ease-in-out infinite;
+        }
+
+        @keyframes homeGlow {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.03); opacity: 1; }
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; position: relative; z-index: 10; }
+
+        .lesson-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 3px solid var(--home-brown);
+            text-align: center;
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute; top: 20px; left: 20px;
+            background: var(--glass-bg); color: white;
+            padding: 10px 20px; text-decoration: none;
+            border-radius: 25px; border: 2px solid var(--home-brown);
+            transition: var(--transition); font-weight: 600; font-size: 0.9rem;
+        }
+        .back-btn:hover { background: rgba(93, 64, 55, 0.2); transform: translateY(-2px); }
+
+        .lesson-info {
+            position: absolute; top: 20px; right: 20px;
+            background: var(--home-brown); color: white;
+            padding: 8px 16px; border-radius: 20px;
+            font-weight: 700; font-size: 0.8rem;
+        }
+
+        .lesson-title { font-size: 2.2rem; color: var(--home-warm); margin-bottom: 10px; font-weight: 900; }
+        .lesson-subtitle { color: var(--text-light); font-size: 1.2rem; font-weight: 600; }
+
+        .progress-bar-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px; padding: 20px; margin: 20px 0;
+            border: 2px solid var(--home-brown);
+        }
+        .progress-bar { width: 100%; height: 12px; background: rgba(255, 255, 255, 0.2); border-radius: 6px; overflow: hidden; margin-bottom: 10px; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--home-brown), var(--river-blue)); border-radius: 6px; width: 0%; transition: width 1s ease; }
+        .progress-text { color: var(--home-warm); font-weight: 700; text-align: center; font-size: 1rem; }
+
+        .story-section {
+            background: linear-gradient(135deg, rgba(93, 64, 55, 0.15), rgba(21, 101, 192, 0.1));
+            border: 3px solid var(--home-brown);
+            border-radius: var(--border-radius);
+            padding: 30px; margin: 30px 0; text-align: center;
+        }
+        .story-title { color: var(--home-warm); font-weight: 700; font-size: 1.6rem; margin-bottom: 20px; }
+
+        .jaguar-avatar {
+            width: 120px; height: 120px; overflow: hidden;
+            border-radius: 50%; margin: 0 auto 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; border: 4px solid var(--jaguar-gold);
+            animation: breathe 3s ease-in-out infinite;
+            cursor: pointer; box-shadow: 0 8px 30px rgba(249, 202, 36, 0.4);
+        }
+        @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        .story-text { color: var(--text-light); font-size: 1.3rem; line-height: 2; margin: 20px 0; }
+        .simple-sentence {
+            margin: 15px 0; padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px; border-left: 5px solid var(--home-brown);
+        }
+
+        .concept-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 30px; margin: 30px 0;
+            border: 3px solid var(--river-blue);
+        }
+        .concept-title { color: var(--river-blue); font-weight: 700; font-size: 1.8rem; margin-bottom: 25px; text-align: center; }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px; margin-top: 25px;
+        }
+
+        .concept-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px; padding: 25px; text-align: center;
+            border: 3px solid transparent;
+            transition: var(--transition); cursor: pointer;
+        }
+        .concept-card:hover { transform: translateY(-5px); border-color: var(--jaguar-gold); box-shadow: 0 10px 30px rgba(249, 202, 36, 0.3); }
+        .concept-card.feliz { border-color: var(--jaguar-gold); }
+        .concept-card.caliente { border-color: var(--jaguar-orange); }
+        .concept-card.cerca { border-color: var(--river-blue); }
+        .concept-card.tranquila { border-color: var(--success-green); }
+
+        .card-avatar {
+            width: 80px; height: 80px; border-radius: 50%;
+            margin: 0 auto 15px; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 2.5rem; border: 3px solid;
+        }
+        .concept-card.feliz .card-avatar { background: linear-gradient(135deg, var(--jaguar-gold), #fdd835); border-color: var(--jaguar-gold); }
+        .concept-card.caliente .card-avatar { background: linear-gradient(135deg, var(--jaguar-orange), #ffb74d); border-color: var(--jaguar-orange); }
+        .concept-card.cerca .card-avatar { background: linear-gradient(135deg, var(--river-blue), #42a5f5); border-color: var(--river-blue); }
+        .concept-card.tranquila .card-avatar { background: linear-gradient(135deg, var(--success-green), #81c784); border-color: var(--success-green); }
+
+        .card-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+        .concept-card.feliz .card-name { color: var(--jaguar-gold); }
+        .concept-card.caliente .card-name { color: var(--jaguar-orange); }
+        .concept-card.cerca .card-name { color: var(--river-blue); }
+        .concept-card.tranquila .card-name { color: var(--success-green); }
+
+        .card-verb { color: var(--text-light); font-size: 1rem; margin-bottom: 10px; font-style: italic; }
+        .card-description { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+        .yaguara-guide {
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.15), rgba(255, 107, 53, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: 20px; padding: 25px; margin: 30px 0;
+            display: grid; grid-template-columns: 80px 1fr;
+            gap: 20px; align-items: start;
+        }
+        .yaguara-small {
+            width: 70px; height: 70px; overflow: hidden;
+            border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 2rem; border: 3px solid var(--jaguar-gold);
+            animation: breathe 4s ease-in-out infinite;
+            cursor: pointer; flex-shrink: 0;
+        }
+        .yaguara-text { padding-top: 5px; }
+        .guide-title { color: var(--jaguar-gold); font-weight: 700; margin-bottom: 10px; font-size: 1.1rem; }
+        .guide-message { color: var(--text-light); line-height: 1.8; font-size: 1rem; }
+        .simple-message { margin: 8px 0; }
+
+        .exercise-section {
+            background: linear-gradient(135deg, rgba(93, 64, 55, 0.15), rgba(21, 101, 192, 0.1));
+            border: 3px solid var(--home-brown);
+            border-radius: var(--border-radius);
+            padding: 30px; margin: 30px 0;
+        }
+        .exercise-title { color: var(--home-brown); font-weight: 700; font-size: 1.6rem; margin-bottom: 20px; text-align: center; }
+        .exercise-instruction {
+            background: rgba(93, 64, 55, 0.1);
+            border: 2px solid var(--home-brown);
+            border-radius: 15px; padding: 20px; margin: 20px 0; text-align: center;
+        }
+        .instruction-text { color: var(--home-warm); font-weight: 600; font-size: 1.2rem; }
+
+        .matching-game { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        .words-column, .images-column { background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 20px; }
+        .column-title { color: var(--home-warm); font-weight: 700; font-size: 1.2rem; margin-bottom: 20px; text-align: center; }
+
+        .word-item, .image-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid transparent; border-radius: 12px;
+            padding: 15px; margin: 10px 0; cursor: pointer;
+            transition: var(--transition); text-align: center;
+            font-weight: 600; font-size: 1.1rem;
+        }
+        .word-item:hover, .image-item:hover { border-color: var(--home-brown); background: rgba(93, 64, 55, 0.1); transform: translateX(5px); }
+        .word-item.selected, .image-item.selected { border-color: var(--home-brown); background: rgba(93, 64, 55, 0.2); transform: scale(1.02); }
+        .word-item.correct, .image-item.correct { border-color: var(--success-green); background: rgba(76, 175, 80, 0.2); }
+        .word-item.incorrect, .image-item.incorrect { border-color: #e74c3c; background: rgba(231, 76, 60, 0.2); }
+
+        .success-message {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(129, 199, 132, 0.1));
+            border: 3px solid var(--success-green);
+            border-radius: 15px; padding: 25px; margin: 25px 0;
+            text-align: center; display: none;
+        }
+        .success-message.show { display: block; animation: successSlide 0.5s ease-out; }
+        @keyframes successSlide { 0% { opacity: 0; transform: translateY(-20px); } 100% { opacity: 1; transform: translateY(0); } }
+        .success-title { color: var(--success-green); font-weight: 700; font-size: 1.4rem; margin-bottom: 15px; }
+        .success-text { color: var(--text-light); font-size: 1.1rem; line-height: 1.6; }
+
+        .lesson-navigation { display: flex; justify-content: center; align-items: center; margin-top: 40px; gap: 20px; flex-wrap: wrap; }
+        .nav-button {
+            padding: 15px 30px; border: none; border-radius: 25px;
+            font-size: 1.1rem; font-weight: 700; cursor: pointer;
+            transition: var(--transition); min-width: 150px; text-align: center;
+        }
+        .nav-button.primary { background: linear-gradient(135deg, var(--home-brown), var(--river-blue)); color: white; border: 2px solid var(--home-brown); }
+        .nav-button.primary:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(93, 64, 55, 0.4); }
+        .nav-button.secondary { background: var(--glass-bg); color: white; border: 2px solid var(--home-brown); }
+        .nav-button.secondary:hover { background: rgba(93, 64, 55, 0.2); transform: scale(1.05); }
+        .nav-button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .nav-button:disabled:hover { transform: none; box-shadow: none; }
+
+        @media (max-width: 768px) {
+            body { font-size: 18px; }
+            .container { padding: 15px; }
+            .concept-grid { grid-template-columns: 1fr; }
+            .matching-game { grid-template-columns: 1fr; gap: 20px; }
+            .lesson-title { font-size: 1.8rem; }
+            .back-btn, .lesson-info { position: static; margin: 10px auto; display: block; width: fit-content; }
+            .yaguara-guide { grid-template-columns: 1fr; text-align: center; gap: 15px; }
+            .yaguara-small { margin: 0 auto; }
+        }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/a1-amazon" class="back-btn">&larr; Destinos</a>
+            <div class="lesson-info">Destino 9 &bull; Lecci&oacute;n 1</div>
+            <h1 class="lesson-title">Mi casa sobre el r&iacute;o</h1>
+            <p class="lesson-subtitle">El hogar y los sentimientos</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text" id="progressText">Paso 1 de 5</div>
+        </div>
+
+        <!-- STEP 1: REVIEW -->
+        <div class="story-section" id="step1">
+            <div class="story-title">Yaguará aprende</div>
+            <div class="story-text">
+                Yaguará come con su familia junto al r&iacute;o. Conoce a su madre, su padre, su hermano y su hermana. La Abuela Ceiba sabe todos los nombres.
+            </div>
+            <div class="story-text">
+                Ahora Yaguará va a ense&ntilde;ar su casa.
+            </div>
+        </div>
+
+        <!-- STEP 2: STORY -->
+        <div class="story-section" id="step2" style="display:none;">
+            <div class="story-title">La casa junto al r&iacute;o</div>
+            <div class="jaguar-avatar" onclick="speakText('Mi casa est&aacute; junto al r&iacute;o. Estoy feliz aqu&iacute;.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">Yaguar&aacute; vive debajo de la ceiba, junto al r&iacute;o.</div>
+                <div class="simple-sentence">Su casa es una cueva grande. Adentro hay una sala.</div>
+                <div class="simple-sentence">La casa est&aacute; caliente. Yaguar&aacute; est&aacute; feliz aqu&iacute;.</div>
+                <div class="simple-sentence">Pero lejos, una niebla gris est&aacute; en el borde del bosque.</div>
+            </div>
+        </div>
+
+        <!-- STEP 3: CONCEPTS — Estar states -->
+        <div class="concept-section" id="step3" style="display:none;">
+            <div class="concept-title">Estar: &iquest;c&oacute;mo estoy?</div>
+            <div class="concept-grid">
+                <div class="concept-card feliz" onclick="learnConcept('feliz')">
+                    <div class="card-avatar">&#128522;</div>
+                    <div class="card-name">Feliz</div>
+                    <div class="card-verb">Estoy feliz</div>
+                    <div class="card-description">Yaguar&aacute; est&aacute; feliz en su casa.</div>
+                </div>
+                <div class="concept-card caliente" onclick="learnConcept('caliente')">
+                    <div class="card-avatar">&#9728;&#65039;</div>
+                    <div class="card-name">Caliente</div>
+                    <div class="card-verb">La casa est&aacute; caliente</div>
+                    <div class="card-description">La cueva est&aacute; caliente por la noche.</div>
+                </div>
+                <div class="concept-card cerca" onclick="learnConcept('cerca')">
+                    <div class="card-avatar">&#128205;</div>
+                    <div class="card-name">Cerca / lejos</div>
+                    <div class="card-verb">Est&aacute; cerca del r&iacute;o</div>
+                    <div class="card-description">La casa est&aacute; cerca. La niebla est&aacute; lejos.</div>
+                </div>
+                <div class="concept-card tranquila" onclick="learnConcept('tranquila')">
+                    <div class="card-avatar">&#128524;</div>
+                    <div class="card-name">Tranquila</div>
+                    <div class="card-verb">Mam&aacute; Jaguar est&aacute; tranquila</div>
+                    <div class="card-description">Mam&aacute; Jaguar est&aacute; tranquila en la casa.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4: YAGUARÁ GUIDE — Ser vs Estar -->
+        <div class="yaguara-guide" id="step4" style="display:none;">
+            <div class="yaguara-small" onclick="speakText('Ser es para siempre. Estar es para ahora.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguar&aacute; dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message"><strong>Ser</strong> = para siempre: La casa <strong>es</strong> grande. Yaguar&aacute; <strong>es</strong> un jaguar.</div>
+                    <div class="simple-message"><strong>Estar</strong> = ahora: La casa <strong>est&aacute;</strong> caliente. Yaguar&aacute; <strong>est&aacute;</strong> feliz.</div>
+                    <div class="simple-message"><strong>Estar</strong> = lugar: La casa <strong>est&aacute;</strong> junto al r&iacute;o.</div>
+                    <div class="simple-message">Mam&aacute; Jaguar dice: &laquo;Hay una mujer vieja junto al r&iacute;o. Se llama Asunci&oacute;n. Ella escucha el bosque.&raquo;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 5: EXERCISE — Ser vs Estar matching -->
+        <div class="exercise-section" id="step5" style="display:none;">
+            <div class="exercise-title">Pr&aacute;ctica: &iquest;ser o estar?</div>
+            <div class="exercise-instruction">
+                <div class="instruction-text">Une la frase con el verbo correcto.</div>
+            </div>
+            <div class="matching-game">
+                <div class="words-column">
+                    <div class="column-title">Frases</div>
+                    <div class="word-item" onclick="selectWord(this, 'es1')" data-word="es1">La casa ___ grande</div>
+                    <div class="word-item" onclick="selectWord(this, 'esta1')" data-word="esta1">Yaguar&aacute; ___ feliz</div>
+                    <div class="word-item" onclick="selectWord(this, 'es2')" data-word="es2">Yaguar&aacute; ___ un jaguar</div>
+                    <div class="word-item" onclick="selectWord(this, 'esta2')" data-word="esta2">La casa ___ junto al r&iacute;o</div>
+                </div>
+                <div class="images-column">
+                    <div class="column-title">Verbo</div>
+                    <div class="image-item" onclick="selectImage(this, 'esta1')" data-image="esta1">est&aacute; (sentimiento)</div>
+                    <div class="image-item" onclick="selectImage(this, 'es1')" data-image="es1">es (caracter&iacute;stica)</div>
+                    <div class="image-item" onclick="selectImage(this, 'esta2')" data-image="esta2">est&aacute; (lugar)</div>
+                    <div class="image-item" onclick="selectImage(this, 'es2')" data-image="es2">es (identidad)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-title">&#161;Excelente!</div>
+            <div class="success-text">
+                Lecci&oacute;n completa.<br>
+                Sabes usar ser y estar.<br>
+                La casa de Yaguar&aacute; est&aacute; junto al r&iacute;o. Ella est&aacute; feliz.
+            </div>
+        </div>
+
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" onclick="previousStep()" id="prevBtn" disabled>&larr; Anterior</button>
+            <button class="nav-button primary" onclick="nextStep()" id="nextBtn">Siguiente &rarr;</button>
+            <button class="nav-button primary" onclick="finishLesson()" id="finishBtn" style="display:none;">Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            var lessonData = {
+                currentStep: 1,
+                totalSteps: 5,
+                selectedWord: null,
+                matchedPairs: 0,
+                totalPairs: 4,
+                isComplete: false
+            };
+
+            var concepts = {
+                feliz: "Estoy feliz. Feliz es un sentimiento. Uso estar.",
+                caliente: "La casa está caliente. Caliente es ahora. Uso estar.",
+                cerca: "La casa está cerca del río. Cerca es un lugar. Uso estar.",
+                tranquila: "Mamá Jaguar está tranquila. Tranquila es ahora. Uso estar."
+            };
+
+            function updateProgress() {
+                var pct = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var fill = document.getElementById('progressFill');
+                var text = document.getElementById('progressText');
+                if (fill) fill.style.width = pct + '%';
+                if (text) text.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(n) {
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var s = document.getElementById('step' + i);
+                    if (s) s.style.display = 'none';
+                }
+                var cur = document.getElementById('step' + n);
+                if (cur) { cur.style.display = 'block'; cur.style.animation = 'fadeIn 0.5s ease-in'; }
+                updateNav();
+                updateProgress();
+            }
+
+            function updateNav() {
+                var prev = document.getElementById('prevBtn');
+                var next = document.getElementById('nextBtn');
+                var fin = document.getElementById('finishBtn');
+                if (prev) prev.disabled = lessonData.currentStep === 1;
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (next) next.style.display = 'none';
+                    if (fin) fin.style.display = 'inline-block';
+                } else {
+                    if (next) next.style.display = 'inline-block';
+                    if (fin) fin.style.display = 'none';
+                }
+            }
+
+            function goNext() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                    if (window.JaguarAPI) JaguarAPI.syncA1Progress('dest9_home', 'lesson1_my_home', { currentStep: lessonData.currentStep, totalSteps: lessonData.totalSteps, isComplete: false });
+                }
+            }
+
+            function goPrev() {
+                if (lessonData.currentStep > 1) { lessonData.currentStep--; showStep(lessonData.currentStep); }
+            }
+
+            function learnConceptFn(concept) {
+                var text = concepts[concept];
+                if (text) { speakInSpanish(text); showNotification('Estar:', text); }
+            }
+
+            function selectWordFn(el, word) {
+                var all = document.querySelectorAll('.word-item');
+                for (var i = 0; i < all.length; i++) all[i].classList.remove('selected');
+                el.classList.add('selected');
+                lessonData.selectedWord = word;
+            }
+
+            function selectImageFn(el, image) {
+                if (!lessonData.selectedWord) { showNotification('Primero:', 'Selecciona una frase'); return; }
+                var isCorrect = lessonData.selectedWord === image;
+                var wordEl = document.querySelector('.word-item[data-word="' + lessonData.selectedWord + '"]');
+
+                if (isCorrect) {
+                    wordEl.classList.remove('selected'); wordEl.classList.add('correct');
+                    el.classList.add('correct');
+                    lessonData.matchedPairs++; lessonData.selectedWord = null;
+                    var msgs = ['Bien', 'Muy bien', 'Excelente', 'Perfecto'];
+                    speakInSpanish(msgs[lessonData.matchedPairs - 1] || 'Bien');
+                    showNotification('Correcto', msgs[lessonData.matchedPairs - 1] || 'Bien');
+
+                    if (lessonData.matchedPairs === lessonData.totalPairs) {
+                        setTimeout(function() {
+                            var sm = document.getElementById('successMessage');
+                            if (sm) sm.classList.add('show');
+                            speakInSpanish('Excelente. Lección completa.');
+                        }, 1000);
+                    }
+                } else {
+                    wordEl.classList.add('incorrect'); el.classList.add('incorrect');
+                    showNotification('Incorrecto', 'Intenta otra vez');
+                    setTimeout(function() {
+                        wordEl.classList.remove('selected', 'incorrect');
+                        el.classList.remove('incorrect');
+                        lessonData.selectedWord = null;
+                    }, 1500);
+                }
+            }
+
+            function speakInSpanish(text) {
+                if (!text || !('speechSynthesis' in window)) return;
+                try {
+                    var u = new SpeechSynthesisUtterance(text);
+                    u.lang = 'es-CO'; u.rate = 0.55; u.pitch = 1.0; u.volume = 1.0;
+                    speechSynthesis.speak(u);
+                } catch (e) { console.log('Speech error:', e); }
+            }
+
+            function showNotification(title, message) {
+                var existing = document.querySelector('.temp-notification');
+                if (existing) existing.remove();
+                var n = document.createElement('div');
+                n.className = 'temp-notification';
+                n.style.cssText = 'position:fixed;top:20px;right:20px;background:rgba(93,64,55,0.95);color:white;padding:15px 20px;border-radius:12px;font-weight:600;z-index:10000;max-width:320px;border:2px solid #5d4037;box-shadow:0 4px 20px rgba(0,0,0,0.3);animation:slideInRight 0.3s ease-out;';
+                n.innerHTML = '<div style="font-weight:700;margin-bottom:5px;font-size:1.1rem;">' + title + '</div><div style="font-size:0.9rem;opacity:0.9;">' + message + '</div>';
+                document.body.appendChild(n);
+                setTimeout(function() { if (n && n.parentNode) n.parentNode.removeChild(n); }, 3500);
+            }
+
+            function completeLessonFn() {
+                lessonData.isComplete = true;
+                if (window.JaguarAPI) JaguarAPI.syncA1Progress('dest9_home', 'lesson1_my_home', { currentStep: lessonData.totalSteps, totalSteps: lessonData.totalSteps, isComplete: true });
+                showNotification('Lecci&oacute;n completa', 'Sabes usar ser y estar');
+                setTimeout(function() {
+                    if (confirm('Lección completa.\n\nSabes usar ser y estar.\n\n¿Continuar?')) { window.location.href = '/a1-amazon'; }
+                }, 2000);
+            }
+
+            window.nextStep = goNext;
+            window.previousStep = goPrev;
+            window.learnConcept = learnConceptFn;
+            window.selectWord = selectWordFn;
+            window.selectImage = selectImageFn;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLessonFn;
+
+            var style = document.createElement('style');
+            style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes slideInRight{from{transform:translateX(300px);opacity:0}to{transform:translateX(0);opacity:1}}';
+            document.head.appendChild(style);
+
+            document.addEventListener('DOMContentLoaded', function() { showStep(1); });
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>

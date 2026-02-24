@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 20: Voces del Pac&iacute;fico - Subjuntivo presente</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest20_subjunctive/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 20: Voces del Pacífico - Subjuntivo presente",
+          "url": "https://babelfree.com/b1_basic/dest20_subjunctive/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Subjunctive introduction", "Present subjunctive", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Basic", "item": "https://babelfree.com/b1-quibdo" },
+            { "@type": "ListItem", "position": 4, "name": "Voces del Pacífico - Subjuntivo presente" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 20: Voces del Pac&iacute;fico</div>
+            <div class="yg-header-subtitle">Subjuntivo presente</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+  // ===== GAME 1: narrative — Las voces del Pac\u00edfico =====
+  {
+    type: "narrative",
+    label: "Narraci\u00f3n",
+    instruction: "Lee sobre las comunidades del Pac\u00edfico colombiano y sus deseos para el futuro.",
+    text: "Yaguar\u00e1 llega a la costa del Pac\u00edfico colombiano. El aire huele a sal y a selva h\u00fameda. En un pueblo peque\u00f1o junto al r\u00edo, una mujer llamada Do\u00f1a Petrona toca la marimba de chonta mientras canta. Ella le dice a Yaguar\u00e1: \u00abEspero que la m\u00fasica nunca desaparezca de este lugar. Quiero que mis nietos conozcan el currulao. Es importante que las nuevas generaciones aprendan nuestras tradiciones.\u00bb Yaguar\u00e1 siente el ritmo en todo su cuerpo. Aqu\u00ed, en el Pac\u00edfico, cada palabra lleva un deseo, una esperanza, una voz que pide que el mundo escuche."
+  },
+  // ===== GAME 2: conjugation — Regulares: hablar, comer, vivir =====
+  {
+    type: "conjugation",
+    label: "Conjugaci\u00f3n",
+    instruction: "Conjuga los verbos regulares en subjuntivo presente.",
+    questions: [
+      { verb: "hablar", subject: "yo", answer: "hable", options: ["hable", "hablo", "habl\u00e9", "habla"] },
+      { verb: "hablar", subject: "t\u00fa", answer: "hables", options: ["hablas", "hables", "habl\u00e9s", "hablas"] },
+      { verb: "comer", subject: "\u00e9l/ella", answer: "coma", options: ["come", "coma", "comi\u00f3", "come"] },
+      { verb: "comer", subject: "nosotros", answer: "comamos", options: ["comemos", "comamos", "com\u00edamos", "comeremos"] },
+      { verb: "vivir", subject: "ellos", answer: "vivan", options: ["viven", "vivan", "vivieron", "vivir\u00e1n"] }
+    ]
+  },
+  // ===== GAME 3: conjugation — Irregulares: ser, tener, ir =====
+  {
+    type: "conjugation",
+    label: "Conjugaci\u00f3n",
+    instruction: "Conjuga los verbos irregulares en subjuntivo presente.",
+    questions: [
+      { verb: "ser", subject: "yo", answer: "sea", options: ["sea", "soy", "ser\u00e9", "fui"] },
+      { verb: "tener", subject: "t\u00fa", answer: "tengas", options: ["tienes", "tengas", "ten\u00edas", "tendr\u00e1s"] },
+      { verb: "ir", subject: "\u00e9l/ella", answer: "vaya", options: ["va", "vaya", "fue", "ir\u00e1"] },
+      { verb: "hacer", subject: "nosotros", answer: "hagamos", options: ["hacemos", "hagamos", "hicimos", "haremos"] },
+      { verb: "poder", subject: "ellos", answer: "puedan", options: ["pueden", "puedan", "pudieron", "podr\u00e1n"] }
+    ]
+  },
+  // ===== GAME 4: fib — Espero que... =====
+  {
+    type: "fib",
+    label: "Completar",
+    instruction: "Completa las oraciones con la forma correcta del subjuntivo.",
+    questions: [
+      { sentence: "Espero que t\u00fa ___ bien.", answer: "est\u00e9s", options: ["est\u00e1s", "est\u00e9s", "eres", "seas"] },
+      { sentence: "Espero que ellos ___ a la fiesta.", answer: "vengan", options: ["vienen", "vengan", "vinieron", "vendr\u00e1n"] },
+      { sentence: "Espero que nosotros ___ una soluci\u00f3n.", answer: "encontremos", options: ["encontramos", "encontremos", "encontr\u00e1bamos", "encontraremos"] },
+      { sentence: "Espero que mi familia ___ feliz.", answer: "sea", options: ["es", "sea", "ser\u00e1", "fue"] }
+    ]
+  },
+  // ===== GAME 5: fib — Es importante que... =====
+  {
+    type: "fib",
+    label: "Completar",
+    instruction: "Completa con el subjuntivo despu\u00e9s de expresiones impersonales.",
+    questions: [
+      { sentence: "Es importante que los j\u00f3venes ___ la marimba.", answer: "aprendan", options: ["aprenden", "aprendan", "aprendieron", "aprender\u00e1n"] },
+      { sentence: "Es necesario que el gobierno ___ m\u00e1s escuelas.", answer: "construya", options: ["construye", "construya", "construy\u00f3", "construir\u00e1"] },
+      { sentence: "Es bueno que la comunidad ___ unida.", answer: "est\u00e9", options: ["est\u00e1", "est\u00e9", "estuvo", "estar\u00e1"] },
+      { sentence: "Es mejor que t\u00fa ___ la verdad.", answer: "digas", options: ["dices", "digas", "dijiste", "dir\u00e1s"] }
+    ]
+  },
+  // ===== GAME 6: pair — Indicativo \u2194 subjuntivo =====
+  {
+    type: "pair",
+    label: "Emparejar",
+    instruction: "Empareja cada forma del indicativo con su forma del subjuntivo.",
+    pairs: [
+      ["hablo", "hable"],
+      ["comes", "comas"],
+      ["vive", "viva"],
+      ["somos", "seamos"],
+      ["tienen", "tengan"],
+      ["va", "vaya"]
+    ]
+  },
+  // ===== GAME 7: narrative — La marimba y los deseos =====
+  {
+    type: "narrative",
+    label: "Narraci\u00f3n",
+    instruction: "Lee c\u00f3mo la m\u00fasica del Pac\u00edfico expresa deseos y esperanzas.",
+    text: "Don Gualajo, un maestro de la marimba de chonta, se sienta junto a Yaguar\u00e1 en la orilla del r\u00edo. Le cuenta: \u00abQuiero que t\u00fa entiendas algo. La marimba no es solo un instrumento. Es la voz de nuestros ancestros. Ojal\u00e1 que m\u00e1s personas vengan a escucharla. Dudo que en las grandes ciudades sepan lo que significa este sonido.\u00bb Yaguar\u00e1 escucha las notas que flotan sobre el agua. Cada melod\u00eda es un deseo, cada ritmo es una plegaria. Don Gualajo a\u00f1ade: \u00abEs necesario que el mundo conozca nuestra cultura antes de que sea demasiado tarde.\u00bb"
+  },
+  // ===== GAME 8: conjugation — saber, querer, salir =====
+  {
+    type: "conjugation",
+    label: "Conjugaci\u00f3n",
+    instruction: "Conjuga estos verbos irregulares en subjuntivo presente.",
+    questions: [
+      { verb: "saber", subject: "yo", answer: "sepa", options: ["s\u00e9", "sepa", "supe", "sabr\u00e9"] },
+      { verb: "querer", subject: "t\u00fa", answer: "quieras", options: ["quieres", "quieras", "quer\u00edas", "querr\u00e1s"] },
+      { verb: "salir", subject: "\u00e9l/ella", answer: "salga", options: ["sale", "salga", "sali\u00f3", "saldr\u00e1"] },
+      { verb: "decir", subject: "nosotros", answer: "digamos", options: ["decimos", "digamos", "dijimos", "diremos"] },
+      { verb: "venir", subject: "ellos", answer: "vengan", options: ["vienen", "vengan", "vinieron", "vendr\u00e1n"] }
+    ]
+  },
+  // ===== GAME 9: fib — Quiero que... / No creo que... =====
+  {
+    type: "fib",
+    label: "Completar",
+    instruction: "Completa con el subjuntivo usando deseos y dudas.",
+    questions: [
+      { sentence: "Quiero que mis hijos ___ m\u00fasica tradicional.", answer: "escuchen", options: ["escuchan", "escuchen", "escucharon", "escuchar\u00e1n"] },
+      { sentence: "No creo que el currulao ___ f\u00e1cil de tocar.", answer: "sea", options: ["es", "sea", "fue", "ser\u00e1"] },
+      { sentence: "Dudo que ellos ___ la diferencia entre marimba y xilof\u00f3n.", answer: "sepan", options: ["saben", "sepan", "supieron", "sabr\u00e1n"] },
+      { sentence: "Ojal\u00e1 que la lluvia ___ pronto.", answer: "pare", options: ["para", "pare", "par\u00f3", "parar\u00e1"] }
+    ]
+  },
+  // ===== GAME 10: fib — Mezcla de disparadores =====
+  {
+    type: "fib",
+    label: "Completar",
+    instruction: "Elige la forma correcta del subjuntivo seg\u00fan el disparador.",
+    questions: [
+      { sentence: "Es necesario que todos ___ agua limpia.", answer: "tengan", options: ["tienen", "tengan", "tuvieron", "tendr\u00e1n"] },
+      { sentence: "No creo que la situaci\u00f3n ___ tan mala.", answer: "sea", options: ["es", "sea", "fue", "ser\u00e1"] },
+      { sentence: "Ojal\u00e1 que nosotros ___ ayudar.", answer: "podamos", options: ["podemos", "podamos", "pudimos", "podremos"] },
+      { sentence: "Quiero que t\u00fa ___ a mi pueblo.", answer: "vengas", options: ["vienes", "vengas", "viniste", "vendr\u00e1s"] }
+    ]
+  },
+  // ===== GAME 11: listening — Recomendaciones de una abuela =====
+  {
+    type: "listening",
+    label: "Escuchar",
+    instruction: "Escucha las recomendaciones de Do\u00f1a Carmen y responde.",
+    audio: "Do\u00f1a Carmen dice: Es importante que los ni\u00f1os aprendan a pescar. Quiero que mi nieta sepa cocinar el tapao. Espero que la comunidad no pierda sus costumbres.",
+    question: "\u00bfQu\u00e9 quiere Do\u00f1a Carmen para su nieta?",
+    answer: "Quiere que su nieta sepa cocinar el tapao",
+    options: ["Quiere que su nieta sepa cocinar el tapao", "Quiere que su nieta estudie medicina", "Quiere que su nieta viva en la ciudad", "Quiere que su nieta toque la marimba"]
+  },
+  // ===== GAME 12: listening — Consejos de un pescador =====
+  {
+    type: "listening",
+    label: "Escuchar",
+    instruction: "Escucha los consejos de Don Manuel y selecciona la respuesta correcta.",
+    audio: "Don Manuel le dice a su hijo: Espero que tengas cuidado en el r\u00edo. Es necesario que respetes la naturaleza. No quiero que pesques m\u00e1s de lo necesario. Ojal\u00e1 que entiendas por qu\u00e9 te digo esto.",
+    question: "\u00bfQu\u00e9 es necesario seg\u00fan Don Manuel?",
+    answer: "Es necesario que su hijo respete la naturaleza",
+    options: ["Es necesario que su hijo respete la naturaleza", "Es necesario que su hijo pesque mucho", "Es necesario que su hijo vaya a la ciudad", "Es necesario que su hijo compre un barco"]
+  },
+  // ===== GAME 13: pair — Frases con indicativo \u2194 subjuntivo =====
+  {
+    type: "pair",
+    label: "Emparejar",
+    instruction: "Empareja cada oraci\u00f3n en indicativo con su versi\u00f3n en subjuntivo.",
+    pairs: [
+      ["Ellos vienen", "Espero que vengan"],
+      ["T\u00fa sabes", "Dudo que sepas"],
+      ["Ella tiene", "Quiero que tenga"],
+      ["\u00c9l puede", "Ojal\u00e1 que pueda"],
+      ["Nosotros hacemos", "Es necesario que hagamos"]
+    ]
+  },
+  // ===== GAME 14: conjugation — poner, traer, conocer =====
+  {
+    type: "conjugation",
+    label: "Conjugaci\u00f3n",
+    instruction: "Conjuga estos verbos en subjuntivo presente.",
+    questions: [
+      { verb: "poner", subject: "yo", answer: "ponga", options: ["pongo", "ponga", "puse", "pondr\u00e9"] },
+      { verb: "traer", subject: "t\u00fa", answer: "traigas", options: ["traes", "traigas", "trajiste", "traer\u00e1s"] },
+      { verb: "conocer", subject: "\u00e9l/ella", answer: "conozca", options: ["conoce", "conozca", "conoci\u00f3", "conocer\u00e1"] },
+      { verb: "pedir", subject: "nosotros", answer: "pidamos", options: ["pedimos", "pidamos", "ped\u00edamos", "pediremos"] },
+      { verb: "dormir", subject: "ellos", answer: "duerman", options: ["duermen", "duerman", "durmieron", "dormir\u00e1n"] }
+    ]
+  },
+  // ===== GAME 15: sorting — Disparadores de indicativo vs. subjuntivo =====
+  {
+    type: "sorting",
+    label: "Clasificar",
+    instruction: "Clasifica cada expresi\u00f3n seg\u00fan si requiere indicativo o subjuntivo.",
+    categories: ["Indicativo", "Subjuntivo"],
+    items: [
+      { text: "Creo que", category: "Indicativo" },
+      { text: "S\u00e9 que", category: "Indicativo" },
+      { text: "Es verdad que", category: "Indicativo" },
+      { text: "Es obvio que", category: "Indicativo" },
+      { text: "Espero que", category: "Subjuntivo" },
+      { text: "Quiero que", category: "Subjuntivo" },
+      { text: "Dudo que", category: "Subjuntivo" },
+      { text: "Es necesario que", category: "Subjuntivo" }
+    ]
+  },
+  // ===== GAME 16: sorting — Expresiones de deseo vs. certeza =====
+  {
+    type: "sorting",
+    label: "Clasificar",
+    instruction: "Clasifica las frases: \u00bfexpresan certeza (indicativo) o deseo/duda (subjuntivo)?",
+    categories: ["Certeza (indicativo)", "Deseo o duda (subjuntivo)"],
+    items: [
+      { text: "Es cierto que", category: "Certeza (indicativo)" },
+      { text: "Pienso que", category: "Certeza (indicativo)" },
+      { text: "Es evidente que", category: "Certeza (indicativo)" },
+      { text: "No creo que", category: "Deseo o duda (subjuntivo)" },
+      { text: "Ojal\u00e1 que", category: "Deseo o duda (subjuntivo)" },
+      { text: "Es importante que", category: "Deseo o duda (subjuntivo)" },
+      { text: "Es mejor que", category: "Deseo o duda (subjuntivo)" },
+      { text: "Es seguro que", category: "Certeza (indicativo)" }
+    ]
+  },
+  // ===== GAME 17: builder — Reordenar cl\u00e1usulas de subjuntivo =====
+  {
+    type: "builder",
+    label: "Construir",
+    instruction: "Ordena las palabras para formar una oraci\u00f3n correcta con subjuntivo.",
+    words: ["Espero", "que", "la", "comunidad", "proteja", "el", "r\u00edo"],
+    answer: "Espero que la comunidad proteja el r\u00edo"
+  },
+  // ===== GAME 18: builder — Construir con ojal\u00e1 =====
+  {
+    type: "builder",
+    label: "Construir",
+    instruction: "Ordena las palabras para expresar un deseo con ojal\u00e1.",
+    words: ["Ojal\u00e1", "que", "mis", "hijos", "tengan", "un", "futuro", "mejor"],
+    answer: "Ojal\u00e1 que mis hijos tengan un futuro mejor"
+  },
+  // ===== GAME 19: translation — I hope you come =====
+  {
+    type: "translation",
+    label: "Traducir",
+    instruction: "Traduce la oraci\u00f3n al espa\u00f1ol usando el banco de palabras.",
+    source: "I hope you come to the festival.",
+    words: ["Espero", "que", "vengas", "al", "festival"],
+    answer: "Espero que vengas al festival"
+  },
+  // ===== GAME 20: translation — It is necessary that they learn =====
+  {
+    type: "translation",
+    label: "Traducir",
+    instruction: "Traduce la oraci\u00f3n al espa\u00f1ol usando el banco de palabras.",
+    source: "It is necessary that they learn the traditions.",
+    words: ["Es", "necesario", "que", "aprendan", "las", "tradiciones"],
+    answer: "Es necesario que aprendan las tradiciones"
+  },
+  // ===== GAME 21: narrative — Voces que piden cambio =====
+  {
+    type: "narrative",
+    label: "Narraci\u00f3n",
+    instruction: "Lee sobre las esperanzas de una comunidad del Pac\u00edfico.",
+    text: "En Tumaco, Yaguar\u00e1 conoce a un grupo de j\u00f3venes que usan la m\u00fasica para transformar su comunidad. Uno de ellos, Juli\u00e1n, toca el cununo y dice: \u00abEs necesario que tengamos espacios seguros para practicar. Quiero que los ni\u00f1os del barrio sepan que hay otras opciones. Ojal\u00e1 que el gobierno nos escuche.\u00bb Su compa\u00f1era Valentina a\u00f1ade: \u00abNo creo que la violencia sea la \u00fanica historia de este lugar. Espero que la gente conozca nuestra m\u00fasica, nuestra alegr\u00eda, nuestra fuerza.\u00bb Yaguar\u00e1 entiende que el subjuntivo no es solo gram\u00e1tica: es la voz de quien espera, sue\u00f1a y lucha."
+  },
+  // ===== GAME 22: conversation — Dar consejos con subjuntivo =====
+  {
+    type: "conversation",
+    label: "Conversaci\u00f3n",
+    instruction: "Ayuda a Yaguar\u00e1 a dar consejos usando el subjuntivo.",
+    turns: [
+      {
+        dialogue: [
+          { speaker: "A", name: "Do\u00f1a Petrona", text: "Mi nieta no quiere aprender marimba. \u00bfQu\u00e9 me recomiendas?" },
+          { speaker: "B", name: "T\u00fa", text: "???" }
+        ],
+        options: [
+          "Es importante que ella conozca sus tradiciones",
+          "Creo que la marimba es bonita",
+          "Yo toco la guitarra"
+        ],
+        answer: "Es importante que ella conozca sus tradiciones"
+      },
+      {
+        dialogue: [
+          { speaker: "A", name: "Do\u00f1a Petrona", text: "Tienes raz\u00f3n. \u00bfPero c\u00f3mo la motivo?" },
+          { speaker: "B", name: "T\u00fa", text: "???" }
+        ],
+        options: [
+          "Quiero que llueva ma\u00f1ana",
+          "Espero que ella vea lo especial que es la m\u00fasica de su familia",
+          "La marimba es de madera"
+        ],
+        answer: "Espero que ella vea lo especial que es la m\u00fasica de su familia"
+      },
+      {
+        dialogue: [
+          { speaker: "A", name: "Do\u00f1a Petrona", text: "\u00bfCrees que es posible?" },
+          { speaker: "B", name: "T\u00fa", text: "???" }
+        ],
+        options: [
+          "No creo que sea imposible. Ojal\u00e1 que lo intente",
+          "Me gusta el pescado",
+          "Ayer fui al mercado"
+        ],
+        answer: "No creo que sea imposible. Ojal\u00e1 que lo intente"
+      }
+    ]
+  },
+  // ===== GAME 23: conversation — Recomendaciones para un viajero =====
+  {
+    type: "conversation",
+    label: "Conversaci\u00f3n",
+    instruction: "Un viajero te pide consejos sobre el Pac\u00edfico. Responde con subjuntivo.",
+    turns: [
+      {
+        dialogue: [
+          { speaker: "A", name: "Viajero", text: "Quiero visitar el Pac\u00edfico colombiano. \u00bfQu\u00e9 me recomiendas?" },
+          { speaker: "B", name: "T\u00fa", text: "???" }
+        ],
+        options: [
+          "Es mejor que vayas en verano para ver las ballenas",
+          "Yo prefiero la monta\u00f1a",
+          "El Pac\u00edfico est\u00e1 en Colombia"
+        ],
+        answer: "Es mejor que vayas en verano para ver las ballenas"
+      },
+      {
+        dialogue: [
+          { speaker: "A", name: "Viajero", text: "\u00bfQu\u00e9 debo probar all\u00e1?" },
+          { speaker: "B", name: "T\u00fa", text: "???" }
+        ],
+        options: [
+          "Me gusta comer",
+          "Quiero que pruebes el tapao y el arroz con coco",
+          "La comida es importante"
+        ],
+        answer: "Quiero que pruebes el tapao y el arroz con coco"
+      },
+      {
+        dialogue: [
+          { speaker: "A", name: "Viajero", text: "\u00bfAlg\u00fan consejo m\u00e1s?" },
+          { speaker: "B", name: "T\u00fa", text: "???" }
+        ],
+        options: [
+          "Espero que escuches currulao en vivo. Es necesario que lo vivas",
+          "Buenas noches",
+          "Tengo sue\u00f1o"
+        ],
+        answer: "Espero que escuches currulao en vivo. Es necesario que lo vivas"
+      }
+    ]
+  },
+  // ===== GAME 24: dictation — Deseos del Pac\u00edfico =====
+  {
+    type: "dictation",
+    label: "Dictado",
+    instruction: "Escucha y escribe la oraci\u00f3n completa.",
+    audio: "Ojal\u00e1 que todos conozcan la m\u00fasica del Pac\u00edfico colombiano.",
+    answer: "Ojal\u00e1 que todos conozcan la m\u00fasica del Pac\u00edfico colombiano."
+  },
+  // ===== GAME 25: pair — Deseo \u2194 oraci\u00f3n completa =====
+  {
+    type: "pair",
+    label: "Emparejar",
+    instruction: "Empareja cada disparador con la oraci\u00f3n completa en subjuntivo.",
+    pairs: [
+      ["Espero que...", "...vengas a la fiesta"],
+      ["Quiero que...", "...aprendas marimba"],
+      ["Ojal\u00e1 que...", "...llueva pronto"],
+      ["Es necesario que...", "...cuidemos el r\u00edo"],
+      ["Dudo que...", "...sepan la verdad"],
+      ["No creo que...", "...sea imposible"]
+    ]
+  },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cocina de la abuela',
+            description: 'Una cocina abandonada que todavía huele a café y hierbas. Las ollas están frías, pero las recetas siguen en la pared.',
+            ambience: 'kitchen'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra están escritas en las ollas.',
+                clue: 'Es el tiempo verbal que describe cosas que pasaban regularmente en el pasado. "Yo jugaba, tú corrías..."',
+                answer: 'imperfecto',
+                scrambled: 'etcfoimerp',
+                onSolve: 'Las ollas suenan suavemente.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Una receta en la pared cuenta una historia.',
+                passage: '«Doña Asunción preparaba este café todas las mañanas. Mientras el agua hervía, ella escuchaba el río. Siempre decía: "El río me cuenta lo que pasó anoche."»',
+                clue: '¿Cuántos verbos en imperfecto hay en este texto?',
+                answer: 'Cuatro: preparaba, hervía, escuchaba, decía',
+                options: [
+                    'Cuatro: preparaba, hervía, escuchaba, decía',
+                    'Tres: preparaba, escuchaba, decía',
+                    'Cinco: preparaba, hervía, escuchaba, decía, pasó',
+                    'Dos: preparaba, decía'
+                ],
+                onSolve: 'La receta brilla. El café casi se huele.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Debajo de una olla hay una cerradura escondida.',
+                clue: 'Completa: «Cuando Yaguará era pequeña, su mamá siempre le ___ historias del bosque.» (verbo contar, imperfecto)',
+                answer: 'contaba',
+                hint: '_ _ _ _ _ _ _',
+                onSolve: 'La olla se levanta. Debajo hay una puerta. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de una olla sobre el fuego, con vapor que forma palabras.',
+            questClue: 'Las historias de la abuela viven en el vapor del café.',
+            item: 'historia-cocina'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '20',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest20Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

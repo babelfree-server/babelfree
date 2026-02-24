@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 21: Historias que conectan - Conectores discursivos</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_basic/dest21_connectors/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 21: Historias que conectan - Conectores discursivos",
+          "url": "https://babelfree.com/b1_basic/dest21_connectors/games",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Discourse connectors", "Cohesive devices", "Spanish writing"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Basic", "item": "https://babelfree.com/b1-quibdo" },
+            { "@type": "ListItem", "position": 4, "name": "Historias que conectan - Conectores discursivos" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+
+    <header class="yg-header">
+        <a href="/b1-quibdo" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 21: Historias que conectan</div>
+            <div class="yg-header-subtitle">Conectores discursivos</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative — La selva del Choc\u00f3 ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee esta historia sobre el Choc\u00f3 y observa c\u00f3mo los conectores unen las ideas.',
+        text: 'El Choc\u00f3 es una de las regiones m\u00e1s lluviosas del mundo. Sin embargo, sus comunidades han aprendido a convivir con el agua y la selva. Adem\u00e1s, la biodiversidad de esta zona es extraordinaria: hay miles de especies de plantas y animales. Por eso, muchos cient\u00edficos viajan al Choc\u00f3 para estudiar la naturaleza. En conclusi\u00f3n, el Choc\u00f3 es un lugar donde la vida florece a pesar de las condiciones dif\u00edciles.'
+    },
+    // === GAME 2: Sorting — Tipos de conectores ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada conector seg\u00fan su funci\u00f3n discursiva.',
+        categories: ['Adici\u00f3n', 'Contraste', 'Causa/Consecuencia'],
+        items: [
+            { text: 'adem\u00e1s', category: 'Adici\u00f3n' },
+            { text: 'tambi\u00e9n', category: 'Adici\u00f3n' },
+            { text: 'sin embargo', category: 'Contraste' },
+            { text: 'no obstante', category: 'Contraste' },
+            { text: 'en cambio', category: 'Contraste' },
+            { text: 'por lo tanto', category: 'Causa/Consecuencia' },
+            { text: 'por eso', category: 'Causa/Consecuencia' },
+            { text: 'aunque', category: 'Contraste' },
+            { text: 'en conclusi\u00f3n', category: 'Causa/Consecuencia' }
+        ]
+    },
+    // === GAME 3: Pair — Conector y funci\u00f3n ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada conector discursivo con su funci\u00f3n.',
+        pairs: [
+            ['sin embargo', 'indica contraste entre dos ideas'],
+            ['adem\u00e1s', 'a\u00f1ade informaci\u00f3n nueva'],
+            ['por lo tanto', 'introduce una consecuencia l\u00f3gica'],
+            ['en cambio', 'presenta una alternativa diferente'],
+            ['por eso', 'explica la raz\u00f3n de algo'],
+            ['en conclusi\u00f3n', 'cierra un argumento o texto']
+        ]
+    },
+    // === GAME 4: FIB — Lluvia y vida en el Choc\u00f3 ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el conector correcto para completar la oraci\u00f3n.',
+        questions: [
+            {
+                sentence: 'Llueve mucho en el Choc\u00f3, ___ la gente sale a trabajar todos los d\u00edas.',
+                answer: 'sin embargo',
+                options: ['sin embargo', 'por lo tanto', 'adem\u00e1s', 'tambi\u00e9n']
+            },
+            {
+                sentence: 'La selva tiene muchos \u00e1rboles. ___, es hogar de miles de animales.',
+                answer: 'Adem\u00e1s',
+                options: ['Adem\u00e1s', 'Sin embargo', 'En cambio', 'No obstante']
+            },
+            {
+                sentence: 'Los r\u00edos crecen con las lluvias; ___, las comunidades construyen sus casas en zonas altas.',
+                answer: 'por eso',
+                options: ['por eso', 'aunque', 'tambi\u00e9n', 'en cambio']
+            }
+        ]
+    },
+    // === GAME 5: Narrative — Comunidades del r\u00edo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre las comunidades del r\u00edo Atrato y presta atenci\u00f3n a los conectores.',
+        text: 'Las comunidades afrocolombianas del r\u00edo Atrato viven de la pesca y la agricultura. No obstante, en los \u00faltimos a\u00f1os han enfrentado grandes desaf\u00edos ambientales. Por un lado, la miner\u00eda ilegal contamina las aguas. Por otro lado, la deforestaci\u00f3n destruye el h\u00e1bitat natural. Aunque la situaci\u00f3n es dif\u00edcil, estas comunidades luchan por proteger su territorio. Por lo tanto, el r\u00edo Atrato fue declarado sujeto de derechos en 2016.'
+    },
+    // === GAME 6: FIB — Conectores de contraste ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona el conector de contraste adecuado.',
+        questions: [
+            {
+                sentence: 'Quibd\u00f3 es la capital del Choc\u00f3. ___, no tiene muchos servicios b\u00e1sicos.',
+                answer: 'Sin embargo',
+                options: ['Sin embargo', 'Adem\u00e1s', 'Por eso', 'Tambi\u00e9n']
+            },
+            {
+                sentence: 'La m\u00fasica del Pac\u00edfico es alegre, ___ las letras hablan de lucha y resistencia.',
+                answer: 'aunque',
+                options: ['aunque', 'por lo tanto', 'adem\u00e1s', 'tambi\u00e9n']
+            },
+            {
+                sentence: 'En Bogot\u00e1 hace fr\u00edo todo el a\u00f1o. ___, en el Choc\u00f3 el clima es c\u00e1lido y h\u00famedo.',
+                answer: 'En cambio',
+                options: ['En cambio', 'Por eso', 'Adem\u00e1s', 'En conclusi\u00f3n']
+            }
+        ]
+    },
+    // === GAME 7: Builder — P\u00e1rrafo con conectores ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar un p\u00e1rrafo coherente con conectores.',
+        words: ['La selva del Choc\u00f3 es muy rica en biodiversidad.', 'Adem\u00e1s,', 'tiene una de las mayores precipitaciones del planeta.', 'Por eso,', 'es un lugar \u00fanico en el mundo.'],
+        answer: 'La selva del Choc\u00f3 es muy rica en biodiversidad. Adem\u00e1s, tiene una de las mayores precipitaciones del planeta. Por eso, es un lugar \u00fanico en el mundo.'
+    },
+    // === GAME 8: Listening — Conectores en contexto oral ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el texto y responde: \u00bfqu\u00e9 conector indica la consecuencia?',
+        audio: 'Las comunidades del Choc\u00f3 protegen la selva con mucho esfuerzo. Sin embargo, la deforestaci\u00f3n sigue avanzando. Por lo tanto, necesitan m\u00e1s apoyo del gobierno y de organizaciones internacionales.',
+        question: '\u00bfQu\u00e9 conector introduce la consecuencia en el texto?',
+        answer: 'por lo tanto',
+        options: ['por lo tanto', 'sin embargo', 'adem\u00e1s', 'aunque']
+    },
+    // === GAME 9: Pair — Sin\u00f3nimos de conectores ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada conector con su equivalente o sin\u00f3nimo funcional.',
+        pairs: [
+            ['sin embargo', 'no obstante'],
+            ['por lo tanto', 'por eso'],
+            ['adem\u00e1s', 'tambi\u00e9n'],
+            ['en primer lugar', 'para empezar'],
+            ['en conclusi\u00f3n', 'en resumen'],
+            ['aunque', 'a pesar de que']
+        ]
+    },
+    // === GAME 10: Sorting — Orden del discurso ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica los conectores seg\u00fan su posici\u00f3n t\u00edpica en un texto argumentativo.',
+        categories: ['Inicio', 'Desarrollo', 'Cierre'],
+        items: [
+            { text: 'en primer lugar', category: 'Inicio' },
+            { text: 'para empezar', category: 'Inicio' },
+            { text: 'adem\u00e1s', category: 'Desarrollo' },
+            { text: 'sin embargo', category: 'Desarrollo' },
+            { text: 'por un lado', category: 'Desarrollo' },
+            { text: 'no obstante', category: 'Desarrollo' },
+            { text: 'en conclusi\u00f3n', category: 'Cierre' },
+            { text: 'por lo tanto', category: 'Cierre' },
+            { text: 'en resumen', category: 'Cierre' }
+        ]
+    },
+    // === GAME 11: Conjugation — Verbos en cl\u00e1usulas conectadas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo correctamente dentro de la cl\u00e1usula conectada.',
+        questions: [
+            {
+                verb: 'proteger',
+                subject: 'las comunidades',
+                answer: 'protegen',
+                options: ['protegen', 'protege', 'proteg\u00edan', 'proteger\u00e1n']
+            },
+            {
+                verb: 'luchar',
+                subject: 'nosotros',
+                answer: 'luchamos',
+                options: ['luchamos', 'luchan', 'lucha', 'luch\u00e1is']
+            },
+            {
+                verb: 'necesitar',
+                subject: 'el Choc\u00f3',
+                answer: 'necesita',
+                options: ['necesita', 'necesitan', 'necesitamos', 'necesitas']
+            },
+            {
+                verb: 'contribuir',
+                subject: 'yo',
+                answer: 'contribuyo',
+                options: ['contribuyo', 'contribuye', 'contribuimos', 'contribuyen']
+            }
+        ]
+    },
+    // === GAME 12: FIB — Conectores de adici\u00f3n y consecuencia ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el conector que mejor completa cada oraci\u00f3n.',
+        questions: [
+            {
+                sentence: 'El Choc\u00f3 tiene selvas tropicales. ___, cuenta con playas hermosas en el Pac\u00edfico.',
+                answer: 'Tambi\u00e9n',
+                options: ['Tambi\u00e9n', 'Sin embargo', 'Por lo tanto', 'En cambio']
+            },
+            {
+                sentence: 'La miner\u00eda contamina los r\u00edos. ___, muchas especies de peces est\u00e1n en peligro.',
+                answer: 'Por lo tanto',
+                options: ['Por lo tanto', 'Adem\u00e1s', 'No obstante', 'Aunque']
+            },
+            {
+                sentence: '___, quiero hablar de la m\u00fasica del Pac\u00edfico. Es una tradici\u00f3n muy importante.',
+                answer: 'En primer lugar',
+                options: ['En primer lugar', 'En conclusi\u00f3n', 'Sin embargo', 'Por eso']
+            }
+        ]
+    },
+    // === GAME 13: Builder — Argumento sobre el medio ambiente ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las frases para construir un argumento l\u00f3gico.',
+        words: ['En primer lugar,', 'el Choc\u00f3 necesita protecci\u00f3n ambiental.', 'Adem\u00e1s,', 'sus comunidades dependen de los recursos naturales.', 'Por lo tanto,', 'es urgente actuar ahora.'],
+        answer: 'En primer lugar, el Choc\u00f3 necesita protecci\u00f3n ambiental. Adem\u00e1s, sus comunidades dependen de los recursos naturales. Por lo tanto, es urgente actuar ahora.'
+    },
+    // === GAME 14: Translation — Contraste ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce la oraci\u00f3n al espa\u00f1ol usando el banco de palabras.',
+        source: 'The Choc\u00f3 is very rainy. However, its communities are happy and resilient.',
+        words: ['El', 'Choc\u00f3', 'es', 'muy', 'lluvioso', 'Sin embargo', 'sus', 'comunidades', 'son', 'felices', 'y', 'resilientes'],
+        answer: 'El Choc\u00f3 es muy lluvioso Sin embargo sus comunidades son felices y resilientes'
+    },
+    // === GAME 15: Conversation — Debate sobre el Choc\u00f3 ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate sobre la protecci\u00f3n del Choc\u00f3 usando conectores discursivos.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mar\u00eda', text: 'Creo que el gobierno debe invertir m\u00e1s en el Choc\u00f3. \u00bfQu\u00e9 piensas t\u00fa?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Estoy de acuerdo. Adem\u00e1s, las comunidades necesitan mejor acceso a la educaci\u00f3n.',
+                    'S\u00ed, el Choc\u00f3 tiene muchos \u00e1rboles.',
+                    'No s\u00e9, llueve mucho all\u00ed.'
+                ],
+                answer: 'Estoy de acuerdo. Adem\u00e1s, las comunidades necesitan mejor acceso a la educaci\u00f3n.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mar\u00eda', text: 'Buena idea. Sin embargo, algunos dicen que no hay suficiente dinero. \u00bfC\u00f3mo respondes?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'No obstante, proteger el medio ambiente genera empleo y turismo sostenible.',
+                    'Es verdad, no hay dinero para nada.',
+                    'Creo que el Choc\u00f3 es bonito.'
+                ],
+                answer: 'No obstante, proteger el medio ambiente genera empleo y turismo sostenible.'
+            }
+        ]
+    },
+    // === GAME 16: Narrative — M\u00fasica del Pac\u00edfico ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la m\u00fasica del Pac\u00edfico colombiano e identifica los conectores.',
+        text: 'La m\u00fasica del Pac\u00edfico colombiano tiene ra\u00edces africanas profundas. En primer lugar, instrumentos como la marimba de chonta y el cununo son fundamentales en las celebraciones. Adem\u00e1s, el currulao es un g\u00e9nero musical que expresa la identidad afrocolombiana. Aunque muchos j\u00f3venes prefieren la m\u00fasica moderna, tambi\u00e9n aprenden las tradiciones de sus abuelos. Por eso, la UNESCO reconoci\u00f3 la marimba del Pac\u00edfico como patrimonio cultural inmaterial de la humanidad.'
+    },
+    // === GAME 17: Listening — Identificar conectores ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el texto y responde: \u00bfqu\u00e9 conector introduce una idea adicional?',
+        audio: 'El Choc\u00f3 es famoso por su biodiversidad. Adem\u00e1s, tiene una riqueza cultural extraordinaria. Sin embargo, muchas personas no conocen esta regi\u00f3n. Por eso, es importante difundir informaci\u00f3n sobre el Choc\u00f3.',
+        question: '\u00bfQu\u00e9 conector se usa para a\u00f1adir informaci\u00f3n nueva despu\u00e9s de la primera idea?',
+        answer: 'adem\u00e1s',
+        options: ['adem\u00e1s', 'sin embargo', 'por eso', 'en cambio']
+    },
+    // === GAME 18: FIB — Conectores mixtos ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con el conector m\u00e1s apropiado.',
+        questions: [
+            {
+                sentence: 'La comida del Choc\u00f3 es deliciosa. ___, el pescado con coco es uno de los platos m\u00e1s famosos.',
+                answer: 'Por ejemplo',
+                options: ['Por ejemplo', 'Sin embargo', 'En cambio', 'No obstante']
+            },
+            {
+                sentence: 'Quibd\u00f3 no tiene aeropuerto internacional. ___, la ciudad recibe muchos visitantes cada a\u00f1o.',
+                answer: 'No obstante',
+                options: ['No obstante', 'Por lo tanto', 'Adem\u00e1s', 'Tambi\u00e9n']
+            },
+            {
+                sentence: '___ la gente del Choc\u00f3 enfrenta muchas dificultades, ___ mantiene viva su cultura.',
+                answer: 'Aunque',
+                options: ['Aunque', 'Por lo tanto', 'En primer lugar', 'En conclusi\u00f3n']
+            }
+        ]
+    },
+    // === GAME 19: Pair — Conector y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada conector con la oraci\u00f3n donde se usa correctamente.',
+        pairs: [
+            ['Por un lado', 'la selva provee alimentos'],
+            ['Por otro lado', 'la miner\u00eda destruye los r\u00edos'],
+            ['En primer lugar', 'debemos conocer la historia del Choc\u00f3'],
+            ['En conclusi\u00f3n', 'el Choc\u00f3 merece m\u00e1s atenci\u00f3n'],
+            ['Aunque', 'llueve mucho, la gente trabaja'],
+            ['Por lo tanto', 'necesitamos proteger la selva']
+        ]
+    },
+    // === GAME 20: Sorting — Adici\u00f3n, contraste, causa, orden ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada conector en su categor\u00eda funcional.',
+        categories: ['Adici\u00f3n', 'Contraste', 'Causa/Consecuencia', 'Orden'],
+        items: [
+            { text: 'adem\u00e1s', category: 'Adici\u00f3n' },
+            { text: 'tambi\u00e9n', category: 'Adici\u00f3n' },
+            { text: 'sin embargo', category: 'Contraste' },
+            { text: 'aunque', category: 'Contraste' },
+            { text: 'por eso', category: 'Causa/Consecuencia' },
+            { text: 'por lo tanto', category: 'Causa/Consecuencia' },
+            { text: 'en primer lugar', category: 'Orden' },
+            { text: 'en conclusi\u00f3n', category: 'Orden' },
+            { text: 'en cambio', category: 'Contraste' }
+        ]
+    },
+    // === GAME 21: Builder — Texto argumentativo ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las frases para formar un texto argumentativo completo.',
+        words: ['En primer lugar,', 'la biodiversidad del Choc\u00f3 es \u00fanica.', 'Sin embargo,', 'est\u00e1 amenazada por la deforestaci\u00f3n.', 'Por lo tanto,', 'debemos apoyar proyectos de conservaci\u00f3n.'],
+        answer: 'En primer lugar, la biodiversidad del Choc\u00f3 es \u00fanica. Sin embargo, est\u00e1 amenazada por la deforestaci\u00f3n. Por lo tanto, debemos apoyar proyectos de conservaci\u00f3n.'
+    },
+    // === GAME 22: Conjugation — Verbos en oraciones conectadas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en la forma correcta dentro de la oraci\u00f3n con conector.',
+        questions: [
+            {
+                verb: 'destruir',
+                subject: 'la miner\u00eda',
+                answer: 'destruye',
+                options: ['destruye', 'destruyen', 'destruimos', 'destru\u00edo']
+            },
+            {
+                verb: 'mantener',
+                subject: 'las comunidades',
+                answer: 'mantienen',
+                options: ['mantienen', 'mantiene', 'mantenemos', 'mantengo']
+            },
+            {
+                verb: 'reconocer',
+                subject: 'yo',
+                answer: 'reconozco',
+                options: ['reconozco', 'reconoce', 'reconocen', 'reconoc\u00e9s']
+            },
+            {
+                verb: 'defender',
+                subject: 't\u00fa',
+                answer: 'defiendes',
+                options: ['defiendes', 'defiende', 'defendemos', 'defiendo']
+            }
+        ]
+    },
+    // === GAME 23: Translation — Adici\u00f3n y consecuencia ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'The river is contaminated. Therefore, the fish are in danger. Furthermore, the communities need clean water.',
+        words: ['El', 'r\u00edo', 'est\u00e1', 'contaminado', 'Por lo tanto', 'los', 'peces', 'est\u00e1n', 'en', 'peligro', 'Adem\u00e1s', 'las', 'comunidades', 'necesitan', 'agua', 'limpia'],
+        answer: 'El r\u00edo est\u00e1 contaminado Por lo tanto los peces est\u00e1n en peligro Adem\u00e1s las comunidades necesitan agua limpia'
+    },
+    // === GAME 24: Conversation — Debate sobre turismo ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Debate con un compa\u00f1ero sobre el turismo en el Choc\u00f3 usando conectores discursivos.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Carlos', text: 'El turismo puede ayudar mucho al Choc\u00f3 econ\u00f3micamente. \u00bfEst\u00e1s de acuerdo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Por un lado, el turismo genera empleo. Por otro lado, puede da\u00f1ar el medio ambiente si no se controla.',
+                    'S\u00ed, el Choc\u00f3 tiene playas.',
+                    'No me gusta viajar mucho.'
+                ],
+                answer: 'Por un lado, el turismo genera empleo. Por otro lado, puede da\u00f1ar el medio ambiente si no se controla.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Carlos', text: 'Buen punto. Entonces, \u00bfcu\u00e1l es tu conclusi\u00f3n?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'En conclusi\u00f3n, necesitamos turismo sostenible que respete la naturaleza y beneficie a las comunidades locales.',
+                    'No s\u00e9, es un tema dif\u00edcil.',
+                    'El Choc\u00f3 es bonito y tiene r\u00edos.'
+                ],
+                answer: 'En conclusi\u00f3n, necesitamos turismo sostenible que respete la naturaleza y beneficie a las comunidades locales.'
+            }
+        ]
+    },
+    // === GAME 25: Dictation — P\u00e1rrafo con conectores ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n exacta. Presta atenci\u00f3n a los conectores.',
+        audio: 'El Choc\u00f3 tiene una biodiversidad extraordinaria. Sin embargo, la deforestaci\u00f3n amenaza sus ecosistemas. Por lo tanto, es urgente proteger esta regi\u00f3n.',
+        answer: 'El Choc\u00f3 tiene una biodiversidad extraordinaria. Sin embargo, la deforestaci\u00f3n amenaza sus ecosistemas. Por lo tanto, es urgente proteger esta regi\u00f3n.'
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El taller del carpintero',
+            description: 'Un taller donde alguien estaba construyendo algo, pero nunca lo terminó. Los planos están en la mesa. Las herramientas esperan.',
+            ambience: 'wood'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Los planos en la mesa tienen una pregunta:',
+                riddle: '«Tengo tres formas de hablar del mañana: "voy a hacer", "haré", "pienso hacer". ¿Cuál es la diferencia?»',
+                clue: 'Piensa en el nivel de certeza y planificación.',
+                answer: '"Voy a hacer" = plan decidido, "haré" = predicción o promesa, "pienso hacer" = intención aún no firme',
+                options: [
+                    '"Voy a hacer" = plan decidido, "haré" = predicción o promesa, "pienso hacer" = intención aún no firme',
+                    'No hay diferencia, son sinónimos',
+                    'Solo "haré" es correcto en español formal',
+                    '"Pienso hacer" es incorrecto gramaticalmente'
+                ],
+                onSolve: 'Los planos se despliegan un poco más.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Los planes de Candelaria para proteger el bosque están desordenados.',
+                clue: 'Ordena sus planes del más inmediato al más lejano.',
+                items: [
+                    'Voy a hablar con la comunidad esta semana',
+                    'Escribiré una carta al periódico el mes que viene',
+                    'Pienso estudiar derecho ambiental algún día'
+                ],
+                onSolve: 'Los planes se ordenan en la mesa.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Una caja de herramientas tiene una cerradura.',
+                clue: 'Candelaria dice: «___ el bosque.» ¿Qué verbo en futuro simple completa su promesa? (proteger, primera persona)',
+                answer: 'protegere',
+                hint: '_ _ _ _ _ _ _ _ _',
+                onSolve: 'Las herramientas brillan. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de planos que muestran un futuro donde el bosque sigue en pie.',
+            questClue: 'El futuro se construye con las palabras que elegimos hoy.',
+            item: 'historia-planos'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '21',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest21Progress',
+        backUrl: '../../b1-quibdo.html'
+    });
+</script>
+</body>
+</html>

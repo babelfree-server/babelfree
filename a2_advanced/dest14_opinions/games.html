@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 14: ¿Qué opinas? - Expresar Opiniones</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_advanced/dest14_opinions/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 14: ¿Qué opinas? - Expresar Opiniones",
+          "url": "https://babelfree.com/a2_advanced/dest14_opinions/games",
+          "educationalLevel": "A2 Advanced - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Expressing opinions", "Opinion vocabulary", "Spanish communication"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Advanced", "item": "https://babelfree.com/a2-coffee" },
+            { "@type": "ListItem", "position": 4, "name": "¿Qué opinas? - Expresar Opiniones" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/a2-coffee" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 14: ¿Qué opinas?</div>
+            <div class="yg-header-subtitle">Expresar Opiniones</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+  // ===== GAME 1: Pair Matching - Opinion phrases =====
+  {
+    type:"pair",
+    title:"Emparejar: Frases de opini\u00f3n",
+    instruction:"Empareja cada frase de opini\u00f3n con su traducci\u00f3n en ingl\u00e9s.",
+    pairs:[
+      ["Creo que","I think that"],
+      ["Pienso que","I believe that"],
+      ["Me parece que","It seems to me"],
+      ["En mi opini\u00f3n","In my opinion"],
+      ["Estoy de acuerdo","I agree"],
+      ["No estoy de acuerdo","I disagree"]
+    ]
+  },
+  // ===== GAME 2: Fill-in-the-Blank =====
+  {
+    type:"fill",
+    title:"Completar: Expresar opiniones",
+    instruction:"Completa la oraci\u00f3n con la palabra correcta.",
+    sentences:[
+      {text:"___ que el espa\u00f1ol es divertido.",blank:"Creo",options:["Creo","Estoy","Tengo","Hago"]},
+      {text:"___ que la m\u00fasica latina es fant\u00e1stica.",blank:"Pienso",options:["Pienso","Parece","Acuerdo","Voy"]},
+      {text:"En mi ___ , Colombia es un pa\u00eds hermoso.",blank:"opini\u00f3n",options:["opini\u00f3n","acuerdo","parece","creo"]},
+      {text:"Me ___ que este libro es interesante.",blank:"parece",options:["parece","creo","pienso","opini\u00f3n"]},
+      {text:"___ de acuerdo contigo.",blank:"Estoy",options:["Estoy","Soy","Tengo","Hago"]}
+    ]
+  },
+  // ===== GAME 3: Verb Conjugation =====
+  {
+    type:"conjugation",
+    title:"Conjugar: Verbos de opini\u00f3n",
+    instruction:"Conjuga los verbos de opini\u00f3n en presente.",
+    verb:"creer",
+    forms:[
+      {pronoun:"Yo",answer:"creo"},
+      {pronoun:"T\u00fa",answer:"crees"},
+      {pronoun:"\u00c9l/Ella",answer:"cree"},
+      {pronoun:"Nosotros",answer:"creemos"},
+      {pronoun:"Ellos/Ellas",answer:"creen"}
+    ]
+  },
+  // ===== GAME 4: Listening =====
+  {
+    type:"listening",
+    title:"Escuchar: \u00bfQu\u00e9 opina?",
+    instruction:"Escucha la oraci\u00f3n y selecciona lo que piensa el hablante.",
+    listenText:"Creo que Cartagena es la ciudad m\u00e1s bonita de Colombia.",
+    question:"\u00bfQu\u00e9 piensa el hablante sobre Cartagena?",
+    options:["Piensa que Cartagena es la ciudad m\u00e1s bonita","Piensa que Cartagena es aburrida","No le gusta Cartagena","Piensa que Cartagena es peque\u00f1a"],
+    correct:0
+  },
+  // ===== GAME 5: Category Sorting =====
+  {
+    type:"category",
+    title:"Clasificar: Opiniones positivas y negativas",
+    instruction:"Clasifica los adjetivos en opini\u00f3n positiva o negativa.",
+    categories:["Opini\u00f3n positiva","Opini\u00f3n negativa"],
+    items:[
+      {text:"interesante",cat:0},
+      {text:"divertido",cat:0},
+      {text:"maravilloso",cat:0},
+      {text:"incre\u00edble",cat:0},
+      {text:"aburrido",cat:1},
+      {text:"terrible",cat:1},
+      {text:"horrible",cat:1},
+      {text:"dif\u00edcil",cat:1}
+    ]
+  },
+  // ===== GAME 6: Fill-in-the-Blank =====
+  {
+    type:"fill",
+    title:"Completar: Di\u00e1logo de opiniones",
+    instruction:"Completa el di\u00e1logo con las palabras correctas.",
+    sentences:[
+      {text:"\u00bfQu\u00e9 ___ de la comida colombiana?",blank:"piensas",options:["piensas","pareces","acuerdas","crees"]},
+      {text:"Me ___ que es deliciosa.",blank:"parece",options:["parece","pienso","creo","opino"]},
+      {text:"\u00bfEst\u00e1s de ___ conmigo?",blank:"acuerdo",options:["acuerdo","opini\u00f3n","parece","creo"]},
+      {text:"S\u00ed, yo tambi\u00e9n ___ que es muy buena.",blank:"creo",options:["creo","parezco","acuerdo","opini\u00f3n"]},
+      {text:"Para ___ , el ajiaco es el mejor plato.",blank:"m\u00ed",options:["m\u00ed","yo","me","mi"]}
+    ]
+  },
+  // ===== GAME 7: Sentence Builder =====
+  {
+    type:"builder",
+    title:"Construir: Comparar opiniones",
+    instruction:"Ordena las palabras para formar una oraci\u00f3n correcta.",
+    sentences:[
+      {words:["Creo","que","el","espa\u00f1ol","es","m\u00e1s","f\u00e1cil","que","el","ingl\u00e9s"],answer:"Creo que el espa\u00f1ol es m\u00e1s f\u00e1cil que el ingl\u00e9s"},
+      {words:["Pienso","que","la","m\u00fasica","colombiana","es","fant\u00e1stica"],answer:"Pienso que la m\u00fasica colombiana es fant\u00e1stica"},
+      {words:["Me","parece","que","este","restaurante","es","muy","bueno"],answer:"Me parece que este restaurante es muy bueno"}
+    ]
+  },
+  // ===== GAME 8: Verb Conjugation =====
+  {
+    type:"conjugation",
+    title:"Conjugar: pensar, creer, parecer",
+    instruction:"Conjuga los verbos de opini\u00f3n correctamente.",
+    verb:"pensar",
+    forms:[
+      {pronoun:"Yo (pensar)",answer:"pienso"},
+      {pronoun:"T\u00fa (pensar)",answer:"piensas"},
+      {pronoun:"\u00c9l/Ella (creer)",answer:"cree"},
+      {pronoun:"Nosotros (creer)",answer:"creemos"},
+      {pronoun:"A m\u00ed me (parecer)",answer:"parece"}
+    ]
+  },
+  // ===== GAME 9: Translation =====
+  {
+    type:"translation",
+    title:"Traducir: Opiniones sobre Colombia",
+    instruction:"Traduce la oraci\u00f3n al espa\u00f1ol usando el banco de palabras.",
+    sentences:[
+      {english:"I think that Colombian food is delicious.",words:["Creo","que","la","comida","colombiana","es","deliciosa"],answer:"Creo que la comida colombiana es deliciosa"},
+      {english:"In my opinion, Bogot\u00e1 is very interesting.",words:["En","mi","opini\u00f3n","Bogot\u00e1","es","muy","interesante"],answer:"En mi opini\u00f3n Bogot\u00e1 es muy interesante"},
+      {english:"It seems to me that Spanish is fun.",words:["Me","parece","que","el","espa\u00f1ol","es","divertido"],answer:"Me parece que el espa\u00f1ol es divertido"}
+    ]
+  },
+  // ===== GAME 10: Conversation =====
+  {
+    type:"conversation",
+    title:"Conversar: Opiniones sobre el f\u00fatbol",
+    instruction:"Responde a las preguntas con tu opini\u00f3n.",
+    steps:[
+      {npc:"\u00bfQu\u00e9 piensas del f\u00fatbol?",options:["Creo que el f\u00fatbol es muy emocionante","No me gusta el cine","Quiero comer"],correct:0},
+      {npc:"\u00bfEst\u00e1s de acuerdo con que es el mejor deporte?",options:["S\u00ed, estoy de acuerdo, es incre\u00edble","Me parece que la pizza es rica","No tengo hambre"],correct:0},
+      {npc:"\u00bfQu\u00e9 opinas del equipo de Colombia?",options:["Quiero ir al parque","Pienso que es un equipo muy bueno","Me gusta el color azul"],correct:1}
+    ]
+  },
+  // ===== GAME 11: Sentence Builder =====
+  {
+    type:"builder",
+    title:"Construir: Opiniones complejas",
+    instruction:"Ordena las palabras para formar oraciones de opini\u00f3n.",
+    sentences:[
+      {words:["En","mi","opini\u00f3n","la","m\u00fasica","colombiana","es","incre\u00edble"],answer:"En mi opini\u00f3n la m\u00fasica colombiana es incre\u00edble"},
+      {words:["Para","m\u00ed","el","caf\u00e9","colombiano","es","el","mejor","del","mundo"],answer:"Para m\u00ed el caf\u00e9 colombiano es el mejor del mundo"},
+      {words:["Me","parece","que","aprender","espa\u00f1ol","es","muy","importante"],answer:"Me parece que aprender espa\u00f1ol es muy importante"}
+    ]
+  },
+  // ===== GAME 12: Translation =====
+  {
+    type:"translation",
+    title:"Traducir: Acuerdo y desacuerdo",
+    instruction:"Traduce las oraciones al espa\u00f1ol.",
+    sentences:[
+      {english:"We don't agree, I think it's boring.",words:["No","estamos","de","acuerdo","creo","que","es","aburrido"],answer:"No estamos de acuerdo creo que es aburrido"},
+      {english:"I disagree, it seems terrible to me.",words:["No","estoy","de","acuerdo","me","parece","terrible"],answer:"No estoy de acuerdo me parece terrible"},
+      {english:"I believe that it's very important.",words:["Creo","que","es","muy","importante"],answer:"Creo que es muy importante"}
+    ]
+  },
+  // ===== GAME 13: Conversation =====
+  {
+    type:"conversation",
+    title:"Conversar: Debate sobre gustos",
+    instruction:"Participa en un debate sobre pel\u00edculas, m\u00fasica y comida.",
+    steps:[
+      {npc:"Pienso que las pel\u00edculas de acci\u00f3n son las mejores. \u00bfQu\u00e9 opinas?",options:["Estoy de acuerdo, son muy emocionantes","Quiero comer pizza","Tengo un gato"],correct:0},
+      {npc:"Pero mi amigo dice que las comedias son mejores. \u00bfT\u00fa qu\u00e9 crees?",options:["Me gusta correr","En mi opini\u00f3n, las dos son divertidas","Voy al supermercado"],correct:1},
+      {npc:"\u00bfY qu\u00e9 me dices de la m\u00fasica? \u00bfPrefieres el reggaet\u00f3n o la salsa?",options:["Me parece que la salsa es m\u00e1s interesante","Tengo dos hermanos","Estudio matem\u00e1ticas"],correct:0},
+      {npc:"\u00bfCrees que la comida colombiana es mejor que la mexicana?",options:["Hoy es martes","Me gusta el color verde","Pienso que las dos son deliciosas, pero para m\u00ed la colombiana es incre\u00edble"],correct:2}
+    ]
+  },
+  // ===== GAME 14: Dictation =====
+  {
+    type:"dictation",
+    title:"Dictado: Oraciones de opini\u00f3n",
+    instruction:"Escucha y escribe la oraci\u00f3n que oyes.",
+    sentences:[
+      {text:"Creo que el espa\u00f1ol es un idioma muy bonito.",hint:"Creo que..."},
+      {text:"Me parece que esta ciudad es maravillosa.",hint:"Me parece que..."},
+      {text:"En mi opini\u00f3n, viajar es muy importante.",hint:"En mi opini\u00f3n..."}
+    ]
+  },
+  // ===== GAME 15: Story Comprehension =====
+  {
+    type:"story",
+    title:"Leer: Las opiniones de Yaguar\u00e1",
+    instruction:"Lee la historia y responde las preguntas.",
+    story:"Yaguar\u00e1 es un jaguar que vive en la selva colombiana. \u00c9l tiene muchas opiniones sobre la vida en la selva. Yaguar\u00e1 piensa que la selva es el lugar m\u00e1s hermoso del mundo. Cree que los r\u00edos son incre\u00edbles y que los \u00e1rboles son maravillosos.\n\nPero no todo es perfecto. En su opini\u00f3n, la temporada de lluvias es terrible porque no puede caminar f\u00e1cilmente. Le parece que el calor es dif\u00edcil de soportar en verano.\n\nSu amigo, el mono Tito, no est\u00e1 de acuerdo. Tito cree que la lluvia es divertida y piensa que el calor es agradable. Yaguar\u00e1 le dice: \u00abPara m\u00ed la lluvia es horrible, pero respeto tu opini\u00f3n.\u00bb",
+    questions:[
+      {q:"\u00bfQu\u00e9 piensa Yaguar\u00e1 sobre la selva?",options:["Piensa que es aburrida","Piensa que es el lugar m\u00e1s hermoso del mundo","Piensa que es horrible","No le gusta la selva"],correct:1},
+      {q:"\u00bfQu\u00e9 opina Yaguar\u00e1 de la temporada de lluvias?",options:["Le parece maravillosa","Cree que es divertida","Piensa que es terrible","No tiene opini\u00f3n"],correct:2},
+      {q:"\u00bfEst\u00e1 Tito de acuerdo con Yaguar\u00e1 sobre la lluvia?",options:["S\u00ed, est\u00e1 de acuerdo","No, Tito cree que la lluvia es divertida","Tito no tiene opini\u00f3n","Tito piensa que la lluvia es terrible"],correct:1}
+    ]
+  },
+  // ===== GAME 16: Pair Matching =====
+  {
+    type:"pair",
+    title:"Emparejar: Opiniones y respuestas",
+    instruction:"Empareja cada opini\u00f3n con la respuesta apropiada.",
+    pairs:[
+      ["Creo que el f\u00fatbol es aburrido","No estoy de acuerdo, es emocionante"],
+      ["Me parece que la comida es deliciosa","Estoy de acuerdo, es muy rica"],
+      ["Pienso que es dif\u00edcil","Para m\u00ed tambi\u00e9n es dif\u00edcil"],
+      ["En mi opini\u00f3n es incre\u00edble","Tienes raz\u00f3n, es maravilloso"],
+      ["No me gusta esta pel\u00edcula","Yo tampoco estoy de acuerdo con eso"]
+    ]
+  },
+  // ===== GAME 17: Listening =====
+  {
+    type:"listening",
+    title:"Escuchar: \u00bfQui\u00e9n est\u00e1 de acuerdo?",
+    instruction:"Escucha el debate e identifica qui\u00e9n est\u00e1 de acuerdo y qui\u00e9n no.",
+    listenText:"Ana dice: Pienso que la m\u00fasica colombiana es la mejor del mundo. Carlos responde: No estoy de acuerdo, creo que toda la m\u00fasica latina es buena. Mar\u00eda dice: Estoy de acuerdo con Ana, la m\u00fasica colombiana es incre\u00edble.",
+    question:"\u00bfQui\u00e9n est\u00e1 de acuerdo con Ana?",
+    options:["Carlos","Mar\u00eda","Nadie","Carlos y Mar\u00eda"],
+    correct:1
+  },
+  // ===== GAME 18: Category Sorting =====
+  {
+    type:"category",
+    title:"Clasificar: Acuerdo, Desacuerdo y Neutral",
+    instruction:"Clasifica las expresiones en la categor\u00eda correcta.",
+    categories:["Acuerdo","Desacuerdo","Opini\u00f3n neutral"],
+    items:[
+      {text:"Estoy de acuerdo",cat:0},
+      {text:"Tienes raz\u00f3n",cat:0},
+      {text:"Yo tambi\u00e9n pienso eso",cat:0},
+      {text:"No estoy de acuerdo",cat:1},
+      {text:"No creo que sea as\u00ed",cat:1},
+      {text:"Yo no pienso lo mismo",cat:1},
+      {text:"Me parece que depende",cat:2},
+      {text:"No estoy seguro",cat:2},
+      {text:"Quiz\u00e1s tengas raz\u00f3n",cat:2}
+    ]
+  },
+  // ===== GAME 19: Dictation =====
+  {
+    type:"dictation",
+    title:"Dictado: Opiniones con justificaci\u00f3n",
+    instruction:"Escucha y escribe las oraciones de opini\u00f3n con sus razones.",
+    sentences:[
+      {text:"Creo que aprender espa\u00f1ol es importante porque es muy \u00fatil.",hint:"Creo que aprender..."},
+      {text:"En mi opini\u00f3n, Colombia es un pa\u00eds maravilloso porque tiene mucha cultura.",hint:"En mi opini\u00f3n, Colombia..."},
+      {text:"No estoy de acuerdo con eso porque me parece que es incorrecto.",hint:"No estoy de acuerdo..."}
+    ]
+  },
+  // ===== GAME 20: Story Comprehension =====
+  {
+    type:"story",
+    title:"Leer: Un debate en clase",
+    instruction:"Lee la historia sobre el debate en clase y responde las preguntas.",
+    story:"Hoy en la clase de espa\u00f1ol hay un debate. La profesora pregunta: \u00ab\u00bfCu\u00e1l es la mejor ciudad de Colombia?\u00bb\n\nLuisa dice: \u00abEn mi opini\u00f3n, Cartagena es la mejor ciudad porque tiene playas hermosas y mucha historia. Me parece que es un lugar incre\u00edble.\u00bb\n\nPedro no est\u00e1 de acuerdo: \u00abYo creo que Medell\u00edn es mejor. Pienso que tiene mejor clima y la gente es muy amable.\u00bb\n\nSof\u00eda tiene otra opini\u00f3n: \u00abPara m\u00ed, Bogot\u00e1 es la m\u00e1s interesante porque tiene muchos museos y restaurantes. Pero estoy de acuerdo con Luisa en que Cartagena es hermosa.\u00bb\n\nLa profesora sonr\u00ede y dice: \u00abTodas las opiniones son v\u00e1lidas. Lo importante es respetar lo que piensan los dem\u00e1s.\u00bb",
+    questions:[
+      {q:"\u00bfQu\u00e9 opina Luisa sobre Cartagena?",options:["Piensa que es aburrida","Cree que es la mejor ciudad por sus playas e historia","No le gusta Cartagena","Piensa que es terrible"],correct:1},
+      {q:"\u00bfPor qu\u00e9 Pedro prefiere Medell\u00edn?",options:["Por la comida","Por las playas","Por el clima y la gente amable","Por los museos"],correct:2},
+      {q:"\u00bfCon qui\u00e9n est\u00e1 de acuerdo Sof\u00eda parcialmente?",options:["Con Pedro","Con la profesora","Con Luisa, en que Cartagena es hermosa","Con nadie"],correct:2},
+      {q:"\u00bfQu\u00e9 dice la profesora al final?",options:["Que Cartagena es la mejor","Que todas las opiniones son v\u00e1lidas","Que Pedro tiene raz\u00f3n","Que el debate es aburrido"],correct:1}
+    ]
+  },
+  // ===== GAME 21: Fill-in-the-Blank =====
+  {
+    type:"fill",
+    title:"Completar: Opiniones mixtas",
+    instruction:"Completa las oraciones con la palabra correcta.",
+    sentences:[
+      {text:"Creo que el caf\u00e9 colombiano es ___ que el brasile\u00f1o.",blank:"mejor",options:["mejor","m\u00e1s","bueno","mucho"]},
+      {text:"En mi opini\u00f3n, siempre es ___ aprender cosas nuevas.",blank:"importante",options:["importante","importar","importancia","importando"]},
+      {text:"Me parece que ___ debemos respetar otras opiniones.",blank:"siempre",options:["siempre","nunca","nada","algo"]},
+      {text:"No ___ de acuerdo con tu opini\u00f3n sobre la pel\u00edcula.",blank:"estoy",options:["estoy","soy","tengo","hago"]},
+      {text:"Para m\u00ed, lo m\u00e1s ___ es la familia.",blank:"importante",options:["importante","aburrido","horrible","terrible"]}
+    ]
+  },
+  // ===== GAME 22: Sentence Builder =====
+  {
+    type:"builder",
+    title:"Construir: Opiniones elaboradas",
+    instruction:"Ordena las palabras para formar oraciones complejas de opini\u00f3n.",
+    sentences:[
+      {words:["No","estoy","de","acuerdo","porque","me","parece","que","es","incorrecto"],answer:"No estoy de acuerdo porque me parece que es incorrecto"},
+      {words:["Creo","que","todos","debemos","aprender","a","respetar","otras","opiniones"],answer:"Creo que todos debemos aprender a respetar otras opiniones"},
+      {words:["En","mi","opini\u00f3n","la","educaci\u00f3n","es","lo","m\u00e1s","importante"],answer:"En mi opini\u00f3n la educaci\u00f3n es lo m\u00e1s importante"}
+    ]
+  },
+  // ===== GAME 23: Verb Conjugation =====
+  {
+    type:"conjugation",
+    title:"Conjugar: Verbos r\u00e1pidos",
+    instruction:"Conjuga r\u00e1pidamente los verbos de opini\u00f3n.",
+    verb:"opinar",
+    forms:[
+      {pronoun:"Yo (opinar)",answer:"opino"},
+      {pronoun:"T\u00fa (creer)",answer:"crees"},
+      {pronoun:"\u00c9l (pensar)",answer:"piensa"},
+      {pronoun:"Nosotros (opinar)",answer:"opinamos"},
+      {pronoun:"Ellos (creer)",answer:"creen"}
+    ]
+  },
+  // ===== GAME 24: Translation =====
+  {
+    type:"translation",
+    title:"Traducir: P\u00e1rrafo de opiniones",
+    instruction:"Traduce las oraciones al espa\u00f1ol.",
+    sentences:[
+      {english:"I think that learning Spanish is wonderful.",words:["Creo","que","aprender","espa\u00f1ol","es","maravilloso"],answer:"Creo que aprender espa\u00f1ol es maravilloso"},
+      {english:"In my opinion, Colombian culture is incredible.",words:["En","mi","opini\u00f3n","la","cultura","colombiana","es","incre\u00edble"],answer:"En mi opini\u00f3n la cultura colombiana es incre\u00edble"},
+      {english:"We agree that it is very important.",words:["Estamos","de","acuerdo","en","que","es","muy","importante"],answer:"Estamos de acuerdo en que es muy importante"}
+    ]
+  },
+  // ===== GAME 25: Conversation =====
+  {
+    type:"conversation",
+    title:"Conversar: Debate - La mejor ciudad",
+    instruction:"Participa en un debate completo sobre la mejor ciudad de Colombia.",
+    steps:[
+      {npc:"Bienvenido al debate. \u00bfCu\u00e1l crees que es la mejor ciudad de Colombia?",options:["En mi opini\u00f3n, Cartagena es la mejor porque es hermosa","Me gusta el pollo","Tengo tres gatos"],correct:0},
+      {npc:"Interesante. Yo pienso que Medell\u00edn es mejor. \u00bfQu\u00e9 opinas?",options:["Voy al gimnasio","No estoy de acuerdo, creo que Cartagena tiene m\u00e1s historia","Quiero dormir"],correct:1},
+      {npc:"\u00bfPero no crees que el clima de Medell\u00edn es mejor?",options:["Me parece que el clima es bueno, pero para m\u00ed las playas son m\u00e1s importantes","No tengo carro","Estudio los lunes"],correct:0},
+      {npc:"\u00bfY qu\u00e9 piensas de Bogot\u00e1?",options:["Me gusta el arroz","Pienso que Bogot\u00e1 es interesante por sus museos, pero prefiero Cartagena","Vivo en una casa"],correct:1},
+      {npc:"Buen debate. \u00bfAlguna opini\u00f3n final?",options:["Creo que todas las ciudades son maravillosas, pero en mi opini\u00f3n Cartagena es incre\u00edble","Hoy es lunes","Quiero agua"],correct:0}
+    ]
+  },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva del encuentro',
+            description: 'Una cueva junto al r\u00edo Atrato. Hay huellas de dos tama\u00f1os: unas son de jaguar, otras son de una ni\u00f1a.',
+            ambience: 'river'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Las huellas cuentan una historia:',
+                riddle: '\u00abUna ni\u00f1a caminaba por el r\u00edo. Estaba perdida. Un animal grande la encontr\u00f3. No hablaban el mismo idioma. Pero se miraron y entendieron algo. \u00bfQui\u00e9nes eran?\u00bb',
+                clue: 'La ni\u00f1a tiene pelo rizado con semillas. El animal tiene ojos verdes.',
+                answer: 'Candelaria y Yaguar\u00e1',
+                options: ['Candelaria y Yaguar\u00e1', 'R\u00edo y Mam\u00e1 Jaguar', 'Do\u00f1a Asunci\u00f3n y Colibr\u00ed', 'Dos desconocidos'],
+                onSolve: 'Las huellas se iluminan de dorado.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras est\u00e1n escritas en la tierra h\u00fameda.',
+                clue: 'Es lo que necesitas para conocer otros lugares. Tiene cinco letras.',
+                answer: 'viaje',
+                scrambled: 'eivja',
+                onSolve: 'La tierra muestra m\u00e1s huellas.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Donde las huellas se juntan hay una cerradura.',
+                clue: 'Candelaria y Yaguar\u00e1 no hablan el mismo idioma, pero quieren ser esto. Seis letras.',
+                answer: 'amigas',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'Las huellas se unen. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: dos huellas juntas \u2014 una de jaguar, una de ni\u00f1a.',
+            questClue: 'El primer encuentro es la primera palabra.',
+            item: 'raiz-huellas'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '14',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest14Progress',
+        backUrl: '../../a2-coffee.html'
+    });
+</script>
+</body>
+</html>

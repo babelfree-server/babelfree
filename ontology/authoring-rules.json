@@ -1,0 +1,119 @@
+{
+  "_document": "Authoring Rules v2 — Invariant-Aligned",
+  "_status": "frozen",
+  "_purpose": "Allow contributors to author content without violating ontology, resolver, schema, or adaptivity invariants. These rules are enforced by validation. Violations are rejected.",
+
+  "rules": [
+
+    {
+      "id": "auth_destination_required",
+      "invariant": "inv_activity_destination",
+      "rule": "Every Activity belongs to exactly one Destination",
+      "rationale": "Destinations are where meaning accumulates. An activity without a destination has no story context, no spiral position, and no CEFR anchor.",
+      "valid": {
+        "id": "act_dest14_fill_preference",
+        "destination": "dest14",
+        "practices": ["lt_verb_gustar_indicative_present"],
+        "cefr": "B1"
+      },
+      "invalid": {
+        "id": "act_express_preference",
+        "_why": "No destination. No dest in ID. Free-floating."
+      }
+    },
+
+    {
+      "id": "auth_paradigm_level_lts",
+      "invariant": "inv_lt_paradigm_level",
+      "rule": "LinguisticTargets are paradigm-level, not person-specific",
+      "rationale": "The ontology stores lt_verb_gustar_indicative_present, not lt_verb_gustar_indicative_present_yo. Person-narrowing is done via targetPerson on Activity. This prevents LT explosion (6 persons x N verbs x M tenses) and keeps the evidence pipeline clean.",
+      "valid": "lt_verb_gustar_indicative_present",
+      "invalid": "lt_verb_gustar_indicative_present_yo",
+      "personNarrowing": "Use Activity.targetPerson: 'yo' to narrow at query time"
+    },
+
+    {
+      "id": "auth_multi_target_allowed",
+      "rule": "Activities may practice multiple LinguisticTargets",
+      "rationale": "Multi-target activities are expected for conversation, contrast, and capstone tasks. A conversation at dest19 naturally practices preterite_vs_imperfect + connectors + vocab. The constraint is bounded complexity, not singularity.",
+      "guideline": "1–3 targets is normal. Capstone/integration activities may use more (e.g., act_dest28_fill_integration practices 3 targets).",
+      "valid": {
+        "practices": ["lt_grammar_preterite_vs_imperfect", "lt_grammar_connectors_narrative", "lt_vocab_community_society"],
+        "_why": "Conversation activity naturally combining narration grammar with vocabulary"
+      },
+      "invalid": {
+        "practices": ["lt_verb_gustar_indicative_present_yo"],
+        "_why": "Person-specific LT that doesn't exist in the ontology"
+      }
+    },
+
+    {
+      "id": "auth_scaffolding_adaptive",
+      "invariant": "inv_scaffolding_global",
+      "rule": "Scaffolding is adaptive, not authored",
+      "rationale": "Activities declare scaffoldable: true. The engine governs promotion (choice -> typing -> voice) via adapt_scaffold_input_mode. Do NOT author separate activities for each inputMode of the same meaning.",
+      "authorsMay": [
+        "Set inputMode to the entry point (typically 'choice')",
+        "Set scaffoldable: true on activities with inputMode choice or typing"
+      ],
+      "authorsMustNot": [
+        "Create typing/voice variants of the same activity",
+        "Write promotion logic in feedback or prompts",
+        "Set scaffoldable: true on listen, drag, voice, or self_correction activities"
+      ]
+    },
+
+    {
+      "id": "auth_no_grammar_in_content",
+      "invariant": "inv_rules_no_content",
+      "rule": "No grammar explanations in activity prompts",
+      "rationale": "Activities speak meaning, not rules. Grammar knowledge is upstream (in LinguisticTargets and the resolver). Feedback confirms or redirects using contextual language.",
+      "valid": {
+        "feedback": { "onIncorrect": "Escucha y vuelve a intentar." }
+      },
+      "invalid": {
+        "feedback": { "onIncorrect": "Use the subjunctive because es importante que triggers it." }
+      },
+      "note": "Feedback MAY reference the correct form ('Era, tenía — imperfecto para el fondo'). It must NOT teach grammar rules abstractly."
+    },
+
+    {
+      "id": "auth_cefr_required",
+      "rule": "CEFR is required on every Activity",
+      "rationale": "Activity.cefr is a schema field. The validator enforces activity.cefr >= storyNode.cefr. CEFR on activities enables validation, routing, and adaptivity queries (getActivitiesForLevel).",
+      "constraint": "activity.cefr >= destination's storyNode.cefr (spiral recycling OK — a B1 activity can appear at an A2 destination for revisit)",
+      "valid": { "cefr": "B1", "destination": "dest19" },
+      "invalid": { "destination": "dest19", "_why": "Missing cefr field entirely" }
+    },
+
+    {
+      "id": "auth_id_convention",
+      "rule": "Activity IDs follow act_{dest}_{gameType}_{slug}",
+      "rationale": "The ID encodes destination and game type for fast lookup and validation. The validator checks that dest in ID matches the destination field, and gameType in ID matches the gameType field.",
+      "valid": "act_dest19_fill_preterite_imperfect",
+      "invalid": "act_express_preference"
+    },
+
+    {
+      "id": "auth_explicit_intent",
+      "rule": "Before authoring, the author must answer three questions",
+      "questions": [
+        "Which Destination does this Activity belong to?",
+        "Which LinguisticTargets does it practice? (paradigm-level IDs only)",
+        "What EvidenceEvent does success generate?"
+      ],
+      "enforcement": "If any answer is unclear, the Activity is rejected."
+    }
+
+  ],
+
+  "autoRejectPatterns": [
+    "Person-specific LT IDs (e.g., _yo, _tu suffixes)",
+    "Free-floating activities (no destination)",
+    "Activities without cefr field",
+    "Grammar explanations in prompts or feedback",
+    "Hard-coded adaptivity logic (inputMode overrides, scaffold sequences)",
+    "IDs not matching act_{dest}_{gameType}_{slug}",
+    "Extra fields not in schema (options, correct, expected, conditions)"
+  ]
+}

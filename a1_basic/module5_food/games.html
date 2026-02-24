@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&oacute;dulo 5: Comida</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module5_food/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 5: Comida — Games",
+                "url": "https://babelfree.com/a1_basic/module5_food/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Food vocabulary practice",
+                    "Verb gustar exercises"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Comida",
+                        "item": "https://babelfree.com/a1_basic/module5_food/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">M&oacute;dulo 5: Comida</div>
+            <div class="yg-header-subtitle">Preferencias de comida</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE \u2014 Yaguar\u00e1 tiene hambre
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 tiene hambre. Busca comida. Ve el r\u00edo. Hay peces en el agua. Yaguar\u00e1 come un pez. El pez es bueno.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE \u2014 Yaguar\u00e1 ve frutas
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 ve frutas. Hay mangos en el \u00e1rbol. El mango es bueno. Hay pl\u00e1tanos tambi\u00e9n. A Yaguar\u00e1 le gusta la fruta.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE \u2014 Yaguar\u00e1 bebe agua
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 tiene sed. Va al r\u00edo. Bebe agua. El agua es buena. Yaguar\u00e1 come pescado y fruta. Bebe agua. Yaguar\u00e1 est\u00e1 feliz.'
+    },
+
+    /* ============================================================
+       4. PAIR \u2014 Food items (Spanish \u2194 English)
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la comida con su nombre.',
+        pairs: [
+            ['pescado', 'fish'],
+            ['fruta', 'fruit'],
+            ['agua', 'water'],
+            ['arroz', 'rice']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR \u2014 Food descriptions
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la comida con la frase.',
+        pairs: [
+            ['el mango', 'es bueno'],
+            ['el pescado', 'est\u00e1 en el r\u00edo'],
+            ['el pl\u00e1tano', 'es grande'],
+            ['el agua', 'es buena']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR \u2014 Preferences
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la frase con la comida.',
+        pairs: [
+            ['me gusta', 'el pescado'],
+            ['tengo hambre', 'como arroz'],
+            ['tengo sed', 'bebo agua'],
+            ['me gustan', 'las frutas']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB \u2014 Gustar + food
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Me ___ el pescado.',
+                answer: 'gusta',
+                options: ['gusta', 'gustan', 'gusto', 'gustas']
+            },
+            {
+                sentence: 'La fruta es ___.',
+                answer: 'buena',
+                options: ['bueno', 'buena', 'malo', 'mala']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ hambre.',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB \u2014 More food sentences
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Me ___ las frutas.',
+                answer: 'gustan',
+                options: ['gusta', 'gustan', 'gusto', 'gustas']
+            },
+            {
+                sentence: 'El arroz es ___.',
+                answer: 'bueno',
+                options: ['buena', 'bueno', 'mala', 'grande']
+            },
+            {
+                sentence: 'Yo ___ agua.',
+                answer: 'bebo',
+                options: ['como', 'bebo', 'bebe', 'come']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB \u2014 Food preferences
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'No me ___ el mango.',
+                answer: 'gusta',
+                options: ['gusta', 'gustan', 'gusto', 'gustas']
+            },
+            {
+                sentence: 'El pescado es ___.',
+                answer: 'bueno',
+                options: ['buena', 'bueno', 'bonita', 'grande']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ pescado.',
+                answer: 'come',
+                options: ['como', 'comes', 'come', 'comen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING \u2014 Food vocabulary (slow)
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Me gusta el pescado.',
+        question: '\u00bfQu\u00e9 le gusta?',
+        answer: 'el pescado',
+        options: ['el arroz', 'el pescado', 'el agua', 'la fruta']
+    },
+
+    /* ============================================================
+       11. LISTENING \u2014 What does Yaguar\u00e1 do?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Tengo hambre. Como arroz.',
+        question: '\u00bfQu\u00e9 come?',
+        answer: 'arroz',
+        options: ['pescado', 'arroz', 'fruta', 'mango']
+    },
+
+    /* ============================================================
+       12. CONJUGATION \u2014 Gustar (me gusta / me gustan)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma de gustar.',
+        questions: [
+            {
+                verb: 'gustar',
+                subject: 'a m\u00ed (el pescado)',
+                answer: 'me gusta',
+                options: ['me gusta', 'me gustan', 'te gusta', 'te gustan']
+            },
+            {
+                verb: 'gustar',
+                subject: 'a m\u00ed (las frutas)',
+                answer: 'me gustan',
+                options: ['me gusta', 'me gustan', 'te gusta', 'te gustan']
+            },
+            {
+                verb: 'gustar',
+                subject: 'a ti (el arroz)',
+                answer: 'te gusta',
+                options: ['me gusta', 'me gustan', 'te gusta', 'te gustan']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION \u2014 Comer / beber (present)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo.',
+        questions: [
+            {
+                verb: 'comer',
+                subject: 'yo',
+                answer: 'como',
+                options: ['como', 'comes', 'come', 'comen']
+            },
+            {
+                verb: 'beber',
+                subject: 'yo',
+                answer: 'bebo',
+                options: ['bebo', 'bebes', 'bebe', 'beben']
+            },
+            {
+                verb: 'comer',
+                subject: '\u00e9l',
+                answer: 'come',
+                options: ['como', 'comes', 'come', 'comen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING \u2014 Frutas / carnes / bebidas
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica la comida.',
+        categories: ['Fruta', 'Carne', 'Bebida'],
+        items: [
+            { text: 'mango', category: 'Fruta' },
+            { text: 'pl\u00e1tano', category: 'Fruta' },
+            { text: 'pescado', category: 'Carne' },
+            { text: 'pollo', category: 'Carne' },
+            { text: 'agua', category: 'Bebida' },
+            { text: 'jugo', category: 'Bebida' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING \u2014 Me gusta / no me gusta
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica las frases.',
+        categories: ['Me gusta', 'No me gusta'],
+        items: [
+            { text: 'el mango es bueno', category: 'Me gusta' },
+            { text: 'el pescado es malo', category: 'No me gusta' },
+            { text: 'la fruta es buena', category: 'Me gusta' },
+            { text: 'el arroz es malo', category: 'No me gusta' },
+            { text: 'el pl\u00e1tano es bueno', category: 'Me gusta' },
+            { text: 'el agua es mala', category: 'No me gusta' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER \u2014 Food preference sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['gusta', 'Me', 'el', 'pescado'],
+        answer: 'Me gusta el pescado'
+    },
+
+    /* ============================================================
+       17. BUILDER \u2014 Another food sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['es', 'La', 'buena', 'fruta'],
+        answer: 'La fruta es buena'
+    },
+
+    /* ============================================================
+       18. CONVERSATION \u2014 Ordering food
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Luna', text: '\u00bfTe gusta el pescado?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['S\u00ed, me gusta.', 'Tengo un hermano.', 'Soy grande.', 'El r\u00edo es bonito.'],
+                answer: 'S\u00ed, me gusta.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION \u2014 Talking about food
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'R\u00edo', text: '\u00bfTienes hambre?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['S\u00ed, tengo hambre.', 'Mi madre es bonita.', 'El agua es grande.', 'Soy un jaguar.'],
+                answer: 'S\u00ed, tengo hambre.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION \u2014 Simple food sentence
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Tengo hambre.',
+        answer: 'Tengo hambre.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de las frutas',
+            description: 'Una cueva donde crecen plantas con frutas brillantes. Hay mangos dorados, plátanos verdes y cocos blancos.',
+            ambience: 'fruit'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un mango dorado pregunta:',
+                riddle: '«Soy amarilla y dulce. Tengo piel que debes quitar. Crezco en árboles en el Chocó. Los niños me comen después de la comida. ¿Qué fruta soy?»',
+                clue: 'Es una fruta tropical muy común.',
+                answer: 'Un mango',
+                options: ['Un mango', 'Una manzana', 'Una naranja', 'Una fresa'],
+                onSolve: 'El mango brilla más fuerte.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras están escritas en las hojas de las plantas.',
+                clue: 'Es la comida que comes al mediodía. Tiene ocho letras.',
+                answer: 'almuerzo',
+                scrambled: 'mzoeluar',
+                onSolve: 'Las hojas se mueven.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Un coco tiene una cerradura.',
+                clue: 'Yaguará tiene hambre. Ella quiere ___. Cinco letras.',
+                answer: 'comer',
+                hint: '_ _ _ _ _',
+                onSolve: 'El coco se abre. La puerta está adentro. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una raíz con forma de fruta.',
+            questClue: 'La tierra da comida a quien la cuida.',
+            item: 'raiz-fruta'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1m5',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Module5Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

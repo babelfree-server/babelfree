@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 30: Huellas en la sabana - Per&iacute;frasis verbales</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b2_basic/dest30_verbal_periphrasis/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 30: Huellas en la sabana - Perífrasis verbales",
+          "url": "https://babelfree.com/b2_basic/dest30_verbal_periphrasis/games",
+          "educationalLevel": "B2 - Upper Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Verbal periphrasis", "Perífrasis verbales", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B2 Basic", "item": "https://babelfree.com/b2-villavicencio" },
+            { "@type": "ListItem", "position": 4, "name": "Huellas en la sabana - Perífrasis verbales" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/b2-villavicencio" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 30: Huellas en la sabana</div>
+            <div class="yg-header-subtitle">Per&iacute;frasis verbales</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative \u2014 Amanecer en la sabana ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 llega a los Llanos y descubre la vida de los llaneros. Observa las per\u00edfrasis verbales.',
+        text: 'Cuando Yaguar\u00e1 lleg\u00f3 a los Llanos Orientales, el sol estaba empezando a salir sobre la sabana infinita. Un grupo de llaneros llevaba horas cabalgando entre el ganado. Uno de ellos, don Eustaquio, se puso a cantar un joropo mientras gu\u00edaba a las reses hacia el corral. "Aqu\u00ed solemos levantarnos antes del amanecer", le explic\u00f3 a Yaguar\u00e1. "Hay que arrear el ganado temprano, porque luego el calor se vuelve insoportable." Yaguar\u00e1 acababa de llegar, pero ya sent\u00eda que esa tierra ten\u00eda un ritmo propio, marcado por el trabajo, la m\u00fasica y la inmensidad del horizonte.'
+    },
+    // === GAME 2: FIB \u2014 Elegir la per\u00edfrasis incoativa correcta ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la per\u00edfrasis incoativa correcta para cada oraci\u00f3n.',
+        questions: [
+            {
+                sentence: 'Al ver la tormenta, los llaneros ___ recoger el ganado lo m\u00e1s r\u00e1pido posible.',
+                answer: 'se pusieron a',
+                options: ['se pusieron a', 'dejaron de', 'acabaron de', 'sol\u00edan']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ llorar cuando escuch\u00f3 la historia del viejo llanero.',
+                answer: 'se ech\u00f3 a',
+                options: ['se ech\u00f3 a', 'sigui\u00f3', 'termin\u00f3 de', 'volvi\u00f3 a']
+            },
+            {
+                sentence: 'Los vaqueros ___ trabajar apenas sali\u00f3 el primer rayo de sol.',
+                answer: 'empezaron a',
+                options: ['empezaron a', 'dejaron de', 'acabaron de', 'llevaban']
+            },
+            {
+                sentence: 'De repente, el caballo ___ correr sin que nadie lo esperara.',
+                answer: 'se puso a',
+                options: ['se puso a', 'dej\u00f3 de', 'sol\u00eda', 'acab\u00f3 de']
+            }
+        ]
+    },
+    // === GAME 3: FIB \u2014 Per\u00edfrasis durativas ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona la per\u00edfrasis durativa que completa correctamente cada oraci\u00f3n.',
+        questions: [
+            {
+                sentence: 'Don Eustaquio ___ tres horas cabalgando bajo el sol cuando por fin encontr\u00f3 la res perdida.',
+                answer: 'llevaba',
+                options: ['llevaba', 'empez\u00f3 a', 'dej\u00f3 de', 'volvi\u00f3 a']
+            },
+            {
+                sentence: 'A pesar del cansancio, los llaneros ___ arreando el ganado hasta el atardecer.',
+                answer: 'siguieron',
+                options: ['siguieron', 'dejaron de', 'acabaron de', 'se pusieron a']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ observando las costumbres llaneras con mucha curiosidad.',
+                answer: 'estaba',
+                options: ['estaba', 'acab\u00f3 de', 'se ech\u00f3 a', 'termin\u00f3 de']
+            },
+            {
+                sentence: 'El perro del hato ___ semanas siguiendo al ganado sin descanso.',
+                answer: 'llevaba',
+                options: ['llevaba', 'empez\u00f3', 'dej\u00f3 de', 'volvi\u00f3 a']
+            }
+        ]
+    },
+    // === GAME 4: Conjugation \u2014 Per\u00edfrasis obligativas en contexto ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Completa con la forma correcta de la per\u00edfrasis obligativa indicada.',
+        questions: [
+            {
+                verb: 'tener que + madrugar',
+                subject: 'los llaneros',
+                answer: 'tienen que madrugar',
+                options: ['tienen que madrugar', 'deben de madrugar', 'suelen madrugar', 'acaban de madrugar']
+            },
+            {
+                verb: 'deber + cuidar',
+                subject: 'nosotros',
+                answer: 'debemos cuidar',
+                options: ['debemos cuidar', 'solemos cuidar', 'empezamos a cuidar', 'dejamos de cuidar']
+            },
+            {
+                verb: 'haber de + aprender',
+                subject: 'Yaguar\u00e1',
+                answer: 'ha de aprender',
+                options: ['ha de aprender', 'suele aprender', 'lleva aprendiendo', 'vuelve a aprender']
+            },
+            {
+                verb: 'tener que + reparar',
+                subject: 'el caporal',
+                answer: 'tiene que reparar',
+                options: ['tiene que reparar', 'acaba de reparar', 'sigue reparando', 'deja de reparar']
+            }
+        ]
+    },
+    // === GAME 5: Pair \u2014 Per\u00edfrasis y su significado ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada per\u00edfrasis verbal con su significado.',
+        pairs: [
+            ['ponerse a + infinitivo', 'Comenzar una acci\u00f3n de forma repentina'],
+            ['seguir + gerundio', 'Continuar una acci\u00f3n ya iniciada'],
+            ['dejar de + infinitivo', 'Interrumpir o cesar una acci\u00f3n'],
+            ['volver a + infinitivo', 'Repetir una acci\u00f3n'],
+            ['acabar de + infinitivo', 'Expresar que algo ocurri\u00f3 hace muy poco'],
+            ['soler + infinitivo', 'Expresar una acci\u00f3n habitual']
+        ]
+    },
+    // === GAME 6: Conjugation \u2014 Per\u00edfrasis terminativas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la per\u00edfrasis terminativa correcta seg\u00fan el contexto.',
+        questions: [
+            {
+                verb: 'dejar de + llover',
+                subject: '(impersonal)',
+                answer: 'dej\u00f3 de llover',
+                options: ['dej\u00f3 de llover', 'sigui\u00f3 lloviendo', 'empez\u00f3 a llover', 'volvi\u00f3 a llover']
+            },
+            {
+                verb: 'acabar de + llegar',
+                subject: 'yo',
+                answer: 'acabo de llegar',
+                options: ['acabo de llegar', 'suelo llegar', 'sigo llegando', 'me pongo a llegar']
+            },
+            {
+                verb: 'terminar de + construir',
+                subject: 'ellos',
+                answer: 'terminaron de construir',
+                options: ['terminaron de construir', 'siguieron construyendo', 'empezaron a construir', 'sol\u00edan construir']
+            },
+            {
+                verb: 'dejar de + trabajar',
+                subject: 'nosotros',
+                answer: 'dejamos de trabajar',
+                options: ['dejamos de trabajar', 'seguimos trabajando', 'volvimos a trabajar', 'ten\u00edamos que trabajar']
+            }
+        ]
+    },
+    // === GAME 7: Narrative \u2014 El trabajo del llano ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la rutina diaria de un hato llanero. Identifica las diferentes per\u00edfrasis verbales.',
+        text: 'En el hato de don Eustaquio, el d\u00eda sol\u00eda empezar a las cuatro de la ma\u00f1ana. Los vaqueros ten\u00edan que orde\u00f1ar las vacas antes de que el sol calentara demasiado. Yaguar\u00e1 llevaba tres d\u00edas observando la rutina y empezaba a entender el ritmo de la sabana. Esa ma\u00f1ana, un becerro se puso a correr hacia el r\u00edo y el caporal tuvo que echarse a galopar tras \u00e9l. Cuando por fin terminaron de reunir todo el ganado, don Eustaquio dej\u00f3 de silbar y dijo: "Aqu\u00ed el que se cansa, vuelve a empezar al d\u00eda siguiente. As\u00ed es la vida del llanero. Uno ha de aceptar lo que la sabana le da".'
+    },
+    // === GAME 8: Listening \u2014 Per\u00edfrasis en contexto llanero ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la narraci\u00f3n sobre la vida en el llano y responde la pregunta.',
+        audio: 'Don Eustaquio llevaba m\u00e1s de cuarenta a\u00f1os trabajando en la sabana. Sol\u00eda decir que el llano no era un lugar para los que se cansaban f\u00e1cil. Cuando empezaba a llover, los vaqueros ten\u00edan que seguir cabalgando, porque el ganado no dejaba de moverse. Acababan de terminar la faena cuando ya deb\u00edan ponerse a preparar la cena.',
+        question: '\u00bfQu\u00e9 hac\u00edan los vaqueros cuando empezaba a llover?',
+        answer: 'Ten\u00edan que seguir cabalgando porque el ganado no dejaba de moverse',
+        options: ['Ten\u00edan que seguir cabalgando porque el ganado no dejaba de moverse', 'Dejaban de trabajar y descansaban', 'Se pon\u00edan a cantar joropo', 'Volvían al hato inmediatamente']
+    },
+    // === GAME 9: FIB \u2014 Per\u00edfrasis repetitivas y resultativas ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la per\u00edfrasis correcta: repetitiva o resultativa.',
+        questions: [
+            {
+                sentence: 'Despu\u00e9s de muchos intentos, el joven vaquero ___ dominar la t\u00e9cnica del lazo.',
+                answer: 'lleg\u00f3 a',
+                options: ['lleg\u00f3 a', 'dej\u00f3 de', 'se puso a', 'llevaba']
+            },
+            {
+                sentence: 'El r\u00edo creci\u00f3 tanto que los llaneros ___ cruzarlo por el puente viejo.',
+                answer: 'volvieron a',
+                options: ['volvieron a', 'dejaron de', 'acabaron de', 'ten\u00edan que']
+            },
+            {
+                sentence: 'Con los a\u00f1os, don Eustaquio ___ convertirse en el mejor caporal de la regi\u00f3n.',
+                answer: 'lleg\u00f3 a',
+                options: ['lleg\u00f3 a', 'se puso a', 'sigui\u00f3', 'empez\u00f3 a']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ preguntarle sobre la vida en la sabana, porque la primera respuesta no le qued\u00f3 clara.',
+                answer: 'volvi\u00f3 a',
+                options: ['volvi\u00f3 a', 'dej\u00f3 de', 'acab\u00f3 de', 'sigui\u00f3']
+            }
+        ]
+    },
+    // === GAME 10: Sorting \u2014 Clasificar por tipo de per\u00edfrasis ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan el tipo de per\u00edfrasis verbal que contiene.',
+        categories: ['Incoativa', 'Durativa', 'Terminativa'],
+        items: [
+            { text: 'Los vaqueros se pusieron a cantar alrededor de la fogata.', category: 'Incoativa' },
+            { text: 'Yaguar\u00e1 empez\u00f3 a comprender la cultura llanera.', category: 'Incoativa' },
+            { text: 'Don Eustaquio segu\u00eda cabalgando a pesar de la lluvia.', category: 'Durativa' },
+            { text: 'Llevaban horas arreando el ganado por la sabana.', category: 'Durativa' },
+            { text: 'La tormenta dej\u00f3 de azotar el llano al amanecer.', category: 'Terminativa' },
+            { text: 'Acababan de cruzar el ca\u00f1o cuando apareci\u00f3 un chig\u00fciro.', category: 'Terminativa' },
+            { text: 'El becerro se ech\u00f3 a correr por la sabana abierta.', category: 'Incoativa' },
+            { text: 'Los peones terminaron de reparar la cerca al mediod\u00eda.', category: 'Terminativa' }
+        ]
+    },
+    // === GAME 11: Pair \u2014 Oraci\u00f3n y tipo de per\u00edfrasis ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada oraci\u00f3n con el tipo de per\u00edfrasis verbal que utiliza.',
+        pairs: [
+            ['Los llaneros suelen madrugar todos los d\u00edas.', 'Per\u00edfrasis habitual'],
+            ['Tenemos que cruzar el r\u00edo antes del anochecer.', 'Per\u00edfrasis obligativa'],
+            ['El caporal volvi\u00f3 a revisar la cerca.', 'Per\u00edfrasis repetitiva'],
+            ['Yaguar\u00e1 estaba aprendiendo a montar a caballo.', 'Per\u00edfrasis durativa'],
+            ['De repente, se puso a llover con fuerza.', 'Per\u00edfrasis incoativa'],
+            ['El viejo llanero lleg\u00f3 a ser leyenda en toda la regi\u00f3n.', 'Per\u00edfrasis resultativa']
+        ]
+    },
+    // === GAME 12: Conjugation \u2014 Per\u00edfrasis en diferentes tiempos ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Selecciona la forma correcta de la per\u00edfrasis en el tiempo verbal indicado.',
+        questions: [
+            {
+                verb: 'empezar a + cantar (pret\u00e9rito)',
+                subject: 'los llaneros',
+                answer: 'empezaron a cantar',
+                options: ['empezaron a cantar', 'empiezan a cantar', 'empezaban a cantar', 'empezar\u00edan a cantar']
+            },
+            {
+                verb: 'seguir + trabajar (imperfecto)',
+                subject: 'el caporal',
+                answer: 'segu\u00eda trabajando',
+                options: ['segu\u00eda trabajando', 'sigui\u00f3 trabajando', 'sigue trabajando', 'seguir\u00eda trabajando']
+            },
+            {
+                verb: 'tener que + salir (condicional)',
+                subject: 'nosotros',
+                answer: 'tendr\u00edamos que salir',
+                options: ['tendr\u00edamos que salir', 'tenemos que salir', 'ten\u00edamos que salir', 'tuvimos que salir']
+            },
+            {
+                verb: 'volver a + intentar (presente)',
+                subject: 'yo',
+                answer: 'vuelvo a intentar',
+                options: ['vuelvo a intentar', 'volv\u00ed a intentar', 'volv\u00eda a intentar', 'volver\u00eda a intentar']
+            }
+        ]
+    },
+    // === GAME 13: Builder \u2014 Per\u00edfrasis incoativa ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con per\u00edfrasis verbal.',
+        words: ['Cuando', 'lleg\u00f3', 'la', 'tormenta,', 'los', 'vaqueros', 'se', 'pusieron', 'a', 'buscar', 'refugio', 'para', 'el', 'ganado', 'cerca', 'del', 'r\u00edo.'],
+        answer: 'Cuando lleg\u00f3 la tormenta, los vaqueros se pusieron a buscar refugio para el ganado cerca del r\u00edo.'
+    },
+    // === GAME 14: Listening \u2014 Rutina con per\u00edfrasis ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la descripci\u00f3n de una jornada en el hato y responde la pregunta.',
+        audio: 'El d\u00eda empez\u00f3 a las cuatro de la ma\u00f1ana. Los vaqueros ten\u00edan que orde\u00f1ar antes del amanecer. Yaguar\u00e1 acababa de despertarse cuando oy\u00f3 que don Eustaquio se puso a silbar un joropo. Llevaban una hora trabajando cuando el sol empez\u00f3 a calentar. A pesar del calor, siguieron arreando el ganado hasta que dejaron de escuchar los mugidos al otro lado del ca\u00f1o.',
+        question: '\u00bfQu\u00e9 pas\u00f3 cuando Yaguar\u00e1 acababa de despertarse?',
+        answer: 'Oy\u00f3 que don Eustaquio se puso a silbar un joropo',
+        options: ['Oy\u00f3 que don Eustaquio se puso a silbar un joropo', 'Los vaqueros dejaron de trabajar', 'Empez\u00f3 a llover sobre la sabana', 'El ganado volvi\u00f3 al corral']
+    },
+    // === GAME 15: Sorting \u2014 Obligativas, habituales y repetitivas ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan el tipo de per\u00edfrasis que contiene.',
+        categories: ['Obligativa', 'Habitual', 'Repetitiva'],
+        items: [
+            { text: 'Los vaqueros tienen que madrugar cada d\u00eda.', category: 'Obligativa' },
+            { text: 'Deben proteger al ganado de los depredadores.', category: 'Obligativa' },
+            { text: 'Don Eustaquio suele cantar mientras cabalga.', category: 'Habitual' },
+            { text: 'En los Llanos suelen celebrar fiestas con joropo.', category: 'Habitual' },
+            { text: 'El becerro volvi\u00f3 a escaparse del corral.', category: 'Repetitiva' },
+            { text: 'Yaguar\u00e1 volvi\u00f3 a preguntar por la historia del hato.', category: 'Repetitiva' }
+        ]
+    },
+    // === GAME 16: Narrative \u2014 La noche del joropo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la noche de fiesta en el hato. Identifica todas las per\u00edfrasis verbales en el texto.',
+        text: 'Esa noche, los llaneros se pusieron a preparar una fiesta. Llevaban semanas planeando el baile y por fin hab\u00eda llegado el momento. Don Eustaquio empez\u00f3 a afinar su arpa mientras los j\u00f3venes terminaban de adornar el patio con faroles. Yaguar\u00e1 sol\u00eda pensar que la m\u00fasica era solo entretenimiento, pero en los Llanos lleg\u00f3 a entender que el joropo era una forma de contar la vida. "Aqu\u00ed la m\u00fasica no deja de sonar hasta que el \u00faltimo bailador se rinde", dijo una mujer mientras segu\u00eda moviendo los pies al comp\u00e1s. Yaguar\u00e1 no pudo resistirse y se ech\u00f3 a bailar. Cuando la fiesta termin\u00f3, los gallos estaban a punto de cantar. Ella acababa de vivir una de las noches m\u00e1s memorables de todo su viaje.'
+    },
+    // === GAME 17: FIB \u2014 Per\u00edfrasis mixtas en contexto ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la per\u00edfrasis verbal correcta para cada contexto.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ a montar a caballo despu\u00e9s de muchos d\u00edas de pr\u00e1ctica.',
+                answer: 'lleg\u00f3 a aprender',
+                options: ['lleg\u00f3 a aprender', 'dej\u00f3 de aprender', 'se ech\u00f3 a aprender', 'llevaba aprendiendo']
+            },
+            {
+                sentence: 'Los ni\u00f1os del pueblo ___ haciendo preguntas a Yaguar\u00e1 sobre su viaje.',
+                answer: 'siguieron',
+                options: ['siguieron', 'dejaron de', 'acabaron de', 'se pusieron a']
+            },
+            {
+                sentence: 'Ya ___ anochecer y los vaqueros todav\u00eda no hab\u00edan cenado.',
+                answer: 'estaba a punto de',
+                options: ['estaba a punto de', 'acababa de', 'sol\u00eda', 'dejaba de']
+            },
+            {
+                sentence: 'Don Eustaquio ___ explicarle a Yaguar\u00e1 c\u00f3mo naci\u00f3 el joropo.',
+                answer: 'se puso a',
+                options: ['se puso a', 'dej\u00f3 de', 'termin\u00f3 de', 'volvi\u00f3 a']
+            }
+        ]
+    },
+    // === GAME 18: Conjugation \u2014 Per\u00edfrasis en subjuntivo y condicional ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma correcta de la per\u00edfrasis verbal en el modo indicado.',
+        questions: [
+            {
+                verb: 'dejar de + contaminar (subjuntivo)',
+                subject: 'las empresas',
+                answer: 'dejen de contaminar',
+                options: ['dejen de contaminar', 'dejan de contaminar', 'dejaron de contaminar', 'dejar\u00edan de contaminar']
+            },
+            {
+                verb: 'tener que + irse (condicional)',
+                subject: 'nosotros',
+                answer: 'tendr\u00edamos que irnos',
+                options: ['tendr\u00edamos que irnos', 'tenemos que irnos', 'ten\u00edamos que irnos', 'tengamos que irnos']
+            },
+            {
+                verb: 'seguir + luchar (subjuntivo)',
+                subject: 'los llaneros',
+                answer: 'sigan luchando',
+                options: ['sigan luchando', 'siguen luchando', 'segu\u00edan luchando', 'seguir\u00edan luchando']
+            },
+            {
+                verb: 'volver a + intentar (condicional)',
+                subject: 'yo',
+                answer: 'volver\u00eda a intentar',
+                options: ['volver\u00eda a intentar', 'vuelvo a intentar', 'volv\u00ed a intentar', 'vuelva a intentar']
+            }
+        ]
+    },
+    // === GAME 19: Translation \u2014 Per\u00edfrasis verbales ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Usa per\u00edfrasis verbales.',
+        source: 'The cowboys started to sing when it stopped raining. They had been riding for hours and they used to rest only at night.',
+        words: ['Los', 'vaqueros', 'se', 'pusieron', 'a', 'cantar', 'cuando', 'dej\u00f3', 'de', 'llover', 'Llevaban', 'horas', 'cabalgando', 'y', 'sol\u00edan', 'descansar', 'solo', 'por', 'la', 'noche'],
+        answer: 'Los vaqueros se pusieron a cantar cuando dej\u00f3 de llover Llevaban horas cabalgando y sol\u00edan descansar solo por la noche'
+    },
+    // === GAME 20: Conversation \u2014 Vida en el llano ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con don Eustaquio sobre la vida en los Llanos usando per\u00edfrasis verbales.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Eustaquio', text: 'Llevo m\u00e1s de cuarenta a\u00f1os viviendo en la sabana. \u00bfAlguna vez has tenido que adaptarte a un lugar completamente nuevo?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, cuando me mud\u00e9 a otra ciudad, tuve que empezar a acostumbrarme a nuevas costumbres. Al principio sol\u00eda extra\u00f1ar mi hogar, pero poco a poco llegu\u00e9 a sentirme parte de la comunidad.',
+                    'No, nunca he viajado.',
+                    'S\u00ed, me gustan los caballos.'
+                ],
+                answer: 'S\u00ed, cuando me mud\u00e9 a otra ciudad, tuve que empezar a acostumbrarme a nuevas costumbres. Al principio sol\u00eda extra\u00f1ar mi hogar, pero poco a poco llegu\u00e9 a sentirme parte de la comunidad.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Eustaquio', text: 'Aqu\u00ed nunca dejamos de trabajar. El ganado no espera. \u00bfQu\u00e9 opinas de ese estilo de vida?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Me parece admirable. Ustedes siguen manteniendo tradiciones que muchos han dejado de valorar. Creo que debemos volver a conectarnos con la naturaleza y el trabajo f\u00edsico.',
+                    'Es demasiado trabajo para m\u00ed.',
+                    'Prefiero la ciudad.'
+                ],
+                answer: 'Me parece admirable. Ustedes siguen manteniendo tradiciones que muchos han dejado de valorar. Creo que debemos volver a conectarnos con la naturaleza y el trabajo f\u00edsico.'
+            }
+        ]
+    },
+    // === GAME 21: Builder \u2014 Per\u00edfrasis durativa y terminativa ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con per\u00edfrasis durativa y terminativa.',
+        words: ['Yaguar\u00e1', 'llevaba', 'd\u00edas', 'aprendiendo', 'a', 'montar', 'cuando', 'por', 'fin', 'termin\u00f3', 'de', 'dominar', 'la', 't\u00e9cnica', 'del', 'galope.'],
+        answer: 'Yaguar\u00e1 llevaba d\u00edas aprendiendo a montar cuando por fin termin\u00f3 de dominar la t\u00e9cnica del galope.'
+    },
+    // === GAME 22: Translation \u2014 Per\u00edfrasis complejas ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Presta atenci\u00f3n a las per\u00edfrasis verbales.',
+        source: 'Don Eustaquio had just finished repairing the fence when the calf ran away again. He had to go back to looking for it across the savanna.',
+        words: ['Don', 'Eustaquio', 'acababa', 'de', 'terminar', 'reparar', 'la', 'cerca', 'cuando', 'el', 'becerro', 'volvi\u00f3', 'a', 'escaparse', 'Tuvo', 'que', 'ponerse', 'buscarlo', 'por', 'toda', 'sabana'],
+        answer: 'Don Eustaquio acababa de terminar de reparar la cerca cuando el becerro volvi\u00f3 a escaparse Tuvo que ponerse a buscarlo por toda la sabana'
+    },
+    // === GAME 23: Conversation \u2014 Reflexi\u00f3n sobre tradiciones ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con Yaguar\u00e1 sobre su experiencia en los Llanos usando per\u00edfrasis verbales variadas.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'Acabo de pasar una semana incre\u00edble en los Llanos. Los llaneros siguen viviendo como lo hac\u00edan sus abuelos. \u00bfCrees que esas tradiciones pueden llegar a desaparecer?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Es posible, pero no tiene que ser as\u00ed. Si las nuevas generaciones empiezan a valorar su herencia, pueden seguir manteniendo esas costumbres. No debemos dejar de recordar de d\u00f3nde venimos.',
+                    'S\u00ed, todo desaparece con el tiempo.',
+                    'No s\u00e9, no conozco los Llanos.'
+                ],
+                answer: 'Es posible, pero no tiene que ser as\u00ed. Si las nuevas generaciones empiezan a valorar su herencia, pueden seguir manteniendo esas costumbres. No debemos dejar de recordar de d\u00f3nde venimos.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: 'Lo que m\u00e1s me impresion\u00f3 fue que nunca dejan de trabajar, pero siempre encuentran tiempo para la m\u00fasica. \u00bfQu\u00e9 se puede aprender de eso?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Creo que debemos volver a equilibrar el trabajo y la alegr\u00eda. Ellos han llegado a comprender que la vida no puede ser solo obligaciones. Tenemos que empezar a disfrutar de lo que hacemos.',
+                    'No s\u00e9, a m\u00ed no me gusta la m\u00fasica.',
+                    'Es que ellos no tienen televisi\u00f3n.'
+                ],
+                answer: 'Creo que debemos volver a equilibrar el trabajo y la alegr\u00eda. Ellos han llegado a comprender que la vida no puede ser solo obligaciones. Tenemos que empezar a disfrutar de lo que hacemos.'
+            }
+        ]
+    },
+    // === GAME 24: Dictation \u2014 Per\u00edfrasis verbales encadenadas ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n exacta. Presta atenci\u00f3n a las per\u00edfrasis verbales.',
+        audio: 'Los llaneros llevaban horas cabalgando y empezaban a sentir el cansancio, pero no dejaban de arrear el ganado porque ten\u00edan que llegar al corral antes del anochecer.',
+        answer: 'Los llaneros llevaban horas cabalgando y empezaban a sentir el cansancio, pero no dejaban de arrear el ganado porque ten\u00edan que llegar al corral antes del anochecer.'
+    },
+    // === GAME 25: Story \u2014 Huellas en la sabana ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el texto final del viaje de Yaguar\u00e1 por los Llanos y responde las preguntas.',
+        title: 'Huellas en la sabana',
+        text: 'Yaguar\u00e1 acababa de despedirse de don Eustaquio cuando se puso a caminar por la sabana una \u00faltima vez. Llevaba una semana conviviendo con los llaneros y hab\u00eda llegado a entender algo fundamental: la vida en el llano no dejaba de exigir esfuerzo, pero a cambio ofrec\u00eda una libertad que no se encontraba en ning\u00fan otro lugar. Los vaqueros sol\u00edan decir que la sabana era como un libro abierto: hab\u00eda que empezar a leerlo con paciencia para llegar a comprender sus secretos. Don Eustaquio le hab\u00eda dicho que \u00e9l volv\u00eda a enamorarse del llano cada amanecer. Yaguar\u00e1 segu\u00eda pensando en esas palabras mientras el viento le acariciaba el rostro. Ten\u00eda que seguir su camino, pero sab\u00eda que nunca dejar\u00eda de sentir la llamada de aquella tierra inmensa. Antes de irse, se ech\u00f3 a re\u00edr porque un chig\u00fciro acababa de cruzar el sendero con total tranquilidad, como si el mundo entero le perteneciera. Entonces pens\u00f3: "He de volver aqu\u00ed alg\u00fan d\u00eda. Esta sabana ha terminado de ense\u00f1arme que la verdadera fuerza est\u00e1 en la constancia".',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 per\u00edfrasis aparece en "llevaba una semana conviviendo"?',
+                options: ['Per\u00edfrasis durativa (llevar + gerundio)', 'Per\u00edfrasis incoativa (ponerse a + infinitivo)', 'Per\u00edfrasis obligativa (tener que + infinitivo)', 'Per\u00edfrasis terminativa (acabar de + infinitivo)'],
+                answer: 'Per\u00edfrasis durativa (llevar + gerundio)'
+            },
+            {
+                q: '\u00bfQu\u00e9 significa "volv\u00eda a enamorarse del llano cada amanecer"?',
+                options: ['Que se enamoraba repetidamente, cada d\u00eda', 'Que hab\u00eda dejado de querer el llano', 'Que acababa de llegar al llano', 'Que ten\u00eda la obligaci\u00f3n de quedarse'],
+                answer: 'Que se enamoraba repetidamente, cada d\u00eda'
+            },
+            {
+                q: '\u00bfQu\u00e9 tipo de per\u00edfrasis es "he de volver"?',
+                options: ['Obligativa (haber de + infinitivo)', 'Durativa (estar + gerundio)', 'Incoativa (empezar a + infinitivo)', 'Resultativa (llegar a + infinitivo)'],
+                answer: 'Obligativa (haber de + infinitivo)'
+            }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El cruce de caminos',
+            description: 'Un cruce donde cuatro caminos se encuentran en el bosque. Cada camino tiene una inscripción que empieza con "Si...".',
+            ambience: 'forest-path'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En la piedra del cruce hay una cerradura.',
+                clue: 'Es la estructura gramatical que expresa una condición y su resultado. Empieza con "si" en español.',
+                answer: 'condicional',
+                hint: '_ _ _ _ _ _ _ _ _ _ _',
+                onSolve: 'La piedra se mueve.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Tres tipos de condicionales están desordenados.',
+                clue: 'Ordénalos del más probable al más imposible.',
+                items: [
+                    'Si estudias, aprobarás. (real)',
+                    'Si estudiaras más, aprobarías. (hipotético)',
+                    'Si hubieras estudiado, habrías aprobado. (irreal pasado)'
+                ],
+                onSolve: 'Los tres caminos se iluminan en orden.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Don Próspero dice en la encrucijada:',
+                premises: [
+                    '«Si construimos la carretera, habrá progreso.»',
+                    '«Si no la construimos, la pobreza continuará.»',
+                    'Pero Doña Asunción preguntó: «¿Y si el progreso no necesita una carretera?»'
+                ],
+                clue: '¿Por qué la pregunta de Doña Asunción rompe la lógica de Don Próspero?',
+                answer: 'Porque cuestiona la premisa oculta: que la carretera es la única vía al progreso',
+                options: [
+                    'Porque cuestiona la premisa oculta: que la carretera es la única vía al progreso',
+                    'Porque es una pregunta retórica sin respuesta',
+                    'Porque contradice los hechos',
+                    'Porque no entiende de economía'
+                ],
+                onSolve: 'Un cuarto camino aparece — uno que nadie había visto. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de un cruce de caminos donde uno de los caminos va hacia arriba.',
+            questClue: 'Siempre hay un camino que no se ve a primera vista.',
+            item: 'historia-cruce'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '30',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest30Progress',
+        backUrl: '../../b2-villavicencio.html'
+    });
+</script>
+</body>
+</html>

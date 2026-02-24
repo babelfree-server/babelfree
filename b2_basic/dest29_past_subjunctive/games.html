@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 29: El canto del joropo - Subjuntivo pasado</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b2_basic/dest29_past_subjunctive/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 29: El canto del joropo - Subjuntivo pasado",
+          "url": "https://babelfree.com/b2_basic/dest29_past_subjunctive/games",
+          "educationalLevel": "B2 - Upper Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Past subjunctive", "Subjuntivo imperfecto", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B2 Basic", "item": "https://babelfree.com/b2-villavicencio" },
+            { "@type": "ListItem", "position": 4, "name": "El canto del joropo - Subjuntivo pasado" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/b2-villavicencio" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 29: El canto del joropo</div>
+            <div class="yg-header-subtitle">Subjuntivo pasado</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative \u2014 La llegada a Los Llanos ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 lleg\u00f3 a Villavicencio y descubri\u00f3 el mundo llanero. Observa las estructuras del subjuntivo pasado.',
+        text: 'Cuando Yaguar\u00e1 lleg\u00f3 a Villavicencio, la inmensidad de Los Llanos la dej\u00f3 sin palabras. Si alguien le hubiera dicho meses antes que terminar\u00eda cabalgando junto a vaqueros llaneros, no lo habr\u00eda cre\u00eddo. Un viejo arpista la recibi\u00f3 en la entrada del hato y le dijo: "Ojal\u00e1 hubieras llegado ayer; tocamos joropo hasta el amanecer". Yaguar\u00e1 sonri\u00f3. No importaba. Sab\u00eda que, si hubiera llegado antes, quiz\u00e1s no habr\u00eda visto la salida del sol sobre la sabana, y ese momento ya val\u00eda todo el viaje.'
+    },
+    // === GAME 2: Conjugation \u2014 Pluscuamperfecto de subjuntivo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en pluscuamperfecto de subjuntivo (hubiera + participio).',
+        questions: [
+            {
+                verb: 'cantar',
+                subject: 'yo',
+                answer: 'hubiera cantado',
+                options: ['hubiera cantado', 'habr\u00eda cantado', 'haya cantado', 'hab\u00eda cantado']
+            },
+            {
+                verb: 'conocer',
+                subject: 't\u00fa',
+                answer: 'hubieras conocido',
+                options: ['hubieras conocido', 'habr\u00edas conocido', 'hayas conocido', 'hab\u00edas conocido']
+            },
+            {
+                verb: 'vivir',
+                subject: '\u00e9l',
+                answer: 'hubiera vivido',
+                options: ['hubiera vivido', 'habr\u00eda vivido', 'haya vivido', 'hab\u00eda vivido']
+            },
+            {
+                verb: 'decir',
+                subject: 'nosotros',
+                answer: 'hubi\u00e9ramos dicho',
+                options: ['hubi\u00e9ramos dicho', 'habr\u00edamos dicho', 'hayamos dicho', 'hab\u00edamos dicho']
+            }
+        ]
+    },
+    // === GAME 3: FIB \u2014 Condicionales irreales del pasado ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la forma correcta del pluscuamperfecto de subjuntivo o del condicional perfecto.',
+        questions: [
+            {
+                sentence: 'Si Yaguar\u00e1 ___ antes a Los Llanos, habr\u00eda aprendido a montar a caballo de ni\u00f1a.',
+                answer: 'hubiera viajado',
+                options: ['hubiera viajado', 'habr\u00eda viajado', 'haya viajado', 'viajara']
+            },
+            {
+                sentence: 'Si los llaneros no ___ sus tradiciones, el joropo habr\u00eda desaparecido.',
+                answer: 'hubieran conservado',
+                options: ['hubieran conservado', 'habr\u00edan conservado', 'hayan conservado', 'conservaran']
+            },
+            {
+                sentence: 'Ojal\u00e1 yo ___ esa noche de joropo junto al r\u00edo.',
+                answer: 'hubiera vivido',
+                options: ['hubiera vivido', 'habr\u00eda vivido', 'haya vivido', 'viviera']
+            }
+        ]
+    },
+    // === GAME 4: Pair \u2014 Pluscuamperfecto de subjuntivo y condicional perfecto ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada cl\u00e1usula con "si" con su consecuencia l\u00f3gica.',
+        pairs: [
+            ['Si hubiera llovido esa noche,', 'no habr\u00edan tocado joropo al aire libre.'],
+            ['Si el arpista no hubiera practicado,', 'no habr\u00eda podido tocar tan bien.'],
+            ['Si Yaguar\u00e1 hubiera llegado ayer,', 'habr\u00eda escuchado la fiesta llanera.'],
+            ['Si los vaqueros no hubieran cuidado el ganado,', 'habr\u00edan perdido todo el hato.'],
+            ['Si hubi\u00e9ramos conocido antes esta m\u00fasica,', 'habr\u00edamos aprendido a bailar joropo.'],
+            ['Si t\u00fa hubieras montado a caballo,', 'habr\u00edas entendido la vida del llanero.']
+        ]
+    },
+    // === GAME 5: Listening \u2014 Lamento de un llanero ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la reflexi\u00f3n de un llanero y responde la pregunta.',
+        audio: 'Si hubiera sabido que la sabana iba a cambiar tanto, habr\u00eda grabado cada amanecer con mis propios ojos. Ojal\u00e1 mi abuelo hubiera visto c\u00f3mo sus nietos todav\u00eda cantan joropo. \u00c9l habr\u00eda estado orgulloso.',
+        question: '\u00bfQu\u00e9 lamenta el llanero?',
+        answer: 'No haber grabado los amaneceres antes de que la sabana cambiara',
+        options: ['No haber grabado los amaneceres antes de que la sabana cambiara', 'No haber aprendido a cantar joropo', 'Que su abuelo no tocara el arpa', 'Que la sabana est\u00e9 igual que antes']
+    },
+    // === GAME 6: Conjugation \u2014 Condicional perfecto ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en condicional perfecto (habr\u00eda + participio).',
+        questions: [
+            {
+                verb: 'ir',
+                subject: 'yo',
+                answer: 'habr\u00eda ido',
+                options: ['habr\u00eda ido', 'hubiera ido', 'he ido', 'hab\u00eda ido']
+            },
+            {
+                verb: 'escribir',
+                subject: 't\u00fa',
+                answer: 'habr\u00edas escrito',
+                options: ['habr\u00edas escrito', 'hubieras escrito', 'has escrito', 'hab\u00edas escrito']
+            },
+            {
+                verb: 'hacer',
+                subject: 'ella',
+                answer: 'habr\u00eda hecho',
+                options: ['habr\u00eda hecho', 'hubiera hecho', 'ha hecho', 'hab\u00eda hecho']
+            },
+            {
+                verb: 'poder',
+                subject: 'ustedes',
+                answer: 'habr\u00edan podido',
+                options: ['habr\u00edan podido', 'hubieran podido', 'han podido', 'hab\u00edan podido']
+            }
+        ]
+    },
+    // === GAME 7: FIB \u2014 Ojal\u00e1 + pluscuamperfecto de subjuntivo ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada deseo imposible con la forma correcta del pluscuamperfecto de subjuntivo.',
+        questions: [
+            {
+                sentence: 'Ojal\u00e1 Yaguar\u00e1 ___ al festival de joropo del a\u00f1o pasado.',
+                answer: 'hubiera asistido',
+                options: ['hubiera asistido', 'habr\u00eda asistido', 'haya asistido', 'asistiera']
+            },
+            {
+                sentence: 'Ojal\u00e1 nosotros ___ m\u00e1s tiempo en la sabana.',
+                answer: 'hubi\u00e9ramos pasado',
+                options: ['hubi\u00e9ramos pasado', 'habr\u00edamos pasado', 'hayamos pasado', 'pas\u00e1ramos']
+            },
+            {
+                sentence: 'Ojal\u00e1 los j\u00f3venes ___ el arpa antes de que muriera el maestro.',
+                answer: 'hubieran aprendido',
+                options: ['hubieran aprendido', 'habr\u00edan aprendido', 'hayan aprendido', 'aprendieran']
+            }
+        ]
+    },
+    // === GAME 8: Sorting \u2014 Pluscuamperfecto de subjuntivo vs. condicional perfecto ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada forma verbal seg\u00fan pertenezca al pluscuamperfecto de subjuntivo o al condicional perfecto.',
+        categories: ['Pluscuamperfecto de subjuntivo', 'Condicional perfecto'],
+        items: [
+            { text: 'hubiera cantado', category: 'Pluscuamperfecto de subjuntivo' },
+            { text: 'habr\u00eda cantado', category: 'Condicional perfecto' },
+            { text: 'hubi\u00e9ramos viajado', category: 'Pluscuamperfecto de subjuntivo' },
+            { text: 'habr\u00edas escrito', category: 'Condicional perfecto' },
+            { text: 'hubieran conocido', category: 'Pluscuamperfecto de subjuntivo' },
+            { text: 'habr\u00edan vivido', category: 'Condicional perfecto' },
+            { text: 'hubieras dicho', category: 'Pluscuamperfecto de subjuntivo' },
+            { text: 'habr\u00eda hecho', category: 'Condicional perfecto' }
+        ]
+    },
+    // === GAME 9: Builder \u2014 Condicional irreal del pasado ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n condicional irreal del pasado.',
+        words: ['Si', 'el', 'arpista', 'no', 'hubiera', 'tocado', 'esa', 'noche,', 'Yaguar\u00e1', 'nunca', 'habr\u00eda', 'descubierto', 'la', 'magia', 'del', 'joropo.'],
+        answer: 'Si el arpista no hubiera tocado esa noche, Yaguar\u00e1 nunca habr\u00eda descubierto la magia del joropo.'
+    },
+    // === GAME 10: Narrative \u2014 La noche del joropo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la primera noche de joropo de Yaguar\u00e1 en un hato llanero. Presta atenci\u00f3n a las hip\u00f3tesis sobre el pasado.',
+        text: 'Aquella noche, el sonido del arpa llen\u00f3 toda la sabana. Si alguien hubiera caminado por all\u00ed sin saber qu\u00e9 era un joropo, habr\u00eda pensado que la tierra misma estaba cantando. Yaguar\u00e1 se sent\u00f3 junto al fuego y escuch\u00f3. Un coplero improvisaba versos sobre la vida del llano, sobre r\u00edos que hab\u00edan cambiado de curso y sobre amores que se fueron con la lluvia. Ella pens\u00f3: "Ojal\u00e1 hubiera tra\u00eddo a mis amigos del Choc\u00f3. Les habr\u00eda encantado". Don Eustaquio, el due\u00f1o del hato, le dijo: "Si mi padre hubiera visto esta fiesta, habr\u00eda llorado de felicidad. \u00c9l siempre so\u00f1\u00f3 con que el joropo nunca muriera".'
+    },
+    // === GAME 11: Conjugation \u2014 Pluscuamperfecto de subjuntivo con irregulares ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga estos verbos irregulares en pluscuamperfecto de subjuntivo.',
+        questions: [
+            {
+                verb: 'ver',
+                subject: 'ella',
+                answer: 'hubiera visto',
+                options: ['hubiera visto', 'habr\u00eda visto', 'hubiera vido', 'haya visto']
+            },
+            {
+                verb: 'poner',
+                subject: 'yo',
+                answer: 'hubiera puesto',
+                options: ['hubiera puesto', 'habr\u00eda puesto', 'hubiera ponido', 'haya puesto']
+            },
+            {
+                verb: 'romper',
+                subject: 'ellos',
+                answer: 'hubieran roto',
+                options: ['hubieran roto', 'habr\u00edan roto', 'hubieran rompido', 'hayan roto']
+            },
+            {
+                verb: 'abrir',
+                subject: 'nosotros',
+                answer: 'hubi\u00e9ramos abierto',
+                options: ['hubi\u00e9ramos abierto', 'habr\u00edamos abierto', 'hubi\u00e9ramos abrido', 'hayamos abierto']
+            }
+        ]
+    },
+    // === GAME 12: FIB \u2014 Mezcla de condicional tipo 3 ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la forma correcta para completar estas condicionales mixtas de tipo 3.',
+        questions: [
+            {
+                sentence: 'Si don Eustaquio no hubiera mantenido el hato, sus hijos no ___ la tradici\u00f3n llanera.',
+                answer: 'habr\u00edan heredado',
+                options: ['habr\u00edan heredado', 'hubieran heredado', 'heredar\u00edan', 'hereden']
+            },
+            {
+                sentence: 'Si los m\u00fasicos ___ el arpa al fuego, se habr\u00eda quemado.',
+                answer: 'hubieran acercado',
+                options: ['hubieran acercado', 'habr\u00edan acercado', 'acercar\u00edan', 'acercaran']
+            },
+            {
+                sentence: 'Me ___ que hubieras probado la carne a la llanera.',
+                answer: 'habr\u00eda gustado',
+                options: ['habr\u00eda gustado', 'hubiera gustado', 'gustar\u00eda', 'gust\u00f3']
+            }
+        ]
+    },
+    // === GAME 13: Pair \u2014 Deseos imposibles sobre el pasado ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada deseo con la raz\u00f3n por la que es imposible.',
+        pairs: [
+            ['Ojal\u00e1 hubiera aprendido a tocar el arpa', 'ya pas\u00f3 el tiempo y ahora es tarde'],
+            ['Ojal\u00e1 hubi\u00e9ramos ido al torneo de coleo', 'el torneo fue la semana pasada'],
+            ['Ojal\u00e1 hubieras probado la hallaca llanera', 'ya no queda ninguna'],
+            ['Ojal\u00e1 hubiera llovido menos aquel a\u00f1o', 'las inundaciones ya destruyeron los cultivos'],
+            ['Ojal\u00e1 el coplero hubiera grabado sus versos', 'muri\u00f3 sin dejar registro de su m\u00fasica'],
+            ['Ojal\u00e1 hubieran construido el puente antes', 'la crecida del r\u00edo ya se llev\u00f3 el camino']
+        ]
+    },
+    // === GAME 14: Listening \u2014 Reflexi\u00f3n sobre el pasado ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la reflexi\u00f3n y responde la pregunta.',
+        audio: 'Si mi abuela hubiera sabido que yo iba a ser m\u00fasico, habr\u00eda sonre\u00eddo mucho. Ella siempre dec\u00eda que el arpa era el alma del llano. Ojal\u00e1 la hubiera conocido mejor; me habr\u00eda ense\u00f1ado tantas coplas que yo nunca aprend\u00ed por mi cuenta.',
+        question: '\u00bfQu\u00e9 habr\u00eda pasado si el hablante hubiera conocido mejor a su abuela?',
+        answer: 'Ella le habr\u00eda ense\u00f1ado muchas coplas',
+        options: ['Ella le habr\u00eda ense\u00f1ado muchas coplas', '\u00c9l habr\u00eda dejado la m\u00fasica', 'La abuela habr\u00eda vendido el arpa', '\u00c9l no habr\u00eda sido m\u00fasico']
+    },
+    // === GAME 15: Conversation \u2014 Hablando con don Eustaquio ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con don Eustaquio, un viejo llanero, sobre la vida en Los Llanos. Usa el subjuntivo pasado.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Eustaquio', text: 'Si hubieras visto esta sabana hace cincuenta a\u00f1os, no la habr\u00edas reconocido. Todo era m\u00e1s verde y salvaje. \u00bfQu\u00e9 habr\u00edas hecho t\u00fa en aquella \u00e9poca?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si hubiera vivido en esa \u00e9poca, habr\u00eda aprendido a montar a caballo y habr\u00eda trabajado con el ganado junto a los llaneros.',
+                    'No s\u00e9, habr\u00eda dormido mucho.',
+                    'Habr\u00eda vuelto a la ciudad.'
+                ],
+                answer: 'Si hubiera vivido en esa \u00e9poca, habr\u00eda aprendido a montar a caballo y habr\u00eda trabajado con el ganado junto a los llaneros.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Eustaquio', text: 'Ojal\u00e1 mi hijo hubiera querido quedarse en el hato. Se fue a Bogot\u00e1 y nunca volvi\u00f3. \u00bfQu\u00e9 le habr\u00edas dicho t\u00fa?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Le habr\u00eda dicho que la ciudad tiene oportunidades, pero que ojal\u00e1 no hubiera olvidado sus ra\u00edces llaneras. Si hubiera mantenido el contacto, habr\u00eda podido tener lo mejor de los dos mundos.',
+                    'Le habr\u00eda dicho que se quedara en Bogot\u00e1.',
+                    'No le habr\u00eda dicho nada.'
+                ],
+                answer: 'Le habr\u00eda dicho que la ciudad tiene oportunidades, pero que ojal\u00e1 no hubiera olvidado sus ra\u00edces llaneras. Si hubiera mantenido el contacto, habr\u00eda podido tener lo mejor de los dos mundos.'
+            }
+        ]
+    },
+    // === GAME 16: Translation \u2014 Hip\u00f3tesis sobre el pasado ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'If I had known about the joropo festival, I would have traveled to Villavicencio last weekend.',
+        words: ['Si', 'hubiera', 'sabido', 'del', 'festival', 'de', 'joropo', 'habr\u00eda', 'viajado', 'a', 'Villavicencio', 'el', 'fin', 'semana', 'pasado'],
+        answer: 'Si hubiera sabido del festival de joropo habr\u00eda viajado a Villavicencio el fin de semana pasado'
+    },
+    // === GAME 17: Sorting \u2014 Funciones del subjuntivo pasado ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan la funci\u00f3n que cumple el subjuntivo pasado.',
+        categories: ['Condici\u00f3n irreal del pasado', 'Deseo imposible', 'Reproche o lamento'],
+        items: [
+            { text: 'Si hubiera estudiado m\u00e1s, habr\u00eda aprobado.', category: 'Condici\u00f3n irreal del pasado' },
+            { text: 'Ojal\u00e1 hubiera ido a ese concierto.', category: 'Deseo imposible' },
+            { text: 'Me habr\u00eda gustado que hubieras venido.', category: 'Reproche o lamento' },
+            { text: 'Si no hubiera llovido, habr\u00edamos salido.', category: 'Condici\u00f3n irreal del pasado' },
+            { text: 'Ojal\u00e1 hubi\u00e9ramos conocido a ese m\u00fasico.', category: 'Deseo imposible' },
+            { text: 'Habr\u00edas podido avisarme si hubieras querido.', category: 'Reproche o lamento' }
+        ]
+    },
+    // === GAME 18: Builder \u2014 Deseo imposible con ojal\u00e1 ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar un deseo imposible sobre el pasado.',
+        words: ['Ojal\u00e1', 'mi', 'abuelo', 'hubiera', 'podido', 'escuchar', 'c\u00f3mo', 'sus', 'nietos', 'todav\u00eda', 'cantan', 'joropo', 'en', 'la', 'sabana.'],
+        answer: 'Ojal\u00e1 mi abuelo hubiera podido escuchar c\u00f3mo sus nietos todav\u00eda cantan joropo en la sabana.'
+    },
+    // === GAME 19: FIB \u2014 Reproches y lamentos ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada reproche o lamento con la forma correcta.',
+        questions: [
+            {
+                sentence: 'Me habr\u00eda encantado que ___ al hato conmigo.',
+                answer: 'hubieras venido',
+                options: ['hubieras venido', 'habr\u00edas venido', 'hayas venido', 'vinieras']
+            },
+            {
+                sentence: 'Habr\u00eda sido mejor que los organizadores ___ la fecha del festival.',
+                answer: 'hubieran cambiado',
+                options: ['hubieran cambiado', 'habr\u00edan cambiado', 'hayan cambiado', 'cambiar\u00edan']
+            },
+            {
+                sentence: 'Nos ___ gustado que el coplero hubiera cantado una copla m\u00e1s.',
+                answer: 'habr\u00eda',
+                options: ['habr\u00eda', 'hubiera', 'ha', 'hab\u00eda']
+            }
+        ]
+    },
+    // === GAME 20: Conjugation \u2014 Hubiese como alternativa ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Selecciona la forma alternativa con "hubiese" equivalente a "hubiera + participio".',
+        questions: [
+            {
+                verb: 'saber (hubiese)',
+                subject: 'yo',
+                answer: 'hubiese sabido',
+                options: ['hubiese sabido', 'hubiera sabido', 'habr\u00eda sabido', 'haya sabido']
+            },
+            {
+                verb: 'venir (hubiese)',
+                subject: 't\u00fa',
+                answer: 'hubieses venido',
+                options: ['hubieses venido', 'hubieras venido', 'habr\u00edas venido', 'hayas venido']
+            },
+            {
+                verb: 'estar (hubiese)',
+                subject: 'ella',
+                answer: 'hubiese estado',
+                options: ['hubiese estado', 'hubiera estado', 'habr\u00eda estado', 'haya estado']
+            },
+            {
+                verb: 'traer (hubiese)',
+                subject: 'ellos',
+                answer: 'hubiesen tra\u00eddo',
+                options: ['hubiesen tra\u00eddo', 'hubieran tra\u00eddo', 'habr\u00edan tra\u00eddo', 'hayan tra\u00eddo']
+            }
+        ]
+    },
+    // === GAME 21: Conversation \u2014 Reflexi\u00f3n con una llanera ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con Mariana, una joven llanera que reflexiona sobre decisiones pasadas.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mariana', text: 'A veces pienso que si hubiera seguido bailando joropo, habr\u00eda llegado al Festival Internacional del Joropo. \u00bfT\u00fa has sentido algo as\u00ed?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, yo tambi\u00e9n he pensado en cosas que habr\u00eda hecho diferente. Si hubiera practicado m\u00e1s m\u00fasica de joven, habr\u00eda tocado en un grupo. Pero nunca es tarde para intentarlo.',
+                    'No, nunca pienso en eso.',
+                    'El joropo no me interesa.'
+                ],
+                answer: 'S\u00ed, yo tambi\u00e9n he pensado en cosas que habr\u00eda hecho diferente. Si hubiera practicado m\u00e1s m\u00fasica de joven, habr\u00eda tocado en un grupo. Pero nunca es tarde para intentarlo.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Mariana', text: 'Ojal\u00e1 mi mam\u00e1 hubiera podido ver el \u00faltimo Festival del Joropo. Habr\u00eda disfrutado mucho. \u00bfQu\u00e9 habr\u00edas hecho t\u00fa en su lugar?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si hubiera estado en su lugar, habr\u00eda grabado todo el festival y se lo habr\u00eda mostrado despu\u00e9s. Me habr\u00eda encantado que ella hubiera podido estar all\u00ed.',
+                    'No s\u00e9, habr\u00eda ido solo.',
+                    'Habr\u00eda comprado recuerdos.'
+                ],
+                answer: 'Si hubiera estado en su lugar, habr\u00eda grabado todo el festival y se lo habr\u00eda mostrado despu\u00e9s. Me habr\u00eda encantado que ella hubiera podido estar all\u00ed.'
+            }
+        ]
+    },
+    // === GAME 22: Translation \u2014 Lamento llanero ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'I wish I had learned to play the harp. If my grandfather had taught me, I would have played joropo at the festival.',
+        words: ['Ojal\u00e1', 'hubiera', 'aprendido', 'a', 'tocar', 'el', 'arpa', 'Si', 'mi', 'abuelo', 'me', 'hubiera', 'ense\u00f1ado', 'habr\u00eda', 'tocado', 'joropo', 'en', 'el', 'festival'],
+        answer: 'Ojal\u00e1 hubiera aprendido a tocar el arpa Si mi abuelo me hubiera ense\u00f1ado habr\u00eda tocado joropo en el festival'
+    },
+    // === GAME 23: Pair \u2014 Hubiera vs. habr\u00eda ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada oraci\u00f3n con su clasificaci\u00f3n gramatical correcta.',
+        pairs: [
+            ['Si hubiera estudiado m\u00e1s', 'cl\u00e1usula con pluscuamperfecto de subjuntivo'],
+            ['habr\u00eda aprobado el examen', 'cl\u00e1usula con condicional perfecto'],
+            ['Ojal\u00e1 hubiera ido al llano', 'deseo imposible con pluscuamperfecto de subjuntivo'],
+            ['Me habr\u00eda gustado que vinieras', 'lamento con condicional perfecto + subjuntivo'],
+            ['Si no hubiera llovido tanto', 'condici\u00f3n irreal del pasado'],
+            ['habr\u00edamos cabalgado por la sabana', 'resultado hipot\u00e9tico con condicional perfecto']
+        ]
+    },
+    // === GAME 24: Dictation \u2014 Condicional del pasado en contexto llanero ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n exacta. Incluye la condicional irreal del pasado correctamente.',
+        audio: 'Si Yaguar\u00e1 no hubiera viajado a Los Llanos, nunca habr\u00eda escuchado el canto del joropo ni habr\u00eda cabalgado bajo las estrellas de la sabana.',
+        answer: 'Si Yaguar\u00e1 no hubiera viajado a Los Llanos, nunca habr\u00eda escuchado el canto del joropo ni habr\u00eda cabalgado bajo las estrellas de la sabana.'
+    },
+    // === GAME 25: Narrative \u2014 El legado del llano ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 sobre su paso por Los Llanos.',
+        text: 'Cuando Yaguar\u00e1 se despidi\u00f3 de Villavicencio, llev\u00f3 consigo el eco del arpa y el olor de la sabana despu\u00e9s de la lluvia. Si alguien le hubiera preguntado qu\u00e9 aprendi\u00f3, habr\u00eda respondido: "Aprend\u00ed que las decisiones del pasado nos hacen quienes somos, y que lamentarse no sirve de nada si no actuamos en el presente". Ojal\u00e1 hubiera tenido m\u00e1s tiempo para recorrer cada r\u00edo y cada camino de tierra roja. Si hubiera podido quedarse un mes m\u00e1s, habr\u00eda aprendido a improvisar coplas como un verdadero coplero. Pero el viaje deb\u00eda continuar. Don Eustaquio le dijo al despedirse: "Si alg\u00fan d\u00eda hubieras olvidado el llano, el llano no te habr\u00eda olvidado a ti. Aqu\u00ed siempre tendr\u00e1s un caballo esperando". Yaguar\u00e1 sonri\u00f3 y prometi\u00f3 que volver\u00eda. Despu\u00e9s de todo, si no hubiera venido a Los Llanos, nunca habr\u00eda entendido que la libertad tambi\u00e9n tiene ra\u00edces.'
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La casa de los espejos rotos',
+            description: 'Una casa abandonada en el bosque. Los espejos de las paredes están rotos, y cada fragmento refleja la misma escena desde un ángulo diferente.',
+            ambience: 'creak'
+        },
+        puzzles: [
+            {
+                puzzleType: 'extract',
+                prompt: 'Dos cartas aparecen en el suelo de la casa.',
+                passage: '«Carta A (Don Próspero al alcalde): "La carretera conectará comunidades aisladas con mercados y hospitales." Carta B (Candelaria a su profesora): "La carretera partirá el bosque en dos y separará a los animales de sus fuentes de agua."»',
+                clue: '¿Por qué describen el mismo proyecto de forma tan diferente?',
+                answer: 'Porque cada perspectiva selecciona los hechos que apoyan su posición',
+                options: [
+                    'Porque cada perspectiva selecciona los hechos que apoyan su posición',
+                    'Porque uno miente y el otro dice la verdad',
+                    'Porque no hablan del mismo proyecto',
+                    'Porque uno es más inteligente que el otro'
+                ],
+                onSolve: 'Un espejo se reconstruye.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Tres perspectivas sobre el mismo evento.',
+                premises: [
+                    'El gobierno dice: «Se crearon 200 empleos con la carretera.»',
+                    'La comunidad dice: «Perdimos 500 hectáreas de bosque con la carretera.»',
+                    'El biólogo dice: «Tres especies endémicas perdieron su corredor de migración.»'
+                ],
+                clue: '¿Qué demuestra la existencia de estas tres perspectivas?',
+                answer: 'Que un mismo hecho tiene múltiples consecuencias, y cada perspectiva ilumina una que las otras ocultan',
+                options: [
+                    'Que un mismo hecho tiene múltiples consecuencias, y cada perspectiva ilumina una que las otras ocultan',
+                    'Que solo una de las tres perspectivas es correcta',
+                    'Que las estadísticas son poco confiables',
+                    'Que el gobierno siempre miente'
+                ],
+                onSolve: 'Otro espejo se reconstruye.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un espejo roto pregunta:',
+                riddle: '«¿Puede existir la verdad completa si solo miras desde un punto?»',
+                clue: '¿Qué responde la casa de los espejos?',
+                answer: 'No — la verdad es la suma de todas las perspectivas, incluidas las que se contradicen',
+                options: [
+                    'No — la verdad es la suma de todas las perspectivas, incluidas las que se contradicen',
+                    'Sí, si tienes suficiente información',
+                    'La verdad no existe',
+                    'Solo la ciencia puede dar la verdad'
+                ],
+                onSolve: 'Todos los espejos se iluminan. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de una casa con muchas ventanas, cada una mostrando un paisaje diferente.',
+            questClue: 'La casa tiene tantas historias como ventanas.',
+            item: 'historia-casa'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '29',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest29Progress',
+        backUrl: '../../b2-villavicencio.html'
+    });
+</script>
+</body>
+</html>

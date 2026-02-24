@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 38: El legado que dejas - Integraci&oacute;n discursiva</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b2_advanced/dest38_discourse_integration/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 38: El legado que dejas - Integración discursiva",
+          "url": "https://babelfree.com/b2_advanced/dest38_discourse_integration/games",
+          "educationalLevel": "B2 Advanced - Upper Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Discourse integration", "Textual coherence", "Spanish proficiency"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B2 Advanced", "item": "https://babelfree.com/b2-casanare" },
+            { "@type": "ListItem", "position": 4, "name": "El legado que dejas - Integración discursiva" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/b2-casanare" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 38: El legado que dejas</div>
+            <div class="yg-header-subtitle">Integraci&oacute;n discursiva</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative \u2014 El \u00faltimo amanecer en la sabana ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 en los llanos de Casanare. Observa c\u00f3mo se integran el subjuntivo pasado, las condicionales mixtas, la per\u00edfrasis verbal y los conectores argumentativos en un discurso completo.',
+        text: 'Yaguar\u00e1 se detuvo al borde del estero justo cuando el sol empezaba a te\u00f1ir de naranja la sabana infinita. Si alguien le hubiera dicho, meses atr\u00e1s, que llegar\u00eda a sentir como propio el olor de la tierra llanera despu\u00e9s de la lluvia, no lo habr\u00eda cre\u00eddo. Sin embargo, ah\u00ed estaba, con los pies hundidos en el barro y el coraz\u00f3n lleno de algo que no sab\u00eda nombrar. Seg\u00fan los ancianos del hato, la sabana ense\u00f1a a quienes se ponen a escucharla; no obstante, Yaguar\u00e1 sospechaba que la lecci\u00f3n m\u00e1s profunda no proven\u00eda del paisaje, sino de las personas que segu\u00edan luchando por protegerlo. De haber pasado por Casanare sin detenerse, habr\u00eda perdido lo m\u00e1s valioso de todo el viaje: la certeza de que cada voz \u2014la del bi\u00f3logo, la del llanero, la del r\u00edo\u2014 merece ser escuchada antes de llegar a cualquier conclusi\u00f3n. Ojal\u00e1 hubiera tenido m\u00e1s tiempo; pero sab\u00eda que ten\u00eda que seguir caminando. El legado que dejaba no era un texto ni un discurso: era la voluntad de volver a integrar, una vez m\u00e1s, todas las perspectivas en un solo relato.'
+    },
+    // === GAME 2: Narrative \u2014 Carta a los llanos ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la carta que Yaguar\u00e1 escribe antes de irse de Casanare. Observa la mezcla de registro formal e informal, las estructuras de reporte, la voz pasiva y las per\u00edfrasis verbales.',
+        text: 'Queridos llanos: Si bien es cierto que llegu\u00e9 aqu\u00ed como una desconocida, no obstante, me voy sintiendo que este territorio fue construido tambi\u00e9n para m\u00ed. He dejado de ver la sabana como un lugar vac\u00edo; ahora s\u00e9 que est\u00e1 llena de historias que a\u00fan no han sido contadas. Los expertos advierten que la biodiversidad de estos llanos se encuentra amenazada por la expansi\u00f3n agr\u00edcola y la industria petrolera. Seg\u00fan los informes que le\u00ed durante mi estad\u00eda, m\u00e1s de treinta especies est\u00e1n en peligro cr\u00edtico. Pero tambi\u00e9n conoc\u00ed a personas que siguen dedicando su vida a la conservaci\u00f3n, que vuelven a sembrar esperanza cada vez que alguien les dice que es imposible. Ojal\u00e1 las decisiones que se tomen en los pr\u00f3ximos a\u00f1os hubieran sido pensadas con la sabidur\u00eda de quienes conocen esta tierra de primera mano. Me pongo a pensar en todo lo que aprend\u00ed y llego a la conclusi\u00f3n de que el verdadero conocimiento no es acumular datos, sino saber integrarlos en un discurso que transforme la realidad. Gracias, Casanare. Volver\u00e9.'
+    },
+    // === GAME 3: Narrative \u2014 El discurso del llanero viejo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee el discurso de don Ram\u00f3n, un llanero viejo que habla ante la comunidad en la \u00faltima noche de Yaguar\u00e1 en Casanare. Observa c\u00f3mo combina ret\u00f3rica, argumentaci\u00f3n y emoci\u00f3n.',
+        text: 'Se\u00f1ores y se\u00f1oras, buenas noches. Es considerado un honor en esta tierra que alguien venga de lejos y se ponga a escuchar antes de hablar. Yaguar\u00e1 hizo exactamente eso. Si todos los que llegan a Casanare hubieran actuado como ella, esta sabana no habr\u00eda perdido tantas voces. Mientras que los pol\u00edticos sostienen que el progreso tiene que pasar por encima de los r\u00edos, nosotros, los que nacimos en esta llanura, argumentamos que el progreso sin memoria es destrucci\u00f3n. De no ser por quienes se negaron a dejar de cuidar la tierra, estos morichales ya habr\u00edan sido arrasados. Yo le ped\u00ed a mi nieto que hiciera una promesa: que no dejara morir el joropo ni el canto del arpa. Por consiguiente, le pido a esta comunidad que siga luchando, que no se rinda. Al integrar nuestra tradici\u00f3n con el conocimiento cient\u00edfico, llegaremos a ser lo que siempre fuimos: guardianes de la sabana. Ojal\u00e1 las generaciones que vienen hubieran podido ver estos llanos como los vimos nosotros. Pero si fuera demasiado tarde para eso, todav\u00eda podr\u00edamos dejarles algo mejor: el relato de c\u00f3mo intentamos salvarlos.'
+    },
+    // === GAME 4: FIB \u2014 Integraci\u00f3n de tiempos verbales ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la forma verbal correcta. Se mezclan subjuntivo pasado, condicional, per\u00edfrasis y voz pasiva.',
+        questions: [
+            {
+                sentence: 'Si Yaguar\u00e1 ___ m\u00e1s tiempo en Casanare, habr\u00eda podido escribir un libro completo sobre la sabana.',
+                answer: 'hubiera tenido',
+                options: ['hubiera tenido', 'tendr\u00eda', 'hab\u00eda tenido', 'haya tenido']
+            },
+            {
+                sentence: 'Los morichales ___ por la comunidad durante generaciones, pero ahora est\u00e1n amenazados.',
+                answer: 'hab\u00edan sido protegidos',
+                options: ['hab\u00edan sido protegidos', 'fueron protegiendo', 'protegieron', 'se hab\u00edan proteger']
+            },
+            {
+                sentence: 'Don Ram\u00f3n le pidi\u00f3 a su nieto que ___ a tocar el arpa todas las tardes.',
+                answer: 'volviera',
+                options: ['volviera', 'volver\u00eda', 'vuelve', 'hab\u00eda vuelto']
+            }
+        ]
+    },
+    // === GAME 5: FIB \u2014 Conectores en discurso integrado ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el conector argumentativo que completa correctamente cada fragmento de discurso integrado.',
+        questions: [
+            {
+                sentence: '___ los ganaderos sostienen que la tradici\u00f3n es parte de su identidad, los ambientalistas argumentan que la biodiversidad no puede sacrificarse.',
+                answer: 'Mientras que',
+                options: ['Mientras que', 'Por consiguiente', 'De haber sabido', 'Ojal\u00e1']
+            },
+            {
+                sentence: '___ la inversi\u00f3n petrolera ha generado empleo, ___ el costo ecol\u00f3gico supera cualquier beneficio econ\u00f3mico a corto plazo.',
+                answer: 'Si bien es cierto que... no obstante',
+                options: ['Si bien es cierto que... no obstante', 'Mientras que... por consiguiente', 'Seg\u00fan... de lo anterior', 'De haber... sin embargo']
+            },
+            {
+                sentence: '___ todas las fuentes consultadas, la restauraci\u00f3n de los humedales ___ como la medida m\u00e1s urgente.',
+                answer: 'Al integrar... es considerada',
+                options: ['Al integrar... es considerada', 'Sin embargo... fue construida', 'No obstante... sigue siendo', 'Mientras que... se deduce']
+            }
+        ]
+    },
+    // === GAME 6: FIB \u2014 Per\u00edfrasis y reporte en contexto ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la per\u00edfrasis verbal o la estructura de reporte adecuada.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ entender que la sabana no era silencio, sino un coro de voces que hab\u00eda que aprender a escuchar.',
+                answer: 'lleg\u00f3 a',
+                options: ['lleg\u00f3 a', 'dej\u00f3 de', 'se puso a', 'volvi\u00f3 a']
+            },
+            {
+                sentence: 'Los bi\u00f3logos sugirieron que la comunidad ___ un plan de conservaci\u00f3n antes de la pr\u00f3xima temporada seca.',
+                answer: 'elaborara',
+                options: ['elaborara', 'elaborar\u00eda', 'elabor\u00f3', 'ha elaborado']
+            },
+            {
+                sentence: 'Seg\u00fan el informe regional, m\u00e1s de doscientas familias ___ beneficiarse del ecoturismo si se invirtiera en infraestructura.',
+                answer: 'podr\u00edan llegar a',
+                options: ['podr\u00edan llegar a', 'dejaron de', 'se pusieron a', 'siguieron sin']
+            }
+        ]
+    },
+    // === GAME 7: FIB \u2014 Condicionales mixtas en reflexi\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones condicionales mixtas que reflejan el balance final de Yaguar\u00e1.',
+        questions: [
+            {
+                sentence: 'De ___ que el viaje ser\u00eda tan transformador, Yaguar\u00e1 habr\u00eda salido antes de la selva amaz\u00f3nica.',
+                answer: 'haber sabido',
+                options: ['haber sabido', 'haber sido', 'hubiera sabido', 'saber']
+            },
+            {
+                sentence: 'Si Yaguar\u00e1 fuera una persona indiferente, no ___ escuchado a cada comunidad con tanta atenci\u00f3n.',
+                answer: 'habr\u00eda',
+                options: ['habr\u00eda', 'hubiera', 'ha', 'fue']
+            },
+            {
+                sentence: 'Si las autoridades hubieran protegido los r\u00edos a tiempo, ahora los pescadores no ___ que buscar otra forma de sustento.',
+                answer: 'tendr\u00edan',
+                options: ['tendr\u00edan', 'habr\u00edan tenido', 'tuvieran', 'tienen']
+            }
+        ]
+    },
+    // === GAME 8: Conjugation \u2014 Subjuntivo pasado en contexto integrado ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la conjugaci\u00f3n correcta del verbo. Cada oraci\u00f3n integra m\u00faltiples estructuras B2.',
+        questions: [
+            {
+                verb: 'hacer (pluscuamperfecto de subjuntivo)',
+                subject: 'nosotros',
+                answer: 'hubi\u00e9ramos hecho',
+                options: ['hubi\u00e9ramos hecho', 'habr\u00edamos hecho', 'hayamos hecho', 'hicimos']
+            },
+            {
+                verb: 'poder (condicional compuesto)',
+                subject: 'ella',
+                answer: 'habr\u00eda podido',
+                options: ['habr\u00eda podido', 'hubiera podido', 'ha podido', 'podr\u00eda haber']
+            },
+            {
+                verb: 'escribir (pluscuamperfecto de subjuntivo)',
+                subject: 'yo',
+                answer: 'hubiera escrito',
+                options: ['hubiera escrito', 'habr\u00eda escrito', 'haya escrito', 'escrib\u00eda']
+            },
+            {
+                verb: 'proteger (condicional perfecto)',
+                subject: 'ellos',
+                answer: 'habr\u00edan protegido',
+                options: ['habr\u00edan protegido', 'hubieran protegido', 'proteger\u00edan', 'hab\u00edan protegido']
+            }
+        ]
+    },
+    // === GAME 9: Conjugation \u2014 Per\u00edfrasis verbales mixtas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Completa la per\u00edfrasis verbal correcta en el contexto dado.',
+        questions: [
+            {
+                verb: 'ponerse a + infinitivo (pret\u00e9rito)',
+                subject: 'Yaguar\u00e1',
+                answer: 'se puso a',
+                options: ['se puso a', 'se pon\u00eda a', 'se ha puesto a', 'se ponga a']
+            },
+            {
+                verb: 'dejar de + infinitivo (pret\u00e9rito perfecto)',
+                subject: 'los llaneros',
+                answer: 'han dejado de',
+                options: ['han dejado de', 'dejaron de', 'dejar\u00edan de', 'dejen de']
+            },
+            {
+                verb: 'seguir + gerundio (imperfecto)',
+                subject: 'la comunidad',
+                answer: 'segu\u00eda luchando',
+                options: ['segu\u00eda luchando', 'sigui\u00f3 luchando', 'sigue luchando', 'seguir\u00eda luchando']
+            },
+            {
+                verb: 'volver a + infinitivo (condicional)',
+                subject: 'yo',
+                answer: 'volver\u00eda a',
+                options: ['volver\u00eda a', 'volv\u00ed a', 'vuelvo a', 'volviera a']
+            }
+        ]
+    },
+    // === GAME 10: Conjugation \u2014 Voz pasiva y reporte con subjuntivo ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma verbal correcta para completar estructuras de voz pasiva y reporte indirecto con subjuntivo.',
+        questions: [
+            {
+                verb: 'construir (pasiva pret\u00e9rito)',
+                subject: 'el puente',
+                answer: 'fue construido',
+                options: ['fue construido', 'era construido', 'ha sido construido', 'ser\u00eda construido']
+            },
+            {
+                verb: 'considerar (pasiva presente)',
+                subject: 'la biodiversidad de Casanare',
+                answer: 'es considerada',
+                options: ['es considerada', 'fue considerada', 'ha sido considerada', 'ser\u00eda considerada']
+            },
+            {
+                verb: 'ir (imperfecto de subjuntivo)',
+                subject: 'nosotros \u2014 reporte: "sugiri\u00f3 que..."',
+                answer: 'fu\u00e9ramos',
+                options: ['fu\u00e9ramos', 'vayamos', '\u00edbamos', 'ir\u00edamos']
+            },
+            {
+                verb: 'establecer (pluscuamperfecto pasivo)',
+                subject: 'las normas',
+                answer: 'hab\u00edan sido establecidas',
+                options: ['hab\u00edan sido establecidas', 'fueron establecidas', 'se establecieron', 'eran establecidas']
+            }
+        ]
+    },
+    // === GAME 11: Conjugation \u2014 Tiempos integrados en discurso ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Cada pregunta mezcla dos o m\u00e1s estructuras B2. Elige la forma correcta.',
+        questions: [
+            {
+                verb: 'tener que + infinitivo (condicional)',
+                subject: 'el gobierno',
+                answer: 'tendr\u00eda que invertir',
+                options: ['tendr\u00eda que invertir', 'tiene que invertir', 'tuvo que invertir', 'tenga que invertir']
+            },
+            {
+                verb: 'llegar a + infinitivo (pluscuamperfecto de subjuntivo)',
+                subject: 't\u00fa',
+                answer: 'hubieras llegado a comprender',
+                options: ['hubieras llegado a comprender', 'llegaste a comprender', 'llegar\u00edas a comprender', 'hayas llegado a comprender']
+            },
+            {
+                verb: 'ser (pasiva condicional compuesto)',
+                subject: 'los humedales',
+                answer: 'habr\u00edan sido restaurados',
+                options: ['habr\u00edan sido restaurados', 'hubieran sido restaurados', 'fueron restaurados', 'ser\u00edan restaurados']
+            },
+            {
+                verb: 'pedir que + subjuntivo (pret\u00e9rito)',
+                subject: 'la l\u00edder',
+                answer: 'pidi\u00f3 que protegi\u00e9ramos',
+                options: ['pidi\u00f3 que protegi\u00e9ramos', 'pidi\u00f3 que protegemos', 'pide que protejamos', 'ped\u00eda que proteg\u00edamos']
+            }
+        ]
+    },
+    // === GAME 12: Pair \u2014 Estructura gramatical y funci\u00f3n discursiva ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada estructura gramatical con su funci\u00f3n en el discurso integrado.',
+        pairs: [
+            ['Si hubiera protegido los r\u00edos...', 'Expresar arrepentimiento sobre el pasado'],
+            ['Es considerada la regi\u00f3n m\u00e1s biodiversa.', 'Presentar informaci\u00f3n con distancia formal'],
+            ['Pidi\u00f3 que hici\u00e9ramos un plan.', 'Reportar una solicitud en discurso indirecto'],
+            ['Segu\u00eda luchando a pesar de todo.', 'Expresar continuidad y persistencia'],
+            ['Si bien es cierto que genera empleo...', 'Introducir una concesi\u00f3n antes de contraargumentar'],
+            ['De haber invertido a tiempo...', 'Plantear una condici\u00f3n pasada irreal con registro formal']
+        ]
+    },
+    // === GAME 13: Pair \u2014 Inicio y cierre de argumento ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada apertura argumentativa con el cierre que le corresponde l\u00f3gicamente.',
+        pairs: [
+            ['Seg\u00fan el informe del Humboldt, la biodiversidad est\u00e1 amenazada.', 'Por consiguiente, se necesitan pol\u00edticas de conservaci\u00f3n urgentes.'],
+            ['Mientras que las empresas defienden la autoregulaci\u00f3n...', '...los datos demuestran que ha sido insuficiente.'],
+            ['Si hubieran invertido en ecoturismo hace una d\u00e9cada...', '...ahora la regi\u00f3n tendr\u00eda una econom\u00eda m\u00e1s diversificada.'],
+            ['La propuesta carece de fundamento cient\u00edfico...', '...porque no se sustenta en datos de campo actualizados.'],
+            ['De lo anterior se deduce que el problema es complejo.', 'Al integrar estas perspectivas, la soluci\u00f3n debe ser multisectorial.'],
+            ['Los ancianos pidieron que no se olvidara la tradici\u00f3n.', 'La l\u00edder sugiri\u00f3 que document\u00e1ramos las historias orales.']
+        ]
+    },
+    // === GAME 14: Pair \u2014 Registro formal e informal ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada expresi\u00f3n informal con su equivalente en registro formal o acad\u00e9mico.',
+        pairs: [
+            ['La verdad es que el r\u00edo est\u00e1 muy sucio.', 'Cabe se\u00f1alar que los niveles de contaminaci\u00f3n fluvial son alarmantes.'],
+            ['Todo el mundo sabe que eso no funciona.', 'Es ampliamente reconocido que dicha medida resulta ineficaz.'],
+            ['Si hubi\u00e9ramos hecho caso antes...', 'De haberse implementado las recomendaciones con anterioridad...'],
+            ['Los ganaderos dicen que necesitan m\u00e1s tierra.', 'El sector ganadero sostiene que requiere una mayor extensi\u00f3n territorial.'],
+            ['Al final, hay que buscar un punto medio.', 'En s\u00edntesis, resulta imprescindible alcanzar un equilibrio entre las partes.'],
+            ['Eso no tiene sentido porque no hay pruebas.', 'Dicho argumento carece de fundamento por la ausencia de evidencia emp\u00edrica.']
+        ]
+    },
+    // === GAME 15: Listening \u2014 Discurso integrado complejo ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha este fragmento de discurso integrado y responde la pregunta. Presta atenci\u00f3n a las estructuras gramaticales y argumentativas.',
+        audio: 'Si las autoridades hubieran invertido en la protecci\u00f3n de los morichales hace veinte a\u00f1os, ahora no tendr\u00edamos que enfrentar una crisis h\u00eddrica. Seg\u00fan los expertos, la deforestaci\u00f3n ha sido la causa principal del deterioro. No obstante, al integrar las perspectivas de las comunidades locales, resulta evidente que tambi\u00e9n es necesario ofrecer alternativas econ\u00f3micas sostenibles. Por consiguiente, la soluci\u00f3n debe combinar restauraci\u00f3n ecol\u00f3gica con desarrollo comunitario.',
+        question: '\u00bfQu\u00e9 tipo de oraci\u00f3n condicional se usa al inicio del fragmento?',
+        answer: 'Condicional mixta: condici\u00f3n pasada con resultado presente',
+        options: ['Condicional mixta: condici\u00f3n pasada con resultado presente', 'Condicional simple de futuro', 'Condicional irreal del pasado completa', 'Condicional con subjuntivo presente']
+    },
+    // === GAME 16: Listening \u2014 Identificar estructuras en discurso oral ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el discurso y determina cu\u00e1ntas estructuras B2 diferentes puedes identificar.',
+        audio: 'La l\u00edder comunitaria pidi\u00f3 que se protegieran los humedales antes de que fuera demasiado tarde. Si bien es cierto que la ganader\u00eda ha sido practicada durante siglos, no obstante, las pr\u00e1cticas actuales est\u00e1n poniendo en peligro el ecosistema. De haber actuado con m\u00e1s visi\u00f3n, habr\u00edamos evitado la p\u00e9rdida de tantas especies. La biodiversidad de Casanare es considerada una de las m\u00e1s ricas del continente, y debemos seguir luchando por ella.',
+        question: '\u00bfCu\u00e1l de las siguientes estructuras NO aparece en el fragmento?',
+        answer: 'Per\u00edfrasis con "volver a + infinitivo"',
+        options: ['Per\u00edfrasis con "volver a + infinitivo"', 'Reporte indirecto con subjuntivo', 'Voz pasiva', 'Condicional mixta con "de haber + participio"']
+    },
+    // === GAME 17: Sorting \u2014 Clasificar por estructura gramatical ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan la estructura B2 principal que contiene.',
+        categories: ['Subjuntivo pasado', 'Per\u00edfrasis verbal', 'Voz pasiva', 'Condicional mixta'],
+        items: [
+            { text: 'Ojal\u00e1 hubieran protegido los r\u00edos a tiempo.', category: 'Subjuntivo pasado' },
+            { text: 'Yaguar\u00e1 se puso a escribir sus memorias del viaje.', category: 'Per\u00edfrasis verbal' },
+            { text: 'La reserva fue establecida por el gobierno en 2005.', category: 'Voz pasiva' },
+            { text: 'Si hubieran invertido en ecoturismo, ahora no depender\u00edan del petr\u00f3leo.', category: 'Condicional mixta' },
+            { text: 'El informe hab\u00eda sido publicado antes de la reuni\u00f3n.', category: 'Voz pasiva' },
+            { text: 'Los j\u00f3venes dejaron de interesarse por las tradiciones llaneras.', category: 'Per\u00edfrasis verbal' },
+            { text: 'La l\u00edder pidi\u00f3 que documentaran las historias de los ancianos.', category: 'Subjuntivo pasado' },
+            { text: 'De haber tenido m\u00e1s recursos, habr\u00edan restaurado todos los morichales.', category: 'Condicional mixta' }
+        ]
+    },
+    // === GAME 18: Sorting \u2014 Clasificar por funci\u00f3n discursiva ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada fragmento seg\u00fan su funci\u00f3n dentro de un discurso argumentativo completo.',
+        categories: ['Presentar evidencia', 'Contrastar posiciones', 'Sintetizar', 'Expresar hip\u00f3tesis irreal'],
+        items: [
+            { text: 'Seg\u00fan el informe de la Corporaci\u00f3n Aut\u00f3noma, los niveles de contaminaci\u00f3n aumentaron.', category: 'Presentar evidencia' },
+            { text: 'Mientras que los ganaderos sostienen que la tradici\u00f3n debe respetarse, los ecologistas argumentan que hay l\u00edmites.', category: 'Contrastar posiciones' },
+            { text: 'Al integrar estas perspectivas, resulta evidente que la negociaci\u00f3n es el \u00fanico camino.', category: 'Sintetizar' },
+            { text: 'Si las pol\u00edticas hubieran sido implementadas a tiempo, la situaci\u00f3n ser\u00eda diferente.', category: 'Expresar hip\u00f3tesis irreal' },
+            { text: 'Los expertos advierten que la especie podr\u00eda extinguirse en dos d\u00e9cadas.', category: 'Presentar evidencia' },
+            { text: 'Si bien es cierto que el turismo genera ingresos, no obstante, su impacto ambiental es considerable.', category: 'Contrastar posiciones' },
+            { text: 'De lo anterior se deduce que un enfoque multisectorial es imprescindible.', category: 'Sintetizar' },
+            { text: 'De haber protegido la cuenca del r\u00edo, habr\u00edamos evitado la crisis actual.', category: 'Expresar hip\u00f3tesis irreal' }
+        ]
+    },
+    // === GAME 19: Builder \u2014 Discurso integrado con m\u00faltiples estructuras ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar un discurso completo que integre una condicional mixta, un conector argumentativo y una conclusi\u00f3n.',
+        words: ['Si las comunidades hubieran recibido', 'apoyo econ\u00f3mico a tiempo,', 'ahora no depender\u00edan', 'exclusivamente de la ganader\u00eda extensiva.', 'Por consiguiente,', 'al integrar las perspectivas', 'de los expertos y los habitantes locales,', 'resulta urgente crear', 'programas de desarrollo sostenible.'],
+        answer: 'Si las comunidades hubieran recibido apoyo econ\u00f3mico a tiempo, ahora no depender\u00edan exclusivamente de la ganader\u00eda extensiva. Por consiguiente, al integrar las perspectivas de los expertos y los habitantes locales, resulta urgente crear programas de desarrollo sostenible.'
+    },
+    // === GAME 20: Builder \u2014 Reporte con subjuntivo y voz pasiva ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las partes para formar un p\u00e1rrafo que combine reporte indirecto con subjuntivo, voz pasiva y per\u00edfrasis verbal.',
+        words: ['La l\u00edder comunitaria pidi\u00f3', 'que se protegieran los morichales', 'antes de que fuera demasiado tarde.', 'Las normas hab\u00edan sido establecidas', 'por la Corporaci\u00f3n Aut\u00f3noma,', 'pero las comunidades', 'segu\u00edan esperando', 'su implementaci\u00f3n efectiva.'],
+        answer: 'La l\u00edder comunitaria pidi\u00f3 que se protegieran los morichales antes de que fuera demasiado tarde. Las normas hab\u00edan sido establecidas por la Corporaci\u00f3n Aut\u00f3noma, pero las comunidades segu\u00edan esperando su implementaci\u00f3n efectiva.'
+    },
+    // === GAME 21: Translation \u2014 Discurso argumentativo integrado ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Integra subjuntivo pasado, conectores y voz pasiva.',
+        source: 'If they had protected the wetlands, the biodiversity crisis would not be so severe. According to the experts, the region is considered one of the richest in the continent. Consequently, an integral plan is needed.',
+        words: ['Si', 'hubieran', 'protegido', 'los', 'humedales', 'la', 'crisis', 'de', 'biodiversidad', 'no', 'ser\u00eda', 'tan', 'grave', 'Seg\u00fan', 'expertos', 'regi\u00f3n', 'es', 'considerada', 'una', 'las', 'm\u00e1s', 'ricas', 'del', 'continente', 'Por', 'consiguiente', 'se', 'necesita', 'un', 'plan', 'integral'],
+        answer: 'Si hubieran protegido los humedales la crisis de biodiversidad no ser\u00eda tan grave Seg\u00fan los expertos la regi\u00f3n es considerada una de las m\u00e1s ricas del continente Por consiguiente se necesita un plan integral'
+    },
+    // === GAME 22: Translation \u2014 Reflexi\u00f3n con condicional mixta y per\u00edfrasis ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras. Incluye per\u00edfrasis verbal y condicional mixta.',
+        source: 'Had she known how important this journey would be, she would have started to write everything down from the first day. She kept walking through the plains until she understood the legacy she was leaving behind.',
+        words: ['De', 'haber', 'sabido', 'lo', 'importante', 'que', 'ser\u00eda', 'este', 'viaje', 'se', 'habr\u00eda', 'puesto', 'a', 'escribir', 'todo', 'desde', 'el', 'primer', 'd\u00eda', 'Sigui\u00f3', 'caminando', 'por', 'los', 'llanos', 'hasta', 'comprendi\u00f3', 'legado', 'dejaba'],
+        answer: 'De haber sabido lo importante que ser\u00eda este viaje se habr\u00eda puesto a escribir todo desde el primer d\u00eda Sigui\u00f3 caminando por los llanos hasta que comprendi\u00f3 el legado que dejaba'
+    },
+    // === GAME 23: Conversation \u2014 Debate integrado sobre el futuro de Casanare ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate sobre el futuro de Casanare. Usa todas las herramientas discursivas B2: subjuntivo, per\u00edfrasis, conectores, voz pasiva y s\u00edntesis argumentativa.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Moderadora', text: 'Yaguar\u00e1, has recorrido toda esta regi\u00f3n. Si hubieras llegado aqu\u00ed hace diez a\u00f1os, \u00bfqu\u00e9 habr\u00edas encontrado de diferente?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si hubiera llegado hace diez a\u00f1os, habr\u00eda encontrado los morichales intactos y los r\u00edos sin contaminaci\u00f3n. Seg\u00fan los ancianos, la sabana era considerada un para\u00edso. De haber visto eso, habr\u00eda entendido a\u00fan mejor la urgencia de actuar ahora.',
+                    'Creo que todo estaba mejor antes.',
+                    'No s\u00e9, no estuve aqu\u00ed hace diez a\u00f1os.'
+                ],
+                answer: 'Si hubiera llegado hace diez a\u00f1os, habr\u00eda encontrado los morichales intactos y los r\u00edos sin contaminaci\u00f3n. Seg\u00fan los ancianos, la sabana era considerada un para\u00edso. De haber visto eso, habr\u00eda entendido a\u00fan mejor la urgencia de actuar ahora.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Moderadora', text: 'Algunos dicen que el petr\u00f3leo ha sido una bendici\u00f3n para la regi\u00f3n. Otros lo consideran una maldici\u00f3n. \u00bfC\u00f3mo sintetizar\u00edas t\u00fa ambas perspectivas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Si bien es cierto que la industria petrolera ha generado empleo y regal\u00edas, no obstante, los da\u00f1os ambientales que han sido documentados por m\u00faltiples estudios resultan innegables. Al integrar ambas perspectivas, de lo anterior se deduce que la regi\u00f3n tiene que empezar a diversificar su econom\u00eda antes de que sea demasiado tarde.',
+                    'El petr\u00f3leo es malo para el medio ambiente.',
+                    'Las dos partes tienen raz\u00f3n en algunas cosas.'
+                ],
+                answer: 'Si bien es cierto que la industria petrolera ha generado empleo y regal\u00edas, no obstante, los da\u00f1os ambientales que han sido documentados por m\u00faltiples estudios resultan innegables. Al integrar ambas perspectivas, de lo anterior se deduce que la regi\u00f3n tiene que empezar a diversificar su econom\u00eda antes de que sea demasiado tarde.'
+            }
+        ]
+    },
+    // === GAME 24: Conversation \u2014 Despedida y legado ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Es la \u00faltima noche de Yaguar\u00e1 en Casanare. Habla con don Ram\u00f3n usando un discurso que integre reflexi\u00f3n personal, estructuras complejas y un tono emotivo pero articulado.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Ram\u00f3n', text: 'Yaguar\u00e1, ma\u00f1ana te vas. Dime, \u00bfqu\u00e9 legado crees que dejas en esta tierra?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Ojal\u00e1 hubiera podido hacer m\u00e1s, don Ram\u00f3n. Pero creo que mi legado no es algo que yo pueda medir. Si esta visita llega a inspirar a alguien para que siga luchando por la sabana, entonces habr\u00e1 valido la pena. No he dejado de pensar en todo lo que me ense\u00f1aron ustedes.',
+                    'No s\u00e9 si dejo algo importante.',
+                    'Dejo muchas fotos y recuerdos bonitos.'
+                ],
+                answer: 'Ojal\u00e1 hubiera podido hacer m\u00e1s, don Ram\u00f3n. Pero creo que mi legado no es algo que yo pueda medir. Si esta visita llega a inspirar a alguien para que siga luchando por la sabana, entonces habr\u00e1 valido la pena. No he dejado de pensar en todo lo que me ense\u00f1aron ustedes.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Ram\u00f3n', text: 'Y si pudieras decirle algo al mundo sobre Casanare, \u00bfqu\u00e9 dir\u00edas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Dir\u00eda que Casanare es un territorio donde la biodiversidad y la cultura fueron construidas juntas durante siglos, y que ambas est\u00e1n siendo amenazadas. Seg\u00fan todo lo que he aprendido, de no ser por personas como usted, esta tierra ya habr\u00eda perdido su alma. Por consiguiente, pedir\u00eda que se escuchara a las comunidades antes de tomar cualquier decisi\u00f3n sobre su futuro.',
+                    'Dir\u00eda que es un lugar bonito.',
+                    'Dir\u00eda que la naturaleza necesita ayuda.'
+                ],
+                answer: 'Dir\u00eda que Casanare es un territorio donde la biodiversidad y la cultura fueron construidas juntas durante siglos, y que ambas est\u00e1n siendo amenazadas. Seg\u00fan todo lo que he aprendido, de no ser por personas como usted, esta tierra ya habr\u00eda perdido su alma. Por consiguiente, pedir\u00eda que se escuchara a las comunidades antes de tomar cualquier decisi\u00f3n sobre su futuro.'
+            }
+        ]
+    },
+    // === GAME 25: Dictation \u2014 Discurso capstone integrado ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el texto completo. Este dictado integra subjuntivo pasado, condicionales mixtas, per\u00edfrasis verbales, voz pasiva, conectores argumentativos y s\u00edntesis discursiva. Es el \u00faltimo ejercicio de B2.',
+        audio: 'Si Yaguar\u00e1 no hubiera recorrido los llanos de Casanare, jam\u00e1s habr\u00eda llegado a comprender que la conservaci\u00f3n es considerada un acto de justicia. Seg\u00fan los expertos, de no ser por las comunidades locales, esta biodiversidad ya habr\u00eda sido destruida. Por consiguiente, al integrar todas las voces, Yaguar\u00e1 dej\u00f3 de buscar respuestas simples y se puso a construir un legado de di\u00e1logo.',
+        answer: 'Si Yaguar\u00e1 no hubiera recorrido los llanos de Casanare, jam\u00e1s habr\u00eda llegado a comprender que la conservaci\u00f3n es considerada un acto de justicia. Seg\u00fan los expertos, de no ser por las comunidades locales, esta biodiversidad ya habr\u00eda sido destruida. Por consiguiente, al integrar todas las voces, Yaguar\u00e1 dej\u00f3 de buscar respuestas simples y se puso a construir un legado de di\u00e1logo.'
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala del tribunal del r\u00edo',
+            description: 'Un espacio abierto junto al Atrato. Tres piedras forman un c\u00edrculo: una para quien acusa, una para quien defiende, una para quien juzga. El r\u00edo es el testigo.',
+            ambience: 'river-tribunal'
+        },
+        puzzles: [
+            {
+                puzzleType: 'sequence',
+                prompt: 'Las partes de un debate formal est\u00e1n desordenadas.',
+                clue: 'Ordena los pasos de un debate estructurado.',
+                items: [
+                    'Presentaci\u00f3n de la tesis',
+                    'Argumentos a favor con evidencia',
+                    'Contraargumentaci\u00f3n',
+                    'Refutaci\u00f3n y conclusi\u00f3n'
+                ],
+                onSolve: 'La primera piedra se ilumina.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Candelaria y Don Pr\u00f3spero debaten frente al r\u00edo.',
+                premises: [
+                    'Candelaria: \u00abEl Atrato fue declarado sujeto de derechos en 2016. La carretera violar\u00eda esos derechos.\u00bb',
+                    'Don Pr\u00f3spero: \u00abLos derechos del r\u00edo no pueden pesar m\u00e1s que los derechos de las personas que necesitan empleo.\u00bb',
+                    'El juez pregunta: \u00ab\u00bfSon estos derechos mutuamente excluyentes?\u00bb'
+                ],
+                clue: '\u00bfQu\u00e9 hace la pregunta del juez?',
+                answer: 'Rechaza la falsa dicotom\u00eda y abre espacio para soluciones que respeten ambos derechos',
+                options: [
+                    'Rechaza la falsa dicotom\u00eda y abre espacio para soluciones que respeten ambos derechos',
+                    'Da la raz\u00f3n a Candelaria',
+                    'Da la raz\u00f3n a Don Pr\u00f3spero',
+                    'Evita el conflicto'
+                ],
+                onSolve: 'La segunda piedra brilla.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Do\u00f1a Asunci\u00f3n, sentada en la tercera piedra, dice su \u00faltima adivinanza:',
+                riddle: '\u00abEl mejor debate no es el que se gana. Es el que cambia a los dos que debaten. Yo ya me voy, pero les dejo esta pregunta: \u00bfpara qu\u00e9 sirve ganar si el r\u00edo sigue callado?\u00bb',
+                clue: '\u00bfCu\u00e1l es la palabra que Do\u00f1a Asunci\u00f3n le conf\u00eda a Yaguar\u00e1 antes de partir?',
+                answer: 'escuchar',
+                options: ['Escuchar', 'Ganar', 'Luchar', 'Olvidar'],
+                onSolve: 'Do\u00f1a Asunci\u00f3n sonr\u00ede. El r\u00edo suena m\u00e1s fuerte que nunca. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de tres piedras junto al r\u00edo, con una huella de mano anciana en una de ellas.',
+            questClue: 'Do\u00f1a Asunci\u00f3n dej\u00f3 su huella en el mapa. Ahora Candelaria debe encontrar la suya.',
+            item: 'historia-tribunal'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '38',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest38Progress',
+        backUrl: '../../b2-casanare.html'
+    });
+</script>
+</body>
+</html>

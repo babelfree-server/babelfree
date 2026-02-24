@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2, Lección 1 - Sonidos de la selva</title>
+    <meta name="description" content="A1 Basic - Module 2 Lesson 1: Yaguará learns jungle sounds">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module2_animals/lesson1_jungle_sounds">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 2, Lección 1 - Sonidos de la selva",
+                "url": "https://babelfree.com/a1_basic/module2_animals/lesson1_jungle_sounds",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": [
+                    "Animal vocabulary",
+                    "Sounds and names",
+                    "Verb hay"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Sonidos",
+                        "item": "https://babelfree.com/a1_basic/module2_animals/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Lesson 1"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --amazon-dark: #0a2e0a;
+            --amazon-medium: #1a4d1a;
+            --amazon-light: #2d6b2d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --sound-blue: #2196f3;
+            --animal-brown: #8d6e63;
+            --listening-purple: #673ab7;
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--amazon-dark) 0%, var(--amazon-medium) 50%, var(--amazon-light) 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            font-size: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 25% 75%, rgba(33, 150, 243, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(103, 58, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(141, 110, 99, 0.1) 0%, transparent 50%);
+            z-index: 1;
+            animation: soundWaves 30s ease-in-out infinite;
+        }
+
+        @keyframes soundWaves {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            33% { transform: scale(1.02) rotate(0.2deg); opacity: 1; }
+            66% { transform: scale(0.98) rotate(-0.1deg); opacity: 0.9; }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .lesson-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 3px solid var(--sound-blue);
+            text-align: center;
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid var(--sound-blue);
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(33, 150, 243, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .lesson-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--listening-purple);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .lesson-title {
+            font-size: 2.2rem;
+            color: var(--sound-blue);
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .lesson-subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .progress-bar-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--sound-blue);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sound-blue), var(--listening-purple));
+            border-radius: 6px;
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .progress-text {
+            color: var(--sound-blue);
+            font-weight: 700;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* LISTENING STORY SECTION */
+        .story-section {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.15), rgba(103, 58, 183, 0.1));
+            border: 3px solid var(--sound-blue);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .story-title {
+            color: var(--sound-blue);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .jaguar-listening {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 4px solid var(--sound-blue);
+            animation: listenPulse 3s ease-in-out infinite;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(33, 150, 243, 0.4);
+            position: relative;
+        }
+
+        @keyframes listenPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); box-shadow: 0 12px 40px rgba(33, 150, 243, 0.6); }
+        }
+
+        .story-text {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            line-height: 2;
+            margin: 20px 0;
+        }
+
+        .simple-sentence {
+            margin: 15px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid var(--sound-blue);
+        }
+
+        /* JUNGLE ANIMALS SECTION */
+        .animals-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            border: 3px solid var(--animal-brown);
+        }
+
+        .animals-title {
+            color: var(--animal-brown);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .animals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .animal-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animal-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sound-blue);
+            box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
+        }
+
+        .animal-card.mono {
+            border-color: var(--animal-brown);
+        }
+
+        .animal-card.tucan {
+            border-color: var(--jaguar-gold);
+        }
+
+        .animal-card.rana {
+            border-color: var(--success-green);
+        }
+
+        .animal-card.grillo {
+            border-color: var(--jaguar-orange);
+        }
+
+        .animal-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            border: 3px solid;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .animal-card.mono .animal-avatar {
+            background: linear-gradient(135deg, var(--animal-brown), #a1887f);
+            border-color: var(--animal-brown);
+        }
+
+        .animal-card.tucan .animal-avatar {
+            background: linear-gradient(135deg, var(--jaguar-gold), #ffd54f);
+            border-color: var(--jaguar-gold);
+        }
+
+        .animal-card.rana .animal-avatar {
+            background: linear-gradient(135deg, var(--success-green), #81c784);
+            border-color: var(--success-green);
+        }
+
+        .animal-card.grillo .animal-avatar {
+            background: linear-gradient(135deg, var(--jaguar-orange), #ffb74d);
+            border-color: var(--jaguar-orange);
+        }
+
+        .animal-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .animal-card.mono .animal-name { color: var(--animal-brown); }
+        .animal-card.tucan .animal-name { color: var(--jaguar-gold); }
+        .animal-card.rana .animal-name { color: var(--success-green); }
+        .animal-card.grillo .animal-name { color: var(--jaguar-orange); }
+
+        .animal-sound {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .animal-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* SOUND WAVES ANIMATION */
+        .sound-indicator {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background: var(--sound-blue);
+            border-radius: 50%;
+            opacity: 0;
+            animation: soundWave 2s infinite;
+        }
+
+        @keyframes soundWave {
+            0% { transform: scale(0.5); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        .animal-card:hover .sound-indicator {
+            animation-play-state: running;
+        }
+
+        /* INTERACTIVE LISTENING EXERCISE */
+        .listening-section {
+            background: linear-gradient(135deg, rgba(103, 58, 183, 0.15), rgba(33, 150, 243, 0.1));
+            border: 3px solid var(--listening-purple);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .listening-title {
+            color: var(--listening-purple);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .listening-instruction {
+            background: rgba(103, 58, 183, 0.1);
+            border: 2px solid var(--listening-purple);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .instruction-text {
+            color: var(--listening-purple);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .listening-game {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .sounds-column, .animals-column {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .column-title {
+            color: var(--sound-blue);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sound-item, .animal-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid transparent;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .sound-item:hover, .animal-option:hover {
+            border-color: var(--sound-blue);
+            background: rgba(33, 150, 243, 0.1);
+            transform: translateX(5px);
+        }
+
+        .sound-item.selected, .animal-option.selected {
+            border-color: var(--sound-blue);
+            background: rgba(33, 150, 243, 0.2);
+            transform: scale(1.02);
+        }
+
+        .sound-item.correct, .animal-option.correct {
+            border-color: var(--success-green);
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .sound-item.incorrect, .animal-option.incorrect {
+            border-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.2);
+        }
+
+        .play-sound-btn {
+            background: var(--sound-blue);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .play-sound-btn:hover {
+            background: var(--listening-purple);
+            transform: scale(1.1);
+        }
+
+        /* YAGUARÁ LISTENING GUIDE */
+        .yaguara-guide {
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.15), rgba(255, 107, 53, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .yaguara-avatar {
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 3px solid var(--jaguar-gold);
+            animation: listenPulse 4s ease-in-out infinite;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .yaguara-text {
+            padding-top: 5px;
+        }
+
+        .guide-title {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .guide-message {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .simple-message {
+            margin: 8px 0;
+        }
+
+        /* LESSON NAVIGATION */
+        .lesson-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .nav-button.primary {
+            background: linear-gradient(135deg, var(--sound-blue), #64b5f6);
+            color: white;
+            border: 2px solid var(--sound-blue);
+        }
+
+        .nav-button.primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: var(--glass-bg);
+            color: white;
+            border: 2px solid var(--sound-blue);
+        }
+
+        .nav-button.secondary:hover {
+            background: rgba(33, 150, 243, 0.2);
+            transform: scale(1.05);
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-button:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* SUCCESS MESSAGE */
+        .success-message {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(129, 199, 132, 0.1));
+            border: 3px solid var(--success-green);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: successSlide 0.5s ease-out;
+        }
+
+        @keyframes successSlide {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-title {
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .success-text {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 18px; padding: 15px; }
+            .container { padding: 15px; }
+            .lesson-header { padding: 20px; }
+            .animals-grid { grid-template-columns: 1fr; }
+            .listening-game { grid-template-columns: 1fr; gap: 20px; }
+            .lesson-title { font-size: 1.8rem; }
+            .back-btn, .lesson-info { 
+                position: static; 
+                margin: 10px auto; 
+                display: block; 
+                width: fit-content; 
+            }
+            .yaguara-guide {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
+            }
+            .yaguara-avatar { margin: 0 auto; }
+        }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/a1-amazon" class="back-btn">← Módulos</a>
+            <div class="lesson-info">Módulo 2 • Lección 1</div>
+            <h1 class="lesson-title">👂 Sonidos de la selva</h1>
+            <p class="lesson-subtitle">Yaguará aprende a escuchar</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Paso 1 de 4</div>
+        </div>
+
+        <!-- LISTENING STORY INTRODUCTION -->
+        <div class="story-section" id="step1">
+            <div class="story-title">👂 Yaguará escucha</div>
+            <div class="jaguar-listening" onclick="speakText('Vivo con mi familia. Escucho la selva.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">👨‍👩‍👧‍👦 Yaguará vive con su familia.</div>
+                <div class="simple-sentence">👂 Yaguará escucha.</div>
+                <div class="simple-sentence">🌳 La selva tiene sonidos.</div>
+                <div class="simple-sentence">🔊 Hay muchos sonidos.</div>
+            </div>
+        </div>
+
+        <!-- JUNGLE ANIMALS -->
+        <div class="animals-section" id="step2" style="display:none;">
+            <div class="animals-title">🐒 Animales de la selva colombiana</div>
+            
+            <div class="animals-grid">
+                <div class="animal-card mono" onclick="playAnimalSound('mono')">
+                    <div class="animal-avatar">
+                        🐒
+                        <div class="sound-indicator"></div>
+                    </div>
+                    <div class="animal-name">Mono</div>
+                    <div class="animal-sound">"¡Ooh ooh ah ah!"</div>
+                    <div class="animal-description">El mono salta en los árboles.</div>
+                </div>
+
+                <div class="animal-card tucan" onclick="playAnimalSound('tucan')">
+                    <div class="animal-avatar">
+                        🦜
+                        <div class="sound-indicator"></div>
+                    </div>
+                    <div class="animal-name">Tucán</div>
+                    <div class="animal-sound">"¡Cuac cuac cuac!"</div>
+                    <div class="animal-description">El tucán es de colores bonitos.</div>
+                </div>
+
+                <div class="animal-card rana" onclick="playAnimalSound('rana')">
+                    <div class="animal-avatar">
+                        🐸
+                        <div class="sound-indicator"></div>
+                    </div>
+                    <div class="animal-name">Rana</div>
+                    <div class="animal-sound">"¡Croac croac!"</div>
+                    <div class="animal-description">La rana vive en el agua.</div>
+                </div>
+
+                <div class="animal-card grillo" onclick="playAnimalSound('grillo')">
+                    <div class="animal-avatar">
+                        🦗
+                        <div class="sound-indicator"></div>
+                    </div>
+                    <div class="animal-name">Grillo</div>
+                    <div class="animal-sound">"¡Cri cri cri!"</div>
+                    <div class="animal-description">El grillo canta en la noche.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YAGUARÁ LISTENING GUIDE -->
+        <div class="yaguara-guide" id="step3" style="display:none;">
+            <div class="yaguara-avatar" onclick="speakText('Escucho cuatro animales. Mono, tucán, rana, grillo.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguará dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message">👂 Escucho cuatro animales.</div>
+                    <div class="simple-message">🐒 Mono, tucán, rana, grillo.</div>
+                    <div class="simple-message">🔊 Mono: ooh. Tucán: cuac. Rana: croac. Grillo: cri.</div>
+                    <div class="simple-message">🎯 Escucha los sonidos.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE LISTENING EXERCISE -->
+        <div class="listening-section" id="step4" style="display:none;">
+            <div class="listening-title">🎯 Práctica: ¿Qué animal?</div>
+            
+            <div class="listening-instruction">
+                <div class="instruction-text">Escucha. ¿Qué animal es?</div>
+            </div>
+
+            <div class="listening-game">
+                <div class="sounds-column">
+                    <div class="column-title">🔊 Sonidos</div>
+                    <div class="sound-item" onclick="playSound(this, 'mono')" data-sound="mono">
+                        <button class="play-sound-btn">▶️</button>
+                        <div>Sonido 1</div>
+                    </div>
+                    <div class="sound-item" onclick="playSound(this, 'tucan')" data-sound="tucan">
+                        <button class="play-sound-btn">▶️</button>
+                        <div>Sonido 2</div>
+                    </div>
+                    <div class="sound-item" onclick="playSound(this, 'rana')" data-sound="rana">
+                        <button class="play-sound-btn">▶️</button>
+                        <div>Sonido 3</div>
+                    </div>
+                    <div class="sound-item" onclick="playSound(this, 'grillo')" data-sound="grillo">
+                        <button class="play-sound-btn">▶️</button>
+                        <div>Sonido 4</div>
+                    </div>
+                </div>
+
+                <div class="animals-column">
+                    <div class="column-title">🐒 Animales</div>
+                    <div class="animal-option" onclick="selectAnimal(this, 'mono')" data-animal="mono">🐒 Mono</div>
+                    <div class="animal-option" onclick="selectAnimal(this, 'grillo')" data-animal="grillo">🦗 Grillo</div>
+                    <div class="animal-option" onclick="selectAnimal(this, 'tucan')" data-animal="tucan">🦜 Tucán</div>
+                    <div class="animal-option" onclick="selectAnimal(this, 'rana')" data-animal="rana">🐸 Rana</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-message" id="successMessage">
+            <div class="success-title">🎉 ¡Excelente!</div>
+            <div class="success-text">
+                Lección 1 completa.<br>
+                Yaguará sabe escuchar la selva.<br>
+                ¡Conoces 4 animales nuevos!
+            </div>
+        </div>
+
+        <!-- LESSON NAVIGATION -->
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" onclick="previousStep()" id="prevBtn" disabled>← Anterior</button>
+            <button class="nav-button primary" onclick="nextStep()" id="nextBtn">Siguiente →</button>
+            <button class="nav-button primary" onclick="finishLesson()" id="finishBtn" style="display:none;">✅ Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        // Lesson Management System
+        (function() {
+            'use strict';
+            
+            var lessonData = {
+                currentStep: 1,
+                totalSteps: 4,
+                selectedSound: null,
+                matchedSounds: 0,
+                totalSounds: 4,
+                isComplete: false
+            };
+
+            // CORREGIDO: Animales específicos de Colombia según PDF
+            var animalSounds = {
+                mono: "Ooh ooh ah ah",
+                tucan: "Cuac cuac cuac",  // NUEVO: Tucán colombiano
+                rana: "Croac croac croac",
+                grillo: "Cri cri cri"    // CORREGIDO: Grillo específico (no "insecto")
+            };
+
+            // CORREGIDO: Descripciones simplificadas para A1
+            var animalDescriptions = {
+                mono: "El mono salta en los árboles. Hace ooh ooh ah ah.",
+                tucan: "El tucán es de colores bonitos. Hace cuac cuac cuac.", // NUEVO
+                rana: "La rana vive en el agua. Hace croac croac.",
+                grillo: "El grillo canta en la noche. Hace cri cri cri."
+            };
+
+            function updateProgress() {
+                var percentage = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var progressFill = document.getElementById('progressFill');
+                var progressText = document.getElementById('progressText');
+                
+                if (progressFill) progressFill.style.width = percentage + '%';
+                if (progressText) progressText.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(stepNumber) {
+                // Hide all steps
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var step = document.getElementById('step' + i);
+                    if (step) step.style.display = 'none';
+                }
+                
+                // Show current step
+                var currentStep = document.getElementById('step' + stepNumber);
+                if (currentStep) {
+                    currentStep.style.display = 'block';
+                    currentStep.style.animation = 'fadeIn 0.5s ease-in';
+                }
+                
+                updateNavigationButtons();
+                updateProgress();
+            }
+
+            function updateNavigationButtons() {
+                var prevBtn = document.getElementById('prevBtn');
+                var nextBtn = document.getElementById('nextBtn');
+                var finishBtn = document.getElementById('finishBtn');
+                
+                if (prevBtn) prevBtn.disabled = lessonData.currentStep === 1;
+                
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    if (finishBtn) finishBtn.style.display = 'inline-block';
+                } else {
+                    if (nextBtn) nextBtn.style.display = 'inline-block';
+                    if (finishBtn) finishBtn.style.display = 'none';
+                }
+            }
+
+            function goToNextStep() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                    if (window.JaguarAPI) JaguarAPI.syncA1Progress('module2_animals', 'lesson1_jungle_sounds', { currentStep: lessonData.currentStep, totalSteps: lessonData.totalSteps, isComplete: false, matchedPairs: lessonData.matchedPairs });
+                }
+            }
+
+            function goToPreviousStep() {
+                if (lessonData.currentStep > 1) {
+                    lessonData.currentStep--;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function playAnimalSoundIntro(animal) {
+                var sound = animalSounds[animal];
+                var description = animalDescriptions[animal];
+                
+                if (sound) {
+                    speakText(sound);
+                    setTimeout(function() {
+                        speakText(description);
+                        // CORREGIDO: Añadir repetición según PDF
+                        setTimeout(function() {
+                            speakText('Yaguará escucha. Vive con su familia.');
+                        }, 2500);
+                    }, 2000);
+                    showNotification('🔊 ' + animal.charAt(0).toUpperCase() + animal.slice(1) + ':', sound);
+                }
+            }
+
+            function playSoundInGame(soundElement, animal) {
+                // Clear previous selections
+                var allSounds = document.querySelectorAll('.sound-item');
+                for (var i = 0; i < allSounds.length; i++) {
+                    allSounds[i].classList.remove('selected');
+                }
+                
+                soundElement.classList.add('selected');
+                lessonData.selectedSound = animal;
+                
+                // Play the sound
+                var sound = animalSounds[animal];
+                if (sound) {
+                    speakText(sound);
+                    showNotification('🔊 Escucha:', sound);
+                }
+            }
+
+            function selectAnimalInGame(animalElement, animal) {
+                if (!lessonData.selectedSound) {
+                    showNotification('⚠️ Primero:', 'Haz clic en un sonido');
+                    return;
+                }
+                
+                var isCorrect = lessonData.selectedSound === animal;
+                var soundElement = document.querySelector('.sound-item[data-sound="' + lessonData.selectedSound + '"]');
+                
+                if (isCorrect) {
+                    // Correct match
+                    soundElement.classList.remove('selected');
+                    soundElement.classList.add('correct');
+                    animalElement.classList.add('correct');
+                    
+                    lessonData.matchedSounds++;
+                    lessonData.selectedSound = null;
+                    
+                    showNotification('✅ ¡Correcto!', animal + ' hace ese sonido');
+                    speakText('¡Muy bien! ' + animal);
+                    
+                    if (lessonData.matchedSounds === lessonData.totalSounds) {
+                        setTimeout(function() {
+                            var successMessage = document.getElementById('successMessage');
+                            if (successMessage) successMessage.classList.add('show');
+                            speakText('¡Excelente! Conoces todos los sonidos.');
+                        }, 1000);
+                    }
+                } else {
+                    // Incorrect match
+                    soundElement.classList.add('incorrect');
+                    animalElement.classList.add('incorrect');
+                    
+                    showNotification('❌ Incorrecto', 'Intenta otra vez');
+                    
+                    setTimeout(function() {
+                        soundElement.classList.remove('selected', 'incorrect');
+                        animalElement.classList.remove('incorrect');
+                        lessonData.selectedSound = null;
+                    }, 1500);
+                }
+            }
+
+            function speakInSpanish(text) {
+                if (!text || !('speechSynthesis' in window)) {
+                    console.log('Síntesis de voz no disponible o texto vacío');
+                    return;
+                }
+                
+                try {
+                    var utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'es-CO';
+                    utterance.rate = 0.5;  // CORREGIDO: Más lento para principiantes
+                    utterance.pitch = 1.0;
+                    utterance.volume = 1.0;
+                    
+                    utterance.onerror = function(event) {
+                        console.log('Error en síntesis de voz:', event.error);
+                    };
+                    
+                    speechSynthesis.speak(utterance);
+                } catch (error) {
+                    console.log('Error al hablar:', error);
+                }
+            }
+
+            // CORREGIDO: Mejorada función de notificaciones
+            function showNotification(title, message) {
+                if (!title || !message) {
+                    console.log('Título o mensaje faltante para notificación');
+                    return;
+                }
+                
+                // Remover notificación previa si existe
+                var existingNotification = document.querySelector('.temp-notification');
+                if (existingNotification) {
+                    existingNotification.remove();
+                }
+                
+                var notification = document.createElement('div');
+                notification.className = 'temp-notification';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: rgba(33, 150, 243, 0.95);
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 12px;
+                    font-weight: 600;
+                    z-index: 10000;
+                    max-width: 320px;
+                    border: 2px solid #2196f3;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+                    animation: slideInRight 0.3s ease-out;
+                `;
+                
+                notification.innerHTML = `
+                    <div style="font-weight: 700; margin-bottom: 5px; font-size: 1.1rem;">${title}</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">${message}</div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(function() {
+                    if (notification && notification.parentNode) {
+                        notification.style.animation = 'slideOutRight 0.3s ease-in';
+                        setTimeout(function() {
+                            if (notification.parentNode) {
+                                notification.parentNode.removeChild(notification);
+                            }
+                        }, 300);
+                    }
+                }, 3500);
+            }
+
+            // CORREGIDO: Nombre de función
+            function completeLesson() {
+                lessonData.isComplete = true;
+                if (window.JaguarAPI) JaguarAPI.syncA1Progress('module2_animals', 'lesson1_jungle_sounds', { currentStep: lessonData.totalSteps, totalSteps: lessonData.totalSteps, isComplete: true, matchedPairs: lessonData.matchedPairs });
+                showNotification('🎓 Lección 2 completa', 'Yaguará sabe escuchar la selva');
+                
+                setTimeout(function() {
+                    if (confirm('🎉 ¡Lección completa!\n\nYaguará escucha sonidos de animales.\n\n¿Continuar al siguiente módulo?')) {
+                        window.location.href = '/a1-amazon';
+                    }
+                }, 2000);
+            }
+
+            // Make functions globally available
+            window.nextStep = goToNextStep;
+            window.previousStep = goToPreviousStep;
+            window.playAnimalSound = playAnimalSoundIntro;
+            window.playSound = playSoundInGame;
+            window.selectAnimal = selectAnimalInGame;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLesson; // CORREGIDO: Nombre de función
+
+            // Add CSS for animations
+            var style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                @keyframes slideInRight {
+                    from { transform: translateX(300px); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOutRight {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(300px); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // CORREGIDO: Mejor manejo de errores en inicialización
+            document.addEventListener('DOMContentLoaded', function() {
+                try {
+                    showStep(1);
+                    console.log('Módulo 2 cargado correctamente');
+                    
+                    // Verificar elementos críticos
+                    var progressFill = document.getElementById('progressFill');
+                    var progressText = document.getElementById('progressText');
+                    
+                    if (!progressFill || !progressText) {
+                        console.error('Elementos de progreso no encontrados');
+                    }
+                    
+                } catch (error) {
+                    console.error('Error al inicializar módulo:', error);
+                    showNotification('⚠️ Error', 'Problema al cargar el módulo');
+                }
+            });
+
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>

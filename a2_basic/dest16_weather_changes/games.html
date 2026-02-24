@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 16: El cielo cambia</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest16_weather_changes/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 16: El cielo cambia — Games",
+                "url": "https://babelfree.com/a2_basic/dest16_weather_changes/games",
+                "educationalLevel": "A2 - Elementary",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Weather vocabulary",
+                    "Describing changes with estar",
+                    "Emotions vocabulary",
+                    "Negative commands introduction"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A2",
+                        "item": "https://babelfree.com/a2-caribbean"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "El cielo cambia",
+                        "item": "https://babelfree.com/a2_basic/dest16_weather_changes/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-costa-caribena">
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 16: El cielo cambia</div>
+            <div class="yg-header-subtitle">Clima, emociones y cambios</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — La tormenta
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Una tormenta. El bosque se abre con lluvia y truenos. Candelaria y Yaguar\u00e1 se refugian juntas bajo un \u00e1rbol ca\u00eddo. No hablan el mismo idioma, pero comparten el calor.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — El silencio gris avanza
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Cuando la tormenta pasa, la niebla gris ha avanzado. Una secci\u00f3n entera del bosque est\u00e1 sin color, sin sonido. Candelaria lo ve tambi\u00e9n. Escribe en su cuaderno: \u00abAqu\u00ed no hay sonido.\u00bb Yaguar\u00e1 lee la palabra y la entiende por primera vez: sonido.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — El cielo cuenta historias
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'El cielo cambia. A veces llueve, a veces hace sol. El viento trae fr\u00edo o calor. Las estaciones pasan. Pero algo m\u00e1s cambia: el silencio crece. Yaguar\u00e1 sabe que debe actuar.'
+    },
+
+    /* ============================================================
+       4. PAIR — Clima
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la palabra del clima con su descripci\u00f3n.',
+        pairs: [
+            ['lluvia', 'agua que cae del cielo'],
+            ['tormenta', 'lluvia fuerte con truenos'],
+            ['viento', 'aire que se mueve'],
+            ['sol', 'luz y calor del cielo']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Clima y emociones
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el clima con la emoci\u00f3n.',
+        pairs: [
+            ['Llueve mucho', 'Estoy triste'],
+            ['Hace sol', 'Estoy contento'],
+            ['Hay tormenta', 'Estoy nervioso'],
+            ['Est\u00e1 tranquilo', 'Estoy tranquilo']
+        ]
+    },
+
+    /* ============================================================
+       6. FIB — Estar + clima/estados
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con estar o hay.',
+        questions: [
+            {
+                sentence: 'El cielo ___ gris.',
+                answer: 'est\u00e1',
+                options: ['es', 'est\u00e1', 'hay', 'tiene']
+            },
+            {
+                sentence: 'No ___ sonido en el bosque.',
+                answer: 'hay',
+                options: ['es', 'est\u00e1', 'hay', 'tiene']
+            },
+            {
+                sentence: 'El bosque ___ h\u00famedo.',
+                answer: 'est\u00e1',
+                options: ['es', 'est\u00e1', 'hay', 'tiene']
+            }
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Hacer + clima
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con hace, hay o est\u00e1.',
+        questions: [
+            {
+                sentence: '___ fr\u00edo por la noche.',
+                answer: 'Hace',
+                options: ['Hace', 'Hay', 'Est\u00e1', 'Es']
+            },
+            {
+                sentence: '___ mucho viento.',
+                answer: 'Hace',
+                options: ['Hace', 'Hay', 'Est\u00e1', 'Es']
+            },
+            {
+                sentence: '___ tormenta.',
+                answer: 'Hay',
+                options: ['Hace', 'Hay', 'Est\u00e1', 'Es']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Emociones con estar
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la emoci\u00f3n correcta.',
+        questions: [
+            {
+                sentence: 'Candelaria est\u00e1 ___. Tiene miedo de la tormenta.',
+                answer: 'nerviosa',
+                options: ['contenta', 'nerviosa', 'cansada', 'tranquila']
+            },
+            {
+                sentence: 'Despu\u00e9s de la tormenta, Yaguar\u00e1 est\u00e1 ___.',
+                answer: 'tranquila',
+                options: ['nerviosa', 'triste', 'tranquila', 'enojada']
+            },
+            {
+                sentence: 'El bosque sin sonido est\u00e1 ___.',
+                answer: 'triste',
+                options: ['contento', 'nervioso', 'triste', 'fuerte']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. LISTENING — La tormenta
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Llueve mucho. Hay truenos. El viento es fuerte. Candelaria y Yaguar\u00e1 se refugian bajo un \u00e1rbol.',
+        question: '\u00bfQu\u00e9 tiempo hace?',
+        answer: 'Hay tormenta',
+        options: ['Hace sol', 'Hay tormenta', 'Hace calor', 'Est\u00e1 nublado']
+    },
+
+    /* ============================================================
+       10. LISTENING — Después de la tormenta
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'La tormenta pas\u00f3. Una parte del bosque est\u00e1 sin color. No hay sonido. Candelaria escribe: aqu\u00ed no hay sonido.',
+        question: '\u00bfQu\u00e9 pas\u00f3 despu\u00e9s de la tormenta?',
+        answer: 'Una parte del bosque perdi\u00f3 el color',
+        options: ['Sali\u00f3 el sol', 'Una parte del bosque perdi\u00f3 el color', 'Candelaria se fue', 'Lleg\u00f3 Mam\u00e1 Jaguar']
+    },
+
+    /* ============================================================
+       11. CONJUGATION — Estar (emociones)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga estar + emoci\u00f3n.',
+        questions: [
+            {
+                verb: 'estar triste',
+                subject: 'yo',
+                answer: 'estoy triste',
+                options: ['estoy triste', 'est\u00e1s triste', 'est\u00e1 triste', 'estamos tristes']
+            },
+            {
+                verb: 'estar nervioso',
+                subject: 't\u00fa',
+                answer: 'est\u00e1s nervioso',
+                options: ['estoy nervioso', 'est\u00e1s nervioso', 'est\u00e1 nervioso', 'estamos nerviosos']
+            },
+            {
+                verb: 'estar tranquila',
+                subject: 'ella',
+                answer: 'est\u00e1 tranquila',
+                options: ['estoy tranquila', 'est\u00e1s tranquila', 'est\u00e1 tranquila', 'estamos tranquilas']
+            }
+        ]
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Imperativo negativo intro
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Imperativo negativo: no + subjuntivo.',
+        questions: [
+            {
+                verb: 'tener miedo (t\u00fa)',
+                subject: 'no',
+                answer: 'no tengas miedo',
+                options: ['no tengas miedo', 'no tienes miedo', 'no tiene miedo', 'no ten miedo']
+            },
+            {
+                verb: 'caminar solo (t\u00fa)',
+                subject: 'no',
+                answer: 'no camines solo',
+                options: ['no camines solo', 'no caminas solo', 'no camina solo', 'no caminar solo']
+            },
+            {
+                verb: 'hablar alto (t\u00fa)',
+                subject: 'no',
+                answer: 'no hables alto',
+                options: ['no hables alto', 'no hablas alto', 'no habla alto', 'no hablar alto']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. SORTING — Clima / emoción
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfes clima o emoci\u00f3n?',
+        categories: ['Clima', 'Emoci\u00f3n'],
+        items: [
+            { text: 'lluvia', category: 'Clima' },
+            { text: 'triste', category: 'Emoci\u00f3n' },
+            { text: 'sol', category: 'Clima' },
+            { text: 'nervioso', category: 'Emoci\u00f3n' },
+            { text: 'viento', category: 'Clima' },
+            { text: 'tranquilo', category: 'Emoci\u00f3n' }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Hace / hay / está
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfhace, hay o est\u00e1?',
+        categories: ['Hace', 'Hay', 'Est\u00e1'],
+        items: [
+            { text: 'fr\u00edo', category: 'Hace' },
+            { text: 'tormenta', category: 'Hay' },
+            { text: 'nublado', category: 'Est\u00e1' },
+            { text: 'calor', category: 'Hace' },
+            { text: 'lluvia', category: 'Hay' },
+            { text: 'h\u00famedo', category: 'Est\u00e1' }
+        ]
+    },
+
+    /* ============================================================
+       15. BUILDER — Describir el clima
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['Hoy', 'hace', 'mucho', 'fr\u00edo', 'y', 'llueve'],
+        answer: 'Hoy hace mucho fr\u00edo y llueve'
+    },
+
+    /* ============================================================
+       16. BUILDER — Imperativo negativo
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['No', 'tengas', 'miedo', 'de', 'la', 'tormenta'],
+        answer: 'No tengas miedo de la tormenta'
+    },
+
+    /* ============================================================
+       17. CONVERSATION — ¿Qué tiempo hace?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: '\u00bfQu\u00e9 tiempo hace?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Llueve y hace fr\u00edo.', 'Me levanto temprano.', 'Necesito agua.', 'La rana cant\u00f3.'],
+                answer: 'Llueve y hace fr\u00edo.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       18. CONVERSATION — ¿Cómo estás?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguar\u00e1', text: '\u00bfC\u00f3mo est\u00e1s despu\u00e9s de la tormenta?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Estoy nervioso pero bien.', 'Quiero ir a casa.', 'Cant\u00e9 toda la noche.', 'Me ba\u00f1o en el r\u00edo.'],
+                answer: 'Estoy nervioso pero bien.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — No tengas miedo
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Candelaria', text: 'Tengo miedo de la niebla gris.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['No tengas miedo. Estamos juntas.', 'Hace calor.', 'Me llamo Yaguar\u00e1.', 'Camin\u00e9 mucho.'],
+                answer: 'No tengas miedo. Estamos juntas.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Clima y emociones
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Llueve mucho. Estoy nervioso.',
+        answer: 'Llueve mucho. Estoy nervioso.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La c\u00e1mara del clima',
+            description: 'Patrones de agua fluyen por las paredes de piedra. Cambian con cada enigma resuelto. El aire huele a lluvia.',
+            ambience: 'storm'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'El agua en la pared forma letras:',
+                riddle: '\u00abCaigo del cielo. Mojo la tierra. Los truenos me acompa\u00f1an. \u00bfQu\u00e9 soy?\u00bb',
+                clue: 'Agua del cielo. Seis letras.',
+                answer: 'lluvia',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'El agua fluye m\u00e1s r\u00e1pido.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una nube de piedra pregunta:',
+                riddle: '\u00abCandelaria me siente. Yaguar\u00e1 tambi\u00e9n. No soy feliz, no soy triste. Estoy entre los dos. \u00bfQu\u00e9 emoci\u00f3n soy?\u00bb',
+                clue: 'Despu\u00e9s de la tormenta, antes de la calma.',
+                answer: 'Nervioso',
+                options: ['Nervioso', 'Triste', 'Contento', 'Enojado'],
+                onSolve: 'La nube se disuelve.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En la puerta, letras mojadas:',
+                clue: 'Candelaria escribi\u00f3 esta palabra. Es lo que falta en el bosque gris. Seis letras.',
+                answer: 'sonido',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'La puerta se abre. El sonido vuelve por un momento.'
+            }
+        ],
+        fragment: {
+            text: 'Una ra\u00edz con forma de rayo brilla en la pared mojada.',
+            questClue: '\u00bfQu\u00e9 cambia y qu\u00e9 no cambia?',
+            item: 'raiz-16'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a2d16',
+        world: 'costaCaribena',
+        storageKey: 'yaguaraA2Dest16Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

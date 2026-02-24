@@ -1,0 +1,235 @@
+{
+  "_purpose": "Ontology-driven adaptivity. No black-box ML. Every decision traceable to a rule + data.",
+
+  "playerDataSchema": {
+    "targetHistory": {
+      "_note": "Keyed by LinguisticTarget ID",
+      "example": {
+        "lt_verb_tener_imperative_negative": {
+          "attempts": 4,
+          "successes": 1,
+          "lastInputMode": "typing",
+          "lastGameType": "fill",
+          "lastAttemptAt": 1708700000,
+          "successByGameType": { "fill": 1, "conversation": 0 },
+          "successByInputMode": { "choice": 1, "typing": 0 },
+          "selfCorrectionAttempts": 0,
+          "selfCorrectionSuccesses": 0
+        }
+      }
+    }
+  },
+
+  "inputModeLadder": ["choice", "drag", "typing", "voice", "self_correction"],
+  "gameTypeProductionLadder": [
+    "narrative",
+    "listening",
+    "pair",
+    "category",
+    "fill",
+    "builder",
+    "conjugation",
+    "translation",
+    "conversation",
+    "dictation"
+  ],
+
+  "rules": [
+
+    {
+      "id": "adapt_scaffold_input_mode",
+      "name": "Input mode scaffold",
+      "trigger": "Student fails same LinguisticTarget twice in current input mode",
+      "reads": [
+        "targetHistory[targetId].attempts",
+        "targetHistory[targetId].successes",
+        "targetHistory[targetId].lastInputMode"
+      ],
+      "condition": {
+        "pseudo": "attempts - successes >= 2 AND last 2 attempts were failures AND inputMode != 'choice'",
+        "code": "const h = targetHistory[targetId]; const recentFails = h.attempts - h.successes; return recentFails >= 2 && inputModeLadder.indexOf(h.lastInputMode) > 0;"
+      },
+      "decision": "Step DOWN one rung on inputModeLadder for the same LinguisticTarget",
+      "selects": {
+        "same": "LinguisticTarget",
+        "change": "InputMode → one step easier",
+        "keep": "GameType (same or compatible)"
+      },
+      "example": {
+        "scenario": "Student tries lt_verb_tener_imperative_negative via typing, fails twice",
+        "action": "Next activity: same target, but input mode = choice (multiple choice options)",
+        "why": "The student may know the form but can't produce it yet. Recognition before production."
+      },
+      "escalation": "If student succeeds at easier mode, next encounter returns to original mode"
+    },
+
+    {
+      "id": "adapt_rotate_game_type",
+      "name": "Game type rotation",
+      "trigger": "Student succeeds at recognition game types but fails at production game types for the same target",
+      "reads": [
+        "targetHistory[targetId].successByGameType",
+        "gameTypeProductionLadder"
+      ],
+      "condition": {
+        "pseudo": "success in ANY of [pair, listening, fill] >= 1 AND success in ANY of [conversation, translation, builder] == 0 AND attempts in production types >= 2",
+        "code": "const h = targetHistory[targetId]; const recogOk = ['pair','listening','fill'].some(t => (h.successByGameType[t]||0) >= 1); const prodFail = ['conversation','translation','builder'].every(t => (h.successByGameType[t]||0) === 0); return recogOk && prodFail;"
+      },
+      "decision": "Insert a BRIDGING activity: one step above current highest success on the production ladder",
+      "selects": {
+        "same": "LinguisticTarget",
+        "change": "GameType → next step on production ladder above highest success",
+        "keep": "InputMode = choice (scaffolded)"
+      },
+      "example": {
+        "scenario": "Student recognizes 'no tengas' in pair/fill games, but fails in conversation",
+        "action": "Insert builder activity: reorder [no, tengas, miedo, del, silencio] — structured production without free recall",
+        "why": "Bridge between recognition (I know the answer when I see it) and production (I can construct it). Builder is the missing rung."
+      },
+      "escalation": "After builder success, retry the conversation activity"
+    },
+
+    {
+      "id": "adapt_spiral_revisit",
+      "name": "Spiral prerequisite revisit",
+      "trigger": "Student fails a target whose prerequisite targets haven't been practiced recently",
+      "reads": [
+        "targetHistory[targetId].attempts (current target)",
+        "targetHistory[prereqId].lastAttemptAt (prerequisite target)",
+        "ontology.getObjective(objectiveId).targets (to find prerequisites)",
+        "currentEncounterIndex"
+      ],
+      "condition": {
+        "pseudo": "student fails targetX AND targetX.cefr > 'A1' AND any prerequisite target from lower CEFR level has lastAttempt > 10 encounters ago",
+        "code": "const obj = ontology.getObjectivesForTarget(targetId)[0]; const prereqs = obj.targets.filter(t => cefrRank(ontology.getTarget(t).cefr) < cefrRank(target.cefr)); return prereqs.some(pid => currentIndex - (targetHistory[pid]?.lastAttemptAt || 0) > 10);"
+      },
+      "decision": "Insert a brief review activity for the stale prerequisite before retrying the current target",
+      "selects": {
+        "target": "Prerequisite LinguisticTarget (the stale one)",
+        "gameType": "pair or fill (lightweight review)",
+        "inputMode": "choice (fast recall, not deep production)"
+      },
+      "example": {
+        "scenario": "Student at A2 fails lt_grammar_imperative_negative. Prerequisite lt_grammar_subjunctive_present_basic hasn't been touched in 15 encounters.",
+        "action": "Insert quick fill activity: 'El subjuntivo de hablar, tú: ___' (answer: hables). Then retry the negative imperative.",
+        "why": "Negative imperative = no + subjunctive present. If the subjunctive form is rusty, the imperative will fail. Fix the foundation before the roof."
+      },
+      "prerequisiteMap": {
+        "_note": "These links come from the ontology. Examples:",
+        "lt_grammar_imperative_negative": ["lt_grammar_subjunctive_present_basic"],
+        "lt_grammar_si_clauses": ["lt_grammar_subjunctive_imperfect", "lt_grammar_conditional"],
+        "lt_grammar_reported_speech": ["lt_grammar_preterite_vs_imperfect"]
+      },
+      "escalation": "If prerequisite review succeeds, immediately retry the original target. If prerequisite also fails, apply Rule 1 or 2 to the prerequisite."
+    },
+
+    {
+      "id": "adapt_self_correction",
+      "name": "Self-correction promotion",
+      "trigger": "Student demonstrates strong mastery of a target via voice — promote to self-correction mode",
+      "reads": [
+        "targetHistory[targetId].attempts",
+        "targetHistory[targetId].successes",
+        "targetHistory[targetId].successByInputMode.voice",
+        "targetHistory[targetId].selfCorrectionAttempts",
+        "targetHistory[targetId].selfCorrectionSuccesses"
+      ],
+      "condition": {
+        "pseudo": "successRate >= 0.85 AND voice successes >= 2 AND attempts >= 4",
+        "code": "const h = targetHistory[targetId]; const rate = h.successes / h.attempts; const voiceOk = (h.successByInputMode.voice || 0) >= 2; return h.attempts >= 4 && rate >= 0.85 && voiceOk;"
+      },
+      "decision": "Promote to inputMode: self_correction — learner evaluates and corrects own production instead of receiving external feedback",
+      "selects": {
+        "same": "LinguisticTarget",
+        "change": "InputMode → self_correction",
+        "gameType": "conversation or dictation (compatible with self-monitoring)"
+      },
+      "example": {
+        "scenario": "Student has 4 attempts on lt_verb_tener_imperative_negative, 85%+ success rate, 2+ voice successes",
+        "action": "Next activity: same target, self_correction mode — student says 'no tengas miedo', then evaluates: '¿Lo dije bien?' and selects correct/incorrect",
+        "why": "Self-monitoring is a higher-order skill. The student doesn't just produce — they judge their own production. This is the bridge to autonomous learner."
+      },
+      "escalation": "If self-correction succeeds → flag 'self-monitoring achieved' on the target. If fails → return to standard voice mode (do NOT scaffold down to choice — the student already proved mastery, the issue is metacognitive, not linguistic)."
+    }
+
+  ],
+
+  "walkthrough": {
+    "target": "lt_verb_tener_imperative_negative",
+    "cefr": "A2",
+    "form": "no tengas",
+    "storyContext": "Yaguará tells the student: the forest at night has sounds that can frighten. But fear makes you deaf.",
+
+    "steps": [
+      {
+        "encounter": 1,
+        "gameType": "fill",
+        "inputMode": "typing",
+        "prompt": "Completa: ___ miedo del bosque. (no tener, tú)",
+        "studentAnswer": "no tienes",
+        "correct": "no tengas",
+        "result": "FAIL",
+        "rulesFired": []
+      },
+      {
+        "encounter": 2,
+        "gameType": "fill",
+        "inputMode": "typing",
+        "prompt": "Yaguará dice: ¡___ miedo! El bosque es tu amigo.",
+        "studentAnswer": "no tiene",
+        "correct": "no tengas",
+        "result": "FAIL",
+        "rulesFired": ["adapt_scaffold_input_mode"],
+        "ruleAction": "2 consecutive failures in typing → downgrade to choice"
+      },
+      {
+        "encounter": 3,
+        "gameType": "fill",
+        "inputMode": "choice",
+        "prompt": "¡___ miedo! El bosque es tu amigo.",
+        "options": ["no tengas", "no tienes", "no tiene", "no ten"],
+        "studentAnswer": "no tengas",
+        "correct": "no tengas",
+        "result": "PASS",
+        "rulesFired": [],
+        "note": "Student recognizes the form when they see it"
+      },
+      {
+        "encounter": 4,
+        "gameType": "builder",
+        "inputMode": "drag",
+        "prompt": "Ordena las palabras:",
+        "words": ["no", "tengas", "miedo", "del", "silencio"],
+        "studentAnswer": "no tengas miedo del silencio",
+        "result": "PASS",
+        "rulesFired": [],
+        "note": "Bridge activity — structured production"
+      },
+      {
+        "encounter": 5,
+        "gameType": "conversation",
+        "inputMode": "choice",
+        "prompt": "Yaguará tiene miedo. ¿Qué le dices?",
+        "options": ["¡No tengas miedo!", "¡No tienes miedo!", "¡Ten miedo!"],
+        "studentAnswer": "¡No tengas miedo!",
+        "result": "PASS",
+        "rulesFired": [],
+        "note": "Production in context — the form now has emotional weight"
+      },
+      {
+        "encounter": 6,
+        "gameType": "fill",
+        "inputMode": "typing",
+        "prompt": "Cande escucha un ruido. Yaguará le dice: ¡No ___ miedo, Cande!",
+        "studentAnswer": "tengas",
+        "result": "PASS",
+        "rulesFired": [],
+        "note": "Return to original input mode (typing). Student can now produce the form."
+      }
+    ],
+
+    "summary": "6 encounters. 2 failures → scaffold → bridge → context → return to production. Every step traceable. No guessing."
+  },
+
+  "scalingNote": "These 3 rules compose. Rule 3 (spiral revisit) can trigger Rule 1 (input scaffold) on the prerequisite. Rule 2 (game rotation) generates the bridging activity that Rule 1 then scaffolds. The ontology is the lookup table — rules don't need to know content, only relationships. Adding a new LinguisticTarget to the ontology automatically makes it available to all 3 rules. Adding a new rule requires only the same data schema. No retraining. No model updates. Just one more IF-THEN."
+}

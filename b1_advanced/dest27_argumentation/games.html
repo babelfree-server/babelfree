@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 27: Defender lo que importa - Argumentaci&oacute;n</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest27_argumentation/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 27: Defender lo que importa - Argumentación",
+          "url": "https://babelfree.com/b1_advanced/dest27_argumentation/games",
+          "educationalLevel": "B1 Advanced - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Argumentation", "Persuasive language", "Spanish communication"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Advanced", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "Defender lo que importa - Argumentación" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 27: Defender lo que importa</div>
+            <div class="yg-header-subtitle">Argumentaci&oacute;n</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative — The debate begins ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee el texto sobre el debate ambiental en el Choc\u00f3.',
+        text: 'Yaguar\u00e1 llega a una asamblea comunitaria en Nuqu\u00ed. Las voces se cruzan como r\u00edos. Por un lado, una empresa minera quiere extraer oro de la selva. Por otro lado, las comunidades afrocolombianas e ind\u00edgenas defienden su territorio. Don Ram\u00f3n, un l\u00edder comunitario, se pone de pie y dice: \u00abEn mi opini\u00f3n, la selva vale m\u00e1s que el oro. Creo que debemos proteger lo que nos da vida.\u00bb Yaguar\u00e1 observa con atenci\u00f3n. Sabe que las palabras pueden ser tan poderosas como las garras.'
+    },
+    // === GAME 2: Narrative — Voices of the community ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee las diferentes posiciones en el debate.',
+        text: 'Doña Luc\u00eda, pescadora del r\u00edo Atrato, toma la palabra: \u00abDesde mi punto de vista, el r\u00edo es nuestra vida. Ya que la miner\u00eda contamina el agua, no estoy de acuerdo con el proyecto.\u00bb Luego habla el ingeniero de la empresa: \u00abCreo que la miner\u00eda puede generar empleo. Sin embargo, entiendo la preocupaci\u00f3n.\u00bb La profesora Marta responde: \u00abEs cierto que necesitamos empleo, pero no creo que destruir la selva sea la soluci\u00f3n. Por lo tanto, propongo buscar alternativas.\u00bb'
+    },
+    // === GAME 3: Narrative — Yaguar\u00e1 reflects ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n de Yaguar\u00e1 sobre la argumentaci\u00f3n.',
+        text: 'Yaguar\u00e1 comprende algo importante: defender lo que importa requiere m\u00e1s que emoci\u00f3n. En primer lugar, hay que escuchar todas las voces. En segundo lugar, hay que presentar razones claras. En conclusi\u00f3n, argumentar bien es un acto de respeto. Dado que el Choc\u00f3 es una de las regiones con mayor biodiversidad del planeta, cada argumento en su defensa tiene un peso enorme. Yaguar\u00e1 decide aprender a argumentar para defender su selva.'
+    },
+    // === GAME 4: Fill-in-the-blank — Opinion connectors ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones con el conector de opini\u00f3n adecuado.',
+        questions: [
+            {
+                sentence: '_____, creo que debemos proteger el bosque.',
+                answer: 'En mi opini\u00f3n',
+                options: ['En mi opini\u00f3n', 'Por lo tanto', 'Sin embargo', 'Dado que']
+            },
+            {
+                sentence: '_____ la miner\u00eda contamina el agua, debemos buscar alternativas.',
+                answer: 'Dado que',
+                options: ['En conclusi\u00f3n', 'Dado que', 'Me parece que', 'Por un lado']
+            },
+            {
+                sentence: '_____ la selva es m\u00e1s importante que el dinero.',
+                answer: 'Me parece que',
+                options: ['Por eso', 'Ya que', 'Me parece que', 'En resumen']
+            },
+            {
+                sentence: '_____, necesitamos empleo; _____, no debemos destruir la naturaleza.',
+                answer: 'Por un lado / por otro lado',
+                options: ['Por un lado / por otro lado', 'Porque / ya que', 'Creo que / dado que', 'En primer lugar / por eso']
+            }
+        ]
+    },
+    // === GAME 5: Fill-in-the-blank — Reasoning connectors ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige el conector de raz\u00f3n o conclusi\u00f3n correcto.',
+        questions: [
+            {
+                sentence: 'El r\u00edo est\u00e1 contaminado, _____ no podemos pescar.',
+                answer: 'por eso',
+                options: ['por eso', 'en mi opini\u00f3n', 'me parece que', 'por un lado']
+            },
+            {
+                sentence: 'Debemos proteger la selva _____ es el hogar de miles de especies.',
+                answer: 'porque',
+                options: ['sin embargo', 'porque', 'por lo tanto', 'en conclusi\u00f3n']
+            },
+            {
+                sentence: 'La comunidad ha presentado sus argumentos. _____, el proyecto debe detenerse.',
+                answer: 'En conclusi\u00f3n',
+                options: ['Desde mi punto de vista', 'Ya que', 'En conclusi\u00f3n', 'Por un lado']
+            },
+            {
+                sentence: '_____ la biodiversidad est\u00e1 en peligro, debemos actuar ahora.',
+                answer: 'Ya que',
+                options: ['Por eso', 'Ya que', 'En resumen', 'Creo que']
+            }
+        ]
+    },
+    // === GAME 6: Fill-in-the-blank — Agreement and disagreement ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la expresi\u00f3n de acuerdo o desacuerdo correcta.',
+        questions: [
+            {
+                sentence: '_____ con tu propuesta. La selva necesita protecci\u00f3n.',
+                answer: 'Estoy de acuerdo',
+                options: ['Estoy de acuerdo', 'No creo que', 'Por lo tanto', 'Dado que']
+            },
+            {
+                sentence: '_____ la miner\u00eda sea buena para la comunidad. Contamina demasiado.',
+                answer: 'No creo que',
+                options: ['Es cierto que', 'No creo que', 'Estoy de acuerdo', 'Por eso']
+            },
+            {
+                sentence: 'Tiene raz\u00f3n. _____ necesitamos encontrar soluciones sostenibles.',
+                answer: 'Es cierto que',
+                options: ['No estoy de acuerdo', 'Es cierto que', 'Sin embargo', 'En primer lugar']
+            },
+            {
+                sentence: '_____ con el ingeniero. La miner\u00eda destruye nuestros r\u00edos.',
+                answer: 'No estoy de acuerdo',
+                options: ['Estoy de acuerdo', 'Tiene raz\u00f3n', 'No estoy de acuerdo', 'Me parece que']
+            }
+        ]
+    },
+    // === GAME 7: Fill-in-the-blank — Structural connectors ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el conector de estructura adecuado.',
+        questions: [
+            {
+                sentence: '_____, la miner\u00eda destruye el medioambiente. _____, afecta la salud de la comunidad.',
+                answer: 'En primer lugar / En segundo lugar',
+                options: ['En primer lugar / En segundo lugar', 'Por eso / Ya que', 'Creo que / Me parece que', 'Sin embargo / Dado que']
+            },
+            {
+                sentence: 'Hemos escuchado todas las voces. _____, debemos votar.',
+                answer: 'Por lo tanto',
+                options: ['En mi opini\u00f3n', 'Por un lado', 'Por lo tanto', 'Dado que']
+            },
+            {
+                sentence: '_____, el Choc\u00f3 tiene una biodiversidad \u00fanica y merece protecci\u00f3n.',
+                answer: 'En resumen',
+                options: ['Por otro lado', 'En resumen', 'Porque', 'Ya que']
+            },
+            {
+                sentence: 'Escuch\u00e9 los argumentos a favor y en contra. _____, la conservaci\u00f3n es la mejor opci\u00f3n.',
+                answer: 'En conclusi\u00f3n',
+                options: ['Por un lado', 'Desde mi punto de vista', 'En conclusi\u00f3n', 'Sin embargo']
+            }
+        ]
+    },
+    // === GAME 8: Pair — Position and supporting phrase ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada posici\u00f3n con la frase de apoyo que la complementa.',
+        pairs: [
+            ['Creo que debemos proteger la selva', 'porque es el hogar de miles de especies'],
+            ['No estoy de acuerdo con la miner\u00eda', 'ya que contamina los r\u00edos'],
+            ['Es cierto que necesitamos empleo', 'pero no a costa del medioambiente'],
+            ['Desde mi punto de vista', 'la comunidad debe decidir su futuro'],
+            ['En conclusi\u00f3n', 'la conservaci\u00f3n es la mejor opci\u00f3n']
+        ]
+    },
+    // === GAME 9: Pair — Connector function ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada conector con su funci\u00f3n argumentativa.',
+        pairs: [
+            ['En mi opini\u00f3n', 'Introducir una opini\u00f3n personal'],
+            ['Por lo tanto', 'Presentar una conclusi\u00f3n'],
+            ['Ya que', 'Dar una raz\u00f3n o causa'],
+            ['Sin embargo', 'Introducir una idea contraria'],
+            ['En primer lugar', 'Organizar los argumentos']
+        ]
+    },
+    // === GAME 10: Pair — Agreement vs disagreement ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada expresi\u00f3n con su respuesta l\u00f3gica.',
+        pairs: [
+            ['La miner\u00eda genera empleo.', 'Es cierto, pero tambi\u00e9n contamina.'],
+            ['El bosque no produce dinero.', 'No estoy de acuerdo. El ecoturismo s\u00ed produce.'],
+            ['Debemos escuchar a las comunidades.', 'Tiene raz\u00f3n. Ellas conocen el territorio.'],
+            ['El progreso es m\u00e1s importante.', 'No creo que sea progreso si destruye la vida.'],
+            ['Hay que buscar un equilibrio.', 'Estoy de acuerdo. Es posible combinar las dos cosas.']
+        ]
+    },
+    // === GAME 11: Sorting — Opinion vs fact ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada enunciado como opini\u00f3n o hecho.',
+        categories: ['Opini\u00f3n', 'Hecho'],
+        items: [
+            { text: 'Creo que la selva es m\u00e1s importante que el oro.', category: 'Opini\u00f3n' },
+            { text: 'El Choc\u00f3 tiene una de las mayores biodiversidades del mundo.', category: 'Hecho' },
+            { text: 'Me parece que las comunidades deben decidir.', category: 'Opini\u00f3n' },
+            { text: 'La miner\u00eda contamina el r\u00edo Atrato.', category: 'Hecho' },
+            { text: 'En mi opini\u00f3n, el ecoturismo es una mejor alternativa.', category: 'Opini\u00f3n' },
+            { text: 'El r\u00edo Atrato fue declarado sujeto de derechos en 2016.', category: 'Hecho' },
+            { text: 'Desde mi punto de vista, necesitamos m\u00e1s educaci\u00f3n ambiental.', category: 'Opini\u00f3n' },
+            { text: 'En el Choc\u00f3 llueve m\u00e1s de 8000 mm al a\u00f1o.', category: 'Hecho' }
+        ]
+    },
+    // === GAME 12: Sorting — Argumentative function ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada conector seg\u00fan su funci\u00f3n en la argumentaci\u00f3n.',
+        categories: ['Opini\u00f3n', 'Raz\u00f3n', 'Conclusi\u00f3n'],
+        items: [
+            { text: 'Creo que', category: 'Opini\u00f3n' },
+            { text: 'porque', category: 'Raz\u00f3n' },
+            { text: 'en conclusi\u00f3n', category: 'Conclusi\u00f3n' },
+            { text: 'me parece que', category: 'Opini\u00f3n' },
+            { text: 'ya que', category: 'Raz\u00f3n' },
+            { text: 'por lo tanto', category: 'Conclusi\u00f3n' },
+            { text: 'en mi opini\u00f3n', category: 'Opini\u00f3n' },
+            { text: 'dado que', category: 'Raz\u00f3n' },
+            { text: 'en resumen', category: 'Conclusi\u00f3n' }
+        ]
+    },
+    // === GAME 13: Sorting — For or against mining ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada argumento seg\u00fan su posici\u00f3n sobre la miner\u00eda en el Choc\u00f3.',
+        categories: ['A favor de la conservaci\u00f3n', 'A favor de la miner\u00eda'],
+        items: [
+            { text: 'La selva es el hogar de especies \u00fanicas.', category: 'A favor de la conservaci\u00f3n' },
+            { text: 'La miner\u00eda genera empleo para la regi\u00f3n.', category: 'A favor de la miner\u00eda' },
+            { text: 'El agua limpia es un derecho de todos.', category: 'A favor de la conservaci\u00f3n' },
+            { text: 'La extracci\u00f3n de oro trae inversi\u00f3n econ\u00f3mica.', category: 'A favor de la miner\u00eda' },
+            { text: 'El ecoturismo puede generar ingresos sostenibles.', category: 'A favor de la conservaci\u00f3n' },
+            { text: 'Las empresas mineras construyen carreteras.', category: 'A favor de la miner\u00eda' },
+            { text: 'La biodiversidad no tiene precio.', category: 'A favor de la conservaci\u00f3n' },
+            { text: 'El proyecto crear\u00eda 200 puestos de trabajo.', category: 'A favor de la miner\u00eda' }
+        ]
+    },
+    // === GAME 14: Builder — Construct an opinion ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para construir un argumento completo.',
+        words: ['En', 'mi', 'opini\u00f3n', 'debemos', 'proteger', 'la', 'selva', 'porque', 'es', 'nuestro', 'hogar'],
+        answer: 'En mi opini\u00f3n debemos proteger la selva porque es nuestro hogar'
+    },
+    // === GAME 15: Builder — Construct a conclusion ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una conclusi\u00f3n argumentativa.',
+        words: ['Por', 'lo', 'tanto', 'la', 'comunidad', 'debe', 'decidir', 'el', 'futuro', 'de', 'su', 'territorio'],
+        answer: 'Por lo tanto la comunidad debe decidir el futuro de su territorio'
+    },
+    // === GAME 16: Listening — Identify speaker's position (1) ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha al hablante e identifica su posici\u00f3n.',
+        audio: 'Desde mi punto de vista, la miner\u00eda es un peligro para nuestra comunidad. Ya que contamina el agua que bebemos, no creo que sea una buena opci\u00f3n. Por lo tanto, propongo que invirtamos en ecoturismo.',
+        question: '\u00bfCu\u00e1l es la posici\u00f3n del hablante?',
+        answer: 'Est\u00e1 en contra de la miner\u00eda y propone el ecoturismo.',
+        options: ['Est\u00e1 en contra de la miner\u00eda y propone el ecoturismo.', 'Apoya la miner\u00eda porque genera empleo.', 'No tiene una opini\u00f3n clara sobre el tema.', 'Quiere m\u00e1s miner\u00eda y m\u00e1s ecoturismo.']
+    },
+    // === GAME 17: Listening — Identify speaker's position (2) ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el argumento e identifica el conector que usa el hablante.',
+        audio: 'Es cierto que la miner\u00eda genera empleo. Sin embargo, no creo que el empleo temporal justifique la destrucci\u00f3n permanente. En conclusi\u00f3n, debemos buscar alternativas sostenibles para el Choc\u00f3.',
+        question: '\u00bfQu\u00e9 conector usa el hablante para introducir una idea contraria?',
+        answer: 'Sin embargo',
+        options: ['Sin embargo', 'En conclusi\u00f3n', 'Es cierto que', 'Por lo tanto']
+    },
+    // === GAME 18: Translation — Argumentative sentence (1) ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce esta oraci\u00f3n argumentativa al espa\u00f1ol usando el banco de palabras.',
+        source: 'In my opinion, we should protect the forest because it is our home.',
+        words: ['En', 'mi', 'opini\u00f3n', 'debemos', 'proteger', 'el', 'bosque', 'porque', 'es', 'nuestro', 'hogar'],
+        answer: 'En mi opini\u00f3n debemos proteger el bosque porque es nuestro hogar'
+    },
+    // === GAME 19: Translation — Argumentative sentence (2) ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce esta oraci\u00f3n argumentativa al espa\u00f1ol usando el banco de palabras.',
+        source: 'I do not agree with mining. Therefore, I propose to invest in ecotourism.',
+        words: ['No', 'estoy', 'de', 'acuerdo', 'con', 'la', 'miner\u00eda', 'Por', 'lo', 'tanto', 'propongo', 'invertir', 'en', 'ecoturismo'],
+        answer: 'No estoy de acuerdo con la miner\u00eda Por lo tanto propongo invertir en ecoturismo'
+    },
+    // === GAME 20: Conversation — Community debate (1) ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en el debate comunitario sobre la miner\u00eda en el Choc\u00f3.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Ram\u00f3n', text: 'La empresa minera quiere extraer oro de nuestra selva. \u00bfQu\u00e9 opinas t\u00fa?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['En mi opini\u00f3n, no debemos permitir la miner\u00eda porque contamina el agua.', 'S\u00ed, el oro es bonito.', 'No s\u00e9, voy a comer.'],
+                answer: 'En mi opini\u00f3n, no debemos permitir la miner\u00eda porque contamina el agua.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Ram\u00f3n', text: 'Estoy de acuerdo contigo. Pero el ingeniero dice que la miner\u00eda genera empleo. \u00bfQu\u00e9 le respondes?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Es cierto que necesitamos empleo, pero no creo que la miner\u00eda sea la \u00fanica soluci\u00f3n.', 'Tiene raz\u00f3n, el empleo es lo m\u00e1s importante.', 'No me importa el empleo.'],
+                answer: 'Es cierto que necesitamos empleo, pero no creo que la miner\u00eda sea la \u00fanica soluci\u00f3n.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Don Ram\u00f3n', text: 'Muy bien dicho. \u00bfQu\u00e9 alternativa propones?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Desde mi punto de vista, el ecoturismo puede generar empleo sin destruir la selva.', 'No tengo ideas.', 'Podemos vender el bosque.'],
+                answer: 'Desde mi punto de vista, el ecoturismo puede generar empleo sin destruir la selva.'
+            }
+        ]
+    },
+    // === GAME 21: Conversation — Structured debate (2) ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate estructurado. Usa conectores de argumentaci\u00f3n.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora Marta', text: 'Hoy vamos a debatir sobre el futuro del Choc\u00f3. Empieza con tu argumento principal.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['En primer lugar, creo que debemos proteger la biodiversidad del Choc\u00f3 porque es \u00fanica en el mundo.', 'La selva es verde.', 'Me gusta el Choc\u00f3 porque llueve mucho.'],
+                answer: 'En primer lugar, creo que debemos proteger la biodiversidad del Choc\u00f3 porque es \u00fanica en el mundo.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora Marta', text: 'Buen punto. Ahora, el ingeniero dice que la miner\u00eda trae progreso. \u00bfC\u00f3mo respondes?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['No creo que destruir el medioambiente sea progreso. Ya que hay alternativas sostenibles, debemos explorarlas.', 'S\u00ed, el progreso es bueno.', 'No me gusta la miner\u00eda porque es fea.'],
+                answer: 'No creo que destruir el medioambiente sea progreso. Ya que hay alternativas sostenibles, debemos explorarlas.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora Marta', text: 'Excelente argumento. Ahora, presenta tu conclusi\u00f3n.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['En conclusi\u00f3n, dado que el Choc\u00f3 es un tesoro natural, por lo tanto debemos invertir en su conservaci\u00f3n y en el bienestar de sus comunidades.', 'En conclusi\u00f3n, no s\u00e9.', 'El Choc\u00f3 es bonito y ya.'],
+                answer: 'En conclusi\u00f3n, dado que el Choc\u00f3 es un tesoro natural, por lo tanto debemos invertir en su conservaci\u00f3n y en el bienestar de sus comunidades.'
+            }
+        ]
+    },
+    // === GAME 22: Conjugation — Subjunctive in disagreement (1) ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en subjuntivo despu\u00e9s de \u00abno creo que\u00bb.',
+        questions: [
+            {
+                verb: 'ser',
+                subject: 'No creo que la miner\u00eda',
+                answer: 'sea',
+                options: ['sea', 'es', 'ser\u00e1', 'fue']
+            },
+            {
+                verb: 'tener',
+                subject: 'No creo que el proyecto',
+                answer: 'tenga',
+                options: ['tiene', 'tenga', 'tendr\u00e1', 'tuvo']
+            },
+            {
+                verb: 'poder',
+                subject: 'No creo que la empresa',
+                answer: 'pueda',
+                options: ['puede', 'pueda', 'podr\u00e1', 'pudo']
+            },
+            {
+                verb: 'resolver',
+                subject: 'No creo que el dinero',
+                answer: 'resuelva',
+                options: ['resuelve', 'resuelva', 'resolver\u00e1', 'resolvi\u00f3']
+            }
+        ]
+    },
+    // === GAME 23: Conjugation — Subjunctive in disagreement (2) ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma correcta del subjuntivo en contextos de desacuerdo.',
+        questions: [
+            {
+                verb: 'haber',
+                subject: 'No creo que',
+                answer: 'haya',
+                options: ['hay', 'haya', 'habr\u00e1', 'hubo']
+            },
+            {
+                verb: 'funcionar',
+                subject: 'No creo que la miner\u00eda',
+                answer: 'funcione',
+                options: ['funciona', 'funcione', 'funcionar\u00e1', 'funcion\u00f3']
+            },
+            {
+                verb: 'mejorar',
+                subject: 'No creo que la situaci\u00f3n',
+                answer: 'mejore',
+                options: ['mejora', 'mejore', 'mejorar\u00e1', 'mejor\u00f3']
+            },
+            {
+                verb: 'dar',
+                subject: 'No creo que eso nos',
+                answer: 'dé',
+                options: ['da', 'd\u00e9', 'dar\u00e1', 'dio']
+            }
+        ]
+    },
+    // === GAME 24: Dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n argumentativa completa.',
+        audio: 'Desde mi punto de vista, no creo que la miner\u00eda sea una buena opci\u00f3n para el Choc\u00f3, ya que destruye la biodiversidad.',
+        answer: 'Desde mi punto de vista, no creo que la miner\u00eda sea una buena opci\u00f3n para el Choc\u00f3, ya que destruye la biodiversidad.'
+    },
+    // === GAME 25: Story — Read an argument text + questions ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el texto argumentativo y responde las preguntas.',
+        title: 'El futuro del Choc\u00f3',
+        text: 'El Choc\u00f3 enfrenta una decisi\u00f3n dif\u00edcil. Por un lado, las empresas mineras prometen empleo y desarrollo econ\u00f3mico. Por otro lado, las comunidades locales temen la destrucci\u00f3n de su territorio. En mi opini\u00f3n, debemos escuchar a las comunidades porque ellas conocen la tierra mejor que nadie. Es cierto que la regi\u00f3n necesita desarrollo, pero no creo que la miner\u00eda sea la respuesta. Ya que el Choc\u00f3 tiene selvas \u00fanicas, r\u00edos de agua pura y una biodiversidad extraordinaria, estas riquezas naturales tienen m\u00e1s valor que cualquier mineral. En primer lugar, el ecoturismo puede generar empleo sostenible. En segundo lugar, la pesca responsable alimenta a las familias. Por lo tanto, en conclusi\u00f3n, creo que invertir en la naturaleza es invertir en el futuro de las comunidades chocoanas.',
+        questions: [
+            {
+                q: '\u00bfCu\u00e1les son las dos posiciones presentadas en el texto?',
+                options: ['Miner\u00eda vs. conservaci\u00f3n', 'Turismo vs. agricultura', 'Educaci\u00f3n vs. salud', 'Ciudad vs. campo'],
+                answer: 'Miner\u00eda vs. conservaci\u00f3n'
+            },
+            {
+                q: '\u00bfPor qu\u00e9 el autor cree que debemos escuchar a las comunidades?',
+                options: ['Porque tienen m\u00e1s dinero', 'Porque conocen la tierra mejor que nadie', 'Porque trabajan en la miner\u00eda', 'Porque viven en la ciudad'],
+                answer: 'Porque conocen la tierra mejor que nadie'
+            },
+            {
+                q: '\u00bfQu\u00e9 alternativas a la miner\u00eda propone el texto?',
+                options: ['Construir f\u00e1bricas y carreteras', 'Ecoturismo y pesca responsable', 'Agricultura intensiva', 'Exportar madera'],
+                answer: 'Ecoturismo y pesca responsable'
+            },
+            {
+                q: '\u00bfQu\u00e9 conector usa el autor para presentar su conclusi\u00f3n final?',
+                options: ['Sin embargo', 'Por un lado', 'En conclusi\u00f3n', 'Ya que'],
+                answer: 'En conclusi\u00f3n'
+            }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'El puente colgante',
+            description: 'Un puente colgante sobre un barranco profundo. Cada tabla tiene una palabra. Para cruzar, debes pisar las tablas correctas.',
+            ambience: 'wind-bridge'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'El viento pregunta:',
+                riddle: '\u00ab"Quiero que vengas" usa un modo especial. No dice "vienes" \u2014 dice "vengas". \u00bfPor qu\u00e9?\u00bb',
+                clue: '\u00bfCu\u00e1ndo se usa este modo especial?',
+                answer: 'Cuando expresamos deseo, duda o emoci\u00f3n sobre la acci\u00f3n de otra persona \u2014 el subjuntivo',
+                options: [
+                    'Cuando expresamos deseo, duda o emoci\u00f3n sobre la acci\u00f3n de otra persona \u2014 el subjuntivo',
+                    'Cuando hablamos del pasado',
+                    'Cuando damos \u00f3rdenes directas',
+                    'Es un error gramatical'
+                ],
+                onSolve: 'La primera tabla se asegura.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra est\u00e1n talladas en las tablas del puente.',
+                clue: 'Es el nombre del modo verbal que expresa deseos, dudas y emociones.',
+                answer: 'subjuntivo',
+                scrambled: 'vuontbsiju',
+                onSolve: 'Varias tablas se aseguran.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La \u00faltima tabla tiene una cerradura.',
+                clue: 'Completa: \u00abEspero que Candelaria ___ al bosque.\u00bb (subjuntivo presente de volver)',
+                answer: 'vuelva',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'Todas las tablas se aseguran. El puente es seguro. La puerta al otro lado se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de un puente colgante entre el mundo real y el mundo de los deseos.',
+            questClue: 'El subjuntivo es el puente entre lo que es y lo que esperamos.',
+            item: 'historia-puente-colgante'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '27',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest27Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

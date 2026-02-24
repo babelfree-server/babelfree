@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Jaguar - Examen Final A2</title>
+    <link rel="canonical" href="https://babelfree.com/a2-exam">
+    <meta name="description" content="Examen Final A2 - El Viaje del Jaguar. Evalua pasado simple, comparaciones, frecuencia y futuro en espanol nivel A2.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "El Viaje del Jaguar - Examen Final A2",
+          "description": "Examen Final A2 - El Viaje del Jaguar. Assess past simple, comparisons, frequency, and future tense at CEFR A2 level.",
+          "url": "https://babelfree.com/a2-exam",
+          "educationalLevel": "A2 - Elementary",
+          "learningResourceType": "Assessment",
+          "educationalAlignment": {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalLevel",
+            "educationalFramework": "CEFR",
+            "targetName": "A2 - Elementary / Waystage",
+            "targetUrl": "https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
+          },
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "assesses": [
+            "Past simple",
+            "Comparisons",
+            "Frequency",
+            "Future tense"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "A2",
+              "item": "https://babelfree.com/a2-exam"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Exam"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --forest-dark: #0f2027;
+            --jaguar-gold: #ffd700;
+            --success-green: #00ff88;
+            --a2-blue: #3742fa;
+            --a2-purple: #8e44ad;
+            --a2-coral: #fd79a8;
+            --mastery-gold: #ffa502;
+            --epic-purple: #6c5ce7;
+            --text-light: #ffffff;
+            --text-muted: #cccccc;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --border-radius: 15px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .exam-header {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 3px solid var(--epic-purple);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .exam-header::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--jaguar-gold), var(--a2-blue), var(--epic-purple), var(--mastery-gold));
+            border-radius: var(--border-radius);
+            z-index: -1;
+            animation: borderGlow 3s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: var(--glass-bg);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            border: 2px solid var(--epic-purple);
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: rgba(108, 92, 231, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .jaguar-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--epic-purple);
+            position: relative;
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+            animation: epicBreathe 4s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        @keyframes epicBreathe {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 12px 35px rgba(108, 92, 231, 0.6); }
+        }
+
+        .exam-title {
+            font-size: 2.8rem;
+            background: linear-gradient(45deg, var(--jaguar-gold), var(--epic-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .exam-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .mastery-badge {
+            background: linear-gradient(135deg, var(--epic-purple), var(--mastery-gold));
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 10px 0;
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(108, 92, 231, 0.4);
+        }
+
+        .vocabulary-mastery-display {
+            background: rgba(108, 92, 231, 0.1);
+            border: 2px solid var(--epic-purple);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .vocab-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .vocab-level {
+            text-align: center;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .vocab-level.a1 {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid var(--success-green);
+            color: var(--success-green);
+        }
+
+        .vocab-level.a2 {
+            background: rgba(108, 92, 231, 0.2);
+            border: 2px solid var(--epic-purple);
+            color: var(--epic-purple);
+        }
+
+        .total-vocab {
+            background: linear-gradient(135deg, var(--jaguar-gold), var(--mastery-gold));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+        }
+
+        .exam-progress {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .progress-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .progress-dot.active {
+            background: var(--epic-purple);
+            transform: scale(1.5);
+            box-shadow: 0 0 20px var(--epic-purple);
+        }
+
+        .progress-dot.completed {
+            background: var(--success-green);
+            transform: scale(1.2);
+        }
+
+        .progress-line {
+            width: 40px;
+            height: 3px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .progress-line.active {
+            background: var(--epic-purple);
+        }
+
+        .exam-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 2px solid;
+            display: none;
+        }
+
+        .exam-section.active {
+            display: block;
+        }
+
+        .exam-section.vocabulary { border-color: var(--success-green); }
+        .exam-section.grammar { border-color: var(--a2-blue); }
+        .exam-section.reading { border-color: var(--a2-purple); }
+        .exam-section.writing { border-color: var(--a2-coral); }
+        .exam-section.speaking { border-color: var(--jaguar-gold); }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .exam-section.vocabulary .section-title { color: var(--success-green); }
+        .exam-section.grammar .section-title { color: var(--a2-blue); }
+        .exam-section.reading .section-title { color: var(--a2-purple); }
+        .exam-section.writing .section-title { color: var(--a2-coral); }
+        .exam-section.speaking .section-title { color: var(--jaguar-gold); }
+
+        .level-indicator {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin: 0 auto 20px;
+            width: fit-content;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .question-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            background: var(--epic-purple);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .option:hover {
+            border-color: var(--epic-purple);
+            background: rgba(108, 92, 231, 0.1);
+        }
+
+        .option.selected {
+            border-color: var(--epic-purple);
+            background: rgba(108, 92, 231, 0.2);
+        }
+
+        .option.correct {
+            border-color: var(--success-green);
+            background: rgba(0, 255, 136, 0.2);
+        }
+
+        .option.incorrect {
+            border-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.2);
+        }
+
+        .text-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--epic-purple);
+            border-radius: 10px;
+            padding: 12px 15px;
+            color: white;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .text-input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.8;
+        }
+
+        .text-input:focus {
+            border-color: var(--epic-purple);
+            box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+        }
+
+        .epic-story-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(108, 92, 231, 0.1));
+            border: 2px dashed var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .epic-header {
+            color: var(--jaguar-gold);
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .vocabulary-bank {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .bank-title {
+            color: var(--jaguar-gold);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .vocab-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .vocab-section {
+            text-align: center;
+        }
+
+        .vocab-section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .vocab-section.a1 .vocab-section-title {
+            color: var(--success-green);
+        }
+
+        .vocab-section.a2 .vocab-section-title {
+            color: var(--epic-purple);
+        }
+
+        .available-words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        .available-word {
+            padding: 4px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            user-select: none;
+            font-size: 0.8rem;
+        }
+
+        .available-word.a1 {
+            background: var(--success-green);
+            color: white;
+        }
+
+        .available-word.a2 {
+            background: var(--epic-purple);
+            color: white;
+        }
+
+        .available-word:hover {
+            transform: translateY(-2px);
+        }
+
+        .available-word.used {
+            opacity: 0.4;
+            cursor: default;
+            transform: none;
+        }
+
+        .available-word.used:hover {
+            transform: none;
+        }
+
+        .story-instructions {
+            background: rgba(108, 92, 231, 0.1);
+            border: 2px solid var(--epic-purple);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .reading-passage {
+            background: rgba(142, 68, 173, 0.1);
+            border: 2px solid var(--a2-purple);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .exam-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            min-width: 120px;
+            text-align: center;
+            background: var(--glass-bg);
+            color: white;
+            border: 2px solid var(--epic-purple);
+        }
+
+        .nav-button:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-button.primary {
+            background: linear-gradient(135deg, var(--epic-purple), var(--mastery-gold));
+            color: white;
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-button:disabled:hover {
+            transform: none;
+        }
+
+        .score-display {
+            background: rgba(108, 92, 231, 0.1);
+            border: 2px solid var(--epic-purple);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .current-score {
+            font-size: 1.5rem;
+            color: var(--epic-purple);
+            font-weight: bold;
+        }
+
+        .exam-complete {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            display: none;
+            border: 3px solid var(--success-green);
+            margin-top: 30px;
+        }
+
+        .exam-complete.show {
+            display: block;
+        }
+
+        .completion-score {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, var(--success-green), var(--jaguar-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .epic-completion-message {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .yaguara-final-message {
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.2), rgba(108, 92, 231, 0.2));
+            border: 2px solid var(--jaguar-gold);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .yaguara-final-message::before {
+            content: '🐆';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: var(--forest-dark);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 1.5rem;
+        }
+
+        .completion-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .completion-btn {
+            background: linear-gradient(135deg, var(--success-green), var(--jaguar-gold));
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 150px;
+        }
+
+        .completion-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .exam-header { padding: 20px 15px; }
+            .exam-section { padding: 20px 15px; }
+            .exam-navigation { flex-direction: column; gap: 10px; }
+            .nav-button { width: 100%; }
+            .completion-buttons { flex-direction: column; align-items: center; }
+            .completion-btn { width: 100%; max-width: 250px; }
+            .vocab-summary { justify-content: center; }
+            .vocab-sections { grid-template-columns: 1fr; }
+            .exam-title { font-size: 2rem; }
+            .section-title { font-size: 1.7rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="exam-header">
+            <a href="/a2" class="back-btn">← Volver</a>
+            <div class="jaguar-avatar"><img src="img/jaguar-hero-full.jpg" alt="Yaguara the Jaguar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <h1 class="exam-title">Examen Final A2</h1>
+            <p class="exam-subtitle">
+                La historia completa de Yaguará - Demuestra tu nivel intermedio básico
+            </p>
+            <div class="mastery-badge">🏆 Examen A2 - 5 secciones de nivel intermedio</div>
+            
+            <div class="vocabulary-mastery-display">
+                <div class="vocab-summary">
+                    <div class="vocab-level a1">A1: 70 palabras ✓</div>
+                    <div class="vocab-level a2">A2: 60 palabras ✓</div>
+                    <div class="total-vocab">Total: 130 palabras</div>
+                </div>
+            </div>
+            
+            <div class="exam-progress">
+                <div class="progress-dot active" data-step="1"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" data-step="2"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" data-step="3"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" data-step="4"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" data-step="5"></div>
+            </div>
+            
+            <div class="score-display">
+                <div class="current-score" id="currentScore">Puntos: 0/100</div>
+            </div>
+        </div>
+
+        <!-- Sección 1: Vocabulario A1+A2 -->
+        <div class="exam-section vocabulary active" id="section1">
+            <h2 class="section-title">1. Vocabulario A1 + A2</h2>
+            <div class="level-indicator">Usa las palabras que aprendiste con Yaguará</div>
+            
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">1</span>
+                    ¿Cuál palabra habla del pasado? (A2)
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">mañana</div>
+                    <div class="option" onclick="selectOption(this, true)">ayer</div>
+                    <div class="option" onclick="selectOption(this, false)">ahora</div>
+                    <div class="option" onclick="selectOption(this, false)">siempre</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">2</span>
+                    Para comparar dos cosas usas: (A2)
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">mucho</div>
+                    <div class="option" onclick="selectOption(this, true)">más</div>
+                    <div class="option" onclick="selectOption(this, false)">muy</div>
+                    <div class="option" onclick="selectOption(this, false)">también</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">3</span>
+                    "Hace calor" habla del: (A2)
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">transporte</div>
+                    <div class="option" onclick="selectOption(this, true)">clima</div>
+                    <div class="option" onclick="selectOption(this, false)">dinero</div>
+                    <div class="option" onclick="selectOption(this, false)">familia</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2: Gramática A2 -->
+        <div class="exam-section grammar" id="section2">
+            <h2 class="section-title">2. Gramática A2</h2>
+            <div class="level-indicator">Presente + pasado + futuro + comparaciones</div>
+            
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">4</span>
+                    Ayer Yaguará _____ a Medellín. (pasado)
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">va</div>
+                    <div class="option" onclick="selectOption(this, true)">fue</div>
+                    <div class="option" onclick="selectOption(this, false)">irá</div>
+                    <div class="option" onclick="selectOption(this, false)">yendo</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">5</span>
+                    Mañana _____ a viajar. (futuro próximo)
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">fui</div>
+                    <div class="option" onclick="selectOption(this, false)">estoy</div>
+                    <div class="option" onclick="selectOption(this, true)">voy</div>
+                    <div class="option" onclick="selectOption(this, false)">era</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">6</span>
+                    Medellín es _____ grande _____ Cali. (comparación)
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">muy / y</div>
+                    <div class="option" onclick="selectOption(this, true)">más / que</div>
+                    <div class="option" onclick="selectOption(this, false)">mucho / con</div>
+                    <div class="option" onclick="selectOption(this, false)">poco / de</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Lectura -->
+        <div class="exam-section reading" id="section3">
+            <h2 class="section-title">3. Lectura</h2>
+            <div class="level-indicator">Comprende el viaje de Yaguará</div>
+            
+            <div class="reading-passage">
+                <strong>El viaje de Yaguará:</strong><br><br>
+                Hola, soy Yaguará. Ayer fui de Cali a Medellín en bus. El viaje fue largo pero bonito. 
+                Creo que Medellín es más grande que Cali, pero Cali hace más calor.
+                <br><br>
+                Mañana voy a conocer el centro de la ciudad. Quiero comprar algo en las tiendas 
+                porque aquí todo es más barato que en Bogotá. Me gusta mucho viajar por Colombia.
+                <br><br>
+                Siempre como comida típica cuando viajo. A veces es cara, pero es muy rica. 
+                Nunca tengo problemas porque la gente es muy amable.
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">7</span>
+                    ¿Cómo viajó Yaguará de Cali a Medellín?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">En avión</div>
+                    <div class="option" onclick="selectOption(this, true)">En bus</div>
+                    <div class="option" onclick="selectOption(this, false)">En carro</div>
+                    <div class="option" onclick="selectOption(this, false)">Caminando</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">8</span>
+                    Según Yaguará, ¿dónde hace más calor?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">En Medellín</div>
+                    <div class="option" onclick="selectOption(this, true)">En Cali</div>
+                    <div class="option" onclick="selectOption(this, false)">En Bogotá</div>
+                    <div class="option" onclick="selectOption(this, false)">No dice</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">9</span>
+                    ¿Qué va a hacer mañana?
+                </div>
+                <div class="options-container">
+                    <div class="option" onclick="selectOption(this, false)">Viajar a Cali</div>
+                    <div class="option" onclick="selectOption(this, true)">Conocer el centro</div>
+                    <div class="option" onclick="selectOption(this, false)">Comer en casa</div>
+                    <div class="option" onclick="selectOption(this, false)">Dormir todo el día</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 4: Historia de Yaguará -->
+        <div class="exam-section writing" id="section4">
+            <h2 class="section-title">4. La historia de Yaguará</h2>
+            <div class="level-indicator">Usa tus 130 palabras (A1 + A2) para contar la historia</div>
+            
+            <div class="epic-story-section">
+                <div class="epic-header">📖 Escribe la historia completa de Yaguará</div>
+                
+                <div class="vocabulary-bank">
+                    <div class="bank-title">🎒 Tus palabras aprendidas (A1 + A2)</div>
+                    <div class="vocab-sections">
+                        <div class="vocab-section a1">
+                            <div class="vocab-section-title">A1 - Básico (70 palabras)</div>
+                            <div class="available-words">
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">hola</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">soy</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">familia</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">me gusta</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">azul</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">grande</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">casa</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">comer</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">números</span>
+                                <span class="available-word a1" onclick="useWordInEpicStory(this)">colores</span>
+                            </div>
+                        </div>
+                        
+                        <div class="vocab-section a2">
+                            <div class="vocab-section-title">A2 - Intermedio (60 palabras)</div>
+                            <div class="available-words">
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">ayer</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">mañana</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">fui</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">voy a</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">más</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">menos</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">creo que</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">hace calor</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">a la derecha</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">es caro</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">Bogotá</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">Cali</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">Medellín</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">viaje</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">siempre</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">a veces</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">nunca</span>
+                                <span class="available-word a2" onclick="useWordInEpicStory(this)">Colombia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-instructions">
+                    <strong>Instrucciones para la historia:</strong><br>
+                    Escribe la historia de Yaguará usando vocabulario de A1 y A2. 
+                    Tu historia debe incluir: dónde vive (A1), qué hizo ayer (A2 pasado), 
+                    qué va a hacer mañana (A2 futuro), y comparaciones entre ciudades (A2). 
+                    Usa palabras de clima, direcciones y compras también.
+                </div>
+                
+                <textarea class="text-input" id="epicStory" placeholder="Escribe aquí la historia de Yaguará... (Mínimo 100 palabras, usando A1 + A2)"></textarea>
+            </div>
+        </div>
+
+        <!-- Sección 5: Expresión oral -->
+        <div class="exam-section speaking" id="section5">
+            <h2 class="section-title">5. Hablar sobre el viaje</h2>
+            <div class="level-indicator">Demuestra que puedes hablar sobre viajes</div>
+            
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">10</span>
+                    🎤 Tema: "Cuenta un viaje que hiciste el año pasado"
+                    <br><br>
+                    <em>Usa: pasado simple, comparaciones, opiniones, clima</em>
+                </div>
+                <textarea class="text-input" placeholder="Escribe tu respuesta aquí... Usa gramática A2: ayer fui, era más bonito, creo que            <div class="question-text">
+                    <span class="question-number">11</span>
+                    🎤 Pregunta: "¿Qué planes tienes para el próximo fin de semana?"
+                    <br><br>
+                    <em>Usa: futuro próximo (voy a), quiero, prefiero</em>
+                </div>
+                <textarea class="text-input" placeholder="Responde usando A2: voy a..., quiero..., creo que..."></textarea>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text">
+                    <span class="question-number">12</span>
+                    🎤 Comparación: "Compara tu ciudad con otra ciudad que conoces"
+                    <br><br>
+                    <em>Usa: más/menos que, mejor/peor, me gusta más</em>
+                </div>
+                <textarea class="text-input" placeholder="Compara usando A2: mi ciudad es más..., hace menos calor que..., prefiero..."></textarea>
+            </div>
+        </div>
+
+        <div class="exam-navigation">
+            <button class="nav-button" onclick="previousSection()" id="prevBtn" disabled>← Anterior</button>
+            <button class="nav-button primary" onclick="nextSection()" id="nextBtn">Siguiente →</button>
+            <button class="nav-button" onclick="finishExam()" id="finishBtn" style="display:none">🏆 Terminar examen</button>
+        </div>
+
+        <div class="exam-complete" id="examComplete">
+            <h2 style="color: var(--success-green); font-size: 2.5rem; margin-bottom: 20px;">¡Examen A2 Completado!</h2>
+            <div class="completion-score" id="finalScore">85/100</div>
+            
+            <div class="epic-completion-message">
+                <strong>¡Felicitaciones! Has completado el nivel A2 intermedio básico.</strong><br>
+                Ahora puedes hablar sobre el pasado y el futuro, hacer comparaciones,
+                dar opiniones simples y comunicarte en situaciones cotidianas.
+            </div>
+            
+            <div class="yaguara-final-message">
+                <div style="margin-top: 15px; font-style: italic; color: var(--text-light); line-height: 1.6;">
+                    "¡Increíble! Hemos viajado juntos por Colombia, desde Bogotá hasta Medellín. 
+                    Ayer no sabías mucho español, pero ahora puedes contar historias del pasado 
+                    y hacer planes para el futuro. Creo que eres un estudiante excelente. 
+                    ¡Nos vemos en el nivel B1! 🐆❤️"
+                </div>
+            </div>
+
+            <div class="completion-buttons">
+                <button class="completion-btn" onclick="downloadCertificate()">📜 Descargar certificado A2</button>
+                <button class="completion-btn" onclick="continueToB1()">🚀 Continuar a B1</button>
+                <button class="completion-btn" onclick="reviewStory()">📚 Ver historia completa</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Use immediately invoked function expression to avoid global conflicts
+        (function() {
+            'use strict';
+            
+            // Exam state object to avoid variable conflicts
+            var examData = {
+                section: 1,
+                points: 0,
+                totalQuestions: 12
+            };
+
+            // Function to select an option
+            function handleOptionSelect(option, isCorrect) {
+                var container = option.parentElement;
+                var options = container.querySelectorAll('.option');
+                
+                // Clear previous selections
+                for (var i = 0; i < options.length; i++) {
+                    options[i].classList.remove('selected', 'correct', 'incorrect');
+                }
+                
+                option.classList.add('selected');
+                
+                setTimeout(function() {
+                    if (isCorrect) {
+                        option.classList.add('correct');
+                        examData.points += Math.floor(100 / examData.totalQuestions);
+                    } else {
+                        option.classList.add('incorrect');
+                        // Show correct answer
+                        for (var j = 0; j < options.length; j++) {
+                            var onclickAttr = options[j].getAttribute('onclick') || '';
+                            if (onclickAttr.indexOf('true') !== -1) {
+                                options[j].classList.add('correct');
+                            }
+                        }
+                    }
+                    updateScoreDisplay();
+                }, 500);
+            }
+
+            // Function to use word in story
+            function handleWordSelection(wordElement) {
+                if (wordElement.classList.contains('used')) return;
+                
+                var storyTextarea = document.getElementById('epicStory');
+                if (!storyTextarea) return;
+                
+                var currentText = storyTextarea.value;
+                var word = wordElement.textContent;
+                
+                if (currentText) {
+                    storyTextarea.value = currentText + ' ' + word;
+                } else {
+                    storyTextarea.value = word;
+                }
+                
+                wordElement.classList.add('used');
+                storyTextarea.focus();
+                storyTextarea.setSelectionRange(storyTextarea.value.length, storyTextarea.value.length);
+            }
+
+            // Update score display
+            function updateScoreDisplay() {
+                var scoreElement = document.getElementById('currentScore');
+                if (scoreElement) {
+                    scoreElement.textContent = 'Puntos: ' + examData.points + '/100';
+                }
+            }
+
+            // Navigate to next section
+            function goToNextSection() {
+                if (examData.section < 5) {
+                    document.getElementById('section' + examData.section).classList.remove('active');
+                    examData.section++;
+                    document.getElementById('section' + examData.section).classList.add('active');
+                    
+                    updateProgressDots();
+                    updateNavigationButtons();
+                }
+            }
+
+            // Navigate to previous section
+            function goToPreviousSection() {
+                if (examData.section > 1) {
+                    document.getElementById('section' + examData.section).classList.remove('active');
+                    examData.section--;
+                    document.getElementById('section' + examData.section).classList.add('active');
+                    
+                    updateProgressDots();
+                    updateNavigationButtons();
+                }
+            }
+
+            // Update progress indicators
+            function updateProgressDots() {
+                var dots = document.querySelectorAll('.progress-dot');
+                for (var i = 0; i < dots.length; i++) {
+                    var dotIndex = i + 1;
+                    if (dotIndex < examData.section) {
+                        dots[i].classList.add('completed');
+                        dots[i].classList.remove('active');
+                    } else if (dotIndex === examData.section) {
+                        dots[i].classList.add('active');
+                        dots[i].classList.remove('completed');
+                    } else {
+                        dots[i].classList.remove('active', 'completed');
+                    }
+                }
+            }
+
+            // Update navigation buttons
+            function updateNavigationButtons() {
+                var prevBtn = document.getElementById('prevBtn');
+                var nextBtn = document.getElementById('nextBtn');
+                var finishBtn = document.getElementById('finishBtn');
+                
+                if (prevBtn) prevBtn.disabled = examData.section === 1;
+                
+                if (examData.section === 5) {
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    if (finishBtn) finishBtn.style.display = 'inline-block';
+                } else {
+                    if (nextBtn) nextBtn.style.display = 'inline-block';
+                    if (finishBtn) finishBtn.style.display = 'none';
+                }
+            }
+
+            // Finish the exam
+            function completeExam() {
+                var sections = document.querySelectorAll('.exam-section');
+                for (var i = 0; i < sections.length; i++) {
+                    sections[i].style.display = 'none';
+                }
+                
+                var navigation = document.querySelector('.exam-navigation');
+                if (navigation) navigation.style.display = 'none';
+                
+                var finalScore = document.getElementById('finalScore');
+                if (finalScore) finalScore.textContent = examData.points + '/100';
+                
+                var examComplete = document.getElementById('examComplete');
+                if (examComplete) examComplete.classList.add('show');
+                
+                var dots = document.querySelectorAll('.progress-dot');
+                for (var j = 0; j < dots.length; j++) {
+                    dots[j].classList.add('completed');
+                    dots[j].classList.remove('active');
+                }
+            }
+
+            // Certificate download
+            function downloadCert() {
+                alert('🎓 ¡Certificado A2 generado!\n\nFelicitaciones por completar el nivel A2 intermedio básico con Yaguará.\nAhora dominas gramática intermedia del español.');
+            }
+
+            // Continue to B1
+            function goToB1() {
+                alert('🚀 ¡Aventura B1 próximamente!\n\nYaguará te espera para nuevas aventuras en el nivel B1 intermedio.\n¡La historia continúa!');
+            }
+
+            // Review story
+            function showStory() {
+                var storyTextarea = document.getElementById('epicStory');
+                if (storyTextarea) {
+                    var storyText = storyTextarea.value;
+                    if (storyText.length > 50) {
+                        alert('📚 Tu historia de Yaguará:\n\n"' + storyText + '"\n\n¡Excelente uso de A1 + A2!');
+                    } else {
+                        alert('📚 Completa la historia en la sección de escritura para ver tu creación final.');
+                    }
+                }
+            }
+
+            // Make functions globally available
+            window.selectOption = handleOptionSelect;
+            window.useWordInEpicStory = handleWordSelection;
+            window.nextSection = goToNextSection;
+            window.previousSection = goToPreviousSection;
+            window.finishExam = completeExam;
+            window.downloadCertificate = downloadCert;
+            window.continueToB1 = goToB1;
+            window.reviewStory = showStory;
+
+            // Initialize when DOM is ready
+            document.addEventListener('DOMContentLoaded', function() {
+                updateScoreDisplay();
+                updateNavigationButtons();
+                console.log('A2 Final Exam loaded successfully');
+            });
+
+        })();
+    </script>
+</body>
+</html>

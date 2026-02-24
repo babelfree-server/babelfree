@@ -5,6 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A1 - El Despertar del Jaguar</title>
     <meta name="description" content="Level A1: El Despertar - Journey through the Amazon rainforest with Yaguará">
+    <link rel="canonical" href="https://babelfree.com/a1-amazon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "A1 - El Despertar del Jaguar",
+          "description": "A1 Beginner Spanish course module set in the Colombian Amazon rainforest. Learn present tense ser, estar, and tener, family vocabulary, animal names, basic needs, simple descriptions, and first interactions through immersive gameplay with Yaguara the jaguar. Destinations 1-6 of El Viaje del Jaguar.",
+          "url": "https://babelfree.com/a1-amazon",
+          "educationalLevel": "A1 Basic — Beginner",
+          "learningResourceType": "Interactive Course Module",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": [
+            "Present tense ser/estar/tener",
+            "Family vocabulary",
+            "Animal names",
+            "Basic needs expressions",
+            "Simple descriptions",
+            "First interactions in Spanish"
+          ]
+        },
+        {
+          "@type": "Place",
+          "name": "Selva Amazonica",
+          "description": "The Colombian Amazon rainforest, one of the most biodiverse regions on Earth. Home to jaguars, river dolphins, and thousands of species in a vast tropical ecosystem spanning southern Colombia.",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -1.0,
+            "longitude": -70.0
+          },
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Colombia"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "A1",
+              "item": "https://babelfree.com/a1-amazon"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Amazon"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -164,35 +238,54 @@
         }
 
         .jaguar-hero {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
+            background: radial-gradient(circle at 40% 35%, #f9ca24 0%, #e8a820 40%, #c8860a 80%, #8B6914 100%);
             margin: 0 auto 25px;
             border: 5px solid var(--jaguar-gold);
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: breathe 6s ease-in-out infinite;
+            animation: breathe 4s ease-in-out infinite;
             cursor: pointer;
-            box-shadow: 0 12px 40px rgba(249, 202, 36, 0.5);
+            box-shadow: 0 0 30px rgba(249, 202, 36, 0.6), 0 0 60px rgba(249, 202, 36, 0.3), 0 12px 40px rgba(0, 0, 0, 0.5);
             position: relative;
             overflow: hidden;
         }
 
+        .jaguar-hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent 0%, rgba(249,202,36,0.15) 25%, transparent 50%, rgba(255,107,53,0.1) 75%, transparent 100%);
+            animation: heroGlow 8s linear infinite;
+        }
+
+        @keyframes heroGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         .jaguar-hero svg {
-            width: 85%;
-            height: 85%;
+            width: 95%;
+            height: 95%;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
         }
 
         .jaguar-hero:hover {
-            transform: scale(1.05);
-            box-shadow: 0 16px 50px rgba(249, 202, 36, 0.7);
+            transform: scale(1.12);
+            box-shadow: 0 0 40px rgba(249, 202, 36, 0.8), 0 0 80px rgba(249, 202, 36, 0.4), 0 16px 50px rgba(0, 0, 0, 0.5);
         }
 
         @keyframes breathe {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
+            50% { transform: scale(1.06); }
         }
 
         .title {
@@ -319,12 +412,12 @@
         .yaguara-avatar {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 3px solid var(--jaguar-gold);
+            overflow: hidden;
             animation: breathe 4s ease-in-out infinite;
             cursor: pointer;
             flex-shrink: 0;
@@ -437,6 +530,20 @@
 
         .module-status {
             font-size: 2rem;
+        }
+
+        .module-icon {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: var(--jaguar-gold);
+        }
+        .module-icon svg {
+            width: 48px;
+            height: 48px;
+        }
+        .module-card.locked .module-icon {
+            opacity: 0.4;
         }
 
         .module-title {
@@ -603,8 +710,8 @@
             }
 
             .jaguar-hero {
-                width: 120px;
-                height: 120px;
+                width: 160px;
+                height: 160px;
             }
 
             .back-btn, .level-indicator {
@@ -634,6 +741,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="luxury.css">
 </head>
 <body>
     <!-- Amazon Floating Elements -->
@@ -641,7 +749,7 @@
 
     <div class="container">
         <div class="header">
-            <a href="dashboard.html" class="back-btn">&larr; Volver</a>
+            <a href="/a1" class="back-btn">&larr; Volver</a>
             <div class="level-indicator">A1 B&Aacute;SICO</div>
         </div>
 
@@ -649,27 +757,7 @@
         <div class="hero-section">
             <div class="hero-content">
                 <div class="jaguar-hero" onclick="speakYaguara()">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
-                        <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-                        <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                        <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                        <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                        <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                        <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-                        <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
-                        <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
-                        <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                        <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                        <circle cx="40" cy="34" r="1" fill="#fff"/>
-                        <circle cx="64" cy="34" r="1" fill="#fff"/>
-                        <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
-                        <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
-                        <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-                        <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                        <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                        <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                        <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                    </svg>
+                    <img src="img/jaguar-hero-full.jpg" alt="Yaguara the Jaguar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                 </div>
                 <h1 class="title">El Despertar del Jaguar</h1>
                 <p class="subtitle">A1 b&aacute;sico - Espa&ntilde;ol con Yaguar&aacute;</p>
@@ -714,21 +802,7 @@
         <!-- YAGUARÁ GUIDE -->
         <div class="yaguara-guide">
             <div class="yaguara-avatar" onclick="speakYaguara()">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-                    <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
-                    <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
-                    <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                    <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                    <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
-                    <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
-                    <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-                </svg>
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
             </div>
             <div class="yaguara-text">
                 <div class="guide-title">Yaguar&aacute;:</div>
@@ -748,6 +822,7 @@
                     <span class="module-number">M&oacute;dulo 1</span>
                     <span class="module-status">&#10004;</span>
                 </div>
+                <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="2.5"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><path d="M17 11.5a3 3 0 013 3V21"/></svg></div>
                 <h3 class="module-title">Mi Familia</h3>
                 <p class="module-theme">Tema: Familia</p>
                 <p class="module-desc">Yaguar&aacute; + familia. Palabras: madre, padre.</p>
@@ -783,6 +858,7 @@
                     <span class="module-number">M&oacute;dulo 2</span>
                     <span class="module-status">&#127919;</span>
                 </div>
+                <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a6 6 0 006 6v0a6 6 0 006-6"/><path d="M12 16v0a4 4 0 01-4-4V8a4 4 0 018 0v4a4 4 0 01-4 4z"/><path d="M17 10a8 8 0 01.5 2"/><path d="M19 8a10 10 0 01.7 4"/></svg></div>
                 <h3 class="module-title">Escuchar</h3>
                 <p class="module-theme">Tema: Sonidos</p>
                 <p class="module-desc">Yaguar&aacute; escucha. Palabras: mono, p&aacute;jaro.</p>
@@ -818,6 +894,7 @@
                     <span class="module-number">M&oacute;dulo 3</span>
                     <span class="module-status">&#128274;</span>
                 </div>
+                <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 5 10 5 14.5A7 7 0 0019 14.5C19 10 12 2 12 2z"/></svg></div>
                 <h3 class="module-title">Agua</h3>
                 <p class="module-theme">Tema: Beber</p>
                 <p class="module-desc">Yaguar&aacute; bebe agua. Palabras: agua, r&iacute;o.</p>
@@ -853,6 +930,7 @@
                     <span class="module-number">M&oacute;dulo 4</span>
                     <span class="module-status">&#128274;</span>
                 </div>
+                <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 10v9a1 1 0 001 1h12a1 1 0 001-1v-9"/><rect x="9" y="14" width="6" height="6" rx="0.5"/></svg></div>
                 <h3 class="module-title">Casa</h3>
                 <p class="module-theme">Tema: Dormir</p>
                 <p class="module-desc">Yaguar&aacute; duerme. Palabras: casa, cueva.</p>
@@ -888,6 +966,7 @@
                     <span class="module-number">M&oacute;dulo 5</span>
                     <span class="module-status">&#128274;</span>
                 </div>
+                <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M12 7V3"/><path d="M15 5c0 0-1.5 2-3 2S9 5 9 5"/></svg></div>
                 <h3 class="module-title">Comida</h3>
                 <p class="module-theme">Tema: Comer</p>
                 <p class="module-desc">Yaguar&aacute; come. Palabras: comida, hambre.</p>
@@ -923,6 +1002,7 @@
                     <span class="module-number">M&oacute;dulo 6</span>
                     <span class="module-status">&#128274;</span>
                 </div>
+                <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12h10"/><path d="M7 12c-2 0-4-1.5-4-3.5S5 5 7 5s3 1.5 3 3.5"/><path d="M17 12c2 0 4-1.5 4-3.5S19 5 17 5s-3 1.5-3 3.5"/><path d="M7 12c-2 0-4 1.5-4 3.5S5 19 7 19s3-1.5 3-3.5"/><path d="M17 12c2 0 4 1.5 4 3.5S19 19 17 19s-3-1.5-3-3.5"/></svg></div>
                 <h3 class="module-title">Amigos</h3>
                 <p class="module-theme">Tema: Hablar</p>
                 <p class="module-desc">Yaguar&aacute; habla. Palabras: amigo, ayudar.</p>
@@ -1017,32 +1097,33 @@
             const moduleRoutes = {
                 1: {
                     title: "Mi Familia",
-                    url: "a1_basic/module1_family/lesson1_meet_family.html",
+                    url: "a1_basic/module1_family/games.html",
                     available: true
                 },
                 2: {
                     title: "Sonidos de la Selva",
-                    url: "a1_basic/module2_animals/lesson1_jungle_sounds.html",
+                    url: "a1_basic/module2_animals/games.html",
                     available: true
                 },
                 3: {
                     title: "Agua",
-                    url: "a1_basic/module3_water/lesson1_finding_water.html",
+                    url: "a1_basic/module3_water/games.html",
                     available: true
                 },
                 4: {
                     title: "Mi Casa",
-                    url: "a1_basic/module4_home/lesson1_finding_home.html",
+                    url: "a1_basic/module4_home/games.html",
                     available: true
                 },
                 5: {
                     title: "Comida",
-                    url: "a1_basic/module5_food/lesson1_hungry_jaguar.html",
+                    url: "a1_basic/module5_food/games.html",
                     available: true
                 },
                 6: {
                     title: "Amigos",
-                    available: false
+                    url: "a1_basic/module6_friends/games.html",
+                    available: true
                 }
             };
 

@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Jaguar — Illustrator Brief</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --bark: #3E2723;
+            --bark-light: #5D4037;
+            --gold: #C9A54E;
+            --gold-bright: #E8C547;
+            --cream: #FDF6E3;
+            --cream-dark: #F5ECD7;
+            --forest: #2D5016;
+            --forest-deep: #1A3A0A;
+            --river: #1B4D6E;
+            --earth: #5C3317;
+            --night: #2C1654;
+            --terracotta: #B7562A;
+            --ochre: #C49A3C;
+            --mountain: #5F7A8A;
+            --turquoise: #1AA5A5;
+            --indigo: #1A1A4E;
+            --amber: #E8A824;
+            --silver: #C0C0D0;
+            --cosmic: #0D0D1A;
+            --text: #2C1B0E;
+            --text-light: #6B5843;
+            --border: #D4C5A9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* --- HERO HEADER --- */
+        .hero {
+            background: linear-gradient(135deg, var(--bark) 0%, var(--forest-deep) 40%, var(--night) 100%);
+            color: var(--cream);
+            padding: 80px 40px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(201,165,78,0.15) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 80%, rgba(43,80,22,0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .hero .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .hero .meta {
+            font-size: 0.85rem;
+            color: rgba(253,246,227,0.6);
+            position: relative;
+        }
+
+        .hero .divider {
+            width: 80px;
+            height: 2px;
+            background: var(--gold);
+            margin: 25px auto;
+            position: relative;
+        }
+
+        /* --- NAVIGATION --- */
+        .toc {
+            background: var(--cream-dark);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .toc-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            justify-content: center;
+        }
+
+        .toc a {
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--bark-light);
+            text-decoration: none;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        /* --- MAIN CONTENT --- */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: 50px 0 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--bark);
+            margin-bottom: 6px;
+        }
+
+        h2 .section-number {
+            color: var(--gold);
+            font-weight: 400;
+            margin-right: 8px;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--bark-light);
+            margin: 30px 0 12px;
+        }
+
+        h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--bark);
+            margin: 20px 0 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--bark);
+        }
+
+        em {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* --- STORY INTRO BOX --- */
+        .story-box {
+            background: linear-gradient(135deg, var(--bark) 0%, var(--forest-deep) 100%);
+            color: var(--cream);
+            border-radius: 12px;
+            padding: 35px 30px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-box::after {
+            content: '';
+            position: absolute;
+            top: -30px; right: -30px;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, rgba(201,165,78,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .story-box p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .story-box .quote {
+            font-style: italic;
+            color: var(--gold);
+            display: block;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* --- VISUAL KEYWORDS --- */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .keyword {
+            background: var(--cream-dark);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--bark-light);
+        }
+
+        .keyword.do-not {
+            background: #FFF0F0;
+            border-color: #E8C0C0;
+            color: #8B3A3A;
+        }
+
+        /* --- COLOR PALETTES --- */
+        .palette-group {
+            margin: 25px 0;
+        }
+
+        .palette-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--bark);
+            margin-bottom: 4px;
+        }
+
+        .palette-desc {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .swatches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .swatch-color {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            border: 2px solid rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .swatch-label {
+            font-size: 0.68rem;
+            font-family: 'Inter', monospace;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* --- CHARACTER CARDS --- */
+        .character-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 18px 0;
+            position: relative;
+        }
+
+        .character-card.protagonist {
+            border-left: 4px solid var(--gold);
+            background: linear-gradient(135deg, white 0%, #FFF9ED 100%);
+        }
+
+        .character-card.family {
+            border-left: 4px solid var(--forest);
+        }
+
+        .character-card.ally {
+            border-left: 4px solid var(--turquoise);
+        }
+
+        .character-card.force {
+            border-left: 4px solid #888;
+        }
+
+        .character-card.dream {
+            border-left: 4px solid var(--indigo);
+        }
+
+        .character-card.human {
+            border-left: 4px solid var(--terracotta);
+            background: linear-gradient(135deg, white 0%, #FFF5EE 100%);
+        }
+
+        .character-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--bark);
+        }
+
+        .character-role {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .character-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .character-card li {
+            padding: 4px 0 4px 18px;
+            position: relative;
+            font-size: 0.92rem;
+        }
+
+        .character-card li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .deliverable-tag {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-top: 12px;
+        }
+
+        /* --- ENVIRONMENT CARDS --- */
+        .env-card {
+            border-radius: 12px;
+            padding: 25px;
+            margin: 18px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .env-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+        }
+
+        .env-card * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .env-selva { background: linear-gradient(135deg, #1A3A0A, #2D5016, #1B4D6E); }
+        .env-andes { background: linear-gradient(135deg, #5F7A8A, #8B6914, #5C3317); }
+        .env-llanos { background: linear-gradient(135deg, #C49A3C, #D4A843, #B7562A); }
+        .env-costa { background: linear-gradient(135deg, #1AA5A5, #1B4D6E, #2C1654); }
+        .env-cosmic { background: linear-gradient(135deg, #1A1A4E, #0D0D1A, #2C1654); }
+
+        .env-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .env-card .env-tags {
+            font-size: 0.82rem;
+            opacity: 0.8;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .env-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .env-card li {
+            padding: 3px 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- SPEC TABLES --- */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .spec-table thead {
+            background: var(--bark);
+            color: var(--cream);
+        }
+
+        .spec-table th {
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .spec-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .spec-table tr:nth-child(even) {
+            background: rgba(0,0,0,0.02);
+        }
+
+        .spec-table code {
+            background: var(--cream-dark);
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            color: var(--bark);
+        }
+
+        /* --- CODE / NAMING --- */
+        .code-block {
+            background: var(--cosmic);
+            color: #E8E0D0;
+            border-radius: 8px;
+            padding: 18px 22px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .code-block .comment {
+            color: #6B7B6B;
+        }
+
+        .code-block .highlight {
+            color: var(--gold);
+        }
+
+        /* --- TIMELINE --- */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 25px 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--cream);
+            border: 3px solid var(--gold);
+        }
+
+        .timeline-item.priority-1::before { border-color: var(--gold); background: var(--gold); }
+        .timeline-item.priority-2::before { border-color: var(--forest); }
+        .timeline-item.priority-3::before { border-color: var(--turquoise); }
+
+        .timeline-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--bark);
+            font-size: 0.95rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* --- REFERENCE GRID --- */
+        .ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .ref-do, .ref-dont {
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .ref-do {
+            background: #F0F7EC;
+            border: 1px solid #C0D8B0;
+        }
+
+        .ref-dont {
+            background: #FFF0F0;
+            border: 1px solid #E8C0C0;
+        }
+
+        .ref-do h4, .ref-dont h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .ref-do h4 { color: #3A6B2A; }
+        .ref-dont h4 { color: #8B3A3A; }
+
+        .ref-do ul, .ref-dont ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ref-do li, .ref-dont li {
+            padding: 4px 0;
+            font-size: 0.88rem;
+        }
+
+        /* --- RIGHTS BOX --- */
+        .rights-box {
+            background: #FFF9ED;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .rights-box h3 {
+            color: var(--bark);
+            margin-top: 0;
+        }
+
+        .rights-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rights-box li {
+            padding: 5px 0 5px 22px;
+            position: relative;
+            font-size: 0.92rem;
+        }
+
+        .rights-box li::before {
+            content: '!';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        /* --- HERO JOURNEY MAP --- */
+        .journey-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .journey-act {
+            border-radius: 12px;
+            padding: 22px;
+            color: white;
+        }
+
+        .journey-act.act-1 {
+            background: linear-gradient(180deg, var(--forest-deep), var(--night));
+        }
+        .journey-act.act-2 {
+            background: linear-gradient(180deg, var(--terracotta), var(--earth));
+        }
+        .journey-act.act-3 {
+            background: linear-gradient(180deg, var(--indigo), var(--cosmic));
+        }
+
+        .journey-act h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin: 0 0 3px;
+        }
+
+        .journey-act .act-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .journey-act p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .journey-act .campbell {
+            font-style: italic;
+            font-size: 0.78rem;
+            opacity: 0.6;
+            margin-top: 10px;
+        }
+
+        /* --- SIZE SPEC CARDS --- */
+        .size-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .size-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .size-card .dim {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--bark);
+        }
+
+        .size-card .purpose {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 3px;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+            font-size: 0.82rem;
+        }
+
+        .footer .project {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--bark);
+            margin-bottom: 5px;
+        }
+
+        /* --- PRINT --- */
+        @media print {
+            .toc { display: none; }
+            .hero { padding: 40px 20px 30px; }
+            section { page-break-inside: avoid; }
+            .character-card, .env-card { page-break-inside: avoid; }
+            body { font-size: 11pt; }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero { padding: 50px 20px 40px; }
+            .content { padding: 0 20px; }
+            .journey-map { grid-template-columns: 1fr; }
+            .ref-grid { grid-template-columns: 1fr; }
+            .toc-inner { justify-content: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================== HERO ============================== -->
+<header class="hero">
+    <h1>El Viaje del Jaguar</h1>
+    <div class="subtitle">Illustrator Creative Brief</div>
+    <div class="divider"></div>
+    <div class="meta">Confidential &mdash; Project Documentation &mdash; February 2026</div>
+</header>
+
+<!-- ============================== TOC ============================== -->
+<nav class="toc">
+    <div class="toc-inner">
+        <a href="#project">The Project</a>
+        <a href="#story">The Story</a>
+        <a href="#characters">Characters</a>
+        <a href="#environments">Environments</a>
+        <a href="#palettes">Color Palettes</a>
+        <a href="#specs">Technical Specs</a>
+        <a href="#ui">UI Elements</a>
+        <a href="#references">Style References</a>
+        <a href="#schedule">Delivery Schedule</a>
+        <a href="#rights">Rights &amp; Usage</a>
+    </div>
+</nav>
+
+<div class="content">
+
+<!-- ============================== 1. THE PROJECT ============================== -->
+<section id="project">
+    <h2><span class="section-number">01</span> The Project</h2>
+    <div class="section-subtitle">What you are illustrating and why it matters</div>
+
+    <div class="story-box">
+        <p>
+            <strong>El Viaje del Jaguar</strong> is an interactive language-learning game set in the ecosystems of Colombia. A young female jaguar-spirit named Yaguará travels through rainforest, Andes, llanos, and Caribbean coast, meeting allies and facing forces of forgetting that are erasing the world's names.
+        </p>
+        <p>
+            The visual world draws from <strong>Colombian indigenous art, textile patterns, and natural landscapes</strong>. It is NOT Disney, manga, or generic fantasy. These are spirits, not cartoon animals. This world is alive, warm, and ancient.
+        </p>
+        <span class="quote">"No todas las palabras se dicen. Algunas se cuidan."</span>
+    </div>
+
+    <h3>Visual Identity Keywords</h3>
+    <div class="keywords">
+        <span class="keyword">Warm, earthy, alive</span>
+        <span class="keyword">Textile-inspired</span>
+        <span class="keyword">Organic shapes</span>
+        <span class="keyword">Circles &amp; spirals</span>
+        <span class="keyword">Illustrated, not photorealistic</span>
+        <span class="keyword">Golden-hour light</span>
+        <span class="keyword">Mola patterns (Kuna)</span>
+        <span class="keyword">Wayúu woven textures</span>
+        <span class="keyword">Pre-Columbian gold motifs</span>
+    </div>
+
+    <h3>What this is NOT</h3>
+    <div class="keywords">
+        <span class="keyword do-not">No Disney/Pixar style</span>
+        <span class="keyword do-not">No anime/manga</span>
+        <span class="keyword do-not">No generic fantasy</span>
+        <span class="keyword do-not">No photorealistic 3D</span>
+        <span class="keyword do-not">No clip art or flat corporate</span>
+        <span class="keyword do-not">No AI-generated aesthetic</span>
+        <span class="keyword do-not">No hard geometric edges</span>
+        <span class="keyword do-not">No harsh/fluorescent light</span>
+    </div>
+</section>
+
+<!-- ============================== 2. THE STORY ============================== -->
+<section id="story">
+    <h2><span class="section-number">02</span> The Story</h2>
+    <div class="section-subtitle">The narrative arc that shapes every illustration</div>
+
+    <p>The game follows <strong>Joseph Campbell's Hero's Journey</strong> mapped across three worlds and six language levels. The story's central conflict: <em>the world is losing its names, and things that are not named disappear.</em> Yaguará must travel through Colombia to recover them. The student speaks them back into existence through gameplay.</p>
+
+    <div class="journey-map">
+        <div class="journey-act act-1">
+            <div class="act-label">Act I &mdash; A1&ndash;A2</div>
+            <h4>El Mundo de Abajo</h4>
+            <p><strong>"Nombrar el mundo"</strong><br>Roots, water, night, beginnings. Yaguará's family, her river, the sounds of the forest. Something goes silent. One sound disappears. Then another. The river says: things that are not named, disappear.</p>
+            <div class="campbell">Ordinary World &rarr; Call to Adventure &rarr; Refusal &rarr; Meeting the Mentor</div>
+        </div>
+        <div class="journey-act act-2">
+            <div class="act-label">Act II &mdash; B1&ndash;B2</div>
+            <h4>El Mundo del Medio</h4>
+            <p><strong>"Contar lo vivido"</strong><br>Community, memory, history. Yaguará travels through Colombia's four ecosystems, meeting allies and facing forces of forgetting. She realizes she needs the <em>stories behind the names</em>, not just the names themselves.</p>
+            <div class="campbell">Crossing the Threshold &rarr; Tests / Allies / Enemies &rarr; The Ordeal</div>
+        </div>
+        <div class="journey-act act-3">
+            <div class="act-label">Act III &mdash; C1&ndash;C2</div>
+            <h4>El Mundo de Arriba</h4>
+            <p><strong>"Cuidar la palabra"</strong><br>Dreams, stars, balance, destiny. Yaguará carries the recovered names back, but the world has changed. She must choose: restore what was, or let it become something new? The student writes their own myth.</p>
+            <div class="campbell">Reward &rarr; The Road Back &rarr; Resurrection &rarr; Return with the Elixir</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 3. CHARACTERS ============================== -->
+<section id="characters">
+    <h2><span class="section-number">03</span> Characters</h2>
+    <div class="section-subtitle">The beings who inhabit this world &mdash; every detail matters</div>
+
+    <!-- Yaguará -->
+    <div class="character-card protagonist">
+        <div class="character-name">Yaguará</div>
+        <div class="character-role">The Protagonist &mdash; Priority 1</div>
+        <ul>
+            <li><strong>Species:</strong> Young female jaguar-spirit. Not a cub, not fully mature. Not yet a guardian.</li>
+            <li><strong>Build:</strong> Lean, athletic, not massive. She is fast, not powerful (yet).</li>
+            <li><strong>Fur:</strong> Golden-dark with clearly visible rosettes. NOT orange like a tiger &mdash; study real jaguars (<em>Panthera onca</em>).</li>
+            <li><strong>Eyes:</strong> Green-amber, expressive, intelligent. The most important feature &mdash; these eyes carry the whole story.</li>
+            <li><strong>Distinguishing mark:</strong> A small constellation-shaped pattern on her left shoulder (this becomes important later in the story).</li>
+            <li><strong>Personality in pose:</strong> Curious, quiet, brave without knowing it. At early levels she mostly listens. Later she speaks with weight.</li>
+        </ul>
+        <h4>Expressions needed (6)</h4>
+        <ul>
+            <li>Curious &mdash; ears forward, eyes wide, head slightly tilted</li>
+            <li>Determined &mdash; eyes focused, jaw set, body low</li>
+            <li>Worried &mdash; ears back slightly, eyes searching</li>
+            <li>Joyful &mdash; eyes bright, relaxed posture, almost smiling</li>
+            <li>Listening &mdash; completely still, ears turned, eyes half-closed</li>
+            <li>Speaking &mdash; mouth slightly open, eyes connecting with viewer</li>
+        </ul>
+        <h4>Poses needed (5)</h4>
+        <ul>
+            <li>Sitting alert &mdash; by a riverbank, looking outward</li>
+            <li>Walking &mdash; through forest, mid-stride, confident</li>
+            <li>Leaping &mdash; across water or between rocks, full extension</li>
+            <li>Crouching by water &mdash; looking at her reflection</li>
+            <li>Looking up at stars &mdash; sitting, head tilted back, constellation glowing on shoulder</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheet (turnaround) + individual poses as separate PNGs with transparent backgrounds</div>
+    </div>
+
+    <!-- Mamá Jaguar -->
+    <div class="character-card family">
+        <div class="character-name">Mamá Jaguar (Nakawe)</div>
+        <div class="character-role">The Mother &mdash; Priority 2</div>
+        <ul>
+            <li><strong>Appearance:</strong> Larger than Yaguará, darker fur. Calm golden eyes.</li>
+            <li><strong>Distinguishing mark:</strong> A scar across the bridge of her nose &mdash; from old journeys she doesn't talk about.</li>
+            <li><strong>Personality:</strong> Steady, warm, ancient without being old. Dignified and grounded.</li>
+            <li><strong>Voice lines (for tone reference):</strong> "El río no espera." / "Los nombres no se pierden. Se olvidan."</li>
+        </ul>
+        <h4>Poses needed</h4>
+        <ul>
+            <li>Sitting regally &mdash; near the river, watching over her territory</li>
+            <li>Nuzzling Yaguará &mdash; a tender moment of goodbye</li>
+            <li>Looking toward the horizon &mdash; back to viewer, the weight of what she knows</li>
+        </ul>
+        <h4>Expressions: serene, proud, concerned</h4>
+        <div class="deliverable-tag">Deliver: 3 poses + 3 expressions, PNG transparent</div>
+    </div>
+
+    <!-- Río -->
+    <div class="character-card family">
+        <div class="character-name">Río</div>
+        <div class="character-role">The Little Brother &mdash; Trickster / Heart &mdash; Priority 2</div>
+        <ul>
+            <li><strong>Appearance:</strong> Smaller than Yaguará, lighter fur, wide playful eyes.</li>
+            <li><strong>Named after the river</strong> because he never stops moving.</li>
+            <li><strong>Key quality:</strong> Even his "still" pose should feel kinetic &mdash; tail flicking, paw mid-reach, weight shifting.</li>
+            <li><strong>Story role:</strong> Comic relief at A1, source of worry at B1 (does he follow Yaguará?), surprise hero at C1.</li>
+        </ul>
+        <h4>Poses needed</h4>
+        <ul>
+            <li>Mid-leap &mdash; pure joy, chasing a butterfly or firefly</li>
+            <li>Tumbling &mdash; tripped over his own paws, playful</li>
+            <li>Hiding behind Yaguará &mdash; only eyes and ears visible, peeking</li>
+            <li>Sleeping curled up &mdash; the only time he's still, tail over nose</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: 4 poses, PNG transparent</div>
+    </div>
+
+    <!-- Abuela Ceiba -->
+    <div class="character-card family">
+        <div class="character-name">Abuela Ceiba</div>
+        <div class="character-role">The Mentor &mdash; Not a jaguar &mdash; Priority 2</div>
+        <ul>
+            <li><strong>What she is:</strong> A massive ceiba tree (kapok tree) at the center of the forest. She speaks, but slowly.</li>
+            <li><strong>Visual reference:</strong> Look up real <em>Ceiba pentandra</em> trees &mdash; enormous buttress roots, wide crown, epiphytes covering the trunk.</li>
+            <li><strong>Face:</strong> Subtly visible in the bark &mdash; NOT a cartoon face. More like pareidolia &mdash; you see it if you look, but it could just be bark patterns.</li>
+            <li><strong>Crown:</strong> Fireflies (luciérnagas) gathering around her upper branches, creating a gentle glow.</li>
+            <li><strong>Roots:</strong> Spread outward like rivers or veins, connecting to everything.</li>
+            <li><strong>She knows all names</strong> because all roots pass through her.</li>
+        </ul>
+        <h4>Versions needed</h4>
+        <ul>
+            <li><strong>Day version:</strong> Warm green light filtering through canopy, moss and ferns on trunk</li>
+            <li><strong>Night version:</strong> Fireflies glowing, moonlight, mystical but not spooky</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: 2 versions (day/night), PNG transparent + full scene versions with background</div>
+    </div>
+
+    <!-- Colibrí -->
+    <div class="character-card ally">
+        <div class="character-name">Colibrí (Zunzún)</div>
+        <div class="character-role">Rainforest Guide &mdash; Ally &mdash; Priority 5</div>
+        <ul>
+            <li><strong>Species:</strong> Hummingbird spirit. Iridescent green-blue plumage.</li>
+            <li><strong>Scale:</strong> Impossibly small. Emphasize the contrast with Yaguará &mdash; she could perch on her ear.</li>
+            <li><strong>Special effect:</strong> Trails of luminous particles when flying, like tiny stars falling from wing-tips.</li>
+            <li><strong>Personality:</strong> Fast-talker, knows every flower's name. Teaches that small things hold great power.</li>
+        </ul>
+        <h4>Poses needed</h4>
+        <ul>
+            <li>Hovering in place &mdash; wings a blur, facing viewer</li>
+            <li>Darting &mdash; mid-flight streak with light trail</li>
+            <li>Perched on Yaguará's ear &mdash; whispering</li>
+            <li>Wings spread &mdash; showing full iridescence, like a jewel</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: 4 poses, PNG transparent + SVG simplified version for UI</div>
+    </div>
+
+    <!-- Cóndor Viejo -->
+    <div class="character-card ally">
+        <div class="character-name">Cóndor Viejo</div>
+        <div class="character-role">Andes Guide &mdash; Ally &mdash; Priority 5</div>
+        <ul>
+            <li><strong>Species:</strong> Andean condor (<em>Vultur gryphus</em>). Ancient, massive wingspan.</li>
+            <li><strong>Details:</strong> White collar ruff, weathered feathers showing age, one slightly clouded eye (left).</li>
+            <li><strong>Personality:</strong> Speaks rarely. Sees everything from above. Teaches perspective.</li>
+        </ul>
+        <h4>Poses needed</h4>
+        <ul>
+            <li>Soaring &mdash; seen from below, wingspan fills the frame, mountains behind</li>
+            <li>Perched on rock &mdash; high mountain ledge, wind ruffling feathers</li>
+            <li>Head turned to look down &mdash; one clear eye, one clouded, wise and patient</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: 3 poses, PNG transparent</div>
+    </div>
+
+    <!-- Delfín Rosado -->
+    <div class="character-card ally">
+        <div class="character-name">Delfín Rosado (Boto)</div>
+        <div class="character-role">Llanos / River Guide &mdash; Ally &mdash; Priority 5</div>
+        <ul>
+            <li><strong>Species:</strong> Amazon pink river dolphin (<em>Inia geoffrensis</em>). Look up real photos &mdash; they are strange and beautiful.</li>
+            <li><strong>Color:</strong> Pale pink, almost translucent in places. Lighter on belly.</li>
+            <li><strong>Key quality:</strong> Always half-submerged &mdash; you never see the whole dolphin. Enigmatic "smile" (their mouths naturally curve upward).</li>
+            <li><strong>Folklore note:</strong> Shape-shifter in Colombian/Amazonian folklore. Playful but unreliable. Teaches that not all words mean what they say.</li>
+        </ul>
+        <h4>Poses needed</h4>
+        <ul>
+            <li>Breaching &mdash; rising from murky river water, pink against brown water</li>
+            <li>Peeking above water &mdash; just eyes and top of head visible, watching</li>
+            <li>Swimming alongside a canoe &mdash; seen from above, shadow beneath the surface</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: 3 poses, PNG transparent</div>
+    </div>
+
+    <!-- Tortuga Marina -->
+    <div class="character-card ally">
+        <div class="character-name">Tortuga Marina (Carey)</div>
+        <div class="character-role">Coast Guide &mdash; Ally &mdash; Priority 5</div>
+        <ul>
+            <li><strong>Species:</strong> Hawksbill sea turtle (<em>Eretmochelys imbricata</em>). Ancient.</li>
+            <li><strong>Shell:</strong> Has barnacles, tiny coral growths, maybe a small anemone &mdash; she carries an ecosystem on her back.</li>
+            <li><strong>Movements:</strong> Slow and deliberate. Every gesture is intentional.</li>
+            <li><strong>Personality:</strong> Has crossed every ocean. Remembers everything. Teaches patience &mdash; some stories take a lifetime to tell.</li>
+        </ul>
+        <h4>Poses needed</h4>
+        <ul>
+            <li>Swimming in open ocean &mdash; turquoise water, light filtering from above</li>
+            <li>Resting on sand &mdash; on a Caribbean beach at night, moonlight on shell</li>
+            <li>Head emerging from shell &mdash; looking directly at viewer with ancient eyes</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: 3 poses, PNG transparent</div>
+    </div>
+
+    <!-- El Silencio Gris -->
+    <div class="character-card force">
+        <div class="character-name">El Silencio Gris</div>
+        <div class="character-role">The Antagonist &mdash; A force, not a character &mdash; Priority 7</div>
+        <ul>
+            <li><strong>NOT a character with a body.</strong> This is an atmosphere, a condition, an absence.</li>
+            <li><strong>Visual concept:</strong> Grey mist / static / visual noise that <em>erases color</em> where it passes.</li>
+            <li><strong>Think:</strong> A photograph slowly losing its saturation from one edge. A landscape where the left side is vivid and the right side is dissolving into grey.</li>
+            <li><strong>Not evil.</strong> Not a villain. Simply the absence of naming. Natural, like entropy.</li>
+            <li><strong>Sound equivalent:</strong> The feeling of a word on the tip of your tongue that you can't quite remember.</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Overlay textures and edge effects &mdash; PNG with transparency, various sizes, seamless where possible</div>
+    </div>
+
+    <!-- La Sombra -->
+    <div class="character-card force">
+        <div class="character-name">La Sombra de Yaguará</div>
+        <div class="character-role">The Shadow Self &mdash; Priority 7</div>
+        <ul>
+            <li><strong>Appears at B2 level.</strong> Looks exactly like Yaguará but <em>wrong</em>.</li>
+            <li><strong>Visual:</strong> Yaguará's silhouette, but edges waver like a reflection in disturbed water.</li>
+            <li><strong>Eyes:</strong> Mirrors &mdash; they reflect the viewer instead of seeing. No pupil, just reflective surface.</li>
+            <li><strong>Represents:</strong> The fear of making mistakes, of not being good enough to speak. Must be <em>embraced</em>, not defeated.</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Dark silhouette version of each Yaguará pose, with wavering edges &mdash; PNG transparent</div>
+    </div>
+
+    <!-- Los Antiguos -->
+    <div class="character-card dream">
+        <div class="character-name">Los Antiguos</div>
+        <div class="character-role">The Ancestors &mdash; Dream Figures &mdash; Priority 9</div>
+        <ul>
+            <li><strong>Appear as:</strong> Constellations, cave paintings that move, voices in water, petroglyphs that animate.</li>
+            <li><strong>Visual style:</strong> Luminous outlines, star-patterns, golden line-art on dark backgrounds.</li>
+            <li><strong>Reference:</strong> Colombian petroglyphs (Chiribiquete cave paintings), pre-Columbian gold figures (Museo del Oro).</li>
+            <li><strong>Speak in metaphor and poetry.</strong> Never give straight answers. They are the final teachers.</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: 4&ndash;6 constellation/petroglyph figures, SVG + PNG with glow effects</div>
+    </div>
+
+    <!-- Candelaria -->
+    <div class="character-card human">
+        <div class="character-name">Candelaria &ldquo;Cande&rdquo; Arango</div>
+        <div class="character-role">Herald / Companion &mdash; Human &mdash; Priority 3</div>
+        <h4>Age 12 (A2 Advanced)</h4>
+        <ul>
+            <li><strong>Appearance:</strong> Afro-Colombian / mestiza from Quibd&oacute;, Choc&oacute;. Dark skin, curly braids decorated with small seeds and wildflowers.</li>
+            <li><strong>Clothing:</strong> School uniform &mdash; white blouse, blue skirt, slightly muddy from the forest. Sturdy boots, too big for her.</li>
+            <li><strong>Props:</strong> Worn leather notebook clutched to chest (pages sticking out). Canvas bag slung over one shoulder.</li>
+            <li><strong>Personality in pose:</strong> Bright-eyed, curious, slightly scared but brave. She draws everything &mdash; her notebook becomes a map at higher levels.</li>
+        </ul>
+        <h4>Expressions needed (5)</h4>
+        <ul>
+            <li>Wonder &mdash; wide eyes, mouth slightly open</li>
+            <li>Concentration &mdash; brow furrowed, pencil in hand</li>
+            <li>Laughing &mdash; head back, genuine joy</li>
+            <li>Listening hard &mdash; head tilted, hand cupped to ear</li>
+            <li>Drawing in notebook &mdash; eyes down, completely absorbed</li>
+        </ul>
+        <h4>Poses needed (5)</h4>
+        <ul>
+            <li>Standing alert &mdash; notebook against chest, looking toward the forest</li>
+            <li>Crouching by the river &mdash; one hand touching water, the other holding her notebook</li>
+            <li>Sitting cross-legged drawing &mdash; surrounded by plants, peaceful</li>
+            <li>Walking alongside Yaguar&aacute; &mdash; NOT riding her &mdash; side by side, equal companions</li>
+            <li>Reaching toward something &mdash; one hand extended, wonder on her face</li>
+        </ul>
+        <h4>Age 18 (C1&ndash;C2)</h4>
+        <ul>
+            <li><strong>Appearance:</strong> Confident posture, taller. Same braids now with gold threads woven in. Round thin wire-frame glasses.</li>
+            <li><strong>Clothing:</strong> Jeans, boots, a colorful pa&ntilde;uelo (echo of Do&ntilde;a Asunci&oacute;n). University canvas bag covered in patches and pins.</li>
+            <li><strong>Props:</strong> Same notebook &mdash; now thick, bursting with drawings, maps, pressed leaves.</li>
+        </ul>
+        <h4>Expressions (4)</h4>
+        <ul>
+            <li>Determined &mdash; jaw set, eyes forward</li>
+            <li>Speaking passionately &mdash; hands gesturing, eyes bright</li>
+            <li>Studying a document &mdash; glasses pushed up, focused</li>
+            <li>Smiling at Yaguar&aacute; &mdash; warm recognition between old friends</li>
+        </ul>
+        <h4>Poses (3)</h4>
+        <ul>
+            <li>Standing at a podium or table &mdash; presenting with authority</li>
+            <li>Holding up the notebook open &mdash; showing its contents to someone</li>
+            <li>Walking through the forest as an adult &mdash; confident stride, pa&ntilde;uelo catching the wind</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheets for both ages (turnaround + expressions + poses), PNG transparent</div>
+    </div>
+
+    <!-- Don Próspero -->
+    <div class="character-card human">
+        <div class="character-name">Don Pr&oacute;spero Garc&iacute;a</div>
+        <div class="character-role">Antagonist (Threshold Guardian) &mdash; Human &mdash; Priority 4</div>
+        <ul>
+            <li><strong>Build:</strong> Tall, thin silhouette &mdash; not physically threatening, intellectually imposing. 55&ndash;60 years old.</li>
+            <li><strong>Face:</strong> Weathered face that has seen both boardrooms and backroads. Silver hair combed back neatly, slight widow&rsquo;s peak. Expression shows intelligence, weariness, and conviction &mdash; NOT cruelty, NOT sneering.</li>
+            <li><strong>Clothing:</strong> Expensive but practical &mdash; clean linen shirt, well-fitted pants, leather belt, polished but dusty boots.</li>
+            <li><strong>Props:</strong> Leather portfolio/briefcase holding contracts, maps, documents.</li>
+            <li><strong>Hands:</strong> Notably clean and soft &mdash; contrast with everyone else&rsquo;s working hands.</li>
+            <li><strong>Critical detail:</strong> A small carved wooden jaguar in his pocket &mdash; his mother made it. He never shows it. <strong>One illustration must show it falling out or him holding it when alone.</strong></li>
+        </ul>
+        <h4>Expressions needed (4)</h4>
+        <ul>
+            <li>Persuasive smile &mdash; warm, convincing, practiced</li>
+            <li>Calculating gaze &mdash; eyes narrowed, assessing</li>
+            <li>Genuine sadness &mdash; unguarded, alone</li>
+            <li>Surprise &mdash; when confronted with truth, mask slipping</li>
+        </ul>
+        <h4>Poses needed (4)</h4>
+        <ul>
+            <li>Standing with portfolio &mdash; formal, imposing silhouette</li>
+            <li>Gesturing at a map or blueprint &mdash; selling his vision</li>
+            <li>Sitting alone looking at the wooden jaguar &mdash; the only moment we see the real man</li>
+            <li>Walking away &mdash; seen from behind, diminishing into distance</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheet (turnaround) + expressions + poses, PNG transparent</div>
+    </div>
+
+    <!-- Doña Asunción -->
+    <div class="character-card human">
+        <div class="character-name">Do&ntilde;a Asunci&oacute;n &ldquo;La Abuela del R&iacute;o&rdquo;</div>
+        <div class="character-role">The Bridge &mdash; Human &mdash; Priority 4</div>
+        <ul>
+            <li><strong>Build:</strong> Small figure &mdash; always contrasted against enormous river/landscape. 75&ndash;80 years old.</li>
+            <li><strong>Face:</strong> Deep brown skin, deeply lined face, expression of peace and deep concentration. White hair under colorful pa&ntilde;uelo (bright patterns).</li>
+            <li><strong>Hands:</strong> Missing two fingers on left hand (machete accident in youth) &mdash; visible, not hidden.</li>
+            <li><strong>Setting:</strong> Always near water &mdash; sitting on a riverbank, hands touching the water surface.</li>
+            <li><strong>Clothing:</strong> Simple, worn but clean. Long skirt, practical blouse, no shoes or simple sandals.</li>
+        </ul>
+        <h4>Expressions needed (4)</h4>
+        <ul>
+            <li>Listening &mdash; eyes closed, hands in water, completely still</li>
+            <li>Knowing smile &mdash; she sees something you don&rsquo;t</li>
+            <li>Speaking with authority &mdash; eyes open, voice carrying weight</li>
+            <li>Serene &mdash; at peace, near sunset</li>
+        </ul>
+        <h4>Poses needed (4)</h4>
+        <ul>
+            <li>Sitting by the river with hands in water &mdash; her defining image</li>
+            <li>Standing small against the forest &mdash; showing scale, she is tiny but rooted</li>
+            <li>Holding Candelaria&rsquo;s face in her hands &mdash; passing knowledge between generations</li>
+            <li>Profile silhouette at sunset &mdash; the last escuchadora</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheet + expressions + poses, PNG transparent</div>
+    </div>
+</section>
+
+<!-- ============================== 4. ENVIRONMENTS ============================== -->
+<section id="environments">
+    <h2><span class="section-number">04</span> Environments</h2>
+    <div class="section-subtitle">The four ecosystems of Colombia &mdash; each a chapter of the journey</div>
+
+    <p>Each ecosystem needs the following deliverables:</p>
+
+    <div class="size-specs">
+        <div class="size-card">
+            <div class="dim">3840 &times; 1080 px</div>
+            <div class="purpose">Wide panoramic background (section headers, desktop)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">1080 &times; 1920 px</div>
+            <div class="purpose">Portrait background (mobile screens)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">1200 &times; 800 px</div>
+            <div class="purpose">Scene vignettes (3&ndash;4 per ecosystem)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">Seamless tile (SVG)</div>
+            <div class="purpose">Textile-inspired repeating pattern/texture</div>
+        </div>
+    </div>
+
+    <div class="env-card env-selva">
+        <h4>Selva (Chocó / Amazon)</h4>
+        <div class="env-tags">green, water, rain, drums &mdash; Guide: Colibrí &mdash; Afro-Colombian &amp; indigenous cultures</div>
+        <ul>
+            <li>Dense canopy, filtered green light, massive buttress roots, river visible below</li>
+            <li>Rain. Always a sense of rain, even if it's not actively raining. Wet leaves, mist, droplets.</li>
+            <li>Textile reference: <strong>Mola-inspired pattern border</strong> (Kuna/Guna layered appliqué)</li>
+            <li>This is Yaguará's HOME &mdash; it should feel warm, safe, and alive</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-andes">
+        <h4>Andes</h4>
+        <div class="env-tags">earth, stone, cold clear light, wind instruments &mdash; Guide: Cóndor Viejo &mdash; Highland communities</div>
+        <ul>
+            <li>Mountain valley, terraced fields (like Muisca agricultural terraces), stone paths</li>
+            <li>Cold clear light, long shadows, clouds <em>below</em> the viewer (condor territory)</li>
+            <li>Textile reference: <strong>Wayúu-inspired geometric pattern border</strong></li>
+            <li>Feeling: ancient, vast, quiet. You can hear the wind.</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-llanos">
+        <h4>Llanos</h4>
+        <div class="env-tags">gold, open sky, harp, endless horizon &mdash; Guide: Delfín Rosado &mdash; Llanero culture</div>
+        <ul>
+            <li>Vast golden grassland, enormous sky (sky should be 2/3 of the image), scattered moriche palms</li>
+            <li>River cutting through the plain, heat shimmer on the horizon</li>
+            <li>Textile reference: <strong>Sombrero vueltiao weave pattern border</strong></li>
+            <li>Feeling: freedom, exposure, nowhere to hide. The opposite of the sheltered forest.</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-costa">
+        <h4>Costa (Caribbean)</h4>
+        <div class="env-tags">turquoise, salt, cumbia, intense heat &mdash; Guide: Tortuga Marina &mdash; Afro-Caribbean culture</div>
+        <ul>
+            <li>Turquoise water, mangroves at the edge, fishing boats (small, colorful, wooden)</li>
+            <li>Coral visible underwater, intense saturated light, cumbia energy</li>
+            <li>Textile reference: <strong>Filigree / gold-inspired pattern border</strong> (Momposina goldwork tradition)</li>
+            <li>Feeling: vibrant, rhythmic, warm. Life at the edge of land and sea.</li>
+        </ul>
+    </div>
+
+    <h3>Escape Room Chambers</h3>
+    <p>Each world contains escape rooms (&ldquo;salas de enigmas&rdquo;) with distinct visual atmospheres. These are archaeological discovery spaces, not competitive gaming environments.</p>
+
+    <div class="env-card env-selva">
+        <h4>Mundo de Abajo Rooms (A1&ndash;A2)</h4>
+        <div class="env-tags">underground, roots, bioluminescence, carved stone &mdash; &ldquo;Las ra&iacute;ces&rdquo;</div>
+        <ul>
+            <li>Underground chambers beneath ceiba roots &mdash; roots forming natural arches and doorways</li>
+            <li>Bioluminescent moss on stone walls &mdash; warm amber light from below (not fire)</li>
+            <li>Water trickling down carved surfaces &mdash; petroglyphs visible: spirals, animal prints, wave patterns</li>
+            <li>Palette: deep green, amber, earth brown, luminescent blue-green accents</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-andes">
+        <h4>Mundo del Medio Rooms (B1&ndash;B2)</h4>
+        <div class="env-tags">nature reclaiming architecture, hidden chambers, human traces &mdash; &ldquo;Las historias&rdquo;</div>
+        <ul>
+            <li>Rooms inside human spaces &mdash; abandoned buildings with cracked walls and vines growing through</li>
+            <li>Hidden chambers under market squares &mdash; stone steps leading down, ceramic shards on the floor</li>
+            <li>Rooms inside riverboats &mdash; wooden walls, water-light rippling on ceiling, rope and nets</li>
+            <li>Objects suggest recent human presence: tools, textiles, half-burned candles, woven baskets</li>
+            <li>Palette: terracotta, ochre, mountain grey-blue, touches of Caribbean turquoise</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-cosmic">
+        <h4>Mundo de Arriba Rooms (C1&ndash;C2)</h4>
+        <div class="env-tags">metaphysical, cosmic, constellation-defined spaces &mdash; &ldquo;Las constelaciones&rdquo;</div>
+        <ul>
+            <li>Rooms made of starlight, of text, of sound &mdash; no physical walls</li>
+            <li>Boundaries defined by constellations &mdash; points of light connected by thin golden lines</li>
+            <li>Floor is a map (the Mapa de las Voces becoming visible)</li>
+            <li>Ceiling is sky &mdash; day and night simultaneously</li>
+            <li>Luminous outlines rather than solid surfaces &mdash; think: the inside of an astrolabe, a constellation chart come alive</li>
+            <li>Palette: deep indigo, silver, gold, cosmic black</li>
+        </ul>
+    </div>
+
+    <h3>Escape Room Deliverables (per world)</h3>
+    <div class="size-specs">
+        <div class="size-card">
+            <div class="dim">1920 &times; 1080 px</div>
+            <div class="purpose">Wide room background (desktop)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">1080 &times; 1920 px</div>
+            <div class="purpose">Portrait room background (mobile)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">800 &times; 600 px</div>
+            <div class="purpose">Door/threshold illustration</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">800 &times; 800 px</div>
+            <div class="purpose">Fragment reveal illustration (square)</div>
+        </div>
+    </div>
+
+    <h3>Textile-Inspired Room Borders</h3>
+    <ul style="margin: 10px 0 0 20px;">
+        <li><strong>Mundo de Abajo:</strong> Mola patterns (Kuna/Guna) &mdash; layered, organic, animal forms</li>
+        <li><strong>Mundo del Medio:</strong> Way&uacute;u geometric patterns &mdash; woven, angular, symmetrical</li>
+        <li><strong>Mundo de Arriba:</strong> Pre-Columbian gold motifs (Museo del Oro) &mdash; spiral, abstract, luminous</li>
+    </ul>
+</section>
+
+<!-- ============================== 5. COLOR PALETTES ============================== -->
+<section id="palettes">
+    <h2><span class="section-number">05</span> Color Palettes</h2>
+    <div class="section-subtitle">Exact hex values for each world</div>
+
+    <div class="palette-group">
+        <div class="palette-title">El Mundo de Abajo (A1&ndash;A2)</div>
+        <div class="palette-desc">Forest, water, night, beginnings &mdash; "Nombrar el mundo"</div>
+        <div class="swatches">
+            <div class="swatch">
+                <div class="swatch-color" style="background:#2D5016"></div>
+                <div class="swatch-label">#2D5016</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1A3A0A"></div>
+                <div class="swatch-label">#1A3A0A</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1B4D6E"></div>
+                <div class="swatch-label">#1B4D6E</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#2E8B8B"></div>
+                <div class="swatch-label">#2E8B8B</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#5C3317"></div>
+                <div class="swatch-label">#5C3317</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#8B6914"></div>
+                <div class="swatch-label">#8B6914</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#2C1654"></div>
+                <div class="swatch-label">#2C1654</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#C9A54E"></div>
+                <div class="swatch-label">#C9A54E</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#E8C547"></div>
+                <div class="swatch-label">#E8C547</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">El Mundo del Medio (B1&ndash;B2)</div>
+        <div class="palette-desc">Community, memory, journey &mdash; "Contar lo vivido"</div>
+        <div class="swatches">
+            <div class="swatch">
+                <div class="swatch-color" style="background:#B7562A"></div>
+                <div class="swatch-label">#B7562A</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#CC6633"></div>
+                <div class="swatch-label">#CC6633</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#C49A3C"></div>
+                <div class="swatch-label">#C49A3C</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#5F7A8A"></div>
+                <div class="swatch-label">#5F7A8A</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#D4A843"></div>
+                <div class="swatch-label">#D4A843</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1AA5A5"></div>
+                <div class="swatch-label">#1AA5A5</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">El Mundo de Arriba (C1&ndash;C2)</div>
+        <div class="palette-desc">Stars, dreams, transformation &mdash; "Cuidar la palabra"</div>
+        <div class="swatches">
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1A1A4E"></div>
+                <div class="swatch-label">#1A1A4E</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#C0C0D0"></div>
+                <div class="swatch-label">#C0C0D0</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#E8A824"></div>
+                <div class="swatch-label">#E8A824</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#F5E6B8"></div>
+                <div class="swatch-label">#F5E6B8</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#0D0D1A"></div>
+                <div class="swatch-label">#0D0D1A</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 6. TECHNICAL SPECS ============================== -->
+<section id="specs">
+    <h2><span class="section-number">06</span> Technical Specifications</h2>
+    <div class="section-subtitle">Formats, sizes, naming &mdash; non-negotiable requirements</div>
+
+    <h3>File Formats Required</h3>
+    <p>For <strong>every illustration</strong>, deliver these versions:</p>
+
+    <table class="spec-table">
+        <thead>
+            <tr>
+                <th>Format</th>
+                <th>Use Case</th>
+                <th>Requirements</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>SVG</strong></td>
+                <td>UI elements, icons, patterns, borders, simple scene elements</td>
+                <td>Vector format. Clean paths, no embedded rasters. Scalable to any size without quality loss.</td>
+            </tr>
+            <tr>
+                <td><strong>PNG-24</strong></td>
+                <td>Characters, complex scenes, overlays</td>
+                <td><strong>Transparent background (RGBA).</strong> Minimum 2048px on longest edge. 300 DPI. No white backgrounds.</td>
+            </tr>
+            <tr>
+                <td><strong>Source file</strong></td>
+                <td>Future editing, animation, adaptation</td>
+                <td><code>.ai</code>, <code>.psd</code>, <code>.procreate</code>, or <code>.kra</code> &mdash; with all layers organized and named.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Layer Organization</h3>
+    <ul style="margin: 10px 0 20px 20px;">
+        <li>Character body separate from background</li>
+        <li>Facial expressions on separate layers (for potential animation)</li>
+        <li>Special effects (glow, particles, mist) on separate layers</li>
+        <li>Layer names in English or Spanish &mdash; consistent throughout</li>
+    </ul>
+
+    <h3>File Naming Convention</h3>
+    <div class="code-block">
+        <span class="comment">// Pattern:</span>
+        <span class="highlight">character</span>-<span class="highlight">world</span>-<span class="highlight">scene</span>-<span class="highlight">variant</span>.<span class="highlight">format</span>
+
+        <span class="comment">// Examples:</span>
+        yaguara-abajo-familia-happy.png
+        yaguara-abajo-river-crouching.png
+        nakawe-abajo-horizon-serene.png
+        rio-abajo-leap-playful.png
+        ceiba-abajo-forest-night.png
+        colibri-medio-selva-flying.svg
+        condor-medio-andes-perched.png
+        delfin-medio-llanos-breaching.png
+        carey-medio-costa-swimming.png
+        silencio-gris-overlay-edge-01.png
+        sombra-yaguara-sitting-distorted.png
+        pattern-mola-selva-border.svg
+        pattern-wayuu-andes-border.svg
+        env-selva-panoramic.png
+        env-andes-mobile-portrait.png
+        ui-progress-seed.svg
+        ui-progress-tree-flowering.svg
+        fragment-01-river-awakening.png
+    </div>
+
+    <h3>What NOT to deliver</h3>
+    <ul style="margin: 10px 0 0 20px;">
+        <li><strong>No JPG files</strong> &mdash; we need transparency</li>
+        <li><strong>No flattened files</strong> &mdash; we need editable layers</li>
+        <li><strong>No white backgrounds</strong> &mdash; all character art must be on transparent</li>
+        <li><strong>No tiny source files</strong> &mdash; "300 DPI" means nothing if the canvas is only 500px wide. We need large <em>pixel dimensions</em> AND high DPI.</li>
+    </ul>
+</section>
+
+<!-- ============================== 7. UI ELEMENTS ============================== -->
+<section id="ui">
+    <h2><span class="section-number">07</span> UI Elements</h2>
+    <div class="section-subtitle">SVG only &mdash; the interface vocabulary of the game</div>
+
+    <h3>Progress Indicator (6 stages = 6 language levels)</h3>
+    <p>A living plant that grows as the student advances. NOT a progress bar. NOT numbered steps.</p>
+    <table class="spec-table">
+        <thead>
+            <tr><th>Stage</th><th>Level</th><th>Visual</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>A1</td><td>A seed in dark earth &mdash; potential, beginning</td></tr>
+            <tr><td>2</td><td>A2</td><td>A small sprout breaking through soil &mdash; first growth</td></tr>
+            <tr><td>3</td><td>B1</td><td>A sapling with a few leaves &mdash; finding form</td></tr>
+            <tr><td>4</td><td>B2</td><td>A young tree with branches reaching &mdash; strength</td></tr>
+            <tr><td>5</td><td>C1</td><td>A flowering tree &mdash; beauty, expression</td></tr>
+            <tr><td>6</td><td>C2</td><td>A fruiting tree with roots visible underground &mdash; full cycle, giving back</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Navigation</h3>
+    <ul style="margin: 10px 0 20px 20px;">
+        <li><strong>Navigation dots:</strong> Constellation pattern (not a linear row of circles). Stars that connect as you progress.</li>
+        <li><strong>Border frames:</strong> One per ecosystem, textile-inspired (mola, wayúu, vueltiao, filigree)</li>
+        <li><strong>Button shapes:</strong> Rounded, organic &mdash; leaf-shaped, stone-shaped, water-drop-shaped. No rectangles.</li>
+    </ul>
+
+    <h3>Skill Icons (5 core skills)</h3>
+    <table class="spec-table">
+        <thead>
+            <tr><th>Skill</th><th>Icon</th><th>Style Notes</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Listening</td><td>Ear</td><td>Organic, with sound waves as concentric leaf-shapes</td></tr>
+            <tr><td>Speaking</td><td>Mouth</td><td>Stylized, with words flowing out as small birds or seeds</td></tr>
+            <tr><td>Reading</td><td>Eye</td><td>Jaguar eye with text/glyphs reflected in the iris</td></tr>
+            <tr><td>Writing</td><td>Hand</td><td>Hand (or paw) touching earth, leaving a mark/glyph</td></tr>
+            <tr><td>Culture</td><td>Heart</td><td>Heart shape formed by two rivers meeting, or two roots intertwining</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Story Fragment Collectibles</h3>
+    <p>Small, detailed, precious illustrations &mdash; one unlocked per module. Like pages from a lost book.</p>
+    <ul style="margin: 10px 0 0 20px;">
+        <li>Approximately 20&ndash;30 needed for the full game</li>
+        <li>Style: more painterly and detailed than the UI art</li>
+        <li><strong>Size: 800&times;800px minimum, square format</strong></li>
+        <li>Think: botanical illustration meets indigenous codex meets magical realism</li>
+    </ul>
+
+    <h3>Escape Room Puzzle Icons</h3>
+    <p>Small SVG icons for the escape room interface. Style: organic/stone aesthetic, NOT metal or industrial.</p>
+    <table class="spec-table">
+        <thead>
+            <tr><th>Element</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Lock closed</td><td>Stylized stone/organic lock &mdash; not a metal padlock</td></tr>
+            <tr><td>Lock open</td><td>Same form, with subtle glow effect</td></tr>
+            <tr><td>Lock active</td><td>Same form, with pulse animation ring</td></tr>
+            <tr><td>Fragment</td><td>A map piece with glowing edges</td></tr>
+            <tr><td>Wordlock</td><td>Stone tablet with letter slots carved in</td></tr>
+            <tr><td>Cipher</td><td>Scattered letter tiles (stone chips)</td></tr>
+            <tr><td>Riddle</td><td>A mask or face, half-hidden in shadow</td></tr>
+            <tr><td>Sequence</td><td>Footprints in order, leading forward</td></tr>
+            <tr><td>Extract</td><td>An open book or scroll</td></tr>
+            <tr><td>Logic</td><td>A branching path splitting into options</td></tr>
+            <tr><td>Synthesis</td><td>Three rivers meeting at one point</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================== 8. STYLE REFERENCES ============================== -->
+<section id="references">
+    <h2><span class="section-number">08</span> Style References</h2>
+    <div class="section-subtitle">Show these to the illustrator &mdash; this is the visual universe we live in</div>
+
+    <div class="ref-grid">
+        <div class="ref-do">
+            <h4>DO Reference</h4>
+            <ul>
+                <li><strong>Mola textile art</strong> (Kuna/Guna people) &mdash; layered color, bold organic shapes</li>
+                <li><strong>Pre-Columbian gold figures</strong> (Museo del Oro, Bogotá) &mdash; stylized animal forms</li>
+                <li><strong>Remedios Varo</strong> paintings &mdash; magical realism, organic forms, mystical light</li>
+                <li><strong>Hayao Miyazaki</strong> backgrounds (Princess Mononoke forest scenes) &mdash; living, breathing nature</li>
+                <li><strong>Shaun Tan</strong> (The Arrival) &mdash; wordless storytelling, atmospheric, emotional</li>
+                <li><strong>Charley Harper</strong> animal illustrations &mdash; stylized but zoologically accurate</li>
+                <li><strong>Carlos Jacanamijoy</strong> &mdash; Colombian artist, color, nature, indigenous perspective</li>
+            </ul>
+        </div>
+        <div class="ref-dont">
+            <h4>DO NOT Reference</h4>
+            <ul>
+                <li><strong>Disney / Pixar</strong> animal character style &mdash; too commercial, too "cute"</li>
+                <li><strong>Anime / manga</strong> style &mdash; wrong visual language entirely</li>
+                <li><strong>Generic "fantasy game"</strong> aesthetic &mdash; no elves, no medieval, no dark-fantasy</li>
+                <li><strong>Photorealistic 3D renders</strong> &mdash; we want illustration, not simulation</li>
+                <li><strong>Clip art / flat corporate</strong> &mdash; no "startup illustration" style</li>
+                <li><strong>AI-generated imagery</strong> aesthetic &mdash; no Midjourney / DALL-E look</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 9. DELIVERY SCHEDULE ============================== -->
+<section id="schedule">
+    <h2><span class="section-number">09</span> Suggested Delivery Schedule</h2>
+    <div class="section-subtitle">Priority order &mdash; what we need first to start building</div>
+
+    <div class="timeline">
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Phase 1 &mdash; Highest Priority</div>
+            <div class="timeline-title">Yaguará character sheet</div>
+            <div class="timeline-desc">Turnaround (front, 3/4, side, back) + 6 expressions + 5 key poses. This is the foundation &mdash; everything else flows from her design.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Phase 2</div>
+            <div class="timeline-title">The A1 Family: Nakawe, Río, Abuela Ceiba</div>
+            <div class="timeline-desc">These characters appear in the very first modules. Needed to build the opening experience.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Phase 3</div>
+            <div class="timeline-title">Selva environment</div>
+            <div class="timeline-desc">Yaguará's home. Panoramic + portrait + 3 vignettes + mola pattern tile. This is where the game begins.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Phase 3b &mdash; Escape Rooms</div>
+            <div class="timeline-title">Room backgrounds (3 worlds &times; 4 formats)</div>
+            <div class="timeline-desc">Underground ceiba chambers, nature-reclaimed architecture, and cosmic constellation rooms. 12 illustration files total.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Phase 3c &mdash; Human Characters</div>
+            <div class="timeline-title">Candelaria (age 12), Do&ntilde;a Asunci&oacute;n, Don Pr&oacute;spero</div>
+            <div class="timeline-desc">Character sheets with turnarounds, expressions, and poses for each. Candelaria age-18 version delivered in a later phase.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Phase 3d</div>
+            <div class="timeline-title">Candelaria age-18 character sheet</div>
+            <div class="timeline-desc">Adult version with university look, gold-threaded braids, glasses, evolved notebook.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Phase 3e</div>
+            <div class="timeline-title">Escape room elements</div>
+            <div class="timeline-desc">Puzzle element SVG icons (11 pieces), room textile borders (3 SVG patterns), fragment reveal illustrations (3 worlds &times; 1 = 3 files).</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Phase 4</div>
+            <div class="timeline-title">UI elements (full SVG set)</div>
+            <div class="timeline-desc">Progress indicator (6 stages), navigation constellation, border frames, button shapes, skill icons.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Phase 5</div>
+            <div class="timeline-title">The Four Allies: Colibrí, Cóndor, Delfín, Tortuga</div>
+            <div class="timeline-desc">Each with their poses as specified. These populate Act II.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Phase 6</div>
+            <div class="timeline-title">Remaining 3 environments: Andes, Llanos, Costa</div>
+            <div class="timeline-desc">Each with panoramic + portrait + vignettes + textile pattern tile.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Phase 7</div>
+            <div class="timeline-title">El Silencio Gris + La Sombra de Yaguará</div>
+            <div class="timeline-desc">Overlay effects, desaturation textures, shadow silhouettes. For B2+ content.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Phase 8</div>
+            <div class="timeline-title">Story fragment collectibles (20&ndash;30 pieces)</div>
+            <div class="timeline-desc">Square format, painterly style, botanical-codex-magical realism blend.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Phase 9</div>
+            <div class="timeline-title">Los Antiguos &mdash; constellation / petroglyph figures</div>
+            <div class="timeline-desc">Dream-world characters for C1&ndash;C2. Luminous outlines, star-patterns, animated petroglyphs.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 10. RIGHTS ============================== -->
+<section id="rights">
+    <h2><span class="section-number">10</span> Rights &amp; Usage</h2>
+    <div class="section-subtitle">Settle this before any work begins</div>
+
+    <div class="rights-box">
+        <h3>Important &mdash; Please Discuss Before Starting</h3>
+        <ul>
+            <li>This is a <strong>free game monetized through advertising</strong> &mdash; this means <strong>commercial use</strong>. All artwork must be licensed for commercial use.</li>
+            <li>We prefer <strong>work-for-hire</strong> or <strong>full license transfer</strong> &mdash; we need the right to use, modify, and distribute all artwork across web, mobile apps, and promotional materials.</li>
+            <li>If royalty-based compensation is preferred, <strong>agree on exact terms before any work begins</strong>.</li>
+            <li>The illustrator will be <strong>credited in the game</strong> (e.g., "Illustrations by [Name]") and in project documentation.</li>
+            <li>Future adaptations (other languages, merchandise, print) should be covered in the agreement.</li>
+        </ul>
+    </div>
+</section>
+
+</div>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+    <div class="project">El Viaje del Jaguar</div>
+    <div>Illustrator Creative Brief &mdash; Version 2.0 &mdash; February 2026</div>
+    <div style="margin-top:10px; font-style:italic; color:#C9A54E;">"No todas las palabras se dicen. Algunas se cuidan."</div>
+</footer>
+
+</body>
+</html>

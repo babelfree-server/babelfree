@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final B2 - El Viaje del Jaguar</title>
+    <meta name="description" content="Examen Final B2 - El Legado del Jaguar. Evaluacion completa de los Llanos Orientales.">
+    <link rel="canonical" href="https://babelfree.com/b2-exam">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F406;</text></svg>">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Examen Final B2 - El Viaje del Jaguar",
+          "description": "Examen Final B2 - El Legado del Jaguar. Assess past subjunctive, mixed conditionals, register, and argumentation at CEFR B2 level.",
+          "url": "https://babelfree.com/b2-exam",
+          "educationalLevel": "B2 - Upper Intermediate",
+          "learningResourceType": "Assessment",
+          "educationalAlignment": {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalLevel",
+            "educationalFramework": "CEFR",
+            "targetName": "B2 - Upper Intermediate / Vantage",
+            "targetUrl": "https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
+          },
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "assesses": [
+            "Past subjunctive",
+            "Mixed conditionals",
+            "Register",
+            "Argumentation"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "B2",
+              "item": "https://babelfree.com/b2-exam"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Exam"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ceremony-dark: #3d2e00;
+            --ceremony-medium: #5a4400;
+            --ceremony-light: #7a5e00;
+            --jaguar-gold: #ffd700;
+            --success-green: #00ff88;
+            --ceremony-accent: #ffd700;
+            --ceremony-glow: #f39c12;
+            --deep-amber: #b8860b;
+            --ceremony-gold: #ffab00;
+            --text-light: #ffffff;
+            --text-muted: #d4c5a0;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --border-radius: 15px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--ceremony-dark) 0%, var(--ceremony-medium) 50%, #1a1200 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 25% 75%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(243, 156, 18, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 171, 0, 0.05) 0%, transparent 50%);
+            z-index: 1;
+            animation: examAura 40s ease-in-out infinite;
+        }
+
+        @keyframes examAura {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            33% { transform: scale(1.02) rotate(0.3deg); opacity: 1; }
+            66% { transform: scale(0.98) rotate(-0.2deg); opacity: 0.9; }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .exam-element {
+            position: absolute;
+            animation: examFloat 35s infinite linear;
+            opacity: 0.35;
+            font-size: 1.2em;
+        }
+
+        @keyframes examFloat {
+            0% { transform: translateY(-100px) translateX(-30px) rotate(0deg); }
+            100% { transform: translateY(100vh) translateX(60px) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .exam-header {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 3px solid var(--ceremony-glow);
+            margin-bottom: 30px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .exam-header::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--jaguar-gold), var(--ceremony-glow), var(--deep-amber), var(--ceremony-gold));
+            border-radius: var(--border-radius);
+            z-index: -1;
+            animation: borderGlow 4s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: var(--glass-bg);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            border: 2px solid var(--ceremony-glow);
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(243, 156, 18, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .jaguar-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--jaguar-gold);
+            position: relative;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5);
+            animation: examPulse 4s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        @keyframes examPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 16px 50px rgba(255, 215, 0, 0.7); }
+        }
+
+        .exam-title {
+            font-size: 2.5rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .exam-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .exam-badge {
+            background: linear-gradient(135deg, var(--ceremony-glow), var(--deep-amber));
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 10px 0;
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(243, 156, 18, 0.4);
+        }
+
+        /* Hero/ceremony section */
+        .ceremony-section {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(255, 171, 0, 0.05));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .ceremony-title {
+            font-size: 1.6rem;
+            color: var(--ceremony-gold);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .ceremony-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* Exam sections */
+        .exam-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 2px solid rgba(243, 156, 18, 0.3);
+            position: relative;
+        }
+
+        .section-number {
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            background: linear-gradient(135deg, var(--ceremony-glow), var(--deep-amber));
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--ceremony-glow);
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Question styles */
+        .question {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+
+        .question:hover {
+            border-color: rgba(243, 156, 18, 0.3);
+        }
+
+        .question-text {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .options {
+            display: grid;
+            gap: 8px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .option:hover {
+            border-color: var(--ceremony-glow);
+            background: rgba(243, 156, 18, 0.1);
+        }
+
+        .option.selected {
+            border-color: var(--ceremony-glow);
+            background: rgba(243, 156, 18, 0.15);
+        }
+
+        .option.correct {
+            border-color: var(--success-green);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .option.incorrect {
+            border-color: #ff5252;
+            background: rgba(255, 82, 82, 0.1);
+        }
+
+        .option-radio {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .option.selected .option-radio {
+            border-color: var(--ceremony-glow);
+            background: var(--ceremony-glow);
+        }
+
+        .option.correct .option-radio {
+            border-color: var(--success-green);
+            background: var(--success-green);
+        }
+
+        .option.incorrect .option-radio {
+            border-color: #ff5252;
+            background: #ff5252;
+        }
+
+        /* Reading passage */
+        .reading-passage {
+            background: rgba(243, 156, 18, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--ceremony-glow);
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        /* Writing section */
+        .writing-area {
+            width: 100%;
+            min-height: 160px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 16px;
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: var(--transition);
+        }
+
+        .writing-area:focus {
+            outline: none;
+            border-color: var(--ceremony-glow);
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.2);
+        }
+
+        .writing-area::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .word-count {
+            text-align: right;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+
+        /* Submit section */
+        .submit-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--ceremony-glow), var(--jaguar-gold));
+            color: var(--ceremony-dark);
+            border: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 32px rgba(243, 156, 18, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(243, 156, 18, 0.5);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Results */
+        .results-section {
+            display: none;
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.15), rgba(255, 171, 0, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-title {
+            font-size: 2rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .results-score {
+            font-size: 4rem;
+            font-weight: 900;
+            margin: 20px 0;
+        }
+
+        .results-score.pass {
+            color: var(--success-green);
+        }
+
+        .results-score.fail {
+            color: #ff5252;
+        }
+
+        .results-message {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .results-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .result-btn {
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .result-btn.primary {
+            background: linear-gradient(135deg, var(--ceremony-glow), var(--deep-amber));
+            color: white;
+            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+        }
+
+        .result-btn.secondary {
+            background: var(--glass-bg);
+            color: var(--jaguar-gold);
+            border: 2px solid var(--jaguar-gold);
+        }
+
+        .result-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .exam-title { font-size: 1.8rem; }
+            .ceremony-section { padding: 25px; }
+            .exam-section { padding: 20px; }
+            .jaguar-avatar { width: 120px; height: 120px; }
+            .results-score { font-size: 3rem; }
+            .results-actions { flex-direction: column; align-items: center; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body>
+    <!-- Floating elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <div class="container">
+        <!-- Exam Header -->
+        <div class="exam-header">
+            <a href="/b2" class="back-btn">&#8592; Volver a B2</a>
+            <div class="jaguar-avatar">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <h1 class="exam-title">Examen Final B2</h1>
+            <p class="exam-subtitle">El Legado del Jaguar &mdash; Llanos Orientales</p>
+            <div class="exam-badge">Ceremonia del Legado Tejido</div>
+        </div>
+
+        <!-- Ceremony intro -->
+        <div class="ceremony-section">
+            <div class="ceremony-title">&#127942; La prueba del legado</div>
+            <p class="ceremony-text">
+                Has recorrido los Llanos Orientales, has cabalgado junto a los llaneros y has escuchado
+                el canto del arpa bajo las estrellas. Has debatido, analizado y construido argumentos
+                con la fuerza del jaguar. Ahora es momento de demostrar que puedes tejer un legado
+                con las palabras. El llano espera tu voz.
+            </p>
+        </div>
+
+        <!-- Section 1: Comprension analitica -->
+        <div class="exam-section" id="section1">
+            <div class="section-number">Parte 1 de 4</div>
+            <h2 class="section-title">&#128270; Comprension analitica</h2>
+            <p class="section-desc">Lee el texto con atencion y responde las preguntas de analisis.</p>
+
+            <div class="reading-passage">
+                Los Llanos Orientales de Colombia representan un delicado equilibrio entre la ganaderia
+                tradicional y la conservacion de la biodiversidad. Los hatos llaneros, que durante siglos
+                han definido la economia de la region, enfrentan hoy el desafio de adaptarse a practicas
+                sostenibles sin perder su identidad cultural. Algunos ganaderos argumentan que las
+                regulaciones ambientales amenazan su forma de vida, mientras que los ecologistas insisten
+                en que sin cambios urgentes, especies como el chiguiro y el caiman podrian desaparecer.
+            </div>
+
+            <div class="question" data-question="1" data-correct="b">
+                <p class="question-text">1. &iquest;Cual es el dilema central del texto?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La desaparicion inevitable de la ganaderia en los Llanos</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La tension entre mantener la ganaderia tradicional y conservar la biodiversidad</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La prohibicion total de la ganaderia por razones ambientales</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La falta de interes de los ganaderos en la economia regional</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="2" data-correct="c">
+                <p class="question-text">2. &iquest;Que se puede inferir sobre la posicion de los ganaderos?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Estan completamente a favor de las regulaciones ambientales</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>No les importa la conservacion de las especies</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Perciben las regulaciones como una amenaza a su sustento y cultura</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Quieren abandonar la ganaderia por completo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="3" data-correct="a">
+                <p class="question-text">3. &iquest;Que palabra describe mejor el tono del texto?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Equilibrado y reflexivo</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Agresivo y parcializado</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Humoristico y despreocupado</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Nostalgico y poetico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Gramatica en contexto -->
+        <div class="exam-section" id="section2">
+            <div class="section-number">Parte 2 de 4</div>
+            <h2 class="section-title">&#128161; Gramatica en contexto</h2>
+            <p class="section-desc">Elige la opcion correcta para completar cada oracion.</p>
+
+            <div class="question" data-question="4" data-correct="a">
+                <p class="question-text">4. Si los ganaderos _____ implementado practicas sostenibles antes, la situacion seria diferente.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>hubieran</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>habrian</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>hayan</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>habian</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="5" data-correct="a">
+                <p class="question-text">5. Los investigadores llevan anos _____ el impacto de la ganaderia en los ecosistemas.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>estudiando</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>estudiar</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>estudiado</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>estudian</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="6" data-correct="a">
+                <p class="question-text">6. Es fundamental que las comunidades _____ alternativas economicas viables.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>desarrollen</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>desarrollan</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>desarrollaran</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>desarrollaron</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="7" data-correct="d">
+                <p class="question-text">7. La experta senalo que, de haber tenido mas recursos, _____ ampliar la zona protegida.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>habria podido</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>hubiera podido</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>podria haber</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>todas las anteriores</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Argumentacion y debate -->
+        <div class="exam-section" id="section3">
+            <div class="section-number">Parte 3 de 4</div>
+            <h2 class="section-title">&#9878;&#65039; Argumentacion y debate</h2>
+            <p class="section-desc">Analiza los argumentos presentados y elige la mejor respuesta.</p>
+
+            <div class="question" data-question="8" data-correct="c">
+                <p class="question-text">8. En un debate, un participante afirma: "La ganaderia extensiva es la unica forma de mantener la economia llanera. Sin ella, las familias no tendrian ingresos." &iquest;Cual es el contraargumento mas solido?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Eso no es verdad, la ganaderia no es importante.</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Los llaneros deberian buscar otro trabajo en la ciudad.</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Si bien la ganaderia es fundamental para la economia, existen modelos de ganaderia sostenible que permiten mantener los ingresos mientras se protege el ecosistema, como lo demuestran experiencias en otros paises.</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Los ecologistas tienen razon y los ganaderos estan equivocados.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="9" data-correct="b">
+                <p class="question-text">9. Identifica la falacia logica en el siguiente argumento: "Mi abuelo fue ganadero toda su vida y nunca dano el medio ambiente. Por lo tanto, la ganaderia no puede causar problemas ambientales."</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Argumento circular: la conclusion repite la premisa</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Generalizacion indebida: usa un caso particular para hacer una conclusion universal</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Falsa dicotomia: presenta solo dos opciones cuando hay mas</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Apelacion a la autoridad: cita una fuente no calificada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="10" data-correct="b">
+                <p class="question-text">10. &iquest;Que conector estructura mejor el siguiente argumento complejo? "_____ los datos cientificos demuestran el deterioro ambiental, _____ es necesario considerar las realidades socioeconomicas de las comunidades afectadas antes de implementar restricciones."</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Porque... tambien...</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Si bien... no obstante...</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Cuando... entonces...</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Ademas... por eso...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Produccion escrita -->
+        <div class="exam-section" id="section4">
+            <div class="section-number">Parte 4 de 4</div>
+            <h2 class="section-title">&#9997;&#65039; Produccion escrita</h2>
+            <p class="section-desc">Escribe un texto argumentativo (80-150 palabras) sobre el siguiente tema: &iquest;Es posible equilibrar el desarrollo economico y la conservacion ambiental en los Llanos Orientales? Incluye al menos dos argumentos y una conclusion.</p>
+            <textarea class="writing-area" id="writingResponse" placeholder="En mi opinion, el equilibrio entre el desarrollo economico y la conservacion ambiental en los Llanos Orientales es posible, aunque requiere compromiso de todos los sectores..."></textarea>
+            <div class="word-count" id="wordCount">0 palabras</div>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-section">
+            <button class="submit-btn" id="submitBtn" onclick="submitExam()">
+                &#127942; Entregar examen
+            </button>
+        </div>
+
+        <!-- Results -->
+        <div class="results-section" id="resultsSection">
+            <div class="jaguar-avatar" style="width:100px;height:100px;margin-bottom:20px;">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <h2 class="results-title" id="resultsTitle">Resultado</h2>
+            <div class="results-score" id="resultsScore">0%</div>
+            <p class="results-message" id="resultsMessage"></p>
+            <div class="results-actions">
+                <button class="result-btn primary" onclick="location.reload()">Intentar de nuevo</button>
+                <a href="/b2" class="result-btn secondary">Volver a B2</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Floating elements
+        (function() {
+            var elements = ['&#127942;', '&#127793;', '&#9878;&#65039;', '&#128161;', '&#10024;', '&#128214;', '&#127774;', '&#128293;'];
+            var container = document.getElementById('floatingElements');
+            for (var i = 0; i < 8; i++) {
+                var el = document.createElement('div');
+                el.className = 'exam-element';
+                el.innerHTML = elements[i % elements.length];
+                el.style.left = (Math.random() * 100) + 'vw';
+                el.style.animationDuration = (25 + Math.random() * 20) + 's';
+                el.style.animationDelay = (Math.random() * 15) + 's';
+                container.appendChild(el);
+            }
+        })();
+
+        // Track answers
+        var answers = {};
+
+        function selectOption(el) {
+            var question = el.closest('.question');
+            var qNum = question.getAttribute('data-question');
+
+            // Remove selected from siblings
+            var siblings = question.querySelectorAll('.option');
+            for (var i = 0; i < siblings.length; i++) {
+                siblings[i].classList.remove('selected');
+            }
+
+            el.classList.add('selected');
+            answers[qNum] = el.getAttribute('data-value');
+        }
+
+        // Word count for writing
+        var writingArea = document.getElementById('writingResponse');
+        writingArea.addEventListener('input', function() {
+            var words = this.value.trim().split(/\s+/).filter(function(w) { return w.length > 0; });
+            document.getElementById('wordCount').textContent = words.length + ' palabras';
+        });
+
+        function submitExam() {
+            var totalQuestions = 10;
+            var correctCount = 0;
+            var questions = document.querySelectorAll('.question');
+
+            for (var i = 0; i < questions.length; i++) {
+                var q = questions[i];
+                var qNum = q.getAttribute('data-question');
+                var correctAnswer = q.getAttribute('data-correct');
+                var userAnswer = answers[qNum];
+                var options = q.querySelectorAll('.option');
+
+                for (var j = 0; j < options.length; j++) {
+                    options[j].classList.remove('selected');
+                    if (options[j].getAttribute('data-value') === correctAnswer) {
+                        options[j].classList.add('correct');
+                    } else if (options[j].getAttribute('data-value') === userAnswer && userAnswer !== correctAnswer) {
+                        options[j].classList.add('incorrect');
+                    }
+                }
+
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                }
+            }
+
+            // Writing bonus
+            var writingText = writingArea.value.trim();
+            var writingWords = writingText.split(/\s+/).filter(function(w) { return w.length > 0; }).length;
+            var writingBonus = 0;
+            if (writingWords >= 100) writingBonus = 3;
+            else if (writingWords >= 80) writingBonus = 2;
+            else if (writingWords >= 50) writingBonus = 1;
+
+            var totalScore = correctCount + writingBonus;
+            var maxScore = totalQuestions + 3;
+            var percentage = Math.round((totalScore / maxScore) * 100);
+
+            var resultsSection = document.getElementById('resultsSection');
+            var resultsTitle = document.getElementById('resultsTitle');
+            var resultsScore = document.getElementById('resultsScore');
+            var resultsMessage = document.getElementById('resultsMessage');
+
+            resultsScore.textContent = percentage + '%';
+
+            // Save result to localStorage
+            var resultData = {
+                score: percentage,
+                correct: correctCount,
+                total: totalQuestions,
+                writingBonus: writingBonus,
+                writingWords: writingWords,
+                date: new Date().toISOString()
+            };
+            try {
+                localStorage.setItem('jaguarB2ExamResult', JSON.stringify(resultData));
+            } catch(e) {}
+
+            if (percentage >= 80) {
+                resultsTitle.textContent = '\u{1F3C6} Has tejido tu legado';
+                resultsScore.className = 'results-score pass';
+                resultsMessage.textContent = 'Extraordinario. Dominas el analisis, la argumentacion y la escritura con la precision de un verdadero narrador de los Llanos. El legado del jaguar vive en tus palabras. Yaguara esta orgulloso.';
+            } else if (percentage >= 60) {
+                resultsTitle.textContent = '\u{1F31F} Casi lo logras';
+                resultsScore.className = 'results-score pass';
+                resultsMessage.textContent = 'Buen esfuerzo. Tu capacidad de analisis y argumentacion esta creciendo, pero aun hay hilos por fortalecer. Revisa los temas y vuelve a intentarlo.';
+            } else {
+                resultsTitle.textContent = '\u{1F4A1} Sigue construyendo';
+                resultsScore.className = 'results-score fail';
+                resultsMessage.textContent = 'El legado necesita mas trabajo. Vuelve a recorrer los Llanos, fortalece tu analisis critico y tu argumentacion, y regresa cuando las ideas fluyan con claridad.';
+            }
+
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('submitBtn').textContent = 'Examen entregado';
+        }
+    </script>
+</body>
+</html>

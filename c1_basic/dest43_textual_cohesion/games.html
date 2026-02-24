@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 43: Hilos de luz - Cohesi&oacute;n textual avanzada</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c1_basic/dest43_textual_cohesion/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 43: Hilos de luz - Cohesión textual avanzada",
+          "url": "https://babelfree.com/c1_basic/dest43_textual_cohesion/games",
+          "educationalLevel": "C1 - Advanced",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Textual cohesion", "Advanced discourse markers", "Spanish writing"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C1 Basic", "item": "https://babelfree.com/c1-santa-marta" },
+            { "@type": "ListItem", "position": 4, "name": "Hilos de luz - Cohesión textual avanzada" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c1-santa-marta" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 43: Hilos de luz</div>
+            <div class="yg-header-subtitle">Cohesi&oacute;n textual avanzada</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee con atenci\u00f3n este texto sobre los hilos invisibles que tejen la cohesi\u00f3n textual.',
+        text: 'Los kogi de la Sierra Nevada de Santa Marta creen que hilos invisibles conectan todas las cosas del universo: las monta\u00f1as con los r\u00edos, los \u00e1rboles con las estrellas, los vivos con los ancestros. De manera similar, un texto bien construido depende de hilos que unen cada oraci\u00f3n con la siguiente. Estos hilos \u2014la an\u00e1fora, la cat\u00e1fora, la elipsis, las cadenas l\u00e9xicas\u2014 son los mecanismos de cohesi\u00f3n textual. Sin ellos, las ideas quedar\u00edan sueltas, como cuentas sin collar. En este destino, aprender\u00e1s a tejer tus propios hilos de luz: a referirte a lo ya dicho sin repetirlo, a anticipar lo que viene, a omitir lo innecesario y a enlazar p\u00e1rrafos con la precisi\u00f3n de un tejedor kogi. Al dominar estos recursos, tus textos dejar\u00e1n de ser secuencias de oraciones para convertirse en discursos cohesionados y fluidos.'
+    },
+    // === GAME 2: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con el mecanismo de an\u00e1fora adecuado.',
+        questions: [
+            {
+                sentence: 'El gobierno present\u00f3 un plan de reforma educativa. ___ contempla la formaci\u00f3n continua del profesorado.',
+                answer: 'Dicho plan',
+                options: ['Dicho plan', 'Un plan', 'El otro plan', 'Alg\u00fan plan']
+            },
+            {
+                sentence: 'La investigadora public\u00f3 sus hallazgos en una revista cient\u00edfica. ___ demostraban la relaci\u00f3n entre contaminaci\u00f3n y enfermedades respiratorias.',
+                answer: 'Estos',
+                options: ['Estos', 'Ellas', 'Aquellas', 'Los otros']
+            },
+            {
+                sentence: 'Se debatieron varias propuestas durante la sesi\u00f3n. ___ result\u00f3 ser la m\u00e1s viable de todas.',
+                answer: 'La \u00faltima de ellas',
+                options: ['La \u00faltima de ellas', 'Una propuesta', 'La primera', 'Otra propuesta']
+            },
+            {
+                sentence: 'El r\u00edo Magdalena recorre gran parte de Colombia. ___ constituye la arteria fluvial m\u00e1s importante del pa\u00eds.',
+                answer: 'Este',
+                options: ['Este', 'Aquel', 'Un r\u00edo', 'El otro']
+            }
+        ]
+    },
+    // === GAME 3: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada mecanismo de cohesi\u00f3n con su definici\u00f3n.',
+        pairs: [
+            ['An\u00e1fora', 'Referencia a un elemento ya mencionado en el texto'],
+            ['Cat\u00e1fora', 'Referencia anticipada a un elemento que aparecer\u00e1 despu\u00e9s'],
+            ['Elipsis', 'Omisi\u00f3n de un elemento recuperable por el contexto'],
+            ['Cadena l\u00e9xica', 'Serie de palabras relacionadas sem\u00e1nticamente a lo largo del texto'],
+            ['Progresi\u00f3n tem\u00e1tica', 'Avance de la informaci\u00f3n conocida hacia la informaci\u00f3n nueva']
+        ]
+    },
+    // === GAME 4: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento y selecciona el conector de reformulaci\u00f3n que se utiliza.',
+        audio: 'dest43_listen01',
+        question: '\u00bfQu\u00e9 conector de reformulaci\u00f3n se emplea en el fragmento?',
+        answer: 'Es decir',
+        options: ['Es decir', 'Sin embargo', 'Por lo tanto', 'No obstante']
+    },
+    // === GAME 5: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en el tiempo adecuado para mantener la cohesi\u00f3n temporal del texto.',
+        questions: [
+            {
+                verb: 'constituir',
+                subject: 'Lo anterior (presente)',
+                answer: 'constituye',
+                options: ['constituye', 'constitu\u00eda', 'constituir\u00e1', 'haya constituido']
+            },
+            {
+                verb: 'referirse',
+                subject: 'El autor (presente)',
+                answer: 'se refiere',
+                options: ['se refiere', 'se refer\u00eda', 'se referir\u00e1', 'se haya referido']
+            },
+            {
+                verb: 'evidenciar',
+                subject: 'Dicho estudio (presente)',
+                answer: 'evidencia',
+                options: ['evidencia', 'evidenciaba', 'evidenciar\u00e1', 'evidenci\u00f3']
+            },
+            {
+                verb: 'implicar',
+                subject: 'Lo expuesto (presente)',
+                answer: 'implica',
+                options: ['implica', 'implicaba', 'implicar\u00e1', 'implic\u00f3']
+            }
+        ]
+    },
+    // === GAME 6: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan su funci\u00f3n de cohesi\u00f3n textual.',
+        categories: ['Reformulaci\u00f3n', 'Ejemplificaci\u00f3n', 'Conclusi\u00f3n'],
+        items: [
+            { text: 'En otras palabras', category: 'Reformulaci\u00f3n' },
+            { text: 'A modo de ejemplo', category: 'Ejemplificaci\u00f3n' },
+            { text: 'En s\u00edntesis', category: 'Conclusi\u00f3n' },
+            { text: 'Dicho de otro modo', category: 'Reformulaci\u00f3n' },
+            { text: 'Como muestra de ello', category: 'Ejemplificaci\u00f3n' },
+            { text: 'En definitiva', category: 'Conclusi\u00f3n' }
+        ]
+    },
+    // === GAME 7: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con un marcador de organizaci\u00f3n textual.',
+        words: ['En', 'primer', 'lugar', ',', 'es', 'necesario', 'analizar', 'las', 'causas', 'del', 'problema'],
+        answer: 'En primer lugar, es necesario analizar las causas del problema'
+    },
+    // === GAME 8: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee este texto sobre la an\u00e1fora y la cat\u00e1fora como hilos de referencia.',
+        text: 'Imagina un tejido kogi: cada hilo se entrelaza con los anteriores y anticipa los que vendr\u00e1n. La an\u00e1fora funciona de manera an\u00e1loga: mira hacia atr\u00e1s, retoma lo ya mencionado. Cuando escribimos \u00abdicho fen\u00f3meno\u00bb, \u00abel mencionado autor\u00bb o \u00abesto\u00bb, estamos tirando de un hilo que conecta con algo previo. La cat\u00e1fora, en cambio, mira hacia delante: anuncia lo que est\u00e1 por venir. Expresiones como \u00ablo siguiente\u00bb, \u00abesto es lo que necesitamos\u00bb o \u00abveamos qu\u00e9 ocurre a continuaci\u00f3n\u00bb crean expectativa y gu\u00edan al lector. Ambos mecanismos son complementarios. Un texto maduro los combina con naturalidad, creando una red de referencias que sostiene el discurso como los hilos sostienen el tejido. Dominar la an\u00e1fora y la cat\u00e1fora es tejer con conciencia.'
+    },
+    // === GAME 9: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la expresi\u00f3n cataf\u00f3rica adecuada.',
+        questions: [
+            {
+                sentence: '___ es lo que debemos recordar: la cohesi\u00f3n no se logra solo con conectores.',
+                answer: 'Esto',
+                options: ['Esto', 'Aquello', 'Lo anterior', 'Dicho']
+            },
+            {
+                sentence: 'La conclusi\u00f3n es ___: sin cohesi\u00f3n, no hay texto.',
+                answer: 'la siguiente',
+                options: ['la siguiente', 'la anterior', 'la mencionada', 'la dicha']
+            },
+            {
+                sentence: 'Te explicar\u00e9 ___: los mecanismos de referencia son la base de la cohesi\u00f3n.',
+                answer: 'lo siguiente',
+                options: ['lo siguiente', 'lo anterior', 'lo dicho', 'lo mencionado']
+            }
+        ]
+    },
+    // === GAME 10: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce esta oraci\u00f3n al espa\u00f1ol usando el conector de reformulaci\u00f3n adecuado.',
+        source: 'La cohesi\u00f3n textual, es decir, la conexi\u00f3n entre las partes de un texto, es fundamental.',
+        words: ['La', 'cohesi\u00f3n', 'textual', ',', 'es', 'decir', 'la', 'conexi\u00f3n', 'entre', 'las', 'partes', 'de', 'un', 'texto', 'fundamental'],
+        answer: 'La cohesi\u00f3n textual, es decir, la conexi\u00f3n entre las partes de un texto, es fundamental'
+    },
+    // === GAME 11: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona el conector de organizaci\u00f3n textual adecuado para cada espacio.',
+        questions: [
+            {
+                sentence: '___, abordaremos las causas del problema. ___, analizaremos sus consecuencias. ___, propondremos soluciones.',
+                answer: 'En primer lugar / En segundo lugar / Por \u00faltimo',
+                options: ['En primer lugar / En segundo lugar / Por \u00faltimo', 'Primero / Luego / Finalmente', 'Antes / Despu\u00e9s / Al final', 'Por un lado / Por otro / En cambio']
+            },
+            {
+                sentence: '___ la educaci\u00f3n, es necesario aumentar la inversi\u00f3n p\u00fablica.',
+                answer: 'En lo que respecta a',
+                options: ['En lo que respecta a', 'Sin embargo', 'Por lo tanto', 'A pesar de']
+            },
+            {
+                sentence: '___ la contaminaci\u00f3n costera, los datos son alarmantes.',
+                answer: 'En cuanto a',
+                options: ['En cuanto a', 'No obstante', 'Por consiguiente', 'En cambio']
+            }
+        ]
+    },
+    // === GAME 12: conversation ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Completa el di\u00e1logo acad\u00e9mico usando mecanismos de cohesi\u00f3n adecuados.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora M\u00e1rquez', text: 'El texto que entregaste tiene buenas ideas, pero le falta cohesi\u00f3n. Las oraciones parecen aisladas entre s\u00ed.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Entiendo. \u00bfSer\u00eda \u00fatil incorporar m\u00e1s an\u00e1foras y conectores de reformulaci\u00f3n para enlazar las ideas?',
+                    'No s\u00e9 qu\u00e9 es la cohesi\u00f3n.',
+                    'Voy a agregar m\u00e1s palabras bonitas.',
+                    'Las oraciones est\u00e1n bien as\u00ed.'
+                ],
+                answer: 'Entiendo. \u00bfSer\u00eda \u00fatil incorporar m\u00e1s an\u00e1foras y conectores de reformulaci\u00f3n para enlazar las ideas?'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora M\u00e1rquez', text: 'Exactamente. Tambi\u00e9n te recomiendo usar progresi\u00f3n tem\u00e1tica: que cada oraci\u00f3n retome algo de la anterior y a\u00f1ada informaci\u00f3n nueva.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Es decir, que el tema de una oraci\u00f3n se convierta en el punto de partida de la siguiente. Lo intentar\u00e9.',
+                    'No entiendo nada de eso.',
+                    'Prefiero escribir como siempre.',
+                    'Eso suena muy complicado.'
+                ],
+                answer: 'Es decir, que el tema de una oraci\u00f3n se convierta en el punto de partida de la siguiente. Lo intentar\u00e9.'
+            }
+        ]
+    },
+    // === GAME 13: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento e identifica qu\u00e9 tipo de referencia textual se emplea.',
+        audio: 'dest43_listen02',
+        question: '\u00bfQu\u00e9 tipo de referencia se utiliza cuando el hablante dice \u00abdicho fen\u00f3meno\u00bb?',
+        answer: 'An\u00e1fora',
+        options: ['An\u00e1fora', 'Cat\u00e1fora', 'Elipsis', 'Deixis']
+    },
+    // === GAME 14: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo para completar oraciones con marcadores de cohesi\u00f3n.',
+        questions: [
+            {
+                verb: 'demostrar',
+                subject: 'Lo mencionado anteriormente (presente)',
+                answer: 'demuestra',
+                options: ['demuestra', 'demostraba', 'demostrar\u00e1', 'demostr\u00f3']
+            },
+            {
+                verb: 'corroborar',
+                subject: 'Los datos expuestos (presente)',
+                answer: 'corroboran',
+                options: ['corroboran', 'corroboraban', 'corroborar\u00e1n', 'corroboraron']
+            },
+            {
+                verb: 'sintetizar',
+                subject: 'En definitiva, el estudio (presente)',
+                answer: 'sintetiza',
+                options: ['sintetiza', 'sintetizaba', 'sintetizar\u00e1', 'sintetiz\u00f3']
+            },
+            {
+                verb: 'aludir',
+                subject: 'El p\u00e1rrafo anterior (presente)',
+                answer: 'alude',
+                options: ['alude', 'alud\u00eda', 'aludir\u00e1', 'aludi\u00f3']
+            },
+            {
+                verb: 'remitir',
+                subject: 'Esta expresi\u00f3n nos (presente)',
+                answer: 'remite',
+                options: ['remite', 'remit\u00eda', 'remitir\u00e1', 'remiti\u00f3']
+            }
+        ]
+    },
+    // === GAME 15: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada conector con su funci\u00f3n textual.',
+        pairs: [
+            ['En otras palabras', 'Reformulaci\u00f3n'],
+            ['A modo de ejemplo', 'Ejemplificaci\u00f3n'],
+            ['En lo que respecta a', 'Tematizaci\u00f3n'],
+            ['En s\u00edntesis', 'Conclusi\u00f3n'],
+            ['En primer lugar', 'Organizaci\u00f3n textual'],
+            ['Dicho de otro modo', 'Reformulaci\u00f3n']
+        ]
+    },
+    // === GAME 16: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con elipsis cohesiva.',
+        words: ['Mar\u00eda', 'estudi\u00f3', 'ling\u00fc\u00edstica', 'y', 'Pedro', ',', 'filosof\u00eda'],
+        answer: 'Mar\u00eda estudi\u00f3 ling\u00fc\u00edstica y Pedro, filosof\u00eda'
+    },
+    // === GAME 17: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona la expresi\u00f3n anaf\u00f3rica m\u00e1s adecuada para evitar la repetici\u00f3n.',
+        questions: [
+            {
+                sentence: 'Gabriel Garc\u00eda M\u00e1rquez recibi\u00f3 el Nobel en 1982. ___ transform\u00f3 la literatura latinoamericana.',
+                answer: 'El escritor colombiano',
+                options: ['El escritor colombiano', 'Gabriel Garc\u00eda M\u00e1rquez', '\u00c9l mismo', 'Un autor']
+            },
+            {
+                sentence: 'La biodiversidad de la Sierra Nevada es excepcional. ___ incluye especies end\u00e9micas que no se encuentran en ning\u00fan otro lugar.',
+                answer: 'Esta',
+                options: ['Esta', 'La otra', 'Aquella', 'Una biodiversidad']
+            },
+            {
+                sentence: 'Los investigadores publicaron un informe alarmante. ___ revel\u00f3 que el 40% de los arrecifes est\u00e1n da\u00f1ados.',
+                answer: 'El mencionado documento',
+                options: ['El mencionado documento', 'Un informe', 'El otro informe', 'Alg\u00fan documento']
+            }
+        ]
+    },
+    // === GAME 18: dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n completa con el conector de reformulaci\u00f3n.',
+        audio: 'dest43_dict01',
+        answer: 'La cohesi\u00f3n textual, es decir, el conjunto de mecanismos que conectan las partes de un texto, resulta imprescindible en la escritura acad\u00e9mica.'
+    },
+    // === GAME 19: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la elipsis como recurso de cohesi\u00f3n y fluidez.',
+        text: 'En la tradici\u00f3n oral kogi, lo que no se dice es tan importante como lo que se expresa. El silencio entre las palabras del mamo carga significado. En la ling\u00fc\u00edstica textual, la elipsis funciona de manera semejante: omitimos un elemento que el lector puede recuperar del contexto, y esa omisi\u00f3n, lejos de empobrecer el texto, lo agiliza. \u00abJuan compr\u00f3 manzanas y Pedro, peras\u00bb: la elipsis del verbo \u00abcompr\u00f3\u00bb evita la redundancia y otorga ritmo. Pero la elipsis exige precisi\u00f3n: el elemento omitido debe ser inequ\u00edvocamente recuperable. Si el lector no puede reconstruir lo elidido, la cohesi\u00f3n se rompe y el texto pierde claridad. Dominar la elipsis es aprender el arte del silencio significativo.'
+    },
+    // === GAME 20: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan sea una referencia anaf\u00f3rica o cataf\u00f3rica.',
+        categories: ['An\u00e1fora', 'Cat\u00e1fora'],
+        items: [
+            { text: 'Dicho problema', category: 'An\u00e1fora' },
+            { text: 'Lo siguiente', category: 'Cat\u00e1fora' },
+            { text: 'El mencionado autor', category: 'An\u00e1fora' },
+            { text: 'Esto es lo que debemos considerar:', category: 'Cat\u00e1fora' },
+            { text: 'Lo anterior', category: 'An\u00e1fora' },
+            { text: 'A continuaci\u00f3n se expone', category: 'Cat\u00e1fora' }
+        ]
+    },
+    // === GAME 21: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el marcador de conclusi\u00f3n m\u00e1s adecuado.',
+        questions: [
+            {
+                sentence: '___, los mecanismos de cohesi\u00f3n son indispensables para la construcci\u00f3n de textos acad\u00e9micos.',
+                answer: 'En definitiva',
+                options: ['En definitiva', 'Por ejemplo', 'Sin embargo', 'En primer lugar']
+            },
+            {
+                sentence: '___, podemos afirmar que la an\u00e1fora y la cat\u00e1fora son mecanismos complementarios.',
+                answer: 'A modo de conclusi\u00f3n',
+                options: ['A modo de conclusi\u00f3n', 'Por otro lado', 'En cambio', 'Adem\u00e1s']
+            },
+            {
+                sentence: '___, la cohesi\u00f3n textual no depende solo de los conectores, sino tambi\u00e9n de la progresi\u00f3n tem\u00e1tica.',
+                answer: 'En s\u00edntesis',
+                options: ['En s\u00edntesis', 'No obstante', 'Por consiguiente', 'A modo de ejemplo']
+            }
+        ]
+    },
+    // === GAME 22: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento acad\u00e9mico e identifica el marcador de organizaci\u00f3n textual.',
+        audio: 'dest43_listen03',
+        question: '\u00bfQu\u00e9 marcador de organizaci\u00f3n textual introduce el segundo argumento?',
+        answer: 'En segundo lugar',
+        options: ['En segundo lugar', 'Por otro lado', 'Sin embargo', 'Es decir']
+    },
+    // === GAME 23: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Construye la oraci\u00f3n en espa\u00f1ol con el marcador de tematizaci\u00f3n adecuado.',
+        source: 'Por lo que se refiere a la educaci\u00f3n ambiental, los resultados son prometedores.',
+        words: ['Por', 'lo', 'que', 'se', 'refiere', 'a', 'la', 'educaci\u00f3n', 'ambiental', ',', 'los', 'resultados', 'son', 'prometedores'],
+        answer: 'Por lo que se refiere a la educaci\u00f3n ambiental, los resultados son prometedores'
+    },
+    // === GAME 24: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada oraci\u00f3n con el tipo de cohesi\u00f3n que emplea.',
+        pairs: [
+            ['La tesis result\u00f3 innovadora. Esta abord\u00f3 un tema in\u00e9dito.', 'An\u00e1fora pronominal'],
+            ['Juan estudi\u00f3 medicina y Pedro, derecho.', 'Elipsis verbal'],
+            ['Lo que debemos hacer es lo siguiente: revisar el texto.', 'Cat\u00e1fora'],
+            ['El bosque, la selva, la monta\u00f1a: todos los ecosistemas est\u00e1n amenazados.', 'Cadena l\u00e9xica'],
+            ['El problema es grave. Dicha situaci\u00f3n exige medidas urgentes.', 'An\u00e1fora l\u00e9xica']
+        ]
+    },
+    // === GAME 25: cancion ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Completa los versos de esta canci\u00f3n con las expresiones de cohesi\u00f3n adecuadas.',
+        title: 'Hilos que nos unen',
+        artist: 'Destino 43',
+        lines: [
+            {
+                text: 'Tejo palabras con hilos de luz, ___ que todas se conecten al fin.',
+                answer: 'para',
+                options: ['para', 'aunque', 'porque', 'si']
+            },
+            {
+                text: 'Lo que dije antes vuelve a sonar, ___ lo retomo con nueva voz.',
+                answer: 'cuando',
+                options: ['cuando', 'pero', 'nunca', 'sin que']
+            },
+            {
+                text: '___, el silencio tambi\u00e9n habla: lo que no digo, t\u00fa ya lo sabes.',
+                answer: 'En otras palabras',
+                options: ['En otras palabras', 'Sin embargo', 'Por ejemplo', 'Adem\u00e1s']
+            },
+            {
+                text: 'En primer lugar, mi coraz\u00f3n; ___, mi pensamiento; por \u00faltimo, mi alma entera.',
+                answer: 'en segundo lugar',
+                options: ['en segundo lugar', 'sin embargo', 'por lo tanto', 'no obstante']
+            }
+        ]
+    },
+    // === GAME 26: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para construir una oraci\u00f3n con un marcador de tematizaci\u00f3n.',
+        words: ['En', 'lo', 'que', 'respecta', 'a', 'la', 'biodiversidad', ',', 'Colombia', 'ocupa', 'el', 'segundo', 'lugar', 'mundial'],
+        answer: 'En lo que respecta a la biodiversidad, Colombia ocupa el segundo lugar mundial'
+    },
+    // === GAME 27: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo para mantener la coherencia temporal en textos con marcadores de cohesi\u00f3n.',
+        questions: [
+            {
+                verb: 'exponer',
+                subject: 'Como se (pret\u00e9rito)',
+                answer: 'expuso',
+                options: ['expuso', 'expone', 'expondr\u00e1', 'expon\u00eda']
+            },
+            {
+                verb: 'se\u00f1alar',
+                subject: 'Tal como se (pret\u00e9rito)',
+                answer: 'se\u00f1al\u00f3',
+                options: ['se\u00f1al\u00f3', 'se\u00f1ala', 'se\u00f1alar\u00e1', 'se\u00f1alaba']
+            },
+            {
+                verb: 'abordar',
+                subject: 'A continuaci\u00f3n se (futuro)',
+                answer: 'abordar\u00e1',
+                options: ['abordar\u00e1', 'abord\u00f3', 'aborda', 'abordaba']
+            },
+            {
+                verb: 'concluir',
+                subject: 'En definitiva, la investigaci\u00f3n (presente)',
+                answer: 'concluye',
+                options: ['concluye', 'concluy\u00f3', 'concluir\u00e1', 'conclu\u00eda']
+            }
+        ]
+    },
+    // === GAME 28: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre las cadenas l\u00e9xicas y la progresi\u00f3n tem\u00e1tica.',
+        text: 'Los kogi distinguen entre diferentes niveles de conexi\u00f3n en su cosmovisi\u00f3n: la conexi\u00f3n f\u00edsica, la espiritual y la ancestral. En la ling\u00fc\u00edstica textual, las cadenas l\u00e9xicas operan de forma similar: crean niveles de conexi\u00f3n sem\u00e1ntica que recorren el texto. Una cadena l\u00e9xica puede estar formada por sin\u00f3nimos (bosque, selva, floresta), por hip\u00f3nimos (animal: jaguar, c\u00f3ndor, serpiente) o por palabras del mismo campo sem\u00e1ntico (r\u00edo, corriente, cauce, ribera). Estas cadenas sostienen la unidad tem\u00e1tica del texto sin necesidad de repeticiones literales. La progresi\u00f3n tem\u00e1tica, por su parte, asegura que la informaci\u00f3n avance: cada oraci\u00f3n toma como punto de partida algo ya conocido (el tema) y le a\u00f1ade informaci\u00f3n nueva (el rema). As\u00ed, el texto progresa como un r\u00edo que avanza sin perder su cauce.'
+    },
+    // === GAME 29: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la expresi\u00f3n de ejemplificaci\u00f3n m\u00e1s adecuada.',
+        questions: [
+            {
+                sentence: 'Los mecanismos de cohesi\u00f3n son variados. ___, la an\u00e1fora permite retomar elementos ya mencionados.',
+                answer: 'A modo de ejemplo',
+                options: ['A modo de ejemplo', 'En definitiva', 'Sin embargo', 'En primer lugar']
+            },
+            {
+                sentence: 'Las cadenas l\u00e9xicas contribuyen a la unidad tem\u00e1tica. ___, en un texto sobre ecolog\u00eda encontramos palabras como bosque, selva y floresta.',
+                answer: 'Como muestra de ello',
+                options: ['Como muestra de ello', 'En s\u00edntesis', 'No obstante', 'En cambio']
+            },
+            {
+                sentence: 'La elipsis agiliza el discurso. ___, la oraci\u00f3n \u00abJuan come manzanas y Pedro, peras\u00bb omite el verbo en la segunda cl\u00e1usula.',
+                answer: 'As\u00ed',
+                options: ['As\u00ed', 'En definitiva', 'Por lo tanto', 'Sin embargo']
+            }
+        ]
+    },
+    // === GAME 30: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan su funci\u00f3n como marcador textual.',
+        categories: ['Organizaci\u00f3n', 'Tematizaci\u00f3n'],
+        items: [
+            { text: 'En primer lugar', category: 'Organizaci\u00f3n' },
+            { text: 'En lo que respecta a', category: 'Tematizaci\u00f3n' },
+            { text: 'En segundo lugar', category: 'Organizaci\u00f3n' },
+            { text: 'En cuanto a', category: 'Tematizaci\u00f3n' },
+            { text: 'Por \u00faltimo', category: 'Organizaci\u00f3n' },
+            { text: 'Por lo que se refiere a', category: 'Tematizaci\u00f3n' }
+        ]
+    },
+    // === GAME 31: story ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee el siguiente texto acad\u00e9mico y responde las preguntas sobre sus mecanismos de cohesi\u00f3n.',
+        title: 'La Sierra Nevada y sus guardianes',
+        text: 'La Sierra Nevada de Santa Marta constituye uno de los ecosistemas m\u00e1s singulares del planeta. Esta formaci\u00f3n monta\u00f1osa, la m\u00e1s alta del mundo junto al mar, alberga una biodiversidad excepcional. En lo que respecta a sus habitantes originarios, los kogi han preservado su cosmovisi\u00f3n durante siglos. Dicho pueblo ind\u00edgena considera que la Sierra es el coraz\u00f3n del mundo. En primer lugar, los kogi mantienen un equilibrio espiritual con la naturaleza. En segundo lugar, sus pr\u00e1cticas agr\u00edcolas respetan los ciclos naturales. Por \u00faltimo, su sistema de conocimiento integra lo material y lo espiritual. En s\u00edntesis, los kogi representan un modelo de convivencia arm\u00f3nica con el entorno que el mundo contempor\u00e1neo deber\u00eda estudiar.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 tipo de referencia es \u00abesta formaci\u00f3n monta\u00f1osa\u00bb?',
+                options: ['An\u00e1fora l\u00e9xica', 'Cat\u00e1fora', 'Elipsis', 'Deixis'],
+                answer: 'An\u00e1fora l\u00e9xica'
+            },
+            {
+                q: '\u00bfQu\u00e9 funci\u00f3n cumple \u00aben lo que respecta a\u00bb?',
+                options: ['Tematizaci\u00f3n', 'Conclusi\u00f3n', 'Reformulaci\u00f3n', 'Ejemplificaci\u00f3n'],
+                answer: 'Tematizaci\u00f3n'
+            },
+            {
+                q: '\u00bfQu\u00e9 recurso cohesivo es \u00abdicho pueblo ind\u00edgena\u00bb?',
+                options: ['An\u00e1fora con demostrativo', 'Cat\u00e1fora', 'Cadena l\u00e9xica', 'Elipsis'],
+                answer: 'An\u00e1fora con demostrativo'
+            },
+            {
+                q: '\u00bfQu\u00e9 tipo de marcadores son \u00aben primer lugar / en segundo lugar / por \u00faltimo\u00bb?',
+                options: ['Organizaci\u00f3n textual', 'Reformulaci\u00f3n', 'Ejemplificaci\u00f3n', 'Tematizaci\u00f3n'],
+                answer: 'Organizaci\u00f3n textual'
+            },
+            {
+                q: '\u00bfQu\u00e9 funci\u00f3n cumple \u00aben s\u00edntesis\u00bb al inicio del \u00faltimo enunciado?',
+                options: ['Conclusi\u00f3n', 'Organizaci\u00f3n', 'Ejemplificaci\u00f3n', 'Tematizaci\u00f3n'],
+                answer: 'Conclusi\u00f3n'
+            }
+        ]
+    },
+    // === GAME 32: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la exposici\u00f3n e identifica el mecanismo de cohesi\u00f3n empleado.',
+        audio: 'dest43_listen04',
+        question: '\u00bfQu\u00e9 mecanismo de cohesi\u00f3n se utiliza cuando la hablante dice \u00abeste fen\u00f3meno, es decir, la deforestaci\u00f3n\u00bb?',
+        answer: 'Reformulaci\u00f3n explicativa',
+        options: ['Reformulaci\u00f3n explicativa', 'Ejemplificaci\u00f3n', 'Conclusi\u00f3n', 'Cat\u00e1fora']
+    },
+    // === GAME 33: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con un marcador de reformulaci\u00f3n.',
+        words: ['La', 'sostenibilidad', ',', 'dicho', 'de', 'otro', 'modo', ',', 'la', 'capacidad', 'de', 'satisfacer', 'necesidades', 'sin', 'comprometer', 'el', 'futuro'],
+        answer: 'La sostenibilidad, dicho de otro modo, la capacidad de satisfacer necesidades sin comprometer el futuro'
+    },
+    // === GAME 34: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el mecanismo de referencia textual adecuado.',
+        questions: [
+            {
+                sentence: 'Se analizar\u00e1n tres aspectos fundamentales. ___ se expondr\u00e1 el marco te\u00f3rico.',
+                answer: 'En primer lugar',
+                options: ['En primer lugar', 'En definitiva', 'Sin embargo', 'Por ejemplo']
+            },
+            {
+                sentence: 'La deforestaci\u00f3n avanza a ritmo alarmante. ___ amenaza la supervivencia de miles de especies.',
+                answer: 'Este proceso',
+                options: ['Este proceso', 'Un proceso', 'El otro proceso', 'Alg\u00fan proceso']
+            },
+            {
+                sentence: 'Los resultados fueron concluyentes. ___ confirman la hip\u00f3tesis inicial del equipo.',
+                answer: 'Estos',
+                options: ['Estos', 'Ellos', 'Los otros', 'Algunos']
+            }
+        ]
+    },
+    // === GAME 35: dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n con el marcador de organizaci\u00f3n textual.',
+        audio: 'dest43_dict02',
+        answer: 'En primer lugar, es necesario definir el concepto de cohesi\u00f3n textual; en segundo lugar, debemos distinguirlo del concepto de coherencia.'
+    },
+    // === GAME 36: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada sin\u00f3nimo textual con la palabra que puede sustituir (cadena l\u00e9xica).',
+        pairs: [
+            ['El astro rey', 'sol'],
+            ['La urbe', 'ciudad'],
+            ['El vital l\u00edquido', 'agua'],
+            ['El galeno', 'm\u00e9dico'],
+            ['La aeronave', 'avi\u00f3n'],
+            ['El or\u00e1culo', 'profec\u00eda']
+        ]
+    },
+    // === GAME 37: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo para completar oraciones con progresi\u00f3n tem\u00e1tica.',
+        questions: [
+            {
+                verb: 'sostener',
+                subject: 'Lo anterior (presente)',
+                answer: 'sostiene',
+                options: ['sostiene', 'sosten\u00eda', 'sostendr\u00e1', 'sostuvo']
+            },
+            {
+                verb: 'retomar',
+                subject: 'El siguiente p\u00e1rrafo (presente)',
+                answer: 'retoma',
+                options: ['retoma', 'retomaba', 'retomar\u00e1', 'retom\u00f3']
+            },
+            {
+                verb: 'desarrollar',
+                subject: 'A continuaci\u00f3n se (futuro)',
+                answer: 'desarrollar\u00e1',
+                options: ['desarrollar\u00e1', 'desarrolla', 'desarroll\u00f3', 'desarrollaba']
+            },
+            {
+                verb: 'resumir',
+                subject: 'En s\u00edntesis, este cap\u00edtulo (presente)',
+                answer: 'resume',
+                options: ['resume', 'resum\u00eda', 'resumir\u00e1', 'resumi\u00f3']
+            }
+        ]
+    },
+    // === GAME 38: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre los conectores de organizaci\u00f3n textual y su papel en el discurso extendido.',
+        text: 'Un mamo kogi organiza sus ense\u00f1anzas con una estructura precisa: primero, el origen; luego, el desarrollo; finalmente, la visi\u00f3n del futuro. Los textos acad\u00e9micos y argumentativos necesitan una organizaci\u00f3n semejante. Los marcadores de organizaci\u00f3n textual \u2014\u00aben primer lugar\u00bb, \u00aben segundo lugar\u00bb, \u00abpor \u00faltimo\u00bb\u2014 no son meros adornos: son se\u00f1ales que gu\u00edan al lector a trav\u00e9s de la estructura del pensamiento. A estos se suman los marcadores de tematizaci\u00f3n: \u00aben lo que respecta a\u00bb, \u00aben cuanto a\u00bb, \u00abpor lo que se refiere a\u00bb, que introducen nuevos subtemas dentro de un texto extenso. Un texto bien organizado es como un sendero se\u00f1alizado en la Sierra: el lector sabe d\u00f3nde est\u00e1 y hacia d\u00f3nde se dirige en todo momento.'
+    },
+    // === GAME 39: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada recurso seg\u00fan su tipo de cohesi\u00f3n.',
+        categories: ['Cohesi\u00f3n l\u00e9xica', 'Cohesi\u00f3n gramatical'],
+        items: [
+            { text: 'Sin\u00f3nimos', category: 'Cohesi\u00f3n l\u00e9xica' },
+            { text: 'Pronombres anaf\u00f3ricos', category: 'Cohesi\u00f3n gramatical' },
+            { text: 'Hip\u00f3nimos e hiper\u00f3nimos', category: 'Cohesi\u00f3n l\u00e9xica' },
+            { text: 'Elipsis', category: 'Cohesi\u00f3n gramatical' },
+            { text: 'Repetici\u00f3n l\u00e9xica', category: 'Cohesi\u00f3n l\u00e9xica' },
+            { text: 'Conectores', category: 'Cohesi\u00f3n gramatical' }
+        ]
+    },
+    // === GAME 40: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Construye la oraci\u00f3n en espa\u00f1ol con la referencia anaf\u00f3rica adecuada.',
+        source: 'El cambio clim\u00e1tico afecta a los ecosistemas. Dicho fen\u00f3meno requiere acciones inmediatas.',
+        words: ['El', 'cambio', 'clim\u00e1tico', 'afecta', 'a', 'los', 'ecosistemas', '.', 'Dicho', 'fen\u00f3meno', 'requiere', 'acciones', 'inmediatas'],
+        answer: 'El cambio clim\u00e1tico afecta a los ecosistemas. Dicho fen\u00f3meno requiere acciones inmediatas'
+    },
+    // === GAME 41: conversation ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Completa el di\u00e1logo sobre la revisi\u00f3n de un texto acad\u00e9mico.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Colega', text: 'He le\u00eddo tu ensayo. Los argumentos son s\u00f3lidos, pero noto que repites mucho las mismas palabras. \u00bfHas considerado usar cadenas l\u00e9xicas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Tienes raz\u00f3n. Podr\u00eda sustituir algunas repeticiones por sin\u00f3nimos o hiper\u00f3nimos para crear cadenas l\u00e9xicas que mantengan la cohesi\u00f3n.',
+                    'No s\u00e9 qu\u00e9 son las cadenas l\u00e9xicas.',
+                    'Prefiero repetir las palabras para que se entienda mejor.',
+                    'Las repeticiones no importan.'
+                ],
+                answer: 'Tienes raz\u00f3n. Podr\u00eda sustituir algunas repeticiones por sin\u00f3nimos o hiper\u00f3nimos para crear cadenas l\u00e9xicas que mantengan la cohesi\u00f3n.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Colega', text: 'Exacto. Y tambi\u00e9n notar\u00eda que algunos p\u00e1rrafos empiezan de forma abrupta. Necesitas marcadores de tematizaci\u00f3n.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Entendido. Usar\u00e9 expresiones como \u00aben lo que respecta a\u00bb o \u00aben cuanto a\u00bb para introducir cada subtema de forma cohesionada.',
+                    'No me gustan esas expresiones.',
+                    'Los p\u00e1rrafos est\u00e1n bien as\u00ed.',
+                    'Voy a empezar todos los p\u00e1rrafos igual.'
+                ],
+                answer: 'Entendido. Usar\u00e9 expresiones como \u00aben lo que respecta a\u00bb o \u00aben cuanto a\u00bb para introducir cada subtema de forma cohesionada.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Colega', text: 'Perfecto. Y no olvides cerrar con un marcador de conclusi\u00f3n que sintetice tu argumento principal.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'De acuerdo. Cerrar\u00e9 con \u00aben definitiva\u00bb o \u00aba modo de conclusi\u00f3n\u00bb para darle un cierre cohesivo al ensayo.',
+                    'No necesito conclusi\u00f3n.',
+                    'Ya ver\u00e9 c\u00f3mo lo termino.',
+                    'Voy a copiar la introducci\u00f3n.'
+                ],
+                answer: 'De acuerdo. Cerrar\u00e9 con \u00aben definitiva\u00bb o \u00aba modo de conclusi\u00f3n\u00bb para darle un cierre cohesivo al ensayo.'
+            }
+        ]
+    },
+    // === GAME 42: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona la expresi\u00f3n que mejor mantiene la progresi\u00f3n tem\u00e1tica del texto.',
+        questions: [
+            {
+                sentence: 'La Sierra Nevada alberga m\u00e1s de 600 especies de aves. ___ representan el 36% de la avifauna colombiana.',
+                answer: 'Estas especies',
+                options: ['Estas especies', 'Las aves', 'Unos animales', 'Los seres']
+            },
+            {
+                sentence: 'Los kogi practican una agricultura sostenible. ___ se basa en el respeto a los ciclos naturales de la tierra.',
+                answer: 'Dicha pr\u00e1ctica',
+                options: ['Dicha pr\u00e1ctica', 'Una agricultura', 'El campo', 'La otra']
+            },
+            {
+                sentence: 'El mamo transmite sus ense\u00f1anzas de generaci\u00f3n en generaci\u00f3n. ___ garantiza la preservaci\u00f3n de la sabidur\u00eda ancestral.',
+                answer: 'Este proceso de transmisi\u00f3n',
+                options: ['Este proceso de transmisi\u00f3n', 'La transmisi\u00f3n', 'Un proceso', 'El otro']
+            }
+        ]
+    },
+    // === GAME 43: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el texto e identifica la cadena l\u00e9xica predominante.',
+        audio: 'dest43_listen05',
+        question: '\u00bfCu\u00e1l es la cadena l\u00e9xica principal del fragmento escuchado?',
+        answer: 'R\u00edo, corriente, cauce, agua, ribera',
+        options: ['R\u00edo, corriente, cauce, agua, ribera', 'Monta\u00f1a, cumbre, pico, ladera', 'Bosque, \u00e1rbol, hoja, ra\u00edz', 'Ciudad, calle, edificio, plaza']
+    },
+    // === GAME 44: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para construir una oraci\u00f3n que use un marcador de ejemplificaci\u00f3n.',
+        words: ['Los', 'mecanismos', 'de', 'cohesi\u00f3n', 'son', 'diversos', ';', 'a', 'modo', 'de', 'ejemplo', ',', 'la', 'an\u00e1fora', 'retoma', 'elementos', 'previos'],
+        answer: 'Los mecanismos de cohesi\u00f3n son diversos; a modo de ejemplo, la an\u00e1fora retoma elementos previos'
+    },
+    // === GAME 45: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada hip\u00f3nimo con su hiper\u00f3nimo correspondiente.',
+        pairs: [
+            ['Jaguar', 'Felino'],
+            ['Roble', '\u00c1rbol'],
+            ['Magdalena', 'R\u00edo'],
+            ['Espa\u00f1ol', 'Lengua'],
+            ['Vallenato', 'G\u00e9nero musical'],
+            ['Bogot\u00e1', 'Capital']
+        ]
+    },
+    // === GAME 46: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en subjuntivo para completar oraciones que emplean cat\u00e1fora.',
+        questions: [
+            {
+                verb: 'considerar',
+                subject: 'Lo que importa es que el lector (presente de subjuntivo)',
+                answer: 'considere',
+                options: ['considere', 'considera', 'considerar\u00e1', 'consideraba']
+            },
+            {
+                verb: 'comprender',
+                subject: 'Lo siguiente es esencial: que el estudiante (presente de subjuntivo)',
+                answer: 'comprenda',
+                options: ['comprenda', 'comprende', 'comprender\u00e1', 'comprend\u00eda']
+            },
+            {
+                verb: 'reconocer',
+                subject: 'Esto es lo que pedimos: que la sociedad (presente de subjuntivo)',
+                answer: 'reconozca',
+                options: ['reconozca', 'reconoce', 'reconocer\u00e1', 'reconoc\u00eda']
+            },
+            {
+                verb: 'preservar',
+                subject: 'Lo esencial es que las comunidades (presente de subjuntivo)',
+                answer: 'preserven',
+                options: ['preserven', 'preservan', 'preservar\u00e1n', 'preservaban']
+            }
+        ]
+    },
+    // === GAME 47: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la reformulaci\u00f3n como estrategia de clarificaci\u00f3n textual.',
+        text: 'En la pedagog\u00eda kogi, el mamo explica un concepto y luego lo reformula con im\u00e1genes distintas hasta que el aprendiz lo comprende plenamente. La reformulaci\u00f3n textual cumple una funci\u00f3n id\u00e9ntica: el escritor presenta una idea y, acto seguido, la reexpresa con otras palabras para asegurar la comprensi\u00f3n. Expresiones como \u00abes decir\u00bb, \u00aben otras palabras\u00bb, \u00abdicho de otro modo\u00bb y \u00abesto es\u00bb son marcadores de reformulaci\u00f3n que act\u00fan como puentes entre la formulaci\u00f3n original y su versi\u00f3n clarificada. Reformular no es repetir: es iluminar desde otro \u00e1ngulo. Un buen reformulador enriquece el texto al ofrecer perspectivas complementarias sobre una misma idea, exactamente como los hilos de un tejido que, siendo distintos, contribuyen al mismo dise\u00f1o.'
+    },
+    // === GAME 48: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con el tipo de elipsis adecuado para cada contexto.',
+        questions: [
+            {
+                sentence: 'Algunos investigadores apoyan la teor\u00eda y otros ___ la rechazan.',
+                answer: '\u00d8',
+                options: ['\u00d8', 'investigadores', 'cient\u00edficos', 'expertos']
+            },
+            {
+                sentence: 'Ana present\u00f3 el proyecto ante el comit\u00e9 y Claudia, ___ ante la junta directiva.',
+                answer: '\u00d8',
+                options: ['\u00d8', 'present\u00f3 el proyecto', 'lo hizo', 'tambi\u00e9n']
+            },
+            {
+                sentence: '\u2014\u00bfQuieres participar en el seminario de cohesi\u00f3n textual? \u2014S\u00ed, ___.',
+                answer: 'quiero',
+                options: ['quiero', 'quiero participar en el seminario de cohesi\u00f3n textual', 'me gustar\u00eda mucho hacerlo', 'claro que s\u00ed participar\u00e9']
+            }
+        ]
+    },
+    // === GAME 49: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Construye la oraci\u00f3n con el marcador de conclusi\u00f3n adecuado.',
+        source: 'En definitiva, la cohesi\u00f3n textual es el hilo invisible que da unidad al discurso.',
+        words: ['En', 'definitiva', ',', 'la', 'cohesi\u00f3n', 'textual', 'es', 'el', 'hilo', 'invisible', 'que', 'da', 'unidad', 'al', 'discurso'],
+        answer: 'En definitiva, la cohesi\u00f3n textual es el hilo invisible que da unidad al discurso'
+    },
+    // === GAME 50: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada expresi\u00f3n seg\u00fan el tipo de cadena l\u00e9xica que representa.',
+        categories: ['Sinonimia', 'Hiponimia'],
+        items: [
+            { text: 'Bosque / selva / floresta', category: 'Sinonimia' },
+            { text: 'Animal: jaguar, c\u00f3ndor, serpiente', category: 'Hiponimia' },
+            { text: 'R\u00edo / corriente / cauce', category: 'Sinonimia' },
+            { text: 'Fruta: mango, guayaba, lulo', category: 'Hiponimia' },
+            { text: 'Sendero / camino / vereda', category: 'Sinonimia' },
+            { text: 'Instrumento: tambor, flauta, maracas', category: 'Hiponimia' }
+        ]
+    },
+    // === GAME 51: conversation ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Completa el di\u00e1logo sobre estrategias de cohesi\u00f3n en una presentaci\u00f3n oral.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Director de tesis', text: 'Tu presentaci\u00f3n oral necesita m\u00e1s se\u00f1ales de organizaci\u00f3n para que el p\u00fablico siga tu argumento.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Tiene raz\u00f3n. Incorporar\u00e9 marcadores como \u00aben primer lugar\u00bb, \u00aben segundo lugar\u00bb y \u00abpor \u00faltimo\u00bb para estructurar mi discurso.',
+                    'Creo que la presentaci\u00f3n est\u00e1 bien as\u00ed.',
+                    'No s\u00e9 c\u00f3mo mejorarla.',
+                    'Voy a hablar m\u00e1s despacio.'
+                ],
+                answer: 'Tiene raz\u00f3n. Incorporar\u00e9 marcadores como \u00aben primer lugar\u00bb, \u00aben segundo lugar\u00bb y \u00abpor \u00faltimo\u00bb para estructurar mi discurso.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Director de tesis', text: 'Bien. Adem\u00e1s, cuando introduzcas un nuevo tema, an\u00fancialo para que la audiencia sepa qu\u00e9 esperar.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Usar\u00e9 expresiones cataf\u00f3ricas como \u00aba continuaci\u00f3n veremos\u00bb o \u00ablo siguiente es clave\u00bb para anticipar cada nuevo punto.',
+                    'Cambiar\u00e9 de tema sin avisar.',
+                    'No me parece necesario.',
+                    'Prefiero improvisar.'
+                ],
+                answer: 'Usar\u00e9 expresiones cataf\u00f3ricas como \u00aba continuaci\u00f3n veremos\u00bb o \u00ablo siguiente es clave\u00bb para anticipar cada nuevo punto.'
+            }
+        ]
+    },
+    // === GAME 52: dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n completa con la referencia anaf\u00f3rica.',
+        audio: 'dest43_dict03',
+        answer: 'La biodiversidad de la Sierra Nevada es excepcional. Dicha riqueza biol\u00f3gica convierte a este ecosistema en una prioridad de conservaci\u00f3n a nivel mundial.'
+    },
+    // === GAME 53: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha el fragmento e identifica qu\u00e9 recurso de cohesi\u00f3n se emplea para cerrar el texto.',
+        audio: 'dest43_listen06',
+        question: '\u00bfQu\u00e9 marcador de conclusi\u00f3n utiliza la hablante para cerrar su exposici\u00f3n?',
+        answer: 'A modo de conclusi\u00f3n',
+        options: ['A modo de conclusi\u00f3n', 'Por ejemplo', 'En cuanto a', 'En otras palabras']
+    },
+    // === GAME 54: cancion ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Completa los versos con los mecanismos de cohesi\u00f3n adecuados.',
+        title: 'El tejido de las palabras',
+        artist: 'Destino 43',
+        lines: [
+            {
+                text: 'Dicho de otro modo, todo ___ al principio: cada hilo vuelve al origen.',
+                answer: 'vuelve',
+                options: ['vuelve', 'llega', 'sale', 'corre']
+            },
+            {
+                text: 'Lo que viene ___ es la verdad: que sin cohesi\u00f3n no hay texto.',
+                answer: 'a continuaci\u00f3n',
+                options: ['a continuaci\u00f3n', 'despacio', 'solamente', 'al rev\u00e9s']
+            },
+            {
+                text: 'En definitiva, cada palabra ___ su lugar en el tejido.',
+                answer: 'tiene',
+                options: ['tiene', 'pierde', 'busca', 'olvida']
+            },
+            {
+                text: 'Es decir, el sentido ___ cuando los hilos se entrelazan.',
+                answer: 'nace',
+                options: ['nace', 'muere', 'cae', 'huye']
+            }
+        ]
+    },
+    // === GAME 55: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee esta reflexi\u00f3n final sobre la cohesi\u00f3n textual como arte de tejer el discurso.',
+        text: 'Has recorrido los hilos de luz que tejen la cohesi\u00f3n textual: la an\u00e1fora, que mira hacia lo ya dicho; la cat\u00e1fora, que anticipa lo que vendr\u00e1; la elipsis, que calla lo innecesario; las cadenas l\u00e9xicas, que crean redes de significado; los marcadores de organizaci\u00f3n, que se\u00f1alizan el camino; la reformulaci\u00f3n, que ilumina desde nuevos \u00e1ngulos; y la progresi\u00f3n tem\u00e1tica, que hace avanzar la informaci\u00f3n. Estos recursos no son t\u00e9cnicas aisladas: son los hilos de un mismo tejido. Los kogi ense\u00f1an que todo en el universo est\u00e1 conectado. En definitiva, un texto cohesionado refleja esa misma verdad: cada oraci\u00f3n existe en relaci\u00f3n con las dem\u00e1s, y el sentido no reside en las partes, sino en las conexiones entre ellas. Ahora, t\u00fa tambi\u00e9n sabes tejer con hilos de luz.'
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La c\u00e1mara de lo invisible',
+            description: 'Aqu\u00ed no hay objetos, solo conceptos. Las paredes son ideas. El suelo es una pregunta. El techo es la duda.',
+            ambience: 'void'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Una cerradura hecha de niebla espera una palabra.',
+                clue: 'No puedes tocarla, pero la sientes. No puedes verla, pero la reconoces. Es lo que hace humanos a los humanos, m\u00e1s all\u00e1 del cuerpo.',
+                answer: 'dignidad',
+                hint: '_ _ _ _ _ _ _ _',
+                onSolve: 'La niebla se disipa un poco.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Los Antiguos formulan un acertijo:',
+                riddle: '\u00ab\u00bfPuede existir la justicia si nadie la nombra? \u00bfPuede existir el amor si nadie lo practica? \u00bfExiste la libertad en una jaula con la puerta abierta?\u00bb',
+                clue: '\u00bfQu\u00e9 relaci\u00f3n entre lenguaje y realidad plantean estas preguntas?',
+                answer: 'Que los conceptos abstractos necesitan tanto el lenguaje como la acci\u00f3n para existir realmente',
+                options: [
+                    'Que los conceptos abstractos necesitan tanto el lenguaje como la acci\u00f3n para existir realmente',
+                    'Que los conceptos abstractos no existen',
+                    'Que solo el lenguaje crea la realidad',
+                    'Que las acciones son m\u00e1s importantes que las palabras'
+                ],
+                onSolve: 'Las preguntas se iluminan como estrellas.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Dos voces hablan desde la oscuridad.',
+                sources: [
+                    '\u00abLa palabra "esperanza" no existe en la lengua de cierto pueblo amaz\u00f3nico. No porque no tengan esperanza, sino porque su lengua no separa el futuro del presente: todo lo que ser\u00e1, ya est\u00e1 siendo.\u00bb \u2014 Dato antropol\u00f3gico',
+                    '\u00abDo\u00f1a Asunci\u00f3n dijo una vez: "El r\u00edo no espera. El r\u00edo ya lleg\u00f3."\u00bb \u2014 Yaguar\u00e1'
+                ],
+                clue: '\u00bfQu\u00e9 revelan juntos estos textos sobre la relaci\u00f3n entre lenguaje abstracto y cosmovisi\u00f3n?',
+                answer: 'Que cada lengua estructura los conceptos abstractos seg\u00fan su forma de entender el tiempo y la realidad',
+                options: [
+                    'Que cada lengua estructura los conceptos abstractos seg\u00fan su forma de entender el tiempo y la realidad',
+                    'Que las lenguas amaz\u00f3nicas son m\u00e1s simples',
+                    'Que la esperanza es un concepto universal',
+                    'Que Do\u00f1a Asunci\u00f3n hablaba una lengua amaz\u00f3nica'
+                ],
+                onSolve: 'Lo invisible se hace visible. La puerta se materializa y se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: una constelaci\u00f3n sin forma definida \u2014 cambia seg\u00fan quien la mira.',
+            questClue: 'Lo abstracto no tiene forma fija. Su poder est\u00e1 en transformarse.',
+            item: 'constelacion-abstracta'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '43',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest43Progress',
+        backUrl: '../../c1-santa-marta.html'
+    });
+</script>
+</body>
+</html>

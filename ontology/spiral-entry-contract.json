@@ -1,0 +1,68 @@
+{
+  "_document": "Spiral Entry Contract v1",
+  "_status": "frozen",
+  "_principle": "A learner enters the spiral only after demonstrating stable control of form; the spiral deepens meaning, not grammar.",
+
+  "whatTheSpiralIs": [
+    "Reuse of existing LinguisticTargets across new destinations",
+    "Increased contextual, social, and cognitive depth",
+    "Evidence-driven progression through meaning layers"
+  ],
+
+  "whatTheSpiralIsNot": [
+    "New grammar introduction",
+    "New LinguisticTarget creation",
+    "New Activity creation (reuses existing Activity IDs)",
+    "Remediation (that is handled by adaptivity rules)"
+  ],
+
+  "entryPreconditions": {
+    "_note": "ALL conditions must be true. If any fails, learner stays in linear progression.",
+    "linguisticMastery": {
+      "description": "For each LinguisticTarget in scope",
+      "minimumEvidenceEvents": 3,
+      "minimumProductionSuccess": 1,
+      "productionModes": ["typing", "voice"],
+      "minimumSuccessRate": 0.75
+    },
+    "scaffoldCompletion": {
+      "description": "InputMode ladder has been climbed",
+      "voiceReachedAtLeastOnce": true,
+      "noPendingScaffoldPromotions": true
+    },
+    "destinationCoverage": {
+      "description": "All pre-spiral destinations completed",
+      "example": "For A2 spiral entry: dest1–dest18 completed"
+    }
+  },
+
+  "whatChangesInsideTheSpiral": {
+    "grammar": { "before": "Introduced", "inside": "Reused only" },
+    "activities": { "before": "Scaffolded", "inside": "Same activities, same IDs" },
+    "inputMode": { "before": "Promoted via ladder", "inside": "Mixed / chosen by engine" },
+    "context": { "before": "Literal", "inside": "Social / cultural / ethical" },
+    "evaluation": { "before": "Accuracy", "inside": "Agency, reflection" }
+  },
+
+  "spiralActivityRules": {
+    "_note": "Strict. No exceptions.",
+    "must": [
+      "Reference existing Activity.id",
+      "Reference existing LinguisticTarget.id",
+      "Belong to a Destination (inv_activity_destination)"
+    ],
+    "mustNot": [
+      "Override inputMode (engine controls this)",
+      "Disable scaffolding",
+      "Introduce new LinguisticTargets"
+    ]
+  },
+
+  "exitCondition": {
+    "triggers": [
+      "A new LinguisticTarget is required by the next CEFR level",
+      "The narrative arc closes (destination sequence ends)"
+    ],
+    "note": "Spirals are finite. They deepen, they do not loop."
+  }
+}

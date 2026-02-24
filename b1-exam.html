@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B1 Examen Final - La Aventura de Yaguara</title>
+    <meta name="description" content="B1 Examen Final - Demuestra que puedes contar lo vivido. Evaluacion completa del Mundo del Medio.">
+    <link rel="canonical" href="https://babelfree.com/b1-exam">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F406;</text></svg>">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "B1 Examen Final - La Aventura de Yaguara",
+          "description": "B1 Examen Final - Demuestra que puedes contar lo vivido. Assess imperfect, subjunctive, connectors, and reported speech at CEFR B1 level.",
+          "url": "https://babelfree.com/b1-exam",
+          "educationalLevel": "B1 - Intermediate",
+          "learningResourceType": "Assessment",
+          "educationalAlignment": {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalLevel",
+            "educationalFramework": "CEFR",
+            "targetName": "B1 - Intermediate / Threshold",
+            "targetUrl": "https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
+          },
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "assesses": [
+            "Imperfect",
+            "Subjunctive",
+            "Connectors",
+            "Reported speech"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "B1",
+              "item": "https://babelfree.com/b1-exam"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Exam"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --exam-dark: #002b36;
+            --exam-medium: #004d5a;
+            --exam-light: #006d75;
+            --jaguar-gold: #ffd700;
+            --success-green: #00ff88;
+            --b1-teal: #008080;
+            --b1-cyan: #26c6da;
+            --deep-ocean: #01579b;
+            --ceremony-gold: #ffab00;
+            --text-light: #ffffff;
+            --text-muted: #b0bec5;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --border-radius: 15px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--exam-dark) 0%, var(--exam-medium) 50%, var(--deep-ocean) 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 25% 75%, rgba(0, 128, 128, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(38, 198, 218, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 171, 0, 0.05) 0%, transparent 50%);
+            z-index: 1;
+            animation: examAura 40s ease-in-out infinite;
+        }
+
+        @keyframes examAura {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            33% { transform: scale(1.02) rotate(0.3deg); opacity: 1; }
+            66% { transform: scale(0.98) rotate(-0.2deg); opacity: 0.9; }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .exam-element {
+            position: absolute;
+            animation: examFloat 35s infinite linear;
+            opacity: 0.35;
+            font-size: 1.2em;
+        }
+
+        @keyframes examFloat {
+            0% { transform: translateY(-100px) translateX(-30px) rotate(0deg); }
+            100% { transform: translateY(100vh) translateX(60px) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .exam-header {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 3px solid var(--b1-teal);
+            margin-bottom: 30px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .exam-header::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--jaguar-gold), var(--b1-teal), var(--b1-cyan), var(--ceremony-gold));
+            border-radius: var(--border-radius);
+            z-index: -1;
+            animation: borderGlow 4s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: var(--glass-bg);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            border: 2px solid var(--b1-teal);
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(0, 128, 128, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .jaguar-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--jaguar-gold);
+            position: relative;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5);
+            animation: examPulse 4s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        @keyframes examPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 16px 50px rgba(255, 215, 0, 0.7); }
+        }
+
+        .exam-title {
+            font-size: 2.5rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .exam-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .exam-badge {
+            background: linear-gradient(135deg, var(--b1-teal), var(--b1-cyan));
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 10px 0;
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(0, 128, 128, 0.4);
+        }
+
+        /* Hero/ceremony section */
+        .ceremony-section {
+            background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 171, 0, 0.05));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .ceremony-title {
+            font-size: 1.6rem;
+            color: var(--ceremony-gold);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .ceremony-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* Exam sections */
+        .exam-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 2px solid rgba(0, 128, 128, 0.3);
+            position: relative;
+        }
+
+        .section-number {
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            background: linear-gradient(135deg, var(--b1-teal), var(--b1-cyan));
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--b1-cyan);
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Question styles */
+        .question {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+
+        .question:hover {
+            border-color: rgba(0, 128, 128, 0.3);
+        }
+
+        .question-text {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .options {
+            display: grid;
+            gap: 8px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .option:hover {
+            border-color: var(--b1-cyan);
+            background: rgba(38, 198, 218, 0.1);
+        }
+
+        .option.selected {
+            border-color: var(--b1-cyan);
+            background: rgba(38, 198, 218, 0.15);
+        }
+
+        .option.correct {
+            border-color: var(--success-green);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .option.incorrect {
+            border-color: #ff5252;
+            background: rgba(255, 82, 82, 0.1);
+        }
+
+        .option-radio {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .option.selected .option-radio {
+            border-color: var(--b1-cyan);
+            background: var(--b1-cyan);
+        }
+
+        .option.correct .option-radio {
+            border-color: var(--success-green);
+            background: var(--success-green);
+        }
+
+        .option.incorrect .option-radio {
+            border-color: #ff5252;
+            background: #ff5252;
+        }
+
+        /* Writing section */
+        .writing-area {
+            width: 100%;
+            min-height: 120px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 16px;
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: var(--transition);
+        }
+
+        .writing-area:focus {
+            outline: none;
+            border-color: var(--b1-cyan);
+            box-shadow: 0 0 20px rgba(38, 198, 218, 0.2);
+        }
+
+        .writing-area::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .word-count {
+            text-align: right;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+
+        /* Submit section */
+        .submit-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--b1-teal), var(--ceremony-gold));
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 32px rgba(0, 128, 128, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 128, 128, 0.5);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Results */
+        .results-section {
+            display: none;
+            background: linear-gradient(135deg, rgba(0, 128, 128, 0.15), rgba(255, 171, 0, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-title {
+            font-size: 2rem;
+            color: var(--jaguar-gold);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .results-score {
+            font-size: 4rem;
+            font-weight: 900;
+            margin: 20px 0;
+        }
+
+        .results-score.pass {
+            color: var(--success-green);
+        }
+
+        .results-score.fail {
+            color: #ff5252;
+        }
+
+        .results-message {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .results-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .result-btn {
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .result-btn.primary {
+            background: linear-gradient(135deg, var(--b1-teal), var(--b1-cyan));
+            color: white;
+            box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+        }
+
+        .result-btn.secondary {
+            background: var(--glass-bg);
+            color: var(--jaguar-gold);
+            border: 2px solid var(--jaguar-gold);
+        }
+
+        .result-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .exam-title { font-size: 1.8rem; }
+            .ceremony-section { padding: 25px; }
+            .exam-section { padding: 20px; }
+            .jaguar-avatar { width: 120px; height: 120px; }
+            .results-score { font-size: 3rem; }
+            .results-actions { flex-direction: column; align-items: center; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body>
+    <!-- Floating elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <div class="container">
+        <!-- Exam Header -->
+        <div class="exam-header">
+            <a href="/b1" class="back-btn">&#8592; Volver a B1</a>
+            <div class="jaguar-avatar">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <h1 class="exam-title">Examen Final B1</h1>
+            <p class="exam-subtitle">El Mundo del Medio &mdash; Contar lo vivido</p>
+            <div class="exam-badge">Ceremonia de la Palabra Tejida</div>
+        </div>
+
+        <!-- Ceremony intro -->
+        <div class="ceremony-section">
+            <div class="ceremony-title">&#127793; La prueba del narrador</div>
+            <p class="ceremony-text">
+                Has caminado por Quibdo y Nuqui. Has escuchado el rio Atrato, las ballenas del Pacifico
+                y las voces de la comunidad. Ahora es momento de demostrar que puedes contar lo vivido.
+                Teje tu historia con las palabras que has aprendido.
+            </p>
+        </div>
+
+        <!-- Section 1: Comprension narrativa -->
+        <div class="exam-section" id="section1">
+            <div class="section-number">Parte 1 de 4</div>
+            <h2 class="section-title">&#128214; Comprension narrativa</h2>
+            <p class="section-desc">Lee el texto y responde las preguntas.</p>
+
+            <div style="background: rgba(0, 128, 128, 0.1); padding: 20px; border-radius: 12px; border-left: 4px solid var(--b1-cyan); margin-bottom: 20px; font-style: italic; line-height: 1.8;">
+                Cuando era nina, mi abuela vivia cerca del rio Atrato. Cada manana, ella se levantaba temprano
+                y caminaba hasta la orilla. Me contaba que el rio tenia memoria, que guardaba las historias
+                de todos los que habian vivido alli. Un dia, mientras escuchabamos el agua, me dijo:
+                "Si cuidaras el rio como cuidas a tu familia, nunca estarias sola."
+                Es increible que despues de tantos anos, todavia recuerde sus palabras.
+            </div>
+
+            <div class="question" data-question="1" data-correct="b">
+                <p class="question-text">1. &iquest;Que hacia la abuela cada manana?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Pescaba en el rio</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Caminaba hasta la orilla del rio</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Cocinaba para la familia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="2" data-correct="c">
+                <p class="question-text">2. Segun la abuela, &iquest;que guardaba el rio?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Los peces de la region</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>El agua de la lluvia</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Las historias de todos los que habian vivido alli</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="3" data-correct="a">
+                <p class="question-text">3. &iquest;Que estructura gramatical usa "Si cuidaras el rio... nunca estarias sola"?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Condicional (si + subjuntivo imperfecto + condicional)</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Futuro simple</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Preterito indefinido</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Gramatica en contexto -->
+        <div class="exam-section" id="section2">
+            <div class="section-number">Parte 2 de 4</div>
+            <h2 class="section-title">&#128161; Gramatica en contexto</h2>
+            <p class="section-desc">Elige la opcion correcta para completar cada oracion.</p>
+
+            <div class="question" data-question="4" data-correct="b">
+                <p class="question-text">4. Cuando yo ___ pequeno, mi familia ___ en Quibdo.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>fui / vivio</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>era / vivia</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>soy / vive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="5" data-correct="a">
+                <p class="question-text">5. Es importante que las comunidades ___ sus tradiciones.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>protejan (subjuntivo)</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>protegen (indicativo)</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>protegieron (preterito)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="6" data-correct="c">
+                <p class="question-text">6. Me dijo que las ballenas ___ todos los anos a Nuqui.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>vienen</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>vinieron</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>venian</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="7" data-correct="b">
+                <p class="question-text">7. La selva del Choco es muy importante; ___, mucha gente no la conoce.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>ademas</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>sin embargo</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>por eso</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="8" data-correct="a">
+                <p class="question-text">8. Si ___ mas recursos, se podria proteger mejor el manglar.</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>hubiera</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>hay</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>habia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Argumentacion -->
+        <div class="exam-section" id="section3">
+            <div class="section-number">Parte 3 de 4</div>
+            <h2 class="section-title">&#9878;&#65039; Argumentacion</h2>
+            <p class="section-desc">Lee la situacion y elige la mejor respuesta argumentada.</p>
+
+            <div class="question" data-question="9" data-correct="b">
+                <p class="question-text">9. Un amigo dice: "La conservacion de la selva no es tan importante." &iquest;Cual es la mejor respuesta argumentada?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>No estoy de acuerdo.</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>No estoy de acuerdo porque la selva del Choco alberga miles de especies endemicas. Ademas, las comunidades dependen de ella para vivir.</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La selva es bonita.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="10" data-correct="c">
+                <p class="question-text">10. &iquest;Que expresion introduce mejor un punto de vista contrario?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Tambien creo que...</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Por eso pienso que...</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Por un lado entiendo tu posicion, pero por otro lado...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Produccion escrita -->
+        <div class="exam-section" id="section4">
+            <div class="section-number">Parte 4 de 4</div>
+            <h2 class="section-title">&#128214; Produccion escrita</h2>
+            <p class="section-desc">Escribe un texto corto (50-100 palabras). Cuenta una experiencia real o imaginaria de tu viaje por el Choco. Usa al menos: un verbo en imperfecto, un subjuntivo y un conector.</p>
+            <textarea class="writing-area" id="writingResponse" placeholder="Cuando llegue a Quibdo, el rio Atrato brillaba bajo el sol. Me sorprendio que el agua fuera tan ancha..."></textarea>
+            <div class="word-count" id="wordCount">0 palabras</div>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-section">
+            <button class="submit-btn" id="submitBtn" onclick="submitExam()">
+                &#127793; Entregar examen
+            </button>
+        </div>
+
+        <!-- Results -->
+        <div class="results-section" id="resultsSection">
+            <div class="jaguar-avatar" style="width:100px;height:100px;margin-bottom:20px;">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <h2 class="results-title" id="resultsTitle">Resultado</h2>
+            <div class="results-score" id="resultsScore">0%</div>
+            <p class="results-message" id="resultsMessage"></p>
+            <div class="results-actions">
+                <button class="result-btn primary" onclick="location.reload()">Intentar de nuevo</button>
+                <a href="/b1" class="result-btn secondary">Volver a B1</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Floating elements
+        (function() {
+            var elements = ['&#127793;', '&#128011;', '&#127754;', '&#127926;', '&#10024;', '&#128161;', '&#127964;', '&#128214;'];
+            var container = document.getElementById('floatingElements');
+            for (var i = 0; i < 8; i++) {
+                var el = document.createElement('div');
+                el.className = 'exam-element';
+                el.innerHTML = elements[i % elements.length];
+                el.style.left = (Math.random() * 100) + 'vw';
+                el.style.animationDuration = (25 + Math.random() * 20) + 's';
+                el.style.animationDelay = (Math.random() * 15) + 's';
+                container.appendChild(el);
+            }
+        })();
+
+        // Track answers
+        var answers = {};
+
+        function selectOption(el) {
+            var question = el.closest('.question');
+            var qNum = question.getAttribute('data-question');
+
+            // Remove selected from siblings
+            var siblings = question.querySelectorAll('.option');
+            for (var i = 0; i < siblings.length; i++) {
+                siblings[i].classList.remove('selected');
+            }
+
+            el.classList.add('selected');
+            answers[qNum] = el.getAttribute('data-value');
+        }
+
+        // Word count for writing
+        var writingArea = document.getElementById('writingResponse');
+        writingArea.addEventListener('input', function() {
+            var words = this.value.trim().split(/\s+/).filter(function(w) { return w.length > 0; });
+            document.getElementById('wordCount').textContent = words.length + ' palabras';
+        });
+
+        function submitExam() {
+            var totalQuestions = 10;
+            var correctCount = 0;
+            var questions = document.querySelectorAll('.question');
+
+            for (var i = 0; i < questions.length; i++) {
+                var q = questions[i];
+                var qNum = q.getAttribute('data-question');
+                var correctAnswer = q.getAttribute('data-correct');
+                var userAnswer = answers[qNum];
+                var options = q.querySelectorAll('.option');
+
+                for (var j = 0; j < options.length; j++) {
+                    options[j].classList.remove('selected');
+                    if (options[j].getAttribute('data-value') === correctAnswer) {
+                        options[j].classList.add('correct');
+                    } else if (options[j].getAttribute('data-value') === userAnswer && userAnswer !== correctAnswer) {
+                        options[j].classList.add('incorrect');
+                    }
+                }
+
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                }
+            }
+
+            // Writing bonus (if they wrote something)
+            var writingText = writingArea.value.trim();
+            var writingWords = writingText.split(/\s+/).filter(function(w) { return w.length > 0; }).length;
+            var writingBonus = 0;
+            if (writingWords >= 50) writingBonus = 2;
+            else if (writingWords >= 30) writingBonus = 1;
+
+            var totalScore = correctCount + writingBonus;
+            var maxScore = totalQuestions + 2;
+            var percentage = Math.round((totalScore / maxScore) * 100);
+
+            var resultsSection = document.getElementById('resultsSection');
+            var resultsTitle = document.getElementById('resultsTitle');
+            var resultsScore = document.getElementById('resultsScore');
+            var resultsMessage = document.getElementById('resultsMessage');
+
+            resultsScore.textContent = percentage + '%';
+
+            if (percentage >= 80) {
+                resultsTitle.textContent = '&#127793; Has tejido tu historia';
+                resultsScore.className = 'results-score pass';
+                resultsMessage.textContent = 'Excelente. Puedes contar lo vivido con fluidez. El Mundo del Medio te ha dado la palabra. Yaguara esta orgulloso.';
+            } else if (percentage >= 60) {
+                resultsTitle.textContent = '&#127775; Casi lo logras';
+                resultsScore.className = 'results-score pass';
+                resultsMessage.textContent = 'Buen trabajo. Tu narrativa esta creciendo, pero aun hay hilos por tejer. Repasa los destinos y vuelve a intentarlo.';
+            } else {
+                resultsTitle.textContent = '&#128161; Sigue tejiendo';
+                resultsScore.className = 'results-score fail';
+                resultsMessage.textContent = 'La historia necesita mas practica. Vuelve a Quibdo y Nuqui, escucha con atencion, y regresa cuando las palabras fluyan.';
+            }
+
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('submitBtn').textContent = 'Examen entregado';
+        }
+    </script>
+</body>
+</html>

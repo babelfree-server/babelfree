@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 9: Ayer con Yaguar&aacute; - Pret&eacute;rito Indefinido</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest9_past_simple/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 9: Ayer con Yaguará - Pretérito Indefinido",
+          "url": "https://babelfree.com/a2_basic/dest9_past_simple/games",
+          "educationalLevel": "A2 - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Past simple (pretérito indefinido)", "Spanish grammar", "Verb conjugation"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Basic", "item": "https://babelfree.com/a2-caribbean" },
+            { "@type": "ListItem", "position": 4, "name": "Ayer con Yaguará - Pretérito Indefinido" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 9: Ayer con Yaguar&aacute;</div>
+            <div class="yg-header-subtitle">Pret&eacute;rito Indefinido</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+    var games = [
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>infinitivo &#8594; yo (pret&eacute;rito)</em>',
+            pairs: [
+                ['comer', 'com&iacute;'],
+                ['beber', 'beb&iacute;'],
+                ['dormir', 'dorm&iacute;'],
+                ['caminar', 'camin&eacute;'],
+                ['hablar', 'habl&eacute;'],
+                ['vivir', 'viv&iacute;']
+            ]
+        },
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa la frase con la forma correcta del pret&eacute;rito.',
+            questions: [
+                { sentence: 'Ayer yo ___ agua.', answer: 'beb\u00ed', options: ['bebo', 'beb\u00ed', 'beber\u00e9', 'beber'] },
+                { sentence: 'Ayer yo ___ en casa.', answer: 'camin\u00e9', options: ['camino', 'camin\u00e9', 'caminar\u00e9', 'caminar'] }
+            ]
+        },
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Selecciona la conjugaci&oacute;n correcta del pret&eacute;rito.',
+            questions: [
+                { verb: 'hablar', subject: 'yo', answer: 'habl\u00e9', options: ['hablo', 'habl\u00e9', 'hablar\u00e9', 'hablaba'] },
+                { verb: 'hablar', subject: 't\u00fa', answer: 'hablaste', options: ['hablas', 'hablaste', 'hablar\u00e1s', 'hablabas'] },
+                { verb: 'hablar', subject: '\u00e9l', answer: 'habl\u00f3', options: ['habla', 'habl\u00f3', 'hablar\u00e1', 'hablaba'] }
+            ]
+        },
+        {
+            type: 'listening',
+            label: 'Escuchar',
+            instruction: 'Escucha la frase y selecciona la opci&oacute;n correcta.',
+            audio: 'Ayer com\u00ed pescado.',
+            question: '\u00bfQu\u00e9 comi\u00f3?',
+            answer: 'Pescado',
+            options: ['Pescado', 'Pan', 'Agua', 'Frutas']
+        },
+        {
+            type: 'sorting',
+            label: 'Clasificar',
+            instruction: 'Clasifica los verbos en <em>Regular</em> o <em>Irregular</em>.',
+            categories: ['Regular', 'Irregular'],
+            items: [
+                { text: 'comer', category: 'Regular' },
+                { text: 'ir', category: 'Irregular' },
+                { text: 'hablar', category: 'Regular' },
+                { text: 'hacer', category: 'Irregular' },
+                { text: 'vivir', category: 'Regular' },
+                { text: 'ser', category: 'Irregular' }
+            ]
+        },
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa el di&aacute;logo con la forma correcta.',
+            questions: [
+                { sentence: '\u00bfQu\u00e9 comiste ayer? \u2014 Yo ___ arroz.', answer: 'com\u00ed', options: ['como', 'com\u00ed', 'comer\u00e9', 'comer'] },
+                { sentence: '\u00bfD\u00f3nde dormiste? \u2014 ___ en un hotel.', answer: 'Dorm\u00ed', options: ['Duermo', 'Dorm\u00ed', 'Dormir\u00e9', 'Dormir'] }
+            ]
+        },
+        {
+            type: 'builder',
+            label: 'Construir',
+            instruction: 'Ordena las palabras para formar una frase correcta.',
+            words: ['Ayer', 'yo', 'com\u00ed', 'en', 'casa'],
+            answer: 'Ayer yo com\u00ed en casa'
+        },
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n',
+            instruction: 'Conjuga <em>hablar</em> en pret&eacute;rito indefinido.',
+            questions: [
+                { verb: 'hablar', subject: 'yo', answer: 'habl\u00e9', options: ['habl\u00e9', 'hablaste', 'habl\u00f3', 'hablamos'] },
+                { verb: 'hablar', subject: 't\u00fa', answer: 'hablaste', options: ['habl\u00e9', 'hablaste', 'habl\u00f3', 'hablaron'] },
+                { verb: 'hablar', subject: '\u00e9l/ella', answer: 'habl\u00f3', options: ['habl\u00e9', 'hablaste', 'habl\u00f3', 'hablamos'] },
+                { verb: 'hablar', subject: 'nosotros', answer: 'hablamos', options: ['habl\u00e9', 'hablaste', 'hablamos', 'hablaron'] },
+                { verb: 'hablar', subject: 'ellos', answer: 'hablaron', options: ['habl\u00f3', 'hablamos', 'hablasteis', 'hablaron'] }
+            ]
+        },
+        {
+            type: 'translation',
+            label: 'Traducir',
+            instruction: 'Traduce al espa&ntilde;ol usando las palabras disponibles.',
+            source: 'Yesterday I ate fish.',
+            words: ['Ayer', 'yo', 'com\u00ed', 'pescado', 'en', 'la', 'casa'],
+            answer: 'Ayer yo com\u00ed pescado'
+        },
+        {
+            type: 'conversation',
+            label: 'Conversaci&oacute;n',
+            instruction: 'Completa la conversaci&oacute;n eligiendo la respuesta correcta.',
+            turns: [
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amigo', text: '\u00bfQu\u00e9 hiciste ayer?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Fui al mercado.', 'Voy al mercado.', 'Ir\u00e9 al mercado.'],
+                    answer: 'Fui al mercado.'
+                }
+            ]
+        },
+        {
+            type: 'builder',
+            label: 'Construir',
+            instruction: 'Ordena las palabras para formar la frase correcta.',
+            words: ['La', 'semana', 'pasada', 'fui', 'al', 'mercado', 'y', 'compr\u00e9', 'frutas'],
+            answer: 'La semana pasada fui al mercado y compr\u00e9 frutas'
+        },
+        {
+            type: 'translation',
+            label: 'Traducir',
+            instruction: 'Traduce al espa&ntilde;ol usando las palabras disponibles.',
+            source: 'Yesterday I went to the market and bought fruit.',
+            words: ['Ayer', 'fui', 'al', 'mercado', 'y', 'compr\u00e9', 'frutas'],
+            answer: 'Ayer fui al mercado y compr\u00e9 frutas'
+        },
+        {
+            type: 'conversation',
+            label: 'Conversaci&oacute;n',
+            instruction: 'Completa la conversaci&oacute;n. Responde a cada pregunta.',
+            turns: [
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amiga', text: '\u00bfFuiste al cine el s\u00e1bado?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['S\u00ed, fui con mi familia.', 'S\u00ed, voy con mi familia.', 'No, ir\u00e9 ma\u00f1ana.'],
+                    answer: 'S\u00ed, fui con mi familia.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Amiga', text: '\u00bfQu\u00e9 pel\u00edcula viste?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Vi una pel\u00edcula de acci\u00f3n.', 'Veo una pel\u00edcula.', 'Ver\u00e9 una pel\u00edcula.'],
+                    answer: 'Vi una pel\u00edcula de acci\u00f3n.'
+                }
+            ]
+        },
+        {
+            type: 'dictation',
+            label: 'Dictado',
+            instruction: 'Escucha y escribe la frase que oyes.',
+            audio: 'Ayer camin\u00e9 por la playa.',
+            answer: 'Ayer camin\u00e9 por la playa'
+        },
+        {
+            type: 'story',
+            label: 'Lectura',
+            instruction: 'Lee la historia y responde las preguntas.',
+            title: 'El d\u00eda de Yaguar\u00e1',
+            text: 'Ayer Yaguar\u00e1 se despert\u00f3 temprano. Camin\u00f3 por la selva. Bebi\u00f3 agua del r\u00edo. Comi\u00f3 frutas. Por la noche, durmi\u00f3 en su cueva.',
+            questions: [
+                { q: '\u00bfQu\u00e9 bebi\u00f3 Yaguar\u00e1?', options: ['Jugo', 'Agua del r\u00edo', 'Leche', 'Caf\u00e9'], answer: 'Agua del r\u00edo' },
+                { q: '\u00bfD\u00f3nde durmi\u00f3?', options: ['En un \u00e1rbol', 'En el r\u00edo', 'En su cueva', 'En la playa'], answer: 'En su cueva' },
+                { q: '\u00bfQu\u00e9 comi\u00f3?', options: ['Pescado', 'Carne', 'Frutas', 'Arroz'], answer: 'Frutas' }
+            ]
+        },
+        {
+            type: 'pair',
+            label: 'Emparejar',
+            instruction: 'Encuentra los pares: <em>pregunta &#8594; respuesta</em>',
+            pairs: [
+                ['\u00bfQu\u00e9 comiste?', 'Com\u00ed arroz.'],
+                ['\u00bfAd\u00f3nde fuiste?', 'Fui al mercado.'],
+                ['\u00bfQu\u00e9 hiciste?', 'Estudi\u00e9 espa\u00f1ol.']
+            ]
+        },
+        {
+            type: 'listening',
+            label: 'Escuchar',
+            instruction: 'Escucha el p&aacute;rrafo y responde la pregunta.',
+            audio: 'Ayer Yaguar\u00e1 se despert\u00f3 temprano. Primero camin\u00f3 por la selva. Despu\u00e9s bebi\u00f3 agua del r\u00edo.',
+            question: '\u00bfQu\u00e9 hizo Yaguar\u00e1 primero?',
+            answer: 'Camin\u00f3 por la selva.',
+            options: ['Camin\u00f3 por la selva.', 'Bebi\u00f3 agua.', 'Comi\u00f3 frutas.', 'Durmi\u00f3 en su cueva.']
+        },
+        {
+            type: 'sorting',
+            label: 'Clasificar',
+            instruction: 'Clasifica las expresiones de tiempo.',
+            categories: ['Pasado', 'Presente', 'Futuro'],
+            items: [
+                { text: 'ayer', category: 'Pasado' },
+                { text: 'hoy', category: 'Presente' },
+                { text: 'ma\u00f1ana', category: 'Futuro' },
+                { text: 'la semana pasada', category: 'Pasado' },
+                { text: 'ahora', category: 'Presente' },
+                { text: 'el pr\u00f3ximo lunes', category: 'Futuro' },
+                { text: 'anoche', category: 'Pasado' }
+            ]
+        },
+        {
+            type: 'dictation',
+            label: 'Dictado',
+            instruction: 'Escucha y escribe la frase completa.',
+            audio: 'La semana pasada fui a Cartagena con mi familia.',
+            answer: 'La semana pasada fui a Cartagena con mi familia'
+        },
+        {
+            type: 'story',
+            label: 'Lectura',
+            instruction: 'Lee la historia y responde las preguntas.',
+            title: 'Yaguar\u00e1 en Cartagena',
+            text: 'La semana pasada, Yaguar\u00e1 viaj\u00f3 a Cartagena. Camin\u00f3 por las calles de la ciudad vieja. Comi\u00f3 arepas en un restaurante. Despu\u00e9s fue a la playa y nad\u00f3 en el mar. Por la noche, bail\u00f3 salsa con sus amigos. Fue un d\u00eda incre\u00edble.',
+            questions: [
+                { q: '\u00bfAd\u00f3nde viaj\u00f3 Yaguar\u00e1?', options: ['A Bogot\u00e1', 'A Cartagena', 'A Medell\u00edn', 'A Cali'], answer: 'A Cartagena' },
+                { q: '\u00bfQu\u00e9 comi\u00f3 en el restaurante?', options: ['Pescado', 'Arroz', 'Arepas', 'Empanadas'], answer: 'Arepas' },
+                { q: '\u00bfQu\u00e9 hizo en la playa?', options: ['Durmi\u00f3', 'Nad\u00f3 en el mar', 'Ley\u00f3 un libro', 'Jug\u00f3 f\u00fatbol'], answer: 'Nad\u00f3 en el mar' },
+                { q: '\u00bfQu\u00e9 bail\u00f3 por la noche?', options: ['Cumbia', 'Salsa', 'Merengue', 'Reggaet\u00f3n'], answer: 'Salsa' }
+            ]
+        },
+        {
+            type: 'fib',
+            label: 'Completar',
+            instruction: 'Completa con la forma correcta del pret&eacute;rito indefinido.',
+            questions: [
+                { sentence: 'El a\u00f1o pasado ___ (ir / yo) a Colombia.', answer: 'fui', options: ['fui', 'iba', 'voy', 'ir\u00e9'] },
+                { sentence: 'Ayer ella ___ (hacer) la tarea.', answer: 'hizo', options: ['hace', 'hizo', 'har\u00e1', 'hac\u00eda'] },
+                { sentence: 'Nosotros ___ (comer) en un restaurante anoche.', answer: 'comimos', options: ['comemos', 'comimos', 'comeremos', 'com\u00edamos'] }
+            ]
+        },
+        {
+            type: 'builder',
+            label: 'Construir',
+            instruction: 'Ordena las palabras para formar la frase.',
+            words: ['El', 'fin', 'de', 'semana', 'pasado', 'mi', 'familia', 'y', 'yo', 'fuimos', 'a', 'la', 'playa'],
+            answer: 'El fin de semana pasado mi familia y yo fuimos a la playa'
+        },
+        {
+            type: 'conjugation',
+            label: 'Conjugaci&oacute;n R&aacute;pida',
+            instruction: 'Selecciona r&aacute;pidamente la conjugaci&oacute;n correcta.',
+            questions: [
+                { verb: 'ir', subject: 'yo', answer: 'fui', options: ['fui', 'fue', 'iba', 'voy'] },
+                { verb: 'hacer', subject: 't\u00fa', answer: 'hiciste', options: ['haces', 'hiciste', 'har\u00e1s', 'hac\u00edas'] },
+                { verb: 'comer', subject: 'ella', answer: 'comi\u00f3', options: ['come', 'comi\u00f3', 'comer\u00e1', 'com\u00eda'] },
+                { verb: 'ser', subject: 'nosotros', answer: 'fuimos', options: ['somos', 'fuimos', 'seremos', '\u00e9ramos'] },
+                { verb: 'tener', subject: 'ellos', answer: 'tuvieron', options: ['tienen', 'tuvieron', 'tendr\u00e1n', 'ten\u00edan'] },
+                { verb: 'dormir', subject: 'yo', answer: 'dorm\u00ed', options: ['duermo', 'dorm\u00ed', 'dormir\u00e9', 'dorm\u00eda'] }
+            ]
+        },
+        {
+            type: 'translation',
+            label: 'Traducir',
+            instruction: 'Traduce al espa&ntilde;ol usando las palabras disponibles.',
+            source: 'Last weekend I went to the beach with my friends. We swam in the sea and ate fish.',
+            words: ['El', 'fin', 'de', 'semana', 'pasado', 'fui', 'a', 'la', 'playa', 'con', 'mis', 'amigos', 'Nadamos', 'en', 'el', 'mar', 'y', 'comimos', 'pescado'],
+            answer: 'El fin de semana pasado fui a la playa con mis amigos Nadamos en el mar y comimos pescado'
+        },
+        {
+            type: 'conversation',
+            label: 'Conversaci&oacute;n Final',
+            instruction: 'Completa la conversaci&oacute;n sobre el fin de semana pasado.',
+            turns: [
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Mar\u00eda', text: '\u00a1Hola! \u00bfQu\u00e9 hiciste el fin de semana pasado?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Fui a la playa con mis amigos.', 'Voy a la playa con mis amigos.', 'Ir\u00e9 a la playa con mis amigos.'],
+                    answer: 'Fui a la playa con mis amigos.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Mar\u00eda', text: '\u00a1Qu\u00e9 divertido! \u00bfNadaron en el mar?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['S\u00ed, nadamos mucho y comimos pescado.', 'S\u00ed, nadamos mucho y comemos pescado.', 'S\u00ed, nadaremos mucho.'],
+                    answer: 'S\u00ed, nadamos mucho y comimos pescado.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Mar\u00eda', text: '\u00bfA qu\u00e9 hora volvieron a casa?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['Volvimos a las ocho de la noche.', 'Volvemos a las ocho.', 'Volveremos a las ocho.'],
+                    answer: 'Volvimos a las ocho de la noche.'
+                },
+                {
+                    dialogue: [
+                        { speaker: 'A', name: 'Mar\u00eda', text: '\u00bfTe gust\u00f3 el d\u00eda?' },
+                        { speaker: 'B', name: 'T\u00fa', text: '???' }
+                    ],
+                    options: ['S\u00ed, fue un d\u00eda incre\u00edble.', 'S\u00ed, es un d\u00eda incre\u00edble.', 'S\u00ed, ser\u00e1 un d\u00eda incre\u00edble.'],
+                    answer: 'S\u00ed, fue un d\u00eda incre\u00edble.'
+                }
+            ]
+        },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva del manantial',
+            description: 'Una cueva debajo de las ra\u00edces de una ceiba gigante. El agua brota de la piedra. En las paredes hay dibujos antiguos.',
+            ambience: 'water-drop'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una cerradura en la piedra junto al agua.',
+                clue: 'Es algo que haces todos los d\u00edas, por la ma\u00f1ana, cuando te levantas. Ocho letras.',
+                answer: 'desayuno',
+                hint: '_ _ _ _ _ _ _ _',
+                onSolve: 'La piedra se mueve un poco.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra est\u00e1n dibujadas en las paredes de la cueva.',
+                clue: 'Es la parte del d\u00eda cuando el sol se va. Cinco letras.',
+                answer: 'noche',
+                scrambled: 'hcneo',
+                onSolve: 'Las paredes brillan con luz verde.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'El agua susurra una pregunta:',
+                riddle: '\u00abAlguien en este pueblo escucha el r\u00edo todas las ma\u00f1anas. Los vecinos dicen que es una abuela muy vieja. \u00bfQui\u00e9n es?\u00bb',
+                clue: 'Su nombre empieza con A.',
+                answer: 'Do\u00f1a Asunci\u00f3n',
+                options: ['Do\u00f1a Asunci\u00f3n', 'Candelaria', 'Yaguar\u00e1', 'Mam\u00e1 Jaguar'],
+                onSolve: 'El agua suena m\u00e1s fuerte. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla en la pared: una ra\u00edz con forma de mano.',
+            questClue: 'La ra\u00edz se\u00f1ala hacia el r\u00edo.',
+            item: 'raiz-mano'
+        }
+    }
+    ];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '9',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraDest9Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

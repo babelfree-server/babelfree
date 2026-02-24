@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 57: Guardianes de historias &mdash; Transmisi&oacute;n cultural</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_advanced/dest57_cultural_transmission/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 57: Guardianes de historias — Transmisión cultural",
+          "url": "https://babelfree.com/c2_advanced/dest57_cultural_transmission/games",
+          "educationalLevel": "C2 Advanced - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Cultural transmission", "Heritage preservation", "Spanish cultural competence"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Advanced", "item": "https://babelfree.com/c2-colombia" },
+            { "@type": "ListItem", "position": 4, "name": "Guardianes de historias — Transmisión cultural" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-colombia" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 57: Guardianes de historias</div>
+            <div class="yg-header-subtitle">Transmisi&oacute;n cultural</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — Ense\u00f1ar es la prueba final ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre que el verdadero dominio de una lengua se demuestra cuando puedes transmitirla.',
+        text: 'Abuela Ceiba se lo hab\u00eda dicho al principio del viaje, cuando Yaguar\u00e1 a\u00fan era una cachorra que apenas sab\u00eda nombrar las cosas: \u00abSaber no es tener. Saber es poder dar.\u00bb Ahora, cincuenta y seis destinos despu\u00e9s, Yaguar\u00e1 comprend\u00eda al fin. No bastaba con dominar la lengua para uno mismo: el guardi\u00e1n era quien pod\u00eda transmitirla. Ense\u00f1ar gram\u00e1tica a quien no la conoc\u00eda. Explicar una met\u00e1fora a quien nunca hab\u00eda le\u00eddo poes\u00eda. Contar una historia de modo que quien la escuchara la recordara para siempre y la contara a su vez. La transmisi\u00f3n cultural no era un a\u00f1adido al dominio ling\u00fc\u00edstico: era su culminaci\u00f3n. Porque solo puedes ense\u00f1ar lo que entiendes de verdad, y solo entiendes de verdad lo que puedes explicar con claridad a quien no sabe nada.'
+    },
+    // === GAME 2: Narrative — La tradici\u00f3n oral ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la tradici\u00f3n oral como la forma m\u00e1s antigua de transmisi\u00f3n cultural.',
+        text: 'Antes de la escritura, todo el conocimiento humano se transmit\u00eda de boca en boca: los mitos, las leyes, las recetas, los nombres de las plantas medicinales, los cantos funerarios, las genealog\u00edas. En Colombia, la tradici\u00f3n oral segu\u00eda viva: los decimeros del Pac\u00edfico, los copleros de los Llanos, los juglares del vallenato, los narradores wayúu, los sabedores emberá. Todos ellos eran guardianes de historias: personas cuya memoria era la biblioteca de la comunidad. Y todos compart\u00edan una habilidad que ning\u00fan libro pod\u00eda ense\u00f1ar: sab\u00edan adaptar la historia al auditorio. El mismo mito se contaba de un modo a los ni\u00f1os y de otro a los ancianos; se narraba de una manera en tiempos de fiesta y de otra en tiempos de duelo. El narrador oral era el primer mediador: traduc\u00eda el pasado al presente y el conocimiento al contexto.'
+    },
+    // === GAME 3: Narrative — Explicar lo complejo con sencillez ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el arte de explicar conceptos complejos con sencillez, sin simplificarlos.',
+        text: 'Einstein dec\u00eda que si no pod\u00edas explicar algo de forma sencilla, no lo entend\u00edas lo suficiente. Yaguar\u00e1 lo experiment\u00f3 cuando intent\u00f3 explicarle a Río, su hermanito pequeño, qué era el subjuntivo. \u00abEs el modo de hablar de lo que deseas, lo que dudas o lo que imaginas\u00bb, le dijo. Y Río respondi\u00f3: \u00ab\u00bfComo cuando digo "ojalá que no llueva"?\u00bb. Exacto. La clave no era simplificar hasta falsear, sino encontrar la analog\u00eda justa, el ejemplo que encend\u00eda la comprensi\u00f3n. El buen maestro no bajaba su nivel: elevaba al estudiante. No eliminaba la complejidad: la hac\u00eda accesible. Y para eso necesitaba dos cosas: un dominio tan profundo del tema que pudiera mirarlo desde cualquier \u00e1ngulo, y una empat\u00eda tan genuina con el aprendiz que pudiera ver el mundo desde sus ojos.'
+    },
+    // === GAME 4: Narrative — La narrativa como pedagog\u00eda ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el poder de la narrativa como herramienta pedag\u00f3gica.',
+        text: 'Los seres humanos no recuerdan datos: recuerdan historias. Un dato \u2014\u00aben Colombia se hablan 65 lenguas ind\u00edgenas\u00bb\u2014 se olvida en minutos. Una historia \u2014\u00abcuando la \u00faltima hablante del tinigua muri\u00f3 en 2008, desapareci\u00f3 con ella una forma entera de ver el mundo\u00bb\u2014 se recuerda para siempre. Yaguar\u00e1 comprendi\u00f3 que el guardián de historias no era alguien que acumulaba datos sino alguien que los convert\u00eda en relatos. Cada lecci\u00f3n de gram\u00e1tica pod\u00eda ser una historia: el subjuntivo era el modo de los deseos y las dudas; el pret\u00e9rito pluscuamperfecto era el tiempo de los arrepentimientos (lo que hab\u00eda pasado antes de lo que pas\u00f3); la voz pasiva era la forma que ten\u00eda la lengua de esconder al responsable. Ense\u00f1ar no era transferir informaci\u00f3n: era contar historias que dejaran al aprendiz con ganas de saber m\u00e1s.'
+    },
+    // === GAME 5: Narrative — Preservar sin congelar ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la tensi\u00f3n entre preservar la tradici\u00f3n y permitir que evolucione.',
+        text: 'Hab\u00eda un dilema que los guardianes de historias conoc\u00edan bien: \u00bfc\u00f3mo preservar la tradici\u00f3n sin convertirla en una pieza de museo? La cumbia que bailaban los j\u00f3venes en Bogot\u00e1 no era la misma cumbia de los pescadores del Magdalena; el vallenato electr\u00f3nico de los festivales no era el vallenato de los juglares del Cesar. \u00bfEra eso traici\u00f3n o evoluci\u00f3n? Yaguar\u00e1 entendi\u00f3 que la respuesta depend\u00eda de una sola pregunta: \u00bfse conserva el alma? Si la nueva forma segu\u00eda contando historias, si segu\u00eda conectando a las personas con su memoria, si segu\u00eda haciendo sentir, entonces no era traici\u00f3n: era vida. La cultura no se preservaba encerr\u00e1ndola en una vitrina. Se preservaba transmiti\u00e9ndola, y todo lo que se transmite se transforma, y todo lo que se transforma est\u00e1 vivo.'
+    },
+    // === GAME 6: Narrative — El guardi\u00e1n ense\u00f1a ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 asume su papel de guardiana-maestra.',
+        text: 'Yaguar\u00e1 se sent\u00f3 con un grupo de j\u00f3venes en un sal\u00f3n comunitario de Ciudad Bol\u00edvar, en el sur de Bogot\u00e1. No eran estudiantes de ling\u00fc\u00edstica: eran raperos, grafiteros, poetas urbanos. Y cuando Yaguar\u00e1 les habl\u00f3 del subjuntivo, no les dio reglas: les puso una canci\u00f3n de Juanes (\u00abA Dios le pido que mi madre no se muera\u00bb) y les pregunt\u00f3 por qu\u00e9 el verbo estaba en esa forma y no en otra. Cuando les habl\u00f3 de ret\u00f3rica, no cit\u00f3 a Arist\u00f3teles: analiz\u00f3 la letra de una canci\u00f3n de Calle 13 y mostr\u00f3 c\u00f3mo usaba an\u00e1fora, ant\u00edtesis y pregunta ret\u00f3rica. Cuando les habl\u00f3 de registro, les pidi\u00f3 que reescribieran un mensaje de WhatsApp como si fuera un discurso ante el Congreso. Se rieron. Aprendieron. Y ella, al ense\u00f1arles, descubri\u00f3 que sab\u00eda m\u00e1s de lo que cre\u00eda: porque ense\u00f1ar es la forma m\u00e1s rigurosa de aprender.'
+    },
+    // === GAME 7: FIB — Pedagog\u00eda de la lengua ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones sobre ense\u00f1anza y transmisi\u00f3n de la lengua.',
+        sentences: [
+            { text: 'El m\u00e9todo ___ prioriza la comunicaci\u00f3n real sobre la memorizaci\u00f3n de reglas gramaticales.', blank: 'comunicativo', options: ['comunicativo', 'gramatical', 'tradicional', 'audiovisual'] },
+            { text: 'La zona de desarrollo ___, concepto de Vygotsky, es el espacio entre lo que el aprendiz sabe y lo que puede aprender con ayuda.', blank: 'pr\u00f3ximo', options: ['pr\u00f3ximo', 'actual', 'futuro', 'real'] },
+            { text: 'Un buen maestro adapta su explicaci\u00f3n al nivel del ___: no simplifica de m\u00e1s ni presupone conocimientos.', blank: 'aprendiz', options: ['aprendiz', 'tema', 'libro', 'examen'] },
+            { text: 'La ___ oral es la forma m\u00e1s antigua de transmisi\u00f3n cultural y sigue viva en las comunidades rurales de Colombia.', blank: 'tradici\u00f3n', options: ['tradici\u00f3n', 'cultura', 'herencia', 'costumbre'] },
+            { text: 'Explicar algo complejo con una ___ accesible es una de las habilidades m\u00e1s avanzadas del dominio ling\u00fc\u00edstico.', blank: 'analog\u00eda', options: ['analog\u00eda', 'palabra', 'lista', 'definici\u00f3n'] },
+            { text: 'El ___ es un fen\u00f3meno cognitivo por el cual ense\u00f1ar un tema refuerza la comprensi\u00f3n del propio ense\u00f1ante.', blank: 'efecto protégé', options: ['efecto prot\u00e9g\u00e9', 'efecto halo', 'efecto placebo', 'efecto mariposa'] },
+            { text: 'La ___ formativa, a diferencia de la sumativa, busca retroalimentar al estudiante durante el proceso de aprendizaje.', blank: 'evaluaci\u00f3n', options: ['evaluaci\u00f3n', 'calificaci\u00f3n', 'medici\u00f3n', 'clasificaci\u00f3n'] },
+            { text: 'Un ___ de aprendizaje es un error sistem\u00e1tico que revela una regla interiorizada incorrectamente.', blank: 'error', options: ['error', 'problema', 'fallo', 'defecto'] }
+        ]
+    },
+    // === GAME 8: FIB — Tradici\u00f3n oral colombiana ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones sobre las formas de tradici\u00f3n oral en Colombia.',
+        sentences: [
+            { text: 'El ___ es el narrador-m\u00fasico del vallenato, custodio de la memoria colectiva de la costa caribe\u00f1a.', blank: 'juglar', options: ['juglar', 'poeta', 'bardo', 'cantor'] },
+            { text: 'La ___ es una composici\u00f3n oral en versos octosílabos, típica de los Llanos colombo-venezolanos.', blank: 'copla', options: ['copla', 'canci\u00f3n', 'd\u00e9cima', 'cuarteta'] },
+            { text: 'Los ___ del Pac\u00edfico colombiano improvisan versos en d\u00e9cimas sobre cualquier tema que el p\u00fablico proponga.', blank: 'decimeros', options: ['decimeros', 'copleros', 'cantadores', 'rezanderos'] },
+            { text: 'Los \u00absabedores\u00bb ind\u00edgenas son personas que guardan el conocimiento ___ de su comunidad.', blank: 'ancestral', options: ['ancestral', 'cient\u00edfico', 'escolar', 'moderno'] },
+            { text: 'La oralidad no es una forma inferior de transmisi\u00f3n; es una forma distinta, con sus propias t\u00e9cnicas de ___ y memorizaci\u00f3n.', blank: 'composici\u00f3n', options: ['composici\u00f3n', 'escritura', 'lectura', 'copia'] },
+            { text: 'En la tradici\u00f3n oral, la ___ no es un defecto: cada narrador adapta la historia a su p\u00fablico y su momento.', blank: 'variaci\u00f3n', options: ['variaci\u00f3n', 'repetici\u00f3n', 'exactitud', 'copia'] },
+            { text: 'El \u00abpiqueria\u00bb o duelo verbal entre juglares vallenatos es una forma de ___ oral improvisada.', blank: 'competencia', options: ['competencia', 'pelea', 'conversaci\u00f3n', 'lectura'] },
+            { text: 'Los cantos de ___ del Pac\u00edfico acompa\u00f1an a los muertos y transmiten la cosmovisi\u00f3n afrocolombiana.', blank: 'alabao', options: ['alabao', 'cumbia', 'joropo', 'bambuco'] }
+        ]
+    },
+    // === GAME 9: Conjugation — Explicar gram\u00e1tica ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga correctamente para completar estas explicaciones gramaticales que un maestro dar\u00eda a sus estudiantes.',
+        sentences: [
+            { text: 'Si dices \u00abquiero que ___ (venir, t\u00fa)\u00bb, usas subjuntivo porque expresas un deseo, no un hecho.', blank: 'vengas', verb: 'venir', tense: 'presente de subjuntivo' },
+            { text: '\u00abHab\u00eda ___ (llover)\u00bb es pluscuamperfecto: algo que pas\u00f3 antes de otra cosa que tambi\u00e9n ya pas\u00f3.', blank: 'llovido', verb: 'llover', tense: 'participio' },
+            { text: 'Cuando dices \u00ab\u00a1___ (sentarse, t\u00fa)!\u00bb, est\u00e1s usando el imperativo: le ordenas a alguien que haga algo.', blank: 'Si\u00e9ntate', verb: 'sentarse', tense: 'imperativo' },
+            { text: '\u00abSi yo ___ (ser) p\u00e1jaro, volar\u00eda\u00bb usa el imperfecto de subjuntivo porque la condici\u00f3n es irreal.', blank: 'fuera', verb: 'ser', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: '\u00abSe ___ (vender) casas\u00bb es una construcci\u00f3n impersonal: no se dice qui\u00e9n vende.', blank: 'venden', verb: 'vender', tense: 'presente (pasiva refleja)' },
+            { text: '\u00abCuando ___ (terminar, t\u00fa), av\u00edsame\u00bb usa subjuntivo porque el momento de terminar es incierto.', blank: 'termines', verb: 'terminar', tense: 'presente de subjuntivo' },
+            { text: 'El gerundio \u00ab___ (caminar)\u00bb indica una acci\u00f3n en curso: \u00abestoy caminando\u00bb.', blank: 'caminando', verb: 'caminar', tense: 'gerundio' },
+            { text: '\u00abHabr\u00e9 ___ (llegar) para las seis\u00bb es futuro perfecto: antes de las seis, la llegada estar\u00e1 completa.', blank: 'llegado', verb: 'llegar', tense: 'participio (futuro perfecto)' }
+        ]
+    },
+    // === GAME 10: Pair — Concepto gramatical y analog\u00eda pedag\u00f3gica ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada concepto gramatical con la analog\u00eda que un buen maestro usar\u00eda para explicarlo.',
+        pairs: [
+            ['Subjuntivo', 'El modo de los deseos, las dudas y los mundos imaginados'],
+            ['Pret\u00e9rito pluscuamperfecto', 'El tiempo de los arrepentimientos: lo que hab\u00eda pasado antes de lo que pas\u00f3'],
+            ['Voz pasiva', 'La forma que tiene la lengua de esconder al responsable de la acci\u00f3n'],
+            ['Conectores discursivos', 'Los puentes que permiten al lector cruzar de una idea a otra sin perderse'],
+            ['Registro formal', 'El traje de gala del idioma: se usa en ocasiones que lo exigen'],
+            ['Iron\u00eda', 'Decir lo contrario de lo que piensas para que el otro entienda exactamente lo que piensas'],
+            ['Etimolog\u00eda', 'La arqueolog\u00eda de las palabras: excavar hasta encontrar de d\u00f3nde vienen'],
+            ['Coherencia textual', 'El hilo invisible que conecta todas las oraciones de un texto en una sola idea']
+        ]
+    },
+    // === GAME 11: Pair — Forma de tradici\u00f3n oral y regi\u00f3n ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada forma de tradici\u00f3n oral colombiana con su regi\u00f3n de origen.',
+        pairs: [
+            ['Vallenato (canto narrativo con acorde\u00f3n)', 'Costa Caribe / Cesar y La Guajira'],
+            ['D\u00e9cima improvisada', 'Pac\u00edfico colombiano'],
+            ['Copla llanera', 'Llanos Orientales / Casanare y Arauca'],
+            ['Alabao (canto funerario)', 'Choc\u00f3 / Pac\u00edfico afrocolombiano'],
+            ['Mito de Yurupa\u00e1', 'Amazon\u00eda colombiana'],
+            ['Leyenda de la Patasola', 'Regi\u00f3n Andina'],
+            ['Bullerengue (canto y baile)', 'Bol\u00edvar y sur de la costa Caribe'],
+            ['Coplero de contrapunteo', 'Boyac\u00e1 y Cundinamarca']
+        ]
+    },
+    // === GAME 12: Listening — Evaluar una explicaci\u00f3n pedag\u00f3gica ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Lee dos explicaciones del mismo concepto y eval\u00faa cu\u00e1l es m\u00e1s eficaz pedag\u00f3gicamente.',
+        text: 'Concepto: por qu\u00e9 \u00abser\u00bb y \u00abestar\u00bb son dos verbos diferentes en espa\u00f1ol.\n\nExplicaci\u00f3n A: \u00abSer se emplea para predicados que denotan propiedades esenciales o clasificatorias del sujeto, mientras que estar se reserva para estados transitorios, resultantes o locativos.\u00bb\n\nExplicaci\u00f3n B: \u00abImagina que ser es como una foto de pasaporte: dice qui\u00e9n eres de manera fija (soy colombiana, soy alta). Estar es como una foto con el celular: captura c\u00f3mo est\u00e1s en este momento (estoy cansada, estoy en Bogot\u00e1). La misma persona sale en ambas fotos, pero cada una dice algo diferente.\u00bb',
+        questions: [
+            { q: '\u00bfCu\u00e1l de las dos explicaciones es m\u00e1s accesible para un aprendiz inicial?', options: ['La B, porque usa una analog\u00eda visual concreta que conecta con la experiencia cotidiana del aprendiz', 'La A, porque es m\u00e1s precisa t\u00e9cnicamente', 'Las dos son iguales de claras', 'Ninguna es buena'], answer: 'La B, porque usa una analog\u00eda visual concreta que conecta con la experiencia cotidiana del aprendiz' },
+            { q: '\u00bfLa explicaci\u00f3n A es incorrecta?', options: ['No: es t\u00e9cnicamente correcta, pero su registro metalingü\u00edstico la hace inaccesible para alguien que a\u00fan no domina esos t\u00e9rminos', 'S\u00ed, es completamente incorrecta', 'S\u00ed, porque \u00abestar\u00bb no es solo transitorio', 'No, y es mejor que la B'], answer: 'No: es t\u00e9cnicamente correcta, pero su registro metalingü\u00edstico la hace inaccesible para alguien que a\u00fan no domina esos t\u00e9rminos' },
+            { q: '\u00bfQu\u00e9 principio pedag\u00f3gico ilustra la diferencia entre ambas explicaciones?', options: ['Que la eficacia de una explicaci\u00f3n depende no de su precisi\u00f3n t\u00e9cnica sino de su capacidad de conectar con lo que el aprendiz ya sabe', 'Que la gram\u00e1tica no importa', 'Que los ejemplos son mejores que las reglas', 'Que la explicaci\u00f3n B es m\u00e1s correcta ling\u00fc\u00edsticamente'], answer: 'Que la eficacia de una explicaci\u00f3n depende no de su precisi\u00f3n t\u00e9cnica sino de su capacidad de conectar con lo que el aprendiz ya sabe' }
+        ]
+    },
+    // === GAME 13: Sorting — Estrategia pedag\u00f3gica seg\u00fan nivel ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada estrategia pedag\u00f3gica seg\u00fan el nivel CEFR del aprendiz al que mejor se adapta.',
+        categories: ['A1\u2013A2', 'B1\u2013B2', 'C1\u2013C2'],
+        items: [
+            { text: 'Ense\u00f1ar vocabulario con im\u00e1genes y gestos', category: 'A1\u2013A2' },
+            { text: 'Analizar las estrategias ret\u00f3ricas de un discurso pol\u00edtico', category: 'C1\u2013C2' },
+            { text: 'Practicar di\u00e1logos en situaciones cotidianas (tienda, restaurante)', category: 'A1\u2013A2' },
+            { text: 'Debatir sobre temas de actualidad con argumentos y contraargumentos', category: 'B1\u2013B2' },
+            { text: 'Reflexionar sobre las diferencias entre variedades del espa\u00f1ol', category: 'C1\u2013C2' },
+            { text: 'Contar an\u00e9cdotas personales usando tiempos del pasado', category: 'B1\u2013B2' },
+            { text: 'Escribir un ensayo acad\u00e9mico con tesis, argumentos y conclusi\u00f3n', category: 'C1\u2013C2' },
+            { text: 'Practicar la conjugaci\u00f3n del presente con verbos regulares', category: 'A1\u2013A2' },
+            { text: 'Resumir una pel\u00edcula o un libro explicando la trama principal', category: 'B1\u2013B2' }
+        ]
+    },
+    // === GAME 14: Sorting — Tipo de conocimiento transmitido ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada ejemplo seg\u00fan el tipo de conocimiento cultural que se transmite.',
+        categories: ['Conocimiento ling\u00fc\u00edstico', 'Conocimiento art\u00edstico', 'Conocimiento ecol\u00f3gico', 'Conocimiento hist\u00f3rico'],
+        items: [
+            { text: 'Ense\u00f1ar a conjugar el subjuntivo', category: 'Conocimiento ling\u00fc\u00edstico' },
+            { text: 'Transmitir la t\u00e9cnica del tejido wayúu', category: 'Conocimiento art\u00edstico' },
+            { text: 'Nombrar las plantas medicinales de la selva', category: 'Conocimiento ecol\u00f3gico' },
+            { text: 'Narrar la historia de la independencia de Colombia', category: 'Conocimiento hist\u00f3rico' },
+            { text: 'Explicar los registros del espa\u00f1ol y cu\u00e1ndo usar cada uno', category: 'Conocimiento ling\u00fc\u00edstico' },
+            { text: 'Ense\u00f1ar los pasos de la cumbia', category: 'Conocimiento art\u00edstico' },
+            { text: 'Identificar los cantos de las aves del p\u00e1ramo', category: 'Conocimiento ecol\u00f3gico' },
+            { text: 'Contar la historia del conflicto armado a las nuevas generaciones', category: 'Conocimiento hist\u00f3rico' }
+        ]
+    },
+    // === GAME 15: Builder — Explicaci\u00f3n pedag\u00f3gica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una explicaci\u00f3n pedag\u00f3gica clara del pret\u00e9rito pluscuamperfecto.',
+        words: ['El pluscuamperfecto', 'es el tiempo', 'que usamos para hablar', 'de algo que pas\u00f3', 'antes de otra cosa', 'que tambi\u00e9n ya pas\u00f3.', 'Por ejemplo:', '\u00abCuando llegu\u00e9,', 'ya hab\u00eda llovido\u00bb:', 'primero llovi\u00f3,', 'despu\u00e9s llegu\u00e9.'],
+        answer: 'El pluscuamperfecto es el tiempo que usamos para hablar de algo que pas\u00f3 antes de otra cosa que tambi\u00e9n ya pas\u00f3. Por ejemplo: \u00abCuando llegu\u00e9, ya hab\u00eda llovido\u00bb: primero llovi\u00f3, despu\u00e9s llegu\u00e9.'
+    },
+    // === GAME 16: Builder — Reflexi\u00f3n sobre transmisi\u00f3n cultural ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una reflexi\u00f3n sobre la transmisi\u00f3n cultural.',
+        words: ['La cultura no se preserva', 'encerr\u00e1ndola en una vitrina:', 'se preserva', 'transmiti\u00e9ndola,', 'y todo lo que se transmite', 'se transforma,', 'y todo lo que se transforma', 'est\u00e1 vivo.'],
+        answer: 'La cultura no se preserva encerr\u00e1ndola en una vitrina: se preserva transmiti\u00e9ndola, y todo lo que se transmite se transforma, y todo lo que se transforma est\u00e1 vivo.'
+    },
+    // === GAME 17: Translation — Explicar lo mismo a diferentes audiencias ===
+    {
+        type: 'translation',
+        label: 'Mediaci\u00f3n pedag\u00f3gica',
+        instruction: 'Empareja cada explicaci\u00f3n del subjuntivo con la audiencia a la que est\u00e1 adaptada.',
+        pairs: [
+            { source: 'Para un ni\u00f1o de 8 a\u00f1os', target: 'El subjuntivo es c\u00f3mo hablas cuando deseas algo o cuando no est\u00e1s seguro de que va a pasar. Como cuando dices: \u00abojalá no llueva mañana\u00bb.' },
+            { source: 'Para un estudiante B1', target: 'Usamos el subjuntivo despu\u00e9s de expresiones como \u00abquiero que...\u00bb, \u00abes importante que...\u00bb, \u00abojalá...\u00bb. Se usa para hablar de deseos, emociones y situaciones inciertas.' },
+            { source: 'Para un estudiante C2', target: 'El subjuntivo codifica la actitud del hablante hacia la proposici\u00f3n: irrealidad, valoraci\u00f3n, deseo o incertidumbre. Su distribuci\u00f3n depende del tipo de predicado matriz y de factores pragm\u00e1ticos como la presuposici\u00f3n.' },
+            { source: 'Para un poeta', target: 'El subjuntivo es el modo de lo que a\u00fan no existe: el territorio de los deseos, los sue\u00f1os y los \u00abqu\u00e9 hubiera pasado si...\u00bb. Es la gram\u00e1tica de la imaginaci\u00f3n.' }
+        ]
+    },
+    // === GAME 18: Conversation — Ense\u00f1ar a explicar ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Un amigo extranjero te pide que le expliques conceptos del espa\u00f1ol. Elige la explicaci\u00f3n m\u00e1s clara y pedag\u00f3gicamente eficaz.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'Amigo', text: 'No entiendo la diferencia entre \u00abpor\u00bb y \u00abpara\u00bb. Me confundo todo el tiempo.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Piensa en \u00abpor\u00bb como \u00abmirando hacia atr\u00e1s\u00bb: la causa, el motivo, lo que ya pas\u00f3 (\u00ablo hice por ti\u00bb = la raz\u00f3n fuiste t\u00fa). Y \u00abpara\u00bb como \u00abmirando hacia adelante\u00bb: el destino, la finalidad, lo que va a pasar (\u00abesto es para ti\u00bb = t\u00fa eres el destino). Causa hacia atr\u00e1s, finalidad hacia adelante.',
+                    '\u00abPor\u00bb es una preposici\u00f3n causal y \u00abpara\u00bb es una preposici\u00f3n final.',
+                    'Son preposiciones muy complicadas. Memoriza los ejemplos.',
+                    'No hay regla. Tienes que practicar mucho hasta que suene natural.'
+                ],
+                correct: 'Piensa en \u00abpor\u00bb como \u00abmirando hacia atr\u00e1s\u00bb: la causa, el motivo, lo que ya pas\u00f3 (\u00ablo hice por ti\u00bb = la raz\u00f3n fuiste t\u00fa). Y \u00abpara\u00bb como \u00abmirando hacia adelante\u00bb: el destino, la finalidad, lo que va a pasar (\u00abesto es para ti\u00bb = t\u00fa eres el destino). Causa hacia atr\u00e1s, finalidad hacia adelante.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Amigo', text: '\u00bfY por qu\u00e9 los colombianos dicen \u00abusted\u00bb a todo el mundo, incluso a los amigos?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'En muchas regiones de Colombia, \u00abusted\u00bb no implica distancia como en Espa\u00f1a: es simplemente la forma neutra de dirigirse a alguien. Puedes decirle \u00abusted\u00bb a tu mejor amigo, a tu pareja, incluso a tu mascota. Lo que expresa no es formalidad, sino cercan\u00eda diferente: un respeto cari\u00f1oso, como si dijeras \u00abte quiero tanto que te trato con cuidado\u00bb.',
+                    'Porque en Colombia no se usa \u00abt\u00fa\u00bb.',
+                    'Es un error gramatical que cometen los colombianos.',
+                    'Es igual que en Espa\u00f1a: \u00abusted\u00bb es formal.'
+                ],
+                correct: 'En muchas regiones de Colombia, \u00abusted\u00bb no implica distancia como en Espa\u00f1a: es simplemente la forma neutra de dirigirse a alguien. Puedes decirle \u00abusted\u00bb a tu mejor amigo, a tu pareja, incluso a tu mascota. Lo que expresa no es formalidad, sino cercan\u00eda diferente: un respeto cari\u00f1oso, como si dijeras \u00abte quiero tanto que te trato con cuidado\u00bb.'
+            }
+        ]
+    },
+    // === GAME 19: Dictation — La transmisi\u00f3n como oficio ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje sobre la transmisi\u00f3n cultural.',
+        text: 'El juglar vallenato no solo cantaba: era el periodista, el historiador y el terapeuta de su comunidad. Cada canci\u00f3n era una cr\u00f3nica en tres minutos, y cada verso carri\u00f3n contaba una historia que todo el pueblo reconoc\u00eda como propia.'
+    },
+    // === GAME 20: Story — Texto sobre tradici\u00f3n oral y modernidad ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este texto sobre la tensi\u00f3n entre tradici\u00f3n oral y modernidad y responde las preguntas.',
+        text: 'En un rinc\u00f3n del Pac\u00edfico colombiano, una anciana cantaba alabaos mientras su nieta grababa con el celular. La anciana cantaba para los muertos; la nieta grababa para Instagram. \u00bfEra esto el fin de la tradici\u00f3n o su salvaci\u00f3n?\n\nLa respuesta depend\u00eda de lo que pasara despu\u00e9s. Si el video se perd\u00eda entre millones de otros videos, si nadie lo escuchaba con la atenci\u00f3n que merec\u00eda, si se convert\u00eda en \u00abcontenido\u00bb sin contexto, entonces s\u00ed: era una forma de muerte por trivializaci\u00f3n. Pero si alguien lo escuchaba y preguntaba \u00abQu\u00e9 es eso? \u00bfQui\u00e9n canta? \u00bfPor qu\u00e9?\u00bb, si ese video era la puerta de entrada a un mundo que de otro modo habr\u00eda permanecido invisible, entonces la tecnolog\u00eda no hab\u00eda matado la tradici\u00f3n: le hab\u00eda dado un nuevo r\u00edo por donde fluir.\n\nLa clave no estaba en la herramienta sino en la intenci\u00f3n. El guardián de historias del siglo XXI no rechazaba la tecnolog\u00eda ni se rend\u00eda ante ella: la usaba con la misma sabidur\u00eda con que el juglar usaba el acorde\u00f3n \u2014no como un fin, sino como un veh\u00edculo para lo que siempre hab\u00eda importado: que la historia siguiera viva.',
+        questions: [
+            {
+                q: '\u00bfCu\u00e1l es la tensi\u00f3n central del texto?',
+                options: ['Si la tecnolog\u00eda digital preserva o trivializa la tradici\u00f3n oral', 'Si los j\u00f3venes deben o no usar celulares', 'Si los alabaos deben cantarse solo en funerales', 'Si Instagram es mejor que YouTube'],
+                answer: 'Si la tecnolog\u00eda digital preserva o trivializa la tradici\u00f3n oral'
+            },
+            {
+                q: '\u00bfQu\u00e9 determina, seg\u00fan el texto, si la tecnolog\u00eda salva o destruye la tradici\u00f3n?',
+                options: ['La intenci\u00f3n con que se usa y si genera curiosidad genuina por el contexto original', 'La calidad de la grabaci\u00f3n', 'La cantidad de seguidores que tenga la cuenta', 'Si la anciana da su permiso'],
+                answer: 'La intenci\u00f3n con que se usa y si genera curiosidad genuina por el contexto original'
+            },
+            {
+                q: '\u00bfQu\u00e9 analog\u00eda emplea el texto para describir al guardi\u00e1n de historias del siglo XXI?',
+                options: ['Compara la tecnolog\u00eda con el acorde\u00f3n del juglar: un veh\u00edculo, no un fin', 'Compara al guardi\u00e1n con un programador', 'Compara Instagram con un libro', 'Compara la anciana con un museo'],
+                answer: 'Compara la tecnolog\u00eda con el acorde\u00f3n del juglar: un veh\u00edculo, no un fin'
+            }
+        ]
+    },
+    // === GAME 21: Canci\u00f3n — \u00abPor la calle del olvido\u00bb de Diomedes D\u00edaz ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abSin medir distancias\u00bb de Diomedes D\u00edaz y completa los versos. Diomedes fue el \u00faltimo gran juglar del vallenato: sus canciones eran cr\u00f3nicas de amor, de dolor y de pueblo.',
+        youtubeId: 'SFLHGhypTbA',
+        artist: 'Diomedes D\u00edaz',
+        songTitle: 'Sin medir distancias',
+        lines: [
+            { text: 'Sin medir ___.', blank: 'distancias', options: ['distancias', 'palabras', 'silencios', 'pasos'] },
+            { text: 'Yo vengo a ___.', blank: 'buscarte', options: ['buscarte', 'cantarte', 'encontrarte', 'amarte'] },
+            { text: 'Porque este ___ no me deja vivir.', blank: 'amor', options: ['amor', 'dolor', 'sue\u00f1o', 'miedo'] },
+            { text: 'Es que yo sin ti no ___.', blank: 'puedo', options: ['puedo', 'quiero', 'vivo', 'duermo'] },
+            { text: 'Es que t\u00fa eres todo para ___.', blank: 'm\u00ed', options: ['m\u00ed', 'ti', '\u00e9l', 'todos'] },
+            { text: 'Esa fue mi ___.', blank: 'suerte', options: ['suerte', 'vida', 'culpa', 'estrella'] },
+            { text: 'Yo no puedo vivir sin tu ___.', blank: 'querer', options: ['querer', 'amor', 'mirada', 'calor'] },
+            { text: 'Se me sale el ___.', blank: 'coraz\u00f3n', options: ['coraz\u00f3n', 'alma', 'llanto', 'grito'] }
+        ]
+    },
+    // === GAME 22: Canci\u00f3n — \u00abLa bicicleta\u00bb de Carlos Vives & Shakira ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abLa bicicleta\u00bb de Carlos Vives y Shakira y completa los versos. Esta canci\u00f3n une Barranquilla y Santa Marta, dos ciudades coste\u00f1as, y transmite la cultura del Caribe colombiano a trav\u00e9s de la m\u00fasica pop: un acto de transmisi\u00f3n cultural masivo.',
+        youtubeId: 'FKhMhwR6GPo',
+        artist: 'Carlos Vives & Shakira',
+        songTitle: 'La bicicleta',
+        lines: [
+            { text: 'Que te ___ montado en bicicleta.', blank: 'sueño', options: ['sue\u00f1o', 'veo', 'busco', 'llevo'] },
+            { text: 'Que me ___ en Barranquilla.', blank: 'lleve', options: ['lleve', 'deje', 'busque', 'encuentre'] },
+            { text: 'En una bicicleta ___.', blank: 'vieja', options: ['vieja', 'nueva', 'roja', 'bonita'] },
+            { text: 'Que yo voy a pasear por la ___.', blank: 'arenosa', options: ['arenosa', 'heroica', 'ciudad', 'carrera'] },
+            { text: 'Hasta ___ me voy.', blank: 'Santa Marta', options: ['Santa Marta', 'Cartagena', 'Bogot\u00e1', 'Medell\u00edn'] },
+            { text: 'Me despierto y te ___.', blank: 'llamo', options: ['llamo', 'busco', 'sue\u00f1o', 'miro'] },
+            { text: 'Y todo el ___ se ilumina.', blank: 'mundo', options: ['mundo', 'cielo', 'camino', 'd\u00eda'] },
+            { text: 'Y hoy me siento ___.', blank: 'vivo', options: ['vivo', 'feliz', 'loco', 'libre'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara de la herencia',
+            description: 'Objetos de todas las épocas flotan en el aire: una mola tejida, un sombrero vueltiao, un celular con una canción de reguetón, un manuscrito colonial. Todos vibran con la misma frecuencia.',
+            ambience: 'time'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Un cofre antiguo tiene una cerradura de letras.',
+                clue: 'Es el proceso por el cual una generación pasa sus conocimientos, historias y valores a la siguiente.',
+                answer: 'transmision',
+                hint: '_ _ _ _ _ _ _ _ _ _ _',
+                onSolve: 'El cofre se abre y libera un sonido antiguo.'
+            },
+            {
+                puzzleType: 'sequence',
+                prompt: 'Cuatro momentos de transmisión cultural deben ordenarse cronológicamente.',
+                clue: 'Del origen al presente.',
+                items: [
+                    'Los muiscas graban sus leyes en piedra',
+                    'Los españoles imponen el castellano como lengua oficial',
+                    'Los abuelos cuentan historias orales a sus nietos',
+                    'Un joven sube un video en wayúu a internet'
+                ],
+                onSolve: 'Los momentos se conectan en una línea luminosa.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Tres objetos proyectan sus historias simultáneamente.',
+                sources: [
+                    '«La mola kuna cuenta la historia de la creación con hilos de colores. Cada patrón es un capítulo.» — Museo textil',
+                    '«Mi abuela no sabía leer, pero sabía contar historias que duraban tres noches.» — Testimonio oral',
+                    '«El reguetón colombiano mezcla ritmos africanos, instrumentos electrónicos y letras en spanglish.» — Análisis musical'
+                ],
+                clue: '¿Qué principio de transmisión cultural ilustran estos tres ejemplos juntos?',
+                answer: 'La cultura no se transmite intacta: se transforma, se mezcla y se reinventa en cada generación',
+                options: [
+                    'La cultura no se transmite intacta: se transforma, se mezcla y se reinventa en cada generación',
+                    'La cultura tradicional es siempre mejor que la moderna',
+                    'La tecnología destruye la cultura',
+                    'Solo la escritura preserva la cultura'
+                ],
+                onSolve: 'Los objetos dejan de flotar y se posan suavemente.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Doña Asunción habla desde algún lugar que ya no es aquí:',
+                riddle: '«Lo que te doy no lo pierdo. Lo que tú recibes no me lo quitas. Cuanto más se reparte, más crece. Pero si nadie lo quiere, desaparece.»',
+                clue: '¿De qué habla?',
+                answer: 'El conocimiento cultural transmitido oralmente',
+                options: [
+                    'El conocimiento cultural transmitido oralmente',
+                    'El dinero',
+                    'La fama',
+                    'La tierra'
+                ],
+                onSolve: 'La voz de Doña Asunción se desvanece con una sonrisa. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: la constelación del Hilo, que conecta las generaciones.',
+            questClue: 'El hilo nunca se corta. Solo se vuelve invisible cuando nadie lo sigue.',
+            item: 'constelacion-hilo'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '57',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest57Progress',
+        backUrl: '../../c2-colombia.html'
+    });
+</script>
+</body>
+</html>

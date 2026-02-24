@@ -1,0 +1,233 @@
+<?php
+
+function handleAuthRoutes(string $action, string $method): void {
+    $pdo = getDB();
+    $userModel = new User($pdo);
+    $sessionModel = new Session($pdo);
+    $config = require __DIR__ . '/../config/app.php';
+
+    switch ($action) {
+        case 'register':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+            checkRateLimit('register');
+
+            $input = getJsonBody();
+            if (!$input) jsonError('Datos inválidos');
+
+            $email = trim($input['email'] ?? '');
+            $password = $input['password'] ?? '';
+            $displayName = sanitizeString($input['display_name'] ?? '', 100);
+            $userType = in_array($input['user_type'] ?? '', ['individual', 'classroom'])
+                ? $input['user_type'] : 'individual';
+            $role = in_array($input['role'] ?? '', ['student', 'teacher'])
+                ? $input['role'] : ($userType === 'classroom' ? 'teacher' : 'student');
+            $interfaceLang = sanitizeString($input['interface_lang'] ?? 'es', 10);
+            $detectedLang = isset($input['detected_lang'])
+                ? sanitizeString($input['detected_lang'], 10) : null;
+
+            if (!validateEmail($email)) jsonError('Email inválido');
+            if (!validatePassword($password)) jsonError('La contraseña debe tener al menos 8 caracteres');
+            if (mb_strlen($displayName) < 1) jsonError('El nombre es obligatorio');
+
+            if ($userModel->findByEmail($email)) {
+                jsonError('Ya existe una cuenta con este email');
+            }
+
+            $verifyToken = generateToken();
+            $verifyExpires = date('Y-m-d H:i:s', time() + $config['verify_expiry_hours'] * 3600);
+
+            $userId = $userModel->create([
+                'email'          => $email,
+                'password'       => $password,
+                'display_name'   => $displayName,
+                'user_type'      => $userType,
+                'role'           => $role,
+                'interface_lang'  => $interfaceLang,
+                'detected_lang'  => $detectedLang,
+                'verify_token'   => $verifyToken,
+                'verify_expires' => $verifyExpires,
+            ]);
+
+            sendVerificationEmail($email, $displayName, $verifyToken);
+
+            jsonSuccess(['message' => 'Cuenta creada. Revisa tu correo para verificar tu cuenta.'], 201);
+            break;
+
+        case 'login':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+            checkRateLimit('login');
+
+            $input = getJsonBody();
+            if (!$input) jsonError('Datos inválidos');
+
+            $email = trim($input['email'] ?? '');
+            $password = $input['password'] ?? '';
+
+            if (!$email || !$password) jsonError('Email y contraseña son obligatorios');
+
+            $user = $userModel->findByEmail($email);
+            if (!$user || !password_verify($password, $user['password_hash'])) {
+                jsonError('Email o contraseña incorrectos', 401);
+            }
+
+            if (!$user['is_active']) {
+                jsonError('Cuenta desactivada', 403);
+            }
+
+            // Rehash if needed
+            if (password_needs_rehash($user['password_hash'], PASSWORD_ARGON2ID)) {
+                $userModel->updatePassword((int)$user['id'], $password);
+            }
+
+            $token = $sessionModel->create((int)$user['id'], $config['token_expiry_days']);
+            $userModel->updateLastLogin((int)$user['id']);
+
+            // Set CSRF cookie
+            $csrfToken = generateToken();
+            setCsrfCookie($csrfToken);
+
+            // Determine immersion lock
+            $immersionLocked = in_array($user['cefr_level'], $config['immersion_locked_levels']);
+
+            jsonSuccess([
+                'token' => $token,
+                'user'  => [
+                    'id'              => (int)$user['id'],
+                    'email'           => $user['email'],
+                    'display_name'    => $user['display_name'],
+                    'user_type'       => $user['user_type'],
+                    'role'            => $user['role'] ?? 'student',
+                    'tier'            => $user['tier'] ?? 'free',
+                    'cefr_level'      => $user['cefr_level'],
+                    'interface_lang'   => $immersionLocked ? 'es' : $user['interface_lang'],
+                    'detected_lang'   => $user['detected_lang'],
+                    'email_verified'  => (bool)$user['email_verified'],
+                    'immersion_locked' => $immersionLocked,
+                ],
+            ]);
+            break;
+
+        case 'logout':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+            $header = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+            if (preg_match('/^Bearer\s+([a-f0-9]{64})$/i', $header, $m)) {
+                $sessionModel->revoke($m[1]);
+            }
+            jsonSuccess(['message' => 'Sesión cerrada']);
+            break;
+
+        case 'forgot':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+            checkRateLimit('forgot');
+
+            $input = getJsonBody();
+            $email = trim($input['email'] ?? '');
+
+            // Always return 200 to prevent email enumeration
+            if ($email) {
+                $user = $userModel->findByEmail($email);
+                if ($user && $user['is_active']) {
+                    $resetToken = generateToken();
+                    $resetExpires = date('Y-m-d H:i:s', time() + $config['reset_expiry_hours'] * 3600);
+                    $userModel->setResetToken((int)$user['id'], $resetToken, $resetExpires);
+                    sendPasswordResetEmail($email, $user['display_name'], $resetToken);
+                }
+            }
+
+            jsonSuccess(['message' => 'Si el email existe, recibirás un enlace para restablecer tu contraseña.']);
+            break;
+
+        case 'reset':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+
+            $input = getJsonBody();
+            $token = $input['token'] ?? '';
+            $newPassword = $input['password'] ?? '';
+
+            if (!$token || !$newPassword) jsonError('Datos incompletos');
+            if (!validatePassword($newPassword)) jsonError('La contraseña debe tener al menos 8 caracteres');
+
+            $user = $userModel->findByResetToken($token);
+            if (!$user) {
+                jsonError('Enlace inválido o expirado');
+            }
+
+            $userModel->updatePassword((int)$user['id'], $newPassword);
+            $sessionModel->revokeAll((int)$user['id']);
+
+            jsonSuccess(['message' => 'Contraseña actualizada. Inicia sesión con tu nueva contraseña.']);
+            break;
+
+        case 'verify':
+            if ($method !== 'GET') jsonError('Método no permitido', 405);
+
+            $token = $_GET['token'] ?? '';
+            if (!$token) jsonError('Token requerido');
+
+            if ($userModel->verify($token)) {
+                jsonSuccess(['message' => 'Email verificado correctamente. Ya puedes iniciar sesión.']);
+            } else {
+                jsonError('Enlace de verificación inválido o expirado');
+            }
+            break;
+
+        case 'delete-account':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+            $user = authenticateRequest();
+            validateCsrf();
+            checkRateLimit('general');
+
+            $input = getJsonBody();
+            $password = $input['password'] ?? '';
+            if (!$password) jsonError('La contraseña es obligatoria');
+
+            $fullUser = $userModel->findById($user['id']);
+            if (!$fullUser || !password_verify($password, $fullUser['password_hash'])) {
+                jsonError('Contraseña incorrecta', 401);
+            }
+
+            // CASCADE handles sessions, progress, stats, settings, escape_room_progress
+            $stmt = $pdo->prepare('DELETE FROM users WHERE id = ?');
+            $stmt->execute([$user['id']]);
+
+            jsonSuccess(['message' => 'Cuenta eliminada permanentemente']);
+            break;
+
+        case 'export-data':
+            if ($method !== 'GET') jsonError('Método no permitido', 405);
+            $user = authenticateRequest();
+
+            $fullUser = $userModel->findById($user['id']);
+            // Strip sensitive fields
+            unset($fullUser['password_hash'], $fullUser['verify_token'], $fullUser['verify_expires'],
+                  $fullUser['reset_token'], $fullUser['reset_expires']);
+
+            $a1Model = new A1Progress($pdo);
+            $destModel = new DestProgress($pdo);
+            $statsModel = new UserStats($pdo);
+            $settingsModel = new UserSettings($pdo);
+            $escapeModel = new EscapeRoomProgress($pdo);
+
+            $stats = $statsModel->get($user['id']);
+            if ($stats) unset($stats['id'], $stats['user_id']);
+
+            $settings = $settingsModel->get($user['id']);
+            if ($settings) unset($settings['id'], $settings['user_id']);
+
+            $export = [
+                'exported_at'           => date('c'),
+                'account'               => $fullUser,
+                'a1_progress'           => $a1Model->getAllByUser($user['id']),
+                'destination_progress'  => $destModel->getAllByUser($user['id']),
+                'escape_room_progress'  => $escapeModel->getAllByUser($user['id']),
+                'stats'                 => $stats,
+                'settings'              => $settings,
+            ];
+
+            jsonSuccess($export);
+            break;
+
+        default:
+            jsonError('Ruta no encontrada', 404);
+    }
+}

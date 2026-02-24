@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 11: Todos los verbos del mundo</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_advanced/dest11_verbs/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 11: Todos los verbos del mundo — Games",
+                "url": "https://babelfree.com/a1_advanced/dest11_verbs/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Full -AR/-ER/-IR conjugation",
+                    "Ir a + infinitive",
+                    "Asking and answering why"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Todos los verbos del mundo",
+                        "item": "https://babelfree.com/a1_advanced/dest11_verbs/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 11: Todos los verbos del mundo</div>
+            <div class="yg-header-subtitle">Conjugaci&oacute;n completa y por qu&eacute;</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE — Abuela Ceiba habla
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguará camina hacia la Abuela Ceiba. El árbol es enorme. Las raíces son como ríos. Hay luces pequeñas en sus ramas. Abuela Ceiba habla despacio: «Tú caminas. Tú comes. Tú vives. Estos son los verbos.»'
+    },
+
+    /* ============================================================
+       2. NARRATIVE — Los verbos son movimiento
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Abuela Ceiba dice: «Los verbos son lo que hacemos. Caminar, comer, vivir, ser, tener, ir. Sin verbos, nada se mueve.» Yaguará escucha. En los bordes del bosque, las cosas no se mueven.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE — ¿Por qué?
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narración',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguará pregunta: «¿Por qué las cosas no se mueven?» Abuela Ceiba dice: «Porque olvidan los verbos. Cuando olvidas caminar, no caminas. Cuando olvidas cantar, no cantas.» Yaguará entiende: los verbos son la vida.'
+    },
+
+    /* ============================================================
+       4. PAIR — Infinitivos y grupos
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el verbo con su grupo.',
+        pairs: [
+            ['caminar', '-AR'],
+            ['comer', '-ER'],
+            ['vivir', '-IR'],
+            ['hablar', '-AR']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR — Verbo y acción
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el verbo con su significado.',
+        pairs: [
+            ['caminar', 'mover los pies'],
+            ['comer', 'tomar comida'],
+            ['vivir', 'estar vivo'],
+            ['ir', 'mover a otro lugar']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR — ¿Por qué? / Porque
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la pregunta con la respuesta.',
+        pairs: [
+            ['¿Por qué caminas?', 'Porque me gusta el bosque.'],
+            ['¿Por qué comes?', 'Porque tengo hambre.'],
+            ['¿Por qué vives aquí?', 'Porque mi familia está aquí.'],
+            ['¿Por qué escuchas?', 'Porque el bosque habla.']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB — Conjugar -AR (hablar)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yo ___ con Abuela Ceiba.',
+                answer: 'hablo',
+                options: ['hablo', 'hablas', 'habla', 'hablan']
+            },
+            {
+                sentence: 'Tú ___ con tu familia.',
+                answer: 'hablas',
+                options: ['hablo', 'hablas', 'habla', 'hablan']
+            },
+            {
+                sentence: 'Ellos ___ junto al río.',
+                answer: 'hablan',
+                options: ['hablo', 'hablas', 'habla', 'hablan']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB — Conjugar -ER (correr)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Río ___ por el bosque.',
+                answer: 'corre',
+                options: ['corro', 'corres', 'corre', 'corren']
+            },
+            {
+                sentence: 'Nosotros ___ juntos.',
+                answer: 'corremos',
+                options: ['corro', 'corres', 'corre', 'corremos']
+            },
+            {
+                sentence: 'Yo ___ rápido.',
+                answer: 'corro',
+                options: ['corro', 'corres', 'corre', 'corren']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB — Ir a + infinitivo
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con ir a + verbo.',
+        questions: [
+            {
+                sentence: 'Yo ___ a caminar por el bosque.',
+                answer: 'voy',
+                options: ['voy', 'vas', 'va', 'van']
+            },
+            {
+                sentence: 'Tú ___ a comer pescado.',
+                answer: 'vas',
+                options: ['voy', 'vas', 'va', 'van']
+            },
+            {
+                sentence: 'Yaguará ___ a hablar con la ceiba.',
+                answer: 'va',
+                options: ['voy', 'vas', 'va', 'van']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING — ¿Qué dice Abuela Ceiba?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Tú caminas. Tú comes. Tú vives. Estos son los verbos. Los verbos son lo que hacemos.',
+        question: '¿Qué son los verbos?',
+        answer: 'lo que hacemos',
+        options: ['los nombres', 'los números', 'lo que hacemos', 'los animales']
+    },
+
+    /* ============================================================
+       11. LISTENING — ¿Por qué no se mueven?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Las cosas no se mueven porque olvidan los verbos. Cuando olvidas caminar, no caminas.',
+        question: '¿Por qué las cosas no se mueven?',
+        answer: 'porque olvidan los verbos',
+        options: ['porque tienen hambre', 'porque están lejos', 'porque olvidan los verbos', 'porque es de noche']
+    },
+
+    /* ============================================================
+       12. CONJUGATION — Caminar (completo)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo caminar.',
+        questions: [
+            {
+                verb: 'caminar',
+                subject: 'yo',
+                answer: 'camino',
+                options: ['camino', 'caminas', 'camina', 'caminamos']
+            },
+            {
+                verb: 'caminar',
+                subject: 'nosotros',
+                answer: 'caminamos',
+                options: ['camino', 'caminas', 'camina', 'caminamos']
+            },
+            {
+                verb: 'caminar',
+                subject: 'ustedes',
+                answer: 'caminan',
+                options: ['camina', 'caminamos', 'caminan', 'caminas']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION — Escribir (presente)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugación',
+        instruction: 'Conjuga el verbo escribir.',
+        questions: [
+            {
+                verb: 'escribir',
+                subject: 'yo',
+                answer: 'escribo',
+                options: ['escribo', 'escribes', 'escribe', 'escriben']
+            },
+            {
+                verb: 'escribir',
+                subject: 'tú',
+                answer: 'escribes',
+                options: ['escribo', 'escribes', 'escribe', 'escriben']
+            },
+            {
+                verb: 'escribir',
+                subject: 'ella',
+                answer: 'escribe',
+                options: ['escribo', 'escribes', 'escribe', 'escribimos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING — Grupos de verbos
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica los verbos por grupo.',
+        categories: ['-AR', '-ER', '-IR'],
+        items: [
+            { text: 'hablar', category: '-AR' },
+            { text: 'comer', category: '-ER' },
+            { text: 'vivir', category: '-IR' },
+            { text: 'caminar', category: '-AR' },
+            { text: 'correr', category: '-ER' },
+            { text: 'escribir', category: '-IR' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING — ¿Por qué o porque?
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: ¿pregunta o respuesta?',
+        categories: ['Pregunta (¿por qué?)', 'Respuesta (porque)'],
+        items: [
+            { text: '¿Por qué caminas?', category: 'Pregunta (¿por qué?)' },
+            { text: 'Porque me gusta.', category: 'Respuesta (porque)' },
+            { text: '¿Por qué comes?', category: 'Pregunta (¿por qué?)' },
+            { text: 'Porque tengo hambre.', category: 'Respuesta (porque)' },
+            { text: '¿Por qué vives aquí?', category: 'Pregunta (¿por qué?)' },
+            { text: 'Porque mi familia está aquí.', category: 'Respuesta (porque)' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER — Ir a + infinitivo
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['voy', 'Yo', 'a', 'caminar', 'por', 'el', 'bosque'],
+        answer: 'Yo voy a caminar por el bosque'
+    },
+
+    /* ============================================================
+       17. BUILDER — Por qué / porque
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['Porque', 'gusta', 'me', 'el', 'río'],
+        answer: 'Porque me gusta el río'
+    },
+
+    /* ============================================================
+       18. CONVERSATION — ¿Por qué caminas?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Abuela Ceiba', text: '¿Por qué caminas por el bosque?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Porque me gusta el bosque.', 'Son las tres.', 'Mi casa es grande.', 'Me llamo Yaguará.'],
+                answer: 'Porque me gusta el bosque.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION — ¿Qué vas a hacer?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversación',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Yaguará', text: '¿Qué vas a hacer?' },
+                    { speaker: 'B', name: 'Tú', text: '???' }
+                ],
+                options: ['Voy a caminar por el río.', 'Tengo cinco años.', 'Mi madre se llama Luna.', 'Estoy feliz.'],
+                answer: 'Voy a caminar por el río.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION — Frase verbal
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Los verbos son lo que hacemos.',
+        answer: 'Los verbos son lo que hacemos.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara de los verbos',
+            description: 'Una cueva entre las raíces de la Abuela Ceiba. Las raíces tienen verbos escritos: caminar, comer, vivir, ser. Las letras brillan despacio, como si respiraran.',
+            ambience: 'forest'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una raíz grande tiene una pregunta:',
+                riddle: '«Sin mí, nada se mueve. Sin mí, nada camina. Sin mí, nada vive. Yo soy la acción. ¿Qué soy?»',
+                clue: 'Caminar, comer, vivir son ejemplos.',
+                answer: 'Un verbo',
+                options: ['Un verbo', 'Un nombre', 'Un número', 'Un animal'],
+                onSolve: 'La raíz brilla.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Hay letras escritas en las raíces de la ceiba.',
+                clue: 'Abuela Ceiba dice: «Tú ___, tú comes, tú vives.» El primer verbo. Siete letras.',
+                answer: 'caminar',
+                scrambled: 'mcanira',
+                onSolve: 'Las raíces brillan.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Hay una cerradura entre las raíces.',
+                clue: 'Es el verbo más importante para Abuela Ceiba. Mover a otro lugar. Dos letras.',
+                answer: 'ir',
+                hint: '_ _',
+                onSolve: 'Las raíces se abren. La puerta está adentro. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una raíz en forma de verbo infinitivo.',
+            questClue: 'Los verbos son las raíces que mueven el mundo.',
+            item: 'raiz-verbos'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1d11',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Dest11Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

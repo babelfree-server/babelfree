@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&oacute;dulo 3: Agua</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module3_water/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 3: Agua — Games",
+                "url": "https://babelfree.com/a1_basic/module3_water/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Needs vocabulary practice",
+                    "Verb tener exercises"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Agua",
+                        "item": "https://babelfree.com/a1_basic/module3_water/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">M&oacute;dulo 3: Agua</div>
+            <div class="yg-header-subtitle">Expresar necesidades</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE \u2014 Yaguar\u00e1 has thirst
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Hoy hace calor. Yaguar\u00e1 tiene sed. Ella necesita agua. El agua es buena.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE \u2014 Finding the river
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 camina. Hay un r\u00edo. El r\u00edo es grande. El agua es limpia. Yaguar\u00e1 bebe agua.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE \u2014 Rain in the jungle
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Hay lluvia. La lluvia es buena. La selva necesita agua. Los animales necesitan agua. Yaguar\u00e1 est\u00e1 feliz.'
+    },
+
+    /* ============================================================
+       4. PAIR \u2014 Need \u2194 object
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la necesidad con el objeto.',
+        pairs: [
+            ['tengo sed', 'agua'],
+            ['tengo hambre', 'comida'],
+            ['tengo fr\u00edo', 'fuego'],
+            ['tengo calor', 'r\u00edo']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR \u2014 Water vocabulary
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la palabra con su descripci\u00f3n.',
+        pairs: [
+            ['agua', 'para beber'],
+            ['r\u00edo', 'agua grande'],
+            ['lluvia', 'agua del cielo'],
+            ['sed', 'necesitar agua']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR \u2014 Verb + complement
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el verbo con su complemento.',
+        pairs: [
+            ['beber', 'agua'],
+            ['comer', 'comida'],
+            ['necesitar', 'agua limpia'],
+            ['tener', 'sed']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB \u2014 Tener + needs
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yaguar\u00e1 ___ sed.',
+                answer: 'tiene',
+                options: ['tiene', 'tengo', 'tienes', 'tienen']
+            },
+            {
+                sentence: 'Yo ___ hambre.',
+                answer: 'tengo',
+                options: ['tiene', 'tengo', 'tienes', 'tenemos']
+            },
+            {
+                sentence: 'Los animales ___ sed.',
+                answer: 'tienen',
+                options: ['tengo', 'tiene', 'tienen', 'tienes']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB \u2014 Necesitar + agua
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yo ___ agua.',
+                answer: 'necesito',
+                options: ['necesito', 'necesita', 'necesitas', 'necesitan']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ beber agua.',
+                answer: 'necesita',
+                options: ['necesito', 'necesita', 'necesitas', 'necesitamos']
+            },
+            {
+                sentence: 'El r\u00edo ___ grande.',
+                answer: 'es',
+                options: ['es', 'est\u00e1', 'soy', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB \u2014 Estar + states / Hay
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: '___ un r\u00edo.',
+                answer: 'Hay',
+                options: ['Hay', 'Es', 'Son', 'Tiene']
+            },
+            {
+                sentence: 'El agua ___ limpia.',
+                answer: 'es',
+                options: ['es', 'hay', 'tiene', 'son']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ feliz.',
+                answer: 'est\u00e1',
+                options: ['es', 'est\u00e1', 'tiene', 'hay']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING \u2014 Water vocabulary (slow)
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Tengo sed. Necesito agua.',
+        question: '\u00bfQu\u00e9 necesita?',
+        answer: 'agua',
+        options: ['comida', 'agua', 'fuego', 'un r\u00edo']
+    },
+
+    /* ============================================================
+       11. LISTENING \u2014 The river
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Hay un r\u00edo grande. El agua es buena.',
+        question: '\u00bfC\u00f3mo es el agua?',
+        answer: 'buena',
+        options: ['mala', 'peque\u00f1a', 'buena', 'nueva']
+    },
+
+    /* ============================================================
+       12. CONJUGATION \u2014 Tener (present tense)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo tener.',
+        questions: [
+            {
+                verb: 'tener',
+                subject: 'yo',
+                answer: 'tengo',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                verb: 'tener',
+                subject: 't\u00fa',
+                answer: 'tienes',
+                options: ['tengo', 'tienes', 'tiene', 'tenemos']
+            },
+            {
+                verb: 'tener',
+                subject: '\u00e9l',
+                answer: 'tiene',
+                options: ['tengo', 'tienes', 'tiene', 'tienen']
+            },
+            {
+                verb: 'tener',
+                subject: 'nosotros',
+                answer: 'tenemos',
+                options: ['tengo', 'tienen', 'tenemos', 'tienes']
+            },
+            {
+                verb: 'tener',
+                subject: 'ellos',
+                answer: 'tienen',
+                options: ['tiene', 'tenemos', 'tengo', 'tienen']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION \u2014 Necesitar (present tense)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo necesitar.',
+        questions: [
+            {
+                verb: 'necesitar',
+                subject: 'yo',
+                answer: 'necesito',
+                options: ['necesito', 'necesitas', 'necesita', 'necesitan']
+            },
+            {
+                verb: 'necesitar',
+                subject: 't\u00fa',
+                answer: 'necesitas',
+                options: ['necesito', 'necesitas', 'necesita', 'necesitamos']
+            },
+            {
+                verb: 'necesitar',
+                subject: 'ella',
+                answer: 'necesita',
+                options: ['necesito', 'necesitas', 'necesita', 'necesitan']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. CONJUGATION \u2014 Beber (present tense)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo beber.',
+        questions: [
+            {
+                verb: 'beber',
+                subject: 'yo',
+                answer: 'bebo',
+                options: ['bebo', 'bebes', 'bebe', 'beben']
+            },
+            {
+                verb: 'beber',
+                subject: 't\u00fa',
+                answer: 'bebes',
+                options: ['bebo', 'bebes', 'bebe', 'bebemos']
+            },
+            {
+                verb: 'beber',
+                subject: '\u00e9l',
+                answer: 'bebe',
+                options: ['bebo', 'bebes', 'bebe', 'beben']
+            }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING \u2014 Things you drink vs things you eat
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfbeber o comer?',
+        categories: ['Beber', 'Comer'],
+        items: [
+            { text: 'agua', category: 'Beber' },
+            { text: 'comida', category: 'Comer' },
+            { text: 'lluvia', category: 'Beber' },
+            { text: 'fruta', category: 'Comer' },
+            { text: 'r\u00edo', category: 'Beber' },
+            { text: 'pescado', category: 'Comer' }
+        ]
+    },
+
+    /* ============================================================
+       16. SORTING \u2014 Need words (tener vs necesitar)
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bftener o necesitar?',
+        categories: ['Tener', 'Necesitar'],
+        items: [
+            { text: 'tengo sed', category: 'Tener' },
+            { text: 'necesito agua', category: 'Necesitar' },
+            { text: 'tiene hambre', category: 'Tener' },
+            { text: 'necesita comida', category: 'Necesitar' },
+            { text: 'tenemos fr\u00edo', category: 'Tener' },
+            { text: 'necesitan fuego', category: 'Necesitar' }
+        ]
+    },
+
+    /* ============================================================
+       17. BUILDER \u2014 Simple need sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['Yo', 'tengo', 'sed'],
+        answer: 'Yo tengo sed'
+    },
+
+    /* ============================================================
+       18. BUILDER \u2014 Water sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['El', 'agua', 'es', 'buena'],
+        answer: 'El agua es buena'
+    },
+
+    /* ============================================================
+       19. CONVERSATION \u2014 Expressing thirst
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Luna', text: '\u00bfTienes sed?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['S\u00ed, tengo sed.', 'Soy grande.', 'Hay un r\u00edo.', 'La selva es bonita.'],
+                answer: 'S\u00ed, tengo sed.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. CONVERSATION \u2014 Asking for water
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'R\u00edo', text: '\u00bfQu\u00e9 necesitas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Necesito agua.', 'Soy feliz.', 'Tengo un hermano.', 'El r\u00edo es grande.'],
+                answer: 'Necesito agua.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'R\u00edo', text: '\u00bfEl agua es buena?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['S\u00ed, el agua es buena.', 'Tengo hambre.', 'Soy fuerte.', 'Hay lluvia.'],
+                answer: 'S\u00ed, el agua es buena.'
+            }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva del agua',
+            description: 'Una cueva con un r\u00edo peque\u00f1o adentro. El agua hace m\u00fasica al caer sobre las piedras.',
+            ambience: 'water'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'El agua pregunta:',
+                riddle: '\u00abSoy transparente. Todos me necesitan. Sin m\u00ed, no hay vida. Los r\u00edos est\u00e1n hechos de m\u00ed. \u00bfQu\u00e9 soy?\u00bb',
+                clue: 'Es lo m\u00e1s importante para vivir.',
+                answer: 'El agua',
+                options: ['El agua', 'El aire', 'La tierra', 'El fuego'],
+                onSolve: 'El agua canta m\u00e1s fuerte.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las gotas de agua forman letras.',
+                clue: 'Es un sonido fuerte que viene del cielo cuando llueve.',
+                answer: 'trueno',
+                scrambled: 'nourte',
+                onSolve: 'Las gotas brillan.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Una piedra en el r\u00edo tiene una cerradura.',
+                clue: 'Yaguar\u00e1 tiene sed. Ella necesita ___. Cinco letras.',
+                answer: 'beber',
+                hint: '_ _ _ _ _',
+                onSolve: 'El r\u00edo brilla. La puerta aparece detr\u00e1s de la cascada.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de ola.',
+            questClue: 'El agua recuerda todo lo que toca.',
+            item: 'raiz-ola'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1m3',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Module3Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Jaguar — Brief creativo para ilustrador</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --bark: #3E2723;
+            --bark-light: #5D4037;
+            --gold: #C9A54E;
+            --gold-bright: #E8C547;
+            --cream: #FDF6E3;
+            --cream-dark: #F5ECD7;
+            --forest: #2D5016;
+            --forest-deep: #1A3A0A;
+            --river: #1B4D6E;
+            --earth: #5C3317;
+            --night: #2C1654;
+            --terracotta: #B7562A;
+            --ochre: #C49A3C;
+            --mountain: #5F7A8A;
+            --turquoise: #1AA5A5;
+            --indigo: #1A1A4E;
+            --amber: #E8A824;
+            --silver: #C0C0D0;
+            --cosmic: #0D0D1A;
+            --text: #2C1B0E;
+            --text-light: #6B5843;
+            --border: #D4C5A9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* --- HERO HEADER --- */
+        .hero {
+            background: linear-gradient(135deg, var(--bark) 0%, var(--forest-deep) 40%, var(--night) 100%);
+            color: var(--cream);
+            padding: 80px 40px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(201,165,78,0.15) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 80%, rgba(43,80,22,0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .hero .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .hero .meta {
+            font-size: 0.85rem;
+            color: rgba(253,246,227,0.6);
+            position: relative;
+        }
+
+        .hero .divider {
+            width: 80px;
+            height: 2px;
+            background: var(--gold);
+            margin: 25px auto;
+            position: relative;
+        }
+
+        /* --- NAVIGATION --- */
+        .toc {
+            background: var(--cream-dark);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .toc-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            justify-content: center;
+        }
+
+        .toc a {
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--bark-light);
+            text-decoration: none;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        /* --- MAIN CONTENT --- */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: 50px 0 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--bark);
+            margin-bottom: 6px;
+        }
+
+        h2 .section-number {
+            color: var(--gold);
+            font-weight: 400;
+            margin-right: 8px;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--bark-light);
+            margin: 30px 0 12px;
+        }
+
+        h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--bark);
+            margin: 20px 0 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--bark);
+        }
+
+        em {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* --- STORY INTRO BOX --- */
+        .story-box {
+            background: linear-gradient(135deg, var(--bark) 0%, var(--forest-deep) 100%);
+            color: var(--cream);
+            border-radius: 12px;
+            padding: 35px 30px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-box::after {
+            content: '';
+            position: absolute;
+            top: -30px; right: -30px;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, rgba(201,165,78,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .story-box p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .story-box .quote {
+            font-style: italic;
+            color: var(--gold);
+            display: block;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* --- VISUAL KEYWORDS --- */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .keyword {
+            background: var(--cream-dark);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--bark-light);
+        }
+
+        .keyword.do-not {
+            background: #FFF0F0;
+            border-color: #E8C0C0;
+            color: #8B3A3A;
+        }
+
+        /* --- COLOR PALETTES --- */
+        .palette-group {
+            margin: 25px 0;
+        }
+
+        .palette-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--bark);
+            margin-bottom: 4px;
+        }
+
+        .palette-desc {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .swatches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .swatch-color {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            border: 2px solid rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .swatch-label {
+            font-size: 0.68rem;
+            font-family: 'Inter', monospace;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* --- CHARACTER CARDS --- */
+        .character-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 18px 0;
+            position: relative;
+        }
+
+        .character-card.protagonist {
+            border-left: 4px solid var(--gold);
+            background: linear-gradient(135deg, white 0%, #FFF9ED 100%);
+        }
+
+        .character-card.family {
+            border-left: 4px solid var(--forest);
+        }
+
+        .character-card.ally {
+            border-left: 4px solid var(--turquoise);
+        }
+
+        .character-card.force {
+            border-left: 4px solid #888;
+        }
+
+        .character-card.dream {
+            border-left: 4px solid var(--indigo);
+        }
+
+        .character-card.human {
+            border-left: 4px solid var(--terracotta);
+            background: linear-gradient(135deg, white 0%, #FFF5EE 100%);
+        }
+
+        .character-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--bark);
+        }
+
+        .character-role {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .character-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .character-card li {
+            padding: 4px 0 4px 18px;
+            position: relative;
+            font-size: 0.92rem;
+        }
+
+        .character-card li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .deliverable-tag {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-top: 12px;
+        }
+
+        /* --- ENVIRONMENT CARDS --- */
+        .env-card {
+            border-radius: 12px;
+            padding: 25px;
+            margin: 18px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .env-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+        }
+
+        .env-card * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .env-selva { background: linear-gradient(135deg, #1A3A0A, #2D5016, #1B4D6E); }
+        .env-andes { background: linear-gradient(135deg, #5F7A8A, #8B6914, #5C3317); }
+        .env-llanos { background: linear-gradient(135deg, #C49A3C, #D4A843, #B7562A); }
+        .env-costa { background: linear-gradient(135deg, #1AA5A5, #1B4D6E, #2C1654); }
+        .env-cosmic { background: linear-gradient(135deg, #1A1A4E, #0D0D1A, #2C1654); }
+
+        .env-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .env-card .env-tags {
+            font-size: 0.82rem;
+            opacity: 0.8;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .env-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .env-card li {
+            padding: 3px 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- SPEC TABLES --- */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .spec-table thead {
+            background: var(--bark);
+            color: var(--cream);
+        }
+
+        .spec-table th {
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .spec-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .spec-table tr:nth-child(even) {
+            background: rgba(0,0,0,0.02);
+        }
+
+        .spec-table code {
+            background: var(--cream-dark);
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            color: var(--bark);
+        }
+
+        /* --- CODE / NAMING --- */
+        .code-block {
+            background: var(--cosmic);
+            color: #E8E0D0;
+            border-radius: 8px;
+            padding: 18px 22px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .code-block .comment {
+            color: #6B7B6B;
+        }
+
+        .code-block .highlight {
+            color: var(--gold);
+        }
+
+        /* --- TIMELINE --- */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 25px 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--cream);
+            border: 3px solid var(--gold);
+        }
+
+        .timeline-item.priority-1::before { border-color: var(--gold); background: var(--gold); }
+        .timeline-item.priority-2::before { border-color: var(--forest); }
+        .timeline-item.priority-3::before { border-color: var(--turquoise); }
+
+        .timeline-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--bark);
+            font-size: 0.95rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* --- REFERENCE GRID --- */
+        .ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .ref-do, .ref-dont {
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .ref-do {
+            background: #F0F7EC;
+            border: 1px solid #C0D8B0;
+        }
+
+        .ref-dont {
+            background: #FFF0F0;
+            border: 1px solid #E8C0C0;
+        }
+
+        .ref-do h4, .ref-dont h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .ref-do h4 { color: #3A6B2A; }
+        .ref-dont h4 { color: #8B3A3A; }
+
+        .ref-do ul, .ref-dont ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ref-do li, .ref-dont li {
+            padding: 4px 0;
+            font-size: 0.88rem;
+        }
+
+        /* --- RIGHTS BOX --- */
+        .rights-box {
+            background: #FFF9ED;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .rights-box h3 {
+            color: var(--bark);
+            margin-top: 0;
+        }
+
+        .rights-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rights-box li {
+            padding: 5px 0 5px 22px;
+            position: relative;
+            font-size: 0.92rem;
+        }
+
+        .rights-box li::before {
+            content: '!';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        /* --- HERO JOURNEY MAP --- */
+        .journey-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .journey-act {
+            border-radius: 12px;
+            padding: 22px;
+            color: white;
+        }
+
+        .journey-act.act-1 {
+            background: linear-gradient(180deg, var(--forest-deep), var(--night));
+        }
+        .journey-act.act-2 {
+            background: linear-gradient(180deg, var(--terracotta), var(--earth));
+        }
+        .journey-act.act-3 {
+            background: linear-gradient(180deg, var(--indigo), var(--cosmic));
+        }
+
+        .journey-act h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin: 0 0 3px;
+        }
+
+        .journey-act .act-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .journey-act p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .journey-act .campbell {
+            font-style: italic;
+            font-size: 0.78rem;
+            opacity: 0.6;
+            margin-top: 10px;
+        }
+
+        /* --- SIZE SPEC CARDS --- */
+        .size-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .size-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .size-card .dim {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--bark);
+        }
+
+        .size-card .purpose {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 3px;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+            font-size: 0.82rem;
+        }
+
+        .footer .project {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--bark);
+            margin-bottom: 5px;
+        }
+
+        /* --- PRINT --- */
+        @media print {
+            .toc { display: none; }
+            .hero { padding: 40px 20px 30px; }
+            section { page-break-inside: avoid; }
+            .character-card, .env-card { page-break-inside: avoid; }
+            body { font-size: 11pt; }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero { padding: 50px 20px 40px; }
+            .content { padding: 0 20px; }
+            .journey-map { grid-template-columns: 1fr; }
+            .ref-grid { grid-template-columns: 1fr; }
+            .toc-inner { justify-content: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================== HERO ============================== -->
+<header class="hero">
+    <h1>El Viaje del Jaguar</h1>
+    <div class="subtitle">Brief creativo para ilustrador</div>
+    <div class="divider"></div>
+    <div class="meta">Confidencial &mdash; Documentaci&oacute;n del proyecto &mdash; Febrero 2026</div>
+</header>
+
+<!-- ============================== TOC ============================== -->
+<nav class="toc">
+    <div class="toc-inner">
+        <a href="#project">El proyecto</a>
+        <a href="#story">La historia</a>
+        <a href="#characters">Personajes</a>
+        <a href="#environments">Ambientes</a>
+        <a href="#palettes">Paletas de color</a>
+        <a href="#specs">Especificaciones t&eacute;cnicas</a>
+        <a href="#ui">Elementos de interfaz</a>
+        <a href="#references">Referencias de estilo</a>
+        <a href="#schedule">Cronograma de entrega</a>
+        <a href="#rights">Derechos y uso</a>
+    </div>
+</nav>
+
+<div class="content">
+
+<!-- ============================== 1. THE PROJECT ============================== -->
+<section id="project">
+    <h2><span class="section-number">01</span> El proyecto</h2>
+    <div class="section-subtitle">Qu&eacute; vas a ilustrar y por qu&eacute; importa</div>
+
+    <div class="story-box">
+        <p>
+            <strong>El Viaje del Jaguar</strong> es un juego interactivo de aprendizaje de idiomas ambientado en los ecosistemas de Colombia. Un joven esp&iacute;ritu-jaguar femenino llamada Yaguar&aacute; viaja a trav&eacute;s de la selva, los Andes, los llanos y la costa caribe&ntilde;a, encontrando aliados y enfrentando fuerzas del olvido que est&aacute;n borrando los nombres del mundo.
+        </p>
+        <p>
+            El mundo visual se inspira en el <strong>arte ind&iacute;gena colombiano, los patrones textiles y los paisajes naturales</strong>. NO es Disney, manga ni fantas&iacute;a gen&eacute;rica. Estos son esp&iacute;ritus, no animales de caricatura. Este mundo es vivo, c&aacute;lido y antiguo.
+        </p>
+        <span class="quote">"No todas las palabras se dicen. Algunas se cuidan."</span>
+    </div>
+
+    <h3>Palabras clave de identidad visual</h3>
+    <div class="keywords">
+        <span class="keyword">C&aacute;lido, terroso, vivo</span>
+        <span class="keyword">Inspirado en textiles</span>
+        <span class="keyword">Formas org&aacute;nicas</span>
+        <span class="keyword">C&iacute;rculos y espirales</span>
+        <span class="keyword">Ilustrado, no fotorrealista</span>
+        <span class="keyword">Luz de hora dorada</span>
+        <span class="keyword">Patrones mola (Kuna)</span>
+        <span class="keyword">Texturas tejidas way&uacute;u</span>
+        <span class="keyword">Motivos de oro precolombino</span>
+    </div>
+
+    <h3>Lo que esto NO es</h3>
+    <div class="keywords">
+        <span class="keyword do-not">Nada de estilo Disney/Pixar</span>
+        <span class="keyword do-not">Nada de anime/manga</span>
+        <span class="keyword do-not">Nada de fantas&iacute;a gen&eacute;rica</span>
+        <span class="keyword do-not">Nada de 3D fotorrealista</span>
+        <span class="keyword do-not">Nada de clip art ni estilo corporativo plano</span>
+        <span class="keyword do-not">Nada de est&eacute;tica generada por IA</span>
+        <span class="keyword do-not">Nada de bordes geom&eacute;tricos duros</span>
+        <span class="keyword do-not">Nada de luz fuerte/fluorescente</span>
+    </div>
+</section>
+
+<!-- ============================== 2. THE STORY ============================== -->
+<section id="story">
+    <h2><span class="section-number">02</span> La historia</h2>
+    <div class="section-subtitle">El arco narrativo que da forma a cada ilustraci&oacute;n</div>
+
+    <p>El juego sigue <strong>El viaje del h&eacute;roe de Joseph Campbell</strong> mapeado a trav&eacute;s de tres mundos y seis niveles de idioma. El conflicto central de la historia: <em>el mundo est&aacute; perdiendo sus nombres, y las cosas que no se nombran desaparecen.</em> Yaguar&aacute; debe viajar por Colombia para recuperarlos. El estudiante los pronuncia para devolverlos a la existencia a trav&eacute;s del juego.</p>
+
+    <div class="journey-map">
+        <div class="journey-act act-1">
+            <div class="act-label">Acto I &mdash; A1&ndash;A2</div>
+            <h4>El Mundo de Abajo</h4>
+            <p><strong>"Nombrar el mundo"</strong><br>Ra&iacute;ces, agua, noche, comienzos. La familia de Yaguar&aacute;, su r&iacute;o, los sonidos del bosque. Algo se queda en silencio. Un sonido desaparece. Luego otro. El r&iacute;o dice: las cosas que no se nombran, desaparecen.</p>
+            <div class="campbell">Mundo ordinario &rarr; Llamada a la aventura &rarr; Rechazo &rarr; Encuentro con el mentor</div>
+        </div>
+        <div class="journey-act act-2">
+            <div class="act-label">Acto II &mdash; B1&ndash;B2</div>
+            <h4>El Mundo del Medio</h4>
+            <p><strong>"Contar lo vivido"</strong><br>Comunidad, memoria, historia. Yaguar&aacute; viaja por los cuatro ecosistemas de Colombia, encontrando aliados y enfrentando fuerzas del olvido. Se da cuenta de que necesita las <em>historias detr&aacute;s de los nombres</em>, no solo los nombres en s&iacute;.</p>
+            <div class="campbell">Cruce del umbral &rarr; Pruebas / Aliados / Enemigos &rarr; La prueba suprema</div>
+        </div>
+        <div class="journey-act act-3">
+            <div class="act-label">Acto III &mdash; C1&ndash;C2</div>
+            <h4>El Mundo de Arriba</h4>
+            <p><strong>"Cuidar la palabra"</strong><br>Sue&ntilde;os, estrellas, equilibrio, destino. Yaguar&aacute; lleva los nombres recuperados de vuelta, pero el mundo ha cambiado. Debe elegir: &iquest;restaurar lo que era, o dejar que se convierta en algo nuevo? El estudiante escribe su propio mito.</p>
+            <div class="campbell">Recompensa &rarr; El camino de regreso &rarr; Resurrecci&oacute;n &rarr; Regreso con el elixir</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 3. CHARACTERS ============================== -->
+<section id="characters">
+    <h2><span class="section-number">03</span> Personajes</h2>
+    <div class="section-subtitle">Los seres que habitan este mundo &mdash; cada detalle importa</div>
+
+    <!-- Yaguará -->
+    <div class="character-card protagonist">
+        <div class="character-name">Yaguar&aacute;</div>
+        <div class="character-role">La protagonista &mdash; Prioridad 1</div>
+        <ul>
+            <li><strong>Especie:</strong> Joven esp&iacute;ritu-jaguar femenino. No es una cachorra, no es completamente adulta. A&uacute;n no es guardiana.</li>
+            <li><strong>Complexi&oacute;n:</strong> Esbelta, atl&eacute;tica, no corpulenta. Es r&aacute;pida, no poderosa (a&uacute;n).</li>
+            <li><strong>Pelaje:</strong> Dorado oscuro con rosetas claramente visibles. NO anaranjado como un tigre &mdash; estudiar jaguares reales (<em>Panthera onca</em>).</li>
+            <li><strong>Ojos:</strong> Verde &aacute;mbar, expresivos, inteligentes. El rasgo m&aacute;s importante &mdash; estos ojos llevan toda la historia.</li>
+            <li><strong>Marca distintiva:</strong> Un peque&ntilde;o patr&oacute;n en forma de constelaci&oacute;n en su hombro izquierdo (esto cobra importancia m&aacute;s adelante en la historia).</li>
+            <li><strong>Personalidad en la pose:</strong> Curiosa, callada, valiente sin saberlo. En los primeros niveles mayormente escucha. Luego habla con peso.</li>
+        </ul>
+        <h4>Expresiones necesarias (6)</h4>
+        <ul>
+            <li>Curiosa &mdash; orejas hacia adelante, ojos bien abiertos, cabeza ligeramente inclinada</li>
+            <li>Decidida &mdash; ojos enfocados, mand&iacute;bula firme, cuerpo bajo</li>
+            <li>Preocupada &mdash; orejas ligeramente hacia atr&aacute;s, ojos buscando</li>
+            <li>Alegre &mdash; ojos brillantes, postura relajada, casi sonriendo</li>
+            <li>Escuchando &mdash; completamente quieta, orejas giradas, ojos entrecerrados</li>
+            <li>Hablando &mdash; boca ligeramente abierta, ojos conectando con el espectador</li>
+        </ul>
+        <h4>Poses necesarias (5)</h4>
+        <ul>
+            <li>Sentada alerta &mdash; junto a la orilla de un r&iacute;o, mirando hacia afuera</li>
+            <li>Caminando &mdash; a trav&eacute;s del bosque, a medio paso, con confianza</li>
+            <li>Saltando &mdash; sobre el agua o entre rocas, extensi&oacute;n completa</li>
+            <li>Agachada junto al agua &mdash; mirando su reflejo</li>
+            <li>Mirando las estrellas &mdash; sentada, cabeza inclinada hacia atr&aacute;s, constelaci&oacute;n brillando en su hombro</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hoja de personaje (rotaci&oacute;n) + poses individuales como PNG separados con fondos transparentes</div>
+    </div>
+
+    <!-- Mamá Jaguar -->
+    <div class="character-card family">
+        <div class="character-name">Mam&aacute; Jaguar (Nakawe)</div>
+        <div class="character-role">La madre &mdash; Prioridad 2</div>
+        <ul>
+            <li><strong>Apariencia:</strong> M&aacute;s grande que Yaguar&aacute;, pelaje m&aacute;s oscuro. Ojos dorados serenos.</li>
+            <li><strong>Marca distintiva:</strong> Una cicatriz que cruza el puente de su nariz &mdash; de viejos viajes de los que no habla.</li>
+            <li><strong>Personalidad:</strong> Estable, c&aacute;lida, antigua sin ser vieja. Digna y firme.</li>
+            <li><strong>L&iacute;neas de di&aacute;logo (referencia de tono):</strong> "El r&iacute;o no espera." / "Los nombres no se pierden. Se olvidan."</li>
+        </ul>
+        <h4>Poses necesarias</h4>
+        <ul>
+            <li>Sentada con majestuosidad &mdash; cerca del r&iacute;o, vigilando su territorio</li>
+            <li>Acariciando a Yaguar&aacute; &mdash; un momento tierno de despedida</li>
+            <li>Mirando hacia el horizonte &mdash; de espaldas al espectador, el peso de lo que sabe</li>
+        </ul>
+        <h4>Expresiones: serena, orgullosa, preocupada</h4>
+        <div class="deliverable-tag">Entregable: 3 poses + 3 expresiones, PNG transparente</div>
+    </div>
+
+    <!-- Río -->
+    <div class="character-card family">
+        <div class="character-name">R&iacute;o</div>
+        <div class="character-role">El hermano menor &mdash; Picard&iacute;a / Coraz&oacute;n &mdash; Prioridad 2</div>
+        <ul>
+            <li><strong>Apariencia:</strong> M&aacute;s peque&ntilde;o que Yaguar&aacute;, pelaje m&aacute;s claro, ojos grandes y juguetones.</li>
+            <li><strong>Lleva el nombre del r&iacute;o</strong> porque nunca deja de moverse.</li>
+            <li><strong>Cualidad clave:</strong> Incluso su pose de "quieto" debe sentirse cin&eacute;tica &mdash; cola movi&eacute;ndose, pata a medio alcanzar, peso cambiando.</li>
+            <li><strong>Rol en la historia:</strong> Alivio c&oacute;mico en A1, fuente de preocupaci&oacute;n en B1 (&iquest;sigue a Yaguar&aacute;?), h&eacute;roe sorpresa en C1.</li>
+        </ul>
+        <h4>Poses necesarias</h4>
+        <ul>
+            <li>A medio salto &mdash; pura alegr&iacute;a, persiguiendo una mariposa o luci&eacute;rnaga</li>
+            <li>Tropezando &mdash; cay&eacute;ndose por sus propias patas, juguet&oacute;n</li>
+            <li>Escondi&eacute;ndose detr&aacute;s de Yaguar&aacute; &mdash; solo ojos y orejas visibles, espiando</li>
+            <li>Durmiendo acurrucado &mdash; el &uacute;nico momento en que est&aacute; quieto, cola sobre la nariz</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: 4 poses, PNG transparente</div>
+    </div>
+
+    <!-- Abuela Ceiba -->
+    <div class="character-card family">
+        <div class="character-name">Abuela Ceiba</div>
+        <div class="character-role">La mentora &mdash; No es un jaguar &mdash; Prioridad 2</div>
+        <ul>
+            <li><strong>Qu&eacute; es:</strong> Un enorme &aacute;rbol de ceiba (ceiba) en el centro del bosque. Habla, pero lentamente.</li>
+            <li><strong>Referencia visual:</strong> Buscar &aacute;rboles reales de <em>Ceiba pentandra</em> &mdash; enormes ra&iacute;ces tabulares, copa ancha, ep&iacute;fitas cubriendo el tronco.</li>
+            <li><strong>Rostro:</strong> Sutilmente visible en la corteza &mdash; NO una cara de caricatura. M&aacute;s bien pareidolia &mdash; se ve si buscas, pero podr&iacute;a ser solo el patr&oacute;n de la corteza.</li>
+            <li><strong>Copa:</strong> Luci&eacute;rnagas reunidas alrededor de sus ramas superiores, creando un brillo suave.</li>
+            <li><strong>Ra&iacute;ces:</strong> Se extienden hacia afuera como r&iacute;os o venas, conect&aacute;ndose con todo.</li>
+            <li><strong>Ella conoce todos los nombres</strong> porque todas las ra&iacute;ces pasan por ella.</li>
+        </ul>
+        <h4>Versiones necesarias</h4>
+        <ul>
+            <li><strong>Versi&oacute;n de d&iacute;a:</strong> Luz verde c&aacute;lida filtr&aacute;ndose por el dosel, musgo y helechos en el tronco</li>
+            <li><strong>Versi&oacute;n de noche:</strong> Luci&eacute;rnagas brillando, luz de luna, m&iacute;stico pero no tenebroso</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: 2 versiones (d&iacute;a/noche), PNG transparente + versiones de escena completa con fondo</div>
+    </div>
+
+    <!-- Colibrí -->
+    <div class="character-card ally">
+        <div class="character-name">Colibr&iacute; (Zunz&uacute;n)</div>
+        <div class="character-role">Gu&iacute;a de la selva &mdash; Aliado &mdash; Prioridad 5</div>
+        <ul>
+            <li><strong>Especie:</strong> Esp&iacute;ritu colibr&iacute;. Plumaje iridiscente verde-azul.</li>
+            <li><strong>Escala:</strong> Imposiblemente peque&ntilde;o. Enfatizar el contraste con Yaguar&aacute; &mdash; podr&iacute;a posarse en su oreja.</li>
+            <li><strong>Efecto especial:</strong> Estelas de part&iacute;culas luminosas al volar, como peque&ntilde;as estrellas cayendo de las puntas de las alas.</li>
+            <li><strong>Personalidad:</strong> Habla r&aacute;pido, conoce el nombre de cada flor. Ense&ntilde;a que las cosas peque&ntilde;as tienen gran poder.</li>
+        </ul>
+        <h4>Poses necesarias</h4>
+        <ul>
+            <li>Suspendido en el aire &mdash; alas borrosas, mirando al espectador</li>
+            <li>Acelerando &mdash; estela de vuelo a media carrera con rastro de luz</li>
+            <li>Posado en la oreja de Yaguar&aacute; &mdash; susurrando</li>
+            <li>Alas extendidas &mdash; mostrando toda la iridiscencia, como una joya</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: 4 poses, PNG transparente + versi&oacute;n simplificada en SVG para la interfaz</div>
+    </div>
+
+    <!-- Cóndor Viejo -->
+    <div class="character-card ally">
+        <div class="character-name">C&oacute;ndor Viejo</div>
+        <div class="character-role">Gu&iacute;a de los Andes &mdash; Aliado &mdash; Prioridad 5</div>
+        <ul>
+            <li><strong>Especie:</strong> C&oacute;ndor andino (<em>Vultur gryphus</em>). Antiguo, envergadura enorme.</li>
+            <li><strong>Detalles:</strong> Collar blanco, plumas desgastadas que muestran la edad, un ojo ligeramente nublado (el izquierdo).</li>
+            <li><strong>Personalidad:</strong> Habla rara vez. Ve todo desde arriba. Ense&ntilde;a la perspectiva.</li>
+        </ul>
+        <h4>Poses necesarias</h4>
+        <ul>
+            <li>Planeando &mdash; visto desde abajo, las alas llenan el encuadre, monta&ntilde;as detr&aacute;s</li>
+            <li>Posado en una roca &mdash; en un saliente alto de monta&ntilde;a, el viento agitando las plumas</li>
+            <li>Cabeza girada mirando hacia abajo &mdash; un ojo claro, uno nublado, sabio y paciente</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: 3 poses, PNG transparente</div>
+    </div>
+
+    <!-- Delfín Rosado -->
+    <div class="character-card ally">
+        <div class="character-name">Delf&iacute;n Rosado (Boto)</div>
+        <div class="character-role">Gu&iacute;a de los llanos / R&iacute;o &mdash; Aliado &mdash; Prioridad 5</div>
+        <ul>
+            <li><strong>Especie:</strong> Delf&iacute;n rosado del Amazonas (<em>Inia geoffrensis</em>). Buscar fotos reales &mdash; son extra&ntilde;os y hermosos.</li>
+            <li><strong>Color:</strong> Rosa p&aacute;lido, casi transl&uacute;cido en algunas partes. M&aacute;s claro en el vientre.</li>
+            <li><strong>Cualidad clave:</strong> Siempre medio sumergido &mdash; nunca se ve el delf&iacute;n completo. "Sonrisa" enigm&aacute;tica (su boca naturalmente se curva hacia arriba).</li>
+            <li><strong>Nota folcl&oacute;rica:</strong> Cambiaformas en el folclor colombiano/amaz&oacute;nico. Juguet&oacute;n pero poco confiable. Ense&ntilde;a que no todas las palabras significan lo que dicen.</li>
+        </ul>
+        <h4>Poses necesarias</h4>
+        <ul>
+            <li>Emergiendo &mdash; saliendo del agua turbia del r&iacute;o, rosa contra agua marr&oacute;n</li>
+            <li>Asomando sobre el agua &mdash; solo ojos y parte superior de la cabeza visibles, observando</li>
+            <li>Nadando junto a una canoa &mdash; visto desde arriba, sombra bajo la superficie</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: 3 poses, PNG transparente</div>
+    </div>
+
+    <!-- Tortuga Marina -->
+    <div class="character-card ally">
+        <div class="character-name">Tortuga Marina (Carey)</div>
+        <div class="character-role">Gu&iacute;a de la costa &mdash; Aliada &mdash; Prioridad 5</div>
+        <ul>
+            <li><strong>Especie:</strong> Tortuga carey (<em>Eretmochelys imbricata</em>). Antigua.</li>
+            <li><strong>Caparaz&oacute;n:</strong> Tiene percebes, peque&ntilde;os crecimientos de coral, tal vez una peque&ntilde;a an&eacute;mona &mdash; lleva un ecosistema en su espalda.</li>
+            <li><strong>Movimientos:</strong> Lentos y deliberados. Cada gesto es intencional.</li>
+            <li><strong>Personalidad:</strong> Ha cruzado todos los oc&eacute;anos. Recuerda todo. Ense&ntilde;a la paciencia &mdash; algunas historias toman toda una vida en contarse.</li>
+        </ul>
+        <h4>Poses necesarias</h4>
+        <ul>
+            <li>Nadando en mar abierto &mdash; agua turquesa, luz filtr&aacute;ndose desde arriba</li>
+            <li>Descansando en la arena &mdash; en una playa caribe&ntilde;a de noche, luz de luna en el caparaz&oacute;n</li>
+            <li>Cabeza emergiendo del caparaz&oacute;n &mdash; mirando directamente al espectador con ojos ancestrales</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: 3 poses, PNG transparente</div>
+    </div>
+
+    <!-- El Silencio Gris -->
+    <div class="character-card force">
+        <div class="character-name">El Silencio Gris</div>
+        <div class="character-role">El antagonista &mdash; Una fuerza, no un personaje &mdash; Prioridad 7</div>
+        <ul>
+            <li><strong>NO es un personaje con cuerpo.</strong> Es una atm&oacute;sfera, una condici&oacute;n, una ausencia.</li>
+            <li><strong>Concepto visual:</strong> Niebla gris / est&aacute;tica / ruido visual que <em>borra el color</em> por donde pasa.</li>
+            <li><strong>Pensar en:</strong> Una fotograf&iacute;a que lentamente pierde su saturaci&oacute;n desde un borde. Un paisaje donde el lado izquierdo es v&iacute;vido y el lado derecho se disuelve en gris.</li>
+            <li><strong>No es malvado.</strong> No es un villano. Simplemente la ausencia de nombrar. Natural, como la entrop&iacute;a.</li>
+            <li><strong>Equivalente sonoro:</strong> La sensaci&oacute;n de una palabra en la punta de la lengua que no logras recordar.</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Texturas superpuestas y efectos de borde &mdash; PNG con transparencia, varios tama&ntilde;os, sin costuras donde sea posible</div>
+    </div>
+
+    <!-- La Sombra -->
+    <div class="character-card force">
+        <div class="character-name">La Sombra de Yaguar&aacute;</div>
+        <div class="character-role">El yo-sombra &mdash; Prioridad 7</div>
+        <ul>
+            <li><strong>Aparece en el nivel B2.</strong> Luce exactamente como Yaguar&aacute; pero <em>algo anda mal</em>.</li>
+            <li><strong>Visual:</strong> La silueta de Yaguar&aacute;, pero los bordes oscilan como un reflejo en agua agitada.</li>
+            <li><strong>Ojos:</strong> Espejos &mdash; reflejan al espectador en vez de ver. Sin pupilas, solo superficie reflectante.</li>
+            <li><strong>Representa:</strong> El miedo a cometer errores, a no ser lo suficientemente bueno para hablar. Debe ser <em>abrazada</em>, no derrotada.</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Versi&oacute;n silueta oscura de cada pose de Yaguar&aacute;, con bordes ondulantes &mdash; PNG transparente</div>
+    </div>
+
+    <!-- Los Antiguos -->
+    <div class="character-card dream">
+        <div class="character-name">Los Antiguos</div>
+        <div class="character-role">Los ancestros &mdash; Figuras on&iacute;ricas &mdash; Prioridad 9</div>
+        <ul>
+            <li><strong>Aparecen como:</strong> Constelaciones, pinturas rupestres que se mueven, voces en el agua, petroglifos que se animan.</li>
+            <li><strong>Estilo visual:</strong> Contornos luminosos, patrones de estrellas, arte lineal dorado sobre fondos oscuros.</li>
+            <li><strong>Referencia:</strong> Petroglifos colombianos (pinturas rupestres de Chiribiquete), figuras de oro precolombino (Museo del Oro).</li>
+            <li><strong>Hablan en met&aacute;foras y poes&iacute;a.</strong> Nunca dan respuestas directas. Son los maestros finales.</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: 4&ndash;6 figuras de constelaci&oacute;n/petroglifo, SVG + PNG con efectos de brillo</div>
+    </div>
+
+    <!-- Candelaria -->
+    <div class="character-card human">
+        <div class="character-name">Candelaria &ldquo;Cande&rdquo; Arango</div>
+        <div class="character-role">Heraldo / Compa&ntilde;era &mdash; Humana &mdash; Prioridad 3</div>
+        <h4>Versi&oacute;n 12 a&ntilde;os (A2 Avanzado)</h4>
+        <ul>
+            <li><strong>Apariencia:</strong> Afrocolombiana / mestiza de Quibd&oacute;, Choc&oacute;. Piel oscura, trenzas rizadas decoradas con peque&ntilde;as semillas y flores silvestres.</li>
+            <li><strong>Ropa:</strong> Uniforme escolar &mdash; blusa blanca, falda azul, ligeramente embarrada del bosque. Botas resistentes, grandes para ella.</li>
+            <li><strong>Accesorios:</strong> Cuaderno de cuero gastado apretado contra el pecho (p&aacute;ginas sobresaliendo). Bolso de lona colgado de un hombro.</li>
+            <li><strong>Personalidad en la pose:</strong> Ojos brillantes, curiosa, un poco asustada pero valiente. Lo dibuja todo &mdash; su cuaderno se convierte en un mapa en niveles superiores.</li>
+        </ul>
+        <h4>Expresiones necesarias (5)</h4>
+        <ul>
+            <li>Asombro &mdash; ojos muy abiertos, boca ligeramente abierta</li>
+            <li>Concentraci&oacute;n &mdash; ce&ntilde;o fruncido, l&aacute;piz en mano</li>
+            <li>Riendo &mdash; cabeza hacia atr&aacute;s, alegr&iacute;a genuina</li>
+            <li>Escuchando con atenci&oacute;n &mdash; cabeza inclinada, mano en la oreja</li>
+            <li>Dibujando en el cuaderno &mdash; ojos bajos, completamente absorta</li>
+        </ul>
+        <h4>Poses necesarias (5)</h4>
+        <ul>
+            <li>De pie alerta &mdash; cuaderno contra el pecho, mirando hacia el bosque</li>
+            <li>Agachada junto al r&iacute;o &mdash; una mano tocando el agua, la otra sosteniendo su cuaderno</li>
+            <li>Sentada con piernas cruzadas dibujando &mdash; rodeada de plantas, en paz</li>
+            <li>Caminando junto a Yaguar&aacute; &mdash; NO mont&aacute;ndola &mdash; lado a lado, compa&ntilde;eras iguales</li>
+            <li>Alcanzando algo &mdash; una mano extendida, asombro en su rostro</li>
+        </ul>
+        <h4>Versi&oacute;n 18 a&ntilde;os (C1&ndash;C2)</h4>
+        <ul>
+            <li><strong>Apariencia:</strong> Postura segura, m&aacute;s alta. Las mismas trenzas ahora con hilos dorados entretejidos. Gafas redondas de montura fina.</li>
+            <li><strong>Ropa:</strong> Jeans, botas, un pa&ntilde;uelo colorido (eco de Do&ntilde;a Asunci&oacute;n). Bolso universitario de lona cubierto de parches y pines.</li>
+            <li><strong>Accesorios:</strong> El mismo cuaderno &mdash; ahora grueso, rebosante de dibujos, mapas, hojas prensadas.</li>
+        </ul>
+        <h4>Expresiones (4)</h4>
+        <ul>
+            <li>Decidida &mdash; mand&iacute;bula firme, ojos al frente</li>
+            <li>Hablando con pasi&oacute;n &mdash; manos gesticulando, ojos brillantes</li>
+            <li>Estudiando un documento &mdash; gafas ajustadas, concentrada</li>
+            <li>Sonriendo a Yaguar&aacute; &mdash; reconocimiento c&aacute;lido entre viejas amigas</li>
+        </ul>
+        <h4>Poses (3)</h4>
+        <ul>
+            <li>De pie en un podio o mesa &mdash; presentando con autoridad</li>
+            <li>Sosteniendo el cuaderno abierto &mdash; mostrando su contenido a alguien</li>
+            <li>Caminando por el bosque como adulta &mdash; paso seguro, pa&ntilde;uelo al viento</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hojas de personaje para ambas edades (rotaci&oacute;n + expresiones + poses), PNG transparente</div>
+    </div>
+
+    <!-- Don Próspero -->
+    <div class="character-card human">
+        <div class="character-name">Don Pr&oacute;spero Garc&iacute;a</div>
+        <div class="character-role">Antagonista (guardi&aacute;n del umbral) &mdash; Humano &mdash; Prioridad 4</div>
+        <ul>
+            <li><strong>Complexi&oacute;n:</strong> Silueta alta y delgada &mdash; no f&iacute;sicamente amenazante, intelectualmente imponente. 55&ndash;60 a&ntilde;os.</li>
+            <li><strong>Rostro:</strong> Cara curtida que ha visto tanto salas de juntas como caminos rurales. Cabello plateado peinado hacia atr&aacute;s, ligera entrada. La expresi&oacute;n muestra inteligencia, cansancio y convicci&oacute;n &mdash; NO crueldad, NO desprecio.</li>
+            <li><strong>Ropa:</strong> Cara pero pr&aacute;ctica &mdash; camisa de lino limpia, pantalones bien cortados, cintur&oacute;n de cuero, botas pulidas pero polvorientas.</li>
+            <li><strong>Accesorios:</strong> Portafolio/malet&iacute;n de cuero con contratos, mapas, documentos.</li>
+            <li><strong>Manos:</strong> Notablemente limpias y suaves &mdash; contraste con las manos trabajadoras de todos los dem&aacute;s.</li>
+            <li><strong>Detalle cr&iacute;tico:</strong> Un peque&ntilde;o jaguar tallado en madera en su bolsillo &mdash; lo hizo su madre. Nunca lo muestra. <strong>Una ilustraci&oacute;n debe mostrarlo cay&eacute;ndose o &eacute;l sosteni&eacute;ndolo cuando est&aacute; solo.</strong></li>
+        </ul>
+        <h4>Expresiones necesarias (4)</h4>
+        <ul>
+            <li>Sonrisa persuasiva &mdash; c&aacute;lida, convincente, practicada</li>
+            <li>Mirada calculadora &mdash; ojos entrecerrados, evaluando</li>
+            <li>Tristeza genuina &mdash; sin m&aacute;scara, a solas</li>
+            <li>Sorpresa &mdash; al ser confrontado con la verdad, la m&aacute;scara cayendo</li>
+        </ul>
+        <h4>Poses necesarias (4)</h4>
+        <ul>
+            <li>De pie con portafolio &mdash; formal, silueta imponente</li>
+            <li>Gesticulando hacia un mapa o plano &mdash; vendiendo su visi&oacute;n</li>
+            <li>Sentado solo mirando el jaguar de madera &mdash; el &uacute;nico momento en que vemos al hombre real</li>
+            <li>Caminando de espaldas &mdash; visto desde atr&aacute;s, disminuyendo en la distancia</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hoja de personaje (rotaci&oacute;n) + expresiones + poses, PNG transparente</div>
+    </div>
+
+    <!-- Doña Asunción -->
+    <div class="character-card human">
+        <div class="character-name">Do&ntilde;a Asunci&oacute;n &ldquo;La Abuela del R&iacute;o&rdquo;</div>
+        <div class="character-role">El puente &mdash; Humana &mdash; Prioridad 4</div>
+        <ul>
+            <li><strong>Complexi&oacute;n:</strong> Figura peque&ntilde;a &mdash; siempre contrastada contra el enorme r&iacute;o/paisaje. 75&ndash;80 a&ntilde;os.</li>
+            <li><strong>Rostro:</strong> Piel marr&oacute;n profundo, rostro profundamente arrugado, expresi&oacute;n de paz y concentraci&oacute;n profunda. Cabello blanco bajo un pa&ntilde;uelo colorido (patrones brillantes).</li>
+            <li><strong>Manos:</strong> Faltan dos dedos en la mano izquierda (accidente con machete en su juventud) &mdash; visibles, no ocultos.</li>
+            <li><strong>Entorno:</strong> Siempre cerca del agua &mdash; sentada en la orilla de un r&iacute;o, manos tocando la superficie del agua.</li>
+            <li><strong>Ropa:</strong> Sencilla, gastada pero limpia. Falda larga, blusa pr&aacute;ctica, sin zapatos o sandalias simples.</li>
+        </ul>
+        <h4>Expresiones necesarias (4)</h4>
+        <ul>
+            <li>Escuchando &mdash; ojos cerrados, manos en el agua, completamente quieta</li>
+            <li>Sonrisa sabia &mdash; ella ve algo que t&uacute; no ves</li>
+            <li>Hablando con autoridad &mdash; ojos abiertos, voz con peso</li>
+            <li>Serena &mdash; en paz, cerca del atardecer</li>
+        </ul>
+        <h4>Poses necesarias (4)</h4>
+        <ul>
+            <li>Sentada junto al r&iacute;o con las manos en el agua &mdash; su imagen definitoria</li>
+            <li>De pie peque&ntilde;a contra el bosque &mdash; mostrando la escala, diminuta pero enraizada</li>
+            <li>Sosteniendo el rostro de Candelaria entre sus manos &mdash; pasando conocimiento entre generaciones</li>
+            <li>Silueta de perfil al atardecer &mdash; la &uacute;ltima escuchadora</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hoja de personaje + expresiones + poses, PNG transparente</div>
+    </div>
+</section>
+
+<!-- ============================== 4. ENVIRONMENTS ============================== -->
+<section id="environments">
+    <h2><span class="section-number">04</span> Ambientes</h2>
+    <div class="section-subtitle">Los cuatro ecosistemas de Colombia &mdash; cada uno un cap&iacute;tulo del viaje</div>
+
+    <p>Cada ecosistema necesita los siguientes entregables:</p>
+
+    <div class="size-specs">
+        <div class="size-card">
+            <div class="dim">3840 &times; 1080 px</div>
+            <div class="purpose">Fondo panor&aacute;mico ancho (encabezados de secci&oacute;n, escritorio)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">1080 &times; 1920 px</div>
+            <div class="purpose">Fondo vertical (pantallas m&oacute;viles)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">1200 &times; 800 px</div>
+            <div class="purpose">Vi&ntilde;etas de escena (3&ndash;4 por ecosistema)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">Mosaico continuo (SVG)</div>
+            <div class="purpose">Patr&oacute;n/textura repetitiva inspirada en textiles</div>
+        </div>
+    </div>
+
+    <div class="env-card env-selva">
+        <h4>Selva (Choc&oacute; / Amazonas)</h4>
+        <div class="env-tags">verde, agua, lluvia, tambores &mdash; Gu&iacute;a: Colibr&iacute; &mdash; Culturas afrocolombiana e ind&iacute;gena</div>
+        <ul>
+            <li>Dosel denso, luz verde filtrada, enormes ra&iacute;ces tabulares, r&iacute;o visible abajo</li>
+            <li>Lluvia. Siempre una sensaci&oacute;n de lluvia, aunque no est&eacute; lloviendo activamente. Hojas mojadas, neblina, gotas.</li>
+            <li>Referencia textil: <strong>Borde con patr&oacute;n inspirado en mola</strong> (apliqu&eacute; en capas kuna/guna)</li>
+            <li>Este es el HOGAR de Yaguar&aacute; &mdash; debe sentirse c&aacute;lido, seguro y vivo</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-andes">
+        <h4>Andes</h4>
+        <div class="env-tags">tierra, piedra, luz fr&iacute;a y clara, instrumentos de viento &mdash; Gu&iacute;a: C&oacute;ndor Viejo &mdash; Comunidades de tierras altas</div>
+        <ul>
+            <li>Valle de monta&ntilde;a, campos en terraza (como las terrazas agr&iacute;colas muiscas), caminos de piedra</li>
+            <li>Luz fr&iacute;a y clara, sombras largas, nubes <em>debajo</em> del espectador (territorio del c&oacute;ndor)</li>
+            <li>Referencia textil: <strong>Borde con patr&oacute;n geom&eacute;trico inspirado en way&uacute;u</strong></li>
+            <li>Sensaci&oacute;n: antiguo, vasto, silencioso. Se puede escuchar el viento.</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-llanos">
+        <h4>Llanos</h4>
+        <div class="env-tags">dorado, cielo abierto, arpa, horizonte infinito &mdash; Gu&iacute;a: Delf&iacute;n Rosado &mdash; Cultura llanera</div>
+        <ul>
+            <li>Vasta pradera dorada, cielo enorme (el cielo debe ser 2/3 de la imagen), palmas de moriche dispersas</li>
+            <li>R&iacute;o cortando la llanura, reverberaci&oacute;n del calor en el horizonte</li>
+            <li>Referencia textil: <strong>Borde con patr&oacute;n de tejido de sombrero vueltiao</strong></li>
+            <li>Sensaci&oacute;n: libertad, exposici&oacute;n, sin d&oacute;nde esconderse. Lo opuesto al bosque protegido.</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-costa">
+        <h4>Costa (Caribe)</h4>
+        <div class="env-tags">turquesa, sal, cumbia, calor intenso &mdash; Gu&iacute;a: Tortuga Marina &mdash; Cultura afrocaribe&ntilde;a</div>
+        <ul>
+            <li>Agua turquesa, manglares en el borde, botes de pesca (peque&ntilde;os, coloridos, de madera)</li>
+            <li>Coral visible bajo el agua, luz saturada intensa, energ&iacute;a de cumbia</li>
+            <li>Referencia textil: <strong>Borde con patr&oacute;n de filigrana / inspirado en oro</strong> (tradici&oacute;n orfebre momposina)</li>
+            <li>Sensaci&oacute;n: vibrante, r&iacute;tmico, c&aacute;lido. Vida en el l&iacute;mite entre la tierra y el mar.</li>
+        </ul>
+    </div>
+
+    <h3>C&aacute;maras de salas de enigmas</h3>
+    <p>Cada mundo contiene salas de enigmas con atm&oacute;sferas visuales distintas. Estos son espacios de descubrimiento arqueol&oacute;gico, no ambientes de juegos competitivos.</p>
+
+    <div class="env-card env-selva">
+        <h4>Salas del Mundo de Abajo (A1&ndash;A2)</h4>
+        <div class="env-tags">subterr&aacute;neo, ra&iacute;ces, bioluminiscencia, piedra tallada &mdash; &ldquo;Las ra&iacute;ces&rdquo;</div>
+        <ul>
+            <li>C&aacute;maras subterr&aacute;neas bajo las ra&iacute;ces de la ceiba &mdash; ra&iacute;ces formando arcos y puertas naturales</li>
+            <li>Musgo bioluminiscente en paredes de piedra &mdash; luz &aacute;mbar c&aacute;lida desde abajo (no fuego)</li>
+            <li>Agua goteando por superficies talladas &mdash; petroglifos visibles: espirales, huellas de animales, patrones de olas</li>
+            <li>Paleta: verde profundo, &aacute;mbar, marr&oacute;n tierra, acentos azul-verde luminiscente</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-andes">
+        <h4>Salas del Mundo del Medio (B1&ndash;B2)</h4>
+        <div class="env-tags">naturaleza reclamando arquitectura, c&aacute;maras ocultas, rastros humanos &mdash; &ldquo;Las historias&rdquo;</div>
+        <ul>
+            <li>Habitaciones dentro de espacios humanos &mdash; edificios abandonados con paredes agrietadas y enredaderas creciendo</li>
+            <li>C&aacute;maras ocultas bajo plazas de mercado &mdash; escalones de piedra descendiendo, fragmentos de cer&aacute;mica en el suelo</li>
+            <li>Habitaciones dentro de botes fluviales &mdash; paredes de madera, luz del agua ondulando en el techo, cuerdas y redes</li>
+            <li>Objetos sugieren presencia humana reciente: herramientas, textiles, velas a medio quemar, cestas tejidas</li>
+            <li>Paleta: terracota, ocre, gris-azul de monta&ntilde;a, toques de turquesa caribe&ntilde;o</li>
+        </ul>
+    </div>
+
+    <div class="env-card env-cosmic">
+        <h4>Salas del Mundo de Arriba (C1&ndash;C2)</h4>
+        <div class="env-tags">metaf&iacute;sico, c&oacute;smico, espacios definidos por constelaciones &mdash; &ldquo;Las constelaciones&rdquo;</div>
+        <ul>
+            <li>Salas hechas de luz de estrellas, de texto, de sonido &mdash; sin paredes f&iacute;sicas</li>
+            <li>L&iacute;mites definidos por constelaciones &mdash; puntos de luz conectados por finas l&iacute;neas doradas</li>
+            <li>El suelo es un mapa (el Mapa de las Voces haci&eacute;ndose visible)</li>
+            <li>El techo es cielo &mdash; d&iacute;a y noche simult&aacute;neamente</li>
+            <li>Contornos luminosos en lugar de superficies s&oacute;lidas &mdash; pensar en: el interior de un astrolabio, una carta de constelaciones que cobra vida</li>
+            <li>Paleta: &iacute;ndigo profundo, plata, oro, negro c&oacute;smico</li>
+        </ul>
+    </div>
+
+    <h3>Entregables de salas de enigmas (por mundo)</h3>
+    <div class="size-specs">
+        <div class="size-card">
+            <div class="dim">1920 &times; 1080 px</div>
+            <div class="purpose">Fondo de sala ancho (escritorio)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">1080 &times; 1920 px</div>
+            <div class="purpose">Fondo de sala vertical (m&oacute;vil)</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">800 &times; 600 px</div>
+            <div class="purpose">Ilustraci&oacute;n de puerta/umbral</div>
+        </div>
+        <div class="size-card">
+            <div class="dim">800 &times; 800 px</div>
+            <div class="purpose">Ilustraci&oacute;n de revelaci&oacute;n de fragmento (cuadrado)</div>
+        </div>
+    </div>
+
+    <h3>Bordes textiles para marcos de salas</h3>
+    <ul style="margin: 10px 0 0 20px;">
+        <li><strong>Mundo de Abajo:</strong> Patrones mola (kuna/guna) &mdash; en capas, org&aacute;nicos, formas de animales</li>
+        <li><strong>Mundo del Medio:</strong> Patrones geom&eacute;tricos way&uacute;u &mdash; tejidos, angulares, sim&eacute;tricos</li>
+        <li><strong>Mundo de Arriba:</strong> Motivos de oro precolombino (Museo del Oro) &mdash; espiral, abstracto, luminoso</li>
+    </ul>
+</section>
+
+<!-- ============================== 5. COLOR PALETTES ============================== -->
+<section id="palettes">
+    <h2><span class="section-number">05</span> Paletas de color</h2>
+    <div class="section-subtitle">Valores hexadecimales exactos para cada mundo</div>
+
+    <div class="palette-group">
+        <div class="palette-title">El Mundo de Abajo (A1&ndash;A2)</div>
+        <div class="palette-desc">Bosque, agua, noche, comienzos &mdash; "Nombrar el mundo"</div>
+        <div class="swatches">
+            <div class="swatch">
+                <div class="swatch-color" style="background:#2D5016"></div>
+                <div class="swatch-label">#2D5016</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1A3A0A"></div>
+                <div class="swatch-label">#1A3A0A</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1B4D6E"></div>
+                <div class="swatch-label">#1B4D6E</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#2E8B8B"></div>
+                <div class="swatch-label">#2E8B8B</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#5C3317"></div>
+                <div class="swatch-label">#5C3317</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#8B6914"></div>
+                <div class="swatch-label">#8B6914</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#2C1654"></div>
+                <div class="swatch-label">#2C1654</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#C9A54E"></div>
+                <div class="swatch-label">#C9A54E</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#E8C547"></div>
+                <div class="swatch-label">#E8C547</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">El Mundo del Medio (B1&ndash;B2)</div>
+        <div class="palette-desc">Comunidad, memoria, viaje &mdash; "Contar lo vivido"</div>
+        <div class="swatches">
+            <div class="swatch">
+                <div class="swatch-color" style="background:#B7562A"></div>
+                <div class="swatch-label">#B7562A</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#CC6633"></div>
+                <div class="swatch-label">#CC6633</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#C49A3C"></div>
+                <div class="swatch-label">#C49A3C</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#5F7A8A"></div>
+                <div class="swatch-label">#5F7A8A</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#D4A843"></div>
+                <div class="swatch-label">#D4A843</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1AA5A5"></div>
+                <div class="swatch-label">#1AA5A5</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">El Mundo de Arriba (C1&ndash;C2)</div>
+        <div class="palette-desc">Estrellas, sue&ntilde;os, transformaci&oacute;n &mdash; "Cuidar la palabra"</div>
+        <div class="swatches">
+            <div class="swatch">
+                <div class="swatch-color" style="background:#1A1A4E"></div>
+                <div class="swatch-label">#1A1A4E</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#C0C0D0"></div>
+                <div class="swatch-label">#C0C0D0</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#E8A824"></div>
+                <div class="swatch-label">#E8A824</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#F5E6B8"></div>
+                <div class="swatch-label">#F5E6B8</div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#0D0D1A"></div>
+                <div class="swatch-label">#0D0D1A</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 6. TECHNICAL SPECS ============================== -->
+<section id="specs">
+    <h2><span class="section-number">06</span> Especificaciones t&eacute;cnicas</h2>
+    <div class="section-subtitle">Formatos, tama&ntilde;os, nomenclatura &mdash; requisitos no negociables</div>
+
+    <h3>Formatos de archivo requeridos</h3>
+    <p>Para <strong>cada ilustraci&oacute;n</strong>, entregar estas versiones:</p>
+
+    <table class="spec-table">
+        <thead>
+            <tr>
+                <th>Formato</th>
+                <th>Caso de uso</th>
+                <th>Requisitos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>SVG</strong></td>
+                <td>Elementos de interfaz, &iacute;conos, patrones, bordes, elementos de escena simples</td>
+                <td>Formato vectorial. Trazados limpios, sin r&aacute;sters incrustados. Escalable a cualquier tama&ntilde;o sin p&eacute;rdida de calidad.</td>
+            </tr>
+            <tr>
+                <td><strong>PNG-24</strong></td>
+                <td>Personajes, escenas complejas, superposiciones</td>
+                <td><strong>Fondo transparente (RGBA).</strong> M&iacute;nimo 2048px en el borde m&aacute;s largo. 300 DPI. Sin fondos blancos.</td>
+            </tr>
+            <tr>
+                <td><strong>Archivo fuente</strong></td>
+                <td>Edici&oacute;n futura, animaci&oacute;n, adaptaci&oacute;n</td>
+                <td><code>.ai</code>, <code>.psd</code>, <code>.procreate</code>, o <code>.kra</code> &mdash; con todas las capas organizadas y nombradas.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Organizaci&oacute;n de capas</h3>
+    <ul style="margin: 10px 0 20px 20px;">
+        <li>Cuerpo del personaje separado del fondo</li>
+        <li>Expresiones faciales en capas separadas (para posible animaci&oacute;n)</li>
+        <li>Efectos especiales (brillo, part&iacute;culas, neblina) en capas separadas</li>
+        <li>Nombres de capas en ingl&eacute;s o espa&ntilde;ol &mdash; consistentes en todo el archivo</li>
+    </ul>
+
+    <h3>Convenci&oacute;n de nombres de archivo</h3>
+    <div class="code-block">
+        <span class="comment">// Patr&oacute;n:</span>
+        <span class="highlight">personaje</span>-<span class="highlight">mundo</span>-<span class="highlight">escena</span>-<span class="highlight">variante</span>.<span class="highlight">formato</span>
+
+        <span class="comment">// Ejemplos:</span>
+        yaguara-abajo-familia-happy.png
+        yaguara-abajo-river-crouching.png
+        nakawe-abajo-horizon-serene.png
+        rio-abajo-leap-playful.png
+        ceiba-abajo-forest-night.png
+        colibri-medio-selva-flying.svg
+        condor-medio-andes-perched.png
+        delfin-medio-llanos-breaching.png
+        carey-medio-costa-swimming.png
+        silencio-gris-overlay-edge-01.png
+        sombra-yaguara-sitting-distorted.png
+        pattern-mola-selva-border.svg
+        pattern-wayuu-andes-border.svg
+        env-selva-panoramic.png
+        env-andes-mobile-portrait.png
+        ui-progress-seed.svg
+        ui-progress-tree-flowering.svg
+        fragment-01-river-awakening.png
+    </div>
+
+    <h3>Qu&eacute; NO entregar</h3>
+    <ul style="margin: 10px 0 0 20px;">
+        <li><strong>No archivos JPG</strong> &mdash; necesitamos transparencia</li>
+        <li><strong>No archivos aplanados</strong> &mdash; necesitamos capas editables</li>
+        <li><strong>No fondos blancos</strong> &mdash; todo el arte de personajes debe tener fondo transparente</li>
+        <li><strong>No archivos fuente peque&ntilde;os</strong> &mdash; "300 DPI" no significa nada si el lienzo tiene solo 500px de ancho. Necesitamos <em>dimensiones en p&iacute;xeles</em> grandes Y alta resoluci&oacute;n DPI.</li>
+    </ul>
+</section>
+
+<!-- ============================== 7. UI ELEMENTS ============================== -->
+<section id="ui">
+    <h2><span class="section-number">07</span> Elementos de interfaz</h2>
+    <div class="section-subtitle">Solo SVG &mdash; el vocabulario visual de la interfaz del juego</div>
+
+    <h3>Indicador de progreso (6 etapas = 6 niveles de idioma)</h3>
+    <p>Una planta viva que crece a medida que el estudiante avanza. NO es una barra de progreso. NO son pasos numerados.</p>
+    <table class="spec-table">
+        <thead>
+            <tr><th>Etapa</th><th>Nivel</th><th>Visual</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>A1</td><td>Una semilla en tierra oscura &mdash; potencial, comienzo</td></tr>
+            <tr><td>2</td><td>A2</td><td>Un peque&ntilde;o brote rompiendo la tierra &mdash; primer crecimiento</td></tr>
+            <tr><td>3</td><td>B1</td><td>Un arbolito con algunas hojas &mdash; encontrando forma</td></tr>
+            <tr><td>4</td><td>B2</td><td>Un &aacute;rbol joven con ramas extendi&eacute;ndose &mdash; fortaleza</td></tr>
+            <tr><td>5</td><td>C1</td><td>Un &aacute;rbol florecido &mdash; belleza, expresi&oacute;n</td></tr>
+            <tr><td>6</td><td>C2</td><td>Un &aacute;rbol con frutos y ra&iacute;ces visibles bajo tierra &mdash; ciclo completo, devolver</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Navegaci&oacute;n</h3>
+    <ul style="margin: 10px 0 20px 20px;">
+        <li><strong>Puntos de navegaci&oacute;n:</strong> Patr&oacute;n de constelaci&oacute;n (no una fila lineal de c&iacute;rculos). Estrellas que se conectan a medida que avanzas.</li>
+        <li><strong>Marcos de borde:</strong> Uno por ecosistema, inspirado en textiles (mola, way&uacute;u, vueltiao, filigrana)</li>
+        <li><strong>Formas de botones:</strong> Redondeados, org&aacute;nicos &mdash; en forma de hoja, de piedra, de gota de agua. Sin rect&aacute;ngulos.</li>
+    </ul>
+
+    <h3>&Iacute;conos de habilidades (5 habilidades principales)</h3>
+    <table class="spec-table">
+        <thead>
+            <tr><th>Habilidad</th><th>&Iacute;cono</th><th>Notas de estilo</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Escuchar</td><td>Oreja</td><td>Org&aacute;nica, con ondas sonoras como hojas conc&eacute;ntricas</td></tr>
+            <tr><td>Hablar</td><td>Boca</td><td>Estilizada, con palabras saliendo como peque&ntilde;os p&aacute;jaros o semillas</td></tr>
+            <tr><td>Leer</td><td>Ojo</td><td>Ojo de jaguar con texto/glifos reflejados en el iris</td></tr>
+            <tr><td>Escribir</td><td>Mano</td><td>Mano (o pata) tocando la tierra, dejando una marca/glifo</td></tr>
+            <tr><td>Cultura</td><td>Coraz&oacute;n</td><td>Forma de coraz&oacute;n formada por dos r&iacute;os que se encuentran, o dos ra&iacute;ces entrelaz&aacute;ndose</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Coleccionables de fragmentos de la historia</h3>
+    <p>Peque&ntilde;as ilustraciones detalladas y preciosas &mdash; una se desbloquea por m&oacute;dulo. Como p&aacute;ginas de un libro perdido.</p>
+    <ul style="margin: 10px 0 0 20px;">
+        <li>Se necesitan aproximadamente 20&ndash;30 para el juego completo</li>
+        <li>Estilo: m&aacute;s pict&oacute;rico y detallado que el arte de interfaz</li>
+        <li><strong>Tama&ntilde;o: 800&times;800px m&iacute;nimo, formato cuadrado</strong></li>
+        <li>Pensar en: ilustraci&oacute;n bot&aacute;nica mezclada con c&oacute;dice ind&iacute;gena y realismo m&aacute;gico</li>
+    </ul>
+
+    <h3>&Iacute;conos de elementos de salas de enigmas</h3>
+    <p>Peque&ntilde;os &iacute;conos SVG para la interfaz de las salas de enigmas. Estilo: est&eacute;tica org&aacute;nica/piedra, NO met&aacute;lica ni industrial.</p>
+    <table class="spec-table">
+        <thead>
+            <tr><th>Elemento</th><th>Descripci&oacute;n</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Candado cerrado</td><td>Candado estilizado de piedra/org&aacute;nico &mdash; no un candado met&aacute;lico</td></tr>
+            <tr><td>Candado abierto</td><td>Misma forma, con efecto de brillo sutil</td></tr>
+            <tr><td>Candado activo</td><td>Misma forma, con anillo de animaci&oacute;n pulsante</td></tr>
+            <tr><td>Fragmento</td><td>Una pieza de mapa con bordes brillantes</td></tr>
+            <tr><td>Candado de palabras</td><td>Tableta de piedra con ranuras para letras talladas</td></tr>
+            <tr><td>Cifrado</td><td>Fichas de letras dispersas (trozos de piedra)</td></tr>
+            <tr><td>Acertijo</td><td>Una m&aacute;scara o rostro, medio oculto en la sombra</td></tr>
+            <tr><td>Secuencia</td><td>Huellas en orden, avanzando</td></tr>
+            <tr><td>Extracci&oacute;n</td><td>Un libro abierto o pergamino</td></tr>
+            <tr><td>L&oacute;gica</td><td>Un camino ramificado dividi&eacute;ndose en opciones</td></tr>
+            <tr><td>S&iacute;ntesis</td><td>Tres r&iacute;os encontr&aacute;ndose en un punto</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================== 8. STYLE REFERENCES ============================== -->
+<section id="references">
+    <h2><span class="section-number">08</span> Referencias de estilo</h2>
+    <div class="section-subtitle">Muestra esto al ilustrador &mdash; este es el universo visual en el que vivimos</div>
+
+    <div class="ref-grid">
+        <div class="ref-do">
+            <h4>S&Iacute; usar como referencia</h4>
+            <ul>
+                <li><strong>Arte textil mola</strong> (pueblo kuna/guna) &mdash; color en capas, formas org&aacute;nicas llamativas</li>
+                <li><strong>Figuras de oro precolombino</strong> (Museo del Oro, Bogot&aacute;) &mdash; formas animales estilizadas</li>
+                <li><strong>Remedios Varo</strong>, pinturas &mdash; realismo m&aacute;gico, formas org&aacute;nicas, luz m&iacute;stica</li>
+                <li><strong>Hayao Miyazaki</strong>, fondos (escenas del bosque en La princesa Mononoke) &mdash; naturaleza viva que respira</li>
+                <li><strong>Shaun Tan</strong> (The Arrival) &mdash; narrativa sin palabras, atmosf&eacute;rico, emocional</li>
+                <li><strong>Charley Harper</strong>, ilustraciones de animales &mdash; estilizadas pero zool&oacute;gicamente precisas</li>
+                <li><strong>Carlos Jacanamijoy</strong> &mdash; artista colombiano, color, naturaleza, perspectiva ind&iacute;gena</li>
+            </ul>
+        </div>
+        <div class="ref-dont">
+            <h4>NO usar como referencia</h4>
+            <ul>
+                <li><strong>Disney / Pixar</strong>, estilo de personajes animales &mdash; demasiado comercial, demasiado "lindo"</li>
+                <li><strong>Anime / manga</strong> &mdash; lenguaje visual completamente equivocado</li>
+                <li><strong>Est&eacute;tica gen&eacute;rica de "juego de fantas&iacute;a"</strong> &mdash; nada de elfos, nada de medieval, nada de fantas&iacute;a oscura</li>
+                <li><strong>Renders 3D fotorrealistas</strong> &mdash; queremos ilustraci&oacute;n, no simulaci&oacute;n</li>
+                <li><strong>Clip art / estilo corporativo plano</strong> &mdash; nada de estilo "ilustraci&oacute;n de startup"</li>
+                <li><strong>Est&eacute;tica de im&aacute;genes generadas por IA</strong> &mdash; nada de apariencia Midjourney / DALL-E</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 9. DELIVERY SCHEDULE ============================== -->
+<section id="schedule">
+    <h2><span class="section-number">09</span> Cronograma sugerido de entrega</h2>
+    <div class="section-subtitle">Orden de prioridad &mdash; lo que necesitamos primero para empezar a construir</div>
+
+    <div class="timeline">
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Fase 1 &mdash; M&aacute;xima prioridad</div>
+            <div class="timeline-title">Hoja de personaje de Yaguar&aacute;</div>
+            <div class="timeline-desc">Rotaci&oacute;n (frente, 3/4, perfil, espalda) + 6 expresiones + 5 poses clave. Esta es la base &mdash; todo lo dem&aacute;s fluye a partir de su dise&ntilde;o.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Fase 2</div>
+            <div class="timeline-title">La familia A1: Nakawe, R&iacute;o, Abuela Ceiba</div>
+            <div class="timeline-desc">Estos personajes aparecen en los primeros m&oacute;dulos. Necesarios para construir la experiencia inicial.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Fase 3</div>
+            <div class="timeline-title">Ambiente de la selva</div>
+            <div class="timeline-desc">El hogar de Yaguar&aacute;. Panor&aacute;mica + vertical + 3 vi&ntilde;etas + mosaico con patr&oacute;n mola. Aqu&iacute; es donde comienza el juego.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Fase 3b &mdash; Salas de enigmas</div>
+            <div class="timeline-title">Fondos de salas (3 mundos &times; 4 formatos)</div>
+            <div class="timeline-desc">C&aacute;maras subterr&aacute;neas de ceiba, arquitectura recuperada por la naturaleza y salas de constelaciones c&oacute;smicas. 12 archivos de ilustraci&oacute;n en total.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Fase 3c &mdash; Personajes humanos</div>
+            <div class="timeline-title">Candelaria (12 a&ntilde;os), Do&ntilde;a Asunci&oacute;n, Don Pr&oacute;spero</div>
+            <div class="timeline-desc">Hojas de personaje con rotaciones, expresiones y poses para cada uno. La versi&oacute;n de 18 a&ntilde;os de Candelaria se entrega en una fase posterior.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Fase 3d</div>
+            <div class="timeline-title">Hoja de personaje de Candelaria (18 a&ntilde;os)</div>
+            <div class="timeline-desc">Versi&oacute;n adulta con look universitario, trenzas con hilos dorados, gafas, cuaderno evolucionado.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Fase 3e</div>
+            <div class="timeline-title">Elementos de salas de enigmas</div>
+            <div class="timeline-desc">&Iacute;conos SVG de elementos de puzzles (11 piezas), bordes textiles de salas (3 patrones SVG), ilustraciones de revelaci&oacute;n de fragmentos (3 mundos &times; 1 = 3 archivos).</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Fase 4</div>
+            <div class="timeline-title">Elementos de interfaz (set completo en SVG)</div>
+            <div class="timeline-desc">Indicador de progreso (6 etapas), constelaci&oacute;n de navegaci&oacute;n, marcos de borde, formas de botones, &iacute;conos de habilidades.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Fase 5</div>
+            <div class="timeline-title">Los cuatro aliados: Colibr&iacute;, C&oacute;ndor, Delf&iacute;n, Tortuga</div>
+            <div class="timeline-desc">Cada uno con sus poses especificadas. Estos pueblan el Acto II.</div>
+        </div>
+        <div class="timeline-item priority-2">
+            <div class="timeline-label">Fase 6</div>
+            <div class="timeline-title">Los 3 ambientes restantes: Andes, Llanos, Costa</div>
+            <div class="timeline-desc">Cada uno con panor&aacute;mica + vertical + vi&ntilde;etas + mosaico de patr&oacute;n textil.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Fase 7</div>
+            <div class="timeline-title">El Silencio Gris + La Sombra de Yaguar&aacute;</div>
+            <div class="timeline-desc">Efectos de superposici&oacute;n, texturas de desaturaci&oacute;n, siluetas de sombra. Para contenido B2+.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Fase 8</div>
+            <div class="timeline-title">Coleccionables de fragmentos de la historia (20&ndash;30 piezas)</div>
+            <div class="timeline-desc">Formato cuadrado, estilo pict&oacute;rico, mezcla de bot&aacute;nica-c&oacute;dice-realismo m&aacute;gico.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Fase 9</div>
+            <div class="timeline-title">Los Antiguos &mdash; figuras de constelaci&oacute;n / petroglifo</div>
+            <div class="timeline-desc">Personajes del mundo de los sue&ntilde;os para C1&ndash;C2. Contornos luminosos, patrones de estrellas, petroglifos animados.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== 10. RIGHTS ============================== -->
+<section id="rights">
+    <h2><span class="section-number">10</span> Derechos y uso</h2>
+    <div class="section-subtitle">Resolver esto antes de comenzar cualquier trabajo</div>
+
+    <div class="rights-box">
+        <h3>Importante &mdash; Discutir antes de comenzar</h3>
+        <ul>
+            <li>Este es un <strong>juego gratuito monetizado a trav&eacute;s de publicidad</strong> &mdash; esto significa <strong>uso comercial</strong>. Todo el arte debe estar licenciado para uso comercial.</li>
+            <li>Preferimos <strong>trabajo por encargo</strong> o <strong>transferencia total de licencia</strong> &mdash; necesitamos el derecho de usar, modificar y distribuir todo el arte en web, aplicaciones m&oacute;viles y materiales promocionales.</li>
+            <li>Si se prefiere compensaci&oacute;n basada en regal&iacute;as, <strong>acordar t&eacute;rminos exactos antes de comenzar cualquier trabajo</strong>.</li>
+            <li>El ilustrador recibir&aacute; <strong>cr&eacute;dito en el juego</strong> (ej. "Ilustraciones por [Nombre]") y en la documentaci&oacute;n del proyecto.</li>
+            <li>Adaptaciones futuras (otros idiomas, mercanc&iacute;a, impresi&oacute;n) deben estar cubiertas en el acuerdo.</li>
+        </ul>
+    </div>
+</section>
+
+</div>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+    <div class="project">El Viaje del Jaguar</div>
+    <div>Brief creativo para ilustrador &mdash; Versi&oacute;n 2.0 &mdash; Febrero 2026</div>
+    <div style="margin-top:10px; font-style:italic; color:#C9A54E;">"No todas las palabras se dicen. Algunas se cuidan."</div>
+</footer>
+
+</body>
+</html>

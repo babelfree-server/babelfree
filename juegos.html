@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos libres — El viaje del jaguar</title>
+    <meta name="description" content="Practica español gratis con juegos interactivos. Sin registro, sin compromisos. Niveles A1 a C2.">
+    <link rel="stylesheet" href="css/yaguara-game.css">
+    <link rel="stylesheet" href="luxury.css">
+    <link rel="canonical" href="https://babelfree.com/juegos">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Juegos libres — El viaje del jaguar",
+                "url": "https://babelfree.com/juegos",
+                "educationalLevel": "A1 to C2",
+                "learningResourceType": "Interactive Game",
+                "teaches": ["Spanish vocabulary", "Spanish grammar", "Verb conjugation"],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/elviajedeljaguar"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Juegos libres"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        /* Free Play Picker Styles */
+        .fp-hero {
+            text-align: center;
+            padding: 2rem 1rem 1rem;
+        }
+        .fp-hero h1 {
+            font-family: var(--font-display, 'Playfair Display', serif);
+            color: var(--ochre, #c9a227);
+            font-size: 2rem;
+            margin: 0 0 0.5rem;
+        }
+        .fp-hero p {
+            color: var(--sand, #e8dcc8);
+            font-size: 1.05rem;
+            margin: 0;
+            opacity: 0.85;
+        }
+
+        .fp-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .fp-section h2 {
+            color: var(--ochre, #c9a227);
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+            font-family: var(--font-display, 'Playfair Display', serif);
+        }
+
+        #fpLevelGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.75rem;
+        }
+        .fp-level-btn {
+            background: rgba(201, 162, 39, 0.08);
+            border: 2px solid rgba(201, 162, 39, 0.3);
+            border-radius: 12px;
+            padding: 0.75rem 0.5rem;
+            color: var(--sand, #e8dcc8);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .fp-level-btn:hover {
+            background: rgba(201, 162, 39, 0.15);
+            border-color: var(--ochre, #c9a227);
+        }
+        .fp-level-btn.active {
+            background: rgba(201, 162, 39, 0.2);
+            border-color: var(--ochre, #c9a227);
+            color: var(--ochre, #c9a227);
+            font-weight: 600;
+        }
+
+        #fpTypeGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+        .fp-type-btn {
+            background: rgba(232, 220, 200, 0.06);
+            border: 1px solid rgba(232, 220, 200, 0.15);
+            border-radius: 10px;
+            padding: 0.6rem 0.75rem;
+            color: var(--sand, #e8dcc8);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+        .fp-type-btn:hover {
+            background: rgba(232, 220, 200, 0.12);
+            border-color: rgba(232, 220, 200, 0.3);
+        }
+        .fp-type-btn.active {
+            background: rgba(201, 162, 39, 0.15);
+            border-color: var(--ochre, #c9a227);
+            color: var(--ochre, #c9a227);
+        }
+        .fp-type-count {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .fp-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+        .fp-play-btn {
+            background: var(--ochre, #c9a227);
+            color: var(--earth-deep, #1a1207);
+            border: none;
+            border-radius: 12px;
+            padding: 0.8rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .fp-play-btn:hover {
+            filter: brightness(1.1);
+        }
+        .fp-play-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .fp-random-btn {
+            background: transparent;
+            color: var(--ochre, #c9a227);
+            border: 2px solid var(--ochre, #c9a227);
+            border-radius: 12px;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .fp-random-btn:hover {
+            background: rgba(201, 162, 39, 0.1);
+        }
+
+        .fp-journey-cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .fp-journey-cta a {
+            color: var(--sand, #e8dcc8);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .fp-journey-cta a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Ad slots */
+        .ad-slot {
+            max-width: 728px;
+            margin: 1rem auto;
+            text-align: center;
+            min-height: 50px;
+        }
+        .ad-slot-between {
+            margin: 1.5rem auto;
+        }
+
+        @media (max-width: 500px) {
+            #fpLevelGrid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .fp-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <!-- Ad slot: top banner -->
+    <div class="ad-slot" id="adTop"></div>
+
+    <!-- Picker Section -->
+    <section id="fpPicker">
+        <div class="fp-hero">
+            <h1>Juegos libres</h1>
+            <p>Practica espa&ntilde;ol con juegos interactivos. Sin registro.</p>
+        </div>
+
+        <div class="fp-section">
+            <h2>Elige tu nivel</h2>
+            <div id="fpLevelGrid"></div>
+
+            <div id="fpTypeSection" style="display:none;">
+                <h2>Elige un tipo de juego <span style="font-weight:normal;opacity:0.6;">(opcional)</span></h2>
+                <div id="fpTypeGrid"></div>
+            </div>
+
+            <div class="fp-actions">
+                <button class="fp-play-btn" id="fpPlayBtn" disabled>Jugar</button>
+                <button class="fp-random-btn" id="fpRandomBtn">Aleatorio</button>
+            </div>
+
+            <div class="fp-journey-cta">
+                <a href="/elviajedeljaguar">&iquest;Quieres la historia completa? Comienza el viaje &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engine Section (hidden until game starts) -->
+    <section id="fpEngineArea" style="display:none;">
+        <header class="yg-header">
+            <button class="yg-back-btn" id="fpBackBtn" style="background:none;border:none;color:inherit;font:inherit;cursor:pointer;">&#8592; Volver a juegos</button>
+            <div class="yg-header-info">
+                <div class="yg-header-title">Juegos libres</div>
+                <div class="yg-header-subtitle">Modo libre</div>
+            </div>
+        </header>
+        <div class="yg-progress" id="yaguaraProgress"></div>
+        <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+        <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+        <nav class="yg-nav" id="yaguaraNav">
+            <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+            <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+        </nav>
+    </section>
+
+    <!-- Ad slot: bottom banner -->
+    <div class="ad-slot" id="adBottom"></div>
+
+    <script src="js/jaguar-api.js"></script>
+    <script src="js/ad-manager.js"></script>
+    <script src="js/yaguara-engine.js"></script>
+    <script src="js/freeplay-loader.js"></script>
+    <script>
+        // Initialize free play
+        FreePlayLoader.init();
+        AdManager.init();
+
+        // Back button returns to picker
+        document.getElementById('fpBackBtn').addEventListener('click', function() {
+            FreePlayLoader.showPicker();
+        });
+    </script>
+</body>
+</html>

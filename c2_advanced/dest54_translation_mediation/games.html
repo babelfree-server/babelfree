@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 54: El regreso a la selva &mdash; Traducci&oacute;n y mediaci&oacute;n</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_advanced/dest54_translation_mediation/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 54: El regreso a la selva — Traducción y mediación",
+          "url": "https://babelfree.com/c2_advanced/dest54_translation_mediation/games",
+          "educationalLevel": "C2 Advanced - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Translation and mediation", "Cross-linguistic competence", "Spanish proficiency"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Advanced", "item": "https://babelfree.com/c2-colombia" },
+            { "@type": "ListItem", "position": 4, "name": "El regreso a la selva — Traducción y mediación" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-colombia" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 54: El regreso a la selva</div>
+            <div class="yg-header-subtitle">Traducci&oacute;n y mediaci&oacute;n</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — El regreso ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 regresa al Choc\u00f3 donde todo comenz\u00f3 y descubre que su misi\u00f3n no es restaurar, sino traducir.',
+        text: 'Yaguar\u00e1 baj\u00f3 de Bogot\u00e1 siguiendo el curso del r\u00edo Atrato, y cuando la selva del Choc\u00f3 la recibi\u00f3 con su abrazo h\u00famedo y verde, sinti\u00f3 que el viaje se cerraba sobre s\u00ed mismo. Pero no era el mismo bosque, o quiz\u00e1 no era ella la misma. Antes, la selva le hablaba en sonidos que ella entend\u00eda sin pensar: el crujido de una rama, el canto de un tucán, el silencio que anuncia la lluvia. Ahora cargaba también otra lengua \u2014el español de cincuenta y tres destinos\u2014 y con ella, la capacidad de escuchar lo que los humanos decían sobre su bosque: los informes ambientales, los discursos políticos, las canciones de las comunidades afro. Comprendió que su papel ya no era nombrar ni argumentar ni analizar: era traducir. Ser el puente entre dos mundos que se necesitaban mutuamente pero que no se entendían.'
+    },
+    // === GAME 2: Narrative — Qué significa traducir ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la diferencia entre traducir palabras y traducir significados. Observa c\u00f3mo la mediaci\u00f3n va m\u00e1s all\u00e1 de la equivalencia ling\u00fc\u00edstica.',
+        text: 'La primera lecci\u00f3n lleg\u00f3 cuando una comunidad ember\u00e1 del r\u00edo Baud\u00f3 intent\u00f3 explicarle a un equipo de bi\u00f3logos que su palabra para \u00abr\u00edo\u00bb no significaba \u00abcurso de agua\u00bb: significaba \u00abcamino que respira\u00bb. Los bi\u00f3logos necesitaban datos h\u00eddricos; los ember\u00e1 estaban hablando de una entidad viva con derechos y voluntad. Traducir la frase era trivial; traducir el significado exig\u00eda algo que ning\u00fan diccionario pod\u00eda ofrecer: la comprensi\u00f3n profunda de dos cosmovisi\u00f3nes y la capacidad de construir un tercer espacio donde ambas pudieran encontrarse sin que ninguna perdiera su verdad. Eso era la mediaci\u00f3n intercultural: no buscar equivalencias, sino crear puentes donde antes solo hab\u00eda orillas opuestas.'
+    },
+    // === GAME 3: Narrative — Traducci\u00f3n como traici\u00f3n creativa ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el viejo dilema de la traducci\u00f3n: \u00abtraduttore, traditore\u00bb. Observa c\u00f3mo toda traducci\u00f3n implica una negociaci\u00f3n de p\u00e9rdidas y ganancias.',
+        text: 'Cóndor Viejo, que la había acompañado en los Andes, le había dicho una vez: \u00abDesde arriba, todo se ve distinto.\u00bb Pues bien, la traducción era exactamente eso: mirar la misma realidad desde otra altura y aceptar que algo siempre se pierde en el tránsito. El italiano lo resumía en un juego de palabras: traduttore, traditore \u2014traductor, traidor\u2014, porque traducir era inevitablemente traicionar algo del original. Pero Yaguará comprendió que la traición podía ser creativa: cuando García Márquez fue traducido al inglés por Gregory Rabassa, algo del ritmo caribeño se perdió, pero se ganó una cadencia que hizo que millones de angloparlantes sintieran el calor de Macondo en sus propias sílabas. Toda traducción era un duelo y una creación simultáneos: se enterraba una forma para que naciera otra.'
+    },
+    // === GAME 4: Narrative — Mediaci\u00f3n entre registros ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo la mediaci\u00f3n no solo ocurre entre lenguas, sino entre registros de una misma lengua.',
+        text: 'Yaguará descubrió que la mediación no requería dos idiomas diferentes: dentro del español mismo, traducir entre registros era una forma de mediación igualmente compleja. Un médico que le explica a un paciente su diagnóstico está traduciendo del registro técnico al coloquial. Un periodista que convierte un informe científico en una noticia comprensible está mediando entre la academia y el público. Un maestro que explica la gramática a un niño está traduciendo la metalengua a un lenguaje accesible. En cada caso, el mediador debía tomar decisiones: ¿qué simplificar sin falsear? ¿Qué matiz preservar a costa de la claridad? ¿Cuándo la precisión importaba más que la comprensión, y cuándo era al revés? No había fórmulas: solo juicio, empatía y dominio absoluto de ambos registros.'
+    },
+    // === GAME 5: Narrative — Las lenguas ind\u00edgenas de Colombia ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la riqueza ling\u00fc\u00edstica de Colombia y el desaf\u00edo de la mediaci\u00f3n entre el espa\u00f1ol y las lenguas originarias.',
+        text: 'En Colombia se hablan más de sesenta y cinco lenguas indígenas, dos lenguas criollas y la lengua romaní. Yaguará lo supo siempre: en su selva natal, el emberá, el wounaan y el español convivían en un equilibrio frágil. Pero ahora entendía que la mediación entre estas lenguas no era un problema técnico de vocabulario: era un problema político de poder. Cuando un líder wayúu debía defender los derechos de su comunidad ante un tribunal que solo operaba en español, ¿quién traducía? ¿Y qué se perdía cuando conceptos como \u00abterritorio ancestral\u00bb \u2014que en wayuunaiki cargaba generaciones de memoria colectiva\u2014 se convertía en una categoría jurídica del derecho colombiano? El mediador intercultural no era un técnico: era un guardián de significados que operaba en la frontera donde las lenguas se tocaban y, a veces, se herían.'
+    },
+    // === GAME 6: Narrative — El puente y la frontera ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 sobre la mediaci\u00f3n como vocaci\u00f3n del guardi\u00e1n.',
+        text: 'Sentada junto al río Atrato, Yaguará comprendió que traducir y mediar eran los actos lingüísticos más altos que existían, porque exigían todo lo que había aprendido a lo largo de tres mundos: la precisión del A1 para nombrar sin ambigüedad; la narrativa del B1 para contar la historia del otro; la argumentación del B2 para defender la posición de ambas partes; el análisis del C1 para identificar lo que se pierde y lo que se gana; y la síntesis del C2 para crear un espacio donde dos verdades pudieran coexistir sin destruirse mutuamente. El guardián no era quien hablaba más fuerte, ni quien hablaba más bonito: era quien escuchaba dos voces que no se entendían entre sí y encontraba las palabras para que una pudiera, al fin, escuchar a la otra.'
+    },
+    // === GAME 7: FIB — Conceptos de traducci\u00f3n y mediaci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones con el concepto de traducci\u00f3n o mediaci\u00f3n adecuado.',
+        sentences: [
+            { text: 'La traducci\u00f3n que prioriza la fidelidad al texto original sobre la naturalidad en la lengua meta se denomina traducci\u00f3n ___.', blank: 'literal', options: ['literal', 'libre', 'din\u00e1mica', 'funcional'] },
+            { text: 'La ___ cultural consiste en facilitar la comunicaci\u00f3n entre personas de diferentes marcos culturales.', blank: 'mediaci\u00f3n', options: ['mediaci\u00f3n', 'traducci\u00f3n', 'interpretaci\u00f3n', 'adaptaci\u00f3n'] },
+            { text: 'Cuando un int\u00e9rprete traduce simult\u00e1neamente mientras el orador habla, realiza interpretaci\u00f3n ___.', blank: 'simult\u00e1nea', options: ['simult\u00e1nea', 'consecutiva', 'bilateral', 'susurrada'] },
+            { text: 'La equivalencia ___ busca que el texto traducido produzca en el lector meta el mismo efecto que el original produce en el lector fuente.', blank: 'din\u00e1mica', options: ['din\u00e1mica', 'formal', 'literal', 'l\u00e9xica'] },
+            { text: 'Un texto que ha sido modificado culturalmente para un p\u00fablico diferente \u2014no solo traducido sino reconceptualizado\u2014 ha pasado por un proceso de ___.', blank: 'localizaci\u00f3n', options: ['localizaci\u00f3n', 'traducci\u00f3n', 'revisi\u00f3n', 'transcripci\u00f3n'] },
+            { text: 'El fen\u00f3meno por el cual un hablante biling\u00fce alterna entre dos lenguas en una misma conversaci\u00f3n se conoce como ___.', blank: 'alternancia de c\u00f3digo', options: ['alternancia de c\u00f3digo', 'interferencia', 'calco', 'pr\u00e9stamo'] },
+            { text: 'Una palabra que se incorpora de otra lengua sin traducci\u00f3n se denomina ___ ling\u00fc\u00edstico.', blank: 'pr\u00e9stamo', options: ['pr\u00e9stamo', 'calco', 'neologismo', 'extranjerismo'] },
+            { text: 'La expresi\u00f3n italiana traduttore, traditore resume el dilema de la ___ inherente a toda traducci\u00f3n.', blank: 'p\u00e9rdida', options: ['p\u00e9rdida', 'ganancia', 'dificultad', 'necesidad'] }
+        ]
+    },
+    // === GAME 8: FIB — Estrategias de mediaci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones sobre estrategias de mediaci\u00f3n ling\u00fc\u00edstica e intercultural.',
+        sentences: [
+            { text: 'Al mediar entre un texto t\u00e9cnico y un p\u00fablico general, la estrategia m\u00e1s com\u00fan es la ___ del contenido.', blank: 'simplificaci\u00f3n', options: ['simplificaci\u00f3n', 'ampliaci\u00f3n', 'omisi\u00f3n', 'repetici\u00f3n'] },
+            { text: 'Un ___ sem\u00e1ntico ocurre cuando se traduce literalmente una estructura de otra lengua, como \u00abrealizar\u00bb por \u00abto realize\u00bb (darse cuenta).', blank: 'calco', options: ['calco', 'pr\u00e9stamo', 'error', 'neologismo'] },
+            { text: 'Cuando un mediador reformula el mensaje de una parte para que la otra lo comprenda, emplea la ___.', blank: 'par\u00e1frasis', options: ['par\u00e1frasis', 'traducci\u00f3n', 'cita', 'repetici\u00f3n'] },
+            { text: 'La ___ es la t\u00e9cnica de traducci\u00f3n que sustituye un elemento cultural espec\u00edfico del texto fuente por otro equivalente en la cultura meta.', blank: 'adaptaci\u00f3n', options: ['adaptaci\u00f3n', 'modulaci\u00f3n', 'transposici\u00f3n', 'compensaci\u00f3n'] },
+            { text: 'Un mediador intercultural debe gestionar no solo la lengua sino tambi\u00e9n las ___ culturales impl\u00edcitas en cada mensaje.', blank: 'presuposiciones', options: ['presuposiciones', 'palabras', 'gram\u00e1ticas', 'pronunciaciones'] },
+            { text: 'La ___ consiste en cambiar la categor\u00eda gramatical de una expresi\u00f3n al traducirla (por ejemplo, un verbo por un sustantivo).', blank: 'transposici\u00f3n', options: ['transposici\u00f3n', 'modulaci\u00f3n', 'adaptaci\u00f3n', 'compensaci\u00f3n'] },
+            { text: 'Cuando lo que se pierde en un punto del texto se recupera en otro punto, el traductor emplea la ___.', blank: 'compensaci\u00f3n', options: ['compensaci\u00f3n', 'amplificaci\u00f3n', 'reducci\u00f3n', 'equivalencia'] },
+            { text: 'La ___ consiste en cambiar el punto de vista desde el cual se expresa una idea al traducirla.', blank: 'modulaci\u00f3n', options: ['modulaci\u00f3n', 'transposici\u00f3n', 'adaptaci\u00f3n', 'calco'] }
+        ]
+    },
+    // === GAME 9: FIB — Mediaci\u00f3n entre registros ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones sobre la mediaci\u00f3n entre registros dentro del espa\u00f1ol.',
+        sentences: [
+            { text: 'Un m\u00e9dico que explica \u00abhipertensi\u00f3n arterial\u00bb como \u00abpresi\u00f3n alta\u00bb est\u00e1 realizando una mediaci\u00f3n de ___.', blank: 'registro', options: ['registro', 'idioma', 'cultura', 'g\u00e9nero'] },
+            { text: 'Al simplificar un texto jur\u00eddico para el p\u00fablico general, se debe preservar la ___ sin sacrificar la accesibilidad.', blank: 'precisi\u00f3n', options: ['precisi\u00f3n', 'extensi\u00f3n', 'complejidad', 'formalidad'] },
+            { text: 'Un buen res\u00famen ejecutivo ___ la informaci\u00f3n sin distorsionar las conclusiones.', blank: 'condensa', options: ['condensa', 'elimina', 'repite', 'decora'] },
+            { text: 'La divulgaci\u00f3n cient\u00edfica es una forma de mediaci\u00f3n que transforma el discurso ___ en discurso p\u00fablico.', blank: 'especializado', options: ['especializado', 'formal', 'escrito', 'complejo'] },
+            { text: 'Al adaptar un texto acad\u00e9mico para adolescentes, es \u00fatil emplear ___ que conecten con su experiencia cotidiana.', blank: 'analog\u00edas', options: ['analog\u00edas', 'citas', 'estad\u00edsticas', 'tecnicismos'] },
+            { text: 'La mediaci\u00f3n textual exitosa requiere que el mediador domine tanto el registro ___ como el registro meta.', blank: 'fuente', options: ['fuente', 'alto', 'original', 'base'] },
+            { text: 'Un int\u00e9rprete de conferencias debe tomar decisiones de mediaci\u00f3n en ___ real, sin posibilidad de consultar diccionarios.', blank: 'tiempo', options: ['tiempo', 'espacio', 'contexto', 'momento'] },
+            { text: 'La nota al pie es un recurso de mediaci\u00f3n que permite al traductor ___ informaci\u00f3n cultural que el lector meta desconoce.', blank: 'a\u00f1adir', options: ['a\u00f1adir', 'eliminar', 'ocultar', 'resumir'] }
+        ]
+    },
+    // === GAME 10: FIB — Falsos amigos y trampas de traducci\u00f3n ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la traducci\u00f3n correcta al espa\u00f1ol. Cuidado con los falsos amigos y calcos.',
+        sentences: [
+            { text: 'En ingl\u00e9s, \u00abactually\u00bb no significa \u00abactualmente\u00bb sino ___.', blank: 'en realidad', options: ['en realidad', 'actualmente', 'de hecho', 'realmente'] },
+            { text: 'La palabra inglesa \u00absensible\u00bb se traduce al espa\u00f1ol como ___, no como \u00absensible\u00bb.', blank: 'sensato', options: ['sensato', 'sensible', 'sensitivo', 'razonable'] },
+            { text: '\u00abEventually\u00bb en ingl\u00e9s significa \u00ab___\u00bb, no \u00abeventualmente\u00bb.', blank: 'finalmente', options: ['finalmente', 'eventualmente', 'posiblemente', 'quiz\u00e1s'] },
+            { text: 'El portugu\u00e9s \u00abexquisito\u00bb significa \u00abextra\u00f1o\u00bb, mientras que en espa\u00f1ol \u00abexquisito\u00bb significa ___.', blank: 'de calidad suprema', options: ['de calidad suprema', 'extra\u00f1o', 'raro', 'poco com\u00fan'] },
+            { text: 'La expresi\u00f3n inglesa \u00abI am embarrassed\u00bb se traduce como \u00abestoy ___\u00bb, no como \u00abestoy embarazada\u00bb.', blank: 'avergonzado', options: ['avergonzado', 'embarazada', 'confundido', 'preocupado'] },
+            { text: '\u00abLibrary\u00bb en ingl\u00e9s es \u00ab___\u00bb en espa\u00f1ol, no \u00ablibrer\u00eda\u00bb.', blank: 'biblioteca', options: ['biblioteca', 'librer\u00eda', 'librería', 'archivo'] },
+            { text: 'El franc\u00e9s \u00abattendre\u00bb significa \u00ab___\u00bb, no \u00abatender\u00bb.', blank: 'esperar', options: ['esperar', 'atender', 'asistir', 'cuidar'] },
+            { text: 'La palabra \u00abcarpet\u00bb en ingl\u00e9s se traduce como \u00ab___\u00bb, no como \u00abcarpeta\u00bb.', blank: 'alfombra', options: ['alfombra', 'carpeta', 'moqueta', 'tapete'] }
+        ]
+    },
+    // === GAME 11: Conjugation — Verbos de mediaci\u00f3n y comunicaci\u00f3n ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga los verbos de mediaci\u00f3n y comunicaci\u00f3n en el tiempo y modo que exija el contexto.',
+        sentences: [
+            { text: 'El int\u00e9rprete ___ (traducir) simult\u00e1neamente mientras el orador hablaba.', blank: 'traduc\u00eda', verb: 'traducir', tense: 'pret\u00e9rito imperfecto' },
+            { text: 'Es fundamental que el mediador ___ (reformular) el mensaje sin alterarlo.', blank: 'reformule', verb: 'reformular', tense: 'presente de subjuntivo' },
+            { text: 'Si ___ (disponer, nosotros) de m\u00e1s tiempo, habr\u00edamos revisado la traducci\u00f3n.', blank: 'hubi\u00e9ramos dispuesto', verb: 'disponer', tense: 'pret\u00e9rito pluscuamperfecto de subjuntivo' },
+            { text: 'El documento ___ (requerir) una adaptaci\u00f3n cultural profunda.', blank: 'requiri\u00f3', verb: 'requerir', tense: 'pret\u00e9rito indefinido' },
+            { text: '___ (Transmitir, t\u00fa) el mensaje con fidelidad, pero sin rigidez.', blank: 'Transmite', verb: 'transmitir', tense: 'imperativo' },
+            { text: 'Cuando el mediador ___ (concluir) su intervenci\u00f3n, ambas partes se dieron la mano.', blank: 'concluy\u00f3', verb: 'concluir', tense: 'pret\u00e9rito indefinido' },
+            { text: 'La traductora espera que su versi\u00f3n ___ (reflejar) la intenci\u00f3n del autor.', blank: 'refleje', verb: 'reflejar', tense: 'presente de subjuntivo' },
+            { text: 'Los int\u00e9rpretes ___ (venir + preparar) el glosario desde hace semanas.', blank: 'vienen preparando', verb: 'venir + preparar', tense: 'per\u00edfrasis durativa' }
+        ]
+    },
+    // === GAME 12: Conjugation — Discurso reportado y citas ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Transforma las citas directas a discurso indirecto, conjugando el verbo en el tiempo correcto.',
+        sentences: [
+            { text: 'El l\u00edder dijo: \u00abNecesitamos un int\u00e9rprete.\u00bb \u2192 El l\u00edder dijo que ___ (necesitar) un int\u00e9rprete.', blank: 'necesitaban', verb: 'necesitar', tense: 'pret\u00e9rito imperfecto' },
+            { text: 'La traductora afirm\u00f3: \u00abHe terminado el encargo.\u00bb \u2192 La traductora afirm\u00f3 que ___ (terminar) el encargo.', blank: 'hab\u00eda terminado', verb: 'terminar', tense: 'pret\u00e9rito pluscuamperfecto' },
+            { text: 'El juez orden\u00f3: \u00abTraduzcan este documento.\u00bb \u2192 El juez orden\u00f3 que ___ (traducir) ese documento.', blank: 'tradujeran', verb: 'traducir', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: 'La delegaci\u00f3n pregunt\u00f3: \u00ab\u00bfCu\u00e1ndo estar\u00e1 lista la versi\u00f3n?\u00bb \u2192 La delegaci\u00f3n pregunt\u00f3 cu\u00e1ndo ___ (estar) lista la versi\u00f3n.', blank: 'estar\u00eda', verb: 'estar', tense: 'condicional simple' },
+            { text: 'El autor declar\u00f3: \u00abMi novela no puede traducirse literalmente.\u00bb \u2192 El autor declar\u00f3 que su novela no ___ (poder) traducirse literalmente.', blank: 'pod\u00eda', verb: 'poder', tense: 'pret\u00e9rito imperfecto' },
+            { text: 'La mediadora explic\u00f3: \u00abCuando traduzco, intento preservar la emoci\u00f3n.\u00bb \u2192 La mediadora explic\u00f3 que cuando ___ (traducir), intentaba preservar la emoci\u00f3n.', blank: 'traduc\u00eda', verb: 'traducir', tense: 'pret\u00e9rito imperfecto' },
+            { text: 'El comit\u00e9 solicit\u00f3: \u00abQueremos que la traducci\u00f3n est\u00e9 lista ma\u00f1ana.\u00bb \u2192 El comit\u00e9 solicit\u00f3 que la traducci\u00f3n ___ (estar) lista al d\u00eda siguiente.', blank: 'estuviera', verb: 'estar', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: 'Los ancianos afirmaron: \u00abNuestra lengua siempre ha nombrado el r\u00edo como ser vivo.\u00bb \u2192 Los ancianos afirmaron que su lengua siempre ___ (nombrar) el r\u00edo como ser vivo.', blank: 'hab\u00eda nombrado', verb: 'nombrar', tense: 'pret\u00e9rito pluscuamperfecto' }
+        ]
+    },
+    // === GAME 13: Conjugation — Subjuntivo en contextos de mediaci\u00f3n ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga en subjuntivo. La mediaci\u00f3n est\u00e1 llena de expresiones que exigen este modo: deseos, peticiones, dudas, valoraciones.',
+        sentences: [
+            { text: 'Es imprescindible que el int\u00e9rprete ___ (mantener) la neutralidad.', blank: 'mantenga', verb: 'mantener', tense: 'presente de subjuntivo' },
+            { text: 'Las partes solicitaron que se ___ (buscar) un mediador imparcial.', blank: 'buscara', verb: 'buscar', tense: 'pret\u00e9rito imperfecto de subjuntivo' },
+            { text: 'No es seguro que la traducci\u00f3n autom\u00e1tica ___ (captar) los matices pragm\u00e1ticos.', blank: 'capte', verb: 'captar', tense: 'presente de subjuntivo' },
+            { text: 'Habr\u00eda sido deseable que el documento se ___ (revisar) antes de su publicaci\u00f3n.', blank: 'hubiera revisado', verb: 'revisar', tense: 'pret\u00e9rito pluscuamperfecto de subjuntivo' },
+            { text: 'Quien ___ (ejercer) de int\u00e9rprete jurado deber\u00e1 acreditar su competencia.', blank: 'ejerciere', verb: 'ejercer', tense: 'futuro de subjuntivo' },
+            { text: 'Esperamos que la mediaci\u00f3n ___ (conducir) a un acuerdo satisfactorio.', blank: 'conduzca', verb: 'conducir', tense: 'presente de subjuntivo' },
+            { text: 'Aunque el texto ___ (parecer) simple, su traducci\u00f3n encierra trampas culturales.', blank: 'parezca', verb: 'parecer', tense: 'presente de subjuntivo' },
+            { text: 'Si la comunidad ___ (contar) con int\u00e9rpretes certificados, la situaci\u00f3n ser\u00eda distinta.', blank: 'contara', verb: 'contar', tense: 'pret\u00e9rito imperfecto de subjuntivo' }
+        ]
+    },
+    // === GAME 14: Pair — T\u00e9cnica de traducci\u00f3n y definici\u00f3n ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada t\u00e9cnica de traducci\u00f3n con su definici\u00f3n.',
+        pairs: [
+            ['Traducci\u00f3n literal', 'Trasladar palabra por palabra respetando la estructura de la lengua meta'],
+            ['Transposici\u00f3n', 'Cambiar la categor\u00eda gramatical sin alterar el sentido'],
+            ['Modulaci\u00f3n', 'Cambiar el punto de vista o la perspectiva cognitiva'],
+            ['Adaptaci\u00f3n', 'Sustituir un referente cultural por otro equivalente en la cultura meta'],
+            ['Compensaci\u00f3n', 'Recuperar en otro punto del texto lo que se perdi\u00f3 en la traducci\u00f3n'],
+            ['Pr\u00e9stamo', 'Incorporar la palabra original sin traducirla'],
+            ['Calco', 'Traducir literalmente una expresi\u00f3n extranjera, creando un molde nuevo'],
+            ['Amplificaci\u00f3n', 'A\u00f1adir elementos para que el texto meta sea comprensible']
+        ]
+    },
+    // === GAME 15: Pair — Falso amigo y significado real ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada falso amigo ingl\u00e9s-espa\u00f1ol con su significado real en espa\u00f1ol.',
+        pairs: [
+            ['Actually (ingl\u00e9s)', 'En realidad, de hecho'],
+            ['Constipated (ingl\u00e9s)', 'Estre\u00f1ido (no constipado/resfriado)'],
+            ['Fabric (ingl\u00e9s)', 'Tela, tejido (no f\u00e1brica)'],
+            ['Realize (ingl\u00e9s)', 'Darse cuenta (no realizar)'],
+            ['Lecture (ingl\u00e9s)', 'Conferencia, clase magistral (no lectura)'],
+            ['Assist (ingl\u00e9s)', 'Ayudar (no asistir/estar presente)'],
+            ['Bizarre (ingl\u00e9s)', 'Extra\u00f1o (no bizarro/valiente)'],
+            ['Exit (ingl\u00e9s)', 'Salida (no \u00e9xito)']
+        ]
+    },
+    // === GAME 16: Pair — Expresi\u00f3n idiom\u00e1tica y equivalente ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada expresi\u00f3n idiom\u00e1tica con su equivalente funcional en la otra lengua. La traducci\u00f3n idiom\u00e1tica nunca es literal.',
+        pairs: [
+            ['It\u2019s raining cats and dogs (ingl\u00e9s)', 'Llueve a c\u00e1ntaros'],
+            ['Avoir le cafard (franc\u00e9s)', 'Estar deprimido, tener la moral baja'],
+            ['Dar gato por liebre (espa\u00f1ol)', 'To pull the wool over someone\u2019s eyes'],
+            ['Ins Fettn\u00e4pfchen treten (alem\u00e1n)', 'Meter la pata'],
+            ['Tener p\u00e1jaros en la cabeza', 'To have one\u2019s head in the clouds'],
+            ['Costar un ojo de la cara', 'To cost an arm and a leg'],
+            ['No tener pelos en la lengua', 'Not to mince words'],
+            ['Estar en las nubes', '\u00catre dans la lune (franc\u00e9s)']
+        ]
+    },
+    // === GAME 17: Listening — Mediaci\u00f3n en acci\u00f3n ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Lee el siguiente di\u00e1logo donde un mediador intercultural interviene entre una comunidad ind\u00edgena y un equipo de investigadores. Analiza las estrategias de mediaci\u00f3n.',
+        text: 'Investigador: \u00abNecesitamos recolectar muestras de suelo en un radio de 500 metros desde el punto de referencia geogr\u00e1fico.\u00bb Mediadora: \u00abEl equipo quiere estudiar la tierra alrededor del \u00e1rbol grande junto al r\u00edo, en un \u00e1rea como del tama\u00f1o de la parcela de don Alberto, para entender c\u00f3mo est\u00e1 la salud de la tierra.\u00bb L\u00edder comunitario: \u00abPrimero deben pedirle permiso a la tierra. No se saca nada sin hablar con ella.\u00bb Mediadora (al investigador): \u00abLa comunidad tiene un protocolo de acceso al territorio que incluye una ceremonia de permiso. Es un requisito cultural no negociable y tambi\u00e9n tiene sentido pr\u00e1ctico: les permitir\u00e1 contar con la cooperaci\u00f3n plena de la comunidad durante el estudio.\u00bb',
+        questions: [
+            { q: '\u00bfQu\u00e9 estrategia usa la mediadora al reformular el mensaje del investigador para la comunidad?', options: ['Sustituye t\u00e9rminos t\u00e9cnicos por referencias concretas del entorno local', 'Traduce palabra por palabra', 'Omite informaci\u00f3n para simplificar', 'Usa un tono m\u00e1s autoritario'], answer: 'Sustituye t\u00e9rminos t\u00e9cnicos por referencias concretas del entorno local' },
+            { q: '\u00bfC\u00f3mo reformula la mediadora la petici\u00f3n del l\u00edder comunitario para el investigador?', options: ['Traduce el requisito cultural a un argumento pr\u00e1ctico que el investigador pueda valorar', 'Elimina la referencia espiritual por considerarla irrelevante', 'Le dice al investigador que la comunidad se niega a colaborar', 'Traduce literalmente la frase sobre hablar con la tierra'], answer: 'Traduce el requisito cultural a un argumento pr\u00e1ctico que el investigador pueda valorar' },
+            { q: '\u00bfQu\u00e9 principio de mediaci\u00f3n demuestra la intervenci\u00f3n de la mediadora?', options: ['Respetar las dos cosmovisi\u00f3nes y construir un puente funcional entre ambas', 'Priorizar la visi\u00f3n cient\u00edfica sobre la cultural', 'Imponer la visi\u00f3n comunitaria al investigador', 'Reducir el conflicto evitando el tema'], answer: 'Respetar las dos cosmovisi\u00f3nes y construir un puente funcional entre ambas' }
+        ]
+    },
+    // === GAME 18: Listening — Problemas de traducci\u00f3n literaria ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Lee sobre un problema real de traducci\u00f3n literaria y analiza las decisiones del traductor.',
+        text: 'Cuando Gregory Rabassa tradujo el inicio de Cien a\u00f1os de soledad \u2014\u00abMuchos a\u00f1os despu\u00e9s, frente al pelot\u00f3n de fusilamiento, el coronel Aureliano Buend\u00eda hab\u00eda de recordar aquella tarde remota en que su padre lo llev\u00f3 a conocer el hielo\u00bb\u2014 tuvo que decidir c\u00f3mo traducir \u00abhab\u00eda de recordar\u00bb: una per\u00edfrasis que en espa\u00f1ol expresa fatalidad, destino inevitable, algo que est\u00e1 escrito. \u00abWas to remember\u00bb captura la obligaci\u00f3n pero pierde la fatalidad po\u00e9tica. \u00abWould remember\u00bb captura la predicci\u00f3n pero pierde la inevitabilidad. Rabassa eligi\u00f3 \u00abwas to remember\u00bb, y esa decisi\u00f3n marc\u00f3 el tono de toda la novela en ingl\u00e9s.',
+        questions: [
+            { q: '\u00bfQu\u00e9 matiz tiene \u00abhab\u00eda de recordar\u00bb en espa\u00f1ol que es dif\u00edcil de traducir?', options: ['Fatalidad: algo que el destino ha determinado que ocurrir\u00e1, no una simple predicci\u00f3n', 'Obligaci\u00f3n: algo que el coronel ten\u00eda que hacer', 'Probabilidad: algo que quiz\u00e1s ocurri\u00f3', 'Duda: algo que no se sabe si ocurri\u00f3'], answer: 'Fatalidad: algo que el destino ha determinado que ocurrir\u00e1, no una simple predicci\u00f3n' },
+            { q: '\u00bfPor qu\u00e9 la elecci\u00f3n del traductor marc\u00f3 el tono de toda la novela?', options: ['Porque la primera frase establece la voz narrativa, y cada opci\u00f3n de traducci\u00f3n lleva consigo un universo de connotaciones', 'Porque era la frase m\u00e1s larga del libro', 'Porque Garc\u00eda M\u00e1rquez se opuso a la traducci\u00f3n', 'Porque el ingl\u00e9s no tiene tiempos verbales equivalentes'], answer: 'Porque la primera frase establece la voz narrativa, y cada opci\u00f3n de traducci\u00f3n lleva consigo un universo de connotaciones' },
+            { q: '\u00bfQu\u00e9 demuestra este ejemplo sobre la naturaleza de la traducci\u00f3n literaria?', options: ['Que traducir no es trasladar palabras sino negociar p\u00e9rdidas: toda elecci\u00f3n gana algo y sacrifica algo', 'Que el espa\u00f1ol es superior al ingl\u00e9s', 'Que la traducci\u00f3n literaria es imposible', 'Que solo el autor puede traducir su propia obra'], answer: 'Que traducir no es trasladar palabras sino negociar p\u00e9rdidas: toda elecci\u00f3n gana algo y sacrifica algo' }
+        ]
+    },
+    // === GAME 19: Sorting — Tipos de mediaci\u00f3n ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada situaci\u00f3n seg\u00fan el tipo de mediaci\u00f3n que requiere.',
+        categories: ['Mediaci\u00f3n interling\u00fc\u00edstica', 'Mediaci\u00f3n intralingüística', 'Mediaci\u00f3n intercultural'],
+        items: [
+            { text: 'Traducir un contrato del ingl\u00e9s al espa\u00f1ol', category: 'Mediaci\u00f3n interling\u00fc\u00edstica' },
+            { text: 'Explicar un diagn\u00f3stico m\u00e9dico a un paciente sin formaci\u00f3n cient\u00edfica', category: 'Mediaci\u00f3n intralingüística' },
+            { text: 'Facilitar el di\u00e1logo entre una comunidad ind\u00edgena y una empresa minera', category: 'Mediaci\u00f3n intercultural' },
+            { text: 'Interpretar una conferencia del \u00e1rabe al espa\u00f1ol', category: 'Mediaci\u00f3n interling\u00fc\u00edstica' },
+            { text: 'Resumir un art\u00edculo acad\u00e9mico para un peri\u00f3dico', category: 'Mediaci\u00f3n intralingüística' },
+            { text: 'Ayudar a un inmigrante a entender las normas sociales del pa\u00eds de acogida', category: 'Mediaci\u00f3n intercultural' },
+            { text: 'Subtitular una pel\u00edcula del franc\u00e9s al espa\u00f1ol', category: 'Mediaci\u00f3n interling\u00fc\u00edstica' },
+            { text: 'Adaptar un cuento infantil para lectores con discapacidad intelectual', category: 'Mediaci\u00f3n intralingüística' },
+            { text: 'Negociar entre las expectativas de una familia colombiana y una japonesa en un intercambio estudiantil', category: 'Mediaci\u00f3n intercultural' }
+        ]
+    },
+    // === GAME 20: Sorting — T\u00e9cnicas de traducci\u00f3n aplicadas ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada ejemplo de traducci\u00f3n seg\u00fan la t\u00e9cnica empleada.',
+        categories: ['Adaptaci\u00f3n cultural', 'Pr\u00e9stamo', 'Calco', 'Modulaci\u00f3n'],
+        items: [
+            { text: 'Traducir \u00abhot dog\u00bb como \u00abperrito caliente\u00bb', category: 'Calco' },
+            { text: 'Usar \u00absoftware\u00bb directamente en espa\u00f1ol', category: 'Pr\u00e9stamo' },
+            { text: 'Traducir \u00abGod bless you\u00bb (al estornudar) como \u00ab\u00a1Salud!\u00bb', category: 'Adaptaci\u00f3n cultural' },
+            { text: 'Traducir \u00abHe ran away\u00bb como \u00abPuso pies en polvorosa\u00bb', category: 'Modulaci\u00f3n' },
+            { text: 'Usar \u00abmarketing\u00bb en un texto en espa\u00f1ol', category: 'Pr\u00e9stamo' },
+            { text: 'Traducir \u00abskyscraper\u00bb como \u00abrascacielos\u00bb', category: 'Calco' },
+            { text: 'Traducir \u00abIt is not difficult\u00bb como \u00abEs f\u00e1cil\u00bb', category: 'Modulaci\u00f3n' },
+            { text: 'Cambiar \u00abThanksgiving\u00bb por una referencia local al D\u00eda de Acci\u00f3n de Gracias con explicaci\u00f3n', category: 'Adaptaci\u00f3n cultural' }
+        ]
+    },
+    // === GAME 21: Sorting — Lo traducible y lo intraducible ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada elemento seg\u00fan su grado de traducibilidad.',
+        categories: ['F\u00e1cilmente traducible', 'Traducible con p\u00e9rdida', 'Pr\u00e1cticamente intraducible'],
+        items: [
+            { text: 'Un n\u00famero de tel\u00e9fono', category: 'F\u00e1cilmente traducible' },
+            { text: 'Un juego de palabras basado en homon\u00edmia', category: 'Pr\u00e1cticamente intraducible' },
+            { text: 'Una met\u00e1fora universal (la vida es un viaje)', category: 'F\u00e1cilmente traducible' },
+            { text: 'El sistema de tratamiento t\u00fa/usted/vos al ingl\u00e9s', category: 'Traducible con p\u00e9rdida' },
+            { text: 'Un poema cuyo significado depende de la rima y el ritmo', category: 'Pr\u00e1cticamente intraducible' },
+            { text: 'Instrucciones t\u00e9cnicas de un electrodom\u00e9stico', category: 'F\u00e1cilmente traducible' },
+            { text: 'Una referencia cultural local (\u00abm\u00e1s perdido que el hijo de Lindbergh\u00bb)', category: 'Traducible con p\u00e9rdida' },
+            { text: 'La distinci\u00f3n ser/estar al ingl\u00e9s', category: 'Traducible con p\u00e9rdida' },
+            { text: 'Una onomatopeya culturalmente espec\u00edfica (el gallo dice \u00abquiquiriqu\u00ed\u00bb / \u00abcock-a-doodle-doo\u00bb)', category: 'Pr\u00e1cticamente intraducible' }
+        ]
+    },
+    // === GAME 22: Builder — Reformulaci\u00f3n mediadora ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una reformulaci\u00f3n mediadora que traduzca un concepto t\u00e9cnico a lenguaje accesible.',
+        words: ['Lo que el informe quiere decir', 'es que la calidad del agua', 'del r\u00edo ha empeorado', 'porque las f\u00e1bricas', 'est\u00e1n vertiendo', 'sustancias contaminantes,', 'y eso afecta directamente', 'la salud de las personas', 'que beben de ese r\u00edo.'],
+        answer: 'Lo que el informe quiere decir es que la calidad del agua del r\u00edo ha empeorado porque las f\u00e1bricas est\u00e1n vertiendo sustancias contaminantes, y eso afecta directamente la salud de las personas que beben de ese r\u00edo.'
+    },
+    // === GAME 23: Builder — Oraci\u00f3n acad\u00e9mica sobre traducci\u00f3n ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una afirmaci\u00f3n acad\u00e9mica sobre la teor\u00eda de la traducci\u00f3n.',
+        words: ['La equivalencia din\u00e1mica,', 'propuesta por Eugene Nida,', 'sostiene que el objetivo', 'de la traducci\u00f3n no es', 'reproducir la forma del original,', 'sino producir en el lector meta', 'un efecto equivalente', 'al que el texto fuente produce', 'en su lector original.'],
+        answer: 'La equivalencia din\u00e1mica, propuesta por Eugene Nida, sostiene que el objetivo de la traducci\u00f3n no es reproducir la forma del original, sino producir en el lector meta un efecto equivalente al que el texto fuente produce en su lector original.'
+    },
+    // === GAME 24: Builder — Mediaci\u00f3n diplom\u00e1tica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para construir una intervenci\u00f3n mediadora diplom\u00e1tica.',
+        words: ['Entiendo la preocupaci\u00f3n', 'de ambas partes,', 'y creo que el punto', 'en com\u00fan es que', 'todos buscan proteger', 'el bienestar de la comunidad,', 'aunque difieren', 'en los medios', 'para lograrlo.'],
+        answer: 'Entiendo la preocupaci\u00f3n de ambas partes, y creo que el punto en com\u00fan es que todos buscan proteger el bienestar de la comunidad, aunque difieren en los medios para lograrlo.'
+    },
+    // === GAME 25: Translation — Mediaci\u00f3n de texto t\u00e9cnico a accesible ===
+    {
+        type: 'translation',
+        label: 'Mediaci\u00f3n textual',
+        instruction: 'Empareja cada fragmento t\u00e9cnico con su reformulaci\u00f3n accesible para el p\u00fablico general.',
+        pairs: [
+            { source: 'Se detect\u00f3 una concentraci\u00f3n de part\u00edculas PM2.5 superior a los l\u00edmites permisibles.', target: 'El aire est\u00e1 contaminado con part\u00edculas tan peque\u00f1as que entran directamente a los pulmones.' },
+            { source: 'El \u00edndice de Gini del pa\u00eds se sit\u00faa en 0,54, lo que evidencia una marcada desigualdad distributiva.', target: 'La riqueza del pa\u00eds est\u00e1 muy mal repartida: unos pocos tienen mucho y muchos tienen muy poco.' },
+            { source: 'El paciente presenta un cuadro de hiperglucemia cr\u00f3nica compatible con diabetes mellitus tipo 2.', target: 'El az\u00facar en la sangre del paciente ha estado alto durante mucho tiempo, lo que indica diabetes.' },
+            { source: 'La sentencia declar\u00f3 la inconstitucionalidad sobrevenida de la disposici\u00f3n impugnada.', target: 'El tribunal decidi\u00f3 que esa ley, que antes era v\u00e1lida, ya no es compatible con la Constituci\u00f3n.' }
+        ]
+    },
+    // === GAME 26: Translation — Adaptaci\u00f3n cultural de expresiones ===
+    {
+        type: 'translation',
+        label: 'Adaptaci\u00f3n cultural',
+        instruction: 'Empareja cada expresi\u00f3n colombiana con la versi\u00f3n que un mediador usar\u00eda para un p\u00fablico internacional hispanohablante.',
+        pairs: [
+            { source: '\u00abMe regal\u00f3 un tinto y nos pusimos a echar carreta.\u00bb', target: 'Me ofreci\u00f3 un caf\u00e9 y nos pusimos a conversar largo rato.' },
+            { source: '\u00abEse man es una nota, parcero.\u00bb', target: 'Ese tipo es incre\u00edble, amigo.' },
+            { source: '\u00abEstoy mamado de tanto tr\u00e1mite.\u00bb', target: 'Estoy agotado de tanta burocracia.' },
+            { source: '\u00abLa vaina se puso tenaz cuando lleg\u00f3 la polic\u00eda.\u00bb', target: 'La situaci\u00f3n se complic\u00f3 mucho cuando lleg\u00f3 la polic\u00eda.' }
+        ]
+    },
+    // === GAME 27: Conversation — Mediaci\u00f3n en un conflicto comunitario ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Act\u00faas como mediador entre una empresa de turismo ecol\u00f3gico y una comunidad afrodescendiente del Pac\u00edfico. Elige la intervenci\u00f3n m\u00e1s apropiada en cada momento.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'Empresa', text: 'Queremos construir caba\u00f1as de lujo junto al manglar. Traer\u00e1 empleo y desarrollo a la zona.' },
+                    { speaker: 'C', name: 'Comunidad', text: 'Ese manglar es nuestro sustento. De ah\u00ed sacamos el piangua. Si lo tocan, nos quitan la comida.' },
+                    { speaker: 'B', name: 'Mediador (t\u00fa)', text: '' }
+                ],
+                options: [
+                    'Ambas partes comparten un inter\u00e9s en el bienestar de la zona, pero tienen visiones diferentes de lo que eso significa. \u00bfPodr\u00edamos explorar un modelo que combine la actividad tur\u00edstica con la preservaci\u00f3n del manglar y la econom\u00eda tradicional del piangua?',
+                    'La empresa tiene raz\u00f3n: el turismo trae desarrollo.',
+                    'La comunidad tiene raz\u00f3n: el manglar no se toca.',
+                    'Hay que hacer un estudio de impacto ambiental y punto.'
+                ],
+                correct: 'Ambas partes comparten un inter\u00e9s en el bienestar de la zona, pero tienen visiones diferentes de lo que eso significa. \u00bfPodr\u00edamos explorar un modelo que combine la actividad tur\u00edstica con la preservaci\u00f3n del manglar y la econom\u00eda tradicional del piangua?'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Empresa', text: 'No entendemos por qu\u00e9 se niegan. Les estamos ofreciendo trabajo bien pagado.' },
+                    { speaker: 'B', name: 'Mediador (t\u00fa)', text: '' }
+                ],
+                options: [
+                    'Comprendo su perspectiva. Lo que la comunidad expresa no es un rechazo al empleo, sino la defensa de un sistema econ\u00f3mico y cultural propio. El piangua no es solo alimento: es identidad, tradici\u00f3n y autonom\u00eda. Cualquier propuesta que funcione deber\u00e1 integrar esa realidad.',
+                    'Es que son tercos. As\u00ed son las comunidades.',
+                    'Ofr\u00e9zcanles m\u00e1s dinero y aceptan.',
+                    'Deben respetar la decisi\u00f3n de la comunidad sin cuestionar.'
+                ],
+                correct: 'Comprendo su perspectiva. Lo que la comunidad expresa no es un rechazo al empleo, sino la defensa de un sistema econ\u00f3mico y cultural propio. El piangua no es solo alimento: es identidad, tradici\u00f3n y autonom\u00eda. Cualquier propuesta que funcione deber\u00e1 integrar esa realidad.'
+            },
+            {
+                lines: [
+                    { speaker: 'C', name: 'Comunidad', text: 'Los \u00fanicos que siempre ganan son ellos. Nosotros ponemos la tierra y nos quedamos sin nada.' },
+                    { speaker: 'B', name: 'Mediador (t\u00fa)', text: '' }
+                ],
+                options: [
+                    'Escucho su desconfianza y es leg\u00edtima, porque tiene fundamento hist\u00f3rico. Por eso, cualquier acuerdo deber\u00eda incluir garant\u00edas concretas: participaci\u00f3n comunitaria en la toma de decisiones, reparto equitativo de beneficios y cl\u00e1usulas de protecci\u00f3n del manglar verificables por ustedes mismos.',
+                    'No generalicen. Esta empresa es diferente.',
+                    'Tienen toda la raz\u00f3n. No conf\u00eden en nadie.',
+                    'Es un problema del pasado. Ahora las cosas son distintas.'
+                ],
+                correct: 'Escucho su desconfianza y es leg\u00edtima, porque tiene fundamento hist\u00f3rico. Por eso, cualquier acuerdo deber\u00eda incluir garant\u00edas concretas: participaci\u00f3n comunitaria en la toma de decisiones, reparto equitativo de beneficios y cl\u00e1usulas de protecci\u00f3n del manglar verificables por ustedes mismos.'
+            }
+        ]
+    },
+    // === GAME 28: Conversation — Int\u00e9rprete en un contexto m\u00e9dico ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Eres int\u00e9rprete entre un m\u00e9dico y un paciente cuyo espa\u00f1ol es limitado. Media entre el lenguaje t\u00e9cnico y la comprensi\u00f3n del paciente.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'M\u00e9dico', text: 'Los an\u00e1lisis revelan que el paciente presenta hipertensi\u00f3n arterial en estadio 2. Necesitamos iniciar terapia farmacol\u00f3gica con un inhibidor de la ECA.' },
+                    { speaker: 'B', name: 'Int\u00e9rprete (t\u00fa)', text: '' }
+                ],
+                options: [
+                    'El doctor dice que tu presi\u00f3n est\u00e1 bastante alta. Necesita recetarte una pastilla que ayuda a bajarla. Es importante tomarla todos los d\u00edas.',
+                    'Los an\u00e1lisis revelan hipertensi\u00f3n arterial en estadio 2. Necesitan un inhibidor de la ECA.',
+                    'El doctor dice que est\u00e1s muy enfermo y necesitas muchas medicinas.',
+                    'Tienes algo en la sangre. El doctor te va a dar unas pastillas.'
+                ],
+                correct: 'El doctor dice que tu presi\u00f3n est\u00e1 bastante alta. Necesita recetarte una pastilla que ayuda a bajarla. Es importante tomarla todos los d\u00edas.'
+            },
+            {
+                lines: [
+                    { speaker: 'C', name: 'Paciente', text: 'Pero es que yo me siento bien. No me duele nada. \u00bfPara qu\u00e9 tomar pastillas si no estoy enfermo?' },
+                    { speaker: 'B', name: 'Int\u00e9rprete (t\u00fa al m\u00e9dico)', text: '' }
+                ],
+                options: [
+                    'El paciente dice que se siente bien f\u00edsicamente y no comprende por qu\u00e9 necesita medicaci\u00f3n si no tiene s\u00edntomas. Ser\u00eda \u00fatil que le explique por qu\u00e9 la hipertensi\u00f3n es peligrosa aunque no duela.',
+                    'Dice que no quiere tomar las pastillas.',
+                    'El paciente se niega al tratamiento por razones culturales.',
+                    'No entiende nada de lo que usted dice, doctor.'
+                ],
+                correct: 'El paciente dice que se siente bien f\u00edsicamente y no comprende por qu\u00e9 necesita medicaci\u00f3n si no tiene s\u00edntomas. Ser\u00eda \u00fatil que le explique por qu\u00e9 la hipertensi\u00f3n es peligrosa aunque no duela.'
+            }
+        ]
+    },
+    // === GAME 29: Dictation — Pasaje sobre traducci\u00f3n ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje sobre la naturaleza de la traducci\u00f3n.',
+        text: 'Traducir no es sustituir palabras de una lengua por palabras de otra: es trasladar un mundo entero a otro mundo, aceptando que algo siempre se perder\u00e1 en el trayecto y que algo nuevo, imprevisto y a veces m\u00e1s bello que el original, nacer\u00e1 en su lugar.'
+    },
+    // === GAME 30: Dictation — Pasaje sobre mediaci\u00f3n intercultural ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje sobre la mediaci\u00f3n intercultural en Colombia.',
+        text: 'La mediaci\u00f3n intercultural en un pa\u00eds como Colombia, donde conviven m\u00e1s de sesenta y cinco lenguas ind\u00edgenas con el espa\u00f1ol, no es un lujo acad\u00e9mico sino una necesidad pol\u00edtica: sin mediadores capaces de construir puentes entre cosmovisi\u00f3nes, el di\u00e1logo entre el Estado y los pueblos originarios se reduce a un mon\u00f3logo disfrazado.'
+    },
+    // === GAME 31: Story — La intraducibilidad creativa ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este texto sobre conceptos intraducibles y responde las preguntas de comprensi\u00f3n.',
+        text: 'Hay palabras que se resisten a la traducci\u00f3n como un gato se resiste al ba\u00f1o: con toda su energ\u00eda y sin ninguna raz\u00f3n que el traductor pueda refutar. El portugu\u00e9s \u00absaudade\u00bb \u2014esa nostalgia dulce de algo amado que se ha perdido o que quiz\u00e1 nunca se tuvo\u2014 no es \u00abnostalgia\u00bb en espa\u00f1ol, porque la nostalgia due le y la saudade se saborea. El japon\u00e9s \u00abwabi-sabi\u00bb \u2014la belleza de lo imperfecto, lo efímero, lo incompleto\u2014 necesita un p\u00e1rrafo entero donde en japon\u00e9s basta una palabra.\n\nPero la intraducibilidad no es una derrota: es una invitaci\u00f3n. Cuando un concepto no cabe en otra lengua, el traductor tiene tres opciones: pedir prestada la palabra original (\u00absaudade\u00bb, sin traducir), crear una imagen equivalente (\u00abesq nostalgia gozosa\u00bb), o aceptar que el vac\u00edo es el mensaje: hay experiencias humanas que solo existen plenamente en la lengua que las nombr\u00f3 primero, y esa es la prueba m\u00e1s hermosa de que cada idioma es un universo \u00fanico e irrepetible.',
+        questions: [
+            {
+                q: '\u00bfPor qu\u00e9 dice el texto que \u00absaudade\u00bb no es exactamente \u00abnostalgia\u00bb?',
+                options: ['Porque la nostalgia implica dolor, mientras que la saudade incluye un componente de goce en el recuerdo', 'Porque son palabras de idiomas diferentes', 'Porque la saudade solo se refiere al pasado', 'Porque la nostalgia es m\u00e1s fuerte que la saudade'],
+                answer: 'Porque la nostalgia implica dolor, mientras que la saudade incluye un componente de goce en el recuerdo'
+            },
+            {
+                q: '\u00bfCu\u00e1les son las tres estrategias que propone el texto ante lo intraducible?',
+                options: ['Pr\u00e9stamo de la palabra original, creaci\u00f3n de una imagen equivalente, o aceptaci\u00f3n del vac\u00edo como mensaje', 'Traducci\u00f3n literal, par\u00e1frasis y omisi\u00f3n', 'Diccionario, int\u00e9rprete y traductor autom\u00e1tico', 'Simplificaci\u00f3n, amplificaci\u00f3n y nota al pie'],
+                answer: 'Pr\u00e9stamo de la palabra original, creaci\u00f3n de una imagen equivalente, o aceptaci\u00f3n del vac\u00edo como mensaje'
+            },
+            {
+                q: '\u00bfQu\u00e9 conclusi\u00f3n extrae el texto de la existencia de palabras intraducibles?',
+                options: ['Que cada idioma es un universo \u00fanico que captura experiencias humanas que solo existen plenamente en esa lengua', 'Que la traducci\u00f3n es imposible y no deber\u00eda intentarse', 'Que unas lenguas son m\u00e1s ricas que otras', 'Que la tecnolog\u00eda resolver\u00e1 todos los problemas de traducci\u00f3n'],
+                answer: 'Que cada idioma es un universo \u00fanico que captura experiencias humanas que solo existen plenamente en esa lengua'
+            },
+            {
+                q: '\u00bfQu\u00e9 recurso estil\u00edstico emplea el texto al comparar las palabras intraducibles con un gato que se resiste al ba\u00f1o?',
+                options: ['Un s\u00edmil humor\u00edstico que humaniza un concepto abstracto y hace la lectura accesible', 'Una met\u00e1fora muerta sin efecto estil\u00edstico', 'Una iron\u00eda que ridiculiza la traducci\u00f3n', 'Una hip\u00e9rbole que exagera la dificultad'],
+                answer: 'Un s\u00edmil humor\u00edstico que humaniza un concepto abstracto y hace la lectura accesible'
+            }
+        ]
+    },
+    // === GAME 32: Story — Texto acad\u00e9mico sobre mediaci\u00f3n ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este fragmento acad\u00e9mico sobre mediaci\u00f3n y responde las preguntas.',
+        text: 'El Marco Com\u00fan Europeo de Referencia para las Lenguas (MCER) incorpor\u00f3 en su actualizaci\u00f3n de 2018 la mediaci\u00f3n como cuarta actividad ling\u00fc\u00edstica, junto a la comprensi\u00f3n, la expresi\u00f3n y la interacci\u00f3n. Este reconocimiento institucional reflejaba un cambio de paradigma: el usuario de una lengua no solo comprende, produce e interact\u00faa, sino que tambi\u00e9n act\u00faa como puente entre interlocutores que no comparten el mismo c\u00f3digo ling\u00fc\u00edstico, el mismo nivel de especializaci\u00f3n o el mismo marco cultural.\n\nLa mediaci\u00f3n, seg\u00fan el MCER, incluye actividades como la mediaci\u00f3n textual (resumir, parafrasear, traducir), la mediaci\u00f3n de conceptos (facilitar la comprensi\u00f3n de ideas complejas) y la mediaci\u00f3n de la comunicaci\u00f3n (gestionar la interacci\u00f3n entre partes con perspectivas diferentes). En el nivel C2, se espera que el usuario sea capaz de mediar en situaciones de alta complejidad, adaptando su estrategia con flexibilidad, anticipando malentendidos y construyendo un espacio discursivo donde todas las voces sean escuchadas.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 cambio introdujo el MCER en 2018 respecto a la mediaci\u00f3n?',
+                options: ['La reconoci\u00f3 como cuarta actividad ling\u00fc\u00edstica junto a comprensi\u00f3n, expresi\u00f3n e interacci\u00f3n', 'La elimin\u00f3 del marco por considerarla redundante', 'La limit\u00f3 a la traducci\u00f3n entre lenguas', 'La reserv\u00f3 exclusivamente para el nivel C2'],
+                answer: 'La reconoci\u00f3 como cuarta actividad ling\u00fc\u00edstica junto a comprensi\u00f3n, expresi\u00f3n e interacci\u00f3n'
+            },
+            {
+                q: '\u00bfCu\u00e1les son los tres tipos de mediaci\u00f3n que distingue el MCER?',
+                options: ['Mediaci\u00f3n textual, mediaci\u00f3n de conceptos y mediaci\u00f3n de la comunicaci\u00f3n', 'Mediaci\u00f3n oral, escrita y visual', 'Mediaci\u00f3n ling\u00fc\u00edstica, cultural y social', 'Mediaci\u00f3n b\u00e1sica, intermedia y avanzada'],
+                answer: 'Mediaci\u00f3n textual, mediaci\u00f3n de conceptos y mediaci\u00f3n de la comunicaci\u00f3n'
+            },
+            {
+                q: '\u00bfQu\u00e9 se espera de un usuario C2 en t\u00e9rminos de mediaci\u00f3n?',
+                options: ['Mediar en situaciones de alta complejidad con flexibilidad, anticipando malentendidos y creando espacios inclusivos', 'Traducir textos simples de un idioma a otro', 'Resumir textos acad\u00e9micos con precisi\u00f3n', 'Interpretar en conferencias internacionales'],
+                answer: 'Mediar en situaciones de alta complejidad con flexibilidad, anticipando malentendidos y creando espacios inclusivos'
+            }
+        ]
+    },
+    // === GAME 33: Canci\u00f3n — \u00abLatinoam\u00e9rica\u00bb de Calle 13 ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abLatinoam\u00e9rica\u00bb de Calle 13 y completa los versos. Reflexiona sobre c\u00f3mo la canci\u00f3n funciona como un acto de mediaci\u00f3n cultural: traduce la experiencia latinoamericana a un lenguaje po\u00e9tico universal sin perder su especificidad.',
+        youtubeId: 'DkFJE8ZdeG8',
+        artist: 'Calle 13',
+        songTitle: 'Latinoam\u00e9rica',
+        lines: [
+            { text: 'Soy, soy lo que dejaron, soy toda la ___ de mis antepasados.', blank: 'sobra', options: ['sobra', 'fuerza', 'sangre', 'tierra'] },
+            { text: 'Soy la cara de mi pueblo, mi cara ___.', blank: 'despierta', options: ['despierta', 'bonita', 'morena', 'perdida'] },
+            { text: 'T\u00fa no puedes comprar el ___.', blank: 'viento', options: ['viento', 'tiempo', 'sue\u00f1o', 'cielo'] },
+            { text: 'T\u00fa no puedes comprar el ___.', blank: 'sol', options: ['sol', 'mar', 'amor', 'pan'] },
+            { text: 'T\u00fa no puedes comprar la ___.', blank: 'lluvia', options: ['lluvia', 'tierra', 'vida', 'noche'] },
+            { text: 'T\u00fa no puedes comprar mi ___.', blank: 'alegr\u00eda', options: ['alegr\u00eda', 'tristeza', 'esperanza', 'libertad'] },
+            { text: 'Aqu\u00ed se respira ___.', blank: 'lucha', options: ['lucha', 'paz', 'miedo', 'fuerza'] },
+            { text: 'Vamos caminando, aqu\u00ed se ___ en la calle.', blank: 'vive', options: ['vive', 'muere', 'sufre', 'canta'] }
+        ]
+    },
+    // === GAME 34: Canci\u00f3n — \u00abEl mar de sus ojos\u00bb de Carlos Vives y ChocQuibTown ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abEl mar de sus ojos\u00bb de Carlos Vives con ChocQuibTown y completa los versos. Esta canci\u00f3n es en s\u00ed un acto de mediaci\u00f3n: une el vallenato costero con los ritmos afrocolombianos del Pac\u00edfico, dos mundos musicales que se encuentran.',
+        youtubeId: 'bPqMv-KnGn0',
+        artist: 'Carlos Vives ft. ChocQuibTown',
+        songTitle: 'El mar de sus ojos',
+        lines: [
+            { text: 'Y sus ojos se llenan de ___.', blank: 'mar', options: ['mar', 'sol', 'luz', 'sal'] },
+            { text: 'Y sus ojos se llenan de ___.', blank: 'agua', options: ['agua', 'llanto', 'brillo', 'cielo'] },
+            { text: 'Y yo me lleno de ___.', blank: 'ganas', options: ['ganas', 'fuerza', 'pena', 'sue\u00f1os'] },
+            { text: 'De ir nadando hasta su ___.', blank: 'alma', options: ['alma', 'puerta', 'playa', 'casa'] },
+            { text: 'Ella viene del ___.', blank: 'Pac\u00edfico', options: ['Pac\u00edfico', 'Caribe', 'Atl\u00e1ntico', 'r\u00edo'] },
+            { text: 'Con la ___ de su piel.', blank: 'noche', options: ['noche', 'fuerza', 'luz', 'magia'] },
+            { text: 'Y me ense\u00f1\u00f3 que la ___ puede ser oscura y ser bonita.', blank: 'vida', options: ['vida', 'noche', 'piel', 'tierra'] },
+            { text: 'Y que el ___ no tiene frontera.', blank: 'amor', options: ['amor', 'mar', 'r\u00edo', 'canto'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara de los puentes',
+            description: 'Dos mundos flotan en la oscuridad, separados por un abismo de silencio. Puentes de palabras los conectan, pero algunos están rotos.',
+            ambience: 'bridge'
+        },
+        puzzles: [
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el primer puente roto hay una cerradura.',
+                clue: 'No es solo cambiar palabras de un idioma a otro. Es llevar significado entre mundos. Tiene diez letras.',
+                answer: 'traduccion',
+                hint: '_ _ _ _ _ _ _ _ _ _',
+                onSolve: 'El primer puente se reconstruye.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Un texto aparece en dos idiomas simultáneamente.',
+                passage: '«Saudade» (portugués): un sentimiento profundo de nostalgia por algo o alguien ausente. No existe una palabra equivalente exacta en español.',
+                clue: '¿Qué revela este ejemplo sobre los límites de la traducción?',
+                answer: 'Que algunas experiencias culturales no tienen equivalente directo en otras lenguas',
+                options: [
+                    'Que algunas experiencias culturales no tienen equivalente directo en otras lenguas',
+                    'Que el portugués es más expresivo que el español',
+                    'Que la nostalgia no existe en español',
+                    'Que la traducción es imposible'
+                ],
+                onSolve: 'El segundo puente se ilumina.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un acertijo resuena entre los dos mundos:',
+                riddle: '«Soy fiel cuando traiciono y traiciono cuando soy fiel. El traductor me conoce bien.»',
+                clue: '¿Qué concepto describe esta paradoja?',
+                answer: 'Traduttore, traditore — traducir siempre implica una pérdida',
+                options: [
+                    'Traduttore, traditore — traducir siempre implica una pérdida',
+                    'La literalidad es la mejor estrategia',
+                    'Los diccionarios son suficientes para traducir',
+                    'La gramática es más importante que el significado'
+                ],
+                onSolve: 'El tercer puente se forma.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Tres fragmentos aparecen flotando sobre el abismo.',
+                sources: [
+                    '«La mediación lingüística no es traducción: es crear comprensión donde antes no existía.» — Marco Común Europeo',
+                    '«Doña Asunción me dijo una palabra en su lengua. No tiene traducción al español. Pero yo la entendí con el cuerpo.» — Diario de Yaguará',
+                    '«El Mapa de las Voces muestra que todas las lenguas de Colombia estuvieron conectadas. La separación fue un olvido, no una frontera.» — Fragmento del mapa'
+                ],
+                clue: '¿Qué sugiere todo esto sobre la misión de Yaguará?',
+                answer: 'Yaguará no traduce entre lenguas: media entre mundos que olvidaron que alguna vez estuvieron conectados',
+                options: [
+                    'Yaguará no traduce entre lenguas: media entre mundos que olvidaron que alguna vez estuvieron conectados',
+                    'Yaguará debería aprender todas las lenguas indígenas',
+                    'La traducción perfecta es posible si se estudia suficiente',
+                    'Las lenguas indígenas son más difíciles que el español'
+                ],
+                onSolve: 'Los tres puentes brillan. El abismo se cierra. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: la constelación del Puente, que une dos orillas de silencio.',
+            questClue: 'El puente no conecta lugares — conecta formas de ver.',
+            item: 'constelacion-puente'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '54',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest54Progress',
+        backUrl: '../../c2-colombia.html'
+    });
+</script>
+</body>
+</html>

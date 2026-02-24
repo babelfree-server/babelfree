@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 56: La lengua viva &mdash; Socioling&uuml;&iacute;stica</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c2_advanced/dest56_sociolinguistics/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 56: La lengua viva — Sociolingüística",
+          "url": "https://babelfree.com/c2_advanced/dest56_sociolinguistics/games",
+          "educationalLevel": "C2 Advanced - Mastery",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Sociolinguistics", "Language variation", "Spanish social contexts"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C2 Advanced", "item": "https://babelfree.com/c2-colombia" },
+            { "@type": "ListItem", "position": 4, "name": "La lengua viva — Sociolingüística" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c2-colombia" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 56: La lengua viva</div>
+            <div class="yg-header-subtitle">Socioling\u00fc\u00edstica</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: Narrative — El espa\u00f1ol no existe ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre que \u00abel espa\u00f1ol\u00bb es una abstracci\u00f3n: lo que existe son hablantes, cada uno con su variedad.',
+        text: 'Yaguar\u00e1 hab\u00eda recorrido toda Colombia \u2014desde el Choc\u00f3 hasta los Llanos, desde Bogot\u00e1 hasta la costa\u2014 y hab\u00eda escuchado un espa\u00f1ol diferente en cada lugar. El bogotano con su usted cortés y sus diminutivos estratégicos. El costero con su aspiración de eses, su ritmo acelerado y sus vocales abiertas como ventanas. El paisa con su voseo suave y su melodía inconfundible. El valluno con su cadencia dulce. El llanero con su habla pausada como la sabana. Y comprendió algo que ningún manual le había enseñado: \u00abel español\u00bb no existía. Era una abstracción, un nombre que le dábamos a una constelación de variedades que compartían un tronco común pero que habían crecido como ramas distintas, cada una moldeada por la geografía, la historia, las migraciones y las lenguas que la habían tocado. La sociolingüística era la ciencia que estudiaba esa diversidad, no para eliminarla sino para comprenderla.'
+    },
+    // === GAME 2: Narrative — Lengua, clase y poder ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la relaci\u00f3n entre lengua y poder social. Observa c\u00f3mo las variedades ling\u00fc\u00edsticas est\u00e1n jerarquizadas.',
+        text: 'La segunda lecci\u00f3n fue m\u00e1s inc\u00f3moda. No todas las variedades del espa\u00f1ol gozaban del mismo prestigio. El habla de Bogot\u00e1 se consideraba \u00abcorrecta\u00bb; el habla del Pac\u00edfico, \u00abinculta\u00bb. Pero la lingü\u00edstica demostraba que esa jerarqu\u00eda no era ling\u00fc\u00edstica sino social: una variedad era \u00abprestigiosa\u00bb no porque fuera m\u00e1s l\u00f3gica, m\u00e1s clara o m\u00e1s expresiva, sino porque la hablaban quienes ten\u00edan el poder. El español de la élite bogotana era estándar no por su superioridad intrínseca, sino porque Bogotá era la capital y sus hablantes controlaban las instituciones, los medios y la educaci\u00f3n. Corregir a un chocoano por aspirar las eses no era corregir un error ling\u00fc\u00edstico: era ejercer una forma de violencia simb\u00f3lica. Yaguar\u00e1, que hab\u00eda nacido en la selva y hab\u00eda aprendido a hablar en todos los registros, entendi\u00f3 que el guardián no era quien hablaba \u00abcorrectamente\u00bb, sino quien entend\u00eda por qu\u00e9 unos hablantes eran juzgados y otros no.'
+    },
+    // === GAME 3: Narrative — Las lenguas de Colombia ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la diversidad ling\u00fc\u00edstica de Colombia y el desaf\u00edo de la convivencia entre lenguas.',
+        text: 'Colombia no era un pa\u00eds monolingual. Adem\u00e1s del español, se hablaban 65 lenguas indígenas (wayuunaiki, emberá, nasa yuwe, tikuna, entre muchas otras), dos lenguas criollas (el criollo palenquero de San Basilio y el criollo de San Andrés) y la lengua romaní de la comunidad gitana. La Constitución de 1991 reconoció esta diversidad: las lenguas indígenas eran oficiales en sus territorios. Pero el reconocimiento legal no bastaba: muchas de esas lenguas estaban en peligro de extinción, desplazadas por un español que avanzaba como una inundación lenta. Cada vez que moría un anciano que hablaba una lengua sin escritura, desaparecía una biblioteca entera. La sociolingüística no solo estudiaba la variación: alertaba sobre la pérdida. Y Yaguará, nacida en territorio emberá, sentía esa pérdida como una herida personal.'
+    },
+    // === GAME 4: Narrative — El cambio ling\u00fc\u00edstico ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el cambio ling\u00fc\u00edstico como proceso natural e inevitable. Observa la tensi\u00f3n entre conservaci\u00f3n e innovaci\u00f3n.',
+        text: 'Las lenguas cambian. Es lo único seguro. El español que hablaba Cervantes no era el mismo que hablaba García Márquez, y el que hablamos hoy no será el que se hable dentro de cien años. Los cambios ocurren en todos los niveles: fonético (las eses aspiradas del Caribe), léxico (palabras nuevas como \u00abgooglear\u00bb), gramatical (el avance del voseo en algunas regiones), pragmático (la evolución de las fórmulas de cortesía). Y siempre, invariablemente, los hablantes mayores percibían el cambio como decadencia: \u00ablos jóvenes ya no saben hablar\u00bb, \u00abse está perdiendo el idioma\u00bb. Pero la sociolingüística mostraba que esa queja era tan vieja como el lenguaje mismo: ya en la antigua Roma se lamentaban de que \u00abel latín se está corrompiendo\u00bb. La corrupción de hoy era la norma de mañana. Y el español que se estaba \u00abperdiendo\u00bb no era más que el español que se estaba transformando.'
+    },
+    // === GAME 5: Narrative — Actitudes ling\u00fc\u00edsticas ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre las actitudes ling\u00fc\u00edsticas: los juicios que los hablantes hacen sobre las variedades de su propia lengua.',
+        text: 'Un experimento cl\u00e1sico: se grababa a la misma persona leyendo el mismo texto en dos acentos diferentes \u2014uno bogotano estándar, otro costeño\u2014 y se pedía a un grupo de oyentes que evaluara la inteligencia, la confiabilidad y la educación del hablante. El resultado, replicado en decenas de países con decenas de lenguas, era siempre el mismo: el hablante de la variedad estándar era percibido como más inteligente y educado; el hablante de la variedad no estándar, como más simpático y cercano pero menos competente. Los oyentes no evaluaban la lengua: evaluaban al hablante. Y lo que evaluaban no era lingüística, sino prejuicio social disfrazado de criterio lingüístico. Yaguará comprendió que las actitudes lingüísticas eran un espejo: no reflejaban la lengua, sino la sociedad que la hablaba.'
+    },
+    // === GAME 6: Narrative — La lengua como ser vivo ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee la reflexi\u00f3n final de Yaguar\u00e1 sobre la lengua como organismo vivo.',
+        text: 'Al final, Yaguará entendió que la lengua era como el río Atrato donde había nacido: nunca el mismo, siempre reconocible. Cada generación le añadía sedimento; cada migración le abría un nuevo cauce; cada contacto con otra lengua le daba un afluente. Intentar detener su movimiento era tan inútil como intentar detener el río. Pero eso no significaba que todo diera igual: así como un río necesitaba márgenes para no desbordarse, la lengua necesitaba conciencia crítica \u2014hablantes que supieran por qué hablaban como hablaban, que reconocieran la diferencia entre variación legítima y comunicación ineficaz, que defendieran la diversidad sin renunciar a la comprensibilidad\u2014. El guardián de la lengua no era quien la congelaba: era quien la dejaba fluir sabiendo que el río, mientras fluye, está vivo.'
+    },
+    // === GAME 7: FIB — Conceptos socioling\u00fc\u00edsticos ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones con el concepto socioling\u00fc\u00edstico adecuado.',
+        sentences: [
+            { text: 'La variaci\u00f3n ling\u00fc\u00edstica determinada por la regi\u00f3n geogr\u00e1fica se denomina variaci\u00f3n ___.', blank: 'diatópica', options: ['diat\u00f3pica', 'diastr\u00e1tica', 'diaf\u00e1sica', 'diacr\u00f3nica'] },
+            { text: 'La variaci\u00f3n determinada por la clase social del hablante se denomina variaci\u00f3n ___.', blank: 'diastrática', options: ['diastr\u00e1tica', 'diat\u00f3pica', 'diaf\u00e1sica', 'diacr\u00f3nica'] },
+            { text: 'La variaci\u00f3n determinada por la situaci\u00f3n comunicativa (registro) se denomina variaci\u00f3n ___.', blank: 'diafásica', options: ['diaf\u00e1sica', 'diastr\u00e1tica', 'diat\u00f3pica', 'diacr\u00f3nica'] },
+            { text: 'Una variedad ling\u00fc\u00edstica asociada a un grupo social espec\u00edfico se llama ___.', blank: 'sociolecto', options: ['sociolecto', 'dialecto', 'idiolecto', 'registro'] },
+            { text: 'La situaci\u00f3n en la que dos variedades de una lengua coexisten con funciones sociales diferentes se denomina ___.', blank: 'diglosia', options: ['diglosia', 'biling\u00fcismo', 'criollizaci\u00f3n', 'pidginizaci\u00f3n'] },
+            { text: 'El ___ ling\u00fc\u00edstico es el proceso por el cual una lengua minoritaria pierde hablantes generaci\u00f3n tras generaci\u00f3n.', blank: 'desplazamiento', options: ['desplazamiento', 'cambio', 'contacto', 'pr\u00e9stamo'] },
+            { text: 'La forma particular de hablar de un individuo, su \u00abhuella ling\u00fc\u00edstica\u00bb \u00fanica, se denomina ___.', blank: 'idiolecto', options: ['idiolecto', 'sociolecto', 'dialecto', 'cronolecto'] },
+            { text: 'La variedad de lengua asociada a la edad del hablante se denomina ___.', blank: 'cronolecto', options: ['cronolecto', 'sociolecto', 'dialecto', 'idiolecto'] }
+        ]
+    },
+    // === GAME 8: FIB — Variedades del espa\u00f1ol colombiano ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones sobre las variedades del espa\u00f1ol colombiano.',
+        sentences: [
+            { text: 'El espa\u00f1ol ___ se caracteriza por la aspiraci\u00f3n de la /s/ al final de s\u00edlaba y un ritmo r\u00e1pido.', blank: 'coste\u00f1o', options: ['coste\u00f1o', 'bogotano', 'paisa', 'valluno'] },
+            { text: 'El ___ se distingue por el uso del voseo con desinencias propias: \u00abvos sab\u00e9s\u00bb, \u00abvos ten\u00e9s\u00bb.', blank: 'espa\u00f1ol paisa', options: ['espa\u00f1ol paisa', 'espa\u00f1ol bogotano', 'espa\u00f1ol coste\u00f1o', 'espa\u00f1ol llanero'] },
+            { text: 'El espa\u00f1ol bogotano tradicionalmente se ha considerado la variedad de mayor ___ en Colombia.', blank: 'prestigio', options: ['prestigio', 'antig\u00fcedad', 'dificultad', 'belleza'] },
+            { text: 'El criollo ___ es la \u00fanica lengua criolla de base espa\u00f1ola en Am\u00e9rica.', blank: 'palenquero', options: ['palenquero', 'sanandresano', 'chocoano', 'llanero'] },
+            { text: 'La comunidad ling\u00fc\u00edstica way\u00fau habla ___, una lengua de la familia arawak.', blank: 'wayuunaiki', options: ['wayuunaiki', 'ember\u00e1', 'nasa yuwe', 'tikuna'] },
+            { text: 'El fen\u00f3meno de usar \u00abusted\u00bb incluso en contextos \u00edntimos es caracter\u00edstico del espa\u00f1ol ___.', blank: 'bogotano', options: ['bogotano', 'coste\u00f1o', 'paisa', 'llanero'] },
+            { text: 'San Andr\u00e9s y Providencia albergan un criollo de base ___ que coexiste con el espa\u00f1ol.', blank: 'inglesa', options: ['inglesa', 'espa\u00f1ola', 'francesa', 'portuguesa'] },
+            { text: 'El espa\u00f1ol chocoano comparte rasgos con el ___ debido a la proximidad geogr\u00e1fica y la historia com\u00fan.', blank: 'coste\u00f1o', options: ['coste\u00f1o', 'bogotano', 'paisa', 'llanero'] }
+        ]
+    },
+    // === GAME 9: Conjugation — Variaci\u00f3n verbal en el mundo hispanohablante ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Identifica la conjugaci\u00f3n que corresponde a cada variedad del espa\u00f1ol.',
+        sentences: [
+            { text: 'En el espa\u00f1ol paisa, \u00abt\u00fa tienes\u00bb se dice \u00abvos ___\u00bb.', blank: 'ten\u00e9s', verb: 'tener', tense: 'voseo paisa' },
+            { text: 'En el espa\u00f1ol rioplatense, \u00abt\u00fa puedes\u00bb se dice \u00abvos ___\u00bb.', blank: 'pod\u00e9s', verb: 'poder', tense: 'voseo rioplatense' },
+            { text: 'En Espa\u00f1a, \u00abustedes tienen\u00bb se dice \u00abvosotros ___\u00bb.', blank: 'ten\u00e9is', verb: 'tener', tense: 'vosotros' },
+            { text: 'En M\u00e9xico, el pret\u00e9rito perfecto (\u00abhe comido\u00bb) suele sustituirse por el indefinido: \u00abya ___\u00bb.', blank: 'com\u00ed', verb: 'comer', tense: 'pret\u00e9rito indefinido' },
+            { text: 'En el Caribe colombiano, \u00abt\u00fa eres\u00bb con frecuencia se pronuncia como \u00abt\u00fa ___\u00bb (con aspiraci\u00f3n).', blank: 'ereh', verb: 'ser', tense: 'variante fon\u00e9tica coste\u00f1a' },
+            { text: 'En Colombia, \u00abvosotros habl\u00e1is\u00bb no se usa; se dice \u00abustedes ___\u00bb.', blank: 'hablan', verb: 'hablar', tense: 'ustedes (Latinoam\u00e9rica)' },
+            { text: 'En el espa\u00f1ol centroamericano, \u00abvos am\u00e1s\u00bb conserva la forma ___ del voseo.', blank: 'diptongada', verb: 'amar', tense: 'voseo centroamericano' },
+            { text: 'En el espa\u00f1ol andino de Colombia, influido por el quechua, el diminutivo -ito se aplica incluso a ___: \u00abahoritica\u00bb, \u00abcerquitica\u00bb.', blank: 'adverbios', verb: 'aplicar', tense: 'diminutivo extendido' }
+        ]
+    },
+    // === GAME 10: Conjugation — Variaci\u00f3n en tiempos verbales seg\u00fan zona ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga seg\u00fan la variedad indicada. La variaci\u00f3n no es error: es riqueza.',
+        sentences: [
+            { text: 'Espa\u00f1a: \u00ab\u00bfHas ___ (comer) ya?\u00bb (pretérito perfecto para acciones recientes)', blank: 'comido', verb: 'comer', tense: 'pret\u00e9rito perfecto' },
+            { text: 'M\u00e9xico: \u00ab\u00bfYa ___ (comer)?\u00bb (indefinido para acciones recientes)', blank: 'comiste', verb: 'comer', tense: 'pret\u00e9rito indefinido' },
+            { text: 'Argentina: \u00ab\u00bfVos ya ___ (terminar)?\u00bb', blank: 'terminaste', verb: 'terminar', tense: 'pret\u00e9rito indefinido con voseo' },
+            { text: 'Colombia (formal): \u00ab\u00bfUsted ya ___ (llegar)?\u00bb', blank: 'lleg\u00f3', verb: 'llegar', tense: 'pret\u00e9rito indefinido con usted' },
+            { text: 'Espa\u00f1a (imperativo): \u00ab___ (Venir, vosotros) aqu\u00ed.\u00bb', blank: 'Venid', verb: 'venir', tense: 'imperativo vosotros' },
+            { text: 'Colombia (imperativo): \u00ab___ (Venir, ustedes) ac\u00e1.\u00bb', blank: 'Vengan', verb: 'venir', tense: 'imperativo ustedes' },
+            { text: 'Paisa (imperativo con vos): \u00ab___ (Venir, vos) ya.\u00bb', blank: 'Ven\u00ed', verb: 'venir', tense: 'imperativo voseo' },
+            { text: 'Caribe: \u00abElla ___ (estar) contenta\u00bb (con aspiración: eht\u00e1).', blank: 'est\u00e1', verb: 'estar', tense: 'presente indicativo' }
+        ]
+    },
+    // === GAME 11: Pair — Fen\u00f3meno socioling\u00fc\u00edstico y ejemplo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada fen\u00f3meno socioling\u00fc\u00edstico con su ejemplo concreto en Colombia.',
+        pairs: [
+            ['Variaci\u00f3n diat\u00f3pica', 'Las eses se aspiran en la costa pero se pronuncian en Bogot\u00e1'],
+            ['Variaci\u00f3n diastr\u00e1tica', 'Un ejecutivo dice \u00abreunión\u00bb y un obrero dice \u00abjunta\u00bb para lo mismo'],
+            ['Diglosia', 'En San Basilio de Palenque, el criollo se usa en casa y el espa\u00f1ol en la escuela'],
+            ['Desplazamiento ling\u00fc\u00edstico', 'Los j\u00f3venes tikuna prefieren hablar espa\u00f1ol y dejan de usar su lengua ancestral'],
+            ['Actitud ling\u00fc\u00edstica', 'Creer que el espa\u00f1ol bogotano es \u00abmejor\u00bb que el coste\u00f1o'],
+            ['Prestigio encubierto', 'Los j\u00f3venes de clase alta adoptan jerga callejera para proyectar autenticidad'],
+            ['Alternancia de c\u00f3digo', 'Un sanandresano que mezcla criollo ingl\u00e9s y espa\u00f1ol en la misma conversaci\u00f3n'],
+            ['Criollizaci\u00f3n', 'El palenquero surgi\u00f3 del contacto entre lenguas africanas y el espa\u00f1ol colonial']
+        ]
+    },
+    // === GAME 12: Pair — Variedad del espa\u00f1ol y rasgo ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada variedad del espa\u00f1ol con un rasgo ling\u00fc\u00edstico caracter\u00edstico.',
+        pairs: [
+            ['Espa\u00f1ol rioplatense (Argentina)', 'Yeísmo rehilado: \u00abcalle\u00bb se pronuncia /kashe/ o /cazhe/'],
+            ['Espa\u00f1ol mexicano', 'Conservaci\u00f3n de la /s/ final y uso frecuente del diminutivo -ito'],
+            ['Espa\u00f1ol caribe\u00f1o', 'Aspiraci\u00f3n o elisión de /s/ final: \u00abm\u00e1h o menoh\u00bb'],
+            ['Espa\u00f1ol andino', 'Influencia del quechua en la entonación y el uso del diminutivo'],
+            ['Espa\u00f1ol peninsular centro-norte\u00f1o', 'Distinci\u00f3n entre /s/ y /\u03b8/: \u00abcasa\u00bb vs. \u00abcaza\u00bb'],
+            ['Espa\u00f1ol canario', 'Similitudes con el espa\u00f1ol caribe\u00f1o: aspiraci\u00f3n de /s/, seseo'],
+            ['Espa\u00f1ol paraguayo', 'Biling\u00fcismo generalizado con el guaran\u00ed'],
+            ['Espa\u00f1ol chileno', 'Aspiraci\u00f3n de /s/ y uso frecuente de \u00abcachai\u00bb como muletilla']
+        ]
+    },
+    // === GAME 13: Listening — Prejuicio ling\u00fc\u00edstico ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Lee el siguiente di\u00e1logo y analiza el prejuicio ling\u00fc\u00edstico que contiene.',
+        text: 'Madre: \u00abHijo, no hable as\u00ed. Diga \u00abpara qu\u00e9\u00bb, no \u00abpa\u2019 qu\u00e9\u00bb. Usted no es de la calle.\u00bb Hijo: \u00abMam\u00e1, todos mis amigos hablan as\u00ed.\u00bb Madre: \u00abPor eso. Que ellos hablen como quieran, pero usted es de buena familia. La gente lo juzga por c\u00f3mo habla.\u00bb',
+        questions: [
+            { q: '\u00bfQu\u00e9 actitud ling\u00fc\u00edstica revela la madre?', options: ['Asocia la variedad coloquial con baja clase social y la variedad est\u00e1ndar con \u00abbuena familia\u00bb', 'Tiene raz\u00f3n: \u00abpa\u2019 qu\u00e9\u00bb es un error gramatical', 'Quiere que su hijo aprenda ingl\u00e9s', 'No le importa c\u00f3mo habla su hijo'], answer: 'Asocia la variedad coloquial con baja clase social y la variedad est\u00e1ndar con \u00abbuena familia\u00bb' },
+            { q: '\u00bfLa expresi\u00f3n \u00abpa\u2019 qu\u00e9\u00bb es un error ling\u00fc\u00edstico?', options: ['No: es una reducci\u00f3n fon\u00e9tica natural del habla coloquial, documentada en todas las variedades del espa\u00f1ol', 'S\u00ed: es una corrupci\u00f3n del espa\u00f1ol correcto', 'Es un error solo en contextos formales', 'Depende de la regi\u00f3n geogr\u00e1fica'], answer: 'No: es una reducci\u00f3n fon\u00e9tica natural del habla coloquial, documentada en todas las variedades del espa\u00f1ol' },
+            { q: '\u00bfQu\u00e9 concepto socioling\u00fc\u00edstico ilustra este di\u00e1logo?', options: ['La ideolog\u00eda ling\u00fc\u00edstica que vincula la variedad est\u00e1ndar con el prestigio social y la no est\u00e1ndar con la marginalidad', 'La diglosia entre dos lenguas diferentes', 'El biling\u00fcismo familiar', 'La criollizaci\u00f3n del espa\u00f1ol'], answer: 'La ideolog\u00eda ling\u00fc\u00edstica que vincula la variedad est\u00e1ndar con el prestigio social y la no est\u00e1ndar con la marginalidad' }
+        ]
+    },
+    // === GAME 14: Sorting — Tipos de variaci\u00f3n ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada ejemplo seg\u00fan el tipo de variaci\u00f3n ling\u00fc\u00edstica que representa.',
+        categories: ['Diat\u00f3pica (geogr\u00e1fica)', 'Diastr\u00e1tica (social)', 'Diaf\u00e1sica (situacional)', 'Diacr\u00f3nica (temporal)'],
+        items: [
+            { text: 'En la costa se aspira la /s/; en el interior se pronuncia', category: 'Diat\u00f3pica (geogr\u00e1fica)' },
+            { text: 'Un m\u00e9dico usa \u00abhipertensi\u00f3n\u00bb; un paciente dice \u00abpresi\u00f3n alta\u00bb', category: 'Diastr\u00e1tica (social)' },
+            { text: 'El mismo abogado habla diferente en el tribunal y en un asado', category: 'Diaf\u00e1sica (situacional)' },
+            { text: 'En el siglo XVI se dec\u00eda \u00abagora\u00bb; hoy se dice \u00abahora\u00bb', category: 'Diacr\u00f3nica (temporal)' },
+            { text: 'En Argentina dicen \u00abcolectivo\u00bb; en Colombia, \u00abbus\u00bb', category: 'Diat\u00f3pica (geogr\u00e1fica)' },
+            { text: 'Los j\u00f3venes usan \u00abcringe\u00bb; los mayores no lo entienden', category: 'Diacr\u00f3nica (temporal)' },
+            { text: 'La jerga de los abogados difiere de la jerga de los m\u00fasicos', category: 'Diastr\u00e1tica (social)' },
+            { text: 'En un correo formal se escribe \u00abEstimado\u00bb; en WhatsApp, \u00abHola\u00bb', category: 'Diaf\u00e1sica (situacional)' }
+        ]
+    },
+    // === GAME 15: Sorting — Lenguas de Colombia por familia ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada lengua hablada en Colombia seg\u00fan su familia o tipo.',
+        categories: ['Ind\u00edgena', 'Criolla', 'Indoeuropea'],
+        items: [
+            { text: 'Wayuunaiki (arawak)', category: 'Ind\u00edgena' },
+            { text: 'Criollo palenquero', category: 'Criolla' },
+            { text: 'Espa\u00f1ol', category: 'Indoeuropea' },
+            { text: 'Ember\u00e1 (choc\u00f3)', category: 'Ind\u00edgena' },
+            { text: 'Criollo sanandresano (base inglesa)', category: 'Criolla' },
+            { text: 'Roman\u00ed (gitano)', category: 'Indoeuropea' },
+            { text: 'Nasa yuwe (p\u00e1ez)', category: 'Ind\u00edgena' },
+            { text: 'Tikuna (aislada)', category: 'Ind\u00edgena' },
+            { text: 'Inga (quechua)', category: 'Ind\u00edgena' }
+        ]
+    },
+    // === GAME 16: Sorting — Cambio ling\u00fc\u00edstico por nivel ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada ejemplo de cambio ling\u00fc\u00edstico seg\u00fan el nivel en que ocurre.',
+        categories: ['Fon\u00e9tico', 'L\u00e9xico', 'Gramatical', 'Pragm\u00e1tico'],
+        items: [
+            { text: 'La aspiraci\u00f3n de la /s/ en posici\u00f3n final', category: 'Fon\u00e9tico' },
+            { text: 'La incorporaci\u00f3n de \u00abgooglear\u00bb al espa\u00f1ol', category: 'L\u00e9xico' },
+            { text: 'El avance del voseo en regiones que usaban t\u00fa', category: 'Gramatical' },
+            { text: 'El uso de \u00abregalar\u00bb por \u00abdar\u00bb en Colombia como estrategia de cortes\u00eda', category: 'Pragm\u00e1tico' },
+            { text: 'La p\u00e9rdida de la distinci\u00f3n entre /s/ y /\u03b8/ (seseo)', category: 'Fon\u00e9tico' },
+            { text: 'El reemplazo de \u00abordenador\u00bb por \u00abcomputador\u00bb en Latinoam\u00e9rica', category: 'L\u00e9xico' },
+            { text: 'La sustituci\u00f3n de \u00abhubo\u00bb por \u00abhubieron\u00bb en el habla popular', category: 'Gramatical' },
+            { text: 'La extensi\u00f3n del tuteo a contextos antes reservados al usted', category: 'Pragm\u00e1tico' }
+        ]
+    },
+    // === GAME 17: Builder — Afirmaci\u00f3n socioling\u00fc\u00edstica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para formar una afirmaci\u00f3n socioling\u00fc\u00edstica fundamentada.',
+        words: ['Ninguna variedad', 'del espa\u00f1ol es', 'ling\u00fc\u00edsticamente superior', 'a otra:', 'las jerarqu\u00edas', 'entre dialectos', 'reflejan relaciones', 'de poder social,', 'no diferencias', 'de complejidad gramatical.'],
+        answer: 'Ninguna variedad del espa\u00f1ol es ling\u00fc\u00edsticamente superior a otra: las jerarqu\u00edas entre dialectos reflejan relaciones de poder social, no diferencias de complejidad gramatical.'
+    },
+    // === GAME 18: Builder — Argumento sobre diversidad ling\u00fc\u00edstica ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena los segmentos para construir un argumento sobre la importancia de preservar la diversidad ling\u00fc\u00edstica.',
+        words: ['Cada lengua que muere', 'se lleva consigo', 'un sistema \u00fanico', 'de categorizar la realidad,', 'un archivo de conocimientos', 'ecol\u00f3gicos y culturales', 'acumulados', 'durante siglos', 'y una forma irrepetible', 'de ser humano.'],
+        answer: 'Cada lengua que muere se lleva consigo un sistema \u00fanico de categorizar la realidad, un archivo de conocimientos ecol\u00f3gicos y culturales acumulados durante siglos y una forma irrepetible de ser humano.'
+    },
+    // === GAME 19: Translation — La misma idea en variedades del espa\u00f1ol ===
+    {
+        type: 'translation',
+        label: 'Variedades',
+        instruction: 'Empareja cada expresi\u00f3n con la variedad regional del espa\u00f1ol a la que corresponde.',
+        pairs: [
+            { source: 'Espa\u00f1ol bogotano', target: '\u00bfUsted me hace el favor de regalarme un tinto?' },
+            { source: 'Espa\u00f1ol rioplatense', target: '\u00bfMe tir\u00e1s un cafecito, che?' },
+            { source: 'Espa\u00f1ol mexicano', target: '\u00bfMe puedes dar un cafecito, por favor?' },
+            { source: 'Espa\u00f1ol peninsular', target: '\u00bfMe pones un caf\u00e9 solo, por favor?' }
+        ]
+    },
+    // === GAME 20: Conversation — Debate sobre pol\u00edtica ling\u00fc\u00edstica ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en un debate universitario sobre pol\u00edtica ling\u00fc\u00edstica en Colombia. Defiende posiciones con argumentos socioling\u00fc\u00edsticos.',
+        conversations: [
+            {
+                lines: [
+                    { speaker: 'A', name: 'Profesora', text: '\u00bfDeber\u00eda el Estado colombiano invertir recursos en revitalizar lenguas ind\u00edgenas que solo hablan unos pocos miles de personas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'S\u00ed, porque cada lengua es un sistema cognitivo \u00fanico que codifica conocimientos ecol\u00f3gicos, culturales e hist\u00f3ricos irremplazables. Adem\u00e1s, la Constituci\u00f3n de 1991 reconoce estas lenguas como patrimonio de la naci\u00f3n, lo que genera una obligaci\u00f3n no solo \u00e9tica sino jur\u00eddica.',
+                    'No, porque esas lenguas no sirven para nada en el mundo moderno.',
+                    'Solo si los hablantes lo piden. El Estado no debe intervenir.',
+                    'Es imposible salvar lenguas que ya est\u00e1n muriendo.'
+                ],
+                correct: 'S\u00ed, porque cada lengua es un sistema cognitivo \u00fanico que codifica conocimientos ecol\u00f3gicos, culturales e hist\u00f3ricos irremplazables. Adem\u00e1s, la Constituci\u00f3n de 1991 reconoce estas lenguas como patrimonio de la naci\u00f3n, lo que genera una obligaci\u00f3n no solo \u00e9tica sino jur\u00eddica.'
+            },
+            {
+                lines: [
+                    { speaker: 'A', name: 'Estudiante', text: 'Pero \u00bfno ser\u00eda m\u00e1s pr\u00e1ctico que todos hablaran espa\u00f1ol? As\u00ed nos entender\u00edamos mejor.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '' }
+                ],
+                options: [
+                    'Ese argumento confunde comunicaci\u00f3n con uniformidad. Un pa\u00eds puede tener una lengua vehicular com\u00fan y al mismo tiempo preservar sus lenguas originarias. La diversidad ling\u00fc\u00edstica no impide la comunicaci\u00f3n: la enriquece. Suiza tiene cuatro lenguas oficiales y funciona perfectamente.',
+                    'Tiene raz\u00f3n, una sola lengua ser\u00eda m\u00e1s eficiente.',
+                    'Eso es imposible porque las lenguas ind\u00edgenas son muy dif\u00edciles.',
+                    'El espa\u00f1ol tambi\u00e9n podr\u00eda desaparecer alg\u00fan d\u00eda.'
+                ],
+                correct: 'Ese argumento confunde comunicaci\u00f3n con uniformidad. Un pa\u00eds puede tener una lengua vehicular com\u00fan y al mismo tiempo preservar sus lenguas originarias. La diversidad ling\u00fc\u00edstica no impide la comunicaci\u00f3n: la enriquece. Suiza tiene cuatro lenguas oficiales y funciona perfectamente.'
+            }
+        ]
+    },
+    // === GAME 21: Dictation — Pasaje socioling\u00fc\u00edstico ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe el siguiente pasaje sobre socioling\u00fc\u00edstica.',
+        text: 'Las lenguas no mueren de muerte natural: las matan la marginaci\u00f3n, la pobreza y la verg\u00fcenza. Cuando un ni\u00f1o ind\u00edgena deja de hablar su lengua porque en la escuela lo castigan o lo ridiculizan, no estamos ante un cambio ling\u00fc\u00edstico: estamos ante una forma de violencia.'
+    },
+    // === GAME 22: Story — Texto sobre actitudes ling\u00fc\u00edsticas ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee este texto sobre actitudes ling\u00fc\u00edsticas en Colombia y responde las preguntas.',
+        text: 'El mito del \u00abmejor espa\u00f1ol del mundo\u00bb ha acompa\u00f1ado a Colombia durante d\u00e9cadas. Se repite en discursos oficiales, en conversaciones casuales y en gu\u00edas tur\u00edsticas: \u00aben Colombia se habla el mejor espa\u00f1ol\u00bb. Pero \u00bfqu\u00e9 significa esa afirmaci\u00f3n? Desde la ling\u00fc\u00edstica, no significa nada: no existe un criterio objetivo para determinar qu\u00e9 variedad de una lengua es \u00abmejor\u00bb que otra. Lo que s\u00ed existe es un conjunto de actitudes que asocian ciertas variedades con el prestigio y otras con la estigmatizaci\u00f3n.\n\nCuando se dice que \u00aben Colombia se habla el mejor espa\u00f1ol\u00bb, generalmente se est\u00e1 pensando en el espa\u00f1ol bogotano de clase media-alta: claro, pausado, sin aspiraci\u00f3n de eses, con un sistema de usted/t\u00fa bien diferenciado. Pero ese espa\u00f1ol no representa al pa\u00eds: excluye al coste\u00f1o, al paisa, al chocoano, al llanero, al nari\u00f1ense. Excluye, sobre todo, a los sesenta y cinco pueblos ind\u00edgenas cuyas lenguas ni siquiera son mencionadas en la celebraci\u00f3n.\n\nEl verdadero orgullo ling\u00fc\u00edstico de Colombia no es tener \u00abel mejor espa\u00f1ol\u00bb \u2014frase que, en el fondo, es una forma de desprecio hacia las dem\u00e1s variedades\u2014, sino tener una diversidad ling\u00fc\u00edstica extraordinaria: un pa\u00eds donde conviven el espa\u00f1ol, sesenta y cinco lenguas ind\u00edgenas, dos criollos y la lengua roman\u00ed. Eso s\u00ed es excepcional. Eso s\u00ed merece orgullo.',
+        questions: [
+            {
+                q: '\u00bfPor qu\u00e9 la afirmaci\u00f3n \u00aben Colombia se habla el mejor espa\u00f1ol\u00bb no tiene fundamento ling\u00fc\u00edstico?',
+                options: ['Porque no existe un criterio objetivo para determinar qu\u00e9 variedad de una lengua es superior a otra', 'Porque en Colombia se hablan muchos idiomas', 'Porque el espa\u00f1ol colombiano tiene errores', 'Porque otros pa\u00edses hablan mejor'],
+                answer: 'Porque no existe un criterio objetivo para determinar qu\u00e9 variedad de una lengua es superior a otra'
+            },
+            {
+                q: '\u00bfA qu\u00e9 variedad se refiere impl\u00edcitamente quien dice que Colombia tiene el mejor espa\u00f1ol?',
+                options: ['Al espa\u00f1ol bogotano de clase media-alta, excluyendo todas las dem\u00e1s variedades del pa\u00eds', 'A todas las variedades colombianas por igual', 'Al espa\u00f1ol coste\u00f1o', 'Al espa\u00f1ol paisa'],
+                answer: 'Al espa\u00f1ol bogotano de clase media-alta, excluyendo todas las dem\u00e1s variedades del pa\u00eds'
+            },
+            {
+                q: '\u00bfCu\u00e1l es, seg\u00fan el texto, el verdadero orgullo ling\u00fc\u00edstico de Colombia?',
+                options: ['Su extraordinaria diversidad ling\u00fc\u00edstica: espa\u00f1ol, 65 lenguas ind\u00edgenas, dos criollos y la lengua roman\u00ed', 'Que todos hablan espa\u00f1ol est\u00e1ndar', 'Que Garc\u00eda M\u00e1rquez era colombiano', 'Que el acento bogotano es neutro'],
+                answer: 'Su extraordinaria diversidad ling\u00fc\u00edstica: espa\u00f1ol, 65 lenguas ind\u00edgenas, dos criollos y la lengua roman\u00ed'
+            },
+            {
+                q: '\u00bfPor qu\u00e9 dice el texto que la frase \u00abel mejor espa\u00f1ol\u00bb es, en el fondo, una forma de desprecio?',
+                options: ['Porque al celebrar una sola variedad como \u00abla mejor\u00bb, impl\u00edcitamente descalifica a todas las dem\u00e1s', 'Porque nadie habla bien el espa\u00f1ol', 'Porque es una frase inventada por los turistas', 'Porque los bogotanos desprecian a los dem\u00e1s colombianos'],
+                answer: 'Porque al celebrar una sola variedad como \u00abla mejor\u00bb, impl\u00edcitamente descalifica a todas las dem\u00e1s'
+            }
+        ]
+    },
+    // === GAME 23: Canci\u00f3n — \u00abSoy colombiano\u00bb de varios artistas ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abColombia, tierra querida\u00bb y completa los versos. Esta canci\u00f3n tradicional representa la diversidad cultural colombiana expresada a trav\u00e9s de la m\u00fasica.',
+        youtubeId: 'kz2SBBQF6xI',
+        artist: 'Tradicional colombiana',
+        songTitle: 'Colombia, tierra querida',
+        lines: [
+            { text: 'Colombia, tierra ___.', blank: 'querida', options: ['querida', 'bonita', 'hermosa', 'bendita'] },
+            { text: 'Himno de fe y ___.', blank: 'alegr\u00eda', options: ['alegr\u00eda', 'esperanza', 'armon\u00eda', 'poes\u00eda'] },
+            { text: 'Se forj\u00f3 una nueva ___.', blank: 'vida', options: ['vida', 'patria', 'historia', 'tierra'] },
+            { text: 'Bajo el cielo de ___.', blank: 'Am\u00e9rica', options: ['Am\u00e9rica', 'Colombia', 'esperanza', 'libertad'] },
+            { text: 'El caf\u00e9 con su ___.', blank: 'aroma', options: ['aroma', 'sabor', 'color', 'fuerza'] },
+            { text: 'Es orgullo ___.', blank: 'nacional', options: ['nacional', 'colombiano', 'regional', 'mundial'] },
+            { text: 'Y su gente siempre ___.', blank: 'amable', options: ['amable', 'alegre', 'fuerte', 'noble'] },
+            { text: 'Vive con el ___ en alto.', blank: 'coraz\u00f3n', options: ['coraz\u00f3n', '\u00e1nimo', 'esp\u00edritu', 'orgullo'] }
+        ]
+    },
+    // === GAME 24: Canci\u00f3n — \u00abLa pollera color\u00e1\u00bb ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Escucha \u00abLa pollera color\u00e1\u00bb y completa los versos. Observa c\u00f3mo la cumbia refleja la variedad ling\u00fc\u00edstica del Caribe colombiano: \u00abcolor\u00e1\u00bb (no \u00abcolorada\u00bb), reflejo de la elisión de la /d/ intervocálica, un rasgo fonético regional.',
+        youtubeId: 'tO4ROXM4xgM',
+        artist: 'Wilson Choperena / Tradicional',
+        songTitle: 'La pollera color\u00e1',
+        lines: [
+            { text: '\u00a1Ay! Que t\u00e9ngame la pollera ___.', blank: 'color\u00e1', options: ['color\u00e1', 'colorada', 'bonita', 'bordada'] },
+            { text: 'Que t\u00e9ngame la pollera ___.', blank: 'color\u00e1', options: ['color\u00e1', 'colorada', 'bonita', 'bordada'] },
+            { text: 'Que la traigo aquí ___.', blank: 'guard\u00e1', options: ['guard\u00e1', 'guardada', 'cerrada', 'doblada'] },
+            { text: 'Para bailar con ___.', blank: 'Juana', options: ['Juana', 'ella', 'nadie', 'Marta'] },
+            { text: 'La pollera color\u00e1 se me ___.', blank: 'perdi\u00f3', options: ['perdi\u00f3', 'rompi\u00f3', 'cay\u00f3', 'qued\u00f3'] },
+            { text: 'Y buscando la pollera fue que la ___.', blank: 'encontr\u00e9', options: ['encontr\u00e9', 'perd\u00ed', 'busqu\u00e9', 'hall\u00e9'] },
+            { text: 'Debajo de una ___.', blank: 'mata', options: ['mata', 'palma', 'mesa', 'cama'] },
+            { text: 'Haciendo ___ con el viento.', blank: 'juego', options: ['juego', 'ruido', 'fiesta', 'bulla'] }
+        ]
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cámara de las mil voces',
+            description: 'Voces de todas las regiones de Colombia suenan simultáneamente. El suelo es un mapa sociolingüístico. Pisar una región amplifica su voz.',
+            ambience: 'voices'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una voz pregunta desde el mapa:',
+                riddle: '«Dos personas dicen lo mismo con palabras diferentes. No es traducción — hablan el mismo idioma. ¿Qué me separa de ti sin separarnos?»',
+                clue: '¿Qué fenómeno sociolingüístico describe esto?',
+                answer: 'La variación dialectal',
+                options: ['La variación dialectal', 'El bilingüismo', 'La diglosia', 'El code-switching'],
+                onSolve: 'Una región del mapa se ilumina.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Dos hablantes de español colombiano dicen la misma frase.',
+                passage: '«Hablante de Bogotá: "¿Usted me puede ayudar con eso, por favor?" Hablante de la Costa: "Ey, mijo, ¿me echas una manito con eso?"» Ambos piden exactamente lo mismo.',
+                clue: '¿Qué factores sociolingüísticos explican la diferencia?',
+                answer: 'Región geográfica, normas de cortesía locales, y grado de formalidad percibido',
+                options: [
+                    'Región geográfica, normas de cortesía locales, y grado de formalidad percibido',
+                    'Nivel de educación',
+                    'Edad de los hablantes',
+                    'Diferencia de clase social'
+                ],
+                onSolve: 'Otra región brilla en el mapa.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Un diagrama de premisas aparece sobre el mapa.',
+                premises: [
+                    'Las lenguas indígenas de Colombia no tienen prestigio social en las ciudades.',
+                    'Los jóvenes indígenas en Bogotá a menudo dejan de hablar su lengua materna.',
+                    'La pérdida lingüística se acelera cuando una lengua pierde hablantes jóvenes.'
+                ],
+                clue: '¿Qué concepto sociolingüístico describe este ciclo?',
+                answer: 'Desplazamiento lingüístico causado por la presión del prestigio social',
+                options: [
+                    'Desplazamiento lingüístico causado por la presión del prestigio social',
+                    'Evolución natural de las lenguas',
+                    'Préstamo lingüístico',
+                    'Bilingüismo equilibrado'
+                ],
+                onSolve: 'El mapa muestra las conexiones perdidas.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Tres voces confluyen en el centro del mapa.',
+                sources: [
+                    '«Mi abuela me hablaba en wayúu. Mi madre me hablaba en español. Yo le hablo a mi hija en inglés. Tres generaciones, tres lenguas, ninguna completa.» — Testimonio anónimo',
+                    '«El 50% de las lenguas del mundo desaparecerán antes de 2100.» — UNESCO',
+                    '«Doña Asunción fue la última escuchadora. Cuando ella se fue, el río dejó de contar historias.» — Yaguará'
+                ],
+                clue: '¿Qué conecta estas tres voces con la misión del Mapa de las Voces?',
+                answer: 'El Mapa de las Voces intenta restaurar lo que la presión social y el olvido han destruido: la conexión entre todas las lenguas',
+                options: [
+                    'El Mapa de las Voces intenta restaurar lo que la presión social y el olvido han destruido: la conexión entre todas las lenguas',
+                    'Las lenguas indígenas son responsabilidad del gobierno',
+                    'Es natural que las lenguas mueran',
+                    'El español es la solución para unir a todos'
+                ],
+                onSolve: 'Todas las voces se unen. El mapa brilla completo. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: la constelación de las Raíces Entrelazadas.',
+            questClue: 'Las raíces no compiten. Se entrelazan bajo la tierra donde nadie las ve.',
+            item: 'constelacion-raices'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '56',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest56Progress',
+        backUrl: '../../c2-colombia.html'
+    });
+</script>
+</body>
+</html>

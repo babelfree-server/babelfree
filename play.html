@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Jaguar</title>
+    <link rel="stylesheet" href="css/yaguara-game.css">
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <header class="yg-header">
+        <a href="/dashboard" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Cargando...</div>
+            <div class="yg-header-subtitle"></div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script src="js/jaguar-api.js"></script>
+<script>
+    // Auth guard
+    if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
+        window.location.href = 'login.html';
+    }
+</script>
+<script src="js/yaguara-engine.js"></script>
+<script src="js/content-loader.js"></script>
+</body>
+</html>

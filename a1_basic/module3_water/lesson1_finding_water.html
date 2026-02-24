@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3, Lección 1 - Buscando agua</title>
+    <meta name="description" content="A1 Basic - Module 3 Lesson 1: Yaguará finds water in the jungle">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module3_water/lesson1_finding_water">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 3, Lección 1 - Buscando agua",
+                "url": "https://babelfree.com/a1_basic/module3_water/lesson1_finding_water",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": [
+                    "Basic needs vocabulary",
+                    "Verb tener",
+                    "Expressing needs"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Agua",
+                        "item": "https://babelfree.com/a1_basic/module3_water/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Lesson 1"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --amazon-dark: #0a2e0a;
+            --amazon-medium: #1a4d1a;
+            --amazon-light: #2d6b2d;
+            --jaguar-gold: #f9ca24;
+            --jaguar-orange: #ff6b35;
+            --success-green: #4caf50;
+            --water-blue: #00bcd4;
+            --river-blue: #0277bd;
+            --thirst-orange: #ff9800;
+            --fresh-cyan: #4dd0e1;
+            --text-light: #e8f5e8;
+            --text-muted: #a5d6a7;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--amazon-dark) 0%, var(--amazon-medium) 50%, var(--water-blue) 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            font-size: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(0, 188, 212, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(2, 119, 189, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(77, 208, 225, 0.1) 0%, transparent 50%);
+            z-index: 1;
+            animation: waterFlow 35s ease-in-out infinite;
+        }
+
+        @keyframes waterFlow {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            25% { transform: scale(1.03) rotate(0.3deg); opacity: 1; }
+            50% { transform: scale(0.97) rotate(-0.2deg); opacity: 0.9; }
+            75% { transform: scale(1.01) rotate(0.1deg); opacity: 1; }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .lesson-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 3px solid var(--water-blue);
+            text-align: center;
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid var(--water-blue);
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(0, 188, 212, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .lesson-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--river-blue);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .lesson-title {
+            font-size: 2.2rem;
+            color: var(--water-blue);
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .lesson-subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .progress-bar-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--water-blue);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--water-blue), var(--fresh-cyan));
+            border-radius: 6px;
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .progress-text {
+            color: var(--water-blue);
+            font-weight: 700;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* THIRST STORY SECTION */
+        .story-section {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(0, 188, 212, 0.1));
+            border: 3px solid var(--thirst-orange);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .story-title {
+            color: var(--thirst-orange);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .jaguar-thirsty {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 4px solid var(--thirst-orange);
+            animation: thirstyPulse 3s ease-in-out infinite;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(255, 152, 0, 0.4);
+            position: relative;
+        }
+
+        @keyframes thirstyPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); filter: brightness(1.2); }
+        }
+
+        .story-text {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            line-height: 2;
+            margin: 20px 0;
+        }
+
+        .simple-sentence {
+            margin: 15px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid var(--thirst-orange);
+        }
+
+        /* WATER CONCEPTS SECTION */
+        .water-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            border: 3px solid var(--water-blue);
+        }
+
+        .water-title {
+            color: var(--water-blue);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .water-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .water-concept {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .water-concept:hover {
+            transform: translateY(-5px);
+            border-color: var(--water-blue);
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+        }
+
+        .water-concept.agua {
+            border-color: var(--water-blue);
+        }
+
+        .water-concept.rio {
+            border-color: var(--river-blue);
+        }
+
+        .water-concept.beber {
+            border-color: var(--fresh-cyan);
+        }
+
+        .water-concept.sed {
+            border-color: var(--thirst-orange);
+        }
+
+        .concept-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            border: 3px solid;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .water-concept.agua .concept-avatar {
+            background: linear-gradient(135deg, var(--water-blue), #4dd0e1);
+            border-color: var(--water-blue);
+        }
+
+        .water-concept.rio .concept-avatar {
+            background: linear-gradient(135deg, var(--river-blue), #42a5f5);
+            border-color: var(--river-blue);
+        }
+
+        .water-concept.beber .concept-avatar {
+            background: linear-gradient(135deg, var(--fresh-cyan), #80deea);
+            border-color: var(--fresh-cyan);
+        }
+
+        .water-concept.sed .concept-avatar {
+            background: linear-gradient(135deg, var(--thirst-orange), #ffb74d);
+            border-color: var(--thirst-orange);
+        }
+
+        .concept-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .water-concept.agua .concept-name { color: var(--water-blue); }
+        .water-concept.rio .concept-name { color: var(--river-blue); }
+        .water-concept.beber .concept-name { color: var(--fresh-cyan); }
+        .water-concept.sed .concept-name { color: var(--thirst-orange); }
+
+        .concept-action {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .concept-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* WATER RIPPLE EFFECT */
+        .water-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: rgba(0, 188, 212, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: ripple 3s infinite;
+        }
+
+        @keyframes ripple {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(8); opacity: 0; }
+        }
+
+        .water-concept:hover .water-ripple {
+            animation-play-state: running;
+        }
+
+        /* INTERACTIVE WATER EXERCISE */
+        .water-exercise-section {
+            background: linear-gradient(135deg, rgba(0, 188, 212, 0.15), rgba(77, 208, 225, 0.1));
+            border: 3px solid var(--water-blue);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .exercise-title {
+            color: var(--water-blue);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .exercise-instruction {
+            background: rgba(0, 188, 212, 0.1);
+            border: 2px solid var(--water-blue);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .instruction-text {
+            color: var(--water-blue);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .water-matching-game {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .situations-column, .actions-column {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .column-title {
+            color: var(--water-blue);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .situation-item, .action-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid transparent;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .situation-item:hover, .action-item:hover {
+            border-color: var(--water-blue);
+            background: rgba(0, 188, 212, 0.1);
+            transform: translateX(5px);
+        }
+
+        .situation-item.selected, .action-item.selected {
+            border-color: var(--water-blue);
+            background: rgba(0, 188, 212, 0.2);
+            transform: scale(1.02);
+        }
+
+        .situation-item.correct, .action-item.correct {
+            border-color: var(--success-green);
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .situation-item.incorrect, .action-item.incorrect {
+            border-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.2);
+        }
+
+        /* YAGUARÁ WATER GUIDE */
+        .yaguara-guide {
+            background: linear-gradient(135deg, rgba(249, 202, 36, 0.15), rgba(255, 107, 53, 0.1));
+            border: 3px solid var(--jaguar-gold);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .yaguara-avatar {
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 3px solid var(--jaguar-gold);
+            animation: thirstyPulse 4s ease-in-out infinite;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .yaguara-text {
+            padding-top: 5px;
+        }
+
+        .guide-title {
+            color: var(--jaguar-gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .guide-message {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .simple-message {
+            margin: 8px 0;
+        }
+
+        /* LESSON NAVIGATION */
+        .lesson-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .nav-button.primary {
+            background: linear-gradient(135deg, var(--water-blue), var(--fresh-cyan));
+            color: white;
+            border: 2px solid var(--water-blue);
+        }
+
+        .nav-button.primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: var(--glass-bg);
+            color: white;
+            border: 2px solid var(--water-blue);
+        }
+
+        .nav-button.secondary:hover {
+            background: rgba(0, 188, 212, 0.2);
+            transform: scale(1.05);
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-button:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* SUCCESS MESSAGE */
+        .success-message {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(129, 199, 132, 0.1));
+            border: 3px solid var(--success-green);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: successSlide 0.5s ease-out;
+        }
+
+        @keyframes successSlide {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-title {
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .success-text {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 18px; padding: 15px; }
+            .container { padding: 15px; }
+            .lesson-header { padding: 20px; }
+            .water-grid { grid-template-columns: 1fr; }
+            .water-matching-game { grid-template-columns: 1fr; gap: 20px; }
+            .lesson-title { font-size: 1.8rem; }
+            .back-btn, .lesson-info { 
+                position: static; 
+                margin: 10px auto; 
+                display: block; 
+                width: fit-content; 
+            }
+            .yaguara-guide {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
+            }
+            .yaguara-avatar { margin: 0 auto; }
+        }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/a1-amazon" class="back-btn">← Módulos</a>
+            <div class="lesson-info">Módulo 3 • Lección 1</div>
+            <h1 class="lesson-title">💧 Buscando agua</h1>
+            <p class="lesson-subtitle">Yaguará tiene sed</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Paso 1 de 4</div>
+        </div>
+
+        <!-- THIRST STORY INTRODUCTION -->
+        <div class="story-section" id="step1">
+            <div class="story-title">😓 Yaguará tiene sed</div>
+            <div class="jaguar-thirsty" onclick="speakText('Yaguará tiene sed. Necesito agua.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="story-text">
+                <div class="simple-sentence">👂 Yaguará escucha sonidos.</div>
+                <div class="simple-sentence">😓 Yaguará tiene sed.</div>
+                <div class="simple-sentence">💧 Necesito agua.</div>
+                <div class="simple-sentence">🔍 Busca agua.</div>
+            </div>
+        </div>
+
+        <!-- WATER CONCEPTS -->
+        <div class="water-section" id="step2" style="display:none;">
+            <div class="water-title">💧 Agua para Yaguará</div>
+            
+            <div class="water-grid">
+                <div class="water-concept agua" onclick="learnWaterConcept('agua')">
+                    <div class="concept-avatar">
+                        💧
+                        <div class="water-ripple"></div>
+                    </div>
+                    <div class="concept-name">Agua</div>
+                    <div class="concept-action">Es limpia</div>
+                    <div class="concept-description">Necesito agua.</div>
+                </div>
+
+                <div class="water-concept rio" onclick="learnWaterConcept('rio')">
+                    <div class="concept-avatar">
+                        🌊
+                        <div class="water-ripple"></div>
+                    </div>
+                    <div class="concept-name">Río</div>
+                    <div class="concept-action">Agua grande</div>
+                    <div class="concept-description">El río tiene agua.</div>
+                </div>
+
+                <div class="water-concept beber" onclick="learnWaterConcept('beber')">
+                    <div class="concept-avatar">
+                        🥤
+                        <div class="water-ripple"></div>
+                    </div>
+                    <div class="concept-name">Beber</div>
+                    <div class="concept-action">Tomar agua</div>
+                    <div class="concept-description">Tengo sed. Bebo agua.</div>
+                </div>
+
+                <div class="water-concept sed" onclick="learnWaterConcept('sed')">
+                    <div class="concept-avatar">
+                        😓
+                        <div class="water-ripple"></div>
+                    </div>
+                    <div class="concept-name">Sed</div>
+                    <div class="concept-action">Necesitar agua</div>
+                    <div class="concept-description">Tengo sed. Busco agua.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YAGUARÁ WATER GUIDE -->
+        <div class="yaguara-guide" id="step3" style="display:none;">
+            <div class="yaguara-avatar" onclick="speakText('Tengo sed. Busco agua. Hay un río. Bebo agua.')"><img src="../../img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">Yaguará dice:</div>
+                <div class="guide-message">
+                    <div class="simple-message">😓 Tengo sed.</div>
+                    <div class="simple-message">🔍 Busco agua.</div>
+                    <div class="simple-message">🌊 Hay un río.</div>
+                    <div class="simple-message">💧 Bebo agua del río.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE WATER EXERCISE -->
+        <div class="water-exercise-section" id="step4" style="display:none;">
+            <div class="exercise-title">🎯 Práctica: ¿Qué hacer?</div>
+            
+            <div class="exercise-instruction">
+                <div class="instruction-text">Haz clic: problema + respuesta</div>
+            </div>
+
+            <div class="water-matching-game">
+                <div class="situations-column">
+                    <div class="column-title">📍 Problema</div>
+                    <div class="situation-item" onclick="selectSituation(this, 'sed')" data-situation="sed">😓 Tengo sed</div>
+                    <div class="situation-item" onclick="selectSituation(this, 'rio')" data-situation="rio">🌊 Veo un río</div>
+                    <div class="situation-item" onclick="selectSituation(this, 'calor')" data-situation="calor">🌞 Hace calor</div>
+                    <div class="situation-item" onclick="selectSituation(this, 'agua')" data-situation="agua">🔍 No hay agua</div>
+                </div>
+
+                <div class="actions-column">
+                    <div class="column-title">✨ Respuesta</div>
+                    <div class="action-item" onclick="selectAction(this, 'beber')" data-action="beber">🥤 Beber agua</div>
+                    <div class="action-item" onclick="selectAction(this, 'nadar')" data-action="nadar">🏊 Nadar</div>
+                    <div class="action-item" onclick="selectAction(this, 'refrescar')" data-action="refrescar">💦 Agua fría</div>
+                    <div class="action-item" onclick="selectAction(this, 'agua')" data-action="agua">🔎 Buscar agua</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-message" id="successMessage">
+            <div class="success-title">🎉 ¡Excelente!</div>
+            <div class="success-text">
+                Lección 1 completa.<br>
+                Yaguará tiene agua.<br>
+                ¡Conoces palabras sobre el agua!
+            </div>
+        </div>
+
+        <!-- LESSON NAVIGATION -->
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" onclick="previousStep()" id="prevBtn" disabled>← Anterior</button>
+            <button class="nav-button primary" onclick="nextStep()" id="nextBtn">Siguiente →</button>
+            <button class="nav-button primary" onclick="finishLesson()" id="finishBtn" style="display:none;">✅ Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        // Lesson Management System
+        (function() {
+            'use strict';
+            
+            var lessonData = {
+                currentStep: 1,
+                totalSteps: 4,
+                selectedSituation: null,
+                matchedPairs: 0,
+                totalPairs: 4,
+                isComplete: false
+            };
+
+            // CORREGIDO: Conceptos simplificados para A1 según PDF
+            var waterConcepts = {
+                agua: "Necesito agua. El agua es limpia.",
+                rio: "El río tiene agua. El río es grande.",
+                beber: "Tengo sed. Bebo agua.",
+                sed: "Tengo sed. Busco agua."
+            };
+
+            // CORREGIDO CRÍTICO: Emparejamientos más claros según PDF
+            var situationMatches = {
+                sed: 'beber',       // Tengo sed → Beber agua
+                rio: 'nadar',       // Veo un río → Nadar
+                calor: 'refrescar', // Hace calor → Refrescarse
+                agua: 'agua'        // No hay agua → Buscar agua
+            };
+
+            function updateProgress() {
+                var percentage = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var progressFill = document.getElementById('progressFill');
+                var progressText = document.getElementById('progressText');
+                
+                if (progressFill) progressFill.style.width = percentage + '%';
+                if (progressText) progressText.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(stepNumber) {
+                // Hide all steps
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var step = document.getElementById('step' + i);
+                    if (step) step.style.display = 'none';
+                }
+                
+                // Show current step
+                var currentStep = document.getElementById('step' + stepNumber);
+                if (currentStep) {
+                    currentStep.style.display = 'block';
+                    currentStep.style.animation = 'fadeIn 0.5s ease-in';
+                }
+                
+                updateNavigationButtons();
+                updateProgress();
+            }
+
+            function updateNavigationButtons() {
+                var prevBtn = document.getElementById('prevBtn');
+                var nextBtn = document.getElementById('nextBtn');
+                var finishBtn = document.getElementById('finishBtn');
+                
+                if (prevBtn) prevBtn.disabled = lessonData.currentStep === 1;
+                
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    if (finishBtn) finishBtn.style.display = 'inline-block';
+                } else {
+                    if (nextBtn) nextBtn.style.display = 'inline-block';
+                    if (finishBtn) finishBtn.style.display = 'none';
+                }
+            }
+
+            function goToNextStep() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                    if (window.JaguarAPI) JaguarAPI.syncA1Progress('module3_water', 'lesson1_finding_water', { currentStep: lessonData.currentStep, totalSteps: lessonData.totalSteps, isComplete: false, matchedPairs: lessonData.matchedPairs });
+                }
+            }
+
+            function goToPreviousStep() {
+                if (lessonData.currentStep > 1) {
+                    lessonData.currentStep--;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function learnWaterConceptFunction(concept) {
+                var explanation = waterConcepts[concept];
+                if (explanation) {
+                    speakText(explanation);
+                    // CORREGIDO: Añadir repetición según PDF
+                    setTimeout(function() {
+                        speakText('Yaguará escucha. Tiene sed. Busca agua.');
+                    }, 3000);
+                    showNotification('💧 ' + concept.charAt(0).toUpperCase() + concept.slice(1) + ':', explanation);
+                }
+            }
+
+            function selectSituationInGame(situationElement, situation) {
+                // Clear previous selections
+                var allSituations = document.querySelectorAll('.situation-item');
+                for (var i = 0; i < allSituations.length; i++) {
+                    allSituations[i].classList.remove('selected');
+                }
+                
+                situationElement.classList.add('selected');
+                lessonData.selectedSituation = situation;
+                
+                // Speak the situation
+                var situationTexts = {
+                    sed: "Tengo sed",
+                    rio: "Veo un río",
+                    calor: "Hace calor",
+                    agua: "No hay agua"
+                };
+                
+                var text = situationTexts[situation];
+                if (text) {
+                    speakText(text);
+                    showNotification('📍 Situación:', text);
+                }
+            }
+
+            function selectActionInGame(actionElement, action) {
+                if (!lessonData.selectedSituation) {
+                    showNotification('⚠️ Primero:', 'Selecciona una situación');
+                    return;
+                }
+                
+                var correctAction = situationMatches[lessonData.selectedSituation];
+                var isCorrect = action === correctAction;
+                var situationElement = document.querySelector('.situation-item[data-situation="' + lessonData.selectedSituation + '"]');
+                
+                if (isCorrect) {
+                    // Correct match
+                    situationElement.classList.remove('selected');
+                    situationElement.classList.add('correct');
+                    actionElement.classList.add('correct');
+                    
+                    lessonData.matchedPairs++;
+                    lessonData.selectedSituation = null;
+                    
+                    showNotification('✅ ¡Correcto!', 'Buena solución');
+                    speakText('¡Muy bien!');
+                    
+                    if (lessonData.matchedPairs === lessonData.totalPairs) {
+                        setTimeout(function() {
+                            var successMessage = document.getElementById('successMessage');
+                            if (successMessage) successMessage.classList.add('show');
+                            speakText('¡Excelente! Yaguará sabe sobre el agua.');
+                        }, 1000);
+                    }
+                } else {
+                    // Incorrect match
+                    situationElement.classList.add('incorrect');
+                    actionElement.classList.add('incorrect');
+                    
+                    showNotification('❌ Incorrecto', 'Intenta otra vez');
+                    
+                    setTimeout(function() {
+                        situationElement.classList.remove('selected', 'incorrect');
+                        actionElement.classList.remove('incorrect');
+                        lessonData.selectedSituation = null;
+                    }, 1500);
+                }
+            }
+
+            // CORREGIDO: Velocidad de síntesis más lenta para A1
+            function speakInSpanish(text) {
+                if (!text || !('speechSynthesis' in window)) {
+                    console.log('Síntesis de voz no disponible o texto vacío');
+                    return;
+                }
+                
+                try {
+                    var utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'es-CO';
+                    utterance.rate = 0.5;  // CORREGIDO: Más lento para principiantes
+                    utterance.pitch = 1.0;
+                    utterance.volume = 1.0;
+                    
+        
+                    speechSynthesis.speak(utterance);
+                } catch (error) {
+                    console.log('Error al hablar:', error);
+                }
+            }
+
+            // CORREGIDO: Mejorada función de notificaciones
+            function showNotification(title, message) {
+                if (!title || !message) {
+                    console.log('Título o mensaje faltante para notificación');
+                    return;
+                }
+                
+                // Remover notificación previa si existe
+                var existingNotification = document.querySelector('.temp-notification');
+                if (existingNotification) {
+                    existingNotification.remove();
+                }
+                
+                var notification = document.createElement('div');
+                notification.className = 'temp-notification';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: rgba(0, 188, 212, 0.95);
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 12px;
+                    font-weight: 600;
+                    z-index: 10000;
+                    max-width: 320px;
+                    border: 2px solid #00bcd4;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+                    animation: slideInRight 0.3s ease-out;
+                `;
+                
+                notification.innerHTML = `
+                    <div style="font-weight: 700; margin-bottom: 5px; font-size: 1.1rem;">${title}</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">${message}</div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(function() {
+                    if (notification && notification.parentNode) {
+                        notification.style.animation = 'slideOutRight 0.3s ease-in';
+                        setTimeout(function() {
+                            if (notification.parentNode) {
+                                notification.parentNode.removeChild(notification);
+                            }
+                        }, 300);
+                    }
+                }, 3500);
+            }
+
+            // CORREGIDO: Nombre de función
+            function completeLesson() {
+                lessonData.isComplete = true;
+                if (window.JaguarAPI) JaguarAPI.syncA1Progress('module3_water', 'lesson1_finding_water', { currentStep: lessonData.totalSteps, totalSteps: lessonData.totalSteps, isComplete: true, matchedPairs: lessonData.matchedPairs });
+                showNotification('🎓 Lección 3 completa', 'Yaguará tiene agua');
+                
+                setTimeout(function() {
+                    if (confirm('🎉 ¡Lección completa!\n\nYaguará bebe agua. Tiene sed.\n\n¿Continuar al siguiente módulo?')) {
+                        window.location.href = '/a1-amazon';
+                    }
+                }, 2000);
+            }
+
+            // Make functions globally available
+            window.nextStep = goToNextStep;
+            window.previousStep = goToPreviousStep;
+            window.learnWaterConcept = learnWaterConceptFunction;
+            window.selectSituation = selectSituationInGame;
+            window.selectAction = selectActionInGame;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLesson; // CORREGIDO: Nombre de función
+
+            // Add CSS for animations
+            var style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                @keyframes slideInRight {
+                    from { transform: translateX(300px); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOutRight {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(300px); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // CORREGIDO: Mejor manejo de errores en inicialización
+            document.addEventListener('DOMContentLoaded', function() {
+                try {
+                    showStep(1);
+                    console.log('Módulo 3 cargado correctamente');
+                    
+                    // Verificar elementos críticos
+                    var progressFill = document.getElementById('progressFill');
+                    var progressText = document.getElementById('progressText');
+                    
+                    if (!progressFill || !progressText) {
+                        console.error('Elementos de progreso no encontrados');
+                    }
+                    
+                } catch (error) {
+                    console.error('Error al inicializar módulo:', error);
+                    showNotification('⚠️ Error', 'Problema al cargar el módulo');
+                }
+            });
+
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>

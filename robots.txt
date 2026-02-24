@@ -1,0 +1,54 @@
+# robots.txt - Babel Free
+# https://babelfree.com
+
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI answer engine crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Block non-public files
+Disallow: /*.py$
+Disallow: /__pycache__/
+Disallow: /.git/
+Disallow: /api/
+Disallow: /ontology/
+Disallow: /generator/
+
+# Block app/internal pages
+Disallow: /login
+Disallow: /dashboard
+Disallow: /play
+Disallow: /ecosystem
+Disallow: /*-exam
+
+# Sitemap
+Sitemap: https://babelfree.com/sitemap.xml

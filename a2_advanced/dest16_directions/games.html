@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 16: ¿Dónde está...? - Direcciones</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_advanced/dest16_directions/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 16: ¿Dónde está...? - Direcciones",
+          "url": "https://babelfree.com/a2_advanced/dest16_directions/games",
+          "educationalLevel": "A2 Advanced - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Giving directions", "Location vocabulary", "Spanish communication"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Advanced", "item": "https://babelfree.com/a2-coffee" },
+            { "@type": "ListItem", "position": 4, "name": "¿Dónde está...? - Direcciones" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+
+    <header class="yg-header">
+        <a href="/a2-coffee" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 16: ¿Dónde está...?</div>
+            <div class="yg-header-subtitle">Direcciones</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+            // GAME 1: Pair Matching - Direction phrase to meaning
+            {
+                type: 'pair-matching',
+                title: 'Conecta las direcciones',
+                instruction: 'Conecta cada frase de direcci\u00f3n con su significado.',
+                pairs: [
+                    { left: 'a la derecha', right: 'to the right \u2192' },
+                    { left: 'a la izquierda', right: 'to the left \u2190' },
+                    { left: 'sigue derecho', right: 'go straight \u2191' },
+                    { left: 'gira', right: 'turn \u21A9' },
+                    { left: 'al lado de', right: 'next to' },
+                    { left: 'enfrente de', right: 'in front of' }
+                ],
+                hint: 'Piensa en las flechas: derecha = \u2192, izquierda = \u2190, derecho = \u2191'
+            },
+
+            // GAME 2: Fill-in-the-Blank - Prepositions of location
+            {
+                type: 'fill-blank',
+                title: 'Completa la frase',
+                instruction: 'Elige la preposici\u00f3n correcta para completar la frase.',
+                sentence: 'El banco est\u00e1 ___ del hospital.',
+                blanks: [{ answer: 'al lado', options: ['al lado', 'enfrente', 'cerca', 'lejos'] }],
+                feedback_correct: '\u00a1Correcto! "Al lado de" significa "next to".',
+                feedback_incorrect: 'La respuesta correcta es "al lado". El banco est\u00e1 al lado del hospital.',
+                hint: '"Al lado de" indica proximidad directa, como estar pegado.'
+            },
+
+            // GAME 3: Verb Conjugation - Imperative
+            {
+                type: 'verb-conjugation',
+                title: 'Imperativo: da instrucciones',
+                instruction: 'Escribe la forma imperativa (t\u00fa) del verbo entre par\u00e9ntesis.',
+                prompt: '___ (girar, t\u00fa) a la derecha.',
+                verb: 'girar',
+                subject: 't\u00fa',
+                answer: 'Gira',
+                context: 'Imperativo informal (t\u00fa): girar \u2192 gira',
+                hint: 'Para formar el imperativo de verbos -ar con "t\u00fa", usa la forma de \u00e9l/ella del presente: gira.'
+            },
+
+            // GAME 4: Listening - Follow directions
+            {
+                type: 'listening',
+                title: 'Escucha las direcciones',
+                instruction: 'Escucha la direcci\u00f3n y selecciona la respuesta correcta.',
+                audioText: 'Sigue derecho y gira a la izquierda.',
+                options: [
+                    'Go straight and turn left',
+                    'Go straight and turn right',
+                    'Turn left and go straight',
+                    'Turn right and turn left'
+                ],
+                correctIndex: 0,
+                hint: '"Sigue derecho" = go straight, "gira a la izquierda" = turn left.'
+            },
+
+            // GAME 5: Category Sorting - Lugares vs Direcciones
+            {
+                type: 'category-sort',
+                title: 'Clasifica las palabras',
+                instruction: 'Arrastra cada palabra a la categor\u00eda correcta: Lugares o Direcciones.',
+                categories: ['Lugares', 'Direcciones'],
+                items: [
+                    { text: 'banco', category: 'Lugares' },
+                    { text: 'hospital', category: 'Lugares' },
+                    { text: 'farmacia', category: 'Lugares' },
+                    { text: 'parque', category: 'Lugares' },
+                    { text: 'derecha', category: 'Direcciones' },
+                    { text: 'izquierda', category: 'Direcciones' },
+                    { text: 'derecho', category: 'Direcciones' },
+                    { text: 'esquina', category: 'Direcciones' }
+                ],
+                hint: 'Los lugares son sitios f\u00edsicos; las direcciones son instrucciones de movimiento.'
+            },
+
+            // GAME 6: Fill-in-the-Blank - Giving directions with two blanks
+            {
+                type: 'fill-blank-multi',
+                title: 'Da las direcciones',
+                instruction: 'Completa las direcciones con los verbos correctos.',
+                sentence: '\u00bfD\u00f3nde est\u00e1 la farmacia? \u2014 ___ derecho dos cuadras y ___ a la derecha.',
+                blanks: [
+                    { answer: 'Sigue', options: ['Sigue', 'Gira', 'Camina', 'Toma'] },
+                    { answer: 'gira', options: ['gira', 'sigue', 'camina', 'toma'] }
+                ],
+                feedback_correct: '\u00a1Perfecto! "Sigue derecho dos cuadras y gira a la derecha."',
+                feedback_incorrect: 'Las respuestas correctas son "Sigue" y "gira". Sigue derecho = go straight, gira = turn.',
+                hint: '"Sigue derecho" = go straight, "gira" = turn.'
+            },
+
+            // GAME 7: Sentence Builder
+            {
+                type: 'sentence-builder',
+                title: 'Construye la oraci\u00f3n',
+                instruction: 'Ordena las palabras para formar una direcci\u00f3n correcta.',
+                words: ['Gira', 'a la', 'izquierda', 'en', 'la', 'esquina'],
+                correctOrder: ['Gira', 'a la', 'izquierda', 'en', 'la', 'esquina'],
+                translation: 'Turn left at the corner.',
+                hint: 'Empieza con el verbo imperativo "Gira", luego la direcci\u00f3n, luego el lugar.'
+            },
+
+            // GAME 8: Verb Conjugation - Multiple imperative forms
+            {
+                type: 'verb-conjugation-multi',
+                title: 'Imperativo de verbos de direcci\u00f3n',
+                instruction: 'Escribe la forma imperativa (t\u00fa) de cada verbo.',
+                verbs: [
+                    { infinitive: 'girar', answer: 'gira', context: '(t\u00fa) ___ a la derecha' },
+                    { infinitive: 'seguir', answer: 'sigue', context: '(t\u00fa) ___ derecho' },
+                    { infinitive: 'caminar', answer: 'camina', context: '(t\u00fa) ___ dos cuadras' },
+                    { infinitive: 'tomar', answer: 'toma', context: '(t\u00fa) ___ la primera calle' }
+                ],
+                hint: 'Imperativo t\u00fa: -ar \u2192 -a, -er/-ir \u2192 -e (seguir es irregular: sigue).'
+            },
+
+            // GAME 9: Translation - Word bank
+            {
+                type: 'translation',
+                title: 'Traduce al espa\u00f1ol',
+                instruction: 'Usa las palabras para traducir la frase al espa\u00f1ol.',
+                sourceText: 'The restaurant is next to the bank.',
+                words: ['El', 'restaurante', 'est\u00e1', 'al', 'lado', 'del', 'banco', 'en', 'la'],
+                correctOrder: ['El', 'restaurante', 'est\u00e1', 'al', 'lado', 'del', 'banco'],
+                hint: '"Next to" = "al lado de". "Del" = "de" + "el".'
+            },
+
+            // GAME 10: Conversation - Asking for directions
+            {
+                type: 'conversation',
+                title: 'Pide direcciones',
+                instruction: 'Elige la respuesta correcta en la conversaci\u00f3n.',
+                exchanges: [
+                    {
+                        speaker: 'T\u00fa',
+                        text: 'Disculpe, \u00bfd\u00f3nde est\u00e1 el hospital?',
+                        isPlayer: true,
+                        isFixed: true
+                    },
+                    {
+                        speaker: 'Se\u00f1ora',
+                        text: null,
+                        isPlayer: false,
+                        isFixed: false,
+                        options: [
+                            'Sigue derecho dos cuadras y gira a la izquierda. Est\u00e1 al lado de la farmacia.',
+                            'El hospital es muy grande y bonito.',
+                            'No me gustan los hospitales.',
+                            'Yo vivo en la calle principal.'
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        speaker: 'T\u00fa',
+                        text: null,
+                        isPlayer: true,
+                        isFixed: false,
+                        options: [
+                            '\u00a1Muchas gracias, se\u00f1ora!',
+                            '\u00bfCu\u00e1ntos a\u00f1os tienes?',
+                            'No me gusta caminar.',
+                            'Yo soy de Colombia.'
+                        ],
+                        correctIndex: 0
+                    }
+                ],
+                hint: 'Busca la respuesta que da direcciones espec\u00edficas al hospital.'
+            },
+
+            // GAME 11: Sentence Builder - Between
+            {
+                type: 'sentence-builder',
+                title: 'Construye la oraci\u00f3n',
+                instruction: 'Ordena las palabras para describir la ubicaci\u00f3n.',
+                words: ['El', 'supermercado', 'est\u00e1', 'entre', 'el', 'banco', 'y', 'la', 'farmacia'],
+                correctOrder: ['El', 'supermercado', 'est\u00e1', 'entre', 'el', 'banco', 'y', 'la', 'farmacia'],
+                translation: 'The supermarket is between the bank and the pharmacy.',
+                hint: '"Entre" = between. La estructura es: est\u00e1 + entre + lugar 1 + y + lugar 2.'
+            },
+
+            // GAME 12: Translation - Directions
+            {
+                type: 'translation',
+                title: 'Traduce al espa\u00f1ol',
+                instruction: 'Traduce usando el banco de palabras.',
+                sourceText: 'Go straight two blocks and turn left.',
+                words: ['Sigue', 'derecho', 'dos', 'cuadras', 'y', 'gira', 'a', 'la', 'izquierda', 'tres'],
+                correctOrder: ['Sigue', 'derecho', 'dos', 'cuadras', 'y', 'gira', 'a', 'la', 'izquierda'],
+                hint: '"Go straight" = "sigue derecho", "blocks" = "cuadras", "turn left" = "gira a la izquierda".'
+            },
+
+            // GAME 13: Conversation - Multi-turn directions
+            {
+                type: 'conversation',
+                title: 'Direcciones en la ciudad',
+                instruction: 'Completa la conversaci\u00f3n pidiendo y dando direcciones.',
+                exchanges: [
+                    {
+                        speaker: 'Turista',
+                        text: 'Disculpe, \u00bfc\u00f3mo llego al parque central?',
+                        isPlayer: false,
+                        isFixed: true
+                    },
+                    {
+                        speaker: 'T\u00fa',
+                        text: null,
+                        isPlayer: true,
+                        isFixed: false,
+                        options: [
+                            'Camina derecho por esta calle tres cuadras.',
+                            'El parque es muy bonito.',
+                            'No s\u00e9 nada.',
+                            'Me gusta el parque.'
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        speaker: 'Turista',
+                        text: '\u00bfY despu\u00e9s?',
+                        isPlayer: false,
+                        isFixed: true
+                    },
+                    {
+                        speaker: 'T\u00fa',
+                        text: null,
+                        isPlayer: true,
+                        isFixed: false,
+                        options: [
+                            'Gira a la derecha en la esquina. El parque est\u00e1 enfrente de la iglesia.',
+                            'El parque tiene muchos \u00e1rboles.',
+                            'Yo voy al parque los domingos.',
+                            'No me gusta caminar.'
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        speaker: 'Turista',
+                        text: '\u00a1Muchas gracias!',
+                        isPlayer: false,
+                        isFixed: true
+                    }
+                ],
+                hint: 'Da instrucciones claras paso a paso: camina, gira, y describe d\u00f3nde est\u00e1.'
+            },
+
+            // GAME 14: Dictation
+            {
+                type: 'dictation',
+                title: 'Escucha y escribe',
+                instruction: 'Escucha las direcciones y escr\u00edbelas correctamente.',
+                audioText: 'Gira a la derecha en la esquina.',
+                answer: 'Gira a la derecha en la esquina.',
+                acceptableAnswers: ['Gira a la derecha en la esquina.', 'Gira a la derecha en la esquina', 'gira a la derecha en la esquina'],
+                hint: 'Escucha con atenci\u00f3n: un verbo imperativo + direcci\u00f3n + lugar.'
+            },
+
+            // GAME 15: Story Comprehension - Yaguara busca el parque
+            {
+                type: 'story',
+                title: 'Yaguar\u00e1 busca el parque',
+                story: 'Yaguar\u00e1 est\u00e1 en el centro de la ciudad. Quiere ir al parque. Una se\u00f1ora le dice: "Sigue derecho dos cuadras. Despu\u00e9s, gira a la izquierda en la esquina. El parque est\u00e1 al lado de la biblioteca, enfrente de la iglesia." Yaguar\u00e1 camina derecho, gira a la izquierda y encuentra el parque. \u00a1Est\u00e1 muy contento!',
+                questions: [
+                    {
+                        question: '\u00bfD\u00f3nde est\u00e1 Yaguar\u00e1 al principio?',
+                        options: ['En el parque', 'En el centro de la ciudad', 'En la biblioteca', 'En la iglesia'],
+                        correctIndex: 1
+                    },
+                    {
+                        question: '\u00bfHacia d\u00f3nde gira Yaguar\u00e1?',
+                        options: ['A la derecha', 'A la izquierda', 'Derecho', 'No gira'],
+                        correctIndex: 1
+                    },
+                    {
+                        question: '\u00bfD\u00f3nde est\u00e1 el parque?',
+                        options: ['Al lado del hospital', 'Enfrente del banco', 'Al lado de la biblioteca', 'Lejos de la iglesia'],
+                        correctIndex: 2
+                    }
+                ],
+                hint: 'Lee con cuidado las indicaciones que le da la se\u00f1ora a Yaguar\u00e1.'
+            },
+
+            // GAME 16: Pair Matching - Questions and direction responses
+            {
+                type: 'pair-matching',
+                title: 'Conecta preguntas y respuestas',
+                instruction: 'Conecta cada pregunta con la respuesta de direcci\u00f3n correcta.',
+                pairs: [
+                    { left: '\u00bfD\u00f3nde est\u00e1 el banco?', right: 'Est\u00e1 en la esquina, a la derecha.' },
+                    { left: '\u00bfC\u00f3mo llego al hotel?', right: 'Sigue derecho tres cuadras.' },
+                    { left: '\u00bfEst\u00e1 lejos la estaci\u00f3n?', right: 'No, est\u00e1 cerca, a dos cuadras.' },
+                    { left: '\u00bfHay una farmacia por aqu\u00ed?', right: 'S\u00ed, est\u00e1 enfrente del parque.' },
+                    { left: '\u00bfD\u00f3nde est\u00e1 el restaurante?', right: 'Est\u00e1 entre el banco y el hotel.' },
+                    { left: '\u00bfLa biblioteca est\u00e1 cerca?', right: 'Est\u00e1 detr\u00e1s de la iglesia.' }
+                ],
+                hint: 'Lee cada pregunta y busca la respuesta que da informaci\u00f3n l\u00f3gica sobre la ubicaci\u00f3n.'
+            },
+
+            // GAME 17: Listening - Identify destination
+            {
+                type: 'listening',
+                title: 'Escucha e identifica el destino',
+                instruction: 'Escucha las direcciones y selecciona el lugar al que llegas.',
+                audioText: 'Camina dos cuadras derecho. Gira a la derecha. Est\u00e1 al lado del parque, enfrente de la iglesia. Puedes comprar medicina all\u00ed.',
+                options: [
+                    'La farmacia',
+                    'El hospital',
+                    'El supermercado',
+                    'La biblioteca'
+                ],
+                correctIndex: 0,
+                hint: '\u00bfD\u00f3nde compras medicina? Piensa en la pista final.'
+            },
+
+            // GAME 18: Category Sorting - Position vs Movement
+            {
+                type: 'category-sort',
+                title: 'Posici\u00f3n vs. Movimiento',
+                instruction: 'Clasifica las expresiones en "Posici\u00f3n" (d\u00f3nde est\u00e1) o "Movimiento" (qu\u00e9 hacer).',
+                categories: ['Posici\u00f3n', 'Movimiento'],
+                items: [
+                    { text: 'al lado de', category: 'Posici\u00f3n' },
+                    { text: 'enfrente de', category: 'Posici\u00f3n' },
+                    { text: 'detr\u00e1s de', category: 'Posici\u00f3n' },
+                    { text: 'entre', category: 'Posici\u00f3n' },
+                    { text: 'gira', category: 'Movimiento' },
+                    { text: 'sigue', category: 'Movimiento' },
+                    { text: 'camina', category: 'Movimiento' },
+                    { text: 'toma', category: 'Movimiento' }
+                ],
+                hint: 'Posici\u00f3n describe d\u00f3nde est\u00e1 algo. Movimiento es lo que haces para llegar.'
+            },
+
+            // GAME 19: Dictation - Longer directions
+            {
+                type: 'dictation',
+                title: 'Escucha y escribe',
+                instruction: 'Escucha las direcciones completas y escr\u00edbelas.',
+                audioText: 'Sigue derecho tres cuadras y gira a la izquierda. La biblioteca est\u00e1 enfrente del parque.',
+                answer: 'Sigue derecho tres cuadras y gira a la izquierda. La biblioteca est\u00e1 enfrente del parque.',
+                acceptableAnswers: [
+                    'Sigue derecho tres cuadras y gira a la izquierda. La biblioteca est\u00e1 enfrente del parque.',
+                    'Sigue derecho tres cuadras y gira a la izquierda. La biblioteca esta enfrente del parque.',
+                    'sigue derecho tres cuadras y gira a la izquierda. la biblioteca est\u00e1 enfrente del parque.',
+                    'Sigue derecho tres cuadras y gira a la izquierda La biblioteca est\u00e1 enfrente del parque'
+                ],
+                hint: 'Son dos oraciones: primero las instrucciones de movimiento, luego la ubicaci\u00f3n.'
+            },
+
+            // GAME 20: Story Comprehension - Un dia perdido en Medellin
+            {
+                type: 'story',
+                title: 'Un d\u00eda perdido en Medell\u00edn',
+                story: 'Carlos es turista en Medell\u00edn. Quiere visitar el Museo de Antioquia. Pregunta a un se\u00f1or: "\u00bfC\u00f3mo llego al museo?" El se\u00f1or responde: "Camina por la Avenida Oriental tres cuadras. Gira a la derecha en la calle Boyac\u00e1. El museo est\u00e1 enfrente de la Plaza Botero, al lado del Palacio de la Cultura." Carlos sigue las direcciones. Camina derecho, gira a la derecha y ve la Plaza Botero con sus famosas esculturas. El museo est\u00e1 justo enfrente. \u00a1Por fin llega!',
+                questions: [
+                    {
+                        question: '\u00bfQu\u00e9 quiere visitar Carlos?',
+                        options: ['La Plaza Botero', 'El Museo de Antioquia', 'El Palacio de la Cultura', 'La Avenida Oriental'],
+                        correctIndex: 1
+                    },
+                    {
+                        question: '\u00bfPor d\u00f3nde camina primero?',
+                        options: ['Por la calle Boyac\u00e1', 'Por la Plaza Botero', 'Por la Avenida Oriental', 'Por el parque'],
+                        correctIndex: 2
+                    },
+                    {
+                        question: '\u00bfD\u00f3nde est\u00e1 el museo?',
+                        options: ['Al lado de la estaci\u00f3n', 'Detr\u00e1s del parque', 'Enfrente de la Plaza Botero', 'Lejos del centro'],
+                        correctIndex: 2
+                    },
+                    {
+                        question: '\u00bfHacia d\u00f3nde gira Carlos?',
+                        options: ['A la izquierda', 'A la derecha', 'Derecho', 'No gira'],
+                        correctIndex: 1
+                    }
+                ],
+                hint: 'Lee las indicaciones del se\u00f1or con cuidado: avenida, gira, ubicaci\u00f3n final.'
+            },
+
+            // GAME 21: Fill-in-the-Blank - Mixed directions
+            {
+                type: 'fill-blank-multi',
+                title: 'Completa las direcciones',
+                instruction: 'Elige la palabra correcta para cada espacio.',
+                sentence: 'La estaci\u00f3n est\u00e1 ___ de aqu\u00ed. ___ derecho por la avenida y gira a la ___ en la segunda cuadra.',
+                blanks: [
+                    { answer: 'cerca', options: ['cerca', 'lejos', 'entre', 'detr\u00e1s'] },
+                    { answer: 'Sigue', options: ['Sigue', 'Gira', 'Est\u00e1', 'Hay'] },
+                    { answer: 'derecha', options: ['derecha', 'izquierda', 'derecho', 'esquina'] }
+                ],
+                feedback_correct: '\u00a1Excelente! "La estaci\u00f3n est\u00e1 cerca de aqu\u00ed. Sigue derecho por la avenida y gira a la derecha."',
+                feedback_incorrect: 'Las respuestas correctas son: "cerca", "Sigue", "derecha".',
+                hint: '"Cerca de" = near. "Sigue derecho" = go straight. "A la derecha" = to the right.'
+            },
+
+            // GAME 22: Sentence Builder - Complex directions
+            {
+                type: 'sentence-builder',
+                title: 'Construye la oraci\u00f3n',
+                instruction: 'Ordena las palabras para dar direcciones al hotel.',
+                words: ['Camina', 'por', 'la', 'avenida', 'principal', 'hasta', 'la', 'esquina', 'y', 'el', 'hotel', 'est\u00e1', 'a', 'la', 'derecha'],
+                correctOrder: ['Camina', 'por', 'la', 'avenida', 'principal', 'hasta', 'la', 'esquina', 'y', 'el', 'hotel', 'est\u00e1', 'a', 'la', 'derecha'],
+                translation: 'Walk along the main avenue to the corner and the hotel is on the right.',
+                hint: 'Empieza con el verbo, luego el camino, luego la ubicaci\u00f3n del hotel.'
+            },
+
+            // GAME 23: Verb Conjugation - Rapid-fire imperatives
+            {
+                type: 'verb-conjugation-multi',
+                title: 'Imperativo r\u00e1pido',
+                instruction: 'Escribe r\u00e1pidamente el imperativo (t\u00fa) de cada verbo.',
+                verbs: [
+                    { infinitive: 'girar', answer: 'gira', context: '___ a la izquierda' },
+                    { infinitive: 'seguir', answer: 'sigue', context: '___ por esta calle' },
+                    { infinitive: 'caminar', answer: 'camina', context: '___ hasta la esquina' },
+                    { infinitive: 'cruzar', answer: 'cruza', context: '___ la avenida' },
+                    { infinitive: 'tomar', answer: 'toma', context: '___ la segunda calle' },
+                    { infinitive: 'doblar', answer: 'dobla', context: '___ en la esquina' }
+                ],
+                hint: 'Imperativo t\u00fa para -ar: quita -ar, a\u00f1ade -a. Para -ir como seguir: sigue (irregular).'
+            },
+
+            // GAME 24: Translation - Paragraph with word bank
+            {
+                type: 'translation',
+                title: 'Traduce las direcciones',
+                instruction: 'Traduce al espa\u00f1ol usando las palabras disponibles.',
+                sourceText: 'The pharmacy is behind the church, near the park.',
+                words: ['La', 'farmacia', 'est\u00e1', 'detr\u00e1s', 'de', 'la', 'iglesia', 'cerca', 'del', 'parque', 'al'],
+                correctOrder: ['La', 'farmacia', 'est\u00e1', 'detr\u00e1s', 'de', 'la', 'iglesia', 'cerca', 'del', 'parque'],
+                hint: '"Behind" = "detr\u00e1s de". "Near" = "cerca de". Recuerda: "del" = "de" + "el".'
+            },
+
+            // GAME 25: Conversation - Role-play giving directions to multiple places
+            {
+                type: 'conversation',
+                title: 'Gu\u00eda tur\u00edstico',
+                instruction: 'Eres un gu\u00eda tur\u00edstico. Da direcciones a los turistas.',
+                exchanges: [
+                    {
+                        speaker: 'Turista 1',
+                        text: '\u00bfD\u00f3nde est\u00e1 el supermercado?',
+                        isPlayer: false,
+                        isFixed: true
+                    },
+                    {
+                        speaker: 'T\u00fa',
+                        text: null,
+                        isPlayer: true,
+                        isFixed: false,
+                        options: [
+                            'Sigue derecho dos cuadras. Est\u00e1 a la derecha, al lado del banco.',
+                            'El supermercado tiene muchas frutas.',
+                            'No me gusta el supermercado.',
+                            'Yo prefiero la farmacia.'
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        speaker: 'Turista 2',
+                        text: 'Y \u00bfc\u00f3mo llego a la estaci\u00f3n de tren?',
+                        isPlayer: false,
+                        isFixed: true
+                    },
+                    {
+                        speaker: 'T\u00fa',
+                        text: null,
+                        isPlayer: true,
+                        isFixed: false,
+                        options: [
+                            'Gira a la izquierda en la esquina y camina tres cuadras. La estaci\u00f3n est\u00e1 enfrente de la plaza.',
+                            'Los trenes son r\u00e1pidos.',
+                            'La estaci\u00f3n es grande.',
+                            'Me gustan los trenes.'
+                        ],
+                        correctIndex: 0
+                    },
+                    {
+                        speaker: 'Turista 3',
+                        text: '\u00bfHay una biblioteca cerca de aqu\u00ed?',
+                        isPlayer: false,
+                        isFixed: true
+                    },
+                    {
+                        speaker: 'T\u00fa',
+                        text: null,
+                        isPlayer: true,
+                        isFixed: false,
+                        options: [
+                            'S\u00ed, est\u00e1 detr\u00e1s de la iglesia, a una cuadra de aqu\u00ed.',
+                            'Las bibliotecas tienen muchos libros.',
+                            'No me gusta leer.',
+                            'La biblioteca est\u00e1 cerrada.'
+                        ],
+                        correctIndex: 0
+                    }
+                ],
+                hint: 'Elige las respuestas que dan direcciones claras y espec\u00edficas.'
+            },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva del mercado antiguo',
+            description: 'Bajo la plaza del mercado hay una cueva. En las paredes hay dibujos de personas intercambiando cosas: frutas por pescado, telas por semillas.',
+            ambience: 'market-echo'
+        },
+        puzzles: [
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras de una palabra est\u00e1n dibujadas junto a los intercambios.',
+                clue: 'Antes del dinero, la gente hac\u00eda esto: intercambiar cosas directamente.',
+                answer: 'trueque',
+                scrambled: 'equrtue',
+                onSolve: 'Los dibujos se mueven.'
+            },
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un dibujo antiguo muestra a dos personas:',
+                riddle: '\u00abUna persona tiene muchas frutas. La otra tiene mucho pescado. Las dos quieren lo que la otra tiene. \u00bfQu\u00e9 deben hacer?\u00bb',
+                clue: '\u00bfC\u00f3mo se resuelve sin dinero?',
+                answer: 'Intercambiar: dar frutas por pescado',
+                options: [
+                    'Intercambiar: dar frutas por pescado',
+                    'Pelear por la comida',
+                    'Esperar a que llegue el dinero',
+                    'No hacer nada'
+                ],
+                onSolve: 'Los dibujos sonr\u00eden.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el suelo de la cueva hay una cerradura.',
+                clue: 'Es lo que usas hoy para comprar cosas. Seis letras.',
+                answer: 'dinero',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'El suelo se abre. La puerta aparece.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de mano que da y otra que recibe.',
+            questClue: 'Antes del dinero, la gente confiaba en la palabra del otro.',
+            item: 'raiz-manos'
+        }
+    }
+        ];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '16',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest16Progress',
+        backUrl: '../../a2-coffee.html'
+    });
+</script>
+</body>
+</html>

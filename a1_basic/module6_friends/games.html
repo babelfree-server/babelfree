@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&oacute;dulo 6: Amigos</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module6_friends/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 6: Amigos — Games",
+                "url": "https://babelfree.com/a1_basic/module6_friends/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Greetings practice",
+                    "Basic interaction exercises"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Amigos",
+                        "item": "https://babelfree.com/a1_basic/module6_friends/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">M&oacute;dulo 6: Amigos</div>
+            <div class="yg-header-subtitle">Saludos y presentaciones</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE \u2014 Yaguar\u00e1 meets a new friend
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 camina por la selva. Hay un animal nuevo. Es una guacamaya. La guacamaya es bonita. Es grande y tiene colores.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE \u2014 Greetings between animals
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 dice: \u00abHola. Soy Yaguar\u00e1. \u00bfC\u00f3mo te llamas?\u00bb La guacamaya dice: \u00abHola. Me llamo Paloma. Mucho gusto.\u00bb Yaguar\u00e1 dice: \u00abMucho gusto, Paloma.\u00bb'
+    },
+
+    /* ============================================================
+       3. NARRATIVE \u2014 Meeting more friends
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Yaguar\u00e1 tiene m\u00e1s amigos. El mono se llama Coco. La tortuga se llama Lenta. Yaguar\u00e1 es feliz. Yaguar\u00e1 dice: \u00abHola, amigos. \u00bfC\u00f3mo est\u00e1n?\u00bb Ellos dicen: \u00abBien, gracias.\u00bb'
+    },
+
+    /* ============================================================
+       4. PAIR \u2014 Greeting \u2194 Response
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el saludo con la respuesta.',
+        pairs: [
+            ['Hola', 'Hola'],
+            ['\u00bfC\u00f3mo est\u00e1s?', 'Bien, gracias'],
+            ['Adi\u00f3s', 'Adi\u00f3s'],
+            ['Mucho gusto', 'Mucho gusto']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR \u2014 Question \u2194 Answer (introductions)
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la pregunta con la respuesta.',
+        pairs: [
+            ['\u00bfC\u00f3mo te llamas?', 'Me llamo Yaguar\u00e1'],
+            ['\u00bfC\u00f3mo est\u00e1s?', 'Estoy bien'],
+            ['\u00bfQui\u00e9n es?', 'Es Paloma'],
+            ['\u00bfC\u00f3mo se llama?', 'Se llama Coco']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR \u2014 Name \u2194 Animal
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el nombre con el animal.',
+        pairs: [
+            ['Yaguar\u00e1', 'jaguar'],
+            ['Paloma', 'guacamaya'],
+            ['Coco', 'mono'],
+            ['Lenta', 'tortuga']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB \u2014 Llamarse (fill in the blank)
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Me ___ Yaguar\u00e1.',
+                answer: 'llamo',
+                options: ['llamo', 'llamas', 'llama', 'llaman']
+            },
+            {
+                sentence: '\u00bfC\u00f3mo ___ llamas?',
+                answer: 'te',
+                options: ['me', 'te', 'se', 'nos']
+            },
+            {
+                sentence: 'Ella ___ llama Paloma.',
+                answer: 'se',
+                options: ['me', 'te', 'se', 'nos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB \u2014 Greetings and responses
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: '\u00bfC\u00f3mo ___? \u2014 Bien, gracias.',
+                answer: 'est\u00e1s',
+                options: ['eres', 'est\u00e1s', 'es', 'est\u00e1']
+            },
+            {
+                sentence: 'Yo ___ bien.',
+                answer: 'estoy',
+                options: ['estoy', 'est\u00e1s', 'es', 'soy']
+            },
+            {
+                sentence: '___ gusto.',
+                answer: 'Mucho',
+                options: ['Mucho', 'Bien', 'Bueno', 'Grande']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB \u2014 Ser with introductions
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'Yo ___ Yaguar\u00e1.',
+                answer: 'soy',
+                options: ['soy', 'es', 'eres', 'son']
+            },
+            {
+                sentence: '\u00c9l ___ Coco.',
+                answer: 'es',
+                options: ['soy', 'eres', 'es', 'somos']
+            },
+            {
+                sentence: '\u00bfT\u00fa ___ Paloma?',
+                answer: 'eres',
+                options: ['soy', 'eres', 'es', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING \u2014 A greeting conversation (slow)
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'Hola. Me llamo Paloma. Mucho gusto.',
+        question: '\u00bfC\u00f3mo se llama?',
+        answer: 'Paloma',
+        options: ['Yaguar\u00e1', 'Paloma', 'Coco', 'Lenta']
+    },
+
+    /* ============================================================
+       11. LISTENING \u2014 How is the friend?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: '\u00bfC\u00f3mo est\u00e1s, Coco? Estoy bien, gracias.',
+        question: '\u00bfC\u00f3mo est\u00e1 Coco?',
+        answer: 'bien',
+        options: ['mal', 'bien', 'grande', 'nuevo']
+    },
+
+    /* ============================================================
+       12. CONJUGATION \u2014 Llamarse (present tense)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo llamarse.',
+        questions: [
+            {
+                verb: 'llamarse',
+                subject: 'yo',
+                answer: 'me llamo',
+                options: ['me llamo', 'te llamas', 'se llama', 'nos llamamos']
+            },
+            {
+                verb: 'llamarse',
+                subject: 't\u00fa',
+                answer: 'te llamas',
+                options: ['me llamo', 'te llamas', 'se llama', 'se llaman']
+            },
+            {
+                verb: 'llamarse',
+                subject: '\u00e9l',
+                answer: 'se llama',
+                options: ['me llamo', 'te llamas', 'se llama', 'nos llamamos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION \u2014 Ser (present, introduction context)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo ser.',
+        questions: [
+            {
+                verb: 'ser',
+                subject: 'yo',
+                answer: 'soy',
+                options: ['soy', 'es', 'eres', 'somos']
+            },
+            {
+                verb: 'ser',
+                subject: 't\u00fa',
+                answer: 'eres',
+                options: ['soy', 'eres', 'es', 'son']
+            },
+            {
+                verb: 'ser',
+                subject: 'ella',
+                answer: 'es',
+                options: ['soy', 'eres', 'es', 'somos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. SORTING \u2014 Formal / informal greetings
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica los saludos.',
+        categories: ['Informal', 'Formal'],
+        items: [
+            { text: 'Hola', category: 'Informal' },
+            { text: 'Buenos d\u00edas', category: 'Formal' },
+            { text: '\u00bfQu\u00e9 tal?', category: 'Informal' },
+            { text: 'Buenas tardes', category: 'Formal' },
+            { text: '\u00bfC\u00f3mo est\u00e1s?', category: 'Informal' },
+            { text: 'Buenas noches', category: 'Formal' }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING \u2014 Greeting / farewell
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfsaludo o despedida?',
+        categories: ['Saludo', 'Despedida'],
+        items: [
+            { text: 'Hola', category: 'Saludo' },
+            { text: 'Adi\u00f3s', category: 'Despedida' },
+            { text: 'Buenos d\u00edas', category: 'Saludo' },
+            { text: 'Hasta luego', category: 'Despedida' },
+            { text: '\u00bfQu\u00e9 tal?', category: 'Saludo' },
+            { text: 'Chao', category: 'Despedida' }
+        ]
+    },
+
+    /* ============================================================
+       16. BUILDER \u2014 Introduction sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['llamo', 'Me', 'Yaguar\u00e1'],
+        answer: 'Me llamo Yaguar\u00e1'
+    },
+
+    /* ============================================================
+       17. BUILDER \u2014 Greeting question
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['te', '\u00bfC\u00f3mo', 'llamas?'],
+        answer: '\u00bfC\u00f3mo te llamas?'
+    },
+
+    /* ============================================================
+       18. CONVERSATION \u2014 Introducing yourself
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Paloma', text: '\u00bfC\u00f3mo te llamas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Me llamo Yaguar\u00e1.', 'Estoy bien.', 'Adi\u00f3s.', 'Es grande.'],
+                answer: 'Me llamo Yaguar\u00e1.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       19. CONVERSATION \u2014 Responding to a greeting
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Coco', text: 'Hola, Yaguar\u00e1. \u00bfC\u00f3mo est\u00e1s?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Bien, gracias. \u00bfY t\u00fa?', 'Me llamo Coco.', 'Adi\u00f3s, amigo.', 'Es bonita.'],
+                answer: 'Bien, gracias. \u00bfY t\u00fa?'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. DICTATION \u2014 Simple greeting sentence
+    ============================================================ */
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe.',
+        audio: 'Hola. Me llamo Yaguar\u00e1.',
+        answer: 'Hola. Me llamo Yaguar\u00e1.'
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva del encuentro',
+            description: 'Una cueva grande donde muchos caminos se juntan. Hay espacio para sentarse en c\u00edrculo. Este es un lugar de amigos.',
+            ambience: 'gathering'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Una voz amable pregunta:',
+                riddle: '\u00abYo juego contigo. Yo te ayudo. Yo te escucho. T\u00fa tambi\u00e9n me ayudas. \u00bfQu\u00e9 soy yo para ti?\u00bb',
+                clue: 'Es alguien que quieres y que te quiere.',
+                answer: 'Un amigo',
+                options: ['Un amigo', 'Un profesor', 'Un vecino', 'Un doctor'],
+                onSolve: 'La voz est\u00e1 contenta.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Las letras est\u00e1n en las piedras del c\u00edrculo.',
+                clue: 'Es lo que dices cuando conoces a alguien nuevo. Cuatro letras.',
+                answer: 'hola',
+                scrambled: 'aloh',
+                onSolve: 'Las piedras forman un c\u00edrculo m\u00e1s bonito.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'En el centro del c\u00edrculo hay una cerradura.',
+                clue: 'Yaguar\u00e1 busca a sus ___. Son las personas y animales que la quieren.',
+                answer: 'amigos',
+                hint: '_ _ _ _ _ _',
+                onSolve: 'El c\u00edrculo brilla. Todas las ra\u00edces se conectan. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de c\u00edrculo \u2014 donde las ra\u00edces de la ceiba se encuentran.',
+            questClue: 'Las ra\u00edces del Mundo de Abajo est\u00e1n completas. Yaguar\u00e1 est\u00e1 lista para salir al Mundo del Medio.',
+            item: 'raiz-circulo'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1m6',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Module6Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>

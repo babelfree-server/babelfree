@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 42: El tejido de las palabras - Per&iacute;frasis y locuciones</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/c1_basic/dest42_periphrasis_idioms/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 42: El tejido de las palabras - Perífrasis y locuciones",
+          "url": "https://babelfree.com/c1_basic/dest42_periphrasis_idioms/games",
+          "educationalLevel": "C1 - Advanced",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Periphrasis and idioms", "Idiomatic expressions", "Spanish vocabulary"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "C1 Basic", "item": "https://babelfree.com/c1-santa-marta" },
+            { "@type": "ListItem", "position": 4, "name": "El tejido de las palabras - Perífrasis y locuciones" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-arriba">
+    <header class="yg-header">
+        <a href="/c1-santa-marta" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 42: El tejido de las palabras</div>
+            <div class="yg-header-subtitle">Per&iacute;frasis y locuciones</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+<script>
+var games = [
+    // === GAME 1: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee con atenci\u00f3n este texto sobre la tradici\u00f3n tejedora de la Sierra Nevada.',
+        text: 'En la Sierra Nevada de Santa Marta, los kogi tejen mantas que cuentan historias sin palabras. Cada hilo viene a ser un pensamiento, cada nudo da a entender una conexi\u00f3n con la tierra. Yaguar\u00e1 lleg\u00f3 a comprender que el idioma funciona igual: las per\u00edfrasis y las locuciones son los hilos que, entrelazados, dan textura al habla. Sin ellos, la lengua queda plana, sin relieve. A ra\u00edz de este descubrimiento, se puso a observar c\u00f3mo los mayores hablaban, c\u00f3mo iban tejiendo frases con expresiones que no se pod\u00edan traducir palabra por palabra. A fin de cuentas, dominar un idioma no es solo conjugar verbos: es saber qu\u00e9 hilos jalar y cu\u00e1ndo.'
+    },
+    // === GAME 2: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la per\u00edfrasis verbal correcta.',
+        questions: [
+            {
+                sentence: 'Despu\u00e9s de muchos intentos, Mar\u00eda ___ aprobar el examen de conducci\u00f3n.',
+                answer: 'lleg\u00f3 a',
+                options: ['lleg\u00f3 a', 'dej\u00f3 de', 'volvi\u00f3 a', 'acab\u00f3 por']
+            },
+            {
+                sentence: 'El profesor ___ explicar el tema porque nadie entend\u00eda.',
+                answer: 'volvi\u00f3 a',
+                options: ['volvi\u00f3 a', 'dej\u00f3 de', 'se puso a', 'dio a']
+            },
+            {
+                sentence: 'Carlos ___ fumar hace tres a\u00f1os y desde entonces se siente mejor.',
+                answer: 'dej\u00f3 de',
+                options: ['dej\u00f3 de', 'se puso a', 'acab\u00f3 por', 'lleg\u00f3 a']
+            },
+            {
+                sentence: 'Cuando escuch\u00f3 la noticia, Luc\u00eda ___ llorar sin poder contenerse.',
+                answer: 'se puso a',
+                options: ['se puso a', 'dej\u00f3 de', 'volvi\u00f3 a', 'vino a']
+            }
+        ]
+    },
+    // === GAME 3: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada per\u00edfrasis verbal con su significado.',
+        pairs: [
+            ['dar a entender', 'insinuar algo'],
+            ['echar de menos', 'extra\u00f1ar a alguien o algo'],
+            ['acabar por', 'terminar haciendo algo'],
+            ['venir a ser', 'resultar ser aproximadamente'],
+            ['dar por hecho', 'considerar algo como cierto'],
+            ['quedar en', 'acordar hacer algo']
+        ]
+    },
+    // === GAME 4: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga la per\u00edfrasis verbal con el sujeto indicado en pret\u00e9rito indefinido.',
+        questions: [
+            {
+                verb: 'ponerse a + llorar',
+                subject: 'ella',
+                answer: 'se puso a llorar',
+                options: ['se puso a llorar', 'se pone a llorar', 'se pon\u00eda a llorar', 'se pondr\u00e1 a llorar']
+            },
+            {
+                verb: 'volver a + intentar',
+                subject: 'nosotros',
+                answer: 'volvimos a intentar',
+                options: ['volvimos a intentar', 'volvemos a intentar', 'volv\u00edamos a intentar', 'volveremos a intentar']
+            },
+            {
+                verb: 'llegar a + comprender',
+                subject: 't\u00fa',
+                answer: 'llegaste a comprender',
+                options: ['llegaste a comprender', 'llegas a comprender', 'llegabas a comprender', 'llegar\u00e1s a comprender']
+            },
+            {
+                verb: 'dejar de + trabajar',
+                subject: 'ellos',
+                answer: 'dejaron de trabajar',
+                options: ['dejaron de trabajar', 'dejan de trabajar', 'dejaban de trabajar', 'dejar\u00e1n de trabajar']
+            },
+            {
+                verb: 'acabar por + aceptar',
+                subject: 'yo',
+                answer: 'acab\u00e9 por aceptar',
+                options: ['acab\u00e9 por aceptar', 'acabo por aceptar', 'acababa por aceptar', 'acabar\u00e9 por aceptar']
+            }
+        ]
+    },
+    // === GAME 5: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y selecciona la per\u00edfrasis que se utiliza.',
+        audio: 'Los precios van subiendo poco a poco cada mes.',
+        question: '\u00bfQu\u00e9 per\u00edfrasis se usa en la oraci\u00f3n?',
+        answer: 'ir + gerundio',
+        options: ['ir + gerundio', 'andar + gerundio', 'ponerse a + infinitivo', 'volver a + infinitivo']
+    },
+    // === GAME 6: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica estas expresiones seg\u00fan sean per\u00edfrasis verbales o locuciones adverbiales.',
+        categories: ['Per\u00edfrasis verbal', 'Locuci\u00f3n adverbial'],
+        items: [
+            { text: 'ponerse a + infinitivo', category: 'Per\u00edfrasis verbal' },
+            { text: 'a fin de cuentas', category: 'Locuci\u00f3n adverbial' },
+            { text: 'dejar de + infinitivo', category: 'Per\u00edfrasis verbal' },
+            { text: 'a grandes rasgos', category: 'Locuci\u00f3n adverbial' },
+            { text: 'ir + gerundio', category: 'Per\u00edfrasis verbal' },
+            { text: 'sin lugar a dudas', category: 'Locuci\u00f3n adverbial' },
+            { text: 'volver a + infinitivo', category: 'Per\u00edfrasis verbal' },
+            { text: 'de buenas a primeras', category: 'Locuci\u00f3n adverbial' }
+        ]
+    },
+    // === GAME 7: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con la per\u00edfrasis correcta.',
+        words: ['Los', 'ni\u00f1os', 'se', 'pusieron', 'a', 'correr', 'por', 'el', 'parque'],
+        answer: 'Los ni\u00f1os se pusieron a correr por el parque'
+    },
+    // === GAME 8: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa cada oraci\u00f3n con la locuci\u00f3n correcta.',
+        questions: [
+            {
+                sentence: '___, el proyecto result\u00f3 ser un \u00e9xito a pesar de las dificultades iniciales.',
+                answer: 'A fin de cuentas',
+                options: ['A fin de cuentas', 'A grandes rasgos', 'Por si fuera poco', 'De buenas a primeras']
+            },
+            {
+                sentence: '___, la situaci\u00f3n econ\u00f3mica del pa\u00eds ha mejorado en los \u00faltimos a\u00f1os.',
+                answer: 'A grandes rasgos',
+                options: ['A grandes rasgos', 'A fin de cuentas', 'Ni mucho menos', 'Sin lugar a dudas']
+            },
+            {
+                sentence: 'Perdi\u00f3 el trabajo y, ___, su esposa lo abandon\u00f3.',
+                answer: 'por si fuera poco',
+                options: ['por si fuera poco', 'a la larga', 'en resumidas cuentas', 'a ra\u00edz de']
+            }
+        ]
+    },
+    // === GAME 9: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee este pasaje sobre c\u00f3mo las expresiones fijas dan vida al idioma.',
+        text: 'Los tejedores kogi no eligen los colores al azar. Cada tono viene a ser un s\u00edmbolo, y la combinaci\u00f3n de hilos da a entender relaciones invisibles entre la monta\u00f1a y el mar. De buenas a primeras, un extranjero no llegar\u00eda a descifrar esos patrones. Pero a medida que uno convive con la comunidad, va entendiendo que cada manta cuenta una historia. Lo mismo ocurre con las locuciones: quien las domina deja de hablar como estudiante y empieza a hablar como hablante. Sin lugar a dudas, ese es el salto que separa el conocimiento del dominio.'
+    },
+    // === GAME 10: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce esta expresi\u00f3n colombiana al espa\u00f1ol est\u00e1ndar.',
+        source: 'No hay que dar papaya en esa zona de la ciudad.',
+        words: ['No', 'hay', 'que', 'exponerse', 'innecesariamente', 'en', 'esa', 'zona', 'de', 'la', 'ciudad'],
+        answer: 'No hay que exponerse innecesariamente en esa zona de la ciudad'
+    },
+    // === GAME 11: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y selecciona la locuci\u00f3n que aparece.',
+        audio: 'A ra\u00edz de la pandemia, muchas empresas adoptaron el teletrabajo.',
+        question: '\u00bfQu\u00e9 locuci\u00f3n se usa para indicar la causa?',
+        answer: 'a ra\u00edz de',
+        options: ['a ra\u00edz de', 'en torno a', 'con respecto a', 'a medida que']
+    },
+    // === GAME 12: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga la per\u00edfrasis en presente de indicativo con el sujeto dado.',
+        questions: [
+            {
+                verb: 'ir + gerundio (mejorar)',
+                subject: 'la situaci\u00f3n',
+                answer: 'va mejorando',
+                options: ['va mejorando', 'fue mejorando', 'iba mejorando', 'ir\u00e1 mejorando']
+            },
+            {
+                verb: 'andar + gerundio (buscar)',
+                subject: 'ellos',
+                answer: 'andan buscando',
+                options: ['andan buscando', 'anduvieron buscando', 'andaban buscando', 'andar\u00e1n buscando']
+            },
+            {
+                verb: 'venir a + infinitivo (costar)',
+                subject: 'el apartamento',
+                answer: 'viene a costar',
+                options: ['viene a costar', 'vino a costar', 'ven\u00eda a costar', 'vendr\u00e1 a costar']
+            },
+            {
+                verb: 'dar por + participio (terminar)',
+                subject: 'el juez',
+                answer: 'da por terminado',
+                options: ['da por terminado', 'dio por terminado', 'daba por terminado', 'dar\u00e1 por terminado']
+            }
+        ]
+    },
+    // === GAME 13: conversation ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Completa el di\u00e1logo usando la expresi\u00f3n m\u00e1s adecuada.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Camila', text: '\u00bfCrees que Andr\u00e9s va a cambiar de opini\u00f3n sobre la mudanza?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'A la larga, acabar\u00e1 por aceptar que es lo mejor para la familia.',
+                    'De buenas a primeras, dej\u00f3 de pensar en eso.',
+                    'En resumidas cuentas, no da papaya.'
+                ],
+                answer: 'A la larga, acabar\u00e1 por aceptar que es lo mejor para la familia.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Camila', text: 'Es que \u00e9l echa de menos su barrio, sus amigos...' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Sin lugar a dudas, pero a medida que conozca el nuevo lugar, se ir\u00e1 adaptando.',
+                    'Por si fuera poco, se puso a llorar.',
+                    'A grandes rasgos, no viene a ser lo mismo.'
+                ],
+                answer: 'Sin lugar a dudas, pero a medida que conozca el nuevo lugar, se ir\u00e1 adaptando.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Camila', text: 'Tienes raz\u00f3n. A fin de cuentas, lo importante es estar juntos.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Exacto. Y con respecto a los amigos, siempre podr\u00e1 volver a visitarlos.',
+                    'Ni mucho menos. Dej\u00f3 de ir al trabajo.',
+                    'Acab\u00f3 por dar papaya en la oficina.'
+                ],
+                answer: 'Exacto. Y con respecto a los amigos, siempre podr\u00e1 volver a visitarlos.'
+            }
+        ]
+    },
+    // === GAME 14: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la per\u00edfrasis de acci\u00f3n gradual o continuada correcta.',
+        questions: [
+            {
+                sentence: 'La temperatura ___ descendiendo desde la madrugada.',
+                answer: 'va',
+                options: ['va', 'anda', 'viene', 'queda']
+            },
+            {
+                sentence: 'Mi vecino ___ diciendo por ah\u00ed que va a vender su casa.',
+                answer: 'anda',
+                options: ['anda', 'va', 'viene', 'deja']
+            },
+            {
+                sentence: 'El costo total ___ a ser unos doscientos mil pesos.',
+                answer: 'viene',
+                options: ['viene', 'va', 'anda', 'acaba']
+            }
+        ]
+    },
+    // === GAME 15: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada locuci\u00f3n con su significado.',
+        pairs: [
+            ['a fin de cuentas', 'en definitiva, al final'],
+            ['por si fuera poco', 'adem\u00e1s de todo lo anterior'],
+            ['a la larga', 'con el paso del tiempo'],
+            ['de buenas a primeras', 'de repente, sin aviso'],
+            ['ni mucho menos', 'en absoluto, de ninguna manera'],
+            ['en resumidas cuentas', 'en resumen, brevemente']
+        ]
+    },
+    // === GAME 16: dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n completa.',
+        audio: 'A medida que avanzaba por la Sierra, Yaguar\u00e1 iba comprendiendo el valor de cada expresi\u00f3n.',
+        answer: 'A medida que avanzaba por la Sierra, Yaguar\u00e1 iba comprendiendo el valor de cada expresi\u00f3n.'
+    },
+    // === GAME 17: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con una locuci\u00f3n.',
+        words: ['Sin', 'lugar', 'a', 'dudas', 'esta', 'es', 'la', 'mejor', 'decisi\u00f3n', 'que', 'hemos', 'tomado'],
+        answer: 'Sin lugar a dudas esta es la mejor decisi\u00f3n que hemos tomado'
+    },
+    // === GAME 18: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica estas per\u00edfrasis seg\u00fan indiquen inicio o fin de la acci\u00f3n.',
+        categories: ['Inicio de acci\u00f3n', 'Fin de acci\u00f3n'],
+        items: [
+            { text: 'ponerse a + infinitivo', category: 'Inicio de acci\u00f3n' },
+            { text: 'dejar de + infinitivo', category: 'Fin de acci\u00f3n' },
+            { text: 'echar a + infinitivo', category: 'Inicio de acci\u00f3n' },
+            { text: 'acabar de + infinitivo', category: 'Fin de acci\u00f3n' },
+            { text: 'romper a + infinitivo', category: 'Inicio de acci\u00f3n' },
+            { text: 'acabar por + infinitivo', category: 'Fin de acci\u00f3n' }
+        ]
+    },
+    // === GAME 19: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y selecciona qu\u00e9 significa la expresi\u00f3n destacada.',
+        audio: 'Mi abuela anda diciendo que va a vender la finca.',
+        question: '\u00bfQu\u00e9 indica "andar + gerundio" en esta oraci\u00f3n?',
+        answer: 'Una acci\u00f3n repetida o habitual sin rumbo fijo',
+        options: ['Una acci\u00f3n repetida o habitual sin rumbo fijo', 'Una acci\u00f3n que acaba de terminar', 'Una acci\u00f3n que est\u00e1 por comenzar', 'Una acci\u00f3n completada con \u00e9xito']
+    },
+    // === GAME 20: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee esta reflexi\u00f3n sobre las expresiones colombianas.',
+        text: 'En Colombia, decir "no dar papaya" viene a ser una filosof\u00eda de vida. Significa no exponerse innecesariamente, no dar ventaja al otro. De buenas a primeras, un extranjero no llegar\u00eda a captar el peso de esa expresi\u00f3n. Pero a medida que convive con la gente, va entendiendo que detr\u00e1s de cada modismo hay una cosmovisi\u00f3n. "Echar los perros" no tiene nada que ver con animales: es cortejar a alguien. Y cuando alguien dice que est\u00e1 "mamado", da a entender que est\u00e1 agotado, harto. A fin de cuentas, los modismos son el alma secreta de una lengua.'
+    },
+    // === GAME 21: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona la locuci\u00f3n prepositiva correcta para cada oraci\u00f3n.',
+        questions: [
+            {
+                sentence: '___ la crisis del 2020, muchas personas cambiaron sus h\u00e1bitos de consumo.',
+                answer: 'A ra\u00edz de',
+                options: ['A ra\u00edz de', 'En torno a', 'Con respecto a', 'A medida que']
+            },
+            {
+                sentence: 'Hay mucha pol\u00e9mica ___ la nueva ley de educaci\u00f3n.',
+                answer: 'en torno a',
+                options: ['en torno a', 'a ra\u00edz de', 'a fin de cuentas', 'por si fuera poco']
+            },
+            {
+                sentence: '___ tu solicitud de beca, necesitamos documentaci\u00f3n adicional.',
+                answer: 'Con respecto a',
+                options: ['Con respecto a', 'A ra\u00edz de', 'En torno a', 'A medida que']
+            }
+        ]
+    },
+    // === GAME 22: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Reformula esta expresi\u00f3n colombiana en espa\u00f1ol est\u00e1ndar.',
+        source: 'Carlos le ech\u00f3 los perros a Valentina en la fiesta.',
+        words: ['Carlos', 'cortej\u00f3', 'a', 'Valentina', 'en', 'la', 'fiesta'],
+        answer: 'Carlos cortej\u00f3 a Valentina en la fiesta'
+    },
+    // === GAME 23: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga la per\u00edfrasis en pret\u00e9rito imperfecto con el sujeto indicado.',
+        questions: [
+            {
+                verb: 'ir + gerundio (aprender)',
+                subject: 'los estudiantes',
+                answer: 'iban aprendiendo',
+                options: ['iban aprendiendo', 'van aprendiendo', 'fueron aprendiendo', 'ir\u00e1n aprendiendo']
+            },
+            {
+                verb: 'andar + gerundio (contar)',
+                subject: 'la gente',
+                answer: 'andaba contando',
+                options: ['andaba contando', 'anda contando', 'anduvo contando', 'andar\u00e1 contando']
+            },
+            {
+                verb: 'dejar de + infinitivo (llover)',
+                subject: '(impersonal)',
+                answer: 'dejaba de llover',
+                options: ['dejaba de llover', 'deja de llover', 'dej\u00f3 de llover', 'dejar\u00e1 de llover']
+            },
+            {
+                verb: 'volver a + infinitivo (salir)',
+                subject: 'nosotros',
+                answer: 'volv\u00edamos a salir',
+                options: ['volv\u00edamos a salir', 'volvemos a salir', 'volvimos a salir', 'volveremos a salir']
+            }
+        ]
+    },
+    // === GAME 24: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con per\u00edfrasis verbal.',
+        words: ['Acab\u00f3', 'por', 'reconocer', 'que', 'se', 'hab\u00eda', 'equivocado', 'con', 'ella'],
+        answer: 'Acab\u00f3 por reconocer que se hab\u00eda equivocado con ella'
+    },
+    // === GAME 25: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y responde la pregunta sobre la expresi\u00f3n usada.',
+        audio: 'De buenas a primeras, el director anunci\u00f3 que cerraba la empresa.',
+        question: '\u00bfQu\u00e9 significa "de buenas a primeras" en este contexto?',
+        answer: 'De forma repentina e inesperada',
+        options: ['De forma repentina e inesperada', 'Despu\u00e9s de pensarlo mucho', 'Con buenas intenciones', 'Al principio de todo']
+    },
+    // === GAME 26: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada expresi\u00f3n colombiana con su equivalente en espa\u00f1ol est\u00e1ndar.',
+        pairs: [
+            ['no dar papaya', 'no exponerse innecesariamente'],
+            ['echar los perros', 'cortejar a alguien'],
+            ['estar mamado', 'estar agotado o harto'],
+            ['tirar la toalla', 'rendirse, abandonar'],
+            ['ser una nota', 'ser algo excelente o divertido'],
+            ['tener una vaca', 'hacer una colecta de dinero']
+        ]
+    },
+    // === GAME 27: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la per\u00edfrasis con "dar" o "quedar" que mejor completa cada oraci\u00f3n.',
+        questions: [
+            {
+                sentence: 'El t\u00e9cnico ___ reparado el electrodom\u00e9stico, pero sigue fallando.',
+                answer: 'dio por',
+                options: ['dio por', 'qued\u00f3 en', 'dej\u00f3 de', 'volvi\u00f3 a']
+            },
+            {
+                sentence: 'Nosotros ___ encontrarnos en el caf\u00e9 a las cinco de la tarde.',
+                answer: 'quedamos en',
+                options: ['quedamos en', 'dimos por', 'acabamos por', 'llegamos a']
+            },
+            {
+                sentence: 'Su tono ir\u00f3nico ___ que no estaba de acuerdo con la propuesta.',
+                answer: 'daba a entender',
+                options: ['daba a entender', 'daba por hecho', 'quedaba en', 'dejaba de']
+            }
+        ]
+    },
+    // === GAME 28: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee c\u00f3mo Yaguar\u00e1 descubre la complejidad del habla cotidiana.',
+        text: 'Yaguar\u00e1 andaba recorriendo los caminos de la Sierra cuando se encontr\u00f3 con una tejedora anciana. La mujer iba cantando mientras sus manos entrelazaban hilos de colores. "A grandes rasgos", le dijo la anciana, "tejer es f\u00e1cil. Pero llegar a dominar los patrones lleva toda una vida." Yaguar\u00e1 se puso a observar y not\u00f3 que cada movimiento ten\u00eda un prop\u00f3sito. Ni mucho menos era aleatorio. A medida que la anciana avanzaba, el dise\u00f1o iba cobrando sentido. Por si fuera poco, cada color daba a entender una emoci\u00f3n diferente. El tejido ven\u00eda a ser un poema visual.'
+    },
+    // === GAME 29: dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n que contiene dos locuciones.',
+        audio: 'Por si fuera poco, a ra\u00edz de la tormenta, se quedaron sin luz durante tres d\u00edas.',
+        answer: 'Por si fuera poco, a ra\u00edz de la tormenta, se quedaron sin luz durante tres d\u00edas.'
+    },
+    // === GAME 30: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica estas locuciones seg\u00fan su funci\u00f3n en el discurso.',
+        categories: ['Resumir o concluir', 'A\u00f1adir informaci\u00f3n'],
+        items: [
+            { text: 'a fin de cuentas', category: 'Resumir o concluir' },
+            { text: 'por si fuera poco', category: 'A\u00f1adir informaci\u00f3n' },
+            { text: 'en resumidas cuentas', category: 'Resumir o concluir' },
+            { text: 'adem\u00e1s de eso', category: 'A\u00f1adir informaci\u00f3n' },
+            { text: 'en definitiva', category: 'Resumir o concluir' },
+            { text: 'encima de todo', category: 'A\u00f1adir informaci\u00f3n' }
+        ]
+    },
+    // === GAME 31: conversation ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Participa en esta conversaci\u00f3n usando per\u00edfrasis y locuciones apropiadas.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Santiago', text: '\u00bfSupiste que Marcela dej\u00f3 de trabajar en la editorial?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'S\u00ed, me enter\u00e9. Parece que andaba buscando algo con m\u00e1s proyecci\u00f3n.',
+                    'S\u00ed, lleg\u00f3 a ser muy grande la editorial.',
+                    'S\u00ed, por si fuera poco, se puso a cantar.'
+                ],
+                answer: 'S\u00ed, me enter\u00e9. Parece que andaba buscando algo con m\u00e1s proyecci\u00f3n.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Santiago', text: 'Dicen que acab\u00f3 por montar su propia agencia.' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'No me sorprende. A la larga, ella siempre dio a entender que quer\u00eda independizarse.',
+                    'De buenas a primeras, dej\u00f3 de echar los perros.',
+                    'En resumidas cuentas, no vino a ser nada.'
+                ],
+                answer: 'No me sorprende. A la larga, ella siempre dio a entender que quer\u00eda independizarse.'
+            }
+        ]
+    },
+    // === GAME 32: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la locuci\u00f3n temporal correcta.',
+        questions: [
+            {
+                sentence: '___ los a\u00f1os, aprender\u00e1s a valorar esos momentos.',
+                answer: 'A la larga',
+                options: ['A la larga', 'De buenas a primeras', 'Por si fuera poco', 'A ra\u00edz de']
+            },
+            {
+                sentence: '___ vayas leyendo, ir\u00e1s entendiendo la complejidad de la trama.',
+                answer: 'A medida que',
+                options: ['A medida que', 'A ra\u00edz de', 'En torno a', 'Con respecto a']
+            },
+            {
+                sentence: '___, empez\u00f3 a llover y tuvimos que cancelar el evento.',
+                answer: 'De buenas a primeras',
+                options: ['De buenas a primeras', 'A la larga', 'En resumidas cuentas', 'A fin de cuentas']
+            }
+        ]
+    },
+    // === GAME 33: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y selecciona la opci\u00f3n que mejor parafrasea la oraci\u00f3n.',
+        audio: 'En resumidas cuentas, el proyecto no lleg\u00f3 a cumplir las expectativas del equipo.',
+        question: '\u00bfQu\u00e9 quiere decir esta oraci\u00f3n?',
+        answer: 'En resumen, el proyecto no logr\u00f3 satisfacer lo que el equipo esperaba.',
+        options: ['En resumen, el proyecto no logr\u00f3 satisfacer lo que el equipo esperaba.', 'El proyecto dej\u00f3 de existir por falta de fondos.', 'El equipo se puso a trabajar desde el principio.', 'El proyecto volvi\u00f3 a empezar con nuevas metas.']
+    },
+    // === GAME 34: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga la per\u00edfrasis en futuro simple con el sujeto indicado.',
+        questions: [
+            {
+                verb: 'acabar por + entender',
+                subject: 't\u00fa',
+                answer: 'acabar\u00e1s por entender',
+                options: ['acabar\u00e1s por entender', 'acabas por entender', 'acabaste por entender', 'acabar\u00edas por entender']
+            },
+            {
+                verb: 'llegar a + ser',
+                subject: 'este pa\u00eds',
+                answer: 'llegar\u00e1 a ser',
+                options: ['llegar\u00e1 a ser', 'llega a ser', 'lleg\u00f3 a ser', 'llegar\u00eda a ser']
+            },
+            {
+                verb: 'volver a + ocurrir',
+                subject: 'eso',
+                answer: 'volver\u00e1 a ocurrir',
+                options: ['volver\u00e1 a ocurrir', 'vuelve a ocurrir', 'volvi\u00f3 a ocurrir', 'volver\u00eda a ocurrir']
+            },
+            {
+                verb: 'dejar de + existir',
+                subject: 'esas tradiciones',
+                answer: 'dejar\u00e1n de existir',
+                options: ['dejar\u00e1n de existir', 'dejan de existir', 'dejaron de existir', 'dejar\u00edan de existir']
+            }
+        ]
+    },
+    // === GAME 35: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con una locuci\u00f3n causal.',
+        words: ['A', 'ra\u00edz', 'de', 'la', 'protesta', 'el', 'gobierno', 'volvi\u00f3', 'a', 'negociar', 'con', 'los', 'sindicatos'],
+        answer: 'A ra\u00edz de la protesta el gobierno volvi\u00f3 a negociar con los sindicatos'
+    },
+    // === GAME 36: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Reformula esta expresi\u00f3n colombiana en espa\u00f1ol est\u00e1ndar.',
+        source: 'Estoy mamado de tanto trabajar sin descanso.',
+        words: ['Estoy', 'agotado', 'de', 'tanto', 'trabajar', 'sin', 'descanso'],
+        answer: 'Estoy agotado de tanto trabajar sin descanso'
+    },
+    // === GAME 37: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada per\u00edfrasis con un ejemplo de uso correcto.',
+        pairs: [
+            ['ir + gerundio', 'Los precios van subiendo cada a\u00f1o.'],
+            ['andar + gerundio', 'Anda diciendo mentiras por ah\u00ed.'],
+            ['ponerse a + infinitivo', 'Se puso a llover de repente.'],
+            ['dejar de + infinitivo', 'Dej\u00f3 de llamarme hace semanas.'],
+            ['volver a + infinitivo', 'Volvi\u00f3 a cometer el mismo error.']
+        ]
+    },
+    // === GAME 38: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona la per\u00edfrasis o locuci\u00f3n que da coherencia al texto.',
+        questions: [
+            {
+                sentence: 'La inflaci\u00f3n ___ aumentando a pesar de las medidas del banco central.',
+                answer: 'sigue',
+                options: ['sigue', 'anda', 'deja', 'acaba']
+            },
+            {
+                sentence: '___, las pol\u00edticas econ\u00f3micas no han logrado estabilizar los precios.',
+                answer: 'En resumidas cuentas',
+                options: ['En resumidas cuentas', 'De buenas a primeras', 'Por si fuera poco', 'A medida que']
+            },
+            {
+                sentence: 'La oposici\u00f3n ___ que el gobierno no tiene un plan claro.',
+                answer: 'da a entender',
+                options: ['da a entender', 'da por hecho', 'deja de creer', 'acaba por decir']
+            }
+        ]
+    },
+    // === GAME 39: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee esta narraci\u00f3n sobre el poder de las expresiones fijas en la vida cotidiana.',
+        text: 'En el mercado de Santa Marta, la vendedora de frutas le dijo a Yaguar\u00e1: "No vayas a dar papaya por ah\u00ed, mija." Yaguar\u00e1 no lleg\u00f3 a entender de inmediato, pero a medida que iba recorriendo las calles, el sentido se fue revelando. Un hombre le ech\u00f3 los perros a una chica en la esquina. Otro dec\u00eda estar mamado del calor. Una se\u00f1ora amenazaba con tirar la toalla si no bajaban los precios. A grandes rasgos, cada expresi\u00f3n era un mundo comprimido en pocas palabras. Sin lugar a dudas, dominar esos hilos invisibles era la clave para tejer conversaciones aut\u00e9nticas.'
+    },
+    // === GAME 40: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica estas locuciones seg\u00fan su tipo gramatical.',
+        categories: ['Locuci\u00f3n adverbial', 'Locuci\u00f3n prepositiva'],
+        items: [
+            { text: 'a fin de cuentas', category: 'Locuci\u00f3n adverbial' },
+            { text: 'a ra\u00edz de', category: 'Locuci\u00f3n prepositiva' },
+            { text: 'de buenas a primeras', category: 'Locuci\u00f3n adverbial' },
+            { text: 'en torno a', category: 'Locuci\u00f3n prepositiva' },
+            { text: 'sin lugar a dudas', category: 'Locuci\u00f3n adverbial' },
+            { text: 'con respecto a', category: 'Locuci\u00f3n prepositiva' },
+            { text: 'ni mucho menos', category: 'Locuci\u00f3n adverbial' },
+            { text: 'a medida que', category: 'Locuci\u00f3n prepositiva' }
+        ]
+    },
+    // === GAME 41: listening ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y selecciona la per\u00edfrasis que se utiliza en la oraci\u00f3n.',
+        audio: 'Quedamos en reunirnos el viernes para revisar los avances del informe.',
+        question: '\u00bfQu\u00e9 per\u00edfrasis aparece en la oraci\u00f3n?',
+        answer: 'quedar en + infinitivo',
+        options: ['quedar en + infinitivo', 'dar por + participio', 'acabar por + infinitivo', 'venir a + infinitivo']
+    },
+    // === GAME 42: conjugation ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga la per\u00edfrasis en subjuntivo presente con el sujeto indicado.',
+        questions: [
+            {
+                verb: 'ponerse a + estudiar',
+                subject: 'que t\u00fa',
+                answer: 'te pongas a estudiar',
+                options: ['te pongas a estudiar', 'te pones a estudiar', 'te pusiste a estudiar', 'te pondr\u00e1s a estudiar']
+            },
+            {
+                verb: 'dejar de + mentir',
+                subject: 'que \u00e9l',
+                answer: 'deje de mentir',
+                options: ['deje de mentir', 'deja de mentir', 'dej\u00f3 de mentir', 'dejar\u00e1 de mentir']
+            },
+            {
+                verb: 'volver a + intentar',
+                subject: 'que nosotros',
+                answer: 'volvamos a intentar',
+                options: ['volvamos a intentar', 'volvemos a intentar', 'volvimos a intentar', 'volveremos a intentar']
+            },
+            {
+                verb: 'llegar a + saber',
+                subject: 'que ellos',
+                answer: 'lleguen a saber',
+                options: ['lleguen a saber', 'llegan a saber', 'llegaron a saber', 'llegar\u00e1n a saber']
+            },
+            {
+                verb: 'acabar por + rendirse',
+                subject: 'que yo',
+                answer: 'acabe por rendirme',
+                options: ['acabe por rendirme', 'acabo por rendirme', 'acab\u00e9 por rendirme', 'acabar\u00e9 por rendirme']
+            }
+        ]
+    },
+    // === GAME 43: story ===
+    {
+        type: 'story',
+        label: 'Lectura',
+        instruction: 'Lee esta historia y responde las preguntas sobre las per\u00edfrasis y locuciones.',
+        title: 'Los hilos de la Sierra',
+        text: 'La tejedora kogi llevaba toda la ma\u00f1ana trabajando en silencio. Yaguar\u00e1 se puso a observarla y, a medida que pasaban las horas, iba descubriendo patrones ocultos en la tela. De buenas a primeras, la anciana dej\u00f3 de tejer y la mir\u00f3 fijamente. "T\u00fa andas buscando algo", le dijo. "Pero no vas a llegar a encontrarlo si no dejas de correr." Yaguar\u00e1 qued\u00f3 en volver al d\u00eda siguiente. A ra\u00edz de esa conversaci\u00f3n, empez\u00f3 a ver el idioma de otra manera. Las per\u00edfrasis ven\u00edan a ser como nudos en el tejido: cada una daba a entender algo que las palabras sueltas no pod\u00edan expresar. A fin de cuentas, la anciana le hab\u00eda ense\u00f1ado, sin lugar a dudas, la lecci\u00f3n m\u00e1s importante: la paciencia es el primer hilo de todo aprendizaje.',
+        questions: [
+            {
+                q: '\u00bfQu\u00e9 per\u00edfrasis indica que Yaguar\u00e1 comenz\u00f3 a observar a la tejedora?',
+                options: ['se puso a observar', 'iba descubriendo', 'dej\u00f3 de tejer', 'andas buscando'],
+                answer: 'se puso a observar'
+            },
+            {
+                q: '\u00bfQu\u00e9 locuci\u00f3n indica que algo sucedi\u00f3 de manera repentina?',
+                options: ['de buenas a primeras', 'a medida que', 'a ra\u00edz de', 'a fin de cuentas'],
+                answer: 'de buenas a primeras'
+            },
+            {
+                q: '\u00bfQu\u00e9 per\u00edfrasis usa la anciana para describir una b\u00fasqueda continua sin rumbo?',
+                options: ['andar buscando', 'ir descubriendo', 'ponerse a observar', 'llegar a encontrar'],
+                answer: 'andar buscando'
+            },
+            {
+                q: '\u00bfQu\u00e9 significa "quedar en volver" en el contexto del relato?',
+                options: ['Acordar regresar', 'Dejar de regresar', 'Empezar a regresar', 'Terminar de regresar'],
+                answer: 'Acordar regresar'
+            },
+            {
+                q: '\u00bfQu\u00e9 locuci\u00f3n se usa para expresar la causa de un cambio de perspectiva?',
+                options: ['a ra\u00edz de', 'a fin de cuentas', 'sin lugar a dudas', 'de buenas a primeras'],
+                answer: 'a ra\u00edz de'
+            }
+        ]
+    },
+    // === GAME 44: builder ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con per\u00edfrasis y locuci\u00f3n.',
+        words: ['A', 'fin', 'de', 'cuentas', 'acabamos', 'por', 'mudarnos', 'a', 'otra', 'ciudad'],
+        answer: 'A fin de cuentas acabamos por mudarnos a otra ciudad'
+    },
+    // === GAME 45: fib ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Selecciona la expresi\u00f3n colombiana que mejor encaja en cada situaci\u00f3n.',
+        questions: [
+            {
+                sentence: 'Ten cuidado con tus pertenencias en el transporte p\u00fablico. No vayas a ___.',
+                answer: 'dar papaya',
+                options: ['dar papaya', 'echar los perros', 'tirar la toalla', 'estar mamado']
+            },
+            {
+                sentence: 'Llevamos seis meses con este problema y ya estoy a punto de ___.',
+                answer: 'tirar la toalla',
+                options: ['tirar la toalla', 'dar papaya', 'echar los perros', 'estar mamado']
+            },
+            {
+                sentence: '\u00bfViste c\u00f3mo Luis le ___ a la chica nueva de la oficina?',
+                answer: 'ech\u00f3 los perros',
+                options: ['ech\u00f3 los perros', 'dio papaya', 'tir\u00f3 la toalla', 'anduvo mamado']
+            }
+        ]
+    },
+    // === GAME 46: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada locuci\u00f3n con la funci\u00f3n discursiva que cumple.',
+        pairs: [
+            ['a grandes rasgos', 'generalizar o resumir'],
+            ['a ra\u00edz de', 'indicar causa u origen'],
+            ['a medida que', 'indicar simultaneidad progresiva'],
+            ['con respecto a', 'introducir un tema'],
+            ['en torno a', 'delimitar un \u00e1mbito'],
+            ['a la larga', 'proyectar hacia el futuro']
+        ]
+    },
+    // === GAME 47: cancion ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Completa la letra de esta canci\u00f3n con las expresiones que faltan.',
+        title: 'El tejedor de palabras',
+        artist: 'Canci\u00f3n tradicional (adaptada)',
+        lines: [
+            {
+                text: 'Voy ___ los hilos de mi lengua, uno a uno, sin prisa.',
+                answer: 'tejiendo',
+                options: ['tejiendo', 'buscando', 'perdiendo', 'rompiendo']
+            },
+            {
+                text: '___ los a\u00f1os, cada nudo cobra sentido.',
+                answer: 'A la larga',
+                options: ['A la larga', 'De repente', 'Sin embargo', 'Ni mucho menos']
+            },
+            {
+                text: 'Me ___ a escuchar las voces de los viejos tejedores.',
+                answer: 'puse',
+                options: ['puse', 'dej\u00e9', 'acab\u00e9', 'volv\u00ed']
+            },
+            {
+                text: 'Y ___ entendiendo que las palabras son semillas.',
+                answer: 'fui',
+                options: ['fui', 'anduve', 'segu\u00ed', 'dej\u00e9']
+            },
+            {
+                text: '___, el idioma se teje como una manta sagrada.',
+                answer: 'A fin de cuentas',
+                options: ['A fin de cuentas', 'Por si fuera poco', 'De buenas a primeras', 'Ni mucho menos']
+            }
+        ]
+    },
+    // === GAME 48: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee esta reflexi\u00f3n sobre la importancia de las per\u00edfrasis en el discurso.',
+        text: 'Las per\u00edfrasis verbales no son adornos: vienen a ser herramientas de precisi\u00f3n. Decir "fue mejorando" no es lo mismo que decir "mejor\u00f3". La primera expresi\u00f3n da a entender un proceso gradual; la segunda, un cambio puntual. Del mismo modo, "anda diciendo" sugiere una acci\u00f3n dispersa, casi gossip, mientras que "sigue diciendo" implica persistencia. A grandes rasgos, quien domina las per\u00edfrasis puede expresar matices temporales que un simple tiempo verbal no alcanza. En resumidas cuentas, son el tejido fino del espa\u00f1ol hablado.'
+    },
+    // === GAME 49: dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n con la per\u00edfrasis verbal.',
+        audio: 'Despu\u00e9s de a\u00f1os de esfuerzo, lleg\u00f3 a convertirse en la mejor tejedora de la Sierra.',
+        answer: 'Despu\u00e9s de a\u00f1os de esfuerzo, lleg\u00f3 a convertirse en la mejor tejedora de la Sierra.'
+    },
+    // === GAME 50: translation ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Reformula esta oraci\u00f3n sustituyendo la per\u00edfrasis por una expresi\u00f3n equivalente.',
+        source: 'El alcalde vino a decir que no hab\u00eda presupuesto para el proyecto.',
+        words: ['El', 'alcalde', 'b\u00e1sicamente', 'dijo', 'que', 'no', 'hab\u00eda', 'presupuesto', 'para', 'el', 'proyecto'],
+        answer: 'El alcalde b\u00e1sicamente dijo que no hab\u00eda presupuesto para el proyecto'
+    },
+    // === GAME 51: conversation ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Completa el di\u00e1logo con la expresi\u00f3n m\u00e1s natural.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora', text: '\u00bfQu\u00e9 diferencia hay entre "ir + gerundio" y "andar + gerundio"?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    '"Ir + gerundio" indica un proceso gradual y progresivo, mientras que "andar + gerundio" sugiere una acci\u00f3n repetida sin direcci\u00f3n clara.',
+                    '"Ir + gerundio" significa caminar y "andar + gerundio" significa correr.',
+                    'Las dos significan exactamente lo mismo, solo cambia el verbo auxiliar.'
+                ],
+                answer: '"Ir + gerundio" indica un proceso gradual y progresivo, mientras que "andar + gerundio" sugiere una acci\u00f3n repetida sin direcci\u00f3n clara.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora', text: '\u00bfPodr\u00edas darme un ejemplo de cada una?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    '"La econom\u00eda va mejorando" muestra progreso gradual, y "anda diciendo cosas" sugiere repetici\u00f3n dispersa.',
+                    '"Voy al mercado comprando" y "ando en la casa cocinando".',
+                    '"Voy a comprar" y "ando comprando" significan lo mismo.'
+                ],
+                answer: '"La econom\u00eda va mejorando" muestra progreso gradual, y "anda diciendo cosas" sugiere repetici\u00f3n dispersa.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Profesora', text: 'Excelente. \u00bfY qu\u00e9 matiz a\u00f1ade "andar + gerundio" que no tiene "estar + gerundio"?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    '"Andar + gerundio" a\u00f1ade un matiz de dispersi\u00f3n o falta de prop\u00f3sito que "estar + gerundio" no tiene.',
+                    '"Andar + gerundio" es m\u00e1s formal que "estar + gerundio".',
+                    'No hay ninguna diferencia de matiz entre las dos construcciones.'
+                ],
+                answer: '"Andar + gerundio" a\u00f1ade un matiz de dispersi\u00f3n o falta de prop\u00f3sito que "estar + gerundio" no tiene.'
+            }
+        ]
+    },
+    // === GAME 52: sorting ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica estas per\u00edfrasis seg\u00fan expresen acci\u00f3n gradual o acci\u00f3n lograda.',
+        categories: ['Acci\u00f3n gradual', 'Acci\u00f3n lograda'],
+        items: [
+            { text: 'ir + gerundio', category: 'Acci\u00f3n gradual' },
+            { text: 'llegar a + infinitivo', category: 'Acci\u00f3n lograda' },
+            { text: 'andar + gerundio', category: 'Acci\u00f3n gradual' },
+            { text: 'acabar por + infinitivo', category: 'Acci\u00f3n lograda' },
+            { text: 'seguir + gerundio', category: 'Acci\u00f3n gradual' },
+            { text: 'venir a + infinitivo', category: 'Acci\u00f3n lograda' }
+        ]
+    },
+    // === GAME 53: pair ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Empareja cada oraci\u00f3n con la per\u00edfrasis que contiene.',
+        pairs: [
+            ['Dieron por terminada la investigaci\u00f3n.', 'dar por + participio'],
+            ['Quedaron en verse el pr\u00f3ximo lunes.', 'quedar en + infinitivo'],
+            ['Vino a costar unos tres millones.', 'venir a + infinitivo'],
+            ['Ech\u00f3 a correr cuando vio al perro.', 'echar a + infinitivo'],
+            ['Rompi\u00f3 a llorar al escuchar la noticia.', 'romper a + infinitivo']
+        ]
+    },
+    // === GAME 54: cancion ===
+    {
+        type: 'cancion',
+        label: 'Canci\u00f3n',
+        instruction: 'Completa la letra con las per\u00edfrasis y locuciones correctas.',
+        title: 'Voces de la Sierra',
+        artist: 'Canci\u00f3n folkl\u00f3rica (adaptada)',
+        lines: [
+            {
+                text: '___ de la monta\u00f1a bajaron los cantos antiguos.',
+                answer: 'A ra\u00edz',
+                options: ['A ra\u00edz', 'En torno', 'A fin', 'Sin lugar']
+            },
+            {
+                text: 'Los abuelos ___ contando historias que nadie escribe.',
+                answer: 'andan',
+                options: ['andan', 'dejan', 'acaban', 'vuelven']
+            },
+            {
+                text: '___ que pasan los a\u00f1os, la memoria se va perdiendo.',
+                answer: 'A medida',
+                options: ['A medida', 'A ra\u00edz', 'En torno', 'Con respecto']
+            },
+            {
+                text: 'Pero yo ___ a cantar para que nadie las olvide.',
+                answer: 'vuelvo',
+                options: ['vuelvo', 'dejo', 'acabo', 'doy']
+            },
+            {
+                text: '___, estas voces son el tejido de nuestra alma.',
+                answer: 'A fin de cuentas',
+                options: ['A fin de cuentas', 'De buenas a primeras', 'Por si fuera poco', 'Ni mucho menos']
+            }
+        ]
+    },
+    // === GAME 55: narrative ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee el cierre de este destino sobre el tejido de las palabras.',
+        text: 'Yaguar\u00e1 baj\u00f3 de la Sierra con las manos vac\u00edas pero la mente llena. Hab\u00eda llegado a comprender que las per\u00edfrasis y las locuciones no se aprenden de memoria: se absorben, como la lluvia empapa la tierra. A fin de cuentas, cada expresi\u00f3n que domin\u00f3 ven\u00eda a ser un hilo nuevo en su propio tejido ling\u00fc\u00edstico. Ya no andaba buscando palabras sueltas; ahora iba tejiendo frases con la soltura de quien conoce los patrones desde adentro. Sin lugar a dudas, este destino la hab\u00eda transformado. De buenas a primeras, el espa\u00f1ol dej\u00f3 de ser un idioma que estudiaba para convertirse en uno que viv\u00eda.'
+    },
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La sala de los ecos',
+            description: 'Una sala donde cada opini\u00f3n que se pronuncia rebota en las paredes y vuelve transformada. Nada suena igual la segunda vez.',
+            ambience: 'reverb'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Un eco pregunta:',
+                riddle: '\u00ab\u00bfCu\u00e1l es la diferencia entre decir "creo que" y decir "es evidente que"?\u00bb',
+                clue: 'Piensa en el grado de certeza y compromiso del hablante.',
+                answer: 'El grado de modalizaci\u00f3n: "creo que" marca subjetividad, "es evidente que" presenta la opini\u00f3n como hecho',
+                options: [
+                    'El grado de modalizaci\u00f3n: "creo que" marca subjetividad, "es evidente que" presenta la opini\u00f3n como hecho',
+                    'No hay diferencia, son sin\u00f3nimos',
+                    'El primero es informal y el segundo formal',
+                    'El primero es incorrecto gramaticalmente'
+                ],
+                onSolve: 'El primer eco se clarifica.'
+            },
+            {
+                puzzleType: 'logic',
+                prompt: 'Tres perspectivas sobre la carretera de Don Pr\u00f3spero resuenan.',
+                premises: [
+                    'Don Pr\u00f3spero: \u00abLa carretera es progreso.\u00bb',
+                    'Candelaria: \u00abLa carretera es destrucci\u00f3n.\u00bb',
+                    'Do\u00f1a Asunci\u00f3n: \u00abLa carretera es una pregunta que nadie ha formulado bien.\u00bb'
+                ],
+                clue: '\u00bfCu\u00e1l de las tres afirmaciones abre m\u00e1s espacio para el di\u00e1logo?',
+                answer: 'La de Do\u00f1a Asunci\u00f3n, porque reformula el debate como una pregunta abierta',
+                options: [
+                    'La de Do\u00f1a Asunci\u00f3n, porque reformula el debate como una pregunta abierta',
+                    'La de Don Pr\u00f3spero, porque es la m\u00e1s clara',
+                    'La de Candelaria, porque defiende la naturaleza',
+                    'Ninguna, porque todas son opiniones'
+                ],
+                onSolve: 'Los ecos convergen en un nuevo sonido.'
+            },
+            {
+                puzzleType: 'synthesis',
+                prompt: 'Dos textos resuenan simult\u00e1neamente en la sala.',
+                sources: [
+                    '\u00abLa opini\u00f3n sin informaci\u00f3n es prejuicio. La informaci\u00f3n sin opini\u00f3n es indiferencia.\u00bb \u2014 Reflexi\u00f3n',
+                    '\u00abYaguar\u00e1 escuch\u00f3 todas las voces del bosque antes de hablar. Cuando finalmente habl\u00f3, cada palabra conten\u00eda todas las dem\u00e1s.\u00bb \u2014 Los Antiguos'
+                ],
+                clue: '\u00bfQu\u00e9 modelo de formaci\u00f3n de opini\u00f3n proponen estos textos?',
+                answer: 'Escuchar primero, integrar perspectivas, y luego hablar con la responsabilidad de quien ha o\u00eddo a todos',
+                options: [
+                    'Escuchar primero, integrar perspectivas, y luego hablar con la responsabilidad de quien ha o\u00eddo a todos',
+                    'Hablar r\u00e1pido antes de que otros impongan su opini\u00f3n',
+                    'Buscar solo informaci\u00f3n que confirme lo que ya piensas',
+                    'Evitar dar opiniones para no ofender a nadie'
+                ],
+                onSolve: 'La sala queda en silencio. Un silencio lleno, no vac\u00edo. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: una constelaci\u00f3n con forma de o\u00eddo.',
+            questClue: 'El o\u00eddo que escucha todas las voces antes de hablar es el que m\u00e1s lejos llega.',
+            item: 'constelacion-oido'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '42',
+        world: 'mundoDeArriba',
+        storageKey: 'yaguaraDest42Progress',
+        backUrl: '../../c1-santa-marta.html'
+    });
+</script>
+</body>
+</html>

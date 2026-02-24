@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final C2 - El Viaje del Jaguar</title>
+    <meta name="description" content="Examen Final C2 - El Espiritu del Jaguar. Ceremonia de maestria absoluta. Guardian de Historias. La culminacion del viaje completo de Yaguara.">
+    <link rel="canonical" href="https://babelfree.com/c2-exam">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F406;</text></svg>">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Examen Final C2 - El Viaje del Jaguar",
+          "description": "Examen Final C2 - El Espiritu del Jaguar. Assess register mastery, literary creation, metalinguistics, and public discourse at CEFR C2 level.",
+          "url": "https://babelfree.com/c2-exam",
+          "educationalLevel": "C2 - Mastery",
+          "learningResourceType": "Assessment",
+          "educationalAlignment": {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalLevel",
+            "educationalFramework": "CEFR",
+            "targetName": "C2 - Mastery",
+            "targetUrl": "https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
+          },
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "assesses": [
+            "Register mastery",
+            "Literary creation",
+            "Metalinguistics",
+            "Public discourse"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Babel Free",
+              "item": "https://babelfree.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "El Viaje del Jaguar",
+              "item": "https://babelfree.com/index"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "C2",
+              "item": "https://babelfree.com/c2-exam"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Exam"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ceremony-dark: #2a1a00;
+            --ceremony-accent: #daa520;
+            --ceremony-glow: #ffd700;
+            --jaguar-gold: #ffd700;
+            --success-green: #00ff88;
+            --c2-gold: #daa520;
+            --c2-light-gold: #f0c040;
+            --deep-black: #0d0800;
+            --ceremony-warm: #3d2600;
+            --text-light: #ffffff;
+            --text-muted: #c9b896;
+            --glass-bg: rgba(42, 26, 0, 0.6);
+            --border-radius: 15px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--deep-black) 0%, var(--ceremony-dark) 40%, #1a1000 70%, #0d0800 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.8;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 25% 75%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(255, 215, 0, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(218, 165, 32, 0.04) 0%, transparent 50%);
+            z-index: 1;
+            animation: examAura 40s ease-in-out infinite;
+        }
+
+        @keyframes examAura {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            33% { transform: scale(1.02) rotate(0.3deg); opacity: 1; }
+            66% { transform: scale(0.98) rotate(-0.2deg); opacity: 0.9; }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .exam-element {
+            position: absolute;
+            animation: examFloat 35s infinite linear;
+            opacity: 0.3;
+            font-size: 1.2em;
+        }
+
+        @keyframes examFloat {
+            0% { transform: translateY(-100px) translateX(-30px) rotate(0deg); }
+            100% { transform: translateY(100vh) translateX(60px) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header */
+        .exam-header {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 3px solid var(--ceremony-accent);
+            margin-bottom: 30px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .exam-header::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--ceremony-glow), var(--ceremony-accent), var(--ceremony-warm), var(--ceremony-glow));
+            border-radius: var(--border-radius);
+            z-index: -1;
+            animation: borderGlow 4s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: hue-rotate(0deg) brightness(1); }
+            50% { filter: hue-rotate(15deg) brightness(1.2); }
+            100% { filter: hue-rotate(0deg) brightness(1); }
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: var(--glass-bg);
+            color: var(--ceremony-glow);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            border: 2px solid var(--ceremony-accent);
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .back-btn:hover {
+            background: rgba(218, 165, 32, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .jaguar-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--ceremony-glow);
+            position: relative;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5), 0 0 60px rgba(218, 165, 32, 0.3);
+            animation: examPulse 4s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        @keyframes examPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5), 0 0 60px rgba(218, 165, 32, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 16px 50px rgba(255, 215, 0, 0.7), 0 0 80px rgba(218, 165, 32, 0.5); }
+        }
+
+        .exam-title {
+            font-size: 2.5rem;
+            color: var(--ceremony-glow);
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .exam-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .exam-badge {
+            background: linear-gradient(135deg, var(--ceremony-dark), var(--ceremony-accent));
+            color: var(--ceremony-glow);
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 10px 0;
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(218, 165, 32, 0.4);
+            border: 1px solid var(--ceremony-accent);
+        }
+
+        /* Hero/ceremony section */
+        .ceremony-section {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.1), rgba(42, 26, 0, 0.4));
+            border: 3px solid var(--ceremony-glow);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.1);
+        }
+
+        .ceremony-title {
+            font-size: 1.6rem;
+            color: var(--ceremony-glow);
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .ceremony-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* Exam sections */
+        .exam-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            position: relative;
+        }
+
+        .section-number {
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            background: linear-gradient(135deg, var(--ceremony-dark), var(--ceremony-accent));
+            color: var(--ceremony-glow);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border: 1px solid var(--ceremony-accent);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--ceremony-glow);
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Reading passage */
+        .reading-passage {
+            background: rgba(218, 165, 32, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--ceremony-glow);
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        /* Question styles */
+        .question {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(218, 165, 32, 0.1);
+            transition: var(--transition);
+        }
+
+        .question:hover {
+            border-color: rgba(218, 165, 32, 0.3);
+        }
+
+        .question-text {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .question-context {
+            background: rgba(218, 165, 32, 0.06);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--ceremony-accent);
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .options {
+            display: grid;
+            gap: 8px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .option:hover {
+            border-color: var(--ceremony-accent);
+            background: rgba(218, 165, 32, 0.1);
+        }
+
+        .option.selected {
+            border-color: var(--ceremony-accent);
+            background: rgba(218, 165, 32, 0.15);
+        }
+
+        .option.correct {
+            border-color: var(--success-green);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .option.incorrect {
+            border-color: #ff5252;
+            background: rgba(255, 82, 82, 0.1);
+        }
+
+        .option-radio {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .option.selected .option-radio {
+            border-color: var(--ceremony-accent);
+            background: var(--ceremony-accent);
+        }
+
+        .option.correct .option-radio {
+            border-color: var(--success-green);
+            background: var(--success-green);
+        }
+
+        .option.incorrect .option-radio {
+            border-color: #ff5252;
+            background: #ff5252;
+        }
+
+        /* Writing section */
+        .writing-area {
+            width: 100%;
+            min-height: 180px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(218, 165, 32, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: var(--transition);
+        }
+
+        .writing-area:focus {
+            outline: none;
+            border-color: var(--ceremony-glow);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .writing-area::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .word-count {
+            text-align: right;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+
+        /* Submit section */
+        .submit-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--ceremony-dark), var(--ceremony-accent));
+            color: var(--ceremony-glow);
+            border: 2px solid var(--ceremony-accent);
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 32px rgba(218, 165, 32, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(218, 165, 32, 0.6);
+            background: linear-gradient(135deg, var(--ceremony-accent), var(--ceremony-glow));
+            color: var(--ceremony-dark);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Results */
+        .results-section {
+            display: none;
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(42, 26, 0, 0.5));
+            border: 3px solid var(--ceremony-glow);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.15);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-title {
+            font-size: 2rem;
+            color: var(--ceremony-glow);
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .results-score {
+            font-size: 4rem;
+            font-weight: 900;
+            margin: 20px 0;
+        }
+
+        .results-score.pass {
+            color: var(--success-green);
+        }
+
+        .results-score.partial {
+            color: var(--ceremony-glow);
+        }
+
+        .results-score.fail {
+            color: #ff5252;
+        }
+
+        .results-message {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .results-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .result-btn {
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .result-btn.primary {
+            background: linear-gradient(135deg, var(--ceremony-dark), var(--ceremony-accent));
+            color: var(--ceremony-glow);
+            box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+            border: 1px solid var(--ceremony-accent);
+        }
+
+        .result-btn.secondary {
+            background: var(--glass-bg);
+            color: var(--ceremony-glow);
+            border: 2px solid var(--ceremony-glow);
+        }
+
+        .result-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Guardian achievement */
+        .guardian-achievement {
+            display: none;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(218, 165, 32, 0.1));
+            border: 3px solid var(--ceremony-glow);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+            animation: guardianReveal 1.2s ease-out;
+            box-shadow: 0 0 80px rgba(255, 215, 0, 0.3), inset 0 0 40px rgba(255, 215, 0, 0.05);
+        }
+
+        @keyframes guardianReveal {
+            0% { opacity: 0; transform: scale(0.8); }
+            50% { transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .guardian-title {
+            font-size: 2rem;
+            color: var(--ceremony-glow);
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .guardian-text {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .exam-title { font-size: 1.8rem; }
+            .ceremony-section { padding: 25px; }
+            .exam-section { padding: 20px; }
+            .jaguar-avatar { width: 120px; height: 120px; }
+            .results-score { font-size: 3rem; }
+            .results-actions { flex-direction: column; align-items: center; }
+            .guardian-title { font-size: 1.5rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="luxury.css">
+</head>
+<body>
+    <!-- Floating elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <div class="container">
+        <!-- Exam Header -->
+        <div class="exam-header">
+            <a href="/c2" class="back-btn">&#8592; Volver a C2</a>
+            <div class="jaguar-avatar">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <h1 class="exam-title">Examen Final C2</h1>
+            <p class="exam-subtitle">El Esp&iacute;ritu del Jaguar &mdash; Maestr&iacute;a absoluta</p>
+            <div class="exam-badge">Examen Final C2</div>
+        </div>
+
+        <!-- Ceremony intro -->
+        <div class="ceremony-section">
+            <div class="ceremony-title">&#128293; Ceremonia del Esp&iacute;ritu Completo</div>
+            <p class="ceremony-text">
+                Has recorrido los tres mundos. Has escuchado todas las voces, descifrado todos los c&oacute;digos,
+                habitado todas las formas de la lengua. Esta es la prueba final &mdash; no de lo que sabes,
+                sino de lo que eres capaz de crear con lo que sabes. Yaguar&aacute; te observa desde el Mundo de Arriba.
+                Demuestra que mereces ser Guardi&aacute;n de Historias.
+            </p>
+        </div>
+
+        <!-- Section 1: Comprension y deconstruccion -->
+        <div class="exam-section" id="section1">
+            <div class="section-number">Parte 1 de 4</div>
+            <h2 class="section-title">&#128220; Comprensi&oacute;n y deconstrucci&oacute;n</h2>
+            <p class="section-desc">Lee el texto con atenci&oacute;n y responde las preguntas de an&aacute;lisis.</p>
+
+            <div class="reading-passage">
+                Gabriel Garc&iacute;a M&aacute;rquez escribi&oacute; que Colombia era un pa&iacute;s donde la realidad superaba cualquier ficci&oacute;n. Esta afirmaci&oacute;n, lejos de ser un mero recurso ret&oacute;rico, constituye una epistemolog&iacute;a: la comprensi&oacute;n de que en este territorio la frontera entre lo vivido y lo imaginado se disuelve en el acto mismo de narrar. Los pueblos ind&iacute;genas de la Sierra Nevada lo sab&iacute;an antes que cualquier novelista: nombrar el mundo es crearlo. As&iacute;, el espa&ntilde;ol colombiano no es simplemente un instrumento de comunicaci&oacute;n sino un acto performativo que reconfigura la realidad con cada enunciaci&oacute;n. Quien domina esta lengua no solo habla &mdash; conjura.
+            </div>
+
+            <div class="question" data-question="1" data-correct="c">
+                <p class="question-text">1. &iquest;Qu&eacute; funci&oacute;n cumple la referencia a Garc&iacute;a M&aacute;rquez en la estructura argumentativa del texto?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Funciona como argumento de autoridad para validar la superioridad de la literatura colombiana frente a otras tradiciones narrativas</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Sirve como an&eacute;cdota introductoria sin conexi&oacute;n directa con la tesis central del texto</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Opera como premisa inicial que el autor trasciende al reinterpretar la frase no como recurso literario sino como fundamento epistemol&oacute;gico</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Constituye una refutaci&oacute;n impl&iacute;cita de la tradici&oacute;n del realismo m&aacute;gico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="2" data-correct="b">
+                <p class="question-text">2. &iquest;C&oacute;mo redefine el texto el concepto de &laquo;dominar una lengua&raquo;?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Lo equipara con la capacidad de comunicarse sin errores gramaticales en contextos formales e informales</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Lo transforma de competencia comunicativa en acto creador: dominar la lengua es conjurar realidad, no solo transmitir informaci&oacute;n</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Lo reduce a la pr&aacute;ctica de la escritura literaria profesional</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Lo asocia exclusivamente con el conocimiento de las lenguas ind&iacute;genas de la Sierra Nevada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="3" data-correct="d">
+                <p class="question-text">3. &iquest;Qu&eacute; relaci&oacute;n establece el autor entre la cosmovisi&oacute;n ind&iacute;gena y la literatura colombiana?</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Las presenta como tradiciones opuestas e irreconciliables en su concepci&oacute;n del lenguaje</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Sugiere que la literatura colombiana copi&oacute; directamente las pr&aacute;cticas narrativas ind&iacute;genas</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Indica que ambas carecen de rigor epistemol&oacute;gico por confundir ficci&oacute;n con realidad</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Establece una convergencia: ambas comparten la comprensi&oacute;n de que el acto de nombrar es un acto de creaci&oacute;n, siendo el saber ind&iacute;gena anterior y fundacional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Gramatica de maestria -->
+        <div class="exam-section" id="section2">
+            <div class="section-number">Parte 2 de 4</div>
+            <h2 class="section-title">&#9878;&#65039; Gram&aacute;tica de maestr&iacute;a</h2>
+            <p class="section-desc">Elige la opci&oacute;n que completa correctamente cada enunciado. Atenci&oacute;n a los matices del subjuntivo literario, las construcciones formales y la modalidad impl&iacute;cita.</p>
+
+            <div class="question" data-question="4" data-correct="a">
+                <p class="question-text">4. &laquo;Quienquiera que _____ recorrido estos territorios comprender&aacute; que la lengua no se aprende; se habita.&raquo;</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>hubiere</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>haya</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>hubiese</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>habr&iacute;a</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="5" data-correct="a">
+                <p class="question-text">5. &laquo;No ya porque la tradici&oacute;n lo _____, sino porque el acto de nombrar constituye en s&iacute; mismo una forma de resistencia.&raquo;</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>exija</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>exige</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>exigiera</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>exigiese</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="6" data-correct="a">
+                <p class="question-text">6. &laquo;De no _____ sido por la transmisi&oacute;n oral, gran parte del patrimonio ling&uuml;&iacute;stico se habr&iacute;a perdido irremediablemente.&raquo;</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>haber</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>ser</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>estar</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>poder</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="7" data-correct="b">
+                <p class="question-text">7. &laquo;La escritora sostuvo que, _____ lo que _____ las circunstancias, la lengua siempre encontrar&iacute;a la manera de reinventarse.&raquo;</p>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>fueran... fueran</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>fuesen... fuesen</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>fueren... fueren</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>sean... sean</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Analisis estilistico y creativo -->
+        <div class="exam-section" id="section3">
+            <div class="section-number">Parte 3 de 4</div>
+            <h2 class="section-title">&#127912; An&aacute;lisis estil&iacute;stico y creativo</h2>
+            <p class="section-desc">Demuestra tu dominio del an&aacute;lisis literario, las t&eacute;cnicas narrativas y la comprensi&oacute;n estil&iacute;stica avanzada.</p>
+
+            <div class="question" data-question="8" data-correct="b">
+                <p class="question-text">8. Lee ambas versiones y determina cu&aacute;l demuestra mayor maestr&iacute;a literaria.</p>
+                <div class="question-context">
+                    <strong>Versi&oacute;n A:</strong> &laquo;El r&iacute;o era muy grande y ten&iacute;a mucha agua. La gente del pueblo iba all&iacute; todos los d&iacute;as porque necesitaba agua para vivir y tambi&eacute;n para lavar la ropa.&raquo;<br><br>
+                    <strong>Versi&oacute;n B:</strong> &laquo;El r&iacute;o no separaba las orillas: las un&iacute;a. Cada ma&ntilde;ana, el pueblo entero acud&iacute;a a &eacute;l como quien acude a un templo sin paredes, a renovar el pacto silencioso entre el agua y la memoria.&raquo;
+                </div>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La versi&oacute;n A, porque su claridad informativa facilita la comprensi&oacute;n sin ambig&uuml;edad</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La versi&oacute;n B, porque emplea la ant&iacute;tesis, la personificaci&oacute;n y la met&aacute;fora para transformar la descripci&oacute;n en significado</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Ambas tienen igual calidad literaria, solo difieren en registro</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>La versi&oacute;n A, porque la buena literatura evita las figuras ret&oacute;ricas innecesarias</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="9" data-correct="c">
+                <p class="question-text">9. Identifica la t&eacute;cnica narrativa empleada en el siguiente fragmento:</p>
+                <div class="question-context">
+                    &laquo;Mar&iacute;a camin&oacute; hasta la orilla. El agua estaba fr&iacute;a, demasiado fr&iacute;a, y sin embargo era necesario cruzar. Siempre hab&iacute;a sido as&iacute;. Nadie le hab&iacute;a preguntado si quer&iacute;a cruzar. El r&iacute;o esperaba como esperan los r&iacute;os, sin prisa, sin perd&oacute;n. Meti&oacute; los pies.&raquo;
+                </div>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Mon&oacute;logo interior directo</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Narrador omnisciente tradicional</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Estilo indirecto libre: la voz del narrador se funde con el pensamiento del personaje sin marcas expl&iacute;citas</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Flujo de conciencia puro sin puntuaci&oacute;n</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="10" data-correct="d">
+                <p class="question-text">10. Lee el siguiente texto y determina qu&eacute; logra el autor mediante la ambig&uuml;edad deliberada:</p>
+                <div class="question-context">
+                    &laquo;Cuando por fin lleg&oacute; al Mundo de Arriba, Yaguar&aacute; descubri&oacute; que no hab&iacute;a nadie esper&aacute;ndolo. O quiz&aacute;s todos lo esperaban y &eacute;l a&uacute;n no sab&iacute;a mirar. El territorio no ten&iacute;a bordes. La lengua no ten&iacute;a fin.&raquo;
+                </div>
+                <div class="options">
+                    <div class="option" data-value="a" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Genera confusi&oacute;n narrativa que debilita el mensaje del texto</span>
+                    </div>
+                    <div class="option" data-value="b" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Demuestra que el narrador no tiene una postura clara sobre los hechos</span>
+                    </div>
+                    <div class="option" data-value="c" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Crea un efecto humor&iacute;stico basado en la contradicci&oacute;n</span>
+                    </div>
+                    <div class="option" data-value="d" onclick="selectOption(this)">
+                        <div class="option-radio"></div>
+                        <span>Reproduce en la forma del texto la experiencia que describe: la maestr&iacute;a como un estado sin l&iacute;mites definidos, donde la llegada es tambi&eacute;n un nuevo comienzo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Produccion escrita -->
+        <div class="exam-section" id="section4">
+            <div class="section-number">Parte 4 de 4</div>
+            <h2 class="section-title">&#9997;&#65039; Producci&oacute;n escrita</h2>
+            <p class="section-desc">Escribe un texto creativo-reflexivo (150&ndash;250 palabras) que responda a la siguiente pregunta: <strong>Si el viaje de Yaguar&aacute; por los tres mundos de Colombia es una met&aacute;fora del aprendizaje de una lengua, &iquest;qu&eacute; significa llegar al Mundo de Arriba?</strong> Integra reflexi&oacute;n metaling&uuml;&iacute;stica, al menos una referencia cultural colombiana, y demuestra dominio estil&iacute;stico.</p>
+            <textarea class="writing-area" id="writingResponse" placeholder="Llegar al Mundo de Arriba no es alcanzar una cumbre sino descubrir que el territorio de la lengua carece de cumbres..."></textarea>
+            <div class="word-count" id="wordCount">0 palabras</div>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-section">
+            <button class="submit-btn" id="submitBtn" onclick="submitExam()">
+                &#128293; Entregar examen final
+            </button>
+        </div>
+
+        <!-- Results -->
+        <div class="results-section" id="resultsSection">
+            <div class="jaguar-avatar" style="width:100px;height:100px;margin-bottom:20px;">
+                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+            <h2 class="results-title" id="resultsTitle">Resultado</h2>
+            <div class="results-score" id="resultsScore">0%</div>
+            <p class="results-message" id="resultsMessage"></p>
+            <div id="guardianAchievement" class="guardian-achievement">
+                <div class="guardian-title">&#128081; Guardi&aacute;n de Historias &#128081;</div>
+                <p class="guardian-text">
+                    Has alcanzado la puntuaci&oacute;n perfecta. No queda nada por demostrar &mdash; ahora eres quien guarda y transmite.
+                    Yaguar&aacute; te reconoce como Guardi&aacute;n de Historias: portador de la lengua viva, tejedor de mundos,
+                    voz que conjura realidad. El Viaje del Jaguar no termina aqu&iacute; &mdash; contin&uacute;a en cada palabra que pronuncies.
+                </p>
+            </div>
+            <div class="results-actions">
+                <button class="result-btn primary" onclick="location.reload()">Intentar de nuevo</button>
+                <a href="/c2" class="result-btn secondary">Volver a C2</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Floating elements
+        (function() {
+            var elements = ['&#128293;', '&#10024;', '&#128081;', '&#127775;', '&#9733;', '&#128220;', '&#127912;', '&#9878;&#65039;'];
+            var container = document.getElementById('floatingElements');
+            for (var i = 0; i < 8; i++) {
+                var el = document.createElement('div');
+                el.className = 'exam-element';
+                el.innerHTML = elements[i % elements.length];
+                el.style.left = (Math.random() * 100) + 'vw';
+                el.style.animationDuration = (25 + Math.random() * 20) + 's';
+                el.style.animationDelay = (Math.random() * 15) + 's';
+                container.appendChild(el);
+            }
+        })();
+
+        // Track answers
+        var answers = {};
+
+        function selectOption(el) {
+            var question = el.closest('.question');
+            var qNum = question.getAttribute('data-question');
+
+            // Remove selected from siblings
+            var siblings = question.querySelectorAll('.option');
+            for (var i = 0; i < siblings.length; i++) {
+                siblings[i].classList.remove('selected');
+            }
+
+            el.classList.add('selected');
+            answers[qNum] = el.getAttribute('data-value');
+        }
+
+        // Word count for writing
+        var writingArea = document.getElementById('writingResponse');
+        writingArea.addEventListener('input', function() {
+            var words = this.value.trim().split(/\s+/).filter(function(w) { return w.length > 0; });
+            document.getElementById('wordCount').textContent = words.length + ' palabras';
+        });
+
+        function submitExam() {
+            var totalQuestions = 10;
+            var correctCount = 0;
+            var questions = document.querySelectorAll('.question');
+
+            for (var i = 0; i < questions.length; i++) {
+                var q = questions[i];
+                var qNum = q.getAttribute('data-question');
+                var correctAnswer = q.getAttribute('data-correct');
+                var userAnswer = answers[qNum];
+                var options = q.querySelectorAll('.option');
+
+                for (var j = 0; j < options.length; j++) {
+                    options[j].classList.remove('selected');
+                    if (options[j].getAttribute('data-value') === correctAnswer) {
+                        options[j].classList.add('correct');
+                    } else if (options[j].getAttribute('data-value') === userAnswer && userAnswer !== correctAnswer) {
+                        options[j].classList.add('incorrect');
+                    }
+                }
+
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                }
+            }
+
+            // Writing bonus
+            var writingText = writingArea.value.trim();
+            var writingWords = writingText.split(/\s+/).filter(function(w) { return w.length > 0; }).length;
+            var writingBonus = 0;
+            if (writingWords >= 200) writingBonus = 5;
+            else if (writingWords >= 150) writingBonus = 4;
+            else if (writingWords >= 120) writingBonus = 3;
+            else if (writingWords >= 80) writingBonus = 2;
+            else if (writingWords >= 50) writingBonus = 1;
+
+            var totalScore = correctCount + writingBonus;
+            var maxScore = 15;
+            var percentage = Math.round((totalScore / maxScore) * 100);
+
+            var resultsSection = document.getElementById('resultsSection');
+            var resultsTitle = document.getElementById('resultsTitle');
+            var resultsScore = document.getElementById('resultsScore');
+            var resultsMessage = document.getElementById('resultsMessage');
+
+            resultsScore.textContent = totalScore + ' / ' + maxScore + ' (' + percentage + '%)';
+
+            if (totalScore === maxScore) {
+                // Perfect score — Guardian de Historias
+                resultsTitle.innerHTML = '&#128081; Maestr&iacute;a absoluta';
+                resultsScore.className = 'results-score pass';
+                resultsMessage.textContent = 'Puntuaci\u00f3n perfecta. Has completado El Viaje del Jaguar en su totalidad. No hay palabras que no puedas conjurar, no hay mundo que no puedas nombrar.';
+                document.getElementById('guardianAchievement').style.display = 'block';
+            } else if (percentage >= 80) {
+                resultsTitle.innerHTML = '&#128293; El Esp&iacute;ritu del Jaguar te reconoce';
+                resultsScore.className = 'results-score pass';
+                resultsMessage.textContent = 'Has demostrado maestr\u00eda aut\u00e9ntica. El Mundo de Arriba se abre ante ti. Yaguar\u00e1 camina a tu lado. Eres digno portador de la lengua viva.';
+            } else if (percentage >= 60) {
+                resultsTitle.innerHTML = '&#127775; Cerca de la cima';
+                resultsScore.className = 'results-score partial';
+                resultsMessage.textContent = 'Tu dominio es notable, pero el Esp\u00edritu Completo exige perfecci\u00f3n. Revisa los matices, afina tu o\u00eddo a las sutilezas, y regresa a esta ceremonia.';
+            } else {
+                resultsTitle.innerHTML = '&#128220; El camino contin&uacute;a';
+                resultsScore.className = 'results-score fail';
+                resultsMessage.textContent = 'La maestr\u00eda C2 requiere un dominio que a\u00fan est\u00e1 en proceso. Vuelve a recorrer los territorios avanzados, profundiza en los textos, y regresa cuando la lengua sea parte de ti.';
+            }
+
+            // Save to localStorage
+            try {
+                var resultData = {
+                    score: totalScore,
+                    maxScore: maxScore,
+                    percentage: percentage,
+                    mcCorrect: correctCount,
+                    writingBonus: writingBonus,
+                    writingWords: writingWords,
+                    passed: percentage >= 80,
+                    partialPass: percentage >= 60,
+                    perfectScore: totalScore === maxScore,
+                    date: new Date().toISOString()
+                };
+                localStorage.setItem('jaguarC2ExamResult', JSON.stringify(resultData));
+            } catch(e) {
+                // localStorage not available
+            }
+
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('submitBtn').textContent = 'Examen entregado';
+        }
+    </script>
+</body>
+</html>

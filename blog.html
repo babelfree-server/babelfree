@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Babel Free | Language Learning & Translation Insights</title>
+    <meta name="description" content="Explore articles on language learning, Spanish culture, CEFR levels, and translation insights from Babel Free.">
+    <link rel="canonical" href="https://babelfree.com/blog">
+    <link rel="icon" type="image/png" href="/assets/tower-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://babelfree.com/blog">
+    <meta property="og:title" content="Blog — Babel Free">
+    <meta property="og:description" content="Articles on language learning, Spanish culture, CEFR levels, and translation insights.">
+    <meta property="og:site_name" content="Babel Free">
+    <meta property="og:image" content="https://babelfree.com/assets/og-babel.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — Babel Free">
+    <meta name="twitter:description" content="Articles on language learning, Spanish culture, and translation.">
+    <meta name="twitter:image" content="https://babelfree.com/assets/og-babel.png">
+    <meta name="theme-color" content="#F4A5A5">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "name": "Blog — Babel Free",
+          "description": "Articles on language learning, Spanish culture, CEFR levels, and translation insights from Babel Free.",
+          "url": "https://babelfree.com/blog",
+          "isPartOf": {"@type": "WebSite", "name": "Babel Free", "url": "https://babelfree.com"},
+          "publisher": {
+            "@type": "Organization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com",
+            "logo": {"@type": "ImageObject", "url": "https://babelfree.com/assets/tower-logo.png"}
+          },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://babelfree.com/blog/what-is-cefr",
+                "name": "What is CEFR? Language Levels Explained"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "https://babelfree.com/blog/spanish-greetings-guide",
+                "name": "10 Essential Spanish Greetings You Need to Know"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "https://babelfree.com/blog/colombian-coffee-culture",
+                "name": "Coffee & Language: Colombian Coffee Culture"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://babelfree.com/blog"}
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lucida+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Lucida Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+        .header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+        .main-logo {
+            height: 70px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .main-logo img { height: 100%; width: auto; object-fit: contain; max-width: none; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-link {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        .nav-link:hover, .nav-link.active { color: #F4A5A5; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0;
+            width: 0; height: 2px;
+            background: #F4A5A5;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .cta-nav {
+            background: #F4A5A5;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(244, 165, 165, 0.3);
+        }
+        .cta-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(244, 165, 165, 0.4);
+        }
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .menu-bar {
+            width: 25px; height: 3px;
+            background: #1a1a1a;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 100px; left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            z-index: 999;
+        }
+        .mobile-menu.active { display: block; }
+        .mobile-menu-item {
+            display: block;
+            color: #1a1a1a;
+            text-decoration: none;
+            padding: 1rem 0;
+            border-bottom: 1px solid #ecf0f1;
+            font-weight: 600;
+        }
+        .mobile-menu-item:hover { color: #F4A5A5; }
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-menu-toggle { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo-brand">
+                <div class="main-logo"><img src="/assets/logo.png" alt="Babel Free Logo"></div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/services" class="nav-link">Services</a></li>
+                <li><a href="/blog" class="nav-link active">Blog</a></li>
+                <li><a href="/dictionary" class="nav-link">Dictionary</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+                <li><a href="/elviajedeljaguar" class="cta-nav">Spanish Course</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-menu-item">Home</a>
+        <a href="/services" class="mobile-menu-item">Services</a>
+        <a href="/blog" class="mobile-menu-item">Blog</a>
+        <a href="/dictionary" class="mobile-menu-item">Dictionary</a>
+        <a href="/contact" class="mobile-menu-item">Contact</a>
+        <a href="/elviajedeljaguar" class="mobile-menu-item">Spanish Course</a>
+    </div>
+
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <h1>BLOG</h1>
+            <p>Insights on language learning, Spanish culture, translation, and the CEFR framework from Babel Free.</p>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-grid">
+            <a href="/blog/spanish-greetings-guide" class="blog-card">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #F7D794, #F4A5A5);">&#128075;</div>
+                <div class="blog-card-body">
+                    <h2>10 ESSENTIAL SPANISH GREETINGS</h2>
+                    <p>Master the most common Spanish greetings used across Latin America — from casual "hola" to formal introductions.</p>
+                    <div class="blog-meta">
+                        <span>Feb 22, 2026</span>
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/colombian-coffee-culture" class="blog-card">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #8B4513, #D2691E);">&#9749;</div>
+                <div class="blog-card-body">
+                    <h2>COFFEE & LANGUAGE: COLOMBIAN COFFEE CULTURE</h2>
+                    <p>How Colombia's coffee tradition shaped its language, hospitality, and the words you'll learn as a Spanish student.</p>
+                    <div class="blog-meta">
+                        <span>Feb 22, 2026</span>
+                        <span>6 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/what-is-cefr" class="blog-card">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #2d6b2d, #27ae60);">&#128218;</div>
+                <div class="blog-card-body">
+                    <h2>WHAT IS CEFR? LANGUAGE LEVELS EXPLAINED</h2>
+                    <p>A clear guide to the Common European Framework of Reference — what A1 through C2 really mean for your learning.</p>
+                    <div class="blog-meta">
+                        <span>Feb 22, 2026</span>
+                        <span>7 min read</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer light">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <p class="footer-logo"><img src="/assets/tower-logo.png" alt="Babel Free" loading="lazy"></p>
+                <p class="footer-desc">Language courses, professional translation, and immersive Spanish learning through El Viaje del Jaguar — a CEFR-aligned journey powered by Colombian culture and storytelling.</p>
+            </div>
+            <nav class="footer-links" aria-label="Site map">
+                <p class="footer-heading">Explore</p>
+                <a href="/services">Language courses</a>
+                <a href="/elviajedeljaguar">El Viaje del Jaguar</a>
+                <a href="/dictionary">Dictionary</a>
+                <a href="/languages">100+ languages</a>
+                <a href="/blog">Blog</a>
+            </nav>
+            <div class="footer-contact">
+                <p class="footer-heading">Contact us</p>
+                <a href="/translation-services" class="footer-cta">Translation services</a>
+                <a href="/contact" class="footer-cta">Message form</a>
+                <a href="mailto:info@babelfree.com" class="footer-cta-secondary">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Babel Free &middot; <a href="/privacy">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+    function toggleMobileMenu() {
+        var m = document.getElementById('mobileMenu');
+        m.classList.toggle('active');
+    }
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+    }
+    </script>
+</body>
+</html>

@@ -4,46 +4,9 @@
 import os
 
 # Jaguar SVG used across all pages (inline, no external deps)
-JAGUAR_SVG = '''<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Yaguara" role="img">
-                        <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-                        <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                        <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                        <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                        <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                        <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-                        <circle cx="38" cy="36" r="6" fill="#1a1a1a"/>
-                        <circle cx="62" cy="36" r="6" fill="#1a1a1a"/>
-                        <circle cx="39.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                        <circle cx="63.5" cy="34.5" r="2.5" fill="#7fff00"/>
-                        <circle cx="40" cy="34" r="1" fill="#fff"/>
-                        <circle cx="64" cy="34" r="1" fill="#fff"/>
-                        <ellipse cx="50" cy="44" rx="6" ry="3.5" fill="#1a1a1a"/>
-                        <ellipse cx="50" cy="43" rx="3" ry="1.5" fill="#d4756b"/>
-                        <path d="M43 50 Q50 57 57 50" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-                        <circle cx="28" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
-                        <circle cx="72" cy="38" r="2.5" fill="#c8860a" opacity="0.6"/>
-                        <circle cx="35" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
-                        <circle cx="65" cy="50" r="2" fill="#c8860a" opacity="0.5"/>
-                        <path d="M26 46 Q20 50 15 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                        <path d="M74 46 Q80 50 85 46" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                        <path d="M24 52 Q18 56 13 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                        <path d="M76 52 Q82 56 87 52" stroke="#e8a820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                    </svg>'''
+JAGUAR_SVG = '''<img src="img/jaguar-hero.jpg" alt="Yaguara the Jaguar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">'''
 
-JAGUAR_SVG_SMALL = '''<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Jaguar logo">
-                    <circle cx="50" cy="42" r="28" fill="#1a1a1a"/>
-                    <ellipse cx="34" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                    <ellipse cx="66" cy="28" rx="10" ry="12" fill="#c8860a"/>
-                    <ellipse cx="34" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                    <ellipse cx="66" cy="30" rx="7" ry="8" fill="#e8a820"/>
-                    <ellipse cx="50" cy="42" rx="22" ry="18" fill="#e8a820"/>
-                    <circle cx="38" cy="36" r="5" fill="#1a1a1a"/>
-                    <circle cx="62" cy="36" r="5" fill="#1a1a1a"/>
-                    <circle cx="39" cy="35" r="2" fill="#7fff00"/>
-                    <circle cx="63" cy="35" r="2" fill="#7fff00"/>
-                    <ellipse cx="50" cy="44" rx="5" ry="3" fill="#1a1a1a"/>
-                    <path d="M44 50 Q50 56 56 50" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
-                </svg>'''
+JAGUAR_SVG_SMALL = '''<img src="img/jaguar-hero.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">'''
 
 # Shared footer across all level pages
 FOOTER_HTML = '''    <!-- Footer -->
@@ -52,7 +15,7 @@ FOOTER_HTML = '''    <!-- Footer -->
             <div class="footer-section">
                 <h3>El Viaje del Jaguar</h3>
                 <p>Learn Spanish through the epic adventures of Yaguar&aacute; in Colombia. Total immersion with game-based learning.</p>
-                <p>Part of the Babel Free Union language learning ecosystem.</p>
+                <p>Available in 100+ languages at babelfree.com</p>
             </div>
             <div class="footer-section">
                 <h3>Levels Available</h3>
@@ -65,15 +28,14 @@ FOOTER_HTML = '''    <!-- Footer -->
             </div>
             <div class="footer-section">
                 <h3>Contact &amp; Support</h3>
-                <p><a href="mailto:info@babelfreeunion.com">info@babelfreeunion.com</a></p>
-                <p><a href="https://wa.me/19173067920" target="_blank" rel="noopener noreferrer">WhatsApp: +1 917 306 7920</a></p>
-                <p><a href="index.html">Babel Free Union</a></p>
+                <p><a href="mailto:info@babelfree.com">info@babelfree.com</a></p>
+                <p><a href="languages.html">All Languages</a></p>
+                <p><a href="/blog">Blog</a></p>
                 <p><a href="login.html">Student Login</a></p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 El Viaje del Jaguar - Babel Free Union. All rights reserved.</p>
-            <p class="photo-credit">All graphics rendered inline &mdash; no external dependencies</p>
+            <p>&copy; 2026 El Viaje del Jaguar &middot; <a href="/">Babel Free</a></p>
         </div>
     </footer>'''
 
@@ -327,7 +289,24 @@ def generate_page(level_data):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{d["level"]} {d["level_name"]} - El Viaje del Jaguar</title>
-    <meta name="description" content="Level {d["level"]}: {d["title"]} - Learn Spanish through immersive adventures in Colombia's {d["region"]}">
+    <meta name="description" content="Level {d["level"]}: {d["title"]} - Learn Spanish through immersive adventures in Colombia's {d["region"]}. Free course with interactive games.">
+    <link rel="canonical" href="https://babelfree.com/{d["level"].lower()}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://babelfree.com/{d["level"].lower()}">
+    <meta property="og:title" content="{d["level"]} {d["level_name"]} - El Viaje del Jaguar">
+    <meta property="og:description" content="Level {d["level"]}: {d["title"]} - Learn Spanish through immersive adventures in Colombia">
+    <meta property="og:site_name" content="El Viaje del Jaguar">
+    <meta property="og:image" content="https://babelfree.com/img/og-jaguar.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{d["level"]} {d["level_name"]} - El Viaje del Jaguar">
+    <meta name="twitter:image" content="https://babelfree.com/img/og-jaguar.jpg">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="{d["color_dark"]}">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F406;</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -413,10 +392,10 @@ def generate_page(level_data):
 
         .logo {{
             width: 50px; height: 50px; border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, var(--jaguar-orange), var(--jaguar-gold));
             display: flex; align-items: center; justify-content: center;
             border: 2px solid rgba(249, 202, 36, 0.5);
             transition: var(--transition);
+            overflow: hidden;
         }}
 
         .logo:hover {{
@@ -522,20 +501,24 @@ def generate_page(level_data):
         .hero-inner {{ position: relative; z-index: 1; }}
 
         .jaguar-hero {{
-            width: 150px; height: 150px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--jaguar-gold), var(--jaguar-orange));
+            width: 200px; height: 200px; border-radius: 50%;
             margin: 0 auto 1.5rem; border: 5px solid var(--jaguar-gold);
             display: flex; align-items: center; justify-content: center;
             animation: breathe 6s ease-in-out infinite;
-            box-shadow: 0 12px 40px rgba(249, 202, 36, 0.5);
+            box-shadow: 0 0 30px rgba(249, 202, 36, 0.6), 0 0 60px rgba(249, 202, 36, 0.3), 0 12px 40px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }}
 
-        .jaguar-hero svg {{ width: 85%; height: 85%; }}
+        .jaguar-hero svg {{ width: 95%; height: 95%; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }}
 
         @keyframes breathe {{
             0%, 100% {{ transform: scale(1); }}
             50% {{ transform: scale(1.05); }}
+        }}
+
+        .jaguar-hero:hover {{
+            transform: scale(1.12);
+            box-shadow: 0 0 40px rgba(249, 202, 36, 0.8), 0 0 80px rgba(249, 202, 36, 0.4), 0 16px 50px rgba(0, 0, 0, 0.6);
         }}
 
         .hero-title {{
@@ -794,7 +777,7 @@ def generate_page(level_data):
             .main-content {{ padding: 100px 1rem 1rem; }}
             .hero-section {{ padding: 2rem; }}
             .hero-title {{ font-size: 2.2rem; }}
-            .jaguar-hero {{ width: 120px; height: 120px; }}
+            .jaguar-hero {{ width: 160px; height: 160px; }}
             .subpage-grid {{ grid-template-columns: 1fr; }}
             .region-details {{ grid-template-columns: 1fr; }}
             .cta-buttons {{ flex-direction: column; align-items: center; }}
@@ -894,7 +877,7 @@ def generate_page(level_data):
             <p>Join thousands of students exploring Colombia while learning Spanish</p>
             <div class="cta-buttons">
                 <a href="index.html#precios" class="btn-primary">View Pricing</a>
-                <a href="https://wa.me/19173067920?text=Hello,%20I'm%20interested%20in%20{d["level"]}%20level" class="btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+                <a href="mailto:info@babelfree.com" class="btn-secondary">Contact Us</a>
             </div>
         </section>
     </div>
@@ -958,6 +941,7 @@ def generate_page(level_data):
             }}
         }});
     </script>
+    <script>if('serviceWorker' in navigator){{navigator.serviceWorker.register('/service-worker.js');}}</script>
 </body>
 </html>'''
 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 12: Más grande, menos caro - Comparativos y Superlativos</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a2_basic/dest12_comparisons/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 12: Más grande, menos caro - Comparativos y Superlativos",
+          "url": "https://babelfree.com/a2_basic/dest12_comparisons/games",
+          "educationalLevel": "A2 - Elementary",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Comparisons", "Comparatives and superlatives", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "A2 Basic", "item": "https://babelfree.com/a2-caribbean" },
+            { "@type": "ListItem", "position": 4, "name": "Más grande, menos caro - Comparativos y Superlativos" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+
+    <header class="yg-header">
+        <a href="/a2-caribbean" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 12: Más grande, menos caro</div>
+            <div class="yg-header-subtitle">Comparativos y Superlativos</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+  {type:"pair",title:"Opuestos de adjetivos",instructions:"Une cada adjetivo con su opuesto.",pairs:[{a:"grande",b:"peque\u00f1o"},{a:"caro",b:"barato"},{a:"alto",b:"bajo"},{a:"r\u00e1pido",b:"lento"},{a:"bonito",b:"feo"},{a:"viejo",b:"nuevo"}]},
+  {type:"fib",title:"Completa la comparaci\u00f3n",instructions:"Selecciona la palabra correcta para completar cada oraci\u00f3n.",sentences:[{text:"El jaguar es ___ r\u00e1pido que el gato.",blanks:["m\u00e1s"],options:["m\u00e1s","menos","tan"]},{text:"La tortuga es ___ lenta que el conejo.",blanks:["m\u00e1s"],options:["m\u00e1s","menos","tan"]},{text:"El carro es ___ barato que la bicicleta.",blanks:["menos"],options:["m\u00e1s","menos","tan"]},{text:"El elefante es ___ grande que el rat\u00f3n.",blanks:["m\u00e1s"],options:["m\u00e1s","menos","como"]}]},
+  {type:"conj",title:"Estructura comparativa",instructions:"Selecciona la forma comparativa correcta para cada oraci\u00f3n.",items:[{prompt:"Mar\u00eda es ___ alta ___ Pedro.",answer:"m\u00e1s...que",options:["m\u00e1s...que","menos...que","tan...como"]},{prompt:"El gato es ___ grande ___ el perro.",answer:"menos...que",options:["m\u00e1s...que","menos...que","tan...como"]},{prompt:"Mi hermano es ___ alto ___ yo.",answer:"tan...como",options:["m\u00e1s...que","menos...que","tan...como"]},{prompt:"El avi\u00f3n es ___ r\u00e1pido ___ el tren.",answer:"m\u00e1s...que",options:["m\u00e1s...que","menos...que","tan...como"]},{prompt:"Este libro es ___ interesante ___ ese.",answer:"menos...que",options:["m\u00e1s...que","menos...que","tan...como"]}]},
+  {type:"listen",title:"Escucha y responde",instructions:"Escucha la oraci\u00f3n y selecciona la respuesta correcta.",sentence:"El carro rojo es m\u00e1s caro que el azul.",question:"\u00bfCu\u00e1l es m\u00e1s caro?",options:["El carro rojo","El carro azul","Los dos cuestan igual","No se sabe"],answer:"El carro rojo"},
+  {type:"sort",title:"Regular o irregular",instructions:"Clasifica cada forma comparativa como regular o irregular.",categories:["Comparativo regular","Comparativo irregular"],items:[{text:"m\u00e1s grande",cat:"Comparativo regular"},{text:"m\u00e1s alto",cat:"Comparativo regular"},{text:"m\u00e1s bonito",cat:"Comparativo regular"},{text:"m\u00e1s r\u00e1pido",cat:"Comparativo regular"},{text:"mejor",cat:"Comparativo irregular"},{text:"peor",cat:"Comparativo irregular"},{text:"mayor",cat:"Comparativo irregular"},{text:"menor",cat:"Comparativo irregular"}]},
+  {type:"fib",title:"Completa con m\u00e1s...que / menos...que",instructions:"Completa cada oraci\u00f3n con las palabras correctas.",sentences:[{text:"Bogot\u00e1 es ___ grande ___ Medell\u00edn.",blanks:["m\u00e1s","que"],options:["m\u00e1s","menos","que","como"]},{text:"El bus es ___ r\u00e1pido ___ el avi\u00f3n.",blanks:["menos","que"],options:["m\u00e1s","menos","que","como"]},{text:"La playa es ___ bonita ___ el desierto.",blanks:["m\u00e1s","que"],options:["m\u00e1s","menos","que","como"]},{text:"Mi casa es ___ grande ___ la tuya.",blanks:["tan","como"],options:["m\u00e1s","tan","que","como"]}]},
+  {type:"sb",title:"Construye la oraci\u00f3n",instructions:"Ordena las palabras para formar una comparaci\u00f3n correcta.",sentences:[{words:["El","jaguar","es","m\u00e1s","r\u00e1pido","que","el","gato"],answer:"El jaguar es m\u00e1s r\u00e1pido que el gato"},{words:["La","monta\u00f1a","es","m\u00e1s","alta","que","la","colina"],answer:"La monta\u00f1a es m\u00e1s alta que la colina"},{words:["Este","hotel","es","menos","caro","que","ese"],answer:"Este hotel es menos caro que ese"}]},
+  {type:"conj",title:"Superlativos",instructions:"Completa con la forma superlativa correcta.",items:[{prompt:"Bogot\u00e1 es la ciudad ___ grande de Colombia.",answer:"m\u00e1s",options:["m\u00e1s","menos","tan"]},{prompt:"El Amazonas es el r\u00edo ___ largo de Sudam\u00e9rica.",answer:"m\u00e1s",options:["m\u00e1s","menos","tan"]},{prompt:"Es el restaurante ___ caro de la ciudad.",answer:"m\u00e1s",options:["m\u00e1s","menos","tan"]},{prompt:"Es la fruta ___ barata del mercado.",answer:"m\u00e1s",options:["m\u00e1s","menos","como"]},{prompt:"Juan es el estudiante ___ inteligente de la clase.",answer:"m\u00e1s",options:["m\u00e1s","menos","mejor"]}]},
+  {type:"trans",title:"Traduce al espa\u00f1ol",instructions:"Traduce la oraci\u00f3n usando las palabras disponibles.",sentences:[{en:"The jaguar is faster than the cat.",words:["El","jaguar","es","m\u00e1s","r\u00e1pido","que","el","gato"],answer:"El jaguar es m\u00e1s r\u00e1pido que el gato"},{en:"The mountain is taller than the hill.",words:["La","monta\u00f1a","es","m\u00e1s","alta","que","la","colina"],answer:"La monta\u00f1a es m\u00e1s alta que la colina"}]},
+  {type:"conv",title:"Conversaci\u00f3n: Comparando",instructions:"Responde a las preguntas de comparaci\u00f3n.",steps:[{npc:"\u00bfCu\u00e1l es m\u00e1s bonito, el mar o la monta\u00f1a?",options:["El mar es m\u00e1s bonito que la monta\u00f1a.","El mar es menos bonito.","La monta\u00f1a es tan grande como el mar."],correct:0},{npc:"\u00bfY cu\u00e1l prefieres para vacaciones?",options:["Prefiero el mar porque es m\u00e1s relajante.","La monta\u00f1a es peor.","No me gusta nada."],correct:0},{npc:"\u00bfEs m\u00e1s caro ir a la playa o a la monta\u00f1a?",options:["Ir a la playa es m\u00e1s caro que ir a la monta\u00f1a.","S\u00ed, la playa.","No, gracias."],correct:0}]},
+  {type:"sb",title:"Construye superlativos",instructions:"Ordena las palabras para formar un superlativo.",sentences:[{words:["Cartagena","es","la","ciudad","m\u00e1s","bonita","de","Colombia"],answer:"Cartagena es la ciudad m\u00e1s bonita de Colombia"},{words:["El","Chimborazo","es","la","monta\u00f1a","m\u00e1s","alta","del","Ecuador"],answer:"El Chimborazo es la monta\u00f1a m\u00e1s alta del Ecuador"},{words:["Es","el","mejor","restaurante","de","la","ciudad"],answer:"Es el mejor restaurante de la ciudad"}]},
+  {type:"trans",title:"Traduce al espa\u00f1ol",instructions:"Traduce usando las palabras del banco.",sentences:[{en:"This restaurant is cheaper than that one.",words:["Este","restaurante","es","m\u00e1s","barato","que","ese"],answer:"Este restaurante es m\u00e1s barato que ese"},{en:"My house is bigger than yours.",words:["Mi","casa","es","m\u00e1s","grande","que","la","tuya"],answer:"Mi casa es m\u00e1s grande que la tuya"}]},
+  {type:"conv",title:"Comparando ciudades y comida",instructions:"Participa en la conversaci\u00f3n comparando cosas.",steps:[{npc:"\u00bfCu\u00e1l ciudad es m\u00e1s grande, Bogot\u00e1 o Medell\u00edn?",options:["Bogot\u00e1 es m\u00e1s grande que Medell\u00edn.","Medell\u00edn es m\u00e1s grande.","Son iguales."],correct:0},{npc:"\u00bfY la comida? \u00bfCu\u00e1l es mejor?",options:["La comida de Medell\u00edn es tan buena como la de Bogot\u00e1.","La comida es mala.","No como comida."],correct:0},{npc:"\u00bfQu\u00e9 actividad es m\u00e1s divertida, bailar salsa o hacer senderismo?",options:["Bailar salsa es m\u00e1s divertido que hacer senderismo.","No me gusta nada.","Es peor hacer senderismo."],correct:0},{npc:"\u00bfCu\u00e1l es la mejor ciudad para visitar?",options:["Cartagena es la mejor ciudad para visitar.","No hay ciudades buenas.","Todas son las peores."],correct:0}]},
+  {type:"dict",title:"Dictado: Comparaciones",instructions:"Escucha y escribe la oraci\u00f3n que oyes.",sentences:[{text:"El gato es m\u00e1s peque\u00f1o que el perro.",hint:"6 palabras - comparativo"},{text:"La casa roja es m\u00e1s bonita que la azul.",hint:"9 palabras - comparativo"},{text:"Bogot\u00e1 es la ciudad m\u00e1s grande de Colombia.",hint:"8 palabras - superlativo"}]},
+  {type:"story",title:"Yaguar\u00e1 compara",story:"Yaguar\u00e1 vive en la selva. Un d\u00eda decide comparar a los animales. El jaguar es m\u00e1s r\u00e1pido que el tapir. El tapir es m\u00e1s grande que el mono. El mono es m\u00e1s peque\u00f1o que el tapir, pero es m\u00e1s inteligente. De todos los animales, el jaguar es el m\u00e1s r\u00e1pido y el elefante es el m\u00e1s grande. Yaguar\u00e1 piensa que todos los animales son especiales.",questions:[{q:"\u00bfQui\u00e9n es m\u00e1s r\u00e1pido, el jaguar o el tapir?",options:["El jaguar","El tapir","Son iguales"],answer:"El jaguar"},{q:"\u00bfQui\u00e9n es m\u00e1s grande, el mono o el tapir?",options:["El mono","El tapir","Yaguar\u00e1"],answer:"El tapir"},{q:"\u00bfCu\u00e1l es el animal m\u00e1s r\u00e1pido de todos?",options:["El tapir","El mono","El jaguar"],answer:"El jaguar"}]},
+  {type:"pair",title:"Une oraciones con significados",instructions:"Une cada comparaci\u00f3n con su significado.",pairs:[{a:"El gato es m\u00e1s peque\u00f1o que el perro.",b:"The cat is smaller than the dog."},{a:"La casa es menos cara que el apartamento.",b:"The house is less expensive than the apartment."},{a:"Mar\u00eda es tan alta como Juan.",b:"Mar\u00eda is as tall as Juan."},{a:"Es el mejor restaurante.",b:"It's the best restaurant."},{a:"Es la ciudad m\u00e1s grande.",b:"It's the biggest city."},{a:"El tren es peor que el avi\u00f3n.",b:"The train is worse than the plane."}]},
+  {type:"listen",title:"Identifica el superlativo",instructions:"Escucha la oraci\u00f3n y selecciona el superlativo correcto.",sentence:"De todas las frutas, la manzana es la m\u00e1s barata del mercado.",question:"\u00bfCu\u00e1l es el superlativo en la oraci\u00f3n?",options:["la m\u00e1s barata","m\u00e1s barata que","menos barata","tan barata como"],answer:"la m\u00e1s barata"},
+  {type:"sort3",title:"Clasifica las comparaciones",instructions:"Clasifica cada oraci\u00f3n seg\u00fan el tipo de comparaci\u00f3n.",categories:["m\u00e1s...que","menos...que","tan...como"],items:[{text:"El carro es m\u00e1s r\u00e1pido que la bici.",cat:"m\u00e1s...que"},{text:"La sopa es m\u00e1s caliente que la ensalada.",cat:"m\u00e1s...que"},{text:"El bus es menos c\u00f3modo que el tren.",cat:"menos...que"},{text:"La pel\u00edcula es menos interesante que el libro.",cat:"menos...que"},{text:"Mi casa es tan grande como la tuya.",cat:"tan...como"},{text:"Pedro es tan inteligente como Ana.",cat:"tan...como"}]},
+  {type:"dict",title:"Dictado: Oraciones largas",instructions:"Escucha y escribe cada oraci\u00f3n.",sentences:[{text:"Cartagena es la ciudad m\u00e1s bonita de Colombia.",hint:"8 palabras - superlativo"},{text:"El hotel es menos caro que el apartamento.",hint:"8 palabras - menos...que"},{text:"Mi hermana es tan inteligente como mi hermano.",hint:"8 palabras - tan...como"},{text:"El jaguar es el animal m\u00e1s r\u00e1pido de la selva.",hint:"10 palabras - superlativo"}]},
+  {type:"story",title:"De compras en Medell\u00edn",story:"Ana y Carlos van de compras en Medell\u00edn. En la primera tienda, un vestido rojo cuesta 80.000 pesos y uno azul cuesta 120.000 pesos. El vestido rojo es m\u00e1s barato que el azul. En otra tienda, encuentran zapatos. Los zapatos negros son m\u00e1s c\u00f3modos que los blancos, pero los blancos son m\u00e1s bonitos. Carlos dice: \u201cEstos zapatos negros son los mejores de la tienda.\u201d Al final, Ana compra el vestido rojo porque es menos caro y Carlos compra los zapatos negros porque son los m\u00e1s c\u00f3modos.",questions:[{q:"\u00bfCu\u00e1l vestido es m\u00e1s barato?",options:["El rojo","El azul","Son iguales"],answer:"El rojo"},{q:"\u00bfCu\u00e1les zapatos son m\u00e1s c\u00f3modos?",options:["Los blancos","Los negros","Los rojos"],answer:"Los negros"},{q:"\u00bfCu\u00e1les zapatos son m\u00e1s bonitos?",options:["Los negros","Los blancos","Los rojos"],answer:"Los blancos"},{q:"\u00bfQu\u00e9 compra Carlos?",options:["El vestido azul","Los zapatos blancos","Los zapatos negros"],answer:"Los zapatos negros"}]},
+  {type:"fib",title:"Comparativos regulares e irregulares",instructions:"Completa con la forma comparativa o superlativa correcta.",sentences:[{text:"Este libro es ___ que ese. (good)",blanks:["mejor"],options:["mejor","m\u00e1s bueno","bueno"]},{text:"Esta pel\u00edcula es ___ que la otra. (bad)",blanks:["peor"],options:["peor","m\u00e1s malo","malo"]},{text:"Mi hermano ___ es ___ que yo. (old)",blanks:["mayor",""],options:["mayor","m\u00e1s viejo","menor"]},{text:"Es el ___ estudiante de la clase. (best)",blanks:["mejor"],options:["mejor","m\u00e1s bueno","bueno"]},{text:"Es la ___ idea del mundo. (worst)",blanks:["peor"],options:["peor","m\u00e1s mala","menos buena"]}]},
+  {type:"sb",title:"Oraciones complejas",instructions:"Ordena las palabras para formar comparaciones complejas.",sentences:[{words:["El","clima","de","Medell\u00edn","es","mejor","que","el","de","Bogot\u00e1"],answer:"El clima de Medell\u00edn es mejor que el de Bogot\u00e1"},{words:["Cartagena","es","la","ciudad","m\u00e1s","tur\u00edstica","de","Colombia"],answer:"Cartagena es la ciudad m\u00e1s tur\u00edstica de Colombia"},{words:["Los","tamales","son","tan","deliciosos","como","las","arepas"],answer:"Los tamales son tan deliciosos como las arepas"}]},
+  {type:"conj",title:"Comparativos: Selecci\u00f3n r\u00e1pida",instructions:"Selecciona la forma correcta lo m\u00e1s r\u00e1pido posible.",items:[{prompt:"bueno \u2192 comparativo",answer:"mejor",options:["mejor","m\u00e1s bueno","buenor"]},{prompt:"malo \u2192 comparativo",answer:"peor",options:["peor","m\u00e1s malo","malor"]},{prompt:"grande \u2192 superlativo",answer:"el m\u00e1s grande",options:["el m\u00e1s grande","el mayor","grandote"]},{prompt:"peque\u00f1o \u2192 comparativo",answer:"m\u00e1s peque\u00f1o",options:["m\u00e1s peque\u00f1o","menor","peque\u00f1or"]},{prompt:"joven \u2192 comparativo",answer:"menor",options:["menor","m\u00e1s joven","jovenor"]},{prompt:"viejo \u2192 comparativo",answer:"mayor",options:["mayor","m\u00e1s viejo","viejor"]},{prompt:"r\u00e1pido \u2192 superlativo",answer:"el m\u00e1s r\u00e1pido",options:["el m\u00e1s r\u00e1pido","el rapidote","el mejor r\u00e1pido"]},{prompt:"bonito \u2192 comparativo",answer:"m\u00e1s bonito",options:["m\u00e1s bonito","bonitor","mejor bonito"]}]},
+  {type:"trans",title:"Traduce el p\u00e1rrafo",instructions:"Traduce cada oraci\u00f3n al espa\u00f1ol usando las palabras disponibles.",sentences:[{en:"Bogot\u00e1 is bigger than Medell\u00edn.",words:["Bogot\u00e1","es","m\u00e1s","grande","que","Medell\u00edn"],answer:"Bogot\u00e1 es m\u00e1s grande que Medell\u00edn"},{en:"But Medell\u00edn has better weather.",words:["Pero","Medell\u00edn","tiene","mejor","clima"],answer:"Pero Medell\u00edn tiene mejor clima"},{en:"Cartagena is the most beautiful city in Colombia.",words:["Cartagena","es","la","ciudad","m\u00e1s","bonita","de","Colombia"],answer:"Cartagena es la ciudad m\u00e1s bonita de Colombia"}]},
+  {type:"conv",title:"De compras: Comparando productos",instructions:"Est\u00e1s de compras. Compara productos y elige.",steps:[{npc:"Bienvenido a la tienda. Tenemos dos camisetas: una roja por 50.000 pesos y una azul por 35.000 pesos. \u00bfCu\u00e1l prefiere?",options:["La azul es m\u00e1s barata que la roja. Prefiero la azul.","La roja es m\u00e1s barata.","No me gustan las camisetas."],correct:0},{npc:"Buena elecci\u00f3n. Tambi\u00e9n tenemos pantalones. Estos negros son m\u00e1s elegantes que los azules. \u00bfQu\u00e9 opina?",options:["S\u00ed, los negros son m\u00e1s elegantes, pero los azules son m\u00e1s c\u00f3modos.","Son los peores pantalones.","No quiero nada."],correct:0},{npc:"\u00bfQuiere ver los zapatos? Son los mejores de la tienda.",options:["\u00a1S\u00ed! Quiero ver los mejores zapatos que tiene.","Los zapatos son los peores.","No, gracias, ya tengo todo."],correct:0},{npc:"Estos zapatos cuestan 200.000 pesos. Son los m\u00e1s c\u00f3modos que tenemos. \u00bfLos quiere?",options:["Son m\u00e1s caros que los otros, pero son los m\u00e1s c\u00f3modos. \u00a1Los llevo!","Son los m\u00e1s baratos.","Son menos c\u00f3modos que los otros."],correct:0}]},
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de las voces',
+            description: 'Una cueva donde se escuchan muchas voces. Cada voz tiene una opini\u00f3n diferente.',
+            ambience: 'murmur'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'Tres voces hablan al mismo tiempo:',
+                riddle: '\u00abVoz 1: "Me gusta el r\u00edo." Voz 2: "Prefiero la monta\u00f1a." Voz 3: "A m\u00ed me encanta el mar." \u00bfEst\u00e1n de acuerdo?\u00bb',
+                clue: 'Piensa en lo que expresan: \u00bfopiniones o hechos?',
+                answer: 'No est\u00e1n de acuerdo, pero las tres expresan opiniones v\u00e1lidas usando "me gusta", "prefiero", "me encanta"',
+                options: [
+                    'No est\u00e1n de acuerdo, pero las tres expresan opiniones v\u00e1lidas usando "me gusta", "prefiero", "me encanta"',
+                    'S\u00ed, porque todas hablan de la naturaleza',
+                    'No, porque solo una tiene raz\u00f3n',
+                    'S\u00ed, porque todas est\u00e1n contentas'
+                ],
+                onSolve: 'Las voces se calman un poco.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'Una cerradura aparece entre las piedras.',
+                clue: 'Completa: \u00abA Yaguar\u00e1 le ___ nadar en el r\u00edo.\u00bb (verbo gustar, tercera persona)',
+                answer: 'gusta',
+                hint: '_ _ _ _ _',
+                onSolve: 'La cerradura gira.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras aparecen en el eco de las voces.',
+                clue: 'Es la palabra para decir lo que piensas sobre algo. Siete letras.',
+                answer: 'opinion',
+                scrambled: 'inopnio',
+                onSolve: 'Las voces cantan juntas. La puerta se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de oreja.',
+            questClue: 'La oreja escucha todas las voces, no solo una.',
+            item: 'raiz-oreja'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '12',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraDest12Progress',
+        backUrl: '../../a2-caribbean.html'
+    });
+</script>
+</body>
+</html>

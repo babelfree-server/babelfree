@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 24: El canto de las ballenas - Subjuntivo con emociones</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/b1_advanced/dest24_subjunctive_emotions/games">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LearningResource",
+          "name": "Destino 24: El canto de las ballenas - Subjuntivo con emociones",
+          "url": "https://babelfree.com/b1_advanced/dest24_subjunctive_emotions/games",
+          "educationalLevel": "B1 Advanced - Intermediate",
+          "learningResourceType": "Interactive Game",
+          "isAccessibleForFree": true,
+          "inLanguage": "es",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Babel Free",
+            "url": "https://babelfree.com"
+          },
+          "dateModified": "2026-02-24",
+          "teaches": ["Subjunctive with emotions", "Emotional expression", "Spanish grammar"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+            { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/index.html" },
+            { "@type": "ListItem", "position": 3, "name": "B1 Advanced", "item": "https://babelfree.com/b1-nuqui" },
+            { "@type": "ListItem", "position": 4, "name": "El canto de las ballenas - Subjuntivo con emociones" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-del-medio">
+
+    <header class="yg-header">
+        <a href="/b1-nuqui" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">Destino 24: El canto de las ballenas</div>
+            <div class="yg-header-subtitle">Subjuntivo con emociones</div>
+        </div>
+    </header>
+
+    <div class="yg-progress" id="yaguaraProgress"></div>
+
+    <div class="yg-encounter-wrapper">
+        <div class="yg-card" id="yaguaraCard"></div>
+    </div>
+
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+    // === GAME 1: Narrative — Arrival at Nuqu\u00ed ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre la llegada de Yaguar\u00e1 a Nuqu\u00ed.',
+        text: 'Yaguar\u00e1 llega a Nuqu\u00ed, en la costa del Pac\u00edfico colombiano. Es julio y las ballenas jorobadas est\u00e1n migrando desde la Ant\u00e1rtida. Me alegra que las ballenas vengan cada a\u00f1o a estas aguas c\u00e1lidas. Los pescadores del pueblo dicen que es incre\u00edble que estos animales enormes viajen miles de kil\u00f3metros para tener a sus cr\u00edas aqu\u00ed. Yaguar\u00e1 siente emoci\u00f3n y respeto por la naturaleza.'
+    },
+
+    // === GAME 2: Conjugation — Present subjunctive after emotion triggers ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo en presente de subjuntivo despu\u00e9s de la expresi\u00f3n de emoci\u00f3n.',
+        questions: [
+            { verb: 'venir', subject: 'Me alegra que las ballenas ___', answer: 'vengan', options: ['vienen', 'vengan', 'ven\u00edan', 'vendr\u00e1n'] },
+            { verb: 'estar', subject: 'Es triste que el oc\u00e9ano ___ contaminado', answer: 'est\u00e9', options: ['est\u00e1', 'est\u00e9', 'estaba', 'estar\u00e1'] },
+            { verb: 'proteger', subject: 'Me encanta que la comunidad ___ a las ballenas', answer: 'proteja', options: ['protege', 'proteja', 'proteg\u00eda', 'proteger\u00e1'] },
+            { verb: 'poder', subject: 'Es incre\u00edble que nosotros ___ verlas desde la playa', answer: 'podamos', options: ['podemos', 'podamos', 'pod\u00edamos', 'podremos'] }
+        ]
+    },
+
+    // === GAME 3: Conjugation — More subjunctive forms ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Elige la forma correcta del subjuntivo.',
+        questions: [
+            { verb: 'nadar', subject: 'Me sorprende que las cr\u00edas ___ tan r\u00e1pido', answer: 'naden', options: ['nadan', 'naden', 'nadaban', 'nadar\u00e1n'] },
+            { verb: 'existir', subject: 'Me preocupa que ___ tanta contaminaci\u00f3n', answer: 'exista', options: ['existe', 'exista', 'exist\u00eda', 'existir\u00e1'] },
+            { verb: 'cuidar', subject: 'Es importante que todos ___ el medio ambiente', answer: 'cuidemos', options: ['cuidamos', 'cuidemos', 'cuid\u00e1bamos', 'cuidaremos'] },
+            { verb: 'llegar', subject: 'Me alegra que los turistas ___ con respeto', answer: 'lleguen', options: ['llegan', 'lleguen', 'llegaban', 'llegar\u00e1n'] }
+        ]
+    },
+
+    // === GAME 4: FIB — Complete with subjunctive after emotions ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la oraci\u00f3n con la forma correcta del subjuntivo.',
+        questions: [
+            { sentence: 'Me alegra que las ballenas ___ a Nuqu\u00ed cada julio.', answer: 'vengan', options: ['vienen', 'vengan', 'ven\u00edan', 'vinieron'] },
+            { sentence: 'Es triste que muchas especies ___ en peligro de extinci\u00f3n.', answer: 'est\u00e9n', options: ['est\u00e1n', 'est\u00e9n', 'estaban', 'estuvieron'] },
+            { sentence: 'Me encanta que t\u00fa ___ inter\u00e9s por la ecolog\u00eda marina.', answer: 'tengas', options: ['tienes', 'tengas', 'ten\u00edas', 'tuviste'] },
+            { sentence: 'Es incre\u00edble que estos animales ___ tantos kil\u00f3metros.', answer: 'recorran', options: ['recorren', 'recorran', 'recorr\u00edan', 'recorrieron'] }
+        ]
+    },
+
+    // === GAME 5: Narrative — The whale song ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre el canto de las ballenas.',
+        text: 'En la lancha, un gu\u00eda local explica: \u00abLas ballenas jorobadas cantan. Los machos producen sonidos que viajan cientos de kil\u00f3metros bajo el agua. Me sorprende que cada grupo tenga su propio canto. Es triste que el ruido de los barcos grandes afecte su comunicaci\u00f3n.\u00bb Yaguar\u00e1 escucha con atenci\u00f3n. Tiene miedo de que los humanos no entiendan la importancia de estos animales.'
+    },
+
+    // === GAME 6: FIB — Emotion verbs triggering subjunctive ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Elige la opci\u00f3n correcta para completar cada oraci\u00f3n.',
+        questions: [
+            { sentence: 'Me preocupa que el ruido de los barcos ___ a las ballenas.', answer: 'afecte', options: ['afecta', 'afecte', 'afectaba', 'afect\u00f3'] },
+            { sentence: 'Tengo miedo de que los pescadores no ___ las reglas.', answer: 'respeten', options: ['respetan', 'respeten', 'respetaban', 'respetaron'] },
+            { sentence: 'Me molesta que algunas personas ___ basura al mar.', answer: 'tiren', options: ['tiran', 'tiren', 'tiraban', 'tiraron'] },
+            { sentence: 'Es maravilloso que la comunidad ___ programas de conservaci\u00f3n.', answer: 'tenga', options: ['tiene', 'tenga', 'ten\u00eda', 'tuvo'] }
+        ]
+    },
+
+    // === GAME 7: Pair — Emotion phrase \u2194 subjunctive clause ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada expresi\u00f3n de emoci\u00f3n con su cl\u00e1usula en subjuntivo.',
+        pairs: [
+            ['Me alegra que...', 'las ballenas vengan cada a\u00f1o'],
+            ['Es triste que...', 'el oc\u00e9ano est\u00e9 contaminado'],
+            ['Me sorprende que...', 'cada grupo tenga su propio canto'],
+            ['Me preocupa que...', 'haya tanta basura en el mar'],
+            ['Me encanta que...', 'los ni\u00f1os aprendan sobre ecolog\u00eda'],
+            ['Tengo miedo de que...', 'las ballenas no regresen']
+        ]
+    },
+
+    // === GAME 8: Conjugation — Irregular subjunctive forms ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga estos verbos irregulares en subjuntivo.',
+        questions: [
+            { verb: 'ser', subject: 'Es triste que la situaci\u00f3n ___ tan dif\u00edcil', answer: 'sea', options: ['es', 'sea', 'era', 'fue'] },
+            { verb: 'ir', subject: 'Me alegra que ustedes ___ a ver las ballenas', answer: 'vayan', options: ['van', 'vayan', 'iban', 'fueron'] },
+            { verb: 'saber', subject: 'Me sorprende que mucha gente no ___ sobre la migraci\u00f3n', answer: 'sepa', options: ['sabe', 'sepa', 'sab\u00eda', 'supo'] },
+            { verb: 'haber', subject: 'Me preocupa que no ___ suficientes leyes de protecci\u00f3n', answer: 'haya', options: ['hay', 'haya', 'hab\u00eda', 'hubo'] }
+        ]
+    },
+
+    // === GAME 9: Listening — Identify emotion + subjunctive ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha la oraci\u00f3n y elige la emoci\u00f3n que expresa.',
+        audio: 'Me alegra mucho que las ballenas jorobadas regresen a Nuqu\u00ed este a\u00f1o.',
+        question: '\u00bfQu\u00e9 emoci\u00f3n expresa el hablante?',
+        answer: 'Alegr\u00eda',
+        options: ['Alegr\u00eda', 'Tristeza', 'Miedo', 'Enojo']
+    },
+
+    // === GAME 10: Sorting — Emotion verbs vs non-emotion verbs ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfqu\u00e9 expresiones necesitan subjuntivo y cu\u00e1les no?',
+        categories: ['Requiere subjuntivo', 'No requiere subjuntivo'],
+        items: [
+            { text: 'Me alegra que...', category: 'Requiere subjuntivo' },
+            { text: 'Es triste que...', category: 'Requiere subjuntivo' },
+            { text: 'Me preocupa que...', category: 'Requiere subjuntivo' },
+            { text: 'Creo que...', category: 'No requiere subjuntivo' },
+            { text: 'S\u00e9 que...', category: 'No requiere subjuntivo' },
+            { text: 'Me sorprende que...', category: 'Requiere subjuntivo' },
+            { text: 'Es evidente que...', category: 'No requiere subjuntivo' },
+            { text: 'Tengo miedo de que...', category: 'Requiere subjuntivo' },
+            { text: 'Es verdad que...', category: 'No requiere subjuntivo' }
+        ]
+    },
+
+    // === GAME 11: Builder — Reorder emotion + subjunctive sentence ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n con emoci\u00f3n y subjuntivo.',
+        words: ['Me', 'alegra', 'que', 'las', 'ballenas', 'vengan', 'cada', 'a\u00f1o'],
+        answer: 'Me alegra que las ballenas vengan cada a\u00f1o'
+    },
+
+    // === GAME 12: FIB — Mixed emotion triggers ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa con la forma correcta del verbo entre par\u00e9ntesis.',
+        questions: [
+            { sentence: 'Me sorprende que tantas personas ___ (visitar) Nuqu\u00ed en julio.', answer: 'visiten', options: ['visitan', 'visiten', 'visitaban', 'visitaron'] },
+            { sentence: 'Es incre\u00edble que una ballena ___ (pesar) cuarenta toneladas.', answer: 'pese', options: ['pesa', 'pese', 'pesaba', 'pes\u00f3'] },
+            { sentence: 'Me molesta que los turistas ___ (hacer) tanto ruido en las lanchas.', answer: 'hagan', options: ['hacen', 'hagan', 'hac\u00edan', 'hicieron'] },
+            { sentence: 'Tengo miedo de que la temperatura del agua ___ (subir) demasiado.', answer: 'suba', options: ['sube', 'suba', 'sub\u00eda', 'subi\u00f3'] }
+        ]
+    },
+
+    // === GAME 13: Pair — Complete sentences ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el inicio de la oraci\u00f3n con su final correcto en subjuntivo.',
+        pairs: [
+            ['Me encanta que los ni\u00f1os...', 'aprendan sobre las ballenas'],
+            ['Es triste que el pl\u00e1stico...', 'llegue hasta el oc\u00e9ano Pac\u00edfico'],
+            ['Me preocupa que la pesca...', 'afecte a las cr\u00edas de ballena'],
+            ['Es incre\u00edble que las ballenas...', 'canten bajo el agua'],
+            ['Me sorprende que el viaje...', 'dure miles de kil\u00f3metros'],
+            ['Me molesta que algunos barcos...', 'no respeten la distancia m\u00ednima']
+        ]
+    },
+
+    // === GAME 14: Conjugation — Subjunctive with yo/t\u00fa/\u00e9l ===
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Completa con el subjuntivo correcto seg\u00fan el sujeto indicado.',
+        questions: [
+            { verb: 'hablar', subject: 'Me alegra que t\u00fa ___ con el gu\u00eda', answer: 'hables', options: ['hablas', 'hables', 'hablabas', 'hablaste'] },
+            { verb: 'conocer', subject: 'Es incre\u00edble que yo ___ este lugar', answer: 'conozca', options: ['conozco', 'conozca', 'conoc\u00eda', 'conoc\u00ed'] },
+            { verb: 'vivir', subject: 'Me sorprende que ella ___ tan cerca del mar', answer: 'viva', options: ['vive', 'viva', 'viv\u00eda', 'vivi\u00f3'] },
+            { verb: 'entender', subject: 'Es triste que muchos no ___ la importancia del oc\u00e9ano', answer: 'entiendan', options: ['entienden', 'entiendan', 'entend\u00edan', 'entendieron'] }
+        ]
+    },
+
+    // === GAME 15: Translation — Emotion + subjunctive sentences ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce la oraci\u00f3n al espa\u00f1ol usando el banco de palabras.',
+        source: 'I am glad that the whales come every year.',
+        words: ['Me', 'alegra', 'que', 'las', 'ballenas', 'vengan', 'cada', 'a\u00f1o'],
+        answer: 'Me alegra que las ballenas vengan cada a\u00f1o'
+    },
+
+    // === GAME 16: Narrative — Conservation emotions ===
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee sobre los sentimientos de la comunidad de Nuqu\u00ed.',
+        text: 'Do\u00f1a Carmen, una pescadora de Nuqu\u00ed, habla con Yaguar\u00e1: \u00abMe encanta que mi nieta sepa los nombres de las ballenas. Me preocupa que el cambio clim\u00e1tico afecte sus rutas de migraci\u00f3n. Pero me alegra que cada vez m\u00e1s personas quieran proteger el oc\u00e9ano. Es triste que en el pasado no entendi\u00e9ramos tanto, pero es maravilloso que ahora trabajemos juntos.\u00bb Yaguar\u00e1 siente esperanza.'
+    },
+
+    // === GAME 17: Listening — Identify the subjunctive clause ===
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la oraci\u00f3n que usa correctamente el subjuntivo con emoci\u00f3n.',
+        audio: 'Es triste que tantas ballenas mueran por la contaminaci\u00f3n del oc\u00e9ano.',
+        question: '\u00bfCu\u00e1l es el verbo en subjuntivo en esta oraci\u00f3n?',
+        answer: 'mueran',
+        options: ['mueran', 'mueren', 'murieron', 'mor\u00edan']
+    },
+
+    // === GAME 18: Sorting — Indicative vs subjunctive triggers ===
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica cada oraci\u00f3n seg\u00fan si el verbo subrayado est\u00e1 en indicativo o subjuntivo.',
+        categories: ['Indicativo', 'Subjuntivo'],
+        items: [
+            { text: 'Las ballenas vienen cada julio', category: 'Indicativo' },
+            { text: 'Me alegra que vengan cada julio', category: 'Subjuntivo' },
+            { text: 'El gu\u00eda sabe mucho sobre ballenas', category: 'Indicativo' },
+            { text: 'Me sorprende que sepa tanto', category: 'Subjuntivo' },
+            { text: 'La comunidad protege el oc\u00e9ano', category: 'Indicativo' },
+            { text: 'Me encanta que protejan el oc\u00e9ano', category: 'Subjuntivo' },
+            { text: 'Los turistas llegan en lancha', category: 'Indicativo' },
+            { text: 'Me preocupa que lleguen sin gu\u00eda', category: 'Subjuntivo' }
+        ]
+    },
+
+    // === GAME 19: Builder — Complex emotion sentence ===
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras para formar una oraci\u00f3n correcta.',
+        words: ['Es', 'triste', 'que', 'el', 'oc\u00e9ano', 'est\u00e9', 'tan', 'contaminado'],
+        answer: 'Es triste que el oc\u00e9ano est\u00e9 tan contaminado'
+    },
+
+    // === GAME 20: FIB — Advanced emotion + subjunctive ===
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa las oraciones con el subjuntivo adecuado.',
+        questions: [
+            { sentence: 'Me encanta que el gobierno ___ (crear) \u00e1reas protegidas.', answer: 'cree', options: ['crea', 'cree', 'creaba', 'cre\u00f3'] },
+            { sentence: 'Es incre\u00edble que las ballenas ___ (comunicarse) con cantos.', answer: 'se comuniquen', options: ['se comunican', 'se comuniquen', 'se comunicaban', 'se comunicaron'] },
+            { sentence: 'Tengo miedo de que nosotros no ___ (hacer) lo suficiente.', answer: 'hagamos', options: ['hacemos', 'hagamos', 'hac\u00edamos', 'hicimos'] },
+            { sentence: 'Me preocupa que el turismo ___ (crecer) sin control.', answer: 'crezca', options: ['crece', 'crezca', 'crec\u00eda', 'creci\u00f3'] }
+        ]
+    },
+
+    // === GAME 21: Translation — Sadness + subjunctive ===
+    {
+        type: 'translation',
+        label: 'Traducir',
+        instruction: 'Traduce al espa\u00f1ol usando el banco de palabras.',
+        source: 'It is sad that the ocean is so polluted.',
+        words: ['Es', 'triste', 'que', 'el', 'oc\u00e9ano', 'est\u00e9', 'tan', 'contaminado'],
+        answer: 'Es triste que el oc\u00e9ano est\u00e9 tan contaminado'
+    },
+
+    // === GAME 22: Conversation — Expressing feelings about whale watching ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Habla con el gu\u00eda sobre tus emociones al ver las ballenas.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda', text: '\u00a1Mira, ah\u00ed est\u00e1 una ballena con su cr\u00eda! \u00bfQu\u00e9 sientes?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Me alegra que podamos verlas tan cerca. Es incre\u00edble.',
+                    'Las ballenas son grandes y nadan.',
+                    'Yo quiero ir a la playa ahora.'
+                ],
+                answer: 'Me alegra que podamos verlas tan cerca. Es incre\u00edble.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda', text: 'S\u00ed, es un momento especial. Pero hay un problema: la contaminaci\u00f3n. \u00bfQu\u00e9 opinas?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Me preocupa que haya tanta basura en el oc\u00e9ano. Tengo miedo de que afecte a las cr\u00edas.',
+                    'El oc\u00e9ano es muy grande y tiene agua.',
+                    'Ayer fui a la tienda y compr\u00e9 cosas.'
+                ],
+                answer: 'Me preocupa que haya tanta basura en el oc\u00e9ano. Tengo miedo de que afecte a las cr\u00edas.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Gu\u00eda', text: 'La comunidad trabaja mucho en la conservaci\u00f3n. \u00bfQu\u00e9 te parece eso?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Me encanta que la comunidad proteja a las ballenas. Es maravilloso que trabajen juntos.',
+                    'La comunidad tiene casas y tiendas.',
+                    'Yo prefiero las monta\u00f1as.'
+                ],
+                answer: 'Me encanta que la comunidad proteja a las ballenas. Es maravilloso que trabajen juntos.'
+            }
+        ]
+    },
+
+    // === GAME 23: Conversation — Feelings about Nuqu\u00ed ecology ===
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Conversa con do\u00f1a Carmen sobre la ecolog\u00eda de Nuqu\u00ed.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Do\u00f1a Carmen', text: 'Yo nac\u00ed aqu\u00ed en Nuqu\u00ed. Me sorprende que tanta gente quiera conocer nuestras ballenas. \u00bfPor qu\u00e9 viniste?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Vine porque me encanta que este lugar tenga tanta biodiversidad. Quiero aprender m\u00e1s.',
+                    'Vine porque hace calor y me gusta el sol.',
+                    'No s\u00e9 por qu\u00e9 vine.'
+                ],
+                answer: 'Vine porque me encanta que este lugar tenga tanta biodiversidad. Quiero aprender m\u00e1s.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Do\u00f1a Carmen', text: 'Antes no cuid\u00e1bamos tanto el mar. Ahora todo cambi\u00f3. \u00bfQu\u00e9 emoci\u00f3n te produce eso?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Me alegra que ahora la comunidad cuide el medio ambiente. Es esperanzador.',
+                    'El mar es azul y tiene peces.',
+                    'Yo no s\u00e9 nada sobre el mar.'
+                ],
+                answer: 'Me alegra que ahora la comunidad cuide el medio ambiente. Es esperanzador.'
+            },
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Do\u00f1a Carmen', text: 'Mi nieta estudia biolog\u00eda marina. \u00bfQu\u00e9 piensas de las nuevas generaciones?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: [
+                    'Es incre\u00edble que los j\u00f3venes se interesen por la conservaci\u00f3n. Me da esperanza que estudien estos temas.',
+                    'Los j\u00f3venes usan mucho el tel\u00e9fono.',
+                    'No me importa lo que estudian.'
+                ],
+                answer: 'Es incre\u00edble que los j\u00f3venes se interesen por la conservaci\u00f3n. Me da esperanza que estudien estos temas.'
+            }
+        ]
+    },
+
+    // === GAME 24: Dictation ===
+    {
+        type: 'dictation',
+        label: 'Dictado',
+        instruction: 'Escucha y escribe la oraci\u00f3n exacta.',
+        audio: 'Me sorprende que las ballenas jorobadas viajen desde la Ant\u00e1rtida hasta Nuqu\u00ed cada a\u00f1o.',
+        answer: 'Me sorprende que las ballenas jorobadas viajen desde la Ant\u00e1rtida hasta Nuqu\u00ed cada a\u00f1o.'
+    },
+
+    // === GAME 25: Pair — Emotion word \u2194 example sentence ===
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Conecta cada verbo de emoci\u00f3n con la oraci\u00f3n que lo usa correctamente.',
+        pairs: [
+            ['Me alegra que...', 'las comunidades protejan el mar'],
+            ['Me molesta que...', 'los barcos hagan tanto ruido'],
+            ['Es incre\u00edble que...', 'las ballenas viajen ocho mil kil\u00f3metros'],
+            ['Tengo miedo de que...', 'el cambio clim\u00e1tico altere las rutas'],
+            ['Me encanta que...', 'mi hija quiera ser bi\u00f3loga marina'],
+            ['Es triste que...', 'muchas especies est\u00e9n en peligro']
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva del cuentero',
+            description: 'Una cueva donde un viejo cuentero sol\u00eda sentarse a contar historias. La silla est\u00e1 vac\u00eda, pero las paredes recuerdan las palabras.',
+            ambience: 'campfire'
+        },
+        puzzles: [
+            {
+                puzzleType: 'sequence',
+                prompt: 'Los elementos de una buena historia est\u00e1n desordenados en la pared.',
+                clue: 'Ord\u00e9nalos seg\u00fan la estructura narrativa cl\u00e1sica.',
+                items: [
+                    'Hab\u00eda una vez... (situaci\u00f3n inicial)',
+                    'Un d\u00eda... (evento que cambia todo)',
+                    'Entonces... (desarrollo y conflicto)',
+                    'Al final... (desenlace)'
+                ],
+                onSolve: 'Las paredes de la cueva recuerdan el orden.'
+            },
+            {
+                puzzleType: 'extract',
+                prompt: 'Una historia est\u00e1 escrita en la piedra, pero le faltan los conectores temporales.',
+                passage: '\u00ab___ Yaguar\u00e1 viv\u00eda tranquila junto al r\u00edo. ___ un silencio extra\u00f1o cubri\u00f3 el bosque. ___ decidi\u00f3 buscar la causa. ___ descubri\u00f3 que las palabras se estaban perdiendo.\u00bb',
+                clue: 'Los conectores son: "Antes,", "Un d\u00eda,", "Entonces", "Finalmente,"',
+                answer: 'Antes \u2014 Un d\u00eda \u2014 Entonces \u2014 Finalmente',
+                options: [
+                    'Antes \u2014 Un d\u00eda \u2014 Entonces \u2014 Finalmente',
+                    'Despu\u00e9s \u2014 Luego \u2014 M\u00e1s tarde \u2014 Al final',
+                    'Primero \u2014 Segundo \u2014 Tercero \u2014 Cuarto',
+                    'Ayer \u2014 Hoy \u2014 Ma\u00f1ana \u2014 Siempre'
+                ],
+                onSolve: 'La historia se completa en la piedra.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La silla del cuentero tiene una cerradura escondida.',
+                clue: 'Es lo que toda buena historia necesita para avanzar. Sin esto, no pasa nada. Nueve letras.',
+                answer: 'conflicto',
+                hint: '_ _ _ _ _ _ _ _ _',
+                onSolve: 'La silla se mueve. Debajo hay una puerta. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un fragmento del Mapa de las Voces: un dibujo de una cueva con palabras flotando como humo de fogata.',
+            questClue: 'Las historias nacen donde el fuego y la oscuridad se encuentran.',
+            item: 'historia-cueva'
+        }
+    }
+];
+</script>
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: '24',
+        world: 'mundoDelMedio',
+        storageKey: 'yaguaraDest24Progress',
+        backUrl: '../../b1-nuqui.html'
+    });
+</script>
+</body>
+</html>

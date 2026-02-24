@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&oacute;dulo 4: Mi casa</title>
+    <link rel="stylesheet" href="../../css/yaguara-game.css">
+    <link rel="stylesheet" href="../../luxury.css">
+    <link rel="canonical" href="https://babelfree.com/a1_basic/module4_home/games">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Módulo 4: Casa — Games",
+                "url": "https://babelfree.com/a1_basic/module4_home/games",
+                "educationalLevel": "A1 - Beginner",
+                "learningResourceType": "Interactive Game",
+                "teaches": [
+                    "Home vocabulary practice",
+                    "Verb estar exercises"
+                ],
+                "isAccessibleForFree": true,
+                "inLanguage": "es",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "dateModified": "2026-02-24"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "El Viaje del Jaguar",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A1",
+                        "item": "https://babelfree.com/a1-amazon"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Casa",
+                        "item": "https://babelfree.com/a1_basic/module4_home/games"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Games"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="yg-body yg-mundo-de-abajo">
+    <header class="yg-header">
+        <a href="/a1-amazon" class="yg-back-btn">&#8592; Volver</a>
+        <div class="yg-header-info">
+            <div class="yg-header-title">M&oacute;dulo 4: Mi casa</div>
+            <div class="yg-header-subtitle">Describir lugares</div>
+        </div>
+    </header>
+    <div class="yg-progress" id="yaguaraProgress"></div>
+    <div class="yg-encounter-wrapper"><div class="yg-card" id="yaguaraCard"></div></div>
+    <div class="yg-yaguara-panel" id="yaguaraPanel"></div>
+    <nav class="yg-nav" id="yaguaraNav">
+        <button class="yg-nav-btn yg-btn-prev" id="ygBtnPrev" disabled>&#8592; Anterior</button>
+        <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
+    </nav>
+
+<script>
+var games = [
+
+    /* ============================================================
+       1. NARRATIVE \u2014 Yaguar\u00e1 finds her home
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Soy Yaguar\u00e1. Tengo una casa. Mi casa es una cueva. La cueva es grande. La cueva est\u00e1 en la selva.'
+    },
+
+    /* ============================================================
+       2. NARRATIVE \u2014 Around the cave
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'Hay un r\u00edo. El r\u00edo es bonito. Hay \u00e1rboles grandes. La selva es verde. Mi casa est\u00e1 aqu\u00ed.'
+    },
+
+    /* ============================================================
+       3. NARRATIVE \u2014 Inside the cave
+    ============================================================ */
+    {
+        type: 'narrative',
+        label: 'Narraci\u00f3n',
+        instruction: 'Lee y escucha.',
+        text: 'La cueva es buena. Es grande. Es fuerte. Aqu\u00ed estoy feliz. Mi familia est\u00e1 aqu\u00ed.'
+    },
+
+    /* ============================================================
+       4. PAIR \u2014 Place \u2194 description
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une el lugar con su descripci\u00f3n.',
+        pairs: [
+            ['la cueva', 'grande'],
+            ['el r\u00edo', 'bonito'],
+            ['la selva', 'verde'],
+            ['la casa', 'buena']
+        ]
+    },
+
+    /* ============================================================
+       5. PAIR \u2014 Ser vs estar usage
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une la frase con el verbo.',
+        pairs: [
+            ['La cueva ___ grande.', 'es'],
+            ['Yaguar\u00e1 ___ aqu\u00ed.', 'est\u00e1'],
+            ['El r\u00edo ___ bonito.', 'es'],
+            ['La familia ___ en la cueva.', 'est\u00e1']
+        ]
+    },
+
+    /* ============================================================
+       6. PAIR \u2014 Hay + places
+    ============================================================ */
+    {
+        type: 'pair',
+        label: 'Emparejar',
+        instruction: 'Une las frases.',
+        pairs: [
+            ['Hay un r\u00edo', 'en la selva'],
+            ['Hay una cueva', 'en la selva'],
+            ['Hay \u00e1rboles', 'grandes'],
+            ['Hay agua', 'en el r\u00edo']
+        ]
+    },
+
+    /* ============================================================
+       7. FIB \u2014 Estar + locations
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'La cueva ___ aqu\u00ed.',
+                answer: 'est\u00e1',
+                options: ['est\u00e1', 'es', 'hay', 'son']
+            },
+            {
+                sentence: 'Yaguar\u00e1 ___ en la cueva.',
+                answer: 'est\u00e1',
+                options: ['es', 'est\u00e1', 'soy', 'hay']
+            },
+            {
+                sentence: 'Mi familia ___ en la selva.',
+                answer: 'est\u00e1',
+                options: ['est\u00e1', 'es', 'son', 'hay']
+            }
+        ]
+    },
+
+    /* ============================================================
+       8. FIB \u2014 Hay for existence
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: '___ un r\u00edo grande.',
+                answer: 'Hay',
+                options: ['Hay', 'Es', 'Est\u00e1', 'Son']
+            },
+            {
+                sentence: '___ \u00e1rboles en la selva.',
+                answer: 'Hay',
+                options: ['Son', 'Est\u00e1n', 'Hay', 'Es']
+            },
+            {
+                sentence: '___ una cueva aqu\u00ed.',
+                answer: 'Hay',
+                options: ['Est\u00e1', 'Hay', 'Es', 'Son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       9. FIB \u2014 Ser for descriptions
+    ============================================================ */
+    {
+        type: 'fib',
+        label: 'Completar',
+        instruction: 'Completa la frase.',
+        questions: [
+            {
+                sentence: 'La cueva ___ grande.',
+                answer: 'es',
+                options: ['es', 'est\u00e1', 'hay', 'son']
+            },
+            {
+                sentence: 'El r\u00edo ___ bonito.',
+                answer: 'es',
+                options: ['est\u00e1', 'es', 'soy', 'hay']
+            },
+            {
+                sentence: 'La selva ___ verde.',
+                answer: 'es',
+                options: ['hay', 'est\u00e1', 'es', 'son']
+            }
+        ]
+    },
+
+    /* ============================================================
+       10. LISTENING \u2014 Place description (slow)
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'La cueva es grande.',
+        question: '\u00bfC\u00f3mo es la cueva?',
+        answer: 'grande',
+        options: ['peque\u00f1a', 'grande', 'mala', 'nueva']
+    },
+
+    /* ============================================================
+       11. LISTENING \u2014 Where is it?
+    ============================================================ */
+    {
+        type: 'listening',
+        label: 'Escuchar',
+        instruction: 'Escucha y elige la respuesta.',
+        audio: 'El r\u00edo est\u00e1 en la selva.',
+        question: '\u00bfD\u00f3nde est\u00e1 el r\u00edo?',
+        answer: 'en la selva',
+        options: ['en la cueva', 'en la selva', 'en la casa', 'en el \u00e1rbol']
+    },
+
+    /* ============================================================
+       12. CONJUGATION \u2014 Estar (present: yo, t\u00fa, \u00e9l/ella)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo estar.',
+        questions: [
+            {
+                verb: 'estar',
+                subject: 'yo',
+                answer: 'estoy',
+                options: ['estoy', 'est\u00e1s', 'est\u00e1', 'estamos']
+            },
+            {
+                verb: 'estar',
+                subject: 't\u00fa',
+                answer: 'est\u00e1s',
+                options: ['estoy', 'est\u00e1s', 'est\u00e1', 'est\u00e1n']
+            },
+            {
+                verb: 'estar',
+                subject: 'ella',
+                answer: 'est\u00e1',
+                options: ['estoy', 'est\u00e1s', 'est\u00e1', 'estamos']
+            }
+        ]
+    },
+
+    /* ============================================================
+       13. CONJUGATION \u2014 Estar (present: nosotros, ustedes, ellos)
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo estar.',
+        questions: [
+            {
+                verb: 'estar',
+                subject: 'nosotros',
+                answer: 'estamos',
+                options: ['estoy', 'est\u00e1n', 'estamos', 'est\u00e1']
+            },
+            {
+                verb: 'estar',
+                subject: 'ustedes',
+                answer: 'est\u00e1n',
+                options: ['estamos', 'est\u00e1n', 'est\u00e1', 'est\u00e1s']
+            },
+            {
+                verb: 'estar',
+                subject: 'ellos',
+                answer: 'est\u00e1n',
+                options: ['estamos', 'est\u00e1', 'estoy', 'est\u00e1n']
+            }
+        ]
+    },
+
+    /* ============================================================
+       14. CONJUGATION \u2014 Estar in context
+    ============================================================ */
+    {
+        type: 'conjugation',
+        label: 'Conjugaci\u00f3n',
+        instruction: 'Conjuga el verbo estar.',
+        questions: [
+            {
+                verb: 'estar',
+                subject: 'yo',
+                answer: 'estoy',
+                context: 'Yo ___ en la cueva.',
+                options: ['estoy', 'est\u00e1', 'est\u00e1s', 'estamos']
+            },
+            {
+                verb: 'estar',
+                subject: 'Yaguar\u00e1',
+                answer: 'est\u00e1',
+                context: 'Yaguar\u00e1 ___ feliz.',
+                options: ['estoy', 'est\u00e1s', 'est\u00e1', 'est\u00e1n']
+            },
+            {
+                verb: 'estar',
+                subject: 'nosotros',
+                answer: 'estamos',
+                context: 'Nosotros ___ en la selva.',
+                options: ['est\u00e1n', 'estamos', 'estoy', 'est\u00e1']
+            }
+        ]
+    },
+
+    /* ============================================================
+       15. SORTING \u2014 Inside vs outside
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfdentro o fuera de la cueva?',
+        categories: ['Dentro', 'Fuera'],
+        items: [
+            { text: 'Yaguar\u00e1', category: 'Dentro' },
+            { text: 'el r\u00edo', category: 'Fuera' },
+            { text: 'la familia', category: 'Dentro' },
+            { text: 'los \u00e1rboles', category: 'Fuera' },
+            { text: 'la cueva', category: 'Dentro' },
+            { text: 'la selva', category: 'Fuera' }
+        ]
+    },
+
+    /* ============================================================
+       16. SORTING \u2014 Ser vs estar
+    ============================================================ */
+    {
+        type: 'sorting',
+        label: 'Clasificar',
+        instruction: 'Clasifica: \u00bfser o estar?',
+        categories: ['Ser', 'Estar'],
+        items: [
+            { text: 'es grande', category: 'Ser' },
+            { text: 'est\u00e1 aqu\u00ed', category: 'Estar' },
+            { text: 'es bonito', category: 'Ser' },
+            { text: 'est\u00e1 en la selva', category: 'Estar' },
+            { text: 'es buena', category: 'Ser' },
+            { text: 'est\u00e1 feliz', category: 'Estar' }
+        ]
+    },
+
+    /* ============================================================
+       17. BUILDER \u2014 Simple place sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['cueva', 'La', 'grande', 'es'],
+        answer: 'La cueva es grande'
+    },
+
+    /* ============================================================
+       18. BUILDER \u2014 Location sentence
+    ============================================================ */
+    {
+        type: 'builder',
+        label: 'Construir',
+        instruction: 'Ordena las palabras.',
+        words: ['r\u00edo', 'Hay', 'un', 'bonito'],
+        answer: 'Hay un r\u00edo bonito'
+    },
+
+    /* ============================================================
+       19. CONVERSATION \u2014 Describing a place
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'Luna', text: '\u00bfC\u00f3mo es tu casa?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['Mi casa es grande.', 'Tengo un hermano.', 'Soy feliz.', 'El r\u00edo es malo.'],
+                answer: 'Mi casa es grande.'
+            }
+        ]
+    },
+
+    /* ============================================================
+       20. CONVERSATION \u2014 Where is the cave?
+    ============================================================ */
+    {
+        type: 'conversation',
+        label: 'Conversaci\u00f3n',
+        instruction: 'Elige la respuesta.',
+        turns: [
+            {
+                dialogue: [
+                    { speaker: 'A', name: 'R\u00edo', text: '\u00bfD\u00f3nde est\u00e1 la cueva?' },
+                    { speaker: 'B', name: 'T\u00fa', text: '???' }
+                ],
+                options: ['La cueva es bonita.', 'Hay \u00e1rboles.', 'La cueva est\u00e1 en la selva.', 'Soy grande.'],
+                answer: 'La cueva est\u00e1 en la selva.'
+            }
+        ]
+    },
+
+    // --- SALA DE ENIGMAS (Meta-quest: Las puertas de la memoria) ---
+    {
+        type: 'escaperoom',
+        label: 'Sala de enigmas',
+        instruction: 'Resuelve los enigmas para abrir la puerta.',
+        room: {
+            name: 'La cueva de la casa',
+            description: 'Una cueva que parece una casa. Hay una mesa de piedra, una cama de musgo, una ventana que es un agujero en la roca.',
+            ambience: 'home'
+        },
+        puzzles: [
+            {
+                puzzleType: 'riddle',
+                prompt: 'La mesa de piedra pregunta:',
+                riddle: '\u00abTengo techo, tengo paredes, tengo puerta. La familia vive aqu\u00ed. Es un lugar seguro. \u00bfQu\u00e9 soy?\u00bb',
+                clue: 'Es donde vives.',
+                answer: 'Una casa',
+                options: ['Una casa', 'Una escuela', 'Un hospital', 'Una tienda'],
+                onSolve: 'La mesa brilla.'
+            },
+            {
+                puzzleType: 'cipher',
+                prompt: 'Letras est\u00e1n en las piedras de la pared.',
+                clue: 'Es la habitaci\u00f3n donde duermes.',
+                answer: 'cuarto',
+                scrambled: 'tuoacr',
+                onSolve: 'La cama de musgo brilla.'
+            },
+            {
+                puzzleType: 'wordlock',
+                prompt: 'La ventana de roca tiene una cerradura.',
+                clue: 'Es donde la familia come junta. Tiene cuatro patas y es plana.',
+                answer: 'mesa',
+                hint: '_ _ _ _',
+                onSolve: 'La ventana se abre. La puerta est\u00e1 detr\u00e1s. Se abre.'
+            }
+        ],
+        fragment: {
+            text: 'Un dibujo brilla: una ra\u00edz con forma de techo.',
+            questClue: 'La primera casa fue una cueva. La ra\u00edz es el techo m\u00e1s antiguo.',
+            item: 'raiz-techo'
+        }
+    }
+
+];
+</script>
+
+<script src="../../js/jaguar-api.js"></script>
+<script src="../../js/yaguara-engine.js"></script>
+<script>
+    YaguaraEngine.init({
+        games: games,
+        container: document.getElementById('yaguaraCard'),
+        progressContainer: document.getElementById('yaguaraProgress'),
+        yaguaraPanel: document.getElementById('yaguaraPanel'),
+        destinationId: 'a1m4',
+        world: 'mundoDeAbajo',
+        storageKey: 'yaguaraA1Module4Progress',
+        backUrl: '../../a1-amazon.html'
+    });
+</script>
+</body>
+</html>
