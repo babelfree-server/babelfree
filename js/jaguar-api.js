@@ -131,7 +131,7 @@
         /**
          * Register a new account
          */
-        register: function(email, password, displayName, userType, interfaceLang, detectedLang, role) {
+        register: function(email, password, displayName, userType, interfaceLang, detectedLang, role, gender, nativeLang) {
             return _request('POST', '/auth/register', {
                 email: email,
                 password: password,
@@ -139,7 +139,9 @@
                 user_type: userType || 'individual',
                 role: role || (userType === 'classroom' ? 'teacher' : 'student'),
                 interface_lang: interfaceLang || 'es',
-                detected_lang: detectedLang || null
+                detected_lang: detectedLang || null,
+                gender: gender || 'X',
+                native_lang: nativeLang || null
             }, true);
         },
 
@@ -502,6 +504,33 @@
             return _request('POST', '/progress/escaperooms', payload).catch(function() {
                 _enqueue('POST', '/progress/escaperooms', payload);
             });
+        },
+
+        /**
+         * Sync busqueda (riddle quest) progress to server
+         */
+        syncBusquedaProgress: function(state) {
+            if (!_getToken()) return Promise.resolve();
+            var payload = {
+                solved_riddles:  state.solvedRiddles || [],
+                bridge_segments: state.bridgeSegments || 0,
+                rana_opacity:    state.ranaOpacity || 0,
+                rana_name:       state.ranaName || null,
+                journal_entries: state.journalEntries || []
+            };
+            return _request('POST', '/busqueda/progress', payload).catch(function() {
+                _enqueue('POST', '/busqueda/progress', payload);
+            });
+        },
+
+        /**
+         * Get busqueda progress from server (for cross-device sync)
+         */
+        getBusquedaProgress: function() {
+            if (!_getToken()) return Promise.resolve(null);
+            return _request('GET', '/busqueda/progress').then(function(res) {
+                return res.success ? res.data.progress : null;
+            }).catch(function() { return null; });
         },
 
         /**

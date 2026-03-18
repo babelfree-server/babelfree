@@ -15,7 +15,10 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 VALID_GAME_TYPES = {
     "narrative", "pair", "fill", "conjugation", "listening", "category",
     "builder", "translation", "conversation", "dictation", "story",
-    "cancion", "escaperoom", "crossword", "bingo", "scrabble", "madlibs", "kloo", "boggle", "spaceman", "bananagrams", "consequences", "madgab", "conjuro", "explorador", "senda", "guardian", "clon", "eco_restaurar", "flashnote", "cultura"
+    "cancion", "escaperoom", "crossword", "bingo", "scrabble", "madlibs", "kloo", "boggle", "spaceman", "bananagrams", "consequences", "madgab", "conjuro", "explorador", "senda", "guardian", "clon", "eco_restaurar", "flashnote", "cultura",
+    "par_minimo", "dictogloss", "corrector", "brecha", "resumen", "registro", "debate", "descripcion", "ritmo", "cronometro", "portafolio", "autoevaluacion", "negociacion", "transformador",
+    "susurro", "eco_lejano", "tertulia", "pregonero", "raiz", "codice", "sombra", "oraculo", "tejido", "cartografo",
+    "despertar", "cronica"
 }
 VALID_INPUT_MODES = {"choice", "typing", "voice", "drag", "listen", "self_correction"}
 VALID_DIFFICULTIES = {"guided", "semi_guided", "open"}

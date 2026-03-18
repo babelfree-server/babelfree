@@ -24,8 +24,8 @@ class User {
         $role = $data['role'] ?? ($userType === 'classroom' ? 'teacher' : 'student');
 
         $stmt = $this->pdo->prepare(
-            'INSERT INTO users (email, password_hash, display_name, user_type, role, tier, interface_lang, detected_lang, verify_token, verify_expires)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+            'INSERT INTO users (email, password_hash, display_name, user_type, role, tier, interface_lang, detected_lang, native_lang, gender, verify_token, verify_expires)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
         );
         $stmt->execute([
             $data['email'],
@@ -36,6 +36,8 @@ class User {
             'free',
             $data['interface_lang'] ?? 'es',
             $data['detected_lang'] ?? null,
+            $data['native_lang'] ?? null,
+            $data['gender'] ?? null,
             $data['verify_token'],
             $data['verify_expires'],
         ]);

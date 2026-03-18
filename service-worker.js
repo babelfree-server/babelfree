@@ -1,4 +1,4 @@
-const CACHE_NAME = 'babelfree-v2';
+const CACHE_NAME = 'babelfree-v6';
 const PRECACHE_URLS = [
   '/',
   '/services',
@@ -10,7 +10,16 @@ const PRECACHE_URLS = [
   '/css/blog.css',
   '/assets/tower-logo.png',
   '/assets/logo.png',
-  '/img/jaguar-hero-full.jpg'
+  '/img/jaguar-hero-full.jpg',
+  '/play.html',
+  '/storymap.html',
+  '/offline.html',
+  '/js/yaguara-engine.js',
+  '/js/evidence-engine.js',
+  '/js/adaptivity-engine.js',
+  '/js/destination-router.js',
+  '/css/yaguara-game.css',
+  '/ontology/ontology-api.js'
 ];
 
 // Install: precache key pages and assets
@@ -47,7 +56,7 @@ self.addEventListener('fetch', event => {
           caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
           return response;
         })
-        .catch(() => caches.match(event.request))
+        .catch(() => caches.match('/offline.html'))
     );
     return;
   }
@@ -64,6 +73,20 @@ self.addEventListener('fetch', event => {
             return response;
           });
         })
+    );
+    return;
+  }
+
+  // JSON content/ontology: network-first with cache fallback (offline play)
+  if (/\.(json)$/i.test(url.pathname) && (/\/content\//.test(url.pathname) || /\/ontology\//.test(url.pathname))) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          return response;
+        })
+        .catch(() => caches.match(event.request))
     );
     return;
   }

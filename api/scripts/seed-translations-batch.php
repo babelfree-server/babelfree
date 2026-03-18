@@ -49,14 +49,14 @@ function normalize(string $word): string {
 }
 
 // Insert a word into dict_words for a given language, return its ID
-function ensureWordEntry(PDO $pdo, string $word, string $langCode, ?string $cefrLevel = null): ?int {
+function ensureWordEntry(PDO $pdo, string $word, string $langCode, ?string $cefrLevel = null, ?string $pos = null): ?int {
     static $insertStmt = null;
     static $findStmt = null;
 
     if (!$insertStmt) {
         $insertStmt = $pdo->prepare(
-            'INSERT INTO dict_words (lang_code, word, word_normalized, cefr_level, source, is_verified)
-             VALUES (?, ?, ?, ?, "wiktionary", 0)
+            'INSERT INTO dict_words (lang_code, word, word_normalized, cefr_level, part_of_speech)
+             VALUES (?, ?, ?, ?, ?)
              ON DUPLICATE KEY UPDATE id=LAST_INSERT_ID(id)'
         );
         $findStmt = $pdo->prepare(
@@ -67,7 +67,9 @@ function ensureWordEntry(PDO $pdo, string $word, string $langCode, ?string $cefr
     $norm = normalize($word);
     if (!$norm) return null;
 
-    $insertStmt->execute([$langCode, $word, $norm, $cefrLevel]);
+    if (!$pos) $pos = 'noun';
+
+    $insertStmt->execute([$langCode, $word, $norm, $cefrLevel, $pos]);
     $id = $pdo->lastInsertId();
 
     if (!$id) {
@@ -96,7 +98,7 @@ function ensureTranslation(PDO $pdo, int $sourceId, int $targetId): void {
 
 $stmt = $pdo->prepare(
     "SELECT id, word, word_normalized, cefr_level FROM dict_words
-     WHERE lang_code = 'es' AND is_verified = 1
+     WHERE lang_code = 'es'
      ORDER BY frequency_rank ASC
      LIMIT ?"
 );

@@ -30,6 +30,7 @@ require_once __DIR__ . '/models/UserSettings.php';
 require_once __DIR__ . '/models/EscapeRoomProgress.php';
 require_once __DIR__ . '/models/Dictionary.php';
 require_once __DIR__ . '/models/Glossary.php';
+require_once __DIR__ . '/models/BusquedaProgress.php';
 
 // Routes
 require_once __DIR__ . '/routes/auth.php';
@@ -40,6 +41,10 @@ require_once __DIR__ . '/routes/settings.php';
 require_once __DIR__ . '/routes/dictionary.php';
 require_once __DIR__ . '/routes/glossary.php';
 require_once __DIR__ . '/routes/freeplay.php';
+require_once __DIR__ . '/routes/feedback.php';
+require_once __DIR__ . '/routes/forum.php';
+require_once __DIR__ . '/routes/validation.php';
+require_once __DIR__ . '/routes/busqueda.php';
 
 // CORS
 setCorsHeaders();
@@ -83,6 +88,18 @@ switch ($resource) {
         break;
     case 'freeplay':
         handleFreeplayRoutes($action, $method);
+        break;
+    case 'feedback':
+        handleFeedbackRoutes($action, $method);
+        break;
+    case 'forum':
+        handleForumRoutes($action, $method);
+        break;
+    case 'validation':
+        handleValidationRoutes($action, $method);
+        break;
+    case 'busqueda':
+        handleBusquedaRoutes($action, $method);
         break;
     default:
         jsonError('Ruta no encontrada', 404);

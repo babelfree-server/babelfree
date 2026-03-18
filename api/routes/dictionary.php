@@ -36,6 +36,22 @@ function handleDictionaryRoutes(string $action, string $method): void {
 
     $subAction = $parts[0] ?? '';
 
+    // GET /api/dictionary/i18n/{lang} — localized UI strings
+    if ($subAction === 'i18n') {
+        $lang = $parts[1] ?? 'en';
+        $i18nFile = __DIR__ . '/../scripts/data/dict_i18n.json';
+        if (!file_exists($i18nFile)) {
+            jsonError('i18n data not found', 500);
+        }
+        $i18nData = json_decode(file_get_contents($i18nFile), true);
+        if (!$i18nData) {
+            jsonError('i18n data corrupt', 500);
+        }
+        // Return requested language, fall back to English
+        $strings = $i18nData[$lang] ?? $i18nData['en'] ?? [];
+        jsonSuccess(['lang' => $lang, 'strings' => $strings]);
+    }
+
     // GET /api/dictionary/languages
     if ($subAction === 'languages') {
         $languages = $model->getLanguages();

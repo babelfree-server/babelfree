@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Viaje del Jaguar</title>
-    <link rel="stylesheet" href="css/yaguara-game.css">
+    <link rel="stylesheet" href="css/yaguara-game.css?v=20260228e">
     <link rel="stylesheet" href="luxury.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#F4A5A5">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 </head>
 <body class="yg-body yg-mundo-de-abajo">
 
     <header class="yg-header">
         <a href="/dashboard" class="yg-back-btn">&#8592; Volver</a>
         <div class="yg-header-info">
-            <div class="yg-header-title">Cargando...</div>
+            <h1 class="yg-header-title">El viaje del jaguar</h1>
             <div class="yg-header-subtitle"></div>
         </div>
     </header>
@@ -30,6 +33,8 @@
         <button class="yg-nav-btn yg-btn-next" id="ygBtnNext" disabled>Siguiente &#8594;</button>
     </nav>
 
+    <div class="ad-slot ad-slot-compact" id="adPlay"></div>
+
 <script src="js/jaguar-api.js"></script>
 <script>
     // Auth guard
@@ -37,7 +42,46 @@
         window.location.href = 'login.html';
     }
 </script>
-<script src="js/yaguara-engine.js"></script>
-<script src="js/content-loader.js"></script>
+<script src="ontology/ontology-api.js"></script>
+<script src="js/evidence-engine.js"></script>
+<script src="js/adaptivity-engine.js"></script>
+<script src="js/yaguara-engine.js?v=20260311"></script>
+<script src="js/practice-engine.js?v=20260311"></script>
+<script src="js/riddle-quest.js"></script>
+<script src="js/quest-journal.js"></script>
+<script src="js/ad-manager.js"></script>
+<script>if(window.AdManager)AdManager.init();</script>
+<script>
+    // Tri routing: ?mode=practice → practice picker, ?dest=N → destination router, else → legacy
+    (function() {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('branch')) {
+            /* Branch routing — handled by destination-router */
+            var branchScript = document.createElement('script');
+            branchScript.src = 'js/destination-router.js?v=20260311';
+            document.body.appendChild(branchScript);
+        } else if (params.get('mode') === 'practice') {
+            /* Practice mode — show picker UI */
+            var nav = document.getElementById('yaguaraNav');
+            if (nav) nav.style.display = 'none';
+            var progress = document.getElementById('yaguaraProgress');
+            if (progress) progress.style.display = 'none';
+            var titleEl = document.querySelector('.yg-header-title');
+            if (titleEl) titleEl.textContent = 'Práctica';
+            document.title = 'Práctica — El Viaje del Jaguar';
+            if (window.PracticeEngine) {
+                PracticeEngine.renderPicker(document.getElementById('yaguaraCard'));
+            }
+        } else {
+            var script = document.createElement('script');
+            if (params.get('dest')) {
+                script.src = 'js/destination-router.js?v=20260311';
+            } else {
+                script.src = 'js/content-loader.js';
+            }
+            document.body.appendChild(script);
+        }
+    })();
+</script>
 </body>
 </html>

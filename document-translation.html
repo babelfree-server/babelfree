@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Translation Services | Babel Free</title>
+    <meta name="description" content="Professional document translation services by Babel Free. Certified translations for legal, academic, business, medical, and immigration documents. Accurate, confidential, and fast turnaround.">
+    <link rel="canonical" href="https://babelfree.com/document-translation">
+    <link rel="icon" type="image/png" href="/assets/tower-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://babelfree.com/document-translation">
+    <meta property="og:title" content="Document Translation Services | Babel Free">
+    <meta property="og:description" content="Certified document translation for legal, academic, business, medical, and immigration documents. Accurate, confidential, and fast.">
+    <meta property="og:site_name" content="Babel Free">
+    <meta property="og:image" content="https://babelfree.com/assets/og-babel.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Document Translation Services | Babel Free">
+    <meta name="twitter:description" content="Certified document translation for legal, academic, business, and medical documents. Request a free quote.">
+    <meta name="twitter:image" content="https://babelfree.com/assets/og-babel.png">
+    <meta name="theme-color" content="#F4A5A5">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "name": "Document Translation Services — Babel Free",
+                "serviceType": "Document Translation",
+                "description": "Professional certified document translation services for legal, academic, business, medical, and immigration documents. Accurate translations with quality assurance and fast turnaround times.",
+                "url": "https://babelfree.com/document-translation",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "Babel Free",
+                    "url": "https://babelfree.com"
+                },
+                "areaServed": "Worldwide"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Babel Free",
+                        "item": "https://babelfree.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Translation Services",
+                        "item": "https://babelfree.com/translation-services"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Document Translation",
+                        "item": "https://babelfree.com/document-translation"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lucida+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Lucida Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        .header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+        .main-logo { height: 70px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .main-logo img { height: 100%; width: auto; object-fit: contain; max-width: none; }
+        .brand-name { font-family: 'Bebas Neue', cursive; font-size: 2rem; color: #1a1a1a; letter-spacing: 1px; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-link { color: #1a1a1a; text-decoration: none; font-weight: 600; transition: color 0.3s ease; position: relative; }
+        .nav-link:hover { color: #F4A5A5; }
+        .nav-link::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: #F4A5A5; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .cta-nav { background: #F4A5A5; color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(244,165,165,0.3); }
+        .cta-nav:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(244,165,165,0.4); }
+        .mobile-menu-toggle { display: none; flex-direction: column; cursor: pointer; padding: 0.5rem; }
+        .menu-bar { width: 25px; height: 3px; background: #1a1a1a; margin: 3px 0; transition: 0.3s; border-radius: 2px; }
+        .mobile-menu { display: none; position: fixed; top: 100px; left: 0; width: 100%; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 2rem; z-index: 999; }
+        .mobile-menu.active { display: block; }
+        .mobile-menu-item { display: block; color: #1a1a1a; text-decoration: none; padding: 1rem 0; border-bottom: 1px solid #ecf0f1; font-weight: 600; }
+        .mobile-menu-item:hover { color: #F4A5A5; }
+
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6.5rem 2rem 0;
+            font-size: 0.85rem;
+            color: #999;
+        }
+        .breadcrumb a { color: #F4A5A5; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 0.5rem; }
+
+        .page-hero {
+            padding: 2rem 2rem 3rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="tower" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23F4A5A5" stop-opacity="0.15"/><stop offset="50%" stop-color="%23F7D794" stop-opacity="0.1"/><stop offset="100%" stop-color="%23F4A5A5" stop-opacity="0.05"/></linearGradient></defs><polygon points="600,100 500,300 700,300" fill="url(%23tower)"/><polygon points="600,300 450,500 750,500" fill="url(%23tower)"/><polygon points="600,500 400,700 800,700" fill="url(%23tower)"/></svg>') center/contain no-repeat;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        .page-hero-content { position: relative; z-index: 2; }
+        .page-hero h1 { font-family: 'Bebas Neue', cursive; font-size: 3.5rem; color: #1a1a1a; letter-spacing: 2px; margin-bottom: 1rem; }
+        .page-hero .intro { font-size: 1.15rem; color: #666; line-height: 1.8; max-width: 700px; margin: 0 auto; }
+
+        .content-section {
+            padding: 3rem 2rem;
+            background: #ffffff;
+        }
+        .content-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .content-container h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.2rem;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+            margin-bottom: 1.2rem;
+        }
+        .content-container p {
+            color: #555;
+            line-height: 1.85;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+        .content-container ul {
+            color: #555;
+            line-height: 1.85;
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+        }
+        .content-container ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #F4A5A5;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(244,165,165,0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(244,165,165,0.4);
+        }
+
+        .related-section {
+            padding: 3rem 2rem;
+            background: #ffffff;
+        }
+        .related-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .related-container h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .related-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 16px;
+            padding: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(244,165,165,0.12);
+            border-color: #F4A5A5;
+        }
+        .related-card h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.4rem;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+        }
+        .related-card p {
+            color: #666;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-menu-toggle { display: flex; }
+            .page-hero h1 { font-size: 2.5rem; }
+            .page-hero { padding: 2rem 1.5rem; }
+            .breadcrumb { padding-top: 6rem; }
+            .content-container h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="/" class="logo-brand">
+                <div class="main-logo"><img src="/assets/logo.png" alt="Babel Free Logo"></div>
+                
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/services" class="nav-link">Services</a></li>
+                <li><a href="/blog" class="nav-link">Blog</a></li>
+                <li><a href="/dictionary" class="nav-link">Dictionaries</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+                <li><a href="/elviajedeljaguar" class="cta-nav">Spanish Course</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-menu-item">Home</a>
+        <a href="/services" class="mobile-menu-item">Services</a>
+        <a href="/blog" class="mobile-menu-item">Blog</a>
+        <a href="/dictionary" class="mobile-menu-item">Dictionaries</a>
+        <a href="/contact" class="mobile-menu-item">Contact</a>
+        <a href="/elviajedeljaguar" class="mobile-menu-item">Spanish Course</a>
+    </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>&rsaquo;</span><a href="/translation-services">Translation Services</a><span>&rsaquo;</span>Document Translation
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Document translation</h1>
+            <p class="intro">
+                Accurate, certified document translation services for legal, academic, business, medical, and immigration purposes. Every document is handled by subject-matter experts who understand the terminology and the stakes involved.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Types of documents we translate</h2>
+            <p>
+                Document translation demands more than language fluency. It requires deep familiarity with the conventions, formats, and regulatory expectations of each document type. At Babel Free, we assign every project to a translator whose expertise matches the subject matter, ensuring that the translated document carries the same authority and precision as the original.
+            </p>
+            <p>
+                Our document translation services span a wide range of categories, each with its own requirements and standards:
+            </p>
+            <ul>
+                <li><strong>Legal documents:</strong> Contracts, court filings, affidavits, power of attorney, intellectual property filings, and compliance documentation. Legal translation requires exact terminology and an understanding of the legal frameworks in both the source and target jurisdictions.</li>
+                <li><strong>Academic documents:</strong> Diplomas, transcripts, research papers, dissertations, and institutional correspondence. Academic translation preserves the formal register and citation standards required by universities and accreditation bodies worldwide.</li>
+                <li><strong>Business documents:</strong> Financial reports, corporate bylaws, shareholder agreements, audit statements, and internal policies. Business translation requires fluency in both language and corporate conventions.</li>
+                <li><strong>Medical documents:</strong> Patient records, clinical trial documentation, pharmaceutical labeling, informed consent forms, and regulatory submissions. Medical translation demands absolute accuracy, as errors can have serious consequences for patient safety and regulatory compliance.</li>
+                <li><strong>Immigration documents:</strong> Birth certificates, marriage certificates, police clearances, visa applications, and supporting evidence packages. Immigration translation must meet the formatting and certification requirements of the receiving authority.</li>
+            </ul>
+            <p>
+                No matter the document type, we maintain strict confidentiality throughout the process. All files are handled through secure channels, and our translators adhere to non-disclosure agreements as standard practice.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Our translation process</h2>
+            <p>
+                A reliable translation is the product of a disciplined process. We have refined our workflow over years of professional practice to eliminate ambiguity and deliver consistent results at every stage.
+            </p>
+            <p>
+                <strong>Step 1: Project review.</strong> When you submit a document, our project managers assess its scope, complexity, and subject matter. We identify the appropriate translator based on language pair, domain expertise, and any certification requirements. At this stage, we also confirm the deadline and provide a transparent quote with no hidden fees.
+            </p>
+            <p>
+                <strong>Step 2: Translation.</strong> A subject-matter expert translates your document, preserving the meaning, tone, and formatting of the original. For legal and official documents, the translator follows the conventions expected by the target jurisdiction or institution. Technical terminology is cross-referenced against established glossaries to ensure consistency.
+            </p>
+            <p>
+                <strong>Step 3: Proofreading and review.</strong> A second linguist reviews the completed translation against the source document. This independent review catches errors that even experienced translators can overlook: inconsistent terminology, formatting discrepancies, or subtle shifts in meaning. For certified translations, the reviewer also verifies that all certification requirements are met.
+            </p>
+            <p>
+                <strong>Step 4: Delivery.</strong> The finalized document is delivered in your preferred format, whether that is a formatted PDF, an editable Word file, or a certified hard copy. If your document requires notarization or apostille, we can coordinate those additional steps as well.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Certified translations and quality assurance</h2>
+            <p>
+                Many institutions and government agencies require certified translations, which means the translator or translation agency attests to the accuracy and completeness of the translation with a signed declaration. Babel Free provides certified translations that are accepted by courts, immigration authorities, universities, and regulatory bodies across the world.
+            </p>
+            <p>
+                Our certification process follows the standards expected in the target country. In the United States, this typically means a signed Certificate of Translation Accuracy accompanying the translated document. In the European Union, we follow the specific requirements of each member state, including sworn translation where applicable. For other jurisdictions, we research and comply with local requirements before beginning work.
+            </p>
+            <p>
+                Quality assurance is embedded at every stage, not applied as an afterthought. Our translators use translation memory tools to ensure terminological consistency across large documents and multi-part projects. Every translation passes through at least one independent review before delivery. For high-stakes documents such as patent applications or clinical trial submissions, we offer an additional specialist review by a third linguist with domain-specific credentials.
+            </p>
+            <p>
+                We also maintain detailed project records, so if you need a revision or an updated version of a previously translated document, we can ensure consistency with the original translation.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Language pairs and turnaround times</h2>
+            <p>
+                Babel Free offers document translation across a broad range of language pairs, with particular depth in Spanish, English, French, German, Portuguese, and Italian. We also serve less common language combinations through our extended network of vetted professional translators. If you have a specific language pair in mind, contact us and we will confirm availability and pricing.
+            </p>
+            <p>
+                Turnaround times depend on the length and complexity of the document. As a general guide, a standard business document of up to 2,000 words can be completed within two to three business days. Longer or more specialized documents, such as legal contracts or technical manuals, may require five to ten business days. For urgent requests, we offer expedited turnaround at an additional fee, with delivery possible within 24 hours for shorter documents.
+            </p>
+            <p>
+                We are transparent about timelines from the start. When you request a quote, we provide a firm delivery date along with the price. If your project has a non-negotiable deadline, let us know up front and we will structure the workflow accordingly. We do not sacrifice quality for speed, but we are experienced at managing tight schedules without compromising accuracy.
+            </p>
+            <p>
+                Volume discounts are available for ongoing projects and large document sets. If your organization regularly needs translated documents, we can establish a standing arrangement with pre-agreed rates and priority scheduling.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Get a free quote for your document</h2>
+        <p>
+            Tell us about your document, the language pair, and your deadline. We will respond within 24 hours with a transparent quote and a firm delivery date.
+        </p>
+        <a href="/translation-services" class="cta-button">Request a free quote</a>
+    </section>
+
+    <section class="related-section">
+        <div class="related-container">
+            <h2>Related translation services</h2>
+            <div class="related-grid">
+                <a href="/website-localization" class="related-card">
+                    <h3>WEBSITE LOCALIZATION</h3>
+                    <p>Full website translation and cultural adaptation so your content feels native to every audience.</p>
+                </a>
+                <a href="/business-communications" class="related-card">
+                    <h3>BUSINESS COMMUNICATIONS</h3>
+                    <p>Marketing materials, presentations, and corporate communications adapted for your target market.</p>
+                </a>
+                <a href="/cultural-adaptation" class="related-card">
+                    <h3>CULTURAL ADAPTATION</h3>
+                    <p>Beyond word-for-word translation: adapting idioms, humor, references, and tone for your audience.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer light">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <p class="footer-logo"><img src="/assets/tower-logo.png" alt="Babel Free" loading="lazy"></p>
+                <p class="footer-desc">Language courses, professional translation, and immersive Spanish learning through El Viaje del Jaguar — a CEFR-aligned journey powered by Colombian culture and storytelling.</p>
+            </div>
+            <nav class="footer-links" aria-label="Site map">
+                <p class="footer-heading">Explore</p>
+                <a href="/services">Language courses</a>
+                <a href="/elviajedeljaguar">El Viaje del Jaguar</a>
+                <a href="/dictionary">Dictionaries</a>
+                <a href="/languages">100+ languages</a>
+                <a href="/blog">Blog</a>
+            </nav>
+            <div class="footer-contact">
+                <p class="footer-heading">Contact us</p>
+                <a href="/translation-services" class="footer-cta">Translation services</a>
+                <a href="/contact" class="footer-cta">Message form</a>
+                <a href="mailto:info@babelfree.com" class="footer-cta-secondary">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Babel Free &middot; <a href="/privacy">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+    function toggleMobileMenu() {
+        var m = document.getElementById('mobileMenu');
+        m.classList.toggle('active');
+    }
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+    }
+    </script>
+</body>
+</html>

@@ -38,7 +38,7 @@
       "description": "Lean pedagogical unit — what to practice, how, and at what difficulty. Story context comes from the StoryNode at the linked destination.",
       "fields": {
         "id": "act_{dest}_{gameType}_{slug}",
-        "gameType": "narrative | pair | fill | conjugation | listening | category | builder | translation | conversation | dictation | story | cancion | escaperoom | crossword | bingo | scrabble | madlibs | kloo | boggle | spaceman | bananagrams | consequences | madgab | conjuro | explorador | senda | guardian | clon | eco_restaurar | flashnote | cultura",
+        "gameType": "narrative | pair | fill | conjugation | listening | category | builder | translation | conversation | dictation | story | cancion | escaperoom | crossword | bingo | scrabble | madlibs | kloo | boggle | spaceman | bananagrams | consequences | madgab | conjuro | explorador | senda | guardian | clon | eco_restaurar | flashnote | cultura | par_minimo | dictogloss | corrector | brecha | resumen | registro | debate | descripcion | ritmo | cronometro | portafolio | autoevaluacion | negociacion | transformador | susurro | eco_lejano | tertulia | pregonero | raiz | codice | sombra | oraculo | tejido | cartografo | despertar",
         "practices": "LinguisticTarget IDs",
         "objective": "LearningObjective ID",
         "inputMode": "choice | typing | voice | drag | listen | self_correction",
@@ -48,7 +48,8 @@
         "feedback": "{ onCorrect: string, onIncorrect: string }",
         "difficulty": "guided | semi_guided | open",
         "targetPerson": "optional — narrows a paradigm LT to one person (yo, tú, él/ella/usted, nosotros, ellos/ellas/ustedes)",
-        "scaffoldable": "boolean — true if adapt_scaffold_input_mode may promote this activity's inputMode. Set on activities with inputMode choice or typing. NOT set on listen, drag, voice, self_correction (mode is inherent to game mechanic or already terminal)."
+        "scaffoldable": "boolean — true if adapt_scaffold_input_mode may promote this activity's inputMode. Set on activities with inputMode choice or typing. NOT set on listen, drag, voice, self_correction (mode is inherent to game mechanic or already terminal).",
+        "symbolAssist": "optional boolean — when true AND destination is A1-A2 Basic, renderers display SYMBOLS SVG icons alongside text. Density auto-calculated from destination number."
       }
     },
     "EvidenceEvent": {
@@ -121,7 +122,9 @@
         "narrativeBeat": "what happens",
         "characters": "Character IDs",
         "closingQuestion": "every module ends with a question",
-        "escapeRoom": "{ name, fragment, item }"
+        "escapeRoom": "{ name, fragment, item }",
+        "preArrival": "optional array of despertar encounters shown BEFORE the arrival narrative (A1-A2 Basic only). Each entry: { type: 'despertar', density: 'heavy'|'moderate'|'light', words: [{word, symbol}] }",
+        "a1Simplified": "optional boolean on arrival narrative — when true, .yg-symbol-word spans get inline SVG icons and TTS click handlers"
       }
     },
     "CulturalConcept": {

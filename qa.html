@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Dashboard — El Viaje del Jaguar</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --earth-deep:#1a1208;--earth-warm:#2d1f0e;--earth-medium:#4a3520;
+  --terracotta:#c67a4a;--ochre:#c9a227;--amber:#d4913a;
+  --sand:#e8d5b7;--clay-light:#f0e6d3;--moss:#5a6e4a;
+  --river-dark:#2a3a4a;--jaguar-gold:#c9a227;
+  --success:#5a6e4a;--warning:#d4913a;--error:#a64232;
+  --glass-bg:rgba(26,18,8,0.85);--glass-border:rgba(255,255,255,0.1);
+  --text-light:#f0e6d3;--text-muted:#b8a88a;
+  --abajo:#2d5a27;--medio:#8B6914;--arriba:#2a3a6a;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Inter',-apple-system,sans-serif;
+}
+body{font-family:var(--font-body);background:#0d0a06;color:var(--text-light);min-height:100vh;overflow:hidden}
+#auth-gate{position:fixed;inset:0;z-index:9999;background:linear-gradient(145deg,#0d0a06,#1a1208,#2d1f0e);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
+#auth-gate img{width:120px;margin-bottom:10px}
+#auth-gate h2{font-family:var(--font-display);color:var(--ochre);font-size:1.5rem}
+#auth-gate input{padding:12px 20px;border-radius:12px;border:1px solid rgba(201,162,39,0.3);background:rgba(26,18,8,0.9);color:var(--text-light);font-size:1rem;width:280px;text-align:center}
+#auth-gate button{padding:10px 30px;border-radius:12px;border:none;background:linear-gradient(135deg,#bf953f,#b38728);color:#1a1208;font-weight:600;cursor:pointer;font-size:1rem}
+#auth-gate .auth-err{color:var(--error);font-size:.85rem;min-height:20px}
+
+.app{display:none;height:100vh;grid-template-columns:280px 1fr;grid-template-rows:52px 1fr}
+.app.active{display:grid}
+
+/* Top bar */
+.topbar{grid-column:1/-1;background:var(--earth-deep);border-bottom:1px solid var(--glass-border);display:flex;align-items:center;padding:0 16px;gap:12px;z-index:100}
+.topbar img{height:28px}
+.topbar h1{font-family:var(--font-display);font-size:.95rem;color:var(--ochre);white-space:nowrap}
+.topbar .tabs{display:flex;gap:2px;margin-left:20px}
+.topbar .tab{padding:6px 16px;border-radius:8px 8px 0 0;cursor:pointer;font-size:.8rem;font-weight:500;color:var(--text-muted);background:transparent;border:none;transition:.2s}
+.topbar .tab:hover{color:var(--text-light);background:rgba(255,255,255,.05)}
+.topbar .tab.active{color:var(--ochre);background:rgba(201,162,39,.1);border-bottom:2px solid var(--ochre)}
+.topbar .validation-badges{margin-left:auto;display:flex;gap:6px;align-items:center}
+
+/* Sidebar */
+.sidebar{background:var(--earth-deep);border-right:1px solid var(--glass-border);overflow-y:auto;padding:8px}
+.sidebar::-webkit-scrollbar{width:6px}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(201,162,39,.3);border-radius:3px}
+.sidebar .search{width:100%;padding:8px 12px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,.05);color:var(--text-light);font-size:.8rem;margin-bottom:8px}
+.sidebar .search::placeholder{color:var(--text-muted)}
+.sublevel-header{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:6px 8px 4px;color:var(--text-muted);margin-top:8px}
+.dest-card{padding:6px 10px;border-radius:8px;cursor:pointer;margin-bottom:2px;display:flex;align-items:center;gap:8px;font-size:.78rem;transition:.15s;border-left:3px solid transparent}
+.dest-card:hover{background:rgba(255,255,255,.06)}
+.dest-card.active{background:rgba(201,162,39,.12);border-left-color:var(--ochre)}
+.dest-card .num{font-weight:700;min-width:22px;color:var(--ochre);font-size:.75rem}
+.dest-card .title{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dest-card .badge{font-size:.65rem;padding:1px 5px;border-radius:4px;background:rgba(255,255,255,.08);color:var(--text-muted)}
+.dest-card.world-abajo{border-left-color:var(--abajo)}
+.dest-card.world-abajo.active{border-left-color:#4a9a3f}
+.dest-card.world-medio{border-left-color:var(--medio)}
+.dest-card.world-medio.active{border-left-color:#c9a227}
+.dest-card.world-arriba{border-left-color:var(--arriba)}
+.dest-card.world-arriba.active{border-left-color:#4a6aaa}
+.dest-card.missing{opacity:.4}
+.dest-card.missing .title{font-style:italic}
+
+/* Main content */
+.main{overflow-y:auto;padding:16px 20px;background:linear-gradient(180deg,#151009,#1a1208)}
+.main::-webkit-scrollbar{width:8px}
+.main::-webkit-scrollbar-thumb{background:rgba(201,162,39,.2);border-radius:4px}
+.panel{display:none}
+.panel.active{display:block}
+
+/* Inspector */
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px}
+.meta-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;padding:14px;backdrop-filter:blur(10px)}
+.meta-card h4{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:4px}
+.meta-card p{font-size:.9rem;color:var(--text-light)}
+.meta-card .val{font-family:var(--font-display);color:var(--ochre);font-size:1.1rem}
+
+.section-title{font-family:var(--font-display);font-size:1rem;color:var(--ochre);margin:18px 0 10px;padding-bottom:6px;border-bottom:1px solid rgba(201,162,39,.15)}
+
+/* Arrival/Departure */
+.narrative-box{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;padding:16px;margin-bottom:12px}
+.narrative-box .speaker{font-weight:600;color:var(--ochre);font-size:.8rem;margin-bottom:6px}
+.narrative-box .body{font-size:.88rem;line-height:1.6;color:var(--sand)}
+.narrative-box .img-ref{font-size:.72rem;color:var(--text-muted);margin-top:8px;font-style:italic}
+
+/* Games list */
+.game-item{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:10px;margin-bottom:6px;overflow:hidden;transition:.2s}
+.game-item:hover{border-color:rgba(201,162,39,.25)}
+.game-header{display:flex;align-items:center;padding:10px 14px;cursor:pointer;gap:10px}
+.game-header .idx{font-size:.7rem;color:var(--text-muted);min-width:24px;font-weight:600}
+.game-type-badge{font-size:.68rem;padding:2px 8px;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.type-fill{background:rgba(59,130,246,.2);color:#93c5fd}
+.type-skit{background:rgba(168,85,247,.2);color:#d8b4fe}
+.type-listening{background:rgba(34,197,94,.2);color:#86efac}
+.type-pair{background:rgba(234,179,8,.2);color:#fde68a}
+.type-builder{background:rgba(249,115,22,.2);color:#fdba74}
+.type-conversation{background:rgba(236,72,153,.2);color:#f9a8d4}
+.type-category{background:rgba(14,165,233,.2);color:#7dd3fc}
+.type-dictation{background:rgba(139,92,246,.2);color:#c4b5fd}
+.type-escaperoom{background:rgba(239,68,68,.2);color:#fca5a5}
+.type-cronica{background:rgba(20,184,166,.2);color:#5eead4}
+.type-translation{background:rgba(99,102,241,.2);color:#a5b4fc}
+.type-susurro{background:rgba(107,114,128,.2);color:#d1d5db}
+.type-sombra{background:rgba(75,85,99,.2);color:#d1d5db}
+.type-senda{background:rgba(217,119,6,.2);color:#fcd34d}
+.type-eco_lejano{background:rgba(16,185,129,.2);color:#6ee7b7}
+.type-ritmo{background:rgba(244,63,94,.2);color:#fda4af}
+.type-corrector{background:rgba(245,158,11,.2);color:#fde68a}
+.type-narrative{background:rgba(100,116,139,.2);color:#cbd5e1}
+.type-conjugation{background:rgba(79,70,229,.2);color:#a5b4fc}
+.type-tertulia{background:rgba(236,72,153,.2);color:#f9a8d4}
+.type-pregonero{background:rgba(234,88,12,.2);color:#fed7aa}
+.type-oraculo{background:rgba(139,92,246,.2);color:#c4b5fd}
+.type-cartografo{background:rgba(6,182,212,.2);color:#67e8f9}
+.type-crossword{background:rgba(168,85,247,.2);color:#d8b4fe}
+.type-explorador{background:rgba(34,197,94,.2);color:#86efac}
+.type-flashnote{background:rgba(234,179,8,.2);color:#fde68a}
+.type-kloo{background:rgba(249,115,22,.2);color:#fdba74}
+.type-bananagrams{background:rgba(236,72,153,.2);color:#f9a8d4}
+.type-clon{background:rgba(14,165,233,.2);color:#7dd3fc}
+.type-par_minimo{background:rgba(239,68,68,.2);color:#fca5a5}
+.type-negociacion{background:rgba(107,114,128,.2);color:#e5e7eb}
+.game-header .label{flex:1;font-size:.82rem}
+.game-header .flag-btn{background:none;border:none;cursor:pointer;font-size:1rem;opacity:.4;transition:.15s;padding:4px}
+.game-header .flag-btn:hover,.game-header .flag-btn.flagged{opacity:1}
+.game-header .chevron{color:var(--text-muted);font-size:.7rem;transition:.2s}
+.game-item.open .chevron{transform:rotate(90deg)}
+.game-body{display:none;padding:0 14px 14px;font-size:.82rem;line-height:1.6}
+.game-item.open .game-body{display:block}
+.game-body pre{background:rgba(0,0,0,.3);border-radius:8px;padding:12px;overflow-x:auto;font-size:.75rem;color:var(--sand);white-space:pre-wrap;word-break:break-word;max-height:400px;overflow-y:auto}
+.game-body .answer-correct{color:#86efac;font-weight:600}
+.game-body .pool-marker{color:#fde68a;font-weight:600;background:rgba(234,179,8,.1);padding:0 4px;border-radius:3px}
+.game-body .play-btn{display:inline-block;padding:6px 16px;border-radius:8px;background:linear-gradient(135deg,#bf953f,#b38728);color:#1a1208;font-weight:600;font-size:.78rem;text-decoration:none;margin-top:8px;cursor:pointer;border:none}
+.game-body .play-btn:hover{filter:brightness(1.1)}
+.game-body .dup-warn{color:var(--error);font-size:.75rem;font-weight:600;margin-top:4px}
+
+/* Character lines */
+.char-panel{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;padding:14px;margin-bottom:10px}
+.char-panel h4{color:var(--ochre);font-size:.85rem;margin-bottom:8px}
+.char-panel .count{font-size:.72rem;color:var(--text-muted);margin-left:8px}
+.char-panel ul{list-style:none;padding-left:0}
+.char-panel li{font-size:.8rem;padding:3px 0;color:var(--sand);border-bottom:1px solid rgba(255,255,255,.03)}
+.char-panel li::before{content:'\201C';color:var(--ochre);margin-right:4px}
+
+/* Escape room */
+.escape-box{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:16px;margin-bottom:12px}
+.escape-box h4{color:#fca5a5;margin-bottom:8px}
+.puzzle-item{background:rgba(0,0,0,.2);border-radius:8px;padding:10px;margin-bottom:8px}
+.puzzle-item .ptype{font-size:.7rem;text-transform:uppercase;color:#fca5a5;font-weight:600}
+.puzzle-item .prompt{font-size:.82rem;margin:4px 0}
+.puzzle-item .ans{color:#86efac;font-size:.82rem}
+
+/* Validation */
+.validation-panel{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;padding:16px;margin-bottom:16px}
+.check-row{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:.82rem}
+.check-row .icon{font-size:1rem}
+.check-pass{color:#86efac}
+.check-fail{color:#fca5a5}
+.check-warn{color:#fde68a}
+
+/* Bulk validation */
+.bulk-table{width:100%;border-collapse:collapse;font-size:.78rem}
+.bulk-table th{text-align:left;padding:8px 10px;background:rgba(201,162,39,.1);color:var(--ochre);font-weight:600;position:sticky;top:0;z-index:2}
+.bulk-table td{padding:6px 10px;border-bottom:1px solid rgba(255,255,255,.04)}
+.bulk-table tr:hover td{background:rgba(255,255,255,.03)}
+.bulk-table .issue-count{color:var(--error);font-weight:600}
+.bulk-table .ok{color:#86efac}
+.bulk-table .miss{color:var(--text-muted);font-style:italic}
+.export-btn{display:inline-block;padding:8px 20px;border-radius:8px;background:rgba(201,162,39,.15);color:var(--ochre);border:1px solid rgba(201,162,39,.3);cursor:pointer;font-size:.82rem;margin:12px 0}
+.export-btn:hover{background:rgba(201,162,39,.25)}
+.bulk-progress{width:100%;height:4px;background:rgba(255,255,255,.05);border-radius:2px;margin:12px 0;overflow:hidden}
+.bulk-progress .bar{height:100%;background:var(--ochre);border-radius:2px;transition:width .3s}
+
+/* Template inspector */
+.tmpl-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:10px;margin-bottom:6px;overflow:hidden}
+.tmpl-header{display:flex;align-items:center;padding:10px 14px;cursor:pointer;gap:10px;font-size:.82rem}
+.tmpl-header .idx{font-size:.7rem;color:var(--text-muted);min-width:24px;font-weight:600}
+.tmpl-header .chevron{color:var(--text-muted);font-size:.7rem;transition:.2s}
+.tmpl-card.open .chevron{transform:rotate(90deg)}
+.tmpl-body{display:none;padding:0 14px 14px}
+.tmpl-card.open .tmpl-body{display:block}
+.tmpl-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.tmpl-stat{background:rgba(201,162,39,.08);border-radius:8px;padding:10px 16px;text-align:center}
+.tmpl-stat .num{font-family:var(--font-display);font-size:1.4rem;color:var(--ochre)}
+.tmpl-stat .lbl{font-size:.7rem;color:var(--text-muted);margin-top:2px}
+
+/* Empty state */
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-muted)}
+.empty-state h3{font-family:var(--font-display);color:var(--ochre);margin-bottom:8px}
+
+/* Loading spinner */
+.spinner{display:inline-block;width:20px;height:20px;border:2px solid rgba(201,162,39,.2);border-top-color:var(--ochre);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Badge counts */
+.v-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:600}
+.v-badge.pass{background:rgba(34,197,94,.15);color:#86efac}
+.v-badge.fail{background:rgba(239,68,68,.15);color:#fca5a5}
+.v-badge.warn{background:rgba(234,179,8,.15);color:#fde68a}
+</style>
+</head>
+<body>
+
+<!-- Auth Gate -->
+<div id="auth-gate">
+  <img src="/assets/logo.png" alt="Babel Free">
+  <h2>QA Dashboard</h2>
+  <input type="email" id="auth-email" placeholder="Admin email" autofocus>
+  <input type="password" id="auth-pass" placeholder="Password" style="margin-top:8px">
+  <button onclick="checkAuth()">Entrar</button>
+  <div class="auth-err" id="auth-err"></div>
+</div>
+
+<!-- App -->
+<div class="app" id="app">
+  <!-- Top Bar -->
+  <div class="topbar">
+    <img src="/assets/logo.png" alt="Logo">
+    <h1>QA Dashboard</h1>
+    <div class="tabs">
+      <button class="tab active" data-tab="inspector">Inspector</button>
+      <button class="tab" data-tab="bulk">Bulk validation</button>
+      <button class="tab" data-tab="templates">Templates</button>
+    </div>
+    <div class="validation-badges" id="val-badges"></div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <input type="text" class="search" id="search" placeholder="Buscar destino...">
+    <div id="dest-list"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main" id="main-content">
+    <!-- Inspector panel -->
+    <div class="panel active" id="panel-inspector">
+      <div class="empty-state" id="empty-state">
+        <h3>Selecciona un destino</h3>
+        <p>Elige un destino del panel izquierdo para inspeccionarlo</p>
+      </div>
+      <div id="inspector-content" style="display:none">
+        <div id="validation-section"></div>
+        <h2 class="section-title">Meta</h2>
+        <div class="meta-grid" id="meta-grid"></div>
+        <h2 class="section-title">Arrival</h2>
+        <div id="arrival-section"></div>
+        <h2 class="section-title">Games <span id="game-count" style="font-size:.75rem;color:var(--text-muted)"></span></h2>
+        <div id="games-section"></div>
+        <h2 class="section-title">Character Lines</h2>
+        <div id="chars-section"></div>
+        <h2 class="section-title">Departure</h2>
+        <div id="departure-section"></div>
+        <h2 class="section-title" id="escape-title" style="display:none">Escape Room</h2>
+        <div id="escape-section"></div>
+      </div>
+    </div>
+
+    <!-- Bulk validation panel -->
+    <div class="panel" id="panel-bulk">
+      <h2 class="section-title">Bulk validation (58 destinations)</h2>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+        <button class="export-btn" id="run-bulk-btn" style="margin:0">Client-side checks</button>
+        <button class="export-btn" id="run-server-btn" style="margin:0">Server CEFR + structure</button>
+        <button class="export-btn" id="run-full-btn" style="margin:0;background:rgba(201,162,39,.25)">Full validation</button>
+        <button class="export-btn" id="export-csv-btn" style="display:none;margin:0">Export CSV</button>
+        <button class="export-btn" id="db-stats-btn" style="margin:0">DB stats</button>
+      </div>
+      <div class="bulk-progress" id="bulk-progress" style="display:none"><div class="bar" id="bulk-bar"></div></div>
+      <div id="bulk-results"></div>
+    </div>
+
+    <!-- Templates panel -->
+    <div class="panel" id="panel-templates">
+      <h2 class="section-title">Template Inspector</h2>
+      <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:12px">Select a destination from the sidebar, or click below to load its template file.</p>
+      <div id="tmpl-content"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// === AUTH ===
+let qaToken=sessionStorage.getItem('qa-token')||'';
+async function checkAuth(){
+  const email=document.getElementById('auth-email').value.trim();
+  const pass=document.getElementById('auth-pass').value;
+  if(!email||!pass){document.getElementById('auth-err').textContent='Email y contraseña requeridos';return;}
+  try{
+    const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password:pass})});
+    const j=await r.json();
+    if(!j.success){document.getElementById('auth-err').textContent=j.error||'Login failed';return;}
+    if((j.data?.user?.role||j.data?.role)!=='admin'){document.getElementById('auth-err').textContent='Se requiere rol de admin';return;}
+    qaToken=j.data?.token||'';
+    if(!qaToken){document.getElementById('auth-err').textContent='No token returned';return;}
+    sessionStorage.setItem('qa-token',qaToken);
+    showApp();
+  }catch(e){document.getElementById('auth-err').textContent='Error: '+e.message;}
+}
+function showApp(){
+  document.getElementById('auth-gate').style.display='none';
+  document.getElementById('app').classList.add('active');
+  buildSidebar();
+}
+document.getElementById('auth-pass').addEventListener('keydown',e=>{if(e.key==='Enter')checkAuth()});
+document.getElementById('auth-email').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('auth-pass').focus()});
+if(qaToken){
+  // Validate stored token is still good
+  fetch('/api/auth/me',{headers:{'Authorization':'Bearer '+qaToken}}).then(r=>r.json()).then(j=>{
+    if(j.success&&(j.data?.role)==='admin'){showApp();}
+    else{qaToken='';sessionStorage.removeItem('qa-token');}
+  }).catch(()=>{qaToken='';sessionStorage.removeItem('qa-token');});
+}
+
+// === CONSTANTS ===
+const DEST_MAP = [
+  {sub:'A1 basico',range:[1,6],world:'abajo'},
+  {sub:'A1 avanzado',range:[7,12],world:'abajo'},
+  {sub:'A2 basico',range:[13,15],world:'abajo'},
+  {sub:'A2 avanzado',range:[16,18],world:'abajo'},
+  {sub:'B1 basico',range:[19,22],world:'medio'},
+  {sub:'B1 avanzado',range:[23,28],world:'medio'},
+  {sub:'B2 basico',range:[29,33],world:'medio'},
+  {sub:'B2 avanzado',range:[34,38],world:'medio'},
+  {sub:'C1 basico',range:[39,43],world:'arriba'},
+  {sub:'C1 avanzado',range:[44,48],world:'arriba'},
+  {sub:'C2 basico',range:[49,53],world:'arriba'},
+  {sub:'C2 avanzado',range:[54,58],world:'arriba'}
+];
+
+const destCache={};
+const tmplCache={};
+const flagStore=JSON.parse(localStorage.getItem('qa-flags')||'{}');
+let currentDest=null;
+
+// === TABS ===
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    document.getElementById('panel-'+t.dataset.tab).classList.add('active');
+  });
+});
+
+// === SIDEBAR ===
+function buildSidebar(){
+  const container=document.getElementById('dest-list');
+  let html='';
+  DEST_MAP.forEach(group=>{
+    html+=`<div class="sublevel-header">${group.sub} (${group.world})</div>`;
+    for(let i=group.range[0];i<=group.range[1];i++){
+      html+=`<div class="dest-card world-${group.world}" data-dest="${i}" id="card-${i}">
+        <span class="num">${i}</span>
+        <span class="title" id="card-title-${i}">dest${i}</span>
+        <span class="badge" id="card-badge-${i}">...</span>
+      </div>`;
+    }
+  });
+  container.innerHTML=html;
+
+  // Click handlers
+  container.querySelectorAll('.dest-card').forEach(card=>{
+    card.addEventListener('click',()=>loadDest(parseInt(card.dataset.dest)));
+  });
+
+  // Preload card info
+  preloadCards();
+}
+
+async function preloadCards(){
+  for(let i=1;i<=58;i++){
+    try{
+      const r=await fetch(`/content/dest${i}.json`);
+      if(!r.ok){
+        document.getElementById(`card-${i}`).classList.add('missing');
+        document.getElementById(`card-title-${i}`).textContent='(missing)';
+        document.getElementById(`card-badge-${i}`).textContent='--';
+        continue;
+      }
+      const d=await r.json();
+      destCache[i]=d;
+      const title=d.meta?.title||`dest${i}`;
+      const gCount=d.games?.length||0;
+      document.getElementById(`card-title-${i}`).textContent=title;
+      document.getElementById(`card-badge-${i}`).textContent=gCount+'g';
+    }catch(e){
+      document.getElementById(`card-${i}`).classList.add('missing');
+      document.getElementById(`card-title-${i}`).textContent='(error)';
+    }
+  }
+}
+
+// === SEARCH ===
+document.getElementById('search').addEventListener('input',e=>{
+  const q=e.target.value.toLowerCase();
+  document.querySelectorAll('.dest-card').forEach(card=>{
+    const n=card.dataset.dest;
+    const t=(card.querySelector('.title').textContent||'').toLowerCase();
+    card.style.display=(n.includes(q)||t.includes(q)||!q)?'flex':'none';
+  });
+  // Also show/hide headers
+  document.querySelectorAll('.sublevel-header').forEach(h=>{
+    if(!q){h.style.display='';return;}
+    let next=h.nextElementSibling;
+    let anyVisible=false;
+    while(next&&!next.classList.contains('sublevel-header')){
+      if(next.style.display!=='none')anyVisible=true;
+      next=next.nextElementSibling;
+    }
+    h.style.display=anyVisible?'':'none';
+  });
+});
+
+// === LOAD DESTINATION ===
+async function loadDest(n){
+  currentDest=n;
+  document.querySelectorAll('.dest-card').forEach(c=>c.classList.remove('active'));
+  document.getElementById(`card-${n}`).classList.add('active');
+
+  let data=destCache[n];
+  if(!data){
+    try{
+      const r=await fetch(`/content/dest${n}.json`);
+      if(!r.ok){showError(`Could not load dest${n}.json`);return;}
+      data=await r.json();
+      destCache[n]=data;
+    }catch(e){showError(`Error loading dest${n}: ${e.message}`);return;}
+  }
+
+  document.getElementById('empty-state').style.display='none';
+  document.getElementById('inspector-content').style.display='block';
+
+  // Switch to inspector tab
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelector('[data-tab="inspector"]').classList.add('active');
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-inspector').classList.add('active');
+
+  renderMeta(data);
+  renderArrival(data);
+  renderGames(data,n);
+  renderChars(data);
+  renderDeparture(data);
+  renderEscape(data);
+  renderValidation(data,n);
+  loadTemplate(n);
+}
+
+function showError(msg){
+  document.getElementById('empty-state').style.display='block';
+  document.getElementById('empty-state').innerHTML=`<h3 style="color:var(--error)">${msg}</h3>`;
+  document.getElementById('inspector-content').style.display='none';
+}
+
+// === META ===
+function renderMeta(d){
+  const m=d.meta||{};
+  const items=[
+    {label:'Destination',val:m.destination||'?'},
+    {label:'Title',val:m.title||'?'},
+    {label:'CEFR',val:m.cefr||'?'},
+    {label:'Sub-level',val:m.cefrSubLevel||'?'},
+    {label:'World',val:m.world||'?'},
+    {label:'Campbell Stage',val:m.campbellStage||'?'},
+    {label:'Characters',val:(m.characters||[]).join(', ')||'none'},
+    {label:'Closing Question',val:m.closingQuestion||'?'},
+  ];
+  document.getElementById('meta-grid').innerHTML=items.map(i=>
+    `<div class="meta-card"><h4>${i.label}</h4><p class="val">${i.val}</p></div>`
+  ).join('');
+}
+
+// === ARRIVAL ===
+function renderArrival(d){
+  const a=d.arrival;
+  if(!a){document.getElementById('arrival-section').innerHTML='<p style="color:var(--text-muted)">No arrival data</p>';return;}
+  let html=`<div class="narrative-box">`;
+  if(a.speaker)html+=`<div class="speaker">${a.speaker} — ${a.label||''}</div>`;
+  if(a.sections){
+    a.sections.forEach(s=>{html+=`<div class="body">${s.body}</div>`;});
+  }
+  if(a.image)html+=`<div class="img-ref">Image: ${a.image}</div>`;
+  if(a.imageAlt)html+=`<div class="img-ref">Alt: ${a.imageAlt}</div>`;
+  html+=`</div>`;
+  document.getElementById('arrival-section').innerHTML=html;
+}
+
+// === GAMES ===
+function renderGames(d,destNum){
+  const games=d.games||[];
+  document.getElementById('game-count').textContent=`(${games.length} games)`;
+  if(!games.length){
+    document.getElementById('games-section').innerHTML='<p style="color:var(--text-muted)">No games</p>';
+    return;
+  }
+  const flagKey=`dest${destNum}`;
+  let html='';
+  games.forEach((g,idx)=>{
+    const type=g.type||'unknown';
+    const typeClass='type-'+type;
+    const label=g.label||g.title||type;
+    const isFlagged=(flagStore[flagKey]||{})[idx];
+    const expanded=renderGameExpanded(g,destNum,idx);
+    html+=`<div class="game-item" id="game-${destNum}-${idx}">
+      <div class="game-header" onclick="toggleGame(${destNum},${idx})">
+        <span class="idx">#${idx+1}</span>
+        <span class="game-type-badge ${typeClass}">${type}</span>
+        <span class="label">${esc(label)}</span>
+        <button class="flag-btn ${isFlagged?'flagged':''}" onclick="event.stopPropagation();toggleFlag(${destNum},${idx})" title="Flag issue">${isFlagged?'&#9873;':'&#9872;'}</button>
+        <span class="chevron">&#9654;</span>
+      </div>
+      <div class="game-body">${expanded}</div>
+    </div>`;
+  });
+  document.getElementById('games-section').innerHTML=html;
+}
+
+function toggleGame(dest,idx){
+  const el=document.getElementById(`game-${dest}-${idx}`);
+  el.classList.toggle('open');
+}
+
+function toggleFlag(dest,idx){
+  const key=`dest${dest}`;
+  if(!flagStore[key])flagStore[key]={};
+  flagStore[key][idx]=!flagStore[key][idx];
+  if(!flagStore[key][idx])delete flagStore[key][idx];
+  localStorage.setItem('qa-flags',JSON.stringify(flagStore));
+  // Re-render the flag button
+  const btn=document.querySelector(`#game-${dest}-${idx} .flag-btn`);
+  if(btn){
+    btn.classList.toggle('flagged');
+    btn.innerHTML=flagStore[key]?.[idx]?'&#9873;':'&#9872;';
+  }
+}
+
+function renderGameExpanded(g,destNum,idx){
+  let html='<pre>'+highlightJSON(JSON.stringify(g,null,2))+'</pre>';
+
+  // Specific rendering for common types
+  if(g.type==='fill'&&g.questions){
+    html+=renderFillQuestions(g.questions);
+  }
+  if(g.type==='listening'){
+    if(g.questions)html+=renderFillQuestions(g.questions);
+    else if(g.options)html+=renderSingleQuestion(g);
+  }
+  if(g.type==='conversation'&&g.turns){
+    html+=renderConversation(g.turns);
+  }
+  if(g.type==='builder'){
+    html+=`<div style="margin-top:8px"><strong>Words:</strong> ${(g.words||[]).join(' | ')}<br><span class="answer-correct">Answer: ${g.answer}</span></div>`;
+  }
+
+  // Duplicate check
+  const dups=findDuplicateOptions(g);
+  if(dups.length){
+    html+=dups.map(d=>`<div class="dup-warn">Duplicate: answer "${d.answer}" found in options at same position</div>`).join('');
+  }
+
+  html+=`<a class="play-btn" href="/play.html?dest=${destNum}" target="_blank">Play dest${destNum}</a>`;
+  return html;
+}
+
+function renderFillQuestions(questions){
+  let html='<div style="margin-top:10px">';
+  questions.forEach((q,i)=>{
+    html+=`<div style="margin:6px 0;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)">`;
+    html+=`<div>${q.sentence||q.question||q.prompt||q.audio||''}</div>`;
+    if(q.options){
+      html+=`<div style="margin-top:4px">`;
+      q.options.forEach(o=>{
+        const isCorrect=(o===q.answer)||(q.correct!==undefined&&q.options.indexOf(o)===q.correct);
+        html+=`<span style="margin-right:8px;padding:2px 6px;border-radius:4px;${isCorrect?'background:rgba(34,197,94,.15);color:#86efac;font-weight:600':'color:var(--text-muted)'}">${esc(String(o))}</span>`;
+      });
+      html+=`</div>`;
+    }
+    html+=`</div>`;
+  });
+  html+='</div>';
+  return html;
+}
+
+function renderSingleQuestion(g){
+  let html='<div style="margin-top:10px">';
+  if(g.question)html+=`<div>${g.question}</div>`;
+  if(g.options){
+    html+=`<div style="margin-top:4px">`;
+    g.options.forEach(o=>{
+      const isCorrect=o===g.answer;
+      html+=`<span style="margin-right:8px;padding:2px 6px;border-radius:4px;${isCorrect?'background:rgba(34,197,94,.15);color:#86efac;font-weight:600':'color:var(--text-muted)'}">${esc(String(o))}</span>`;
+    });
+    html+=`</div>`;
+  }
+  html+='</div>';
+  return html;
+}
+
+function renderConversation(turns){
+  let html='<div style="margin-top:10px">';
+  turns.forEach(t=>{
+    if(t.dialogue){
+      t.dialogue.forEach(d=>{
+        html+=`<div style="margin:2px 0"><strong>${d.name||d.speaker}:</strong> ${esc(d.text)}</div>`;
+      });
+    }
+    if(t.options){
+      html+=`<div style="margin:4px 0">`;
+      t.options.forEach(o=>{
+        const isCorrect=o===t.answer;
+        html+=`<div style="padding:2px 6px;${isCorrect?'color:#86efac;font-weight:600':'color:var(--text-muted)'}">${isCorrect?'-> ':''} ${esc(String(o))}</div>`;
+      });
+      html+=`</div>`;
+    }
+    html+=`<hr style="border:none;border-top:1px solid rgba(255,255,255,.05);margin:6px 0">`;
+  });
+  html+='</div>';
+  return html;
+}
+
+function findDuplicateOptions(g){
+  const issues=[];
+  const checkQ=(q)=>{
+    if(!q.options||!q.answer)return;
+    const ansCount=q.options.filter(o=>String(o).toLowerCase()===String(q.answer).toLowerCase()).length;
+    if(ansCount>1)issues.push({answer:q.answer});
+  };
+  (g.questions||[]).forEach(checkQ);
+  (g.turns||[]).forEach(checkQ);
+  (g.items||[]).forEach(checkQ);
+  if(g.options&&g.answer)checkQ(g);
+  return issues;
+}
+
+function highlightJSON(str){
+  return esc(str)
+    .replace(/("answer"\s*:\s*"[^"]*")/g,'<span class="answer-correct">$1</span>')
+    .replace(/(\{pool:[^}]*\})/g,'<span class="pool-marker">$1</span>');
+}
+
+function esc(s){
+  if(!s)return'';
+  const d=document.createElement('div');d.textContent=s;return d.innerHTML;
+}
+
+// === CHARACTERS ===
+function renderChars(d){
+  const lines=d.characterLines||{};
+  const meta=d.characterMeta||{};
+  const section=document.getElementById('chars-section');
+  if(!Object.keys(lines).length&&!Object.keys(meta).length){
+    section.innerHTML='<p style="color:var(--text-muted)">No character data</p>';
+    return;
+  }
+  let html='';
+  for(const[id,arr] of Object.entries(lines)){
+    const name=meta[id]?.name||id;
+    const lineArr=Array.isArray(arr)?arr:[];
+    html+=`<div class="char-panel">
+      <h4>${esc(name)}<span class="count">(${lineArr.length} lines)</span></h4>
+      <ul>${lineArr.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>
+    </div>`;
+  }
+  // Show meta for chars without lines
+  for(const[id,m] of Object.entries(meta)){
+    if(!lines[id]){
+      html+=`<div class="char-panel">
+        <h4>${esc(m.name||id)}<span class="count">(0 lines)</span></h4>
+        <p style="font-size:.78rem;color:var(--text-muted)">${esc(m.role||'')} — ${esc(m.voice||'')}</p>
+      </div>`;
+    }
+  }
+  section.innerHTML=html;
+}
+
+// === DEPARTURE ===
+function renderDeparture(d){
+  const dep=d.departure;
+  if(!dep){document.getElementById('departure-section').innerHTML='<p style="color:var(--text-muted)">No departure</p>';return;}
+  let html=`<div class="narrative-box">`;
+  if(dep.closingQuestion)html+=`<div class="body" style="font-style:italic;color:var(--ochre)">Closing: ${esc(dep.closingQuestion)}</div>`;
+  if(dep.yaguaraLine)html+=`<div class="body" style="margin-top:6px">Yaguara: ${esc(dep.yaguaraLine)}</div>`;
+  if(dep.nextUrl)html+=`<div class="img-ref">Next: ${dep.nextUrl}</div>`;
+  html+=`</div>`;
+  document.getElementById('departure-section').innerHTML=html;
+}
+
+// === ESCAPE ROOM ===
+function renderEscape(d){
+  const games=d.games||[];
+  const escape=games.find(g=>g.type==='escaperoom');
+  const title=document.getElementById('escape-title');
+  const section=document.getElementById('escape-section');
+  if(!escape){title.style.display='none';section.innerHTML='';return;}
+  title.style.display='';
+  let html=`<div class="escape-box">`;
+  if(escape.room){
+    html+=`<h4>${esc(escape.room.name||'Escape Room')}</h4>`;
+    html+=`<p style="font-size:.82rem;margin-bottom:10px">${esc(escape.room.description||'')}</p>`;
+  }
+  (escape.puzzles||[]).forEach(p=>{
+    html+=`<div class="puzzle-item">
+      <div class="ptype">${p.puzzleType||'puzzle'}</div>
+      <div class="prompt">${esc(p.prompt||'')} ${esc(p.riddle||'')}</div>
+      <div class="ans">Answer: ${esc(p.answer||'')}</div>
+      ${p.clue?`<div style="font-size:.75rem;color:var(--text-muted)">Clue: ${esc(p.clue)}</div>`:''}
+      ${p.onSolve?`<div style="font-size:.75rem;color:var(--text-muted)">On solve: ${esc(p.onSolve)}</div>`:''}
+    </div>`;
+  });
+  if(escape.fragment){
+    html+=`<div style="margin-top:8px;padding:8px;background:rgba(201,162,39,.08);border-radius:8px">
+      <div style="font-size:.75rem;color:var(--ochre)">Fragment</div>
+      <div style="font-size:.82rem">${esc(escape.fragment.text||'')}</div>
+      <div style="font-size:.72rem;color:var(--text-muted)">${esc(escape.fragment.questClue||'')} — item: ${esc(escape.fragment.item||'')}</div>
+    </div>`;
+  }
+  html+=`</div>`;
+  section.innerHTML=html;
+}
+
+// === VALIDATION ===
+function runChecks(d){
+  const checks=[];
+  const games=d.games||[];
+  // JSON valid (if we got here it's valid)
+  checks.push({pass:true,msg:'JSON valid'});
+  // Arrival
+  checks.push({pass:!!d.arrival,msg:'Has arrival narrative'});
+  // Departure
+  checks.push({pass:!!d.departure,msg:'Has departure'});
+  // Escape room
+  const hasEscape=games.some(g=>g.type==='escaperoom');
+  checks.push({pass:hasEscape,msg:'Has escape room',warn:!hasEscape});
+  // Character lines
+  const charCount=Object.values(d.characterLines||{}).reduce((s,a)=>s+(Array.isArray(a)?a.length:0),0);
+  checks.push({pass:charCount>0,msg:`Character lines present (${charCount})`,warn:charCount===0});
+  // All games have instructions
+  const noInstr=games.filter(g=>!g.instruction&&g.type!=='cronica'&&g.type!=='narrative');
+  checks.push({pass:noInstr.length===0,msg:`All games have instructions${noInstr.length?` (${noInstr.length} missing)`:''}`});
+  // Fill/listening have 3+ options
+  let lowOpt=0;
+  games.forEach(g=>{
+    if(g.type==='fill'||g.type==='listening'){
+      (g.questions||[]).forEach(q=>{
+        if(q.options&&q.options.length<3)lowOpt++;
+      });
+      if(g.options&&g.options.length<3)lowOpt++;
+    }
+  });
+  checks.push({pass:lowOpt===0,msg:`Fill/listening games have 3+ options${lowOpt?` (${lowOpt} with <3)`:''}`});
+  // Duplicate answers
+  let dupCount=0;
+  games.forEach(g=>{dupCount+=findDuplicateOptions(g).length;});
+  checks.push({pass:dupCount===0,msg:`No duplicate answers in options${dupCount?` (${dupCount} found)`:''}`});
+  // Image refs
+  let imgCount=0,missingImg=0;
+  games.forEach(g=>{if(g.image)imgCount++;});
+  if(d.arrival?.image)imgCount++;
+  checks.push({pass:imgCount>0,msg:`Image references (${imgCount} found)`,warn:imgCount===0});
+
+  return checks;
+}
+
+function renderValidation(d,n){
+  const checks=runChecks(d);
+  let html='<div class="validation-panel">';
+  checks.forEach(c=>{
+    const cls=c.pass?'check-pass':(c.warn?'check-warn':'check-fail');
+    const icon=c.pass?'&#10003;':(c.warn?'&#9888;':'&#10007;');
+    html+=`<div class="check-row ${cls}"><span class="icon">${icon}</span> ${c.msg}</div>`;
+  });
+  html+=`<div class="check-row" id="cefr-server-row" style="margin-top:6px"><span class="spinner" style="width:14px;height:14px;border-width:1.5px"></span> <span style="color:var(--text-muted);font-size:.8rem">Running server CEFR check...</span></div>`;
+  html+='</div>';
+  html+=`<div id="cefr-detail-section"></div>`;
+  document.getElementById('validation-section').innerHTML=html;
+
+  // Update top badges
+  const pass=checks.filter(c=>c.pass).length;
+  const fail=checks.filter(c=>!c.pass&&!c.warn).length;
+  const warn=checks.filter(c=>c.warn).length;
+  document.getElementById('val-badges').innerHTML=
+    `<span class="v-badge pass">${pass} pass</span>`+
+    (fail?`<span class="v-badge fail">${fail} fail</span>`:'')+
+    (warn?`<span class="v-badge warn">${warn} warn</span>`:'');
+
+  // Server-side CEFR check
+  fetchCefrValidation(n);
+}
+
+async function fetchCefrValidation(n){
+  const row=document.getElementById('cefr-server-row');
+  const detailEl=document.getElementById('cefr-detail-section');
+  try{
+    const r=await fetch(`/api/validation/dest/${n}?check=cefr,structure`,{headers:qaHeaders()});
+    if(!r.ok){row.innerHTML=`<span class="icon" style="color:var(--error)">&#10007;</span> Server CEFR check failed (${r.status})`;return;}
+    const data=await r.json();
+    const res=data.results?.[`dest${n}`];
+    if(!res){row.innerHTML=`<span class="icon check-warn">&#9888;</span> No server data`;return;}
+    const cv=res.cefr_violations||0;
+    const si=res.structure_issues||0;
+    const cefrIssues=(res.issues||[]).filter(i=>i.type==='cefr');
+    const structIssues=(res.issues||[]).filter(i=>i.type==='structure');
+
+    if(cv===0&&si===0){
+      row.innerHTML=`<span class="icon check-pass">&#10003;</span> Server CEFR: 0 violations | Structure: 0 issues`;
+    }else{
+      let msg=[];
+      if(cv>0)msg.push(`<span class="check-fail">CEFR: ${cv} violations</span>`);
+      if(si>0)msg.push(`<span class="check-warn">Structure: ${si} issues</span>`);
+      row.innerHTML=`<span class="icon ${cv>0?'check-fail':'check-warn'}">${cv>0?'&#10007;':'&#9888;'}</span> Server: ${msg.join(' | ')}`;
+    }
+
+    // Show CEFR detail table
+    if(cefrIssues.length){
+      let html=`<div class="validation-panel" style="margin-top:8px"><h4 style="color:#fca5a5;font-size:.82rem;margin-bottom:8px">CEFR Violations (${cefrIssues.length} unique words above level)</h4>`;
+      html+=`<table class="bulk-table"><thead><tr><th>Word</th><th>Word level</th><th>Dest level</th><th>Context</th></tr></thead><tbody>`;
+      cefrIssues.slice(0,50).forEach(i=>{
+        const sev=i.severity==='error'?'issue-count':'check-warn';
+        html+=`<tr><td class="${sev}" style="font-weight:600">${esc(i.word)}</td><td class="${sev}">${i.word_cefr}</td><td>${i.dest_cefr}</td><td style="font-size:.75rem;max-width:400px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(i.context||'')}</td></tr>`;
+      });
+      if(cefrIssues.length>50)html+=`<tr><td colspan="4" style="color:var(--text-muted)">...and ${cefrIssues.length-50} more</td></tr>`;
+      html+=`</tbody></table></div>`;
+      detailEl.innerHTML=html;
+    }
+
+    // Show structure issues
+    if(structIssues.length){
+      let html=`<div class="validation-panel" style="margin-top:8px"><h4 style="color:#fde68a;font-size:.82rem;margin-bottom:8px">Structure Issues (${structIssues.length})</h4>`;
+      structIssues.forEach(i=>{
+        const cls=i.severity==='error'?'check-fail':'check-warn';
+        const icon=i.severity==='error'?'&#10007;':'&#9888;';
+        html+=`<div class="check-row ${cls}"><span class="icon">${icon}</span> ${esc(i.message)}</div>`;
+      });
+      html+=`</div>`;
+      detailEl.innerHTML=(detailEl.innerHTML||'')+html;
+    }
+
+    // Update top badges with server info
+    if(cv>0){
+      document.getElementById('val-badges').innerHTML+=`<span class="v-badge fail">CEFR: ${cv}</span>`;
+    }
+  }catch(e){
+    row.innerHTML=`<span class="icon check-warn">&#9888;</span> Server check error: ${esc(e.message)}`;
+  }
+}
+
+// === BULK VALIDATION ===
+function qaHeaders(){return {'Authorization':'Bearer '+qaToken};}
+document.getElementById('run-bulk-btn').addEventListener('click',()=>runBulkValidation('client'));
+document.getElementById('run-server-btn').addEventListener('click',()=>runBulkValidation('server'));
+document.getElementById('run-full-btn').addEventListener('click',()=>runBulkValidation('full'));
+document.getElementById('export-csv-btn').addEventListener('click',exportCSV);
+document.getElementById('db-stats-btn').addEventListener('click',showDbStats);
+
+let bulkData=[];
+let serverResults=null;
+
+async function runBulkValidation(mode){
+  const btns=document.querySelectorAll('#panel-bulk .export-btn');
+  btns.forEach(b=>{b.disabled=true});
+  const progress=document.getElementById('bulk-progress');
+  const bar=document.getElementById('bulk-bar');
+  progress.style.display='block';
+  bar.style.width='0%';
+  bulkData=[];
+  serverResults=null;
+
+  // Client-side pass (always run for basic info)
+  for(let i=1;i<=58;i++){
+    bar.style.width=((i/58)*50)+'%';
+    let data=destCache[i];
+    if(!data){
+      try{const r=await fetch(`/content/dest${i}.json`);if(r.ok){data=await r.json();destCache[i]=data;}}catch(e){}
+    }
+    if(!data){
+      bulkData.push({dest:i,title:'(missing)',games:0,chars:0,escape:false,clientIssues:['File missing'],serverIssues:[],cefrViolations:0,missing:true});
+      continue;
+    }
+    const checks=runChecks(data);
+    const issues=checks.filter(c=>!c.pass).map(c=>c.msg);
+    const charCount=Object.values(data.characterLines||{}).reduce((s,a)=>s+(Array.isArray(a)?a.length:0),0);
+    bulkData.push({
+      dest:i, title:data.meta?.title||`dest${i}`,
+      games:(data.games||[]).length, chars:charCount,
+      escape:(data.games||[]).some(g=>g.type==='escaperoom'),
+      clientIssues:issues, serverIssues:[], cefrViolations:0
+    });
+  }
+
+  // Server-side pass (CEFR + structure)
+  if(mode==='server'||mode==='full'){
+    bar.style.width='55%';
+    document.getElementById('bulk-results').innerHTML='<p style="color:var(--text-muted)"><span class="spinner"></span> Running server-side CEFR + structure validation (this may take a moment)...</p>';
+    try{
+      const r=await fetch('/api/validation/bulk?check=cefr,structure',{headers:qaHeaders()});
+      if(r.ok){
+        serverResults=await r.json();
+        bar.style.width='90%';
+        // Merge server results into bulkData
+        for(const row of bulkData){
+          const sr=serverResults.results?.[`dest${row.dest}`];
+          if(sr){
+            row.cefrViolations=sr.cefr_violations||0;
+            row.serverIssues=(sr.issues||[]).filter(i=>i.type==='structure').map(i=>`[${i.severity}] ${i.message}`);
+            row.cefrDetails=sr.issues?.filter(i=>i.type==='cefr')||[];
+          }
+        }
+      }else{
+        document.getElementById('bulk-results').innerHTML=`<p style="color:var(--error)">Server validation failed: ${r.status}</p>`;
+      }
+    }catch(e){
+      document.getElementById('bulk-results').innerHTML=`<p style="color:var(--error)">Server error: ${e.message}</p>`;
+    }
+  }
+
+  bar.style.width='100%';
+  renderBulkTable(mode);
+  btns.forEach(b=>{b.disabled=false});
+  document.getElementById('export-csv-btn').style.display='inline-block';
+  setTimeout(()=>{progress.style.display='none'},500);
+}
+
+function renderBulkTable(mode){
+  const hasServer=mode==='server'||mode==='full';
+  let html=`<table class="bulk-table"><thead><tr>
+    <th>Dest</th><th>Title</th><th>CEFR</th><th>Games</th><th>Chars</th>
+    ${hasServer?'<th>CEFR violations</th><th>Server issues</th>':''}
+    <th>Client issues</th>
+  </tr></thead><tbody>`;
+
+  let totalCefr=0,totalStruct=0;
+  bulkData.forEach(r=>{
+    totalCefr+=r.cefrViolations||0;
+    totalStruct+=r.serverIssues?.length||0;
+    const destCefr=r.dest<=12?'A1':r.dest<=18?'A2':r.dest<=28?'B1':r.dest<=38?'B2':r.dest<=48?'C1':'C2';
+    const cefrClass=(r.cefrViolations||0)>10?'issue-count':(r.cefrViolations||0)>0?'check-warn':'ok';
+    const clientClass=r.clientIssues.length?'issue-count':'ok';
+    const serverClass=(r.serverIssues?.length||0)?'issue-count':'ok';
+    html+=`<tr class="${r.missing?'miss':''}">
+      <td><a href="#" onclick="loadDest(${r.dest});return false" style="color:var(--ochre)">${r.dest}</a></td>
+      <td>${esc(r.title)}</td>
+      <td>${destCefr}</td>
+      <td>${r.games}</td>
+      <td>${r.chars}</td>
+      ${hasServer?`
+        <td class="${cefrClass}">${r.cefrViolations||0}${r.cefrDetails?.length?` <a href="#" onclick="showCefrDetail(${r.dest});return false" style="color:var(--ochre);font-size:.7rem">(view)</a>`:''}</td>
+        <td class="${serverClass}">${r.serverIssues?.length?r.serverIssues.join('; '):'<span class="ok">OK</span>'}</td>
+      `:''}
+      <td class="${clientClass}">${r.clientIssues.length?r.clientIssues.join('; '):'<span class="ok">OK</span>'}</td>
+    </tr>`;
+  });
+  html+=`</tbody></table>`;
+
+  // Summary bar
+  const totalDests=bulkData.length;
+  const cleanDests=bulkData.filter(r=>(r.cefrViolations||0)===0&&r.clientIssues.length===0&&(r.serverIssues?.length||0)===0).length;
+  let summary=`<div style="display:flex;gap:16px;margin:12px 0;flex-wrap:wrap">
+    <div class="tmpl-stat"><div class="num">${totalDests}</div><div class="lbl">Destinations</div></div>
+    <div class="tmpl-stat"><div class="num" style="color:#86efac">${cleanDests}</div><div class="lbl">Clean</div></div>`;
+  if(hasServer){
+    summary+=`<div class="tmpl-stat"><div class="num" style="color:#fca5a5">${totalCefr}</div><div class="lbl">CEFR violations</div></div>
+    <div class="tmpl-stat"><div class="num" style="color:#fde68a">${totalStruct}</div><div class="lbl">Structure issues</div></div>`;
+    if(serverResults?.stats){
+      summary+=`<div class="tmpl-stat"><div class="num">${(serverResults.stats.words_checked||0).toLocaleString()}</div><div class="lbl">Words checked</div></div>`;
+    }
+  }
+  summary+=`</div>`;
+
+  document.getElementById('bulk-results').innerHTML=summary+html;
+}
+
+function showCefrDetail(dest){
+  const row=bulkData.find(r=>r.dest===dest);
+  if(!row?.cefrDetails?.length)return;
+  const details=row.cefrDetails;
+  let html=`<h3 style="color:var(--ochre);margin:12px 0 8px">CEFR violations — dest${dest} (${details[0]?.dest_cefr||'?'})</h3>`;
+  html+=`<table class="bulk-table"><thead><tr><th>Word</th><th>Word CEFR</th><th>Dest CEFR</th><th>Severity</th><th>Context</th></tr></thead><tbody>`;
+  details.forEach(d=>{
+    const sev=d.severity==='error'?'issue-count':'check-warn';
+    html+=`<tr><td style="font-weight:600">${esc(d.word)}</td><td class="${sev}">${d.word_cefr}</td><td>${d.dest_cefr}</td><td class="${sev}">${d.severity}</td><td style="font-size:.75rem;max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(d.context||'')}</td></tr>`;
+  });
+  html+=`</tbody></table>`;
+  html+=`<button class="export-btn" onclick="this.parentElement.remove()" style="margin-top:8px">Close</button>`;
+  // Insert after bulk results
+  const container=document.createElement('div');
+  container.style.cssText='background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;padding:16px;margin-top:12px';
+  container.innerHTML=html;
+  document.getElementById('bulk-results').appendChild(container);
+}
+
+async function showDbStats(){
+  const res=document.getElementById('bulk-results');
+  res.innerHTML='<p style="color:var(--text-muted)"><span class="spinner"></span> Loading DB stats...</p>';
+  try{
+    const r=await fetch('/api/validation/stats',{headers:qaHeaders()});
+    if(!r.ok){res.innerHTML=`<p style="color:var(--error)">Failed: ${r.status}</p>`;return;}
+    const data=await r.json();
+    let html='<h3 style="color:var(--ochre);margin-bottom:12px">Dictionary Database Stats</h3>';
+    html+=`<table class="bulk-table"><thead><tr><th>Language</th><th>Total words</th><th>With frequency</th><th>CEFR leveled</th><th>Coverage</th></tr></thead><tbody>`;
+    (data.languages||[]).forEach(l=>{
+      const pct=l.total>0?((l.leveled/l.total)*100).toFixed(1):'0';
+      const cls=parseFloat(pct)>90?'ok':parseFloat(pct)>50?'check-warn':'issue-count';
+      html+=`<tr><td style="font-weight:600">${l.lang_code}</td><td>${Number(l.total).toLocaleString()}</td><td>${Number(l.with_freq).toLocaleString()}</td><td>${Number(l.leveled).toLocaleString()}</td><td class="${cls}">${pct}%</td></tr>`;
+    });
+    html+=`</tbody></table>`;
+    if(data.es_cefr_distribution?.length){
+      html+=`<h4 style="color:var(--ochre);margin:16px 0 8px">Spanish CEFR Distribution</h4><div style="display:flex;gap:12px;flex-wrap:wrap">`;
+      data.es_cefr_distribution.forEach(d=>{
+        html+=`<div class="tmpl-stat"><div class="num">${Number(d.cnt).toLocaleString()}</div><div class="lbl">${d.cefr_level}</div></div>`;
+      });
+      html+=`</div>`;
+    }
+    res.innerHTML=html;
+  }catch(e){res.innerHTML=`<p style="color:var(--error)">Error: ${e.message}</p>`;}
+}
+
+function exportCSV(){
+  if(!bulkData.length)return;
+  let csv='Dest,Title,CEFR,Games,Characters,CEFRViolations,ServerIssues,ClientIssues\n';
+  bulkData.forEach(r=>{
+    const cefr=r.dest<=12?'A1':r.dest<=18?'A2':r.dest<=28?'B1':r.dest<=38?'B2':r.dest<=48?'C1':'C2';
+    csv+=`${r.dest},"${(r.title||'').replace(/"/g,'""')}",${cefr},${r.games},${r.chars},${r.cefrViolations||0},"${(r.serverIssues||[]).join('; ').replace(/"/g,'""')}","${r.clientIssues.join('; ').replace(/"/g,'""')}"\n`;
+  });
+  const blob=new Blob([csv],{type:'text/csv'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='qa-validation-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+}
+
+// === TEMPLATE INSPECTOR ===
+async function loadTemplate(n){
+  const container=document.getElementById('tmpl-content');
+  let data=tmplCache[n];
+  if(!data){
+    try{
+      const r=await fetch(`/content/templates/dest${n}-templates.json`);
+      if(!r.ok){container.innerHTML=`<p style="color:var(--text-muted)">No template file for dest${n}</p>`;return;}
+      data=await r.json();
+      tmplCache[n]=data;
+    }catch(e){container.innerHTML=`<p style="color:var(--text-muted)">Error loading template: ${e.message}</p>`;return;}
+  }
+
+  const templates=data.templates||[];
+  const layers={};
+  let ecoSlots=0;
+  templates.forEach(t=>{
+    const layer=t.layer||'unknown';
+    layers[layer]=(layers[layer]||0)+1;
+    if(t.ecosystemSlots)ecoSlots+=t.ecosystemSlots.length;
+  });
+
+  let html=`<div class="tmpl-stats">
+    <div class="tmpl-stat"><div class="num">${templates.length}</div><div class="lbl">Templates</div></div>
+    <div class="tmpl-stat"><div class="num">${ecoSlots}</div><div class="lbl">Ecosystem Slots</div></div>
+    ${Object.entries(layers).map(([k,v])=>`<div class="tmpl-stat"><div class="num">${v}</div><div class="lbl">${k}</div></div>`).join('')}
+  </div>`;
+
+  templates.forEach((t,i)=>{
+    const type=t.type||'?';
+    const label=t.label||t.title||type;
+    const layer=t.layer||'?';
+    html+=`<div class="tmpl-card" id="tmpl-${n}-${i}">
+      <div class="tmpl-header" onclick="document.getElementById('tmpl-${n}-${i}').classList.toggle('open')">
+        <span class="idx">#${i+1}</span>
+        <span class="game-type-badge type-${type}">${type}</span>
+        <span style="flex:1;font-size:.82rem">${esc(label)}</span>
+        <span style="font-size:.7rem;color:var(--text-muted)">${layer}</span>
+        <span class="chevron">&#9654;</span>
+      </div>
+      <div class="tmpl-body"><pre>${esc(JSON.stringify(t,null,2))}</pre></div>
+    </div>`;
+  });
+
+  container.innerHTML=html;
+}
+</script>
+</body>
+</html>

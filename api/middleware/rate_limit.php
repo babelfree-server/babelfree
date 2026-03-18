@@ -26,7 +26,8 @@ function checkRateLimit(string $action): void {
         }
         $redis->close();
     } catch (\Exception $e) {
-        // If Redis is down, allow the request (fail open)
-        error_log("Redis rate limit error: " . $e->getMessage());
+        // If Redis is down, deny the request (fail closed)
+        error_log("Redis rate limit error (blocking request): " . $e->getMessage());
+        jsonError('Servicio temporalmente no disponible. Intenta de nuevo en unos minutos.', 503);
     }
 }

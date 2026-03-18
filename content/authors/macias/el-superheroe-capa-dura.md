@@ -1,0 +1,2666 @@
+# El superhéroe Capa Dura
+# Luis Fernando Macías
+# Licensed material — used with author permission
+# Children's novel (Spanish only)
+
+## Integration Notes
+# - Children's novel — 39 chapters, Spanish only
+# - Written for David (Macías's son) — deeply autobiographical
+# - Matías's riddle "Ayer con una, ahora con dos, mañana con tres" (answer: La A)
+#   appears as the FINAL riddle that opens the bridge between worlds
+# - Contains 9 riddles from "Quien no la adivina" and "Señor, señora" books:
+#   1. Viejo (old age) — solved via Shakespeare/Hamlet
+#   2. El camaleón — solved via David's future family
+#   3. El libro de poemas — solved via Homero, Dante, Borges
+#   4. El silencio — solved via Alice Through the Looking Glass
+#   5. El espejo — solved alongside silence
+#   6. El arcoíris — solved via meeting his older self
+#   7. La luna — solved via the moon/sun love story
+#   8. El caracol — solved via Andersen's journey
+#   9. El eco — solved alongside caracol
+#   Final: La A — solved via Matías in school
+# - Key themes connecting to El Viaje del Jaguar:
+#   1. TIME TRAVEL — the horse of time, paper plane as vehicle
+#   2. STORIES WITHIN STORIES — Jack/beanstalk, Don Quixote, Hamlet, Alice
+#   3. FATHER-SON BOND — Luilli the "ayudante" guides through stories
+#   4. RIDDLES AS BRIDGE — solving riddles literally builds bridge between worlds
+#   5. THE BLACK HOLE — liminal space between reality and fantasy
+#   6. "Las palabras hacen que las cosas existan" — naming creates reality
+#   7. STEINER EDUCATION — Rudolf Steiner portrait in Matías's classroom
+#   8. THE FUENTE DEL CONOCIMIENTO — oracle in Pandeazúcar (from La rana sin dientes)
+#   9. PARADOX — "lo que en la fantasía es malo, en la vida es bueno"
+# - Character voice for "El maestro" at B1+ levels
+# - Don Ernesto the master = guardian of knowledge (game NPC potential)
+# - The "caballo del tiempo" = horse of time (game mechanic potential)
+# - Medellín geography: Pandeazúcar, Nutibara, La Milagrosa, Rionegro
+
+---
+
+A los hijos de David
+y María Angélica:
+Emmanuel, Miguel y
+Raquel. Bisnietos de
+Rafael.
+
+Capítulo I
+Que trata de la petición de una capa y del robo de
+un reloj que a nadie fue robado.
+Quiero una capa como la de Supermán —le dijo David a
+la abuelita.
+A papá le pareció natural que pidiera una capa, ya que
+David se la pasaba viendo televisión, y la manera como los
+superhéroes resolvían los problemas de la humanidad lo hacía
+sentir que él también era un salvador, un importante defensor
+de la justicia.
+Claro que a David lo único que le llamaba la atención era
+volar. Por eso le gustaba Supermán, porque podía volar.
+—¿Cierto, abuelita, que si usted me hace una capa roja, yo
+salgo volando y puedo mirar el mundo desde el aire?
+—
+En el momento en que terminó de hacer la pregunta, David
+sintió que iba volando sobre la ciudad.
+Allá abajo estaban los edificios y, en las calles, los carros se
+parecían a los modelos en miniatura con los que él estaba
+acostumbrado a jugar, pues se veían del mismo tamaño.
+Vio también multitudes de gentes apresuradas caminando
+en todas las direcciones y, con su mirada telescópica, logró
+enfocar lo que estaba sucediendo en un paradero de buses,
+donde había un tumulto de personas esperando.
+El bus venía por la mitad de la calle, pero de repente se lanzó
+hacia la derecha. Crepitaron los frenos cuando se paró frente
+a la multitud.
+Todos se apretujaron para alcanzar la puerta y subirse.
+Había una señora de gafas que no sabía si meterse al tumulto
+o esperar a que este menguara, pero que, por estar ahí, la
+tiraban de un lado para otro, obligándola a avanzar.
+Detrás, un muchacho miraba sus movimientos, sin apartar
+los ojos del reloj que ella tenía en la mano izquierda.
+“¡Se lo va a robar!”, pensó David desde las nubes. “¿Qué haría
+Supermán en un caso como este?”.
+Y, mientras se preguntaba, el muchacho tomó el reloj de la
+mano de la señora, lo arrancó y corrió por la avenida hacia
+esa otra multitud que iba y venía.
+David intentó lanzarse desde lo alto para atraparlo, pero lo
+único que consiguió fue que se le cayeran las gafas al suelo
+al tratar de tirarse, porque ni a una señora le habían robado
+el reloj, ni él estaba volando sobre la ciudad.
+Mientras papá se agachaba a recogerle las gafas, David se
+decía para sus adentros:
+“Y eso que me lo estaba imaginando. ¿Qué tal cuando tenga
+la capa roja y pueda volar de verdad?”.
+Que trata de la adquisición de una tela y de una
+camiseta, y del descubrimiento de una fábrica
+clandestina de armas.
+Está bien —respondió la abuela. Guardó el cepillo de
+pestañina en el tubo, tomó a David de la mano y se
+fueron para Rionegro.
+La abuela era una mujer de cincuenta y siete años, de un rostro
+muy blanco y un cabello muy negro. Se había pintado los labios
+de un rojo muy rojo y las pestañas de un negro muy negro.
+David había cumplido ocho años en el mes de julio, el diecinueve
+a las once de la mañana, y eran él y Valentina los
+únicos nietos que habían nacido en el hogar de Nelly.
+—¿Cierto, abuela, que lo mejor que hay es volar? —le preguntó
+David, mientras el carro, un Chevrolet Monza modelo
+—
+
+Capítulo II
+1984, levantaba polvo sobre la carretera destapada, camino
+de Rionegro.
+—Puede ser, puede ser… —respondió ella, mientras tomaba
+el volante con las dos manos, sin apartar la mirada de la
+carretera.
+Otra vez David imaginó que tenía la capa puesta, que se había
+bajado el vidrio del Monza y que él había salido volando
+por la ventanilla. Desde arriba vio cómo la abuela daba
+vuelta a la derecha primero, y después hacia la izquierda en
+una curva de bajada hacia la autopista. Al elevarse, el carro
+se iba reduciendo y se veía raudo, seguido por una nube de
+polvo.
+“Allá vamos ella y yo para Rionegro”, pensó. “La abuela cree
+que yo estoy en el carro, en la silla de atrás, solo porque me
+habla y le contesto; pero eso no es cierto: yo estoy aquí, viendo
+cómo el carro se mueve abajo”.
+Vio los árboles, los techos de las casas, las colinas que se levantaban,
+las culebras de la quebrada y de la carretera, cada
+vez más lejos y más pequeño todo, hasta sentir que ya empezaba
+a darle susto.
+“¡Qué miedo! ¿Y ahora qué hago?”. No bien se había hecho
+esta pregunta, cuando divisó una columna de humo que se
+levantaba en mitad de una montaña. “Seguramente alguien
+está preparando un sancocho en fogón de leña en esa casa
+de campo”, se dijo. Y decidió acercarse.
+Fue entonces cuando vio con su mirada de superhéroe que
+no era un fogón de leña, sino un horno de fundición de metales
+lo que allí ardía. Entonces puso el oído de alta definición
+y oyó que un hombre uniformado le decía a otro:
+—¡Debemos tener doscientos cañones de fusil listos para el
+lunes de la semana próxima! Hay que completar la fundición
+esta misma noche para hacer el vaciado de las armas.
+“¡Ah, con que se trata de una fábrica de armas!”, pensó. “Ya
+verán cómo resuelvo este caso del modo más severo”.
+En ese momento, la abuela frenó frente a un almacén de
+telas en Rionegro.
+—¡Llegamos! —dijo.
+Y David sintió que el carro lo lanzaba hacia la banca de adelante
+al frenar, lo cual hizo que se diera cuenta de que ni él estaba
+volando, ni había descubierto alguna fábrica de armas.
+“¡Pero no crean que esto es pura imaginación!”, pensó.
+La abuela compró una camiseta azul y le hizo estampar las
+letras DSHCD, que habrían de identificar a David, el súperhéroe
+Capa Dura, y compró también un corte de seda roja
+con el que habría de confeccionar la capa.
+—¿Estás segura, abuelita, de que este traje de superhéroe
+será auténtico y me permitirá volar por los aires, en busca de
+la justicia y en defensa de los débiles?
+—¡Segura!
+—¿Estás segura de que podré oír todo lo que digan, ver todo lo
+que hagan y sentir lo que tramen los malos de este mundo?
+—¡Segura!
+Que trata del inicio de la confección de una capa
+y de la visión aterradora de un bombardeo a una
+ciudad desamparada.
+Regresaron.
+—Ponte a jugar —propuso la abuela—. Yo ahora voy
+a trabajar en la máquina de coser. Debo confeccionar
+la capa del más grandioso superhéroe de todos los tiempos.
+David no entendió qué podía significar la palabra grandioso,
+pero eso le importó muy poco. Fue hasta su cuarto y tomó
+un juguete del armario.
+“¿Esto qué es?”, se preguntó. Y de inmediato vio que una multitud
+de personas caminaba por el sendero polvoriento.
+“¡Qué raro! El viento que sopla es pegajoso y ruge como un
+animal herido”.
+
+Capítulo III
+No solo era húmedo y caliente, sino que traía arena dispersa
+en sus oleadas. Era el viento del desierto, que golpeaba duro
+contra los cuerpos de los que huían.
+“¿Cómo hacer para que esos niños no lloren? Seguramente,
+deben estar llorando de hambre”, concluyó, al ver que las
+madres trataban de envolver a sus hijos en trapos, a fin de
+protegerlos del huracán y del sol, mientras corrían con expresión
+angustiada, como si no supieran para dónde iban, ni
+qué suerte habría de esperarles.
+En el cielo, rugían veloces los aviones de combate.
+“¿Por qué huyen?, ¿a dónde van?, ¿de dónde vienen todas esas
+bombas?”.
+Eran demasiadas preguntas, y no sabía responder ninguna.
+Dejó más bien ese juguete ahí y se fue al cuarto, donde la
+abuela estaba sentada frente a la máquina. Entonces, vio la
+tela roja de su capa de futuro superhéroe y se dijo:
+“¡Eso me pasa cada vez que juego con el tanque de guerra de
+plástico que me dieron en el cumpleaños. Vuelvo a imaginar
+a todas esas gentes!”.
+Que trata de la investidura de un héroe y del
+encuentro con un anciano que pasa la noche en vela,
+a fin de armarse caballero.
+Listo! —dijo la abuela—. He concluido la confección de
+la capa.
+—¿Puedo ponérmela ya?
+—¡Sí!
+—¿Y puedo estrenarme la camiseta?
+—¡Sí!
+David corrió al comedor en busca de su padre.
+—¡Vamos! —le dijo—. ¡Seré un superhéroe!
+—¡
+
+Capítulo IV
+Este descargó el libro sobre la mesa y se puso de pie.
+David estiró las manos hacia los brazos extendidos de su padre
+y, apoyándose en ellos, brincó a su pecho.
+Fueron juntos al costurero de Nelly. Ella estaba sentada frente
+a la máquina de coser. Se ocupaba de la última puntada
+de la capa.
+La capa salía por debajo de la aguja de la máquina y se deslizaba
+hacia la mesa hasta colgar en el aire. Al mirarla, David
+sintió que la tela roja lanzaba un destello.
+—¡Esa capa es verdadera! ¡Lo siento! —gritó—. ¡Tiene un sol
+por dentro!
+La abuela se puso de pie, fue al armario para recoger la camiseta
+con las letras DSHCD, y volvió con ella y con la capa.
+David le entregó las gafas a su padre para quitarse la camisa.
+Apareció su torso delgado, con dos botones marrones en
+su pecho blanco.
+El papá le ayudó a vestirse la camiseta, la abuela le amarró
+la capa alrededor del cuello y él se puso las gafas de nuevo.
+En el momento en que la capa cubrió su cuerpo, al descender
+desde los hombros hacia los pies, David sintió que iba
+volando sobre una llanura en medio de la noche.
+Al frente, se veía la silueta de un olivo, iluminado por el disco
+de una luna que todo lo hacía transparente.
+—Mira, Pa, ¿quién es ese hombre que está apoyado en un palo
+largo, dando vueltas alrededor de una pila de tiestos, allá en
+aquel caserón?
+—No son tiestos —aclaró el padre—. Son útiles de caballero
+andante. Ese hombre es don Quijote de la Mancha en el
+momento de la velación de las armas.
+David recordó que, hacía una semana, su padre le había leído
+unos capítulos del Quijote. Ahora veía algo así como la
+escena de una película, en la que unos hombres con acento
+español daban voces. Le pareció que el anciano que vigilaba
+las armas se comportaba como un sacerdote, dando vueltas
+alrededor de los hierros. La luz de la luna pegaba en el latón
+de una armadura y emanaba un destello azul.
+—Mira —le dijo a su padre—, lo estamos viendo tal como
+me lo leíste.
+—Claro. Ese no es un caserón, sino una venta. ¿Lo recuerdas?
+Don Quijote pensaba que, antes de emprender sus aventuras,
+debía armarse caballero. La velación de las armas fue lo
+primero que hizo.
+Aunque David lo comprendía, algo lo incomodaba:
+—Esos hombres se están burlando de don Quijote —dijo—.
+¡Qué tontos!
+El padre dejó escapar una sonrisa.
+—¿Por qué puedo verlo tan claro, si tú me dijiste que ese episodio
+no había ocurrido en verdad, sino que Cervantes lo había
+imaginado mientras estaba en una cárcel?
+—Nosotros podemos verlo ahora porque Cervantes, al imaginarlo,
+lo expresó en palabras, y ya tú sabes que las palabras
+hacen que las cosas existan. Todo aparece y desaparece continuamente,
+pero se guarda en las palabras. Son ellas las que
+hacen posible recordar lo que un día pasó y ya no vuelve.
+—¡Pa! ¿Ves a ese hombre que, en una celda, se ríe solitario
+mientras escribe?
+—Claro. Estoy viendo que apoya el muñón de un brazo sobre
+el papel, mientras con el otro, el que sí tiene mano, escribe.
+—Aunque se ríe, se ve triste, Pa.
+—Ese es Miguel de Cervantes. Guardó su risa en palabras
+para que nosotros lo imagináramos riéndose.
+David cerró los ojos para apartar de su mente las dos imágenes:
+la silueta del caballero andante en el solar de la venta
+y aquel hombre que, en la cárcel, escribía y reía, reía y
+escribía...
+—¡Son el mismo, Pa! —dijo, mientras se acomodaba la camiseta
+dentro de la sudadera azul que la abuela acababa de
+ponerle.
+
+Capítulo V
+Mientras hablaban, el superhéroe Capa Dura y Luilli, el ayudante,
+bajaban por el camino del lago.
+—¡Vamos al guadual!
+—¡Sí, vamos al bosque de bambú!
+Sorteaban la pendiente cuando una ráfaga de viento frío golpeó
+sus rostros. Al frente, las hojas del bambú se sacudían
+como si una mano alada agitara un cascabel enorme al mismo
+tiempo que, desde el gualanday vecino, brotaba el chillido
+de alerta del bichofué.
+El bosque iniciaba en la parte más baja del terreno de la finca
+y se extendía hacia el lago, por los límites con la finca de enseguida.
+Había bambú, guadua, yarumos, chopos, gualandayes,
+acacias y carboneros. Especialmente, los yarumos eran
+un aletear constante entre sus ramas.
+Al llegar abajo, Luilli, el padre ayudante del superhéroe Capa
+Dura, tomó el senderito de la derecha, siguiendo el canto de
+un mayo que parecía advertir algo desde la espesura verde.
+El superhéroe entró en la atmósfera de largueros y hojas diminutas
+de bambú, entretenido en la observación de una
+mariposa enorme que ondulaba, iluminada por los haces de
+rayos de sol que caían rectos sobre las hojas secas dispersas
+en el piso.
+Luilli cruzó el puente y se sentó a esperar al recién armado
+superhéroe en la banca del otro lado. Al parecer, le maravillaba
+el color del aire bajo el sol, ¡esa luz! …, esa luz blanca
+entre el verde de tantas hojas de todos los tamaños, y el
+viento frío que agitaba las ramas, y el aleteo, y el gorjeo de
+las aguas, y la suma de olores frescos, y la inmensa paz de
+esos parajes vírgenes…
+No habían pasado diez minutos, cuando el ayudante vio venir
+al superhéroe. Este corría haciendo ondear su capa por
+los senderos que se formaban entre árboles y arbustos. Subió
+al puente y lo pasó raudo, gritando mientras corría:
+—¡Luilli, me dijo el enano que si podíamos ayudarle a rescatar
+el arpa dorada y la gansa de los huevos de oro!
+—¿Cuál enano?, ¿cuál gansa? y ¿qué arpa?
+—El enano que estaba entre las ramas de un bambú. La mariposa
+grande se elevó y se perdió arriba, cuando nos lo encontramos.
+Me dijo que nosotros podíamos ayudar.
+El superhéroe jadeaba emocionado.
+—Háblame despacio —pidió el ayudante—, ¿a quién te refieres?
+—Al enano, el que habló conmigo en el bambú. Tenía un
+gorro verde que le tapaba las orejas. Movía las manos como
+si el viento agitara una rama, pero no era una rama, era él.
+Me dijo que tú y yo podíamos hacerlo juntos.
+—¿Hacer qué? —en su forma de preguntar, el padre se veía
+incrédulo.
+—¡Rescatar el arpa dorada y la gansa de los huevos de oro!
+—repitió DSHCD, con energía, para que su ayudante al fin
+le creyera.
+Que trata del recuerdo de un cuento y de la
+comprensión de un asunto que concierne a la
+historia del mundo.
+El ayudante se quedó perplejo con lo que acababa de
+decirle el superhéroe. Él había pensado que estaba jugando
+con su hijo, pero ahora los hechos le advertían
+que, sin saberlo, habían sido designados para cumplir una
+importante misión.
+“Tal vez todavía no advierto el verdadero significado de la
+aventura que ahora estamos obligados a emprender”, se dijo
+Luilli.
+—Está bien —le respondió al superhéroe—. ¡Hagamos lo que
+tengamos qué hacer!, ¿qué más dijo el enano?
+—Me dijo que tú y yo debíamos encontrar el arpa dorada y
+la gansa de los huevos de oro para devolverlas a su mundo.
+
+Capítulo VI
+Dijo que, después, entenderíamos cuál es ese mundo y cuál
+es este.
+Al escucharlo, el ayudante recordó un cuento inglés que había
+leído de niño: Jack y las habichuelas mágicas. Pensó en
+si había leído ese cuento con su hijo, y no recordó haberlo
+hecho. Si David no lo conocía, ¿por qué sabía entonces de
+la existencia de un arpa dorada y de una gansa que ponía
+huevos de oro? Ya no podía dudarlo, el superhéroe se había
+encontrado con el elemental del bambú y este le había impuesto
+una misión de vida o muerte para la humanidad.
+—¡Muy bien —dijo—, empecemos por documentarnos!
+—¡Hurra! —gritó DSHCD.
+—Vamos primero a leer un cuento.
+Que trata de la lectura de un cuento y de la búsqueda
+del significado de las palabras "oca" y "alubia".
+Regresaron.
+Mientras que el ayudante buscaba una edición de
+los Cuentos populares ingleses, recopilados por Flora
+Annie Steel, DSHCD fue al corredor, donde estaban ellas
+tejiendo y conversando.
+—¡Mira, mamá! —le dijo a Liliana—. ¡Soy un superhéroe!
+Se subió a una silla y se lanzó desde allí hasta el prado, para
+que su madre observara el movimiento de su capa roja en
+pleno vuelo. La madre puso el tejido sobre la mesa y aplaudió.
+Valentina, que estaba jugando a pasar agua de una coca
+a otra más pequeña, sintió la leve vibración de los aplausos
+que llegaban hasta su mundo.
+
+Capítulo VII
+—Tengo una misión que cumplir —le dijo David a la abuela,
+poniéndose de pie—. Debemos ir al mundo que hay del otro
+lado para rescatar un arpa mágica y una gansa que pone
+huevos de oro.
+—¡Ah! —respondió Nelly—. ¿Y cómo harán para llegar al otro
+mundo?
+—No lo sé. Primero vamos a leer un cuento. El enano me
+dijo que viajaríamos en el tiempo.
+Llegó una voz desde adentro:
+—¡Tengo el libro!
+El superhéroe se apartó de las tejedoras y entró en la sala,
+donde lo esperaba el ayudante con un volumen de cuentos
+en pasta dura. Se sentaron sobre el tapete, frente a la chimenea,
+de tal modo que DSHCD quedó sobre las piernas del
+ayudante, con el libro entre las suyas.
+En la carátula, había una ilustración a todo color que representaba
+la cocina de la esposa del ogro. En primer plano, aparecía
+la imagen de este y en su rostro sobresalía la inmensa
+nariz corva. Atados al cinto, llevaba los tres corderos que traía
+para el desayuno.
+—Mira qué grande es el ogro —le dijo el ayudante—. Esos
+corderos se ven diminutos en comparación con él.
+Buscaron la página 141, donde aparecía el título Jack y la mata
+de alubias.
+—¿Por qué alubias, si yo había leído el cuento con el título
+de habichuelas? Espérame un segundo para que busquemos
+el significado de esa palabra.
+Fue hasta la biblioteca y regresó con una enciclopedia que
+puso a un lado mientras adoptaba de nuevo la posición de
+lectura. Al consultar la palabra, vieron que alubia era una
+forma de llamar a los fríjoles y a las habichuelas. Encontraron
+que se referían a ellas también como judías o porotos.
+Nombre científico: Phaseolus vulgaris.
+Estaban leyendo el cuento, cuando en lugar de la palabra
+ganso encontraron oca.
+—¿Por qué oca? —interrumpió DSHCD.
+Consultaron:
+La oca es un animal diurno y gregario. Vive hasta 20 años y puede
+pesar más de 10 kg. Defiende su territorio con graznidos cuando
+se acerca cualquier otro animal, sin que le importe su tamaño. Las
+ocas o gansos tienen su antecesor salvaje en el ánsar (Anser anser),
+ave originaria de Europa, norte de África y Asia. Las primeras
+ocas se criaron en Egipto. Son el ave doméstica más antigua
+que existe.
+Luilli tomó el libro, sentó al superhéroe en sus piernas y empezó
+a leer:
+Jack y las habichuelas mágicas
+Una pobre viuda vivía con su hijo en una pequeña
+cabaña. Como único sustento tenían una vaca que
+les daba leche y queso. Cierto día, la mujer enfermó
+y no pudo trabajar en su huerta ni cuidar su
+casa. Entonces, se vio obligada a pedirle a Jack que
+vendiera la vaca.
+Al domingo siguiente, día de feria en el pueblo, el
+muchacho decidió ofrecerla en el mercado. Su madre
+esperaba sobrevivir durante algunos meses con
+los víveres y las semillas que obtuvieran a cambio
+del animal.
+En medio del camino, Jack se encontró con un
+hombre que quiso saber por qué iba el joven con
+la vaca.
+—Voy a venderla —le respondió. La mirada y el
+aspecto amigable del anciano le habían inspirado
+confianza.
+—Tengo una propuesta para hacerte —le dijo el
+extraño, mientras le enseñaba una mano empuñada—:
+te cambio estas semillas de habichuela por la
+vaca. Son mágicas, crecerán de la noche a la mañana
+y darán la planta más grande que nadie haya
+visto jamás; con ella, tu madre y tú no volverán a
+pasar hambre ni ha de faltarles nada.
+Jack se entusiasmó y aceptó el cambio. Regresó y
+le contó a su madre:
+—Di la vaca a cambio de estas semillas mágicas de
+habichuela.
+La madre entristeció:
+—¡Ve a acostarte sin comer! —le gritó, desconsolada,
+mientras tiraba las semillas por la ventana.
+Jack se fue a dormir. Durante esa noche, soñó que
+las semillas del jardín crecían y sacudían su casa. El
+tallo de la planta de habichuelas crecía y crecía tan
+grande que golpeaba su ventana…
+Cuando despertó, descubrió que el sueño era realidad.
+Desde su ventana, vio una enorme planta que
+subía y se perdía entre las nubes hasta el cielo.
+Antes de que su madre pudiera llamarlo, se escapó por
+la ventana y empezó a trepar. Subió y subió, y subió
+y subió…, hasta pasar las nubes. De pronto, descubrió
+que la planta terminaba en un extraño país. Cerca,
+sobre una colina blanca, se levantaba un castillo.
+Jack se acercó. En la puerta estaba parada una enorme
+mujer que lo miraba sorprendida. Cuando estuvo casi
+debajo de ella, le preguntó quién vivía en ese castillo.
+La mujer le dijo que era la casa de ella y su esposo, el
+malvado ogro.
+Jack tenía mucha hambre y le preguntó si podía comer
+algo antes de volver a bajar por la planta. La
+mujer lo dejó pasar. Le dio de tomar leche de cabra
+y un pedazo de pan. Cuando Jack estaba disfrutando
+de la comida, sintió un estruendo, y observó que
+la tierra se estremecía y hasta los trastos brincaban
+en la mesa entre sus manos.
+—Viene mi marido —dijo. Buscó un lugar para esconder
+a Jack y encontró el horno. En ese lugar, el
+ogro no lo vería.
+¡Pum, pum, pum!
+—¡Viene muy hambriento! ¡Si te encuentra, te desayunará!
+—le dijo, mientras cerraba la puerta, después
+de que Jack se escurriera hasta el rincón del fondo.
+Cuando el ogro llegó, pidió su desayuno; pero, antes
+de probar bocado, se detuvo y comenzó a oler
+el aire y a resoplar:
+—¡Fa!… ¡Fe!… ¡Fi!… ¡Fo!… ¡Fuuu…!, huelo carne
+de niño. ¿Será que tienes por ahí escondido alguno
+que yo pueda comer?
+—¡Ni se te ocurra! Ese olor es del último niño que
+comiste. No he tenido tiempo de limpiar el horno.
+Después de comer, el ogro se tiró a dormir y Jack
+aprovechó para salir. Despacio, en puntas de pies,
+se acercó a la puerta, pero no salió enseguida, porque
+vio que, en la sala, el ogro tenía muchos tesoros:
+sacos con monedas, estatuas y jarrones dorados…
+Le llamaron la atención una gansa y un arpa
+de oro que se tocaba sola.
+Decidió llevarse una bolsa llena de monedas, para
+darle a su madre una recompensa por no haber vendido
+la vaca.
+Llegó hasta la planta y bajó, bajó y bajó... Volvió al
+jardín de su casa. Encontró a su madre muy preocupada.
+Le contó su aventura en el país de los gigantes
+y le entregó la bolsa. Había más dinero allí
+de lo que pudo haber conseguido con la venta de
+la vaca.
+Con ese oro vivieron bien por un tiempo, mientras
+la madre se recuperaba. No obstante, un día volvió
+a faltarles con qué comprar el alimento. Jack decidió
+entonces regresar al castillo de las nubes. Lo
+había pensado mucho; esta vez se llevaría la gansa
+de los huevos de oro.
+Era una hermosa mañana de verano cuando Jack
+subió y subió por el tallo de habichuelas hasta llegar
+al país de los gigantes. Nuevamente encontró a la
+mujer parada en la puerta del castillo. Cuando estuvo
+casi debajo de ella, Jack le preguntó si el ogro
+andaba por allí. La mujer le respondió:
+—Mejor es que te marches, muchacho, sabes que
+a mi esposo le gusta comer niños en el desayuno y
+está por venir.
+Jack le preguntó si podía comer algo antes de volver
+a bajar por la gigantesca planta.
+La mujer lo dejó pasar, le dio de tomar leche de
+cabra y un pedazo de pan. Cuando Jack estaba disfrutando
+de la comida, sintieron un fuerte temblor:
+¡Pum, pum, pum!
+Jack dejó de comer y se escondió en el horno.
+Llegó el ogro, pidió su comida del día y se sentó a
+devorarla; pero antes de probar bocado, se detuvo
+y comenzó a oler el aire y a resoplar:
+—¡Fa!… ¡Fe!… ¡Fi!… ¡Fo!… ¡Fuuu…!, huelo carne
+de niño. ¿Tienes escondido por ahí alguno que
+yo pueda comer?
+La mujer le contestó que el olor era del niño que
+se había comido la noche anterior porque no había
+tenido tiempo de limpiar el horno.
+Ya satisfecho, el ogro se tiró a dormir y Jack aprovechó
+para salir. Despacio, en puntas de pies, se
+acercó a la sala de los tesoros. Quería llevarse la
+gansa. La tomó y salió rápido.
+Bajó, bajó y bajó hasta llegar a su jardín, allí lo esperaba
+su madre, quien se sorprendió al ver la maravillosa
+gansa.
+—Con sus huevos no tendremos más necesidades
+—comentó muy contenta.
+Y era cierto…, pero Jack no estaba tranquilo. Quería
+volver al país de los gigantes para llevarse el arpa
+mágica. Una pequeña arpa de cuerdas de oro que
+se tocaba sola.
+Así, cierta mañana, se levantó temprano; salió por
+la ventana de su cuarto y subió, subió y subió por
+el tallo de habichuelas, hasta llegar al país de los
+gigantes.
+Muy apurado, se encaminó al castillo del ogro.
+Nuevamente, encontró parada en la puerta a la
+enorme mujer, quien lo miraba sorprendida. Cuando
+estuvo casi debajo de ella, Jack le preguntó si el
+ogro se hallaba en el castillo.
+La mujer le respondió:
+—Lo mejor es que te marches, muchacho. Sabes
+bien que a mi esposo le gusta comer niños en el
+desayuno y está por venir.
+Jack le preguntó si podía comer algo antes de volver
+a bajar por la gigantesca planta. La mujer, que
+no dejaba de enternecerse por la forma de ser del
+joven, lo dejó pasar. Le dio de tomar leche de cabra
+y un pedazo de pan. Cuando Jack estaba disfrutando
+la comida, sintieron un fuerte temblor:
+¡Pum, pum, pum!
+Jack dejó de comer y se escondió, por tercera vez,
+en el horno. El ogro le pidió a su mujer la comida
+del día y se sentó a devorarla. Pero antes de probar
+bocado, se detuvo y comenzó a oler el aire y
+a resoplar:
+—¡Fa!… ¡Fe!… ¡Fi!… ¡Fo!… ¡Fuuu…!, huelo carne
+de niño. ¿Tienes escondido por ahí alguno que
+yo pueda comer?
+—Es el olor del niño que cociné la otra noche. No
+he tenido tiempo de limpiar el horno —le contestó
+la mujer, que no sabía inventar otra excusa para su
+marido.
+Después de comer, el ogro le pidió que le trajera su
+arpa. Cuando tuvo cerca el instrumento, le ordenó:
+“¡Canta!”. El arpa comenzó a hacer sonar sus cuerdas
+y el ogro poco a poco se fue durmiendo con la
+música.
+Jack aprovechó para salir. Despacio, en puntas de
+pies. El ronquido del ogro semejaba un trueno que
+se repite. Se acercó a él para llevarse el arpa, la tomó
+y se encaminó hacia la puerta…
+Pero el arpa comenzó a sonar, llamando a su amo.
+No quería ser robada por un hombrecillo extraño,
+así que comenzó a gritar con voz metálica:
+—¡Eh, señor amo, despierte usted, que me roban!
+El ogro se despertó sobresaltado, mientras seguían
+oyéndose los gritos acusadores:
+—¡Señor amo, que me roban!
+En ese momento, Jack escapaba hacia la planta de
+habichuelas y, como al ogro le costó trabajo entender
+lo que sucedía, le dio alguna ventaja en la carrera.
+Jack bajó, bajó y bajó, pero de pronto la planta
+comenzó a sacudirse.
+Antes de llegar a su jardín, Jack le gritó a su madre
+que le alcanzase un hacha y, apenas llegó, se puso
+a cortar con ella el tallo. El ogro seguía bajando
+y ya se lo podía ver, enfurecido, descolgándose de
+entre las nubes.
+De pronto, el tallo se partió en dos y la planta se
+quebró. Grande como era el ogro, cayó en la tierra
+y se hundió, mientras dejaba un hoyo inmenso y
+sin fondo. Nunca más nadie lo volvió a ver.
+En cuanto a Jack, se divirtió con su nueva arpa y,
+gracias a los huevos de oro, él y su madre no tuvieron
+más necesidades.
+Que trata de la conversación sobre ciertos cuentos de
+la tradición oral y el desplazamiento de unas familias
+campesinas en el municipio de Granada.
+No es justo con el gigante que primero lo roben y luego
+caiga en un abismo abierto por su propio cuerpo en la
+tierra! —trató de protestar el ayudante.
+—No, Pa —le respondió el superhéroe Capa Dura—. Ese gigante
+desayunaba niños.
+El ayudante guardó silencio, como si las palabras del superhéroe
+lo hubieran hecho caer en cuenta de algo que no había
+considerado, y entonces agregó:
+—Ahora comprendo por qué el libro de cuentos de Perrault
+se titula Cuentos de la madre oca y también por qué existe
+uno que se titula La oca de los huevos de oro…
+—¡
+
+Capítulo VIII
+Parecía que el padre iría a hablarle a David acerca de sus
+estudios de los cuentos populares; pero no bien había pronunciado
+la expresión huevos de oro, cuando el superhéroe
+empezó a imaginar que sobrevolaba el valle de San Nicolás
+hacia los municipios de Marinilla, Cocorná, Santuario… hasta
+contemplar algo así como una vereda de humildes casas
+campesinas, donde las gentes corrían de un lado a otro, atareadas
+en recoger cuanto podían, para salir corriendo hacia
+el camino que los habría de llevar a la plaza de Granada.
+Abajo, en el patio de lo que parecía ser la escuela veredal,
+se veía un grupo de hombres abatidos. Los cuerpos yacían
+tirados en el piso, uno al lado de otro, inmóviles, sangrantes.
+En el camino, se oía el lamento de los niños en tanto que las
+madres lloraban en silencio y los animales contemplaban
+aterrados a los amos que ya no habrían de volver a ver, ay,
+nunca más…
+—¡Epa! —increpó el padre a David, al ver que este se había
+ido de la conversación como si algo, de pronto, lo hubiera
+dejado absorto.
+David sacudió los ojos como despertando de un sueño, y le
+dijo a su padre:
+—Me lo estaba imaginando.
+Y, como David no quiso agregar más detalles de lo que acababa
+de imaginar, el padre le pidió que volvieran al bosque
+de bambú, donde los esperaba una misión que, juntos, deberían
+emprender.
+Que trata del inicio de una aventura inobjetable en el
+caballo del tiempo.
+David despejó su rostro de la capa que se le había venido
+encima con el ventarrón. Quería saber a qué se debía
+la algarabía de relinchos y pisadas de caballo, el aleteo
+súbito de pájaros que se lanzaban de las ramas en vuelo
+desordenado y ese aroma de jazmín que se había despertado
+como si, en un instante, el día hubiera cedido su lugar a la
+noche y las diminutas flores se hubieran abierto, exhalando
+ese olor que todo lo impregnaba.
+—¿Qué pasa? —preguntó.
+—¡Mira! —respondió Luilli, señalando hacia el matorral, mientras
+le ayudaba a acomodarse la capa.
+David se llevó el índice a la nariz para ajustarse las gafas y
+miró hacia el lugar donde su padre señalaba.
+
+Capítulo IX
+Ya la estampida de pájaros había vuelto al silencio del vuelo
+sereno y las ramas temblorosas estaban quietas de nuevo.
+Se abrieron las hojas de un arbusto como si una criatura muy
+suave saliera del matorral.
+Primero apareció el belfo azulado, después la trompa de pelambre
+blanca, el nervioso ojo y la brillante crin detrás de las
+orejas en el cuello.
+—¡Mira, Pa! ¡Es el unicornio!
+—No —respondió el ayudante—, no puede ser el unicornio
+porque, en ese caso, tendría un hermoso cuerno en la frente.
+La criatura sacó la cabeza y el largo cuello. Los brillos de su
+piel y de su crin iluminaron el bosque y, apenas se sintió libre,
+levantó las patas delanteras y dejó escapar un relincho prolongado
+que despertó de nuevo el aleteo de los pájaros y que
+recibió como respuesta el canto de la soledad.
+—Entonces, ¿qué es? —preguntó David.
+—Debe de ser el caballo del tiempo —dijo el ayudante.
+Aunque no lo entendía muy bien, el padre empezaba a vislumbrar
+el cúmulo de aventuras que ahora les esperaban.
+—Vamos —le dijo al superhéroe—. El caballo del tiempo ha
+venido por nosotros.
+—¡Hurra! —exclamó DSHCD.
+Frente a ellos, el animal movía la cabeza arriba y abajo mientras
+daba pasos acompasados con sus cuatro cuartos, como si
+lo suyo fuera una danza de bienvenida. Doblaba ligeramente
+las rodillas delanteras antes de que estas cayeran y dejaba
+escapar breves relinchos como si musitara algo.
+“He ahí la fastuosidad de la danza equina”, pensó el ayudante.
+Y era como si el esplendor del animal lo pusiera al
+tanto del magma de sentimientos que los días de su hijo
+habrían de traerle.
+DSHCD no se hizo esperar, corrió hacia el caballo del tiempo
+y este se agachó cuanto pudo para que el superhéroe trepara,
+seguido de su ayudante.
+Por un instante, brilló la silueta de los jinetes aferrados a las
+crines del caballo blanco contra el verde de las hojas de los
+árboles en el crepúsculo y todo volvió a ser la callada paz del
+bosquecillo, como si se hubieran convertido en aire… el aire
+transparente de lo que ya no es. La forma física que, al no
+estar ahí, es invisible.
+Que trata del despertar de David en un mundo
+desconocido, y del recuerdo de un encuentro de su
+padre, cuando era niño, con la señora misteriosa.
+Primero oyó un silbido largo, como si alguien dejara escapar
+un lamento prolongado, y después sintió que la
+arena golpeaba sus mejillas.
+Entonces abrió los ojos y vio que las gafas se le habían caído
+mientras dormía, y estaban ahí, a su lado, sobre el arenal.
+Descubrió que lo que había imaginado como un lamento era
+el viento que lloraba a su paso por las dunas.
+“Estoy en medio del desierto”, se dijo. “Debo haberme dormido
+cuando viajábamos en el caballo del tiempo. Y el caballo,
+¿dónde está?”.
+
+Capítulo X
+Al hacerse esta pregunta, pensó también en su ayudante y en
+qué se habría hecho. ¿Por qué lo había dejado solo en medio
+del desierto?
+Pero, no bien se lo preguntó, cuando vio en su imaginación
+ese rostro que le sonreía:
+Detrás de la figura de su padre estaba la fuente de la plaza
+central de la universidad, en la que un hombre y una mujer,
+desde una flor de concreto y bronce proyectan sus manos
+hacia los cielos, en medio de las líneas de arcoíris que se producen
+al contacto del sol con las gotas de agua esparcidas
+en el aire.
+“Ahora lo recuerdo”, se dijo. “Eso fue el 31 de octubre de 1984.
+Me habían disfrazado de payasito rojo. Tenía el ojo derecho
+vendado debajo de las gafas porque en esos días me habían
+operado. Mi padre se veía triste. ¿Por qué estaría triste? Me
+abrazó para cargarme y sentarme en el borde de la fuente.
+Fue entonces cuando me contó una historia de cuando él
+era niño”:
+Parábola de la muerte a la
+espera
+Una vez me llamó mi papá desde el interior de la
+casa, a través de la ventana de la calle, por donde
+atendían a los clientes que se acercaban a comprar
+el pan.
+Yo estaba jugando en la acera sobre el recorrido de
+una vuelta a Colombia, que habíamos trazado en el
+suelo, para cumplirlo con tapas de gaseosa preparadas
+con un número de almanaque bajo un vidrio
+sostenido con esperma.
+En el momento en que mi padre me llamó, estaba
+imaginando que era “Cochise” e iba vestido con la
+camiseta tricolor, pedaleando hacia la meta; pero su
+voz me trajo de nuevo al mundo, ya que no podía
+hacerlo esperar puesto que las obligaciones del trabajo,
+para nosotros, estaban por encima de todo.
+—Hay que llevar esta canasta de parva a donde
+Anita, la de la iglesia.
+Entré, recibí la canasta. Mi padre me ayudó a levantarla
+hasta el hombro y salí.
+Llegué a la esquina. No sé por qué di vuelta hacia
+la izquierda. Tal vez seguía soñando. Iba más o menos
+en la mitad de la cuadra cuando me di cuenta
+de que, para ir a donde Anita, debí haber seguido
+derecho. Pensé devolverme, pero como ya era casi
+lo mismo continuar que retroceder, seguí.
+Al llegar a la esquina, pensé:
+“Esta sí que es una esquina de cinco caminos: si sigo
+derecho, voy al Vergel; si volteo a la izquierda, voy
+a Buenos Aires; si medio-volteo a la derecha y subo,
+llego al colegio de las Mercedarias y a la parte de
+atrás de la iglesia; y si volteo del todo a la derecha,
+llego a la iglesia, de frente, pasando por El Botecito”.
+En el momento en que tomaba ese camino, vi venir
+a una señora, cuya mirada llamó mi atención
+porque se dirigía expresamente a mí.
+—¿Qué hubo, niño? —me dijo— ¿Usted no lleva
+esa parva para donde Anita?
+—¡Sí, señora!
+—Entonces, ¿por qué se vino por aquí?
+—¡No sé!…
+—¡Ah! —exclamó—. Eso está bien.
+—¡Señora!
+—¿Sí?
+—Usted, ¿quién es?
+—¡Mire, niño! Usted no me conoce todavía, le hablo
+para que siga tranquilo. Yo estoy al final y al
+comienzo de todos los caminos.
+Donde se cuenta cómo DSHCD comprende que
+debe rescatar al ogro caído en el gran agujero e
+imagina la suerte de un dictador condenado a la
+horca en la ciudad de Bagdad.
+Ya entiendo”, pensó. “Al entrar en la esfera del tiempo,
+mi padre —Luilli, el ayudante—, tomó un rumbo que
+desconozco, pero él sigue aquí. Está en mí”.
+En la historia que su padre le había contado, el superhéroe
+supo que él, su padre y su abuelo eran un solo hombre por
+dentro:
+“Es el tiempo", se dijo. "Hace cuatro años, estábamos los dos
+en la fuente de la universidad, y él me estaba contando la
+historia que le había sucedido veinte años atrás. En esa historia,
+él estaba con su padre como yo en ese instante con él y,
+aunque estoy solo, los dos están conmigo ahora”.
+“
+
+Capítulo XI
+Entonces pensó en lo que el ayudante le querría decir con
+esa historia, y estas palabras resonaron en su recuerdo: “…Yo
+estoy al final y al comienzo de todos los caminos…”.
+—¡Claro! —les dijo a las arenas de ese extraño desierto—.
+¡Este es el comienzo del camino del superhéroe Capa Dura!
+Lo que debo hacer es encontrar al ogro de las habichuelas
+para devolverlo a su mundo.
+Pronunciado que hubo estas palabras, lo que todo el tiempo
+había sido el lamento del viento contra las dunas se oyó
+como la melodía de los violines de La primavera, en Las cuatro
+estaciones de Vivaldi.
+Seguido por la música, o más bien envuelto en ella, se elevó
+sobre las dunas de ese desierto. Y siguió elevándose más y
+más, hasta ver una ciudad entre dos ríos. ¡Dos grandes ríos
+que cruzan el inconmensurable arenal, el Tigris y el Éufrates!
+Aguzó su mirada telescópica y empezó a ver en su imaginación
+lo que estaba aconteciendo en la ciudad recostada
+en uno de los ríos, el de la derecha, más allá del lago. La
+ciudad aparecía en ruinas debido a los bombardeos desde
+los poderosos aviones ultrasónicos. Los edificios y los bellos
+palacios antiguos eran ahora escombros y restos de muros
+agrietados.
+Entre los escombros, en un caño inhóspito, habían encontrado
+al dictador y lo habían apresado, como quien descubre
+una rata asustada en la última de las madrigueras, para
+llevarlo al cadalso.
+Y fue precisamente en la imagen de ese dictador colgado
+que vino a su recuerdo un libro que su padre le había leído
+noche tras noche para invocar la llegada del sueño, El libro
+de las maravillas del mundo, donde se relatan los viajes de
+Marco Polo. En el libro se hablaba de la misma ciudad, pero
+en otro tiempo. Al igual que en su visión, la ciudad había
+sido atacada por un ejército. En este caso, se trataba de miles
+de hombres a caballo que, en vez de misiles, disparaban
+flechas y afrontaban el combate cuerpo a cuerpo, con escudos,
+espadas y mazas.
+Había un califa en esa ciudad que, cuando supo que los tártaros
+venían a atacarlo, en vez de preparar a su ejército para
+defenderse, se encerró en la torre donde guardaba sus tesoros
+por el miedo de perderlos. Fue así como el kan, jefe del
+ejército invasor, quien había vencido sin encontrar oposición,
+decidió dejarlo encerrado en esa misma torre, sin comida:
+—¡A ver si su tesoro lo salva de morir de hambre!...
+“¡Qué curioso!”, pensó el superhéroe. “¡Es la misma historia
+que se repite!”.
+Que trata del descubrimiento de los huesos de
+Greco, dispersos en la tierra del solar de Ita, y del
+significado de la libertad del tiempo.
+Aunque el superhéroe solo lo pensó después, entre esos
+dos desgraciados, el dictador y el califa de Bagdad, había
+una distancia de más de setecientos años; pero,
+en el fondo, su suerte era la misma.
+David lo había notado en el momento de imaginar al uno y
+recordar la historia del otro.
+“¿Cómo puedo ahora rescatar al ogro?”, se preguntó.
+Y en ese mismo instante, vino a su memoria la mañana en
+que él y su padre desayunaban en el balcón del apartamento
+de Cataluña y este le contó la historia de Greco, un perro
+pequinés.
+
+Capítulo XII
+Hallazgo de unos huesos
+Tenía cinco o seis años cuando el nuevo novio de
+mi hermana mayor le regaló un par de perros pequineses.
+Al blanco le dieron el nombre de Sandro
+y al café, el de Greco. Mi madre los cuidaba, pero
+ellos eran mis perros y yo su niño. Solo habían pasado
+unos meses cuando Sandro murió. Como la
+puerta de la casa permanecía abierta casi todo el
+tiempo por lo de la panadería, salió y, al tratar de
+cruzar la calle, un carro lo atropelló. Ocurrió cuando
+yo estaba en el colegio. Me lo contaron, pero no
+vi al perro, sino que me tocó vivir su triste ausencia.
+Quedamos Greco y yo, el uno para el otro.
+No había pasado mucho tiempo cuando trajeron
+a Bambina, una pincher miniatura, de color café,
+como Greco. Jugábamos con ella, pero yo no era
+su niño y los tres lo aceptábamos en forma natural.
+Éramos felices, aunque no pensábamos en eso, solo
+jugábamos. Cada vez que mi madre salía a comprar
+algo en la tienda o en la carnicería, o si llevaba
+una parva para uno de los tratos cercanos, Greco la
+acompañaba y se iba dando vueltas en torno a ella
+y a los arbustos de los frentes de las casas. Como
+era pequinés, tenía los dientes de abajo salidos y su
+mirada parecía una sonrisa imborrable. Tal vez la
+sonrisa también estaba en la expresión de sus ojos y
+con ella quería decir que era un perro feliz.
+El amor del niño que yo era lo hacía feliz, del mismo
+modo que el amor del perro que él era me hacía
+feliz a mí.
+Esta historia duró unos años, mientras crecíamos,
+hasta una tarde en que mi madre llegó compungida
+porque un bus de La Milagrosa había alcanzado a
+atropellar a Greco. Yo corrí a la calle de arriba, la
+45, que era la calle por donde bajaban los buses, y
+lo encontré en el piso. No había sangre, pero estaba
+quieto, ahí. Tenía los ojos abiertos y en ellos se
+reflejaba una mirada vidriosa, perdida, como si él
+y el amor mío que le infundía un rayo de dicha se
+hubieran apartado de su mirada y ahora lo único
+que allí se reflejaba fuera el vacío.
+Saqué una pala del cuarto de las herramientas de
+la panadería y me lo llevé al solar de Ita. Sin pedir
+permiso a nadie, entré, abrí un hueco junto a la
+piedra negra donde nos escondíamos a jugar policías
+y bandidos, y allí lo enterré. Fue ese un entierro
+solitario porque nadie nos acompañó y nadie
+nos vio siquiera. Así estaba dado que nos despidiéramos
+para siempre.
+No sé cuánto tiempo había pasado, un año o dos. Yo
+ya me había olvidado de ese entierro, quizá porque
+esas son cosas que uno prefiere no recordar. Estábamos
+jugando allí mismo y, de pronto, sentí la presencia
+de Greco en mí, acaso por el lugar, y me dio
+por escarbar en el sitio donde lo había enterrado.
+Primero encontré un trozo de mandíbula, la parte
+de abajo, el hueso donde antes habían estado los
+dientes de su risa, y entonces pensé que por mucho
+que se hubiera muerto y por mucho que sus restos
+ahora fueran huesos sueltos, lo que él había sido
+seguía intacto en mí, pues volví a ver su sonrisa de
+muchas mañanas y de muchas tardes, todas en el
+mismo recuerdo.
+La presencia no solo es la presencia física. Al cambiar
+de condición, se abren las puertas de otros
+mundos y entramos en ellos justo cuando logramos
+salir del mundo físico y dejamos de ser los prisioneros
+del tiempo.
+“Dejamos de ser los prisioneros del tiempo”… Esa fue la frase
+que siguió resonando en el oído interior del superhéroe
+Capa Dura.
+“¡Claro!”, se dijo. “Cuando leía conmigo o me contaba historias
+de su vida, lo que hacía en verdad era enseñarme lo que
+él sabía. Sus cuentos atesoraban lo que yo debo hacer ahora.
+El caballo vino por nosotros para que dejáramos de ser los
+prisioneros del tiempo”…
+Entonces volvió al momento en que Jack huía del ogro por
+el tronco del árbol de las habichuelas mágicas hacia su jardín.
+En su mente apareció la mirada de Jack; este sostenía el
+arpa de oro entre su mano izquierda y su pecho, mientras se
+agarraba de las ramas con la otra mano.
+—¡Que me roban! —vociferaba el arpa con la más dulce de
+las voces de una soprano jamás oída—. ¡Que un niño intruso
+me aparta de mi dueño!
+Y esa mirada de Jack, los ojos profundos moviéndose, inquietos,
+de un lado a otro, de arriba abajo, ya veían al ogro
+que sacudía las ramas al descolgarse por allí; ya veían a la
+madre, esperándolo a él con el hacha. ¡Cuánta emoción había
+en esos ojos! En cambio, los ojos de Greco, ya muerto,
+reflejaban el vacío.
+“Mi padre también me dijo en ese cuento que la única presencia
+no es la presencia física. Es por eso que ahora sé que
+él está en mí. En esos dos cuentos me estaba enseñando lo
+que él sabía de la muerte. ¡Él no está muerto y, aunque hubiera
+muerto, viviría en mí!”.
+“Lo otro es el tiempo. Desperté en el desierto y pude ver la
+ciudad de Bagdad atacada por el ejército norteamericano y,
+en el instante siguiente, la misma ciudad setecientos años
+antes, y en el siguiente, el momento justo en que Jack era
+perseguido por el ogro: ¡Estoy libre del tiempo!, ¡puedo ahora
+volar en el tiempo!”.
+Que trata del descubrimiento de la relatividad del
+tiempo y del viaje a una ciudad recorrida por una
+red de metro y metro cables que elevan a las gentes
+hasta las casuchas de los barrios altos.
+El superhéroe Capa Dura acababa de descubrir que el
+tiempo es como una goma de chicle que se estira y se
+encoge, se agranda y se achica, se infla y se desinfla:
+“Si voy de un lugar a otro”, se dijo, “me demoro el tiempo
+que necesitan mis pasos para ir; pero si imagino que estoy
+en un lugar primero, y después en otro, voy del primero al
+segundo en menos de un instante. El prisionero del tiempo
+es el mundo físico”.
+En el momento en que lo pensó, imaginó que estaba sobrevolando
+la ciudad de Medellín para observar lo que sucedía
+allá abajo. La vio desde muy alto, como un pequeño hueco
+en la rama central de la cordillera de los Andes. Al acercarse,
+
+Capítulo XIII
+pudo distinguir el valle, rodeado de montañas y cruzado por
+el río de sur a norte. Un poco más cerca, empezó a ver la masa
+de edificios color ladrillo que se apiñaban allí, como si treparan
+a los cuatro costados. ¡Una hermosa ciudad parda, construida
+a lo largo del río y levantada hacia los flancos hasta
+llegar a las cimas empinadas de las montañas!
+Todo era muy distinto a lo que siempre había visto. Le llamó
+la atención una larga serpiente de rieles que se erguía a lo
+largo del río sobre un viaducto de cemento que a veces iba
+a nivel de la autopista y otras se elevaba unos metros. Vio
+que por allí iban y venían una suerte de gusanos de metal,
+atestados de personas. Y vio también que, al partir del río
+hacia las montañas, en lugar de en los gusanos, las gentes
+iban en pequeños globos colgados por medio de cables de
+alambre que se desplazaban, flotando en el aire, entre una
+torre y otra.
+“He viajado en el tiempo”, se dijo. “Esta es la que será mi
+ciudad dentro de 33 años”.
+Que trata de la visión de un acontecimiento acaecido
+en la estación Acevedo del metro de Medellín.
+En su descenso, se fue acercando al viaducto, justo cuando
+este, a un lado del río, llegaba hasta una de las estaciones
+de transbordo.
+Todavía desde muy arriba, observó cómo las multitudes de
+gentes que se bajaban de los vagones se movían en masa
+hacia las escaleras y, en la planta superior, se ordenaban en
+la fila que les permitía ingresar, en grupos de ocho personas,
+a las cabinas que, suspendidas por medio de gruesos cables
+de acero, daban la vuelta para elevarse hacia los barrios altos,
+sobre los muros de colores de las casas y sus techos de
+cinc, de lata o de tejas de barro cocido.
+Su mirada telescópica se detuvo en un hombre que iba corriendo
+por la plataforma hacia el encuentro del tren que
+en ese momento se acercaba a la estación. Vio como la niña
+
+Capítulo XIV
+que iba conduciendo desde la cabina de mando, al percatarse
+de la presencia del hombre, activó el freno de emergencia,
+como si hubiera percibido el accidente; pero todo sucedió
+tan rápido y de forma tan inesperada, que sus intentos de
+detener el tren no fueron suficientes, y el hombre alcanzó a
+resbalarse, de modo que se golpeó contra el vidrio de la cabina.
+Este se desastilló en miles de pedazos que fueron a dar en
+la humanidad de la hermosa conductora, mientras el cuerpo
+del hombre se estrellaba contra los rieles y se perdía debajo
+del vagón, en el instante en que este se detenía.
+“Esto es algo que sucederá cuando la ciudad, en su recorrido
+por la línea del tiempo, llegue al instante que le corresponde”,
+pensó.
+Y el descubrimiento lo disuadió de seguirse acercando a ese
+lugar y a ese momento.
+“Esa niña aterrada todavía no ha nacido”, se dijo.
+Que trata de la entrada sutil del superhéroe Capa
+Dura en el agujero del tiempo.
+Pobre muchacha”, pensó. “Tendrá que recordar ese acontecimiento
+una y otra vez”.
+Y al pensarlo supo que no era allí hacia donde él se dirigía.
+Entonces, ¿por qué había llegado a ese lugar y a ese
+instante?...
+Y “¿cómo hago para entrar en el mundo del cuento de las
+habichuelas mágicas?”.
+No bien se había hecho esta pregunta, cuando apareció delante
+de él una especie de agujero que se proyectaba hacia
+las profundidades.
+“¡Un agujero negro!”, exclamó.
+“
+
+Capítulo XV
+Si le preguntáramos a un físico moderno por lo que le estaba
+sucediendo al superhéroe Capa Dura, nos respondería
+que la caída del gigante del árbol de las habichuelas ocasionó
+un agujero entre dos mundos, el mundo fantástico de los
+gigantes y el mundo de la realidad de Jack.
+—Al ser mundos distintos, no se puede caer intempestivamente
+de uno a otro; es necesario deslizarse por medio de
+un instrumento que sirva como puente entre ellos —eso nos
+respondería.
+Esto explica por qué Jack podía subir al mundo de los gigantes
+a través del árbol de las habichuelas o podía retornar al
+suyo, bajando por ese mismo árbol. El árbol hacía las veces
+de puente entre los dos mundos. Al caer, el gigante se desprendió
+del propio; pero no llegó al de Jack, quedó suspendido
+en el agujero de lo insondable.
+Eso nos respondería un físico moderno; pero DSHCD no tenía
+quién le aclarara su inquietud sobre el significado del agujero
+negro en el que estaba ingresando en su aventura. Así
+que, al sentir lo que estaba viviendo, no pudo más que lanzar
+un grito:
+—¡Estoy ciego, no veo sino tinieblas!
+Que narra la llegada del superhéroe Capa Dura a las
+profundidades del hoyo negro.
+Pero, aunque él sentía que estaba ciego, no se trataba
+de una ceguera de verdad. Lo que en realidad estaba
+sucediendo era que el superhéroe había entrado en el
+hoyo negro.
+En un principio, sintió miedo porque trató de mirarse las manos
+y no las veía. Podía tocarse el cuerpo, pero no verlo. Sintió
+la textura de su capa, al buscarla para asegurarse de que
+todavía la llevara puesta, pero no la vio. Era como si su cuerpo
+fuera las tinieblas mismas.
+“¡Estoy perdido!”, se dijo, y sintió que no podía respirar.
+No obstante, antes de caer en la desesperación, escuchó la
+voz de su ayudante y recordó su imagen en el momento en
+
+Capítulo XVI
+que, con el libro entre las manos, le leía la aventura de don
+Quijote en la cueva de Montesinos.
+Recordó cómo, después de salir, don Quijote les narró a Sancho
+y al primo lo que había vivido en el fondo en tinieblas
+de la cueva.
+Esto fue lo que oyó en su memoria:
+...…de repente y sin procurarlo, me salteó
+un sueño profundísimo, y cuando menos
+lo pensaba, sin saber cómo ni cómo no,
+desperté de él y me hallé en la mitad del
+más bello, ameno y deleitoso prado que
+puede criar la naturaleza…...
+Este recuerdo fue suficiente para que DSHCD volviera a respirar
+con soltura. El ahogo que había sentido había sido una
+consecuencia del miedo que lo atenazó al entrar en la oscuridad
+del hoyo.
+“Así como don Quijote se encontró con Montesinos, debo yo
+encontrarme al ogro de las habichuelas”, reflexionó.
+Que muestra cómo el superhéroe encontró al ogro
+en la entraña del agujero negro.
+Y fue como si en las tinieblas se le hubiera abierto un nuevo
+sentido que le permitía ver con claridad aquello que,
+en principio, parecía no entender.
+Al frente suyo, iluminado por una luz que lo bañaba desde
+abajo, pero que no procedía de sol alguno, yacía el cuerpo
+descomunal del ogro, acostado en la luz misma.
+“¿Cómo hará esa luz para soportar el peso de ese gigante?”, se
+preguntó con asombro.
+Por un instante, se esforzó en observar en detalle el rostro
+dormido, y comprobó que se trataba del mismo ogro que
+había visto en la ilustración del libro de Jack y las habichuelas
+mágicas.
+
+Capítulo XVII
+—¡Es él, no cabe duda! —dijo, como si alguien estuviera escuchándolo—.
+Pero no es el único que se halla en este agujero.
+Veo también al hombre que en la cárcel se ríe y escribe; pero
+que, a pesar de su risa, sigue triste. Es como si de su cabeza
+saliera la imagen del viejo de armadura. ¿Qué debo hacer
+ahora?”.
+Donde se muestra el pensamiento en el que el
+superhéroe se sumerge en el mar de la duda.
+Lo que debo hacer ahora, es encontrar el objeto que nos
+sirva de puente entre este mundo de las tinieblas suspendidas
+y el mundo de las fantasías de los cuentos
+maravillosos, para que allí vuelva a existir el ogro y, lleno de
+vida, recorra los campos de su país de gigantes y acuda al
+castillo de las inmensidades, donde su esposa debe estar esperándolo
+con tres corderos asados para el desayuno”.
+Al decírselo, recordó que el ogro, además de corderos, desayunaba
+niños; entonces, se afligió. No supo qué hacer. Miró
+hacia el rostro dormido del gigante sobre el pedestal de luz.
+Lo vio puro e indefenso en ese momento.
+“Ahora depende de mí”, se dijo; “pero si consigo despertarlo
+y llevarlo a su mundo, seguro habrá de encontrar niños para
+que su esposa adobe y cueza en ese horno de leña…”.
+“
+
+Capítulo XVIII
+Y continuó reflexionando.
+¿Por qué no mejor regreso a mi propio mundo, en la finca de
+la abuela o a nuestro edificio de Cataluña, donde me esperan
+Juan Diego y Federico para jugar con la pelota, o con el
+tren de pilas que da vueltas en torno a un lago de acrílico y
+pasa por debajo de unas montañas pintadas de verde, antes
+de salir al valle de baldosas en la sala del apartamento?”.
+Se sintió incómodo. Lo que acababa de pensar lo paralizó.
+No sabía qué hacer.
+Se debatía entre cumplir la misión que lo había llevado hasta
+el corazón del hoyo negro o dejar todo allí y no ser ningún
+superhéroe. No tenía que ser un superhéroe. Podía ser el niño
+que era. David, el hijo de Luilli, el ayudante, nieto de Rafael
+Macías, el panadero de La Milagrosa… David Macías, el niño
+de ocho años que desde que despertó en la vida percibió el
+dolor de los afligidos y, sin saberlo, sintió amor y solidaridad
+por los humildes, los desheredados o los proscritos.
+“Y ahora ¿qué hago?”, pensó.
+Donde se consulta el significado de las palabras
+"incertidumbre" y "melancolía".
+De nuevo, todo era tinieblas a su alrededor. La imagen
+del ogro había desaparecido, lo mismo que la maravillosa
+luz que lo sostenía; la imagen de don Quijote,
+emergiendo de la cabeza de Cervantes, también había desaparecido
+y Cervantes mismo, en su aura de profunda tristeza,
+también se había desvanecido. Por alguna razón, esa pena le
+recordaba la tristeza de su padre la tarde en que, en la fuente
+de la universidad, le había contado su encuentro con la señora
+misteriosa, a él, que llevaba el disfraz del payasito rojo.
+Aunque él mismo no pudiera pensarlo en ese momento, la
+razón por la que hacía esta serie de asociaciones tenía que ver
+con el hecho de que, al no saber qué hacer, sentía la misma
+tristeza. Si pudiéramos preguntarle a un sicólogo por el nombre
+de ese sentimiento, nos respondería rápidamente: “eso
+es un estado de melancolía”; pero en el mundo de tinieblas
+
+Capítulo XIX
+en que se hallaba David, no era posible preguntarle nada a
+nadie. “Incertidumbre es el sentimiento que a uno lo asiste
+cuando no sabe qué hacer; melancolía es un sentimiento de
+tristeza profunda y sosegada, originado por causas físicas o
+morales, a veces desconocidas”.
+Lo terrible de aquella situación era que, aunque él no lo sabía,
+estaba a punto de abandonarse y renunciar a la misión
+que lo había llevado a esas honduras, así como renunciar a
+ser David, el superhéroe Capa Dura. Pero estando donde estaba,
+corría el peligro de quedarse en ese limbo, con lo cual,
+de ahí en adelante, vagaría en las tinieblas de ningún lugar
+y de ningún tiempo:
+Hermoso niño de anteojos y traje de superhéroe
+desaparece misteriosamente del guadual en el que se
+hallaba con su padre, jugando a ser como supermán.
+Dirían las noticias allá afuera, en el mundo de la vida.
+En el que se narra cómo el muchacho afligido
+recuerda el momento en que su padre le contó la
+historia de Jesús de Nazaret en el monte de los Olivos
+y, gracias a ella, recupera el deseo de ser DSHCD.
+Se hallaba en ese doloroso estado cuando, desde muy
+adentro de sí mismo, surgió el recuerdo de la voz de su
+padre, contándole una historia:
+Él había despertado de repente en mitad de la noche. Tenía sed.
+Caminó a tientas desde su habitación y entró en la habitación
+de sus padres. Ellos dormían. Se acercó a la cabecera de la
+cama, por el lado donde sabía que estaba él. Lo sacudió.
+—¡Tengo sed! —le dijo.
+El padre se levantó, lo cargó y caminó hacia la cocina.
+
+Capítulo XX
+Buscó la nevera, encontró un vaso de yogur de mora, lo destapó
+y él mismo le dio de beber a David. Todavía cargándolo,
+se dirigió a la sala del apartamento, se sentó en el sofá y
+acomodó al niño en sus piernas.
+—Te voy a contar una historia:
+Oración de Jesús en el monte
+de los olivos
+Durante la última cena, Judas se retiró antes que
+cualquiera de los demás apóstoles. Jesús de Nazaret
+sabía que se tenía que ir porque estaba obligado
+a cumplir su parte, que consistía en venderlo a
+él para que lo llevaran a juicio. Alguien tenía que
+hacerlo porque estaba dado que Jesús fuera vendido,
+juzgado, azotado y crucificado. Solo así podría
+cumplir con su misión. Solo así podría resucitar tres
+días después de muerto. Solo así millones y millones
+de hombres de generaciones sucesivas encontrarían
+su redención en ese sacrificio.
+Como Jesús sabía que muy pronto empezaría su
+calvario, después de compartir la cena de pascua
+con sus apóstoles, caminó hasta el huerto de los
+Olivos y allí se apartó para orar en la intimidad de
+su padre. Sudaba, y las gotas de sudor que corrían
+por sus mejillas eran sangre. “Que se cumpla tu
+voluntad mas no la mía”, dicen los evangelistas
+que le dijo a su padre durante la oración.
+Él sabía que, más tarde, un grupo de soldados
+vendría por él y que Judas le daría un beso en la
+mejilla para que, en él, reconocieran al Nazareno y
+lo llevaran al juicio, a los azotes y a la crucifixión.
+Esa pasión y muerte habría de significar la
+redención del mundo cristiano. Lo que parecía un
+terrible mal, en verdad significaba la liberación de
+un pueblo.
+“¿Por qué recuerdo esa historia justo en este momento? Ya
+sé, por esa frase que dijo mi padre. Las cosas no son lo que
+parecen. ¿Qué significa entonces que el ogro, en su mundo,
+desayune niños?”.
+Donde renace el principio de acción en el alma del
+superhéroe.
+Aquella frase empezó a resonar en su mente: “¡Lo que
+parecía un terrible mal, en verdad significaba la liberación
+de un pueblo!”.
+“No debo rendirme ahora”, se dio ánimo.
+Más allá de lo que podía entender, en David se estaba operando
+un descubrimiento que su padre había hallado en sus
+estudios de los cuentos populares y que podríamos expresar
+con esta frase:
+“En el fondo del dolor o de la desesperanza, cuando ya te
+encuentres al borde del vacío definitivo, desde la fuente de
+tu ser, emergerá el hálito que te ha de devolver la alegría de
+vivir”.
+
+Capítulo XXI
+Eso no podía saberlo en ese momento, pero era justo lo que
+estaba experimentando.
+—Tengo que hacerle unas preguntas a la fuente del conocimiento
+—dijo en voz alta, como si le estuviera hablando a
+alguien.
+Aunque se hallaba solo en la infinita soledad del hoyo negro,
+por alguna razón sentía que alguien lo acompañaba. Si nosotros
+pudiéramos estar dentro de su mente, sabríamos que
+le hablaba a su ayudante. Este lo acompañaba desde una región
+que hay más allá del tiempo y del espacio, pues se había
+metido en el paisaje interior de sus recuerdos por medio de
+los cuentos que le había contado o leído.
+En el que se cuenta el extraordinario viaje del
+superhéroe a su propio pasado, hasta el momento
+en el que en la entraña del cerro Pandeazúcar,
+escuchó el Himno a la alegría de Beethoven, cuando
+descendía hacia la fuente del conocimiento.
+Como si un parpadeo lo hubiera despertado en el aire y
+se viera sobrevolando una ciudad, abrió los ojos ante
+un cerro que se ofrecía a su vista.
+—¡Conozco este lugar! —dijo. La frase estaba dirigida a su
+ayudante, pues como resultado de todo lo que acababa de
+vivir en el hoyo negro, ahora tenía la convicción de que este
+lo escuchaba desde su propio interior—. Ese que hay ahí es
+el cerro Pandeazúcar.
+Y como si asistiera a una película de hologramas en las cuatro
+dimensiones, las tres del espacio más la del tiempo, se
+
+Capítulo XXII
+vio en el David que había sido él sobrevolando el cerro en
+Amigo, el avión de papel.
+“Cáscara de papa,
+palo de la yuca,
+¿cómo se destapa
+el cerro Pandeazúcar?”.
+Al escuchar el conjuro pronunciado por el David que un día
+fuera, sintió una inmensa alegría:
+“¡Yo soy ese niño que está entrando en la gruta del cerro! Lo
+sigo, escucho el Himno a la alegría cuando baja las escaleras
+de barro y me lleva de regreso a la fuente del conocimiento”.
+Un delicioso olor a jazmín se percibió en el ambiente de la
+gruta, y fue como si el superhéroe se hubiera fundido con el
+David que había sido, y ya en el momento de pararse frente
+a la paila humeante que era la fuente, estuviera dentro de él.
+“¿Qué se hizo el caballo del tiempo cuando nos montamos
+en él, en el bosque de bambú?”. Eso fue lo primero que se le
+ocurrió preguntar. ¡Cuánta curiosidad tenía por conocer esa
+respuesta!
+Donde se hace notar la presencia de los dos Davides
+en la misma gruta y se muestra tanto el parecido
+como la diferencia entre ambos.
+Al fondo, detrás de la paila humeante, brilló la risa de
+don Ernesto, el maestro, cuyos dientes delanteros se
+veían muy separados unos de otros: blanco, negro,
+blanco, negro, o, lo que es lo mismo: diente, hueco, diente,
+hueco…
+Se oía la coincidencia de dos músicas que llenaban el recinto.
+De un lado, el Himno a la alegría de Beethoven, en las
+teclas de un piano; y de otro, La Primavera de Vivaldi, en la
+armonía de los violines.
+Solo se percibía un olor; pero esta vez era fuerte, como si
+su intensidad se hubiera duplicado ante la presencia de los
+dos niños: David, el de cuatro años, y David, el superhéroe,
+cuatro años mayor.
+
+Capítulo XXIII
+Para David, el niño, no había sino una música, su himno, y un
+aroma, su jazmín de noche; pero para David, el superhéroe,
+existían las dos músicas que se podían diferenciar entre sí.
+Para el primer David, el segundo era futuro, esto es, inexistente;
+en tanto que, para el segundo David, el primero era
+pasado, es decir, su recuerdo.
+Para David, el niño, comenzaba la aventura de la búsqueda
+de la rana sin dientes que se le había perdido, en tanto que,
+para David, el superhéroe Capa Dura, se iniciaba la misión
+de rescatar del hoyo negro al ogro del cuento de Jack y las
+habichuelas mágicas, así como el arpa dorada y la oca de los
+huevos de oro.
+El superhéroe desconocía el significado de su misión; pero
+el ayudante ya lo sabía. En sus estudios, había descubierto
+que los cuentos populares son el cofre en el que se guarda el
+tesoro de la sabiduría humana.
+Donde inicia el interrogatorio que tiene lugar en
+la gruta del cerro Pandeazúcar, entre DSHCD y la
+fuente del conocimiento.
+Había llegado su oportunidad.
+Se hallaba ante la fuente y escuchaba tanto las notas
+del piano como la armonía de los violines. De la paila
+salía la columna de humo. Detrás de ella, el rostro de don
+Ernesto, el maestro, aparecía y desaparecía, con su sonrisa
+enigmática de dientes separados.
+Si su ayudante estuviera allí con él, al ver esa risa desvanecida
+por el humo con aroma de jazmín, le diría:
+—¡Mira esa risa!, ¿acaso no te trae el recuerdo del gato de
+Alicia, cuando ella recién había entrado en el país de las
+Maravillas?
+
+Capítulo XXIV
+Donde inicia el interrogatorio que tiene lugar en
+la gruta del cerro Pandeazúcar, entre DSHCD y la
+fuente del conocimiento.
+Había llegado su oportunidad.
+Se hallaba ante la fuente y escuchaba tanto las notas
+del piano como la armonía de los violines. De la paila
+salía la columna de humo. Detrás de ella, el rostro de don
+Ernesto, el maestro, aparecía y desaparecía, con su sonrisa
+enigmática de dientes separados.
+Si su ayudante estuviera allí con él, al ver esa risa desvanecida
+por el humo con aroma de jazmín, le diría:
+—¡Mira esa risa!, ¿acaso no te trae el recuerdo del gato de
+Alicia, cuando ella recién había entrado en el país de las
+Maravillas?
+—No es lo mismo —le hubiera respondido el superhéroe.
+El ayudante se hubiera detenido a pensar en esa respuesta y,
+finalmente, hubiera concluido:
+—¡Ya sé!: la risa del gato era un encanto; en cambio, la de
+don Ernesto es un enigma.
+Por supuesto, esas dos palabras le hubieran sonado extrañas
+al superhéroe. ¿Qué es “encanto” y qué, “enigma”? Ni siquiera
+se lo hubiera preguntado porque ardía en deseos de saber
+algo, así que ignoró el juego de palabras y lanzó la pregunta:
+—¿Qué se hizo el caballo del tiempo cuando mi padre y yo
+nos subimos en él, en el bosque de bambú de la finca de la
+abuela?
+En el que la fuente del conocimiento da respuesta a
+la pregunta sobre el caballo del tiempo.
+La candela se agitó debajo de la paila, las llamas se hicieron
+más intensas y vibrantes. Un ramillete de lenguas
+de fuego envolvía el caldero, mientras las aguas
+espesas regurgitaban en un hervor semejante al de un volcán
+de lodo.
+De la superficie de las aguas, brotaba la densa columna de
+humo, cuyas moléculas prodigaban la más alta pureza del
+blanco: el blanco inefable de la verdad revelada.
+Para responder, la fuente del conocimiento se servía en esta
+ocasión de la voz de don Ernesto, el maestro, cuya sonrisa
+de dientes separados aparecía y desaparecía detrás de la columna
+de humo:
+
+Capítulo XXV
+—Gracias a él, has ido hasta el futuro y ahora estás en tu
+pasado, realizando esta consulta. El caballo del tiempo es
+como una manta ondulada que se extiende en todas las direcciones:
+antes y después, ahora y nunca, ya y siempre… El
+caballo del tiempo lo es todo. De su mente surge la luna;
+de sus ojos, el sol; de su boca, el fuego, y su aliento está en
+todas las respiraciones. Sus extremidades se extienden hasta
+el infinito y es por eso por lo que ahora no puedes verlo, aunque
+lo vives. Solo por un instante fugaz se hace posible la
+contemplación de su danza. Después desaparece, pero sigue
+ahí… siempre ha estado ahí.
+El superhéroe guardó silencio ante la respuesta que acababa
+de escuchar en la voz de las cavernas de don Ernesto, el
+maestro.
+Recordó el momento en que, al llegar de Rionegro, le entregó
+a su padre la rana de trapo en la que habían empacado
+los zapatos rojos que acababa de comprarle la abuela. Este
+había puesto el títere en su mano y la había escondido debajo
+de la ruana. Fue así como por el hueco del cuello de
+la ruana apareció la rana sin dientes y le habló, y le contó
+historias…
+—Ya sé —dijo—. El caballo del tiempo también puede ser un
+avión de papel.
+Donde DSHCD formula la gran pregunta relacionada
+con su misión como superhéroe.
+En el transcurso de su aventura, David había descubierto
+que don Quijote y Cervantes eran el mismo ser;
+que el califa y el dictador de Bagdad, aunque habían
+vivido con más de setecientos años de diferencia entre sí, representaban
+el mismo fenómeno, en relación con los tesoros
+de su ciudad; que la cueva de Montesinos, el hoyo negro
+donde se hallaba el ogro de las habichuelas y la gruta del
+cerro Pandeazúcar tenían el mismo significado; y también
+que para volar en el tiempo podía montarse en un avión de
+papel o volar en un caballo de crines blancas peinadas por
+el viento.
+—¿Quiero saber ahora por qué debo salvar al ogro, si sé que,
+al devolverlo a su mundo, buscará niños para que su mujer
+se los prepare como desayuno?
+
+Capítulo XXVI
+Al escucharse aquella pregunta en la entraña de la gruta
+del cerro, se apagaron las músicas que venían sonando; cesó
+la candela de la fuente del conocimiento y se desvaneció el
+olor a jazmín de noche, de modo que, por un instante, las
+tinieblas totales se apoderaron del recinto y volvió el silencio
+absoluto.
+El superhéroe sintió el mismo miedo que había sentido cuando
+entró en el hoyo negro, antes de haberlo visto todo. Así
+que se llevó las manos a la capa roja para comprobar si todavía
+la llevaba puesta, pisó duro con los zapatos en el suelo, se
+sobrepuso y demostró su firme determinación:
+—¡Tengo que saberlo! —enfatizó.
+Entonces, de nuevo se encendió la candela de la fuente, el
+volcán de lodo volvió a hervir, el humo de la verdad volvió a
+salir de la paila, la sonrisa de don Ernesto, el maestro, volvió
+a brillar detrás del humo blanco, y regresaron las músicas y
+el delicioso aroma de jazmín de noche.
+Se oyó la voz cavernosa de don Ernesto, el maestro, quien
+traía la respuesta de la fuente:
+—Como se trata del gran misterio —dijo—, no podrás saberlo
+en las palabras comunes que responden las cosas. Tendrás
+que conformarte con el enunciado de la gran paradoja:
+Lo que en el mundo de la fantasía es negro,
+en el mundo de la vida es blanco;
+lo que en el mundo de la fantasía es feo,
+en el mundo de la vida es bello;
+y lo que en el mundo de la fantasía es malo,
+en el mundo de la vida es bueno.
+Se trata de la inversión de los valores que hacen posibles la
+verdad, la belleza y el amor.
+—No entiendo.
+—Ya se te advirtió. Pasarán muchos años antes de que lo
+comprendas; pero, al llevar al ogro de regreso a su mundo en
+el país de los gigantes, los niños que todavía no han nacido
+podrán sentir esa emoción que, en ellos, hará que su imaginación
+despierte. Solo acéptalo, la imaginación es el motor
+del mundo de la vida. No tienes que entenderlo…
+—Y entonces, ¿cómo hago para llevar al ogro a su mundo?
+¿Cuál es el puente que hace posible ese paso?
+—Tendrás que resolver nueve enigmas y un acertijo. El último
+de ellos trazará el puente que conduce del hoyo negro al
+país de los gigantes.
+En el que la fuente del conocimiento formula los
+enigmas que habrán de servirle al superhéroe para
+trazar el puente entre dos mundos.
+De pronto, se iluminó la gruta en su inmensidad de torres
+de barro, y se vieron los senderos que confluyen
+en la paila de la fuente y que constituyen las historias
+de los que han existido y de los que no existirán jamás. En
+el magma hirviente de ese caldero, se resume todo el conocimiento,
+así como la historia real de los hombres y las
+infinitas posibilidades nunca realizadas.
+Lo que acababa de suceder ante los ojos del superhéroe
+Capa Dura, en la forma de un relámpago súbito, era nada
+más y nada menos que la aparición de la eternidad en el
+instante. Ningún ser humano había logrado contemplar la
+imagen de la totalidad en un destello; pero eso para DSHCD
+no era más que la presencia de una luz que se prende, y se
+apaga casi de inmediato:
+
+Capítulo XXVII
+—¿Cuáles son esas adivinanzas que debo resolver? —inquirió.
+Y la voz grave de don Ernesto resonó en todos los ámbitos
+de la gruta, como si procediera de los destinos que confluían
+en ella:
+—¡Escucha bien los nueve enigmas y el acertijo, porque tendrás
+que recordarlos e ir resolviéndolos uno por uno! Cada
+respuesta tuya ha de ser como un ladrillo o una columna del
+puente que debes trazar entre esos dos mundos.
+Primer enigma:
+Un día fui
+como eres hoy,
+mas tú serás
+como yo soy.
+Segundo enigma:
+En el árbol, árbol;
+en la tierra, tierra;
+en el pasto, pasto;
+y en la piedra, piedra.
+Tercer enigma:
+El tronco en hojas
+se ha mudado;
+y en las hojas
+se ha cantado.
+Cuarto enigma:
+Si no se advierte
+aunque lo toques,
+si no se oye
+mientras más fuerte,
+será una suerte
+si me respondes.
+Quinto enigma:
+Tu cara de espanto
+devuelve si miras,
+si ríes, tu risa;
+si lloras, tu llanto.
+Y de tanto en tanto,
+ve por quién suspiras.
+Sexto enigma:
+Digno de verlo
+como un fluido:
+ni el sol se ha ido,
+ni está lloviendo.
+¿Qué hay en el cielo
+tan colorido?
+Séptimo enigma:
+Es espejo
+y no te ves.
+Tiempo es
+en su reflejo
+del más viejo
+atardecer.
+Octavo enigma:
+Quien fuera lento
+en su caminar,
+deja escuchar
+en su aposento,
+como en un cuento,
+la voz del mar.
+Noveno enigma:
+¿Has oído
+el reflejo
+de un espejo
+de sonidos
+repetidos
+a lo lejos?
+Y un acertijo:
+Ayer con una,
+ahora con dos,
+mañana con tres…
+El superhéroe Capa Dura recuerda la historia de
+Edipo rey.
+En el momento en que don Ernesto pronunció la última
+sentencia del acertijo, se desvaneció en el piso de tierra
+de la gruta, como si se hubiera desmayado a causa del
+esfuerzo que significaba servir de médium al oráculo de la
+fuente.
+Esto le pareció natural al superhéroe, puesto que acababa
+de recordar una escena parecida, cuando la rana le contó la
+historia de Edipo rey.
+—Dile a la rana que me cuente un cuento que nunca se me
+olvide —le pidió a su padre después de que la hubo rescatado,
+cuando esta se le había perdido.
+—Muy bien. Esta historia no podrás olvidarla nunca.
+
+Capítulo XXVIII
+El superhéroe Capa Dura recuerda la historia de
+Edipo rey.
+En el momento en que don Ernesto pronunció la última
+sentencia del acertijo, se desvaneció en el piso de tierra
+de la gruta, como si se hubiera desmayado a causa del
+esfuerzo que significaba servir de médium al oráculo de la
+fuente.
+Esto le pareció natural al superhéroe, puesto que acababa
+de recordar una escena parecida, cuando la rana le contó la
+historia de Edipo rey.
+—Dile a la rana que me cuente un cuento que nunca se me
+olvide —le pidió a su padre después de que la hubo rescatado,
+cuando esta se le había perdido.
+—Muy bien. Esta historia no podrás olvidarla nunca.
+Edipo responde a la esfinge
+Primero debo explicarte lo que significa un oráculo.
+Cuando alguien quiere saber lo que va a sucederle
+más adelante, en el transcurso de su vida, acude al
+oráculo. En la antigüedad, el oráculo era el lugar sagrado
+a donde se iba en busca de la respuesta de los
+dioses a la inquietud por el destino; y al mensaje que
+entregaban los adivinos como respuesta, también se
+le llamaba oráculo.
+Layo, rey de Tebas, consultó el oráculo de Delfos
+a propósito de que, a su esposa Yocasta, se le hacía
+difícil concebir un hijo.
+El oráculo le respondió: “Tu hijo matará a su padre
+y después se casará con su madre”.
+Para que esto no le fuera a suceder, cuando su hijo
+nació, se deshizo de él, entregándoselo a un pastor
+para que lo llevara al bosque y allí le diera muerte.
+El hombre se apiadó y, en vez de matarlo, lo entregó
+a Pólibo y Peribea, reyes de Corinto. Lo llamaron
+Edipo y creció en la creencia de que estos eran
+sus padres.
+Había llegado a la edad adulta cuando el oráculo le
+advirtió que mataría a su padre y después se casaría
+con su madre. Fue huyendo de este destino que partió
+de Corinto.
+En las cercanías de la ciudad de Tebas, su carro se
+enredó con el carro de un hombre mayor, de modo
+que se presentó una disputa entre ambos y, en medio
+de la pelea, Edipo dio muerte a aquel hombre.
+Como la reina de la ciudad había quedado viuda,
+se proclamó que el que fuera capaz de responder el
+acertijo de la Esfinge podría casarse con ella y convertirse
+en rey. Edipo se presentó y la Esfinge le formuló
+el acertijo que nadie había sido capaz de resolver:
+¿Cuál es el animal que en la mañana
+camina en cuatro patas,
+al mediodía en dos
+y al anochecer en tres?
+Su respuesta fue: el hombre, pues de niño gatea,
+de joven camina erguido sobre sus dos piernas y, ya
+anciano, se apoya en un bastón.
+Fue así como Edipo se hizo rey y se casó con Yocasta.
+Más adelante oyó decir que el rey de la ciudad había
+muerto a manos de unos asaltantes en un cruce de
+caminos, y esto lo llevó a averiguar en detalle, hasta
+darse cuenta de que se trataba de Layo, y entonces
+supo que no habían sido unos asaltantes, sino él mismo
+quien lo había matado en aquella absurda pelea.
+Siguió su investigación y pudo dar con el pastor
+que lo había entregado a Pólibo, quien confesó que
+Layo le había ordenado matarlo para huir del terrible
+oráculo, con lo cual comprendió toda la verdad
+y, arrepentido, se arrancó los ojos.
+Al recordar el momento en que había escuchado esta historia,
+le vino a su memoria un detalle que no había percibido:
+la voz de la rana, que a veces se le confundía con la de su padre
+un tanto deformada, se había quebrado como cuando
+alguien contiene las ganas de llorar mientras habla.
+—¿Por qué la rana estaba llorando cuando me narró la historia
+de Edipo rey? —preguntó.
+Nosotros entendemos que esa pregunta iba dirigida a su
+ayudante. El superhéroe no se daba cuenta de ello porque,
+sin saberlo, había adquirido la costumbre de hablar con él,
+en su interior.
+Dejó atrás la gruta del cerro Pandeazúcar, donde quedaron
+también las notas del piano del Himno a la alegría, la fuente
+del conocimiento, el aroma de jazmín de noche y don Ernesto,
+el intérprete del oráculo. Iba él, DSHCD, rumbo al
+cumplimiento de su misión. Le acompañaba la música de
+los violines de La primavera, que se oía como un florecer de
+todas las plantas y un cantar de todos los pájaros bajo el sol.
+“El enigma de la Esfinge…”, se dijo. “Aunque la pregunta es la
+misma, soy yo quien debe responderla ahora”.
+El superhéroe llega a una ciudad brumosa y fría a
+orillas de un ancho río, y allí revive el momento en
+que su padre le contó su recuerdo más lejano.
+Si en ese momento pudiera consultarle algo a su ayudante,
+le diría:
+—¿Qué debo responder en el primer enigma?
+—Te preguntan por cierta característica de una persona. El
+enigma dice: “mas tú serás como yo soy”. Es como si te estuvieran
+preguntando: ¿cuál es esa característica? —eso imaginó
+que le hubiera respondido.
+Se hallaba en esta cavilación, cuando descubrió que tenía
+mucho frío y que estaba sobrevolando una ciudad en brumas,
+levantada a orillas de un río muy ancho.
+“¿Qué ciudad es esta?”, pensó.
+
+Capítulo XXIX
+No tenía quién le respondiera.
+“¿Por qué a lo largo de este puente hay edificios a lado y lado?”,
+se preguntó.
+Recorrió la sucesión de ventorrillos de toda clase de viandas
+y chucherías. No había negocio que no estuviera atestado de
+personas.
+Al mismo tiempo que se hacía estas preguntas, iba pensando
+en el enigma al que ahora debía darle respuesta, sin saber que
+su viaje en el caballo del tiempo tenía que ver precisamente
+con la solución que más adelante habría de encontrar.
+En medio del puente, había una calle que atravesaba el río
+de una a otra orilla. Por esa calle caminaban unas personas,
+otras iban en carrozas y otras en cabalgaduras. Ya se detenían
+a comprar una cosa aquí, otra más allá…
+De pronto, el superhéroe distinguió tres figuras que caminaban
+juntas por el callejón, se adelantó desde el aire a prudente
+distancia para verles la cara y pudo comprobar que se
+trataba de un niño que iba con dos hombres mayores.
+“Deben ser su padre y su abuelo”, se dijo, pensando en el
+niño. Le pareció así porque los tres tenían el mismo rostro
+con edades diferentes.
+“Si el abuelo Rafael no se hubiera muerto ocho años antes
+de que yo naciera, seguro un día hubiéramos caminado los
+tres del mismo modo”, pensó.
+Y este pensamiento le trajo a la memoria la tarde en que su
+padre le contó su primer recuerdo. Era domingo. El día anterior
+fueron a la finca con la abuelita Nelly. Sentados ante la
+chimenea encendida, la abuela les había hablado del abuelo
+Valerio y de cómo este había muerto una noche mientras
+dormían. Los sábados, la abuela les pedía que se tomaran
+unos vinos, y era en esas veladas en las que contaba historias
+de su vida. El abuelo Valerio murió cuando ella todavía
+estaba muy joven. Fue por eso que tuvo que afrontar la vida
+para sacar adelante a sus cinco hijas y al tío Juan José. La
+abuelita Nelly entornaba los ojos cuando aparecía el abuelo
+Valerio en sus recuerdos.
+Ese domingo, David y su padre se levantaron temprano y bajaron
+al lago con el fin de alimentar a los peces espada con
+migas de pan.
+—Te voy a contar uno de mis primeros recuerdos —le dijo
+el padre.
+Los dos estaban sentados en el puente de guaduas sobre el
+lago y, desde allí, les lanzaban migas a los espadas de colas
+de colores:
+Una misa en la Plaza de
+Flores
+Tendría tres o cuatro años cuando mi padre hizo
+que me levantaran temprano, me bañaran y me
+pusieran el traje de marinero para llevarme consigo
+a la misa de la Plaza de Flores. Parece que a él
+le gustaba ir los domingos a esa misa. Yo tenía unos
+zapatos ñatos, blancos y negros como el vestido de
+marinero. Cogimos un bus de Buenos Aires y nos
+quedamos en la calle Colombia, frente a la Plaza.
+Mi papá iba vestido de cachaco. Me cargó para
+bajarnos del bus y pasar la calle. Ya en la acera,
+me pidió que caminara hasta el patio de afuera de
+la Plaza. Se sentían los aromas de las flores y de
+las frutas, mezclados con el olor de las carnes que
+colgaban de los ganchos de las carnicerías; pero el
+más fuerte de todos era el olor a pescado que venía
+desde las carretas en las que los vendían. Había
+mucha gente frente al toldo desde donde el sacerdote
+oficiaba. Aferrado a los pies de mi padre, yo
+miraba a todas partes, menos a ese sacerdote.
+Al revivir el momento en que su padre le había contado ese
+recuerdo, el superhéroe volvió a sentir que el abuelo, su padre
+y él eran un mismo hombre por dentro.
+“Pero ¿esto qué tiene que ver con el enigma que debo responder?”,
+se dijo, mientras descubría que, después de pasar
+por la torre de esa ciudad, había seguido volando hacia
+una especie de plaza abierta, y había cruzado por una puerta
+en cuyo dintel había un letrero que decía: “The falcon”,
+como si se dirigiera específicamente a un rincón dentro de
+la taberna.
+“¿Qué lugar es este y por qué he entrado aquí?”. Se descubrió
+observando a un hombre de frente amplia y pelo largo
+que bebía, pensaba y escribía.
+Donde se narra cómo el superhéroe resuelve el
+primer enigma, al ver a William Shakespeare en el
+momento en el que escribía el diálogo de Hamlet
+con la calavera de Yorick, el bufón de la corte.
+Quién será este hombre?”, se preguntó el superhéroe.
+Él podía verlo, pero el hombre no lo veía a él. Podía
+sentir el frío que hacía en aquella taberna, oír las risas
+de los pocos hombres que ocupaban el recinto, escuchar el
+inglés en sus voces marcadas; pero él no existía para ellos.
+El hombre al que observaba vestía jubón de amplio cuello
+blanco y chaleco, en su rostro crecía una barba ligera y en
+su oreja brillaba un arete dorado. “¡Qué cosa tan horrible!”,
+hubiera dicho el ayudante, al ver un arete en la oreja de aquel
+hombre que, a diferencia de la mayoría de los clientes de la
+taberna que tomaban infusiones humeantes, bebía directamente
+de la botella cierto licor de hierbas y raíces. Sobre la
+“¿
+
+Capítulo XXX
+mesa tenía el frasco de tinta, la botella y un cráneo sin la
+mandíbula inferior. Escribía con pluma en un libro de hojas
+blancas, encuadernado artesanalmente. Bebía y escribía…
+Aunque el superhéroe no podía saberlo, había llegado a la ciudad
+de Londres durante el otoño de 1599. Ese hombre era William
+Shakespeare y, en aquel momento, estaba redactando
+una escena del acto V de una obra que pensaba estrenar en su
+teatro el año siguiente, Hamlet, príncipe de Dinamarca.
+El superhéroe lo vio levantar el cráneo, mirándolo directo a
+sus cuencas, acaso recordando los ojos que un día estuvieron
+en ellas, para decirle lo que acababa de escribir:
+HAMLET. – ¡Ay! ¡Pobre Yorick! Yo le conocí…, era
+un hombre sumamente gracioso, de la más fecunda
+imaginación. Me acuerdo que siendo yo niño me
+llevó mil veces sobre sus hombros…
+Y esa visión: el hombre, la calavera, el diálogo entre ambos…
+le hizo pensar en el enigma que lo ocupaba:
+“¿Qué le diría la calavera, si fuera ella la que le estuviera hablando
+a ese hombre?
+Ya sé. Le diría:
+Un día fui
+como eres hoy,
+mas tú serás
+como yo soy.
+Tengo la respuesta: es la calavera”.
+Iba a gritar de felicidad; pero recordó que el ayudante le había
+dicho que la respuesta era la característica de una persona,
+entonces esa no podía ser la respuesta. Preocupado, se devolvió
+sobre los pasos que había dado desde que salió de la
+gruta en el cerro Pandeazúcar. Esto le permitió ver la imagen
+de su padre siendo niño tomado de la mano del abuelo
+en el patio de la Plaza de Flores…
+“¡Eso es!, si el abuelo le formulara la pregunta al ayudante,
+la respuesta sería: viejo, porque el abuelo un día fue niño y
+el ayudante un día será viejo como él”.
+En el que se cuenta el viaje inusitado del superhéroe
+hasta su propio regazo familiar.
+Como un parpadeo, que consiste en cerrar los ojos y
+abrirlos de nuevo en menos de un segundo, así ocurrían
+los viajes en el caballo del tiempo. El superhéroe
+se veía de pronto sobrevolando un lugar o una región, sin saber
+dónde estaba ni en qué momento.
+Al descender delante de una vidriera que abarcaba todo el
+ancho de una amplia estancia, construida al lado de otra más
+grande aun, sintió la deliciosa frescura de un clima de páramo
+en el campo soleado.
+Adentro, la estancia se componía de un espacioso salón ocupado
+por la sala, el comedor y la cocina. Todo en el mismo
+cuadrado, con un baño a la derecha, junto al mirador por
+donde él estaba entrando y un patio de ropas, al fondo. Del
+
+Capítulo XXXI
+otro lado, sobre la mesa del comedor, estaban las escalas de
+madera por donde se subía al segundo piso.
+En la cocina, una mujer de ojos achinados, piel rosada y cabello
+muy negro se veía atareada lavando platos y organizándolos
+dentro de las alacenas. A un lado del fogón, sobre
+el mesón, respiraba una cafetera humeante, esparciendo el
+delicioso aroma del café recién molido.
+DSHCD supo que en ese lugar tampoco lo advertían, aunque
+él podía verlos y oírlos vívidamente.
+—A ver —dijo el hombre de barba espesa que jugaba con los
+tres niños en la mesa del comedor:
+En el árbol, árbol;
+en la tierra, tierra;
+en el pasto, pasto
+y en la piedra, piedra.
+“Están jugando a las adivinanzas”, pensó el superhéroe. “Ahí
+viene la solución al segundo enigma de la fuente”.
+Uno de los niños, el segundo, de cejas muy gruesas, gritó:
+—¡El camaleón!
+—No se vale. Miguel leyó la respuesta en el libro —dijo Emmanuel,
+el otro niño. Tenía la piel muy blanca y los cachetes
+rosados. Su rostro era igual al del superhéroe, aunque un
+poco mayor.
+—¡Sí, eso es cierto! —confirmó la madre desde la cocina, en
+el momento en que se ocupaba de servir un par de tazas de
+café—. Miguel estaba leyendo las respuestas en el libro de
+adivinanzas del abuelo.
+—No importa —se defendió el muchacho—, esa es la respuesta.
+—Está bien —admitió el padre, y cargó a la niña para levantarse
+a recibir su taza de café.
+La niña reía tiernamente en los brazos de ese hombrón de
+mirada transparente.
+“¡Qué criatura más hermosa!”, hubiera dicho el ayudante, refiriéndose
+a esa niña.
+En el que se cuenta cómo el superhéroe encuentra
+la solución al tercer enigma en una impensable
+asamblea de poetas.
+Quién es ese hombre?”, se preguntó DSHCD. “¿Por qué
+esos niños se parecen tanto a mí?”.
+Como es natural, él mismo no sabría responderse esas
+preguntas.
+Además, tenía la urgencia de resolver el tercer enigma de la
+fuente del conocimiento. Si Luilli, el ayudante, hubiera estado
+allí, le habría dado una respuesta muy fácil:
+“Ese hombre de barba espesa serás tú mismo dentro de treinta
+y tres años; esos niños serán tus hijos y esa mujer, tu esposa”.
+Por supuesto, esa respuesta nunca se le dio porque el ayudante
+no estaba allí, al menos en las formas que nosotros conocemos.
+“¿
+
+Capítulo XXXII
+Tal vez sí estaba, pero de un modo diferente: la estancia, la familia,
+el superhéroe, el libro de adivinanzas existían ya en su
+alma como aquello que ha de ser y será.
+Entretanto, el superhéroe iba en busca de la solución al tercer
+enigma. Se vio sobrevolando un paraje entre las nubes.
+“¿Hacia dónde me dirijo ahora?”, se preguntó.
+Si miraba hacia arriba, no había nada; hacia abajo, no había
+nada; hacia los lados, igual. Lo único fue que empezó a
+percibir un olor a rosal florecido y un trino de pájaro. Tanto
+el aroma como el trino venían de todas partes.
+El superhéroe podía reconocer el olor, aunque no sabía de
+qué pájaro era el canto. Él no podría decirlo, pero se trataba
+del más elevado de los cantos.
+Y tal vez por la conjunción de los dos, el perfume de la rosa
+y la presencia del pájaro, recordó la mañana en que su padre
+le había leído un cuento:
+—Mira —le había dicho el padre, señalando el libro que tenía
+entre sus manos—. Este cuento se titula El ruiseñor y la rosa, lo
+escribió Oscar Wilde. Es el cuento más triste y hermoso que
+conozco. Mezcla dos motivos que a mí me hacen llorar: la belleza
+y el desamor. Esos dos motivos resumen la vida del hombre
+que lo escribió. Cuando en un libro te hablen del ruiseñor,
+debes entender que te están hablando del poeta. El poeta es
+el que eleva el canto más alto. Y cuando te hablen de la rosa,
+entenderás que te hablan del amor. Los más grandes poetas
+antiguos usaban la imagen del ruiseñor y la rosa para significar
+el más sublime de los cantos, el poema del amor.
+Y entonces el superhéroe se convenció de que lo que estaba
+escuchando era el trino de un ruiseñor.
+Y estaba en estas cavilaciones cuando en lo que podríamos
+llamar “ningúnlugar” se hallaban tres hombres, al parecer
+sumidos en una antigua conversación.
+—Yo te imaginé en la esfera de los sin pecado, pero
+sin fe —le dijo el hombre de la nariz aguileña al ciego
+que portaba un bastón griego de mango tallado.
+—En cambio, yo te imaginé en el desierto de los
+inmortales —agregó el tercero. Este también se
+apoyaba en un bastón, pero el suyo era de ébano.
+Dirigía el rostro hacia arriba, aunque era evidente
+que no miraba hacia ninguna parte, pues también
+era ciego.
+A pesar de que el superhéroe no entendía de qué estaban
+hablando, cada vez que uno de ellos intervenía, sentía una
+atmósfera de recogimiento.
+En su viaje en el caballo del tiempo, había llegado a un mundo
+imaginado acaso por su ayudante.
+“Debo resolver el tercer enigma”, se dijo. “Este termina así: y
+en las hojas se ha cantado”.
+Como siempre, el recuerdo de un cuento que le hubiera narrado
+o leído su padre le permitía al superhéroe resolver un
+problema:
+“El enigma se refiere a los escritos en hojas, los cantos de los
+poetas. El libro de adivinanzas con el que estaban jugando
+en la estancia se veía como un libro de pequeños poemas en
+las manos de ese hombre dulce”.
+Al parecer, David, el superhéroe Capa Dura, estaba a punto
+de encontrar la solución al tercer enigma.
+Él no sabía, ni podía saberlo en ese momento, que los tres
+hombres que estaban delante de él se llamaban Homero,
+Dante y Borges. Para él solo eran tres hombres, dos ancianos
+ciegos y otro de rostro suave.
+Volvió entonces al enigma:
+El tronco en hojas
+se ha mudado,
+y en las hojas
+se ha cantado.
+Ya tenía la respuesta:
+El libro de poemas, porque las hojas de un libro son de papel,
+el papel se saca de los árboles y las palabras que cantan
+son poesías.
+Así pues, resuelto el tercer enigma, debía partir en busca de
+la solución del cuarto y, antes de darse vuelta, les dedicó una
+última mirada a los poetas.
+En ese momento, el que hablaba debió de ser Dante Alighieri,
+puesto que se le oyó:
+—Entre nosotros —dijo— no hay primero
+y todos nos rendimos homenaje.
+—¡Qué curioso! —concluyó el superhéroe—. Esos tres, así
+como don Quijote y Cervantes, o el califa y el dictador de Bagdad,
+son el mismo hombre.
+En donde DSHCD aprovecha la oportunidad para
+preguntarle a Alicia por la respuesta del cuarto
+enigma, al mismo tiempo que resuelve el quinto.
+Descendió en un curioso campo.
+Sabía que sus viajes en el caballo del tiempo no eran
+gratuitos, pues tenían como propósito procurarle los
+medios para que hallara las respuestas a los enigmas de la
+fuente. Ahora se encontraba en un campo muy raro: una serie
+de diminutos arroyuelos lo surcaban en línea recta de lado
+a lado y las franjas del terreno que quedaban entre ellas estaban
+divididas a cuadros por pequeños setos vivos, dispuestos
+de orilla a orilla.
+—¡Se diría que todo está trazado como si fuera un enorme
+tablero de ajedrez! —dijo la niña, que venía conversando
+con la Reina Roja.
+
+Capítulo XXXIII
+DSHCD se preguntó quién sería esa niña y, después de pensarlo
+un rato, concluyó: “¡Esa es Alicia! Justo en este preciso
+momento está a punto de convertirse en uno de los peones
+de la Reina Blanca”. ¡Cuánto se habían divertido él y su padre
+leyendo ese pasaje en Alicia a través del espejo!, el libro de
+Lewis Carroll que leían una y otra vez y los hacía reír; pero
+ahora él estaba allí, en ese mundo. Pudo ver el pelo liso de Alicia,
+peinado en capul, y descubrió que se le hacían un par de
+hoyuelos en los cachetes cuando gesticulaba. Su voz era tal
+y como la había imaginado. Alicia era una de esas niñas que
+hablan y hablan; de sus labios salían cascadas de palabras.
+—Debiera haber algunos hombres moviéndose
+por algún lado... y ¡ahí están! —añadió alborozada,
+y el corazón empezó a latirle con fuerza a
+medida que iba percatándose de todo—. ¡Están jugando
+una gran partida de ajedrez! ¡El mundo entero
+en un tablero!..., bueno, siempre que estemos
+realmente en el mundo, por supuesto. ¡Qué divertido
+es todo esto! ¡Cómo me gustaría estar jugando
+yo también! ¡Como que no me importaría ser un
+peón con tal de que me dejaran jugar...! Aunque,
+claro está, que preferiría ser una reina.
+Al decir esto, miró con cierta timidez a la verdadera
+Reina, pero su compañera solo sonrió amablemente
+y dijo:
+—Pues eso es fácil de arreglar. Si quieres, puedes
+ser el peón de la Reina Blanca, porque su pequeña,
+Lirio, es demasiado niña para jugar; ya sabes
+que has de empezar a jugar desde la segunda casilla;
+cuando llegues a la octava, te convertirás en
+una Reina...
+Como el superhéroe había repetido tantas veces ese pasaje,
+sabía que a continuación Alicia y la Reina Roja iniciarían
+una carrera por el campo de juego, así que decidió hablarles
+para no quedarse solo:
+—Ya sé que Alicia llegará a la octava casilla del tablero al final
+del libro y se convertirá en reina como quiere; pero antes
+de que se vayan, quiero saber si alguna de ustedes dos está
+en condiciones de darme la respuesta a una adivinanza.
+—¡Qué divertido! —se apresuró a responder la Reina Roja. Al
+parecer, ella estaba más interesada en los juegos que la misma
+Alicia.
+—¡Sí! —afirmó esta—. Dinos la adivinanza.
+De inmediato, dijo David:
+—Si no se advierte
+aunque lo toques,
+si no se oye
+mientras más fuerte,
+será una suerte
+si me respondes.
+—¡Ópale! —gritó la Reina Roja—. Eso se parece mucho a lo
+que sucede a este lado del espejo, que para ir hay que venir,
+para venir hay que ir, para la derecha hay que tomar la izquierda
+y para la izquierda hay que tomar la derecha.
+—¡Exacto! —agregó Alicia—. La clave está en toda la mitad:
+“no se oye mientras más fuerte”, ¿qué es lo que no se oye
+mientras sea más fuerte?
+Con la sola pregunta, el superhéroe lo supo. Antes no había
+dado con la respuesta, pero en ese preciso momento se le
+reveló de golpe. Iba a decirlo, pero pensó que no sería justo
+con ellas. Tenía que darles la oportunidad.
+—¡El viento! —se apresuró la Reina.
+—Fría, muy fría —dictaminó DSHCD.
+—¡La oscuridad! —dijo Alicia.
+—La oscuridad es un asunto de los ojos —le aclaró.
+Pero antes de que Alicia ensayara una nueva respuesta, la
+Reina Roja la tomó de la mano y empezaron a correr. David
+iba a seguirlas, pero un pensamiento relámpago lo detuvo:
+el siguiente enigma de la fuente. Casi sin darse cuenta,
+había encontrado la solución, así que lo repitió en voz alta
+como preguntándose a sí mismo:
+Tu cara de espanto
+devuelve si miras,
+si ríes, tu risa;
+si lloras, tu llanto.
+Y de tanto en tanto,
+ve por quién suspiras.
+“Así es”, se dijo. “Lo que no se oye mientras más fuerte es el
+silencio y el que devuelve tu risa es el espejo. Por eso vine a
+esta historia, porque aquí estamos del otro lado del espejo.
+Pero ¿y Alicia?… ¡Ella es mucho más simpática de lo que
+siempre había imaginado!
+En el que se narra cómo DSHCD, desde un lugar
+de su futuro, resuelve el sexto enigma a raíz de un
+recuerdo del pasado.
+Esta vez descendió en un barrio de muchos árboles y
+altos edificios. Por una de las calles que desemboca
+hacia la avenida trazada en diagonal, bajó en medio
+de un sapán, un carbonero y una acacia que entrecruzan sus
+ramas frente a los balcones de los apartamentos.
+Si alguien lo hubiera visto en el momento en que se detuvo,
+suspendido en el aire, frente al piso cuarto de un edificio marrón
+y gris, diría que ese niño de capa roja semejaba un colibrí
+dispuesto a chupar el néctar de alguna flor; pero nadie
+podía verlo porque estaba llegando a un momento futuro
+para él. Cualquiera sabe que solo existimos en el presente,
+en el futuro somos nada y en el pasado, recuerdo.
+
+Capítulo XXXIV
+El balcón por el que se disponía a entrar en la sala ofrecía un
+jardín cuidado por las manos del amor: a la izquierda, contra
+la pared, dos canastas de cuerno de buey, una de ellas invadida
+por una tórtola de mirada lela que quiere anidar allí,
+mientras el tórtolo vigila desde el alambre. Enseguida, ya en
+la pared del frente, un curazao en canasta colgante, sin flores,
+como si en él un espíritu atormentado ensayara su lugar
+entre los muertos. Debajo, en el piso, bifloras, suculentas, un
+mirto moribundo, un tango florecido de amarillo y naranja.
+Junto al tango, el milagro de una penca sábila en flor, erguida
+en la dignidad de una estirpe de mujeres generosas. Más
+acá, un geranio de Egipto con el brillo verde de sus siete poderes
+y sus siete grandes principios de la sabiduría originaria.
+En la esquina derecha, un frondoso jazmín de noche. Se diría
+que de ese jazmín procede el segundo aroma de la fuente en
+la gruta del cerro Pandeazúcar.
+Al entrar en la sala por el portón corredizo de la derecha, se
+encuentra una pachira convertida en arbusto de hojas brillantes;
+después el sofá y una orquídea ricamente florida sobre
+la mesa de centro.
+El superhéroe caminó tranquilo hacia el comedor que estaba
+al frente, a la izquierda de la cocina, porque creyó que
+el hombre que allí estaba sentado frente a un computador
+portátil no podía verlo; pero esta vez se equivocaba.
+El hombre le sonrió.
+—Yo sé a qué vienes —le dijo—. Vienes a buscar respuestas
+y vas a encontrarlas. Llegaste aquí viajando en el caballo del
+tiempo. Tu momento es 1988 y aquí, ahora, estamos en 2021.
+Han pasado treinta y tres años desde que tu abuelita Nelly
+confeccionó esa capa roja que llevas puesta…
+El hombre iba a continuar; pero DSHCD lo interrumpió:
+—Venga. ¿Usted por qué lo sabe?
+—Eso no puedo decírtelo, pero lo sabrás de todos modos.
+El superhéroe sintió que esa era una voz muy conocida. Se
+fijó en la apariencia del hombre: muy mayor, casi viejo, de
+pelo gris delgado y escaso, calvo, con unas cuantas lanas diminutas
+en la testa.
+—Yo lo conozco —le dijo.
+El hombre sonrió de nuevo. DSHCD identificó esa risa y al
+ver su mirada detrás de los lentes, recibió la ráfaga de un
+recuerdo:
+Ese mismo hombre lo estaba cargando para
+ponerlo en el borde de la fuente, él estaba
+vestido de payasito rojo. Le dio una vuelta,
+sosteniéndolo en el aire, antes de depositarlo
+en el muro, de espaldas al agua de la fuente.
+En ese momento vio cómo se formaba el
+arco iris con las partículas de agua que se
+exponían al sol después de golpear contra las
+figuras de la escultura de la fuente…...
+—¡Ya sé quién eres! —exclamó.
+El hombre se puso de pie y extendió los brazos para que el
+superhéroe viniera hacia él y este corrió hacia ellos; pero al
+cerrarlos, ambos abrazaron el aire…
+Podían verse y hablarse pero no tocarse, porque sus cuerpos
+estaban en tiempos diferentes. Era la misma sensación que
+había experimentado Odiseo cuando trató de abrazar a su
+madre en el hades, solo que este era un encuentro muy feliz.
+Para el hombre, porque sentía que debía pedirle perdón a
+ese niño, y ahora tenía la oportunidad de hacerlo. Y para
+el niño, porque acababa de encontrar la respuesta al sexto
+enigma que debía resolver:
+Digno de verlo
+como un fluido:
+ni el sol se ha ido,
+ni está lloviendo.
+¿Qué hay en el cielo
+tan colorido?
+—La respuesta es “el arco iris”, porque se forma en el cielo
+cuando hace sol y va a llover o ha llovido.
+Donde se cuenta cómo el superhéroe Capa Dura
+encuentra la solución al séptimo enigma, una vez
+más en un recuerdo del pasado desde su futuro.
+El hombre aplaudió la respuesta y después continuó:
+—El siguiente enigma también lo vas a resolver… y el
+otro, y el otro… así conseguirás que el ogro regrese a
+su país de las inmensidades, le devolverás la oca de los huevos
+de oro y el arpa dorada. Tu misión tendrá un final feliz
+y, una vez más, se habrá restaurado el orden del mundo de
+la fantasía.
+—¿Tú por qué lo sabes?
+—Porque los cuentos maravillosos me lo han enseñado. En
+esos relatos de fantasías dulces o enrevesadas se guarda el
+tesoro de la sabiduría. Muchas personas creen que solo son
+historias inocuas. Pero se equivocan. Todo lo que un hombre
+
+Capítulo XXXV
+debe saber para comprender el gran enigma de la existencia
+se revela, o mejor, se esconde en los cuentos. Unos lo ven,
+otros no; pero nada se puede hacer para que el que no tiene
+oídos oiga.
+El hombre se había vuelto a sentar frente al teclado, delante
+de la pantalla, y se disponía a seguir escribiendo.
+—¿Qué haces? —le preguntó el superhéroe. Para él, ese instrumento
+era raro y desconocido—. Y ¿eso qué es?
+—Escribo —respondió el hombre—. Esto es un computador
+portátil.
+Al verlo ahora escribiendo frente a un teclado y una pantalla,
+DSHCD recordó a su padre haciendo lo mismo, pero
+no frente a la pantalla, sino frente a la hoja en blanco en la
+máquina de escribir.
+Era un domingo en la mañana. David acababa de levantarse
+en la pieza destinada para ellos en la finca de la abuelita Nelly,
+y había llegado al comedor, donde estaba su padre pasando
+en limpio lo que antes había escrito en un cuaderno:
+—Pa, ¿qué estás haciendo?
+—Estoy escribiendo una novela. El capítulo que estoy pasando
+cuenta el recuerdo de una conversación que tuvimos hace
+muchos años, cuando trotábamos por las calles de La Milagrosa,
+El Salvador y Buenos Aires.
+—Léeme lo que estás escribiendo.
+—Está bien —le dijo, y movió la silla para cargarlo sobre sus
+piernas, de modo que David quedó viendo lo que leían:
+La luna es una mujer castigada
+—Antier sí pasamos bacano metidos en esa choza,
+pensando en las estrellas.
+—¿Ya vieron la luna?
+—Sí.
+—Nos está persiguiendo.
+—La luna es una mujer castigada.
+—¿Quién dijo?
+—Yo sé.
+(Trotando codo a codo desde El Salvador por las
+avenidas hacia los bomberos).
+—Contá.
+—Era una mujer común y corriente. Tenía el mejor
+marido. Ella era muy linda, vivía desnuda. Yo
+la vi una vez, qué cuerpo.
+—¡Qué va, home! ¿Cuándo la viste?
+—Yo la vi. Era la mujer más linda, qué cara. La más
+linda.
+—Este sí es mentiroso.
+—No crea, pues. Vivían aquí en Medellín, pero hace
+muchos años.
+—¿Cómo cuántos?
+—Muchos.
+(Las máquinas rojas de los bomberos a la izquierda).
+—El marido era bueno, pero ella lo despreciaba. Se
+creía por linda. Se casó con él por error, y le daba
+rabia que la tocara. A él le daba rabia que a ella le
+diera rabia, hasta que se fue poniendo rojo. El cielo
+se mantenía oscuro. Después, ella se enamoró
+de él, pero él ya no la quería.
+—Qué va, hermano, eso son mentiras.
+—No. Es verdá. Así fue todo lo que cuenta mi papá.
+(Trotando por Ayacucho hacia arriba, la iglesia
+de Buenos Aires a la derecha).
+—Contá pues.
+—A los dos los castigaron. Cuando se enamoraron
+al mismo tiempo, los separaron. Él se puso rojo de
+la rabia y ella se puso azul. Los condenaron a perseguirse,
+pero nunca se pueden encontrar. Cuando
+él sale, ella desaparece; y cuando ella sale, él
+desaparece. Ella persigue a todo el mundo a ver si
+lo encuentra. Por eso nos está persiguiendo. Miren
+y verán.
+(La iglesia y la cancha de Miraflores a la izquierda,
+más arriba la recta de Alejandro Echavarría,
+la manga de la India a la derecha en la oscuridad).
+—Miren a la luna. Es verdá. Nos está persiguiendo.
+—¿Por qué te quedaste tan callado? —le preguntó el hombre
+al superhéroe.
+—Estaba recordando la vez que me leíste la historia de la
+luna y el sol, ¿te acuerdas?
+—Sí, ese era el capítulo de una novela que estaba escribiendo
+hace muchos años. Para ti es un recuerdo reciente, pero
+para mí ya es lejano. Esa historia me pone muy triste, es un
+poco el espejo de lo que me estaba sucediendo en esa época.
+En parte debo pedirte perdón también por eso. No por el
+capítulo de la novela, sino por los hechos que lo inspiraron,
+el dolor que vas a sentir en los años sucesivos estará relacionado
+con esa historia, ¡perdóname!
+Aunque no entendió nada de lo que el hombre acababa de
+decirle, de algún modo supo que le estaba pidiendo perdón
+a él por algo que él desconocía, ¿y cómo no perdonarlo, aunque
+no supiera por qué?
+El hombre entendió que la conversación ya había llegado a su
+punto preciso, el que le había sido trazado desde el comienzo
+de todas las cosas; entonces decidió concluirla. Ahora tenía que
+ayudarle al superhéroe a resolver el enigma que lo ocupaba:
+—Y ¿cuál es el próximo enigma que debes resolver? —le dijo.
+Él sabía por qué le hacía esa pregunta.
+DSHCD le respondió:
+Es espejo
+y no te ves.
+Tiempo es
+en su reflejo
+del más viejo
+atardecer.
+—¿Por qué te quedaste tan callado? —le preguntó el hombre
+al superhéroe.
+—Estaba recordando la vez que me leíste la historia de la
+luna y el sol, ¿te acuerdas?
+—Sí, ese era el capítulo de una novela que estaba escribiendo
+hace muchos años. Para ti es un recuerdo reciente, pero
+para mí ya es lejano. Esa historia me pone muy triste, es un
+poco el espejo de lo que me estaba sucediendo en esa época.
+En parte debo pedirte perdón también por eso. No por el
+capítulo de la novela, sino por los hechos que lo inspiraron,
+el dolor que vas a sentir en los años sucesivos estará relacionado
+con esa historia, ¡perdóname!
+Aunque no entendió nada de lo que el hombre acababa de
+decirle, de algún modo supo que le estaba pidiendo perdón
+a él por algo que él desconocía, ¿y cómo no perdonarlo, aunque
+no supiera por qué?
+El hombre entendió que la conversación ya había llegado a su
+punto preciso, el que le había sido trazado desde el comienzo
+de todas las cosas; entonces decidió concluirla. Ahora tenía que
+ayudarle al superhéroe a resolver el enigma que lo ocupaba:
+—Y ¿cuál es el próximo enigma que debes resolver? —le dijo.
+Él sabía por qué le hacía esa pregunta.
+DSHCD le respondió:
+Es espejo
+y no te ves.
+Tiempo es
+en su reflejo
+del más viejo
+atardecer.
+[Pasted text #125 +29 lines]
+—¿Quieres que te ayude?
+—Bueno.
+—Piensa en el capítulo que acabas de recordar y en esta pista:
+¿qué es lo que está en casi todos los atardeceres desde
+hace miles de años?
+—¡La luna!
+—Ahí tienes la respuesta.
+—¡Hurra! —gritó DSHCD. Ese enigma tal vez no lo hubiera
+resuelto sin la ayuda del hombre viejo. Fue por eso por lo
+que, antes de dejarlo, quiso hacerle una última pregunta:
+—Y ¿qué es lo que estás escribiendo ahí?
+—Estoy escribiendo lo que estamos viviendo ahora, en tu tiempo
+tú y yo en el mío. Todo quedará en un libro cuyo título ha
+de llevar tu nombre y cuyo contenido narrará la historia de tu
+aventura en el caballo del tiempo. Lo que nosotros dos estamos
+viviendo como el camino del perdón, en el mundo de la vida
+será un divertimento para chicos y grandes…
+El superhéroe no entendía lo que el hombre procuraba decirle.
+“Dice cosas muy raras”, pensaba. De hecho, tampoco le importaba.
+En el fondo, sentía que ese hombre seguía siendo muy
+amoroso con él. “Aunque pasen muchos años, me seguirá queriendo
+con todo el amor del mundo”, pensó.
+Donde se narra el momento en que Andersen, un
+muchacho que en ese año de 1819 tenía 14 años y
+viajaba de Odense a Copenhague, canta para el
+guardián del barco en el que habría de atravesar
+el estrecho entre las dos islas danesas y, gracias a
+este acontecimiento, acaecido en el embarcadero
+de Nyborg, DSHCD resuelve los enigmas octavo y
+noveno.
+El superhéroe Capa Dura se vio de pronto en un embarcadero.
+El aire se sentía muy fresco y, aunque no
+había sol, era una mañana clara.
+En el mar, flotaban cientos de barcos con sus velas plegadas
+unos e izadas los otros en pleno movimiento. Decenas de
+personas iban y venían, ellos con sombrero de copa y ellas
+con sombreros emplumados.
+Una carroza se detuvo frente al puente que conducía a la embarcación
+que estaba siendo abordada por una fila de pasajeros.
+
+Capítulo XXXVI
+El eco y el caracol
+Cuando el caracol vivía
+en las rocas junto al mar,
+no cesaba de escuchar
+la constante melodía
+de las aguas que algún día
+empezaron a roncar.
+Es el lamento, decía,
+de un dolor universal.
+De tanta profundidad
+aquel cantar provenía
+que el caracol lo sentía
+en la gran inmensidad.
+Ese sonido sería
+la voz de Dios en el mar.
+Yo lo quisiera cantar
+muy más allá de mi vida
+como la voz repetida
+del aliento celestial.
+Ahora, muerto el caracol,
+su hermosa concha parece
+una joya que se ofrece
+como legado de amor,
+de aquel lamento interior
+que al mismo Dios obedece.
+Es el sonido del mar
+lo que la concha repite.
+En los oídos insiste
+porque quiere reflejar
+el más hermoso lugar
+de todos cuantos existen.
+Lo que el hombre pensó que iba a producirle risa, por el
+contrario, lo conmovió casi hasta el llanto y, temblando, le
+indicó al muchacho dónde acomodarse. Entre tanto, el superhéroe
+descubrió que allí estaban las respuestas a sus dos
+enigmas, así que repitió para sus adentros el octavo:
+Quien fuera lento
+en su caminar,
+deja escuchar
+en su aposento,
+como en un cuento,
+la voz del mar.
+“La respuesta es el caracol”, se dijo, “porque si uno lo lleva al
+oído, allí escucha un mar que viene desde muy lejos, y este,
+a su vez, es como un eco. He ahí la respuesta al siguiente
+enigma, el noveno: es el eco”. E igual que el anterior, lo repitió
+para sí mismo:
+¿Has oído
+el reflejo
+de un espejo
+de sonidos
+repetidos
+a lo lejos?
+Donde se produce el encuentro entre DSHCD y
+su futuro hermano Matías, durante una mañana
+soleada de junio de 2004, en el salón de segundo de
+primaria del colegio Isolda Echavarría.
+Sería muy difícil describir la alegría que sintió el superhéroe
+Capa Dura al saber que había resuelto los
+nueve enigmas de la fuente del conocimiento. Sin que
+él lo supiera todavía, y sin que nadie lo advirtiera, su trabajo
+había levantado un puente invisible en el umbral de los
+mundos: el de las realidades posibles, el de las ficciones y fábulas,
+el de los sueños reales y perdidos, el de la vida y todos
+los mundos de la fantasía.
+Solo faltaba el último eslabón de ese pasadizo que se levantaría
+cuando el superhéroe resolviera el acertijo final.
+En verdad el puente ya estaba hecho. La solución del acertijo
+abriría la puerta de entrada a todos esos mundos, y esto
+
+Capítulo XXXVII
+liberaría el tránsito entre los planos de la existencia: cuerpo,
+mente y espíritu, umbral por donde se pasa de la oscuridad
+a la luz, de la muerte a la inmortalidad.
+Mientras descendía, el superhéroe se repetía una y otra vez
+el acertijo, como tratando de encontrar la clave que lo llevara
+a dar con la respuesta.
+Ayer con una,
+ahora con dos,
+mañana con tres...…
+—¿Qué será lo que tiene una, dos y tres? —se preguntó como
+buscando la clave de resolución.
+La quebrada bajaba allá en el fondo por entre las rocas,
+emanando un sonido casi imperceptible, y en sus orillas crecían
+tréboles y adormideras en medio de morales y mortiños
+con sus respectivos frutos rojos y negros o morados. Desde
+allá emergía la conversación de las ranas, como si una voz
+ronca se alejara aguas abajo y aguas arriba.
+DSHCD cruzó el puente y caminó hacia la hermosa mole de
+ladrillo que se veía al frente, después de una placa polideportiva
+con graderías y tableros de basquetbol, porterías de
+microfútbol y mallas de voleibol.
+Había dado unos cuantos pasos en esa dirección cuando
+algo inesperado, no sabemos qué, lo hizo darse vuelta y dirigirse
+por ese mismo camino hacia la vieja casa de campo,
+construida en medio de ceibos y eucaliptos.
+Cruzó el parqueadero y dio vuelta hacia el pabellón de los
+salones de primaria.
+Dispersos en los distintos parajes o entretenidos en los parques
+de juego, había niños dedicados a destapar sus loncheras.
+Los adultos aparecían por ahí, a veces vigilando el juego
+de los niños, a veces dirigiéndose de un pabellón a otro.
+Al superhéroe nadie lo advertía, pues ninguno de esos niños
+había nacido todavía en su tiempo. Sus pasos eran firmes,
+como si se dirigiera específicamente a un lugar. Él no lo sabía,
+pero un designio que acaso todos ignoramos lo conducía
+hacia el salón de segundo grado.
+Entró. En el tablero, ubicado en la pared de la derecha, se
+veía un retrato de Rudolf Steiner, trazado por la profesora
+con tizas de colores. Solo había un niño en uno de los pupitres
+del medio, inclinado sobre su cuaderno, en la actitud
+de quien piensa y escribe. Este niño había decidido no salir
+hasta conseguir el acertijo que la profesora les había pedido
+poco antes de que sonara el timbre de la media mañana.
+Al acercársele, descubrió con asombro que, aunque no llevaba
+gafas como él, tenía su mismo rostro: labios gruesos, ojos
+grandes y cejas muy pobladas. Parecía como si a su propia
+piel le hubieran agregado un tinte moreno para conseguir
+un individuo diferente.
+“¡Cómo me gustaría que él pudiera verme para hablarle y
+preguntarle cosas!”, pensó.
+Y ante tal ocurrencia, descubrió que ya estaban comunicados
+y que él sabía cosas de ese niño, pero ignoraba que las
+sabía.
+Imaginó que le hablaba una voz interior:
+“Es Matías, será tu hermano”.
+Dispersos en los distintos parajes o entretenidos en los parques
+de juego, había niños dedicados a destapar sus loncheras.
+Los adultos aparecían por ahí, a veces vigilando el juego
+de los niños, a veces dirigiéndose de un pabellón a otro.
+Al superhéroe nadie lo advertía, pues ninguno de esos niños
+había nacido todavía en su tiempo. Sus pasos eran firmes,
+como si se dirigiera específicamente a un lugar. Él no lo sabía,
+pero un designio que acaso todos ignoramos lo conducía
+hacia el salón de segundo grado.
+Entró. En el tablero, ubicado en la pared de la derecha, se
+veía un retrato de Rudolf Steiner, trazado por la profesora
+con tizas de colores. Solo había un niño en uno de los pupitres
+del medio, inclinado sobre su cuaderno, en la actitud
+de quien piensa y escribe. Este niño había decidido no salir
+hasta conseguir el acertijo que la profesora les había pedido
+poco antes de que sonara el timbre de la media mañana.
+Al acercársele, descubrió con asombro que, aunque no llevaba
+gafas como él, tenía su mismo rostro: labios gruesos, ojos
+grandes y cejas muy pobladas. Parecía como si a su propia
+piel le hubieran agregado un tinte moreno para conseguir
+un individuo diferente.
+“¡Cómo me gustaría que él pudiera verme para hablarle y
+preguntarle cosas!”, pensó.
+Y ante tal ocurrencia, descubrió que ya estaban comunicados
+y que él sabía cosas de ese niño, pero ignoraba que las
+sabía.
+Imaginó que le hablaba una voz interior:
+“Es Matías, será tu hermano”.
+Y se acercó hasta el cuaderno en el que Matías intentaba
+componer la adivinanza. Allí pudo leer lo siguiente:
+Cielo, no tiene ninguna.
+Viento, no tiene.
+Mañana, tiene tres.
+Pañuelo, una.
+Ahora, tiene dos.
+Pupitre, ninguna.
+Ayer, una.
+Tablero, una.
+“¡Eso es!, está contando una letra en las palabras”, concluyó:
+“Lo primero que hizo fue una lista de palabras; después contó
+las veces que cada una de ellas tenía la letra A, y ahora se
+dispone a escoger algunas para darles un orden particular.
+Escogerá las que se refieren al paso del tiempo: ayer, hoy
+y mañana; pero como hoy no tiene la letra A, entonces la
+cambiará por ahora y, para terminar, las pondrá en orden: la
+de una, la de dos y la de tres…”.
+En el momento en que el superhéroe pensaba esto, Matías
+escribió en el cuaderno:
+Ayer con una,
+ahora con dos,
+mañana con tres...…
+—¡Hurra! —gritó.
+En el rostro de Matías se esbozó una sonrisa como si él, el
+superhéroe y el padre fueran objeto de la misma alegría.
+Como si los tres fueran el mismo hombre en tres momentos
+diferentes.
+Donde se hace presente la imagen física del caballo
+del tiempo y, en medio de las músicas, expresa su
+danza de gratitud en honor del superhéroe Capa
+Dura, por haber sido gracias a él que se restauró una
+vez más el equilibrio de los mundos.
+DSHCD se vio en medio de un jardín de la campiña inglesa.
+La que antes había sido una casa vieja con las
+paredes agrietadas, ahora era una mansión espléndida.
+Junto a un amplio ventanal, crecía una mata de alubias que
+se elevaba más allá de las nubes. A un lado del inmenso tronco,
+se veía la oscuridad de un agujero, cuya forma dibujaba la
+silueta de un ogro gigante.
+—Pero ¡qué distinto se siente todo aquí!
+Tal vez el superhéroe no sabría expresar que en el lugar donde
+se encontraba, se ubicaba adentro y que, para él, lo que
+ahora se hallaba afuera era el mundo de la vida.
+
+Capítulo XXXVIII
+—Qué curioso. Desde aquí la realidad parece un cuento.
+En el momento en que se lo decía, empezaron a salir los personajes
+del agujero negro: don Quijote y Cervantes, Marco
+Polo y Kublai Kan, Homero, Dante, Virgilio y Jorge Luis Borges,
+Shakespeare y Hamlet, Carroll y Alicia, Oscar Wilde y el
+dulce ruiseñor, Andersen y la pequeña Ida… Salieron también
+un par de hombres a los que no había visto durante su aventura
+en el caballo del tiempo; pero en ese momento, supo que
+los había tenido presentes en cada instante. Se trataba de
+Exupéry y el principito, y de Michael Ende y Bastián Baltasar
+Bux. Detrás de ellos venía el ogro.
+Parecía como si el hoyo negro fuera la puerta de llegada de
+los invitados a una fiesta, y estos se iban disponiendo en el
+descampado del jardín, como si desde siempre supieran que
+allí sucedería una gran celebración. Para el superhéroe no
+podría ocurrir un acontecimiento más feliz. Ni en el mejor de
+los sueños podría alguien reunir a los seres que más amaba
+en este y en cualquier mundo. Allí solo faltaba su padre; pero
+esto no le importaba mucho, porque sabía que estaba dentro
+de él y que de algún modo también disfrutaría de la fiesta.
+En ese momento, supo que tendría que entrar a la mansión
+para traer de allí a otro par de invitados y algo más… lo que
+aún faltaba para completar su misión. Llamó ante el portón
+de roble tallado, esperó a que le abrieran y entró. Un instante
+después apareció por ese mismo portón, con la oca de los
+huevos de oro en una mano y el arpa dorada en la otra. Le
+seguían Jack y su madre.
+Al llegar al círculo de la celebración, el arpa dorada empezó
+a emitir la melodía de la sonata Claro de Luna y entonces se
+escucharon todas las músicas al mismo tiempo, como si estas
+pudieran coexistir armónicamente sin causar ninguna interferencia
+entre sí: El himno a la alegría de La novena sinfonía y
+Para Elisa de Beethoven, Las cuatro estaciones de Vivaldi y, por
+último, el himno de la escuela Boyacá del barrio La Milagrosa,
+como si en ese momento lo estuvieran cantando todos los
+alumnos reunidos en el patio:
+Sobre una alta colina levante
+de la egregia y fabril Medellín,
+encontramos festiva y pujante
+esta escuela de anhelos sin fin…...
+¡Boyacáaaa…!...
+Sacro nombre de honor…...,
+ideario de la libertad,
+ideario de la libertad…...
+Un relámpago iluminó la atmósfera y en ese mismo instante
+apareció, majestuosa, la figura del caballo del tiempo en toda
+su blancura y belleza indescriptibles. Se inundó la atmósfera
+con el delicioso olor a jazmín de noche y, mientras DSHCD le
+entregaba el arpa dorada y la oca de los huevos de oro al ogro,
+los grandes poetas lo miraban con infinita ternura, si acaso
+pudiéramos decir que Homero y Borges miraban, el uno con
+sus cuencas vacías y el otro con sus ojos apagados en dirección
+al infinito. Eran ellos, los poetas de la humanidad, quienes mejor
+sabían cuán importante era la continuidad del ogro en el
+país de las inmensidades y cuán necesaria su presencia para
+despertar la imaginación de los niños desde la raíz del miedo
+a ser devorado en el desayuno de un ser descomunal.
+Todo acontecía como si alguien hubiera filmado los hechos
+con anterioridad y ahora estuviera pasando las imágenes holográficas
+en cámara lenta: al recibir su oca y su arpa dorada,
+el ogro se amarró el arpa en el cinto, como lo hacía siempre
+con los tres corderos de su desayuno, y empezó a trepar por
+el tallo de la mata de alubias hacia su país, donde todo volvería
+a comenzar de nuevo en el ciclo del retorno eterno.
+Y mientras el ogro subía y subía, subía y subía…, en el centro
+del círculo, el caballo del tiempo iniciaba su danza frente a
+los poetas del mundo en honor de DSHCD: David, el superhéroe
+Capa Dura, encargado esta vez de mantener vivo el
+hilo de la imaginación, la alegría de la belleza universal.
+Donde se cuenta cómo el superhéroe olvida su
+aventura en el caballo del tiempo y vuelve a
+ser David, el niño a quien su abuela le acaba de
+confeccionar una capa roja.
+David vio que la mariposa grande descendía de nuevo,
+desde la espesura de hojas altas del guadual hasta posarse
+justo enfrente suyo, a un lado de la rama que
+a él le parecía un enano con quien había estado hablando
+mientras la mariposa exploraba las alturas.
+En ese momento, descubrió que la capa se le había desamarrado
+del cuello y decidió ir en busca de su padre para que se
+la pusiera de nuevo. Tomó la capa con sus manos y caminó
+hacia el puente de guadua sobre el lago. Cruzó hasta el otro
+lado y encontró a su padre sentado en el tablón debajo del
+carbonero, al parecer leyendo un libro azul, como si toda la
+carátula fuera un cielo en el que había una ventana por donde
+se asomaba una inmensa cabeza de rana.
+
+Capítulo XXXIX
+—Pa —le dijo—. Vuélveme a poner la capa porque se me
+desamarró.
+El padre puso el libro a su lado, sobre el tablón, junto al cuaderno
+en el que había estado escribiendo y, mientras le amarraba
+de nuevo la capa en el cuello, comprendió que el superhéroe
+había olvidado su aventura en el caballo del tiempo,
+porque, para él, esa aventura apenas comenzaba.
+Fin
+Luilli
+1991-2021

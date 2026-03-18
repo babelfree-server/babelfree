@@ -1,0 +1,5065 @@
+{
+  "meta": {
+    "destination": "dest36",
+    "title": "Candelaria dibuja el mapa",
+    "cefr": "B2",
+    "world": "mundoDelMedio",
+    "campbellStage": "The Ordeal — the pattern revealed",
+    "rulingArcanum": "XXI — El Mundo",
+    "characters": [
+      "char_yaguara",
+      "char_candelaria"
+    ],
+    "closingQuestion": "¿Qué forma tiene una historia cuando la ves desde lejos?",
+    "grammarTargets": [
+      "synthesize multiple sources",
+      "present complex data",
+      "discourse organization",
+      "academic register",
+      "connectors of synthesis (en primer lugar, por lo tanto, en conclusión)",
+      "relative clauses complex"
+    ],
+    "coreVocabulary": [
+      "mapa",
+      "conectar",
+      "patrón",
+      "red",
+      "síntesis",
+      "organizar",
+      "presentar",
+      "estructura",
+      "relación",
+      "dato",
+      "fuente",
+      "conclusión"
+    ],
+    "narrativeVocabulary": [
+      "Mapa de las Voces",
+      "cuaderno",
+      "fragmento",
+      "línea",
+      "nodo",
+      "carretera",
+      "silencio gris",
+      "camino",
+      "río",
+      "ceiba",
+      "historia",
+      "perspectiva"
+    ]
+  },
+  "preArrival": [],
+  "arrival": {},
+  "games": [
+    {
+      "_template": {
+        "id": "T01_skit_cuaderno",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El cuaderno de Candelaria",
+      "instruction": "Candelaria revela que ha estado dibujando un mapa todo este tiempo.",
+      "grammar": [
+        "academic register",
+        "synthesis connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Candelaria abre su cuaderno. Las páginas están llenas de líneas, flechas, nombres, fechas. No es un diario — es un mapa."
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Yaguará, mira. He estado conectando todo. Cada historia que escuchamos, cada persona que conocimos, cada {pool:eco.place} que visitamos. Todo está relacionado.",
+          "target": [
+            "conectando",
+            "relacionado"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Candelaria... esto es el Mapa de las Voces. O una versión de él. Tú lo estabas dibujando sin saberlo.",
+          "target": [
+            "Mapa de las Voces"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "En primer {pool:eco.place}, todas las historias mencionan la carretera. En segundo {pool:eco.place}, el {pool:eco.sound} gris sigue exactamente la ruta de la carretera. Y por lo tanto, la carretera y el {pool:eco.sound} gris son la misma cosa.",
+          "target": [
+            "En primer lugar",
+            "En segundo lugar",
+            "por lo tanto"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "El gris sigue la carretera. La carretera destruye los nombres. Los nombres perdidos alimentan el gris. Es un ciclo.",
+          "target": [
+            "ciclo"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Ver el patrón es el primer paso para romperlo.",
+              "El patrón es demasiado grande para enfrentarlo.",
+              "No hay ningún patrón."
+            ],
+            "answer": "Ver el patrón es el primer paso para romperlo."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "El Mundo — el último arcano — muestra la totalidad. Desde lejos, la historia tiene forma. Y esa forma es un mapa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T01_skit_cuaderno_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T01_skit_cuaderno"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El cuaderno de Candelaria",
+      "instruction": "Candelaria revela que ha estado dibujando un mapa todo este tiempo.",
+      "grammar": [
+        "academic register",
+        "synthesis connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Candelaria abre su cuaderno. Las páginas están llenas de líneas, flechas, nombres, fechas. No es un diario — es un mapa."
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Yaguará, mira. He estado conectando todo. Cada historia que escuchamos, cada persona que conocimos, cada mirador que visitamos. Todo está relacionado.",
+          "target": [
+            "conectando",
+            "relacionado"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Candelaria... esto es el Mapa de las Voces. O una versión de él. Tú lo estabas dibujando sin saberlo.",
+          "target": [
+            "Mapa de las Voces"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "En primer mirador, todas las historias mencionan la carretera. En segundo mirador, el canto de red gris sigue exactamente la ruta de la carretera. Y por lo tanto, la carretera y el canto de red gris son la misma cosa.",
+          "target": [
+            "En primer lugar",
+            "En segundo lugar",
+            "por lo tanto"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "El gris sigue la carretera. La carretera destruye los nombres. Los nombres perdidos alimentan el gris. Es un ciclo.",
+          "target": [
+            "ciclo"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Ver el patrón es el primer paso para romperlo.",
+              "El patrón es demasiado grande para enfrentarlo.",
+              "No hay ningún patrón."
+            ],
+            "answer": "Ver el patrón es el primer paso para romperlo."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "El Mundo — el último arcano — muestra la totalidad. Desde lejos, la historia tiene forma. Y esa forma es un mapa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T01_skit_cuaderno_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T01_skit_cuaderno"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El cuaderno de Candelaria",
+      "instruction": "Candelaria revela que ha estado dibujando un mapa todo este tiempo.",
+      "grammar": [
+        "academic register",
+        "synthesis connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Candelaria abre su cuaderno. Las páginas están llenas de líneas, flechas, nombres, fechas. No es un diario — es un mapa."
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Yaguará, mira. He estado conectando todo. Cada historia que escuchamos, cada persona que conocimos, cada finca que visitamos. Todo está relacionado.",
+          "target": [
+            "conectando",
+            "relacionado"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Candelaria... esto es el Mapa de las Voces. O una versión de él. Tú lo estabas dibujando sin saberlo.",
+          "target": [
+            "Mapa de las Voces"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "En primer finca, todas las historias mencionan la carretera. En segundo finca, el voz lejana gris sigue exactamente la ruta de la carretera. Y por lo tanto, la carretera y el voz lejana gris son la misma cosa.",
+          "target": [
+            "En primer lugar",
+            "En segundo lugar",
+            "por lo tanto"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "El gris sigue la carretera. La carretera destruye los nombres. Los nombres perdidos alimentan el gris. Es un ciclo.",
+          "target": [
+            "ciclo"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Ver el patrón es el primer paso para romperlo.",
+              "El patrón es demasiado grande para enfrentarlo.",
+              "No hay ningún patrón."
+            ],
+            "answer": "Ver el patrón es el primer paso para romperlo."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "El Mundo — el último arcano — muestra la totalidad. Desde lejos, la historia tiene forma. Y esa forma es un mapa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T02_skit_patron",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El patrón",
+      "instruction": "Candelaria y Yaguará trazan las conexiones.",
+      "grammar": [
+        "discourse organization",
+        "complex connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Mira: aquí está el {pool:eco.place} donde empezaste, Yaguará. Aquí está la ceiba. Aquí, Don Próspero empezó a construir la carretera.",
+          "target": [
+            "aquí"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Por un lado, la carretera avanza hacia el este. Por otro lado, el {pool:eco.sound} gris avanza en la misma dirección. No es coincidencia.",
+          "target": [
+            "Por un lado",
+            "Por otro lado"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Y los testimonios que escuchamos — la anciana, el joven, la maestra — todos estaban en {pool:eco.place} que la carretera ya atravesó.",
+          "target": [
+            "atravesó"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Además, Doña Asunción vive exactamente en el punto donde la carretera todavía no ha llegado. Es como si ella fuera la última barrera.",
+          "target": [
+            "Además",
+            "como si"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "En conclusión: si la carretera llega a la ceiba, el {pool:eco.sound} gris la alcanzará. Y si la ceiba cae, todo se pierde.",
+          "target": [
+            "En conclusión"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Ahora sabemos qué está en juego y dónde está el punto crítico.",
+              "La situación no tiene solución.",
+              "La ceiba no es importante."
+            ],
+            "answer": "Ahora sabemos qué está en juego y dónde está el punto crítico."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T02_skit_patron_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T02_skit_patron"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El patrón",
+      "instruction": "Candelaria y Yaguará trazan las conexiones.",
+      "grammar": [
+        "discourse organization",
+        "complex connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Mira: aquí está el mirador donde empezaste, Yaguará. Aquí está la ceiba. Aquí, Don Próspero empezó a construir la carretera.",
+          "target": [
+            "aquí"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Por un lado, la carretera avanza hacia el este. Por otro lado, el canto de red gris avanza en la misma dirección. No es coincidencia.",
+          "target": [
+            "Por un lado",
+            "Por otro lado"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Y los testimonios que escuchamos — la anciana, el joven, la maestra — todos estaban en mirador que la carretera ya atravesó.",
+          "target": [
+            "atravesó"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Además, Doña Asunción vive exactamente en el punto donde la carretera todavía no ha llegado. Es como si ella fuera la última barrera.",
+          "target": [
+            "Además",
+            "como si"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "En conclusión: si la carretera llega a la ceiba, el canto de red gris la alcanzará. Y si la ceiba cae, todo se pierde.",
+          "target": [
+            "En conclusión"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Ahora sabemos qué está en juego y dónde está el punto crítico.",
+              "La situación no tiene solución.",
+              "La ceiba no es importante."
+            ],
+            "answer": "Ahora sabemos qué está en juego y dónde está el punto crítico."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T02_skit_patron_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T02_skit_patron"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El patrón",
+      "instruction": "Candelaria y Yaguará trazan las conexiones.",
+      "grammar": [
+        "discourse organization",
+        "complex connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Mira: aquí está el finca donde empezaste, Yaguará. Aquí está la ceiba. Aquí, Don Próspero empezó a construir la carretera.",
+          "target": [
+            "aquí"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Por un lado, la carretera avanza hacia el este. Por otro lado, el voz lejana gris avanza en la misma dirección. No es coincidencia.",
+          "target": [
+            "Por un lado",
+            "Por otro lado"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Y los testimonios que escuchamos — la anciana, el joven, la maestra — todos estaban en finca que la carretera ya atravesó.",
+          "target": [
+            "atravesó"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Además, Doña Asunción vive exactamente en el punto donde la carretera todavía no ha llegado. Es como si ella fuera la última barrera.",
+          "target": [
+            "Además",
+            "como si"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "En conclusión: si la carretera llega a la ceiba, el voz lejana gris la alcanzará. Y si la ceiba cae, todo se pierde.",
+          "target": [
+            "En conclusión"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Ahora sabemos qué está en juego y dónde está el punto crítico.",
+              "La situación no tiene solución.",
+              "La ceiba no es importante."
+            ],
+            "answer": "Ahora sabemos qué está en juego y dónde está el punto crítico."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T03_conversation_sintesis",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Practica la síntesis usando conectores académicos.",
+      "tip": {
+        "title": "Conectores de síntesis",
+        "lines": [
+          "En primer lugar / En segundo lugar / En tercer lugar",
+          "Por un lado... por otro lado...",
+          "Además / Sin embargo / No obstante",
+          "Por lo tanto / En conclusión / En resumen"
+        ]
+      },
+      "turns": [
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "¿Cómo resumirías todo lo que sabemos sobre la carretera?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris la sigue. Por lo tanto, la carretera y el gris están conectados.",
+            "La carretera es mala.",
+            "No sé nada."
+          ],
+          "answer": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris la sigue. Por lo tanto, la carretera y el gris están conectados."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "¿Cómo conectas a Don Próspero con el {pool:eco.sound} gris?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Don Próspero construye la carretera. La carretera destruye nombres. Los nombres perdidos alimentan el gris. Además, su retórica omite estas consecuencias.",
+            "Don Próspero es el silencio gris.",
+            "No están conectados."
+          ],
+          "answer": "Don Próspero construye la carretera. La carretera destruye nombres. Los nombres perdidos alimentan el gris. Además, su retórica omite estas consecuencias."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "Por un lado, Don Próspero destruye. Por otro lado, talló un {pool:eco.animal}. ¿Cómo reconcilias eso?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Sin embargo, que tenga contradicciones internas no lo absuelve. Las acciones y los sentimientos pueden coexistir sin que uno cancele al otro.",
+            "Es imposible reconciliarlo.",
+            "El jaguar no importa."
+          ],
+          "answer": "Sin embargo, que tenga contradicciones internas no lo absuelve. Las acciones y los sentimientos pueden coexistir sin que uno cancele al otro."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T03_conversation_sintesis_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T03_conversation_sintesis"
+      },
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Practica la síntesis usando conectores académicos.",
+      "tip": {
+        "title": "Conectores de síntesis",
+        "lines": [
+          "En primer lugar / En segundo lugar / En tercer lugar",
+          "Por un lado... por otro lado...",
+          "Además / Sin embargo / No obstante",
+          "Por lo tanto / En conclusión / En resumen"
+        ]
+      },
+      "turns": [
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "¿Cómo resumirías todo lo que sabemos sobre la carretera?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris la sigue. Por lo tanto, la carretera y el gris están conectados.",
+            "La carretera es mala.",
+            "No sé nada."
+          ],
+          "answer": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris la sigue. Por lo tanto, la carretera y el gris están conectados."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "¿Cómo conectas a Don Próspero con el canto de red gris?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Don Próspero construye la carretera. La carretera destruye nombres. Los nombres perdidos alimentan el gris. Además, su retórica omite estas consecuencias.",
+            "Don Próspero es el silencio gris.",
+            "No están conectados."
+          ],
+          "answer": "Don Próspero construye la carretera. La carretera destruye nombres. Los nombres perdidos alimentan el gris. Además, su retórica omite estas consecuencias."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "Por un lado, Don Próspero destruye. Por otro lado, talló un jaguar. ¿Cómo reconcilias eso?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Sin embargo, que tenga contradicciones internas no lo absuelve. Las acciones y los sentimientos pueden coexistir sin que uno cancele al otro.",
+            "Es imposible reconciliarlo.",
+            "El jaguar no importa."
+          ],
+          "answer": "Sin embargo, que tenga contradicciones internas no lo absuelve. Las acciones y los sentimientos pueden coexistir sin que uno cancele al otro."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T03_conversation_sintesis_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T03_conversation_sintesis"
+      },
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Practica la síntesis usando conectores académicos.",
+      "tip": {
+        "title": "Conectores de síntesis",
+        "lines": [
+          "En primer lugar / En segundo lugar / En tercer lugar",
+          "Por un lado... por otro lado...",
+          "Además / Sin embargo / No obstante",
+          "Por lo tanto / En conclusión / En resumen"
+        ]
+      },
+      "turns": [
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "¿Cómo resumirías todo lo que sabemos sobre la carretera?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris la sigue. Por lo tanto, la carretera y el gris están conectados.",
+            "La carretera es mala.",
+            "No sé nada."
+          ],
+          "answer": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris la sigue. Por lo tanto, la carretera y el gris están conectados."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "¿Cómo conectas a Don Próspero con el voz lejana gris?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Don Próspero construye la carretera. La carretera destruye nombres. Los nombres perdidos alimentan el gris. Además, su retórica omite estas consecuencias.",
+            "Don Próspero es el silencio gris.",
+            "No están conectados."
+          ],
+          "answer": "Don Próspero construye la carretera. La carretera destruye nombres. Los nombres perdidos alimentan el gris. Además, su retórica omite estas consecuencias."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "Por un lado, Don Próspero destruye. Por otro lado, talló un halcón. ¿Cómo reconcilias eso?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Sin embargo, que tenga contradicciones internas no lo absuelve. Las acciones y los sentimientos pueden coexistir sin que uno cancele al otro.",
+            "Es imposible reconciliarlo.",
+            "El jaguar no importa."
+          ],
+          "answer": "Sin embargo, que tenga contradicciones internas no lo absuelve. Las acciones y los sentimientos pueden coexistir sin que uno cancele al otro."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T04_fill_conectores",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "discourse connectors"
+      ],
+      "instruction": "Completa con el conector adecuado.",
+      "tip": {
+        "title": "Conectores",
+        "lines": [
+          "Orden: en primer lugar, en segundo lugar, finalmente",
+          "Adición: además, también, asimismo",
+          "Contraste: sin embargo, no obstante, por otro lado",
+          "Conclusión: por lo tanto, en conclusión, en resumen"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "___, la carretera destruye el {pool:eco.place}. ___, el gris la sigue.",
+          "answer": "En primer lugar / En segundo lugar",
+          "options": [
+            "En primer lugar / En segundo lugar",
+            "Pero / Y",
+            "Nunca / Siempre"
+          ]
+        },
+        {
+          "sentence": "Don Próspero promete progreso. ___, el progreso solo beneficia a las empresas.",
+          "answer": "Sin embargo",
+          "options": [
+            "Sin embargo",
+            "Además",
+            "Finalmente"
+          ]
+        },
+        {
+          "sentence": "Las historias se contradicen. ___, tienen un patrón común.",
+          "answer": "No obstante",
+          "options": [
+            "No obstante",
+            "Por lo tanto",
+            "En primer lugar"
+          ]
+        },
+        {
+          "sentence": "El gris sigue la carretera. ___, la carretera y el gris están conectados.",
+          "answer": "Por lo tanto",
+          "options": [
+            "Por lo tanto",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "sentence": "___, Doña Asunción transmitió su herencia. ___, encontramos los documentos de Don Próspero.",
+          "answer": "Además / También",
+          "options": [
+            "Además / También",
+            "Pero / Sin embargo",
+            "Nunca / Jamás"
+          ]
+        },
+        {
+          "sentence": "___, todo el viaje nos ha preparado para este momento.",
+          "answer": "En conclusión",
+          "options": [
+            "En conclusión",
+            "En primer lugar",
+            "Sin embargo"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T04_fill_conectores_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T04_fill_conectores"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "discourse connectors"
+      ],
+      "instruction": "Completa con el conector adecuado.",
+      "tip": {
+        "title": "Conectores",
+        "lines": [
+          "Orden: en primer lugar, en segundo lugar, finalmente",
+          "Adición: además, también, asimismo",
+          "Contraste: sin embargo, no obstante, por otro lado",
+          "Conclusión: por lo tanto, en conclusión, en resumen"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "___, la carretera destruye el mirador. ___, el gris la sigue.",
+          "answer": "En primer lugar / En segundo lugar",
+          "options": [
+            "En primer lugar / En segundo lugar",
+            "Pero / Y",
+            "Nunca / Siempre"
+          ]
+        },
+        {
+          "sentence": "Don Próspero promete progreso. ___, el progreso solo beneficia a las empresas.",
+          "answer": "Sin embargo",
+          "options": [
+            "Sin embargo",
+            "Además",
+            "Finalmente"
+          ]
+        },
+        {
+          "sentence": "Las historias se contradicen. ___, tienen un patrón común.",
+          "answer": "No obstante",
+          "options": [
+            "No obstante",
+            "Por lo tanto",
+            "En primer lugar"
+          ]
+        },
+        {
+          "sentence": "El gris sigue la carretera. ___, la carretera y el gris están conectados.",
+          "answer": "Por lo tanto",
+          "options": [
+            "Por lo tanto",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "sentence": "___, Doña Asunción transmitió su herencia. ___, encontramos los documentos de Don Próspero.",
+          "answer": "Además / También",
+          "options": [
+            "Además / También",
+            "Pero / Sin embargo",
+            "Nunca / Jamás"
+          ]
+        },
+        {
+          "sentence": "___, todo el viaje nos ha preparado para este momento.",
+          "answer": "En conclusión",
+          "options": [
+            "En conclusión",
+            "En primer lugar",
+            "Sin embargo"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T04_fill_conectores_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T04_fill_conectores"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "discourse connectors"
+      ],
+      "instruction": "Completa con el conector adecuado.",
+      "tip": {
+        "title": "Conectores",
+        "lines": [
+          "Orden: en primer lugar, en segundo lugar, finalmente",
+          "Adición: además, también, asimismo",
+          "Contraste: sin embargo, no obstante, por otro lado",
+          "Conclusión: por lo tanto, en conclusión, en resumen"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "___, la carretera destruye el finca. ___, el gris la sigue.",
+          "answer": "En primer lugar / En segundo lugar",
+          "options": [
+            "En primer lugar / En segundo lugar",
+            "Pero / Y",
+            "Nunca / Siempre"
+          ]
+        },
+        {
+          "sentence": "Don Próspero promete progreso. ___, el progreso solo beneficia a las empresas.",
+          "answer": "Sin embargo",
+          "options": [
+            "Sin embargo",
+            "Además",
+            "Finalmente"
+          ]
+        },
+        {
+          "sentence": "Las historias se contradicen. ___, tienen un patrón común.",
+          "answer": "No obstante",
+          "options": [
+            "No obstante",
+            "Por lo tanto",
+            "En primer lugar"
+          ]
+        },
+        {
+          "sentence": "El gris sigue la carretera. ___, la carretera y el gris están conectados.",
+          "answer": "Por lo tanto",
+          "options": [
+            "Por lo tanto",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "sentence": "___, Doña Asunción transmitió su herencia. ___, encontramos los documentos de Don Próspero.",
+          "answer": "Además / También",
+          "options": [
+            "Además / También",
+            "Pero / Sin embargo",
+            "Nunca / Jamás"
+          ]
+        },
+        {
+          "sentence": "___, todo el viaje nos ha preparado para este momento.",
+          "answer": "En conclusión",
+          "options": [
+            "En conclusión",
+            "En primer lugar",
+            "Sin embargo"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T05_fill_vocabulario_sintesis",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "synthesis vocabulary"
+      ],
+      "instruction": "Completa con la palabra correcta en {pool:eco.place}.",
+      "questions": [
+        {
+          "sentence": "Candelaria encontró el ___ que conecta todas las historias.",
+          "answer": "patrón",
+          "options": [
+            "patrón",
+            "color",
+            "sabor"
+          ]
+        },
+        {
+          "sentence": "Para hacer una ___, hay que reunir información de varias fuentes.",
+          "answer": "síntesis",
+          "options": [
+            "síntesis",
+            "canción",
+            "fiesta"
+          ]
+        },
+        {
+          "sentence": "Cada historia es una ___ diferente, pero todas son parte del mismo mapa.",
+          "answer": "fuente",
+          "options": [
+            "fuente",
+            "puerta",
+            "mesa"
+          ]
+        },
+        {
+          "sentence": "La ___ entre la carretera y el gris no es coincidencia.",
+          "answer": "relación",
+          "options": [
+            "relación",
+            "relación",
+            "revelación"
+          ]
+        },
+        {
+          "sentence": "Un mapa muestra la ___ de las cosas: cómo se organizan en el espacio.",
+          "answer": "estructura",
+          "options": [
+            "estructura",
+            "temperatura",
+            "aventura"
+          ]
+        },
+        {
+          "sentence": "Para ___ los datos, necesitas ver el panorama completo.",
+          "answer": "organizar",
+          "options": [
+            "organizar",
+            "olvidar",
+            "ocultar"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T05_fill_vocabulario_sintesis_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T05_fill_vocabulario_sintesis"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "synthesis vocabulary"
+      ],
+      "instruction": "Completa con la palabra correcta en mirador.",
+      "questions": [
+        {
+          "sentence": "Candelaria encontró el ___ que conecta todas las historias.",
+          "answer": "patrón",
+          "options": [
+            "patrón",
+            "color",
+            "sabor"
+          ]
+        },
+        {
+          "sentence": "Para hacer una ___, hay que reunir información de varias fuentes.",
+          "answer": "síntesis",
+          "options": [
+            "síntesis",
+            "canción",
+            "fiesta"
+          ]
+        },
+        {
+          "sentence": "Cada historia es una ___ diferente, pero todas son parte del mismo mapa.",
+          "answer": "fuente",
+          "options": [
+            "fuente",
+            "puerta",
+            "mesa"
+          ]
+        },
+        {
+          "sentence": "La ___ entre la carretera y el gris no es coincidencia.",
+          "answer": "relación",
+          "options": [
+            "relación",
+            "relación",
+            "revelación"
+          ]
+        },
+        {
+          "sentence": "Un mapa muestra la ___ de las cosas: cómo se organizan en el espacio.",
+          "answer": "estructura",
+          "options": [
+            "estructura",
+            "temperatura",
+            "aventura"
+          ]
+        },
+        {
+          "sentence": "Para ___ los datos, necesitas ver el panorama completo.",
+          "answer": "organizar",
+          "options": [
+            "organizar",
+            "olvidar",
+            "ocultar"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T05_fill_vocabulario_sintesis_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T05_fill_vocabulario_sintesis"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "synthesis vocabulary"
+      ],
+      "instruction": "Completa con la palabra correcta en finca.",
+      "questions": [
+        {
+          "sentence": "Candelaria encontró el ___ que conecta todas las historias.",
+          "answer": "patrón",
+          "options": [
+            "patrón",
+            "color",
+            "sabor"
+          ]
+        },
+        {
+          "sentence": "Para hacer una ___, hay que reunir información de varias fuentes.",
+          "answer": "síntesis",
+          "options": [
+            "síntesis",
+            "canción",
+            "fiesta"
+          ]
+        },
+        {
+          "sentence": "Cada historia es una ___ diferente, pero todas son parte del mismo mapa.",
+          "answer": "fuente",
+          "options": [
+            "fuente",
+            "puerta",
+            "mesa"
+          ]
+        },
+        {
+          "sentence": "La ___ entre la carretera y el gris no es coincidencia.",
+          "answer": "relación",
+          "options": [
+            "relación",
+            "relación",
+            "revelación"
+          ]
+        },
+        {
+          "sentence": "Un mapa muestra la ___ de las cosas: cómo se organizan en el espacio.",
+          "answer": "estructura",
+          "options": [
+            "estructura",
+            "temperatura",
+            "aventura"
+          ]
+        },
+        {
+          "sentence": "Para ___ los datos, necesitas ver el panorama completo.",
+          "answer": "organizar",
+          "options": [
+            "organizar",
+            "olvidar",
+            "ocultar"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T06_category_fuentes",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "Clasifica cada dato según su fuente.",
+      "categories": [
+        "testimonio oral",
+        "documento escrito",
+        "observación directa"
+      ],
+      "items": [
+        {
+          "text": "La anciana dijo que Don Próspero llegó de noche.",
+          "answer": "testimonio oral"
+        },
+        {
+          "text": "El contrato dice que las tierras serán compensadas a valor catastral.",
+          "answer": "documento escrito"
+        },
+        {
+          "text": "El {pool:eco.sound} gris sigue la ruta de la carretera.",
+          "answer": "observación directa"
+        },
+        {
+          "text": "Don Próspero prometió empleos en su discurso escrito.",
+          "answer": "documento escrito"
+        },
+        {
+          "text": "Doña Asunción contó la historia de las escuchadoras.",
+          "answer": "testimonio oral"
+        },
+        {
+          "text": "Candelaria vio que el {pool:eco.animal} de madera tenía las iniciales P. G.",
+          "answer": "observación directa"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T06_category_fuentes_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T06_category_fuentes"
+      },
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "Clasifica cada dato según su fuente.",
+      "categories": [
+        "testimonio oral",
+        "documento escrito",
+        "observación directa"
+      ],
+      "items": [
+        {
+          "text": "La anciana dijo que Don Próspero llegó de noche.",
+          "answer": "testimonio oral"
+        },
+        {
+          "text": "El contrato dice que las tierras serán compensadas a valor catastral.",
+          "answer": "documento escrito"
+        },
+        {
+          "text": "El canto de red gris sigue la ruta de la carretera.",
+          "answer": "observación directa"
+        },
+        {
+          "text": "Don Próspero prometió empleos en su discurso escrito.",
+          "answer": "documento escrito"
+        },
+        {
+          "text": "Doña Asunción contó la historia de las escuchadoras.",
+          "answer": "testimonio oral"
+        },
+        {
+          "text": "Candelaria vio que el jaguar de madera tenía las iniciales P. G.",
+          "answer": "observación directa"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T06_category_fuentes_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T06_category_fuentes"
+      },
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "Clasifica cada dato según su fuente.",
+      "categories": [
+        "testimonio oral",
+        "documento escrito",
+        "observación directa"
+      ],
+      "items": [
+        {
+          "text": "La anciana dijo que Don Próspero llegó de noche.",
+          "answer": "testimonio oral"
+        },
+        {
+          "text": "El contrato dice que las tierras serán compensadas a valor catastral.",
+          "answer": "documento escrito"
+        },
+        {
+          "text": "El voz lejana gris sigue la ruta de la carretera.",
+          "answer": "observación directa"
+        },
+        {
+          "text": "Don Próspero prometió empleos en su discurso escrito.",
+          "answer": "documento escrito"
+        },
+        {
+          "text": "Doña Asunción contó la historia de las escuchadoras.",
+          "answer": "testimonio oral"
+        },
+        {
+          "text": "Candelaria vio que el halcón de madera tenía las iniciales P. G.",
+          "answer": "observación directa"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T07_builder_sintesis",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye un párrafo de síntesis organizado en {pool:eco.place}.",
+      "items": [
+        {
+          "pieces": [
+            "En primer lugar,",
+            "la carretera",
+            "destruye",
+            "el bosque.",
+            "En segundo lugar,",
+            "el silencio gris",
+            "sigue",
+            "la misma ruta."
+          ],
+          "answer": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris sigue la misma ruta."
+        },
+        {
+          "pieces": [
+            "Por un lado,",
+            "Don Próspero",
+            "promete progreso.",
+            "Por otro lado,",
+            "omite",
+            "las consecuencias",
+            "de sus acciones."
+          ],
+          "answer": "Por un lado, Don Próspero promete progreso. Por otro lado, omite las consecuencias de sus acciones."
+        },
+        {
+          "pieces": [
+            "En conclusión,",
+            "todas las historias",
+            "están conectadas",
+            "y forman",
+            "un patrón",
+            "que podemos",
+            "ver en el mapa."
+          ],
+          "answer": "En conclusión, todas las historias están conectadas y forman un patrón que podemos ver en el mapa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T07_builder_sintesis_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T07_builder_sintesis"
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye un párrafo de síntesis organizado en mirador.",
+      "items": [
+        {
+          "pieces": [
+            "En primer lugar,",
+            "la carretera",
+            "destruye",
+            "el bosque.",
+            "En segundo lugar,",
+            "el silencio gris",
+            "sigue",
+            "la misma ruta."
+          ],
+          "answer": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris sigue la misma ruta."
+        },
+        {
+          "pieces": [
+            "Por un lado,",
+            "Don Próspero",
+            "promete progreso.",
+            "Por otro lado,",
+            "omite",
+            "las consecuencias",
+            "de sus acciones."
+          ],
+          "answer": "Por un lado, Don Próspero promete progreso. Por otro lado, omite las consecuencias de sus acciones."
+        },
+        {
+          "pieces": [
+            "En conclusión,",
+            "todas las historias",
+            "están conectadas",
+            "y forman",
+            "un patrón",
+            "que podemos",
+            "ver en el mapa."
+          ],
+          "answer": "En conclusión, todas las historias están conectadas y forman un patrón que podemos ver en el mapa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T07_builder_sintesis_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T07_builder_sintesis"
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye un párrafo de síntesis organizado en finca.",
+      "items": [
+        {
+          "pieces": [
+            "En primer lugar,",
+            "la carretera",
+            "destruye",
+            "el bosque.",
+            "En segundo lugar,",
+            "el silencio gris",
+            "sigue",
+            "la misma ruta."
+          ],
+          "answer": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris sigue la misma ruta."
+        },
+        {
+          "pieces": [
+            "Por un lado,",
+            "Don Próspero",
+            "promete progreso.",
+            "Por otro lado,",
+            "omite",
+            "las consecuencias",
+            "de sus acciones."
+          ],
+          "answer": "Por un lado, Don Próspero promete progreso. Por otro lado, omite las consecuencias de sus acciones."
+        },
+        {
+          "pieces": [
+            "En conclusión,",
+            "todas las historias",
+            "están conectadas",
+            "y forman",
+            "un patrón",
+            "que podemos",
+            "ver en el mapa."
+          ],
+          "answer": "En conclusión, todas las historias están conectadas y forman un patrón que podemos ver en el mapa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T08_listening_presentacion",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha la presentación de Candelaria y responde en {pool:eco.place}.",
+      "items": [
+        {
+          "audio": "Candelaria presenta: 'He analizado tres tipos de fuentes: testimonios orales, documentos escritos y observaciones directas. En primer lugar, los testimonios coinciden en que la carretera cambió todo. En segundo lugar, los documentos revelan que las promesas no se cumplieron. Finalmente, la observación del terreno confirma que el gris sigue exactamente la ruta de la carretera.'",
+          "question": "¿Cuántos tipos de fuentes analizó Candelaria?",
+          "answer": "Tres: testimonios orales, documentos escritos y observaciones directas.",
+          "options": [
+            "Tres: testimonios orales, documentos escritos y observaciones directas.",
+            "Una: los documentos.",
+            "Dos: testimonios y observaciones."
+          ]
+        },
+        {
+          "audio": "Candelaria continúa: 'Por lo tanto, la conclusión es clara: el silencio gris no es un fenómeno natural. Es una consecuencia directa de la destrucción del bosque. Sin embargo, todavía hay tiempo. La carretera no ha llegado a la ceiba.'",
+          "question": "¿Cuál es la conclusión de Candelaria?",
+          "answer": "Que el silencio gris es consecuencia de la destrucción, pero todavía hay tiempo de actuar.",
+          "options": [
+            "Que el silencio gris es consecuencia de la destrucción, pero todavía hay tiempo de actuar.",
+            "Que no hay esperanza.",
+            "Que el gris es natural."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T08_listening_presentacion_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T08_listening_presentacion"
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha la presentación de Candelaria y responde en mirador.",
+      "items": [
+        {
+          "audio": "Candelaria presenta: 'He analizado tres tipos de fuentes: testimonios orales, documentos escritos y observaciones directas. En primer lugar, los testimonios coinciden en que la carretera cambió todo. En segundo lugar, los documentos revelan que las promesas no se cumplieron. Finalmente, la observación del terreno confirma que el gris sigue exactamente la ruta de la carretera.'",
+          "question": "¿Cuántos tipos de fuentes analizó Candelaria?",
+          "answer": "Tres: testimonios orales, documentos escritos y observaciones directas.",
+          "options": [
+            "Tres: testimonios orales, documentos escritos y observaciones directas.",
+            "Una: los documentos.",
+            "Dos: testimonios y observaciones."
+          ]
+        },
+        {
+          "audio": "Candelaria continúa: 'Por lo tanto, la conclusión es clara: el silencio gris no es un fenómeno natural. Es una consecuencia directa de la destrucción del bosque. Sin embargo, todavía hay tiempo. La carretera no ha llegado a la ceiba.'",
+          "question": "¿Cuál es la conclusión de Candelaria?",
+          "answer": "Que el silencio gris es consecuencia de la destrucción, pero todavía hay tiempo de actuar.",
+          "options": [
+            "Que el silencio gris es consecuencia de la destrucción, pero todavía hay tiempo de actuar.",
+            "Que no hay esperanza.",
+            "Que el gris es natural."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T08_listening_presentacion_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T08_listening_presentacion"
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha la presentación de Candelaria y responde en finca.",
+      "items": [
+        {
+          "audio": "Candelaria presenta: 'He analizado tres tipos de fuentes: testimonios orales, documentos escritos y observaciones directas. En primer lugar, los testimonios coinciden en que la carretera cambió todo. En segundo lugar, los documentos revelan que las promesas no se cumplieron. Finalmente, la observación del terreno confirma que el gris sigue exactamente la ruta de la carretera.'",
+          "question": "¿Cuántos tipos de fuentes analizó Candelaria?",
+          "answer": "Tres: testimonios orales, documentos escritos y observaciones directas.",
+          "options": [
+            "Tres: testimonios orales, documentos escritos y observaciones directas.",
+            "Una: los documentos.",
+            "Dos: testimonios y observaciones."
+          ]
+        },
+        {
+          "audio": "Candelaria continúa: 'Por lo tanto, la conclusión es clara: el silencio gris no es un fenómeno natural. Es una consecuencia directa de la destrucción del bosque. Sin embargo, todavía hay tiempo. La carretera no ha llegado a la ceiba.'",
+          "question": "¿Cuál es la conclusión de Candelaria?",
+          "answer": "Que el silencio gris es consecuencia de la destrucción, pero todavía hay tiempo de actuar.",
+          "options": [
+            "Que el silencio gris es consecuencia de la destrucción, pero todavía hay tiempo de actuar.",
+            "Que no hay esperanza.",
+            "Que el gris es natural."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T09_pair_conexiones",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "pair",
+      "label": "Conectar",
+      "instruction": "Conecta cada elemento del mapa con su consecuencia en {pool:eco.place}.",
+      "pairs": [
+        {
+          "left": "Don Próspero construye la carretera",
+          "right": "El bosque se destruye"
+        },
+        {
+          "left": "El bosque se destruye",
+          "right": "Los nombres se pierden"
+        },
+        {
+          "left": "Los nombres se pierden",
+          "right": "El silencio gris crece"
+        },
+        {
+          "left": "El silencio gris crece",
+          "right": "Más cosas se olvidan"
+        },
+        {
+          "left": "Doña Asunción transmite su herencia",
+          "right": "Yaguará puede nombrar"
+        },
+        {
+          "left": "Candelaria dibuja el mapa",
+          "right": "El patrón se hace visible"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T09_pair_conexiones_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T09_pair_conexiones"
+      },
+      "type": "pair",
+      "label": "Conectar",
+      "instruction": "Conecta cada elemento del mapa con su consecuencia en mirador.",
+      "pairs": [
+        {
+          "left": "Don Próspero construye la carretera",
+          "right": "El bosque se destruye"
+        },
+        {
+          "left": "El bosque se destruye",
+          "right": "Los nombres se pierden"
+        },
+        {
+          "left": "Los nombres se pierden",
+          "right": "El silencio gris crece"
+        },
+        {
+          "left": "El silencio gris crece",
+          "right": "Más cosas se olvidan"
+        },
+        {
+          "left": "Doña Asunción transmite su herencia",
+          "right": "Yaguará puede nombrar"
+        },
+        {
+          "left": "Candelaria dibuja el mapa",
+          "right": "El patrón se hace visible"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T09_pair_conexiones_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T09_pair_conexiones"
+      },
+      "type": "pair",
+      "label": "Conectar",
+      "instruction": "Conecta cada elemento del mapa con su consecuencia en finca.",
+      "pairs": [
+        {
+          "left": "Don Próspero construye la carretera",
+          "right": "El bosque se destruye"
+        },
+        {
+          "left": "El bosque se destruye",
+          "right": "Los nombres se pierden"
+        },
+        {
+          "left": "Los nombres se pierden",
+          "right": "El silencio gris crece"
+        },
+        {
+          "left": "El silencio gris crece",
+          "right": "Más cosas se olvidan"
+        },
+        {
+          "left": "Doña Asunción transmite su herencia",
+          "right": "Yaguará puede nombrar"
+        },
+        {
+          "left": "Candelaria dibuja el mapa",
+          "right": "El patrón se hace visible"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T10_cartografo_mapa_voces",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "cartografo",
+      "label": "Cartógrafo",
+      "instruction": "Completa el Mapa de las Voces en {pool:eco.place}.",
+      "locations": [
+        {
+          "name": "Nodo 1: La ceiba",
+          "text": "En el centro del mapa está la ceiba. Todas las líneas convergen aquí. Si cae, todo el sistema se desconecta.",
+          "question": "¿Por qué la ceiba es el centro del mapa?",
+          "answer": "Porque es el punto donde se conectan todos los caminos, voces y memorias.",
+          "options": [
+            "Porque es el punto donde se conectan todos los caminos, voces y memorias.",
+            "Porque es el árbol más grande.",
+            "Porque está en medio del bosque."
+          ]
+        },
+        {
+          "name": "Nodo 2: La carretera",
+          "text": "Una línea roja que avanza de oeste a este. A cada lado de la línea, el color desaparece — se vuelve gris.",
+          "question": "¿Qué relación tiene la carretera con el gris?",
+          "answer": "El gris es la consecuencia visible de la destrucción que trae la carretera.",
+          "options": [
+            "El gris es la consecuencia visible de la destrucción que trae la carretera.",
+            "La carretera es gris porque está hecha de cemento.",
+            "No tienen relación."
+          ]
+        },
+        {
+          "name": "Nodo 3: Las voces",
+          "text": "Puntos de color dispersos por el mapa. Cada punto es una voz: la anciana, el joven, la maestra, Doña Asunción, Don Próspero. Las líneas entre ellos forman una red.",
+          "question": "¿Qué forma tiene la red de voces?",
+          "answer": "La forma de una historia con muchas perspectivas, todas conectadas por los mismos eventos.",
+          "options": [
+            "La forma de una historia con muchas perspectivas, todas conectadas por los mismos eventos.",
+            "Un círculo perfecto.",
+            "Una línea recta."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T10_cartografo_mapa_voces_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T10_cartografo_mapa_voces"
+      },
+      "type": "cartografo",
+      "label": "Cartógrafo",
+      "instruction": "Completa el Mapa de las Voces en mirador.",
+      "locations": [
+        {
+          "name": "Nodo 1: La ceiba",
+          "text": "En el centro del mapa está la ceiba. Todas las líneas convergen aquí. Si cae, todo el sistema se desconecta.",
+          "question": "¿Por qué la ceiba es el centro del mapa?",
+          "answer": "Porque es el punto donde se conectan todos los caminos, voces y memorias.",
+          "options": [
+            "Porque es el punto donde se conectan todos los caminos, voces y memorias.",
+            "Porque es el árbol más grande.",
+            "Porque está en medio del bosque."
+          ]
+        },
+        {
+          "name": "Nodo 2: La carretera",
+          "text": "Una línea roja que avanza de oeste a este. A cada lado de la línea, el color desaparece — se vuelve gris.",
+          "question": "¿Qué relación tiene la carretera con el gris?",
+          "answer": "El gris es la consecuencia visible de la destrucción que trae la carretera.",
+          "options": [
+            "El gris es la consecuencia visible de la destrucción que trae la carretera.",
+            "La carretera es gris porque está hecha de cemento.",
+            "No tienen relación."
+          ]
+        },
+        {
+          "name": "Nodo 3: Las voces",
+          "text": "Puntos de color dispersos por el mapa. Cada punto es una voz: la anciana, el joven, la maestra, Doña Asunción, Don Próspero. Las líneas entre ellos forman una red.",
+          "question": "¿Qué forma tiene la red de voces?",
+          "answer": "La forma de una historia con muchas perspectivas, todas conectadas por los mismos eventos.",
+          "options": [
+            "La forma de una historia con muchas perspectivas, todas conectadas por los mismos eventos.",
+            "Un círculo perfecto.",
+            "Una línea recta."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T10_cartografo_mapa_voces_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T10_cartografo_mapa_voces"
+      },
+      "type": "cartografo",
+      "label": "Cartógrafo",
+      "instruction": "Completa el Mapa de las Voces en finca.",
+      "locations": [
+        {
+          "name": "Nodo 1: La ceiba",
+          "text": "En el centro del mapa está la ceiba. Todas las líneas convergen aquí. Si cae, todo el sistema se desconecta.",
+          "question": "¿Por qué la ceiba es el centro del mapa?",
+          "answer": "Porque es el punto donde se conectan todos los caminos, voces y memorias.",
+          "options": [
+            "Porque es el punto donde se conectan todos los caminos, voces y memorias.",
+            "Porque es el árbol más grande.",
+            "Porque está en medio del bosque."
+          ]
+        },
+        {
+          "name": "Nodo 2: La carretera",
+          "text": "Una línea roja que avanza de oeste a este. A cada lado de la línea, el color desaparece — se vuelve gris.",
+          "question": "¿Qué relación tiene la carretera con el gris?",
+          "answer": "El gris es la consecuencia visible de la destrucción que trae la carretera.",
+          "options": [
+            "El gris es la consecuencia visible de la destrucción que trae la carretera.",
+            "La carretera es gris porque está hecha de cemento.",
+            "No tienen relación."
+          ]
+        },
+        {
+          "name": "Nodo 3: Las voces",
+          "text": "Puntos de color dispersos por el mapa. Cada punto es una voz: la anciana, el joven, la maestra, Doña Asunción, Don Próspero. Las líneas entre ellos forman una red.",
+          "question": "¿Qué forma tiene la red de voces?",
+          "answer": "La forma de una historia con muchas perspectivas, todas conectadas por los mismos eventos.",
+          "options": [
+            "La forma de una historia con muchas perspectivas, todas conectadas por los mismos eventos.",
+            "Un círculo perfecto.",
+            "Una línea recta."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T11_sombra_academico",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Lee en voz alta con registro académico. Organizado, claro, preciso en {pool:eco.place}.",
+      "items": [
+        {
+          "text": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris sigue la misma ruta. Por lo tanto, la carretera y el silencio están directamente conectados.",
+          "highlight": [
+            "En primer lugar",
+            "En segundo lugar",
+            "Por lo tanto"
+          ]
+        },
+        {
+          "text": "Sin embargo, todavía hay tiempo. La carretera no ha llegado a la ceiba. Además, ahora tenemos el mapa: sabemos dónde están las conexiones y dónde están las grietas.",
+          "highlight": [
+            "Sin embargo",
+            "Además",
+            "conexiones",
+            "grietas"
+          ]
+        },
+        {
+          "text": "En conclusión, ver el patrón es el primer paso para romperlo. El mapa no es solo un dibujo — es un arma.",
+          "highlight": [
+            "En conclusión",
+            "patrón",
+            "arma"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T11_sombra_academico_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T11_sombra_academico"
+      },
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Lee en voz alta con registro académico. Organizado, claro, preciso en mirador.",
+      "items": [
+        {
+          "text": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris sigue la misma ruta. Por lo tanto, la carretera y el silencio están directamente conectados.",
+          "highlight": [
+            "En primer lugar",
+            "En segundo lugar",
+            "Por lo tanto"
+          ]
+        },
+        {
+          "text": "Sin embargo, todavía hay tiempo. La carretera no ha llegado a la ceiba. Además, ahora tenemos el mapa: sabemos dónde están las conexiones y dónde están las grietas.",
+          "highlight": [
+            "Sin embargo",
+            "Además",
+            "conexiones",
+            "grietas"
+          ]
+        },
+        {
+          "text": "En conclusión, ver el patrón es el primer paso para romperlo. El mapa no es solo un dibujo — es un arma.",
+          "highlight": [
+            "En conclusión",
+            "patrón",
+            "arma"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T11_sombra_academico_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T11_sombra_academico"
+      },
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Lee en voz alta con registro académico. Organizado, claro, preciso en finca.",
+      "items": [
+        {
+          "text": "En primer lugar, la carretera destruye el bosque. En segundo lugar, el silencio gris sigue la misma ruta. Por lo tanto, la carretera y el silencio están directamente conectados.",
+          "highlight": [
+            "En primer lugar",
+            "En segundo lugar",
+            "Por lo tanto"
+          ]
+        },
+        {
+          "text": "Sin embargo, todavía hay tiempo. La carretera no ha llegado a la ceiba. Además, ahora tenemos el mapa: sabemos dónde están las conexiones y dónde están las grietas.",
+          "highlight": [
+            "Sin embargo",
+            "Además",
+            "conexiones",
+            "grietas"
+          ]
+        },
+        {
+          "text": "En conclusión, ver el patrón es el primer paso para romperlo. El mapa no es solo un dibujo — es un arma.",
+          "highlight": [
+            "En conclusión",
+            "patrón",
+            "arma"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T12_dictation_academico",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe en {pool:eco.place}.",
+      "items": [
+        {
+          "audio": "En primer lugar, todas las historias mencionan la carretera.",
+          "answer": "En primer lugar, todas las historias mencionan la carretera."
+        },
+        {
+          "audio": "Por lo tanto, el silencio gris y la destrucción están conectados.",
+          "answer": "Por lo tanto, el silencio gris y la destrucción están conectados."
+        },
+        {
+          "audio": "Sin embargo, todavía hay tiempo para actuar.",
+          "answer": "Sin embargo, todavía hay tiempo para actuar."
+        },
+        {
+          "audio": "En conclusión, el mapa revela un patrón que antes era invisible.",
+          "answer": "En conclusión, el mapa revela un patrón que antes era invisible."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T12_dictation_academico_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T12_dictation_academico"
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe en mirador.",
+      "items": [
+        {
+          "audio": "En primer lugar, todas las historias mencionan la carretera.",
+          "answer": "En primer lugar, todas las historias mencionan la carretera."
+        },
+        {
+          "audio": "Por lo tanto, el silencio gris y la destrucción están conectados.",
+          "answer": "Por lo tanto, el silencio gris y la destrucción están conectados."
+        },
+        {
+          "audio": "Sin embargo, todavía hay tiempo para actuar.",
+          "answer": "Sin embargo, todavía hay tiempo para actuar."
+        },
+        {
+          "audio": "En conclusión, el mapa revela un patrón que antes era invisible.",
+          "answer": "En conclusión, el mapa revela un patrón que antes era invisible."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T12_dictation_academico_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T12_dictation_academico"
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe en finca.",
+      "items": [
+        {
+          "audio": "En primer lugar, todas las historias mencionan la carretera.",
+          "answer": "En primer lugar, todas las historias mencionan la carretera."
+        },
+        {
+          "audio": "Por lo tanto, el silencio gris y la destrucción están conectados.",
+          "answer": "Por lo tanto, el silencio gris y la destrucción están conectados."
+        },
+        {
+          "audio": "Sin embargo, todavía hay tiempo para actuar.",
+          "answer": "Sin embargo, todavía hay tiempo para actuar."
+        },
+        {
+          "audio": "En conclusión, el mapa revela un patrón que antes era invisible.",
+          "answer": "En conclusión, el mapa revela un patrón que antes era invisible."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T13_cronica_sintesis",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Escribe una síntesis de todo lo que sabes. Conecta al menos tres fuentes de información diferentes (testimonios, documentos, observaciones). Usa conectores académicos: en primer lugar, además, sin embargo, por lo tanto, en conclusión. Escribe 6-10 oraciones en registro académico.",
+      "placeholder": "En primer lugar, las fuentes orales indican que...",
+      "minWords": 50,
+      "maxWords": 150,
+      "scaffoldType": "paragraph",
+      "storyKey": "cronica_dest36",
+      "vocabularyHints": [
+        "en primer lugar",
+        "en segundo lugar",
+        "además",
+        "sin embargo",
+        "por lo tanto",
+        "en conclusión",
+        "patrón",
+        "fuente",
+        "síntesis",
+        "relación",
+        "conectar",
+        "estructura"
+      ],
+      "button": "Guardar en la crónica"
+    },
+    {
+      "_template": {
+        "id": "T14_flashnote_mundo",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "flashnote",
+      "label": "Arcano",
+      "instruction": "Contempla el arcano XXI — El Mundo en {pool:eco.place}.",
+      "note": "El Mundo es el último arcano mayor. Muestra la totalidad: todo está conectado. Desde lejos, lo que parecían eventos aislados forman un patrón. El Mundo no da respuestas — da perspectiva. Y la perspectiva es poder.",
+      "question": "¿Qué ofrece el arcano del Mundo?",
+      "answer": "La perspectiva para ver que todo está conectado.",
+      "options": [
+        "La perspectiva para ver que todo está conectado.",
+        "La respuesta a todas las preguntas.",
+        "El final de la historia."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T14_flashnote_mundo_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T14_flashnote_mundo"
+      },
+      "type": "flashnote",
+      "label": "Arcano",
+      "instruction": "Contempla el arcano XXI — El Mundo en mirador.",
+      "note": "El Mundo es el último arcano mayor. Muestra la totalidad: todo está conectado. Desde lejos, lo que parecían eventos aislados forman un patrón. El Mundo no da respuestas — da perspectiva. Y la perspectiva es poder.",
+      "question": "¿Qué ofrece el arcano del Mundo?",
+      "answer": "La perspectiva para ver que todo está conectado.",
+      "options": [
+        "La perspectiva para ver que todo está conectado.",
+        "La respuesta a todas las preguntas.",
+        "El final de la historia."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T14_flashnote_mundo_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T14_flashnote_mundo"
+      },
+      "type": "flashnote",
+      "label": "Arcano",
+      "instruction": "Contempla el arcano XXI — El Mundo en finca.",
+      "note": "El Mundo es el último arcano mayor. Muestra la totalidad: todo está conectado. Desde lejos, lo que parecían eventos aislados forman un patrón. El Mundo no da respuestas — da perspectiva. Y la perspectiva es poder.",
+      "question": "¿Qué ofrece el arcano del Mundo?",
+      "answer": "La perspectiva para ver que todo está conectado.",
+      "options": [
+        "La perspectiva para ver que todo está conectado.",
+        "La respuesta a todas las preguntas.",
+        "El final de la historia."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T15_oraculo_paso_siguiente",
+        "layer": "advanced",
+        "ecosystem": "canonical"
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "Ahora que ves el patrón, ¿qué haces? En {pool:eco.place}.",
+      "scene": [
+        {
+          "speaker": "Candelaria",
+          "text": "Tenemos el mapa. Sabemos dónde está el problema. Sabemos qué está en juego."
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "Pero saber no es suficiente. Necesitamos actuar antes de que la carretera llegue a la ceiba."
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "¿Qué hacemos primero?"
+        }
+      ],
+      "options": [
+        "Compartir el mapa — el conocimiento solo tiene poder cuando se comparte.",
+        "Destruir la carretera directamente.",
+        "Esperar a que alguien más lo resuelva."
+      ],
+      "answer": "Compartir el mapa — el conocimiento solo tiene poder cuando se comparte.",
+      "explanation": "El mapa es una herramienta de comprensión, no de destrucción. Su poder está en hacer visible lo que era invisible — y compartir esa visibilidad."
+    },
+    {
+      "_template": {
+        "id": "T15_oraculo_paso_siguiente_bosque",
+        "layer": "advanced",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T15_oraculo_paso_siguiente"
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "Ahora que ves el patrón, ¿qué haces? En mirador.",
+      "scene": [
+        {
+          "speaker": "Candelaria",
+          "text": "Tenemos el mapa. Sabemos dónde está el problema. Sabemos qué está en juego."
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "Pero saber no es suficiente. Necesitamos actuar antes de que la carretera llegue a la ceiba."
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "¿Qué hacemos primero?"
+        }
+      ],
+      "options": [
+        "Compartir el mapa — el conocimiento solo tiene poder cuando se comparte.",
+        "Destruir la carretera directamente.",
+        "Esperar a que alguien más lo resuelva."
+      ],
+      "answer": "Compartir el mapa — el conocimiento solo tiene poder cuando se comparte.",
+      "explanation": "El mapa es una herramienta de comprensión, no de destrucción. Su poder está en hacer visible lo que era invisible — y compartir esa visibilidad."
+    },
+    {
+      "_template": {
+        "id": "T15_oraculo_paso_siguiente_sierra",
+        "layer": "advanced",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T15_oraculo_paso_siguiente"
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "Ahora que ves el patrón, ¿qué haces? En finca.",
+      "scene": [
+        {
+          "speaker": "Candelaria",
+          "text": "Tenemos el mapa. Sabemos dónde está el problema. Sabemos qué está en juego."
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "Pero saber no es suficiente. Necesitamos actuar antes de que la carretera llegue a la ceiba."
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "¿Qué hacemos primero?"
+        }
+      ],
+      "options": [
+        "Compartir el mapa — el conocimiento solo tiene poder cuando se comparte.",
+        "Destruir la carretera directamente.",
+        "Esperar a que alguien más lo resuelva."
+      ],
+      "answer": "Compartir el mapa — el conocimiento solo tiene poder cuando se comparte.",
+      "explanation": "El mapa es una herramienta de comprensión, no de destrucción. Su poder está en hacer visible lo que era invisible — y compartir esa visibilidad."
+    },
+    {
+      "_template": {
+        "id": "T16_autoevaluacion_b2_sintesis",
+        "layer": "advanced",
+        "ecosystem": "canonical"
+      },
+      "type": "autoevaluacion",
+      "label": "¿Qué puedo hacer?",
+      "instruction": "Reflexiona sobre tus habilidades de síntesis.",
+      "statements": [
+        {
+          "text": "Puedo sintetizar información de múltiples fuentes."
+        },
+        {
+          "text": "Puedo usar conectores académicos: en primer lugar, además, sin embargo, por lo tanto, en conclusión."
+        },
+        {
+          "text": "Puedo presentar datos complejos de forma organizada."
+        },
+        {
+          "text": "Puedo distinguir entre diferentes tipos de fuentes: orales, escritas, observaciones."
+        },
+        {
+          "text": "Puedo escribir en registro académico."
+        },
+        {
+          "text": "Puedo identificar patrones que conectan eventos aparentemente aislados."
+        }
+      ],
+      "reflection": "¿Qué forma tiene una historia cuando la ves desde lejos?"
+    },
+    {
+      "_template": {
+        "id": "T17_portafolio_presentacion",
+        "layer": "advanced",
+        "ecosystem": "canonical"
+      },
+      "type": "portafolio",
+      "label": "Mi voz",
+      "instruction": "Graba tu presentación del mapa.",
+      "prompt": "Presenta las conclusiones del Mapa de las Voces como si estuvieras dando una conferencia. Usa registro académico, conectores de síntesis, y organiza tu argumento: introducción, datos, conclusión. Habla 60 segundos.",
+      "guidingQuestions": [
+        "¿Qué fuentes analizaste?",
+        "¿Cuál es el patrón que descubriste?",
+        "¿Qué relación hay entre la carretera y el silencio gris?",
+        "¿Cuál es tu conclusión?"
+      ],
+      "minWords": 40
+    },
+    {
+      "_template": {
+        "id": "T18_explorador_mapa",
+        "layer": "meta",
+        "ecosystem": "canonical"
+      },
+      "type": "explorador",
+      "label": "Explorador",
+      "instruction": "Explora el Mapa de las Voces completo en {pool:eco.place}.",
+      "locations": [
+        {
+          "name": "Vista general",
+          "text": "Desde lejos, el mapa parece un árbol. Las raíces son las historias del pasado. El tronco es el presente. Las ramas son los caminos posibles del futuro. La carretera es una línea que corta las raíces.",
+          "question": "¿Qué forma tiene el mapa visto desde lejos?",
+          "answer": "La forma de un árbol — como la ceiba.",
+          "options": [
+            "La forma de un árbol — como la ceiba.",
+            "La forma de un cuadrado.",
+            "No tiene forma."
+          ]
+        },
+        {
+          "name": "Los nodos de color",
+          "text": "Cada voz es un punto de color. Los colores más brillantes son las voces que todavía suenan. Los colores grises son las voces olvidadas. En el borde, hay puntos que parpadean — voces al borde de apagarse.",
+          "question": "¿Qué representan los puntos que parpadean?",
+          "answer": "Voces que todavía existen pero están a punto de ser olvidadas.",
+          "options": [
+            "Voces que todavía existen pero están a punto de ser olvidadas.",
+            "Luces decorativas.",
+            "Errores del mapa."
+          ]
+        },
+        {
+          "name": "El punto crítico",
+          "text": "Donde la línea roja de la carretera casi toca el centro del árbol — la ceiba. Un espacio pequeño separa la destrucción del corazón del mundo. Ese espacio es el tiempo que queda.",
+          "question": "¿Cuánto tiempo queda?",
+          "answer": "Poco — el espacio entre la carretera y la ceiba es cada vez más pequeño.",
+          "options": [
+            "Poco — el espacio entre la carretera y la ceiba es cada vez más pequeño.",
+            "Mucho tiempo.",
+            "No importa el tiempo."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T18_explorador_mapa_bosque",
+        "layer": "meta",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T18_explorador_mapa"
+      },
+      "type": "explorador",
+      "label": "Explorador",
+      "instruction": "Explora el Mapa de las Voces completo en mirador.",
+      "locations": [
+        {
+          "name": "Vista general",
+          "text": "Desde lejos, el mapa parece un árbol. Las raíces son las historias del pasado. El tronco es el presente. Las ramas son los caminos posibles del futuro. La carretera es una línea que corta las raíces.",
+          "question": "¿Qué forma tiene el mapa visto desde lejos?",
+          "answer": "La forma de un árbol — como la ceiba.",
+          "options": [
+            "La forma de un árbol — como la ceiba.",
+            "La forma de un cuadrado.",
+            "No tiene forma."
+          ]
+        },
+        {
+          "name": "Los nodos de color",
+          "text": "Cada voz es un punto de color. Los colores más brillantes son las voces que todavía suenan. Los colores grises son las voces olvidadas. En el borde, hay puntos que parpadean — voces al borde de apagarse.",
+          "question": "¿Qué representan los puntos que parpadean?",
+          "answer": "Voces que todavía existen pero están a punto de ser olvidadas.",
+          "options": [
+            "Voces que todavía existen pero están a punto de ser olvidadas.",
+            "Luces decorativas.",
+            "Errores del mapa."
+          ]
+        },
+        {
+          "name": "El punto crítico",
+          "text": "Donde la línea roja de la carretera casi toca el centro del árbol — la ceiba. Un espacio pequeño separa la destrucción del corazón del mundo. Ese espacio es el tiempo que queda.",
+          "question": "¿Cuánto tiempo queda?",
+          "answer": "Poco — el espacio entre la carretera y la ceiba es cada vez más pequeño.",
+          "options": [
+            "Poco — el espacio entre la carretera y la ceiba es cada vez más pequeño.",
+            "Mucho tiempo.",
+            "No importa el tiempo."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T18_explorador_mapa_sierra",
+        "layer": "meta",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T18_explorador_mapa"
+      },
+      "type": "explorador",
+      "label": "Explorador",
+      "instruction": "Explora el Mapa de las Voces completo en finca.",
+      "locations": [
+        {
+          "name": "Vista general",
+          "text": "Desde lejos, el mapa parece un árbol. Las raíces son las historias del pasado. El tronco es el presente. Las ramas son los caminos posibles del futuro. La carretera es una línea que corta las raíces.",
+          "question": "¿Qué forma tiene el mapa visto desde lejos?",
+          "answer": "La forma de un árbol — como la ceiba.",
+          "options": [
+            "La forma de un árbol — como la ceiba.",
+            "La forma de un cuadrado.",
+            "No tiene forma."
+          ]
+        },
+        {
+          "name": "Los nodos de color",
+          "text": "Cada voz es un punto de color. Los colores más brillantes son las voces que todavía suenan. Los colores grises son las voces olvidadas. En el borde, hay puntos que parpadean — voces al borde de apagarse.",
+          "question": "¿Qué representan los puntos que parpadean?",
+          "answer": "Voces que todavía existen pero están a punto de ser olvidadas.",
+          "options": [
+            "Voces que todavía existen pero están a punto de ser olvidadas.",
+            "Luces decorativas.",
+            "Errores del mapa."
+          ]
+        },
+        {
+          "name": "El punto crítico",
+          "text": "Donde la línea roja de la carretera casi toca el centro del árbol — la ceiba. Un espacio pequeño separa la destrucción del corazón del mundo. Ese espacio es el tiempo que queda.",
+          "question": "¿Cuánto tiempo queda?",
+          "answer": "Poco — el espacio entre la carretera y la ceiba es cada vez más pequeño.",
+          "options": [
+            "Poco — el espacio entre la carretera y la ceiba es cada vez más pequeño.",
+            "Mucho tiempo.",
+            "No importa el tiempo."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T19_guardian_sintesis",
+        "layer": "meta",
+        "ecosystem": "canonical"
+      },
+      "type": "guardian",
+      "label": "Guardián",
+      "instruction": "Demuestra tu capacidad de síntesis.",
+      "timeLimit": 10,
+      "questions": [
+        {
+          "prompt": "Completa: ___, la carretera destruye el {pool:eco.place}. (first)",
+          "answer": "En primer lugar",
+          "options": [
+            "En primer lugar",
+            "Finalmente",
+            "Sin embargo"
+          ]
+        },
+        {
+          "prompt": "El gris sigue la carretera. ___, están conectados. (therefore)",
+          "answer": "Por lo tanto",
+          "options": [
+            "Por lo tanto",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "prompt": "Don Próspero promete progreso. ___, omite las consecuencias. (however)",
+          "answer": "Sin embargo",
+          "options": [
+            "Sin embargo",
+            "Además",
+            "En conclusión"
+          ]
+        },
+        {
+          "prompt": "Reunir información de varias fuentes y encontrar un patrón es hacer una ___.",
+          "answer": "síntesis",
+          "options": [
+            "síntesis",
+            "fiesta",
+            "siesta"
+          ]
+        },
+        {
+          "prompt": "Testimonios, documentos y observaciones son tres tipos de ___.",
+          "answer": "fuentes",
+          "options": [
+            "fuentes",
+            "fiestas",
+            "frutas"
+          ]
+        },
+        {
+          "prompt": "Lo que conecta eventos aparentemente aislados es un ___.",
+          "answer": "patrón",
+          "options": [
+            "patrón",
+            "pastel",
+            "paisaje"
+          ]
+        },
+        {
+          "prompt": "El Mapa de las Voces tiene forma de ___.",
+          "answer": "árbol",
+          "options": [
+            "árbol",
+            "cuadrado",
+            "estrella"
+          ]
+        },
+        {
+          "prompt": "___, el mapa revela que todavía hay tiempo. (in conclusion)",
+          "answer": "En conclusión",
+          "options": [
+            "En conclusión",
+            "En primer lugar",
+            "Sin embargo"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T19_guardian_sintesis_bosque",
+        "layer": "meta",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T19_guardian_sintesis"
+      },
+      "type": "guardian",
+      "label": "Guardián",
+      "instruction": "Demuestra tu capacidad de síntesis.",
+      "timeLimit": 10,
+      "questions": [
+        {
+          "prompt": "Completa: ___, la carretera destruye el mirador. (first)",
+          "answer": "En primer lugar",
+          "options": [
+            "En primer lugar",
+            "Finalmente",
+            "Sin embargo"
+          ]
+        },
+        {
+          "prompt": "El gris sigue la carretera. ___, están conectados. (therefore)",
+          "answer": "Por lo tanto",
+          "options": [
+            "Por lo tanto",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "prompt": "Don Próspero promete progreso. ___, omite las consecuencias. (however)",
+          "answer": "Sin embargo",
+          "options": [
+            "Sin embargo",
+            "Además",
+            "En conclusión"
+          ]
+        },
+        {
+          "prompt": "Reunir información de varias fuentes y encontrar un patrón es hacer una ___.",
+          "answer": "síntesis",
+          "options": [
+            "síntesis",
+            "fiesta",
+            "siesta"
+          ]
+        },
+        {
+          "prompt": "Testimonios, documentos y observaciones son tres tipos de ___.",
+          "answer": "fuentes",
+          "options": [
+            "fuentes",
+            "fiestas",
+            "frutas"
+          ]
+        },
+        {
+          "prompt": "Lo que conecta eventos aparentemente aislados es un ___.",
+          "answer": "patrón",
+          "options": [
+            "patrón",
+            "pastel",
+            "paisaje"
+          ]
+        },
+        {
+          "prompt": "El Mapa de las Voces tiene forma de ___.",
+          "answer": "árbol",
+          "options": [
+            "árbol",
+            "cuadrado",
+            "estrella"
+          ]
+        },
+        {
+          "prompt": "___, el mapa revela que todavía hay tiempo. (in conclusion)",
+          "answer": "En conclusión",
+          "options": [
+            "En conclusión",
+            "En primer lugar",
+            "Sin embargo"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T19_guardian_sintesis_sierra",
+        "layer": "meta",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T19_guardian_sintesis"
+      },
+      "type": "guardian",
+      "label": "Guardián",
+      "instruction": "Demuestra tu capacidad de síntesis.",
+      "timeLimit": 10,
+      "questions": [
+        {
+          "prompt": "Completa: ___, la carretera destruye el finca. (first)",
+          "answer": "En primer lugar",
+          "options": [
+            "En primer lugar",
+            "Finalmente",
+            "Sin embargo"
+          ]
+        },
+        {
+          "prompt": "El gris sigue la carretera. ___, están conectados. (therefore)",
+          "answer": "Por lo tanto",
+          "options": [
+            "Por lo tanto",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "prompt": "Don Próspero promete progreso. ___, omite las consecuencias. (however)",
+          "answer": "Sin embargo",
+          "options": [
+            "Sin embargo",
+            "Además",
+            "En conclusión"
+          ]
+        },
+        {
+          "prompt": "Reunir información de varias fuentes y encontrar un patrón es hacer una ___.",
+          "answer": "síntesis",
+          "options": [
+            "síntesis",
+            "fiesta",
+            "siesta"
+          ]
+        },
+        {
+          "prompt": "Testimonios, documentos y observaciones son tres tipos de ___.",
+          "answer": "fuentes",
+          "options": [
+            "fuentes",
+            "fiestas",
+            "frutas"
+          ]
+        },
+        {
+          "prompt": "Lo que conecta eventos aparentemente aislados es un ___.",
+          "answer": "patrón",
+          "options": [
+            "patrón",
+            "pastel",
+            "paisaje"
+          ]
+        },
+        {
+          "prompt": "El Mapa de las Voces tiene forma de ___.",
+          "answer": "árbol",
+          "options": [
+            "árbol",
+            "cuadrado",
+            "estrella"
+          ]
+        },
+        {
+          "prompt": "___, el mapa revela que todavía hay tiempo. (in conclusion)",
+          "answer": "En conclusión",
+          "options": [
+            "En conclusión",
+            "En primer lugar",
+            "Sin embargo"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T20_escaperoom_fragmentos",
+        "layer": "meta",
+        "ecosystem": "canonical"
+      },
+      "type": "escaperoom",
+      "label": "Sala de enigmas",
+      "instruction": "Conecta los fragmentos. El Mundo se revela cuando ves la totalidad.",
+      "room": {
+        "name": "La sala del mapa",
+        "description": "Una sala circular con paredes de cristal. En cada pared, un fragmento del mapa flota: la carretera, la ceiba, las voces, el gris. En el suelo, líneas de luz esperan ser conectadas. En el techo, El Mundo gira lentamente — un globo que contiene todos los mundos.",
+        "ambience": "crystal-hum"
+      },
+      "puzzles": [
+        {
+          "puzzleType": "logic",
+          "prompt": "Conecta la cadena causal: ¿Qué viene primero? Ordena: 1) Los nombres se pierden. 2) El silencio gris crece. 3) La carretera destruye el bosque. 4) Más cosas se olvidan.",
+          "clue": "La cadena empieza con una acción humana y termina con un ciclo.",
+          "answer": "3, 1, 2, 4",
+          "options": [
+            "3, 1, 2, 4",
+            "1, 2, 3, 4",
+            "4, 3, 2, 1",
+            "2, 4, 1, 3"
+          ],
+          "onSolve": "Las líneas de luz conectan los cuatro fragmentos. La carretera roja toca el gris. El gris toca los nombres. Los nombres desaparecen."
+        },
+        {
+          "puzzleType": "logic",
+          "prompt": "¿Cuál es el punto crítico del mapa? El lugar que, si se pierde, todo se desconecta.",
+          "clue": "Abuela Ceiba. El mandato. El árbol más viejo.",
+          "answer": "la ceiba",
+          "options": [
+            "la ceiba",
+            "la carretera",
+            "el río",
+            "el pueblo"
+          ],
+          "onSolve": "La ceiba brilla en el centro del mapa. Todas las líneas convergen hacia ella."
+        },
+        {
+          "puzzleType": "wordlock",
+          "prompt": "La palabra que describe lo que Candelaria hizo: reunir todas las piezas y encontrar la forma completa. Ocho letras.",
+          "clue": "No es solo resumir — es encontrar cómo todo se conecta.",
+          "answer": "síntesis",
+          "hint": "_ _ _ _ _ _ _ _",
+          "onSolve": "El mapa se completa. Las paredes de cristal se iluminan. El Mundo en el techo desciende. Dentro del globo, un fragmento de luz pulsa."
+        }
+      ],
+      "fragment": {
+        "text": "El mapa completo brilla en las paredes: un árbol de luz con raíces de historias, tronco de presente y ramas de futuros posibles. En el centro, la ceiba pulsa. El fragmento se guarda: la visión completa, la síntesis de todo lo aprendido.",
+        "questClue": "Una historia vista desde lejos tiene forma de árbol. Y el árbol más importante es el que todavía está vivo.",
+        "item": "mapa-de-las-voces"
+      }
+    },
+    {
+      "_template": {
+        "id": "T21_conjuro_sintesis",
+        "layer": "meta",
+        "ecosystem": "canonical"
+      },
+      "type": "conjuro",
+      "label": "Conjuro",
+      "instruction": "Di la síntesis en voz alta. Claro. Organizado. Poderoso en {pool:eco.place}.",
+      "spells": [
+        {
+          "prompt": "La primera conclusión del mapa.",
+          "answer": "La carretera y el silencio gris están conectados",
+          "hint": "La ca-rre-te-ra y el si-len-cio..."
+        },
+        {
+          "prompt": "Lo que está en juego.",
+          "answer": "Si la carretera llega a la ceiba, todo se pierde",
+          "hint": "Si la ca-rre-te-ra lle-ga..."
+        },
+        {
+          "prompt": "Lo que el mapa enseña.",
+          "answer": "Ver el patrón es el primer paso para romperlo",
+          "hint": "Ver el pa-trón es el pri-mer..."
+        },
+        {
+          "prompt": "La pregunta de este destino.",
+          "answer": "¿Qué forma tiene una historia cuando la ves desde lejos?",
+          "hint": "¿Qué for-ma tie-ne..."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T21_conjuro_sintesis_bosque",
+        "layer": "meta",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T21_conjuro_sintesis"
+      },
+      "type": "conjuro",
+      "label": "Conjuro",
+      "instruction": "Di la síntesis en voz alta. Claro. Organizado. Poderoso en mirador.",
+      "spells": [
+        {
+          "prompt": "La primera conclusión del mapa.",
+          "answer": "La carretera y el silencio gris están conectados",
+          "hint": "La ca-rre-te-ra y el si-len-cio..."
+        },
+        {
+          "prompt": "Lo que está en juego.",
+          "answer": "Si la carretera llega a la ceiba, todo se pierde",
+          "hint": "Si la ca-rre-te-ra lle-ga..."
+        },
+        {
+          "prompt": "Lo que el mapa enseña.",
+          "answer": "Ver el patrón es el primer paso para romperlo",
+          "hint": "Ver el pa-trón es el pri-mer..."
+        },
+        {
+          "prompt": "La pregunta de este destino.",
+          "answer": "¿Qué forma tiene una historia cuando la ves desde lejos?",
+          "hint": "¿Qué for-ma tie-ne..."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T21_conjuro_sintesis_sierra",
+        "layer": "meta",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T21_conjuro_sintesis"
+      },
+      "type": "conjuro",
+      "label": "Conjuro",
+      "instruction": "Di la síntesis en voz alta. Claro. Organizado. Poderoso en finca.",
+      "spells": [
+        {
+          "prompt": "La primera conclusión del mapa.",
+          "answer": "La carretera y el silencio gris están conectados",
+          "hint": "La ca-rre-te-ra y el si-len-cio..."
+        },
+        {
+          "prompt": "Lo que está en juego.",
+          "answer": "Si la carretera llega a la ceiba, todo se pierde",
+          "hint": "Si la ca-rre-te-ra lle-ga..."
+        },
+        {
+          "prompt": "Lo que el mapa enseña.",
+          "answer": "Ver el patrón es el primer paso para romperlo",
+          "hint": "Ver el pa-trón es el pri-mer..."
+        },
+        {
+          "prompt": "La pregunta de este destino.",
+          "answer": "¿Qué forma tiene una historia cuando la ves desde lejos?",
+          "hint": "¿Qué for-ma tie-ne..."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T22_skit_mapa_completo",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El mapa completo",
+      "instruction": "Candelaria presenta el mapa terminado. La síntesis se convierte en poder en {pool:eco.place}.",
+      "grammar": [
+        "academic register",
+        "synthesis connectors",
+        "relative clauses"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Yaguará, el mapa está completo. He organizado la información en tres capas: la capa de los testimonios, que muestra lo que las personas dijeron; la capa de los documentos, que muestra lo que Don Próspero escribió; y la capa del terreno, que muestra lo que realmente pasó.",
+          "target": [
+            "tres capas",
+            "que muestra"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Las tres capas cuentan historias diferentes. Pero cuando las superpones, la verdad aparece en las grietas entre ellas.",
+          "target": [
+            "superpones",
+            "grietas"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Por ejemplo: Don Próspero escribió que 'se consultó a los expertos'. Sin embargo, ningún testimonio menciona a un solo experto. Además, el terreno muestra que la construcción empezó antes de cualquier consulta.",
+          "target": [
+            "Sin embargo",
+            "Además"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Cruzar fuentes diferentes revela las mentiras que una sola fuente esconde.",
+              "Las fuentes se contradicen porque la gente miente.",
+              "No se pueden comparar fuentes diferentes."
+            ],
+            "answer": "Cruzar fuentes diferentes revela las mentiras que una sola fuente esconde."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T22_skit_mapa_completo_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T22_skit_mapa_completo"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El mapa completo",
+      "instruction": "Candelaria presenta el mapa terminado. La síntesis se convierte en poder en mirador.",
+      "grammar": [
+        "academic register",
+        "synthesis connectors",
+        "relative clauses"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Yaguará, el mapa está completo. He organizado la información en tres capas: la capa de los testimonios, que muestra lo que las personas dijeron; la capa de los documentos, que muestra lo que Don Próspero escribió; y la capa del terreno, que muestra lo que realmente pasó.",
+          "target": [
+            "tres capas",
+            "que muestra"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Las tres capas cuentan historias diferentes. Pero cuando las superpones, la verdad aparece en las grietas entre ellas.",
+          "target": [
+            "superpones",
+            "grietas"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Por ejemplo: Don Próspero escribió que 'se consultó a los expertos'. Sin embargo, ningún testimonio menciona a un solo experto. Además, el terreno muestra que la construcción empezó antes de cualquier consulta.",
+          "target": [
+            "Sin embargo",
+            "Además"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Cruzar fuentes diferentes revela las mentiras que una sola fuente esconde.",
+              "Las fuentes se contradicen porque la gente miente.",
+              "No se pueden comparar fuentes diferentes."
+            ],
+            "answer": "Cruzar fuentes diferentes revela las mentiras que una sola fuente esconde."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T22_skit_mapa_completo_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T22_skit_mapa_completo"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El mapa completo",
+      "instruction": "Candelaria presenta el mapa terminado. La síntesis se convierte en poder en finca.",
+      "grammar": [
+        "academic register",
+        "synthesis connectors",
+        "relative clauses"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Yaguará, el mapa está completo. He organizado la información en tres capas: la capa de los testimonios, que muestra lo que las personas dijeron; la capa de los documentos, que muestra lo que Don Próspero escribió; y la capa del terreno, que muestra lo que realmente pasó.",
+          "target": [
+            "tres capas",
+            "que muestra"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Las tres capas cuentan historias diferentes. Pero cuando las superpones, la verdad aparece en las grietas entre ellas.",
+          "target": [
+            "superpones",
+            "grietas"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Por ejemplo: Don Próspero escribió que 'se consultó a los expertos'. Sin embargo, ningún testimonio menciona a un solo experto. Además, el terreno muestra que la construcción empezó antes de cualquier consulta.",
+          "target": [
+            "Sin embargo",
+            "Además"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Cruzar fuentes diferentes revela las mentiras que una sola fuente esconde.",
+              "Las fuentes se contradicen porque la gente miente.",
+              "No se pueden comparar fuentes diferentes."
+            ],
+            "answer": "Cruzar fuentes diferentes revela las mentiras que una sola fuente esconde."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T23_skit_urgencia",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "La urgencia",
+      "instruction": "El mapa revela algo alarmante: la carretera está más cerca de lo que pensaban en {pool:eco.place}.",
+      "grammar": [
+        "complex relative clauses",
+        "temporal synthesis"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Mira esto, Yaguará. La carretera, que empezó hace dos años en el oeste, ya está a menos de un día de la ceiba. El gris, que sigue la misma ruta que la carretera, llegará antes que ella.",
+          "target": [
+            "que empezó",
+            "que sigue"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "En otras palabras: el gris llegará primero. Y cuando el gris toque la ceiba, los nombres que la ceiba guarda empezarán a deshacerse.",
+          "target": [
+            "En otras palabras"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "En conclusión, tenemos días — no semanas. El mapa que hicimos nos da una ventaja: sabemos exactamente dónde está el punto crítico y cuánto tiempo queda.",
+          "target": [
+            "En conclusión"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El mapa transforma la información en urgencia y la urgencia en acción.",
+              "La situación es desesperada.",
+              "El mapa no cambia nada."
+            ],
+            "answer": "El mapa transforma la información en urgencia y la urgencia en acción."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T23_skit_urgencia_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T23_skit_urgencia"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "La urgencia",
+      "instruction": "El mapa revela algo alarmante: la carretera está más cerca de lo que pensaban en mirador.",
+      "grammar": [
+        "complex relative clauses",
+        "temporal synthesis"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Mira esto, Yaguará. La carretera, que empezó hace dos años en el oeste, ya está a menos de un día de la ceiba. El gris, que sigue la misma ruta que la carretera, llegará antes que ella.",
+          "target": [
+            "que empezó",
+            "que sigue"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "En otras palabras: el gris llegará primero. Y cuando el gris toque la ceiba, los nombres que la ceiba guarda empezarán a deshacerse.",
+          "target": [
+            "En otras palabras"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "En conclusión, tenemos días — no semanas. El mapa que hicimos nos da una ventaja: sabemos exactamente dónde está el punto crítico y cuánto tiempo queda.",
+          "target": [
+            "En conclusión"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El mapa transforma la información en urgencia y la urgencia en acción.",
+              "La situación es desesperada.",
+              "El mapa no cambia nada."
+            ],
+            "answer": "El mapa transforma la información en urgencia y la urgencia en acción."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T23_skit_urgencia_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T23_skit_urgencia"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "La urgencia",
+      "instruction": "El mapa revela algo alarmante: la carretera está más cerca de lo que pensaban en finca.",
+      "grammar": [
+        "complex relative clauses",
+        "temporal synthesis"
+      ],
+      "beats": [
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Mira esto, Yaguará. La carretera, que empezó hace dos años en el oeste, ya está a menos de un día de la ceiba. El gris, que sigue la misma ruta que la carretera, llegará antes que ella.",
+          "target": [
+            "que empezó",
+            "que sigue"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "En otras palabras: el gris llegará primero. Y cuando el gris toque la ceiba, los nombres que la ceiba guarda empezarán a deshacerse.",
+          "target": [
+            "En otras palabras"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "En conclusión, tenemos días — no semanas. El mapa que hicimos nos da una ventaja: sabemos exactamente dónde está el punto crítico y cuánto tiempo queda.",
+          "target": [
+            "En conclusión"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El mapa transforma la información en urgencia y la urgencia en acción.",
+              "La situación es desesperada.",
+              "El mapa no cambia nada."
+            ],
+            "answer": "El mapa transforma la información en urgencia y la urgencia en acción."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T24_skit_decision_compartir",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "La decisión",
+      "instruction": "Yaguará y Candelaria deciden compartir el mapa.",
+      "grammar": [
+        "discourse organization",
+        "complex connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "No basta con ver el patrón. Necesitamos que otros lo vean también. El conocimiento que no se comparte es como un nombre que nadie dice — se pierde.",
+          "target": [
+            "comparte"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Entonces el primer paso es volver. En segundo {pool:eco.place}, mostrar el mapa a la comunidad. En tercer {pool:eco.place}, actuar juntos antes de que sea tarde.",
+          "target": [
+            "primer paso",
+            "En segundo lugar",
+            "En tercer lugar"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Candelaria, tú dibujaste lo que yo no podía ver. Tu cuaderno es más que un mapa — es la prueba de que una mente organizada puede cambiar el destino de un {pool:eco.place}.",
+          "target": [
+            "prueba"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El conocimiento organizado y compartido es una forma de poder colectivo.",
+              "Un cuaderno no puede cambiar nada.",
+              "Solo las personas fuertes pueden actuar."
+            ],
+            "answer": "El conocimiento organizado y compartido es una forma de poder colectivo."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T24_skit_decision_compartir_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T24_skit_decision_compartir"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "La decisión",
+      "instruction": "Yaguará y Candelaria deciden compartir el mapa.",
+      "grammar": [
+        "discourse organization",
+        "complex connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "No basta con ver el patrón. Necesitamos que otros lo vean también. El conocimiento que no se comparte es como un nombre que nadie dice — se pierde.",
+          "target": [
+            "comparte"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Entonces el primer paso es volver. En segundo mirador, mostrar el mapa a la comunidad. En tercer mirador, actuar juntos antes de que sea tarde.",
+          "target": [
+            "primer paso",
+            "En segundo lugar",
+            "En tercer lugar"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Candelaria, tú dibujaste lo que yo no podía ver. Tu cuaderno es más que un mapa — es la prueba de que una mente organizada puede cambiar el destino de un mirador.",
+          "target": [
+            "prueba"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El conocimiento organizado y compartido es una forma de poder colectivo.",
+              "Un cuaderno no puede cambiar nada.",
+              "Solo las personas fuertes pueden actuar."
+            ],
+            "answer": "El conocimiento organizado y compartido es una forma de poder colectivo."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T24_skit_decision_compartir_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T24_skit_decision_compartir"
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "La decisión",
+      "instruction": "Yaguará y Candelaria deciden compartir el mapa.",
+      "grammar": [
+        "discourse organization",
+        "complex connectors"
+      ],
+      "beats": [
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "No basta con ver el patrón. Necesitamos que otros lo vean también. El conocimiento que no se comparte es como un nombre que nadie dice — se pierde.",
+          "target": [
+            "comparte"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Entonces el primer paso es volver. En segundo finca, mostrar el mapa a la comunidad. En tercer finca, actuar juntos antes de que sea tarde.",
+          "target": [
+            "primer paso",
+            "En segundo lugar",
+            "En tercer lugar"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Candelaria, tú dibujaste lo que yo no podía ver. Tu cuaderno es más que un mapa — es la prueba de que una mente organizada puede cambiar el destino de un finca.",
+          "target": [
+            "prueba"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El conocimiento organizado y compartido es una forma de poder colectivo.",
+              "Un cuaderno no puede cambiar nada.",
+              "Solo las personas fuertes pueden actuar."
+            ],
+            "answer": "El conocimiento organizado y compartido es una forma de poder colectivo."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T25_fill_relativas_complejas",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "complex relative clauses"
+      ],
+      "instruction": "Completa con el relativo adecuado.",
+      "tip": {
+        "title": "Cláusulas relativas complejas",
+        "lines": [
+          "que — relativo general",
+          "el/la cual — después de preposición formal",
+          "cuyo/cuya — posesión",
+          "donde / en el que — lugar",
+          "lo cual — refiere a toda la oración anterior"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "La carretera, ___ empezó hace dos años, ya está cerca de la ceiba.",
+          "answer": "que",
+          "options": [
+            "que",
+            "cuya",
+            "donde"
+          ]
+        },
+        {
+          "sentence": "La comunidad, ___ tierras fueron vendidas, no recibió compensación.",
+          "answer": "cuyas",
+          "options": [
+            "cuyas",
+            "que",
+            "donde"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.place} ___ la ceiba crece es el punto más importante del mapa.",
+          "answer": "donde",
+          "options": [
+            "donde",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "Los testimonios, según ___ la carretera cambió todo, coinciden.",
+          "answer": "los cuales",
+          "options": [
+            "los cuales",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "El gris avanza sin parar, ___ significa que el tiempo se acaba.",
+          "answer": "lo cual",
+          "options": [
+            "lo cual",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "El contrato ___ Don Próspero escribió escondía la verdad.",
+          "answer": "que",
+          "options": [
+            "que",
+            "cuyo",
+            "donde"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T25_fill_relativas_complejas_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T25_fill_relativas_complejas"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "complex relative clauses"
+      ],
+      "instruction": "Completa con el relativo adecuado.",
+      "tip": {
+        "title": "Cláusulas relativas complejas",
+        "lines": [
+          "que — relativo general",
+          "el/la cual — después de preposición formal",
+          "cuyo/cuya — posesión",
+          "donde / en el que — lugar",
+          "lo cual — refiere a toda la oración anterior"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "La carretera, ___ empezó hace dos años, ya está cerca de la ceiba.",
+          "answer": "que",
+          "options": [
+            "que",
+            "cuya",
+            "donde"
+          ]
+        },
+        {
+          "sentence": "La comunidad, ___ tierras fueron vendidas, no recibió compensación.",
+          "answer": "cuyas",
+          "options": [
+            "cuyas",
+            "que",
+            "donde"
+          ]
+        },
+        {
+          "sentence": "El mirador ___ la ceiba crece es el punto más importante del mapa.",
+          "answer": "donde",
+          "options": [
+            "donde",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "Los testimonios, según ___ la carretera cambió todo, coinciden.",
+          "answer": "los cuales",
+          "options": [
+            "los cuales",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "El gris avanza sin parar, ___ significa que el tiempo se acaba.",
+          "answer": "lo cual",
+          "options": [
+            "lo cual",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "El contrato ___ Don Próspero escribió escondía la verdad.",
+          "answer": "que",
+          "options": [
+            "que",
+            "cuyo",
+            "donde"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T25_fill_relativas_complejas_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T25_fill_relativas_complejas"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "complex relative clauses"
+      ],
+      "instruction": "Completa con el relativo adecuado.",
+      "tip": {
+        "title": "Cláusulas relativas complejas",
+        "lines": [
+          "que — relativo general",
+          "el/la cual — después de preposición formal",
+          "cuyo/cuya — posesión",
+          "donde / en el que — lugar",
+          "lo cual — refiere a toda la oración anterior"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "La carretera, ___ empezó hace dos años, ya está cerca de la ceiba.",
+          "answer": "que",
+          "options": [
+            "que",
+            "cuya",
+            "donde"
+          ]
+        },
+        {
+          "sentence": "La comunidad, ___ tierras fueron vendidas, no recibió compensación.",
+          "answer": "cuyas",
+          "options": [
+            "cuyas",
+            "que",
+            "donde"
+          ]
+        },
+        {
+          "sentence": "El finca ___ la ceiba crece es el punto más importante del mapa.",
+          "answer": "donde",
+          "options": [
+            "donde",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "Los testimonios, según ___ la carretera cambió todo, coinciden.",
+          "answer": "los cuales",
+          "options": [
+            "los cuales",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "El gris avanza sin parar, ___ significa que el tiempo se acaba.",
+          "answer": "lo cual",
+          "options": [
+            "lo cual",
+            "que",
+            "cuyo"
+          ]
+        },
+        {
+          "sentence": "El contrato ___ Don Próspero escribió escondía la verdad.",
+          "answer": "que",
+          "options": [
+            "que",
+            "cuyo",
+            "donde"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T26_fill_conectores_avanzados",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "advanced connectors"
+      ],
+      "instruction": "Completa con el conector avanzado adecuado.",
+      "questions": [
+        {
+          "sentence": "El gris sigue la carretera. ___, la destrucción y el olvido están conectados.",
+          "answer": "En otras palabras",
+          "options": [
+            "En otras palabras",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "sentence": "La carretera destruye el {pool:eco.place}. ___, los nombres se pierden. ___, el gris crece.",
+          "answer": "Por consiguiente / Asimismo",
+          "options": [
+            "Por consiguiente / Asimismo",
+            "Sin embargo / Pero",
+            "Además / También"
+          ]
+        },
+        {
+          "sentence": "___ Don Próspero promete progreso, la realidad muestra destrucción.",
+          "answer": "A pesar de que",
+          "options": [
+            "A pesar de que",
+            "Porque",
+            "Además de que"
+          ]
+        },
+        {
+          "sentence": "Los testimonios coinciden. ___, los documentos los contradicen.",
+          "answer": "No obstante",
+          "options": [
+            "No obstante",
+            "Asimismo",
+            "Por consiguiente"
+          ]
+        },
+        {
+          "sentence": "Sabemos dónde está el problema. ___, sabemos cuánto tiempo queda.",
+          "answer": "Asimismo",
+          "options": [
+            "Asimismo",
+            "Sin embargo",
+            "A pesar de que"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T26_fill_conectores_avanzados_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T26_fill_conectores_avanzados"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "advanced connectors"
+      ],
+      "instruction": "Completa con el conector avanzado adecuado.",
+      "questions": [
+        {
+          "sentence": "El gris sigue la carretera. ___, la destrucción y el olvido están conectados.",
+          "answer": "En otras palabras",
+          "options": [
+            "En otras palabras",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "sentence": "La carretera destruye el mirador. ___, los nombres se pierden. ___, el gris crece.",
+          "answer": "Por consiguiente / Asimismo",
+          "options": [
+            "Por consiguiente / Asimismo",
+            "Sin embargo / Pero",
+            "Además / También"
+          ]
+        },
+        {
+          "sentence": "___ Don Próspero promete progreso, la realidad muestra destrucción.",
+          "answer": "A pesar de que",
+          "options": [
+            "A pesar de que",
+            "Porque",
+            "Además de que"
+          ]
+        },
+        {
+          "sentence": "Los testimonios coinciden. ___, los documentos los contradicen.",
+          "answer": "No obstante",
+          "options": [
+            "No obstante",
+            "Asimismo",
+            "Por consiguiente"
+          ]
+        },
+        {
+          "sentence": "Sabemos dónde está el problema. ___, sabemos cuánto tiempo queda.",
+          "answer": "Asimismo",
+          "options": [
+            "Asimismo",
+            "Sin embargo",
+            "A pesar de que"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T26_fill_conectores_avanzados_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T26_fill_conectores_avanzados"
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "advanced connectors"
+      ],
+      "instruction": "Completa con el conector avanzado adecuado.",
+      "questions": [
+        {
+          "sentence": "El gris sigue la carretera. ___, la destrucción y el olvido están conectados.",
+          "answer": "En otras palabras",
+          "options": [
+            "En otras palabras",
+            "Sin embargo",
+            "Además"
+          ]
+        },
+        {
+          "sentence": "La carretera destruye el finca. ___, los nombres se pierden. ___, el gris crece.",
+          "answer": "Por consiguiente / Asimismo",
+          "options": [
+            "Por consiguiente / Asimismo",
+            "Sin embargo / Pero",
+            "Además / También"
+          ]
+        },
+        {
+          "sentence": "___ Don Próspero promete progreso, la realidad muestra destrucción.",
+          "answer": "A pesar de que",
+          "options": [
+            "A pesar de que",
+            "Porque",
+            "Además de que"
+          ]
+        },
+        {
+          "sentence": "Los testimonios coinciden. ___, los documentos los contradicen.",
+          "answer": "No obstante",
+          "options": [
+            "No obstante",
+            "Asimismo",
+            "Por consiguiente"
+          ]
+        },
+        {
+          "sentence": "Sabemos dónde está el problema. ___, sabemos cuánto tiempo queda.",
+          "answer": "Asimismo",
+          "options": [
+            "Asimismo",
+            "Sin embargo",
+            "A pesar de que"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T27_translation_informal_academico",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "translation",
+      "label": "Reformular",
+      "instruction": "Transforma el análisis informal en registro académico en {pool:eco.place}.",
+      "items": [
+        {
+          "source": "La carretera destroza todo y el gris viene detrás.",
+          "target": "En primer lugar, la carretera causa destrucción del hábitat. Por consiguiente, el silencio gris avanza en la misma dirección.",
+          "options": [
+            "En primer lugar, la carretera causa destrucción del hábitat. Por consiguiente, el silencio gris avanza en la misma dirección.",
+            "La carretera es mala.",
+            "Todo se rompe."
+          ]
+        },
+        {
+          "source": "Don Próspero dijo una cosa pero hizo otra.",
+          "target": "A pesar de que los documentos prometían compensación, la observación directa revela que ninguna comunidad recibió lo acordado.",
+          "options": [
+            "A pesar de que los documentos prometían compensación, la observación directa revela que ninguna comunidad recibió lo acordado.",
+            "Don Próspero mintió.",
+            "Los papeles no sirven."
+          ]
+        },
+        {
+          "source": "Si no hacemos algo rápido, todo se pierde.",
+          "target": "En conclusión, la evidencia sugiere que la intervención inmediata es necesaria para prevenir la pérdida irreversible del ecosistema.",
+          "options": [
+            "En conclusión, la evidencia sugiere que la intervención inmediata es necesaria para prevenir la pérdida irreversible del ecosistema.",
+            "Hay que correr.",
+            "No sé qué hacer."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T27_translation_informal_academico_bosque",
+        "layer": "skill",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T27_translation_informal_academico"
+      },
+      "type": "translation",
+      "label": "Reformular",
+      "instruction": "Transforma el análisis informal en registro académico en mirador.",
+      "items": [
+        {
+          "source": "La carretera destroza todo y el gris viene detrás.",
+          "target": "En primer lugar, la carretera causa destrucción del hábitat. Por consiguiente, el silencio gris avanza en la misma dirección.",
+          "options": [
+            "En primer lugar, la carretera causa destrucción del hábitat. Por consiguiente, el silencio gris avanza en la misma dirección.",
+            "La carretera es mala.",
+            "Todo se rompe."
+          ]
+        },
+        {
+          "source": "Don Próspero dijo una cosa pero hizo otra.",
+          "target": "A pesar de que los documentos prometían compensación, la observación directa revela que ninguna comunidad recibió lo acordado.",
+          "options": [
+            "A pesar de que los documentos prometían compensación, la observación directa revela que ninguna comunidad recibió lo acordado.",
+            "Don Próspero mintió.",
+            "Los papeles no sirven."
+          ]
+        },
+        {
+          "source": "Si no hacemos algo rápido, todo se pierde.",
+          "target": "En conclusión, la evidencia sugiere que la intervención inmediata es necesaria para prevenir la pérdida irreversible del ecosistema.",
+          "options": [
+            "En conclusión, la evidencia sugiere que la intervención inmediata es necesaria para prevenir la pérdida irreversible del ecosistema.",
+            "Hay que correr.",
+            "No sé qué hacer."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T27_translation_informal_academico_sierra",
+        "layer": "skill",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T27_translation_informal_academico"
+      },
+      "type": "translation",
+      "label": "Reformular",
+      "instruction": "Transforma el análisis informal en registro académico en finca.",
+      "items": [
+        {
+          "source": "La carretera destroza todo y el gris viene detrás.",
+          "target": "En primer lugar, la carretera causa destrucción del hábitat. Por consiguiente, el silencio gris avanza en la misma dirección.",
+          "options": [
+            "En primer lugar, la carretera causa destrucción del hábitat. Por consiguiente, el silencio gris avanza en la misma dirección.",
+            "La carretera es mala.",
+            "Todo se rompe."
+          ]
+        },
+        {
+          "source": "Don Próspero dijo una cosa pero hizo otra.",
+          "target": "A pesar de que los documentos prometían compensación, la observación directa revela que ninguna comunidad recibió lo acordado.",
+          "options": [
+            "A pesar de que los documentos prometían compensación, la observación directa revela que ninguna comunidad recibió lo acordado.",
+            "Don Próspero mintió.",
+            "Los papeles no sirven."
+          ]
+        },
+        {
+          "source": "Si no hacemos algo rápido, todo se pierde.",
+          "target": "En conclusión, la evidencia sugiere que la intervención inmediata es necesaria para prevenir la pérdida irreversible del ecosistema.",
+          "options": [
+            "En conclusión, la evidencia sugiere que la intervención inmediata es necesaria para prevenir la pérdida irreversible del ecosistema.",
+            "Hay que correr.",
+            "No sé qué hacer."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T28_conjugation_subjuntivo_relativas",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "conjugation",
+      "label": "Conjugar",
+      "instruction": "Conjuga en subjuntivo dentro de cláusulas relativas en {pool:eco.place}.",
+      "verb": "mixed",
+      "tense": "presente de subjuntivo en relativas",
+      "items": [
+        {
+          "prompt": "Necesito un mapa que (mostrar) todo.",
+          "answer": "muestre"
+        },
+        {
+          "prompt": "Busco una fuente que (ser) confiable.",
+          "answer": "sea"
+        },
+        {
+          "prompt": "No hay ningún dato que (contradecir) esto.",
+          "answer": "contradiga"
+        },
+        {
+          "prompt": "Necesito alguien que (poder) organizar la información.",
+          "answer": "pueda"
+        },
+        {
+          "prompt": "Busco un patrón que (conectar) todas las historias.",
+          "answer": "conecte"
+        },
+        {
+          "prompt": "No existe ninguna prueba que (demostrar) lo contrario.",
+          "answer": "demuestre"
+        },
+        {
+          "prompt": "Quiero un análisis que (incluir) todas las perspectivas.",
+          "answer": "incluya"
+        },
+        {
+          "prompt": "Necesito una síntesis que (resumir) todo lo aprendido.",
+          "answer": "resuma"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T28_conjugation_subjuntivo_relativas_bosque",
+        "layer": "skill",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T28_conjugation_subjuntivo_relativas"
+      },
+      "type": "conjugation",
+      "label": "Conjugar",
+      "instruction": "Conjuga en subjuntivo dentro de cláusulas relativas en mirador.",
+      "verb": "mixed",
+      "tense": "presente de subjuntivo en relativas",
+      "items": [
+        {
+          "prompt": "Necesito un mapa que (mostrar) todo.",
+          "answer": "muestre"
+        },
+        {
+          "prompt": "Busco una fuente que (ser) confiable.",
+          "answer": "sea"
+        },
+        {
+          "prompt": "No hay ningún dato que (contradecir) esto.",
+          "answer": "contradiga"
+        },
+        {
+          "prompt": "Necesito alguien que (poder) organizar la información.",
+          "answer": "pueda"
+        },
+        {
+          "prompt": "Busco un patrón que (conectar) todas las historias.",
+          "answer": "conecte"
+        },
+        {
+          "prompt": "No existe ninguna prueba que (demostrar) lo contrario.",
+          "answer": "demuestre"
+        },
+        {
+          "prompt": "Quiero un análisis que (incluir) todas las perspectivas.",
+          "answer": "incluya"
+        },
+        {
+          "prompt": "Necesito una síntesis que (resumir) todo lo aprendido.",
+          "answer": "resuma"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T28_conjugation_subjuntivo_relativas_sierra",
+        "layer": "skill",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T28_conjugation_subjuntivo_relativas"
+      },
+      "type": "conjugation",
+      "label": "Conjugar",
+      "instruction": "Conjuga en subjuntivo dentro de cláusulas relativas en finca.",
+      "verb": "mixed",
+      "tense": "presente de subjuntivo en relativas",
+      "items": [
+        {
+          "prompt": "Necesito un mapa que (mostrar) todo.",
+          "answer": "muestre"
+        },
+        {
+          "prompt": "Busco una fuente que (ser) confiable.",
+          "answer": "sea"
+        },
+        {
+          "prompt": "No hay ningún dato que (contradecir) esto.",
+          "answer": "contradiga"
+        },
+        {
+          "prompt": "Necesito alguien que (poder) organizar la información.",
+          "answer": "pueda"
+        },
+        {
+          "prompt": "Busco un patrón que (conectar) todas las historias.",
+          "answer": "conecte"
+        },
+        {
+          "prompt": "No existe ninguna prueba que (demostrar) lo contrario.",
+          "answer": "demuestre"
+        },
+        {
+          "prompt": "Quiero un análisis que (incluir) todas las perspectivas.",
+          "answer": "incluya"
+        },
+        {
+          "prompt": "Necesito una síntesis que (resumir) todo lo aprendido.",
+          "answer": "resuma"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T29_category_fuentes_fiabilidad",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "Clasifica cada dato según su nivel de fiabilidad en {pool:eco.place}.",
+      "categories": [
+        "confirmado por múltiples fuentes",
+        "probable",
+        "sin confirmar",
+        "contradicho"
+      ],
+      "items": [
+        {
+          "text": "La carretera avanza de oeste a este (testimonios + observación + documentos).",
+          "answer": "confirmado por múltiples fuentes"
+        },
+        {
+          "text": "El gris sigue la misma ruta que la carretera (observación directa).",
+          "answer": "confirmado por múltiples fuentes"
+        },
+        {
+          "text": "Don Próspero consultó a expertos (solo documentos de Don Próspero).",
+          "answer": "contradicho"
+        },
+        {
+          "text": "La ceiba es el punto más importante del mapa (Yaguará + Doña Asunción).",
+          "answer": "probable"
+        },
+        {
+          "text": "Hay otras carreteras planeadas que aún no conocemos.",
+          "answer": "sin confirmar"
+        },
+        {
+          "text": "Las comunidades fueron compensadas (contrato dice sí, testimonios dicen no).",
+          "answer": "contradicho"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T29_category_fuentes_fiabilidad_bosque",
+        "layer": "skill",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T29_category_fuentes_fiabilidad"
+      },
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "Clasifica cada dato según su nivel de fiabilidad en mirador.",
+      "categories": [
+        "confirmado por múltiples fuentes",
+        "probable",
+        "sin confirmar",
+        "contradicho"
+      ],
+      "items": [
+        {
+          "text": "La carretera avanza de oeste a este (testimonios + observación + documentos).",
+          "answer": "confirmado por múltiples fuentes"
+        },
+        {
+          "text": "El gris sigue la misma ruta que la carretera (observación directa).",
+          "answer": "confirmado por múltiples fuentes"
+        },
+        {
+          "text": "Don Próspero consultó a expertos (solo documentos de Don Próspero).",
+          "answer": "contradicho"
+        },
+        {
+          "text": "La ceiba es el punto más importante del mapa (Yaguará + Doña Asunción).",
+          "answer": "probable"
+        },
+        {
+          "text": "Hay otras carreteras planeadas que aún no conocemos.",
+          "answer": "sin confirmar"
+        },
+        {
+          "text": "Las comunidades fueron compensadas (contrato dice sí, testimonios dicen no).",
+          "answer": "contradicho"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T29_category_fuentes_fiabilidad_sierra",
+        "layer": "skill",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T29_category_fuentes_fiabilidad"
+      },
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "Clasifica cada dato según su nivel de fiabilidad en finca.",
+      "categories": [
+        "confirmado por múltiples fuentes",
+        "probable",
+        "sin confirmar",
+        "contradicho"
+      ],
+      "items": [
+        {
+          "text": "La carretera avanza de oeste a este (testimonios + observación + documentos).",
+          "answer": "confirmado por múltiples fuentes"
+        },
+        {
+          "text": "El gris sigue la misma ruta que la carretera (observación directa).",
+          "answer": "confirmado por múltiples fuentes"
+        },
+        {
+          "text": "Don Próspero consultó a expertos (solo documentos de Don Próspero).",
+          "answer": "contradicho"
+        },
+        {
+          "text": "La ceiba es el punto más importante del mapa (Yaguará + Doña Asunción).",
+          "answer": "probable"
+        },
+        {
+          "text": "Hay otras carreteras planeadas que aún no conocemos.",
+          "answer": "sin confirmar"
+        },
+        {
+          "text": "Las comunidades fueron compensadas (contrato dice sí, testimonios dicen no).",
+          "answer": "contradicho"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T30_builder_parrafo_academico",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye un párrafo académico completo: introducción, evidencia, conclusión en {pool:eco.place}.",
+      "items": [
+        {
+          "pieces": [
+            "En primer lugar,",
+            "la evidencia",
+            "de tres fuentes",
+            "diferentes",
+            "confirma que",
+            "la carretera",
+            "y el silencio gris",
+            "están conectados."
+          ],
+          "answer": "En primer lugar, la evidencia de tres fuentes diferentes confirma que la carretera y el silencio gris están conectados."
+        },
+        {
+          "pieces": [
+            "A pesar de que",
+            "los documentos",
+            "prometen compensación,",
+            "los testimonios",
+            "orales",
+            "revelan que",
+            "nadie recibió",
+            "nada."
+          ],
+          "answer": "A pesar de que los documentos prometen compensación, los testimonios orales revelan que nadie recibió nada."
+        },
+        {
+          "pieces": [
+            "Por consiguiente,",
+            "la intervención",
+            "inmediata",
+            "es necesaria",
+            "para proteger",
+            "la ceiba",
+            "y todo",
+            "lo que representa."
+          ],
+          "answer": "Por consiguiente, la intervención inmediata es necesaria para proteger la ceiba y todo lo que representa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T30_builder_parrafo_academico_bosque",
+        "layer": "skill",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T30_builder_parrafo_academico"
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye un párrafo académico completo: introducción, evidencia, conclusión en mirador.",
+      "items": [
+        {
+          "pieces": [
+            "En primer lugar,",
+            "la evidencia",
+            "de tres fuentes",
+            "diferentes",
+            "confirma que",
+            "la carretera",
+            "y el silencio gris",
+            "están conectados."
+          ],
+          "answer": "En primer lugar, la evidencia de tres fuentes diferentes confirma que la carretera y el silencio gris están conectados."
+        },
+        {
+          "pieces": [
+            "A pesar de que",
+            "los documentos",
+            "prometen compensación,",
+            "los testimonios",
+            "orales",
+            "revelan que",
+            "nadie recibió",
+            "nada."
+          ],
+          "answer": "A pesar de que los documentos prometen compensación, los testimonios orales revelan que nadie recibió nada."
+        },
+        {
+          "pieces": [
+            "Por consiguiente,",
+            "la intervención",
+            "inmediata",
+            "es necesaria",
+            "para proteger",
+            "la ceiba",
+            "y todo",
+            "lo que representa."
+          ],
+          "answer": "Por consiguiente, la intervención inmediata es necesaria para proteger la ceiba y todo lo que representa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T30_builder_parrafo_academico_sierra",
+        "layer": "skill",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T30_builder_parrafo_academico"
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye un párrafo académico completo: introducción, evidencia, conclusión en finca.",
+      "items": [
+        {
+          "pieces": [
+            "En primer lugar,",
+            "la evidencia",
+            "de tres fuentes",
+            "diferentes",
+            "confirma que",
+            "la carretera",
+            "y el silencio gris",
+            "están conectados."
+          ],
+          "answer": "En primer lugar, la evidencia de tres fuentes diferentes confirma que la carretera y el silencio gris están conectados."
+        },
+        {
+          "pieces": [
+            "A pesar de que",
+            "los documentos",
+            "prometen compensación,",
+            "los testimonios",
+            "orales",
+            "revelan que",
+            "nadie recibió",
+            "nada."
+          ],
+          "answer": "A pesar de que los documentos prometen compensación, los testimonios orales revelan que nadie recibió nada."
+        },
+        {
+          "pieces": [
+            "Por consiguiente,",
+            "la intervención",
+            "inmediata",
+            "es necesaria",
+            "para proteger",
+            "la ceiba",
+            "y todo",
+            "lo que representa."
+          ],
+          "answer": "Por consiguiente, la intervención inmediata es necesaria para proteger la ceiba y todo lo que representa."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T31_par_minimo_conectores",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "par_minimo",
+      "label": "Par mínimo",
+      "instruction": "Elige el conector más preciso para cada contexto en {pool:eco.place}.",
+      "items": [
+        {
+          "pair": [
+            "sin embargo",
+            "no obstante"
+          ],
+          "context": "Don Próspero prometió empleos. ___, la mayoría fueron temporales. (contexto formal)",
+          "answer": "No obstante",
+          "explanation": "'No obstante' es más formal que 'sin embargo'. Ambos expresan contraste."
+        },
+        {
+          "pair": [
+            "además",
+            "asimismo"
+          ],
+          "context": "La carretera destruye el bosque. ___, contamina el río. (registro académico)",
+          "answer": "Asimismo",
+          "explanation": "'Asimismo' es el equivalente académico de 'además'."
+        },
+        {
+          "pair": [
+            "por lo tanto",
+            "por consiguiente"
+          ],
+          "context": "La evidencia es clara. ___, la acción es urgente. (registro académico)",
+          "answer": "Por consiguiente",
+          "explanation": "'Por consiguiente' es más formal y académico que 'por lo tanto'."
+        },
+        {
+          "pair": [
+            "en resumen",
+            "en conclusión"
+          ],
+          "context": "Al final del análisis: '___,  el mapa revela un patrón de destrucción sistemática.'",
+          "answer": "En conclusión",
+          "explanation": "'En conclusión' cierra un argumento; 'en resumen' solo condensa información."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T31_par_minimo_conectores_bosque",
+        "layer": "skill",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T31_par_minimo_conectores"
+      },
+      "type": "par_minimo",
+      "label": "Par mínimo",
+      "instruction": "Elige el conector más preciso para cada contexto en mirador.",
+      "items": [
+        {
+          "pair": [
+            "sin embargo",
+            "no obstante"
+          ],
+          "context": "Don Próspero prometió empleos. ___, la mayoría fueron temporales. (contexto formal)",
+          "answer": "No obstante",
+          "explanation": "'No obstante' es más formal que 'sin embargo'. Ambos expresan contraste."
+        },
+        {
+          "pair": [
+            "además",
+            "asimismo"
+          ],
+          "context": "La carretera destruye el bosque. ___, contamina el río. (registro académico)",
+          "answer": "Asimismo",
+          "explanation": "'Asimismo' es el equivalente académico de 'además'."
+        },
+        {
+          "pair": [
+            "por lo tanto",
+            "por consiguiente"
+          ],
+          "context": "La evidencia es clara. ___, la acción es urgente. (registro académico)",
+          "answer": "Por consiguiente",
+          "explanation": "'Por consiguiente' es más formal y académico que 'por lo tanto'."
+        },
+        {
+          "pair": [
+            "en resumen",
+            "en conclusión"
+          ],
+          "context": "Al final del análisis: '___,  el mapa revela un patrón de destrucción sistemática.'",
+          "answer": "En conclusión",
+          "explanation": "'En conclusión' cierra un argumento; 'en resumen' solo condensa información."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T31_par_minimo_conectores_sierra",
+        "layer": "skill",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T31_par_minimo_conectores"
+      },
+      "type": "par_minimo",
+      "label": "Par mínimo",
+      "instruction": "Elige el conector más preciso para cada contexto en finca.",
+      "items": [
+        {
+          "pair": [
+            "sin embargo",
+            "no obstante"
+          ],
+          "context": "Don Próspero prometió empleos. ___, la mayoría fueron temporales. (contexto formal)",
+          "answer": "No obstante",
+          "explanation": "'No obstante' es más formal que 'sin embargo'. Ambos expresan contraste."
+        },
+        {
+          "pair": [
+            "además",
+            "asimismo"
+          ],
+          "context": "La carretera destruye el bosque. ___, contamina el río. (registro académico)",
+          "answer": "Asimismo",
+          "explanation": "'Asimismo' es el equivalente académico de 'además'."
+        },
+        {
+          "pair": [
+            "por lo tanto",
+            "por consiguiente"
+          ],
+          "context": "La evidencia es clara. ___, la acción es urgente. (registro académico)",
+          "answer": "Por consiguiente",
+          "explanation": "'Por consiguiente' es más formal y académico que 'por lo tanto'."
+        },
+        {
+          "pair": [
+            "en resumen",
+            "en conclusión"
+          ],
+          "context": "Al final del análisis: '___,  el mapa revela un patrón de destrucción sistemática.'",
+          "answer": "En conclusión",
+          "explanation": "'En conclusión' cierra un argumento; 'en resumen' solo condensa información."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T32_listening_presentacion_formal",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha la presentación formal y evalúa su estructura en {pool:eco.place}.",
+      "items": [
+        {
+          "audio": "Candelaria presenta formalmente: 'El objetivo de este análisis es demostrar la relación entre la construcción de la carretera y el avance del silencio gris. En primer lugar, examinaremos los testimonios orales. En segundo lugar, analizaremos los documentos oficiales. Finalmente, presentaremos las observaciones de campo. La metodología consiste en cruzar estas tres fuentes para identificar contradicciones y patrones.'",
+          "question": "¿Cuántas partes tiene la estructura de la presentación?",
+          "answer": "Cuatro: objetivo, tres fuentes de evidencia (testimonios, documentos, observaciones) y metodología.",
+          "options": [
+            "Cuatro: objetivo, tres fuentes de evidencia (testimonios, documentos, observaciones) y metodología.",
+            "Dos partes.",
+            "Solo una."
+          ]
+        },
+        {
+          "audio": "Candelaria concluye: 'Por consiguiente, la evidencia cruzada demuestra que: a) la carretera y el gris avanzan juntos; b) las promesas de los documentos no se cumplieron; c) la ceiba es el punto crítico. No obstante, todavía queda tiempo para actuar. En conclusión, el conocimiento organizado es nuestra mejor herramienta.'",
+          "question": "¿Qué conectores usa Candelaria en su conclusión?",
+          "answer": "Por consiguiente (causa-efecto), no obstante (contraste esperanzador), en conclusión (cierre).",
+          "options": [
+            "Por consiguiente (causa-efecto), no obstante (contraste esperanzador), en conclusión (cierre).",
+            "Solo usa 'y'.",
+            "No usa conectores."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T32_listening_presentacion_formal_bosque",
+        "layer": "skill",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T32_listening_presentacion_formal"
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha la presentación formal y evalúa su estructura en mirador.",
+      "items": [
+        {
+          "audio": "Candelaria presenta formalmente: 'El objetivo de este análisis es demostrar la relación entre la construcción de la carretera y el avance del silencio gris. En primer lugar, examinaremos los testimonios orales. En segundo lugar, analizaremos los documentos oficiales. Finalmente, presentaremos las observaciones de campo. La metodología consiste en cruzar estas tres fuentes para identificar contradicciones y patrones.'",
+          "question": "¿Cuántas partes tiene la estructura de la presentación?",
+          "answer": "Cuatro: objetivo, tres fuentes de evidencia (testimonios, documentos, observaciones) y metodología.",
+          "options": [
+            "Cuatro: objetivo, tres fuentes de evidencia (testimonios, documentos, observaciones) y metodología.",
+            "Dos partes.",
+            "Solo una."
+          ]
+        },
+        {
+          "audio": "Candelaria concluye: 'Por consiguiente, la evidencia cruzada demuestra que: a) la carretera y el gris avanzan juntos; b) las promesas de los documentos no se cumplieron; c) la ceiba es el punto crítico. No obstante, todavía queda tiempo para actuar. En conclusión, el conocimiento organizado es nuestra mejor herramienta.'",
+          "question": "¿Qué conectores usa Candelaria en su conclusión?",
+          "answer": "Por consiguiente (causa-efecto), no obstante (contraste esperanzador), en conclusión (cierre).",
+          "options": [
+            "Por consiguiente (causa-efecto), no obstante (contraste esperanzador), en conclusión (cierre).",
+            "Solo usa 'y'.",
+            "No usa conectores."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T32_listening_presentacion_formal_sierra",
+        "layer": "skill",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T32_listening_presentacion_formal"
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha la presentación formal y evalúa su estructura en finca.",
+      "items": [
+        {
+          "audio": "Candelaria presenta formalmente: 'El objetivo de este análisis es demostrar la relación entre la construcción de la carretera y el avance del silencio gris. En primer lugar, examinaremos los testimonios orales. En segundo lugar, analizaremos los documentos oficiales. Finalmente, presentaremos las observaciones de campo. La metodología consiste en cruzar estas tres fuentes para identificar contradicciones y patrones.'",
+          "question": "¿Cuántas partes tiene la estructura de la presentación?",
+          "answer": "Cuatro: objetivo, tres fuentes de evidencia (testimonios, documentos, observaciones) y metodología.",
+          "options": [
+            "Cuatro: objetivo, tres fuentes de evidencia (testimonios, documentos, observaciones) y metodología.",
+            "Dos partes.",
+            "Solo una."
+          ]
+        },
+        {
+          "audio": "Candelaria concluye: 'Por consiguiente, la evidencia cruzada demuestra que: a) la carretera y el gris avanzan juntos; b) las promesas de los documentos no se cumplieron; c) la ceiba es el punto crítico. No obstante, todavía queda tiempo para actuar. En conclusión, el conocimiento organizado es nuestra mejor herramienta.'",
+          "question": "¿Qué conectores usa Candelaria en su conclusión?",
+          "answer": "Por consiguiente (causa-efecto), no obstante (contraste esperanzador), en conclusión (cierre).",
+          "options": [
+            "Por consiguiente (causa-efecto), no obstante (contraste esperanzador), en conclusión (cierre).",
+            "Solo usa 'y'.",
+            "No usa conectores."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T33_dictation_academico_avanzado",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe estas oraciones académicas en {pool:eco.place}.",
+      "items": [
+        {
+          "audio": "La carretera, cuya construcción empezó hace dos años, ha causado destrucción irreversible.",
+          "answer": "La carretera, cuya construcción empezó hace dos años, ha causado destrucción irreversible."
+        },
+        {
+          "audio": "A pesar de que los documentos prometen compensación, los testimonios revelan lo contrario.",
+          "answer": "A pesar de que los documentos prometen compensación, los testimonios revelan lo contrario."
+        },
+        {
+          "audio": "Por consiguiente, la intervención inmediata es la única opción viable.",
+          "answer": "Por consiguiente, la intervención inmediata es la única opción viable."
+        },
+        {
+          "audio": "El mapa revela un patrón que antes era invisible, lo cual cambia todo.",
+          "answer": "El mapa revela un patrón que antes era invisible, lo cual cambia todo."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T33_dictation_academico_avanzado_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T33_dictation_academico_avanzado"
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe estas oraciones académicas en mirador.",
+      "items": [
+        {
+          "audio": "La carretera, cuya construcción empezó hace dos años, ha causado destrucción irreversible.",
+          "answer": "La carretera, cuya construcción empezó hace dos años, ha causado destrucción irreversible."
+        },
+        {
+          "audio": "A pesar de que los documentos prometen compensación, los testimonios revelan lo contrario.",
+          "answer": "A pesar de que los documentos prometen compensación, los testimonios revelan lo contrario."
+        },
+        {
+          "audio": "Por consiguiente, la intervención inmediata es la única opción viable.",
+          "answer": "Por consiguiente, la intervención inmediata es la única opción viable."
+        },
+        {
+          "audio": "El mapa revela un patrón que antes era invisible, lo cual cambia todo.",
+          "answer": "El mapa revela un patrón que antes era invisible, lo cual cambia todo."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T33_dictation_academico_avanzado_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T33_dictation_academico_avanzado"
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe estas oraciones académicas en finca.",
+      "items": [
+        {
+          "audio": "La carretera, cuya construcción empezó hace dos años, ha causado destrucción irreversible.",
+          "answer": "La carretera, cuya construcción empezó hace dos años, ha causado destrucción irreversible."
+        },
+        {
+          "audio": "A pesar de que los documentos prometen compensación, los testimonios revelan lo contrario.",
+          "answer": "A pesar de que los documentos prometen compensación, los testimonios revelan lo contrario."
+        },
+        {
+          "audio": "Por consiguiente, la intervención inmediata es la única opción viable.",
+          "answer": "Por consiguiente, la intervención inmediata es la única opción viable."
+        },
+        {
+          "audio": "El mapa revela un patrón que antes era invisible, lo cual cambia todo.",
+          "answer": "El mapa revela un patrón que antes era invisible, lo cual cambia todo."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T34_sombra_presentacion",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Lee en voz alta como si presentaras ante una audiencia. Claro, organizado, convincente en {pool:eco.place}.",
+      "items": [
+        {
+          "text": "El objetivo de este análisis es demostrar que la carretera y el silencio gris están directamente conectados.",
+          "highlight": [
+            "objetivo",
+            "demostrar",
+            "directamente conectados"
+          ]
+        },
+        {
+          "text": "A pesar de que los documentos oficiales prometen compensación, la evidencia cruzada demuestra que ninguna comunidad recibió lo acordado.",
+          "highlight": [
+            "A pesar de que",
+            "evidencia cruzada",
+            "ninguna"
+          ]
+        },
+        {
+          "text": "Por consiguiente, la acción inmediata no es solo deseable — es necesaria. El mapa no es solo un dibujo — es un llamado a actuar.",
+          "highlight": [
+            "Por consiguiente",
+            "necesaria",
+            "llamado a actuar"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T34_sombra_presentacion_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T34_sombra_presentacion"
+      },
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Lee en voz alta como si presentaras ante una audiencia. Claro, organizado, convincente en mirador.",
+      "items": [
+        {
+          "text": "El objetivo de este análisis es demostrar que la carretera y el silencio gris están directamente conectados.",
+          "highlight": [
+            "objetivo",
+            "demostrar",
+            "directamente conectados"
+          ]
+        },
+        {
+          "text": "A pesar de que los documentos oficiales prometen compensación, la evidencia cruzada demuestra que ninguna comunidad recibió lo acordado.",
+          "highlight": [
+            "A pesar de que",
+            "evidencia cruzada",
+            "ninguna"
+          ]
+        },
+        {
+          "text": "Por consiguiente, la acción inmediata no es solo deseable — es necesaria. El mapa no es solo un dibujo — es un llamado a actuar.",
+          "highlight": [
+            "Por consiguiente",
+            "necesaria",
+            "llamado a actuar"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T34_sombra_presentacion_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T34_sombra_presentacion"
+      },
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Lee en voz alta como si presentaras ante una audiencia. Claro, organizado, convincente en finca.",
+      "items": [
+        {
+          "text": "El objetivo de este análisis es demostrar que la carretera y el silencio gris están directamente conectados.",
+          "highlight": [
+            "objetivo",
+            "demostrar",
+            "directamente conectados"
+          ]
+        },
+        {
+          "text": "A pesar de que los documentos oficiales prometen compensación, la evidencia cruzada demuestra que ninguna comunidad recibió lo acordado.",
+          "highlight": [
+            "A pesar de que",
+            "evidencia cruzada",
+            "ninguna"
+          ]
+        },
+        {
+          "text": "Por consiguiente, la acción inmediata no es solo deseable — es necesaria. El mapa no es solo un dibujo — es un llamado a actuar.",
+          "highlight": [
+            "Por consiguiente",
+            "necesaria",
+            "llamado a actuar"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T35_cronica_academica",
+        "layer": "skill",
+        "ecosystem": "canonical"
+      },
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Escribe un ensayo de síntesis formal. Incluye: 1) Una introducción con objetivo. 2) Evidencia de al menos dos fuentes diferentes. 3) Conectores académicos (por consiguiente, no obstante, asimismo, a pesar de que). 4) Al menos una cláusula relativa compleja (cuyo, lo cual, en el que). 5) Una conclusión. Escribe 8-12 oraciones.",
+      "placeholder": "El objetivo de este análisis es demostrar que...",
+      "minWords": 70,
+      "maxWords": 180,
+      "scaffoldType": "paragraph",
+      "storyKey": "cronica_dest36_academica",
+      "vocabularyHints": [
+        "por consiguiente",
+        "no obstante",
+        "asimismo",
+        "a pesar de que",
+        "cuyo",
+        "lo cual",
+        "evidencia",
+        "contradicción",
+        "patrón",
+        "fuente",
+        "observación",
+        "metodología"
+      ],
+      "button": "Guardar en la crónica"
+    },
+    {
+      "_template": {
+        "id": "T36_cultura_cartografia",
+        "layer": "narrative",
+        "ecosystem": "canonical"
+      },
+      "type": "cultura",
+      "label": "Cultura",
+      "instruction": "Reflexiona sobre los mapas como herramientas de poder en {pool:eco.place}.",
+      "text": "Los mapas nunca son neutrales. En la historia de América Latina, los mapas coloniales borraron los nombres indígenas y los reemplazaron con nombres europeos. Borrar un nombre del mapa es una forma de borrar una existencia. Pero los mapas también pueden ser herramientas de resistencia: las comunidades que dibujan sus propios mapas recuperan el poder de nombrar su territorio. Candelaria, al dibujar el Mapa de las Voces, hace exactamente esto: usa la organización del conocimiento como una forma de resistencia contra el olvido.",
+      "question": "¿Por qué dibujar un mapa puede ser un acto de resistencia?",
+      "answer": "Porque nombrar y organizar el propio territorio es recuperar el poder que los mapas coloniales quitaron.",
+      "options": [
+        "Porque nombrar y organizar el propio territorio es recuperar el poder que los mapas coloniales quitaron.",
+        "Porque los mapas son bonitos.",
+        "Porque todos necesitan direcciones."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T36_cultura_cartografia_bosque",
+        "layer": "narrative",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T36_cultura_cartografia"
+      },
+      "type": "cultura",
+      "label": "Cultura",
+      "instruction": "Reflexiona sobre los mapas como herramientas de poder en mirador.",
+      "text": "Los mapas nunca son neutrales. En la historia de América Latina, los mapas coloniales borraron los nombres indígenas y los reemplazaron con nombres europeos. Borrar un nombre del mapa es una forma de borrar una existencia. Pero los mapas también pueden ser herramientas de resistencia: las comunidades que dibujan sus propios mapas recuperan el poder de nombrar su territorio. Candelaria, al dibujar el Mapa de las Voces, hace exactamente esto: usa la organización del conocimiento como una forma de resistencia contra el olvido.",
+      "question": "¿Por qué dibujar un mapa puede ser un acto de resistencia?",
+      "answer": "Porque nombrar y organizar el propio territorio es recuperar el poder que los mapas coloniales quitaron.",
+      "options": [
+        "Porque nombrar y organizar el propio territorio es recuperar el poder que los mapas coloniales quitaron.",
+        "Porque los mapas son bonitos.",
+        "Porque todos necesitan direcciones."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T36_cultura_cartografia_sierra",
+        "layer": "narrative",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T36_cultura_cartografia"
+      },
+      "type": "cultura",
+      "label": "Cultura",
+      "instruction": "Reflexiona sobre los mapas como herramientas de poder en finca.",
+      "text": "Los mapas nunca son neutrales. En la historia de América Latina, los mapas coloniales borraron los nombres indígenas y los reemplazaron con nombres europeos. Borrar un nombre del mapa es una forma de borrar una existencia. Pero los mapas también pueden ser herramientas de resistencia: las comunidades que dibujan sus propios mapas recuperan el poder de nombrar su territorio. Candelaria, al dibujar el Mapa de las Voces, hace exactamente esto: usa la organización del conocimiento como una forma de resistencia contra el olvido.",
+      "question": "¿Por qué dibujar un mapa puede ser un acto de resistencia?",
+      "answer": "Porque nombrar y organizar el propio territorio es recuperar el poder que los mapas coloniales quitaron.",
+      "options": [
+        "Porque nombrar y organizar el propio territorio es recuperar el poder que los mapas coloniales quitaron.",
+        "Porque los mapas son bonitos.",
+        "Porque todos necesitan direcciones."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T37_oraculo_despues_mapa",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "¿Qué pasará cuando el mapa se comparta? En {pool:eco.place}.",
+      "scene": [
+        {
+          "speaker": "Candelaria",
+          "text": "El mapa está listo. Podemos presentarlo. Pero, ¿quién lo creerá? ¿Quién actuará?"
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "No todos creerán. No todos actuarán. Pero los que sí lo hagan serán suficientes."
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "¿Cómo lo sabes?"
+        }
+      ],
+      "options": [
+        "Porque la verdad organizada tiene un poder que la mentira dispersa no puede vencer.",
+        "No lo sé — es solo esperanza.",
+        "Porque todos querrán ayudar."
+      ],
+      "answer": "Porque la verdad organizada tiene un poder que la mentira dispersa no puede vencer.",
+      "explanation": "La síntesis no solo organiza datos — crea una narrativa coherente que puede movilizar a una comunidad."
+    },
+    {
+      "_template": {
+        "id": "T37_oraculo_despues_mapa_bosque",
+        "layer": "core",
+        "ecosystem": "bosque",
+        "isVariant": true,
+        "sourceId": "T37_oraculo_despues_mapa"
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "¿Qué pasará cuando el mapa se comparta? En mirador.",
+      "scene": [
+        {
+          "speaker": "Candelaria",
+          "text": "El mapa está listo. Podemos presentarlo. Pero, ¿quién lo creerá? ¿Quién actuará?"
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "No todos creerán. No todos actuarán. Pero los que sí lo hagan serán suficientes."
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "¿Cómo lo sabes?"
+        }
+      ],
+      "options": [
+        "Porque la verdad organizada tiene un poder que la mentira dispersa no puede vencer.",
+        "No lo sé — es solo esperanza.",
+        "Porque todos querrán ayudar."
+      ],
+      "answer": "Porque la verdad organizada tiene un poder que la mentira dispersa no puede vencer.",
+      "explanation": "La síntesis no solo organiza datos — crea una narrativa coherente que puede movilizar a una comunidad."
+    },
+    {
+      "_template": {
+        "id": "T37_oraculo_despues_mapa_sierra",
+        "layer": "core",
+        "ecosystem": "sierra",
+        "isVariant": true,
+        "sourceId": "T37_oraculo_despues_mapa"
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "¿Qué pasará cuando el mapa se comparta? En finca.",
+      "scene": [
+        {
+          "speaker": "Candelaria",
+          "text": "El mapa está listo. Podemos presentarlo. Pero, ¿quién lo creerá? ¿Quién actuará?"
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "No todos creerán. No todos actuarán. Pero los que sí lo hagan serán suficientes."
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "¿Cómo lo sabes?"
+        }
+      ],
+      "options": [
+        "Porque la verdad organizada tiene un poder que la mentira dispersa no puede vencer.",
+        "No lo sé — es solo esperanza.",
+        "Porque todos querrán ayudar."
+      ],
+      "answer": "Porque la verdad organizada tiene un poder que la mentira dispersa no puede vencer.",
+      "explanation": "La síntesis no solo organiza datos — crea una narrativa coherente que puede movilizar a una comunidad."
+    },
+    {
+      "_template": {
+        "id": "T38_autoevaluacion_sintesis_avanzada",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "autoevaluacion",
+      "label": "¿Qué puedo hacer?",
+      "instruction": "Reflexiona sobre tus habilidades avanzadas de síntesis.",
+      "statements": [
+        {
+          "text": "Puedo escribir un ensayo con estructura clara: introducción, evidencia, conclusión."
+        },
+        {
+          "text": "Puedo usar conectores académicos avanzados: por consiguiente, no obstante, asimismo, a pesar de que."
+        },
+        {
+          "text": "Puedo usar cláusulas relativas complejas: cuyo, lo cual, en el que."
+        },
+        {
+          "text": "Puedo cruzar múltiples fuentes y detectar contradicciones."
+        },
+        {
+          "text": "Puedo clasificar información según su fiabilidad."
+        },
+        {
+          "text": "Puedo transformar un análisis informal en registro académico."
+        }
+      ],
+      "reflection": "¿Qué forma tiene una historia cuando la ves desde lejos?"
+    },
+    {
+      "_template": {
+        "id": "T39_portafolio_conferencia",
+        "layer": "advanced",
+        "ecosystem": "canonical"
+      },
+      "type": "portafolio",
+      "label": "Mi voz",
+      "instruction": "Graba tu presentación formal.",
+      "prompt": "Presenta los hallazgos del Mapa de las Voces como si estuvieras en una conferencia académica. Estructura: 1) Objetivo del análisis. 2) Fuentes consultadas. 3) Hallazgos principales. 4) Conclusión y recomendación. Usa conectores formales. Habla 60-90 segundos.",
+      "guidingQuestions": [
+        "¿Cuál es el objetivo de tu análisis?",
+        "¿Qué fuentes cruzaste?",
+        "¿Qué patrón descubriste?",
+        "¿Cuál es tu conclusión?"
+      ],
+      "minWords": 50
+    },
+    {
+      "_template": {
+        "id": "T40_ritmo_academico",
+        "layer": "core",
+        "ecosystem": "canonical"
+      },
+      "type": "ritmo",
+      "label": "Ritmo",
+      "instruction": "Repite al ritmo. Habla como quien presenta una verdad organizada.",
+      "items": [
+        {
+          "text": "En primer lugar.",
+          "tempo": "slow"
+        },
+        {
+          "text": "Por consiguiente.",
+          "tempo": "slow"
+        },
+        {
+          "text": "En conclusión, la evidencia es clara.",
+          "tempo": "medium"
+        },
+        {
+          "text": "A pesar de que los documentos prometen compensación, la realidad es otra.",
+          "tempo": "medium"
+        },
+        {
+          "text": "La carretera, cuya construcción empezó hace dos años, ha causado destrucción irreversible.",
+          "tempo": "medium"
+        },
+        {
+          "text": "El conocimiento organizado es nuestra mejor herramienta contra el olvido.",
+          "tempo": "slow"
+        }
+      ]
+    }
+  ],
+  "departure": {
+    "type": "narrative",
+    "closingQuestion": "¿Qué forma tiene una historia cuando la ves desde lejos?",
+    "yaguaraLine": "Candelaria dibujó lo que yo no podía ver. Desde lejos, nuestra historia tiene forma de árbol. La carretera corta las raíces. El gris se come las hojas. Pero la ceiba todavía está viva. Y ahora tenemos un mapa.",
+    "button": "→ Destino 37",
+    "nextUrl": "play.html?dest=37"
+  },
+  "characterMeta": {
+    "char_yaguara": {
+      "id": "char_yaguara",
+      "name": "Yaguará",
+      "avatar": "img/characters/yaguara.jpg",
+      "voice": "deep",
+      "description": "El jaguar que camina entre mundos. Descubre que el cuaderno de Candelaria es una versión del Mapa de las Voces."
+    },
+    "char_candelaria": {
+      "id": "char_candelaria",
+      "name": "Candelaria",
+      "realName": "Candelaria Arango",
+      "avatar": "img/characters/candelaria.jpg",
+      "voice": "clear",
+      "age": 16,
+      "description": "Afro-colombiana, 16 años. La cartógrafa. Su cuaderno revela el patrón que conecta toda la historia."
+    }
+  },
+  "_spiralQueue": [],
+  "_stats": {
+    "coreTemplates": 40,
+    "totalGames": 104,
+    "ecosystemVariants": 64,
+    "spiralGamesGenerated": 0,
+    "ecosystemsUsed": 8
+  }
+}

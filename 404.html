@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — Babel Free</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="/assets/tower-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lucida+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lucida Sans', Arial, sans-serif; color: #333; background: #fafbfc; min-height: 100vh; display: flex; flex-direction: column; }
+        .header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: fixed; top: 0; width: 100%; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+        .logo-brand { display: flex; align-items: center; text-decoration: none; }
+        .main-logo img { height: 45px; }
+        .nav-menu { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-link { text-decoration: none; color: #333; font-size: 0.95rem; font-weight: 500; }
+        .nav-link:hover { color: #F4A5A5; }
+        .cta-nav { background: #F4A5A5; color: #fff; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; }
+        .mobile-menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .menu-bar { width: 25px; height: 3px; background: #333; border-radius: 3px; }
+
+        .error-page { flex: 1; display: flex; align-items: center; justify-content: center; padding: 7rem 2rem 4rem; text-align: center; }
+        .error-content { max-width: 550px; }
+        .error-code { font-family: 'Bebas Neue', sans-serif; font-size: 8rem; color: #F4A5A5; line-height: 1; letter-spacing: 6px; }
+        .error-title { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 3px; color: #1a1a2e; margin: 0.5rem 0 1rem; }
+        .error-text { color: #666; line-height: 1.7; margin-bottom: 2rem; }
+        .error-links { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+        .error-link {
+            display: inline-block; padding: 12px 24px; border-radius: 12px;
+            text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s;
+        }
+        .error-link.primary { background: #F4A5A5; color: #fff; }
+        .error-link.primary:hover { background: #e89494; transform: translateY(-2px); }
+        .error-link.secondary { background: #fff; color: #333; border: 1px solid #e0e0e0; }
+        .error-link.secondary:hover { border-color: #F4A5A5; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+
+        .search-box { margin: 1.5rem auto 0; max-width: 400px; position: relative; }
+        .search-404 {
+            width: 100%; padding: 12px 44px 12px 16px; border: 2px solid #e0e0e0;
+            border-radius: 12px; font-size: 1rem; font-family: inherit; color: #333;
+        }
+        .search-404:focus { outline: none; border-color: #F4A5A5; }
+        .search-404::placeholder { color: #bbb; }
+        .search-404-btn {
+            position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+            background: #F4A5A5; border: none; border-radius: 8px; width: 34px; height: 34px;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+        }
+        .search-404-btn svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2.5; }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-menu-toggle { display: flex; }
+            .error-code { font-size: 5rem; }
+            .error-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="nav-container">
+        <a href="/" class="logo-brand"><div class="main-logo"><img src="/assets/logo.png" alt="Babel Free Logo"></div></a>
+        <ul class="nav-menu">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/services" class="nav-link">Services</a></li>
+            <li><a href="/blog" class="nav-link">Blog</a></li>
+            <li><a href="/dictionary" class="nav-link">Dictionaries</a></li>
+            <li><a href="/contact" class="nav-link">Contact</a></li>
+            <li><a href="/elviajedeljaguar" class="cta-nav">Spanish Course</a></li>
+        </ul>
+        <div class="mobile-menu-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('active')">
+            <div class="menu-bar"></div><div class="menu-bar"></div><div class="menu-bar"></div>
+        </div>
+    </nav>
+</header>
+
+<main class="error-page">
+    <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">PAGE NOT FOUND</h1>
+        <p class="error-text">The page you're looking for doesn't exist or has been moved. Try searching for a word in our dictionary, or explore one of these pages:</p>
+        <div class="error-links">
+            <a href="/" class="error-link primary">Home</a>
+            <a href="/dictionary" class="error-link secondary">Dictionaries</a>
+            <a href="/blog" class="error-link secondary">Blog</a>
+            <a href="/contact" class="error-link secondary">Contact</a>
+        </div>
+        <form class="search-box" onsubmit="event.preventDefault(); var w=this.querySelector('input').value.trim(); if(w) window.location='/dictionary/en/meaning-of-'+encodeURIComponent(w);">
+            <input type="text" class="search-404" placeholder="Search the dictionary...">
+            <button type="submit" class="search-404-btn"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        </form>
+    </div>
+</main>
+
+<footer class="site-footer light">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <p class="footer-logo"><img src="/assets/tower-logo.png" alt="Babel Free" loading="lazy"></p>
+            <p class="footer-desc">Language courses, professional translation, and immersive Spanish learning through El Viaje del Jaguar.</p>
+        </div>
+        <nav class="footer-links" aria-label="Site map">
+            <p class="footer-heading">Explore</p>
+            <a href="/services">Language courses</a>
+            <a href="/elviajedeljaguar">El Viaje del Jaguar</a>
+            <a href="/dictionary">Dictionaries</a>
+            <a href="/languages">100+ languages</a>
+            <a href="/blog">Blog</a>
+        </nav>
+        <div class="footer-contact">
+            <p class="footer-heading">Contact us</p>
+            <a href="/translation-services" class="footer-cta">Translation services</a>
+            <a href="/contact" class="footer-cta">Message form</a>
+            <a href="mailto:info@babelfree.com" class="footer-cta-secondary">Email</a>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Babel Free &middot; <a href="/privacy">Privacy</a></p></div>
+</footer>
+</body>
+</html>

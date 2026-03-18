@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary — Babel Free | Multilingual Word Lookup</title>
-    <meta name="description" content="Free multilingual dictionary by Babel Free. Look up words, definitions, translations, conjugations, and example sentences with CEFR level tags.">
+    <title>Dictionaries — Babel Free | Multilingual Word Lookup</title>
+    <meta name="description" content="Free multilingual dictionaries by Babel Free. Look up words, definitions, translations, conjugations, and example sentences in 104 languages with CEFR level tags.">
     <link rel="canonical" href="https://babelfree.com/dictionary">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://babelfree.com/dictionary">
@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="Free multilingual dictionary with definitions, translations, and conjugations.">
     <meta name="twitter:image" content="https://babelfree.com/assets/og-babel.png">
     <meta name="theme-color" content="#F4A5A5">
-    <link rel="icon" type="image/png" href="assets/tower-logo.png">
+    <link rel="icon" type="image/png" href="/assets/tower-logo.png">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <script type="application/ld+json">
@@ -48,7 +48,7 @@
           },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://babelfree.com/dictionary/{search_term_string}",
+            "target": "https://babelfree.com/dictionary/es/significado-de-{search_term_string}",
             "query-input": "required name=search_term_string"
           },
           "about": {
@@ -62,7 +62,7 @@
           "@type": "BreadcrumbList",
           "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Dictionary", "item": "https://babelfree.com/dictionary"}
+            {"@type": "ListItem", "position": 2, "name": "Dictionaries", "item": "https://babelfree.com/dictionary"}
           ]
         },
         {
@@ -100,7 +100,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lucida+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -170,22 +170,33 @@
 
         /* ===== Hero ===== */
         .dict-hero {
-            padding: 8rem 2rem 2.5rem;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 8rem 2rem 3rem;
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
             text-align: center; position: relative; overflow: hidden;
         }
         .dict-hero::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="g" x1="0%25" y1="0%25" x2="100%25" y2="100%25"><stop offset="0%25" stop-color="%23F4A5A5" stop-opacity="0.12"/><stop offset="100%25" stop-color="%23F7D794" stop-opacity="0.06"/></linearGradient></defs><circle cx="200" cy="400" r="300" fill="url(%23g)"/><circle cx="1000" cy="300" r="250" fill="url(%23g)"/></svg>') center/cover no-repeat;
-            opacity: 0.5; z-index: 1;
+            content: '言葉 · palabra · mot · 말 · كلمة · Wort · слово · 詞';
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            font-size: clamp(4rem, 10vw, 8rem); font-weight: 700;
+            white-space: nowrap;
+            background: linear-gradient(135deg, rgba(244,165,165,0.08), rgba(247,215,148,0.05));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; z-index: 1; pointer-events: none;
+            letter-spacing: 0.1em;
+        }
+        .dict-hero::after {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(244,165,165,0.15) 0%, transparent 70%);
+            z-index: 1; pointer-events: none;
         }
         .dict-hero-content { position: relative; z-index: 2; }
         .dict-hero h1 {
             font-family: 'Bebas Neue', cursive; font-size: 3.5rem;
-            color: #1a1a1a; letter-spacing: 2px; margin-bottom: 0.5rem;
+            color: #fff; letter-spacing: 3px; margin-bottom: 0.5rem;
         }
         .dict-hero .intro {
-            font-size: 1.1rem; color: #666; line-height: 1.7;
+            font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.7;
             max-width: 550px; margin: 0 auto 1.5rem;
         }
 
@@ -196,15 +207,16 @@
         }
         .lang-search-input {
             width: 100%; padding: 0.7rem 1rem 0.7rem 2.5rem;
-            border: 1px solid #e9ecef; border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;
             font-family: 'Lucida Sans', Arial, sans-serif; font-size: 0.95rem;
-            background: #fff; color: #333;
+            background: rgba(255,255,255,0.08); color: #fff;
             transition: border-color 0.3s ease;
         }
         .lang-search-input:focus { outline: none; border-color: #F4A5A5; box-shadow: 0 0 0 3px rgba(244,165,165,0.15); }
+        .lang-search-input::placeholder { color: rgba(255,255,255,0.4); }
         .lang-search-icon {
             position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%);
-            color: #bbb; font-size: 1rem;
+            color: rgba(255,255,255,0.4); font-size: 1rem;
         }
         .lang-current {
             display: flex; align-items: center; gap: 0.5rem; justify-content: center;
@@ -212,11 +224,12 @@
         }
         .lang-badge {
             display: inline-flex; align-items: center; gap: 0.4rem;
-            background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 20px;
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;
             padding: 0.4rem 1rem; font-size: 0.95rem; cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease; color: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
         }
-        .lang-badge:hover { border-color: #F4A5A5; }
+        .lang-badge:hover { border-color: #F4A5A5; background: rgba(244,165,165,0.15); }
         .lang-badge .flag { font-size: 1.2rem; }
         .lang-dropdown {
             position: absolute; top: 100%; left: 0; right: 0;
@@ -239,17 +252,19 @@
 
         .search-box { position: relative; width: 100%; }
         .search-input {
-            width: 100%; padding: 1rem 3rem 1rem 1.2rem;
-            border: 2px solid #e9ecef; border-radius: 16px;
-            font-family: 'Lucida Sans', Arial, sans-serif; font-size: 1.1rem;
-            color: #333; transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            background: #fff;
+            width: 100%; padding: 1.1rem 3.5rem 1.1rem 1.4rem;
+            border: 2px solid rgba(255,255,255,0.15); border-radius: 16px;
+            font-family: 'Lucida Sans', Arial, sans-serif; font-size: 1.15rem;
+            color: #fff; transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
         }
         .search-input:focus {
             outline: none; border-color: #F4A5A5;
-            box-shadow: 0 4px 20px rgba(244,165,165,0.15);
+            box-shadow: 0 4px 30px rgba(244,165,165,0.25);
+            background: rgba(255,255,255,0.12);
         }
-        .search-input::placeholder { color: #bbb; }
+        .search-input::placeholder { color: rgba(255,255,255,0.4); }
         .search-btn {
             position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
             background: #F4A5A5; border: none; border-radius: 12px;
@@ -263,8 +278,8 @@
         /* Autocomplete dropdown */
         .autocomplete {
             position: absolute; top: 100%; left: 0; right: 0;
-            background: #fff; border: 1px solid #e9ecef; border-radius: 12px;
-            margin-top: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            background: #fff; border: 1px solid #e0e0e0; border-radius: 12px;
+            margin-top: 4px; box-shadow: 0 12px 40px rgba(0,0,0,0.2);
             z-index: 100; display: none; overflow: hidden;
         }
         .autocomplete.visible { display: block; }
@@ -283,24 +298,31 @@
         }
 
         /* ===== Main content ===== */
-        .dict-main { flex: 1; padding: 2rem; background: #fff; }
+        .dict-main { flex: 1; padding: 2rem; background: #fafbfc; }
         .dict-container { max-width: 800px; margin: 0 auto; }
 
         /* Word of the day card */
         .wotd-card {
-            background: linear-gradient(135deg, #fef5f5 0%, #fff9f0 100%);
-            border: 1px solid #f5e0e0; border-radius: 20px;
-            padding: 2rem; text-align: center; margin-bottom: 2rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: none; border-radius: 20px;
+            padding: 2.5rem 2rem; text-align: center; margin-bottom: 2rem;
+            position: relative; overflow: hidden;
+        }
+        .wotd-card::before {
+            content: ''; position: absolute; top: -30px; right: -30px;
+            width: 150px; height: 150px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(244,165,165,0.2), transparent);
+            pointer-events: none;
         }
         .wotd-label {
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px;
             color: #F4A5A5; font-weight: 700; margin-bottom: 0.5rem;
         }
         .wotd-word {
-            font-family: 'Bebas Neue', cursive; font-size: 2.5rem;
-            color: #1a1a1a; letter-spacing: 1px;
+            font-family: 'Bebas Neue', cursive; font-size: 2.8rem;
+            color: #fff; letter-spacing: 2px;
         }
-        .wotd-meta { font-size: 0.9rem; color: #888; margin-top: 0.3rem; }
+        .wotd-meta { font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; }
         .wotd-link {
             display: inline-block; margin-top: 1rem; color: #F4A5A5;
             text-decoration: none; font-weight: 600; transition: color 0.3s;
@@ -308,25 +330,29 @@
         .wotd-link:hover { color: #e08e8e; }
 
         /* ===== Word detail view ===== */
-        .word-header { margin-bottom: 2rem; }
+        .word-header {
+            margin-bottom: 2rem; padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 20px; color: #fff;
+        }
         .word-title {
-            font-family: 'Bebas Neue', cursive; font-size: 3rem;
-            color: #1a1a1a; letter-spacing: 1px;
+            font-family: 'Bebas Neue', cursive; font-size: 3.2rem;
+            color: #fff; letter-spacing: 2px;
         }
         .word-meta { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
-        .word-pos { font-style: italic; color: #888; font-size: 1rem; }
+        .word-pos { font-style: italic; color: rgba(255,255,255,0.6); font-size: 1rem; }
         .word-gender {
-            font-size: 0.85rem; color: #666; background: #f0f0f0;
+            font-size: 0.85rem; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.1);
             padding: 2px 8px; border-radius: 6px;
         }
-        .word-ipa { font-size: 0.95rem; color: #666; }
+        .word-ipa { font-size: 0.95rem; color: rgba(255,255,255,0.5); }
         .cefr-badge {
             font-size: 0.75rem; font-weight: 700; padding: 3px 10px;
             border-radius: 6px; text-transform: uppercase; color: #fff;
         }
         .freq-badge {
             font-size: 0.7rem; font-weight: 600; padding: 2px 8px;
-            border-radius: 6px; background: #e8e8e8; color: #666;
+            border-radius: 6px; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);
         }
         .cefr-A1 { background: #4CAF50; }
         .cefr-A2 { background: #8BC34A; }
@@ -335,11 +361,16 @@
         .cefr-C1 { background: #9C27B0; }
         .cefr-C2 { background: #673AB7; }
 
-        .dict-section { margin-bottom: 2rem; }
+        .dict-section {
+            margin-bottom: 2rem; background: #fff;
+            border: 1px solid #eef0f2; border-radius: 16px;
+            padding: 1.5rem 1.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
         .dict-section-title {
-            font-family: 'Bebas Neue', cursive; font-size: 1.4rem;
-            color: #1a1a1a; letter-spacing: 1px; margin-bottom: 0.75rem;
-            padding-bottom: 0.5rem; border-bottom: 2px solid #f5e0e0;
+            font-family: 'Bebas Neue', cursive; font-size: 1.3rem;
+            color: #F4A5A5; letter-spacing: 1.5px; margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem; border-bottom: 2px solid #fef0f0;
+            text-transform: uppercase;
         }
 
         /* Definitions */
@@ -355,11 +386,14 @@
         }
         .trans-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .trans-item {
-            background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 10px;
-            padding: 0.5rem 1rem; cursor: pointer; transition: all 0.3s ease;
-            text-decoration: none; color: #333;
+            background: #fff; border: 1px solid #e9ecef; border-radius: 10px;
+            padding: 0.5rem 1rem; cursor: pointer; transition: all 0.25s ease;
+            text-decoration: none; color: #333; font-weight: 500;
         }
-        .trans-item:hover { border-color: #F4A5A5; color: #F4A5A5; transform: translateY(-1px); }
+        .trans-item:hover {
+            border-color: #F4A5A5; color: #F4A5A5;
+            transform: translateY(-2px); box-shadow: 0 4px 12px rgba(244,165,165,0.15);
+        }
         .trans-context { font-size: 0.8rem; color: #999; margin-left: 0.3rem; }
 
         /* Examples */
@@ -411,17 +445,78 @@
         .not-found { text-align: center; padding: 3rem 1rem; }
         .not-found h2 { font-family: 'Bebas Neue', cursive; font-size: 2rem; color: #ccc; margin-bottom: 0.5rem; }
         .not-found p { color: #999; }
+        .dym-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; justify-content: center; }
+        .dym-item { background: #fff; border: 2px solid #e9ecef; border-radius: 12px; padding: 0.6rem 1.2rem; text-decoration: none; color: #333; font-weight: 600; transition: all 0.25s; }
+        .dym-item:hover { border-color: #F4A5A5; color: #F4A5A5; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(244,165,165,0.15); }
 
         /* Loading */
         .loading { text-align: center; padding: 2rem; color: #bbb; }
+
+        /* Language grid */
+        .dict-languages { padding: 2rem 2rem 3rem; background: #fafbfc; }
+        .dict-languages .dict-container { max-width: 1100px; margin: 0 auto; }
+        .lang-grid-title {
+            font-family: 'Bebas Neue', cursive; font-size: 1.8rem;
+            color: #1a1a1a; letter-spacing: 2px; margin-bottom: 0.4rem;
+            text-align: center;
+        }
+        .lang-grid-subtitle {
+            text-align: center; color: #999; font-size: 0.9rem; margin-bottom: 1.5rem;
+        }
+        .lang-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.75rem;
+        }
+        .lang-grid-card {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.9rem 1rem; border: 1px solid #e9ecef; border-radius: 14px;
+            text-decoration: none; color: #333; transition: all 0.25s ease;
+            background: #fff; position: relative; overflow: hidden;
+        }
+        .lang-grid-card::before {
+            content: attr(data-specimen);
+            position: absolute; right: -5px; top: 50%; transform: translateY(-50%);
+            font-size: 2.8rem; opacity: 0.06; font-weight: 700; pointer-events: none;
+            line-height: 1;
+        }
+        .lang-grid-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        .lang-grid-card.has-content { border-left: 4px solid var(--lang-color, #F4A5A5); }
+        .lang-grid-card.has-content:hover { border-color: var(--lang-color, #F4A5A5); }
+        .lang-grid-card .lg-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; font-weight: 700; color: #fff; flex-shrink: 0;
+            background: var(--lang-color, #999);
+        }
+        .lang-grid-card .lg-info { flex: 1; min-width: 0; }
+        .lang-grid-card .lg-name { font-weight: 700; font-size: 0.92rem; display: block; }
+        .lang-grid-card .lg-native { color: #888; font-size: 0.78rem; display: block; }
+        .lang-grid-card .lg-count {
+            font-size: 0.7rem; color: #aaa; white-space: nowrap; flex-shrink: 0;
+        }
+        .lang-grid-card .lg-count strong {
+            color: var(--lang-color, #F4A5A5); font-weight: 700;
+        }
+        .lang-grid-card.no-content { opacity: 0.4; }
+        .lang-grid-card.no-content:hover { opacity: 0.7; transform: translateY(-1px); }
 
         @media (max-width: 768px) {
             .nav-menu { display: none; }
             .mobile-menu-toggle { display: flex; }
             .dict-hero h1 { font-size: 2.5rem; }
             .dict-hero { padding: 7rem 1.5rem 2rem; }
-            .dict-main { padding: 1.5rem; }
+            .dict-hero::before { font-size: 3rem; }
+            .dict-main { padding: 1rem; }
+            .dict-languages { padding: 1rem 1rem 2rem; }
+            .lang-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.5rem; }
+            .lang-grid-card { padding: 0.7rem 0.8rem; }
+            .lang-grid-card .lg-icon { width: 30px; height: 30px; font-size: 0.85rem; }
             .word-title { font-size: 2.2rem; }
+            .word-header { padding: 1.2rem 1.5rem; border-radius: 16px; }
+            .dict-section { padding: 1.2rem 1.25rem; }
             .conj-table { font-size: 0.85rem; }
             .conj-table th, .conj-table td { padding: 0.4rem 0.6rem; }
         }
@@ -432,16 +527,16 @@
     <header class="header">
         <div class="nav-container">
             <a href="/" class="logo-brand">
-                <div class="main-logo"><img src="assets/tower-logo.png" alt="Babel Free"></div>
-                <span class="brand-name">BABEL FREE</span>
+                <div class="main-logo"><img src="/assets/logo.png" alt="Babel Free Logo"></div>
+                
             </a>
             <ul class="nav-menu">
                 <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="/services" class="nav-link">Services</a></li>
-                <li><a href="/elviajedeljaguar" class="nav-link">Spanish Course</a></li>
-                <li><a href="/dictionary" class="nav-link active">Dictionary</a></li>
-                <li><a href="/languages" class="nav-link">Languages</a></li>
-                <li><a href="/contact" class="cta-nav">Contact</a></li>
+                <li><a href="/blog" class="nav-link">Blog</a></li>
+                <li><a href="/dictionary" class="nav-link active">Dictionaries</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+                <li><a href="/elviajedeljaguar" class="cta-nav">Spanish Course</a></li>
             </ul>
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <span class="menu-bar"></span>
@@ -454,17 +549,17 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="/" class="mobile-menu-item">Home</a>
         <a href="/services" class="mobile-menu-item">Services</a>
-        <a href="/elviajedeljaguar" class="mobile-menu-item">Spanish Course</a>
-        <a href="/dictionary" class="mobile-menu-item">Dictionary</a>
-        <a href="/languages" class="mobile-menu-item">Languages</a>
+        <a href="/blog" class="mobile-menu-item">Blog</a>
+        <a href="/dictionary" class="mobile-menu-item">Dictionaries</a>
         <a href="/contact" class="mobile-menu-item">Contact</a>
+        <a href="/elviajedeljaguar" class="mobile-menu-item">Spanish Course</a>
     </div>
 
     <!-- Search view -->
     <section class="dict-hero" id="dictHero">
         <div class="dict-hero-content">
-            <h1>DICTIONARY</h1>
-            <p class="intro">Look up words, translations, conjugations, and examples across 104 languages — with CEFR level tags for learners.</p>
+            <h1 data-i18n="hero_title">Dictionaries</h1>
+            <p class="intro" data-i18n="hero_intro">Look up words, translations, conjugations, and examples across 104 languages — with CEFR level tags for learners.</p>
             <div class="search-area">
                 <div class="lang-current">
                     <span class="lang-badge" id="langBadge" title="Click to change language">
@@ -479,12 +574,23 @@
                     <div class="lang-dropdown" id="langDropdown"></div>
                 </div>
                 <div class="search-box">
-                    <input type="text" class="search-input" id="searchInput" placeholder="Search for a word..." autocomplete="off" autofocus>
+                    <input type="text" class="search-input" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Search for a word..." autocomplete="off" autofocus>
                     <button class="search-btn" id="searchBtn">
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </button>
                     <div class="autocomplete" id="autocomplete"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language grid (visible on landing, hidden on word view) -->
+    <section class="dict-languages" id="dictLanguages">
+        <div class="dict-container">
+            <h2 class="lang-grid-title">Explore all languages</h2>
+            <p class="lang-grid-subtitle">12 languages with definitions, translations, and examples — more added every week</p>
+            <div class="lang-grid" id="langGrid">
+                <!-- Populated by JS from /api/dictionary/languages -->
             </div>
         </div>
     </section>
@@ -517,6 +623,95 @@
         var currentLang = 'es';
         var allLanguages = [];
         var langSelectorOpen = false;
+
+        // i18n state
+        var allI18nData = {};
+        var i18nStrings = {};
+
+        // ── i18n system ──────────────────────────────────────────────
+        function loadI18n(lang, cb) {
+            if (allI18nData[lang]) {
+                i18nStrings = allI18nData[lang];
+                applyI18n();
+                if (cb) cb();
+                return;
+            }
+            // Check localStorage cache
+            var cacheKey = 'dict_i18n_' + lang;
+            try {
+                var cached = localStorage.getItem(cacheKey);
+                if (cached) {
+                    var parsed = JSON.parse(cached);
+                    if (parsed && parsed.strings) {
+                        allI18nData[lang] = parsed.strings;
+                        i18nStrings = parsed.strings;
+                        applyI18n();
+                        if (cb) cb();
+                        return;
+                    }
+                }
+            } catch(e) {}
+
+            fetch(API + '/i18n/' + lang)
+            .then(function(r) { return r.json(); })
+            .then(function(res) {
+                if (res.success && res.data.strings) {
+                    allI18nData[lang] = res.data.strings;
+                    i18nStrings = res.data.strings;
+                    try { localStorage.setItem(cacheKey, JSON.stringify({strings: res.data.strings})); } catch(e) {}
+                    applyI18n();
+                }
+                if (cb) cb();
+            })
+            .catch(function() { if (cb) cb(); });
+        }
+
+        function t(key, replacements) {
+            var str = i18nStrings[key] || key;
+            if (replacements) {
+                for (var k in replacements) {
+                    if (replacements.hasOwnProperty(k)) {
+                        str = str.split('{' + k + '}').join(replacements[k]);
+                    }
+                }
+            }
+            return str;
+        }
+
+        function applyI18n() {
+            var els = document.querySelectorAll('[data-i18n]');
+            for (var i = 0; i < els.length; i++) {
+                var key = els[i].getAttribute('data-i18n');
+                var val = i18nStrings[key];
+                if (val) els[i].textContent = val;
+            }
+            var phs = document.querySelectorAll('[data-i18n-placeholder]');
+            for (var j = 0; j < phs.length; j++) {
+                var phKey = phs[j].getAttribute('data-i18n-placeholder');
+                var phVal = i18nStrings[phKey];
+                if (phVal) phs[j].placeholder = phVal;
+            }
+            // Update JSON-LD SearchAction target with current language prefix
+            var prefix = i18nStrings.url_prefix || 'significado-de';
+            var ldScript = document.querySelector('script[type="application/ld+json"]');
+            if (ldScript) {
+                try {
+                    var ld = JSON.parse(ldScript.textContent);
+                    var graph = ld['@graph'] || [];
+                    for (var g = 0; g < graph.length; g++) {
+                        if (graph[g].potentialAction) {
+                            graph[g].potentialAction.target = 'https://babelfree.com/dictionary/' + currentLang + '/' + prefix + '-{search_term_string}';
+                        }
+                    }
+                    ldScript.textContent = JSON.stringify(ld);
+                } catch(e) {}
+            }
+        }
+
+        function wordSlug(word, lang) {
+            var prefix = (allI18nData[lang || currentLang] || i18nStrings || {}).url_prefix || 'significado-de';
+            return prefix + '-' + encodeURIComponent(word);
+        }
 
         // Load 104 languages from API
         function loadLanguages() {
@@ -583,6 +778,7 @@
                     currentLang = this.dataset.code;
                     updateLangBadge();
                     toggleLangSelector();
+                    loadI18n(currentLang);
                 });
             }
         }
@@ -616,10 +812,26 @@
                 }
                 return { view: 'search', lang: parts[1] };
             }
-            // /dictionary/{lang}/{word} or /dictionary/{pair}/{word}
+            // /dictionary/{lang}/{prefix}-{word} or /dictionary/{pair}/{word}
             if (parts.length >= 3) {
                 var langOrPair = parts[1];
                 var word = decodeURIComponent(parts.slice(2).join('/'));
+                // Strip any known URL prefix (significado-de-, meaning-of-, etc.)
+                var knownPrefixes = ['significado-de-', 'meaning-of-'];
+                if (allI18nData) {
+                    for (var lk in allI18nData) {
+                        if (allI18nData.hasOwnProperty(lk) && allI18nData[lk].url_prefix) {
+                            var p = allI18nData[lk].url_prefix + '-';
+                            if (knownPrefixes.indexOf(p) === -1) knownPrefixes.push(p);
+                        }
+                    }
+                }
+                for (var pi = 0; pi < knownPrefixes.length; pi++) {
+                    if (word.indexOf(knownPrefixes[pi]) === 0) {
+                        word = word.substring(knownPrefixes[pi].length);
+                        break;
+                    }
+                }
                 if (/^[a-z]{2}-[a-z]{2,3}$/.test(langOrPair)) {
                     // Legacy pair format — extract source lang
                     return { view: 'word', lang: langOrPair.split('-')[0], word: word, legacyPair: langOrPair };
@@ -640,7 +852,11 @@
 
         function route() {
             var r = parseRoute();
-            if (r.lang) {
+            if (r.lang && r.lang !== currentLang) {
+                currentLang = r.lang;
+                updateLangBadge();
+                loadI18n(currentLang);
+            } else if (r.lang) {
                 currentLang = r.lang;
                 updateLangBadge();
             }
@@ -651,10 +867,94 @@
             }
         }
 
+        var langSection = document.getElementById('dictLanguages');
+
         function showSearchView() {
             hero.style.display = '';
+            langSection.style.display = '';
             content.innerHTML = '';
             loadWordOfDay();
+            loadLanguageGrid();
+        }
+
+        // Language family colors and script specimens
+        var langFamilies = {
+            // Romance (warm coral/terracotta)
+            es:{color:'#e07a5f',specimen:'Aa',family:'Romance'},
+            fr:{color:'#d4726a',specimen:'Àà',family:'Romance'},
+            it:{color:'#c75d4a',specimen:'Àà',family:'Romance'},
+            pt:{color:'#e08e6d',specimen:'Ãã',family:'Romance'},
+            ro:{color:'#d98a7a',specimen:'Ăă',family:'Romance'},
+            ca:{color:'#cc7766',specimen:'Ça',family:'Romance'},
+            gl:{color:'#d4877a',specimen:'Ña',family:'Romance'},
+            // Germanic (cool blue/steel)
+            en:{color:'#4a7fb5',specimen:'Ww',family:'Germanic'},
+            de:{color:'#3a6fa5',specimen:'Ää',family:'Germanic'},
+            nl:{color:'#5a8fc5',specimen:'IJ',family:'Germanic'},
+            sv:{color:'#4a8fb5',specimen:'Åå',family:'Germanic'},
+            no:{color:'#5a7faa',specimen:'Øø',family:'Germanic'},
+            da:{color:'#6a8fb0',specimen:'Ææ',family:'Germanic'},
+            // Slavic (deep wine/purple)
+            ru:{color:'#7b4f8a',specimen:'Яя',family:'Slavic'},
+            pl:{color:'#8b5f9a',specimen:'Łł',family:'Slavic'},
+            cs:{color:'#6b4f7a',specimen:'Čč',family:'Slavic'},
+            uk:{color:'#8a5f8a',specimen:'Її',family:'Slavic'},
+            hr:{color:'#7b5f8a',specimen:'Žž',family:'Slavic'},
+            // CJK (jade/ink)
+            zh:{color:'#2a9d8f',specimen:'字',family:'CJK'},
+            ja:{color:'#3aad9f',specimen:'字',family:'CJK'},
+            ko:{color:'#4abd9f',specimen:'글',family:'CJK'},
+            // Semitic/Arabic (sand/gold)
+            ar:{color:'#c4913f',specimen:'ع',family:'Semitic'},
+            he:{color:'#d4a14f',specimen:'א',family:'Semitic'},
+            // Other
+            tr:{color:'#e07a5f',specimen:'Çç',family:'Turkic'},
+            hi:{color:'#d4726a',specimen:'अ',family:'Indo-Aryan'},
+            el:{color:'#5a7fb5',specimen:'Ωω',family:'Hellenic'},
+            fi:{color:'#6a8fb0',specimen:'Ää',family:'Uralic'},
+            hu:{color:'#7a8fa0',specimen:'Őő',family:'Uralic'},
+            th:{color:'#4a9d8f',specimen:'ก',family:'Tai'},
+            vi:{color:'#5aad9f',specimen:'Ơơ',family:'Austroasiatic'},
+        };
+        var defaultLangInfo = {color:'#999',specimen:'Aa'};
+
+        function loadLanguageGrid() {
+            var grid = document.getElementById('langGrid');
+            if (grid.children.length > 0) return;
+            fetch(API + '/languages')
+            .then(function(r) { return r.json(); })
+            .then(function(res) {
+                if (!res.success || !res.data.languages) return;
+                var langs = res.data.languages;
+                var html = '';
+                for (var i = 0; i < langs.length; i++) {
+                    var l = langs[i];
+                    var count = parseInt(l.word_count) || 0;
+                    var cls = count > 0 ? 'has-content' : 'no-content';
+                    var lf = langFamilies[l.code] || defaultLangInfo;
+                    var countText = count > 0
+                        ? '<strong>' + (count >= 1000 ? Math.round(count/1000) + 'K' : count) + '</strong> words'
+                        : 'coming soon';
+                    html += '<a href="/dictionary/' + esc(l.code) + '/" class="lang-grid-card ' + cls + '" ' +
+                        'style="--lang-color:' + lf.color + '" data-specimen="' + lf.specimen + '">' +
+                        '<span class="lg-icon" style="background:' + lf.color + '">' + l.code.toUpperCase() + '</span>' +
+                        '<span class="lg-info">' +
+                            '<span class="lg-name">' + esc(l.name_en) + '</span>' +
+                            '<span class="lg-native">' + esc(l.name_native) + '</span>' +
+                        '</span>' +
+                        '<span class="lg-count">' + countText + '</span>' +
+                    '</a>';
+                }
+                grid.innerHTML = html;
+                var cards = grid.querySelectorAll('.lang-grid-card');
+                for (var j = 0; j < cards.length; j++) {
+                    cards[j].addEventListener('click', function(e) {
+                        e.preventDefault();
+                        navigate(this.getAttribute('href'));
+                    });
+                }
+            })
+            .catch(function() {});
         }
 
         // Autocomplete — uses new ?lang= param
@@ -700,7 +1000,7 @@
 
         function doSearch(word) {
             if (!word) return;
-            navigate('/dictionary/' + currentLang + '/' + encodeURIComponent(word));
+            navigate('/dictionary/' + currentLang + '/' + wordSlug(word));
         }
 
         searchInput.addEventListener('input', function() {
@@ -759,14 +1059,14 @@
                 var w = res.data.word;
                 content.innerHTML =
                     '<div class="wotd-card">' +
-                        '<div class="wotd-label">Word of the day</div>' +
+                        '<div class="wotd-label">' + esc(t('wotd_label')) + '</div>' +
                         '<div class="wotd-word">' + esc(w.word) + '</div>' +
                         '<div class="wotd-meta">' +
                             '<span>' + esc(w.part_of_speech) + '</span>' +
                             (w.cefr_level ? ' &middot; <span class="cefr-badge cefr-' + w.cefr_level + '">' + w.cefr_level + '</span>' : '') +
                             (w.frequency_rank ? ' &middot; <span class="freq-badge">#' + w.frequency_rank + '</span>' : '') +
                         '</div>' +
-                        '<a href="/dictionary/' + currentLang + '/' + encodeURIComponent(w.word) + '" class="wotd-link">See full entry &rarr;</a>' +
+                        '<a href="/dictionary/' + currentLang + '/' + wordSlug(w.word) + '" class="wotd-link">' + esc(t('wotd_link')) + ' &rarr;</a>' +
                     '</div>';
                 content.querySelector('.wotd-link').addEventListener('click', function(e) {
                     e.preventDefault();
@@ -779,8 +1079,9 @@
         // Load word detail — new URL: /api/dictionary/lookup/{lang}/{word}
         function loadWord(word, legacyPair) {
             hero.style.display = '';
+            langSection.style.display = 'none';
             searchInput.value = word;
-            content.innerHTML = '<div class="loading">Loading...</div>';
+            content.innerHTML = '<div class="loading">' + esc(t('loading')) + '</div>';
 
             var lookupPath = legacyPair
                 ? '/lookup/' + legacyPair + '/' + encodeURIComponent(word)
@@ -789,18 +1090,40 @@
             fetch(API + lookupPath)
             .then(function(r) { return r.json(); })
             .then(function(res) {
-                if (!res.success || !res.data.entry) {
+                if (!res.success) {
                     content.innerHTML =
                         '<div class="not-found">' +
-                            '<h2>Word not found</h2>' +
-                            '<p>"' + esc(word) + '" was not found in the dictionary. Try a different spelling or search.</p>' +
+                            '<h2>' + esc(t('not_found_title')) + '</h2>' +
+                            '<p>' + esc(t('not_found_text', {word: word})) + '</p>' +
                         '</div>';
                     return;
                 }
-                renderWordDetail(res.data.entry);
+                var entry = res.data.entry;
+                // "Did you mean?" suggestions
+                if (entry._did_you_mean) {
+                    var sugHtml = '<div class="not-found"><h2>' + esc(t('not_found_title')) + '</h2>';
+                    sugHtml += '<p>' + esc(t('not_found_text', {word: word})) + '</p>';
+                    sugHtml += '<div class="did-you-mean"><p style="margin-top:1.5rem;color:#666;">Did you mean:</p><div class="dym-list">';
+                    for (var si = 0; si < entry._did_you_mean.length; si++) {
+                        var sw = entry._did_you_mean[si];
+                        sugHtml += '<a href="/dictionary/' + currentLang + '/' + wordSlug(sw) + '" class="dym-item">' + esc(sw) + '</a>';
+                    }
+                    sugHtml += '</div></div></div>';
+                    content.innerHTML = sugHtml;
+                    // Bind SPA navigation
+                    var dymLinks = content.querySelectorAll('.dym-item');
+                    for (var dl = 0; dl < dymLinks.length; dl++) {
+                        dymLinks[dl].addEventListener('click', function(ev) {
+                            ev.preventDefault();
+                            navigate(this.getAttribute('href'));
+                        });
+                    }
+                    return;
+                }
+                renderWordDetail(entry);
             })
             .catch(function() {
-                content.innerHTML = '<div class="not-found"><h2>Error</h2><p>Could not load the word. Please try again.</p></div>';
+                content.innerHTML = '<div class="not-found"><h2>' + esc(t('not_found_title')) + '</h2><p>' + esc(t('error_text')) + '</p></div>';
             });
         }
 
@@ -808,7 +1131,7 @@
             var html = '';
 
             // Back link
-            html += '<a href="/dictionary/' + currentLang + '" class="back-link">&larr; Back to search</a>';
+            html += '<a href="/dictionary/' + currentLang + '" class="back-link">&larr; ' + esc(t('back_to_search')) + '</a>';
 
             // Header
             html += '<div class="word-header">';
@@ -824,7 +1147,7 @@
             // Definitions
             if (e.definitions && e.definitions.length) {
                 html += '<div class="dict-section">';
-                html += '<div class="dict-section-title">Definitions</div>';
+                html += '<div class="dict-section-title">' + esc(t('section_definitions')) + '</div>';
                 html += '<ol class="def-list">';
                 for (var i = 0; i < e.definitions.length; i++) {
                     html += '<li>' + esc(e.definitions[i].definition);
@@ -839,7 +1162,7 @@
             // Translations — grouped by language, each as a hyperlink
             if (e.translations && e.translations.length) {
                 html += '<div class="dict-section">';
-                html += '<div class="dict-section-title">Translations</div>';
+                html += '<div class="dict-section-title">' + esc(t('section_translations')) + '</div>';
 
                 // Group by language
                 var byLang = {};
@@ -859,7 +1182,8 @@
                     html += '<div class="trans-list">';
                     for (var ti = 0; ti < byLang[langCode].length; ti++) {
                         var tw = byLang[langCode][ti];
-                        var url = tw.url || ('/dictionary/' + tw.lang + '/' + encodeURIComponent(tw.word));
+                        var twPrefix = (allI18nData[tw.lang] || {}).url_prefix || 'significado-de';
+                        var url = '/dictionary/' + tw.lang + '/' + twPrefix + '-' + encodeURIComponent(tw.word);
                         html += '<a href="' + url + '" class="trans-item" data-word="' + esc(tw.word) + '" data-lang="' + tw.lang + '">';
                         html += esc(tw.word);
                         if (tw.context) html += '<span class="trans-context">(' + esc(tw.context) + ')</span>';
@@ -873,7 +1197,7 @@
             // Examples
             if (e.examples && e.examples.length) {
                 html += '<div class="dict-section">';
-                html += '<div class="dict-section-title">Examples</div>';
+                html += '<div class="dict-section-title">' + esc(t('section_examples')) + '</div>';
                 for (var x = 0; x < e.examples.length; x++) {
                     var ex = e.examples[x];
                     html += '<div class="example-item">';
@@ -888,7 +1212,7 @@
             // Conjugations
             if (e.conjugations && e.conjugations.length) {
                 html += '<div class="dict-section">';
-                html += '<div class="dict-section-title">Conjugation</div>';
+                html += '<div class="dict-section-title">' + esc(t('section_conjugation')) + '</div>';
 
                 var tenses = {};
                 var tenseOrder = [];
@@ -906,7 +1230,7 @@
                 for (var tj = 0; tj < tenseOrder.length; tj++) {
                     var conj = tenses[tenseOrder[tj]];
                     html += '<div class="conj-panel" data-tense="' + tj + '" style="' + (tj === 0 ? '' : 'display:none') + '">';
-                    html += '<table class="conj-table"><thead><tr><th>Persona</th><th>Forma</th></tr></thead><tbody>';
+                    html += '<table class="conj-table"><thead><tr><th>' + esc(t('conj_person')) + '</th><th>' + esc(t('conj_form')) + '</th></tr></thead><tbody>';
                     var pronouns = [
                         ['yo', conj.yo],
                         ['t\u00fa', conj.tu],
@@ -929,14 +1253,19 @@
             // Related words
             if (e.related && e.related.length) {
                 html += '<div class="dict-section">';
-                html += '<div class="dict-section-title">Related words</div>';
+                html += '<div class="dict-section-title">' + esc(t('section_related')) + '</div>';
                 var groups = {};
                 for (var r = 0; r < e.related.length; r++) {
                     var rel = e.related[r];
                     if (!groups[rel.relation_type]) groups[rel.relation_type] = [];
                     groups[rel.relation_type].push(rel);
                 }
-                var labels = { synonym: 'Synonyms', antonym: 'Antonyms', derived: 'Derived', see_also: 'See also' };
+                var labels = {
+                    synonym: t('relation_synonym') || 'Synonyms',
+                    antonym: t('relation_antonym') || 'Antonyms',
+                    derived: t('relation_derived') || 'Derived',
+                    see_also: t('relation_see_also') || 'See also'
+                };
                 for (var g in groups) {
                     if (!groups.hasOwnProperty(g)) continue;
                     html += '<div class="related-group">';
@@ -944,7 +1273,7 @@
                     html += '<div class="related-list">';
                     for (var ri = 0; ri < groups[g].length; ri++) {
                         var rw = groups[g][ri];
-                        html += '<a href="/dictionary/' + currentLang + '/' + encodeURIComponent(rw.word) + '" class="related-item" data-word="' + esc(rw.word) + '">' + esc(rw.word) + '</a>';
+                        html += '<a href="/dictionary/' + currentLang + '/' + wordSlug(rw.word) + '" class="related-item" data-word="' + esc(rw.word) + '">' + esc(rw.word) + '</a>';
                     }
                     html += '</div></div>';
                 }
@@ -959,9 +1288,16 @@
                 transLinks[tl].addEventListener('click', function(ev) {
                     ev.preventDefault();
                     var targetLang = this.dataset.lang;
-                    if (targetLang) currentLang = targetLang;
-                    updateLangBadge();
-                    navigate(this.getAttribute('href'));
+                    var href = this.getAttribute('href');
+                    if (targetLang) {
+                        currentLang = targetLang;
+                        updateLangBadge();
+                        loadI18n(targetLang, function() {
+                            navigate(href);
+                        });
+                    } else {
+                        navigate(href);
+                    }
                 });
             }
 
@@ -999,9 +1335,34 @@
         // History navigation
         window.addEventListener('popstate', function() { route(); });
 
-        // Init
+        // Animated placeholder — shows words in different scripts
+        var placeholderWords = [
+            'Search for a word...',
+            'Buscar una palabra...',
+            '単語を検索...',
+            'Rechercher un mot...',
+            'Wort suchen...',
+            '단어 검색...',
+            'Поиск слова...',
+            'ابحث عن كلمة...',
+            'Cerca una parola...',
+            '搜索词语...',
+            'Zoek een woord...',
+            'Procurar uma palavra...'
+        ];
+        var phIdx = 0;
+        function rotatePlaceholder() {
+            if (document.activeElement === searchInput) return;
+            phIdx = (phIdx + 1) % placeholderWords.length;
+            searchInput.setAttribute('placeholder', placeholderWords[phIdx]);
+        }
+        setInterval(rotatePlaceholder, 3000);
+
+        // Init — load i18n first, then route
         loadLanguages();
-        route();
+        loadI18n(currentLang, function() {
+            route();
+        });
     })();
 
     function toggleMobileMenu() {
@@ -1027,14 +1388,14 @@
     <footer class="site-footer light">
         <div class="footer-grid">
             <div class="footer-brand">
-                <p class="footer-logo"><img src="assets/tower-logo.png" alt="Babel Free" loading="lazy"></p>
+                <p class="footer-logo"><img src="/assets/tower-logo.png" alt="Babel Free" loading="lazy"></p>
                 <p class="footer-desc">Language courses, professional translation, and immersive Spanish learning through El Viaje del Jaguar — a CEFR-aligned journey powered by Colombian culture and storytelling.</p>
             </div>
             <nav class="footer-links" aria-label="Site map">
                 <p class="footer-heading">Explore</p>
                 <a href="/services">Language courses</a>
                 <a href="/elviajedeljaguar">El Viaje del Jaguar</a>
-                <a href="/dictionary">Dictionary</a>
+                <a href="/dictionary">Dictionaries</a>
                 <a href="/languages">100+ languages</a>
                 <a href="/blog">Blog</a>
             </nav>

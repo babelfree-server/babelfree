@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino 58, Lecci&oacute;n 1 - La Palabra del Coraz&oacute;n</title>
+    <meta name="description" content="C2 Avanzado - Destino 58 Lección 1: Maestría total — La Palabra del Corazón">
+    <link rel="canonical" href="https://babelfree.com/c2_advanced/dest58_total_mastery/lesson1_heart_word">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LearningResource",
+                "name": "Destino 58, Lecci\u00f3n 1 - La Palabra del Coraz\u00f3n",
+                "url": "https://babelfree.com/c2_advanced/dest58_total_mastery/lesson1_heart_word",
+                "educationalLevel": "C2 - Mastery",
+                "learningResourceType": "Interactive Lesson",
+                "teaches": ["Maestr\u00eda total","Producci\u00f3n original","Guardi\u00e1n de historias","Escuchar como palabra del coraz\u00f3n"],
+                "isAccessibleForFree": true, "inLanguage": "es",
+                "provider": { "@type": "EducationalOrganization", "name": "Babel Free", "url": "https://babelfree.com" },
+                "dateModified": "2026-02-25"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com" },
+                    { "@type": "ListItem", "position": 2, "name": "El Viaje del Jaguar", "item": "https://babelfree.com/c2-colombia" },
+                    { "@type": "ListItem", "position": 3, "name": "C2 Avanzado", "item": "https://babelfree.com/c2-colombia" },
+                    { "@type": "ListItem", "position": 4, "name": "La Palabra del Coraz\u00f3n", "item": "https://babelfree.com/c2_advanced/dest58_total_mastery/games" },
+                    { "@type": "ListItem", "position": 5, "name": "Lecci\u00f3n 1" }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --heart-dark: #0a0508;
+            --heart-deep: #1a0a15;
+            --accent-heart: #ff4081;
+            --accent-gold: #ffd700;
+            --accent-light: #ffcdd2;
+            --success: #2e7d32;
+            --text-light: #fce4ec;
+            --text-muted: #f48fb1;
+            --glass-bg: rgba(255,255,255,0.08);
+            --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+            --border-radius: 20px;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:linear-gradient(135deg,#050204 0%,#0a0508 25%,#1a0a15 60%,#0f050a 100%); min-height:100vh; color:white; line-height:1.8; font-size:20px; position:relative; overflow-x:hidden; }
+        body::before { content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at 40% 60%,rgba(255,64,129,0.08) 0%,transparent 45%),radial-gradient(circle at 70% 30%,rgba(255,215,0,0.1) 0%,transparent 40%),radial-gradient(circle at 20% 80%,rgba(255,205,210,0.06) 0%,transparent 35%); z-index:1; animation:heartBeat 18s ease-in-out infinite; }
+        @keyframes heartBeat { 0%,100% { opacity:0.4; } 40% { opacity:1; } 70% { opacity:0.6; } }
+        .container { max-width:1000px; margin:0 auto; padding:20px; position:relative; z-index:10; }
+        .lesson-header { background:var(--glass-bg); backdrop-filter:blur(20px); padding:25px; border-radius:var(--border-radius); margin-bottom:30px; border:3px solid var(--accent-heart); text-align:center; position:relative; }
+        .back-btn { position:absolute; top:20px; left:20px; background:var(--glass-bg); color:white; padding:10px 20px; text-decoration:none; border-radius:25px; border:2px solid var(--accent-heart); transition:var(--transition); font-weight:600; font-size:0.9rem; }
+        .back-btn:hover { background:rgba(255,64,129,0.15); transform:translateY(-2px); }
+        .lesson-info { position:absolute; top:20px; right:20px; background:var(--accent-gold); color:#0a0508; padding:8px 16px; border-radius:20px; font-weight:700; font-size:0.8rem; }
+        .lesson-title { font-size:2.2rem; color:var(--accent-heart); margin-bottom:10px; font-weight:900; }
+        .lesson-subtitle { color:var(--text-light); font-size:1.2rem; font-weight:600; }
+        .progress-bar-container { background:rgba(255,255,255,0.1); border-radius:15px; padding:20px; margin:20px 0; border:2px solid var(--heart-deep); }
+        .progress-bar { width:100%; height:12px; background:rgba(255,255,255,0.2); border-radius:6px; overflow:hidden; margin-bottom:10px; }
+        .progress-fill { height:100%; background:linear-gradient(90deg,var(--accent-heart),var(--accent-gold)); border-radius:6px; width:0%; transition:width 1s ease; }
+        .progress-text { color:var(--accent-heart); font-weight:700; text-align:center; font-size:1rem; }
+        .story-section { background:linear-gradient(135deg,rgba(255,64,129,0.05),rgba(26,10,21,0.3)); border:3px solid var(--accent-heart); border-radius:var(--border-radius); padding:30px; margin:30px 0; text-align:center; }
+        .story-title { color:var(--accent-heart); font-weight:700; font-size:1.6rem; margin-bottom:20px; }
+        .jaguar-avatar { width:120px; height:120px; overflow:hidden; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; border:4px solid var(--accent-heart); animation:breathe 3s ease-in-out infinite; cursor:pointer; box-shadow:0 8px 30px rgba(255,64,129,0.25); }
+        @keyframes breathe { 0%,100% { transform:scale(1); } 50% { transform:scale(1.05); } }
+        .story-text { color:var(--text-light); font-size:1.3rem; line-height:2; margin:20px 0; }
+        .simple-sentence { margin:15px 0; padding:10px 20px; background:rgba(255,255,255,0.06); border-radius:15px; border-left:5px solid var(--accent-heart); }
+        .simple-sentence.final { border-left-color:var(--accent-heart); background:rgba(255,64,129,0.08); }
+        .simple-sentence.glow { border-left-color:var(--accent-gold); background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,64,129,0.08)); text-shadow:0 0 20px rgba(255,215,0,0.15); }
+        .simple-sentence.revelation { border-left-color:var(--accent-heart); background:linear-gradient(135deg,rgba(255,64,129,0.12),rgba(255,64,129,0.04)); color:#fce4ec; font-weight:600; text-shadow:0 0 20px rgba(255,64,129,0.15); cursor:pointer; }
+        .simple-sentence.key-line { border-left-color:var(--accent-gold); background:rgba(255,215,0,0.1); cursor:pointer; }
+        .concept-section { background:var(--glass-bg); backdrop-filter:blur(20px); border-radius:var(--border-radius); padding:30px; margin:30px 0; border:3px solid var(--accent-heart); }
+        .concept-title { color:var(--accent-heart); font-weight:700; font-size:1.8rem; margin-bottom:25px; text-align:center; }
+        .concept-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:25px; }
+        .concept-card { background:rgba(255,255,255,0.06); border-radius:20px; padding:25px; text-align:center; border:3px solid transparent; transition:var(--transition); cursor:pointer; }
+        .concept-card:hover { transform:translateY(-5px); box-shadow:0 10px 30px rgba(255,64,129,0.15); }
+        .concept-card.maestria { border-color:var(--accent-gold); }
+        .concept-card.creacion { border-color:var(--accent-heart); }
+        .concept-card.guardian { border-color:var(--accent-light); }
+        .concept-card.escuchar { border-color:var(--accent-gold); }
+        .card-avatar { width:80px; height:80px; border-radius:50%; margin:0 auto 15px; display:flex; align-items:center; justify-content:center; font-size:2.5rem; border:3px solid; }
+        .concept-card.maestria .card-avatar { background:linear-gradient(135deg,var(--accent-gold),#ffab00); border-color:var(--accent-gold); }
+        .concept-card.creacion .card-avatar { background:linear-gradient(135deg,var(--accent-heart),#f50057); border-color:var(--accent-heart); }
+        .concept-card.guardian .card-avatar { background:linear-gradient(135deg,var(--accent-light),#ef9a9a); border-color:var(--accent-light); color:#0a0508; }
+        .concept-card.escuchar .card-avatar { background:linear-gradient(135deg,var(--accent-gold),var(--accent-heart)); border-color:var(--accent-gold); }
+        .card-name { font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+        .concept-card.maestria .card-name { color:var(--accent-gold); }
+        .concept-card.creacion .card-name { color:var(--accent-heart); }
+        .concept-card.guardian .card-name { color:var(--accent-light); }
+        .concept-card.escuchar .card-name { color:var(--accent-gold); }
+        .card-example { color:var(--text-light); font-size:1rem; margin-bottom:10px; font-style:italic; }
+        .card-description { color:var(--text-muted); font-size:0.9rem; line-height:1.6; }
+        .concept-card.guardian .card-description { color:#0a0508; }
+        .yaguara-guide { background:linear-gradient(135deg,rgba(255,64,129,0.06),rgba(26,10,21,0.15)); border:3px solid var(--accent-heart); border-radius:20px; padding:25px; margin:30px 0; display:grid; grid-template-columns:80px 1fr; gap:20px; align-items:start; }
+        .yaguara-small { width:70px; height:70px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:3px solid var(--accent-heart); animation:breathe 4s ease-in-out infinite; flex-shrink:0; }
+        .yaguara-text { padding-top:5px; }
+        .guide-title { color:var(--accent-heart); font-weight:700; margin-bottom:10px; font-size:1.1rem; }
+        .guide-message { color:var(--text-light); line-height:1.8; font-size:1rem; }
+        .simple-message { margin:8px 0; }
+        .exercise-section { background:linear-gradient(135deg,rgba(255,64,129,0.05),rgba(26,10,21,0.2)); border:3px solid var(--accent-heart); border-radius:var(--border-radius); padding:30px; margin:30px 0; }
+        .exercise-title { color:var(--accent-heart); font-weight:700; font-size:1.6rem; margin-bottom:20px; text-align:center; }
+        .exercise-instruction { background:rgba(255,64,129,0.08); border:2px solid var(--accent-heart); border-radius:15px; padding:20px; margin:20px 0; text-align:center; }
+        .instruction-text { color:var(--accent-heart); font-weight:600; font-size:1.2rem; }
+        .matching-game { display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:30px; }
+        .words-column,.images-column { background:rgba(255,255,255,0.05); border-radius:15px; padding:20px; }
+        .column-title { color:var(--accent-heart); font-weight:700; font-size:1.2rem; margin-bottom:20px; text-align:center; }
+        .word-item,.image-item { background:rgba(255,255,255,0.06); border:3px solid transparent; border-radius:12px; padding:15px; margin:10px 0; cursor:pointer; transition:var(--transition); text-align:center; font-weight:600; font-size:1.1rem; }
+        .word-item:hover,.image-item:hover { border-color:var(--accent-heart); background:rgba(255,64,129,0.08); transform:translateX(5px); }
+        .word-item.selected,.image-item.selected { border-color:var(--accent-heart); background:rgba(255,64,129,0.12); transform:scale(1.02); }
+        .word-item.correct,.image-item.correct { border-color:var(--success); background:rgba(46,125,50,0.2); }
+        .word-item.incorrect,.image-item.incorrect { border-color:#e74c3c; background:rgba(231,76,60,0.2); }
+        .success-message { background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(46,125,50,0.1)); border:3px solid var(--accent-gold); border-radius:15px; padding:25px; margin:25px 0; text-align:center; display:none; }
+        .success-message.show { display:block; animation:successSlide 0.5s ease-out; }
+        @keyframes successSlide { 0% { opacity:0; transform:translateY(-20px); } 100% { opacity:1; transform:translateY(0); } }
+        .success-title { color:var(--accent-gold); font-weight:700; font-size:1.4rem; margin-bottom:15px; }
+        .success-text { color:var(--text-light); font-size:1.1rem; line-height:1.6; }
+        .lesson-navigation { display:flex; justify-content:center; align-items:center; margin-top:40px; gap:20px; flex-wrap:wrap; }
+        .nav-button { padding:15px 30px; border:none; border-radius:25px; font-size:1.1rem; font-weight:700; cursor:pointer; transition:var(--transition); min-width:150px; text-align:center; }
+        .nav-button.primary { background:linear-gradient(135deg,var(--accent-heart),var(--accent-gold)); color:#0a0508; border:2px solid var(--accent-gold); }
+        .nav-button.primary:hover { transform:scale(1.05); box-shadow:0 6px 20px rgba(255,215,0,0.3); }
+        .nav-button.secondary { background:var(--glass-bg); color:white; border:2px solid var(--heart-deep); }
+        .nav-button.secondary:hover { background:rgba(255,64,129,0.1); transform:scale(1.05); }
+        .nav-button:disabled { opacity:0.5; cursor:not-allowed; }
+        .nav-button:disabled:hover { transform:none; box-shadow:none; }
+        @media (max-width:768px) { body { font-size:18px; } .container { padding:15px; } .concept-grid { grid-template-columns:1fr; } .matching-game { grid-template-columns:1fr; gap:20px; } .lesson-title { font-size:1.8rem; } .back-btn,.lesson-info { position:static; margin:10px auto; display:block; width:fit-content; } .yaguara-guide { grid-template-columns:1fr; text-align:center; gap:15px; } .yaguara-small { margin:0 auto; } }
+    </style>
+    <link rel="stylesheet" href="../../luxury.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <a href="/c2-colombia" class="back-btn">&larr; Destinos</a>
+            <div class="lesson-info">C2 Avanzado &mdash; Destino 58</div>
+            <h1 class="lesson-title">La Palabra del Coraz&oacute;n</h1>
+            <p class="lesson-subtitle">Maestr&iacute;a total</p>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text" id="progressText">Paso 1 de 5</div>
+        </div>
+
+        <!-- STEP 1: REPASO -->
+        <div class="story-section" id="step1">
+            <div class="story-title">Repaso: el camino hasta aqu&iacute;</div>
+            <div class="story-text">
+                <div class="simple-sentence">En el destino anterior escuchaste la voz completa de Yaguar&aacute; &mdash; su mon&oacute;logo final como gu&iacute;a. Aprendiste que no todas las palabras se dicen; algunas se cuidan.</div>
+                <div class="simple-sentence">Ahora llegas al &uacute;ltimo destino. No hay lecci&oacute;n nueva. No hay gram&aacute;tica pendiente. Solo queda una pregunta &mdash; y la respuesta es tuya.</div>
+            </div>
+        </div>
+
+        <!-- STEP 2: HISTORIA -->
+        <div class="story-section" id="step2" style="display:none;">
+            <div class="story-title">La Palabra del Coraz&oacute;n</div>
+            <div class="story-text">
+                <div class="simple-sentence final">El &uacute;ltimo destino. El estudiante est&aacute; solo. Yaguar&aacute; calla. Todos los personajes est&aacute;n presentes, pero esperan.</div>
+                <div class="simple-sentence glow">El Mapa de las Voces brilla completo. Cada fragmento de cada sala de escape est&aacute; ensamblado. Solo queda un espacio vac&iacute;o en el centro.</div>
+                <div class="simple-sentence revelation" onclick="speakText('Hay una palabra que contiene todas las dem\u00e1s. Encu\u00e9ntrala.')">Abuela Ceiba susurra por &uacute;ltima vez: &laquo;Hay una palabra que contiene todas las dem&aacute;s. Encu&eacute;ntrala.&raquo;</div>
+                <div class="simple-sentence key-line" onclick="speakText('La Palabra del Coraz\u00f3n. Una palabra que contiene todas las dem\u00e1s. Todo empez\u00f3 escuchando. Todo se salv\u00f3 escuchando. Todo contin\u00faa escuchando.')">La Palabra del Coraz&oacute;n. Una palabra que contiene todas las dem&aacute;s. Todo empez&oacute; escuchando. Todo se salv&oacute; escuchando. Todo contin&uacute;a escuchando. La respuesta es: <strong>escuchar</strong>.</div>
+            </div>
+        </div>
+
+        <!-- STEP 3: CONCEPTOS -->
+        <div class="concept-section" id="step3" style="display:none;">
+            <div class="concept-title">Cuatro dimensiones del final</div>
+            <div class="concept-grid">
+                <div class="concept-card maestria" onclick="learnConcept('maestria')">
+                    <div class="card-avatar">&#127775;</div>
+                    <div class="card-name">Maestr&iacute;a total</div>
+                    <div class="card-example">&laquo;No hay gram&aacute;tica nueva. Hay un idioma entero que habitar.&raquo;</div>
+                    <div class="card-description">C2 completo. No queda nada por aprender &mdash; queda todo por crear. La maestr&iacute;a no es el final del camino. Es el momento en que el camino se convierte en paisaje.</div>
+                </div>
+                <div class="concept-card creacion" onclick="learnConcept('creacion')">
+                    <div class="card-avatar">&#9997;&#65039;</div>
+                    <div class="card-name">Producci&oacute;n original</div>
+                    <div class="card-example">&laquo;La prueba definitiva de C2: crear algo que solo t&uacute; puedes crear.&raquo;</div>
+                    <div class="card-description">El estudiante ya no reproduce. Crea. Textos, discursos, poemas, argumentos &mdash; todo con voz propia. Esa es la prueba definitiva del dominio.</div>
+                </div>
+                <div class="concept-card guardian" onclick="learnConcept('guardian')">
+                    <div class="card-avatar">&#128737;&#65039;</div>
+                    <div class="card-name">Guardi&aacute;n de historias</div>
+                    <div class="card-example">&laquo;No eres un estudiante. Eres un guardi&aacute;n. La historia que portas es la tuya.&raquo;</div>
+                    <div class="card-description">Al completar el viaje, el estudiante se convierte en Guardi&aacute;n de historias. No recibe un diploma &mdash; recibe una responsabilidad: cuidar las voces que aprendi&oacute; a escuchar.</div>
+                </div>
+                <div class="concept-card escuchar" onclick="learnConcept('escuchar')">
+                    <div class="card-avatar">&#128266;</div>
+                    <div class="card-name">Escuchar</div>
+                    <div class="card-example">&laquo;La Palabra del Coraz&oacute;n. La que contiene todas las dem&aacute;s.&raquo;</div>
+                    <div class="card-description">Escuchar. Todo empez&oacute; con escuchar. Yaguar&aacute; escuch&oacute; algo en la selva. El estudiante escuch&oacute; a Yaguar&aacute;. Escuchar es el principio, el medio y el final. Es la palabra que abre, no que cierra.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4: YAGUARÁ DICE -->
+        <div class="yaguara-guide" id="step4" style="display:none;">
+            <div class="yaguara-small"><img src="../../img/jaguar-hero.jpg" alt="Yaguar&aacute;" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;transform:scale(1.0);"></div>
+            <div class="yaguara-text">
+                <div class="guide-title">El silencio de Yaguar&aacute;:</div>
+                <div class="guide-message">
+                    <div class="simple-message"><strong>Maestr&iacute;a</strong>: <em>Yaguar&aacute; no habla. Te mira. En sus ojos ves cada destino, cada nombre, cada silencio. La maestr&iacute;a no se explica. Se reconoce.</em></div>
+                    <div class="simple-message"><strong>Creaci&oacute;n</strong>: <em>El espacio est&aacute; abierto. La p&aacute;gina en blanco espera. Lo que escribas aqu&iacute; es tuyo &mdash; no una respuesta correcta, sino tu respuesta.</em></div>
+                    <div class="simple-message"><strong>Guardi&aacute;n</strong>: <em>No eres un estudiante que complet&oacute; un curso. Eres un guardi&aacute;n que acept&oacute; una responsabilidad. Las historias que aprendiste ahora te pertenecen.</em></div>
+                    <div class="simple-message"><strong>Escuchar</strong>: <em>La Palabra del Coraz&oacute;n es escuchar. Pero tu palabra puede ser otra. Lo importante es que la encontraste t&uacute;.</em></div>
+                    <div class="simple-message"><strong>El final que abre</strong>: <em>La historia no termina. Se abre. Yaguar&aacute; calla. El estudiante habla. Y en alg&uacute;n lugar de la selva, otra jaguar joven escucha algo moverse entre los &aacute;rboles.</em></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 5: EJERCICIO — Matching -->
+        <div class="exercise-section" id="step5" style="display:none;">
+            <div class="exercise-title">Pr&aacute;ctica final: el viaje completo</div>
+            <div class="exercise-instruction">
+                <div class="instruction-text">Une cada momento del viaje con lo que te ense&ntilde;&oacute;.</div>
+            </div>
+            <div class="matching-game">
+                <div class="words-column">
+                    <div class="column-title">Momento</div>
+                    <div class="word-item" onclick="selectWord(this,'pair1')" data-word="pair1">Yaguar&aacute; escuch&oacute; algo moverse en la selva (A1)</div>
+                    <div class="word-item" onclick="selectWord(this,'pair2')" data-word="pair2">Candelaria apareci&oacute; perdida junto al r&iacute;o Atrato (A2)</div>
+                    <div class="word-item" onclick="selectWord(this,'pair3')" data-word="pair3">Don Pr&oacute;spero entreg&oacute; el jaguar de madera (C2)</div>
+                    <div class="word-item" onclick="selectWord(this,'pair4')" data-word="pair4">Abuela Ceiba susurr&oacute;: &laquo;Encu&eacute;ntrala&raquo; (C2)</div>
+                </div>
+                <div class="images-column">
+                    <div class="column-title">Ense&ntilde;anza</div>
+                    <div class="image-item" onclick="selectImage(this,'pair4')" data-image="pair4">La respuesta siempre fue escuchar</div>
+                    <div class="image-item" onclick="selectImage(this,'pair1')" data-image="pair1">Todo empieza con curiosidad</div>
+                    <div class="image-item" onclick="selectImage(this,'pair3')" data-image="pair3">Incluso quien olvida lleva la semilla del recuerdo</div>
+                    <div class="image-item" onclick="selectImage(this,'pair2')" data-image="pair2">El lenguaje nace de la necesidad de conexi&oacute;n</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-title">&#127775; Guardi&aacute;n de historias</div>
+            <div class="success-text">Has completado El viaje del jaguar. No hay pregunta final. Solo una respuesta que es una invitaci&oacute;n: escuchar. Eres un guardi&aacute;n de historias. La historia que portas es la tuya.</div>
+        </div>
+        <div class="lesson-navigation">
+            <button class="nav-button secondary" id="btnPrev" disabled>&larr; Anterior</button>
+            <button class="nav-button primary" id="btnNext">Siguiente &rarr;</button>
+            <button class="nav-button primary" id="btnFinish" style="display:none;">Terminar</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+            var lessonData = { currentStep:1, totalSteps:5, selectedWord:null, matchedPairs:0, totalPairs:4, isComplete:false };
+            var concepts = {
+                maestria: "Maestr\u00eda total. No hay gram\u00e1tica nueva. Hay un idioma entero que habitar. C2 completo. No queda nada por aprender \u2014 queda todo por crear. La maestr\u00eda no es el final del camino. Es el momento en que el camino se convierte en paisaje.",
+                creacion: "Producci\u00f3n original. La prueba definitiva de C2: crear algo que solo t\u00fa puedes crear. El estudiante ya no reproduce. Crea. Textos, discursos, poemas, argumentos \u2014 todo con voz propia. Esa es la prueba definitiva del dominio.",
+                guardian: "Guardi\u00e1n de historias. No eres un estudiante. Eres un guardi\u00e1n. La historia que portas es la tuya. Al completar el viaje, el estudiante se convierte en Guardi\u00e1n de historias. No recibe un diploma \u2014 recibe una responsabilidad: cuidar las voces que aprendi\u00f3 a escuchar.",
+                escuchar: "Escuchar. La Palabra del Coraz\u00f3n. La que contiene todas las dem\u00e1s. Todo empez\u00f3 con escuchar. Yaguar\u00e1 escuch\u00f3 algo en la selva. El estudiante escuch\u00f3 a Yaguar\u00e1. Escuchar es el principio, el medio y el final. Es la palabra que abre, no que cierra."
+            };
+
+            function updateProgress() {
+                var p = (lessonData.currentStep / lessonData.totalSteps) * 100;
+                var f = document.getElementById('progressFill');
+                var t = document.getElementById('progressText');
+                if (f) f.style.width = p + '%';
+                if (t) t.textContent = 'Paso ' + lessonData.currentStep + ' de ' + lessonData.totalSteps;
+            }
+
+            function showStep(n) {
+                for (var i = 1; i <= lessonData.totalSteps; i++) {
+                    var s = document.getElementById('step' + i);
+                    if (s) s.style.display = 'none';
+                }
+                var c = document.getElementById('step' + n);
+                if (c) { c.style.display = 'block'; c.style.animation = 'fadeIn 0.5s ease-in'; }
+                updateNav();
+                updateProgress();
+            }
+
+            function updateNav() {
+                var p = document.getElementById('btnPrev');
+                var n = document.getElementById('btnNext');
+                var f = document.getElementById('btnFinish');
+                if (p) p.disabled = lessonData.currentStep === 1;
+                if (lessonData.currentStep === lessonData.totalSteps) {
+                    if (n) n.style.display = 'none';
+                    if (f) f.style.display = 'inline-block';
+                } else {
+                    if (n) n.style.display = 'inline-block';
+                    if (f) f.style.display = 'none';
+                }
+            }
+
+            function goNext() {
+                if (lessonData.currentStep < lessonData.totalSteps) {
+                    lessonData.currentStep++;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function goPrev() {
+                if (lessonData.currentStep > 1) {
+                    lessonData.currentStep--;
+                    showStep(lessonData.currentStep);
+                }
+            }
+
+            function learnConceptFn(id) {
+                var t = concepts[id];
+                if (t) {
+                    speakInSpanish(t);
+                    showNotification('Escucha y repite');
+                }
+            }
+
+            function selectWordFn(el, w) {
+                var all = document.querySelectorAll('.word-item');
+                for (var i = 0; i < all.length; i++) all[i].classList.remove('selected');
+                el.classList.add('selected');
+                lessonData.selectedWord = w;
+            }
+
+            function selectImageFn(el, img) {
+                if (!lessonData.selectedWord) {
+                    showNotification('Primero selecciona un momento');
+                    return;
+                }
+                var ok = lessonData.selectedWord === img;
+                var we = document.querySelector('.word-item[data-word="' + lessonData.selectedWord + '"]');
+                if (ok) {
+                    we.classList.remove('selected');
+                    we.classList.add('correct');
+                    el.classList.add('correct');
+                    lessonData.matchedPairs++;
+                    lessonData.selectedWord = null;
+                    var m = ['Bien', 'Muy bien', 'Excelente', 'Perfecto'];
+                    speakInSpanish(m[lessonData.matchedPairs - 1] || 'Bien');
+                    showNotification(m[lessonData.matchedPairs - 1] || 'Bien');
+                    if (lessonData.matchedPairs === lessonData.totalPairs) {
+                        setTimeout(function() {
+                            var sm = document.getElementById('successMessage');
+                            if (sm) sm.classList.add('show');
+                            speakInSpanish('Has completado El viaje del jaguar. No hay pregunta final. Solo una respuesta que es una invitaci\u00f3n: escuchar. Eres un guardi\u00e1n de historias. La historia que portas es la tuya.');
+                        }, 1000);
+                    }
+                } else {
+                    we.classList.add('incorrect');
+                    el.classList.add('incorrect');
+                    showNotification('Incorrecto. Intenta otra vez.');
+                    setTimeout(function() {
+                        we.classList.remove('selected', 'incorrect');
+                        el.classList.remove('incorrect');
+                        lessonData.selectedWord = null;
+                    }, 1500);
+                }
+            }
+
+            function speakInSpanish(text) {
+                if (!text || !('speechSynthesis' in window)) return;
+                try {
+                    var u = new SpeechSynthesisUtterance(text);
+                    u.lang = 'es-CO';
+                    u.rate = 0.55;
+                    speechSynthesis.speak(u);
+                } catch (e) {}
+            }
+
+            function showNotification(msg) {
+                var ex = document.querySelector('.temp-notification');
+                if (ex) ex.remove();
+                var n = document.createElement('div');
+                n.className = 'temp-notification';
+                n.style.cssText = 'position:fixed;top:20px;right:20px;background:rgba(10,5,8,0.95);color:white;padding:15px 20px;border-radius:12px;font-weight:600;z-index:10000;max-width:320px;border:2px solid #ff4081;box-shadow:0 4px 20px rgba(255,64,129,0.2);animation:slideInRight 0.3s ease-out;';
+                n.innerHTML = '<div style="font-size:1.05rem;color:#fce4ec;">' + msg + '</div>';
+                document.body.appendChild(n);
+                setTimeout(function() { if (n && n.parentNode) n.parentNode.removeChild(n); }, 3500);
+            }
+
+            function completeLessonFn() {
+                lessonData.isComplete = true;
+                if (typeof JaguarAPI !== 'undefined') JaguarAPI.syncA1Progress('c2_advanced', 'dest58');
+                showNotification('Has completado El viaje del jaguar.');
+                setTimeout(function() { window.location.href = '/c2-colombia'; }, 2000);
+            }
+
+            window.learnConcept = learnConceptFn;
+            window.selectWord = selectWordFn;
+            window.selectImage = selectImageFn;
+            window.speakText = speakInSpanish;
+            window.finishLesson = completeLessonFn;
+
+            var style = document.createElement('style');
+            style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes slideInRight{from{transform:translateX(300px);opacity:0}to{transform:translateX(0);opacity:1}}';
+            document.head.appendChild(style);
+
+            document.addEventListener('DOMContentLoaded', function() {
+                showStep(1);
+                document.getElementById('btnNext').addEventListener('click', goNext);
+                document.getElementById('btnPrev').addEventListener('click', goPrev);
+                document.getElementById('btnFinish').addEventListener('click', completeLessonFn);
+            });
+        })();
+    </script>
+    <script src="../../js/jaguar-api.js"></script>
+</body>
+</html>

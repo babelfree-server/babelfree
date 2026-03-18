@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de gramática — El Viaje del Jaguar</title>
+    <meta name="description" content="Preguntas y respuestas de gramática española. Un foro que crece con cada duda de nuestros estudiantes.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://babelfree.com/foro">
+    <link rel="stylesheet" href="luxury.css">
+    <!-- Schema.org FAQPage will be injected dynamically -->
+    <style>
+        /* ─── Override luxury.css overlays ─── */
+        body::before, body::after { display: none !important; }
+
+        body {
+            background: #0a0a0a;
+            color: #e8e4d9;
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* ─── Header ─── */
+        .foro-header {
+            text-align: center;
+            padding: 48px 24px 32px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .foro-header img {
+            height: 48px;
+            margin-bottom: 16px;
+        }
+        .foro-header h1 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--lux-gold);
+            margin: 0;
+            letter-spacing: 0.02em;
+        }
+        .foro-header p {
+            font-family: var(--font-elegant);
+            font-size: 1.15rem;
+            color: rgba(232,228,217,0.55);
+            margin: 8px 0 0;
+        }
+
+        /* ─── Container ─── */
+        .foro-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ─── Search ─── */
+        .foro-search {
+            position: relative;
+            margin: 32px 0 24px;
+        }
+        .foro-search svg {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            color: rgba(232,228,217,0.35);
+            pointer-events: none;
+        }
+        .foro-search input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 20px 14px 46px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: #e8e4d9;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s var(--lux-ease), box-shadow 0.3s var(--lux-ease);
+        }
+        .foro-search input::placeholder {
+            color: rgba(232,228,217,0.35);
+        }
+        .foro-search input:focus {
+            border-color: var(--lux-gold-dark);
+            box-shadow: 0 0 20px rgba(212,168,67,0.08);
+        }
+
+        /* ─── CEFR Filter Pills ─── */
+        .foro-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .foro-pill {
+            padding: 6px 18px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.03);
+            color: rgba(232,228,217,0.6);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s var(--lux-ease);
+            user-select: none;
+        }
+        .foro-pill:hover {
+            border-color: rgba(255,255,255,0.2);
+            color: #e8e4d9;
+        }
+        .foro-pill.active {
+            color: #0a0a0a;
+            border-color: transparent;
+        }
+        /* A1/A2 green tones */
+        .foro-pill[data-cefr="A1"].active { background: #4caf50; }
+        .foro-pill[data-cefr="A2"].active { background: #66bb6a; }
+        /* B1/B2 gold tones */
+        .foro-pill[data-cefr="B1"].active { background: var(--lux-gold); }
+        .foro-pill[data-cefr="B2"].active { background: var(--lux-gold-light); }
+        /* C1/C2 purple tones */
+        .foro-pill[data-cefr="C1"].active { background: #9c6ade; }
+        .foro-pill[data-cefr="C2"].active { background: #b388ff; }
+
+        /* ─── Tag Cloud ─── */
+        .foro-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+        .foro-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            background: rgba(212,168,67,0.1);
+            color: var(--lux-gold);
+            border-radius: 12px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.25s var(--lux-ease);
+            user-select: none;
+        }
+        .foro-tag:hover, .foro-tag.active {
+            background: rgba(212,168,67,0.25);
+        }
+
+        /* ─── Results Grid ─── */
+        .foro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* ─── Card ─── */
+        .foro-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-left: 3px solid var(--lux-gold);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: box-shadow 0.3s var(--lux-ease), transform 0.3s var(--lux-ease);
+        }
+        .foro-card:hover {
+            box-shadow: 0 0 20px rgba(201,168,76,0.1);
+            transform: translateY(-2px);
+        }
+        .foro-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .foro-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .foro-badge-cefr {
+            color: #0a0a0a;
+        }
+        .foro-badge-cefr[data-cefr="A1"] { background: #4caf50; }
+        .foro-badge-cefr[data-cefr="A2"] { background: #66bb6a; }
+        .foro-badge-cefr[data-cefr="B1"] { background: var(--lux-gold); }
+        .foro-badge-cefr[data-cefr="B2"] { background: var(--lux-gold-light); }
+        .foro-badge-cefr[data-cefr="C1"] { background: #9c6ade; }
+        .foro-badge-cefr[data-cefr="C2"] { background: #b388ff; }
+        .foro-badge-source {
+            background: rgba(255,255,255,0.06);
+            color: rgba(232,228,217,0.5);
+            font-size: 0.7rem;
+            margin-left: auto;
+        }
+        .foro-card-question {
+            font-family: var(--font-elegant);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #e8e4d9;
+            margin: 0 0 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .foro-card-answer {
+            font-size: 0.9rem;
+            color: rgba(232,228,217,0.5);
+            margin: 0 0 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.5;
+        }
+        .foro-card-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin: 0 0 10px;
+        }
+        .foro-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .foro-card-tag {
+            padding: 2px 10px;
+            background: rgba(212,168,67,0.1);
+            color: var(--lux-gold);
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+        .foro-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.8rem;
+            color: rgba(232,228,217,0.35);
+        }
+        .foro-card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .foro-card-links {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .foro-card-link {
+            padding: 3px 12px;
+            border: 1px solid var(--lux-gold-dark);
+            border-radius: 4px;
+            color: var(--lux-gold);
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s var(--lux-ease);
+        }
+        .foro-card-link:hover {
+            background: rgba(212,168,67,0.12);
+        }
+
+        /* ─── Pagination ─── */
+        .foro-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 48px;
+        }
+        .foro-page-btn {
+            min-width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
+            color: rgba(232,228,217,0.6);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s var(--lux-ease);
+        }
+        .foro-page-btn:hover {
+            border-color: var(--lux-gold-dark);
+            color: var(--lux-gold);
+        }
+        .foro-page-btn.active {
+            background: var(--lux-gold);
+            border-color: var(--lux-gold);
+            color: #0a0a0a;
+            font-weight: 700;
+        }
+        .foro-page-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* ─── Empty State ─── */
+        .foro-empty {
+            text-align: center;
+            padding: 80px 24px;
+        }
+        .foro-empty p:first-child {
+            font-family: var(--font-elegant);
+            font-size: 1.4rem;
+            color: var(--lux-gold);
+            margin: 0 0 12px;
+        }
+        .foro-empty p:last-child {
+            font-size: 0.95rem;
+            color: rgba(232,228,217,0.45);
+            margin: 0;
+        }
+
+        /* ─── Footer ─── */
+        .foro-footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            font-family: var(--font-elegant);
+            font-size: 0.95rem;
+            color: rgba(232,228,217,0.35);
+        }
+
+        /* ─── Loading ─── */
+        .foro-loading {
+            text-align: center;
+            padding: 60px 24px;
+            color: rgba(232,228,217,0.4);
+            font-size: 0.95rem;
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 600px) {
+            .foro-header h1 { font-size: 1.6rem; }
+            .foro-grid { grid-template-columns: 1fr; }
+            .foro-card { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="foro-header">
+        <a href="/"><img src="/assets/logo.png" alt="El Viaje del Jaguar"></a>
+        <h1>Foro de gramática</h1>
+        <p>Preguntas y respuestas que crecen con cada duda</p>
+    </header>
+
+    <div class="foro-container">
+
+        <!-- Search -->
+        <div class="foro-search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" id="foroSearch" placeholder="Buscar preguntas de gramática..." autocomplete="off">
+        </div>
+
+        <!-- CEFR Filter Pills -->
+        <div class="foro-filters" id="foroFilters">
+            <button class="foro-pill" data-cefr="A1" onclick="toggleCefr('A1')">A1</button>
+            <button class="foro-pill" data-cefr="A2" onclick="toggleCefr('A2')">A2</button>
+            <button class="foro-pill" data-cefr="B1" onclick="toggleCefr('B1')">B1</button>
+            <button class="foro-pill" data-cefr="B2" onclick="toggleCefr('B2')">B2</button>
+            <button class="foro-pill" data-cefr="C1" onclick="toggleCefr('C1')">C1</button>
+            <button class="foro-pill" data-cefr="C2" onclick="toggleCefr('C2')">C2</button>
+        </div>
+
+        <!-- Tag Cloud -->
+        <div class="foro-tags" id="foroTags"></div>
+
+        <!-- Results Grid -->
+        <div class="foro-grid" id="foroGrid"></div>
+
+        <!-- Pagination -->
+        <div class="foro-pagination" id="foroPagination"></div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="foro-footer">
+        El Viaje del Jaguar &mdash; babelfree.com
+    </footer>
+
+    <script>
+    (function() {
+        'use strict';
+
+        const API = '/api/forum';
+
+        let currentPage  = 1;
+        let currentCefr  = '';
+        let currentTag   = '';
+        let currentQuery = '';
+
+        const grid       = document.getElementById('foroGrid');
+        const pagination = document.getElementById('foroPagination');
+        const tagsWrap   = document.getElementById('foroTags');
+        const searchInput = document.getElementById('foroSearch');
+
+        /* ─── Debounce ─── */
+        function debounce(fn, ms) {
+            let timer;
+            return function() {
+                clearTimeout(timer);
+                var args = arguments, ctx = this;
+                timer = setTimeout(function() { fn.apply(ctx, args); }, ms);
+            };
+        }
+
+        /* ─── Time Ago (Spanish) ─── */
+        function timeAgo(dateStr) {
+            var now = Date.now();
+            var then = new Date(dateStr).getTime();
+            var diff = Math.max(0, now - then);
+            var seconds = Math.floor(diff / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours   = Math.floor(minutes / 60);
+            var days    = Math.floor(hours / 24);
+            var weeks   = Math.floor(days / 7);
+            var months  = Math.floor(days / 30);
+            var years   = Math.floor(days / 365);
+
+            if (years > 0)   return 'hace ' + years   + (years === 1   ? ' año' : ' años');
+            if (months > 0)  return 'hace ' + months  + (months === 1  ? ' mes' : ' meses');
+            if (weeks > 0)   return 'hace ' + weeks   + (weeks === 1   ? ' semana' : ' semanas');
+            if (days > 0)    return 'hace ' + days    + (days === 1    ? ' día' : ' días');
+            if (hours > 0)   return 'hace ' + hours   + (hours === 1   ? ' hora' : ' horas');
+            if (minutes > 0) return 'hace ' + minutes + (minutes === 1 ? ' minuto' : ' minutos');
+            return 'hace un momento';
+        }
+
+        /* ─── Escape HTML ─── */
+        function esc(s) {
+            if (!s) return '';
+            var d = document.createElement('div');
+            d.textContent = s;
+            return d.innerHTML;
+        }
+
+        /* ─── Truncate ─── */
+        function truncate(s, len) {
+            if (!s) return '';
+            return s.length > len ? s.slice(0, len) + '...' : s;
+        }
+
+        /* ─── Load Posts ─── */
+        function loadPosts() {
+            var params = new URLSearchParams();
+            params.set('page', currentPage);
+            if (currentCefr)  params.set('cefr', currentCefr);
+            if (currentTag)   params.set('tag', currentTag);
+            if (currentQuery) params.set('q', currentQuery);
+
+            grid.innerHTML = '<div class="foro-loading">Cargando...</div>';
+            pagination.innerHTML = '';
+
+            fetch(API + '/list?' + params.toString())
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.tags) renderTagCloud(data.tags);
+                    if (!data.items || data.items.length === 0) {
+                        renderEmpty();
+                    } else {
+                        renderCards(data.items);
+                        renderPagination(data.page || 1, data.pages || 1);
+                        injectFAQSchema(data.items);
+                    }
+                })
+                .catch(function() {
+                    renderEmpty();
+                });
+        }
+
+        /* ─── Render Cards ─── */
+        function renderCards(items) {
+            var html = '';
+            items.forEach(function(item) {
+                var tags = (item.tags || []).map(function(t) {
+                    return '<span class="foro-card-tag">' + esc(t) + '</span>';
+                }).join('');
+
+                var links = '';
+                if (item.fundeu_url || item.dpd_url) {
+                    links = '<div class="foro-card-links">';
+                    if (item.fundeu_url) links += '<a href="' + esc(item.fundeu_url) + '" class="foro-card-link" target="_blank" rel="noopener" onclick="event.stopPropagation()">Fundéu</a>';
+                    if (item.dpd_url)    links += '<a href="' + esc(item.dpd_url)    + '" class="foro-card-link" target="_blank" rel="noopener" onclick="event.stopPropagation()">DPD</a>';
+                    links += '</div>';
+                }
+
+                html += '<article class="foro-card" onclick="location.href=\'/foro/' + esc(item.slug) + '\'">'
+                    + '<div class="foro-card-header">'
+                    +   '<span class="foro-badge foro-badge-cefr" data-cefr="' + esc(item.cefr) + '">' + esc(item.cefr) + '</span>'
+                    +   (item.source ? '<span class="foro-badge foro-badge-source">' + esc(item.source) + '</span>' : '')
+                    + '</div>'
+                    + '<h2 class="foro-card-question">' + esc(truncate(item.question, 120)) + '</h2>'
+                    + '<p class="foro-card-answer">' + esc(truncate(item.answer, 160)) + '</p>'
+                    + '<hr class="foro-card-divider">'
+                    + (tags ? '<div class="foro-card-tags">' + tags + '</div>' : '')
+                    + '<div class="foro-card-meta">'
+                    +   '<span>&#128065; ' + (item.views || 0) + '</span>'
+                    +   '<span>' + timeAgo(item.created_at) + '</span>'
+                    + '</div>'
+                    + links
+                    + '</article>';
+            });
+            grid.innerHTML = html;
+        }
+
+        /* ─── Tag Cloud ─── */
+        function renderTagCloud(tags) {
+            if (!tags || tags.length === 0) { tagsWrap.innerHTML = ''; return; }
+            var html = '';
+            tags.forEach(function(t) {
+                var name = typeof t === 'string' ? t : t.name;
+                var cls = (currentTag === name) ? 'foro-tag active' : 'foro-tag';
+                html += '<span class="' + cls + '" onclick="selectTag(\'' + esc(name).replace(/'/g, "\\'") + '\')">' + esc(name) + '</span>';
+            });
+            tagsWrap.innerHTML = html;
+        }
+
+        /* ─── Pagination ─── */
+        function renderPagination(page, pages) {
+            if (pages <= 1) { pagination.innerHTML = ''; return; }
+            var html = '';
+
+            html += '<button class="foro-page-btn" ' + (page <= 1 ? 'disabled' : '') + ' onclick="goPage(' + (page - 1) + ')">&laquo;</button>';
+
+            var start = Math.max(1, page - 2);
+            var end   = Math.min(pages, page + 2);
+            if (start > 1) {
+                html += '<button class="foro-page-btn" onclick="goPage(1)">1</button>';
+                if (start > 2) html += '<span style="color:rgba(232,228,217,0.3);padding:0 4px">...</span>';
+            }
+            for (var i = start; i <= end; i++) {
+                html += '<button class="foro-page-btn' + (i === page ? ' active' : '') + '" onclick="goPage(' + i + ')">' + i + '</button>';
+            }
+            if (end < pages) {
+                if (end < pages - 1) html += '<span style="color:rgba(232,228,217,0.3);padding:0 4px">...</span>';
+                html += '<button class="foro-page-btn" onclick="goPage(' + pages + ')">' + pages + '</button>';
+            }
+
+            html += '<button class="foro-page-btn" ' + (page >= pages ? 'disabled' : '') + ' onclick="goPage(' + (page + 1) + ')">&raquo;</button>';
+
+            pagination.innerHTML = html;
+        }
+
+        /* ─── Empty State ─── */
+        function renderEmpty() {
+            grid.innerHTML =
+                '<div class="foro-empty">'
+                + '<p>El foro se construye con cada pregunta.</p>'
+                + '<p>Usa el widget de comentarios en el juego para hacer preguntas de gramática.</p>'
+                + '</div>';
+            pagination.innerHTML = '';
+        }
+
+        /* ─── FAQ Schema Injection ─── */
+        function injectFAQSchema(items) {
+            var existing = document.getElementById('foro-faq-schema');
+            if (existing) existing.remove();
+
+            var faq = items.filter(function(i) { return i.question && i.answer; }).slice(0, 20).map(function(i) {
+                return {
+                    "@type": "Question",
+                    "name": i.question,
+                    "acceptedAnswer": { "@type": "Answer", "text": i.answer }
+                };
+            });
+            if (faq.length === 0) return;
+
+            var script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.id = 'foro-faq-schema';
+            script.textContent = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": faq
+            });
+            document.head.appendChild(script);
+        }
+
+        /* ─── Public Handlers ─── */
+        window.toggleCefr = function(level) {
+            currentCefr = (currentCefr === level) ? '' : level;
+            currentPage = 1;
+
+            var pills = document.querySelectorAll('.foro-pill');
+            pills.forEach(function(p) {
+                p.classList.toggle('active', p.getAttribute('data-cefr') === currentCefr);
+            });
+
+            loadPosts();
+        };
+
+        window.selectTag = function(tag) {
+            currentTag = (currentTag === tag) ? '' : tag;
+            currentPage = 1;
+            loadPosts();
+        };
+
+        window.goPage = function(p) {
+            if (p < 1) return;
+            currentPage = p;
+            loadPosts();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        function searchPosts() {
+            currentQuery = searchInput.value.trim();
+            currentPage = 1;
+            loadPosts();
+        }
+
+        searchInput.addEventListener('input', debounce(searchPosts, 300));
+
+        /* ─── Init ─── */
+        loadPosts();
+    })();
+    </script>
+
+</body>
+</html>

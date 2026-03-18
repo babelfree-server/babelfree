@@ -28,7 +28,7 @@
             --silver: #C0C0D0;
             --cosmic: #0D0D1A;
             --text: #2C1B0E;
-            --text-light: #6B5843;
+            --text-light: #4A3828;
             --border: #D4C5A9;
         }
 
@@ -233,6 +233,18 @@
             position: relative;
         }
 
+        .story-box strong,
+        .env-card strong,
+        .journey-act strong {
+            color: var(--gold-bright);
+        }
+
+        .story-box em,
+        .env-card em,
+        .journey-act em {
+            color: var(--cream);
+        }
+
         .story-box .quote {
             font-style: italic;
             color: var(--gold);
@@ -344,6 +356,20 @@
             border-left: 4px solid var(--indigo);
         }
 
+        .character-card.literary {
+            border-left: 4px solid var(--gold);
+            background: linear-gradient(135deg, white 0%, #FFF8E7 100%);
+        }
+
+        .reference-photo {
+            max-width: 180px;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            margin: 10px 0;
+            float: right;
+            margin-left: 16px;
+        }
+
         .character-card.human {
             border-left: 4px solid var(--terracotta);
             background: linear-gradient(135deg, white 0%, #FFF5EE 100%);
@@ -386,7 +412,7 @@
         .deliverable-tag {
             display: inline-block;
             background: var(--gold);
-            color: white;
+            color: var(--bark);
             font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -421,7 +447,7 @@
 
         .env-selva { background: linear-gradient(135deg, #1A3A0A, #2D5016, #1B4D6E); }
         .env-andes { background: linear-gradient(135deg, #5F7A8A, #8B6914, #5C3317); }
-        .env-llanos { background: linear-gradient(135deg, #C49A3C, #D4A843, #B7562A); }
+        .env-llanos { background: linear-gradient(135deg, #8B6914, #9A7A1C, #8B4513); }
         .env-costa { background: linear-gradient(135deg, #1AA5A5, #1B4D6E, #2C1654); }
         .env-cosmic { background: linear-gradient(135deg, #1A1A4E, #0D0D1A, #2C1654); }
 
@@ -503,7 +529,7 @@
         }
 
         .code-block .comment {
-            color: #6B7B6B;
+            color: #9BAB9B;
         }
 
         .code-block .highlight {
@@ -692,7 +718,7 @@
         .journey-act .campbell {
             font-style: italic;
             font-size: 0.78rem;
-            opacity: 0.6;
+            opacity: 0.85;
             margin-top: 10px;
         }
 
@@ -897,7 +923,7 @@
 
     <div class="story-box">
         <p>
-            <strong>El Viaje del Jaguar</strong> is an interactive language-learning game set in the ecosystems of Colombia. A young female jaguar-spirit named Yaguará travels through rainforest, Andes, llanos, and Caribbean coast, meeting allies and facing forces of forgetting that are erasing the world's names.
+            <strong>El Viaje del Jaguar</strong> is an interactive language-learning game set in the ecosystems of Colombia. A female jaguar-spirit named Yaguará &mdash; who begins as a dreamer child and grows into a wise elder &mdash; travels through rainforest, Andes, llanos, and Caribbean coast, meeting allies and facing forces of forgetting that are erasing the world's names.
         </p>
         <p>
             The visual world draws from <strong>Colombian indigenous art, textile patterns, and natural landscapes</strong>. It is NOT Disney, manga, or generic fantasy. These are spirits, not cartoon animals. This world is alive, warm, and ancient.
@@ -933,29 +959,26 @@
 
 <!-- ============================== 2. THE STORY ============================== -->
 <section id="story">
-    <h2><span class="section-number">02</span> The Story</h2>
-    <div class="section-subtitle">The narrative arc that shapes every illustration</div>
+    <h2><span class="section-number">02</span> The Three Worlds</h2>
+    <div class="section-subtitle">Visual atmosphere and palette for each world</div>
 
-    <p>The game follows <strong>Joseph Campbell's Hero's Journey</strong> mapped across three worlds and six language levels. The story's central conflict: <em>the world is losing its names, and things that are not named disappear.</em> Yaguará must travel through Colombia to recover them. The student speaks them back into existence through gameplay.</p>
+    <p>The game takes place across <strong>three visual worlds</strong>. Each has a distinct color palette, mood, and landscape. As the story progresses, the world shifts from intimate jungle to open terrain to cosmic sky.</p>
 
     <div class="journey-map">
         <div class="journey-act act-1">
-            <div class="act-label">Act I &mdash; A1&ndash;A2</div>
             <h4>El Mundo de Abajo</h4>
-            <p><strong>"Nombrar el mundo"</strong><br>Roots, water, night, beginnings. Yaguará's family, her river, the sounds of the forest. Something goes silent. One sound disappears. Then another. The river says: things that are not named, disappear.</p>
-            <div class="campbell">Ordinary World &rarr; Call to Adventure &rarr; Refusal &rarr; Meeting the Mentor</div>
+            <p><strong>Jungle, river, night, roots.</strong><br>Dense Chocó rainforest. Filtered green-gold light. Massive ceiba trees, buttress roots, rivers, bioluminescent moss. Warm and intimate &mdash; small spaces, close encounters. Fireflies, golden frogs, the sound of water everywhere.</p>
+            <p><strong>Palette:</strong> deep greens, river blues, earth browns, night purples, gold accents.</p>
         </div>
         <div class="journey-act act-2">
-            <div class="act-label">Act II &mdash; B1&ndash;B2</div>
             <h4>El Mundo del Medio</h4>
-            <p><strong>"Contar lo vivido"</strong><br>Community, memory, history. Yaguará travels through Colombia's four ecosystems, meeting allies and facing forces of forgetting. She realizes she needs the <em>stories behind the names</em>, not just the names themselves.</p>
-            <div class="campbell">Crossing the Threshold &rarr; Tests / Allies / Enemies &rarr; The Ordeal</div>
+            <p><strong>Villages, mountains, plains, coast.</strong><br>Colombia's four ecosystems in full. Chocó stilt-houses, Andean páramo, Orinoco grasslands, Caribbean shore. Human spaces mixed with nature &mdash; markets, paths, boats, abandoned buildings reclaimed by vines. Wider compositions, more characters, more complexity.</p>
+            <p><strong>Palette:</strong> terracotta, ochre, mountain grey-blue, llanos gold, Caribbean turquoise.</p>
         </div>
         <div class="journey-act act-3">
-            <div class="act-label">Act III &mdash; C1&ndash;C2</div>
             <h4>El Mundo de Arriba</h4>
-            <p><strong>"Cuidar la palabra"</strong><br>Dreams, stars, balance, destiny. Yaguará carries the recovered names back, but the world has changed. She must choose: restore what was, or let it become something new? The student writes their own myth.</p>
-            <div class="campbell">Reward &rarr; The Road Back &rarr; Resurrection &rarr; Return with the Elixir</div>
+            <p><strong>Stars, silence, light, transformation.</strong><br>Cosmic and metaphysical. No solid walls &mdash; boundaries defined by constellations. Floors made of maps, ceilings made of sky. Luminous outlines rather than solid surfaces. Think: inside an astrolabe, a constellation chart come alive.</p>
+            <p><strong>Palette:</strong> deep indigo, starlight silver, luminous amber, white-gold, cosmic black.</p>
         </div>
     </div>
 </section>
@@ -965,36 +988,113 @@
     <h2><span class="section-number">03</span> Characters</h2>
     <div class="section-subtitle">The beings who inhabit this world &mdash; every detail matters</div>
 
-    <!-- Yaguará -->
+    <!-- Yaguará — Three Life Stages -->
     <div class="character-card protagonist">
         <div class="character-name">Yaguará</div>
-        <div class="character-role">The Protagonist &mdash; Priority 1</div>
+        <div class="character-role">The Protagonist &mdash; Priority 1 &mdash; Three Life Stages</div>
+
+        <p style="margin: 10px 0 15px 0;">Yaguará grows across the game. She is NOT a fixed design &mdash; she has <strong>three distinct life stages</strong> mapped to the CEFR bands. Each stage must be visually recognizable at a glance, even at thumbnail size.</p>
+
+        <table style="width:100%; border-collapse: collapse; margin: 10px 0 20px 0; font-size: 0.95em;">
+            <thead>
+                <tr style="border-bottom: 2px solid var(--gold);">
+                    <th style="text-align:left; padding: 8px;">Attribute</th>
+                    <th style="text-align:left; padding: 8px;">Stage 1: So&ntilde;adora (A-band, dest1&ndash;18)</th>
+                    <th style="text-align:left; padding: 8px;">Stage 2: Caminante (B-band, dest19&ndash;38)</th>
+                    <th style="text-align:left; padding: 8px;">Stage 3: Guardiana (C-band, dest39&ndash;58)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Build</strong></td>
+                    <td style="padding: 8px;">Small, oversized paws and ears &mdash; a child still growing into her body</td>
+                    <td style="padding: 8px;">Lean, athletic, fast &mdash; a young adult in her prime</td>
+                    <td style="padding: 8px;">Powerful shoulders, deliberate movement &mdash; nothing wasted</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Fur</strong></td>
+                    <td style="padding: 8px;">Golden-light with faint, still-forming rosettes</td>
+                    <td style="padding: 8px;">Golden-dark with sharp, clearly defined rosettes</td>
+                    <td style="padding: 8px;">Deep gold-amber, dense rosettes, greying muzzle</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Eyes</strong></td>
+                    <td style="padding: 8px;">Wide, bright green with amber flecks &mdash; everything is new</td>
+                    <td style="padding: 8px;">Green-amber balanced, focused &mdash; she knows what she&rsquo;s looking for</td>
+                    <td style="padding: 8px;">Amber dominant, deep-set, calm &mdash; she has already seen it all</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Constellation mark</strong></td>
+                    <td style="padding: 8px;">Faint birthmark on left shoulder &mdash; barely visible</td>
+                    <td style="padding: 8px;">Clear pattern, occasional soft glow</td>
+                    <td style="padding: 8px;">Luminous, pulses with light in key moments</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;"><strong>Scars / marks</strong></td>
+                    <td style="padding: 8px;">None</td>
+                    <td style="padding: 8px;">Thin scratch on her flank (acquired at dest29)</td>
+                    <td style="padding: 8px;">Multiple faded scars + nose bridge scar (mirrors Mam&aacute; Jaguar)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin: 0 0 5px 0;"><strong>Shared across all stages:</strong> Female jaguar-spirit (<em>Panthera onca</em>). NOT orange like a tiger &mdash; study real jaguars. The eyes are always the most important feature &mdash; they carry the whole story.</p>
+
+        <h4>Stage 1: So&ntilde;adora &mdash; Expressions (6)</h4>
         <ul>
-            <li><strong>Species:</strong> Young female jaguar-spirit. Not a cub, not fully mature. Not yet a guardian.</li>
-            <li><strong>Build:</strong> Lean, athletic, not massive. She is fast, not powerful (yet).</li>
-            <li><strong>Fur:</strong> Golden-dark with clearly visible rosettes. NOT orange like a tiger &mdash; study real jaguars (<em>Panthera onca</em>).</li>
-            <li><strong>Eyes:</strong> Green-amber, expressive, intelligent. The most important feature &mdash; these eyes carry the whole story.</li>
-            <li><strong>Distinguishing mark:</strong> A small constellation-shaped pattern on her left shoulder (this becomes important later in the story).</li>
-            <li><strong>Personality in pose:</strong> Curious, quiet, brave without knowing it. At early levels she mostly listens. Later she speaks with weight.</li>
+            <li>Curious &mdash; ears forward, eyes huge, head tilted</li>
+            <li>Startled &mdash; ears splayed, body tensed, wide eyes</li>
+            <li>Shy &mdash; half-hidden behind foliage, one eye visible</li>
+            <li>Delighted &mdash; bouncy posture, eyes sparkling</li>
+            <li>Listening &mdash; completely still, ears swivelled, eyes half-closed</li>
+            <li>Confused &mdash; head cocked, one paw raised</li>
         </ul>
-        <h4>Expressions needed (6)</h4>
+        <h4>Stage 1: So&ntilde;adora &mdash; Poses (5)</h4>
         <ul>
-            <li>Curious &mdash; ears forward, eyes wide, head slightly tilted</li>
+            <li>Sitting by the river &mdash; small against large roots, looking up</li>
+            <li>Pouncing at fireflies &mdash; playful, mid-leap</li>
+            <li>Tucked against Mam&aacute; Jaguar &mdash; sleeping, safe</li>
+            <li>Peering into water &mdash; seeing her reflection for the first time</li>
+            <li>Looking up at the ceiba &mdash; neck craned, constellation mark faintly visible</li>
+        </ul>
+
+        <h4>Stage 2: Caminante &mdash; Expressions (6)</h4>
+        <ul>
             <li>Determined &mdash; eyes focused, jaw set, body low</li>
-            <li>Worried &mdash; ears back slightly, eyes searching</li>
+            <li>Wary &mdash; ears back slightly, eyes scanning</li>
             <li>Joyful &mdash; eyes bright, relaxed posture, almost smiling</li>
-            <li>Listening &mdash; completely still, ears turned, eyes half-closed</li>
+            <li>Fierce &mdash; baring teeth slightly, protective stance</li>
+            <li>Thoughtful &mdash; gazing at middle distance, ears neutral</li>
             <li>Speaking &mdash; mouth slightly open, eyes connecting with viewer</li>
         </ul>
-        <h4>Poses needed (5)</h4>
+        <h4>Stage 2: Caminante &mdash; Poses (5)</h4>
         <ul>
-            <li>Sitting alert &mdash; by a riverbank, looking outward</li>
-            <li>Walking &mdash; through forest, mid-stride, confident</li>
+            <li>Walking through forest &mdash; mid-stride, confident</li>
             <li>Leaping &mdash; across water or between rocks, full extension</li>
-            <li>Crouching by water &mdash; looking at her reflection</li>
-            <li>Looking up at stars &mdash; sitting, head tilted back, constellation glowing on shoulder</li>
+            <li>Standing on a ridge &mdash; wind in fur, surveying the landscape</li>
+            <li>Crouching &mdash; ready to spring, muscles tense</li>
+            <li>Sitting with Candelaria &mdash; side by side, equal companions</li>
         </ul>
-        <div class="deliverable-tag">Deliver: Character sheet (turnaround) + individual poses as separate PNGs with transparent backgrounds</div>
+
+        <h4>Stage 3: Guardiana &mdash; Expressions (6)</h4>
+        <ul>
+            <li>Serene &mdash; eyes half-closed, absolute stillness</li>
+            <li>Commanding &mdash; chin raised, constellation glowing</li>
+            <li>Grief &mdash; eyes downcast, weight of loss visible</li>
+            <li>Teaching &mdash; patient gaze, head slightly lowered toward listener</li>
+            <li>Remembering &mdash; eyes distant, seeing something no longer there</li>
+            <li>Resolute &mdash; facing forward, every scar visible, no fear</li>
+        </ul>
+        <h4>Stage 3: Guardiana &mdash; Poses (5)</h4>
+        <ul>
+            <li>Sitting in repose &mdash; beneath the ceiba, constellation pulsing</li>
+            <li>Walking slowly &mdash; deliberate, heavy with purpose</li>
+            <li>Looking up at stars &mdash; head tilted back, full constellation blazing on shoulder</li>
+            <li>Standing at a threshold &mdash; between two worlds, half in light, half in shadow</li>
+            <li>Nose-to-nose with La Sombra &mdash; embracing her shadow self</li>
+        </ul>
+
+        <div class="deliverable-tag">Deliver: THREE character sheets (one per stage, each with turnaround + expressions + poses as separate PNGs with transparent backgrounds) + 2 transition illustrations (So&ntilde;adora &rarr; Caminante at dest18, Caminante &rarr; Guardiana at dest38)</div>
     </div>
 
     <!-- Mamá Jaguar -->
@@ -1152,12 +1252,139 @@
         <div class="character-name">La Sombra de Yaguará</div>
         <div class="character-role">The Shadow Self &mdash; Priority 7</div>
         <ul>
-            <li><strong>Appears at B2 level.</strong> Looks exactly like Yaguará but <em>wrong</em>.</li>
+            <li><strong>Appears at B2 level.</strong> Uses <strong>Stage 2 (Caminante)</strong> as its silhouette base, since it appears during the B-band. Looks exactly like Yaguará but <em>wrong</em>.</li>
             <li><strong>Visual:</strong> Yaguará's silhouette, but edges waver like a reflection in disturbed water.</li>
             <li><strong>Eyes:</strong> Mirrors &mdash; they reflect the viewer instead of seeing. No pupil, just reflective surface.</li>
             <li><strong>Represents:</strong> The fear of making mistakes, of not being good enough to speak. Must be <em>embraced</em>, not defeated.</li>
         </ul>
         <div class="deliverable-tag">Deliver: Dark silhouette version of each Yaguará pose, with wavering edges &mdash; PNG transparent</div>
+    </div>
+
+    <!-- ===== THE LITERARY AUTHORS ===== -->
+    <h3 style="margin: 40px 0 10px; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--bark);">The literary authors <span style="font-size: 0.85rem; color: var(--gold); font-weight: 400;">&mdash; A1 recurring characters, grow with the student</span></h3>
+    <p style="margin-bottom: 24px; color: var(--text-light); font-size: 0.95rem;">Four real Colombian authors appear as magical-realist presences in Yaguar&aacute;&rsquo;s world. At A1, they are dreamlike &mdash; a figure appears, speaks a single line, glows, then dissolves. They grow linguistically alongside the student. By B1+, they become full narrative characters. <strong>The authors are learning to speak too.</strong></p>
+    <p style="margin-bottom: 24px; color: var(--text-light); font-size: 0.95rem;"><strong>Visual rule:</strong> NOT photorealistic portraits. Stylized, warm, illustrated with the same organic line quality as the animal characters &mdash; but unmistakably human and recognizably based on the real authors&rsquo; actual appearances. Think Shaun Tan&rsquo;s human figures or Remedios Varo&rsquo;s dreamlike people. They exist between the real and the mythic. <strong>Reference the authors&rsquo; actual photographs for face, build, and bearing.</strong></p>
+
+    <!-- El poeta -->
+    <div class="character-card literary">
+        <div class="character-name">El poeta &mdash; Rafael Pombo (1833&ndash;1912)</div>
+        <div class="character-role">Poet of Colombian children&rsquo;s literature &mdash; Public domain &mdash; Priority 3</div>
+        <img src="assets/reference/rafael-pombo.jpg" alt="Portrait of Rafael Pombo" class="reference-photo">
+        <ul>
+            <li><strong>Real appearance</strong> (see <code>assets/reference/rafael-pombo.jpg</code>): Thin face, high forehead, receding brown hair. Small round pince-nez glasses. Neat brown/auburn mustache, no beard. Pale complexion. Dark formal suit, white shirt, black bow tie with pearl pin. Serious, thoughtful expression &mdash; but gentle eyes behind the glasses. Refined, bookish bearing.</li>
+            <li><strong>Theme:</strong> Naming, animals, playfulness. His world IS Yaguar&aacute;&rsquo;s forest.</li>
+            <li><strong>Setting:</strong> Seated or standing in a forest clearing, surrounded by animals from his poems. A frog (Rinr&iacute;n) on his shoulder or leaping from his open book. Do&ntilde;a Ratona may appear nearby.</li>
+            <li><strong>Clothing:</strong> Dark formal suit with high collar, bow tie &mdash; 19th-century Bogot&aacute; intellectual dress. Slightly rumpled, lived-in. Ink stains on his fingers.</li>
+            <li><strong>Light:</strong> Golden, warm &mdash; as if the forest parts to let sunlight reach him.</li>
+            <li><strong>Props:</strong> An open book from which animals emerge; a quill pen; ink pot.</li>
+            <li><strong>Key moment:</strong> <em>&ldquo;El poeta sonr&iacute;e. Una rana salta de su libro.&rdquo;</em></li>
+        </ul>
+        <h4>Expressions needed (4)</h4>
+        <ul>
+            <li>Smiling warmly &mdash; genuine kindness, grandfatherly</li>
+            <li>Reading aloud &mdash; mouth open, eyes on book, declaiming</li>
+            <li>Looking up in wonder &mdash; at the forest canopy</li>
+            <li>Laughing &mdash; open laughter, glasses slightly askew</li>
+        </ul>
+        <h4>Poses needed (3)</h4>
+        <ul>
+            <li>Seated with book open on lap &mdash; frog mid-leap from the pages</li>
+            <li>Standing in clearing with arms slightly open &mdash; welcoming the forest</li>
+            <li>Bending down to speak to a small animal &mdash; at frog level</li>
+        </ul>
+        <h4>Also illustrate</h4>
+        <ul>
+            <li><strong>Rinr&iacute;n</strong> &mdash; the frog from <em>&ldquo;El renacuajo paseador&rdquo;</em>: small, expressive, comic, always near the poet.</li>
+            <li><strong>Do&ntilde;a Ratona</strong> &mdash; a dignified mouse in a tiny apron.</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheet + 3 poses + Rinr&iacute;n and Do&ntilde;a Ratona as separate characters, transparent PNG</div>
+    </div>
+
+    <!-- El viajero -->
+    <div class="character-card literary">
+        <div class="character-name">El viajero &mdash; Jos&eacute; Eustasio Rivera (1888&ndash;1928)</div>
+        <div class="character-role">Author of <em>La vor&aacute;gine</em> &mdash; Public domain &mdash; Priority 3</div>
+        <img src="assets/reference/jose-eustasio-rivera.jpg" alt="Portrait of Jos&eacute; Eustasio Rivera" class="reference-photo">
+        <ul>
+            <li><strong>Real appearance</strong> (see <code>assets/reference/jose-eustasio-rivera.jpg</code>): Young man, early 30s. Oval face, dark hair combed back and parted on the side. Clean-shaven with a hint of thin mustache. Light skin, refined features. Dark contemplative eyes. Three-piece suit with tie. Dignified, upright posture. For the game, adapt clothing to jungle field wear &mdash; but keep the same dignified bearing and youthful, serious face.</li>
+            <li><strong>Theme:</strong> Nature, jungle, exploration. The jungle itself speaks through him.</li>
+            <li><strong>Setting:</strong> Walking through dense selva, notebook in hand, writing as he moves.</li>
+            <li><strong>Clothing:</strong> Early 20th-century field wear &mdash; linen shirt (sleeves rolled), trousers, sturdy boots, wide-brimmed hat pushed back. Leather satchel across chest.</li>
+            <li><strong>Props:</strong> Leather notebook (smaller than Candelaria&rsquo;s), pencil stub, satchel.</li>
+            <li><strong>Key moment:</strong> <em>&ldquo;Un viajero camina por la selva. Tiene un cuaderno.&rdquo;</em></li>
+        </ul>
+        <h4>Expressions needed (4)</h4>
+        <ul>
+            <li>Focused &mdash; writing while walking</li>
+            <li>Looking up at canopy in awe</li>
+            <li>Determined &mdash; firm stride, eyes ahead</li>
+            <li>Contemplative &mdash; profile, gazing at the green horizon</li>
+        </ul>
+        <h4>Poses needed (3)</h4>
+        <ul>
+            <li>Walking through jungle with notebook &mdash; dense vegetation</li>
+            <li>Crouching by river writing &mdash; water reflecting his silhouette</li>
+            <li>Profile silhouette against dense green &mdash; at the forest edge</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheet + 3 poses, transparent PNG</div>
+    </div>
+
+    <!-- Don Tomás -->
+    <div class="character-card literary">
+        <div class="character-name">Don Tom&aacute;s &mdash; Tom&aacute;s Carrasquilla (1858&ndash;1940)</div>
+        <div class="character-role">Master of Antioquian costumbrismo &mdash; Public domain &mdash; Priority 3</div>
+        <img src="assets/reference/tomas-carrasquilla.jpg" alt="Portrait of Tom&aacute;s Carrasquilla by Benjam&iacute;n de la Calle" class="reference-photo">
+        <ul>
+            <li><strong>Real appearance</strong> (see <code>assets/reference/tomas-carrasquilla.jpg</code>): Bald on top, completely smooth scalp. Full, wide, dark mustache &mdash; his most iconic feature, thick and bushy, turned slightly downward. Broad face, strong jaw. Deep-set dark eyes with a direct, penetrating gaze. Formal dark suit, white high-collar shirt, dark cravat with pin. Solid, stocky build. Serious but not stern &mdash; irony lives in the eyes and the set of the mustache.</li>
+            <li><strong>Theme:</strong> Family, food, home, daily life. Fireside stories.</li>
+            <li><strong>Setting:</strong> By a fire or at a rustic table. Always near food, family, warmth.</li>
+            <li><strong>Clothing:</strong> Dark suit, high collar, vest. Ruana over shoulders. Sombrero nearby.</li>
+            <li><strong>Props:</strong> Bowl of food, cup of chocolate caliente, wooden stool, firelight.</li>
+            <li><strong>Key moment:</strong> <em>&ldquo;Un hombre viejo aparece junto al fuego.&rdquo;</em></li>
+        </ul>
+        <h4>Expressions needed (4)</h4>
+        <ul>
+            <li>Welcoming smile &mdash; warm, hospitable</li>
+            <li>Offering food &mdash; hand extended</li>
+            <li>Telling a story &mdash; animated hands, bright eyes</li>
+            <li>Listening with ironic gaze &mdash; raised eyebrow, half-smile</li>
+        </ul>
+        <h4>Poses needed (3)</h4>
+        <ul>
+            <li>Seated by fire with bowl &mdash; firelight on his face</li>
+            <li>Standing at doorway welcoming someone in</li>
+            <li>Hands gesturing while telling a story &mdash; seated, implied audience</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheet + 3 poses, transparent PNG</div>
+    </div>
+
+    <!-- El maestro -->
+    <div class="character-card literary">
+        <div class="character-name">El maestro &mdash; Luis Fernando Mac&iacute;as Zuluaga (b. 1957)</div>
+        <div class="character-role">Poet, narrator, professor &mdash; Contemporary (licensed) &mdash; Priority 3</div>
+        <img src="assets/reference/luis-fernando-macias.jpg" alt="Photo of Luis Fernando Mac&iacute;as Zuluaga" class="reference-photo">
+        <ul>
+            <li><strong>Real appearance</strong> (see <code>assets/reference/luis-fernando-macias.jpg</code>): Late 60s. Short grey/white hair, slightly receding. Rectangular dark-framed glasses. Round, warm face with laugh lines &mdash; a man who smiles easily and fully. Light stubble. Broad, open smile. Plaid button-down shirt, casual and approachable. Not imposing &mdash; friendly, accessible. Stocky build.</li>
+            <li><strong>Theme:</strong> Teaching, wisdom, language. &ldquo;The word as a living thing.&rdquo;</li>
+            <li><strong>Setting:</strong> By the river with a book. The space around him feels like a classroom that became a garden.</li>
+            <li><strong>Clothing:</strong> Modern but understated &mdash; clean button-down, simple trousers.</li>
+            <li><strong>Props:</strong> A book (open or closed), the river behind him.</li>
+            <li><strong>Key moment:</strong> <em>&ldquo;Un hombre con lentes aparece junto al r&iacute;o. Tiene un libro.&rdquo;</em></li>
+        </ul>
+        <h4>Expressions needed (4)</h4>
+        <ul>
+            <li>Listening intently &mdash; head slightly tilted</li>
+            <li>Explaining with quiet passion &mdash; open hands</li>
+            <li>Smiling at a student&rsquo;s insight &mdash; genuine joy, pride</li>
+            <li>Reading &mdash; eyes down, absorbed</li>
+        </ul>
+        <h4>Poses needed (3)</h4>
+        <ul>
+            <li>Standing by river with book &mdash; water flowing behind</li>
+            <li>Seated on a rock reading &mdash; nature around him, peace</li>
+            <li>Hands open as if offering a word &mdash; gesture of giving</li>
+        </ul>
+        <div class="deliverable-tag">Deliver: Character sheet + 3 poses, transparent PNG</div>
     </div>
 
     <!-- Los Antiguos -->
@@ -1572,9 +1799,15 @@
         <span class="comment">// Pattern:</span>
         <span class="highlight">character</span>-<span class="highlight">world</span>-<span class="highlight">scene</span>-<span class="highlight">variant</span>.<span class="highlight">format</span>
 
-        <span class="comment">// Examples:</span>
-        yaguara-abajo-familia-happy.png
-        yaguara-abajo-river-crouching.png
+        <span class="comment">// Examples (note: Yaguará files include life-stage prefix):</span>
+        yaguara-sonadora-abajo-familia-happy.png
+        yaguara-sonadora-abajo-river-peering.png
+        yaguara-caminante-medio-village-walking.png
+        yaguara-caminante-medio-ridge-standing.png
+        yaguara-guardiana-arriba-ceiba-repose.png
+        yaguara-guardiana-arriba-stars-looking.png
+        yaguara-transition-threshold-dest18.png
+        yaguara-transition-bridge-dest38.png
         nakawe-abajo-horizon-serene.png
         rio-abajo-leap-playful.png
         ceiba-abajo-forest-night.png
@@ -1583,7 +1816,7 @@
         delfin-medio-llanos-breaching.png
         carey-medio-costa-swimming.png
         silencio-gris-overlay-edge-01.png
-        sombra-yaguara-sitting-distorted.png
+        sombra-yaguara-caminante-sitting-distorted.png
         pattern-mola-selva-border.svg
         pattern-wayuu-andes-border.svg
         env-selva-panoramic.png
@@ -1715,13 +1948,18 @@
     <div class="timeline">
         <div class="timeline-item priority-1">
             <div class="timeline-label">Phase 1 &mdash; Highest Priority</div>
-            <div class="timeline-title">Yaguará character sheet</div>
-            <div class="timeline-desc">Turnaround (front, 3/4, side, back) + 6 expressions + 5 key poses. This is the foundation &mdash; everything else flows from her design.</div>
+            <div class="timeline-title">Yaguará <strong>So&ntilde;adora</strong> character sheet (Stage 1)</div>
+            <div class="timeline-desc">Turnaround (front, 3/4, side, back) + 6 expressions + 5 key poses for the child stage. This is the foundation &mdash; everything else flows from her design. Needed first for A1 modules.</div>
         </div>
         <div class="timeline-item priority-1">
             <div class="timeline-label">Phase 2</div>
             <div class="timeline-title">The A1 Family: Nakawe, Río, Abuela Ceiba</div>
             <div class="timeline-desc">These characters appear in the very first modules. Needed to build the opening experience.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Phase 2b &mdash; Literary Authors</div>
+            <div class="timeline-title">El poeta (Pombo) + Rinr&iacute;n + Do&ntilde;a Ratona, El viajero (Rivera), Don Tom&aacute;s (Carrasquilla), El maestro (Mac&iacute;as)</div>
+            <div class="timeline-desc">Four real Colombian authors as magical-realist characters. Needed for dest1&ndash;12 (A1 content). Character sheets with turnaround + expressions + 3 poses each. Faces must be based on reference photographs in <code>assets/reference/</code>.</div>
         </div>
         <div class="timeline-item priority-1">
             <div class="timeline-label">Phase 3</div>
@@ -1759,6 +1997,11 @@
             <div class="timeline-desc">Each with their poses as specified. These populate Act II.</div>
         </div>
         <div class="timeline-item priority-2">
+            <div class="timeline-label">Phase 5b</div>
+            <div class="timeline-title">Yaguará <strong>Caminante</strong> character sheet (Stage 2) + Transition 1</div>
+            <div class="timeline-desc">Turnaround + 6 expressions + 5 poses for the young adult stage. Plus one transition illustration showing the So&ntilde;adora &rarr; Caminante shift at dest18 (crossing the threshold).</div>
+        </div>
+        <div class="timeline-item priority-2">
             <div class="timeline-label">Phase 6</div>
             <div class="timeline-title">Remaining 3 environments: Andes, Llanos, Costa</div>
             <div class="timeline-desc">Each with panoramic + portrait + vignettes + textile pattern tile.</div>
@@ -1766,7 +2009,12 @@
         <div class="timeline-item priority-3">
             <div class="timeline-label">Phase 7</div>
             <div class="timeline-title">El Silencio Gris + La Sombra de Yaguará</div>
-            <div class="timeline-desc">Overlay effects, desaturation textures, shadow silhouettes. For B2+ content.</div>
+            <div class="timeline-desc">Overlay effects, desaturation textures, shadow silhouettes (based on Caminante stage). For B2+ content.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Phase 7b</div>
+            <div class="timeline-title">Yaguará <strong>Guardiana</strong> character sheet (Stage 3) + Transition 2</div>
+            <div class="timeline-desc">Turnaround + 6 expressions + 5 poses for the elder stage. Plus one transition illustration showing the Caminante &rarr; Guardiana shift at dest38 (the road back).</div>
         </div>
         <div class="timeline-item priority-3">
             <div class="timeline-label">Phase 8</div>
@@ -1803,7 +2051,7 @@
     <h2><span class="section-number">11</span> Key Scenes by Destination</h2>
     <div class="section-subtitle">Specific narrative moments that need illustration &mdash; the visual spine of the game</div>
 
-    <p>Each destination in the game has a pivotal visual moment. These are the scenes the student <em>remembers</em> &mdash; the images that carry emotional weight and anchor the language learning to a story. Below are the key scenes for all destinations built so far (dest1&ndash;23), organized by level. Each scene card describes the composition, characters, setting, and mood the illustrator should aim for.</p>
+    <p>Each destination has a pivotal visual moment &mdash; the image the student sees on arrival. Below are the scenes for <strong>all 58 destinations</strong>, organized by level. Each card describes the composition, characters, setting, and mood.</p>
 
     <p><strong>Deliverable per scene:</strong> 1200&times;800px (landscape) or 800&times;1200px (portrait), PNG transparent background + source file. These are <em>narrative illustrations</em>, not UI elements &mdash; they should feel like pages from a book.</p>
 
@@ -2165,7 +2413,328 @@
         </div>
     </div>
 
-    <p style="margin-top: 30px; font-style: italic; color: var(--text-light);">Scenes for dest24&ndash;58 will be added as those destinations are built. The full game will contain 58 key scene illustrations &mdash; one per destination &mdash; plus the character sheets, environments, UI elements, and story fragments described in earlier sections.</p>
+    <!-- ==================== B1 ADVANCED ==================== -->
+    <div class="level-group">
+        <h3>B1 Advanced &mdash; Las historias (dest24&ndash;28)</h3>
+        <div class="level-desc">Crossing paths, growing conflict, the elder's farewell.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest24 &mdash; &ldquo;Las historias que se cruzan&rdquo;</div>
+        <div class="scene-meta">Scene: Two paths meet &mdash; Mundo del Medio</div>
+        <div class="scene-desc">A forest crossroads. Two dirt paths meet at a clearing. Yaguar&aacute; approaches from one direction, Candelaria from the other. Do&ntilde;a Asunci&oacute;n sits by the river in the background, small against the landscape, her hands in the water. The two paths are different &mdash; one from deep forest, one from a village &mdash; but they converge here.</div>
+        <h4>Mood: convergence, fate, two journeys becoming one</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span><span>Do&ntilde;a Asunci&oacute;n (background)</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest25 &mdash; &ldquo;El hombre del camino&rdquo;</div>
+        <div class="scene-meta">Scene: Don Pr&oacute;spero's vision &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Don Pr&oacute;spero stands on a hill, silhouetted against the sky, holding a map open with both hands. His posture is confident, persuasive. Below him, Yaguar&aacute; and Candelaria look up from the forest edge. His leather portfolio leans against a rock. The landscape behind him is clear-cut: a road being carved through green.</div>
+        <h4>Mood: ambition, persuasion, the seductive logic of progress</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest26 &mdash; &ldquo;Lo que se pierde&rdquo;</div>
+        <div class="scene-meta">Scene: The silent clearing &mdash; Mundo del Medio</div>
+        <div class="scene-desc">A clearing where a river used to be. Cracked dry earth, fallen tree trunks. A grey mist hangs at the edges &mdash; the first visible presence of El Silencio Gris in this world. No animals. No sound implied. Yaguar&aacute; stands alone in the center, ears flat, looking at the empty riverbed.</div>
+        <h4>Mood: loss, desolation, absence made visible</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest27 &mdash; &ldquo;Dos verdades&rdquo;</div>
+        <div class="scene-meta">Scene: Split perspective &mdash; Mundo del Medio</div>
+        <div class="scene-desc">The same landscape divided down the middle. Left half: Don Pr&oacute;spero's vision &mdash; a road, workers, trucks, a prosperous village. Right half: Candelaria's truth &mdash; the same road destroying forest, the river diverted, animals fleeing. Both halves are painted in the same style but tell opposite stories. The two figures stand back to back at the dividing line.</div>
+        <h4>Mood: tension, divided truth, the impossibility of simple answers</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest28 &mdash; &ldquo;La voz de la abuela&rdquo;</div>
+        <div class="scene-meta">Scene: Do&ntilde;a Asunci&oacute;n's farewell &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Riverbank at golden hour. Do&ntilde;a Asunci&oacute;n sits on the ground, small and ancient, bright pa&ntilde;uelo on her head. Her hands rest in the river water. Candelaria kneels beside her, face close, listening intently. The two missing fingers on Do&ntilde;a Asunci&oacute;n's left hand are visible. Behind them, the river continues flowing, indifferent. This is the last time the elder speaks.</div>
+        <h4>Mood: tenderness, transmission, farewell without drama</h4>
+        <div class="scene-characters"><span>Do&ntilde;a Asunci&oacute;n</span><span>Candelaria</span></div>
+    </div>
+
+    <!-- ==================== B2 BASIC ==================== -->
+    <div class="level-group">
+        <h3>B2 Basic &mdash; El silencio (dest29&ndash;33)</h3>
+        <div class="level-desc">The world losing color, shadows, difficult conversations, forgotten names.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest29 &mdash; &ldquo;El silencio avanza&rdquo;</div>
+        <div class="scene-meta">Scene: Grey mist consumes the forest &mdash; Mundo del Medio</div>
+        <div class="scene-desc">The forest is losing color. Trees fade to grey from the edges inward. A river flows silent. El Silencio Gris advances as visible mist from the horizon. C&oacute;ndor Viejo perches on a bare branch, feathers dull, watching. Colibr&iacute; darts frantically, trailing dimmer light than before.</div>
+        <h4>Mood: encroaching dread, beauty fading, resistance growing desperate</h4>
+        <div class="scene-characters"><span>C&oacute;ndor Viejo</span><span>Colibr&iacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest30 &mdash; &ldquo;La sombra de Yaguar&aacute;&rdquo;</div>
+        <div class="scene-meta">Scene: Yaguar&aacute; faces her shadow &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Yaguar&aacute; stands facing her own shadow on the ground &mdash; but the shadow is wrong. It's slightly distorted, like a reflection in disturbed water. The shadow's edges waver. Its eyes are mirrors that reflect instead of seeing. This is La Sombra de Yaguar&aacute;: the doubt she must face. Dim, amber-grey light. No other characters.</div>
+        <h4>Mood: confrontation with self, fear made visible, inner conflict</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>La Sombra</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest31 &mdash; &ldquo;Hablar con los dem&aacute;s&rdquo;</div>
+        <div class="scene-meta">Scene: The crowded plaza &mdash; Mundo del Medio</div>
+        <div class="scene-desc">A village plaza full of diverse people in conversation. A market, gestures, disagreements, laughter. Yaguar&aacute; moves through the crowd, small among humans. People who don't agree talking face to face. The warmth of community even in conflict.</div>
+        <h4>Mood: human complexity, dialogue, the noise of democracy</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Village community</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest32 &mdash; &ldquo;&iquest;Qui&eacute;n traicion&oacute; a qui&eacute;n?&rdquo;</div>
+        <div class="scene-meta">Scene: Two perspectives of the same landscape &mdash; Mundo del Medio</div>
+        <div class="scene-desc">The same landscape painted twice in one frame: half prosperous, half damaged. Don Pr&oacute;spero and Candelaria stand with their backs to each other at the center. Each sees a different truth. The technique should feel like a painted optical illusion &mdash; the viewer's eye shifts between both readings.</div>
+        <h4>Mood: moral ambiguity, perspective as the only truth</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest33 &mdash; &ldquo;El lugar donde van los nombres&rdquo;</div>
+        <div class="scene-meta">Scene: Graveyard of forgotten words &mdash; Mundo del Medio</div>
+        <div class="scene-desc">A grove where stone tablets lie half-buried in moss. Letters are carved into the stones &mdash; words, names, in languages no one speaks anymore. Some stones glow faintly. Some are completely dark. Yaguar&aacute; walks among them, reading. The atmosphere is sacred, not sad &mdash; a place of rest, not of death.</div>
+        <h4>Mood: reverence, archaeology of language, quiet beauty</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <!-- ==================== B2 ADVANCED ==================== -->
+    <div class="level-group">
+        <h3>B2 Advanced &mdash; La memoria (dest34&ndash;38)</h3>
+        <div class="level-desc">The river of memory, the land as text, economy vs. life, the legacy.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest34 &mdash; &ldquo;El r&iacute;o de la memoria&rdquo;</div>
+        <div class="scene-meta">Scene: A river flowing backwards &mdash; Mundo del Medio</div>
+        <div class="scene-desc">A luminous river that flows upstream. In the water float words, faces, fragments of stories &mdash; all the voices that ever passed through this place. Amber light. Yaguar&aacute; stands at the bank, watching the current reverse. The water is transparent enough to see the words but too fast to read them.</div>
+        <h4>Mood: memory as living water, time reversing, beautiful melancholy</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest35 &mdash; &ldquo;Letras de la llanura&rdquo;</div>
+        <div class="scene-meta">Scene: The land as writing &mdash; Mundo del Medio / Llanos</div>
+        <div class="scene-desc">The llanos at sunset. Furrows in the earth form letters. Animal tracks become hieroglyphs. Plow lines become sentences. Yaguar&aacute; crouches low, reading the ground like a text. The horizon line blurs with heat shimmer. The earth itself is a manuscript.</div>
+        <h4>Mood: reading the world, landscape as literature</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest36 &mdash; &ldquo;Econom&iacute;a de la tierra&rdquo;</div>
+        <div class="scene-meta">Scene: Price tags on trees &mdash; Mundo del Medio</div>
+        <div class="scene-desc">A forest where paper price tags hang from tree branches. Don Pr&oacute;spero stands with a clipboard on one side. Candelaria embraces a tree trunk on the other. The tension between economic value and living value, visualized literally. Some trees have already been cut &mdash; stumps with price tags still attached.</div>
+        <h4>Mood: absurdity of commodification, urgency, moral weight</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest37 &mdash; &ldquo;Biodiversidad en riesgo&rdquo;</div>
+        <div class="scene-meta">Scene: The fading mural &mdash; Mundo del Medio</div>
+        <div class="scene-desc">A living mural of biodiversity in the process of fading. Frogs, butterflies, and birds dissolve from the edges as if the color is being erased. The chain of life breaking visually. Center of the mural still holds vivid color; the edges are grey and disappearing. Candelaria draws frantically in her notebook, trying to capture what's left.</div>
+        <h4>Mood: ecological elegy, racing against erasure</h4>
+        <div class="scene-characters"><span>Candelaria</span><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest38 &mdash; &ldquo;El legado que dejas&rdquo;</div>
+        <div class="scene-meta">Scene: Looking back before ascending &mdash; Mundo del Medio / transition</div>
+        <div class="scene-desc">Dusk. Yaguar&aacute; and Candelaria stand on a high path looking back at everything below &mdash; the villages, the rivers, the coast, the mountains, all visible in a panoramic view. The Mundo del Medio spread out behind them. Ahead: the sky darkens to indigo, hinting at the Mundo de Arriba. A moment of pause before the final ascent.</div>
+        <h4>Mood: reflection, earned wisdom, threshold of transformation</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <!-- ==================== C1 BASIC ==================== -->
+    <div class="level-group">
+        <h3>C1 Basic &mdash; La voz (dest39&ndash;43)</h3>
+        <div class="level-desc">The sky world opens. Stars close, words as constellations, weaving, light.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest39 &mdash; &ldquo;La voz de la monta&ntilde;a&rdquo;</div>
+        <div class="scene-meta">Scene: Entering the sky world &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">The transition upward. Stars are suddenly close, almost touchable. The air is indigo-silver. Words float visible as constellations in the sky &mdash; each word a point of light. Yaguar&aacute; and Candelaria (now 16&ndash;17) look up in wonder. The ground beneath them is translucent, showing the worlds below like layers of glass.</div>
+        <h4>Mood: awe, transcendence, language made cosmic</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest40 &mdash; &ldquo;Palabras de los mayores&rdquo;</div>
+        <div class="scene-meta">Scene: Los Antiguos speak &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Luminous ancestral figures between the stars. Not fully solid &mdash; outlines of light, suggestions of form. Pre-Columbian gold motifs visible in their contours. Yaguar&aacute; and Candelaria look up with reverence. The Antiguos' words fall as gentle rain of golden light.</div>
+        <h4>Mood: ancestral wisdom, sacred silence, golden light</h4>
+        <div class="scene-characters"><span>Los Antiguos (luminous)</span><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest41 &mdash; &ldquo;Ecos de todas las tierras&rdquo;</div>
+        <div class="scene-meta">Scene: A sound map of Colombia &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A map of Colombia floating in dark space. Visible sound waves emanate from different regions &mdash; each in a different color and rhythm. The Choc&oacute; pulses green, the Llanos pulse gold, the coast pulses turquoise, Bogot&aacute; pulses grey-silver. All different, all Spanish, all part of one living system.</div>
+        <h4>Mood: unity in diversity, the living body of language</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest42 &mdash; &ldquo;El tejido de las palabras&rdquo;</div>
+        <div class="scene-meta">Scene: Cosmic weaving &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Threads of light woven like a Way&uacute;u loom, but at cosmic scale. Each thread is a phrase, an idiom, an expression. The weave creates a fabric that is the living language. Yaguar&aacute; walks across the surface of this textile, careful not to break a thread. Colors shift where threads cross.</div>
+        <h4>Mood: intricate beauty, language as craft, walking on meaning</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest43 &mdash; &ldquo;Hilos de luz&rdquo;</div>
+        <div class="scene-meta">Scene: Threads connecting ideas &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Golden threads of light stretch between floating text blocks in the sky. Each connection makes both passages glow brighter. Yaguar&aacute; and Candelaria pull threads to connect ideas, creating a luminous network. The cohesion is invisible until touched &mdash; then it blazes.</div>
+        <h4>Mood: discovery, connection, the joy of coherence</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <!-- ==================== C1 ADVANCED ==================== -->
+    <div class="level-group">
+        <h3>C1 Advanced &mdash; La palabra (dest44&ndash;48)</h3>
+        <div class="level-desc">Temples, rhetoric, voices across time, the power of naming, the guiding star.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest44 &mdash; &ldquo;El templo del silencio&rdquo;</div>
+        <div class="scene-meta">Scene: A temple of suspended words &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Columns made of suspended words. A vast open space where language is preserved, analyzed, contemplated. The light comes from the words themselves &mdash; some bright, some fading. The floor reflects the ceiling. Yaguar&aacute; walks between the columns in silence, reading.</div>
+        <h4>Mood: sacred archive, contemplation, language as cathedral</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest45 &mdash; &ldquo;La piedra que persuade&rdquo;</div>
+        <div class="scene-meta">Scene: Rhetoric carved in floating stone &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A massive stone floats in space, covered in text &mdash; Bol&iacute;var's speeches, urban graffiti, newspaper headlines, all carved together. The stone radiates persuasion as visible force. Candelaria (now 17&ndash;18, glasses, university bag) studies it while Yaguar&aacute; circles, wary of its power.</div>
+        <h4>Mood: the weight of rhetoric, power and danger in words</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria (age 17&ndash;18)</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest46 &mdash; &ldquo;Voces entre las ruinas&rdquo;</div>
+        <div class="scene-meta">Scene: Palimpsest of voices &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Ruins where voices echo. Texts layered like a palimpsest &mdash; Garc&iacute;a M&aacute;rquez overlapping Rulfo, Shakira lyrics over Celia Cruz, graffiti over colonial inscriptions. Everything coexists in one visual space. Time is collapsed. Yaguar&aacute; listens to the overlapping voices.</div>
+        <h4>Mood: intertextuality, dialogue across centuries, living archive</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest47 &mdash; &ldquo;El nombre de las cosas&rdquo;</div>
+        <div class="scene-meta">Scene: The act of naming &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A dark void. In the center, Yaguar&aacute; speaks a word &mdash; and the word creates form. Light emerges from her mouth and shapes itself into an object. The first word creating the first thing. The power of naming as creation. Simple, stark, powerful.</div>
+        <h4>Mood: genesis, the political power of naming, creation as responsibility</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest48 &mdash; &ldquo;La estrella que gu&iacute;a&rdquo;</div>
+        <div class="scene-meta">Scene: The guiding star &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A single star-compass in the night sky, brighter than all others, casting a path of light downward. Yaguar&aacute; and Candelaria (18, adult) follow its beam. Below them, the path they've walked is visible as a trail of small lights &mdash; every destination they've passed through.</div>
+        <h4>Mood: guidance, accumulated knowledge, almost home</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria (age 18)</span></div>
+    </div>
+
+    <!-- ==================== C2 BASIC ==================== -->
+    <div class="level-group">
+        <h3>C2 Basic &mdash; La voz completa (dest49&ndash;53)</h3>
+        <div class="level-desc">The city, writing as territory, the mirror, transformation, the guardian awakens.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest49 &mdash; &ldquo;La ciudad de todas las voces&rdquo;</div>
+        <div class="scene-meta">Scene: Bogot&aacute; at night from above &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Bogot&aacute; seen from the sky. Eight million lights like eight million voices. The city vibrates with registers &mdash; formal, informal, slang, academic, poetic. Each neighborhood glows a different temperature. Yaguar&aacute; and Candelaria float above, listening to the polyphony.</div>
+        <h4>Mood: urban symphony, overwhelming beauty, the living city</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest50 &mdash; &ldquo;Tinta y territorio&rdquo;</div>
+        <div class="scene-meta">Scene: Writing creates worlds &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A hand writing in the air. The ink flows from the pen and becomes territory &mdash; maps, mountains, rivers, cities form from the strokes of letters. The act of writing as world-creation. The hand could be Candelaria's, Yaguar&aacute;'s paw, or the student's &mdash; leave it ambiguous.</div>
+        <h4>Mood: creative power, authorship, the word as territory</h4>
+        <div class="scene-characters"><span>Ambiguous hand/paw</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest51 &mdash; &ldquo;El espejo del idioma&rdquo;</div>
+        <div class="scene-meta">Scene: Cosmic mirror &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A vast mirror floating in space. Yaguar&aacute; looks at the Spanish language from outside and inside simultaneously &mdash; her reflection shows a different perspective of the same reality. The mirror contains all the registers, all the regions, all the histories of the language at once. Infinite depth.</div>
+        <h4>Mood: metalinguistic wonder, seeing language as a whole</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest52 &mdash; &ldquo;Voces que transforman&rdquo;</div>
+        <div class="scene-meta">Scene: Words becoming waves of change &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A voice becoming music becoming action. Visible waves of sound expand outward, transforming everything they touch &mdash; a grey landscape blooms with color where the voice reaches. A speech becomes a song. A song becomes movement. Words have physical force here.</div>
+        <h4>Mood: agency, transformation, the power of voice</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest53 &mdash; &ldquo;El guardi&aacute;n despierta&rdquo;</div>
+        <div class="scene-meta">Scene: Yaguar&aacute; becomes a constellation &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Yaguar&aacute; glows. She stands among other guardian-stars &mdash; constellations that are also language keepers. Her body radiates light, her constellation-mark on her left shoulder now blazes. She has become what she always was: a guardian of words. Other star-figures surround her in a circle.</div>
+        <h4>Mood: consecration, becoming, the student as guardian</h4>
+        <div class="scene-characters"><span>Yaguar&aacute; (luminous)</span><span>Guardian constellations</span></div>
+    </div>
+
+    <!-- ==================== C2 ADVANCED ==================== -->
+    <div class="level-group">
+        <h3>C2 Advanced &mdash; El regreso (dest54&ndash;58)</h3>
+        <div class="level-desc">The return to the forest, the chronicle, the living language, the complete spirit.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest54 &mdash; &ldquo;El regreso a la selva&rdquo;</div>
+        <div class="scene-meta">Scene: Return to the beginning &mdash; Mundo de Arriba / Abajo</div>
+        <div class="scene-desc">Yaguar&aacute; returns to the forest of dest1 &mdash; but now constellations glow between the branches. The same ceiba roots, the same river, but everything is illuminated from within. She is the same jaguar, but she carries cosmic light. The forest recognizes her.</div>
+        <h4>Mood: homecoming, transformation visible, the circle closing</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest55 &mdash; &ldquo;Cr&oacute;nica de los mundos&rdquo;</div>
+        <div class="scene-meta">Scene: All three worlds seen from above &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A vertical view: three layers of world stacked like geological strata. Below: green jungle. Middle: terracotta earth. Above: indigo sky. All 58 destinations glow as points of light along a winding river that flows through all three layers. The whole journey made visible in one image.</div>
+        <h4>Mood: totality, the beauty of the complete journey, cartographic wonder</h4>
+        <div class="scene-characters"><span>Yaguar&aacute; (small, at dest55)</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest56 &mdash; &ldquo;La lengua viva&rdquo;</div>
+        <div class="scene-meta">Scene: Spanish as a living river &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">A river that shifts course, branches, receives tributaries. Each generation adds water. The river is Spanish &mdash; alive, changing, never stopping. Old words sediment at the bottom. New words sparkle on the surface. Yaguar&aacute; walks alongside, knowing she cannot control it, only accompany it.</div>
+        <h4>Mood: acceptance, flow, the humility of the language guardian</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest57 &mdash; &ldquo;Guardianes de historias&rdquo;</div>
+        <div class="scene-meta">Scene: Two guardians before the great tree &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Yaguar&aacute; and Candelaria (fully adult, 18, glasses, pa&ntilde;uelo, gold threads in her braids) stand together before Abuela Ceiba. The tree's crown reaches into the sky, and through the highest branches, other trees are visible on other branches &mdash; faint silhouettes of other worlds, other languages. The two guardians are small before the tree, but they are standing.</div>
+        <h4>Mood: consecration, partnership, glimpse of infinity</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria (age 18)</span><span>Abuela Ceiba</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest58 &mdash; &ldquo;El esp&iacute;ritu completo&rdquo;</div>
+        <div class="scene-meta">Scene: The final dawn &mdash; the circle closes</div>
+        <div class="scene-desc">Dawn in the Choc&oacute; rainforest. <strong>The exact composition of dest1</strong> &mdash; the same ceiba roots, the same river, the same filtered light. But Yaguar&aacute; is fully visible now, not hidden. She radiates golden light. The forest is alive, vivid, named. Every leaf, every sound, every creature is present. The same scene, transformed by everything that happened between.</div>
+        <h4>Key visual requirement: This must visually echo dest1 &mdash; same composition, same angle, same elements &mdash; but alive where dest1 was mysterious, bright where dest1 was shadowed.</h4>
+        <h4>Mood: completion, wholeness, the journey visible in the stillness</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>The forest</span></div>
+    </div>
 
 </section>
 
@@ -2174,7 +2743,7 @@
 <!-- ============================== FOOTER ============================== -->
 <footer class="footer">
     <div class="project">El Viaje del Jaguar</div>
-    <div>Illustrator Creative Brief &mdash; Version 3.0 &mdash; February 2026</div>
+    <div>Illustrator Creative Brief &mdash; Version 4.0 &mdash; February 2026</div>
     <div style="margin-top:10px; font-style:italic; color:#C9A54E;">"No todas las palabras se dicen. Algunas se cuidan."</div>
 </footer>
 

@@ -1,0 +1,49 @@
+[
+  {
+    "type": "escaperoom",
+    "label": "Sala de enigmas",
+    "instruction": "Resuelve los enigmas para abrir la puerta.",
+    "room": {
+      "name": "La cueva de la casa",
+      "description": "Una cueva que parece una casa. Hay una mesa de piedra, una cama de musgo, una ventana que es un agujero en la roca.",
+      "ambience": "home"
+    },
+    "puzzles": [
+      {
+        "puzzleType": "riddle",
+        "prompt": "La mesa de piedra pregunta:",
+        "riddle": "«Tengo techo, tengo paredes, tengo puerta. La familia vive aquí. Es un lugar seguro. ¿Qué soy?»",
+        "clue": "Es donde vives.",
+        "answer": "Una casa",
+        "options": [
+          "Una casa",
+          "Una escuela",
+          "Un hospital",
+          "Una tienda"
+        ],
+        "onSolve": "La mesa brilla."
+      },
+      {
+        "puzzleType": "cipher",
+        "prompt": "Letras están en las piedras de la pared.",
+        "clue": "Es la habitación donde duermes.",
+        "answer": "cuarto",
+        "scrambled": "tuoacr",
+        "onSolve": "La cama de musgo brilla."
+      },
+      {
+        "puzzleType": "wordlock",
+        "prompt": "La ventana de roca tiene una cerradura.",
+        "clue": "Es donde la familia come junta. Tiene cuatro patas y es plana.",
+        "answer": "mesa",
+        "hint": "_ _ _ _",
+        "onSolve": "La ventana se abre. La puerta está detrás. Se abre."
+      }
+    ],
+    "fragment": {
+      "text": "Un dibujo brilla: una raíz con forma de techo.",
+      "questClue": "La primera casa fue una cueva. La raíz es el techo más antiguo.",
+      "item": "raiz-techo"
+    }
+  }
+]

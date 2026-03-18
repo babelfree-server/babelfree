@@ -1,3 +1,6 @@
+# Custom 404 page
+ErrorDocument 404 /404.html
+
 # Security: Block access to sensitive files
 <FilesMatch "\.(py|pyc)$">
     Require all denied
@@ -20,17 +23,104 @@
     # Block .git directory
     RewriteRule ^\.git/ - [F,L]
 
-    # API: Block direct access to internal API directories
-    RewriteRule ^api/(config|middleware|models|helpers|routes|vendor)/ - [F,L]
+    # Legacy level directories → storymap (301)
+    RewriteRule ^a1_basic/ storymap.html [R=301,L]
+    RewriteRule ^a1_advanced/ storymap.html [R=301,L]
+    RewriteRule ^a2_basic/ storymap.html [R=301,L]
+    RewriteRule ^a2_advanced/ storymap.html [R=301,L]
+    RewriteRule ^b1_basic/ storymap.html [R=301,L]
+    RewriteRule ^b1_advanced/ storymap.html [R=301,L]
+    RewriteRule ^b2_basic/ storymap.html [R=301,L]
+    RewriteRule ^b2_advanced/ storymap.html [R=301,L]
+    RewriteRule ^c1_basic/ storymap.html [R=301,L]
+    RewriteRule ^c1_advanced/ storymap.html [R=301,L]
+    RewriteRule ^c2_basic/ storymap.html [R=301,L]
+    RewriteRule ^c2_advanced/ storymap.html [R=301,L]
 
-    # Dictionary SPA routes — all serve dictionary.html
-    # New format: /dictionary/{lang}/{word}
+    # API: Block direct access to internal API directories and scripts
+    RewriteRule ^api/(config|middleware|models|helpers|routes|vendor|scripts)/ - [F,L]
+
+    # Forum: individual post pages
+    RewriteRule ^foro/([a-z0-9-]+)/?$ foro-post.php?slug=$1 [L,QSA]
+    # Forum: listing page
+    RewriteRule ^foro/?$ foro.html [L]
+
+    # Dictionary: ALL word-level URLs route to PHP (handles prefix validation + 301s)
+    # Language index pages (e.g. /dictionary/ru/) are also handled in dictionary-word.php
+    RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/(.+)$ dictionary-word.php [L]
+
+    # Dictionary SPA routes — language index and root
     RewriteRule ^dictionary/?$ dictionary.html [L]
-    RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/?$ dictionary.html [L]
-    RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/(.+)$ dictionary.html [L]
+    RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/?$ dictionary-word.php [L]
+
+    # Dictionary SEO keyword pages (English)
+    RewriteRule ^(spanish-dictionary|spanish-to-english-dictionary|spanish-dictionary-translator|spanish-frequency-dictionary|spanish-language-dictionary|spanish-urban-dictionary|rhyming-dictionary-in-spanish|thesaurus-in-spanish|dictionary-real-academia-espanola|cambridge-dictionary-english-spanish|oxford-spanish-dictionary|collins-spanish-dictionary|linguee-english-to-spanish|wordreference-spanish|spanish-dictionary-words|pocket-spanish-dictionary|oxford-picture-dictionary-english-spanish)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Chinese)
+    RewriteRule ^(chinese-spanish-dictionary|english-chinese-dictionary|traditional-chinese-dictionary|how-to-say-in-spanish-chinese)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Dutch)
+    RewriteRule ^(spaans-woordenboek|woordenboek-spaans-naar-nederlands|ned-spaans-woordenboek|engels-spaans-woordenboek|spaans-engels-woordenboek|spaanse-woorden|betekenis-van|engels-spaans|mijnwoordenboek-spaans)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (German)
+    RewriteRule ^(spanisch-deutsch-woerterbuch|deutsch-spanisch-uebersetzer|spanisch-zu-deutsch-uebersetzer|uebersetzer-deutsch-spanisch-kostenlos|deutsch-spanisch-uebersetzen|google-uebersetzer-spanisch-deutsch|spanisch-uebersetzung-deutsch|deutsch-spanisch-woerterbuch|spanisches-woerterbuch|pons-spanisch-deutsch|leo-spanisch-deutsch|linguee-deutsch-spanisch|deepl-spanisch-deutsch|uebersetzen-spanisch-deutsch-text)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Korean)
+    RewriteRule ^(스페인어-사전|한국어-스페인어-사전|무료-스페인어-사전)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Russian)
+    RewriteRule ^(испано-русский-перевод|испано-русский-словарь|словарь-испанского-языка)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Japanese)
+    RewriteRule ^(スペイン語辞書|日本語スペイン語辞書|無料スペイン語辞書)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Spanish)
+    RewriteRule ^(diccionario-espanol|diccionario-ingles-espanol|diccionario-de-la-rae|diccionario-de-sinonimos|diccionario-frances-espanol|diccionario-italiano-espanol|diccionario-portugues-espanol|significado-de-palabras)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Italian)
+    RewriteRule ^(dizionario-spagnolo|dizionario-spagnolo-italiano|traduzione-italiano-spagnolo|significato-di)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (French)
+    RewriteRule ^(dictionnaire-francais-espagnol|traduction-francais-espagnol|dictionnaire-francais|dictionnaire-francais-anglais|traduction-anglais-francais)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Dictionary SEO keyword pages (Portuguese)
+    RewriteRule ^(dicionario-espanhol|dicionario-espanhol-portugues|dicionario-portugues-espanhol|significado-de|dicionario-real-academia-espanhola)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Portuguese compound/variant 301 redirects
+    RewriteRule ^dicionarioespanhol/?$ /dicionario-espanhol [R=301,L]
+    RewriteRule ^dicionarioespanholportugues/?$ /dicionario-espanhol-portugues [R=301,L]
+    RewriteRule ^dicionario-espanhol-online/?$ /dicionario-espanhol [R=301,L]
 
     # Glossary SPA route
     RewriteRule ^glossary/?$ glossary.html [L]
+
+    # Index homepage keyword URLs: rewrite keyword slugs to index files
+    # Note: /learn-spanish is NOT rewritten here — learn-spanish.html is its own SEO page
+    RewriteRule ^aprender-espanol/?$ index-es.html [L]
+    RewriteRule ^impara-lo-spagnolo/?$ index-it.html [L]
+    RewriteRule ^apprendre-l-espagnol/?$ index-fr.html [L]
+    RewriteRule ^spanisch-lernen/?$ index-de.html [L]
+    RewriteRule ^curso-de-espanhol/?$ index-pt.html [L]
+    RewriteRule ^スペイン語を学ぶ/?$ index-ja.html [L]
+    RewriteRule ^스페인어-배우기/?$ index-ko.html [L]
+    RewriteRule ^学西班牙语/?$ index-zh.html [L]
+    RewriteRule ^учить-испанский/?$ index-ru.html [L]
+    RewriteRule ^spaans-leren/?$ index-nl.html [L]
+    RewriteRule ^تعلم-الإسبانية/?$ index-ar.html [L]
+
+    # Index homepage redirects: 301 old index-{lang} URLs to keyword slugs
+    RewriteRule ^index-es(\.html)?/?$ /aprender-espanol [R=301,L]
+    RewriteRule ^index-it(\.html)?/?$ /impara-lo-spagnolo [R=301,L]
+    RewriteRule ^index-fr(\.html)?/?$ /apprendre-l-espagnol [R=301,L]
+    RewriteRule ^index-de(\.html)?/?$ /spanisch-lernen [R=301,L]
+    RewriteRule ^index-pt(\.html)?/?$ /curso-de-espanhol [R=301,L]
+    RewriteRule ^index-ja(\.html)?/?$ /スペイン語を学ぶ [R=301,L]
+    RewriteRule ^index-ko(\.html)?/?$ /스페인어-배우기 [R=301,L]
+    RewriteRule ^index-zh(\.html)?/?$ /学西班牙语 [R=301,L]
+    RewriteRule ^index-ru(\.html)?/?$ /учить-испанский [R=301,L]
+    RewriteRule ^index-nl(\.html)?/?$ /spaans-leren [R=301,L]
+    RewriteRule ^index-ar(\.html)?/?$ /تعلم-الإسبانية [R=301,L]
+
+    # Jaguar language pages: rewrite /el-viaje-del-jaguar/{lang}/ to es-{lang}.html
+    RewriteCond %{DOCUMENT_ROOT}/es-$1.html -f
+    RewriteRule ^el-viaje-del-jaguar/([a-z]{2,3}(-[a-z]{2,3})?)/?$ es-$1.html [L]
+
+    # Jaguar language pages: 301 redirect old /es-{lang} to /el-viaje-del-jaguar/{lang}/
+    RewriteCond %{DOCUMENT_ROOT}/es-$1.html -f
+    RewriteRule ^es-([a-z]{2,3}(-[a-z]{2,3})?)$ /el-viaje-del-jaguar/$1/ [R=301,L]
+
+    # Jaguar language pages: 301 redirect old /{lang}/ to /el-viaje-del-jaguar/{lang}/
+    RewriteCond %{DOCUMENT_ROOT}/es-$1.html -f
+    RewriteRule ^([a-z]{2,3}(-[a-z]{2,3})?)/?$ /el-viaje-del-jaguar/$1/ [R=301,L]
 
     # Redirect .html URLs to clean URLs (301)
     RewriteCond %{THE_REQUEST} \s/([^.?]+)\.html[\s?] [NC]
@@ -79,4 +169,6 @@
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'"
 </IfModule>

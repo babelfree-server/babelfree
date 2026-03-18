@@ -1,0 +1,1000 @@
+{
+  "meta": {
+    "description": "A1 ecosystem branches — story-driven thematic sub-journeys",
+    "note": "Each branch extends 2-3 destinations with new narrative + games using the same vocabulary",
+    "totalBranches": 6,
+    "estimatedPlaytime": "30-40 hours"
+  },
+
+  "characterMeta": {
+    "char_poeta": {
+      "id": "char_poeta",
+      "name": "El poeta",
+      "realName": "Rafael Pombo",
+      "avatar": "img/characters/poeta.jpg",
+      "voice": "warm",
+      "description": "Un hombre viejo con un libro abierto. De su libro saltan ranas y luciérnagas."
+    },
+    "char_viajero": {
+      "id": "char_viajero",
+      "name": "El viajero",
+      "realName": "José Eustasio Rivera",
+      "avatar": "img/characters/viajero.jpg",
+      "voice": "grave",
+      "description": "Un hombre joven con un cuaderno. Escribe todo lo que ve."
+    },
+    "char_don_tomas": {
+      "id": "char_don_tomas",
+      "name": "Don Tomás",
+      "realName": "Tomás Carrasquilla",
+      "avatar": "img/characters/don_tomas.jpg",
+      "voice": "gruff",
+      "description": "Un hombre viejo junto al fuego. Habla poco. Cuando habla, todos escuchan."
+    },
+    "char_maestro": {
+      "id": "char_maestro",
+      "name": "El maestro",
+      "realName": "Luis Fernando Macías",
+      "avatar": "img/characters/maestro.jpg",
+      "voice": "gentle",
+      "description": "Un hombre con lentes y un libro. Lee los números como si fueran poemas."
+    },
+    "char_rinrin": {
+      "id": "char_rinrin",
+      "name": "Rinrín",
+      "avatar": "img/characters/rinrin.jpg",
+      "voice": "bright",
+      "description": "Una rana pequeña y verde. Salta del libro del poeta. Su canto significa que el mundo está bien."
+    }
+  },
+
+  "branches": [
+    {
+      "id": "branch_rinrin",
+      "title": "¿Dónde está Rinrín?",
+      "subtitle": "La rana perdida",
+      "unlocksAfter": "dest3",
+      "cefr": "A1",
+      "world": "mundoDeAbajo",
+      "storyThread": "Rinrín the frog has gone silent. The student searches for her through the forest.",
+      "estimatedMinutes": 45,
+      "characterLines": {
+        "char_yaguara": [
+          "La rana no canta. ¿Dónde está?",
+          "Escucha. Nada. Solo silencio.",
+          "Necesitamos encontrar a Rinrín."
+        ],
+        "char_poeta": [
+          "Mi libro está triste sin la rana.",
+          "Las palabras necesitan su voz.",
+          "Escucha con los ojos cerrados."
+        ]
+      },
+      "arrival": {
+        "type": "narrative",
+        "wordReveal": true,
+        "speaker": "yaguara",
+        "label": "Yaguará",
+        "sections": [
+          { "body": "Yaguará escucha. El bosque está callado." },
+          { "body": "La rana Rinrín no canta." },
+          { "body": "El poeta mira su libro. Está vacío." },
+          { "body": "\"¿Dónde está Rinrín?\" — pregunta Yaguará." },
+          { "body": "Vamos a buscarla." }
+        ]
+      },
+      "games": [
+        {
+          "type": "skit",
+          "label": "Escena",
+          "title": "El silencio del bosque",
+          "instruction": "Escucha y responde.",
+          "grammar": ["estar (yo/tú/él)", "question words"],
+          "beats": [
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "El bosque. Todo está callado." },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "enter-left",
+              "text": "Escucho... pero no escucho a Rinrín.", "target": ["escucho"] },
+            { "speaker": "poeta", "name": "El poeta", "animation": "glow",
+              "text": "Rinrín no está aquí. Mi libro está vacío.", "target": ["está"] },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "fade-in",
+              "text": "¿Dónde está Rinrín?", "target": ["Dónde", "está"],
+              "interaction": { "type": "pick", "options": ["En el río", "No sé", "Aquí"], "answer": "No sé" } },
+            { "speaker": "poeta", "name": "El poeta", "animation": "fade-in",
+              "text": "Vamos al río. Rinrín está cerca del agua.", "target": ["río", "agua"] },
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-out",
+              "text": "Yaguará y el poeta caminan al río." }
+          ]
+        },
+        {
+          "type": "fill",
+          "label": "Completar",
+          "grammar": ["estar (yo/tú/él)"],
+          "instruction": "¿Ser o estar?",
+          "vocabulary": ["está", "soy", "eres", "estoy"],
+          "tip": { "title": "ser vs estar", "lines": ["ser → identidad: yo soy Yaguará", "estar → lugar/estado: Rinrín está aquí"], "gloss": "ser = to be (identity), estar = to be (location/state)" },
+          "questions": [
+            { "sentence": "Rinrín no ___ aquí.", "answer": "está", "options": ["está", "es", "soy"] },
+            { "sentence": "Yo ___ Yaguará.", "answer": "soy", "options": ["soy", "estoy", "está"] },
+            { "sentence": "¿Dónde ___ la rana?", "answer": "está", "options": ["está", "es", "eres"] },
+            { "sentence": "El libro ___ vacío.", "answer": "está", "options": ["está", "es", "soy"] },
+            { "sentence": "Yo ___ triste.", "answer": "estoy", "options": ["estoy", "soy", "está"] }
+          ]
+        },
+        {
+          "type": "listening",
+          "label": "Escuchar",
+          "instruction": "Escucha y elige la respuesta.",
+          "questions": [
+            { "audio": "¿Dónde está Rinrín?", "question": "¿Qué pregunta Yaguará?", "answer": "¿Dónde está Rinrín?", "options": ["¿Dónde está Rinrín?", "¿Quién es Rinrín?", "¿Cómo está Rinrín?"] },
+            { "audio": "Rinrín no está aquí.", "question": "¿Está Rinrín aquí?", "answer": "No", "options": ["Sí", "No", "No sé"] },
+            { "audio": "Vamos al río.", "question": "¿Adónde van?", "answer": "Al río", "options": ["Al río", "A la casa", "Al bosque"] }
+          ]
+        },
+        {
+          "type": "pair",
+          "label": "Emparejar",
+          "instruction": "Une las preguntas con las respuestas.",
+          "pairs": [
+            ["¿Dónde está?", "No está aquí."],
+            ["¿Quién es?", "Es Rinrín."],
+            ["¿Cómo está?", "Está triste."],
+            ["¿Qué es?", "Es una rana."]
+          ]
+        },
+        {
+          "type": "builder",
+          "label": "Construir",
+          "instruction": "Ordena las palabras.",
+          "words": ["está", "¿Dónde", "Rinrín", "?"],
+          "answer": "¿Dónde está Rinrín?"
+        },
+        {
+          "type": "conversation",
+          "label": "Conversación",
+          "instruction": "Elige la respuesta.",
+          "turns": [
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "El poeta", "text": "¿Dónde está mi rana?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["No sé. Vamos a buscarla.", "Hola, poeta.", "Yo soy viajero."],
+              "answer": "No sé. Vamos a buscarla."
+            },
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Yaguará", "text": "¿Tú estás triste?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Sí, estoy triste. Rinrín no está.", "No, yo soy viajero.", "Adiós."],
+              "answer": "Sí, estoy triste. Rinrín no está."
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Clasificar",
+          "instruction": "¿Ser o estar?",
+          "categories": ["SER (identidad)", "ESTAR (lugar/estado)"],
+          "items": [
+            { "text": "Yo soy Yaguará", "category": "SER (identidad)" },
+            { "text": "Rinrín está aquí", "category": "ESTAR (lugar/estado)" },
+            { "text": "Tú eres viajero", "category": "SER (identidad)" },
+            { "text": "El libro está vacío", "category": "ESTAR (lugar/estado)" },
+            { "text": "Yo estoy triste", "category": "ESTAR (lugar/estado)" },
+            { "text": "Rinrín es una rana", "category": "SER (identidad)" }
+          ]
+        },
+        {
+          "type": "skit",
+          "label": "Escena",
+          "title": "Junto al río",
+          "instruction": "Escucha y responde.",
+          "grammar": ["estar", "hay"],
+          "beats": [
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "El río. Yaguará y el poeta llegan al agua." },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "enter-left",
+              "text": "¡Mira! Hay algo verde en la piedra.", "target": ["Hay"] },
+            { "speaker": "poeta", "name": "El poeta", "animation": "glow",
+              "text": "¿Es Rinrín?", "target": ["Es"] },
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "No es Rinrín. Es una hoja." },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "fade-in",
+              "text": "Hay silencio. No hay canto. Rinrín no está aquí.", "target": ["silencio", "canto"],
+              "interaction": { "type": "pick", "options": ["Sigamos buscando", "Volvamos", "Esperemos"], "answer": "Sigamos buscando" } },
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-out",
+              "text": "Yaguará escucha algo. Muy lejos. Muy suave. ¿Es un canto?" }
+          ]
+        },
+        {
+          "type": "fill",
+          "label": "Completar",
+          "grammar": ["hay"],
+          "instruction": "Completa con 'hay' o 'está'.",
+          "tip": { "title": "hay vs está", "lines": ["hay → existe: Hay un río.", "está → ubicación: El río está aquí."], "gloss": "hay = there is, está = is (located)" },
+          "questions": [
+            { "sentence": "___ silencio en el bosque.", "answer": "Hay", "options": ["Hay", "Está", "Es"] },
+            { "sentence": "La rana ___ en el río.", "answer": "está", "options": ["hay", "está", "es"] },
+            { "sentence": "No ___ canto. Todo está callado.", "answer": "hay", "options": ["hay", "está", "es"] },
+            { "sentence": "___ algo verde en la piedra.", "answer": "Hay", "options": ["Hay", "Está", "Es"] }
+          ]
+        },
+        {
+          "type": "dictation",
+          "label": "Dictado",
+          "instruction": "Escucha y escribe.",
+          "audio": "¿Dónde está Rinrín?",
+          "answer": "¿Dónde está Rinrín?"
+        },
+        {
+          "type": "cronica",
+          "label": "Crónica",
+          "prompt": "¿Dónde está Rinrín? Escribe una idea.",
+          "placeholder": "Rinrín está en...",
+          "minWords": 3,
+          "storyKey": "rinrin_search",
+          "destination": "branch_rinrin"
+        }
+      ],
+      "departure": {
+        "closingQuestion": "¿Dónde están las voces que no escuchamos?",
+        "yaguaraLine": "El silencio no es vacío. Es una pregunta.",
+        "button": "Continuar el viaje"
+      }
+    },
+
+    {
+      "id": "branch_animales",
+      "title": "Los animales del bosque",
+      "subtitle": "Nombres que se pierden",
+      "unlocksAfter": "dest4",
+      "cefr": "A1",
+      "world": "mundoDeAbajo",
+      "storyThread": "Animals in the forest are losing their names. The student must name them before they vanish.",
+      "estimatedMinutes": 50,
+      "characterLines": {
+        "char_yaguara": [
+          "Los animales están perdiendo sus nombres.",
+          "Si no los nombras, desaparecen.",
+          "Escucha. El pájaro todavía canta."
+        ],
+        "char_rio": [
+          "El agua trae los nombres.",
+          "Escucha el río. Los nombres están aquí.",
+          "No hay prisa. Nombra con cuidado."
+        ]
+      },
+      "arrival": {
+        "type": "narrative",
+        "wordReveal": true,
+        "speaker": "yaguara",
+        "label": "Yaguará",
+        "sections": [
+          { "body": "El bosque tiene animales. Muchos animales." },
+          { "body": "Pero algo pasa." },
+          { "body": "Los animales están perdiendo sus nombres." },
+          { "body": "Un pájaro vuela. ¿Cómo se llama?" },
+          { "body": "Si no lo nombras, desaparece." },
+          { "body": "Vamos a nombrar los animales del bosque." }
+        ]
+      },
+      "games": [
+        {
+          "type": "skit",
+          "label": "Escena",
+          "title": "El pájaro sin nombre",
+          "instruction": "Escucha y responde.",
+          "grammar": ["se llama", "articles el/la/los/las"],
+          "beats": [
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "Un pájaro azul vuela entre los árboles. Está perdido." },
+            { "speaker": "rio", "name": "Río Madre", "animation": "enter-left",
+              "text": "¡Mira! Un pájaro. ¿Cómo se llama?", "target": ["pájaro", "se llama"] },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "fade-in",
+              "text": "Se llama... No sé. No recuerdo.", "target": ["recuerdo"] },
+            { "speaker": "rio", "name": "Río Madre", "animation": "fade-in",
+              "text": "Piensa. Tiene plumas azules. Es pequeño.", "target": ["plumas", "pequeño"] },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "glow",
+              "text": "¡Es un azulejo!",
+              "interaction": { "type": "pick", "options": ["azulejo", "jaguar", "rana"], "answer": "azulejo" } },
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "El pájaro brilla. Su nombre ha vuelto. No desaparece." }
+          ]
+        },
+        {
+          "type": "fill",
+          "label": "Completar",
+          "grammar": ["articles el/la", "animal names"],
+          "instruction": "Completa con el artículo correcto.",
+          "vocabulary": ["el", "la", "pájaro", "rana", "jaguar", "mariposa", "serpiente", "pez", "tortuga", "mono"],
+          "tip": { "title": "el/la", "lines": ["el → masculino: el pájaro, el jaguar, el pez", "la → femenino: la rana, la serpiente, la tortuga"], "gloss": "el = the (m), la = the (f)" },
+          "questions": [
+            { "sentence": "___ pájaro vuela.", "answer": "El", "options": ["El", "La", "Un"] },
+            { "sentence": "___ rana canta.", "answer": "La", "options": ["El", "La", "Un"] },
+            { "sentence": "___ jaguar camina.", "answer": "El", "options": ["El", "La", "Los"] },
+            { "sentence": "___ mariposa vuela.", "answer": "La", "options": ["El", "La", "Las"] },
+            { "sentence": "___ serpiente está en el árbol.", "answer": "La", "options": ["El", "La", "Los"] },
+            { "sentence": "___ pez nada en el río.", "answer": "El", "options": ["El", "La", "Un"] }
+          ]
+        },
+        {
+          "type": "pair",
+          "label": "Emparejar",
+          "instruction": "Une el animal con su descripción.",
+          "pairs": [
+            ["el jaguar", "grande y fuerte"],
+            ["la rana", "pequeña y verde"],
+            ["el pájaro", "tiene plumas"],
+            ["la mariposa", "tiene alas de colores"],
+            ["el pez", "nada en el río"],
+            ["la tortuga", "lenta y tiene caparazón"]
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Clasificar",
+          "instruction": "¿En el agua o en el bosque?",
+          "categories": ["En el agua", "En el bosque"],
+          "items": [
+            { "text": "el pez", "category": "En el agua" },
+            { "text": "la tortuga", "category": "En el agua" },
+            { "text": "la rana", "category": "En el agua" },
+            { "text": "el jaguar", "category": "En el bosque" },
+            { "text": "el mono", "category": "En el bosque" },
+            { "text": "la mariposa", "category": "En el bosque" },
+            { "text": "el pájaro", "category": "En el bosque" },
+            { "text": "la serpiente", "category": "En el bosque" }
+          ]
+        },
+        {
+          "type": "listening",
+          "label": "Escuchar",
+          "instruction": "Escucha y elige el animal.",
+          "questions": [
+            { "audio": "Es pequeña, verde, y canta. Vive cerca del agua.", "question": "¿Qué animal es?", "answer": "la rana", "options": ["la rana", "el pez", "la tortuga"] },
+            { "audio": "Es grande, fuerte, y camina en el bosque. Tiene manchas.", "question": "¿Qué animal es?", "answer": "el jaguar", "options": ["el jaguar", "el mono", "el pájaro"] },
+            { "audio": "Nada en el río. No tiene piernas.", "question": "¿Qué animal es?", "answer": "el pez", "options": ["el pez", "la rana", "la tortuga"] },
+            { "audio": "Tiene alas de muchos colores. Vuela entre las flores.", "question": "¿Qué animal es?", "answer": "la mariposa", "options": ["la mariposa", "el pájaro", "la serpiente"] }
+          ]
+        },
+        {
+          "type": "builder",
+          "label": "Construir",
+          "instruction": "Ordena las palabras.",
+          "words": ["jaguar", "El", "el", "camina", "en", "bosque"],
+          "answer": "El jaguar camina en el bosque"
+        },
+        {
+          "type": "translation",
+          "label": "Traducir",
+          "instruction": "Elige la traducción.",
+          "questions": [
+            { "prompt": "the bird", "answer": "el pájaro", "options": ["el pájaro", "la rana", "el pez"] },
+            { "prompt": "the frog", "answer": "la rana", "options": ["la serpiente", "la rana", "el mono"] },
+            { "prompt": "the butterfly", "answer": "la mariposa", "options": ["la tortuga", "la mariposa", "la rana"] },
+            { "prompt": "the fish", "answer": "el pez", "options": ["el pez", "el mono", "el pájaro"] }
+          ]
+        },
+        {
+          "type": "conversation",
+          "label": "Conversación",
+          "instruction": "Elige la respuesta.",
+          "turns": [
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Río Madre", "text": "¡Mira! Un animal. Es grande y tiene manchas. ¿Qué es?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Es un jaguar.", "Es una rana.", "Es un pez."],
+              "answer": "Es un jaguar."
+            },
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Yaguará", "text": "¿Cuántos animales hay en el río?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Hay tres: el pez, la rana y la tortuga.", "Hay uno: el jaguar.", "No hay animales."],
+              "answer": "Hay tres: el pez, la rana y la tortuga."
+            }
+          ]
+        },
+        {
+          "type": "skit",
+          "label": "Escena",
+          "title": "Nombrar es salvar",
+          "instruction": "Escucha y responde.",
+          "beats": [
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "Yaguará dice los nombres. Los animales brillan." },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "glow",
+              "text": "El jaguar. La rana. El pájaro. La mariposa.", "target": ["jaguar", "rana", "pájaro", "mariposa"] },
+            { "speaker": "rio", "name": "Río Madre", "animation": "fade-in",
+              "text": "¡Los nombres vuelven! Los animales no desaparecen.", "target": ["nombres", "vuelven"] },
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-out",
+              "text": "El bosque brilla. Las voces de los animales llenan el aire. Pero en lo profundo del bosque... hay silencio todavía." }
+          ]
+        },
+        {
+          "type": "dictation",
+          "label": "Dictado",
+          "instruction": "Escucha y escribe.",
+          "audio": "El jaguar camina en el bosque.",
+          "answer": "El jaguar camina en el bosque."
+        },
+        {
+          "type": "cronica",
+          "label": "Crónica",
+          "prompt": "¿Qué animal te gusta? Escribe sobre un animal del bosque.",
+          "placeholder": "Me gusta... porque...",
+          "minWords": 5,
+          "storyKey": "animals_named",
+          "destination": "branch_animales"
+        }
+      ],
+      "departure": {
+        "closingQuestion": "¿Qué pasa cuando un nombre se pierde?",
+        "yaguaraLine": "Nombrar es la primera forma de cuidar.",
+        "button": "Continuar"
+      }
+    },
+
+    {
+      "id": "branch_familia",
+      "title": "Las voces de la familia",
+      "subtitle": "Los que caminan contigo",
+      "unlocksAfter": "dest8",
+      "cefr": "A1",
+      "world": "mundoDeAbajo",
+      "storyThread": "Yaguará introduces her family one by one. Each has a voice and a way of being.",
+      "estimatedMinutes": 50,
+      "characterLines": {
+        "char_yaguara": [
+          "Mi familia es grande.",
+          "Cada uno tiene su voz.",
+          "Escucha a mi mamá."
+        ],
+        "char_mama_jaguar": [
+          "Mi pequeña... camina con cuidado.",
+          "La familia es la primera raíz.",
+          "Comemos juntos. Siempre juntos."
+        ],
+        "char_abuela_ceiba": [
+          "Las raíces recuerdan.",
+          "La familia es larga. Muy larga.",
+          "Escucha la tierra."
+        ]
+      },
+      "arrival": {
+        "type": "narrative",
+        "wordReveal": true,
+        "speaker": "yaguara",
+        "label": "Yaguará",
+        "sections": [
+          { "body": "Mi familia vive junto al río." },
+          { "body": "Mi mamá se llama Luna. Es grande y fuerte." },
+          { "body": "Mi papá se llama Sol. Siempre está lejos." },
+          { "body": "Mi hermano se llama Río. Juega en el agua." },
+          { "body": "Mi hermana se llama Flor. Duerme mucho." },
+          { "body": "Y la abuela... La Abuela Ceiba. Ella sabe todo." }
+        ]
+      },
+      "games": [
+        {
+          "type": "skit",
+          "label": "Escena",
+          "title": "La mañana de la familia",
+          "instruction": "Escucha y responde.",
+          "grammar": ["possessives mi/tu/su", "daily routines"],
+          "beats": [
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "Es de mañana. El sol sale. La familia despierta." },
+            { "speaker": "mama_jaguar", "name": "Mamá Jaguar", "animation": "enter-left",
+              "text": "Buenos días, hija. ¿Cómo estás?", "target": ["Buenos días", "estás"] },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "fade-in",
+              "text": "Estoy bien, mamá. Tengo hambre.", "target": ["bien", "hambre"] },
+            { "speaker": "rio", "name": "Río", "animation": "bounce",
+              "text": "¡Yo también! Vamos al río. Hay peces.", "target": ["río", "peces"],
+              "interaction": { "type": "pick", "options": ["Sí, vamos.", "No, tengo sueño.", "Adiós."], "answer": "Sí, vamos." } },
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-out",
+              "text": "La familia camina al río. Juntos." }
+          ]
+        },
+        {
+          "type": "fill",
+          "label": "Completar",
+          "grammar": ["possessives mi/tu/su"],
+          "instruction": "Completa con mi, tu o su.",
+          "tip": { "title": "Posesivos", "lines": ["mi → yo: mi mamá", "tu → tú: tu hermano", "su → él/ella: su casa"], "gloss": "mi = my, tu = your, su = his/her" },
+          "questions": [
+            { "sentence": "___ mamá se llama Luna.", "answer": "Mi", "options": ["Mi", "Tu", "Su"] },
+            { "sentence": "¿Cómo se llama ___ hermano?", "answer": "tu", "options": ["mi", "tu", "su"] },
+            { "sentence": "___ papá está lejos.", "answer": "Su", "options": ["Mi", "Tu", "Su"] },
+            { "sentence": "___ familia vive junto al río.", "answer": "Mi", "options": ["Mi", "Tu", "Su"] },
+            { "sentence": "¿Dónde está ___ casa?", "answer": "tu", "options": ["mi", "tu", "su"] }
+          ]
+        },
+        {
+          "type": "pair",
+          "label": "Emparejar",
+          "instruction": "Une cada miembro con su nombre.",
+          "pairs": [
+            ["la mamá", "Luna"],
+            ["el papá", "Sol"],
+            ["el hermano", "Río"],
+            ["la hermana", "Flor"],
+            ["la abuela", "Ceiba"]
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Clasificar",
+          "instruction": "¿Grande o pequeño?",
+          "categories": ["Grande", "Pequeño/a"],
+          "items": [
+            { "text": "Mamá Jaguar", "category": "Grande" },
+            { "text": "Papá Sol", "category": "Grande" },
+            { "text": "Abuela Ceiba", "category": "Grande" },
+            { "text": "Río", "category": "Pequeño/a" },
+            { "text": "Flor", "category": "Pequeño/a" },
+            { "text": "Yaguará", "category": "Pequeño/a" }
+          ]
+        },
+        {
+          "type": "listening",
+          "label": "Escuchar",
+          "instruction": "Escucha y elige.",
+          "questions": [
+            { "audio": "Mi mamá se llama Luna. Es grande y fuerte.", "question": "¿Cómo se llama la mamá?", "answer": "Luna", "options": ["Luna", "Sol", "Flor"] },
+            { "audio": "Mi hermano juega en el agua. Se llama Río.", "question": "¿Qué hace Río?", "answer": "Juega en el agua", "options": ["Juega en el agua", "Duerme", "Come"] },
+            { "audio": "La abuela sabe todo. Se llama Ceiba.", "question": "¿Quién sabe todo?", "answer": "La abuela Ceiba", "options": ["La abuela Ceiba", "Mamá Jaguar", "Papá Sol"] }
+          ]
+        },
+        {
+          "type": "builder",
+          "label": "Construir",
+          "instruction": "Ordena las palabras.",
+          "words": ["se", "mamá", "Mi", "Luna", "llama"],
+          "answer": "Mi mamá se llama Luna"
+        },
+        {
+          "type": "conversation",
+          "label": "Conversación",
+          "instruction": "Elige la respuesta.",
+          "turns": [
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Abuela Ceiba", "text": "¿Cómo se llama tu mamá, viajero?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Mi mamá se llama...", "Yo soy viajero.", "Adiós, abuela."],
+              "answer": "Mi mamá se llama..."
+            },
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Río", "text": "¿Tienes hermanos?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Sí, tengo hermanos.", "No, no tengo.", "Sí, tengo un hermano."],
+              "answer": "Sí, tengo hermanos."
+            }
+          ]
+        },
+        {
+          "type": "dictation",
+          "label": "Dictado",
+          "instruction": "Escucha y escribe.",
+          "audio": "Mi familia vive junto al río.",
+          "answer": "Mi familia vive junto al río."
+        },
+        {
+          "type": "cronica",
+          "label": "Crónica",
+          "prompt": "¿Cómo es tu familia? Escribe sobre ellos.",
+          "placeholder": "Mi familia...",
+          "minWords": 5,
+          "storyKey": "family_voices",
+          "destination": "branch_familia"
+        }
+      ],
+      "departure": {
+        "closingQuestion": "¿Quién camina contigo?",
+        "yaguaraLine": "La familia es el primer idioma. Las primeras palabras nacen en casa.",
+        "button": "Continuar"
+      }
+    },
+
+    {
+      "id": "branch_comida",
+      "title": "La mesa del bosque",
+      "subtitle": "Compartir es la primera palabra",
+      "unlocksAfter": "dest7",
+      "cefr": "A1",
+      "world": "mundoDeAbajo",
+      "storyThread": "The communal meal. Naming food is naming survival. Don Tomás watches silently.",
+      "estimatedMinutes": 40,
+      "characterLines": {
+        "char_yaguara": [
+          "Tengo hambre. ¿Qué comemos?",
+          "La comida es para todos.",
+          "El fuego calienta la comida y las palabras."
+        ],
+        "char_don_tomas": [
+          "Come.",
+          "La mesa es grande. Todos caben.",
+          "Las manos que cocinan son sabias."
+        ]
+      },
+      "arrival": {
+        "type": "narrative",
+        "wordReveal": true,
+        "speaker": "yaguara",
+        "label": "Yaguará",
+        "sections": [
+          { "body": "Hay un fuego. Don Tomás está sentado." },
+          { "body": "\"Come\" — dice Don Tomás." },
+          { "body": "En la mesa hay frutas, pescado, agua." },
+          { "body": "Todos comen juntos. La comida es para todos." },
+          { "body": "Cada fruta tiene un nombre. Vamos a aprenderlos." }
+        ]
+      },
+      "games": [
+        {
+          "type": "skit",
+          "label": "Escena",
+          "title": "Junto al fuego",
+          "instruction": "Escucha y responde.",
+          "grammar": ["tener (yo tengo, tú tienes)", "querer (yo quiero)"],
+          "beats": [
+            { "speaker": "narrator", "name": "Narrador", "animation": "fade-in",
+              "text": "El fuego. La noche. Don Tomás cocina pescado." },
+            { "speaker": "don_tomas", "name": "Don Tomás", "animation": "fade-in",
+              "text": "Come.", "target": ["Come"] },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "enter-left",
+              "text": "Tengo hambre. ¿Qué hay?", "target": ["Tengo", "hambre", "hay"] },
+            { "speaker": "don_tomas", "name": "Don Tomás", "animation": "fade-in",
+              "text": "Hay pescado. Hay fruta. Hay agua.", "target": ["pescado", "fruta", "agua"] },
+            { "speaker": "yaguara", "name": "Yaguará", "animation": "fade-in",
+              "text": "Quiero fruta.",
+              "interaction": { "type": "pick", "options": ["fruta", "pescado", "agua"], "answer": "fruta" } },
+            { "speaker": "don_tomas", "name": "Don Tomás", "animation": "fade-out",
+              "text": "Bien. Come. La fruta es dulce." }
+          ]
+        },
+        {
+          "type": "fill",
+          "label": "Completar",
+          "grammar": ["tener/querer"],
+          "instruction": "Completa la frase.",
+          "vocabulary": ["tengo", "tienes", "tiene", "quiero", "quieres"],
+          "questions": [
+            { "sentence": "Yo ___ hambre.", "answer": "tengo", "options": ["tengo", "tienes", "tiene"] },
+            { "sentence": "¿Tú ___ sed?", "answer": "tienes", "options": ["tengo", "tienes", "tiene"] },
+            { "sentence": "Yo ___ agua, por favor.", "answer": "quiero", "options": ["quiero", "tengo", "tiene"] },
+            { "sentence": "Ella ___ fruta.", "answer": "tiene", "options": ["tengo", "tienes", "tiene"] },
+            { "sentence": "¿Qué ___ tú?", "answer": "quieres", "options": ["quiero", "quieres", "tengo"] }
+          ]
+        },
+        {
+          "type": "pair",
+          "label": "Emparejar",
+          "instruction": "Une la comida con la descripción.",
+          "pairs": [
+            ["el pescado", "del río"],
+            ["la fruta", "dulce"],
+            ["el agua", "del río"],
+            ["el mango", "amarillo"],
+            ["el plátano", "largo"]
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Clasificar",
+          "instruction": "¿Comida o bebida?",
+          "categories": ["Comida", "Bebida"],
+          "items": [
+            { "text": "el pescado", "category": "Comida" },
+            { "text": "la fruta", "category": "Comida" },
+            { "text": "el mango", "category": "Comida" },
+            { "text": "el plátano", "category": "Comida" },
+            { "text": "el agua", "category": "Bebida" },
+            { "text": "el jugo", "category": "Bebida" }
+          ]
+        },
+        {
+          "type": "builder",
+          "label": "Construir",
+          "instruction": "Ordena las palabras.",
+          "words": ["Tengo", "Yo", "hambre"],
+          "answer": "Yo tengo hambre"
+        },
+        {
+          "type": "conversation",
+          "label": "Conversación",
+          "instruction": "Elige la respuesta.",
+          "turns": [
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Don Tomás", "text": "¿Tienes hambre?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Sí, tengo hambre.", "No, estoy bien.", "Quiero dormir."],
+              "answer": "Sí, tengo hambre."
+            },
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Yaguará", "text": "¿Qué quieres comer?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Quiero fruta.", "Soy viajero.", "Hola."],
+              "answer": "Quiero fruta."
+            }
+          ]
+        },
+        {
+          "type": "dictation",
+          "label": "Dictado",
+          "instruction": "Escucha y escribe.",
+          "audio": "Tengo hambre. Quiero fruta.",
+          "answer": "Tengo hambre. Quiero fruta."
+        },
+        {
+          "type": "cronica",
+          "label": "Crónica",
+          "prompt": "¿Qué te gusta comer? Escribe sobre tu comida favorita.",
+          "placeholder": "Me gusta comer...",
+          "minWords": 4,
+          "storyKey": "shared_meal",
+          "destination": "branch_comida"
+        }
+      ],
+      "departure": {
+        "closingQuestion": "¿Qué compartimos cuando comemos juntos?",
+        "yaguaraLine": "Compartir es la primera forma de hablar.",
+        "button": "Continuar"
+      }
+    },
+
+    {
+      "id": "branch_casa",
+      "title": "Las palabras de la casa",
+      "subtitle": "Un lugar de palabras tranquilas",
+      "unlocksAfter": "dest9",
+      "cefr": "A1",
+      "world": "mundoDeAbajo",
+      "storyThread": "Yaguará retreats into the warmth of home. Every object has a name. But the silence creeps closer.",
+      "estimatedMinutes": 40,
+      "characterLines": {
+        "char_yaguara": [
+          "Mi casa. Mi lugar.",
+          "Cada cosa tiene un nombre.",
+          "Aquí estoy segura."
+        ],
+        "char_mama_jaguar": [
+          "Entra, hija. Descansa.",
+          "La casa es donde comienzan las palabras.",
+          "Duerme. Mañana caminamos."
+        ]
+      },
+      "arrival": {
+        "type": "narrative",
+        "wordReveal": true,
+        "speaker": "yaguara",
+        "label": "Yaguará",
+        "sections": [
+          { "body": "Yaguará llega a su casa. Está cansada." },
+          { "body": "La casa está junto al río. Es pequeña pero bonita." },
+          { "body": "Hay una mesa. Hay sillas. Hay una ventana." },
+          { "body": "Mamá Jaguar dice: \"Entra, hija. Descansa.\"" },
+          { "body": "Pero afuera... el silencio crece." }
+        ]
+      },
+      "games": [
+        {
+          "type": "fill",
+          "label": "Completar",
+          "grammar": ["hay + indefinite articles"],
+          "instruction": "Completa con 'hay un/una' o 'hay'.",
+          "vocabulary": ["mesa", "silla", "ventana", "puerta", "cama", "fuego"],
+          "questions": [
+            { "sentence": "___ mesa en la cocina.", "answer": "Hay una", "options": ["Hay una", "Es una", "Está una"] },
+            { "sentence": "En mi casa ___ tres sillas.", "answer": "hay", "options": ["hay", "es", "está"] },
+            { "sentence": "___ ventana grande.", "answer": "Hay una", "options": ["Hay una", "Tiene una", "Es una"] },
+            { "sentence": "¿___ fuego?", "answer": "Hay", "options": ["Hay", "Es", "Está"] }
+          ]
+        },
+        {
+          "type": "pair",
+          "label": "Emparejar",
+          "instruction": "Une cada cosa con su lugar.",
+          "pairs": [
+            ["la mesa", "la cocina"],
+            ["la cama", "el cuarto"],
+            ["la silla", "junto a la mesa"],
+            ["la ventana", "la pared"],
+            ["el fuego", "el centro"]
+          ]
+        },
+        {
+          "type": "listening",
+          "label": "Escuchar",
+          "instruction": "Escucha y elige.",
+          "questions": [
+            { "audio": "En mi casa hay una mesa, tres sillas, y una ventana grande.", "question": "¿Cuántas sillas hay?", "answer": "Tres", "options": ["Tres", "Dos", "Una"] },
+            { "audio": "La casa está junto al río. Es pequeña pero bonita.", "question": "¿Dónde está la casa?", "answer": "Junto al río", "options": ["Junto al río", "En el bosque", "En la montaña"] }
+          ]
+        },
+        {
+          "type": "builder",
+          "label": "Construir",
+          "instruction": "Ordena las palabras.",
+          "words": ["casa", "junto", "al", "Mi", "está", "río"],
+          "answer": "Mi casa está junto al río"
+        },
+        {
+          "type": "conversation",
+          "label": "Conversación",
+          "instruction": "Elige la respuesta.",
+          "turns": [
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Mamá Jaguar", "text": "¿Cómo es tu casa, viajero?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Mi casa es pequeña y bonita.", "Yo soy viajero.", "Hay un río."],
+              "answer": "Mi casa es pequeña y bonita."
+            }
+          ]
+        },
+        {
+          "type": "dictation",
+          "label": "Dictado",
+          "instruction": "Escucha y escribe.",
+          "audio": "Mi casa está junto al río.",
+          "answer": "Mi casa está junto al río."
+        },
+        {
+          "type": "cronica",
+          "label": "Crónica",
+          "prompt": "¿Cómo es tu casa? Describe tu casa.",
+          "placeholder": "Mi casa tiene...",
+          "minWords": 5,
+          "storyKey": "house_words",
+          "destination": "branch_casa"
+        }
+      ],
+      "departure": {
+        "closingQuestion": "¿Las palabras de tu casa son las mismas que las de afuera?",
+        "yaguaraLine": "Una casa es un lugar de palabras tranquilas. Pero las palabras tranquilas también necesitan protección.",
+        "button": "Continuar"
+      }
+    },
+
+    {
+      "id": "branch_tiempo",
+      "title": "Los números del mundo",
+      "subtitle": "El maestro cuenta",
+      "unlocksAfter": "dest10",
+      "cefr": "A1",
+      "world": "mundoDeAbajo",
+      "storyThread": "El Maestro teaches counting as poetry. Numbers tell stories — how old, how many moons of silence.",
+      "estimatedMinutes": 45,
+      "characterLines": {
+        "char_yaguara": [
+          "Uno, dos, tres... ¿cuántas lunas sin Rinrín?",
+          "Los números cuentan historias.",
+          "El tiempo pasa. Las palabras se quedan."
+        ],
+        "char_maestro": [
+          "Los números.",
+          "Cada número es una historia.",
+          "Cuenta conmigo."
+        ]
+      },
+      "arrival": {
+        "type": "narrative",
+        "wordReveal": true,
+        "speaker": "yaguara",
+        "label": "Yaguará",
+        "sections": [
+          { "body": "El maestro está junto al río. Tiene un libro." },
+          { "body": "\"Los números\" — dice." },
+          { "body": "Yaguará pregunta: \"¿Cuántas lunas sin la rana?\"" },
+          { "body": "El maestro cuenta: \"Una... dos... tres... cuatro.\"" },
+          { "body": "\"Cuatro lunas de silencio\" — dice Yaguará." },
+          { "body": "Los números cuentan historias. Vamos a aprender." }
+        ]
+      },
+      "games": [
+        {
+          "type": "fill",
+          "label": "Completar",
+          "grammar": ["numbers 1-20", "¿cuántos/cuántas?"],
+          "instruction": "Completa con el número correcto.",
+          "vocabulary": ["uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez"],
+          "questions": [
+            { "sentence": "Yaguará tiene ___ años.", "answer": "tres", "options": ["tres", "cinco", "uno"] },
+            { "sentence": "Hay ___ lunas de silencio.", "answer": "cuatro", "options": ["dos", "cuatro", "diez"] },
+            { "sentence": "Hay ___ animales en el río: el pez, la rana y la tortuga.", "answer": "tres", "options": ["dos", "tres", "cuatro"] },
+            { "sentence": "La familia tiene ___ miembros: mamá, papá, Río, Flor y Yaguará.", "answer": "cinco", "options": ["tres", "cinco", "siete"] }
+          ]
+        },
+        {
+          "type": "pair",
+          "label": "Emparejar",
+          "instruction": "Une el número con la palabra.",
+          "pairs": [
+            ["1", "uno"],
+            ["2", "dos"],
+            ["3", "tres"],
+            ["5", "cinco"],
+            ["7", "siete"],
+            ["10", "diez"]
+          ]
+        },
+        {
+          "type": "listening",
+          "label": "Escuchar",
+          "instruction": "Escucha y elige el número.",
+          "questions": [
+            { "audio": "Tengo tres años.", "question": "¿Cuántos años tiene?", "answer": "tres", "options": ["tres", "cinco", "siete"] },
+            { "audio": "Hay cuatro lunas de silencio.", "question": "¿Cuántas lunas?", "answer": "cuatro", "options": ["dos", "cuatro", "seis"] },
+            { "audio": "En mi familia somos cinco.", "question": "¿Cuántos son?", "answer": "cinco", "options": ["tres", "cinco", "ocho"] }
+          ]
+        },
+        {
+          "type": "builder",
+          "label": "Construir",
+          "instruction": "Ordena las palabras.",
+          "words": ["lunas", "Cuatro", "silencio", "de"],
+          "answer": "Cuatro lunas de silencio"
+        },
+        {
+          "type": "conversation",
+          "label": "Conversación",
+          "instruction": "Elige la respuesta.",
+          "turns": [
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "El maestro", "text": "¿Cuántos años tienes, viajero?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Tengo... años.", "Soy viajero.", "Hola, maestro."],
+              "answer": "Tengo... años."
+            },
+            {
+              "dialogue": [
+                { "speaker": "A", "name": "Yaguará", "text": "¿Cuántas lunas sin Rinrín?" },
+                { "speaker": "B", "name": "Tú", "text": "???" }
+              ],
+              "options": ["Cuatro lunas.", "No sé.", "Muchas lunas."],
+              "answer": "Cuatro lunas."
+            }
+          ]
+        },
+        {
+          "type": "dictation",
+          "label": "Dictado",
+          "instruction": "Escucha y escribe.",
+          "audio": "Cuatro lunas de silencio.",
+          "answer": "Cuatro lunas de silencio."
+        },
+        {
+          "type": "cronica",
+          "label": "Crónica",
+          "prompt": "¿Cuántos años tienes? ¿Cuántos en tu familia? Escribe con números.",
+          "placeholder": "Tengo... años. En mi familia somos...",
+          "minWords": 5,
+          "storyKey": "numbers_world",
+          "destination": "branch_tiempo"
+        }
+      ],
+      "departure": {
+        "closingQuestion": "¿Qué cuentan los números que las palabras no pueden?",
+        "yaguaraLine": "Los números cuentan historias. Escúchalas.",
+        "button": "Continuar"
+      }
+    }
+  ]
+}

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Admin - El Viaje del Jaguar</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="luxury.css">
+    <style>
+        /* Reset luxury body overlays for admin */
+        body::before, body::after { display: none !important; }
+        body {
+            font-family: var(--font-body);
+            background: #0a0a0f;
+            color: #e8e4d9;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Auth gate */
+        .fb-auth-gate {
+            max-width: 400px;
+            margin: 15vh auto;
+            text-align: center;
+        }
+        .fb-auth-gate h1 {
+            font-family: var(--font-display);
+            color: var(--lux-gold);
+            margin-bottom: 30px;
+        }
+        .fb-auth-gate input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: #e8e4d9;
+            font-size: 16px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        .fb-auth-gate button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #bf953f, #d4a843);
+            border: none;
+            border-radius: 8px;
+            color: #0a0a0f;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .fb-auth-gate button:hover { opacity: 0.9; }
+
+        /* Main admin container */
+        .fb-admin { display: none; max-width: 1400px; margin: 0 auto; }
+        .fb-admin.active { display: block; }
+
+        .fb-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .fb-header h1 {
+            font-family: var(--font-display);
+            color: var(--lux-gold);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Filters */
+        .fb-filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .fb-filters select {
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 6px;
+            color: #e8e4d9;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .fb-filters select option { background: #1a1a2e; }
+
+        /* Stats bar */
+        .fb-stats {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .fb-stat {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 14px;
+        }
+        .fb-stat strong { color: var(--lux-gold); }
+
+        /* Table */
+        .fb-table-wrap {
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.02);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th {
+            text-align: left;
+            padding: 14px 12px;
+            background: rgba(212,168,67,0.08);
+            color: var(--lux-gold-light);
+            font-weight: 600;
+            white-space: nowrap;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            vertical-align: top;
+        }
+        tr:hover td { background: rgba(255,255,255,0.03); }
+
+        .fb-msg-preview {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .fb-msg-preview:hover { color: var(--lux-gold-light); }
+
+        /* Status badges */
+        .fb-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .fb-badge-new { background: rgba(59,130,246,0.2); color: #60a5fa; }
+        .fb-badge-reviewed { background: rgba(251,191,36,0.2); color: #fbbf24; }
+        .fb-badge-accepted { background: rgba(52,211,153,0.2); color: #34d399; }
+        .fb-badge-resolved { background: rgba(34,197,94,0.2); color: #22c55e; }
+        .fb-badge-dismissed { background: rgba(156,163,175,0.2); color: #9ca3af; }
+
+        .fb-type-error { color: #f87171; }
+        .fb-type-suggestion { color: #60a5fa; }
+        .fb-type-content { color: #a78bfa; }
+        .fb-type-technical { color: #fbbf24; }
+        .fb-type-question { color: #c084fc; }
+        .fb-type-other { color: #9ca3af; }
+
+        /* Pagination */
+        .fb-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        .fb-pagination button {
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            color: #e8e4d9;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .fb-pagination button:disabled { opacity: 0.3; cursor: default; }
+        .fb-pagination button:hover:not(:disabled) { background: rgba(255,255,255,0.1); }
+
+        /* Modal */
+        .fb-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .fb-modal-overlay.active { display: flex; }
+        .fb-modal {
+            background: #14142a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 30px;
+            box-shadow: var(--lux-shadow-xl);
+        }
+        .fb-modal h2 {
+            font-family: var(--font-display);
+            color: var(--lux-gold);
+            margin: 0 0 20px;
+        }
+        .fb-modal-field { margin-bottom: 16px; }
+        .fb-modal-field label {
+            display: block;
+            font-size: 12px;
+            color: var(--lux-gold-light);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .fb-modal-field .fb-value {
+            background: rgba(255,255,255,0.04);
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .fb-modal textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 6px;
+            color: #e8e4d9;
+            font-family: var(--font-body);
+            font-size: 14px;
+            resize: vertical;
+            min-height: 80px;
+            box-sizing: border-box;
+        }
+        .fb-modal select {
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 6px;
+            color: #e8e4d9;
+            font-size: 14px;
+        }
+        .fb-modal select option { background: #1a1a2e; }
+        .fb-modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        .fb-modal-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+        .fb-modal-actions button:hover { opacity: 0.85; }
+        .fb-btn-save {
+            background: linear-gradient(135deg, #bf953f, #d4a843);
+            color: #0a0a0f;
+        }
+        .fb-btn-reply {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+        }
+        .fb-btn-reply:disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
+        .fb-btn-close {
+            background: rgba(255,255,255,0.1);
+            color: #e8e4d9;
+        }
+        .fb-reply-section {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .fb-reply-section h3 {
+            color: #a855f7;
+            font-size: 14px;
+            margin: 0 0 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .fb-reply-sent {
+            color: #22c55e;
+            font-size: 13px;
+            margin-top: 8px;
+            display: none;
+        }
+
+        /* Empty state */
+        .fb-empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Loading */
+        .fb-loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--lux-gold);
+        }
+
+        @media (max-width: 768px) {
+            .fb-header h1 { font-size: 1.3rem; }
+            .fb-modal { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Auth Gate -->
+<div class="fb-auth-gate" id="authGate">
+    <h1>Feedback Admin</h1>
+    <input type="email" id="authEmail" placeholder="Admin email" autocomplete="off">
+    <input type="password" id="authPassword" placeholder="Contraseña" autocomplete="off" style="margin-top:12px">
+    <button onclick="authenticate()">Entrar</button>
+    <div id="authError" style="color:#f87171;font-size:14px;min-height:20px;margin-top:8px"></div>
+</div>
+
+<!-- Admin Panel -->
+<div class="fb-admin" id="adminPanel">
+    <div class="fb-header">
+        <h1>Feedback Admin</h1>
+        <div class="fb-stats" id="statsBar"></div>
+    </div>
+
+    <div class="fb-filters">
+        <select id="filterStatus" onchange="loadFeedback()">
+            <option value="">Todos los estados</option>
+            <option value="new" selected>Nuevos</option>
+            <option value="reviewed">Revisados</option>
+            <option value="accepted">Aceptados</option>
+            <option value="resolved">Resueltos</option>
+            <option value="dismissed">Descartados</option>
+        </select>
+        <select id="filterType" onchange="loadFeedback()">
+            <option value="">Todos los tipos</option>
+            <option value="error">Error</option>
+            <option value="suggestion">Sugerencia</option>
+            <option value="content">Contenido</option>
+            <option value="technical">Técnico</option>
+            <option value="question">Pregunta</option>
+            <option value="other">Otro</option>
+        </select>
+        <select id="filterDest" onchange="loadFeedback()">
+            <option value="">Todos los destinos</option>
+        </select>
+    </div>
+
+    <div class="fb-table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Destino</th>
+                    <th>Mensaje</th>
+                    <th>Usuario</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackBody">
+                <tr><td colspan="7" class="fb-loading">Cargando...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="fb-pagination" id="pagination"></div>
+</div>
+
+<!-- Detail Modal -->
+<div class="fb-modal-overlay" id="detailModal">
+    <div class="fb-modal">
+        <h2>Detalle del feedback #<span id="modalId"></span></h2>
+
+        <div class="fb-modal-field">
+            <label>Fecha</label>
+            <div class="fb-value" id="modalDate"></div>
+        </div>
+        <div class="fb-modal-field">
+            <label>Tipo</label>
+            <div class="fb-value" id="modalType"></div>
+        </div>
+        <div class="fb-modal-field">
+            <label>Destino / Juego</label>
+            <div class="fb-value" id="modalDest"></div>
+        </div>
+        <div class="fb-modal-field">
+            <label>Usuario</label>
+            <div class="fb-value" id="modalUser"></div>
+        </div>
+        <div class="fb-modal-field">
+            <label>URL</label>
+            <div class="fb-value" id="modalUrl"></div>
+        </div>
+        <div class="fb-modal-field">
+            <label>Mensaje</label>
+            <div class="fb-value" id="modalMessage"></div>
+        </div>
+        <div class="fb-modal-field" id="modalContextWrap" style="display:none">
+            <label>Contexto</label>
+            <div class="fb-value" id="modalContext" style="max-height:200px;overflow-y:auto;font-size:12px;font-family:monospace;"></div>
+        </div>
+        <div class="fb-modal-field">
+            <label>User Agent</label>
+            <div class="fb-value" id="modalUA" style="font-size:12px;"></div>
+        </div>
+
+        <hr style="border-color:rgba(255,255,255,0.08); margin:20px 0;">
+
+        <div class="fb-modal-field">
+            <label>Estado</label>
+            <select id="modalStatus">
+                <option value="new">Nuevo</option>
+                <option value="reviewed">Revisado</option>
+                <option value="accepted">Aceptado</option>
+                <option value="resolved">Resuelto</option>
+                <option value="dismissed">Descartado</option>
+            </select>
+        </div>
+        <div class="fb-modal-field">
+            <label>Notas de admin</label>
+            <textarea id="modalNotes" placeholder="Notas internas..."></textarea>
+        </div>
+
+        <div class="fb-reply-section" id="replySection" style="display:none;">
+            <h3>Responder al estudiante</h3>
+            <div class="fb-modal-field">
+                <label>Destinatario</label>
+                <div class="fb-value" id="replyTo" style="font-size:13px;"></div>
+            </div>
+            <div class="fb-modal-field">
+                <textarea id="replyText" placeholder="Escribe tu respuesta al estudiante..." style="min-height:120px;"></textarea>
+            </div>
+            <div class="fb-reply-sent" id="replySentMsg">Respuesta enviada correctamente.</div>
+        </div>
+
+        <div class="fb-modal-actions">
+            <button class="fb-btn-save" onclick="saveChanges()">Guardar cambios</button>
+            <button class="fb-btn-reply" id="replyBtn" onclick="sendReply()" style="display:none;">Enviar respuesta</button>
+            <button class="fb-btn-close" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const API = '/api/feedback';
+let currentPage = 1;
+let currentItem = null;
+let authToken = sessionStorage.getItem('fb_token') || '';
+
+async function authenticate() {
+    const email = document.getElementById('authEmail').value.trim();
+    const pw = document.getElementById('authPassword').value;
+    const errEl = document.getElementById('authError');
+    if (!email || !pw) { errEl.textContent = 'Email y contraseña requeridos'; return; }
+    try {
+        const r = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password: pw })
+        });
+        const j = await r.json();
+        if (!j.success) { errEl.textContent = j.error || 'Login failed'; return; }
+        if ((j.data?.user?.role) !== 'admin') { errEl.textContent = 'Se requiere rol de admin'; return; }
+        authToken = j.data?.token || '';
+        if (!authToken) { errEl.textContent = 'No token returned'; return; }
+        sessionStorage.setItem('fb_token', authToken);
+        showAdmin();
+    } catch (e) { errEl.textContent = 'Error: ' + e.message; }
+}
+
+function showAdmin() {
+    document.getElementById('authGate').style.display = 'none';
+    document.getElementById('adminPanel').classList.add('active');
+    populateDestFilter();
+    loadFeedback();
+}
+
+function populateDestFilter() {
+    const sel = document.getElementById('filterDest');
+    for (let i = 1; i <= 58; i++) {
+        const opt = document.createElement('option');
+        opt.value = 'dest' + i;
+        opt.textContent = 'dest' + i;
+        sel.appendChild(opt);
+    }
+}
+
+function getHeaders() {
+    return { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + authToken };
+}
+
+async function loadFeedback() {
+    const status = document.getElementById('filterStatus').value;
+    const type = document.getElementById('filterType').value;
+    const dest = document.getElementById('filterDest').value;
+
+    let url = API + '/list?page=' + currentPage + '&limit=20';
+    if (status) url += '&status=' + status;
+    if (type) url += '&type=' + type;
+    if (dest) url += '&destination=' + dest;
+
+    const tbody = document.getElementById('feedbackBody');
+    tbody.innerHTML = '<tr><td colspan="7" class="fb-loading">Cargando...</td></tr>';
+
+    try {
+        const resp = await fetch(url, { headers: getHeaders() });
+        const json = await resp.json();
+
+        if (!json.success) {
+            tbody.innerHTML = '<tr><td colspan="7" class="fb-empty">Error: ' + (json.error || 'Desconocido') + '</td></tr>';
+            return;
+        }
+
+        const { items, total, page, pages } = json.data;
+
+        // Stats
+        document.getElementById('statsBar').innerHTML =
+            '<div class="fb-stat"><strong>' + total + '</strong> resultados</div>' +
+            '<div class="fb-stat">Pagina <strong>' + page + '</strong> de <strong>' + pages + '</strong></div>';
+
+        if (!items.length) {
+            tbody.innerHTML = '<tr><td colspan="7" class="fb-empty">Sin feedback en esta vista</td></tr>';
+            renderPagination(page, pages);
+            return;
+        }
+
+        tbody.innerHTML = items.map(item => {
+            const d = new Date(item.created_at);
+            const dateStr = d.toLocaleDateString('es') + ' ' + d.toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' });
+            const typeClass = 'fb-type-' + item.feedback_type;
+            const badgeClass = 'fb-badge fb-badge-' + item.status;
+            const preview = item.message.length > 80 ? item.message.substring(0, 80) + '...' : item.message;
+            const user = item.user_email || (item.user_id ? 'ID:' + item.user_id : 'Anonimo');
+
+            return '<tr onclick="openDetail(' + item.id + ')" style="cursor:pointer;">' +
+                '<td>' + item.id + '</td>' +
+                '<td style="white-space:nowrap;">' + dateStr + '</td>' +
+                '<td class="' + typeClass + '">' + item.feedback_type + '</td>' +
+                '<td>' + (item.destination || '-') + '</td>' +
+                '<td class="fb-msg-preview">' + escapeHtml(preview) + '</td>' +
+                '<td>' + escapeHtml(user) + '</td>' +
+                '<td><span class="' + badgeClass + '">' + item.status + '</span></td>' +
+                '</tr>';
+        }).join('');
+
+        renderPagination(page, pages);
+        // Store items for detail view
+        window._fbItems = {};
+        items.forEach(i => window._fbItems[i.id] = i);
+
+    } catch (e) {
+        tbody.innerHTML = '<tr><td colspan="7" class="fb-empty">Error de red: ' + e.message + '</td></tr>';
+    }
+}
+
+function renderPagination(page, pages) {
+    const div = document.getElementById('pagination');
+    if (pages <= 1) { div.innerHTML = ''; return; }
+
+    div.innerHTML =
+        '<button ' + (page <= 1 ? 'disabled' : '') + ' onclick="goPage(' + (page - 1) + ')">Anterior</button>' +
+        '<span>Pagina ' + page + ' / ' + pages + '</span>' +
+        '<button ' + (page >= pages ? 'disabled' : '') + ' onclick="goPage(' + (page + 1) + ')">Siguiente</button>';
+}
+
+function goPage(p) {
+    currentPage = p;
+    loadFeedback();
+}
+
+function openDetail(id) {
+    const item = window._fbItems[id];
+    if (!item) return;
+    currentItem = item;
+
+    document.getElementById('modalId').textContent = item.id;
+    document.getElementById('modalDate').textContent = item.created_at;
+    document.getElementById('modalType').textContent = item.feedback_type;
+    document.getElementById('modalDest').textContent =
+        (item.destination || '-') +
+        (item.game_type ? ' / ' + item.game_type : '') +
+        (item.game_index !== null ? ' (#' + item.game_index + ')' : '');
+    document.getElementById('modalUser').textContent =
+        (item.user_email || 'Anonimo') + (item.user_id ? ' (ID: ' + item.user_id + ')' : '');
+    document.getElementById('modalUrl').textContent = item.url || '-';
+    document.getElementById('modalMessage').textContent = item.message;
+    document.getElementById('modalUA').textContent = item.user_agent || '-';
+
+    const ctxWrap = document.getElementById('modalContextWrap');
+    if (item.context_snapshot) {
+        ctxWrap.style.display = '';
+        try {
+            const parsed = JSON.parse(item.context_snapshot);
+            document.getElementById('modalContext').textContent = JSON.stringify(parsed, null, 2);
+        } catch {
+            document.getElementById('modalContext').textContent = item.context_snapshot;
+        }
+    } else {
+        ctxWrap.style.display = 'none';
+    }
+
+    document.getElementById('modalStatus').value = item.status;
+    document.getElementById('modalNotes').value = item.admin_notes || '';
+
+    // Show reply section only if user has an email
+    const replySection = document.getElementById('replySection');
+    const replyBtn = document.getElementById('replyBtn');
+    if (item.user_email) {
+        replySection.style.display = '';
+        replyBtn.style.display = '';
+        document.getElementById('replyTo').textContent = item.user_email;
+        document.getElementById('replyText').value = '';
+        document.getElementById('replySentMsg').style.display = 'none';
+    } else {
+        replySection.style.display = 'none';
+        replyBtn.style.display = 'none';
+    }
+
+    document.getElementById('detailModal').classList.add('active');
+}
+
+function closeModal() {
+    document.getElementById('detailModal').classList.remove('active');
+    currentItem = null;
+}
+
+async function saveChanges() {
+    if (!currentItem) return;
+
+    const newStatus = document.getElementById('modalStatus').value;
+    const notes = document.getElementById('modalNotes').value.trim();
+
+    const body = { status: newStatus };
+    if (notes) body.admin_notes = notes;
+
+    try {
+        const resp = await fetch(API + '/' + currentItem.id, {
+            method: 'PATCH',
+            headers: getHeaders(),
+            body: JSON.stringify(body)
+        });
+        const json = await resp.json();
+
+        if (json.success) {
+            closeModal();
+            loadFeedback();
+        } else {
+            alert('Error: ' + (json.error || 'Desconocido'));
+        }
+    } catch (e) {
+        alert('Error de red: ' + e.message);
+    }
+}
+
+async function sendReply() {
+    if (!currentItem) return;
+    const replyText = document.getElementById('replyText').value.trim();
+    if (!replyText) {
+        alert('Escribe una respuesta antes de enviar.');
+        return;
+    }
+
+    const btn = document.getElementById('replyBtn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    try {
+        const resp = await fetch(API + '/' + currentItem.id + '/reply', {
+            method: 'POST',
+            headers: getHeaders(),
+            body: JSON.stringify({ reply: replyText })
+        });
+        const json = await resp.json();
+
+        if (json.success) {
+            document.getElementById('replySentMsg').style.display = '';
+            btn.textContent = 'Enviado';
+            // Update local item status
+            currentItem.status = 'resolved';
+            document.getElementById('modalStatus').value = 'resolved';
+            // Refresh list after a moment
+            setTimeout(() => loadFeedback(), 1500);
+        } else {
+            alert('Error: ' + (json.error || 'Desconocido'));
+            btn.disabled = false;
+            btn.textContent = 'Enviar respuesta';
+        }
+    } catch (e) {
+        alert('Error de red: ' + e.message);
+        btn.disabled = false;
+        btn.textContent = 'Enviar respuesta';
+    }
+}
+
+function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
+// Close modal on overlay click
+document.getElementById('detailModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+});
+
+// Keyboard
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Enter' && document.getElementById('authGate').style.display !== 'none') {
+        authenticate();
+    }
+});
+
+// Init — validate stored token
+if (authToken) {
+    fetch('/api/auth/me', { headers: { 'Authorization': 'Bearer ' + authToken } })
+        .then(r => r.json())
+        .then(j => {
+            if (j.success && (j.data?.role) === 'admin') { showAdmin(); }
+            else { authToken = ''; sessionStorage.removeItem('fb_token'); }
+        })
+        .catch(() => { authToken = ''; sessionStorage.removeItem('fb_token'); });
+}
+</script>
+</body>
+</html>

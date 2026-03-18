@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El mapa del viaje — El Viaje del Jaguar</title>
+    <link rel="stylesheet" href="luxury.css">
+    <link rel="stylesheet" href="css/yaguara-game.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#F4A5A5">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    /* ================================================================
+       STORY MAP — The vertical river of 58 destinations
+       ================================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(180deg, #0d0d1a 0%, #151530 20%, #2a1f10 50%, #1a2520 75%, #1a1208 100%);
+        color: #e8d5b7;
+        min-height: 100vh;
+    }
+
+    /* --- Header --- */
+    .sm-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+    }
+    .sm-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 11%;
+        transform: scale(1.2);
+        border: 2px solid rgba(201, 162, 39, 0.3);
+    }
+    .sm-header-info {
+        flex: 1;
+    }
+    .sm-header-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #c9a227;
+        margin: 0;
+    }
+    .sm-header-progress {
+        font-size: 13px;
+        color: #b8a48a;
+        margin-top: 2px;
+    }
+    .sm-header-actions {
+        display: flex;
+        gap: 12px;
+    }
+    .sm-btn-free {
+        padding: 8px 16px;
+        background: rgba(201, 162, 39, 0.12);
+        border: 1px solid rgba(201, 162, 39, 0.25);
+        border-radius: 10px;
+        color: #c9a227;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    .sm-btn-free:hover {
+        background: rgba(201, 162, 39, 0.2);
+    }
+
+    /* --- Progress bar --- */
+    .sm-progress-bar {
+        height: 3px;
+        background: rgba(201, 162, 39, 0.1);
+    }
+    .sm-progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #c9a227, #c67a4a);
+        transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    /* --- River container --- */
+    .sm-river {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+        position: relative;
+    }
+
+    /* Central river line */
+    .sm-river::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg,
+            rgba(100, 100, 160, 0.3) 0%,
+            rgba(100, 100, 160, 0.2) 20%,
+            rgba(198, 122, 74, 0.3) 40%,
+            rgba(198, 122, 74, 0.2) 60%,
+            rgba(90, 110, 74, 0.4) 80%,
+            rgba(90, 110, 74, 0.2) 100%
+        );
+        transform: translateX(-50%);
+    }
+
+    /* --- World dividers --- */
+    .sm-world-divider {
+        text-align: center;
+        padding: 32px 0;
+        position: relative;
+        z-index: 2;
+    }
+    .sm-world-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin-bottom: 4px;
+    }
+    .sm-world-subtitle {
+        font-size: 14px;
+        font-style: italic;
+        opacity: 0.6;
+    }
+    .sm-world-divider.abajo .sm-world-name { color: #8ec07c; }
+    .sm-world-divider.medio .sm-world-name { color: #c67a4a; }
+    .sm-world-divider.arriba .sm-world-name { color: #b4bed2; }
+
+    /* --- CEFR level label --- */
+    .sm-level-label {
+        text-align: center;
+        padding: 16px 0 8px;
+        position: relative;
+        z-index: 2;
+    }
+    .sm-level-badge {
+        display: inline-block;
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    .sm-level-badge.a1 { background: rgba(90, 110, 74, 0.2); color: #8ec07c; }
+    .sm-level-badge.a2 { background: rgba(90, 110, 74, 0.15); color: #7ab06c; }
+    .sm-level-badge.b1 { background: rgba(198, 122, 74, 0.2); color: #c67a4a; }
+    .sm-level-badge.b2 { background: rgba(198, 122, 74, 0.15); color: #b86a3a; }
+    .sm-level-badge.c1 { background: rgba(100, 100, 160, 0.2); color: #b4bed2; }
+    .sm-level-badge.c2 { background: rgba(100, 100, 160, 0.15); color: #9aa4b8; }
+
+    /* --- Destination nodes --- */
+    .sm-dest {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .sm-dest:hover { transform: scale(1.02); }
+    .sm-dest.locked { opacity: 0.35; cursor: default; }
+    .sm-dest.locked:hover { transform: none; }
+
+    /* Alternate left/right */
+    .sm-dest.left {
+        flex-direction: row;
+        padding-right: 52%;
+    }
+    .sm-dest.right {
+        flex-direction: row-reverse;
+        padding-left: 52%;
+    }
+
+    /* Node dot on the river */
+    .sm-dot {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+    .sm-dest.completed .sm-dot {
+        background: #c9a227;
+        box-shadow: 0 0 8px rgba(201, 162, 39, 0.4);
+    }
+    .sm-dest.current .sm-dot {
+        background: #c9a227;
+        box-shadow: 0 0 16px rgba(201, 162, 39, 0.6);
+        animation: smPulse 2s ease-in-out infinite;
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+    .sm-dest.locked .sm-dot {
+        background: rgba(184, 164, 138, 0.2);
+        border: 1px solid rgba(184, 164, 138, 0.15);
+    }
+
+    /* Card */
+    .sm-card {
+        background: rgba(26, 18, 8, 0.6);
+        border: 1px solid rgba(201, 162, 39, 0.1);
+        border-radius: 14px;
+        padding: 14px 18px;
+        flex: 1;
+        transition: all 0.3s;
+    }
+    .sm-dest.left .sm-card { margin-right: 24px; text-align: right; }
+    .sm-dest.right .sm-card { margin-left: 24px; }
+    .sm-dest.completed .sm-card { border-color: rgba(201, 162, 39, 0.2); }
+    .sm-dest.current .sm-card {
+        border-color: rgba(201, 162, 39, 0.4);
+        background: rgba(201, 162, 39, 0.08);
+    }
+
+    .sm-dest-num {
+        font-size: 11px;
+        font-weight: 700;
+        color: #b8a48a;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+    }
+    .sm-dest-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+    .sm-dest.completed .sm-dest-title { color: #c9a227; }
+    .sm-dest.current .sm-dest-title { color: #e8d5b7; }
+    .sm-dest.locked .sm-dest-title { color: #b8a48a; }
+
+    .sm-dest-question {
+        font-size: 13px;
+        font-style: italic;
+        color: #b8a48a;
+        margin-top: 4px;
+        opacity: 0.7;
+    }
+
+    /* Continue button on current destination */
+    .sm-continue {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 20px;
+        background: linear-gradient(135deg, #c9a227, #c67a4a);
+        color: #1a1208;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .sm-continue:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px rgba(201, 162, 39, 0.3);
+    }
+
+    /* Seed icon for completed destinations */
+    .sm-seed {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+    .sm-badges {
+        display: flex; gap: 6px; justify-content: center; margin-top: 4px;
+    }
+    .sm-badge {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 22px; height: 22px; border-radius: 50%;
+        font-size: 12px; line-height: 1;
+    }
+    .sm-badge-port {
+        background: rgba(201, 162, 39, 0.2);
+        color: var(--gold, #c9a227);
+    }
+    .sm-badge-auto {
+        background: rgba(140, 192, 124, 0.2);
+        color: #8ec07c;
+    }
+    .sm-badge-obj {
+        background: rgba(180, 190, 210, 0.2);
+        color: #b4bed2;
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .sm-badge-obj-full {
+        background: rgba(201, 162, 39, 0.3);
+        color: #c9a227;
+        font-size: 13px;
+    }
+
+    /* --- Ecosystem selection interstitial --- */
+    .sm-eco-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(12px);
+        z-index: 200;
+        padding: 40px 24px;
+        overflow-y: auto;
+    }
+    .sm-eco-overlay.visible { display: block; }
+    .sm-eco-inner {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .sm-eco-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: #c9a227;
+        margin-bottom: 8px;
+    }
+    .sm-eco-subtitle {
+        font-size: 15px;
+        color: #b8a48a;
+        margin-bottom: 32px;
+        line-height: 1.6;
+    }
+    .sm-eco-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .sm-eco-card {
+        background: rgba(26, 18, 8, 0.7);
+        border: 1px solid rgba(201, 162, 39, 0.15);
+        border-radius: 14px;
+        padding: 18px 14px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+    }
+    .sm-eco-card:hover {
+        border-color: rgba(201, 162, 39, 0.4);
+        transform: translateY(-2px);
+    }
+    .sm-eco-card-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #e8d5b7;
+        margin-bottom: 4px;
+    }
+    .sm-eco-card-region {
+        font-size: 12px;
+        color: #b8a48a;
+    }
+
+    /* --- Cuaderno button --- */
+    .sm-btn-cuaderno {
+        font-size: 18px;
+        line-height: 1;
+        padding: 6px 10px;
+        position: relative;
+    }
+    .sm-btn-cuaderno .sm-bridge-count {
+        position: absolute;
+        top: -4px; right: -4px;
+        background: #c9a227;
+        color: #1a1208;
+        font-size: 10px;
+        font-weight: 700;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 3px;
+    }
+
+    /* --- Bridge progress bar --- */
+    .sm-bridge-bar {
+        height: 6px;
+        max-width: 600px;
+        margin: 0 auto;
+        background: rgba(139, 69, 19, 0.15);
+        position: relative;
+        overflow: hidden;
+    }
+    .sm-bridge-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #8B4513, #d4a843);
+        transition: width 1s cubic-bezier(0.23, 1, 0.32, 1);
+        position: relative;
+    }
+    .sm-bridge-fill::after {
+        content: '';
+        position: absolute;
+        right: 0; top: 0; bottom: 0;
+        width: 8px;
+        background: #FFD700;
+        opacity: 0.8;
+    }
+    .sm-bridge-bar:empty { display: none; }
+
+    /* --- Animations --- */
+    @keyframes smPulse {
+        0%, 100% { box-shadow: 0 0 16px rgba(201, 162, 39, 0.6); }
+        50% { box-shadow: 0 0 28px rgba(201, 162, 39, 0.8); }
+    }
+
+    /* --- Responsive --- */
+    /* --- Welcome overlay (first-time onboarding) --- */
+    .sm-welcome-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.88);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        z-index: 600;
+        padding: 40px 24px;
+        overflow-y: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .sm-welcome-overlay.visible {
+        display: flex;
+    }
+    .sm-welcome-inner {
+        max-width: 420px;
+        text-align: center;
+    }
+    .sm-welcome-avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 11%;
+        transform: scale(1.9);
+        border: 2px solid rgba(201, 162, 39, 0.3);
+        margin: 0 auto 32px;
+        display: block;
+        overflow: hidden;
+    }
+    .sm-welcome-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: #c9a227;
+        margin-bottom: 16px;
+    }
+    .sm-welcome-text {
+        font-size: 15px;
+        color: #b8a48a;
+        line-height: 1.7;
+        margin-bottom: 32px;
+    }
+    .sm-welcome-btn {
+        display: inline-block;
+        padding: 14px 40px;
+        background: linear-gradient(135deg, rgba(201, 162, 39, 0.15), rgba(201, 162, 39, 0.08));
+        border: 1px solid rgba(201, 162, 39, 0.4);
+        border-radius: 30px;
+        color: #c9a227;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    .sm-welcome-btn:hover {
+        background: linear-gradient(135deg, rgba(201, 162, 39, 0.25), rgba(201, 162, 39, 0.15));
+        border-color: rgba(201, 162, 39, 0.6);
+        transform: translateY(-2px);
+    }
+
+    /* --- Smooth navigation transition --- */
+    body.sm-navigating {
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+    }
+
+    @media (max-width: 480px) {
+        .sm-dest.left { padding-right: 54%; }
+        .sm-dest.right { padding-left: 54%; }
+        .sm-dest-title { font-size: 15px; }
+        .sm-card { padding: 10px 14px; }
+        .sm-eco-grid { grid-template-columns: 1fr; }
+        .sm-welcome-inner { max-width: 320px; }
+        .sm-welcome-avatar { width: 72px; height: 72px; }
+        .sm-welcome-title { font-size: 24px; }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="sm-header">
+        <img src="img/jaguar-hero-full.jpg" alt="Yaguará" class="sm-avatar">
+        <div class="sm-header-info">
+            <h1 class="sm-header-title">El viaje del jaguar</h1>
+            <div class="sm-header-progress" id="smProgress">Cargando...</div>
+        </div>
+        <div class="sm-header-actions">
+            <a href="cuaderno.html" class="sm-btn-free sm-btn-cuaderno" id="smCuadernoBtn" title="El cuaderno de Candelaria">&#128214;</a>
+            <a href="play.html?mode=practice" class="sm-btn-free">Práctica</a>
+            <a href="juegos.html" class="sm-btn-free">Juego libre</a>
+        </div>
+    </header>
+
+    <!-- Progress bar -->
+    <div class="sm-progress-bar">
+        <div class="sm-progress-fill" id="smProgressBar" style="width: 0%"></div>
+    </div>
+
+    <!-- Bridge progress (riddle quest) -->
+    <div class="sm-bridge-bar" id="smBridgeBar"></div>
+
+    <div class="ad-slot" id="adStorymap" style="padding:8px 0;"></div>
+
+    <!-- Ecosystem selection overlay -->
+    <div class="sm-eco-overlay" id="smEcoOverlay">
+        <div class="sm-eco-inner">
+            <div class="sm-eco-title">Elige tu ecosistema</div>
+            <div class="sm-eco-subtitle">
+                A partir de ahora, la historia se ambienta en un lugar de Colombia.
+                Cada ecosistema trae sus propias palabras, sonidos y personajes.
+            </div>
+            <div class="sm-eco-grid" id="smEcoGrid"></div>
+        </div>
+    </div>
+
+    <!-- First-time welcome overlay -->
+    <div class="sm-welcome-overlay" id="smWelcomeOverlay">
+        <div class="sm-welcome-inner">
+            <img src="img/jaguar-hero-full.jpg" alt="Yaguará" class="sm-welcome-avatar">
+            <div class="sm-welcome-title" id="smWelcomeTitle">Bienvenido al viaje</div>
+            <div class="sm-welcome-text">
+                Este río es tu camino. Cada destino te lleva más lejos en el español
+                — desde las primeras palabras hasta las historias más profundas.
+                Empieza abajo, donde nace el agua, y sube poco a poco.
+            </div>
+            <button class="sm-welcome-btn" id="smWelcomeBtn">Comenzar</button>
+        </div>
+    </div>
+
+    <!-- River of destinations -->
+    <div class="sm-river" id="smRiver"></div>
+
+<script src="js/jaguar-api.js"></script>
+<script>
+    // Auth guard
+    if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
+        window.location.href = 'login.html';
+    }
+</script>
+<script src="ontology/ontology-api.js"></script>
+<script src="js/evidence-engine.js"></script>
+<script src="js/riddle-quest.js"></script>
+<script src="js/ad-manager.js"></script>
+<script>if(window.AdManager)AdManager.init();</script>
+<script>
+(function() {
+    'use strict';
+
+    /* ================================================================
+       DESTINATION DATA (from ontology story-world.json)
+       ================================================================ */
+    var DESTINATIONS = [
+        { dest: 1,  title: '{nombre}, abre los ojos',       cefr: 'A1', world: 'abajo', question: '\u00bfQui\u00e9n eres t\u00fa?' },
+        { dest: 2,  title: 'Los nombres de las cosas',      cefr: 'A1', world: 'abajo', question: '\u00bfC\u00f3mo se llama lo que ves?' },
+        { dest: 3,  title: '\u00bfC\u00f3mo es el mundo?',  cefr: 'A1', world: 'abajo', question: '\u00bfC\u00f3mo es el lugar donde est\u00e1s?' },
+        { dest: 4,  title: 'Contar los d\u00edas',          cefr: 'A1', world: 'abajo', question: '\u00bfCu\u00e1ntos d\u00edas llevas caminando?' },
+        { dest: 5,  title: 'Lo que me gusta',               cefr: 'A1', world: 'abajo', question: '\u00bfQu\u00e9 te gusta de este lugar?' },
+        { dest: 6,  title: 'Un d\u00eda en el mundo',       cefr: 'A1', world: 'abajo', question: '\u00bfQu\u00e9 haces cada d\u00eda?' },
+        { dest: 7,  title: 'Comer juntos',                  cefr: 'A1', world: 'abajo', question: '\u00bfQu\u00e9 compartiste hoy?' },
+        { dest: 8,  title: 'La familia junto al r\u00edo',  cefr: 'A1', world: 'abajo', question: '\u00bfQui\u00e9n camina contigo?' },
+        { dest: 9,  title: 'Mi casa sobre el r\u00edo',     cefr: 'A1', world: 'abajo', question: '\u00bfD\u00f3nde vives?' },
+        { dest: 10, title: 'El tiempo y los n\u00fameros',  cefr: 'A1', world: 'abajo', question: '\u00bfQu\u00e9 hora es en tu mundo?' },
+        { dest: 11, title: 'Todos los verbos del mundo',    cefr: 'A1', world: 'abajo', question: '\u00bfQu\u00e9 puedes hacer con las palabras?' },
+        { dest: 12, title: '\u00bfQui\u00e9n soy yo?',      cefr: 'A1', world: 'abajo', question: '\u00bfQui\u00e9n eres ahora que conoces m\u00e1s?' },
+        { dest: 13, title: 'Los r\u00edos que cantan',      cefr: 'A2', world: 'abajo', question: '\u00bfQu\u00e9 cuenta el r\u00edo?' },
+        { dest: 14, title: 'Contar lo que pas\u00f3',       cefr: 'A2', world: 'abajo', question: '\u00bfQu\u00e9 pas\u00f3 ayer?' },
+        { dest: 15, title: 'Lo que necesito, lo que quiero', cefr: 'A2', world: 'abajo', question: '\u00bfQu\u00e9 necesitas para seguir?' },
+        { dest: 16, title: 'El cielo cambia',               cefr: 'A2', world: 'abajo', question: '\u00bfQu\u00e9 cambiar\u00e1 ma\u00f1ana?' },
+        { dest: 17, title: 'Recordar c\u00f3mo era el mundo', cefr: 'A2', world: 'abajo', question: '\u00bfC\u00f3mo era antes?' },
+        { dest: 18, title: 'El mundo completo',             cefr: 'A2', world: 'abajo', question: '\u00bfQu\u00e9 dejas atr\u00e1s cuando avanzas?' },
+        { dest: 19, title: 'Cruzar el umbral',              cefr: 'B1', world: 'medio', question: '\u00bfPor qu\u00e9 vino este hombre?' },
+        { dest: 20, title: 'Las historias que escucho',      cefr: 'B1', world: 'medio', question: '\u00bfQu\u00e9 escuchaste?' },
+        { dest: 21, title: 'Subir la monta\u00f1a',         cefr: 'B1', world: 'medio', question: '\u00bfQu\u00e9 se ve desde arriba?' },
+        { dest: 22, title: 'El llano infinito',             cefr: 'B1', world: 'medio', question: '\u00bfQu\u00e9 hay al otro lado?' },
+        { dest: 23, title: 'La costa y la paciencia',       cefr: 'B1', world: 'medio', question: '\u00bfQu\u00e9 ense\u00f1a el mar?' },
+        { dest: 24, title: 'Las historias que se cruzan',    cefr: 'B1', world: 'medio', question: '\u00bfD\u00f3nde se cruzan las historias?' },
+        { dest: 25, title: 'El hombre del camino',          cefr: 'B1', world: 'medio', question: '\u00bfQu\u00e9 quiere realmente?' },
+        { dest: 26, title: 'Lo que se pierde',              cefr: 'B1', world: 'medio', question: '\u00bfQu\u00e9 ya no existe?' },
+        { dest: 27, title: 'Dos verdades',                  cefr: 'B1', world: 'medio', question: '\u00bfCu\u00e1l es tu verdad?' },
+        { dest: 28, title: 'La voz de la abuela',           cefr: 'B1', world: 'medio', question: '\u00bfQu\u00e9 dijo antes de irse?' },
+        { dest: 29, title: 'El silencio avanza',            cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 calla este silencio?' },
+        { dest: 30, title: 'La sombra de Yaguar\u00e1',    cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 esconde la sombra?' },
+        { dest: 31, title: 'Hablar con los dem\u00e1s',     cefr: 'B2', world: 'medio', question: '\u00bfC\u00f3mo hablamos cuando importa?' },
+        { dest: 32, title: '\u00bfQui\u00e9n traicion\u00f3 a qui\u00e9n?', cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 es la traici\u00f3n?' },
+        { dest: 33, title: 'El lugar donde van los nombres', cefr: 'B2', world: 'medio', question: '\u00bfD\u00f3nde van las palabras olvidadas?' },
+        { dest: 34, title: 'El r\u00edo de la memoria',     cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 recuerda el r\u00edo?' },
+        { dest: 35, title: 'Letras de la llanura',          cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 escribi\u00f3 la tierra?' },
+        { dest: 36, title: 'Econom\u00eda de la tierra',    cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 vale la tierra?' },
+        { dest: 37, title: 'Biodiversidad en riesgo',       cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 desaparece primero?' },
+        { dest: 38, title: 'El legado que dejas',           cefr: 'B2', world: 'medio', question: '\u00bfQu\u00e9 dejar\u00e1s?' },
+        { dest: 39, title: 'La voz de la monta\u00f1a',    cefr: 'C1', world: 'arriba', question: '\u00bfQu\u00e9 dice la monta\u00f1a?' },
+        { dest: 40, title: 'Palabras de los mayores',       cefr: 'C1', world: 'arriba', question: '\u00bfQu\u00e9 saben los mayores?' },
+        { dest: 41, title: 'Ecos de todas las tierras',     cefr: 'C1', world: 'arriba', question: '\u00bfQu\u00e9 une a todos?' },
+        { dest: 42, title: 'El tejido de las palabras',     cefr: 'C1', world: 'arriba', question: '\u00bfC\u00f3mo se tejen las palabras?' },
+        { dest: 43, title: 'Hilos de luz',                  cefr: 'C1', world: 'arriba', question: '\u00bfD\u00f3nde termina un hilo?' },
+        { dest: 44, title: 'El templo del silencio',        cefr: 'C1', world: 'arriba', question: '\u00bfQu\u00e9 guarda el templo?' },
+        { dest: 45, title: 'La piedra que persuade',        cefr: 'C1', world: 'arriba', question: '\u00bfC\u00f3mo mueve la palabra?' },
+        { dest: 46, title: 'Voces entre las ruinas',        cefr: 'C1', world: 'arriba', question: '\u00bfQu\u00e9 dicen las ruinas?' },
+        { dest: 47, title: 'El nombre de las cosas',        cefr: 'C1', world: 'arriba', question: '\u00bfQui\u00e9n nombra las cosas?' },
+        { dest: 48, title: 'La estrella que gu\u00eda',     cefr: 'C1', world: 'arriba', question: '\u00bfHacia d\u00f3nde apunta la estrella?' },
+        { dest: 49, title: 'La ciudad de todas las voces',  cefr: 'C2', world: 'arriba', question: '\u00bfC\u00f3mo suena la ciudad?' },
+        { dest: 50, title: 'Tinta y territorio',            cefr: 'C2', world: 'arriba', question: '\u00bfQu\u00e9 escribes en la tierra?' },
+        { dest: 51, title: 'El espejo del idioma',          cefr: 'C2', world: 'arriba', question: '\u00bfQu\u00e9 muestra el espejo?' },
+        { dest: 52, title: 'Voces que transforman',         cefr: 'C2', world: 'arriba', question: '\u00bfQu\u00e9 transforma una voz?' },
+        { dest: 53, title: 'El guardi\u00e1n despierta',    cefr: 'C2', world: 'arriba', question: '\u00bfQu\u00e9 guarda el guardi\u00e1n?' },
+        { dest: 54, title: 'El regreso a la selva',         cefr: 'C2', world: 'arriba', question: '\u00bfQu\u00e9 cambi\u00f3 desde que partiste?' },
+        { dest: 55, title: 'Cr\u00f3nica de los mundos',    cefr: 'C2', world: 'arriba', question: '\u00bfQu\u00e9 escribir\u00edas?' },
+        { dest: 56, title: 'La lengua viva',                cefr: 'C2', world: 'arriba', question: '\u00bfPor qu\u00e9 vive una lengua?' },
+        { dest: 57, title: 'Guardianes de historias',       cefr: 'C2', world: 'arriba', question: '\u00bfQui\u00e9n guarda las historias?' },
+        { dest: 58, title: 'El esp\u00edritu completo',     cefr: 'C2', world: 'arriba', question: 'escuchar' }
+    ];
+
+    var ECOSYSTEMS = [
+        { id: 'selva',    name: 'Selva Amaz\u00f3nica', region: 'Leticia' },
+        { id: 'bosque',   name: 'Bosque del Pac\u00edfico', region: 'Choc\u00f3' },
+        { id: 'sierra',   name: 'Sierra Andina', region: 'Bogot\u00e1' },
+        { id: 'costa',    name: 'Costa Caribe', region: 'Cartagena' },
+        { id: 'llanos',   name: 'Llanos Orientales', region: 'Villavicencio' },
+        { id: 'nevada',   name: 'Sierra Nevada', region: 'Santa Marta' },
+        { id: 'islas',    name: 'Islas del Caribe', region: 'San Andr\u00e9s' },
+        { id: 'desierto', name: 'Desierto Guajiro', region: 'Riohacha' }
+    ];
+
+    var WORLD_LABELS = {
+        abajo:  { name: 'Mundo de Abajo', subtitle: 'Nombrar el mundo' },
+        medio:  { name: 'Mundo del Medio', subtitle: 'Contar lo vivido' },
+        arriba: { name: 'Mundo de Arriba', subtitle: 'Cuidar la palabra' }
+    };
+
+    /* Level sub-ranges (end-point → label) — used by reversed render loop.
+       Since the map renders top-down (dest58 → dest1), labels appear at the
+       highest-numbered dest of each sub-level to introduce the group above. */
+    var LEVEL_ENDS = {
+        58: 'C2 Avanzado', 53: 'C2 B\u00e1sico',
+        48: 'C1 Avanzado', 43: 'C1 B\u00e1sico',
+        38: 'B2 Avanzado', 33: 'B2 B\u00e1sico',
+        28: 'B1 Avanzado', 23: 'B1 B\u00e1sico',
+        18: 'A2 Avanzado', 16: 'A2 B\u00e1sico',
+        12: 'A1 Avanzado', 6: 'A1 B\u00e1sico'
+    };
+
+    /* ================================================================
+       PROGRESS SYSTEM
+       ================================================================ */
+    function getJourney() {
+        try {
+            return JSON.parse(localStorage.getItem('yaguara_journey') || 'null') || {
+                currentDestination: 1,
+                completedDestinations: [],
+                ecosystemChoice: null,
+                escapeRoomFragments: [],
+                lastPlayedAt: null
+            };
+        } catch(e) {
+            return { currentDestination: 1, completedDestinations: [], ecosystemChoice: null, escapeRoomFragments: [], lastPlayedAt: null };
+        }
+    }
+
+    function saveJourney(journey) {
+        try {
+            journey.lastPlayedAt = new Date().toISOString();
+            localStorage.setItem('yaguara_journey', JSON.stringify(journey));
+        } catch(e) { /* silent */ }
+    }
+
+    /* Ontology reference — loaded async before render */
+    var _smOntology = null;
+
+    /**
+     * Get objective completion badge data for a destination.
+     * @param {number} destNum
+     * @returns {{ satisfied: number, total: number, complete: boolean } | null}
+     */
+    function getObjectiveBadge(destNum) {
+        if (!_smOntology || !window.EvidenceEngine || !EvidenceEngine._ready) return null;
+        var objectives = _smOntology.getObjectivesForDestination('dest' + destNum);
+        if (!objectives || objectives.length === 0) return null;
+
+        var satisfied = 0;
+        for (var i = 0; i < objectives.length; i++) {
+            var ev = EvidenceEngine.getEvidenceForObjective(objectives[i].id);
+            if (ev && ev.satisfied) satisfied++;
+        }
+        return { satisfied: satisfied, total: objectives.length, complete: satisfied >= objectives.length };
+    }
+
+    /* Migration from old progress keys */
+    function migrateOldProgress(journey) {
+        if (journey._migrated) return journey;
+
+        var completed = new Set(journey.completedDestinations || []);
+
+        /* Old A1 module progress */
+        try {
+            var a1 = JSON.parse(localStorage.getItem('jaguarA1Progress') || 'null');
+            if (a1 && a1.completedModules) {
+                var moduleMap = { module1: 1, module2: 2, module3: 3, module4: 4, module5: 5, module6: 6 };
+                for (var m in moduleMap) {
+                    if (a1.completedModules.indexOf(m) >= 0) {
+                        completed.add(moduleMap[m]);
+                    }
+                }
+            }
+        } catch(e) {}
+
+        /* Old ecosystem progress keys */
+        var ecoKeys = ['selva', 'bosque', 'sierra', 'costa', 'llanos', 'nevada', 'islas', 'desierto'];
+        ecoKeys.forEach(function(eco) {
+            try {
+                var a1p = JSON.parse(localStorage.getItem('yaguara_' + eco + '_a1_progress') || 'null');
+                if (a1p && a1p.completedCount >= 5) {
+                    // A1 ecosystem completed → mark dest1-6
+                    for (var d = 1; d <= 6; d++) completed.add(d);
+                }
+                var a2p = JSON.parse(localStorage.getItem('yaguara_' + eco + '_a2_progress') || 'null');
+                if (a2p && a2p.completedCount >= 5) {
+                    for (var d = 1; d <= 12; d++) completed.add(d);
+                }
+            } catch(e) {}
+        });
+
+        /* Individual dest progress keys */
+        for (var d = 1; d <= 58; d++) {
+            try {
+                var dp = JSON.parse(localStorage.getItem('yaguara_dest' + d + '_progress') || 'null');
+                if (dp && dp.completedCount > 0 && dp.completedCount >= (dp.completedMap || []).length * 0.7) {
+                    completed.add(d);
+                }
+            } catch(e) {}
+        }
+
+        journey.completedDestinations = Array.from(completed).sort(function(a, b) { return a - b; });
+        if (journey.completedDestinations.length > 0) {
+            var maxCompleted = journey.completedDestinations[journey.completedDestinations.length - 1];
+            journey.currentDestination = Math.max(journey.currentDestination, maxCompleted + 1);
+            if (journey.currentDestination > 58) journey.currentDestination = 58;
+        }
+        journey._migrated = true;
+        saveJourney(journey);
+        return journey;
+    }
+
+    /* ================================================================
+       RENDER
+       ================================================================ */
+    function render() {
+        var journey = migrateOldProgress(getJourney());
+        var completedSet = new Set(journey.completedDestinations || []);
+        var current = journey.currentDestination || 1;
+
+        /* Update header */
+        var pctComplete = Math.round((completedSet.size / 58) * 100);
+        document.getElementById('smProgress').textContent =
+            completedSet.size + '/58 destinos \u00b7 ' + pctComplete + '% completo';
+        document.getElementById('smProgressBar').style.width = pctComplete + '%';
+
+        /* Bridge progress (riddle quest) */
+        if (window.Busqueda) {
+            var bridgePlanks = Busqueda.getBridgeProgress();
+            var bridgeBar = document.getElementById('smBridgeBar');
+            if (bridgeBar && bridgePlanks > 0) {
+                var bridgePct = Math.round((bridgePlanks / 58) * 100);
+                bridgeBar.innerHTML = '<div class="sm-bridge-fill" style="width:' + bridgePct + '%"></div>';
+            }
+            /* Badge on cuaderno button */
+            var cuadernoBtn = document.getElementById('smCuadernoBtn');
+            if (cuadernoBtn && bridgePlanks > 0) {
+                var badge = cuadernoBtn.querySelector('.sm-bridge-count');
+                if (!badge) {
+                    badge = document.createElement('span');
+                    badge.className = 'sm-bridge-count';
+                    cuadernoBtn.appendChild(badge);
+                }
+                badge.textContent = String(bridgePlanks);
+            }
+        }
+
+        /* Build river — REVERSED: Mundo de Arriba at top, Mundo de Abajo at bottom.
+           The student starts at the bottom (dest1) and climbs upward. */
+        var river = document.getElementById('smRiver');
+        var html = '';
+        var prevWorld = '';
+
+        for (var i = DESTINATIONS.length - 1; i >= 0; i--) {
+            var d = DESTINATIONS[i];
+            var isCompleted = completedSet.has(d.dest);
+            var isCurrent = d.dest === current;
+            var isLocked = !isCompleted && !isCurrent;
+            var side = i % 2 === 0 ? 'left' : 'right';
+
+            /* World divider — check if we're entering a new world (reversed) */
+            if (d.world !== prevWorld) {
+                var wl = WORLD_LABELS[d.world];
+                html += '<div class="sm-world-divider ' + d.world + '">' +
+                    '<div class="sm-world-name">' + wl.name + '</div>' +
+                    '<div class="sm-world-subtitle">' + wl.subtitle + '</div>' +
+                '</div>';
+                prevWorld = d.world;
+            }
+
+            /* Level label */
+            if (LEVEL_ENDS[d.dest]) {
+                var cefrLower = d.cefr.toLowerCase();
+                html += '<div class="sm-level-label">' +
+                    '<span class="sm-level-badge ' + cefrLower + '">' + LEVEL_ENDS[d.dest] + '</span>' +
+                '</div>';
+            }
+
+            /* Destination node */
+            var stateClass = isCompleted ? 'completed' : (isCurrent ? 'current' : 'locked');
+            var ariaAttrs = isLocked
+                ? ' aria-hidden="true"'
+                : ' role="button" tabindex="0" aria-label="Destino ' + d.dest + ': ' + d.title + (isCompleted ? ' (completado)' : ' (actual)') + '"';
+            html += '<div class="sm-dest ' + side + ' ' + stateClass + '" data-dest="' + d.dest + '"' + ariaAttrs + '>';
+            html += '<div class="sm-dot"></div>';
+            html += '<div class="sm-card">';
+
+            if (isCompleted) {
+                html += '<div class="sm-seed">\uD83C\uDF31</div>';
+            }
+
+            html += '<div class="sm-dest-num">Destino ' + d.dest + '</div>';
+            html += '<div class="sm-dest-title">' + d.title + '</div>';
+
+            if (isCompleted && d.question) {
+                html += '<div class="sm-dest-question">' + d.question + '</div>';
+            }
+
+            /* Portafolio and autoevaluacion indicators */
+            if (isCompleted) {
+                var badges = '';
+                if (journey.portafolios && journey.portafolios['dest' + d.dest]) {
+                    badges += '<span class="sm-badge sm-badge-port" title="Diario escrito">&#9997;</span>';
+                }
+                if (journey.autoevaluaciones && journey.autoevaluaciones['dest' + d.dest]) {
+                    badges += '<span class="sm-badge sm-badge-auto" title="Autoevaluación completa">&#9733;</span>';
+                }
+                /* Objective completion badge from evidence pipeline */
+                var objBadge = getObjectiveBadge(d.dest);
+                if (objBadge) {
+                    if (objBadge.complete) {
+                        badges += '<span class="sm-badge sm-badge-obj-full" title="Objetivos completos">&#10003;</span>';
+                    } else if (objBadge.satisfied > 0) {
+                        badges += '<span class="sm-badge sm-badge-obj" title="' + objBadge.satisfied + '/' + objBadge.total + ' objetivos">' + objBadge.satisfied + '/' + objBadge.total + '</span>';
+                    }
+                }
+                if (badges) html += '<div class="sm-badges">' + badges + '</div>';
+            }
+
+            if (isCurrent) {
+                html += '<a href="play.html?dest=' + d.dest +
+                    (journey.ecosystemChoice && d.dest >= 19 ? '&eco=' + journey.ecosystemChoice : '') +
+                    '" class="sm-continue">Continuar</a>';
+            }
+
+            html += '</div></div>';
+        }
+
+        river.innerHTML = html;
+
+        /* Click handlers for completed destinations (replay) */
+        var destEls = river.querySelectorAll('.sm-dest.completed');
+        for (var j = 0; j < destEls.length; j++) {
+            destEls[j].addEventListener('click', function() {
+                var dest = this.getAttribute('data-dest');
+                var eco = journey.ecosystemChoice && parseInt(dest) >= 19 ? '&eco=' + journey.ecosystemChoice : '';
+                navigateSmooth('play.html?dest=' + dest + eco);
+            });
+        }
+
+        /* Smooth navigation for continue button */
+        var continueBtn = river.querySelector('.sm-continue');
+        if (continueBtn) {
+            continueBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigateSmooth(this.href);
+            });
+        }
+
+        /* Scroll to current destination — since the map is reversed (top=sky, bottom=earth),
+           for first-time students at dest1 this means scrolling to the bottom of the page. */
+        setTimeout(function() {
+            var currentEl = river.querySelector('.sm-dest.current');
+            if (currentEl) {
+                currentEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else if (current <= 1) {
+                /* New student — scroll to bottom where dest1 lives */
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+        }, 300);
+
+        /* Welcome overlay for first-time students */
+        if (!localStorage.getItem('yaguara_welcomed') && current <= 1 && completedSet.size === 0) {
+            showWelcomeOverlay();
+        }
+
+        /* Check if ecosystem selection needed at B1 transition */
+        if (current === 19 && !journey.ecosystemChoice) {
+            showEcosystemSelection(journey);
+        }
+    }
+
+    /* ================================================================
+       ECOSYSTEM SELECTION
+       ================================================================ */
+    function showEcosystemSelection(journey) {
+        var overlay = document.getElementById('smEcoOverlay');
+        var grid = document.getElementById('smEcoGrid');
+        var html = '';
+
+        for (var i = 0; i < ECOSYSTEMS.length; i++) {
+            var eco = ECOSYSTEMS[i];
+            html += '<div class="sm-eco-card" data-eco="' + eco.id + '">' +
+                '<div class="sm-eco-card-name">' + eco.name + '</div>' +
+                '<div class="sm-eco-card-region">' + eco.region + '</div>' +
+            '</div>';
+        }
+
+        grid.innerHTML = html;
+        overlay.classList.add('visible');
+
+        var cards = grid.querySelectorAll('.sm-eco-card');
+        for (var j = 0; j < cards.length; j++) {
+            cards[j].addEventListener('click', function() {
+                journey.ecosystemChoice = this.getAttribute('data-eco');
+                saveJourney(journey);
+                overlay.classList.remove('visible');
+                render(); // Re-render with ecosystem choice
+            });
+        }
+    }
+
+    /* ================================================================
+       WELCOME OVERLAY (first-time students)
+       ================================================================ */
+    function showWelcomeOverlay() {
+        var overlay = document.getElementById('smWelcomeOverlay');
+        var btn = document.getElementById('smWelcomeBtn');
+        var titleEl = document.getElementById('smWelcomeTitle');
+
+        try {
+            var session = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
+            var g = session.gender || 'X';
+            if (g === 'F') {
+                titleEl.textContent = 'Bienvenida al viaje';
+            } else if (g === 'M') {
+                titleEl.textContent = 'Bienvenido al viaje';
+            }
+            /* X (neutral) keeps the default "Bienvenido al viaje" */
+        } catch(e) {}
+
+        overlay.classList.add('visible');
+
+        btn.addEventListener('click', dismissWelcome);
+
+        /* Dismiss on click outside the inner card */
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) dismissWelcome();
+        });
+
+        function dismissWelcome() {
+            overlay.classList.remove('visible');
+            try { localStorage.setItem('yaguara_welcomed', 'true'); } catch(e) {}
+        }
+    }
+
+    /* ================================================================
+       SMOOTH NAVIGATION TRANSITION
+       ================================================================ */
+    function navigateSmooth(url) {
+        document.body.classList.add('sm-navigating');
+        setTimeout(function() {
+            window.location.href = url;
+        }, 350);
+    }
+
+    /* ================================================================
+       INIT — Load ontology for evidence badges, then render
+       ================================================================ */
+    function initStorymap() {
+        if (window.YaguaraOntology) {
+            var onto = new YaguaraOntology('/ontology/');
+            onto.load().then(function(loaded) {
+                _smOntology = loaded;
+                if (window.EvidenceEngine) {
+                    EvidenceEngine.init(loaded);
+                }
+                render();
+            }).catch(function() {
+                /* Ontology failed — render without badges */
+                render();
+            });
+        } else {
+            render();
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initStorymap);
+    } else {
+        initStorymap();
+    }
+})();
+</script>
+<script src="js/feedback-widget.js"></script>
+</body>
+</html>

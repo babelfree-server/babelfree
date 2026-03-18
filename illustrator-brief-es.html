@@ -28,7 +28,7 @@
             --silver: #C0C0D0;
             --cosmic: #0D0D1A;
             --text: #2C1B0E;
-            --text-light: #6B5843;
+            --text-light: #4A3828;
             --border: #D4C5A9;
         }
 
@@ -233,6 +233,18 @@
             position: relative;
         }
 
+        .story-box strong,
+        .env-card strong,
+        .journey-act strong {
+            color: var(--gold-bright);
+        }
+
+        .story-box em,
+        .env-card em,
+        .journey-act em {
+            color: var(--cream);
+        }
+
         .story-box .quote {
             font-style: italic;
             color: var(--gold);
@@ -349,6 +361,20 @@
             background: linear-gradient(135deg, white 0%, #FFF5EE 100%);
         }
 
+        .character-card.literary {
+            border-left: 4px solid var(--gold);
+            background: linear-gradient(135deg, white 0%, #FFF8E7 100%);
+        }
+
+        .reference-photo {
+            max-width: 180px;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            margin: 10px 0;
+            float: right;
+            margin-left: 16px;
+        }
+
         .character-name {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.4rem;
@@ -386,7 +412,7 @@
         .deliverable-tag {
             display: inline-block;
             background: var(--gold);
-            color: white;
+            color: var(--bark);
             font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -421,7 +447,7 @@
 
         .env-selva { background: linear-gradient(135deg, #1A3A0A, #2D5016, #1B4D6E); }
         .env-andes { background: linear-gradient(135deg, #5F7A8A, #8B6914, #5C3317); }
-        .env-llanos { background: linear-gradient(135deg, #C49A3C, #D4A843, #B7562A); }
+        .env-llanos { background: linear-gradient(135deg, #8B6914, #9A7A1C, #8B4513); }
         .env-costa { background: linear-gradient(135deg, #1AA5A5, #1B4D6E, #2C1654); }
         .env-cosmic { background: linear-gradient(135deg, #1A1A4E, #0D0D1A, #2C1654); }
 
@@ -503,7 +529,7 @@
         }
 
         .code-block .comment {
-            color: #6B7B6B;
+            color: #9BAB9B;
         }
 
         .code-block .highlight {
@@ -692,7 +718,7 @@
         .journey-act .campbell {
             font-style: italic;
             font-size: 0.78rem;
-            opacity: 0.6;
+            opacity: 0.85;
             margin-top: 10px;
         }
 
@@ -897,7 +923,7 @@
 
     <div class="story-box">
         <p>
-            <strong>El Viaje del Jaguar</strong> es un juego interactivo de aprendizaje de idiomas ambientado en los ecosistemas de Colombia. Un joven esp&iacute;ritu-jaguar femenino llamada Yaguar&aacute; viaja a trav&eacute;s de la selva, los Andes, los llanos y la costa caribe&ntilde;a, encontrando aliados y enfrentando fuerzas del olvido que est&aacute;n borrando los nombres del mundo.
+            <strong>El Viaje del Jaguar</strong> es un juego interactivo de aprendizaje de idiomas ambientado en los ecosistemas de Colombia. Un esp&iacute;ritu-jaguar femenino llamado Yaguar&aacute; &mdash; que comienza como cachorra so&ntilde;adora y crece hasta convertirse en guardiana sabia &mdash; viaja a trav&eacute;s de la selva, los Andes, los llanos y la costa caribe&ntilde;a, encontrando aliados y enfrentando fuerzas del olvido que est&aacute;n borrando los nombres del mundo.
         </p>
         <p>
             El mundo visual se inspira en el <strong>arte ind&iacute;gena colombiano, los patrones textiles y los paisajes naturales</strong>. NO es Disney, manga ni fantas&iacute;a gen&eacute;rica. Estos son esp&iacute;ritus, no animales de caricatura. Este mundo es vivo, c&aacute;lido y antiguo.
@@ -933,29 +959,26 @@
 
 <!-- ============================== 2. THE STORY ============================== -->
 <section id="story">
-    <h2><span class="section-number">02</span> La historia</h2>
-    <div class="section-subtitle">El arco narrativo que da forma a cada ilustraci&oacute;n</div>
+    <h2><span class="section-number">02</span> Los tres mundos</h2>
+    <div class="section-subtitle">Atm&oacute;sfera visual y paleta de cada mundo</div>
 
-    <p>El juego sigue <strong>El viaje del h&eacute;roe de Joseph Campbell</strong> mapeado a trav&eacute;s de tres mundos y seis niveles de idioma. El conflicto central de la historia: <em>el mundo est&aacute; perdiendo sus nombres, y las cosas que no se nombran desaparecen.</em> Yaguar&aacute; debe viajar por Colombia para recuperarlos. El estudiante los pronuncia para devolverlos a la existencia a trav&eacute;s del juego.</p>
+    <p>El juego transcurre en <strong>tres mundos visuales</strong>. Cada uno tiene su propia paleta de colores, ambiente y paisaje. A medida que avanza la historia, el mundo pasa de la selva &iacute;ntima al terreno abierto y finalmente al cielo c&oacute;smico.</p>
 
     <div class="journey-map">
         <div class="journey-act act-1">
-            <div class="act-label">Acto I &mdash; A1&ndash;A2</div>
             <h4>El Mundo de Abajo</h4>
-            <p><strong>"Nombrar el mundo"</strong><br>Ra&iacute;ces, agua, noche, comienzos. La familia de Yaguar&aacute;, su r&iacute;o, los sonidos del bosque. Algo se queda en silencio. Un sonido desaparece. Luego otro. El r&iacute;o dice: las cosas que no se nombran, desaparecen.</p>
-            <div class="campbell">Mundo ordinario &rarr; Llamada a la aventura &rarr; Rechazo &rarr; Encuentro con el mentor</div>
+            <p><strong>Selva, r&iacute;o, noche, ra&iacute;ces.</strong><br>Selva chocoana densa. Luz verde-dorada filtrada. Ceibas enormes, ra&iacute;ces tabulares, r&iacute;os, musgo bioluminiscente. C&aacute;lido e &iacute;ntimo &mdash; espacios peque&ntilde;os, encuentros cercanos. Luci&eacute;rnagas, ranas doradas, el sonido del agua en todas partes.</p>
+            <p><strong>Paleta:</strong> verdes profundos, azules de r&iacute;o, marrones de tierra, p&uacute;rpuras nocturnos, acentos dorados.</p>
         </div>
         <div class="journey-act act-2">
-            <div class="act-label">Acto II &mdash; B1&ndash;B2</div>
             <h4>El Mundo del Medio</h4>
-            <p><strong>"Contar lo vivido"</strong><br>Comunidad, memoria, historia. Yaguar&aacute; viaja por los cuatro ecosistemas de Colombia, encontrando aliados y enfrentando fuerzas del olvido. Se da cuenta de que necesita las <em>historias detr&aacute;s de los nombres</em>, no solo los nombres en s&iacute;.</p>
-            <div class="campbell">Cruce del umbral &rarr; Pruebas / Aliados / Enemigos &rarr; La prueba suprema</div>
+            <p><strong>Aldeas, monta&ntilde;as, llanos, costa.</strong><br>Los cuatro ecosistemas de Colombia. Casas palaf&iacute;ticas del Choc&oacute;, p&aacute;ramo andino, pastizales del Orinoco, costa caribe&ntilde;a. Espacios humanos mezclados con naturaleza &mdash; mercados, senderos, botes, edificios abandonados cubiertos de enredaderas. Composiciones m&aacute;s amplias, m&aacute;s personajes, m&aacute;s complejidad.</p>
+            <p><strong>Paleta:</strong> terracota, ocre, gris-azul de monta&ntilde;a, dorado de llano, turquesa caribe&ntilde;o.</p>
         </div>
         <div class="journey-act act-3">
-            <div class="act-label">Acto III &mdash; C1&ndash;C2</div>
             <h4>El Mundo de Arriba</h4>
-            <p><strong>"Cuidar la palabra"</strong><br>Sue&ntilde;os, estrellas, equilibrio, destino. Yaguar&aacute; lleva los nombres recuperados de vuelta, pero el mundo ha cambiado. Debe elegir: &iquest;restaurar lo que era, o dejar que se convierta en algo nuevo? El estudiante escribe su propio mito.</p>
-            <div class="campbell">Recompensa &rarr; El camino de regreso &rarr; Resurrecci&oacute;n &rarr; Regreso con el elixir</div>
+            <p><strong>Estrellas, silencio, luz, transformaci&oacute;n.</strong><br>C&oacute;smico y metaf&iacute;sico. Sin paredes s&oacute;lidas &mdash; l&iacute;mites definidos por constelaciones. Suelos hechos de mapas, techos hechos de cielo. Contornos luminosos en lugar de superficies s&oacute;lidas. Piensa en: el interior de un astrolabio, una carta de constelaciones que cobra vida.</p>
+            <p><strong>Paleta:</strong> &iacute;ndigo profundo, plata estelar, &aacute;mbar luminoso, blanco-dorado, negro c&oacute;smico.</p>
         </div>
     </div>
 </section>
@@ -965,36 +988,113 @@
     <h2><span class="section-number">03</span> Personajes</h2>
     <div class="section-subtitle">Los seres que habitan este mundo &mdash; cada detalle importa</div>
 
-    <!-- Yaguará -->
+    <!-- Yaguará — Tres etapas de vida -->
     <div class="character-card protagonist">
         <div class="character-name">Yaguar&aacute;</div>
-        <div class="character-role">La protagonista &mdash; Prioridad 1</div>
+        <div class="character-role">La protagonista &mdash; Prioridad 1 &mdash; Tres etapas de vida</div>
+
+        <p style="margin: 10px 0 15px 0;">Yaguar&aacute; crece a lo largo del juego. NO es un dise&ntilde;o fijo &mdash; tiene <strong>tres etapas de vida distintas</strong> mapeadas a las bandas del MCER. Cada etapa debe ser visualmente reconocible de un vistazo, incluso en tama&ntilde;o miniatura.</p>
+
+        <table style="width:100%; border-collapse: collapse; margin: 10px 0 20px 0; font-size: 0.95em;">
+            <thead>
+                <tr style="border-bottom: 2px solid var(--gold);">
+                    <th style="text-align:left; padding: 8px;">Atributo</th>
+                    <th style="text-align:left; padding: 8px;">Etapa 1: So&ntilde;adora (banda A, dest1&ndash;18)</th>
+                    <th style="text-align:left; padding: 8px;">Etapa 2: Caminante (banda B, dest19&ndash;38)</th>
+                    <th style="text-align:left; padding: 8px;">Etapa 3: Guardiana (banda C, dest39&ndash;58)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Complexi&oacute;n</strong></td>
+                    <td style="padding: 8px;">Peque&ntilde;a, patas y orejas desproporcionadamente grandes &mdash; una cachorra que a&uacute;n crece</td>
+                    <td style="padding: 8px;">Esbelta, atl&eacute;tica, r&aacute;pida &mdash; una adulta joven en su plenitud</td>
+                    <td style="padding: 8px;">Hombros poderosos, movimiento deliberado &mdash; nada desperdiciado</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Pelaje</strong></td>
+                    <td style="padding: 8px;">Dorado claro con rosetas tenues, a&uacute;n form&aacute;ndose</td>
+                    <td style="padding: 8px;">Dorado oscuro con rosetas n&iacute;tidas y bien definidas</td>
+                    <td style="padding: 8px;">Dorado &aacute;mbar profundo, rosetas densas, hocico canoso</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Ojos</strong></td>
+                    <td style="padding: 8px;">Grandes, verde brillante con destellos &aacute;mbar &mdash; todo es nuevo</td>
+                    <td style="padding: 8px;">Verde &aacute;mbar equilibrado, enfocados &mdash; sabe lo que busca</td>
+                    <td style="padding: 8px;">&Aacute;mbar dominante, hundidos, serenos &mdash; ya lo ha visto todo</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(212,175,55,0.3);">
+                    <td style="padding: 8px;"><strong>Marca de constelaci&oacute;n</strong></td>
+                    <td style="padding: 8px;">Marca de nacimiento tenue en el hombro izquierdo &mdash; apenas visible</td>
+                    <td style="padding: 8px;">Patr&oacute;n claro, brillo suave ocasional</td>
+                    <td style="padding: 8px;">Luminosa, pulsa con luz en momentos clave</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;"><strong>Cicatrices / marcas</strong></td>
+                    <td style="padding: 8px;">Ninguna</td>
+                    <td style="padding: 8px;">Rasgu&ntilde;o fino en el costado (adquirido en dest29)</td>
+                    <td style="padding: 8px;">M&uacute;ltiples cicatrices desvanecidas + cicatriz en el puente de la nariz (espejo de Mam&aacute; Jaguar)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin: 0 0 5px 0;"><strong>Compartido en todas las etapas:</strong> Esp&iacute;ritu-jaguar femenino (<em>Panthera onca</em>). NO anaranjado como un tigre &mdash; estudiar jaguares reales. Los ojos son siempre el rasgo m&aacute;s importante &mdash; llevan toda la historia.</p>
+
+        <h4>Etapa 1: So&ntilde;adora &mdash; Expresiones (6)</h4>
         <ul>
-            <li><strong>Especie:</strong> Joven esp&iacute;ritu-jaguar femenino. No es una cachorra, no es completamente adulta. A&uacute;n no es guardiana.</li>
-            <li><strong>Complexi&oacute;n:</strong> Esbelta, atl&eacute;tica, no corpulenta. Es r&aacute;pida, no poderosa (a&uacute;n).</li>
-            <li><strong>Pelaje:</strong> Dorado oscuro con rosetas claramente visibles. NO anaranjado como un tigre &mdash; estudiar jaguares reales (<em>Panthera onca</em>).</li>
-            <li><strong>Ojos:</strong> Verde &aacute;mbar, expresivos, inteligentes. El rasgo m&aacute;s importante &mdash; estos ojos llevan toda la historia.</li>
-            <li><strong>Marca distintiva:</strong> Un peque&ntilde;o patr&oacute;n en forma de constelaci&oacute;n en su hombro izquierdo (esto cobra importancia m&aacute;s adelante en la historia).</li>
-            <li><strong>Personalidad en la pose:</strong> Curiosa, callada, valiente sin saberlo. En los primeros niveles mayormente escucha. Luego habla con peso.</li>
-        </ul>
-        <h4>Expresiones necesarias (6)</h4>
-        <ul>
-            <li>Curiosa &mdash; orejas hacia adelante, ojos bien abiertos, cabeza ligeramente inclinada</li>
-            <li>Decidida &mdash; ojos enfocados, mand&iacute;bula firme, cuerpo bajo</li>
-            <li>Preocupada &mdash; orejas ligeramente hacia atr&aacute;s, ojos buscando</li>
-            <li>Alegre &mdash; ojos brillantes, postura relajada, casi sonriendo</li>
+            <li>Curiosa &mdash; orejas hacia adelante, ojos enormes, cabeza ladeada</li>
+            <li>Sobresaltada &mdash; orejas abiertas, cuerpo tenso, ojos muy abiertos</li>
+            <li>T&iacute;mida &mdash; medio escondida detr&aacute;s del follaje, un ojo visible</li>
+            <li>Encantada &mdash; postura saltarina, ojos brillando</li>
             <li>Escuchando &mdash; completamente quieta, orejas giradas, ojos entrecerrados</li>
+            <li>Confundida &mdash; cabeza ladeada, una pata levantada</li>
+        </ul>
+        <h4>Etapa 1: So&ntilde;adora &mdash; Poses (5)</h4>
+        <ul>
+            <li>Sentada junto al r&iacute;o &mdash; peque&ntilde;a contra ra&iacute;ces grandes, mirando hacia arriba</li>
+            <li>Cazando luci&eacute;rnagas &mdash; juguetona, a medio salto</li>
+            <li>Acurrucada contra Mam&aacute; Jaguar &mdash; durmiendo, segura</li>
+            <li>Asomada al agua &mdash; viendo su reflejo por primera vez</li>
+            <li>Mirando hacia la ceiba &mdash; cuello estirado, marca de constelaci&oacute;n apenas visible</li>
+        </ul>
+
+        <h4>Etapa 2: Caminante &mdash; Expresiones (6)</h4>
+        <ul>
+            <li>Decidida &mdash; ojos enfocados, mand&iacute;bula firme, cuerpo bajo</li>
+            <li>Cautelosa &mdash; orejas ligeramente hacia atr&aacute;s, ojos escaneando</li>
+            <li>Alegre &mdash; ojos brillantes, postura relajada, casi sonriendo</li>
+            <li>Feroz &mdash; mostrando levemente los dientes, postura protectora</li>
+            <li>Pensativa &mdash; mirando a la distancia media, orejas neutras</li>
             <li>Hablando &mdash; boca ligeramente abierta, ojos conectando con el espectador</li>
         </ul>
-        <h4>Poses necesarias (5)</h4>
+        <h4>Etapa 2: Caminante &mdash; Poses (5)</h4>
         <ul>
-            <li>Sentada alerta &mdash; junto a la orilla de un r&iacute;o, mirando hacia afuera</li>
-            <li>Caminando &mdash; a trav&eacute;s del bosque, a medio paso, con confianza</li>
+            <li>Caminando por el bosque &mdash; a medio paso, con confianza</li>
             <li>Saltando &mdash; sobre el agua o entre rocas, extensi&oacute;n completa</li>
-            <li>Agachada junto al agua &mdash; mirando su reflejo</li>
-            <li>Mirando las estrellas &mdash; sentada, cabeza inclinada hacia atr&aacute;s, constelaci&oacute;n brillando en su hombro</li>
+            <li>De pie en una cresta &mdash; viento en el pelaje, observando el paisaje</li>
+            <li>Agachada &mdash; lista para saltar, m&uacute;sculos tensos</li>
+            <li>Sentada con Candelaria &mdash; una al lado de la otra, compa&ntilde;eras iguales</li>
         </ul>
-        <div class="deliverable-tag">Entregable: Hoja de personaje (rotaci&oacute;n) + poses individuales como PNG separados con fondos transparentes</div>
+
+        <h4>Etapa 3: Guardiana &mdash; Expresiones (6)</h4>
+        <ul>
+            <li>Serena &mdash; ojos entrecerrados, quietud absoluta</li>
+            <li>Imponente &mdash; ment&oacute;n alzado, constelaci&oacute;n brillando</li>
+            <li>Dolor &mdash; ojos hacia abajo, peso de la p&eacute;rdida visible</li>
+            <li>Ense&ntilde;ando &mdash; mirada paciente, cabeza ligeramente inclinada hacia quien escucha</li>
+            <li>Recordando &mdash; ojos distantes, viendo algo que ya no est&aacute;</li>
+            <li>Resuelta &mdash; mirando al frente, cada cicatriz visible, sin miedo</li>
+        </ul>
+        <h4>Etapa 3: Guardiana &mdash; Poses (5)</h4>
+        <ul>
+            <li>Sentada en reposo &mdash; bajo la ceiba, constelaci&oacute;n pulsando</li>
+            <li>Caminando lentamente &mdash; deliberada, cargada de prop&oacute;sito</li>
+            <li>Mirando las estrellas &mdash; cabeza inclinada hacia atr&aacute;s, constelaci&oacute;n completa brillando en su hombro</li>
+            <li>De pie en un umbral &mdash; entre dos mundos, mitad en luz, mitad en sombra</li>
+            <li>Nariz contra nariz con La Sombra &mdash; abrazando su yo-sombra</li>
+        </ul>
+
+        <div class="deliverable-tag">Entregable: TRES hojas de personaje (una por etapa, cada una con rotaci&oacute;n + expresiones + poses como PNG separados con fondos transparentes) + 2 ilustraciones de transici&oacute;n (So&ntilde;adora &rarr; Caminante en dest18, Caminante &rarr; Guardiana en dest38)</div>
     </div>
 
     <!-- Mamá Jaguar -->
@@ -1152,12 +1252,140 @@
         <div class="character-name">La Sombra de Yaguar&aacute;</div>
         <div class="character-role">El yo-sombra &mdash; Prioridad 7</div>
         <ul>
-            <li><strong>Aparece en el nivel B2.</strong> Luce exactamente como Yaguar&aacute; pero <em>algo anda mal</em>.</li>
+            <li><strong>Aparece en el nivel B2.</strong> Usa la <strong>Etapa 2 (Caminante)</strong> como base de su silueta, ya que aparece durante la banda B. Luce exactamente como Yaguar&aacute; pero <em>algo anda mal</em>.</li>
             <li><strong>Visual:</strong> La silueta de Yaguar&aacute;, pero los bordes oscilan como un reflejo en agua agitada.</li>
             <li><strong>Ojos:</strong> Espejos &mdash; reflejan al espectador en vez de ver. Sin pupilas, solo superficie reflectante.</li>
             <li><strong>Representa:</strong> El miedo a cometer errores, a no ser lo suficientemente bueno para hablar. Debe ser <em>abrazada</em>, no derrotada.</li>
         </ul>
         <div class="deliverable-tag">Entregable: Versi&oacute;n silueta oscura de cada pose de Yaguar&aacute;, con bordes ondulantes &mdash; PNG transparente</div>
+    </div>
+
+    <!-- ===== LOS AUTORES LITERARIOS ===== -->
+    <h3 style="margin: 40px 0 10px; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--bark);">Los autores literarios <span style="font-size: 0.85rem; color: var(--gold); font-weight: 400;">&mdash; Personajes recurrentes A1, crecen con el estudiante</span></h3>
+    <p style="margin-bottom: 24px; color: var(--text-light); font-size: 0.95rem;">Cuatro autores colombianos reales aparecen como presencias m&aacute;gico-realistas en el mundo de Yaguar&aacute;. En A1, son figuras on&iacute;ricas: aparecen, dicen una sola l&iacute;nea, brillan y se disuelven. Crecen ling&uuml;&iacute;sticamente al mismo ritmo que el estudiante. Para B1+, se convierten en personajes narrativos completos. <strong>Los autores tambi&eacute;n est&aacute;n aprendiendo a hablar.</strong></p>
+    <p style="margin-bottom: 24px; color: var(--text-light); font-size: 0.95rem;"><strong>Regla visual:</strong> NO son retratos fotorrealistas. Son estilizados, c&aacute;lidos, ilustrados con la misma calidad de l&iacute;nea org&aacute;nica que los personajes animales &mdash; pero inconfundiblemente humanos y reconociblemente basados en la apariencia real de los autores. Piense en las figuras humanas de Shaun Tan o los personajes on&iacute;ricos de Remedios Varo. Existen entre lo real y lo m&iacute;tico. <strong>Use las fotograf&iacute;as de referencia para el rostro, la complexi&oacute;n y el porte.</strong></p>
+
+    <!-- El poeta -->
+    <div class="character-card literary">
+        <div class="character-name">El poeta &mdash; Rafael Pombo (1833&ndash;1912)</div>
+        <div class="character-role">Poeta de la literatura infantil colombiana &mdash; Dominio p&uacute;blico &mdash; Prioridad 3</div>
+        <img src="assets/reference/rafael-pombo.jpg" alt="Retrato de Rafael Pombo" class="reference-photo">
+        <ul>
+            <li><strong>Apariencia real</strong> (ver <code>assets/reference/rafael-pombo.jpg</code>): Rostro delgado, frente alta, cabello casta&ntilde;o escaso. Peque&ntilde;os quevedos redondos (pince-nez). Bigote casta&ntilde;o/rojizo cuidado, sin barba. Tez p&aacute;lida. Traje oscuro formal, camisa blanca, corbat&iacute;n negro con alfiler de perla. Expresi&oacute;n seria y reflexiva, pero los ojos son amables detr&aacute;s de los lentes. Porte refinado, de intelectual.</li>
+            <li><strong>Tema:</strong> Nombrar, animales, lo l&uacute;dico. Su mundo ES el bosque de Yaguar&aacute;.</li>
+            <li><strong>Contexto:</strong> Sentado o de pie en un claro del bosque, rodeado de animales de sus poemas. Una rana (Rinr&iacute;n) en su hombro o saltando de su libro abierto. Do&ntilde;a Ratona puede aparecer cerca.</li>
+            <li><strong>Ropa:</strong> Traje oscuro formal con cuello alto, corbat&iacute;n &mdash; vestimenta de intelectual bogotano del siglo XIX. Ligeramente arrugado, vivido. Manchas de tinta en los dedos.</li>
+            <li><strong>Luz:</strong> Dorada, c&aacute;lida &mdash; como si el bosque se abriera para dejar pasar la luz del sol hasta &eacute;l.</li>
+            <li><strong>Accesorios:</strong> Un libro abierto del que emergen animales; una pluma; un tintero.</li>
+            <li><strong>Momento clave:</strong> <em>&ldquo;El poeta sonr&iacute;e. Una rana salta de su libro.&rdquo;</em></li>
+        </ul>
+        <h4>Expresiones necesarias (4)</h4>
+        <ul>
+            <li>Sonriendo c&aacute;lidamente &mdash; amabilidad genuina, paternal</li>
+            <li>Leyendo en voz alta &mdash; boca abierta, ojos en el libro, gesto de declamaci&oacute;n</li>
+            <li>Mirando hacia arriba con asombro &mdash; al dosel del bosque</li>
+            <li>Riendo &mdash; risa abierta, los lentes ligeramente torcidos</li>
+        </ul>
+        <h4>Poses necesarias (3)</h4>
+        <ul>
+            <li>Sentado con libro abierto en el regazo &mdash; rana a media salto desde las p&aacute;ginas</li>
+            <li>De pie en un claro con brazos ligeramente abiertos &mdash; acogiendo el bosque</li>
+            <li>Inclin&aacute;ndose para hablar a un animal peque&ntilde;o &mdash; a la altura de la rana</li>
+        </ul>
+        <h4>Tambi&eacute;n ilustrar</h4>
+        <ul>
+            <li><strong>Rinr&iacute;n</strong> &mdash; la rana de <em>&ldquo;El renacuajo paseador&rdquo;</em>: peque&ntilde;a, expresiva, c&oacute;mica, siempre cerca del poeta.</li>
+            <li><strong>Do&ntilde;a Ratona</strong> &mdash; una ratona digna con un peque&ntilde;o delantal.</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hoja de personaje + 3 poses + Rinr&iacute;n y Do&ntilde;a Ratona como personajes separados, PNG transparente</div>
+    </div>
+
+    <!-- El viajero -->
+    <div class="character-card literary">
+        <div class="character-name">El viajero &mdash; Jos&eacute; Eustasio Rivera (1888&ndash;1928)</div>
+        <div class="character-role">Autor de <em>La vor&aacute;gine</em> &mdash; Dominio p&uacute;blico &mdash; Prioridad 3</div>
+        <img src="assets/reference/jose-eustasio-rivera.jpg" alt="Retrato de Jos&eacute; Eustasio Rivera" class="reference-photo">
+        <ul>
+            <li><strong>Apariencia real</strong> (ver <code>assets/reference/jose-eustasio-rivera.jpg</code>): Hombre joven, principios de los 30. Rostro ovalado, cabello oscuro peinado hacia atr&aacute;s con raya lateral. Afeitado con un insinuaci&oacute;n de bigote fino. Piel clara, facciones refinadas. Ojos oscuros mirando ligeramente fuera de c&aacute;mara &mdash; contemplativos, casi melanc&oacute;licos. Traje de tres piezas con corbata. Postura digna y erguida. Para el juego, adaptar su ropa de traje formal a ropa de campo de la selva, pero mantener el mismo porte digno y su rostro joven y serio.</li>
+            <li><strong>Tema:</strong> Naturaleza, selva, exploraci&oacute;n. La selva misma habla a trav&eacute;s de &eacute;l.</li>
+            <li><strong>Contexto:</strong> Caminando por la selva densa, cuaderno en mano, escribiendo mientras avanza. La selva lo envuelve. Est&aacute; en casa all&iacute;, sin miedo, pero con respeto.</li>
+            <li><strong>Ropa:</strong> Adaptar de su look formal a ropa de explorador de principios del siglo XX &mdash; camisa de lino (mangas enrolladas), pantalones, botas resistentes, sombrero de ala ancha echado hacia atr&aacute;s. Morral de cuero cruzado al pecho. Mantener la dignidad de su porte incluso en ropa de selva.</li>
+            <li><strong>Accesorios:</strong> Un cuaderno de cuero (m&aacute;s peque&ntilde;o que el de Candelaria), un l&aacute;piz corto, el morral.</li>
+            <li><strong>Momento clave:</strong> <em>&ldquo;Un viajero camina por la selva. Tiene un cuaderno.&rdquo;</em></li>
+        </ul>
+        <h4>Expresiones necesarias (4)</h4>
+        <ul>
+            <li>Concentrado &mdash; escribiendo mientras camina, ojos en el cuaderno</li>
+            <li>Mirando al dosel con asombro &mdash; cuello hacia arriba, boca entreabierta</li>
+            <li>Decidido &mdash; paso firme, mirada al frente</li>
+            <li>Contemplativo &mdash; de perfil, mirando al horizonte verde</li>
+        </ul>
+        <h4>Poses necesarias (3)</h4>
+        <ul>
+            <li>Caminando por la selva con cuaderno &mdash; vegetaci&oacute;n densa alrededor</li>
+            <li>Agachado junto al r&iacute;o escribiendo &mdash; agua reflejando su silueta</li>
+            <li>Silueta de perfil contra el verde denso &mdash; al borde del bosque mirando hacia afuera</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hoja de personaje + 3 poses, PNG transparente</div>
+    </div>
+
+    <!-- Don Tomás -->
+    <div class="character-card literary">
+        <div class="character-name">Don Tom&aacute;s &mdash; Tom&aacute;s Carrasquilla (1858&ndash;1940)</div>
+        <div class="character-role">Maestro del costumbrismo antioque&ntilde;o &mdash; Dominio p&uacute;blico &mdash; Prioridad 3</div>
+        <img src="assets/reference/tomas-carrasquilla.jpg" alt="Retrato de Tom&aacute;s Carrasquilla por Benjam&iacute;n de la Calle" class="reference-photo">
+        <ul>
+            <li><strong>Apariencia real</strong> (ver <code>assets/reference/tomas-carrasquilla.jpg</code>): Calvo en la parte superior, cr&aacute;neo completamente liso. Bigote ancho, oscuro y frondoso &mdash; su rasgo m&aacute;s ic&oacute;nico, grueso y tupido, ca&iacute;do ligeramente hacia abajo. Rostro ancho, mand&iacute;bula fuerte. Ojos oscuros hundidos con mirada directa y penetrante &mdash; la mirada de un hombre que no se le escapa nada. Traje oscuro formal, camisa blanca de cuello alto, corbata/corbat&iacute;n oscuro con alfiler. Complexi&oacute;n s&oacute;lida, robusta. Serio pero no severo &mdash; la iron&iacute;a vive en los ojos y en la forma del bigote.</li>
+            <li><strong>Tema:</strong> Familia, comida, hogar, vida cotidiana. Historias junto al fuego.</li>
+            <li><strong>Contexto:</strong> Sentado junto al fuego o en una mesa r&uacute;stica. Siempre cerca de comida, familia, calor. La escena irradia domesticidad &mdash; no pobreza, sino sencillez con dignidad.</li>
+            <li><strong>Ropa:</strong> Formal pero antioque&ntilde;o &mdash; traje oscuro, cuello alto, chaleco. Una ruana sobre los hombros para el fr&iacute;o. Un sombrero cercano (no puesto cuando est&aacute; sentado).</li>
+            <li><strong>Rostro:</strong> El bigote es esencial &mdash; grueso, angular, imponente. Ojos que se arrugan con iron&iacute;a.</li>
+            <li><strong>Accesorios:</strong> Un plato de comida, una taza de chocolate caliente, un taburete de madera, luz de fogata.</li>
+            <li><strong>Momento clave:</strong> <em>&ldquo;Un hombre viejo aparece junto al fuego.&rdquo;</em></li>
+        </ul>
+        <h4>Expresiones necesarias (4)</h4>
+        <ul>
+            <li>Sonrisa de bienvenida &mdash; c&aacute;lida, hospitalaria, bigote curv&aacute;ndose</li>
+            <li>Ofreciendo comida &mdash; mano extendida con un plato o taza</li>
+            <li>Contando una historia &mdash; manos animadas, ojos brillantes</li>
+            <li>Escuchando con mirada ir&oacute;nica &mdash; ceja levantada, media sonrisa</li>
+        </ul>
+        <h4>Poses necesarias (3)</h4>
+        <ul>
+            <li>Sentado junto al fuego con un plato &mdash; fogata iluminando su rostro</li>
+            <li>De pie en una puerta dando la bienvenida &mdash; gesto acogedor</li>
+            <li>Manos gesticulando mientras cuenta una historia &mdash; sentado, audiencia impl&iacute;cita</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hoja de personaje + 3 poses, PNG transparente</div>
+    </div>
+
+    <!-- El maestro -->
+    <div class="character-card literary">
+        <div class="character-name">El maestro &mdash; Luis Fernando Mac&iacute;as Zuluaga (n. 1957)</div>
+        <div class="character-role">Poeta, narrador, profesor &mdash; Contempor&aacute;neo (con licencia) &mdash; Prioridad 3</div>
+        <img src="assets/reference/luis-fernando-macias.jpg" alt="Foto de Luis Fernando Mac&iacute;as Zuluaga" class="reference-photo">
+        <ul>
+            <li><strong>Apariencia real</strong> (ver <code>assets/reference/luis-fernando-macias.jpg</code>): Finales de los 60. Cabello corto gris/blanco, ligeramente escaso. Gafas rectangulares de montura oscura. Rostro redondo y c&aacute;lido con l&iacute;neas de risa &mdash; un hombre que sonr&iacute;e f&aacute;cil y abiertamente. Barba incipiente canosa. Sonrisa amplia y franca. Camisa a cuadros abotonada, casual y accesible. No impone &mdash; amigable, cercano, de esas presencias que ponen a la gente c&oacute;moda. Complexi&oacute;n robusta.</li>
+            <li><strong>Tema:</strong> Ense&ntilde;anza, sabidur&iacute;a, lenguaje. &ldquo;La palabra como ser vivo.&rdquo;</li>
+            <li><strong>Contexto:</strong> Aparece junto al r&iacute;o con un libro. Presencia serena. El espacio alrededor de &eacute;l se siente como un aula que se ha convertido en jard&iacute;n &mdash; o un jard&iacute;n que se ha convertido en aula.</li>
+            <li><strong>Ropa:</strong> Moderna pero discreta &mdash; camisa abotonada limpia, pantalones sencillos. Intelectual pero accesible.</li>
+            <li><strong>Accesorios:</strong> Un libro (cerrado o abierto), el r&iacute;o detr&aacute;s de &eacute;l.</li>
+            <li><strong>Momento clave:</strong> <em>&ldquo;Un hombre con lentes aparece junto al r&iacute;o. Tiene un libro.&rdquo;</em></li>
+        </ul>
+        <h4>Expresiones necesarias (4)</h4>
+        <ul>
+            <li>Escuchando con atenci&oacute;n &mdash; cabeza ligeramente inclinada, ojos atentos</li>
+            <li>Explicando con pasi&oacute;n tranquila &mdash; manos abiertas, palabras en el aire</li>
+            <li>Sonriendo ante el hallazgo de un estudiante &mdash; alegr&iacute;a genuina, orgullo</li>
+            <li>Leyendo &mdash; ojos bajos, absorto en la p&aacute;gina</li>
+        </ul>
+        <h4>Poses necesarias (3)</h4>
+        <ul>
+            <li>De pie junto al r&iacute;o con libro &mdash; agua corriendo detr&aacute;s</li>
+            <li>Sentado en una roca leyendo &mdash; naturaleza alrededor, paz</li>
+            <li>Manos abiertas como ofreciendo una palabra &mdash; gesto de entrega</li>
+        </ul>
+        <div class="deliverable-tag">Entregable: Hoja de personaje + 3 poses, PNG transparente</div>
     </div>
 
     <!-- Los Antiguos -->
@@ -1572,9 +1800,15 @@
         <span class="comment">// Patr&oacute;n:</span>
         <span class="highlight">personaje</span>-<span class="highlight">mundo</span>-<span class="highlight">escena</span>-<span class="highlight">variante</span>.<span class="highlight">formato</span>
 
-        <span class="comment">// Ejemplos:</span>
-        yaguara-abajo-familia-happy.png
-        yaguara-abajo-river-crouching.png
+        <span class="comment">// Ejemplos (nota: los archivos de Yaguar&aacute; incluyen prefijo de etapa de vida):</span>
+        yaguara-sonadora-abajo-familia-happy.png
+        yaguara-sonadora-abajo-river-peering.png
+        yaguara-caminante-medio-village-walking.png
+        yaguara-caminante-medio-ridge-standing.png
+        yaguara-guardiana-arriba-ceiba-repose.png
+        yaguara-guardiana-arriba-stars-looking.png
+        yaguara-transition-threshold-dest18.png
+        yaguara-transition-bridge-dest38.png
         nakawe-abajo-horizon-serene.png
         rio-abajo-leap-playful.png
         ceiba-abajo-forest-night.png
@@ -1583,7 +1817,7 @@
         delfin-medio-llanos-breaching.png
         carey-medio-costa-swimming.png
         silencio-gris-overlay-edge-01.png
-        sombra-yaguara-sitting-distorted.png
+        sombra-yaguara-caminante-sitting-distorted.png
         pattern-mola-selva-border.svg
         pattern-wayuu-andes-border.svg
         env-selva-panoramic.png
@@ -1715,13 +1949,18 @@
     <div class="timeline">
         <div class="timeline-item priority-1">
             <div class="timeline-label">Fase 1 &mdash; M&aacute;xima prioridad</div>
-            <div class="timeline-title">Hoja de personaje de Yaguar&aacute;</div>
-            <div class="timeline-desc">Rotaci&oacute;n (frente, 3/4, perfil, espalda) + 6 expresiones + 5 poses clave. Esta es la base &mdash; todo lo dem&aacute;s fluye a partir de su dise&ntilde;o.</div>
+            <div class="timeline-title">Hoja de personaje de Yaguar&aacute; <strong>So&ntilde;adora</strong> (Etapa 1)</div>
+            <div class="timeline-desc">Rotaci&oacute;n (frente, 3/4, perfil, espalda) + 6 expresiones + 5 poses clave de la etapa cachorra. Esta es la base &mdash; todo lo dem&aacute;s fluye a partir de su dise&ntilde;o. Necesaria primero para los m&oacute;dulos A1.</div>
         </div>
         <div class="timeline-item priority-1">
             <div class="timeline-label">Fase 2</div>
             <div class="timeline-title">La familia A1: Nakawe, R&iacute;o, Abuela Ceiba</div>
             <div class="timeline-desc">Estos personajes aparecen en los primeros m&oacute;dulos. Necesarios para construir la experiencia inicial.</div>
+        </div>
+        <div class="timeline-item priority-1">
+            <div class="timeline-label">Fase 2b &mdash; Autores literarios</div>
+            <div class="timeline-title">El poeta (Pombo) + Rinr&iacute;n + Do&ntilde;a Ratona, El viajero (Rivera), Don Tom&aacute;s (Carrasquilla), El maestro (Mac&iacute;as)</div>
+            <div class="timeline-desc">Cuatro autores colombianos reales como personajes m&aacute;gico-realistas. Necesarios para dest1&ndash;12 (contenido A1). Hojas de personaje con rotaci&oacute;n + expresiones + 3 poses cada uno. Los rostros deben basarse en las fotograf&iacute;as de referencia en <code>assets/reference/</code>.</div>
         </div>
         <div class="timeline-item priority-1">
             <div class="timeline-label">Fase 3</div>
@@ -1759,6 +1998,11 @@
             <div class="timeline-desc">Cada uno con sus poses especificadas. Estos pueblan el Acto II.</div>
         </div>
         <div class="timeline-item priority-2">
+            <div class="timeline-label">Fase 5b</div>
+            <div class="timeline-title">Hoja de personaje de Yaguar&aacute; <strong>Caminante</strong> (Etapa 2) + Transici&oacute;n 1</div>
+            <div class="timeline-desc">Rotaci&oacute;n + 6 expresiones + 5 poses de la etapa adulta joven. M&aacute;s una ilustraci&oacute;n de transici&oacute;n mostrando el cambio So&ntilde;adora &rarr; Caminante en dest18 (cruce del umbral).</div>
+        </div>
+        <div class="timeline-item priority-2">
             <div class="timeline-label">Fase 6</div>
             <div class="timeline-title">Los 3 ambientes restantes: Andes, Llanos, Costa</div>
             <div class="timeline-desc">Cada uno con panor&aacute;mica + vertical + vi&ntilde;etas + mosaico de patr&oacute;n textil.</div>
@@ -1766,7 +2010,12 @@
         <div class="timeline-item priority-3">
             <div class="timeline-label">Fase 7</div>
             <div class="timeline-title">El Silencio Gris + La Sombra de Yaguar&aacute;</div>
-            <div class="timeline-desc">Efectos de superposici&oacute;n, texturas de desaturaci&oacute;n, siluetas de sombra. Para contenido B2+.</div>
+            <div class="timeline-desc">Efectos de superposici&oacute;n, texturas de desaturaci&oacute;n, siluetas de sombra (basadas en la etapa Caminante). Para contenido B2+.</div>
+        </div>
+        <div class="timeline-item priority-3">
+            <div class="timeline-label">Fase 7b</div>
+            <div class="timeline-title">Hoja de personaje de Yaguar&aacute; <strong>Guardiana</strong> (Etapa 3) + Transici&oacute;n 2</div>
+            <div class="timeline-desc">Rotaci&oacute;n + 6 expresiones + 5 poses de la etapa anciana. M&aacute;s una ilustraci&oacute;n de transici&oacute;n mostrando el cambio Caminante &rarr; Guardiana en dest38 (el camino de regreso).</div>
         </div>
         <div class="timeline-item priority-3">
             <div class="timeline-label">Fase 8</div>
@@ -1803,7 +2052,7 @@
     <h2><span class="section-number">11</span> Escenas clave por destino</h2>
     <div class="section-subtitle">Momentos narrativos espec&iacute;ficos que necesitan ilustraci&oacute;n &mdash; la columna visual del juego</div>
 
-    <p>Cada destino del juego tiene un momento visual central. Estas son las escenas que el estudiante <em>recuerda</em> &mdash; las im&aacute;genes que cargan peso emocional y anclan el aprendizaje del idioma a una historia. A continuaci&oacute;n se presentan las escenas clave para todos los destinos construidos hasta ahora (dest1&ndash;23), organizadas por nivel. Cada tarjeta describe la composici&oacute;n, personajes, escenario y ambiente que el ilustrador debe lograr.</p>
+    <p>Cada destino tiene un momento visual central &mdash; la imagen que el estudiante ve al llegar. A continuaci&oacute;n se presentan las escenas de los <strong>58 destinos</strong>, organizadas por nivel. Cada tarjeta describe la composici&oacute;n, personajes, escenario y ambiente.</p>
 
     <p><strong>Entregable por escena:</strong> 1200&times;800px (horizontal) o 800&times;1200px (vertical), PNG con fondo transparente + archivo fuente. Estas son <em>ilustraciones narrativas</em>, no elementos de interfaz &mdash; deben sentirse como p&aacute;ginas de un libro.</p>
 
@@ -2165,7 +2414,328 @@
         </div>
     </div>
 
-    <p style="margin-top: 30px; font-style: italic; color: var(--text-light);">Las escenas para dest24&ndash;58 se agregar&aacute;n cuando esos destinos est&eacute;n construidos. El juego completo contendr&aacute; 58 ilustraciones de escenas clave &mdash; una por destino &mdash; adem&aacute;s de las hojas de personajes, ambientes, elementos de interfaz y fragmentos de historia descritos en secciones anteriores.</p>
+    <!-- ==================== B1 AVANZADO ==================== -->
+    <div class="level-group">
+        <h3>B1 Avanzado &mdash; Las historias (dest24&ndash;28)</h3>
+        <div class="level-desc">Caminos que se cruzan, conflicto creciente, despedida de la anciana.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest24 &mdash; &ldquo;Las historias que se cruzan&rdquo;</div>
+        <div class="scene-meta">Escena: Dos caminos se encuentran &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Una encrucijada en el bosque. Yaguar&aacute; llega por un sendero, Candelaria por otro. Do&ntilde;a Asunci&oacute;n al fondo junto al r&iacute;o, peque&ntilde;a contra el paisaje, manos en el agua. Los caminos convergen aqu&iacute;.</div>
+        <h4>Ambiente: convergencia, destino, dos viajes haci&eacute;ndose uno</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span><span>Do&ntilde;a Asunci&oacute;n (fondo)</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest25 &mdash; &ldquo;El hombre del camino&rdquo;</div>
+        <div class="scene-meta">Escena: La visi&oacute;n de Don Pr&oacute;spero &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Don Pr&oacute;spero de pie en una colina, silueta contra el cielo, mapa extendido en las manos. Postura segura, persuasiva. Abajo, Yaguar&aacute; y Candelaria observan desde el borde del bosque. Detr&aacute;s de &eacute;l: un camino abri&eacute;ndose paso por el verde.</div>
+        <h4>Ambiente: ambici&oacute;n, persuasi&oacute;n, la l&oacute;gica seductora del progreso</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest26 &mdash; &ldquo;Lo que se pierde&rdquo;</div>
+        <div class="scene-meta">Escena: El claro silencioso &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Un claro donde hab&iacute;a un r&iacute;o. Tierra seca y agrietada, troncos ca&iacute;dos. Una niebla gris en los bordes &mdash; primera presencia visible del Silencio Gris. Sin animales. Yaguar&aacute; sola en el centro, orejas aplastadas.</div>
+        <h4>Ambiente: p&eacute;rdida, desolaci&oacute;n, la ausencia hecha visible</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest27 &mdash; &ldquo;Dos verdades&rdquo;</div>
+        <div class="scene-meta">Escena: Perspectiva dividida &mdash; Mundo del Medio</div>
+        <div class="scene-desc">El mismo paisaje dividido por la mitad. Izquierda: la visi&oacute;n de Don Pr&oacute;spero &mdash; camino, trabajadores, pueblo pr&oacute;spero. Derecha: la verdad de Candelaria &mdash; bosque destruido, r&iacute;o desviado, animales huyendo. Ambos de espaldas en la l&iacute;nea divisoria.</div>
+        <h4>Ambiente: tensi&oacute;n, verdad dividida, imposibilidad de respuestas simples</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest28 &mdash; &ldquo;La voz de la abuela&rdquo;</div>
+        <div class="scene-meta">Escena: Despedida de Do&ntilde;a Asunci&oacute;n &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Orilla del r&iacute;o en hora dorada. Do&ntilde;a Asunci&oacute;n sentada en el suelo, peque&ntilde;a y antigua, pa&ntilde;uelo colorido. Manos en el agua del r&iacute;o. Los dos dedos faltantes de su mano izquierda son visibles. Candelaria arrodillada a su lado, escuchando. La &uacute;ltima vez que la anciana habla.</div>
+        <h4>Ambiente: ternura, transmisi&oacute;n, despedida sin drama</h4>
+        <div class="scene-characters"><span>Do&ntilde;a Asunci&oacute;n</span><span>Candelaria</span></div>
+    </div>
+
+    <!-- ==================== B2 B&Aacute;SICO ==================== -->
+    <div class="level-group">
+        <h3>B2 B&aacute;sico &mdash; El silencio (dest29&ndash;33)</h3>
+        <div class="level-desc">El mundo perdiendo color, sombras, conversaciones dif&iacute;ciles, nombres olvidados.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest29 &mdash; &ldquo;El silencio avanza&rdquo;</div>
+        <div class="scene-meta">Escena: La niebla gris consume el bosque &mdash; Mundo del Medio</div>
+        <div class="scene-desc">El bosque perdiendo color. &Aacute;rboles grises desde los bordes. R&iacute;o silencioso. El Silencio Gris avanza como niebla visible. C&oacute;ndor Viejo en una rama desnuda, plumas opacas. Colibr&iacute; revolotea fren&eacute;ticamente con luz m&aacute;s tenue.</div>
+        <h4>Ambiente: amenaza creciente, belleza que se apaga</h4>
+        <div class="scene-characters"><span>C&oacute;ndor Viejo</span><span>Colibr&iacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest30 &mdash; &ldquo;La sombra de Yaguar&aacute;&rdquo;</div>
+        <div class="scene-meta">Escena: Yaguar&aacute; enfrenta su sombra &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Yaguar&aacute; frente a su propia sombra distorsionada &mdash; como un reflejo en agua turbulenta. Los bordes de la sombra ondulan. Sus ojos son espejos. Luz &aacute;mbar-gris. Sin otros personajes.</div>
+        <h4>Ambiente: confrontaci&oacute;n consigo misma, miedo hecho visible</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>La Sombra</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest31 &mdash; &ldquo;Hablar con los dem&aacute;s&rdquo;</div>
+        <div class="scene-meta">Escena: La plaza llena &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Plaza de pueblo llena de gente diversa conversando. Mercado, gestos, desacuerdos, risas. Yaguar&aacute; entre la multitud, peque&ntilde;a entre humanos.</div>
+        <h4>Ambiente: complejidad humana, di&aacute;logo, el ruido de la democracia</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Comunidad</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest32 &mdash; &ldquo;&iquest;Qui&eacute;n traicion&oacute; a qui&eacute;n?&rdquo;</div>
+        <div class="scene-meta">Escena: Dos perspectivas &mdash; Mundo del Medio</div>
+        <div class="scene-desc">El mismo paisaje pintado dos veces en un cuadro: mitad pr&oacute;spera, mitad da&ntilde;ada. Don Pr&oacute;spero y Candelaria de espaldas en el centro. Ilusi&oacute;n &oacute;ptica pintada.</div>
+        <h4>Ambiente: ambig&uuml;edad moral, la perspectiva como &uacute;nica verdad</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest33 &mdash; &ldquo;El lugar donde van los nombres&rdquo;</div>
+        <div class="scene-meta">Escena: Cementerio de palabras &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Un bosquecillo con l&aacute;pidas de piedra cubiertas de musgo. Letras talladas &mdash; palabras y nombres en idiomas que nadie habla. Algunas piedras brillan tenuemente. Yaguar&aacute; camina entre ellas, leyendo. Sagrado, no triste.</div>
+        <h4>Ambiente: reverencia, arqueolog&iacute;a del lenguaje, belleza quieta</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <!-- ==================== B2 AVANZADO ==================== -->
+    <div class="level-group">
+        <h3>B2 Avanzado &mdash; La memoria (dest34&ndash;38)</h3>
+        <div class="level-desc">El r&iacute;o de la memoria, la tierra como texto, econom&iacute;a vs. vida, el legado.</div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest34 &mdash; &ldquo;El r&iacute;o de la memoria&rdquo;</div>
+        <div class="scene-meta">Escena: R&iacute;o que fluye hacia atr&aacute;s &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Un r&iacute;o luminoso que fluye contracorriente. En el agua flotan palabras, rostros, fragmentos de historias. Luz &aacute;mbar. El agua es transparente pero la corriente es demasiado r&aacute;pida para leer las palabras.</div>
+        <h4>Ambiente: memoria como agua viva, tiempo invertido, melancol&iacute;a hermosa</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest35 &mdash; &ldquo;Letras de la llanura&rdquo;</div>
+        <div class="scene-meta">Escena: La tierra como escritura &mdash; Mundo del Medio / Llanos</div>
+        <div class="scene-desc">Los llanos al atardecer. Los surcos forman letras. Las huellas de animales son jerogl&iacute;ficos. Yaguar&aacute; agachada, leyendo el suelo como un texto. La tierra misma es un manuscrito.</div>
+        <h4>Ambiente: leer el mundo, el paisaje como literatura</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest36 &mdash; &ldquo;Econom&iacute;a de la tierra&rdquo;</div>
+        <div class="scene-meta">Escena: Etiquetas de precio en los &aacute;rboles &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Bosque con etiquetas de precio colgando de las ramas. Don Pr&oacute;spero con portapapeles a un lado. Candelaria abrazando un tronco al otro. Algunos &aacute;rboles ya cortados &mdash; tocones con etiquetas a&uacute;n puestas.</div>
+        <h4>Ambiente: absurdo de la mercantilizaci&oacute;n, urgencia, peso moral</h4>
+        <div class="scene-characters"><span>Don Pr&oacute;spero</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest37 &mdash; &ldquo;Biodiversidad en riesgo&rdquo;</div>
+        <div class="scene-meta">Escena: El mural que se borra &mdash; Mundo del Medio</div>
+        <div class="scene-desc">Un mural vivo de biodiversidad borr&aacute;ndose. Ranas, mariposas y aves se disuelven desde los bordes. El centro a&uacute;n tiene color v&iacute;vido; los bordes son grises. Candelaria dibuja fren&eacute;ticamente en su cuaderno, capturando lo que queda.</div>
+        <h4>Ambiente: eleg&iacute;a ecol&oacute;gica, carrera contra el borrado</h4>
+        <div class="scene-characters"><span>Candelaria</span><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-ii">
+        <div class="scene-title">dest38 &mdash; &ldquo;El legado que dejas&rdquo;</div>
+        <div class="scene-meta">Escena: Mirando atr&aacute;s antes de ascender &mdash; Mundo del Medio / transici&oacute;n</div>
+        <div class="scene-desc">Atardecer. Yaguar&aacute; y Candelaria en un sendero alto mirando hacia atr&aacute;s &mdash; aldeas, r&iacute;os, costa, monta&ntilde;as, todo visible. El Mundo del Medio extendido tras ellas. Adelante: el cielo oscurece a &iacute;ndigo.</div>
+        <h4>Ambiente: reflexi&oacute;n, sabidur&iacute;a ganada, umbral de transformaci&oacute;n</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <!-- ==================== C1 B&Aacute;SICO ==================== -->
+    <div class="level-group">
+        <h3>C1 B&aacute;sico &mdash; La voz (dest39&ndash;43)</h3>
+        <div class="level-desc">El mundo del cielo se abre. Estrellas cercanas, palabras como constelaciones, tejidos, luz.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest39 &mdash; &ldquo;La voz de la monta&ntilde;a&rdquo;</div>
+        <div class="scene-meta">Escena: Entrada al mundo del cielo &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Las estrellas est&aacute;n cerca, casi tocables. Aire &iacute;ndigo-plata. Palabras flotando como constelaciones. Yaguar&aacute; y Candelaria (16&ndash;17) miran hacia arriba. El suelo es transl&uacute;cido, mostrando los mundos de abajo como capas de cristal.</div>
+        <h4>Ambiente: asombro, trascendencia, lenguaje hecho c&oacute;smico</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest40 &mdash; &ldquo;Palabras de los mayores&rdquo;</div>
+        <div class="scene-meta">Escena: Los Antiguos hablan &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Figuras ancestrales luminosas entre las estrellas. No completamente s&oacute;lidas &mdash; contornos de luz con motivos precolombinos en oro. Sus palabras caen como lluvia dorada suave.</div>
+        <h4>Ambiente: sabidur&iacute;a ancestral, silencio sagrado, luz dorada</h4>
+        <div class="scene-characters"><span>Los Antiguos</span><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest41 &mdash; &ldquo;Ecos de todas las tierras&rdquo;</div>
+        <div class="scene-meta">Escena: Mapa sonoro de Colombia &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Mapa de Colombia flotando en espacio oscuro. Ondas sonoras visibles de cada regi&oacute;n, cada una en color diferente. Choc&oacute; pulsa verde, Llanos dorado, costa turquesa, Bogot&aacute; gris-plata.</div>
+        <h4>Ambiente: unidad en la diversidad, el cuerpo vivo del idioma</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest42 &mdash; &ldquo;El tejido de las palabras&rdquo;</div>
+        <div class="scene-meta">Escena: Tejido c&oacute;smico &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Hilos de luz tejidos como un telar way&uacute;u a escala c&oacute;smica. Cada hilo es una frase, un modismo, una expresi&oacute;n. Yaguar&aacute; camina sobre la superficie del textil, cuidando no romper un hilo.</div>
+        <h4>Ambiente: belleza intrincada, el idioma como artesan&iacute;a</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest43 &mdash; &ldquo;Hilos de luz&rdquo;</div>
+        <div class="scene-meta">Escena: Hilos conectando ideas &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Hilos dorados entre bloques de texto flotantes. Cada conexi&oacute;n hace brillar ambos textos. Yaguar&aacute; y Candelaria tiran hilos para conectar ideas, creando una red luminosa.</div>
+        <h4>Ambiente: descubrimiento, conexi&oacute;n, el gozo de la coherencia</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <!-- ==================== C1 AVANZADO ==================== -->
+    <div class="level-group">
+        <h3>C1 Avanzado &mdash; La palabra (dest44&ndash;48)</h3>
+        <div class="level-desc">Templos, ret&oacute;rica, voces a trav&eacute;s del tiempo, el poder de nombrar, la estrella gu&iacute;a.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest44 &mdash; &ldquo;El templo del silencio&rdquo;</div>
+        <div class="scene-meta">Escena: Templo de palabras suspendidas &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Columnas hechas de palabras suspendidas. Espacio vasto donde el lenguaje se preserva. La luz viene de las palabras mismas. Yaguar&aacute; camina entre las columnas en silencio.</div>
+        <h4>Ambiente: archivo sagrado, contemplaci&oacute;n, el lenguaje como catedral</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest45 &mdash; &ldquo;La piedra que persuade&rdquo;</div>
+        <div class="scene-meta">Escena: Ret&oacute;rica en piedra flotante &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Piedra masiva flotando en el espacio, cubierta de textos &mdash; discursos de Bol&iacute;var, grafitis, titulares, todo tallado junto. Candelaria (17&ndash;18, gafas, bolsa universitaria) la estudia. Yaguar&aacute; la rodea, cautelosa ante su poder.</div>
+        <h4>Ambiente: el peso de la ret&oacute;rica, poder y peligro en las palabras</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria (17&ndash;18 a&ntilde;os)</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest46 &mdash; &ldquo;Voces entre las ruinas&rdquo;</div>
+        <div class="scene-meta">Escena: Palimpsesto de voces &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Ruinas donde suenan ecos. Textos superpuestos como palimpsesto &mdash; Garc&iacute;a M&aacute;rquez sobre Rulfo, Shakira sobre Celia Cruz, grafiti sobre inscripciones coloniales. Todo coexiste.</div>
+        <h4>Ambiente: intertextualidad, di&aacute;logo entre siglos</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest47 &mdash; &ldquo;El nombre de las cosas&rdquo;</div>
+        <div class="scene-meta">Escena: El acto de nombrar &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Vac&iacute;o oscuro. En el centro, Yaguar&aacute; habla una palabra y la palabra crea forma. La luz emerge de su boca y se moldea en un objeto. Simple, austero, poderoso.</div>
+        <h4>Ambiente: g&eacute;nesis, el poder pol&iacute;tico de nombrar, creaci&oacute;n como responsabilidad</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest48 &mdash; &ldquo;La estrella que gu&iacute;a&rdquo;</div>
+        <div class="scene-meta">Escena: La estrella-br&uacute;jula &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Una estrella-br&uacute;jula en el cielo nocturno, m&aacute;s brillante que todas las dem&aacute;s. Yaguar&aacute; y Candelaria (18, adulta) siguen su haz. Debajo, el camino recorrido es visible como un rastro de peque&ntilde;as luces.</div>
+        <h4>Ambiente: gu&iacute;a, conocimiento acumulado, casi en casa</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria (18 a&ntilde;os)</span></div>
+    </div>
+
+    <!-- ==================== C2 B&Aacute;SICO ==================== -->
+    <div class="level-group">
+        <h3>C2 B&aacute;sico &mdash; La voz completa (dest49&ndash;53)</h3>
+        <div class="level-desc">La ciudad, la escritura como territorio, el espejo, la transformaci&oacute;n, el guardi&aacute;n despierta.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest49 &mdash; &ldquo;La ciudad de todas las voces&rdquo;</div>
+        <div class="scene-meta">Escena: Bogot&aacute; nocturna desde arriba &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Bogot&aacute; desde el cielo. Ocho millones de luces como ocho millones de voces. La ciudad vibra con registros. Cada barrio brilla a temperatura diferente.</div>
+        <h4>Ambiente: sinfon&iacute;a urbana, belleza abrumadora, la ciudad viva</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest50 &mdash; &ldquo;Tinta y territorio&rdquo;</div>
+        <div class="scene-meta">Escena: Escribir crea mundos &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Una mano escribiendo en el aire. La tinta se convierte en territorio &mdash; mapas, monta&ntilde;as, r&iacute;os, ciudades formados por los trazos de letras. La mano podr&iacute;a ser de Candelaria, la pata de Yaguar&aacute;, o la del estudiante &mdash; dejar ambiguo.</div>
+        <h4>Ambiente: poder creativo, autor&iacute;a, la palabra como territorio</h4>
+        <div class="scene-characters"><span>Mano/pata ambigua</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest51 &mdash; &ldquo;El espejo del idioma&rdquo;</div>
+        <div class="scene-meta">Escena: Espejo c&oacute;smico &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Espejo enorme flotando en el espacio. Yaguar&aacute; mira el espa&ntilde;ol desde afuera y desde adentro simult&aacute;neamente. El espejo contiene todos los registros, todas las regiones, todas las historias del idioma a la vez. Profundidad infinita.</div>
+        <h4>Ambiente: asombro metaling&uuml;&iacute;stico, ver el idioma como un todo</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest52 &mdash; &ldquo;Voces que transforman&rdquo;</div>
+        <div class="scene-meta">Escena: Palabras convirti&eacute;ndose en olas de cambio &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Una voz convirti&eacute;ndose en m&uacute;sica convirti&eacute;ndose en acci&oacute;n. Ondas de sonido visibles expandi&eacute;ndose, transformando un paisaje gris en color donde la voz alcanza.</div>
+        <h4>Ambiente: agencia, transformaci&oacute;n, el poder de la voz</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest53 &mdash; &ldquo;El guardi&aacute;n despierta&rdquo;</div>
+        <div class="scene-meta">Escena: Yaguar&aacute; se vuelve constelaci&oacute;n &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Yaguar&aacute; brilla. Est&aacute; entre otras estrellas-guardianes. Su marca de constelaci&oacute;n en el hombro izquierdo ahora arde. Otras figuras estelares la rodean en c&iacute;rculo.</div>
+        <h4>Ambiente: consagraci&oacute;n, devenir, el estudiante como guardi&aacute;n</h4>
+        <div class="scene-characters"><span>Yaguar&aacute; (luminosa)</span><span>Constelaciones guardianas</span></div>
+    </div>
+
+    <!-- ==================== C2 AVANZADO ==================== -->
+    <div class="level-group">
+        <h3>C2 Avanzado &mdash; El regreso (dest54&ndash;58)</h3>
+        <div class="level-desc">El retorno a la selva, la cr&oacute;nica, la lengua viva, el esp&iacute;ritu completo.</div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest54 &mdash; &ldquo;El regreso a la selva&rdquo;</div>
+        <div class="scene-meta">Escena: Volver al principio &mdash; Mundo de Arriba / Abajo</div>
+        <div class="scene-desc">Yaguar&aacute; vuelve a la selva de dest1 &mdash; pero ahora constelaciones brillan entre las ramas. Las mismas ra&iacute;ces de ceiba, el mismo r&iacute;o, pero todo iluminado desde adentro.</div>
+        <h4>Ambiente: regreso al hogar, transformaci&oacute;n visible, el c&iacute;rculo cerr&aacute;ndose</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest55 &mdash; &ldquo;Cr&oacute;nica de los mundos&rdquo;</div>
+        <div class="scene-meta">Escena: Los tres mundos desde lo alto &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Vista vertical: tres capas de mundo como estratos geol&oacute;gicos. Abajo: selva verde. Medio: tierra terracota. Arriba: cielo &iacute;ndigo. Los 58 destinos brillan como puntos de luz a lo largo de un r&iacute;o que fluye por las tres capas.</div>
+        <h4>Ambiente: totalidad, la belleza del viaje completo, asombro cartogr&aacute;fico</h4>
+        <div class="scene-characters"><span>Yaguar&aacute; (peque&ntilde;a, en dest55)</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest56 &mdash; &ldquo;La lengua viva&rdquo;</div>
+        <div class="scene-meta">Escena: El espa&ntilde;ol como r&iacute;o vivo &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Un r&iacute;o que cambia de curso, se bifurca, recibe afluentes. Palabras antiguas sedimentadas en el fondo. Palabras nuevas brillando en la superficie. Yaguar&aacute; camina al lado, sabiendo que no puede controlarlo, solo acompa&ntilde;arlo.</div>
+        <h4>Ambiente: aceptaci&oacute;n, flujo, la humildad del guardi&aacute;n del idioma</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest57 &mdash; &ldquo;Guardianes de historias&rdquo;</div>
+        <div class="scene-meta">Escena: Dos guardianas ante el gran &aacute;rbol &mdash; Mundo de Arriba</div>
+        <div class="scene-desc">Yaguar&aacute; y Candelaria (adulta, 18, gafas, pa&ntilde;uelo, hilos de oro en las trenzas) de pie ante la Abuela Ceiba. La copa del &aacute;rbol llega al cielo, y entre las ramas m&aacute;s altas se ven siluetas tenues de otros &aacute;rboles &mdash; otros mundos, otras lenguas.</div>
+        <h4>Ambiente: consagraci&oacute;n, compa&ntilde;erismo, atisbo de infinito</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>Candelaria (18 a&ntilde;os)</span><span>Abuela Ceiba</span></div>
+    </div>
+
+    <div class="scene-card act-iii">
+        <div class="scene-title">dest58 &mdash; &ldquo;El esp&iacute;ritu completo&rdquo;</div>
+        <div class="scene-meta">Escena: El amanecer final &mdash; el c&iacute;rculo se cierra</div>
+        <div class="scene-desc">Amanecer en la selva chocoana. <strong>La composici&oacute;n exacta de dest1</strong> &mdash; las mismas ra&iacute;ces de ceiba, el mismo r&iacute;o, la misma luz filtrada. Pero Yaguar&aacute; es completamente visible ahora, no escondida. Irradia luz dorada. El bosque est&aacute; vivo, v&iacute;vido, nombrado. La misma escena, transformada por todo lo que pas&oacute; entre medias.</div>
+        <h4>Requisito visual clave: Esta ilustraci&oacute;n debe ser el eco visual de dest1 &mdash; misma composici&oacute;n, mismo &aacute;ngulo, mismos elementos &mdash; pero viva donde dest1 era misteriosa, brillante donde dest1 era sombr&iacute;a.</h4>
+        <h4>Ambiente: completitud, plenitud, el viaje visible en la quietud</h4>
+        <div class="scene-characters"><span>Yaguar&aacute;</span><span>El bosque</span></div>
+    </div>
 
 </section>
 

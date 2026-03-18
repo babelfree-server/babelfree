@@ -493,6 +493,21 @@ hr {
     margin: 2rem 0 !important;
 }
 
+/* ─── Ad Slots ─── */
+.ad-slot {
+    max-width: 728px;
+    margin: 1rem auto;
+    text-align: center;
+    min-height: 50px;
+    overflow: hidden;
+}
+.ad-slot-between { margin: 1.5rem auto; }
+.ad-slot-compact { min-height: 0; margin: 0.5rem auto; }
+.premium-no-ads .ad-slot { display: none !important; }
+@media (max-width: 480px) {
+    .ad-slot { max-width: 100%; margin: 0.75rem auto; }
+}
+
 /* ─── Premium Footer ─── */
 .footer {
     background: rgba(0, 0, 0, 0.5) !important;
@@ -1079,4 +1094,592 @@ body {
     .nav-bar {
         display: none !important;
     }
+}
+
+/* Utility: screen-reader only (visually hidden, accessible) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================================================
+   INPUT MODE: DRAG-AND-DROP
+   ========================================================== */
+.yg-drag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.yg-drag-chip {
+    display: inline-block;
+    padding: 0.55rem 1rem;
+    background: var(--obsidian-card, rgba(30,30,30,0.85));
+    color: var(--sand-light, #f5f0e8);
+    border: 1px solid var(--ochre, #c8a55a);
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: transform var(--lux-duration, 0.25s) var(--lux-ease, ease),
+                box-shadow var(--lux-duration, 0.25s) var(--lux-ease, ease);
+}
+.yg-drag-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200,165,90,0.25);
+}
+.yg-drag-chip:active, .yg-drag-chip.yg-dragging {
+    cursor: grabbing;
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+.yg-drop-zone {
+    min-height: 2.2rem;
+    min-width: 5rem;
+    border: 2px dashed var(--ochre, #c8a55a);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0.8rem;
+    transition: border-color 0.2s, background 0.2s;
+    color: var(--sand-muted, #b0a898);
+    font-style: italic;
+}
+.yg-drop-zone.drag-over {
+    border-color: var(--gold, #e8c547);
+    background: rgba(200,165,90,0.12);
+    box-shadow: 0 0 12px rgba(200,165,90,0.2);
+}
+.yg-drop-zone.yg-drop-filled {
+    border-style: solid;
+    font-style: normal;
+    color: var(--sand-light, #f5f0e8);
+}
+.yg-drag-ghost {
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    padding: 0.55rem 1rem;
+    background: var(--obsidian-card, rgba(30,30,30,0.95));
+    color: var(--sand-light, #f5f0e8);
+    border: 1px solid var(--ochre, #c8a55a);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    opacity: 0.9;
+}
+
+/* ==========================================================
+   INPUT MODE: VOICE
+   ========================================================== */
+.yg-voice-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+}
+.yg-voice-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--ochre, #c8a55a);
+    background: var(--obsidian-card, rgba(30,30,30,0.85));
+    color: var(--sand-light, #f5f0e8);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.yg-voice-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 16px rgba(200,165,90,0.3);
+}
+.yg-voice-btn.listening {
+    border-color: var(--gold, #e8c547);
+    animation: yg-pulse 1s ease-in-out infinite;
+}
+@keyframes yg-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(200,165,90,0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(200,165,90,0); }
+}
+.yg-voice-transcript {
+    font-size: 1.1rem;
+    color: var(--sand-light, #f5f0e8);
+    min-height: 1.5rem;
+    text-align: center;
+}
+.yg-voice-fallback {
+    font-size: 0.85rem;
+    color: var(--sand-muted, #b0a898);
+    text-decoration: underline;
+}
+.yg-voice-fallback:hover {
+    color: var(--ochre, #c8a55a);
+}
+
+/* ==========================================================
+   INPUT MODE: SELF-CORRECTION
+   ========================================================== */
+.yg-self-compare {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.yg-self-yours, .yg-self-correct {
+    flex: 1;
+    min-width: 140px;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.05rem;
+}
+.yg-self-yours {
+    background: rgba(180,60,60,0.12);
+    border: 1px solid rgba(180,60,60,0.35);
+    color: var(--sand-light, #f5f0e8);
+}
+.yg-self-correct {
+    background: rgba(80,160,80,0.12);
+    border: 1px solid rgba(80,160,80,0.35);
+    color: var(--sand-light, #f5f0e8);
+}
+.yg-self-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--sand-muted, #b0a898);
+    margin-bottom: 0.3rem;
+}
+.yg-self-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+.yg-self-btn-correct, .yg-self-btn-retry {
+    padding: 0.55rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.yg-self-btn-correct {
+    background: rgba(80,160,80,0.15);
+    border-color: rgba(80,160,80,0.4);
+    color: var(--sand-light, #f5f0e8);
+}
+.yg-self-btn-correct:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(80,160,80,0.2);
+}
+.yg-self-btn-retry {
+    background: rgba(200,165,90,0.12);
+    border-color: rgba(200,165,90,0.35);
+    color: var(--sand-light, #f5f0e8);
+}
+.yg-self-btn-retry:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(200,165,90,0.2);
+}
+.yg-diff-match {
+    color: rgba(80,160,80,0.9);
+}
+.yg-diff-wrong {
+    color: rgba(220,80,80,0.9);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RIDDLE QUEST (Busqueda) — Encounter Screen
+   ═══════════════════════════════════════════════════════════════ */
+
+.yg-busqueda-card {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    background: radial-gradient(ellipse at 50% 30%, rgba(30, 22, 10, 0.97), rgba(10, 8, 4, 0.99));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    overflow-y: auto;
+    animation: yg-busqueda-fade-in 0.5s var(--lux-ease);
+}
+@keyframes yg-busqueda-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.yg-busqueda-intro {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #b8a48a;
+    text-align: center;
+    max-width: 480px;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+.yg-busqueda-verse {
+    max-width: 420px;
+    margin: 0 auto 32px;
+    padding: 24px 28px;
+    background: rgba(201, 162, 39, 0.04);
+    border-left: 3px solid rgba(201, 162, 39, 0.3);
+    border-radius: 0 12px 12px 0;
+}
+
+.yg-busqueda-verse-line {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e8d5b7;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: yg-verse-appear 0.5s var(--lux-ease) forwards;
+}
+.yg-busqueda-verse-line:nth-child(1) { animation-delay: 0.2s; }
+.yg-busqueda-verse-line:nth-child(2) { animation-delay: 0.5s; }
+.yg-busqueda-verse-line:nth-child(3) { animation-delay: 0.8s; }
+.yg-busqueda-verse-line:nth-child(4) { animation-delay: 1.1s; }
+
+.yg-busqueda-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 480px;
+    margin-bottom: 24px;
+}
+
+.yg-busqueda-option {
+    padding: 10px 22px;
+    background: rgba(201, 162, 39, 0.06);
+    border: 1px solid rgba(201, 162, 39, 0.2);
+    border-radius: 24px;
+    color: #e8d5b7;
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.3s var(--lux-ease);
+}
+.yg-busqueda-option:hover {
+    background: rgba(201, 162, 39, 0.14);
+    border-color: rgba(201, 162, 39, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(201, 162, 39, 0.15);
+}
+.yg-busqueda-option.selected {
+    background: rgba(201, 162, 39, 0.2);
+    border-color: #c9a227;
+    color: #c9a227;
+}
+.yg-busqueda-option.correct {
+    background: rgba(80, 160, 80, 0.15);
+    border-color: rgba(80, 160, 80, 0.5);
+    color: #8ec07c;
+}
+.yg-busqueda-option.incorrect {
+    background: rgba(200, 70, 70, 0.1);
+    border-color: rgba(200, 70, 70, 0.3);
+    color: rgba(200, 70, 70, 0.7);
+    opacity: 0.6;
+}
+
+.yg-busqueda-input {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px 20px;
+    background: rgba(201, 162, 39, 0.04);
+    border: 1px solid rgba(201, 162, 39, 0.2);
+    border-radius: 12px;
+    color: #e8d5b7;
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.15rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 24px;
+}
+.yg-busqueda-input:focus {
+    border-color: rgba(201, 162, 39, 0.5);
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.1);
+}
+.yg-busqueda-input::placeholder {
+    color: rgba(184, 164, 138, 0.4);
+    font-style: italic;
+}
+
+.yg-busqueda-hint-btn {
+    display: inline-block;
+    padding: 6px 18px;
+    background: transparent;
+    border: 1px solid rgba(184, 164, 138, 0.2);
+    border-radius: 20px;
+    color: #b8a48a;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 16px;
+}
+.yg-busqueda-hint-btn:hover {
+    border-color: rgba(184, 164, 138, 0.4);
+    color: #e8d5b7;
+}
+
+.yg-busqueda-hint-text {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #b8a48a;
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: yg-verse-appear 0.4s var(--lux-ease) forwards;
+}
+
+.yg-busqueda-bridge-anim {
+    animation: yg-bridge-segment-appear 0.8s var(--lux-bounce) forwards;
+}
+@keyframes yg-bridge-segment-appear {
+    0%   { opacity: 0; transform: scale(0.7) translateY(10px); }
+    60%  { opacity: 1; transform: scale(1.05) translateY(-2px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.yg-busqueda-rana-anim {
+    animation: yg-rana-flicker 1.5s ease-in-out;
+}
+@keyframes yg-rana-flicker {
+    0%   { opacity: 0; filter: brightness(2); }
+    30%  { opacity: 0.6; filter: brightness(1.5); }
+    50%  { opacity: 0.3; filter: brightness(1); }
+    70%  { opacity: 0.8; filter: brightness(1.2); }
+    100% { opacity: 1; filter: brightness(1); }
+}
+
+.yg-busqueda-create {
+    width: 100%;
+    max-width: 440px;
+    min-height: 100px;
+    padding: 16px 20px;
+    background: rgba(201, 162, 39, 0.03);
+    border: 1px solid rgba(201, 162, 39, 0.15);
+    border-radius: 12px;
+    color: #e8d5b7;
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.yg-busqueda-create:focus {
+    border-color: rgba(201, 162, 39, 0.4);
+}
+.yg-busqueda-create::placeholder {
+    color: rgba(184, 164, 138, 0.35);
+    font-style: italic;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   RIDDLE QUEST — Journal Page (cuaderno.html)
+   ═══════════════════════════════════════════════════════════════ */
+
+.yg-cuaderno {
+    min-height: 100vh;
+    background:
+        linear-gradient(180deg,
+            rgba(30, 22, 10, 1) 0%,
+            rgba(35, 26, 14, 1) 30%,
+            rgba(28, 20, 10, 1) 70%,
+            rgba(20, 14, 8, 1) 100%),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 28px,
+            rgba(201, 162, 39, 0.02) 28px,
+            rgba(201, 162, 39, 0.02) 29px
+        );
+    color: #e8d5b7;
+}
+
+.yg-cuaderno-header {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+}
+
+.yg-cuaderno-bridge {
+    position: relative;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+.yg-cuaderno-rana {
+    position: relative;
+    min-height: 160px;
+}
+
+.yg-cuaderno-rana-name {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #c9a227;
+    text-align: center;
+    min-height: 30px;
+    letter-spacing: 0.04em;
+}
+
+.yg-cuaderno-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.yg-cuaderno-entry {
+    background:
+        linear-gradient(135deg,
+            rgba(201, 162, 39, 0.04) 0%,
+            rgba(26, 18, 8, 0.6) 100%);
+    border: 1px solid rgba(201, 162, 39, 0.1);
+    border-radius: 14px;
+    padding: 20px 24px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+.yg-cuaderno-entry:hover {
+    border-color: rgba(201, 162, 39, 0.25);
+    transform: translateY(-1px);
+}
+
+.yg-cuaderno-entry-verse {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #d4c4a0;
+    padding-left: 16px;
+    border-left: 2px solid rgba(201, 162, 39, 0.2);
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+.yg-cuaderno-entry-answer {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #c9a227;
+    margin-bottom: 8px;
+}
+
+.yg-cuaderno-entry-note {
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #b8a48a;
+    line-height: 1.6;
+    padding-top: 8px;
+    border-top: 1px solid rgba(201, 162, 39, 0.06);
+}
+
+.yg-cuaderno-entry-unsolved {
+    background: rgba(26, 18, 8, 0.3);
+    border: 1px dashed rgba(184, 164, 138, 0.15);
+    border-radius: 14px;
+    padding: 20px 24px;
+    text-align: center;
+    color: rgba(184, 164, 138, 0.35);
+    font-family: var(--font-elegant, 'Cormorant Garamond', Georgia, serif);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.yg-cuaderno-entry-dest {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #b8a48a;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   RIDDLE QUEST — Bridge SVG Styling
+   ═══════════════════════════════════════════════════════════════ */
+
+.yg-bridge-segment {
+    fill: rgba(100, 80, 50, 0.25);
+    stroke: rgba(184, 164, 138, 0.2);
+    stroke-width: 1;
+    transition: fill 0.6s var(--lux-ease), stroke 0.6s var(--lux-ease), filter 0.6s;
+}
+.yg-bridge-segment.solved {
+    fill: rgba(201, 162, 39, 0.3);
+    stroke: #c9a227;
+    stroke-width: 1.5;
+    filter: drop-shadow(0 0 6px rgba(201, 162, 39, 0.35));
+}
+
+.yg-bridge-rope {
+    fill: none;
+    stroke: rgba(140, 120, 80, 0.3);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   RIDDLE QUEST — Rana SVG Styling
+   ═══════════════════════════════════════════════════════════════ */
+
+.yg-rana-silhouette {
+    fill: rgba(60, 90, 60, 0.08);
+    stroke: rgba(80, 120, 70, 0.15);
+    stroke-width: 1;
+    transition: fill 0.8s, stroke 0.8s;
+}
+
+.yg-rana-eyes {
+    fill: rgba(201, 162, 39, 0.7);
+    opacity: 0.2;
+    transition: opacity 0.8s var(--lux-ease);
+}
+
+.yg-rana-body {
+    fill: rgba(80, 140, 60, 0.08);
+    transition: fill 1s var(--lux-ease), opacity 1s;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   RIDDLE QUEST — Verse Line Stagger Animation
+   ═══════════════════════════════════════════════════════════════ */
+
+@keyframes yg-verse-appear {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }

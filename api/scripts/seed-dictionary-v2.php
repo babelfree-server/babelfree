@@ -190,13 +190,11 @@ function getCefrByFrequency(int $rank): string {
 echo "\n--- Step 3: Inserting Spanish words ---\n";
 
 $insertWord = $pdo->prepare(
-    'INSERT INTO dict_words (lang_code, word, word_normalized, cefr_level, frequency_rank, source, is_verified)
-     VALUES ("es", ?, ?, ?, ?, "curated", 1)
+    'INSERT INTO dict_words (lang_code, word, word_normalized, cefr_level, frequency_rank)
+     VALUES ("es", ?, ?, ?, ?)
      ON DUPLICATE KEY UPDATE
        frequency_rank = VALUES(frequency_rank),
-       cefr_level = COALESCE(VALUES(cefr_level), cefr_level),
-       source = "curated",
-       is_verified = 1'
+       cefr_level = COALESCE(VALUES(cefr_level), cefr_level)'
 );
 
 $inserted = 0;

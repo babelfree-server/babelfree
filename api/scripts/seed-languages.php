@@ -1,117 +1,159 @@
 <?php
 /**
- * Seed 104 languages into dict_languages table.
- * Parses lang_data_1.py, lang_data_2.py, lang_data_3.py to extract
- * code, English name, native name, flag emoji, and text direction.
+ * Seed 105 languages into dict_languages table.
+ * Hard-coded array of all platform languages (104 non-Spanish + Spanish).
  *
- * Run: php seed-languages.php
+ * Idempotent: uses INSERT IGNORE on unique `code` column.
+ *
+ * Run: php seed-languages.php [--dry-run]
  */
 
 require_once __DIR__ . '/../config/database.php';
 
 $pdo = getDB();
-$basePath = realpath(__DIR__ . '/../../');
+$dryRun = in_array('--dry-run', $argv ?? []);
 
-echo "=== Seeding 104 Languages ===\n\n";
+echo "=== Seeding Languages ===\n";
+echo "  Mode: " . ($dryRun ? 'DRY RUN' : 'LIVE') . "\n\n";
 
-// Parse all three lang_data files
-$langFiles = [
-    $basePath . '/lang_data_1.py',
-    $basePath . '/lang_data_2.py',
-    $basePath . '/lang_data_3.py',
+// All 105 platform languages: [code, name_en, name_native]
+$languages = [
+    ['af', 'Afrikaans', 'Afrikaans'],
+    ['am', 'Amharic', 'አማርኛ'],
+    ['ar', 'Arabic', 'العربية'],
+    ['az', 'Azerbaijani', 'Azərbaycanca'],
+    ['be', 'Belarusian', 'Беларуская'],
+    ['bg', 'Bulgarian', 'Български'],
+    ['bn', 'Bengali', 'বাংলা'],
+    ['bo', 'Tibetan', 'བོད་སྐད་'],
+    ['bs', 'Bosnian', 'Bosanski'],
+    ['ca', 'Catalan', 'Català'],
+    ['cs', 'Czech', 'Čeština'],
+    ['cy', 'Welsh', 'Cymraeg'],
+    ['da', 'Danish', 'Dansk'],
+    ['de', 'German', 'Deutsch'],
+    ['el', 'Greek', 'Ελληνικά'],
+    ['en', 'English', 'English'],
+    ['eo', 'Esperanto', 'Esperanto'],
+    ['es', 'Spanish', 'Español'],
+    ['et', 'Estonian', 'Eesti'],
+    ['eu', 'Basque', 'Euskara'],
+    ['fa', 'Persian', 'فارسی'],
+    ['fi', 'Finnish', 'Suomi'],
+    ['fj', 'Fijian', 'Vosa Vakaviti'],
+    ['fr', 'French', 'Français'],
+    ['ga', 'Irish', 'Gaeilge'],
+    ['gd', 'Scots Gaelic', 'Gàidhlig'],
+    ['gl', 'Galician', 'Galego'],
+    ['gu', 'Gujarati', 'ગુજરાતી'],
+    ['ha', 'Hausa', 'Hausa'],
+    ['haw', 'Hawaiian', 'ʻŌlelo Hawaiʻi'],
+    ['he', 'Hebrew', 'עברית'],
+    ['hi', 'Hindi', 'हिन्दी'],
+    ['hr', 'Croatian', 'Hrvatski'],
+    ['hu', 'Hungarian', 'Magyar'],
+    ['hy', 'Armenian', 'Հայերեն'],
+    ['id', 'Indonesian', 'Bahasa Indonesia'],
+    ['ig', 'Igbo', 'Igbo'],
+    ['is', 'Icelandic', 'Íslenska'],
+    ['it', 'Italian', 'Italiano'],
+    ['ja', 'Japanese', '日本語'],
+    ['ka', 'Georgian', 'ქართული'],
+    ['kk', 'Kazakh', 'Қазақ'],
+    ['km', 'Khmer', 'ភាសាខ្មែរ'],
+    ['kn', 'Kannada', 'ಕನ್ನಡ'],
+    ['ko', 'Korean', '한국어'],
+    ['ku', 'Kurdish', 'Kurdî'],
+    ['ky', 'Kyrgyz', 'Кыргызча'],
+    ['la', 'Latin', 'Latina'],
+    ['lb', 'Luxembourgish', 'Lëtzebuergesch'],
+    ['ln', 'Lingala', 'Lingála'],
+    ['lo', 'Lao', 'ລາວ'],
+    ['lt', 'Lithuanian', 'Lietuvių'],
+    ['lv', 'Latvian', 'Latviešu'],
+    ['mg', 'Malagasy', 'Malagasy'],
+    ['mi', 'Maori', 'Te Reo Māori'],
+    ['mk', 'Macedonian', 'Македонски'],
+    ['ml', 'Malayalam', 'മലയാളം'],
+    ['mn', 'Mongolian', 'Монгол'],
+    ['mr', 'Marathi', 'मराठी'],
+    ['ms', 'Malay', 'Bahasa Melayu'],
+    ['mt', 'Maltese', 'Malti'],
+    ['my', 'Burmese', 'မြန်မာဘာသာ'],
+    ['ne', 'Nepali', 'नेपाली'],
+    ['nl', 'Dutch', 'Nederlands'],
+    ['no', 'Norwegian', 'Norsk'],
+    ['or', 'Odia', 'ଓଡ଼ିଆ'],
+    ['pa', 'Punjabi', 'ਪੰਜਾਬੀ'],
+    ['pl', 'Polish', 'Polski'],
+    ['ps', 'Pashto', 'پښتو'],
+    ['pt', 'Portuguese', 'Português'],
+    ['ro', 'Romanian', 'Română'],
+    ['ru', 'Russian', 'Русский'],
+    ['rw', 'Kinyarwanda', 'Kinyarwanda'],
+    ['sd', 'Sindhi', 'سنڌي'],
+    ['si', 'Sinhala', 'සිංහල'],
+    ['sk', 'Slovak', 'Slovenčina'],
+    ['sl', 'Slovenian', 'Slovenščina'],
+    ['sm', 'Samoan', 'Gagana Samoa'],
+    ['sn', 'Shona', 'chiShona'],
+    ['so', 'Somali', 'Soomaali'],
+    ['sq', 'Albanian', 'Shqip'],
+    ['sr', 'Serbian', 'Српски'],
+    ['st', 'Sesotho', 'Sesotho'],
+    ['sv', 'Swedish', 'Svenska'],
+    ['sw', 'Swahili', 'Kiswahili'],
+    ['ta', 'Tamil', 'தமிழ்'],
+    ['te', 'Telugu', 'తెలుగు'],
+    ['tg', 'Tajik', 'Тоҷикӣ'],
+    ['th', 'Thai', 'ไทย'],
+    ['ti', 'Tigrinya', 'ትግርኛ'],
+    ['tk', 'Turkmen', 'Türkmen'],
+    ['tl', 'Filipino', 'Filipino'],
+    ['tn', 'Tswana', 'Setswana'],
+    ['tr', 'Turkish', 'Türkçe'],
+    ['ug', 'Uyghur', 'ئۇيغۇرچە'],
+    ['uk', 'Ukrainian', 'Українська'],
+    ['ur', 'Urdu', 'اردو'],
+    ['uz', 'Uzbek', 'Oʻzbek'],
+    ['vi', 'Vietnamese', 'Tiếng Việt'],
+    ['wo', 'Wolof', 'Wolof'],
+    ['xh', 'Xhosa', 'isiXhosa'],
+    ['yo', 'Yoruba', 'Yorùbá'],
+    ['zh', 'Chinese', '中文'],
+    ['zh-tw', 'Chinese Traditional', '繁體中文'],
+    ['zu', 'Zulu', 'isiZulu'],
 ];
 
-$languages = [];
-
-foreach ($langFiles as $file) {
-    if (!file_exists($file)) {
-        echo "  WARNING: $file not found, skipping\n";
-        continue;
-    }
-
-    $content = file_get_contents($file);
-
-    // Match Python tuple entries: ("code", "English Name", "Native Name", "Flag", ..., "dir")
-    // Format: (code, name_en, name_native, flag, learn_spanish, free_tagline, start_cta, dir)
-    preg_match_all(
-        '/\(\s*"([^"]+)"\s*,\s*"([^"]+)"\s*,\s*"([^"]+)"\s*,\s*"([^"]+)"\s*,\s*"[^"]*"\s*,\s*"[^"]*"\s*,\s*"[^"]*"\s*,\s*"([^"]+)"\s*\)/u',
-        $content,
-        $matches,
-        PREG_SET_ORDER
-    );
-
-    foreach ($matches as $m) {
-        $code = $m[1];
-        $nameEn = $m[2];
-        // Decode Python unicode escapes in native name
-        $nameNative = json_decode('"' . $m[3] . '"') ?: $m[3];
-        // Decode flag emoji (Python \UXXXXXXXX format)
-        $flag = preg_replace_callback('/\\\\U([0-9a-fA-F]{8})/', function($fm) {
-            return mb_chr(hexdec($fm[1]), 'UTF-8');
-        }, $m[4]);
-        // Also handle \u escapes in flag
-        $flag = json_decode('"' . $flag . '"') ?: $flag;
-        $dir = $m[5];
-
-        $languages[$code] = [
-            'code' => $code,
-            'name_en' => $nameEn,
-            'name_native' => $nameNative,
-            'flag' => $flag,
-            'dir' => $dir,
-        ];
-    }
-
-    echo "  Parsed: " . basename($file) . " (" . count($matches) . " languages)\n";
-}
-
-// Add Spanish itself (not in lang_data files since it's the target language)
-$languages['es'] = [
-    'code' => 'es',
-    'name_en' => 'Spanish',
-    'name_native' => 'Español',
-    'flag' => '🇪🇸',
-    'dir' => 'ltr',
-];
-
-echo "\n  Total languages found: " . count($languages) . "\n";
-
-// Insert into dict_languages
-$pdo->exec('DELETE FROM dict_languages');
+echo "  Languages in array: " . count($languages) . "\n\n";
 
 $insert = $pdo->prepare(
-    'INSERT INTO dict_languages (code, name_native, name_en, flag, text_direction, is_active)
-     VALUES (?, ?, ?, ?, ?, 1)'
+    'INSERT IGNORE INTO dict_languages (code, name_en, name_native)
+     VALUES (?, ?, ?)'
 );
 
 $inserted = 0;
-foreach ($languages as $lang) {
-    try {
-        $insert->execute([
-            $lang['code'],
-            $lang['name_native'],
-            $lang['name_en'],
-            $lang['flag'],
-            $lang['dir'],
-        ]);
+$skipped = 0;
+
+foreach ($languages as [$code, $nameEn, $nameNative]) {
+    if ($dryRun) {
+        echo "  [DRY] $code: $nameEn ($nameNative)\n";
         $inserted++;
-    } catch (Exception $e) {
-        echo "  ERROR inserting {$lang['code']}: " . $e->getMessage() . "\n";
+        continue;
+    }
+
+    $insert->execute([$code, $nameEn, $nameNative]);
+    if ($insert->rowCount() > 0) {
+        $inserted++;
+    } else {
+        $skipped++;
     }
 }
 
-echo "\n=== Inserted $inserted languages ===\n";
+echo "  Inserted: $inserted\n";
+echo "  Skipped (already existed): $skipped\n";
 
 // Verify
 $stmt = $pdo->query('SELECT COUNT(*) as c FROM dict_languages');
-echo "Total in dict_languages: " . $stmt->fetch()['c'] . "\n";
-
-// Show RTL languages
-$stmt = $pdo->query("SELECT code, name_en FROM dict_languages WHERE text_direction = 'rtl' ORDER BY name_en");
-$rtl = $stmt->fetchAll();
-if ($rtl) {
-    echo "\nRTL languages:\n";
-    foreach ($rtl as $r) {
-        echo "  {$r['code']}: {$r['name_en']}\n";
-    }
-}
+echo "\nTotal in dict_languages: " . $stmt->fetch()['c'] . "\n";
+echo "\nDone.\n";

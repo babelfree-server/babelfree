@@ -60,37 +60,59 @@
         var backBtn = document.querySelector('.yg-back-btn');
         if (backBtn) backBtn.href = 'ecosystem.html?eco=' + p.eco;
 
-        /* Fetch JSON content */
-        var jsonUrl = 'content/' + p.eco + '_' + p.spiral + '.json';
-        fetch(jsonUrl)
+        /* Fetch JSON content — check for template path first, fall back to standard */
+        var templateUrl = 'content/templates/' + p.eco + '_' + p.spiral + '.json';
+        var standardUrl = 'content/' + p.eco + '_' + p.spiral + '.json';
+
+        function initEngine(data) {
+            var games = data.games || data;
+
+            /* Update header with content-provided title if available */
+            if (data.meta && data.meta.title) {
+                if (titleEl) titleEl.textContent = data.meta.title;
+                if (subtitleEl) subtitleEl.textContent = eco.fullName + ' — ' + spiral.cefr;
+            }
+
+            YaguaraEngine.init({
+                games: games,
+                container: document.getElementById('yaguaraCard'),
+                progressContainer: document.getElementById('yaguaraProgress'),
+                yaguaraPanel: document.getElementById('yaguaraPanel'),
+                destinationId: p.eco + '_' + p.spiral,
+                ecosystem: p.eco,
+                world: spiral.mundo,
+                spiral: p.spiral,
+                speechRate: spiral.speechRate,
+                storageKey: 'yaguara_' + p.eco + '_' + p.spiral + '_progress',
+                backUrl: 'ecosystem.html?eco=' + p.eco
+            });
+        }
+
+        /* Try template path first; if it exists, pass through PersonalLexicon pool generation */
+        fetch(templateUrl)
             .then(function(res) {
-                if (!res.ok) throw new Error('HTTP ' + res.status);
+                if (!res.ok) throw new Error('no template');
                 return res.json();
             })
             .then(function(data) {
-                var games = data.games || data;
-
-                /* Update header with content-provided title if available */
-                if (data.meta && data.meta.title) {
-                    if (titleEl) titleEl.textContent = data.meta.title;
-                    if (subtitleEl) subtitleEl.textContent = eco.fullName + ' — ' + spiral.cefr;
+                /* Template file found — fill pool markers via PersonalLexicon */
+                if (window.PersonalLexicon) {
+                    var lex = PersonalLexicon.getInstance();
+                    data = lex.generatePool(data, p.eco);
                 }
-
-                YaguaraEngine.init({
-                    games: games,
-                    container: document.getElementById('yaguaraCard'),
-                    progressContainer: document.getElementById('yaguaraProgress'),
-                    yaguaraPanel: document.getElementById('yaguaraPanel'),
-                    destinationId: p.eco + '_' + p.spiral,
-                    world: spiral.mundo,
-                    spiral: p.spiral,
-                    speechRate: spiral.speechRate,
-                    storageKey: 'yaguara_' + p.eco + '_' + p.spiral + '_progress',
-                    backUrl: 'ecosystem.html?eco=' + p.eco
-                });
+                initEngine(data);
             })
-            .catch(function(err) {
-                showError('No se pudo cargar el contenido. Intenta de nuevo.');
+            .catch(function() {
+                /* No template — load standard content */
+                fetch(standardUrl)
+                    .then(function(res) {
+                        if (!res.ok) throw new Error('HTTP ' + res.status);
+                        return res.json();
+                    })
+                    .then(initEngine)
+                    .catch(function(err) {
+                        showError('No se pudo cargar el contenido. Intenta de nuevo.');
+                    });
             });
     }
 

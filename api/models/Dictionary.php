@@ -2,9 +2,12 @@
 
 class Dictionary {
     private PDO $pdo;
+    private array $i18n;
 
     public function __construct(PDO $pdo) {
         $this->pdo = $pdo;
+        $i18nFile = dirname(__DIR__) . '/scripts/data/dict_i18n.json';
+        $this->i18n = file_exists($i18nFile) ? json_decode(file_get_contents($i18nFile), true) : [];
     }
 
     /**
@@ -26,8 +29,139 @@ class Dictionary {
     }
 
     /**
+     * Try to find the lemma (base form) for an inflected word.
+     * Returns the lemma word string if found, null otherwise.
+     */
+    public function lemmatize(string $lang, string $word): ?string {
+        $normalized = $this->normalize($word);
+        $candidates = [];
+
+        // Spanish / Portuguese / Italian / French plural rules
+        if (in_array($lang, ['es', 'pt', 'it', 'fr'])) {
+            // -ces → -z (Spanish: peces→pez, luces→luz)
+            if (preg_match('/ces$/u', $normalized)) {
+                $candidates[] = preg_replace('/ces$/u', 'z', $normalized);
+            }
+            // -es → remove (Spanish: bancos→banco won't match, but flores→flor, colores→color)
+            if (preg_match('/es$/u', $normalized) && mb_strlen($normalized) > 3) {
+                $candidates[] = mb_substr($normalized, 0, -2);
+            }
+            // -s → remove (most common: bancos→banco, casas→casa)
+            if (preg_match('/s$/u', $normalized) && mb_strlen($normalized) > 2) {
+                $candidates[] = mb_substr($normalized, 0, -1);
+            }
+        }
+
+        // English plural rules
+        if ($lang === 'en') {
+            if (preg_match('/ies$/u', $normalized) && mb_strlen($normalized) > 4) {
+                $candidates[] = preg_replace('/ies$/u', 'y', $normalized);
+            }
+            if (preg_match('/ves$/u', $normalized) && mb_strlen($normalized) > 4) {
+                $candidates[] = preg_replace('/ves$/u', 'f', $normalized);
+                $candidates[] = preg_replace('/ves$/u', 'fe', $normalized);
+            }
+            if (preg_match('/ses$/u', $normalized) || preg_match('/xes$/u', $normalized) || preg_match('/zes$/u', $normalized) || preg_match('/ches$/u', $normalized) || preg_match('/shes$/u', $normalized)) {
+                $candidates[] = mb_substr($normalized, 0, -2);
+            }
+            if (preg_match('/s$/u', $normalized) && mb_strlen($normalized) > 2) {
+                $candidates[] = mb_substr($normalized, 0, -1);
+            }
+        }
+
+        // German plural rules
+        if ($lang === 'de') {
+            if (preg_match('/en$/u', $normalized) && mb_strlen($normalized) > 3) {
+                $candidates[] = mb_substr($normalized, 0, -2);
+                $candidates[] = mb_substr($normalized, 0, -1); // -e base
+            }
+            if (preg_match('/er$/u', $normalized) && mb_strlen($normalized) > 3) {
+                $candidates[] = mb_substr($normalized, 0, -2);
+            }
+            if (preg_match('/e$/u', $normalized) && mb_strlen($normalized) > 2) {
+                $candidates[] = mb_substr($normalized, 0, -1);
+            }
+            if (preg_match('/s$/u', $normalized) && mb_strlen($normalized) > 2) {
+                $candidates[] = mb_substr($normalized, 0, -1);
+            }
+        }
+
+        // Dutch plural rules
+        if ($lang === 'nl') {
+            if (preg_match('/en$/u', $normalized) && mb_strlen($normalized) > 3) {
+                $candidates[] = mb_substr($normalized, 0, -2);
+            }
+            if (preg_match('/s$/u', $normalized) && mb_strlen($normalized) > 2) {
+                $candidates[] = mb_substr($normalized, 0, -1);
+            }
+        }
+
+        // Try each candidate in order
+        $stmt = $this->pdo->prepare(
+            'SELECT word FROM dict_words WHERE lang_code = ? AND word_normalized = ? LIMIT 1'
+        );
+        foreach ($candidates as $candidate) {
+            if ($candidate === $normalized) continue;
+            $stmt->execute([$lang, $candidate]);
+            $row = $stmt->fetch();
+            if ($row) return $row['word'];
+        }
+
+        return null;
+    }
+
+    /**
+     * Find similar words for "did you mean?" suggestions.
+     * Uses prefix matching + Levenshtein distance.
+     */
+    public function fuzzyMatch(string $lang, string $word, int $limit = 5): array {
+        $normalized = $this->normalize($word);
+        if (mb_strlen($normalized) < 2) return [];
+
+        // Strategy 1: prefix match (first 2-3 chars)
+        $prefixLen = min(3, mb_strlen($normalized));
+        $prefix = mb_substr($normalized, 0, $prefixLen);
+
+        $stmt = $this->pdo->prepare(
+            'SELECT word, word_normalized FROM dict_words
+             WHERE lang_code = ? AND word_normalized LIKE ?
+             ORDER BY frequency_rank ASC, LENGTH(word) ASC
+             LIMIT 50'
+        );
+        $stmt->execute([$lang, $prefix . '%']);
+        $candidates = $stmt->fetchAll();
+
+        // Strategy 2: if prefix match gives too few, try shorter prefix
+        if (count($candidates) < 5 && $prefixLen > 2) {
+            $shortPrefix = mb_substr($normalized, 0, 2);
+            $stmt->execute([$lang, $shortPrefix . '%']);
+            $candidates = array_merge($candidates, $stmt->fetchAll());
+        }
+
+        // Score by Levenshtein distance
+        $scored = [];
+        $seen = [];
+        foreach ($candidates as $c) {
+            $cn = $c['word_normalized'];
+            if (isset($seen[$cn])) continue;
+            $seen[$cn] = true;
+
+            $dist = levenshtein($normalized, $cn);
+            $maxLen = max(mb_strlen($normalized), mb_strlen($cn));
+            // Only include if reasonably close (within 40% of word length)
+            if ($dist <= max(2, (int)($maxLen * 0.4))) {
+                $scored[] = ['word' => $c['word'], 'distance' => $dist];
+            }
+        }
+
+        usort($scored, function($a, $b) { return $a['distance'] - $b['distance']; });
+        return array_slice(array_column($scored, 'word'), 0, $limit);
+    }
+
+    /**
      * Full word lookup by language and word.
      * Returns entry with definitions, translations (as hyperlinks), examples, conjugations.
+     * If the word is an inflected form (plural etc.), returns the lemma entry with a redirect hint.
      *
      * Level-gated definitions:
      *  - A1/A2 user → definitions in user's interface language
@@ -44,7 +178,18 @@ class Dictionary {
         $stmt->execute([$lang, $normalized]);
         $entry = $stmt->fetch();
 
-        if (!$entry) return null;
+        // If not found, try lemmatization
+        if (!$entry) {
+            $lemma = $this->lemmatize($lang, $word);
+            if ($lemma) {
+                return ['_redirect_to' => $lemma];
+            }
+            $suggestions = $this->fuzzyMatch($lang, $word);
+            if (!empty($suggestions)) {
+                return ['_did_you_mean' => $suggestions];
+            }
+            return null;
+        }
 
         $wordId = (int)$entry['id'];
 
@@ -84,15 +229,19 @@ class Dictionary {
         $translations = $stmt->fetchAll();
 
         // Format translations with URL for hyperlink model
-        $entry['translations'] = array_map(function($t) {
+        $i18n = $this->i18n;
+        $entry['translations'] = array_map(function($t) use ($i18n) {
+            $langCode = $t['lang_code'];
             $urlWord = rawurlencode(mb_strtolower($t['word'], 'UTF-8'));
+            $prefix = $i18n[$langCode]['url_prefix'] ?? '';
+            $slug = $prefix ? $prefix . '-' . $urlWord : $urlWord;
             return [
                 'word' => $t['word'],
-                'lang' => $t['lang_code'],
+                'lang' => $langCode,
                 'part_of_speech' => $t['part_of_speech'],
                 'gender' => $t['gender'],
                 'context' => $t['context'],
-                'url' => '/dictionary/' . $t['lang_code'] . '/' . $urlWord,
+                'url' => '/dictionary/' . $langCode . '/' . $slug,
             ];
         }, $translations);
 
@@ -173,10 +322,10 @@ class Dictionary {
             'SELECT word, part_of_speech, cefr_level
              FROM dict_words
              WHERE lang_code = ? AND word_normalized LIKE ?
-             ORDER BY frequency_rank ASC, word ASC
+             ORDER BY (word_normalized = ?) DESC, LENGTH(word) ASC, frequency_rank ASC, word ASC
              LIMIT ?'
         );
-        $stmt->execute([$langCode, $normalized . '%', $limit]);
+        $stmt->execute([$langCode, $normalized . '%', $normalized, $limit]);
         return $stmt->fetchAll();
     }
 
@@ -245,20 +394,36 @@ class Dictionary {
     }
 
     /**
-     * Random word (for "word of the day").
+     * Word of the day — deterministic per day and language.
+     * Uses date as seed to pick the same word all day.
      */
     public function getRandomWord(string $langCode = 'es', ?string $cefrLevel = null): ?array {
-        $sql = 'SELECT word, part_of_speech, cefr_level, pronunciation_ipa, frequency_rank FROM dict_words WHERE lang_code = ?';
+        // Get total count for this language/level combo
+        $countSql = 'SELECT COUNT(*) FROM dict_words WHERE lang_code = ?';
         $params = [$langCode];
-
         if ($cefrLevel) {
-            $sql .= ' AND cefr_level = ?';
+            $countSql .= ' AND cefr_level = ?';
             $params[] = $cefrLevel;
         }
-
-        $sql .= ' ORDER BY RAND() LIMIT 1';
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->pdo->prepare($countSql);
         $stmt->execute($params);
+        $total = (int) $stmt->fetchColumn();
+        if ($total === 0) return null;
+
+        // Deterministic offset based on date + language
+        $seed = crc32(date('Y-m-d') . $langCode . ($cefrLevel ?? ''));
+        $offset = abs($seed) % $total;
+
+        $sql = 'SELECT word, part_of_speech, cefr_level, pronunciation_ipa, frequency_rank
+                FROM dict_words WHERE lang_code = ?';
+        $params2 = [$langCode];
+        if ($cefrLevel) {
+            $sql .= ' AND cefr_level = ?';
+            $params2[] = $cefrLevel;
+        }
+        $sql .= ' ORDER BY id LIMIT 1 OFFSET ' . $offset;
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($params2);
         return $stmt->fetch() ?: null;
     }
 
@@ -267,10 +432,12 @@ class Dictionary {
      */
     public function getLanguages(): array {
         $stmt = $this->pdo->query(
-            'SELECT code, name_native, name_en, flag, text_direction
-             FROM dict_languages
-             WHERE is_active = 1
-             ORDER BY name_en'
+            'SELECT l.code, l.name_native, l.name_en,
+                    COUNT(w.id) AS word_count
+             FROM dict_languages l
+             LEFT JOIN dict_words w ON w.lang_code = l.code
+             GROUP BY l.code, l.name_native, l.name_en
+             ORDER BY word_count DESC, l.name_en'
         );
         return $stmt->fetchAll();
     }

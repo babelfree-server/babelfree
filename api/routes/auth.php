@@ -7,6 +7,12 @@ function handleAuthRoutes(string $action, string $method): void {
     $config = require __DIR__ . '/../config/app.php';
 
     switch ($action) {
+        case 'me':
+            if ($method !== 'GET') jsonError('Método no permitido', 405);
+            $user = authenticateRequest();
+            jsonSuccess($user);
+            break;
+
         case 'register':
             if ($method !== 'POST') jsonError('Método no permitido', 405);
             checkRateLimit('register');
@@ -24,9 +30,13 @@ function handleAuthRoutes(string $action, string $method): void {
             $interfaceLang = sanitizeString($input['interface_lang'] ?? 'es', 10);
             $detectedLang = isset($input['detected_lang'])
                 ? sanitizeString($input['detected_lang'], 10) : null;
+            $nativeLang = isset($input['native_lang'])
+                ? sanitizeString($input['native_lang'], 10) : null;
+            $gender = in_array($input['gender'] ?? '', ['M', 'F', 'X'])
+                ? $input['gender'] : null;
 
             if (!validateEmail($email)) jsonError('Email inválido');
-            if (!validatePassword($password)) jsonError('La contraseña debe tener al menos 8 caracteres');
+            if (!validatePassword($password)) jsonError('La contraseña debe tener al menos 10 caracteres, con mayúscula, minúscula y número');
             if (mb_strlen($displayName) < 1) jsonError('El nombre es obligatorio');
 
             if ($userModel->findByEmail($email)) {
@@ -44,6 +54,8 @@ function handleAuthRoutes(string $action, string $method): void {
                 'role'           => $role,
                 'interface_lang'  => $interfaceLang,
                 'detected_lang'  => $detectedLang,
+                'native_lang'    => $nativeLang,
+                'gender'         => $gender,
                 'verify_token'   => $verifyToken,
                 'verify_expires' => $verifyExpires,
             ]);
@@ -65,10 +77,44 @@ function handleAuthRoutes(string $action, string $method): void {
 
             if (!$email || !$password) jsonError('Email y contraseña son obligatorios');
 
+            // Account lockout: check failed attempts
+            $lockoutKey = 'jaguar_lockout:' . md5($email);
+            $lockedOut = false;
+            try {
+                $redis = new Redis();
+                $redis->connect('127.0.0.1', 6379);
+                $failCount = (int)$redis->get($lockoutKey);
+                if ($failCount >= 10) {
+                    $ttl = $redis->ttl($lockoutKey);
+                    error_log("Account locked out: {$email} ({$failCount} failures, {$ttl}s remaining)");
+                    jsonError('Cuenta bloqueada temporalmente por demasiados intentos fallidos. Intenta en ' . ceil($ttl / 60) . ' minutos.', 429);
+                }
+                $redis->close();
+            } catch (\Exception $e) {
+                // Redis down — skip lockout check (rate limit will still apply)
+            }
+
             $user = $userModel->findByEmail($email);
             if (!$user || !password_verify($password, $user['password_hash'])) {
+                // Increment failed attempt counter
+                try {
+                    $redis = new Redis();
+                    $redis->connect('127.0.0.1', 6379);
+                    $redis->incr($lockoutKey);
+                    $redis->expire($lockoutKey, 1800); // 30 min window
+                    $redis->close();
+                } catch (\Exception $e) {}
+                error_log("Failed login attempt for: {$email} from " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown'));
                 jsonError('Email o contraseña incorrectos', 401);
             }
+
+            // Clear lockout on successful login
+            try {
+                $redis = new Redis();
+                $redis->connect('127.0.0.1', 6379);
+                $redis->del($lockoutKey);
+                $redis->close();
+            } catch (\Exception $e) {}
 
             if (!$user['is_active']) {
                 jsonError('Cuenta desactivada', 403);
@@ -101,6 +147,8 @@ function handleAuthRoutes(string $action, string $method): void {
                     'cefr_level'      => $user['cefr_level'],
                     'interface_lang'   => $immersionLocked ? 'es' : $user['interface_lang'],
                     'detected_lang'   => $user['detected_lang'],
+                    'native_lang'     => $user['native_lang'],
+                    'gender'          => $user['gender'],
                     'email_verified'  => (bool)$user['email_verified'],
                     'immersion_locked' => $immersionLocked,
                 ],
@@ -145,7 +193,7 @@ function handleAuthRoutes(string $action, string $method): void {
             $newPassword = $input['password'] ?? '';
 
             if (!$token || !$newPassword) jsonError('Datos incompletos');
-            if (!validatePassword($newPassword)) jsonError('La contraseña debe tener al menos 8 caracteres');
+            if (!validatePassword($newPassword)) jsonError('La contraseña debe tener al menos 10 caracteres, con mayúscula, minúscula y número');
 
             $user = $userModel->findByResetToken($token);
             if (!$user) {
@@ -160,6 +208,7 @@ function handleAuthRoutes(string $action, string $method): void {
 
         case 'verify':
             if ($method !== 'GET') jsonError('Método no permitido', 405);
+            checkRateLimit('general');
 
             $token = $_GET['token'] ?? '';
             if (!$token) jsonError('Token requerido');
@@ -195,6 +244,7 @@ function handleAuthRoutes(string $action, string $method): void {
 
         case 'export-data':
             if ($method !== 'GET') jsonError('Método no permitido', 405);
+            checkRateLimit('general');
             $user = authenticateRequest();
 
             $fullUser = $userModel->findById($user['id']);

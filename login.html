@@ -611,6 +611,45 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
+        .form-select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9a227' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            padding-right: 44px;
+            cursor: pointer;
+        }
+        .form-select option {
+            background: #1a1208;
+            color: #f0e6d3;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border: 1px solid rgba(201, 162, 39, 0.25);
+            border-radius: 10px;
+            cursor: pointer;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .gender-option:has(input:checked) {
+            border-color: var(--ochre);
+            background: rgba(201, 162, 39, 0.12);
+        }
+        .gender-option input[type="radio"] {
+            accent-color: var(--ochre);
+        }
+
         .password-toggle {
             position: absolute;
             right: 20px;
@@ -1218,12 +1257,35 @@
                 <input type="text" id="regName" name="regName" class="form-input" placeholder="Tu nombre" required autocomplete="name">
             </div>
             <div class="form-group">
+                <label for="regNativeLang" class="form-label" data-ai-translate="form.native-lang-label">Tu idioma nativo</label>
+                <select id="regNativeLang" name="regNativeLang" class="form-input form-select" required>
+                    <!-- Populated dynamically from LOGIN_LANGUAGES -->
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="regEmail" class="form-label" data-ai-translate="form.email-label">Dirección de email</label>
                 <input type="email" id="regEmail" name="regEmail" class="form-input" placeholder="tu@email.com" required autocomplete="email">
             </div>
             <div class="form-group">
                 <label for="regPassword" class="form-label" data-ai-translate="form.password-label">Contraseña</label>
                 <input type="password" id="regPassword" name="regPassword" class="form-input" placeholder="Mínimo 8 caracteres" required autocomplete="new-password" minlength="8">
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-ai-translate="form.gender-label">Género</label>
+                <div class="gender-options" id="regGenderGroup">
+                    <label class="gender-option">
+                        <input type="radio" name="regGender" value="M">
+                        <span data-ai-translate="form.gender-male">Masculino</span>
+                    </label>
+                    <label class="gender-option">
+                        <input type="radio" name="regGender" value="F">
+                        <span data-ai-translate="form.gender-female">Femenino</span>
+                    </label>
+                    <label class="gender-option">
+                        <input type="radio" name="regGender" value="X" checked>
+                        <span data-ai-translate="form.gender-neutral">Prefiero no decir</span>
+                    </label>
+                </div>
             </div>
             <div class="form-group">
                 <label for="regPasswordConfirm" class="form-label" data-ai-translate="form.password-confirm-label">Confirmar contraseña</label>
@@ -1341,6 +1403,11 @@
                 const extra = {
                     'es': {
                         'form.name-label': 'Nombre',
+                        'form.native-lang-label': 'Tu idioma nativo',
+                        'form.gender-label': 'Género',
+                        'form.gender-male': 'Masculino',
+                        'form.gender-female': 'Femenino',
+                        'form.gender-neutral': 'Prefiero no decir',
                         'form.password-confirm-label': 'Confirmar contraseña',
                         'form.new-password-label': 'Nueva contraseña',
                         'auth.register-button': 'Crear cuenta',
@@ -1356,6 +1423,11 @@
                     },
                     'en': {
                         'form.name-label': 'Name',
+                        'form.native-lang-label': 'Your native language',
+                        'form.gender-label': 'Gender',
+                        'form.gender-male': 'Male',
+                        'form.gender-female': 'Female',
+                        'form.gender-neutral': 'Prefer not to say',
                         'form.password-confirm-label': 'Confirm password',
                         'form.new-password-label': 'New password',
                         'auth.register-button': 'Create account',
@@ -1371,6 +1443,11 @@
                     },
                     'pt': {
                         'form.name-label': 'Nome',
+                        'form.native-lang-label': 'Seu idioma nativo',
+                        'form.gender-label': 'Gênero',
+                        'form.gender-male': 'Masculino',
+                        'form.gender-female': 'Feminino',
+                        'form.gender-neutral': 'Prefiro não dizer',
                         'form.password-confirm-label': 'Confirmar senha',
                         'form.new-password-label': 'Nova senha',
                         'auth.register-button': 'Criar conta',
@@ -1386,6 +1463,11 @@
                     },
                     'fr': {
                         'form.name-label': 'Nom',
+                        'form.native-lang-label': 'Votre langue maternelle',
+                        'form.gender-label': 'Genre',
+                        'form.gender-male': 'Masculin',
+                        'form.gender-female': 'Féminin',
+                        'form.gender-neutral': 'Je préfère ne pas dire',
                         'form.password-confirm-label': 'Confirmer le mot de passe',
                         'form.new-password-label': 'Nouveau mot de passe',
                         'auth.register-button': 'Créer un compte',
@@ -1617,7 +1699,7 @@
             setupPWA() {
                 // Service Worker registration
                 if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('/sw.js')
+                    navigator.serviceWorker.register('/service-worker.js')
                         .then(registration => {
                             console.log('SW registered:', registration);
                         })
@@ -2008,6 +2090,8 @@
                     version: this.selectedVersion,
                     loginTime: new Date().toISOString(),
                     sessionId: this.generateSessionId(),
+                    gender: serverUser.gender || 'X',
+                    nativeLanguage: serverUser.native_lang || serverUser.detected_lang || this.detectedLanguage,
                     interfaceLanguage: serverUser.interface_lang || this.userLanguagePreference || this.currentLanguage,
                     learningLanguage: 'es',
                     detectedLanguage: serverUser.detected_lang || this.detectedLanguage,
@@ -2024,9 +2108,9 @@
                 localStorage.setItem('jaguarUserSession', JSON.stringify(userData));
                 this.trackEvent('login_success', { userType, version: this.selectedVersion });
 
-                // Redirect
+                // Redirect to story map
                 setTimeout(() => {
-                    window.location.href = 'dashboard.html';
+                    window.location.href = 'storymap.html';
                 }, 2000);
             }
 
@@ -2068,7 +2152,24 @@
                 document.getElementById('backFromForgotContainer').style.display = 'none';
                 document.getElementById('registerForm').style.display = '';
                 document.getElementById('backToLoginContainer').style.display = '';
+                this._populateNativeLangDropdown();
                 document.getElementById('regName').focus();
+            }
+
+            _populateNativeLangDropdown() {
+                const sel = document.getElementById('regNativeLang');
+                if (!sel || sel.options.length > 1) return;
+                const langs = (window.LOGIN_LANGUAGES || []).filter(l => l.code !== 'auto' && l.code !== 'es');
+                for (const l of langs) {
+                    const opt = document.createElement('option');
+                    opt.value = l.code;
+                    opt.textContent = l.flag + ' ' + l.native;
+                    sel.appendChild(opt);
+                }
+                const detected = this.detectedLanguage || 'en';
+                if (sel.querySelector('option[value="' + detected + '"]')) {
+                    sel.value = detected;
+                }
             }
 
             showLoginForm() {
@@ -2090,6 +2191,9 @@
                 const email = document.getElementById('regEmail').value.trim();
                 const password = document.getElementById('regPassword').value;
                 const confirm = document.getElementById('regPasswordConfirm').value;
+                const genderEl = document.querySelector('input[name="regGender"]:checked');
+                const gender = genderEl ? genderEl.value : 'X';
+                const nativeLang = document.getElementById('regNativeLang').value || this.detectedLanguage || 'en';
 
                 if (!name || !email || !password || !confirm) {
                     this.showError(this.t('error.fill-all-fields'));
@@ -2113,7 +2217,9 @@
                         email, password, name, this.selectedVersion,
                         this.userLanguagePreference || this.currentLanguage,
                         this.detectedLanguage,
-                        role
+                        role,
+                        gender,
+                        nativeLang
                     );
                     if (res.success) {
                         this.showSuccess(res.data.message || this.t('register.check-email') || 'Cuenta creada. Revisa tu correo para verificar tu cuenta.');
@@ -2237,14 +2343,14 @@
                         JaguarAPI.validateSession().then(result => {
                             if (result && result.user) {
                                 this.showSuccess(this.t('session.active-redirecting'));
-                                setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);
+                                setTimeout(() => { window.location.href = 'storymap.html'; }, 1500);
                             } else {
                                 // Server rejected or unreachable — fallback to local timestamp
                                 const loginTime = new Date(userData.loginTime);
                                 const daysDiff = (Date.now() - loginTime.getTime()) / (1000 * 60 * 60 * 24);
                                 if (daysDiff < 30) {
                                     this.showSuccess(this.t('session.active-redirecting'));
-                                    setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);
+                                    setTimeout(() => { window.location.href = 'storymap.html'; }, 1500);
                                 } else {
                                     localStorage.removeItem('jaguarUserSession');
                                 }

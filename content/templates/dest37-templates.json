@@ -1,0 +1,2615 @@
+{
+  "meta": {
+    "destination": "dest37",
+    "title": "La última noche de Río",
+    "cefr": "B2",
+    "world": "mundoDelMedio",
+    "campbellStage": "The Ordeal — the messenger returns",
+    "rulingArcanum": "XIX — El Sol (second appearance)",
+    "characters": [
+      "char_yaguara",
+      "char_rio",
+      "char_candelaria"
+    ],
+    "closingQuestion": "¿Qué camino tomaste tú mientras yo tomaba el mío?",
+    "grammarTargets": [
+      "parallel storylines",
+      "reported speech advanced",
+      "complex timelines (antes de que + subjunctive, después de que)",
+      "temporal clauses with subjunctive",
+      "narrative synthesis"
+    ],
+    "coreVocabulary": [
+      "seguir",
+      "volver",
+      "noticias",
+      "peligro",
+      "urgente",
+      "correr",
+      "antes de que",
+      "después de que",
+      "mientras",
+      "cuando",
+      "todavía",
+      "ya"
+    ],
+    "narrativeVocabulary": [
+      "Río",
+      "ceiba",
+      "niebla gris",
+      "camino",
+      "amistad",
+      "mensajero",
+      "advertencia",
+      "tiempo",
+      "viaje paralelo",
+      "reencuentro",
+      "urgencia",
+      "amanecer"
+    ]
+  },
+  "ecosystemVocabulary": {
+    "bosque": {
+      "animal": [
+        "colibrí mensajero",
+        "mono aullador",
+        "jaguar joven",
+        "rana viajera",
+        "tucán",
+        "águila",
+        "luciérnaga",
+        "grillo"
+      ],
+      "nature": [
+        "raíz",
+        "hoja caída",
+        "río crecido",
+        "brisa de noche",
+        "estrella",
+        "luna",
+        "rocío",
+        "amanecer"
+      ],
+      "place": [
+        "camino nocturno",
+        "claro de luna",
+        "ribera",
+        "fogata",
+        "puente de tronco",
+        "mirador"
+      ],
+      "sound": [
+        "grillo",
+        "río",
+        "viento nocturno",
+        "fuego",
+        "risa",
+        "silencio cálido",
+        "urgencia"
+      ],
+      "texture": [
+        "nocturno",
+        "cálido",
+        "urgente",
+        "brillante",
+        "joven",
+        "viejo",
+        "esperanzado"
+      ],
+      "emotion": [
+        "alegría",
+        "urgencia",
+        "nostalgia",
+        "miedo",
+        "amistad",
+        "determinación",
+        "amor"
+      ]
+    },
+    "selva": {
+      "animal": [
+        "mono nocturno",
+        "jaguar joven",
+        "rana cristal",
+        "búho",
+        "luciérnaga",
+        "murciélago",
+        "tucán dormido"
+      ],
+      "nature": [
+        "liana iluminada",
+        "hongo luminoso",
+        "río negro",
+        "estrella entre hojas",
+        "rocío",
+        "neblina"
+      ],
+      "place": [
+        "claro de selva",
+        "orilla del río",
+        "fogata de viaje",
+        "sendero de luna",
+        "cascada nocturna"
+      ],
+      "sound": [
+        "agua nocturna",
+        "rana",
+        "búho",
+        "fuego",
+        "risa joven",
+        "urgencia lejana"
+      ],
+      "texture": [
+        "luminoso",
+        "nocturno",
+        "húmedo",
+        "cálido",
+        "urgente",
+        "joven",
+        "antiguo"
+      ],
+      "emotion": [
+        "alegría",
+        "urgencia",
+        "nostalgia",
+        "miedo",
+        "amistad",
+        "determinación",
+        "amor"
+      ]
+    }
+  },
+  "templates": [
+    {
+      "_template": {
+        "id": "T01_skit_rio_vuelve",
+        "layer": "narrative",
+        "order": 1,
+        "description": "Río returns — thinner, older, grinning. He followed Yaguará. He brings news.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "nature",
+          "place",
+          "sound"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El mensajero",
+      "instruction": "{pool:eco.place} vuelve. Está diferente — más delgado, más viejo, pero sonriendo.",
+      "grammar": [
+        "reported speech",
+        "temporal clauses"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "De noche. Una fogata pequeña. Yaguará y Candelaria descansan. Y entonces — un {pool:eco.sound} entre los arbustos. Algo corre. Algo joven."
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "¡Yaguará! ¡Te encontré! Llevo semanas siguiéndote.",
+          "target": [
+            "encontré",
+            "siguiéndote"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "¿{pool:eco.place}? ¿Eres tú? Estás... diferente. Más delgado. Más grande.",
+          "target": [
+            "diferente"
+          ]
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "¡Y tú estás más seria! Pero tengo noticias. Noticias urgentes. Vine corriendo antes de que fuera demasiado tarde.",
+          "target": [
+            "antes de que fuera"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "¿Quién es él?"
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Es {pool:eco.place}. Mi amigo del {pool:eco.place}. Le dije que esperara, pero...",
+          "target": [
+            "dije que esperara"
+          ]
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "¡Pero no podía esperar! Candelaria, ¿verdad? Me habían dicho que viajabas con Yaguará. Yo soy {pool:eco.place}. Encantado.",
+          "target": [
+            "habían dicho"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Río siguió su propio camino para llegar hasta aquí.",
+              "Río nunca debió haber salido del bosque.",
+              "Río no es importante."
+            ],
+            "answer": "Río siguió su propio camino para llegar hasta aquí."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Candelaria y {pool:eco.place} se miran. Amistad instantánea. El {pool:eco.nature} sale por segunda vez en el viaje: la luz que ilumina lo que el gris oculta."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T02_skit_noticias",
+        "layer": "narrative",
+        "order": 2,
+        "description": "Río brings the news: the grey mist has reached the ceiba. Abuela Ceiba is dimming. Time running out.",
+        "spiralReturn": [
+          4,
+          7
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "Las noticias",
+      "instruction": "{pool:eco.place} trae noticias urgentes. La ceiba está en peligro.",
+      "grammar": [
+        "reported speech",
+        "antes de que + subjunctive",
+        "después de que"
+      ],
+      "beats": [
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "Después de que te fuiste, Yaguará, las cosas empeoraron. El gris avanzó mucho más rápido de lo que pensábamos.",
+          "target": [
+            "Después de que te fuiste"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "fade-in",
+          "text": "¿Cuánto avanzó?"
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "fade-in",
+          "text": "La niebla gris ya llegó a las {pool:eco.nature} de la ceiba. Mamá {pool:eco.animal} me dijo que la Abuela Ceiba se estaba apagando. Dijo que antes de que llegaras tú, alguien tenía que avisarte.",
+          "target": [
+            "me dijo que",
+            "se estaba apagando",
+            "Dijo que antes de que llegaras"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Eso confirma el mapa. Mira: la carretera ya está aquí. Y el gris la sigue.",
+          "target": [
+            "confirma"
+          ]
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "Mamá {pool:eco.animal} también dijo que si no volvías antes de que la última {pool:eco.nature} se apagara, ya no habría nada que salvar.",
+          "target": [
+            "dijo que si no volvías",
+            "antes de que",
+            "se apagara"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El tiempo se acaba. Hay que actuar ahora.",
+              "Todavía hay mucho tiempo.",
+              "No vale la pena intentarlo."
+            ],
+            "answer": "El tiempo se acaba. Hay que actuar ahora."
+          }
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Mientras yo buscaba respuestas aquí, el gris seguía avanzando allá. Dos {pool:eco.place}. Dos tiempos. Y los dos se encuentran ahora."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T03_conversation_discurso_reportado",
+        "layer": "narrative",
+        "order": 3,
+        "description": "Practice advanced reported speech: what people said, what they warned.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice",
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place"
+        ]
+      },
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Transforma las citas directas en discurso reportado.",
+      "tip": {
+        "title": "Discurso reportado avanzado",
+        "lines": [
+          "Directo: 'Vuelve pronto.' → Reportado: Dijo que volviera pronto.",
+          "Directo: 'El gris avanza.' → Reportado: Dijo que el gris avanzaba.",
+          "Directo: 'Si no vienes, será tarde.' → Reportado: Dijo que si no venía, sería tarde."
+        ]
+      },
+      "turns": [
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "Mamá {pool:eco.animal} dijo: 'Vuelve antes de que sea tarde.' En reportado:"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Mamá Jaguar dijo que volviera antes de que fuera tarde.",
+            "Mamá Jaguar dice que vuelvas.",
+            "Mamá Jaguar dirá que vuelvas."
+          ],
+          "answer": "Mamá Jaguar dijo que volviera antes de que fuera tarde."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "{pool:eco.place} contó: 'El gris llegó a las {pool:eco.nature} de la ceiba.' En reportado:"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Río contó que el gris había llegado a las raíces de la ceiba.",
+            "Río cuenta que el gris llega.",
+            "Río contará que el gris llegará."
+          ],
+          "answer": "Río contó que el gris había llegado a las raíces de la ceiba."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "Doña Asunción me advirtió: 'No tendrás mucho tiempo.' En reportado:"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Doña Asunción me advirtió que no tendría mucho tiempo.",
+            "Doña Asunción advierte que no tengo tiempo.",
+            "Doña Asunción advertirá que no tendremos tiempo."
+          ],
+          "answer": "Doña Asunción me advirtió que no tendría mucho tiempo."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Río",
+              "text": "La Ceiba susurró: 'Escucha. Escucha. Escucha.' En reportado:"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "La Ceiba susurró que escuchara.",
+            "La Ceiba susurra que escuches.",
+            "La Ceiba susurrará que escucharás."
+          ],
+          "answer": "La Ceiba susurró que escuchara."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T04_fill_antes_despues_mientras",
+        "layer": "core",
+        "order": 4,
+        "description": "Drill: temporal clauses with antes de que + subjunctive, después de que, mientras.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place"
+        ]
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "temporal clauses with subjunctive"
+      ],
+      "instruction": "Completa con la forma temporal correcta.",
+      "tip": {
+        "title": "Cláusulas temporales",
+        "lines": [
+          "antes de que + subjuntivo: antes de que llegara",
+          "después de que + indicativo/subjuntivo: después de que se fue / se fuera",
+          "mientras + indicativo: mientras yo viajaba"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "Vine corriendo ___ fuera demasiado tarde.",
+          "answer": "antes de que",
+          "options": [
+            "antes de que",
+            "después de que",
+            "mientras"
+          ]
+        },
+        {
+          "sentence": "___ Yaguará buscaba respuestas, el gris seguía avanzando.",
+          "answer": "Mientras",
+          "options": [
+            "Mientras",
+            "Antes de que",
+            "Después de que"
+          ]
+        },
+        {
+          "sentence": "___ te fuiste, todo empeoró.",
+          "answer": "Después de que",
+          "options": [
+            "Después de que",
+            "Antes de que",
+            "Mientras"
+          ]
+        },
+        {
+          "sentence": "Tienes que volver ___ la última {pool:eco.nature} se ___. (apagar)",
+          "answer": "antes de que / apague",
+          "options": [
+            "antes de que / apague",
+            "después de que / apaga",
+            "mientras / apagaba"
+          ]
+        },
+        {
+          "sentence": "___ {pool:eco.place} corría hacia nosotros, la ceiba se apagaba lentamente.",
+          "answer": "Mientras",
+          "options": [
+            "Mientras",
+            "Antes de que",
+            "Después de que"
+          ]
+        },
+        {
+          "sentence": "Mamá {pool:eco.animal} envió a {pool:eco.place} ___ ella ___ hablar directamente. (poder)",
+          "answer": "antes de que / pudiera",
+          "options": [
+            "antes de que / pudiera",
+            "después de que / pudo",
+            "mientras / podía"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T05_fill_discurso_reportado",
+        "layer": "core",
+        "order": 5,
+        "description": "Drill: reported speech transformations. Direct to indirect.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "place"
+        ]
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "reported speech"
+      ],
+      "instruction": "Transforma de discurso directo a reportado.",
+      "tip": {
+        "title": "Cambios en el discurso reportado",
+        "lines": [
+          "presente → imperfecto: 'avanza' → dijo que avanzaba",
+          "pretérito → pluscuamperfecto: 'llegó' → dijo que había llegado",
+          "futuro → condicional: 'volverá' → dijo que volvería",
+          "imperativo → subjuntivo: 'vuelve' → dijo que volviera"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "{pool:eco.place} dijo: 'El gris avanza.' → {pool:eco.place} dijo que el gris ___.",
+          "answer": "avanzaba",
+          "options": [
+            "avanzaba",
+            "avanza",
+            "avanzará"
+          ]
+        },
+        {
+          "sentence": "Mamá {pool:eco.animal} dijo: 'Vuelve.' → Mamá {pool:eco.animal} dijo que ___.",
+          "answer": "volviera",
+          "options": [
+            "volviera",
+            "vuelve",
+            "volverá"
+          ]
+        },
+        {
+          "sentence": "{pool:eco.place} contó: 'La ceiba se apagó.' → {pool:eco.place} contó que la ceiba se ___.",
+          "answer": "había apagado",
+          "options": [
+            "había apagado",
+            "apagó",
+            "apaga"
+          ]
+        },
+        {
+          "sentence": "Doña Asunción advirtió: 'No tendrás tiempo.' → Doña Asunción advirtió que no ___ tiempo.",
+          "answer": "tendría",
+          "options": [
+            "tendría",
+            "tiene",
+            "tendrá"
+          ]
+        },
+        {
+          "sentence": "{pool:eco.place} explicó: 'Seguí tu {pool:eco.place}.' → {pool:eco.place} explicó que ___ mi {pool:eco.place}.",
+          "answer": "había seguido",
+          "options": [
+            "había seguido",
+            "siguió",
+            "sigue"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T06_skit_noche_fogata",
+        "layer": "narrative",
+        "order": 6,
+        "description": "The three around the fire. Río tells his parallel journey. Candelaria and Río become instant friends.",
+        "spiralReturn": [
+          5,
+          9
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "La fogata",
+      "instruction": "Tres amigos alrededor del {pool:eco.nature}. {pool:eco.place} cuenta su viaje.",
+      "grammar": [
+        "parallel timelines",
+        "mientras",
+        "reported speech"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "La fogata calienta. Las {pool:eco.nature} aparecen. Tres viajeros sentados en círculo. {pool:eco.place} cuenta su historia."
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "Mientras tú cruzabas el mundo del medio, yo seguí tu rastro. Pero tomé otro {pool:eco.place} — por la sierra.",
+          "target": [
+            "Mientras",
+            "cruzabas",
+            "seguí"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "¿Viajaste solo? ¿Todo ese tiempo?",
+          "target": [
+            "solo"
+          ]
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "No completamente solo. Encontré personas en el {pool:eco.place}. Un viejo me dijo que había visto a un {pool:eco.animal} caminando hacia el este. Otro me contó que el gris había llegado a su {pool:eco.place}. Cada historia me acercaba más a Yaguará.",
+          "target": [
+            "me dijo que había visto",
+            "me contó que",
+            "había llegado"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "¿Qué {pool:eco.place} tomaste tú mientras yo tomaba el mío? Los dos caminamos. Los dos aprendimos. Los dos llegamos aquí.",
+          "target": [
+            "mientras"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "{pool:eco.place}, ¿puedo ver tu mapa? ¿Tienes notas?",
+          "target": []
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "No tengo mapa. Tengo memoria. Y esta sonrisa.",
+          "target": [
+            "memoria"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Cada viajero carga el mapa de forma diferente.",
+              "Sin mapa no hay viaje.",
+              "La memoria no sirve."
+            ],
+            "answer": "Cada viajero carga el mapa de forma diferente."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Candelaria se ríe. {pool:eco.place} se ríe. Incluso Yaguará, que casi nunca se ríe, muestra los dientes. El {pool:eco.nature} — el arcano de la amistad y la luz — brilla incluso de noche, en una fogata entre amigos."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T07_listening_viaje_paralelo",
+        "layer": "core",
+        "order": 7,
+        "description": "Listen to Río's parallel journey narrated with complex timelines.",
+        "spiralReturn": [
+          3,
+          7
+        ],
+        "inputModes": [
+          "choice",
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha el relato de {pool:eco.place} y reconstruye la línea temporal.",
+      "items": [
+        {
+          "audio": "Río cuenta: 'Después de que Yaguará se fue, esperé tres días. Pero antes de que terminara el tercer día, supe que tenía que seguirla. Mientras ella caminaba hacia el este por el río, yo caminé por la sierra.'",
+          "question": "¿Cuándo decidió Río seguir a Yaguará?",
+          "answer": "Antes de que terminara el tercer día de espera.",
+          "options": [
+            "Antes de que terminara el tercer día de espera.",
+            "Inmediatamente.",
+            "Después de una semana."
+          ]
+        },
+        {
+          "audio": "Río dice: 'Un anciano en la sierra me dijo que había visto un jaguar grande caminando bajo la luna. Después de que le describí a Yaguará, sonrió y dijo que el jaguar había pasado tres noches antes.'",
+          "question": "¿Cuánto tiempo de ventaja tenía Yaguará sobre Río?",
+          "answer": "Tres noches.",
+          "options": [
+            "Tres noches.",
+            "Un día.",
+            "Una semana."
+          ]
+        },
+        {
+          "audio": "Río explica: 'Mientras Yaguará hablaba con Doña Asunción, yo cruzaba un río crecido. Mientras ella leía los documentos de Don Próspero, yo dormía en una cueva. Nuestros caminos eran diferentes pero iban al mismo lugar.'",
+          "question": "¿Qué hacía Río mientras Yaguará hablaba con Doña Asunción?",
+          "answer": "Cruzaba un río crecido.",
+          "options": [
+            "Cruzaba un río crecido.",
+            "Dormía en una cueva.",
+            "Hablaba con Don Próspero."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T08_builder_temporal",
+        "layer": "core",
+        "order": 8,
+        "description": "Build sentences with complex temporal structures.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye oraciones con cláusulas temporales complejas en {pool:eco.place}.",
+      "items": [
+        {
+          "pieces": [
+            "Antes de que",
+            "Río",
+            "llegara,",
+            "Yaguará",
+            "no sabía",
+            "que la ceiba",
+            "estaba en peligro."
+          ],
+          "answer": "Antes de que Río llegara, Yaguará no sabía que la ceiba estaba en peligro."
+        },
+        {
+          "pieces": [
+            "Mientras",
+            "Yaguará",
+            "buscaba",
+            "respuestas,",
+            "Río",
+            "seguía",
+            "su rastro."
+          ],
+          "answer": "Mientras Yaguará buscaba respuestas, Río seguía su rastro."
+        },
+        {
+          "pieces": [
+            "Después de que",
+            "se encontraron,",
+            "los tres",
+            "se sentaron",
+            "alrededor",
+            "de la fogata."
+          ],
+          "answer": "Después de que se encontraron, los tres se sentaron alrededor de la fogata."
+        },
+        {
+          "pieces": [
+            "Mamá Jaguar",
+            "dijo que",
+            "volviera",
+            "antes de que",
+            "la última raíz",
+            "se apagara."
+          ],
+          "answer": "Mamá Jaguar dijo que volviera antes de que la última raíz se apagara."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T09_pair_linea_temporal",
+        "layer": "core",
+        "order": 9,
+        "description": "Match parallel events: what Yaguará was doing vs. what Río was doing.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice",
+          "drag"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "pair",
+      "label": "Conectar",
+      "instruction": "Conecta lo que hacía Yaguará con lo que hacía Río al mismo tiempo en {pool:eco.place}.",
+      "pairs": [
+        {
+          "left": "Yaguará escuchaba a Doña Asunción",
+          "right": "Río cruzaba un río crecido"
+        },
+        {
+          "left": "Yaguará leía los documentos de Don Próspero",
+          "right": "Río dormía en una cueva"
+        },
+        {
+          "left": "Yaguará entraba al Silencio Gris",
+          "right": "Río preguntaba por ella en los pueblos"
+        },
+        {
+          "left": "Yaguará dibujaba el mapa con Candelaria",
+          "right": "Río corría hacia ellas con las noticias"
+        },
+        {
+          "left": "Yaguará esperaba respuestas",
+          "right": "Río seguía su rastro sin descanso"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T10_dictation_temporal",
+        "layer": "core",
+        "order": 10,
+        "description": "Dictation of complex temporal and reported speech sentences.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe en {pool:eco.place}.",
+      "items": [
+        {
+          "audio": "Después de que te fuiste, todo empeoró.",
+          "answer": "Después de que te fuiste, todo empeoró."
+        },
+        {
+          "audio": "Vine corriendo antes de que fuera demasiado tarde.",
+          "answer": "Vine corriendo antes de que fuera demasiado tarde."
+        },
+        {
+          "audio": "Mamá Jaguar dijo que volviera lo antes posible.",
+          "answer": "Mamá Jaguar dijo que volviera lo antes posible."
+        },
+        {
+          "audio": "Mientras yo tomaba un camino, tú tomabas otro.",
+          "answer": "Mientras yo tomaba un camino, tú tomabas otro."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T11_sombra_urgencia",
+        "layer": "core",
+        "order": 11,
+        "description": "Shadow reading: urgent narrative with complex timelines.",
+        "spiralReturn": [
+          4,
+          8
+        ],
+        "inputModes": [
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Lee con urgencia. El tiempo se acaba en {pool:eco.place}.",
+      "items": [
+        {
+          "text": "Después de que te fuiste, el gris avanzó más rápido. Antes de que alguien pudiera reaccionar, ya había llegado a las raíces de la ceiba.",
+          "highlight": [
+            "Después de que",
+            "Antes de que",
+            "ya había llegado"
+          ]
+        },
+        {
+          "text": "Mientras yo corría hacia ti, la ceiba se apagaba. Mientras tú buscabas respuestas, el tiempo se acababa.",
+          "highlight": [
+            "Mientras",
+            "corría",
+            "se apagaba",
+            "se acababa"
+          ]
+        },
+        {
+          "text": "Mamá Jaguar dijo que volvieras. Dijo que antes de que la última raíz se apagara, tenías que estar allí.",
+          "highlight": [
+            "dijo que volvieras",
+            "antes de que",
+            "se apagara"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T12_ritmo_urgencia",
+        "layer": "core",
+        "order": 12,
+        "description": "Rhythm drill: temporal clauses getting faster. Building urgency.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "voice"
+        ]
+      },
+      "type": "ritmo",
+      "label": "Ritmo",
+      "instruction": "Repite al ritmo. La urgencia crece con cada frase.",
+      "items": [
+        {
+          "text": "Antes de que.",
+          "tempo": "slow"
+        },
+        {
+          "text": "Después de que.",
+          "tempo": "slow"
+        },
+        {
+          "text": "Mientras yo caminaba.",
+          "tempo": "medium"
+        },
+        {
+          "text": "Antes de que fuera demasiado tarde.",
+          "tempo": "medium"
+        },
+        {
+          "text": "Dijo que volviera antes de que la raíz se apagara.",
+          "tempo": "fast"
+        },
+        {
+          "text": "Mientras yo buscaba respuestas aquí, el gris seguía avanzando allá.",
+          "tempo": "fast"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T13_conjugation_reportado",
+        "layer": "core",
+        "order": 13,
+        "description": "Conjugation drill: transformations for reported speech.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "conjugation",
+      "label": "Conjugar",
+      "instruction": "Transforma el verbo al tiempo del discurso reportado en {pool:eco.place}.",
+      "verb": "mixed",
+      "tense": "reported speech",
+      "items": [
+        {
+          "prompt": "'avanza' → dijo que (avanzar)",
+          "answer": "avanzaba"
+        },
+        {
+          "prompt": "'llegó' → dijo que (llegar)",
+          "answer": "había llegado"
+        },
+        {
+          "prompt": "'volverá' → dijo que (volver)",
+          "answer": "volvería"
+        },
+        {
+          "prompt": "'vuelve' (imperativo) → dijo que (volver)",
+          "answer": "volviera"
+        },
+        {
+          "prompt": "'no tendrás' → advirtió que no (tener)",
+          "answer": "tendría"
+        },
+        {
+          "prompt": "'he seguido' → contó que (seguir)",
+          "answer": "había seguido"
+        },
+        {
+          "prompt": "'se está apagando' → dijo que (apagarse)",
+          "answer": "se estaba apagando"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T14_cronica_viaje_paralelo",
+        "layer": "skill",
+        "order": 14,
+        "description": "Write about two parallel journeys. Use mientras, antes de que, después de que.",
+        "spiralReturn": [],
+        "inputModes": [
+          "typing"
+        ]
+      },
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Escribe la historia de dos viajes paralelos: el de Yaguará y el de Río. Usa 'mientras', 'antes de que' y 'después de que' al menos una vez cada uno. Incluye al menos dos oraciones de discurso reportado (alguien dijo que...). Escribe 6-8 oraciones.",
+      "placeholder": "Mientras Yaguará viajaba hacia el este...",
+      "minWords": 50,
+      "maxWords": 130,
+      "scaffoldType": "paragraph",
+      "storyKey": "cronica_dest37",
+      "vocabularyHints": [
+        "mientras",
+        "antes de que",
+        "después de que",
+        "dijo que",
+        "contó que",
+        "advirtió que",
+        "seguir",
+        "volver",
+        "urgente",
+        "ceiba",
+        "gris",
+        "camino"
+      ],
+      "button": "Guardar en la crónica"
+    },
+    {
+      "_template": {
+        "id": "T15_flashnote_sol",
+        "layer": "narrative",
+        "order": 15,
+        "description": "The Sun arcanum — second appearance. Light between friends. Warmth in urgency.",
+        "spiralReturn": [
+          5,
+          10
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "nature",
+          "place"
+        ]
+      },
+      "type": "flashnote",
+      "label": "Arcano",
+      "instruction": "Contempla el arcano XIX — segunda aparición.",
+      "note": "El {pool:eco.nature} aparece por segunda vez. La primera vez iluminó el {pool:eco.place}. Ahora ilumina las personas: {pool:eco.place}, Candelaria, Yaguará. Tres viajeros alrededor de una fogata. El {pool:eco.nature} no niega la oscuridad — la atraviesa. La amistad es una forma de luz.",
+      "question": "¿Qué ilumina el {pool:eco.nature} en esta segunda aparición?",
+      "answer": "Las relaciones entre los viajeros — la amistad como forma de luz.",
+      "options": [
+        "Las relaciones entre los viajeros — la amistad como forma de luz.",
+        "El camino hacia adelante.",
+        "La salida del bosque."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T16_oraculo_tiempo",
+        "layer": "advanced",
+        "order": 16,
+        "description": "Oracle: what happens when time runs out?",
+        "spiralReturn": [
+          4,
+          9
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place"
+        ]
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "¿Qué pasa cuando el tiempo se acaba?",
+      "scene": [
+        {
+          "speaker": "Río",
+          "text": "Mamá {pool:eco.animal} dijo que antes de que la última {pool:eco.nature} se apagara, tenías que estar allí."
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "¿Y si no llego a tiempo?"
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "Entonces hacemos lo que podemos con el tiempo que queda. Como siempre."
+        }
+      ],
+      "options": [
+        "Lo importante no es si llegas a tiempo, sino que estés en camino.",
+        "Si no llegas a tiempo, todo está perdido.",
+        "El tiempo no importa."
+      ],
+      "answer": "Lo importante no es si llegas a tiempo, sino que estés en camino.",
+      "explanation": "El viaje importa tanto como la llegada. Estar en {pool:eco.place} ya es una forma de resistencia contra el gris."
+    },
+    {
+      "_template": {
+        "id": "T17_autoevaluacion_b2_temporal",
+        "layer": "advanced",
+        "order": 17,
+        "description": "Self-assessment: temporal clauses, reported speech, parallel narratives.",
+        "spiralReturn": [],
+        "inputModes": [
+          "choice"
+        ]
+      },
+      "type": "autoevaluacion",
+      "label": "¿Qué puedo hacer?",
+      "instruction": "Reflexiona sobre tus habilidades temporales y narrativas.",
+      "statements": [
+        {
+          "text": "Puedo usar cláusulas temporales complejas: antes de que, después de que, mientras."
+        },
+        {
+          "text": "Puedo transformar discurso directo en reportado con los cambios de tiempo correctos."
+        },
+        {
+          "text": "Puedo narrar dos historias paralelas indicando qué pasaba al mismo tiempo."
+        },
+        {
+          "text": "Puedo expresar urgencia usando el subjuntivo con 'antes de que'."
+        },
+        {
+          "text": "Puedo reportar lo que otras personas dijeron usando 'dijo que' + cambio temporal."
+        },
+        {
+          "text": "Puedo construir una narrativa con línea temporal compleja."
+        }
+      ],
+      "reflection": "¿Qué camino tomaste tú mientras yo tomaba el mío?"
+    },
+    {
+      "_template": {
+        "id": "T18_portafolio_urgencia",
+        "layer": "advanced",
+        "order": 18,
+        "description": "Record: narrate the urgent situation using complex timelines and reported speech.",
+        "spiralReturn": [],
+        "inputModes": [
+          "voice"
+        ]
+      },
+      "type": "portafolio",
+      "label": "Mi voz",
+      "instruction": "Graba la narración urgente.",
+      "prompt": "Cuenta la situación: Río llegó con noticias. ¿Qué dijo? ¿Qué pasó mientras Yaguará estaba lejos? ¿Qué tiene que pasar antes de que sea tarde? Usa discurso reportado y cláusulas temporales. Habla con urgencia pero claridad. 45-60 segundos.",
+      "guidingQuestions": [
+        "¿Qué dijo Mamá Jaguar?",
+        "¿Qué pasó después de que Yaguará se fue?",
+        "¿Qué hacía Río mientras Yaguará viajaba?",
+        "¿Qué tiene que pasar antes de que sea tarde?"
+      ],
+      "minWords": 30
+    },
+    {
+      "_template": {
+        "id": "T19_guardian_temporal",
+        "layer": "meta",
+        "order": 19,
+        "description": "Speed test: temporal clauses, reported speech, parallel timelines.",
+        "spiralReturn": [
+          3,
+          8
+        ],
+        "inputModes": [
+          "choice",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "place"
+        ]
+      },
+      "type": "guardian",
+      "label": "Guardián",
+      "instruction": "Demuestra tu dominio del tiempo narrativo.",
+      "timeLimit": 10,
+      "questions": [
+        {
+          "prompt": "Vine corriendo ___ fuera demasiado tarde.",
+          "answer": "antes de que",
+          "options": [
+            "antes de que",
+            "después de que",
+            "cuando"
+          ]
+        },
+        {
+          "prompt": "___ Yaguará viajaba, {pool:eco.place} la seguía.",
+          "answer": "Mientras",
+          "options": [
+            "Mientras",
+            "Antes de que",
+            "Porque"
+          ]
+        },
+        {
+          "prompt": "{pool:eco.place} dijo: 'El gris avanza.' → {pool:eco.place} dijo que el gris ___.",
+          "answer": "avanzaba",
+          "options": [
+            "avanzaba",
+            "avanza",
+            "avanzará"
+          ]
+        },
+        {
+          "prompt": "Mamá {pool:eco.animal} dijo: 'Vuelve.' → Mamá {pool:eco.animal} dijo que ___.",
+          "answer": "volviera",
+          "options": [
+            "volviera",
+            "vuelve",
+            "volverá"
+          ]
+        },
+        {
+          "prompt": "___ te fuiste, todo empeoró.",
+          "answer": "Después de que",
+          "options": [
+            "Después de que",
+            "Antes de que",
+            "Mientras"
+          ]
+        },
+        {
+          "prompt": "{pool:eco.place} contó: 'Llegué ayer.' → {pool:eco.place} contó que ___ el día anterior.",
+          "answer": "había llegado",
+          "options": [
+            "había llegado",
+            "llegó",
+            "llega"
+          ]
+        },
+        {
+          "prompt": "La ceiba se ___ apagando. (estar — imperfecto progresivo)",
+          "answer": "estaba",
+          "options": [
+            "estaba",
+            "está",
+            "estuvo"
+          ]
+        },
+        {
+          "prompt": "Dos {pool:eco.place}, dos tiempos, y los dos se ___ ahora.",
+          "answer": "encuentran",
+          "options": [
+            "encuentran",
+            "encontraron",
+            "encontrarán"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T20_escaperoom_viaje_rio",
+        "layer": "meta",
+        "order": 20,
+        "description": "Escape room: sequence — retrace Río's journey. The Sun's second door.",
+        "spiralReturn": [],
+        "inputModes": [
+          "choice",
+          "typing"
+        ]
+      },
+      "type": "escaperoom",
+      "label": "Sala de enigmas",
+      "instruction": "Reconstruye el viaje de Río. El orden importa.",
+      "room": {
+        "name": "La sala de los caminos paralelos",
+        "description": "Una sala con dos caminos dibujados en el suelo — uno dorado (Yaguará) y uno azul (Río). Los caminos se separan al principio y convergen al final. En las paredes hay momentos congelados del viaje de cada uno. En el techo, El Sol brilla con luz de fogata.",
+        "ambience": "campfire"
+      },
+      "puzzles": [
+        {
+          "puzzleType": "sequence",
+          "prompt": "Ordena el viaje de Río: 1) Río cruza un río crecido. 2) Río espera tres días. 3) Río encuentra a Yaguará. 4) Río recibe las noticias de Mamá Jaguar.",
+          "clue": "Primero la espera, luego la noticia, luego el viaje, luego el encuentro.",
+          "answer": "2, 4, 1, 3",
+          "options": [
+            "2, 4, 1, 3",
+            "1, 2, 3, 4",
+            "4, 2, 3, 1",
+            "3, 1, 4, 2"
+          ],
+          "onSolve": "El camino azul se ilumina. Los momentos del viaje de Río se ordenan en la pared."
+        },
+        {
+          "puzzleType": "riddle",
+          "prompt": "Mamá Jaguar dijo algo a Río. No fue 've'. No fue 'nombra'. No fue 'escucha'. Fue la cuarta palabra del mandato de la Ceiba.",
+          "clue": "Ve. Nombra. Escucha. ___.",
+          "answer": "Vuelve",
+          "options": [
+            "Vuelve",
+            "Corre",
+            "Grita",
+            "Duerme"
+          ],
+          "onSolve": "Los dos caminos se iluminan por completo. Convergen en un punto: la fogata."
+        },
+        {
+          "puzzleType": "wordlock",
+          "prompt": "La palabra que describe lo que Río y Yaguará hacían al mismo tiempo, en caminos diferentes. Ocho letras. Empieza con 'M'.",
+          "clue": "Una conjunción temporal que conecta dos acciones simultáneas.",
+          "answer": "mientras",
+          "hint": "_ _ _ _ _ _ _ _",
+          "onSolve": "Los dos caminos se funden en uno solo. La fogata brilla. El Sol desciende del techo y deja un fragmento cálido."
+        }
+      ],
+      "fragment": {
+        "text": "Los dos caminos son ahora uno. Río, Yaguará y Candelaria caminan juntos hacia la ceiba. El fragmento brilla con calor de fogata: la luz que nace entre amigos no la apaga ningún gris.",
+        "questClue": "Mientras uno caminaba, el otro también caminaba. Los caminos paralelos se encuentran cuando el momento es justo.",
+        "item": "luz-de-fogata"
+      }
+    },
+    {
+      "_template": {
+        "id": "T21_conjuro_caminos",
+        "layer": "meta",
+        "order": 21,
+        "description": "Speak the words of time, urgency, and friendship.",
+        "spiralReturn": [
+          4,
+          10
+        ],
+        "inputModes": [
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "place"
+        ]
+      },
+      "type": "conjuro",
+      "label": "Conjuro",
+      "instruction": "Di las palabras del tiempo y la urgencia.",
+      "spells": [
+        {
+          "prompt": "Lo que dijo Mamá {pool:eco.animal}.",
+          "answer": "Dijo que volviera antes de que la última raíz se apagara",
+          "hint": "Di-jo que vol-vie-ra an-tes..."
+        },
+        {
+          "prompt": "Los dos viajes.",
+          "answer": "Mientras yo tomaba un camino, tú tomabas otro",
+          "hint": "Mien-tras yo to-ma-ba..."
+        },
+        {
+          "prompt": "Lo que sabe {pool:eco.place}.",
+          "answer": "Lo importante no es si llegas a tiempo, sino que estés en camino",
+          "hint": "Lo im-por-tan-te no es..."
+        },
+        {
+          "prompt": "La pregunta de este destino.",
+          "answer": "¿Qué camino tomaste tú mientras yo tomaba el mío?",
+          "hint": "¿Qué ca-mi-no to-mas-te..."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T22_skit_rio_cuenta_viaje",
+        "layer": "narrative",
+        "order": 22,
+        "description": "Río tells his full journey: who he met, what he saw, what he was told. Complex narrative tenses.",
+        "spiralReturn": [
+          5,
+          9
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El viaje de Río",
+      "instruction": "{pool:eco.place} cuenta todo su viaje. Las líneas temporales se cruzan.",
+      "grammar": [
+        "narrative tense mastery",
+        "parallel timelines",
+        "reported speech"
+      ],
+      "beats": [
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "Tres días después de que te fuiste, una anciana llegó al {pool:eco.place}. Me dijo que había visto al {pool:eco.animal} que caminaba solo. Dijo que el {pool:eco.animal} iba hacia donde el {pool:eco.nature} se pone.",
+          "target": [
+            "después de que te fuiste",
+            "me dijo que había visto",
+            "iba"
+          ]
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "Mientras tú hablabas con Doña Asunción, yo cruzaba la sierra. Un pastor me contó que el gris ya había llegado a su {pool:eco.place}. Dijo que las ovejas no dormían desde hacía semanas.",
+          "target": [
+            "Mientras",
+            "me contó que",
+            "había llegado",
+            "dormían"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Es como dos {pool:eco.place} que corren en paralelo. Los dos llevan la misma {pool:eco.nature}, pero por {pool:eco.place} diferentes.",
+          "target": [
+            "paralelo"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Y ahora los dos {pool:eco.place} se encuentran. ¿Qué más te dijeron en el {pool:eco.place}?",
+          "target": [
+            "te dijeron"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "La narrativa paralela usa diferentes tiempos verbales para mostrar acciones simultáneas en diferentes lugares.",
+              "Río exagera su viaje.",
+              "Los tiempos verbales no importan en una historia."
+            ],
+            "answer": "La narrativa paralela usa diferentes tiempos verbales para mostrar acciones simultáneas en diferentes lugares."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T23_skit_amanecer_decision",
+        "layer": "narrative",
+        "order": 23,
+        "description": "Dawn. The three friends must decide: go to the ceiba or gather more allies. Time is running out.",
+        "spiralReturn": [
+          4,
+          8
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "nature",
+          "place"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El amanecer",
+      "instruction": "Amanece. Hay que decidir. El tiempo se acaba.",
+      "grammar": [
+        "narrative tense mastery",
+        "future plans with subjunctive"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "El amanecer llega. La fogata es ceniza. Los tres viajeros miran hacia el este, donde la ceiba espera."
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Antes de que el {pool:eco.nature} suba más, tenemos que decidir. Podemos ir directamente a la ceiba. O podemos buscar más voces que nos ayuden a nombrar.",
+          "target": [
+            "Antes de que",
+            "suba"
+          ]
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "Si vamos solos y no alcanzamos, habremos perdido tiempo. Si buscamos aliados y tardamos demasiado, la ceiba se habrá apagado.",
+          "target": [
+            "habremos perdido",
+            "se habrá apagado"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "El mapa dice que tenemos días. No semanas. Propongo que vayamos directamente y que en el {pool:eco.place} busquemos voces. Los dos {pool:eco.place} al mismo tiempo.",
+          "target": [
+            "vayamos",
+            "busquemos"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "A veces la mejor decisión es intentar dos caminos a la vez — la síntesis en acción.",
+              "Hay que elegir un solo camino.",
+              "No importa qué camino tomemos."
+            ],
+            "answer": "A veces la mejor decisión es intentar dos caminos a la vez — la síntesis en acción."
+          }
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "El {pool:eco.nature} brilla sobre los tres. La última noche terminó. El viaje del Mundo del Medio se acerca a su fin. Lo que viene después es el Mundo de Arriba — y la carrera contra el gris."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T24_skit_despedida_medio",
+        "layer": "narrative",
+        "order": 24,
+        "description": "Farewell to the Mundo del Medio. The three friends walk toward the ceiba. Narrative synthesis.",
+        "spiralReturn": [
+          6,
+          11
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "sound"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "Adiós al Mundo del Medio",
+      "instruction": "Los tres amigos se ponen en {pool:eco.place}. Adiós al Mundo del Medio.",
+      "grammar": [
+        "narrative synthesis",
+        "all tenses review"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Empezaron separados. Yaguará entró sola al {pool:eco.sound} Gris. Conoció a Candelaria, que la acompañó. Escuchó a Doña Asunción, que le dio la herencia. Leyó a Don Próspero, que le enseñó el poder del {pool:eco.sound}. Y ahora {pool:eco.place} ha vuelto, con la urgencia del {pool:eco.place}."
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Cuando empecé este viaje, era solo un {pool:eco.animal} que buscaba nombres. Ahora llevo una herencia, un mapa, y dos amigos. El Mundo del Medio me enseñó que no puedo hacer esto sola.",
+          "target": [
+            "Cuando empecé",
+            "era",
+            "llevo",
+            "enseñó"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Mientras caminábamos juntas, yo aprendía a ver patrones. Después de todo lo que hemos vivido, puedo decir que el mapa del mundo vive en un cuaderno.",
+          "target": [
+            "Mientras",
+            "caminábamos",
+            "Después de"
+          ]
+        },
+        {
+          "speaker": "rio",
+          "name": "Río",
+          "animation": "bounce",
+          "text": "Y yo, que tomé otro {pool:eco.place}, llegué al mismo {pool:eco.place}. Antes de que amaneciera, no sabía si los encontraría. Ahora sé que los {pool:eco.place} paralelos siempre se encuentran.",
+          "target": [
+            "que tomé",
+            "Antes de que amaneciera"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "El dominio de los tiempos narrativos permite contar historias complejas con múltiples líneas temporales.",
+              "Los tiempos verbales son solo reglas.",
+              "No importa cómo se cuente la historia."
+            ],
+            "answer": "El dominio de los tiempos narrativos permite contar historias complejas con múltiples líneas temporales."
+          }
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T25_fill_futuro_perfecto",
+        "layer": "core",
+        "order": 25,
+        "description": "Drill: future perfect — what will have happened by a certain time.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "nature",
+          "place"
+        ]
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "future perfect"
+      ],
+      "instruction": "Completa con el futuro perfecto (habrá + participio).",
+      "tip": {
+        "title": "Futuro perfecto",
+        "lines": [
+          "habré llegado = I will have arrived",
+          "Para mañana, el gris habrá avanzado más.",
+          "Cuando lleguemos, ¿la ceiba se habrá apagado?"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "Cuando lleguemos a la ceiba, el gris ya ___ a sus {pool:eco.nature}. (llegar)",
+          "answer": "habrá llegado",
+          "options": [
+            "habrá llegado",
+            "llegó",
+            "llega"
+          ]
+        },
+        {
+          "sentence": "Para mañana, nosotros ___ la mitad del {pool:eco.place}. (recorrer)",
+          "answer": "habremos recorrido",
+          "options": [
+            "habremos recorrido",
+            "recorrimos",
+            "recorremos"
+          ]
+        },
+        {
+          "sentence": "Si tardamos tres días, la ceiba se ___ apagado. (haber)",
+          "answer": "habrá",
+          "options": [
+            "habrá",
+            "ha",
+            "había"
+          ]
+        },
+        {
+          "sentence": "Antes de la noche, {pool:eco.place} nos ___ contado todo su viaje. (haber)",
+          "answer": "habrá",
+          "options": [
+            "habrá",
+            "ha",
+            "había"
+          ]
+        },
+        {
+          "sentence": "Cuando terminemos este viaje, ___ aprendido a nombrar. (haber — nosotros)",
+          "answer": "habremos",
+          "options": [
+            "habremos",
+            "hemos",
+            "habíamos"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T26_fill_tiempos_narrativos",
+        "layer": "core",
+        "order": 26,
+        "description": "Narrative tense review: choose the correct tense for each part of the story.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "place"
+        ]
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "narrative tense mastery"
+      ],
+      "instruction": "Elige el tiempo verbal correcto para la narración.",
+      "questions": [
+        {
+          "sentence": "Yaguará ___ sola cuando todo empezó. (estar — imperfecto)",
+          "answer": "estaba",
+          "options": [
+            "estaba",
+            "estuvo",
+            "está"
+          ]
+        },
+        {
+          "sentence": "Después de que ___ a Candelaria, todo cambió. (conocer — pretérito)",
+          "answer": "conoció",
+          "options": [
+            "conoció",
+            "conocía",
+            "conoce"
+          ]
+        },
+        {
+          "sentence": "Mientras Yaguará ___, {pool:eco.place} ___ su rastro. (viajar, seguir — imperfecto)",
+          "answer": "viajaba / seguía",
+          "options": [
+            "viajaba / seguía",
+            "viajó / siguió",
+            "viaja / sigue"
+          ]
+        },
+        {
+          "sentence": "Mamá {pool:eco.animal} le ___ que el gris ya ___ a la ceiba. (decir — pretérito, llegar — pluscuamperfecto)",
+          "answer": "dijo / había llegado",
+          "options": [
+            "dijo / había llegado",
+            "dice / ha llegado",
+            "decía / llegaba"
+          ]
+        },
+        {
+          "sentence": "Cuando ___ a la ceiba, todo ___ diferente. (llegar — presente subj., ser — futuro)",
+          "answer": "lleguemos / será",
+          "options": [
+            "lleguemos / será",
+            "llegamos / es",
+            "llegábamos / era"
+          ]
+        },
+        {
+          "sentence": "Si ___ antes, ___ salvar más nombres. (llegar — pluscuamp. Subj., poder — cond. Perfecto)",
+          "answer": "hubiera llegado / habría podido",
+          "options": [
+            "hubiera llegado / habría podido",
+            "llegó / pudo",
+            "llega / puede"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T27_category_tiempos",
+        "layer": "skill",
+        "order": 27,
+        "description": "Categorize sentences by their narrative function: background, main action, reported speech, future plan.",
+        "spiralReturn": [
+          3,
+          5
+        ],
+        "inputModes": [
+          "choice",
+          "drag"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place"
+        ]
+      },
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "Clasifica cada oración según su función narrativa.",
+      "categories": [
+        "fondo (imperfecto)",
+        "acción principal (pretérito)",
+        "discurso reportado",
+        "plan futuro"
+      ],
+      "items": [
+        {
+          "text": "Las {pool:eco.nature} brillaban sobre la fogata.",
+          "answer": "fondo (imperfecto)"
+        },
+        {
+          "text": "{pool:eco.place} llegó corriendo.",
+          "answer": "acción principal (pretérito)"
+        },
+        {
+          "text": "Mamá {pool:eco.animal} dijo que volviera.",
+          "answer": "discurso reportado"
+        },
+        {
+          "text": "Iremos a la ceiba antes de que sea tarde.",
+          "answer": "plan futuro"
+        },
+        {
+          "text": "El {pool:eco.nature} crepitaba mientras hablaban.",
+          "answer": "fondo (imperfecto)"
+        },
+        {
+          "text": "Candelaria abrió el cuaderno.",
+          "answer": "acción principal (pretérito)"
+        },
+        {
+          "text": "{pool:eco.place} contó que había visto el gris avanzar.",
+          "answer": "discurso reportado"
+        },
+        {
+          "text": "Cuando lleguemos, nombraremos todo lo que podamos.",
+          "answer": "plan futuro"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T28_translation_tiempos",
+        "layer": "skill",
+        "order": 28,
+        "description": "Transform simple narratives into complex multi-tense narratives.",
+        "spiralReturn": [
+          3,
+          7
+        ],
+        "inputModes": [
+          "choice",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "translation",
+      "label": "Reformular",
+      "instruction": "Transforma la narración simple en narración compleja con múltiples tiempos en {pool:eco.place}.",
+      "items": [
+        {
+          "source": "Río viajó. Vio cosas. Llegó.",
+          "target": "Después de que Yaguará se fue, Río viajó durante semanas. Mientras caminaba por la sierra, vio cosas que nunca habría imaginado. Finalmente, antes de que amaneciera, llegó.",
+          "options": [
+            "Después de que Yaguará se fue, Río viajó durante semanas. Mientras caminaba por la sierra, vio cosas que nunca habría imaginado. Finalmente, antes de que amaneciera, llegó.",
+            "Río viajó mucho y llegó.",
+            "Río fue y volvió."
+          ]
+        },
+        {
+          "source": "El gris avanzó. La ceiba está en peligro. Hay que actuar.",
+          "target": "Mientras Yaguará buscaba respuestas, el gris había avanzado más de lo esperado. Para cuando Río trajo las noticias, la ceiba ya estaba en peligro. Por consiguiente, si no actúan antes de que el gris la alcance, se habrá perdido todo.",
+          "options": [
+            "Mientras Yaguará buscaba respuestas, el gris había avanzado más de lo esperado. Para cuando Río trajo las noticias, la ceiba ya estaba en peligro. Por consiguiente, si no actúan antes de que el gris la alcance, se habrá perdido todo.",
+            "El gris es malo. Hay que hacer algo.",
+            "La ceiba morirá."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T29_conjugation_todos_tiempos",
+        "layer": "skill",
+        "order": 29,
+        "description": "Master conjugation: the same verb across all narrative tenses.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "conjugation",
+      "label": "Conjugar",
+      "instruction": "Conjuga 'llegar' en todos los tiempos narrativos en {pool:eco.place}.",
+      "verb": "llegar",
+      "tense": "todos los tiempos narrativos",
+      "items": [
+        {
+          "prompt": "presente (yo)",
+          "answer": "llego"
+        },
+        {
+          "prompt": "pretérito (ella)",
+          "answer": "llegó"
+        },
+        {
+          "prompt": "imperfecto (él)",
+          "answer": "llegaba"
+        },
+        {
+          "prompt": "pluscuamperfecto (nosotros)",
+          "answer": "habíamos llegado"
+        },
+        {
+          "prompt": "futuro (tú)",
+          "answer": "llegarás"
+        },
+        {
+          "prompt": "futuro perfecto (ellos)",
+          "answer": "habrán llegado"
+        },
+        {
+          "prompt": "condicional (yo)",
+          "answer": "llegaría"
+        },
+        {
+          "prompt": "presente subjuntivo (cuando nosotros)",
+          "answer": "lleguemos"
+        },
+        {
+          "prompt": "imperfecto subjuntivo (antes de que ella)",
+          "answer": "llegara"
+        },
+        {
+          "prompt": "pluscuamperfecto subjuntivo (si yo)",
+          "answer": "hubiera llegado"
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T30_builder_narrativa_compleja",
+        "layer": "skill",
+        "order": 30,
+        "description": "Build complex narrative sentences with multiple tenses.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Construye oraciones narrativas con múltiples tiempos verbales en {pool:eco.place}.",
+      "items": [
+        {
+          "pieces": [
+            "Después de que",
+            "Río",
+            "llegó,",
+            "contó que",
+            "el gris",
+            "había avanzado",
+            "mucho."
+          ],
+          "answer": "Después de que Río llegó, contó que el gris había avanzado mucho."
+        },
+        {
+          "pieces": [
+            "Mientras",
+            "los tres",
+            "hablaban,",
+            "el fuego",
+            "se apagaba",
+            "y el sol",
+            "empezaba",
+            "a salir."
+          ],
+          "answer": "Mientras los tres hablaban, el fuego se apagaba y el sol empezaba a salir."
+        },
+        {
+          "pieces": [
+            "Si",
+            "no llegan",
+            "antes de que",
+            "el gris",
+            "alcance",
+            "la ceiba,",
+            "se habrá",
+            "perdido todo."
+          ],
+          "answer": "Si no llegan antes de que el gris alcance la ceiba, se habrá perdido todo."
+        },
+        {
+          "pieces": [
+            "Cuando",
+            "empezó",
+            "el viaje,",
+            "Yaguará",
+            "estaba sola.",
+            "Ahora",
+            "son tres."
+          ],
+          "answer": "Cuando empezó el viaje, Yaguará estaba sola. Ahora son tres."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T31_par_minimo_tiempos",
+        "layer": "skill",
+        "order": 31,
+        "description": "Minimal pairs: the narrative difference between tenses — llegó vs. llegaba, dijo vs. decía.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "par_minimo",
+      "label": "Par mínimo",
+      "instruction": "¿Cuál es la diferencia narrativa entre los dos tiempos? En {pool:eco.place}.",
+      "items": [
+        {
+          "pair": [
+            "Río llegó.",
+            "Río llegaba."
+          ],
+          "context": "Para decir que Río completó el acto de llegar en un momento específico:",
+          "answer": "Río llegó.",
+          "explanation": "Pretérito = acción completada. Imperfecto = acción en progreso o habitual."
+        },
+        {
+          "pair": [
+            "Dijo que volviera.",
+            "Decía que volviera."
+          ],
+          "context": "Mamá Jaguar dio la orden una vez, en un momento específico:",
+          "answer": "Dijo que volviera.",
+          "explanation": "'Dijo' = una vez, momento específico. 'Decía' = repetidamente o en progreso."
+        },
+        {
+          "pair": [
+            "El gris había llegado.",
+            "El gris llegó."
+          ],
+          "context": "Para indicar que el gris llegó ANTES de otro evento pasado:",
+          "answer": "El gris había llegado.",
+          "explanation": "Pluscuamperfecto = acción anterior a otra acción pasada."
+        },
+        {
+          "pair": [
+            "Cuando lleguemos.",
+            "Cuando llegamos."
+          ],
+          "context": "Para hablar de un momento futuro que todavía no ha pasado:",
+          "answer": "Cuando lleguemos.",
+          "explanation": "Subjuntivo = futuro incierto. Indicativo = pasado o habitual."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T32_eco_lejano_voces_viaje",
+        "layer": "skill",
+        "order": 32,
+        "description": "Distant echoes from Río's journey: fragments of what people told him along the way.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "sound",
+          "texture"
+        ]
+      },
+      "type": "eco_lejano",
+      "label": "Eco lejano",
+      "instruction": "Escucha los ecos del viaje de Río. Completa lo que le dijeron.",
+      "items": [
+        {
+          "audio": "Un viejo en la sierra le dijo: 'Vi al jaguar que caminaba hacia donde el sol...'",
+          "sentence": "El viejo dijo que había visto al jaguar que caminaba hacia donde el sol ___.",
+          "answer": "se pone",
+          "options": [
+            "se pone",
+            "sale",
+            "brilla"
+          ]
+        },
+        {
+          "audio": "Una maestra le contó: 'El gris llegó a nuestro pueblo. Los niños ya no...'",
+          "sentence": "La maestra contó que el gris había llegado y que los niños ya no ___.",
+          "answer": "recordaban los nombres del río",
+          "options": [
+            "recordaban los nombres del río",
+            "iban a la escuela",
+            "querían jugar"
+          ]
+        },
+        {
+          "audio": "Mamá Jaguar susurró: 'Dile a mi hija que vuelva antes de que la última raíz...'",
+          "sentence": "Mamá Jaguar dijo que volviera antes de que la última raíz ___.",
+          "answer": "se apagara",
+          "options": [
+            "se apagara",
+            "creciera",
+            "floreciera"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T33_listening_narrativa_compleja",
+        "layer": "skill",
+        "order": 33,
+        "description": "Listen to a complex multi-tense narrative and identify the timeline.",
+        "spiralReturn": [
+          3,
+          7
+        ],
+        "inputModes": [
+          "choice",
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha la narrativa compleja y reconstruye la línea temporal en {pool:eco.place}.",
+      "items": [
+        {
+          "audio": "El narrador dice: 'Cuando Río llegó a la fogata, Yaguará y Candelaria ya habían comido. Pero antes de que pudieran descansar, Río les contó que Mamá Jaguar le había dicho que la ceiba se estaba apagando. Mientras escuchaban las noticias, el sol empezaba a salir.'",
+          "question": "¿Cuál es el orden cronológico de los eventos?",
+          "answer": "1) Mamá Jaguar habló con Río. 2) Yaguará y Candelaria comieron. 3) Río llegó y contó las noticias. 4) El sol empezó a salir.",
+          "options": [
+            "1) Mamá Jaguar habló con Río. 2) Yaguará y Candelaria comieron. 3) Río llegó y contó las noticias. 4) El sol empezó a salir.",
+            "1) El sol salió. 2) Todos comieron. 3) Río habló.",
+            "Todo pasó al mismo tiempo."
+          ]
+        },
+        {
+          "audio": "Candelaria reflexiona: 'Si hubiéramos sabido antes lo que Río nos contó, habríamos actuado más rápido. Pero no sabíamos. Y mientras nosotros hacíamos el mapa, el gris seguía avanzando. Ahora que lo sabemos, actuaremos antes de que sea demasiado tarde.'",
+          "question": "¿Cuántos tiempos verbales diferentes usa Candelaria?",
+          "answer": "Cinco: pluscuamperfecto de subjuntivo, condicional perfecto, imperfecto, imperfecto progresivo, futuro.",
+          "options": [
+            "Cinco: pluscuamperfecto de subjuntivo, condicional perfecto, imperfecto, imperfecto progresivo, futuro.",
+            "Dos.",
+            "Solo uno."
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T34_fill_narrativa_completa",
+        "layer": "core",
+        "order": 34,
+        "description": "Complete a narrative paragraph choosing the correct tense for each gap.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "nature",
+          "place"
+        ]
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "narrative tense mastery"
+      ],
+      "instruction": "Completa la narración con el tiempo verbal correcto.",
+      "questions": [
+        {
+          "sentence": "Cuando {pool:eco.place} ___ (llegar), ya ___ (amanecer).",
+          "answer": "llegó / había amanecido",
+          "options": [
+            "llegó / había amanecido",
+            "llega / amanece",
+            "llegaba / amanecía"
+          ]
+        },
+        {
+          "sentence": "Mientras los tres ___ (caminar), cada uno ___ (pensar) en lo que vendría.",
+          "answer": "caminaban / pensaba",
+          "options": [
+            "caminaban / pensaba",
+            "caminaron / pensó",
+            "caminarán / pensará"
+          ]
+        },
+        {
+          "sentence": "{pool:eco.place} les ___ (contar) que el gris ya ___ (alcanzar) las {pool:eco.nature}.",
+          "answer": "contó / había alcanzado",
+          "options": [
+            "contó / había alcanzado",
+            "cuenta / alcanza",
+            "contaba / alcanzaba"
+          ]
+        },
+        {
+          "sentence": "Si ___ (llegar — ellos) a tiempo, ___ (poder) salvar la ceiba.",
+          "answer": "llegan / podrán",
+          "options": [
+            "llegan / podrán",
+            "llegaron / pudieron",
+            "llegaban / podían"
+          ]
+        },
+        {
+          "sentence": "Antes de que ___ (anochecer), ya ___ (recorrer — ellos) la mitad del {pool:eco.place}.",
+          "answer": "anocheciera / habrían recorrido",
+          "options": [
+            "anocheciera / habrían recorrido",
+            "anochece / recorren",
+            "anocheció / recorrieron"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T35_cronica_paralela",
+        "layer": "core",
+        "order": 35,
+        "description": "Write parallel narratives: what Yaguará experienced and what Río experienced at the same time.",
+        "spiralReturn": [],
+        "inputModes": [
+          "typing"
+        ]
+      },
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Escribe dos historias paralelas: lo que Yaguará vivió y lo que Río vivió al mismo tiempo. Usa 'mientras' para conectar las dos líneas. Incluye al menos: un pretérito, un imperfecto, un pluscuamperfecto, un subjuntivo, y un discurso reportado. Escribe 8-10 oraciones.",
+      "placeholder": "Mientras Yaguará entraba al Silencio Gris, Río...",
+      "minWords": 60,
+      "maxWords": 150,
+      "scaffoldType": "paragraph",
+      "storyKey": "cronica_dest37_paralela",
+      "vocabularyHints": [
+        "mientras",
+        "al mismo tiempo",
+        "antes de que",
+        "después de que",
+        "dijo que",
+        "contó que",
+        "había",
+        "estaba",
+        "sería",
+        "hubiera"
+      ],
+      "button": "Guardar en la crónica"
+    },
+    {
+      "_template": {
+        "id": "T36_cultura_viajeros",
+        "layer": "meta",
+        "order": 36,
+        "description": "Cultural reflection: parallel journeys in Colombian oral tradition — the two travelers trope.",
+        "spiralReturn": [
+          5,
+          10
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "cultura",
+      "label": "Cultura",
+      "instruction": "Reflexiona sobre los viajeros paralelos en la tradición oral.",
+      "text": "En la tradición oral colombiana, hay un motivo que se repite: dos viajeros que toman {pool:eco.place} diferentes y se reencuentran en un momento crucial. Los cuentos del Pacífico hablan de hermanos que se separan y que la {pool:eco.place} vuelve a juntar. Las historias andinas cuentan de caminantes que suben por lados diferentes de la {pool:eco.place} y se encuentran en la cumbre. La idea es profunda: el camino individual importa, pero el reencuentro es lo que da sentido al viaje. {pool:eco.place} y Yaguará viven este motivo ancestral.",
+      "question": "¿Qué enseña el motivo de los viajeros paralelos?",
+      "answer": "Que el camino individual importa, pero el reencuentro y la unión son lo que completa el sentido del viaje.",
+      "options": [
+        "Que el camino individual importa, pero el reencuentro y la unión son lo que completa el sentido del viaje.",
+        "Que es mejor viajar solo.",
+        "Que los caminos son aleatorios."
+      ]
+    },
+    {
+      "_template": {
+        "id": "T37_oraculo_futuro",
+        "layer": "core",
+        "order": 37,
+        "description": "Oracle: what will the world look like when they reach the ceiba?",
+        "spiralReturn": [
+          4,
+          9
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "oraculo",
+      "label": "Oráculo",
+      "instruction": "¿Cómo será el mundo cuando lleguen a la ceiba? En {pool:eco.place}.",
+      "scene": [
+        {
+          "speaker": "Río",
+          "text": "Cuando lleguemos, ¿la ceiba todavía estará viva?"
+        },
+        {
+          "speaker": "Yaguará",
+          "text": "No lo sé. Pero sé que habremos hecho todo lo posible para llegar a tiempo."
+        },
+        {
+          "speaker": "Candelaria",
+          "text": "Y si no alcanzamos, al menos habremos caminado juntos. Eso también cuenta."
+        }
+      ],
+      "options": [
+        "El futuro es incierto, pero el viaje compartido ya ha cambiado a los viajeros — y eso no se pierde.",
+        "Si la ceiba muere, todo fue en vano.",
+        "El futuro no importa."
+      ],
+      "answer": "El futuro es incierto, pero el viaje compartido ya ha cambiado a los viajeros — y eso no se pierde.",
+      "explanation": "El viaje transforma a quien lo hace. Incluso si el resultado es incierto, los viajeros ya no son los mismos."
+    },
+    {
+      "_template": {
+        "id": "T38_autoevaluacion_narrativa",
+        "layer": "core",
+        "order": 38,
+        "description": "Self-assessment: narrative tense mastery, parallel timelines, reported speech, complex storytelling.",
+        "spiralReturn": [],
+        "inputModes": [
+          "choice"
+        ]
+      },
+      "type": "autoevaluacion",
+      "label": "¿Qué puedo hacer?",
+      "instruction": "Reflexiona sobre tu dominio narrativo.",
+      "statements": [
+        {
+          "text": "Puedo narrar una historia usando múltiples tiempos verbales: pretérito, imperfecto, pluscuamperfecto."
+        },
+        {
+          "text": "Puedo construir líneas temporales paralelas con 'mientras', 'al mismo tiempo', 'por otro lado'."
+        },
+        {
+          "text": "Puedo usar discurso reportado complejo: dijo que había dicho que..."
+        },
+        {
+          "text": "Puedo usar el futuro perfecto para hablar de lo que habrá pasado."
+        },
+        {
+          "text": "Puedo distinguir entre fondo narrativo (imperfecto) y acción principal (pretérito)."
+        },
+        {
+          "text": "Puedo usar cláusulas temporales con subjuntivo: antes de que, cuando + subjuntivo."
+        }
+      ],
+      "reflection": "¿Qué camino tomaste tú mientras yo tomaba el mío?"
+    },
+    {
+      "_template": {
+        "id": "T39_portafolio_narracion",
+        "layer": "advanced",
+        "order": 39,
+        "description": "Record: narrate the full story of Dest 37 using complex tenses and parallel timelines.",
+        "spiralReturn": [],
+        "inputModes": [
+          "voice"
+        ]
+      },
+      "type": "portafolio",
+      "label": "Mi voz",
+      "instruction": "Graba la narración completa.",
+      "prompt": "Cuenta la historia de la última noche de Río: cómo llegó, qué noticias trajo, qué decidieron los tres amigos. Usa al menos tres tiempos verbales diferentes, una cláusula temporal con subjuntivo, y un discurso reportado. Habla 60-90 segundos.",
+      "guidingQuestions": [
+        "¿Qué pasó mientras Yaguará viajaba?",
+        "¿Qué dijo Mamá Jaguar?",
+        "¿Qué decidieron los tres?",
+        "¿Qué habrá pasado cuando lleguen?"
+      ],
+      "minWords": 50
+    },
+    {
+      "_template": {
+        "id": "T40_ritmo_tres_viajeros",
+        "layer": "core",
+        "order": 40,
+        "description": "Rhythm drill: the cadence of three travelers. Urgency builds with tempo.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "voice"
+        ]
+      },
+      "type": "ritmo",
+      "label": "Ritmo",
+      "instruction": "Repite al ritmo. Tres viajeros. Un destino. La urgencia crece.",
+      "items": [
+        {
+          "text": "Yaguará caminó.",
+          "tempo": "slow"
+        },
+        {
+          "text": "Río la siguió.",
+          "tempo": "slow"
+        },
+        {
+          "text": "Candelaria dibujó el mapa.",
+          "tempo": "medium"
+        },
+        {
+          "text": "Mientras uno viajaba, el otro corría.",
+          "tempo": "medium"
+        },
+        {
+          "text": "Dijo que volviera antes de que la raíz se apagara.",
+          "tempo": "fast"
+        },
+        {
+          "text": "Tres caminos. Un destino. El tiempo se acaba.",
+          "tempo": "fast"
+        },
+        {
+          "text": "¿Qué camino tomaste tú mientras yo tomaba el mío?",
+          "tempo": "slow"
+        }
+      ]
+    }
+  ],
+  "departure": {
+    "type": "narrative",
+    "closingQuestion": "¿Qué camino tomaste tú mientras yo tomaba el mío?",
+    "yaguaraLine": "Río volvió. La ceiba se apaga. El tiempo se acaba. Pero ahora somos tres, y tres es más que uno. Mientras yo buscaba respuestas, Río buscaba el camino de vuelta. Y Candelaria dibujaba el mapa. Tres caminos. Un destino.",
+    "button": "→ Destino 38",
+    "nextUrl": "play.html?dest=38"
+  },
+  "characterMeta": {
+    "char_yaguara": {
+      "id": "char_yaguara",
+      "name": "Yaguará",
+      "avatar": "img/characters/yaguara.jpg",
+      "voice": "deep",
+      "description": "El jaguar que camina entre mundos. Se reencuentra con Río y entiende que los caminos paralelos convergen."
+    },
+    "char_rio": {
+      "id": "char_rio",
+      "name": "Río",
+      "avatar": "img/characters/rio.jpg",
+      "voice": "bright",
+      "age": "young adult",
+      "description": "Más delgado, más viejo, pero sonriendo. Siguió a Yaguará por su propio camino. Trae noticias urgentes. Amistad instantánea con Candelaria."
+    },
+    "char_candelaria": {
+      "id": "char_candelaria",
+      "name": "Candelaria",
+      "realName": "Candelaria Arango",
+      "avatar": "img/characters/candelaria.jpg",
+      "voice": "clear",
+      "age": 16,
+      "description": "Afro-colombiana, 16 años. Conoce a Río y la amistad es inmediata. El equipo está completo."
+    }
+  }
+}

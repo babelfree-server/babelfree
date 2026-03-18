@@ -153,6 +153,19 @@
         color: var(--jaguar-gold);
     }
 
+    .nav-menu { list-style: none; display: flex; align-items: center; gap: 0.5rem; margin: 0; padding: 0; }
+    .nav-link { color: #fff; text-decoration: none; font-weight: 600; padding: .5rem 1rem; border-radius: 25px; transition: all 0.3s; }
+    .nav-link:hover { background: rgba(249,202,36,.2); color: #c9a227; transform: translateY(-2px); }
+    .nav-cta { background: linear-gradient(135deg, #c9a227, #f9ca24); color: #1a1208; padding: .6rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 700; transition: all 0.3s; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(201,162,39,0.4); }
+    .mobile-menu-toggle { display: none; flex-direction: column; cursor: pointer; padding: .5rem; }
+    .menu-bar { width: 25px; height: 3px; background: #fff; margin: 2px 0; border-radius: 2px; transition: all 0.3s; }
+    .mobile-menu { display: none; position: fixed; top: 80px; left: 0; width: 100%; background: rgba(26,18,8,0.98); backdrop-filter: blur(20px); padding: 2rem; border-bottom: 1px solid rgba(249,202,36,.2); z-index: 999; }
+    .mobile-menu.active { display: block; animation: slideDown .3s ease; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .mobile-menu-item { display: block; color: #fff; text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,.1); font-weight: 600; transition: all 0.3s; }
+    .mobile-menu-item:hover { color: #c9a227; padding-left: 1rem; }
+
     /* Page Content */
     .page-content {
         max-width: 820px;
@@ -407,7 +420,8 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-        .nav-links { display: none; }
+        .nav-menu { display: none; }
+        .mobile-menu-toggle { display: flex; }
 
         .page-content { padding: 100px 1.2rem 3rem; }
 
@@ -436,27 +450,35 @@
     }
 </style>
 <link rel="stylesheet" href="luxury.css">
-<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="nav-bar">
-    <a href="/elviajedeljaguar" class="nav-brand">
-        <div class="logo">
-            <img src="img/jaguar-hero-full.jpg" alt="Yaguará">
-        </div>
-        <div class="brand-text">
-            <h1>El viaje del jaguar</h1>
-            <p>Living Spanish</p>
-        </div>
-    </a>
-    <div class="nav-links">
-        <a href="/elviajedeljaguar">Home</a>
-        <a href="/languages">Languages</a>
-        <a href="/login">Log in</a>
-    </div>
+<nav class="nav-bar" role="navigation">
+<a href="/" class="nav-brand">
+<div class="logo"><img src="/img/jaguar-hero-full.jpg" alt="Yaguará" loading="lazy"></div>
+<div class="brand-text"><span>El viaje del jaguar</span><p>Living Spanish</p></div>
+</a>
+<ul class="nav-menu">
+<li><a href="/dictionary" class="nav-link">Dictionaries</a></li>
+<li><a href="/languages" class="nav-link">Languages</a></li>
+<li><a href="/elviajedeljaguar" class="nav-link">The Journey</a></li>
+<li><a href="/contact" class="nav-link">Contact</a></li>
+<li><a href="/login" class="nav-link">Log in</a></li>
+<li><a href="#" class="nav-cta" onclick="startFreeTrial()">Start</a></li>
+</ul>
+<div class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+<div class="menu-bar"></div><div class="menu-bar"></div><div class="menu-bar"></div>
+</div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+<a href="/dictionary" class="mobile-menu-item" onclick="closeMobileMenu()">Dictionaries</a>
+<a href="/languages" class="mobile-menu-item" onclick="closeMobileMenu()">Languages</a>
+<a href="/elviajedeljaguar" class="mobile-menu-item" onclick="closeMobileMenu()">The Journey</a>
+<a href="/contact" class="mobile-menu-item" onclick="closeMobileMenu()">Contact</a>
+<a href="/login" class="mobile-menu-item" onclick="closeMobileMenu()">Log in</a>
+</div>
 
 <!-- Page Content -->
 <div class="page-content">
@@ -536,7 +558,7 @@
             When people talk about "Castilian Spanish" specifically, they usually mean the variety spoken in <strong>central and northern Spain</strong>. This variety does have some distinct features compared to Latin American Spanish:
         </p>
 
-        <h3>Pronunciation</h3>
+        <h3><a href="/castilian-pronunciation" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,162,39,0.3)">Pronunciation</a></h3>
         <table class="example-table">
             <thead>
                 <tr>
@@ -564,7 +586,7 @@
             </tbody>
         </table>
 
-        <h3>Grammar</h3>
+        <h3><a href="/castilian-grammar" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,162,39,0.3)">Grammar</a></h3>
         <table class="example-table">
             <thead>
                 <tr>
@@ -592,7 +614,7 @@
             </tbody>
         </table>
 
-        <h3>Vocabulary</h3>
+        <h3><a href="/castilian-vocabulary" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,162,39,0.3)">Vocabulary</a></h3>
         <table class="example-table">
             <thead>
                 <tr>
@@ -683,7 +705,7 @@
 <footer class="site-footer">
     <div class="footer-grid">
         <div class="footer-brand">
-            <p class="footer-logo"><img src="assets/tower-logo.png" alt="El Viaje del Jaguar" loading="lazy"></p>
+            <p class="footer-logo"><img src="/assets/tower-logo.png" alt="El Viaje del Jaguar" loading="lazy"></p>
             <p class="footer-desc">Curso de español alineado al Marco Común Europeo de Referencia. Aprende español a través de la cultura colombiana, narrativa inmersiva y pedagogía MCER — de A1 a C2.</p>
         </div>
         <nav class="footer-links" aria-label="Mapa del sitio">
@@ -708,5 +730,11 @@
 </footer>
 
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/service-worker.js');}</script>
+<script>
+function toggleMobileMenu(){var m=document.getElementById('mobileMenu'),t=document.querySelector('.mobile-menu-toggle');m.classList.toggle('active');t.classList.toggle('active');var b=t.querySelectorAll('.menu-bar');if(m.classList.contains('active')){b[0].style.transform='rotate(45deg) translate(5px, 5px)';b[1].style.opacity='0';b[2].style.transform='rotate(-45deg) translate(7px, -6px)';document.body.style.overflow='hidden'}else{b[0].style.transform='none';b[1].style.opacity='1';b[2].style.transform='none';document.body.style.overflow='auto'}}
+function closeMobileMenu(){var m=document.getElementById('mobileMenu'),t=document.querySelector('.mobile-menu-toggle'),b=t.querySelectorAll('.menu-bar');m.classList.remove('active');t.classList.remove('active');b[0].style.transform='none';b[1].style.opacity='1';b[2].style.transform='none';document.body.style.overflow='auto'}
+function startFreeTrial(){window.location.href='/login'}
+document.addEventListener('click',function(ev){var m=document.getElementById('mobileMenu'),t=document.querySelector('.mobile-menu-toggle');if(m&&m.classList.contains('active')&&!m.contains(ev.target)&&!t.contains(ev.target))closeMobileMenu()});
+</script>
 </body>
 </html>
