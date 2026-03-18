@@ -447,6 +447,14 @@
                         card.appendChild(verse);
                     }
 
+                    // Curated journal text (from riddle data)
+                    if (entry.journalText) {
+                        var journalEl = _el('p', 'yg-journal-entry-note', entry.journalText);
+                        journalEl.style.fontStyle = 'normal';
+                        journalEl.style.color = '#c8b89a';
+                        card.appendChild(journalEl);
+                    }
+
                     // Answer
                     var answerEl = _el('p', 'yg-journal-entry-answer',
                         'Respuesta: ' + entry.answer);

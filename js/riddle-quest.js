@@ -423,7 +423,7 @@
         // ── Choice mode: 4 option buttons ────────────────────────────
         _renderChoiceInput: function (riddle, card, onSolved) {
             var self = this;
-            var options = riddle.options || [];
+            var options = riddle.answerOptions || riddle.options || [];
             var answer = riddle.answer || '';
             var grid = _el('div', 'yg-busqueda-options');
 
@@ -577,9 +577,17 @@
 
             card.appendChild(wrap);
 
-            // Delay before calling back
+            // Delay before calling back — chain naming ceremony if all 58 solved
             setTimeout(function () {
-                if (callback) callback();
+                if (self.isComplete() && !state.ranaName) {
+                    // All riddles solved — trigger the naming ceremony
+                    var container = card.parentNode || card;
+                    self.namingCeremony(container, function () {
+                        if (callback) callback();
+                    });
+                } else {
+                    if (callback) callback();
+                }
             }, 2200);
         },
 
@@ -642,12 +650,13 @@
             state.ranaOpacity = Math.min(1.0,
                 Math.round((state.solvedRiddles.length / 58) * 100) / 100);
 
-            // Journal entry
+            // Journal entry — use curated journalEntry from riddle data when available
             state.journalEntries.push({
                 dest:           destNum,
-                destName:       riddle.destName || ('Destino ' + destNum),
+                destName:       riddle.destName || riddle.title || ('Destino ' + destNum),
                 verse:          riddle.verse,
                 answer:         answer,
+                journalText:    riddle.journalEntry || '',
                 candelariaNote: riddle.candelariaNote || '',
                 solvedAt:       new Date().toISOString(),
                 studentRiddle:  null
