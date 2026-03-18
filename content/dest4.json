@@ -1289,7 +1289,7 @@
       "room": {
         "name": "La cámara del tiempo",
         "description": "Un reloj enorme en la pared. No tiene números. Solo letras.",
-        "ambience": "Tic-tac suave."
+        "ambience": "heartbeat"
       },
       "puzzles": [
         {
@@ -1297,11 +1297,32 @@
           "prompt": "El primer mes del año. Tiene 5 letras.",
           "clue": "_ _ _ _ _",
           "answer": "enero"
+        },
+        {
+          "puzzleType": "riddle",
+          "prompt": "El reloj muestra esta adivinanza:",
+          "riddle": "Tengo manos pero no puedo tocar. Tengo cara pero no puedo hablar. ¿Qué soy?",
+          "clue": "Mira la pared de la cámara...",
+          "answer": "el reloj",
+          "options": [
+            "el reloj",
+            "la luna",
+            "el espejo",
+            "la puerta"
+          ],
+          "onSolve": "Las manecillas del reloj empiezan a girar."
+        },
+        {
+          "puzzleType": "wordlock",
+          "prompt": "Las letras del reloj dicen: «Después del lunes viene el...»",
+          "clue": "El segundo día de la semana. _ _ _ _ _ _",
+          "answer": "martes",
+          "onSolve": "El reloj marca la hora correcta. La puerta se abre."
         }
       ],
       "fragment": {
-        "text": "Un fragmento brilla.",
-        "questClue": "Continúa el viaje.",
+        "text": "Detrás de la puerta, un fragmento de raíz brilla con luz dorada. Tiene forma de reloj de sol.",
+        "questClue": "El tiempo tiene nombre. Cada día, cada mes, cada hora: nombrar es medir.",
         "item": "raiz-techo"
       },
       "label": "Sala de enigmas",

@@ -221,7 +221,13 @@
             u.rate = (opts && opts.rate) || this._spiralRate || CONFIG.speechRate.a2;
             u.pitch = 1.0;
             u.volume = 1.0;
-            if (opts && opts.onEnd) u.onend = opts.onEnd;
+            /* Duck background music during speech */
+            if (window.AudioManager) AudioManager.duckForSpeech();
+            var userOnEnd = (opts && opts.onEnd) || null;
+            u.onend = function() {
+                if (window.AudioManager) AudioManager.unduckForSpeech();
+                if (userOnEnd) userOnEnd();
+            };
             try { speechSynthesis.speak(u); } catch(e) { /* silent */ }
         },
         cancel: function() {
@@ -2234,6 +2240,7 @@
                         chip.classList.add('yg-dragging');
                         e.dataTransfer.setData('text/plain', dragData);
                         e.dataTransfer.effectAllowed = 'move';
+                        if (window.AudioManager) AudioManager.playDragPick();
                     });
                     chip.addEventListener('dragend', function() {
                         chip.classList.remove('yg-dragging');
@@ -2255,6 +2262,7 @@
                     zone.addEventListener('drop', function(e) {
                         e.preventDefault();
                         zone.classList.remove('drag-over');
+                        if (window.AudioManager) AudioManager.playDragDrop();
                         var val = e.dataTransfer.getData('text/plain');
                         if (val) onDrop(val, zone);
                     });
@@ -2397,6 +2405,7 @@
                         setTimeout(function() {
                             a.classList.add('matched');
                             b.classList.add('matched');
+                            if (window.AudioManager) AudioManager.playPairMatch();
                             WorldReaction.harmony(container, a);
                             state.matched++;
                             state.flipped = [];
@@ -2621,9 +2630,11 @@
                     if (state.resolved) return;
                     voiceBtn.classList.add('listening');
                     transcript.textContent = 'Escuchando...';
+                    if (window.AudioManager) AudioManager.playVoiceStart();
 
                     VoiceInput.listen('es-419', function(results, err) {
                         voiceBtn.classList.remove('listening');
+                        if (window.AudioManager) AudioManager.playVoiceEnd();
                         if (err || !results || !results.length) {
                             transcript.textContent = err === 'timeout' ? 'No se detect\u00f3 voz. Int\u00e9ntalo de nuevo.' : 'Error. Int\u00e9ntalo de nuevo.';
                             return;
@@ -2918,9 +2929,11 @@
                     if (state.resolved) return;
                     voiceBtn.classList.add('listening');
                     transcript.textContent = 'Escuchando...';
+                    if (window.AudioManager) AudioManager.playVoiceStart();
 
                     VoiceInput.listen('es-419', function(results, err) {
                         voiceBtn.classList.remove('listening');
+                        if (window.AudioManager) AudioManager.playVoiceEnd();
                         if (err || !results || !results.length) {
                             transcript.textContent = err === 'timeout' ? 'No se detect\u00f3 voz. Int\u00e9ntalo de nuevo.' : 'Error. Int\u00e9ntalo de nuevo.';
                             return;
@@ -4540,6 +4553,12 @@
             state.resolved = false;
             data._escapeState = state;
 
+            /* Start escape room ambience on first render */
+            if (window.AudioManager && data.room && data.room.ambience && !state._ambiencePlaying) {
+                state._ambiencePlaying = true;
+                AudioManager.playEscapeAmbience(data.room.ambience);
+            }
+
             /* If all puzzles solved, show fragment */
             if (state.puzzleIdx >= data.puzzles.length) {
                 this._showFragment(data, container, state, onComplete);
@@ -4913,6 +4932,11 @@
             var puzzle = data.puzzles[state.puzzleIdx];
             state.solved[state.puzzleIdx] = true;
 
+            /* Escape room puzzle solved SFX */
+            if (window.AudioManager && Engine._config && Engine._config.destNum) {
+                AudioManager.playEscapeSolved(Engine._config.destNum);
+            }
+
             if (puzzle.onSolve) {
                 /* Show transition text */
                 var solvedDiv = document.createElement('div');
@@ -4939,6 +4963,14 @@
             html += '</div>';
             html += '<button class="yg-listo-btn yg-escape-continue" id="ygEscapeContinue">Continuar</button>';
             container.innerHTML = html;
+
+            /* Room complete — stop ambience, play completion sting */
+            if (window.AudioManager) {
+                AudioManager.stopEscapeAmbience();
+                if (Engine._config && Engine._config.destNum) {
+                    AudioManager.playEscapeComplete(Engine._config.destNum);
+                }
+            }
 
             document.getElementById('ygEscapeContinue').addEventListener('click', function() {
                 onComplete(true);
@@ -10004,6 +10036,7 @@
 
         /* 369: Breath moment between phases — a Steiner "sleep" pause */
         _showPhaseBreathe: function(fromPhase, toPhase, callback) {
+            if (window.AudioManager) AudioManager.playPhaseTransition();
             var container = this._container;
             if (!container) { callback(); return; }
 
