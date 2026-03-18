@@ -137,6 +137,7 @@
         // ── Initialize ───────────────────────────────────────────────
         init: function () {
             _injectCSS();
+            if (window.AudioManager) AudioManager.playCuadernoOpen();
             var state = _readState();
 
             var root = document.getElementById('journal-root');

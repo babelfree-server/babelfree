@@ -413,6 +413,12 @@
                         return c !== 'char_yaguara' && data.characterLines && data.characterLines[c];
                     });
 
+                    /* Start audio for this destination */
+                    if (window.AudioManager) {
+                        AudioManager.playWorldLoop(destNum);
+                        if (eco) AudioManager.playEcosystem(eco);
+                    }
+
                     YaguaraEngine.init({
                         games: games,
                         container: document.getElementById('yaguaraCard'),

@@ -356,6 +356,7 @@
                     return;
                 }
 
+                if (window.AudioManager) AudioManager.playRiddleAppears();
                 self._renderRiddle(riddle, container, function () {
                     if (onDone) onDone({ solved: true, destNum: destNum });
                 });
@@ -675,6 +676,12 @@
             }
 
             this._saveState();
+
+            // Audio: bridge plank + rana shimmer
+            if (window.AudioManager) {
+                AudioManager.playBridgePlank();
+                setTimeout(function () { AudioManager.playRanaShimmer(); }, 600);
+            }
         },
 
         // ── Animate a bridge segment reveal ──────────────────────────

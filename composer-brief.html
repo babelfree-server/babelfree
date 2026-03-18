@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Jaguar — Composer / Sound Design Brief</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --bark: #3E2723;
+            --bark-light: #5D4037;
+            --gold: #C9A54E;
+            --gold-bright: #E8C547;
+            --cream: #FDF6E3;
+            --cream-dark: #F5ECD7;
+            --forest: #2D5016;
+            --forest-deep: #1A3A0A;
+            --river: #1B4D6E;
+            --night: #2C1654;
+            --terracotta: #B7562A;
+            --ochre: #C49A3C;
+            --text: #2C1B0E;
+            --text-light: #4A3828;
+            --border: #D4C5A9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--bark) 0%, #1a1a2e 40%, #0D0D1A 100%);
+            color: var(--cream);
+            padding: 80px 40px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(201,165,78,0.12) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 80%, rgba(27,77,110,0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .hero-meta {
+            font-size: 0.85rem;
+            color: rgba(253,246,227,0.6);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- NAV --- */
+        .toc {
+            background: var(--bark);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            justify-content: center;
+        }
+
+        .toc a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .toc a:hover { border-color: var(--gold); }
+
+        /* --- SECTIONS --- */
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .section + .section { padding-top: 0; }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--bark);
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        h2 .section-num {
+            color: var(--gold);
+            font-weight: 400;
+            margin-right: 8px;
+        }
+
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            color: var(--bark-light);
+            margin: 32px 0 12px;
+        }
+
+        p { margin-bottom: 14px; }
+
+        .lead {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            font-style: italic;
+        }
+
+        /* --- DELIVERABLE CARDS --- */
+        .deliverable {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .deliverable::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .deliverable.world-below::before { background: var(--forest); }
+        .deliverable.world-middle::before { background: var(--river); }
+        .deliverable.world-above::before { background: var(--night); }
+        .deliverable.ecosystem::before { background: var(--forest-deep); }
+        .deliverable.character::before { background: var(--terracotta); }
+        .deliverable.ui::before { background: var(--ochre); }
+        .deliverable.quest::before { background: var(--gold); }
+        .deliverable.finale::before { background: linear-gradient(to bottom, var(--forest), var(--river), var(--night)); }
+
+        .deliverable h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            color: var(--bark);
+            margin-bottom: 4px;
+        }
+
+        .deliverable .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .tag.loop { background: #E8F5E9; color: #2E7D32; }
+        .tag.sting { background: #E3F2FD; color: #1565C0; }
+        .tag.theme { background: #FFF3E0; color: #E65100; }
+        .tag.sfx { background: #F3E5F5; color: #6A1B9A; }
+        .tag.ambient { background: #E0F2F1; color: #00695C; }
+
+        .deliverable .desc {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .deliverable .specs {
+            font-size: 0.82rem;
+            color: #777;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #eee;
+        }
+
+        .deliverable .specs span {
+            background: #f5f0e8;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--bark-light);
+            border-left: 3px solid var(--gold);
+            padding: 12px 20px;
+            margin: 20px 0;
+            background: rgba(201,165,78,0.06);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote .attr {
+            font-size: 0.85rem;
+            color: #999;
+            font-style: normal;
+            margin-top: 6px;
+        }
+
+        /* --- TABLES --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 10px 12px;
+            background: var(--bark);
+            color: var(--cream);
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) td { background: #faf8f2; }
+
+        /* --- PHILOSOPHY BOX --- */
+        .philosophy {
+            background: linear-gradient(135deg, #1a1a2e 0%, var(--bark) 100%);
+            color: var(--cream);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .philosophy h3 {
+            color: var(--gold);
+            margin-top: 0;
+        }
+
+        .philosophy p { color: rgba(253,246,227,0.85); }
+
+        .philosophy strong { color: var(--gold-bright); }
+
+        /* --- WARNING BOX --- */
+        .warning {
+            background: #FFF8E1;
+            border: 1px solid #FFD54F;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .warning strong { color: #E65100; }
+
+        /* --- COUNTER --- */
+        .counter {
+            background: var(--bark);
+            color: var(--cream);
+            text-align: center;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 12px;
+        }
+
+        .counter .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .counter .label {
+            font-size: 0.9rem;
+            color: rgba(253,246,227,0.7);
+            margin-top: 4px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            .hero { padding: 50px 20px 40px; }
+            .section { padding: 40px 16px; }
+            .deliverable { padding: 16px; }
+            .toc { padding: 12px 16px; }
+        }
+
+        /* --- SUMMARY TABLE --- */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .summary-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .summary-card .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .summary-card .cat {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ======== HERO ======== -->
+<header class="hero">
+    <h1>El Viaje del Jaguar</h1>
+    <p class="subtitle">Composer &amp; Sound Design Brief</p>
+    <p class="hero-meta">
+        A Spanish-learning game set in a mythological Colombia. 58 destinations, 3 worlds, 8 ecosystems.
+        The student travels with Yaguar&aacute;, a female jaguar spirit, restoring names to a world that is forgetting its language.
+        The journey&rsquo;s final answer is <strong>&ldquo;Escuchar&rdquo;</strong> &mdash; to listen.
+    </p>
+</header>
+
+<!-- ======== TOC ======== -->
+<nav class="toc">
+    <a href="#philosophy">Philosophy</a>
+    <a href="#format">Format &amp; Specs</a>
+    <a href="#worlds">Three Worlds</a>
+    <a href="#ecosystems">Ecosystems</a>
+    <a href="#escaperooms">Escape Rooms</a>
+    <a href="#characters">Characters</a>
+    <a href="#gameplay">Gameplay Sounds</a>
+    <a href="#narrative">Narrative Moments</a>
+    <a href="#quest">Riddle Quest</a>
+    <a href="#finale">The Finale</a>
+    <a href="#donts">What NOT to Do</a>
+    <a href="#summary">Summary</a>
+</nav>
+
+<!-- ======== 01 PHILOSOPHY ======== -->
+<div class="section" id="philosophy">
+    <h2><span class="section-num">01</span> Sound Philosophy</h2>
+    <p class="lead">This game is about listening. Sound is not decoration &mdash; it is the subject.</p>
+
+    <div class="philosophy">
+        <h3>The Core Idea</h3>
+        <p>The world of the game is losing its names. Rivers flow but can&rsquo;t say what they are. Birds sing but the songs carry no words. The student&rsquo;s journey is to <strong>restore language to a world that is forgetting it</strong>.</p>
+        <p style="margin-top:12px">This means sound must <strong>evolve with the student</strong>. At A1, the world is barely audible &mdash; a heartbeat, a single drop of water. By C2, the world is a symphony. <strong>The student&rsquo;s progress literally fills the world with sound.</strong></p>
+        <p style="margin-top:12px">And then, at the very end, the most powerful thing of all: <strong>silence</strong>. Not empty silence, but silence that is full &mdash; because the student has learned to hear what was always there.</p>
+    </div>
+
+    <div class="quote">
+        &ldquo;Los sonidos est&aacute;n. Pero la m&uacute;sica se fue.&rdquo;
+        <div class="attr">&mdash; Yaguar&aacute;, destination 33 (the grey place)</div>
+    </div>
+
+    <div class="philosophy">
+        <h3>Three Rules</h3>
+        <p><strong>1. Less is more.</strong> A single note placed well is worth more than a full orchestration. The game runs for 5,100 hours of content. The music must not exhaust the listener.</p>
+        <p style="margin-top:12px"><strong>2. Colombian, not generic Latin.</strong> This game is set in Colombia. The sound palette should draw from vallenato, cumbia, bambuco, currulao, joropo &mdash; not generic &ldquo;Latin guitar.&rdquo; Indigenous instruments (gaita, marac&oacute;n, quena, tambora) are welcome. But subtly &mdash; as texture, not performance.</p>
+        <p style="margin-top:12px"><strong>3. Silence is content.</strong> Some destinations are about loss, forgetting, the absence of names. These moments need composed silence &mdash; not just &ldquo;no music.&rdquo; A room tone, a breath, a single sustained note fading to nothing. Silence must feel intentional.</p>
+    </div>
+
+    <div class="warning">
+        <strong>Important:</strong> This is a language-learning game. Students will hear spoken Spanish (text-to-speech) constantly. Music must <strong>never compete with speech</strong>. All loops must work well at low volume, beneath dialogue. No vocals in background music. No lyrics.
+    </div>
+</div>
+
+<!-- ======== 02 FORMAT ======== -->
+<div class="section" id="format">
+    <h2><span class="section-num">02</span> Format &amp; Technical Specs</h2>
+
+    <table>
+        <tr><th>Type</th><th>Format</th><th>Bitrate</th><th>Notes</th></tr>
+        <tr>
+            <td>Background music / Ambient loops</td>
+            <td>.mp3</td>
+            <td>192 kbps</td>
+            <td>Seamless loop points. Stereo. Aim for 60&ndash;120 seconds per loop.</td>
+        </tr>
+        <tr>
+            <td>Stings / Transitions</td>
+            <td>.mp3</td>
+            <td>192 kbps</td>
+            <td>2&ndash;8 seconds. Clean attack, natural decay.</td>
+        </tr>
+        <tr>
+            <td>Sound effects (UI, feedback)</td>
+            <td>.mp3</td>
+            <td>128 kbps</td>
+            <td>0.3&ndash;2 seconds. Mono is fine. Tight trim, no silence padding.</td>
+        </tr>
+        <tr>
+            <td>Ambient pads / Room tones</td>
+            <td>.mp3</td>
+            <td>128 kbps</td>
+            <td>30&ndash;60 seconds, seamless loop. These run under everything.</td>
+        </tr>
+    </table>
+
+    <h3>File Naming Convention</h3>
+    <p><code>{category}-{name}-{variant}.mp3</code></p>
+    <p>Examples: <code>world-abajo-theme.mp3</code>, <code>eco-bosque-ambient.mp3</code>, <code>sfx-correct-01.mp3</code>, <code>escape-heartbeat-loop.mp3</code>, <code>char-yaguara-leitmotif.mp3</code>, <code>sting-arrival-a1.mp3</code></p>
+
+    <h3>Loudness</h3>
+    <p>All files normalized to <strong>&ndash;16 LUFS</strong> (integrated). The game engine controls volume dynamically. Deliver at consistent loudness so the engine can mix properly.</p>
+</div>
+
+<!-- ======== 03 THREE WORLDS ======== -->
+<div class="section" id="worlds">
+    <h2><span class="section-num">03</span> The Three Worlds</h2>
+    <p class="lead">The game is divided into three worlds, each with a distinct sonic identity that deepens as the student progresses.</p>
+
+    <div class="deliverable world-below">
+        <h4>Mundo de Abajo &mdash; The World Below</h4>
+        <span class="tag theme">Theme + Loop</span>
+        <p class="desc">
+            <strong>Destinations 1&ndash;18 (A1&ndash;A2).</strong> The student awakens in a mythological underground river system. Yaguar&aacute; is their only guide. Everything is new, strange, and gentle.
+        </p>
+        <p class="desc">
+            <strong>Sonic identity:</strong> Water. Stone. Breath. A single marimba note echoing off cave walls. The drip of condensation. A distant, barely audible heartbeat. Think: the sound of being inside the earth, before you know any words for it.
+        </p>
+        <p class="desc">
+            <strong>Instruments:</strong> Marimba de chonta (single notes, not melodies), water percussion, guacharaca (very soft), breathy flute (gaita hembra). Minimal. Sparse. Space between notes matters more than the notes.
+        </p>
+        <p class="desc">
+            <strong>Progression:</strong> At A1 (dest1&ndash;12), almost nothing &mdash; room tone + occasional single note. At A2 (dest13&ndash;18), a tentative melody begins to form, like someone remembering a song they almost forgot.
+        </p>
+        <div class="specs">
+            <span>2 loops (A1 sparse + A2 emerging)</span>
+            <span>60&ndash;90 sec each</span>
+            <span>Seamless</span>
+        </div>
+    </div>
+
+    <div class="deliverable world-middle">
+        <h4>Mundo del Medio &mdash; The Middle World</h4>
+        <span class="tag theme">Theme + Loop</span>
+        <p class="desc">
+            <strong>Destinations 19&ndash;38 (B1&ndash;B2).</strong> The student emerges into the human world. A Colombian town. Conflict arrives: Don Pr&oacute;spero wants to &ldquo;modernize&rdquo; language, Candelaria guards the old words. There is debate, loss, and the grey place where names go to die.
+        </p>
+        <p class="desc">
+            <strong>Sonic identity:</strong> River current. Human voices (not literal &mdash; the texture of many people). Accordion fragments (vallenatera). The tension between cumbia rhythms and silence. A town that is alive but losing something.
+        </p>
+        <p class="desc">
+            <strong>Instruments:</strong> Accordion (diatonic, vallenato-style) in fragments, caja vallenata, guacharaca, acoustic guitar (tiple), occasional distant tambora. Conversations happen between instruments &mdash; call and response. Some dissonance creeps in at B2 as the world darkens.
+        </p>
+        <p class="desc">
+            <strong>Progression:</strong> At B1 (dest19&ndash;28), rhythmic and warm &mdash; a town plaza with music floating from doorways. At B2 (dest29&ndash;38), the music thins and fragments. By dest33 (&ldquo;the grey place&rdquo;), the music is nearly gone &mdash; only an echo of the accordion, as if heard through fog.
+        </p>
+        <div class="specs">
+            <span>2 loops (B1 warm + B2 fading)</span>
+            <span>90&ndash;120 sec each</span>
+            <span>Seamless</span>
+        </div>
+    </div>
+
+    <div class="deliverable world-above">
+        <h4>Mundo de Arriba &mdash; The World Above</h4>
+        <span class="tag theme">Theme + Loop</span>
+        <p class="desc">
+            <strong>Destinations 39&ndash;58 (C1&ndash;C2).</strong> The student ascends to the cosmic world. Language becomes poetic, philosophical, metalinguistic. Yaguar&aacute; transforms into her final form. The student is no longer learning &mdash; they are creating.
+        </p>
+        <p class="desc">
+            <strong>Sonic identity:</strong> Wind across mountain peaks. Stellar resonance. The overtone series. A choir of all the sounds from below, heard from very far above. Think: the sound of seeing the entire journey from the summit.
+        </p>
+        <p class="desc">
+            <strong>Instruments:</strong> Quena (Andean flute, sustained notes), charango (arpeggiated, high), zampona (pan pipes, very distant), bowed strings (cello or viola, single sustained notes). The gaita from Mundo de Abajo returns, but now it sings a full phrase. Wind as instrument.
+        </p>
+        <p class="desc">
+            <strong>Progression:</strong> At C1 (dest39&ndash;48), spacious and reverent &mdash; the student hears the whole language at once. At C2 (dest49&ndash;58), the instruments gradually converge into a single chord. By dest57, only one sustained note remains. At dest58, silence &mdash; and then the rana sings.
+        </p>
+        <div class="specs">
+            <span>2 loops (C1 spacious + C2 converging)</span>
+            <span>90&ndash;120 sec each</span>
+            <span>Seamless</span>
+        </div>
+    </div>
+
+    <div class="quote">
+        &ldquo;Un acorde hecho de los cincuenta y ocho destinos.&rdquo;
+        <div class="attr">&mdash; Destination 58 narrative (the finale)</div>
+    </div>
+</div>
+
+<!-- ======== 04 ECOSYSTEMS ======== -->
+<div class="section" id="ecosystems">
+    <h2><span class="section-num">04</span> Ecosystem Ambient Loops</h2>
+    <p class="lead">8 Colombian ecosystems, each with a distinct natural soundscape. These play during ecosystem-variant games (?eco= parameter).</p>
+
+    <div class="deliverable ecosystem">
+        <h4>1. Bosque &mdash; Cloud Forest</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">Dense canopy. Filtered light. Moisture dripping from leaves. Birdsong (turpial, barranquero) layered at different depths. A stream far below. Insects at dusk. The forest breathes slowly.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+
+    <div class="deliverable ecosystem">
+        <h4>2. Costa &mdash; Caribbean Coast</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">Waves on sand (medium rhythm, not crashing). Seabirds (pelicans, frigatebirds). Distant cumbia &mdash; so distant it&rsquo;s just the ghost of a tambora beat. Coconut palms rustling. Salt air you can almost hear.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+
+    <div class="deliverable ecosystem">
+        <h4>3. Desierto &mdash; La Guajira Desert</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">Wind over flat sand. Dry heat shimmer (high-frequency haze). A single Wayuu loom clicking in the distance. Silence that isn&rsquo;t empty &mdash; it&rsquo;s the silence of watching. Occasional goat bell, very far.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+
+    <div class="deliverable ecosystem">
+        <h4>4. Islas &mdash; San Andr&eacute;s &amp; Providencia</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">Coral reef shallows. Water lapping on a wooden dock. Creole music fragments (calypso hint). Reggae bass pulse so low it&rsquo;s felt, not heard. Tropical birds (oropendola). A fishing boat engine puttering in the distance.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+
+    <div class="deliverable ecosystem">
+        <h4>5. Llanos &mdash; Eastern Plains</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">Immense open space. Wind through tall grass. A distant arpa llanera (single plucked notes, not a melody). Cattle egrets. The Orinoco river&rsquo;s low hum. Joropo rhythm implied by insect cadence, not actual instruments. Vastness.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+
+    <div class="deliverable ecosystem">
+        <h4>6. Nevada &mdash; Sierra Nevada de Santa Marta</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">High altitude. Thin air. Wind is colder here &mdash; higher pitch, more sustained. A distant poporo (Kogi meditation gourd) tapping. Condor wings. Frozen stream trickling under ice. Sacred mountain stillness.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+
+    <div class="deliverable ecosystem">
+        <h4>7. Selva &mdash; Amazon / Choc&oacute; Rainforest</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">Maximum biodiversity = maximum sound density. Howler monkeys (distant). Cicadas at three different pitches. Rain frogs (dendrobates). Water everywhere &mdash; dripping, flowing, pooling. A marimba de chonta echoing from a Choc&oacute; village. Humid, alive, layered.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+
+    <div class="deliverable ecosystem">
+        <h4>8. Sierra &mdash; Andean Highlands</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">P&aacute;ramo ecosystem. Wind over frailejones. A tiple playing two notes (bambuco feel). Church bell from a distant pueblo. The eucalyptus-scented cold. Hummingbird wings (colibrí). The stillness of altitude, but with life in it.</p>
+        <div class="specs"><span>60 sec loop</span><span>Seamless</span></div>
+    </div>
+</div>
+
+<!-- ======== 05 ESCAPE ROOMS ======== -->
+<div class="section" id="escaperooms">
+    <h2><span class="section-num">05</span> Escape Room Ambience</h2>
+    <p class="lead">58 escape rooms across 3 worlds. Each world has a signature ambient bed. These are tense, immersive, slightly mysterious &mdash; the student is solving puzzles in a closed space.</p>
+
+    <div class="deliverable world-below">
+        <h4>Heartbeat &mdash; Mundo de Abajo Escape Rooms</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">
+            <strong>A1&ndash;A2 rooms.</strong> The student is inside the earth. The dominant sound is a low, slow heartbeat &mdash; as if the cave itself is alive. Occasional water drip. Resonant stone. The heartbeat should feel safe, not threatening &mdash; like being held inside something ancient.
+        </p>
+        <div class="specs"><span>30&ndash;60 sec loop</span><span>Seamless</span><span>Very low frequency emphasis</span></div>
+    </div>
+
+    <div class="deliverable world-middle">
+        <h4>River &mdash; Mundo del Medio Escape Rooms</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">
+            <strong>B1&ndash;B2 rooms.</strong> The student is near water. A river current is the constant &mdash; medium flow, not rapids. Occasional fish splash. The creak of a wooden boat. Ink on paper (a soft scratching). Stories are written in these rooms. The river carries them.
+        </p>
+        <div class="specs"><span>30&ndash;60 sec loop</span><span>Seamless</span><span>Mid-frequency, flowing</span></div>
+    </div>
+
+    <div class="deliverable world-above">
+        <h4>Wind &mdash; Mundo de Arriba Escape Rooms</h4>
+        <span class="tag ambient">Ambient Loop</span>
+        <p class="desc">
+            <strong>C1&ndash;C2 rooms.</strong> The student is in the sky. Wind is the constant &mdash; not howling, but the sustained, almost tonal wind of high altitude. Words float in this wind. Occasionally a distant voice says something unintelligible, as if language itself is the atmosphere. Ethereal. The most &ldquo;silence-adjacent&rdquo; of the three.
+        </p>
+        <div class="specs"><span>30&ndash;60 sec loop</span><span>Seamless</span><span>High-frequency, spacious</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Escape Room: Puzzle Solved</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">A satisfying &ldquo;click&rdquo; or &ldquo;unlock&rdquo; sound when each puzzle is solved inside an escape room. Organic, not digital &mdash; like a stone sliding into place, or a lock carved from wood turning. Short, clean, rewarding.</p>
+        <div class="specs"><span>1&ndash;2 sec</span><span>3 variants (one per world)</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Escape Room: Room Complete</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">All puzzles solved, the room opens. A door of light. A release of tension. Brief, uplifting, with a sense of emerging into open air. 3 variants, one per world &mdash; the Mundo de Arriba version should feel the most transcendent.</p>
+        <div class="specs"><span>3&ndash;5 sec</span><span>3 variants (one per world)</span></div>
+    </div>
+</div>
+
+<!-- ======== 06 CHARACTERS ======== -->
+<div class="section" id="characters">
+    <h2><span class="section-num">06</span> Character Leitmotifs</h2>
+    <p class="lead">Not full themes &mdash; just a few notes that identify each character. These play briefly when the character speaks or appears. Think: a musical signature, 3&ndash;6 notes.</p>
+
+    <div class="deliverable character">
+        <h4>Yaguar&aacute; &mdash; The Jaguar Spirit</h4>
+        <span class="tag sting">Leitmotif</span>
+        <p class="desc">The protagonist and guide. Female jaguar. Wise, warm, sometimes playful. Evolves through 3 stages (So&ntilde;adora &rarr; Caminante &rarr; Guardiana). Her motif should be recognizable across all three but deepen &mdash; same intervals, richer voicing.</p>
+        <p class="desc"><strong>Instrument:</strong> Gaita hembra (breathy flute). At A1, a single phrase. At B1, harmonized with a second voice. At C1, the gaita is joined by strings.</p>
+        <div class="specs"><span>3 variants (one per stage)</span><span>3&ndash;5 sec each</span></div>
+    </div>
+
+    <div class="deliverable character">
+        <h4>Candelaria &mdash; The Guardian of Words</h4>
+        <span class="tag sting">Leitmotif</span>
+        <p class="desc">Appears at dest14. An old woman who guards riddles and forgotten names. Her sound should be like opening an old book &mdash; papery, golden, warm. She carries the cuaderno (journal).</p>
+        <p class="desc"><strong>Instrument:</strong> Tiple (small Colombian guitar), fingerpicked. 4&ndash;5 notes, a descending pattern that resolves upward at the end &mdash; like a question that already knows its answer.</p>
+        <div class="specs"><span>1 motif</span><span>3&ndash;4 sec</span></div>
+    </div>
+
+    <div class="deliverable character">
+        <h4>Don Pr&oacute;spero &mdash; The Antagonist</h4>
+        <span class="tag sting">Leitmotif</span>
+        <p class="desc">Appears at dest19. A persuasive town leader who believes language should be &ldquo;efficient&rdquo; and &ldquo;modern.&rdquo; Not evil &mdash; just wrong. His motif should be seductive, rhythmic, slightly too fast. The kind of music that makes you nod along before you realize you&rsquo;re agreeing.</p>
+        <p class="desc"><strong>Instrument:</strong> Accordion (vallenato diatonic), a quick ascending phrase. Charming, then slightly dissonant on the last note.</p>
+        <div class="specs"><span>1 motif</span><span>3&ndash;4 sec</span></div>
+    </div>
+
+    <div class="deliverable character">
+        <h4>Abuela Ceiba &mdash; The Ancient Tree</h4>
+        <span class="tag sting">Leitmotif</span>
+        <p class="desc">The ceiba tree, oldest voice in the world. Speaks rarely. When she does, everything listens. Her sound should be impossibly deep and slow &mdash; like the earth itself humming.</p>
+        <p class="desc"><strong>Instrument:</strong> Bowed cello on the lowest string, a single sustained note with very slow vibrato. Or a didgeridoo-like drone. Something that vibrates in your chest.</p>
+        <div class="specs"><span>1 motif</span><span>4&ndash;6 sec</span></div>
+    </div>
+
+    <div class="deliverable character">
+        <h4>Do&ntilde;a Asunci&oacute;n &mdash; The Elder</h4>
+        <span class="tag sting">Leitmotif</span>
+        <p class="desc">Appears at dest9. A village elder who remembers the old ways. Patient, kind, slightly sad. Her sound is domestic and warm &mdash; a kitchen, a garden, a rocking chair.</p>
+        <p class="desc"><strong>Instrument:</strong> Marimba de chonta, 3 gentle notes. Like a grandmother humming while she works.</p>
+        <div class="specs"><span>1 motif</span><span>2&ndash;3 sec</span></div>
+    </div>
+
+    <div class="deliverable character">
+        <h4>La Rana sin Dientes &mdash; The Toothless Frog</h4>
+        <span class="tag sting">Leitmotif</span>
+        <p class="desc">A frog who cannot speak. Appears as a ghost at dest10, gains substance through the journey, and at dest58 produces &ldquo;un sonido diminuto &mdash; algo anterior a las palabras.&rdquo; Her motif starts as silence (literally nothing) and, over 58 destinations, becomes a single, beautiful, tiny note.</p>
+        <p class="desc"><strong>Instrument:</strong> None at first. Then a single plucked note (thumb piano / kalimba). At dest58, this note blossoms into a brief, crystalline phrase &mdash; the first song of a creature who was always there but couldn&rsquo;t speak.</p>
+        <div class="specs"><span>3 variants: silence, single note, first song</span><span>1&ndash;4 sec</span></div>
+    </div>
+</div>
+
+<!-- ======== 07 GAMEPLAY ======== -->
+<div class="section" id="gameplay">
+    <h2><span class="section-num">07</span> Gameplay Sound Effects</h2>
+    <p class="lead">Short, organic sounds for game interactions. These play hundreds of times &mdash; they must be pleasant without becoming annoying. Natural materials only: wood, water, stone, wind. No digital bleeps.</p>
+
+    <div class="deliverable ui">
+        <h4>Correct Answer (Harmony)</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">The world approves. A brief, warm resolution. Like a leaf landing on still water, or a bird answering a call. Satisfying but not celebratory &mdash; this is the world settling into rightness, not a game show buzzer.</p>
+        <div class="specs"><span>0.5&ndash;1 sec</span><span>3 variants for variety</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Incorrect Answer (Desequilibrio)</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">The world is slightly unsettled, not punishing. A soft &ldquo;not quite&rdquo; &mdash; like a stone that doesn&rsquo;t quite fit its socket, or a bird call that trails off unresolved. Gentle. The student should feel invited to try again, not scolded.</p>
+        <div class="specs"><span>0.5&ndash;1 sec</span><span>3 variants</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Encounter Start</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">A new game encounter appears. A breath. An opening. Like turning a page in a book, or a door of light appearing. Very subtle &mdash; this plays before every single game.</p>
+        <div class="specs"><span>0.3&ndash;0.8 sec</span><span>1 version</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Destination Complete</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">All encounters in a destination finished. The &ldquo;world restored&rdquo; moment. A brief swell of the current world theme &mdash; a musical exhale. Warm, earned, not triumphant. The student has given this place its name back.</p>
+        <div class="specs"><span>3&ndash;5 sec</span><span>3 variants (one per world)</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Phase Transition (Breathe)</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">Between game phases within a destination, the engine shows a &ldquo;breathe&rdquo; screen. This needs a transitional sound &mdash; a shift, a deepening. Like descending one level deeper into a cenote. Not dramatic, just: &ldquo;something changed.&rdquo;</p>
+        <div class="specs"><span>2&ndash;3 sec</span><span>1 version</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Drag &amp; Drop</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">Picking up a word chip (soft wooden click), dragging (nothing &mdash; silence), dropping into a blank (a satisfying &ldquo;fit&rdquo; sound, like a puzzle piece). If wrong drop: a soft &ldquo;miss&rdquo; (same as desequilibrio but shorter).</p>
+        <div class="specs"><span>Pick: 0.2 sec / Drop: 0.3 sec</span><span>1 set</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Voice Mode: Listening</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">The microphone activates and the game is listening. A soft, sustained tone &mdash; like a tuning fork being held in the air. Should feel like the world is leaning in to hear the student speak. Ends with a soft release when recording stops.</p>
+        <div class="specs"><span>Start: 0.5 sec / End: 0.3 sec</span><span>1 set</span></div>
+    </div>
+
+    <div class="deliverable ui">
+        <h4>Pair Match</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">Two cards matched in a pair game. A satisfying &ldquo;click together&rdquo; &mdash; like two magnets finding each other. Brief, clean, slightly musical (an interval &mdash; perhaps a fifth).</p>
+        <div class="specs"><span>0.4 sec</span><span>1 version</span></div>
+    </div>
+</div>
+
+<!-- ======== 08 NARRATIVE ======== -->
+<div class="section" id="narrative">
+    <h2><span class="section-num">08</span> Narrative Moment Stings</h2>
+    <p class="lead">Key story beats that deserve their own brief musical moment. These play once, at specific destinations.</p>
+
+    <div class="deliverable world-below">
+        <h4>The Awakening (dest1)</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">The very first moment. Eyes open. The student exists for the first time. A single drop of water hits a still pool. Ripples. Then: Yaguar&aacute;&rsquo;s eyes glow gold. This is the birth of the journey.</p>
+        <div class="specs"><span>5&ndash;8 sec</span></div>
+    </div>
+
+    <div class="deliverable world-below">
+        <h4>Candelaria Appears (dest14)</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">An old woman steps from behind a ceiba tree. She carries a leather notebook. The air smells of paper and cinnamon. Her leitmotif plays for the first time, but extended &mdash; she has been waiting.</p>
+        <div class="specs"><span>5&ndash;7 sec</span></div>
+    </div>
+
+    <div class="deliverable world-middle">
+        <h4>Don Pr&oacute;spero Arrives (dest19)</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">The student enters the human town. Cumbia fragments. Fried plantain smell. And then a man in a white suit approaches, smiling too wide. His accordion motif, but played by someone else &mdash; as if the town is already humming his tune.</p>
+        <div class="specs"><span>5&ndash;7 sec</span></div>
+    </div>
+
+    <div class="deliverable world-middle">
+        <h4>The Grey Place (dest33)</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">The student enters the place where forgotten names go. Everything is grey. Sound drains away. The world theme cuts out mid-phrase, as if someone unplugged it. What remains is a single, sustained, very quiet tone &mdash; like tinnitus after an explosion. Loss made audible.</p>
+        <div class="specs"><span>6&ndash;10 sec</span></div>
+    </div>
+
+    <div class="deliverable world-above">
+        <h4>The Return of Music (dest39)</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">After the grey place, after the silence &mdash; the student ascends and sound returns. But different. Changed. Not the naive sounds of Mundo de Abajo. Something earned. The first note of the Mundo de Arriba theme, played with the weight of everything that was lost.</p>
+        <div class="specs"><span>6&ndash;8 sec</span></div>
+    </div>
+
+    <div class="deliverable world-below">
+        <h4>Literary Portal (4 authors)</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">At dest3 (Pombo), dest6 (Rivera), dest9 (Carrasquilla), dest11 (Mac&iacute;as), Yaguar&aacute; enters a literary world. A brief &ldquo;crossing&rdquo; sound &mdash; like stepping through a waterfall of pages. Same base sound, but each author gets a subtle tonal variation (Pombo = playful/light, Rivera = dark/jungle, Carrasquilla = warm/domestic, Mac&iacute;as = mysterious/children&rsquo;s).</p>
+        <div class="specs"><span>2&ndash;3 sec</span><span>4 variants</span></div>
+    </div>
+</div>
+
+<!-- ======== 09 RIDDLE QUEST ======== -->
+<div class="section" id="quest">
+    <h2><span class="section-num">09</span> Riddle Quest &mdash; La B&uacute;squeda</h2>
+    <p class="lead">58 riddles from the poet Mac&iacute;as. Candelaria presents them. Each solved riddle adds a plank to an invisible bridge and brings a ghostly frog closer to visibility.</p>
+
+    <div class="deliverable quest">
+        <h4>Riddle Appears</h4>
+        <span class="tag sting">Sting</span>
+        <p class="desc">Candelaria&rsquo;s cuaderno glows. A riddle is coming. Her leitmotif, but whispered &mdash; tiple notes played with the hand muting the strings (pizzicato + muffled). An invitation to listen carefully.</p>
+        <div class="specs"><span>2&ndash;3 sec</span></div>
+    </div>
+
+    <div class="deliverable quest">
+        <h4>Riddle Solved &mdash; Bridge Plank</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">A wooden plank placed on a rope bridge. The creak of rope. The thud of wood finding its place. Then: the wind crossing the bridge changes pitch slightly &mdash; because the bridge is longer now. Each plank subtly changes the song of the wind.</p>
+        <div class="specs"><span>1.5&ndash;2 sec</span></div>
+    </div>
+
+    <div class="deliverable quest">
+        <h4>Rana Visibility Increase</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">The ghostly frog becomes slightly more visible. A crystalline shimmer &mdash; like frost forming on a window, but in reverse (frost dissolving to reveal life). Brief, magical, almost subliminal.</p>
+        <div class="specs"><span>0.8&ndash;1 sec</span></div>
+    </div>
+
+    <div class="deliverable quest">
+        <h4>Cuaderno Opens (Journal Page)</h4>
+        <span class="tag sfx">Sound Effect</span>
+        <p class="desc">The student opens Candelaria&rsquo;s notebook. Old leather binding. Paper turning. A breath of aged ink. Like opening a book that has been waiting to be read.</p>
+        <div class="specs"><span>1&ndash;1.5 sec</span></div>
+    </div>
+</div>
+
+<!-- ======== 10 FINALE ======== -->
+<div class="section" id="finale">
+    <h2><span class="section-num">10</span> The Finale (Destination 58)</h2>
+    <p class="lead">This is the most important sound in the entire game. Everything has led here.</p>
+
+    <div class="quote">
+        &ldquo;Un sonido diminuto&hellip; no es una palabra&hellip; no es una canci&oacute;n&hellip; algo anterior a las palabras.&rdquo;
+        <div class="attr">&mdash; The moment the rana sin dientes produces her first sound</div>
+    </div>
+
+    <div class="deliverable finale">
+        <h4>The 58-Destination Chord</h4>
+        <span class="tag theme">Composed Piece</span>
+        <p class="desc">
+            All 58 destinations form a single chord. This is not metaphorical &mdash; we need to hear it. A gradual accumulation of every sonic element from the journey: the water drop from dest1, the heartbeat, the marimba note, the gaita, the accordion, the river, the cumbia ghost, the wind, the quena, the silence of dest33 (a gap in the chord), the cello, the charango &mdash; all converging into one sustained, beautiful, impossible chord.
+        </p>
+        <p class="desc">
+            It should take about 15&ndash;20 seconds to fully form. Then it sustains for 5 seconds. Then it fades &mdash; not to silence, but to the sound of a single heartbeat. The same heartbeat from dest1. We have come full circle.
+        </p>
+        <div class="specs"><span>20&ndash;30 sec</span><span>The single most important audio deliverable</span></div>
+    </div>
+
+    <div class="deliverable finale">
+        <h4>La Rana&rsquo;s First Sound</h4>
+        <span class="tag theme">Composed Moment</span>
+        <p class="desc">
+            After the chord fades, after the heartbeat &mdash; silence. Real silence. 3 seconds of nothing. And then: a tiny, crystalline note. The rana sin dientes, who has been silent for 58 destinations, produces her first sound. It is not a word. It is not a song. It is something before words &mdash; the impulse to name.
+        </p>
+        <p class="desc">
+            <strong>Instrument:</strong> Kalimba, single note. Or a glass harmonica. Something that sounds like it has been waiting inside glass for a long time. Pure. Tiny. Alive.
+        </p>
+        <div class="specs"><span>3 sec silence + 2 sec note</span><span>Must be the most delicate sound in the entire game</span></div>
+    </div>
+
+    <div class="deliverable finale">
+        <h4>The Naming Ceremony</h4>
+        <span class="tag theme">Composed Moment</span>
+        <p class="desc">
+            The student names the rana. This is the culmination of the entire riddle quest. After the student types the name and presses &ldquo;Nombrar,&rdquo; the world responds. Every leitmotif plays its first note simultaneously &mdash; Yaguar&aacute;, Candelaria, Ceiba, even Don Pr&oacute;spero &mdash; as if the whole world is saying the name together. Then: the rana&rsquo;s kalimba note, now harmonized. She has a name. She can sing.
+        </p>
+        <div class="specs"><span>8&ndash;12 sec</span><span>Must feel like the world inhaling together</span></div>
+    </div>
+</div>
+
+<!-- ======== 11 DON'TS ======== -->
+<div class="section" id="donts">
+    <h2><span class="section-num">11</span> What This Is NOT</h2>
+
+    <div class="warning">
+        <p><strong>NOT a video game soundtrack.</strong> No epic orchestration. No battle music. No victory fanfares. This is a language-learning journey about listening, naming, and silence. The music serves the learning.</p>
+    </div>
+
+    <div class="warning">
+        <p><strong>NOT generic &ldquo;world music.&rdquo;</strong> No pan flutes from Peru, no mariachi from Mexico, no tango from Argentina. This is Colombia. Vallenato, cumbia, bambuco, currulao, joropo. If you don&rsquo;t know these genres, research them before composing.</p>
+    </div>
+
+    <div class="warning">
+        <p><strong>NOT background wallpaper.</strong> Every sound must be intentional. If a moment doesn&rsquo;t need music, it shouldn&rsquo;t have music. Silence is a valid (and often superior) choice. The game&rsquo;s finale literally resolves to silence.</p>
+    </div>
+
+    <div class="warning">
+        <p><strong>NOT vocals.</strong> No singing, no humming, no vocalization of any kind in background music. The only voice the student should hear is the TTS reading Spanish. Music with vocals will compete with comprehension.</p>
+    </div>
+
+    <div class="warning">
+        <p><strong>NOT loud.</strong> Everything must work at very low volume, under dialogue. The student is reading, listening to speech, and concentrating on language patterns. Music is the air in the room, not the conversation.</p>
+    </div>
+</div>
+
+<!-- ======== 12 SUMMARY ======== -->
+<div class="section" id="summary">
+    <h2><span class="section-num">12</span> Deliverable Summary</h2>
+
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="num">6</div>
+            <div class="cat">World Theme Loops<br>(2 per world)</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">8</div>
+            <div class="cat">Ecosystem Ambient Loops</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">3</div>
+            <div class="cat">Escape Room Ambiences</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">6</div>
+            <div class="cat">Character Leitmotifs</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">8</div>
+            <div class="cat">Gameplay SFX</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">6</div>
+            <div class="cat">Narrative Stings</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">4</div>
+            <div class="cat">Riddle Quest Sounds</div>
+        </div>
+        <div class="summary-card">
+            <div class="num">3</div>
+            <div class="cat">Finale Pieces</div>
+        </div>
+    </div>
+
+    <table>
+        <tr><th>Category</th><th>Count</th><th>Variants</th><th>Total Files</th></tr>
+        <tr><td>World theme loops (2 per world &times; 3 worlds)</td><td>6</td><td>&mdash;</td><td>6</td></tr>
+        <tr><td>Ecosystem ambient loops (8 ecosystems)</td><td>8</td><td>&mdash;</td><td>8</td></tr>
+        <tr><td>Escape room ambience (3 worlds)</td><td>3</td><td>&mdash;</td><td>3</td></tr>
+        <tr><td>Escape room SFX (puzzle solved + room complete)</td><td>2</td><td>3 each</td><td>6</td></tr>
+        <tr><td>Character leitmotifs</td><td>6</td><td>Yaguar&aacute; &times;3, Rana &times;3</td><td>12</td></tr>
+        <tr><td>Gameplay SFX (correct, incorrect, start, drag, voice, pair)</td><td>6</td><td>3 correct, 3 incorrect</td><td>10</td></tr>
+        <tr><td>Destination complete sting</td><td>1</td><td>3 (per world)</td><td>3</td></tr>
+        <tr><td>Phase transition</td><td>1</td><td>&mdash;</td><td>1</td></tr>
+        <tr><td>Narrative stings (awakening, Candelaria, Pr&oacute;spero, grey, return, portals)</td><td>6</td><td>Literary portals &times;4</td><td>9</td></tr>
+        <tr><td>Riddle quest sounds (appear, solved, rana, cuaderno)</td><td>4</td><td>&mdash;</td><td>4</td></tr>
+        <tr><td>Finale (chord, rana&rsquo;s sound, naming ceremony)</td><td>3</td><td>&mdash;</td><td>3</td></tr>
+        <tr>
+            <td colspan="3" style="text-align:right; font-weight:700; border-top:2px solid var(--bark);">Total audio files</td>
+            <td style="font-weight:700; border-top:2px solid var(--bark); color:var(--gold); font-size:1.1rem;">65</td>
+        </tr>
+    </table>
+
+    <div class="counter">
+        <div class="number">65</div>
+        <div class="label">Total audio deliverables</div>
+        <div style="margin-top:12px; font-size:0.85rem; color:rgba(253,246,227,0.5);">Format: .mp3 &bull; 128&ndash;192 kbps &bull; Normalized to &ndash;16 LUFS</div>
+    </div>
+
+    <div class="philosophy">
+        <h3>Important &mdash; Please Discuss Before Starting</h3>
+        <p>Before composing, please read the narrative files (provided separately) for dest1, dest33, and dest58. These three destinations define the emotional arc: <strong>birth &rarr; loss &rarr; restoration</strong>. If the music doesn&rsquo;t serve this arc, nothing else matters.</p>
+        <p style="margin-top:12px">The game&rsquo;s final answer is <strong>&ldquo;Escuchar&rdquo;</strong> &mdash; to listen. The student who reaches dest58 has spent hundreds of hours learning to hear. Honor that by composing music that rewards careful listening.</p>
+    </div>
+</div>
+
+</body>
+</html>

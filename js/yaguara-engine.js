@@ -292,8 +292,13 @@
             /* Accessibility: announce correct answer */
             A11y.announce('\u00a1Correcto!');
 
-            var sounds = ['water-drop', 'bird'];
-            Audio.playNatureSound(sounds[Math.floor(Math.random() * sounds.length)]);
+            /* File-based SFX if available, else synthesized fallback */
+            if (window.AudioManager) {
+                AudioManager.playCorrect();
+            } else {
+                var sounds = ['water-drop', 'bird'];
+                Audio.playNatureSound(sounds[Math.floor(Math.random() * sounds.length)]);
+            }
 
             var self = this;
             this._harmonyTimer = setTimeout(function() {
@@ -314,6 +319,7 @@
             A11y.announce('Intenta otra vez');
 
             Audio.cancel();
+            if (window.AudioManager) AudioManager.playIncorrect();
 
             if (containerEl) document.body.classList.add('yg-world-dim');
             if (targetEl) targetEl.classList.add('yg-retreat');
@@ -9028,6 +9034,9 @@
     function runEncounter(data, container, state, onComplete) {
         var wrapper = container.closest('.yg-encounter-wrapper') || container;
 
+        /* Encounter start SFX */
+        if (window.AudioManager) AudioManager.playEncounterStart();
+
         /* Beat 1 — IMMERSION */
         container.style.opacity = '0';
         container.style.transform = 'translateY(16px)';
@@ -10148,6 +10157,11 @@
         },
 
         _showWorldRestored: function() {
+            /* Destination complete — play sting */
+            if (window.AudioManager && this._config.destNum) {
+                AudioManager.playDestinationComplete(this._config.destNum);
+            }
+
             var card = this._container;
             var seedDiv = document.createElement('div');
             seedDiv.id = 'ygCompletionSeed';
