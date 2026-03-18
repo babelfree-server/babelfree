@@ -208,7 +208,7 @@ body{{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background
 <nav class="nav-bar" role="navigation">
 <a href="/" class="nav-brand">
 <div class="logo"><img src="img/jaguar-hero-full.jpg" alt="Yaguará" loading="lazy"></div>
-<div class="brand-text"><h1>El viaje del jaguar</h1><p>{e(native)}</p></div>
+<div class="brand-text"><span>El viaje del jaguar</span><p>{e(native)}</p></div>
 </a>
 <ul class="nav-menu">
 <li><a href="/dictionary" class="nav-link">{nav_dictionary}</a></li>
@@ -394,7 +394,7 @@ body{{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#0a1628,#
 </head>
 <body>
 <nav class="nav">
-<a href="/" class="nav-brand"><div class="logo">{SVG_SMALL}</div><div class="brand"><h1>El viaje del jaguar</h1><p>Learn Spanish</p></div></a>
+<a href="/" class="nav-brand"><div class="logo">{SVG_SMALL}</div><div class="brand"><span>El viaje del jaguar</span><p>Learn Spanish</p></div></a>
 <div class="nav-links"><a href="/">Spanish Course</a><a href="/#contacto">Contact</a><a href="/login">Login</a></div>
 </nav>
 <div class="main">

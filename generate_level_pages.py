@@ -809,7 +809,7 @@ def generate_page(level_data):
                 {JAGUAR_SVG_SMALL}
             </div>
             <div class="brand-text">
-                <h1>El viaje del jaguar</h1>
+                <span>El viaje del jaguar</span>
                 <p>Total Spanish immersion</p>
             </div>
         </a>
