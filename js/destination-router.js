@@ -417,6 +417,7 @@
                     if (window.AudioManager) {
                         AudioManager.playWorldLoop(destNum);
                         if (eco) AudioManager.playEcosystem(eco);
+                        AudioManager.playArrivalSting(destNum);
                     }
 
                     YaguaraEngine.init({

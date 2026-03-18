@@ -467,6 +467,23 @@
             _playOneShot('sting-' + stingName, VOL.sting, onEnd);
         },
 
+        /* Auto-play the arrival sting for key story destinations */
+        playArrivalSting: function (destNum) {
+            var ARRIVAL_STINGS = {
+                1:  'awakening',
+                3:  'portal-pombo',
+                6:  'portal-rivera',
+                9:  'portal-carrasquilla',
+                11: 'portal-macias',
+                14: 'candelaria',
+                19: 'prospero',
+                33: 'grey-place',
+                39: 'music-returns'
+            };
+            var sting = ARRIVAL_STINGS[destNum];
+            if (sting) _playOneShot('sting-' + sting, VOL.sting);
+        },
+
         /* Convenience for literary portals */
         playPortalSting: function (author) {
             _playOneShot('sting-portal-' + author, VOL.sting);
