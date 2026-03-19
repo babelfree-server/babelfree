@@ -79,6 +79,18 @@ ErrorDocument 404 /404.html
     RewriteRule ^dicionarioespanhol/?$ /dicionario-espanhol [R=301,L]
     RewriteRule ^dicionarioespanholportugues/?$ /dicionario-espanhol-portugues [R=301,L]
     RewriteRule ^dicionario-espanhol-online/?$ /dicionario-espanhol [R=301,L]
+    # Dictionary SEO keyword pages — Language-pair dictionaries (new 12)
+    RewriteRule ^(turkce-ingilizce-sozluk|turkce-almanca-sozluk|turkish-english-dictionary)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(slownik-polsko-angielski|slownik-polsko-niemiecki|polish-english-dictionary)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(svensk-engelsk-ordbok|swedish-english-dictionary)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(cesko-anglicky-slovnik)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(anglijsko-ukrajinskij-slovnik)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(kamus-inggris-indonesia)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(tu-dien-anh-viet)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(lexiko-aggliko-elliniko)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(suomi-englanti-sanakirja)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(hindi-english-dictionary|thai-english-dictionary)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(milon-ivri-angli)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
     # Dictionary SEO keyword pages — National dictionary authorities
     RewriteRule ^(royal-institute-dictionary-thai)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
     RewriteRule ^(kielitoimiston-sanakirja)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]

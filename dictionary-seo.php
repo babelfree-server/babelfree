@@ -1307,6 +1307,187 @@ $pages = [
         ],
     ],
 
+    // ── Language-pair dictionary pages (new 12 languages) ─────────────
+
+    // Turkish pairs
+    'turkce-ingilizce-sozluk' => [
+        'title' => "Türkçe İngilizce Sözlük — Ücretsiz Online | Babel Free",
+        'h1' => "Türkçe İngilizce Sözlük",
+        'meta' => "Ücretsiz Türkçe İngilizce sözlük. {$trWords} Türkçe kelime, tanımlar, eşdeğerler ve CEFR seviyeleri. Online, kayıt gerektirmez.",
+        'intro' => "Ücretsiz <strong>Türkçe İngilizce sözlük</strong> — <strong>{$trWords} Türkçe kelime</strong> ile tanımlar, İngilizce eşdeğerler ve CEFR seviyeleri. Her İngilizce eşdeğer, kendi sözlük sayfasına bağlantılıdır. Toplam <strong>{$langCount} dilde</strong> eşdeğerler.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'tr', 'searchPlaceholder' => 'Bir kelime ara...', 'searchLang' => 'tr',
+        'faq' => [
+            'Türkçe İngilizce sözlük ücretsiz mi?' => "Evet, %100 ücretsiz. Kayıt gerektirmez. {$trWords} kelime, tanımlar ve {$langCount} dilde eşdeğerler serbestçe erişilebilir.",
+            'Almanca Türkçe sözlük de var mı?' => "Evet. Her Türkçe kelime {$langCount} dilde eşdeğerlere sahiptir — Almanca, Fransızca, İspanyolca, Rusça dahil. Her eşdeğer kendi sözlük sayfasına bağlantılıdır.",
+        ],
+    ],
+    'turkce-almanca-sozluk' => [
+        'title' => "Türkçe Almanca Sözlük — Ücretsiz | Babel Free",
+        'h1' => "Türkçe Almanca Sözlük",
+        'meta' => "Ücretsiz Türkçe Almanca sözlük. {$trWords} Türkçe kelime, Almanca eşdeğerler, CEFR seviyeleri.",
+        'intro' => "Ücretsiz <strong>Türkçe Almanca sözlük</strong> — her Türkçe kelime Almanca eşdeğerine ve <strong>{$langCount} dile</strong> bağlantılıdır. CEFR seviyeleri ile öğrenciler için ideal.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'tr', 'searchPlaceholder' => 'Bir kelime ara...', 'searchLang' => 'tr',
+        'faq' => ['Ücretsiz mi?' => "Evet, %100 ücretsiz. Kayıt gerektirmez."],
+    ],
+    'turkish-english-dictionary' => [
+        'title' => "Turkish English Dictionary — Free Online | Babel Free",
+        'h1' => "Turkish–English Dictionary",
+        'meta' => "Free Turkish-English dictionary with {$trWords} Turkish words, definitions, equivalents in {$langCount} languages, and CEFR levels.",
+        'intro' => "A free <strong>Turkish–English dictionary</strong> with <strong>{$trWords} Turkish words</strong>. Every entry includes definitions, IPA pronunciation, CEFR level, and equivalents across <strong>{$langCount} languages</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'faq' => [
+            'How many Turkish words does this dictionary have?' => "The Turkish dictionary contains {$trWords} words with CEFR level tags, IPA pronunciation, and equivalents across {$langCount} languages.",
+        ],
+    ],
+
+    // Polish pairs
+    'slownik-polsko-angielski' => [
+        'title' => "Słownik Polsko-Angielski — Darmowy Online | Babel Free",
+        'h1' => "Słownik polsko-angielski",
+        'meta' => "Darmowy słownik polsko-angielski. {$plWords} polskich słów z definicjami, odpowiednikami w {$langCount} językach i poziomami CEFR.",
+        'intro' => "Darmowy <strong>słownik polsko-angielski</strong> z <strong>{$plWords} polskimi słowami</strong>. Każde słowo zawiera definicje, wymowę IPA, poziom CEFR i odpowiedniki w <strong>{$langCount} językach</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'pl', 'searchPlaceholder' => 'Szukaj słowa...', 'searchLang' => 'pl',
+        'faq' => [
+            'Czy słownik jest darmowy?' => "Tak, 100% za darmo. Bez rejestracji, bez opłat. {$plWords} słów z odpowiednikami w {$langCount} językach.",
+        ],
+    ],
+    'slownik-polsko-niemiecki' => [
+        'title' => "Słownik Polsko-Niemiecki — Darmowy | Babel Free",
+        'h1' => "Słownik polsko-niemiecki",
+        'meta' => "Darmowy słownik polsko-niemiecki z {$plWords} słowami, odpowiednikami i poziomami CEFR.",
+        'intro' => "Darmowy <strong>słownik polsko-niemiecki</strong> — każde polskie słowo powiązane z niemieckim odpowiednikiem i <strong>{$langCount} innymi językami</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'pl', 'searchPlaceholder' => 'Szukaj słowa...', 'searchLang' => 'pl',
+        'faq' => ['Czy to za darmo?' => "Tak, 100% za darmo."],
+    ],
+    'polish-english-dictionary' => [
+        'title' => "Polish English Dictionary — Free Online | Babel Free",
+        'h1' => "Polish–English Dictionary",
+        'meta' => "Free Polish-English dictionary with {$plWords} words, definitions, equivalents in {$langCount} languages, and CEFR levels.",
+        'intro' => "A free <strong>Polish–English dictionary</strong> with <strong>{$plWords} Polish words</strong>, definitions, IPA pronunciation, CEFR levels, and equivalents across <strong>{$langCount} languages</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'faq' => ['Is this dictionary free?' => "Yes, 100% free. {$plWords} words with equivalents in {$langCount} languages."],
+    ],
+
+    // Swedish pairs
+    'svensk-engelsk-ordbok' => [
+        'title' => "Svensk-Engelsk Ordbok — Gratis Online | Babel Free",
+        'h1' => "Svensk-engelsk ordbok",
+        'meta' => "Gratis svensk-engelsk ordbok med {$svWords} svenska ord, definitioner, ekvivalenter på {$langCount} språk och CEFR-nivåer.",
+        'intro' => "Gratis <strong>svensk-engelsk ordbok</strong> med <strong>{$svWords} svenska ord</strong>. Varje ord inkluderar definitioner, IPA-uttal, CEFR-nivå och ekvivalenter på <strong>{$langCount} språk</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'sv', 'searchPlaceholder' => 'Sök ett ord...', 'searchLang' => 'sv',
+        'faq' => ['Är ordboken gratis?' => "Ja, 100% gratis. {$svWords} ord med ekvivalenter på {$langCount} språk."],
+    ],
+    'swedish-english-dictionary' => [
+        'title' => "Swedish English Dictionary — Free | Babel Free",
+        'h1' => "Swedish–English Dictionary",
+        'meta' => "Free Swedish-English dictionary with {$svWords} words, CEFR levels, and equivalents in {$langCount} languages.",
+        'intro' => "A free <strong>Swedish–English dictionary</strong> with <strong>{$svWords} Swedish words</strong> and equivalents across <strong>{$langCount} languages</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'faq' => ['Is it free?' => "Yes, 100% free. No account needed."],
+    ],
+
+    // Czech pairs
+    'cesko-anglicky-slovnik' => [
+        'title' => "Česko-Anglický Slovník — Zdarma Online | Babel Free",
+        'h1' => "Česko-anglický slovník",
+        'meta' => "Bezplatný česko-anglický slovník s {$csWords} slovy, ekvivalenty ve {$langCount} jazycích a úrovněmi CEFR.",
+        'intro' => "Bezplatný <strong>česko-anglický slovník</strong> s <strong>{$csWords} českými slovy</strong>, ekvivalenty ve <strong>{$langCount} jazycích</strong> a úrovněmi CEFR.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'cs', 'searchPlaceholder' => 'Hledat slovo...', 'searchLang' => 'cs',
+        'faq' => ['Je zdarma?' => "Ano, 100% zdarma. {$csWords} slov s ekvivalenty ve {$langCount} jazycích."],
+    ],
+
+    // Ukrainian pair
+    'anglijsko-ukrajinskij-slovnik' => [
+        'title' => "Англійсько-Український Словник — Безкоштовно | Babel Free",
+        'h1' => "Англійсько-український словник",
+        'meta' => "Безкоштовний англійсько-український словник. {$ukWords} українських слів з еквівалентами в {$langCount} мовах та рівнями CEFR.",
+        'intro' => "Безкоштовний <strong>англійсько-український словник</strong> з <strong>{$ukWords} словами</strong>, еквівалентами в <strong>{$langCount} мовах</strong> та рівнями CEFR.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'uk', 'searchPlaceholder' => 'Шукати слово...', 'searchLang' => 'uk',
+        'faq' => ['Безкоштовно?' => "Так, 100% безкоштовно. {$ukWords} слів з еквівалентами в {$langCount} мовах."],
+    ],
+
+    // Indonesian pair
+    'kamus-inggris-indonesia' => [
+        'title' => "Kamus Inggris Indonesia — Gratis Online | Babel Free",
+        'h1' => "Kamus Inggris-Indonesia",
+        'meta' => "Kamus Inggris Indonesia gratis. {$idWords} kata dengan definisi, padanan dalam {$langCount} bahasa, dan level CEFR.",
+        'intro' => "Kamus <strong>Inggris-Indonesia</strong> gratis dengan <strong>{$idWords} kata</strong>, padanan dalam <strong>{$langCount} bahasa</strong>, dan level CEFR.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'id', 'searchPlaceholder' => 'Cari kata...', 'searchLang' => 'id',
+        'faq' => ['Gratis?' => "Ya, 100% gratis. Tanpa akun, tanpa langganan."],
+    ],
+
+    // Vietnamese pair
+    'tu-dien-anh-viet' => [
+        'title' => "Từ Điển Anh Việt — Miễn Phí Online | Babel Free",
+        'h1' => "Từ điển Anh-Việt",
+        'meta' => "Từ điển Anh Việt miễn phí. {$viWords} từ với định nghĩa, từ tương đương trong {$langCount} ngôn ngữ và cấp độ CEFR.",
+        'intro' => "Từ điển <strong>Anh-Việt</strong> miễn phí với <strong>{$viWords} từ</strong>, từ tương đương trong <strong>{$langCount} ngôn ngữ</strong> và cấp độ CEFR.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'vi', 'searchPlaceholder' => 'Tìm một từ...', 'searchLang' => 'vi',
+        'faq' => ['Miễn phí?' => "Có, miễn phí 100%. Không cần đăng ký."],
+    ],
+
+    // Greek pair
+    'lexiko-aggliko-elliniko' => [
+        'title' => "Λεξικό Αγγλικό Ελληνικό — Δωρεάν | Babel Free",
+        'h1' => "Λεξικό αγγλικό-ελληνικό",
+        'meta' => "Δωρεάν αγγλικό-ελληνικό λεξικό. {$elWords} ελληνικές λέξεις με ισοδύναμα σε {$langCount} γλώσσες και επίπεδα CEFR.",
+        'intro' => "Δωρεάν <strong>αγγλικό-ελληνικό λεξικό</strong> με <strong>{$elWords} λέξεις</strong>, ισοδύναμα σε <strong>{$langCount} γλώσσες</strong> και επίπεδα CEFR.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'el', 'searchPlaceholder' => 'Αναζήτηση λέξης...', 'searchLang' => 'el',
+        'faq' => ['Είναι δωρεάν;' => "Ναι, 100% δωρεάν. Χωρίς εγγραφή."],
+    ],
+
+    // Finnish pair
+    'suomi-englanti-sanakirja' => [
+        'title' => "Suomi-Englanti Sanakirja — Ilmainen | Babel Free",
+        'h1' => "Suomi-englanti sanakirja",
+        'meta' => "Ilmainen suomi-englanti sanakirja. {$fiWords} suomenkielistä sanaa, vastineet {$langCount} kielellä ja CEFR-tasot.",
+        'intro' => "Ilmainen <strong>suomi-englanti sanakirja</strong> — <strong>{$fiWords} sanaa</strong>, vastineet <strong>{$langCount} kielellä</strong> ja CEFR-tasot.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'fi', 'searchPlaceholder' => 'Etsi sana...', 'searchLang' => 'fi',
+        'faq' => ['Onko ilmainen?' => "Kyllä, 100% ilmainen. Ei rekisteröintiä."],
+    ],
+
+    // Hindi pair
+    'hindi-english-dictionary' => [
+        'title' => "Hindi English Dictionary — Free Online | Babel Free",
+        'h1' => "Hindi–English Dictionary",
+        'meta' => "Free Hindi-English dictionary with {$hiWords} Hindi words, definitions, equivalents in {$langCount} languages, and CEFR levels.",
+        'intro' => "A free <strong>Hindi–English dictionary</strong> with <strong>{$hiWords} Hindi words</strong>, IPA pronunciation, CEFR levels, and equivalents across <strong>{$langCount} languages</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'faq' => ['Is it free?' => "Yes, 100% free. No account needed."],
+    ],
+
+    // Hebrew pair
+    'milon-ivri-angli' => [
+        'title' => "מילון עברי אנגלי — חינם | Babel Free",
+        'h1' => "מילון עברי-אנגלי",
+        'meta' => "מילון עברי אנגלי חינם. {$heWords} מילים עבריות עם שוות ערך ב-{$langCount} שפות ורמות CEFR.",
+        'intro' => "מילון <strong>עברי-אנגלי</strong> חינם עם <strong>{$heWords} מילים</strong>, שוות ערך ב-<strong>{$langCount} שפות</strong> ורמות CEFR.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'he', 'searchPlaceholder' => 'חפש מילה...', 'searchLang' => 'he',
+        'faq' => ['חינם?' => "כן, 100% חינם. ללא הרשמה."],
+    ],
+
+    // Thai pair
+    'thai-english-dictionary' => [
+        'title' => "Thai English Dictionary (พจนานุกรม ไทย อังกฤษ) — Free | Babel Free",
+        'h1' => "พจนานุกรม ไทย-อังกฤษ — Thai–English Dictionary",
+        'meta' => "Free Thai-English dictionary with {$thWords} Thai words, IPA pronunciation, equivalents in {$langCount} languages, and CEFR levels.",
+        'intro' => "A free <strong>Thai–English dictionary</strong> with <strong>{$thWords} Thai words</strong>, IPA tone marks, CEFR levels, and equivalents across <strong>{$langCount} languages</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'faq' => ['Is it free?' => "Yes, 100% free. No account needed."],
+    ],
+
     // ── National Dictionary Authority Pages ──────────────────────────
 
     'royal-institute-dictionary-thai' => [
