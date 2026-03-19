@@ -501,6 +501,33 @@
         pointer-events: none;
     }
 
+    /* --- Welcome step indicators --- */
+    .sm-welcome-step {
+        text-align: center;
+        padding: 8px 0;
+        animation: smStepFadeIn 0.4s ease;
+    }
+    .sm-welcome-step-icon { font-size: 32px; margin-bottom: 8px; }
+    .sm-welcome-step-text {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #b8a48a;
+    }
+    .sm-welcome-step-text strong { color: #c9a227; }
+    @keyframes smStepFadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Pulse animation for dest1 after welcome --- */
+    .sm-dest-pulse .sm-card {
+        animation: smPulseGold 1.5s ease-in-out 3;
+    }
+    @keyframes smPulseGold {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(201,162,39,0); }
+        50% { box-shadow: 0 0 20px 4px rgba(201,162,39,0.4); }
+    }
+
     @media (max-width: 480px) {
         .sm-dest.left { padding-right: 54%; }
         .sm-dest.right { padding-left: 54%; }
@@ -556,10 +583,23 @@
         <div class="sm-welcome-inner">
             <img src="img/jaguar-hero-full.jpg" alt="Yaguará" class="sm-welcome-avatar">
             <div class="sm-welcome-title" id="smWelcomeTitle">Bienvenido al viaje</div>
-            <div class="sm-welcome-text">
+            <div class="sm-welcome-text" id="smWelcomeText">
                 Este río es tu camino. Cada destino te lleva más lejos en el español
                 — desde las primeras palabras hasta las historias más profundas.
-                Empieza abajo, donde nace el agua, y sube poco a poco.
+            </div>
+            <div class="sm-welcome-steps" id="smWelcomeSteps">
+                <div class="sm-welcome-step" data-step="0" style="display:none">
+                    <div class="sm-welcome-step-icon">🗺️</div>
+                    <div class="sm-welcome-step-text">Cada punto del río es un <strong>destino</strong>. Completa sus encuentros para subir al siguiente.</div>
+                </div>
+                <div class="sm-welcome-step" data-step="1" style="display:none">
+                    <div class="sm-welcome-step-icon">🐆</div>
+                    <div class="sm-welcome-step-text"><strong>Yaguará</strong> te acompaña. Ella te presenta cada lugar, cada palabra, cada historia.</div>
+                </div>
+                <div class="sm-welcome-step" data-step="2" style="display:none">
+                    <div class="sm-welcome-step-icon">📖</div>
+                    <div class="sm-welcome-step-text">No hay puntos ni puntajes. Tu progreso es <strong>el viaje mismo</strong> — y las palabras que descubres.</div>
+                </div>
             </div>
             <button class="sm-welcome-btn" id="smWelcomeBtn">Comenzar</button>
         </div>
@@ -975,6 +1015,10 @@
         var overlay = document.getElementById('smWelcomeOverlay');
         var btn = document.getElementById('smWelcomeBtn');
         var titleEl = document.getElementById('smWelcomeTitle');
+        var textEl = document.getElementById('smWelcomeText');
+        var stepsEl = document.getElementById('smWelcomeSteps');
+        var step = -1; /* -1 = intro, 0-2 = steps */
+        var totalSteps = 3;
 
         try {
             var session = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
@@ -984,12 +1028,26 @@
             } else if (g === 'M') {
                 titleEl.textContent = 'Bienvenido al viaje';
             }
-            /* X (neutral) keeps the default "Bienvenido al viaje" */
         } catch(e) {}
 
         overlay.classList.add('visible');
 
-        btn.addEventListener('click', dismissWelcome);
+        btn.addEventListener('click', function() {
+            step++;
+            if (step < totalSteps) {
+                /* Show next step */
+                if (step === 0) {
+                    textEl.style.display = 'none';
+                    btn.textContent = 'Siguiente';
+                }
+                var stepEls = stepsEl.querySelectorAll('.sm-welcome-step');
+                for (var s = 0; s < stepEls.length; s++) {
+                    stepEls[s].style.display = (parseInt(stepEls[s].getAttribute('data-step')) === step) ? 'block' : 'none';
+                }
+            } else {
+                dismissWelcome();
+            }
+        });
 
         /* Dismiss on click outside the inner card */
         overlay.addEventListener('click', function(e) {
@@ -999,6 +1057,12 @@
         function dismissWelcome() {
             overlay.classList.remove('visible');
             try { localStorage.setItem('yaguara_welcomed', 'true'); } catch(e) {}
+            /* Pulse the dest1 card to guide the user */
+            var dest1 = document.querySelector('.sm-dest[data-dest="1"]');
+            if (dest1) {
+                dest1.classList.add('sm-dest-pulse');
+                setTimeout(function() { dest1.classList.remove('sm-dest-pulse'); }, 6000);
+            }
         }
     }
 
