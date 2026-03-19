@@ -71,11 +71,11 @@ $langSeoContent = [
         ],
         'sections' => [
             ['title' => 'Learn Spanish Free — Babel Free Dictionary',
-             'text' => 'Looking for the best way to learn Spanish? Babel Free offers a free Spanish-English dictionary with over 26,000 words, definitions, translations, and CEFR levels from A1 to C2. Whether you want to learn Spanish online or learn to speak Spanish at your own pace, this dictionary helps you build vocabulary step by step.'],
+             'text' => 'Looking for the best way to learn Spanish? Babel Free offers a free Spanish-English dictionary with over 26,000 words, definitions, equivalents, and CEFR levels from A1 to C2. Whether you want to learn Spanish online or learn to speak Spanish at your own pace, this dictionary helps you build vocabulary step by step.'],
             ['title' => 'How to Learn Spanish Fast',
              'text' => 'How to learn Spanish fast? Start with the most common words. Every entry is tagged with a CEFR level so you can focus on beginner vocabulary first, then progress naturally. Pair this dictionary with the best apps to learn Spanish — or use it as a standalone tool. How long does it take to learn Spanish? With consistent daily practice, you can reach conversational fluency in months.'],
             ['title' => 'Best Way to Learn Spanish Online',
-             'text' => 'The fastest way to learn Spanish is to combine structured courses with a reliable dictionary. Learn Spanish free with Babel Free: look up any word, see its definition in context, explore translations across 12 languages, and track your level. This is not just a dictionary — it is your companion to learn in Spanish.'],
+             'text' => 'The fastest way to learn Spanish is to combine structured courses with a reliable dictionary. Learn Spanish free with Babel Free: look up any word, see its definition in context, explore equivalents across 12 languages, and track your level. This is not just a dictionary — it is your companion to learn in Spanish.'],
         ],
     ],
     'es' => [
@@ -88,9 +88,9 @@ $langSeoContent = [
         ],
         'sections' => [
             ['title' => 'Diccionario para aprender español — Babel Free',
-             'text' => 'Babel Free es un diccionario gratuito con más de 26.000 palabras en español, definiciones, traducciones a 12 idiomas y niveles CEFR. Si estás aprendiendo español o quieres aprender español desde cero, aquí encontrarás vocabulario organizado por nivel, desde A1 hasta C2.'],
+             'text' => 'Babel Free es un diccionario gratuito con más de 26.000 palabras en español, definiciones, equivalentes en 12 idiomas y niveles CEFR. Si estás aprendiendo español o quieres aprender español desde cero, aquí encontrarás vocabulario organizado por nivel, desde A1 hasta C2.'],
             ['title' => 'Aprender español online gratis',
-             'text' => '¿Quiero aprender español pero no sé por dónde empezar? Este diccionario es tu punto de partida. Busca cualquier palabra, consulta su definición, descubre sus traducciones y aprende español gratis sin registro ni pago. Ideal para complementar clases español online o un curso de español online.'],
+             'text' => '¿Quiero aprender español pero no sé por dónde empezar? Este diccionario es tu punto de partida. Busca cualquier palabra, consulta su definición, descubre sus equivalentes y aprende español gratis sin registro ni pago. Ideal para complementar clases español online o un curso de español online.'],
             ['title' => 'Curso de español y clases para extranjeros',
              'text' => 'Babel Free es un recurso perfecto para aprender español para extranjeros. Cada palabra incluye su nivel CEFR, parte del discurso y ejemplos de uso. Complementa tu curso de español gratis o tus clases online español con un diccionario diseñado para estudiantes de todos los niveles.'],
         ],
@@ -149,11 +149,11 @@ $langSeoContent = [
         ],
         'sections' => [
             ['title' => 'Dicionario de espanhol gratis — Babel Free',
-             'text' => 'O Babel Free oferece um dicionario de espanhol completo e gratuito com mais de 26.000 palavras, definicoes, traducoes para 12 idiomas e niveis CEFR (A1 a C2). Se voce quer aprender espanhol online ou esta procurando um curso de espanhol gratis e online, comece pelo vocabulario essencial.'],
+             'text' => 'O Babel Free oferece um dicionario de espanhol completo e gratuito com mais de 26.000 palavras, definicoes, equivalentes em 12 idiomas e niveis CEFR (A1 a C2). Se voce quer aprender espanhol online ou esta procurando um curso de espanhol gratis e online, comece pelo vocabulario essencial.'],
             ['title' => 'Aprenda espanhol — aulas e curso online gratis',
-             'text' => 'Quer aprender espanhol sozinho? Este dicionario e ideal para quem busca aulas de espanhol gratis ou um curso de espanhol online gratis. Cada palavra inclui nivel CEFR, classe gramatical e traducoes, para que voce aprenda o basico do espanhol no seu ritmo. Combine com cursos de espanhol gratis online para resultados ainda melhores.'],
+             'text' => 'Quer aprender espanhol sozinho? Este dicionario e ideal para quem busca aulas de espanhol gratis ou um curso de espanhol online gratis. Cada palavra inclui nivel CEFR, classe gramatical e equivalentes, para que voce aprenda o basico do espanhol no seu ritmo. Combine com cursos de espanhol gratis online para resultados ainda melhores.'],
             ['title' => 'Falar espanhol — conversacao e pratica',
-             'text' => 'Espanhol como falar com confianca? Comece dominando as palavras mais usadas. Use o Babel Free como seu site para aprender espanhol: consulte definicoes, descubra traducoes e pratique espanhol conversacao diariamente. Aprender falar espanhol fica mais facil quando voce tem as ferramentas certas.'],
+             'text' => 'Espanhol como falar com confianca? Comece dominando as palavras mais usadas. Use o Babel Free como seu site para aprender espanhol: consulte definicoes, descubra equivalentes e pratique espanhol conversacao diariamente. Aprender falar espanhol fica mais facil quando voce tem as ferramentas certas.'],
         ],
     ],
     'fr' => [
@@ -167,11 +167,11 @@ $langSeoContent = [
         ],
         'sections' => [
             ['title' => 'Dictionnaire espagnol gratuit — Babel Free',
-             'text' => 'Babel Free propose un dictionnaire espagnol-francais gratuit avec plus de 26 000 mots, definitions, traductions dans 12 langues et niveaux CECR (A1 a C2). Que vous cherchiez a apprendre l espagnol gratuitement ou un cours d espagnol en ligne, ce dictionnaire est votre point de depart.'],
+             'text' => 'Babel Free propose un dictionnaire espagnol-francais gratuit avec plus de 26 000 mots, definitions, équivalents dans 12 langues et niveaux CECR (A1 a C2). Que vous cherchiez a apprendre l espagnol gratuitement ou un cours d espagnol en ligne, ce dictionnaire est votre point de depart.'],
             ['title' => 'Apprendre l espagnol en ligne — cours gratuit',
              'text' => 'Comment apprendre l espagnol rapidement ? Commencez par les mots les plus courants. Chaque entree est classee par niveau CECR pour que vous puissiez progresser du debutant au niveau avance. Mieux qu un cour espagnol gratuit classique, ce dictionnaire vous accompagne a chaque etape. Ideal en complement de Duolingo espagnol gratuit ou Babbel espagnol.'],
             ['title' => 'Apprendre l espagnol débutant',
-             'text' => 'Vous etes debutant et vous voulez apprendre l espagnol en ligne ? Babel Free est le meilleur site pour apprendre l espagnol gratuitement. Consultez definitions, traductions et exemples. Combinez-le avec un cours d espagnol en ligne gratuit pour apprendre espagnol gratuit a votre rythme.'],
+             'text' => 'Vous etes debutant et vous voulez apprendre l espagnol en ligne ? Babel Free est le meilleur site pour apprendre l espagnol gratuitement. Consultez definitions, équivalents et exemples. Combinez-le avec un cours d espagnol en ligne gratuit pour apprendre espagnol gratuit a votre rythme.'],
         ],
     ],
     'it' => [
@@ -268,12 +268,12 @@ $seoContent = $langSeoContent[$landingLang] ?? null;
 $faqData = [
     'en' => [
         ['q' => 'How to learn Spanish fast?', 'a' => 'The fastest way to learn Spanish is to combine daily vocabulary practice with immersion. Start with the most common words tagged A1-A2 in our dictionary, then progress to B1 and beyond. With consistent practice, you can reach conversational fluency in 6-12 months.'],
-        ['q' => 'What is the best way to learn Spanish for free?', 'a' => 'Babel Free offers a free Spanish dictionary with over 26,000 words, CEFR levels, and translations in 12 languages. Combine it with free apps and online courses to learn Spanish free at your own pace.'],
+        ['q' => 'What is the best way to learn Spanish for free?', 'a' => 'Babel Free offers a free Spanish dictionary with over 26,000 words, CEFR levels, and equivalents in 12 languages. Combine it with free apps and online courses to learn Spanish free at your own pace.'],
         ['q' => 'How long does it take to learn Spanish?', 'a' => 'For English speakers, reaching conversational Spanish typically takes 400-600 hours of study. Using a CEFR-leveled dictionary like Babel Free helps you track progress from A1 beginner to C2 mastery.'],
     ],
     'es' => [
-        ['q' => '¿Cómo aprender español gratis online?', 'a' => 'Babel Free ofrece un diccionario gratuito con más de 26.000 palabras, niveles CEFR y traducciones a 12 idiomas. Complementa con un curso de español online y clases para aprender español desde cero sin costo.'],
-        ['q' => '¿Dónde encontrar un curso de español gratis?', 'a' => 'En Babel Free puedes estudiar español gratis con nuestro diccionario completo. Cada palabra incluye nivel CEFR, definiciones y traducciones. Ideal para complementar cualquier curso de español online.'],
+        ['q' => '¿Cómo aprender español gratis online?', 'a' => 'Babel Free ofrece un diccionario gratuito con más de 26.000 palabras, niveles CEFR y equivalentes en 12 idiomas. Complementa con un curso de español online y clases para aprender español desde cero sin costo.'],
+        ['q' => '¿Dónde encontrar un curso de español gratis?', 'a' => 'En Babel Free puedes estudiar español gratis con nuestro diccionario completo. Cada palabra incluye nivel CEFR, definiciones y equivalentes. Ideal para complementar cualquier curso de español online.'],
         ['q' => '¿Es difícil aprender español para extranjeros?', 'a' => 'El español es uno de los idiomas más accesibles para aprender. Con herramientas como el diccionario Babel Free, organizado por niveles CEFR de A1 a C2, aprender español para extranjeros es más fácil que nunca.'],
     ],
     'ja' => [
@@ -298,7 +298,7 @@ $faqData = [
     'fr' => [
         ['q' => "Comment apprendre l'espagnol gratuitement ?", 'a' => "Babel Free propose un dictionnaire espagnol-français gratuit avec plus de 26 000 mots et niveaux CECR. C'est le meilleur site pour apprendre l'espagnol gratuitement, en complément de Duolingo espagnol gratuit ou Babbel espagnol."],
         ['q' => "Comment apprendre l'espagnol rapidement ?", 'a' => "Pour apprendre l'espagnol rapidement, commencez par les mots les plus fréquents (niveau A1-A2) puis progressez vers B1 et au-delà. Le dictionnaire Babel Free classe chaque mot par niveau CECR pour un apprentissage structuré."],
-        ['q' => "Où trouver un cours d'espagnol en ligne gratuit ?", 'a' => "Babel Free offre un dictionnaire complet comme base pour votre cours d'espagnol en ligne gratuit. Chaque mot inclut définition, traductions et niveau CECR, du débutant au niveau avancé."],
+        ['q' => "Où trouver un cours d'espagnol en ligne gratuit ?", 'a' => "Babel Free offre un dictionnaire complet comme base pour votre cours d'espagnol en ligne gratuit. Chaque mot inclut définition, équivalents et niveau CECR, du débutant au niveau avancé."],
     ],
     'it' => [
         ['q' => 'Come imparare lo spagnolo gratis?', 'a' => 'Con Babel Free puoi imparare lo spagnolo gratis: più di 26.000 parole con definizioni, traduzioni in 12 lingue e livelli QCER. Inizia dalle parole di livello A1 e progredisci al tuo ritmo.'],
@@ -326,7 +326,7 @@ $faqData = [
 // ── Language-specific SEO descriptions ──────────────────────────────
 $seoDescriptions = [
     'es' => 'Diccionario para aprender español gratis: más de 26,000 palabras, definiciones, conjugaciones y niveles CEFR. Aprender español online desde cero con curso de español gratis.',
-    'en' => 'Learn Spanish free with 26,000+ words, definitions, translations, and CEFR levels. The best way to learn Spanish online — from beginner to fluent. Learn to speak Spanish fast.',
+    'en' => 'Learn Spanish free with 26,000+ words, definitions, equivalents, and CEFR levels. The best way to learn Spanish online — from beginner to fluent. Learn to speak Spanish fast.',
     'fr' => 'Dictionnaire espagnol-francais gratuit: plus de 26 000 mots avec definitions et niveaux CECR. Apprendre l espagnol gratuitement en ligne — cours d espagnol gratuit pour debutants.',
     'de' => 'Kostenloses Spanisch-Deutsch Wörterbuch: über 26.000 Wörter mit Definitionen und GER-Stufen. Spanisch lernen kostenlos online — für Anfänger und Fortgeschrittene.',
     'pt' => 'Dicionario espanhol-portugues gratis: mais de 26.000 palavras com definicoes e niveis CEFR. Curso de espanhol online gratis — aprenda espanhol, aulas e conversacao.',
@@ -339,7 +339,7 @@ $seoDescriptions = [
     'ar' => 'قاموس اسباني عربي مجاني: أكثر من 26,000 كلمة مع تعريفات وترجمات ومستويات CEFR. تعلم الاسبانية للمبتدئين — كلمات، ارقام، حروف، قواعد ومحادثة اسبانية.',
 ];
 
-$metaDesc = $seoDescriptions[$landingLang] ?? "Free {$langName} dictionary by Babel Free. {$wordCount}+ words with definitions, translations, and CEFR levels.";
+$metaDesc = $seoDescriptions[$landingLang] ?? "Free {$langName} dictionary by Babel Free. {$wordCount}+ words with definitions, equivalents, and CEFR levels.";
 $pageTitle = "{$langName} {$heroTitle} | Babel Free — " . number_format($wordCount) . "+ words";
 
 $canonicalUrl = "https://babelfree.com/dictionary/{$landingLang}/";
@@ -624,7 +624,7 @@ foreach ($allI18n as $hlLang => $hlI18n): ?>
     <?php if ($transCount > 0): ?>
     <div class="stat-item">
         <div class="stat-num"><?= number_format($transCount) ?></div>
-        <div class="stat-label"><?= htmlspecialchars($landingI18n['section_translations'] ?? 'Translations', ENT_QUOTES, 'UTF-8') ?></div>
+        <div class="stat-label"><?= htmlspecialchars($landingI18n['section_translations'] ?? 'Equivalents', ENT_QUOTES, 'UTF-8') ?></div>
     </div>
     <?php endif; ?>
     <div class="stat-item">

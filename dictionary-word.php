@@ -570,7 +570,7 @@ $breadcrumbLd = json_encode([
         }
     ?>
     <div class="section-card">
-        <h2><?= htmlspecialchars($i18n['section_translations'] ?? 'Translations', ENT_QUOTES, 'UTF-8') ?></h2>
+        <h2><?= htmlspecialchars($i18n['section_translations'] ?? 'Equivalents', ENT_QUOTES, 'UTF-8') ?></h2>
         <div class="translations-grid">
             <?php foreach ($translationsByLang as $trLang => $trWords): ?>
                 <div class="trans-lang-group">
