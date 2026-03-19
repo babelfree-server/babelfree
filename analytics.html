@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics — El Viaje del Jaguar</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0f0f14;
+            --card: #1a1a24;
+            --border: #2a2a3a;
+            --text: #e0ddd5;
+            --muted: #8a8778;
+            --gold: #c9a227;
+            --gold-dim: rgba(201,162,39,0.15);
+            --green: #4CAF50;
+            --red: #e57373;
+            --blue: #64B5F6;
+            --purple: #CE93D8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .header {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 { font-size: 18px; font-weight: 600; }
+        .header .back { color: var(--gold); text-decoration: none; font-size: 13px; }
+        .header .refresh-btn {
+            background: var(--gold-dim); border: 1px solid var(--gold);
+            color: var(--gold); padding: 6px 16px; border-radius: 6px;
+            cursor: pointer; font-size: 13px; font-family: inherit;
+        }
+        .header .refresh-btn:hover { background: rgba(201,162,39,0.25); }
+
+        .loading { text-align: center; padding: 80px; color: var(--muted); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            padding: 20px 24px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .card h3 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .kpi { text-align: center; }
+        .kpi .value {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .kpi .label {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .kpi-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 8px;
+        }
+        .kpi-row .kpi .value { font-size: 24px; }
+
+        .wide { grid-column: 1 / -1; }
+        .span2 { grid-column: span 2; }
+
+        /* Bar chart */
+        .bar-chart { display: flex; flex-direction: column; gap: 4px; }
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+        .bar-label {
+            width: 60px;
+            text-align: right;
+            color: var(--muted);
+            flex-shrink: 0;
+        }
+        .bar-track {
+            flex: 1;
+            height: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.6s ease;
+        }
+        .bar-val {
+            width: 45px;
+            text-align: right;
+            color: var(--text);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        /* Funnel chart */
+        .funnel { display: flex; flex-direction: column; gap: 2px; }
+        .funnel-bar {
+            height: 6px;
+            border-radius: 3px;
+            transition: width 0.6s ease;
+            margin: 0 auto;
+        }
+
+        /* Table */
+        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table th {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        .data-table td {
+            padding: 6px 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+        .rate-good { color: var(--green); }
+        .rate-warn { color: #FFB74D; }
+        .rate-bad { color: var(--red); }
+
+        /* Trend sparkline (CSS only) */
+        .trend-row { display: flex; align-items: flex-end; gap: 2px; height: 40px; }
+        .trend-bar {
+            flex: 1;
+            background: var(--gold);
+            border-radius: 2px 2px 0 0;
+            min-height: 2px;
+            opacity: 0.7;
+        }
+        .trend-bar:hover { opacity: 1; }
+
+        .pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .pill-gold { background: var(--gold-dim); color: var(--gold); }
+        .pill-green { background: rgba(76,175,80,0.15); color: var(--green); }
+        .pill-red { background: rgba(229,115,115,0.15); color: var(--red); }
+
+        @media (max-width: 700px) {
+            .grid { padding: 12px; gap: 12px; }
+            .span2 { grid-column: span 1; }
+            .kpi .value { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div>
+        <a href="qa.html" class="back">&larr; QA Dashboard</a>
+        <h1>Analytics — El Viaje del Jaguar</h1>
+    </div>
+    <button class="refresh-btn" id="refreshBtn">Actualizar</button>
+</div>
+
+<div class="loading" id="loadingState">Cargando datos...</div>
+
+<div class="grid" id="dashboard" style="display:none">
+    <!-- KPI cards -->
+    <div class="card kpi" id="kpiUsers"><h3>Usuarios totales</h3><div class="value">—</div></div>
+    <div class="card kpi" id="kpiActive7d"><h3>Activos (7 d&iacute;as)</h3><div class="value">—</div></div>
+    <div class="card kpi" id="kpiActive30d"><h3>Activos (30 d&iacute;as)</h3><div class="value">—</div></div>
+    <div class="card kpi" id="kpiNewWeek"><h3>Nuevos esta semana</h3><div class="value">—</div></div>
+
+    <!-- Registration trend -->
+    <div class="card span2" id="trendCard">
+        <h3>Registros (30 d&iacute;as)</h3>
+        <div class="trend-row" id="trendChart"></div>
+    </div>
+
+    <!-- Activity trend -->
+    <div class="card span2" id="activityCard">
+        <h3>Usuarios activos (30 d&iacute;as)</h3>
+        <div class="trend-row" id="activityChart"></div>
+    </div>
+
+    <!-- CEFR distribution -->
+    <div class="card" id="cefrCard">
+        <h3>Distribuci&oacute;n CEFR</h3>
+        <div class="bar-chart" id="cefrChart"></div>
+    </div>
+
+    <!-- Native languages -->
+    <div class="card" id="langCard">
+        <h3>Idiomas nativos (top 10)</h3>
+        <div class="bar-chart" id="langChart"></div>
+    </div>
+
+    <!-- Funnel -->
+    <div class="card wide" id="funnelCard">
+        <h3>Embudo de retenci&oacute;n: usuarios por destino</h3>
+        <div class="funnel" id="funnelChart"></div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--muted)">
+            <span>dest1</span><span>dest29</span><span>dest58</span>
+        </div>
+    </div>
+
+    <!-- Struggle points -->
+    <div class="card wide" id="struggleCard">
+        <h3>Destinos m&aacute;s dif&iacute;ciles (menor tasa de completaci&oacute;n)</h3>
+        <table class="data-table" id="struggleTable">
+            <thead><tr><th>Destino</th><th>Inicios</th><th>Completados</th><th>Tasa</th><th>Progreso prom.</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Busqueda stats -->
+    <div class="card" id="busquedaCard">
+        <h3>La b&uacute;squeda (adivinanzas)</h3>
+        <div class="kpi-row" id="busquedaKpis"></div>
+        <div class="bar-chart" id="busquedaDist" style="margin-top:16px"></div>
+    </div>
+
+    <!-- Feedback -->
+    <div class="card" id="feedbackCard">
+        <h3>Feedback</h3>
+        <div class="kpi-row" id="feedbackKpis"></div>
+    </div>
+
+    <!-- Escape rooms -->
+    <div class="card wide" id="escapeCard">
+        <h3>Salas de enigmas — tasa de completaci&oacute;n</h3>
+        <div class="bar-chart" id="escapeChart"></div>
+    </div>
+</div>
+
+<script src="js/jaguar-api.js"></script>
+<script>
+(function() {
+    'use strict';
+
+    // Auth guard
+    if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
+        window.location.href = 'login.html';
+        return;
+    }
+
+    var API_BASE = '/api/analytics/';
+
+    function fetchData(endpoint) {
+        var token = '';
+        try {
+            var s = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
+            token = s.token || '';
+        } catch(e) {}
+
+        return fetch(API_BASE + endpoint, {
+            headers: { 'Authorization': 'Bearer ' + token }
+        }).then(function(r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+        }).then(function(d) {
+            if (!d.success) throw new Error(d.error || 'API error');
+            return d.data;
+        });
+    }
+
+    function rateClass(rate) {
+        if (rate >= 60) return 'rate-good';
+        if (rate >= 30) return 'rate-warn';
+        return 'rate-bad';
+    }
+
+    function renderKpi(containerId, value, label) {
+        var el = document.getElementById(containerId);
+        if (!el) return;
+        el.querySelector('.value').textContent = typeof value === 'number' ? value.toLocaleString() : value;
+        if (label) {
+            var lbl = el.querySelector('.label');
+            if (!lbl) { lbl = document.createElement('div'); lbl.className = 'label'; el.appendChild(lbl); }
+            lbl.textContent = label;
+        }
+    }
+
+    function renderBarChart(containerId, items, colorFn) {
+        var el = document.getElementById(containerId);
+        if (!el) return;
+        var max = 0;
+        for (var i = 0; i < items.length; i++) { if (items[i].value > max) max = items[i].value; }
+        if (max === 0) max = 1;
+
+        var html = '';
+        for (var i = 0; i < items.length; i++) {
+            var pct = (items[i].value / max * 100).toFixed(1);
+            var color = colorFn ? colorFn(items[i]) : 'var(--gold)';
+            html += '<div class="bar-row">' +
+                '<span class="bar-label">' + items[i].label + '</span>' +
+                '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>' +
+                '<span class="bar-val">' + items[i].display + '</span>' +
+                '</div>';
+        }
+        el.innerHTML = html;
+    }
+
+    function renderTrend(containerId, points) {
+        var el = document.getElementById(containerId);
+        if (!el) return;
+        var max = 0;
+        for (var i = 0; i < points.length; i++) { if (points[i] > max) max = points[i]; }
+        if (max === 0) max = 1;
+
+        var html = '';
+        for (var i = 0; i < points.length; i++) {
+            var h = Math.max(2, (points[i] / max * 40));
+            html += '<div class="trend-bar" style="height:' + h + 'px" title="' + points[i] + '"></div>';
+        }
+        el.innerHTML = html;
+    }
+
+    function loadAll() {
+        document.getElementById('loadingState').style.display = 'block';
+        document.getElementById('dashboard').style.display = 'none';
+
+        fetchData('all').then(function(d) {
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('dashboard').style.display = '';
+
+            // Overview KPIs
+            var o = d.overview;
+            renderKpi('kpiUsers', o.totalUsers);
+            renderKpi('kpiActive7d', o.activeUsers7d);
+            renderKpi('kpiActive30d', o.activeUsers30d);
+            renderKpi('kpiNewWeek', o.newThisWeek, o.newToday + ' hoy');
+
+            // Registration trend
+            var regPoints = d.registrations.map(function(r) { return parseInt(r.signups); });
+            renderTrend('trendChart', regPoints);
+
+            // Activity trend
+            var actPoints = d.activity.map(function(r) { return parseInt(r.active_users); });
+            renderTrend('activityChart', actPoints);
+
+            // CEFR distribution
+            var cefrColors = { A1: '#4CAF50', A2: '#66BB6A', B1: '#42A5F5', B2: '#1E88E5', C1: '#AB47BC', C2: '#7B1FA2' };
+            renderBarChart('cefrChart', d.cefr.map(function(c) {
+                return { label: c.cefr_level, value: parseInt(c.users), display: c.users, _level: c.cefr_level };
+            }), function(item) { return cefrColors[item._level] || 'var(--gold)'; });
+
+            // Languages
+            var topLangs = d.languages.slice(0, 10);
+            renderBarChart('langChart', topLangs.map(function(l) {
+                return { label: l.native_lang || '?', value: parseInt(l.users), display: l.users };
+            }));
+
+            // Funnel
+            var funnelEl = document.getElementById('funnelChart');
+            var funnelMax = d.funnel.length ? parseInt(d.funnel[0].users_reached) : 1;
+            var funnelHtml = '';
+            for (var i = 0; i < d.funnel.length; i++) {
+                var w = (parseInt(d.funnel[i].users_reached) / Math.max(funnelMax, 1) * 100);
+                var hue = (i / 58 * 120); // green to red
+                funnelHtml += '<div class="funnel-bar" style="width:' + w + '%;background:hsl(' + (120 - hue) + ',60%,50%)" title="dest' + d.funnel[i].dest_num + ': ' + d.funnel[i].users_reached + ' usuarios"></div>';
+            }
+            funnelEl.innerHTML = funnelHtml;
+
+            // Struggle points
+            var tbody = document.querySelector('#struggleTable tbody');
+            tbody.innerHTML = '';
+            for (var i = 0; i < d.struggles.length; i++) {
+                var s = d.struggles[i];
+                var row = '<tr><td>' + s.destination_id + '</td><td>' + s.starts + '</td><td>' + s.completions + '</td>' +
+                    '<td class="' + rateClass(parseFloat(s.completion_rate)) + '">' + s.completion_rate + '%</td>' +
+                    '<td>' + s.avg_progress_pct + '%</td></tr>';
+                tbody.innerHTML += row;
+            }
+
+            // Busqueda
+            var b = d.busqueda;
+            document.getElementById('busquedaKpis').innerHTML =
+                '<div class="kpi"><div class="value" style="font-size:20px">' + b.totalPlayers + '</div><div class="label">Jugadores</div></div>' +
+                '<div class="kpi"><div class="value" style="font-size:20px">' + b.avgBridgeSegments + '</div><div class="label">Puente prom.</div></div>' +
+                '<div class="kpi"><div class="value" style="font-size:20px">' + b.ranasNamed + '</div><div class="label">Ranas nombradas</div></div>';
+            renderBarChart('busquedaDist', (b.distribution || []).map(function(d) {
+                return { label: d.bracket, value: parseInt(d.users), display: d.users };
+            }));
+
+            // Feedback
+            var f = d.feedback;
+            document.getElementById('feedbackKpis').innerHTML =
+                '<div class="kpi"><div class="value" style="font-size:20px">' + f.total + '</div><div class="label">Total</div></div>' +
+                '<div class="kpi"><div class="value" style="font-size:20px;color:' + (f.unresolved > 0 ? 'var(--red)' : 'var(--green)') + '">' + f.unresolved + '</div><div class="label">Sin resolver</div></div>';
+
+            // Escape rooms
+            var escapeItems = (d.escapeRooms || []).map(function(e) {
+                return { label: e.destination_id.replace('dest', 'd'), value: parseFloat(e.completion_rate), display: e.completion_rate + '%' };
+            });
+            renderBarChart('escapeChart', escapeItems, function(item) {
+                if (item.value >= 70) return 'var(--green)';
+                if (item.value >= 40) return '#FFB74D';
+                return 'var(--red)';
+            });
+
+        }).catch(function(err) {
+            document.getElementById('loadingState').textContent = 'Error: ' + err.message + ' (admin access required)';
+        });
+    }
+
+    document.getElementById('refreshBtn').addEventListener('click', loadAll);
+    loadAll();
+})();
+</script>
+
+</body>
+</html>

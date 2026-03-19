@@ -31,6 +31,7 @@ require_once __DIR__ . '/models/EscapeRoomProgress.php';
 require_once __DIR__ . '/models/Dictionary.php';
 require_once __DIR__ . '/models/Glossary.php';
 require_once __DIR__ . '/models/BusquedaProgress.php';
+require_once __DIR__ . '/models/Analytics.php';
 
 // Routes
 require_once __DIR__ . '/routes/auth.php';
@@ -45,6 +46,7 @@ require_once __DIR__ . '/routes/feedback.php';
 require_once __DIR__ . '/routes/forum.php';
 require_once __DIR__ . '/routes/validation.php';
 require_once __DIR__ . '/routes/busqueda.php';
+require_once __DIR__ . '/routes/analytics.php';
 
 // CORS
 setCorsHeaders();
@@ -100,6 +102,9 @@ switch ($resource) {
         break;
     case 'busqueda':
         handleBusquedaRoutes($action, $method);
+        break;
+    case 'analytics':
+        handleAnalyticsRoutes($action, $method);
         break;
     default:
         jsonError('Ruta no encontrada', 404);
