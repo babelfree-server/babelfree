@@ -262,6 +262,213 @@ $langSeoContent = [
     ],
 ];
 
+    // ── New 12 languages (Mar 19) ──────────────────────────────────────
+
+    'hi' => [
+        'keywords' => [
+            'hindi dictionary', 'dictionary meaning hindi', 'english to hindi translate',
+            'google translator english hindi', 'हिंदी ट्रांसलेटर', 'hindi angreji translator',
+            'translate हिंदी from hindi', 'english to हिंदी translate',
+        ],
+        'sections' => [
+            ['title' => 'Free Hindi Dictionary — Babel Free',
+             'text' => 'Looking for a Hindi dictionary with English equivalents? Babel Free offers a free Hindi dictionary with definitions, equivalents across 24 languages, and CEFR level tags. Whether you search in Devanagari or transliteration, every Hindi word connects to its equivalents in English, Arabic, Chinese, and more.'],
+            ['title' => 'Hindi–English Dictionary Online',
+             'text' => 'Translate between Hindi and English instantly. Every word entry includes definitions, pronunciation (IPA), CEFR level, and equivalents — not just in English, but across 24 languages. Perfect for students learning Hindi or native speakers exploring other languages.'],
+            ['title' => 'हिंदी शब्दकोश — मुफ़्त ऑनलाइन',
+             'text' => 'Babel Free एक मुफ़्त हिंदी शब्दकोश है जिसमें परिभाषाएँ, 24 भाषाओं में समकक्ष शब्द और CEFR स्तर शामिल हैं। अंग्रेज़ी, अरबी, चीनी, जापानी और अन्य भाषाओं से जुड़े हिंदी शब्द खोजें।'],
+        ],
+    ],
+
+    'tr' => [
+        'keywords' => [
+            'türkçe sözlük', 'türkçe ingilizce sözlük', 'ingilizce türkçe sözlük',
+            'türkçe ingilizce çeviri', 'ingilizce turkce', 'çeviri ingilizce',
+            'türk dil kurumu sözlük', 'almanca türkçe sözlük', 'sesli sözlük',
+            'sözlük', 'tercüme', 'çevirmen', 'almanca türkçe çeviri',
+            'fransızca türkçe çeviri', 'ispanyolca çeviri', 'rusça çeviri',
+        ],
+        'sections' => [
+            ['title' => 'Ücretsiz Türkçe Sözlük — Babel Free',
+             'text' => 'Babel Free, CEFR seviyeleri ve 24 dilde eşdeğerler içeren ücretsiz bir Türkçe sözlük sunar. İngilizce, Almanca, Fransızca, İspanyolca, Rusça ve daha fazla dilde Türkçe kelimelerin karşılıklarını bulun. TDK sözlüğünü çok dilli özelliklerle tamamlayan ideal bir araç.'],
+            ['title' => 'Türkçe İngilizce Sözlük Online',
+             'text' => 'Türkçe İngilizce sözlük arıyorsunuz? Her kelime girişi tanım, telaffuz, CEFR seviyesi ve 24 dilde eşdeğerler içerir. Sesli sözlük özelliği ile kelimelerin doğru telaffuzunu öğrenin. Ücretsiz, kayıt gerektirmez.'],
+            ['title' => 'Almanca Türkçe ve Çok Dilli Çeviri',
+             'text' => 'Sadece İngilizce değil — Almanca Türkçe, Fransızca Türkçe, İspanyolca Türkçe, Rusça Türkçe ve daha fazla dil çifti. Her Türkçe kelime 24 dildeki eşdeğerine bağlantılıdır. Profesyonel tercüme ve çevirmen hizmetlerine alternatif ücretsiz sözlük.'],
+        ],
+    ],
+
+    'pl' => [
+        'keywords' => [
+            'słownik polsko angielski', 'słownik angielsko polski', 'słownik języka polskiego',
+            'tłumacz polsko angielski', 'tłumaczenie polsko angielskie',
+            'słownik polsko niemiecki', 'tłumacz polsko niemiecki',
+            'tłumacz polsko francuski', 'tłumacz polsko hiszpański',
+            'słownik polski', 'google slownik', 'tłumaczenia przysięgłe',
+        ],
+        'sections' => [
+            ['title' => 'Darmowy Słownik Polsko-Angielski — Babel Free',
+             'text' => 'Babel Free oferuje darmowy słownik polsko-angielski z definicjami, odpowiednikami w 24 językach i poziomami CEFR (A1–C2). Szukasz słownika języka polskiego z tłumaczeniami? Każde polskie słowo łączy się z odpowiednikami w języku angielskim, niemieckim, francuskim, hiszpańskim i innych.'],
+            ['title' => 'Słownik Polsko-Niemiecki i Wielojęzyczny',
+             'text' => 'Nie tylko angielski — Babel Free to także słownik polsko-niemiecki, polsko-francuski, polsko-hiszpański i polsko-rosyjski. Każde słowo zawiera poziom CEFR, wymowę i odpowiedniki w 24 językach. Idealne uzupełnienie SJP PWN o funkcje wielojęzyczne.'],
+            ['title' => 'Tłumacz i Słownik Online Za Darmo',
+             'text' => 'Szukasz darmowego tłumacza polsko-angielskiego? Babel Free to więcej niż tłumacz — to kompletny słownik z definicjami, poziomami trudności i odpowiednikami. Bez rejestracji, bez opłat. Wszystkie słowa dostępne bezpłatnie.'],
+        ],
+    ],
+
+    'sv' => [
+        'keywords' => [
+            'svensk ordbok', 'svensk engelsk ordbok', 'engelsk svensk ordbok',
+            'översätt svenska engelska', 'svenska engelska översättare',
+            'lexikon svenska engelska', 'svenska akademiens ordlista',
+            'svenska tyska översätt', 'svenska franska översätt',
+            'svenska spanska översätt', 'ordböcker',
+        ],
+        'sections' => [
+            ['title' => 'Gratis Svensk Ordbok — Babel Free',
+             'text' => 'Babel Free erbjuder en gratis svensk ordbok med definitioner, ekvivalenter på 24 språk och CEFR-nivåer. Sök svenska ord och hitta ekvivalenter på engelska, tyska, franska, spanska och fler. Ett komplement till Svenska Akademiens ordlista med flerspråkiga funktioner.'],
+            ['title' => 'Svensk Engelsk Ordbok Online',
+             'text' => 'Letar du efter ett svenskt engelskt lexikon? Varje ord innehåller definition, uttal, CEFR-nivå och ekvivalenter på 24 språk. Översätt svenska till engelska, tyska, franska eller spanska — alla ekvivalenter länkar till sina egna ordbokssidor.'],
+            ['title' => 'Översätt Svenska — Flerspråkigt Lexikon',
+             'text' => 'Inte bara engelska — översätt svenska till tyska, franska, spanska, finska, norska, danska och fler. Babel Free är det flerspråkiga lexikonet som kopplar samman 24 språk genom ekvivalenter. Gratis, utan registrering.'],
+        ],
+    ],
+
+    'uk' => [
+        'keywords' => [
+            'український словник', 'англійсько український словник',
+            'перекладач з англійської на український', 'переклад з англійського на українську',
+            'перекладач з німецької на український', 'перекладач з польського на український',
+            'український перекладач', 'словник англійської мови',
+        ],
+        'sections' => [
+            ['title' => 'Безкоштовний Український Словник — Babel Free',
+             'text' => 'Babel Free пропонує безкоштовний українсько-англійський словник з визначеннями, еквівалентами в 24 мовах та рівнями CEFR. Шукайте українські слова та знаходьте еквіваленти англійською, німецькою, польською, французькою та іншими мовами.'],
+            ['title' => 'Англійсько-Український Словник Онлайн',
+             'text' => 'Шукаєте перекладач з англійської на український? Кожне слово містить визначення, вимову, рівень CEFR та еквіваленти в 24 мовах. Доповнює Словник української мови (СУМ) багатомовними функціями.'],
+            ['title' => 'Багатомовний Словник — Переклад Українською',
+             'text' => 'Не тільки англійська — перекладайте з німецької, польської, французької, іспанської та інших мов на українську. Усі еквіваленти пов\'язані з рідними словниковими статтями. Безкоштовно, без реєстрації.'],
+        ],
+    ],
+
+    'cs' => [
+        'keywords' => [
+            'český slovník', 'česko anglický slovník', 'anglicko český slovník',
+            'anglicko český překladač', 'česko anglický překladač',
+            'česko německý slovník', 'německo český překladač',
+            'slovník spisovné češtiny', 'český překladač',
+        ],
+        'sections' => [
+            ['title' => 'Bezplatný Český Slovník — Babel Free',
+             'text' => 'Babel Free nabízí bezplatný česko-anglický slovník s definicemi, ekvivalenty ve 24 jazycích a úrovněmi CEFR. Hledejte česká slova a najděte ekvivalenty v angličtině, němčině, polštině, slovenštině a dalších jazycích.'],
+            ['title' => 'Česko-Anglický a Česko-Německý Slovník',
+             'text' => 'Hledáte anglicko-český překladač? Každé slovo obsahuje definici, výslovnost, úroveň CEFR a ekvivalenty ve 24 jazycích. Doplňuje Slovník spisovné češtiny (SSJČ) o vícejazyčné funkce. Zdarma, bez registrace.'],
+            ['title' => 'Vícejazyčný Překladač Online',
+             'text' => 'Nejen angličtina — překládejte z němčiny, polštiny, slovenštiny, francouzštiny a dalších jazyků do češtiny. Každý ekvivalent odkazuje na vlastní slovníkový záznam. 100% zdarma.'],
+        ],
+    ],
+
+    'id' => [
+        'keywords' => [
+            'kamus bahasa indonesia', 'kamus besar bahasa indonesia', 'kbbi',
+            'kamus inggris indonesia', 'kamus bahasa inggris indonesia',
+            'kamus arab indonesia', 'kamus mandarin indonesia', 'kamus jepang indonesia',
+            'kosakata bahasa indonesia', 'penerjemah bahasa inggris ke indonesia',
+        ],
+        'sections' => [
+            ['title' => 'Kamus Bahasa Indonesia Gratis — Babel Free',
+             'text' => 'Babel Free menyediakan kamus bahasa Indonesia gratis dengan definisi, padanan dalam 24 bahasa, dan level CEFR. Cari kata bahasa Indonesia dan temukan padanannya dalam bahasa Inggris, Arab, Mandarin, Jepang, Korea, dan lainnya. Pelengkap KBBI dengan fitur multibahasa.'],
+            ['title' => 'Kamus Inggris-Indonesia Online',
+             'text' => 'Mencari kamus bahasa Inggris ke Indonesia? Setiap kata dilengkapi definisi, pengucapan, level CEFR, dan padanan dalam 24 bahasa. Tidak hanya Inggris — juga tersedia kamus Arab-Indonesia, Mandarin-Indonesia, dan Jepang-Indonesia.'],
+            ['title' => 'Kosakata Bahasa Indonesia — 1000 Kata dan Lebih',
+             'text' => 'Bangun kosakata bahasa Indonesia Anda dari A1 hingga C2. Setiap kata ditandai dengan level CEFR sehingga Anda bisa mulai dari kata dasar dan maju secara bertahap. Gratis, tanpa registrasi.'],
+        ],
+    ],
+
+    'th' => [
+        'keywords' => [
+            'พจนานุกรม ไทย', 'พจนานุกรม ไทย อังกฤษ', 'คำ ศัพท์ ภาษา ไทย',
+            'ดิก ชัน นารี อังกฤษ ไทย', 'พจนานุกรม ราชบัณฑิต ย สภา',
+            'พจนานุกรม เกาหลี', 'พจนานุกรม ไทย 1000 คำ',
+        ],
+        'sections' => [
+            ['title' => 'พจนานุกรมไทยฟรี — Babel Free',
+             'text' => 'Babel Free เสนอพจนานุกรมไทยฟรีพร้อมคำนิยาม คำเทียบเท่าใน 24 ภาษา และระดับ CEFR ค้นหาคำศัพท์ภาษาไทยและค้นพบคำเทียบเท่าในภาษาอังกฤษ จีน ญี่ปุ่น เกาหลี และอื่นๆ เสริมพจนานุกรมราชบัณฑิตยสถานด้วยฟีเจอร์หลายภาษา'],
+            ['title' => 'พจนานุกรม ไทย อังกฤษ ออนไลน์',
+             'text' => 'ค้นหาพจนานุกรมอังกฤษไทย? ทุกคำมีคำนิยาม การออกเสียง ระดับ CEFR และคำเทียบเท่าใน 24 ภาษา ไม่ใช่แค่อังกฤษ — ยังมีจีน-ไทย ญี่ปุ่น-ไทย เกาหลี-ไทย อีกด้วย ฟรี ไม่ต้องลงทะเบียน'],
+            ['title' => 'คำศัพท์ภาษาไทย — 1000 คำ และมากกว่า',
+             'text' => 'สร้างคลังคำศัพท์ภาษาไทยจาก A1 ถึง C2 ทุกคำมีระดับ CEFR เพื่อให้คุณเริ่มจากคำพื้นฐานและก้าวหน้าเป็นขั้นตอน เครื่องมือเรียนรู้ฟรีสำหรับทุกคน'],
+        ],
+    ],
+
+    'vi' => [
+        'keywords' => [
+            'từ điển anh việt', 'từ điển việt anh', 'từ điển tiếng việt',
+            'tra từ điển anh việt', 'từ điển hán việt', 'từ điển trung việt',
+            'từ điển việt hàn', 'từ điển lac việt', 'từ vựng tiếng việt',
+            'từ điển anh việt online', 'từ điển tiếng việt online',
+        ],
+        'sections' => [
+            ['title' => 'Từ Điển Anh Việt Miễn Phí — Babel Free',
+             'text' => 'Babel Free cung cấp từ điển Anh-Việt miễn phí với định nghĩa, từ tương đương trong 24 ngôn ngữ và cấp độ CEFR. Tra từ điển tiếng Việt và tìm từ tương đương trong tiếng Anh, Trung, Nhật, Hàn, Pháp và nhiều ngôn ngữ khác.'],
+            ['title' => 'Từ Điển Hán Việt và Đa Ngôn Ngữ',
+             'text' => 'Không chỉ Anh-Việt — Babel Free còn là từ điển Hán Việt, Trung Việt, Việt Hàn, và Nhật Việt. Mỗi từ tương đương là một liên kết đến trang từ điển gốc của ngôn ngữ đó. Miễn phí, không cần đăng ký.'],
+            ['title' => 'Từ Vựng Tiếng Việt — Học Theo Cấp Độ',
+             'text' => 'Xây dựng vốn từ vựng tiếng Việt từ A1 đến C2. Mỗi từ được đánh dấu cấp độ CEFR để bạn bắt đầu từ từ cơ bản và tiến bộ dần. Từ điển online miễn phí cho người học tiếng Việt.'],
+        ],
+    ],
+
+    'el' => [
+        'keywords' => [
+            'ελληνικό λεξικό', 'λεξικό αγγλικό ελληνικό', 'ελληνικό αγγλικό λεξικό',
+            'μεταφραστής αγγλικών ελληνικών', 'λεξικο αρχαια ελληνικα',
+            'λεξικο νεας ελληνικης', 'ελληνικο λεξιλογιο',
+            'ελληνικό λεξικό online', 'ελληνικό τουρκικό λεξικό',
+        ],
+        'sections' => [
+            ['title' => 'Δωρεάν Ελληνικό Λεξικό — Babel Free',
+             'text' => 'Το Babel Free προσφέρει ένα δωρεάν ελληνικό λεξικό με ορισμούς, ισοδύναμα σε 24 γλώσσες και επίπεδα CEFR. Αναζητήστε ελληνικές λέξεις και βρείτε ισοδύναμα στα αγγλικά, γερμανικά, γαλλικά, ιταλικά και άλλες γλώσσες.'],
+            ['title' => 'Αγγλικό-Ελληνικό Λεξικό Online',
+             'text' => 'Ψάχνετε λεξικό αγγλικό ελληνικό; Κάθε λέξη περιλαμβάνει ορισμό, προφορά, επίπεδο CEFR και ισοδύναμα σε 24 γλώσσες. Συμπληρώνει το Λεξικό Τριανταφυλλίδη με πολυγλωσσικές λειτουργίες. Δωρεάν, χωρίς εγγραφή.'],
+            ['title' => 'Ελληνικό Λεξιλόγιο — Αρχαία και Νέα Ελληνικά',
+             'text' => 'Χτίστε το ελληνικό σας λεξιλόγιο από A1 έως C2. Κάθε λέξη είναι σημαδεμένη με επίπεδο CEFR. Το καλύτερο ελληνικό λεξικό online — δωρεάν και πολυγλωσσικό.'],
+        ],
+    ],
+
+    'he' => [
+        'keywords' => [
+            'מילון עברי אנגלי', 'מילון אנגלי עברי', 'מילון עברי',
+            'תרגום מאנגלית לעברית', 'מורפיקס', 'מילון עברי ערבי',
+            'מילון עברי עברי', 'מילונים', 'מתרגם עברי אנגלי',
+        ],
+        'sections' => [
+            ['title' => 'מילון עברי-אנגלי חינם — Babel Free',
+             'text' => 'Babel Free מציע מילון עברי-אנגלי חינם עם הגדרות, מילים שוות ערך ב-24 שפות ורמות CEFR. חפשו מילים בעברית ומצאו שוות ערך באנגלית, ערבית, צרפתית, גרמנית ועוד. חלופה מצוינת למורפיקס עם יכולות רב-לשוניות.'],
+            ['title' => 'מילון עברי-ערבי ורב-לשוני',
+             'text' => 'לא רק אנגלית — Babel Free הוא גם מילון עברי-ערבי, עברי-צרפתי, עברי-גרמני ועוד. כל מילה שווה ערך מקושרת לדף המילון שלה בשפת המקור. שתי השפות השמיות הגדולות מחוברות דרך רשת של 24 שפות.'],
+            ['title' => 'מילון עברי — חינם ומקוון',
+             'text' => 'בנו את אוצר המילים העברי שלכם מרמה A1 עד C2. כל מילה מסומנת ברמת CEFR. חינם, ללא הרשמה, ללא מנוי. כל ההגדרות ושוות הערך נגישות מיד.'],
+        ],
+    ],
+
+    'fi' => [
+        'keywords' => [
+            'suomen sanakirja', 'sanakirja suomi', 'suomi englanti sanakirja',
+            'sanakirja englanti suomi', 'kääntäjä suomi englanti',
+            'suomi ruotsi sanakirja', 'suomi saksa kääntäjä',
+            'kääntäjä suomi venäjä', 'espanja suomi sanakirja',
+        ],
+        'sections' => [
+            ['title' => 'Ilmainen Suomen Sanakirja — Babel Free',
+             'text' => 'Babel Free tarjoaa ilmaisen suomen sanakirjan määritelmillä, vastineilla 24 kielellä ja CEFR-tasoilla. Etsi suomenkielisiä sanoja ja löydä vastineet englanniksi, ruotsiksi, saksaksi, venäjäksi, espanjaksi ja muilla kielillä. Täydentää Kielitoimiston sanakirjaa monikielisillä ominaisuuksilla.'],
+            ['title' => 'Suomi-Englanti Sanakirja Online',
+             'text' => 'Etsitkö suomi-englanti sanakirjaa? Jokainen sana sisältää määritelmän, ääntämisen, CEFR-tason ja vastineet 24 kielellä. Ei vain englanti — myös suomi-ruotsi, suomi-saksa, suomi-venäjä ja suomi-espanja. Ilmainen, ei rekisteröintiä.'],
+            ['title' => 'Suomen Sanasto — Opi Tasonmukaisesti',
+             'text' => 'Rakenna suomen sanastoasi A1:stä C2:een. Jokainen sana on merkitty CEFR-tasolla, jotta voit aloittaa perusteista ja edetä vaiheittain. Ilmainen online-sanakirja suomen kielen oppijoille.'],
+        ],
+    ],
+];
+
 $seoContent = $langSeoContent[$landingLang] ?? null;
 
 // ── FAQ structured data (per language) ──────────────────────────────
@@ -321,6 +528,54 @@ $faqData = [
         ['q' => '学西班牙语难吗？', 'a' => '西班牙语是世界上最容易学习的语言之一。通过Babel Free词典按CEFR等级系统學習西班牙語，从基础到高级循序渐进。'],
     ],
     'ru' => [],
+    'hi' => [
+        ['q' => 'Is the Hindi dictionary free?', 'a' => 'Yes, 100% free. Babel Free offers a Hindi dictionary with definitions, equivalents in 24 languages, and CEFR levels. No account needed.'],
+        ['q' => 'Does it have Hindi-English translations?', 'a' => 'Every Hindi word links to its English equivalent and 23 other languages. Click any equivalent to see the full native definition.'],
+    ],
+    'tr' => [
+        ['q' => 'Babel Free ile TDK sözlüğü arasındaki fark nedir?', 'a' => 'TDK sözlüğü tek dilli Türkçe sözlüktür. Babel Free, 24 dilde eşdeğerler, CEFR seviyeleri ve diller arası gezinme ekler. Ücretsiz ve kayıt gerektirmez.'],
+        ['q' => 'Türkçe İngilizce sözlük ücretsiz mi?', 'a' => 'Evet, %100 ücretsiz. Tüm kelimeler, tanımlar ve eşdeğerler serbestçe erişilebilir.'],
+    ],
+    'pl' => [
+        ['q' => 'Czy słownik jest darmowy?', 'a' => 'Tak, 100% za darmo. Babel Free oferuje słownik z definicjami, odpowiednikami w 24 językach i poziomami CEFR. Bez rejestracji.'],
+        ['q' => 'Czym się różni od SJP PWN?', 'a' => 'SJP PWN to jednojęzyczny słownik polskiego. Babel Free dodaje odpowiedniki w 24 językach, poziomy CEFR i nawigację międzyjęzykową.'],
+    ],
+    'sv' => [
+        ['q' => 'Är ordboken gratis?', 'a' => 'Ja, 100% gratis. Babel Free erbjuder en ordbok med definitioner, ekvivalenter på 24 språk och CEFR-nivåer. Inget konto behövs.'],
+        ['q' => 'Hur skiljer sig detta från SAOL?', 'a' => 'SAOL är en enspråkig svensk ordlista. Babel Free lägger till ekvivalenter på 24 språk, CEFR-nivåer och flerspråkig navigering.'],
+    ],
+    'uk' => [
+        ['q' => 'Чи безкоштовний словник?', 'a' => 'Так, 100% безкоштовно. Babel Free пропонує словник з визначеннями, еквівалентами в 24 мовах та рівнями CEFR. Без реєстрації.'],
+        ['q' => 'Чим відрізняється від СУМ?', 'a' => 'СУМ — одномовний словник. Babel Free додає еквіваленти в 24 мовах, рівні CEFR та міжмовну навігацію.'],
+    ],
+    'cs' => [
+        ['q' => 'Je slovník zdarma?', 'a' => 'Ano, 100% zdarma. Babel Free nabízí slovník s definicemi, ekvivalenty ve 24 jazycích a úrovněmi CEFR. Bez registrace.'],
+        ['q' => 'Jak se liší od SSJČ?', 'a' => 'SSJČ je jednojazyčný český slovník. Babel Free přidává ekvivalenty ve 24 jazycích, úrovně CEFR a mezijazykovou navigaci.'],
+    ],
+    'id' => [
+        ['q' => 'Apakah kamus ini gratis?', 'a' => 'Ya, 100% gratis. Babel Free menyediakan kamus dengan definisi, padanan dalam 24 bahasa, dan level CEFR. Tanpa akun.'],
+        ['q' => 'Apa bedanya dengan KBBI?', 'a' => 'KBBI adalah kamus satu bahasa. Babel Free menambahkan padanan dalam 24 bahasa, level CEFR, dan navigasi lintas bahasa.'],
+    ],
+    'th' => [
+        ['q' => 'พจนานุกรมนี้ฟรีหรือไม่?', 'a' => 'ใช่ ฟรี 100% Babel Free เสนอพจนานุกรมพร้อมคำนิยาม คำเทียบเท่าใน 24 ภาษา และระดับ CEFR ไม่ต้องลงทะเบียน'],
+        ['q' => 'แตกต่างจากพจนานุกรมราชบัณฑิตยสถานอย่างไร?', 'a' => 'พจนานุกรมราชบัณฑิตยสถานเป็นพจนานุกรมภาษาไทยเดียว Babel Free เพิ่มคำเทียบเท่าใน 24 ภาษา ระดับ CEFR และการนำทางข้ามภาษา'],
+    ],
+    'vi' => [
+        ['q' => 'Từ điển có miễn phí không?', 'a' => 'Có, miễn phí 100%. Babel Free cung cấp từ điển với định nghĩa, từ tương đương trong 24 ngôn ngữ và cấp độ CEFR. Không cần đăng ký.'],
+        ['q' => 'Có từ điển Hán Việt không?', 'a' => 'Có. Babel Free kết nối tiếng Việt với tiếng Trung, Nhật, Hàn và 21 ngôn ngữ khác. Mỗi từ tương đương liên kết đến trang từ điển gốc.'],
+    ],
+    'el' => [
+        ['q' => 'Είναι δωρεάν το λεξικό;', 'a' => 'Ναι, 100% δωρεάν. Το Babel Free προσφέρει λεξικό με ορισμούς, ισοδύναμα σε 24 γλώσσες και επίπεδα CEFR. Χωρίς εγγραφή.'],
+        ['q' => 'Πώς διαφέρει από το Λεξικό Τριανταφυλλίδη;', 'a' => 'Το Λεξικό Τριανταφυλλίδη είναι μονόγλωσσο. Το Babel Free προσθέτει ισοδύναμα σε 24 γλώσσες, επίπεδα CEFR και πολυγλωσσική πλοήγηση.'],
+    ],
+    'he' => [
+        ['q' => 'האם המילון חינמי?', 'a' => 'כן, 100% חינם. Babel Free מציע מילון עם הגדרות, שוות ערך ב-24 שפות ורמות CEFR. ללא הרשמה.'],
+        ['q' => 'יש מילון עברי-ערבי?', 'a' => 'כן. Babel Free מחבר עברית וערבית דרך רשת של 24 שפות. כל מילה שווה ערך מקושרת להגדרה המלאה בשפת המקור.'],
+    ],
+    'fi' => [
+        ['q' => 'Onko sanakirja ilmainen?', 'a' => 'Kyllä, 100% ilmainen. Babel Free tarjoaa sanakirjan määritelmillä, vastineilla 24 kielellä ja CEFR-tasoilla. Ei rekisteröintiä.'],
+        ['q' => 'Miten tämä eroaa Kielitoimiston sanakirjasta?', 'a' => 'Kielitoimiston sanakirja on yksikielinen. Babel Free lisää vastineet 24 kielellä, CEFR-tasot ja monikielisen navigoinnin.'],
+    ],
 ];
 
 // ── Language-specific SEO descriptions ──────────────────────────────
