@@ -28,13 +28,19 @@ $langArg = $opts['lang'] ?? null;
 
 if (!$langArg) {
     echo "Usage: php seed-frequency-all.php --lang=XX [--dry-run] [--force]\n";
-    echo "  --lang=XX    Language code (es, en, fr, de, pt, it, zh, ja, ko, ru, nl) or 'all'\n";
+    echo "  --lang=XX    Language code from dict_languages, or 'all'\n";
     echo "  --dry-run    Preview changes without writing to DB\n";
     echo "  --force      Overwrite existing frequency_rank values\n";
     exit(1);
 }
 
-$supportedLangs = ['es', 'en', 'fr', 'de', 'pt', 'it', 'zh', 'ja', 'ko', 'ru', 'nl'];
+$pdo = getDB();
+
+// Load supported languages dynamically from dict_languages
+$supportedLangs = array_column(
+    $pdo->query("SELECT code FROM dict_languages ORDER BY code")->fetchAll(PDO::FETCH_ASSOC),
+    'code'
+);
 
 if ($langArg === 'all') {
     $langsToProcess = $supportedLangs;
@@ -45,14 +51,12 @@ if ($langArg === 'all') {
         exit(0);
     }
     if (!in_array($langArg, $supportedLangs)) {
-        echo "ERROR: Unsupported language '{$langArg}'.\n";
-        echo "Supported: " . implode(', ', $supportedLangs) . "\n";
+        echo "ERROR: Unknown language '{$langArg}'. Must exist in dict_languages table.\n";
         exit(1);
     }
     $langsToProcess = [$langArg];
 }
 
-$pdo = getDB();
 $pdo->exec("SET innodb_lock_wait_timeout = 600");
 $pdo->exec("SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED");
 

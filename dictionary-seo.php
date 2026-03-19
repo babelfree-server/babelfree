@@ -23,6 +23,19 @@ try {
         (SELECT COUNT(*) FROM dict_words WHERE lang_code='es') AS es_words,
         (SELECT COUNT(*) FROM dict_words WHERE lang_code='en') AS en_words,
         (SELECT COUNT(*) FROM dict_words WHERE lang_code='zh') AS zh_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='th') AS th_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='el') AS el_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='fi') AS fi_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='pl') AS pl_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='tr') AS tr_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='sv') AS sv_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='cs') AS cs_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='hi') AS hi_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='he') AS he_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='uk') AS uk_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='id') AS id_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='vi') AS vi_words,
+        (SELECT COUNT(*) FROM dict_words WHERE lang_code='ar') AS ar_words,
         (SELECT COUNT(*) FROM dict_definitions) AS total_defs,
         (SELECT COUNT(*) FROM dict_translations) AS total_trans,
         (SELECT COUNT(DISTINCT lang_code) FROM dict_words) AS lang_count,
@@ -30,15 +43,28 @@ try {
     ")->fetch(PDO::FETCH_ASSOC);
     $stats = $row;
 } catch (Exception $e) {
-    $stats = ['es_words'=>'100,000+','en_words'=>'26,000+','total_defs'=>'200,000+','total_trans'=>'150,000+','lang_count'=>12,'conjugations'=>'5,000+'];
+    $stats = ['es_words'=>'100,000+','en_words'=>'26,000+','total_defs'=>'200,000+','total_trans'=>'150,000+','lang_count'=>24,'conjugations'=>'5,000+'];
 }
 
 $esWords = number_format((int)($stats['es_words'] ?? 0));
 $enWords = number_format((int)($stats['en_words'] ?? 0));
 $zhWords = number_format((int)($stats['zh_words'] ?? 0));
+$thWords = number_format((int)($stats['th_words'] ?? 0));
+$elWords = number_format((int)($stats['el_words'] ?? 0));
+$fiWords = number_format((int)($stats['fi_words'] ?? 0));
+$plWords = number_format((int)($stats['pl_words'] ?? 0));
+$trWords = number_format((int)($stats['tr_words'] ?? 0));
+$svWords = number_format((int)($stats['sv_words'] ?? 0));
+$csWords = number_format((int)($stats['cs_words'] ?? 0));
+$hiWords = number_format((int)($stats['hi_words'] ?? 0));
+$heWords = number_format((int)($stats['he_words'] ?? 0));
+$ukWords = number_format((int)($stats['uk_words'] ?? 0));
+$idWords = number_format((int)($stats['id_words'] ?? 0));
+$viWords = number_format((int)($stats['vi_words'] ?? 0));
+$arWords = number_format((int)($stats['ar_words'] ?? 0));
 $totalDefs = number_format((int)($stats['total_defs'] ?? 0));
 $totalTrans = number_format((int)($stats['total_trans'] ?? 0));
-$langCount = (int)($stats['lang_count'] ?? 12);
+$langCount = (int)($stats['lang_count'] ?? 24);
 $conjugations = number_format((int)($stats['conjugations'] ?? 0));
 
 // ── Page data registry ──────────────────────────────────────────────
@@ -1278,6 +1304,268 @@ $pages = [
                 "O dicionario da RAE (Real Academia Espanhola) e a referencia oficial para o espanhol, com definicoes em espanhol. O Babel Free oferece funcionalidades adicionais para estudantes: traducoes em {$langCount} idiomas (incluindo portugues), niveis CEFR (A1–C2) para cada palavra, conjugacoes verbais para 9 tempos e um curso integrado de espanhol. Tudo gratis.",
             'E gratis?' =>
                 "Sim, 100% gratis. Sem conta, sem assinatura, sem custos ocultos. Todas as {$esWords} palavras, definicoes e conjugacoes estao livremente acessiveis.",
+        ],
+    ],
+
+    // ── National Dictionary Authority Pages ──────────────────────────
+
+    'royal-institute-dictionary-thai' => [
+        'title' => "Royal Institute Dictionary (พจนานุกรม ราชบัณฑิตยสถาน) — Free Thai Dictionary | Babel Free",
+        'h1' => "พจนานุกรม ราชบัณฑิตยสถาน — Royal Institute Dictionary",
+        'meta' => "Free Thai dictionary alternative to the Royal Institute Dictionary. {$thWords} Thai words with definitions, equivalents in {$langCount} languages, and CEFR level tags for learners.",
+        'intro' => "The <em>Royal Institute Dictionary</em> (พจนานุกรม ราชบัณฑิตยสถาน) is the definitive authority on the Thai language, published by the Royal Society of Thailand (ราชบัณฑิตยสภา). While the Royal Institute Dictionary is the gold standard for native Thai speakers, Babel Free complements it with <strong>equivalents in {$langCount} languages</strong>, <strong>CEFR level tags</strong> for learners, and <strong>{$thWords} Thai words</strong> — features the official dictionary doesn't offer.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'searchLang' => 'th',
+        'faq' => [
+            'How is Babel Free different from the Royal Institute Dictionary?' =>
+                "The Royal Institute Dictionary (พจนานุกรม ฉบับราชบัณฑิตยสถาน) is a monolingual Thai reference — definitions are in Thai only. Babel Free complements it by providing equivalents across {$langCount} languages, CEFR level tags (A1–C2) for learners, and cross-language navigation. Think of the Royal Institute Dictionary as the authoritative Thai reference and Babel Free as the multilingual learner companion.",
+            'What is the Royal Institute Dictionary?' =>
+                "The Royal Institute Dictionary (พจนานุกรม ฉบับราชบัณฑิตยสถาน) is the official dictionary of the Thai language, published by the Royal Society of Thailand (ราชบัณฑิตยสภา). It is the definitive reference for standard Thai vocabulary, spelling, and usage — similar to the RAE dictionary for Spanish or the Oxford English Dictionary for English.",
+            'Is Babel Free affiliated with the Royal Society of Thailand?' =>
+                "No. Babel Free is an independent language education platform. We complement the Royal Institute Dictionary by adding multilingual equivalents and learner features that the official dictionary does not provide.",
+        ],
+    ],
+
+    'พจนานุกรม-ราชบัณฑิตยสถาน' => [
+        'title' => "พจนานุกรม ราชบัณฑิตยสถาน — ทางเลือกฟรี | Babel Free",
+        'h1' => "พจนานุกรม ราชบัณฑิตยสถาน",
+        'meta' => "พจนานุกรมไทยฟรีทางเลือกจากราชบัณฑิตยสถาน คำศัพท์ภาษาไทย {$thWords} คำ พร้อมคำเทียบเท่าใน {$langCount} ภาษา และระดับ CEFR สำหรับผู้เรียน",
+        'intro' => "<em>พจนานุกรม ราชบัณฑิตยสถาน</em> เป็นพจนานุกรมอ้างอิงอย่างเป็นทางการของภาษาไทย Babel Free เสริมพจนานุกรมราชบัณฑิตยสถานด้วย<strong>คำเทียบเท่าใน {$langCount} ภาษา</strong> <strong>ระดับ CEFR</strong> สำหรับผู้เรียน และ<strong>คำศัพท์ {$thWords} คำ</strong> — ฟีเจอร์ที่พจนานุกรมทางการไม่มี",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'th',
+        'searchPlaceholder' => 'พิมพ์คำที่ต้องการค้นหา...',
+        'searchLang' => 'th',
+        'faq' => [
+            'Babel Free แตกต่างจากพจนานุกรมราชบัณฑิตยสถานอย่างไร?' =>
+                "พจนานุกรมราชบัณฑิตยสถานเป็นพจนานุกรมภาษาไทยเดียว — คำนิยามเป็นภาษาไทยเท่านั้น Babel Free เสริมด้วยคำเทียบเท่าใน {$langCount} ภาษา ระดับ CEFR (A1–C2) สำหรับผู้เรียน และการนำทางข้ามภาษา",
+            'ฟรีจริงหรือ?' =>
+                "ใช่ ฟรี 100% ไม่ต้องสมัครสมาชิก ไม่มีค่าใช้จ่ายแอบแฝง คำศัพท์ {$thWords} คำ คำนิยาม และคำเทียบเท่าทั้งหมดเข้าถึงได้ฟรี",
+        ],
+    ],
+
+    // Finnish: Kielitoimiston sanakirja (Institute for the Languages of Finland)
+    'kielitoimiston-sanakirja' => [
+        'title' => "Kielitoimiston sanakirja — Free Finnish Dictionary Alternative | Babel Free",
+        'h1' => "Kielitoimiston sanakirja — Finnish Dictionary",
+        'meta' => "Free Finnish dictionary alternative to Kielitoimiston sanakirja. {$fiWords} Finnish words with definitions, equivalents in {$langCount} languages, and CEFR levels.",
+        'intro' => "The <em>Kielitoimiston sanakirja</em> (Dictionary of the Institute for the Languages of Finland) is the authoritative reference for modern Finnish. While it is the gold standard for native speakers, Babel Free complements it with <strong>equivalents in {$langCount} languages</strong>, <strong>CEFR level tags</strong>, and <strong>{$fiWords} Finnish words</strong> — making Finnish accessible to international learners.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'searchLang' => 'fi',
+        'faq' => [
+            'How is Babel Free different from Kielitoimiston sanakirja?' =>
+                "Kielitoimiston sanakirja is a monolingual Finnish dictionary maintained by the Institute for the Languages of Finland (Kotimaisten kielten keskus). Babel Free adds multilingual equivalents across {$langCount} languages, CEFR level tags for learners, and cross-language navigation — features the official dictionary doesn't provide.",
+            'Is Babel Free affiliated with Kotimaisten kielten keskus?' =>
+                "No. Babel Free is an independent platform that complements Kielitoimiston sanakirja with multilingual and learner features.",
+        ],
+    ],
+
+    // Polish: Słownik języka polskiego (PWN)
+    'slownik-jezyka-polskiego' => [
+        'title' => "Słownik języka polskiego — Darmowy słownik online | Babel Free",
+        'h1' => "Słownik języka polskiego",
+        'meta' => "Darmowy słownik polskiego jako alternatywa dla SJP PWN. {$plWords} polskich słów z definicjami, odpowiednikami w {$langCount} językach i poziomami CEFR.",
+        'intro' => "<em>Słownik języka polskiego PWN</em> jest autorytatywnym źródłem dla języka polskiego. Babel Free uzupełnia go o <strong>odpowiedniki w {$langCount} językach</strong>, <strong>poziomy CEFR</strong> dla uczących się, oraz <strong>{$plWords} polskich słów</strong> — funkcje, których oficjalny słownik nie oferuje.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'pl',
+        'searchPlaceholder' => 'Wpisz słowo...',
+        'searchLang' => 'pl',
+        'faq' => [
+            'Czym Babel Free różni się od Słownika języka polskiego PWN?' =>
+                "SJP PWN to jednojęzyczny słownik polskiego — definicje są tylko po polsku. Babel Free dodaje odpowiedniki w {$langCount} językach, poziomy CEFR (A1–C2) i nawigację międzyjęzykową.",
+            'Czy to jest darmowe?' =>
+                "Tak, 100% za darmo. Bez konta, bez subskrypcji. Wszystkie {$plWords} słów, definicje i odpowiedniki są dostępne bezpłatnie.",
+        ],
+    ],
+
+    // Turkish: TDK Sözlük (Türk Dil Kurumu)
+    'turk-dil-kurumu-sozluk' => [
+        'title' => "TDK Sözlük — Türk Dil Kurumu Sözlüğü Alternatifi | Babel Free",
+        'h1' => "Türk Dil Kurumu sözlüğü",
+        'meta' => "TDK sözlüğüne ücretsiz alternatif. {$trWords} Türkçe kelime, {$langCount} dilde eşdeğerler ve CEFR seviyeleri ile.",
+        'intro' => "<em>Türk Dil Kurumu</em> (TDK) sözlüğü, Türk dili için resmi referans kaynağıdır. Babel Free, TDK sözlüğünü <strong>{$langCount} dilde eşdeğerler</strong>, <strong>CEFR seviyeleri</strong> ve <strong>{$trWords} Türkçe kelime</strong> ile tamamlar — resmi sözlüğün sunmadığı özellikler.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'tr',
+        'searchPlaceholder' => 'Bir kelime yazın...',
+        'searchLang' => 'tr',
+        'faq' => [
+            'Babel Free ile TDK sözlüğü arasındaki fark nedir?' =>
+                "TDK sözlüğü tek dilli bir Türkçe sözlüktür — tanımlar yalnızca Türkçedir. Babel Free, {$langCount} dilde eşdeğerler, öğrenciler için CEFR seviyeleri (A1–C2) ve diller arası gezinme ekler.",
+            'Ücretsiz mi?' =>
+                "Evet, %100 ücretsiz. Hesap gerekmez, abonelik gerekmez. Tüm {$trWords} kelime, tanım ve eşdeğerlere ücretsiz erişilebilir.",
+        ],
+    ],
+
+    // Czech: Slovník spisovné češtiny (SSJČ)
+    'slovnik-spisovne-cestiny' => [
+        'title' => "Slovník spisovné češtiny — Bezplatný český slovník | Babel Free",
+        'h1' => "Slovník spisovné češtiny",
+        'meta' => "Bezplatný český slovník jako alternativa k SSJČ. {$csWords} českých slov s definicemi, ekvivalenty v {$langCount} jazycích a úrovněmi CEFR.",
+        'intro' => "<em>Slovník spisovné češtiny</em> (SSJČ) je autoritativní reference pro český jazyk. Babel Free jej doplňuje o <strong>ekvivalenty v {$langCount} jazycích</strong>, <strong>úrovně CEFR</strong> pro studenty a <strong>{$csWords} českých slov</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'cs',
+        'searchPlaceholder' => 'Zadejte slovo...',
+        'searchLang' => 'cs',
+        'faq' => [
+            'Jak se Babel Free liší od SSJČ?' =>
+                "SSJČ je jednojazyčný český slovník. Babel Free přidává ekvivalenty v {$langCount} jazycích, úrovně CEFR (A1–C2) a mezijazykovou navigaci.",
+            'Je to zdarma?' =>
+                "Ano, 100% zdarma. Bez registrace, bez předplatného. Všech {$csWords} slov a definic je volně přístupných.",
+        ],
+    ],
+
+    // Swedish: Svenska Akademiens ordlista (SAOL)
+    'svenska-akademiens-ordlista' => [
+        'title' => "Svenska Akademiens ordlista (SAOL) — Gratis svenskt lexikon | Babel Free",
+        'h1' => "Svenska Akademiens ordlista",
+        'meta' => "Gratis svenskt lexikon som alternativ till SAOL. {$svWords} svenska ord med definitioner, ekvivalenter på {$langCount} språk och CEFR-nivåer.",
+        'intro' => "<em>Svenska Akademiens ordlista</em> (SAOL) är den auktoritativa referensen för svenska språket. Babel Free kompletterar SAOL med <strong>ekvivalenter på {$langCount} språk</strong>, <strong>CEFR-nivåer</strong> för inlärare och <strong>{$svWords} svenska ord</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'sv',
+        'searchPlaceholder' => 'Skriv ett ord...',
+        'searchLang' => 'sv',
+        'faq' => [
+            'Hur skiljer sig Babel Free från SAOL?' =>
+                "SAOL är en enspråkig svensk ordlista utgiven av Svenska Akademien. Babel Free lägger till ekvivalenter på {$langCount} språk, CEFR-nivåer (A1–C2) och flerspråkig navigering — funktioner som SAOL inte erbjuder.",
+            'Är det gratis?' =>
+                "Ja, 100% gratis. Inget konto behövs. Alla {$svWords} ord, definitioner och ekvivalenter är fritt tillgängliga.",
+        ],
+    ],
+
+    // Greek: Λεξικό της Νέας Ελληνικής Γλώσσας (Triantafyllidis)
+    'lexiko-neas-ellinikis' => [
+        'title' => "Λεξικό Νέας Ελληνικής — Δωρεάν ελληνικό λεξικό | Babel Free",
+        'h1' => "Λεξικό της Νέας Ελληνικής Γλώσσας",
+        'meta' => "Δωρεάν ελληνικό λεξικό ως εναλλακτική του Λεξικού Τριανταφυλλίδη. {$elWords} ελληνικές λέξεις με ορισμούς, ισοδύναμα σε {$langCount} γλώσσες και επίπεδα CEFR.",
+        'intro' => "Το <em>Λεξικό της Νέας Ελληνικής Γλώσσας</em> (Τριανταφυλλίδης) είναι η κορυφαία αναφορά για τη σύγχρονη ελληνική. Το Babel Free το συμπληρώνει με <strong>ισοδύναμα σε {$langCount} γλώσσες</strong>, <strong>επίπεδα CEFR</strong> για μαθητές και <strong>{$elWords} ελληνικές λέξεις</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'el',
+        'searchPlaceholder' => 'Πληκτρολογήστε μια λέξη...',
+        'searchLang' => 'el',
+        'faq' => [
+            'Πώς διαφέρει το Babel Free από το Λεξικό Τριανταφυλλίδη;' =>
+                "Το Λεξικό Τριανταφυλλίδη είναι μονόγλωσσο ελληνικό λεξικό. Το Babel Free προσθέτει ισοδύναμα σε {$langCount} γλώσσες, επίπεδα CEFR (A1–C2) και πολυγλωσσική πλοήγηση.",
+            'Είναι δωρεάν;' =>
+                "Ναι, 100% δωρεάν. Χωρίς λογαριασμό, χωρίς συνδρομή. Όλες οι {$elWords} λέξεις και οι ορισμοί είναι ελεύθερα προσβάσιμοι.",
+        ],
+    ],
+
+    // Indonesian: KBBI (Kamus Besar Bahasa Indonesia)
+    'kamus-besar-bahasa-indonesia' => [
+        'title' => "KBBI — Kamus Besar Bahasa Indonesia Alternatif Gratis | Babel Free",
+        'h1' => "Kamus Besar Bahasa Indonesia (KBBI)",
+        'meta' => "Kamus bahasa Indonesia gratis sebagai alternatif KBBI. {$idWords} kata bahasa Indonesia dengan definisi, padanan dalam {$langCount} bahasa, dan level CEFR.",
+        'intro' => "<em>Kamus Besar Bahasa Indonesia</em> (KBBI) adalah kamus resmi bahasa Indonesia yang diterbitkan oleh Badan Pengembangan dan Pembinaan Bahasa. Babel Free melengkapi KBBI dengan <strong>padanan dalam {$langCount} bahasa</strong>, <strong>level CEFR</strong> untuk pelajar, dan <strong>{$idWords} kata</strong> — fitur yang tidak tersedia di kamus resmi.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'id',
+        'searchPlaceholder' => 'Ketik sebuah kata...',
+        'searchLang' => 'id',
+        'faq' => [
+            'Apa perbedaan Babel Free dengan KBBI?' =>
+                "KBBI adalah kamus bahasa Indonesia satu bahasa — definisi hanya dalam bahasa Indonesia. Babel Free menambahkan padanan dalam {$langCount} bahasa, level CEFR (A1–C2) untuk pelajar, dan navigasi lintas bahasa.",
+            'Apakah gratis?' =>
+                "Ya, 100% gratis. Tanpa akun, tanpa langganan. Semua {$idWords} kata, definisi, dan padanan dapat diakses secara gratis.",
+        ],
+    ],
+
+    // Ukrainian: Словник української мови (SUM)
+    'slovnyk-ukrainskoi-movy' => [
+        'title' => "Словник української мови — Безкоштовний український словник | Babel Free",
+        'h1' => "Словник української мови",
+        'meta' => "Безкоштовний український словник як альтернатива СУМ. {$ukWords} українських слів з визначеннями, еквівалентами в {$langCount} мовах та рівнями CEFR.",
+        'intro' => "<em>Словник української мови</em> (СУМ) — авторитетний довідник української мови. Babel Free доповнює його <strong>еквівалентами в {$langCount} мовах</strong>, <strong>рівнями CEFR</strong> для тих, хто вивчає мову, та <strong>{$ukWords} українськими словами</strong>.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'uk',
+        'searchPlaceholder' => 'Введіть слово...',
+        'searchLang' => 'uk',
+        'faq' => [
+            'Чим Babel Free відрізняється від СУМ?' =>
+                "СУМ — це одномовний український словник. Babel Free додає еквіваленти в {$langCount} мовах, рівні CEFR (A1–C2) та міжмовну навігацію.",
+            'Це безкоштовно?' =>
+                "Так, 100% безкоштовно. Без реєстрації, без підписки. Усі {$ukWords} слів та визначень доступні безкоштовно.",
+        ],
+    ],
+
+    // ── Hebrew–Arabic cross-language pages ───────────────────────────
+
+    // Hebrew: Even-Shoshan Dictionary + Hebrew-Arabic bridge
+    'מילון-עברי-ערבי' => [
+        'title' => "מילון עברי ערבי — מילון חינם עברית ערבית | Babel Free",
+        'h1' => "מילון עברי ערבי",
+        'meta' => "מילון עברי ערבי חינם. {$heWords} מילים בעברית ו-{$arWords} מילים בערבית עם הגדרות, מילים שוות ערך ב-{$langCount} שפות ורמות CEFR.",
+        'intro' => "מחפשים <strong>מילון עברי ערבי</strong>? Babel Free מציע <strong>{$heWords} מילים בעברית</strong> ו-<strong>{$arWords} מילים בערבית</strong> עם הגדרות, מילים שוות ערך ב-<strong>{$langCount} שפות</strong> ורמות CEFR. כל מילה בעברית מקושרת למקבילה בערבית ולהיפך — גישור בין שתי השפות השמיות הגדולות.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'he',
+        'searchPlaceholder' => 'הקלד מילה...',
+        'searchLang' => 'he',
+        'faq' => [
+            'מה ההבדל בין Babel Free למילון עברי ערבי רגיל?' =>
+                "מילונים עברי-ערבי רגילים מציגים תרגום ישיר בין שתי שפות בלבד. Babel Free מציע מילים שוות ערך ב-{$langCount} שפות, רמות CEFR (A1–C2) ללומדים, וניווט חוצה שפות — כל מילה בעברית מקושרת להגדרה הערבית המלאה שלה, ולהיפך.",
+            'האם זה חינם?' =>
+                "כן, 100% חינם. ללא הרשמה, ללא מנוי. כל {$heWords} המילים בעברית ו-{$arWords} המילים בערבית נגישות בחינם.",
+        ],
+    ],
+
+    'hebrew-arabic-dictionary' => [
+        'title' => "Hebrew Arabic Dictionary — Free Online | Babel Free",
+        'h1' => "Hebrew–Arabic Dictionary",
+        'meta' => "Free Hebrew-Arabic dictionary online. {$heWords} Hebrew words and {$arWords} Arabic words with definitions, equivalents in {$langCount} languages, and CEFR levels.",
+        'intro' => "Looking for a <strong>Hebrew–Arabic dictionary</strong>? Babel Free bridges the two great Semitic languages with <strong>{$heWords} Hebrew words</strong> and <strong>{$arWords} Arabic words</strong>, each linked through multilingual equivalents. Every Hebrew word connects to its Arabic counterpart and vice versa — plus equivalents in <strong>{$langCount} languages</strong> total.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'faq' => [
+            'How does the Hebrew–Arabic dictionary work?' =>
+                "Each Hebrew word entry shows its equivalents across all {$langCount} languages — including Arabic. Click the Arabic equivalent to jump to the full Arabic definition, with its own set of multilingual equivalents linking back to Hebrew. This bidirectional approach makes it easy to explore both languages as interconnected systems, not isolated word lists.",
+            'How many words does the Hebrew–Arabic dictionary have?' =>
+                "The Hebrew dictionary contains {$heWords} words and the Arabic dictionary contains {$arWords} words, each with definitions, CEFR level tags, and cross-language equivalents. Both dictionaries are growing daily through automated imports.",
+            'Is this dictionary free?' =>
+                "Yes, 100% free. No account needed, no premium tier. All words, definitions, and equivalents are freely accessible.",
+        ],
+    ],
+
+    'arabic-hebrew-dictionary' => [
+        'title' => "Arabic Hebrew Dictionary — قاموس عربي عبري | Babel Free",
+        'h1' => "قاموس عربي عبري — Arabic–Hebrew Dictionary",
+        'meta' => "Free Arabic-Hebrew dictionary. {$arWords} Arabic words and {$heWords} Hebrew words with definitions, equivalents across {$langCount} languages, and CEFR levels for learners.",
+        'intro' => "A free <strong>Arabic–Hebrew dictionary</strong> connecting the two largest Semitic languages. With <strong>{$arWords} Arabic words</strong> and <strong>{$heWords} Hebrew words</strong>, each entry links to equivalents across <strong>{$langCount} languages</strong>. Click any Hebrew equivalent to see its full definition — and vice versa.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'faq' => [
+            'How is this different from a simple Arabic–Hebrew translator?' =>
+                "A translator gives you a single word or phrase. Babel Free gives you full dictionary entries: definitions in the native language, CEFR level tags, example sentences, and equivalents across {$langCount} languages — not just Arabic and Hebrew. Each equivalent is a hyperlink to its own native dictionary entry.",
+            'Does this cover Modern Standard Arabic and spoken dialects?' =>
+                "The Arabic dictionary contains {$arWords} words primarily from Modern Standard Arabic (MSA), sourced from Wiktionary data. Dialectal forms are included where documented in Wiktionary.",
+        ],
+    ],
+
+    // Arabic-Hebrew in Arabic script
+    'قاموس-عربي-عبري' => [
+        'title' => "قاموس عربي عبري — مجاني على الإنترنت | Babel Free",
+        'h1' => "قاموس عربي عبري",
+        'meta' => "قاموس عربي عبري مجاني. {$arWords} كلمة عربية و{$heWords} كلمة عبرية مع تعريفات ومكافئات في {$langCount} لغة ومستويات CEFR.",
+        'intro' => "تبحث عن <strong>قاموس عربي عبري</strong>؟ يقدم Babel Free <strong>{$arWords} كلمة عربية</strong> و<strong>{$heWords} كلمة عبرية</strong> مع تعريفات ومكافئات في <strong>{$langCount} لغة</strong>. كل كلمة عربية مرتبطة بمكافئها العبري والعكس — جسر بين اللغتين الساميتين الكبريين.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'pageLang' => 'ar',
+        'searchPlaceholder' => 'اكتب كلمة...',
+        'searchLang' => 'ar',
+        'faq' => [
+            'كيف يعمل القاموس العربي العبري؟' =>
+                "كل كلمة عربية تعرض مكافئاتها في {$langCount} لغة — بما فيها العبرية. انقر على المكافئ العبري للانتقال إلى التعريف العبري الكامل، مع مجموعته الخاصة من المكافئات متعددة اللغات التي تربط بالعربية مرة أخرى.",
+            'هل هو مجاني؟' =>
+                "نعم، مجاني 100%. بدون حساب، بدون اشتراك. جميع الكلمات والتعريفات والمكافئات متاحة مجانًا.",
+        ],
+    ],
+
+    // Hebrew national dictionary: Even-Shoshan / Academy of the Hebrew Language
+    'milon-even-shoshan' => [
+        'title' => "Even-Shoshan Dictionary (מילון אבן שושן) — Free Hebrew Dictionary | Babel Free",
+        'h1' => "מילון אבן שושן — Even-Shoshan Dictionary",
+        'meta' => "Free Hebrew dictionary alternative to Even-Shoshan. {$heWords} Hebrew words with definitions, equivalents in {$langCount} languages, and CEFR levels.",
+        'intro' => "The <em>Even-Shoshan Dictionary</em> (מילון אבן שושן) is the most comprehensive Hebrew dictionary, and the <em>Academy of the Hebrew Language</em> (האקדמיה ללשון העברית) is the official authority on Hebrew. Babel Free complements these references with <strong>equivalents in {$langCount} languages</strong>, <strong>CEFR level tags</strong>, and <strong>{$heWords} Hebrew words</strong> — making Hebrew accessible to international learners.",
+        'features' => ['definitions','translations','cefr','examples','frequency'],
+        'searchLang' => 'he',
+        'faq' => [
+            'How is Babel Free different from the Even-Shoshan Dictionary?' =>
+                "The Even-Shoshan Dictionary is a comprehensive monolingual Hebrew reference. Babel Free adds multilingual equivalents across {$langCount} languages (including Arabic), CEFR level tags for learners, and cross-language navigation — features the traditional dictionary doesn't offer.",
+            'Is Babel Free affiliated with the Academy of the Hebrew Language?' =>
+                "No. Babel Free is an independent platform that complements the Academy's work with multilingual and learner features.",
         ],
     ],
 ];

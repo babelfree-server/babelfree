@@ -79,6 +79,24 @@ ErrorDocument 404 /404.html
     RewriteRule ^dicionarioespanhol/?$ /dicionario-espanhol [R=301,L]
     RewriteRule ^dicionarioespanholportugues/?$ /dicionario-espanhol-portugues [R=301,L]
     RewriteRule ^dicionario-espanhol-online/?$ /dicionario-espanhol [R=301,L]
+    # Dictionary SEO keyword pages — National dictionary authorities
+    RewriteRule ^(royal-institute-dictionary-thai)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(kielitoimiston-sanakirja)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(slownik-jezyka-polskiego)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(turk-dil-kurumu-sozluk)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(slovnik-spisovne-cestiny)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(svenska-akademiens-ordlista)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(lexiko-neas-ellinikis)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(kamus-besar-bahasa-indonesia)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(slovnyk-ukrainskoi-movy)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    RewriteRule ^(milon-even-shoshan)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Hebrew-Arabic cross-language dictionary pages
+    RewriteRule ^(hebrew-arabic-dictionary|arabic-hebrew-dictionary)/?$ dictionary-seo.php?seo_page=$1 [L,QSA]
+    # Native-script slugs for Hebrew-Arabic and national dictionaries
+    RewriteRule ^מילון-עברי-ערבי/?$ dictionary-seo.php?seo_page=מילון-עברי-ערבי [L,QSA]
+    RewriteRule ^قاموس-عربي-عبري/?$ dictionary-seo.php?seo_page=قاموس-عربي-عبري [L,QSA]
+    # Native-script slug for Thai Royal Institute Dictionary
+    RewriteRule ^พจนานุกรม-ราชบัณฑิตยสถาน/?$ dictionary-seo.php?seo_page=พจนานุกรม-ราชบัณฑิตยสถาน [L,QSA]
 
     # Glossary SPA route
     RewriteRule ^glossary/?$ glossary.html [L]

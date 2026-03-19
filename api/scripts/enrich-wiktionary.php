@@ -11,7 +11,9 @@
  * Resumable: only targets un-enriched words; safe to re-run.
  *
  * Usage:
- *   php enrich-wiktionary.php                    # Process up to 200 words
+ *   php enrich-wiktionary.php                    # Process Spanish (default), up to 200 words
+ *   php enrich-wiktionary.php --lang=fr          # Process French
+ *   php enrich-wiktionary.php --lang=de --all    # Process ALL un-enriched German words
  *   php enrich-wiktionary.php --batch=500        # Process 500 words
  *   php enrich-wiktionary.php --pos=verb         # Only verbs
  *   php enrich-wiktionary.php --cefr=A1          # Only A1 words
@@ -27,10 +29,13 @@ $batchSize = 200;
 $posFilter = null;
 $cefrFilter = null;
 $processAll = false;
+$langCode = 'es'; // Default to Spanish
 
 foreach ($argv ?? [] as $arg) {
     if (strpos($arg, '--batch=') === 0) {
         $batchSize = (int)substr($arg, 8);
+    } elseif (strpos($arg, '--lang=') === 0) {
+        $langCode = substr($arg, 7);
     } elseif (strpos($arg, '--pos=') === 0) {
         $posFilter = substr($arg, 6);
     } elseif (strpos($arg, '--cefr=') === 0) {
@@ -42,20 +47,29 @@ foreach ($argv ?? [] as $arg) {
 }
 
 echo "=== Wiktionary Enrichment ===\n";
+echo "  Language: $langCode\n";
 echo "  Batch size: " . ($processAll ? 'ALL' : $batchSize) . "\n";
 if ($posFilter) echo "  POS filter: $posFilter\n";
 if ($cefrFilter) echo "  CEFR filter: $cefrFilter\n";
 echo "\n";
 
+// Wiktionary edition to use for definitions (maps lang_code → Wiktionary subdomain)
+// Most languages use their own code; some need mapping
+$wiktionaryLangMap = [
+    'zh-tw' => 'zh',
+    'no' => 'nb', // Norwegian Bokmål on Wiktionary
+];
+$wiktLang = $wiktionaryLangMap[$langCode] ?? $langCode;
+
 // ── Find words needing enrichment ──────────────────────────────────
 
 $sql = "SELECT w.id, w.word, w.word_normalized, w.part_of_speech, w.pronunciation_ipa, w.gender
         FROM dict_words w
-        LEFT JOIN dict_definitions d ON d.word_id = w.id AND d.lang_code = 'es'
-        WHERE w.lang_code = 'es'
+        LEFT JOIN dict_definitions d ON d.word_id = w.id AND d.lang_code = ?
+        WHERE w.lang_code = ?
           AND d.id IS NULL";
 
-$params = [];
+$params = [$langCode, $langCode];
 
 if ($posFilter) {
     $sql .= " AND w.part_of_speech = ?";
@@ -76,7 +90,7 @@ $words = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo "Words to enrich: " . count($words) . "\n\n";
 
 if (count($words) === 0) {
-    echo "Nothing to do. All words have Spanish definitions.\n";
+    echo "Nothing to do. All {$langCode} words have definitions.\n";
     exit(0);
 }
 
@@ -119,10 +133,10 @@ function httpGet(string $url): ?string {
     return $response;
 }
 
-// ── Source 1: Spanish definitions from es.wiktionary wikitext ──────
+// ── Source 1: Native definitions from {lang}.wiktionary wikitext ───
 
-function fetchSpanishDefs(string $word): array {
-    $url = "https://es.wiktionary.org/w/api.php?"
+function fetchNativeDefs(string $word, string $wiktLang): array {
+    $url = "https://{$wiktLang}.wiktionary.org/w/api.php?"
          . http_build_query([
              'action' => 'parse',
              'page'   => $word,
@@ -137,7 +151,7 @@ function fetchSpanishDefs(string $word): array {
     $wikitext = $data['parse']['wikitext']['*'] ?? null;
     if (!$wikitext) return ['defs' => [], 'gender' => null, 'wikitext' => null];
 
-    // Extract definitions: ;N: definition text
+    // Extract definitions: ;N: definition text (common across many Wiktionary editions)
     $defs = [];
     if (preg_match_all('/^;(\d+)\s*[:\|]+\s*(.+)/mu', $wikitext, $matches, PREG_SET_ORDER)) {
         foreach ($matches as $m) {
@@ -163,13 +177,35 @@ function fetchSpanishDefs(string $word): array {
             }
         }
     }
+
+    // Fallback: try # definition lines (used by en, fr, de, nl, and many others)
+    if (empty($defs) && preg_match_all('/^#\s+(.+)/mu', $wikitext, $matches)) {
+        foreach ($matches[1] as $raw) {
+            $text = $raw;
+            // Clean wiki templates and links (same as above)
+            $text = preg_replace('/\{\{[^|]+\|([^}|]+)[^}]*\}\}/', '$1', $text);
+            $text = preg_replace('/\{\{[^}]+\}\}/', '', $text);
+            $text = preg_replace('/\[\[[^|\]]+\|([^\]]+)\]\]/', '$1', $text);
+            $text = preg_replace('/\[\[([^\]]+)\]\]/', '$1', $text);
+            $text = preg_replace('/<ref[^>]*>.*?<\/ref>/s', '', $text);
+            $text = strip_tags($text);
+            $text = trim($text, " \t\n\r\0\x0B.");
+            if ($text && mb_strlen($text) > 2) {
+                $defs[] = ucfirst($text) . '.';
+            }
+        }
+    }
     $defs = array_slice($defs, 0, 5);
 
-    // Extract gender from template headers
+    // Extract gender from template headers (works for es, fr, pt, it, de)
     $gender = null;
-    if (preg_match('/\{\{sustantivo\s+femenino/u', $wikitext)) {
+    if (preg_match('/\{\{sustantivo\s+femenino/u', $wikitext) ||
+        preg_match('/\{\{S\|nom\|[^}]*genre=f/u', $wikitext) ||
+        preg_match('/\{\{f\}\}/u', $wikitext)) {
         $gender = 'f';
-    } elseif (preg_match('/\{\{sustantivo\s+masculino/u', $wikitext)) {
+    } elseif (preg_match('/\{\{sustantivo\s+masculino/u', $wikitext) ||
+              preg_match('/\{\{S\|nom\|[^}]*genre=m/u', $wikitext) ||
+              preg_match('/\{\{m\}\}/u', $wikitext)) {
         $gender = 'm';
     }
 
@@ -178,7 +214,7 @@ function fetchSpanishDefs(string $word): array {
 
 // ── Source 2: English definitions from en.wiktionary REST API ──────
 
-function fetchEnglishDefs(string $word): array {
+function fetchEnglishDefs(string $word, string $langCode = 'es'): array {
     $url = "https://en.wiktionary.org/api/rest_v1/page/definition/" . rawurlencode($word);
     $json = httpGet($url);
     if (!$json) return [];
@@ -187,7 +223,7 @@ function fetchEnglishDefs(string $word): array {
     if (!$data) return [];
 
     $defs = [];
-    $sections = $data['es'] ?? [];
+    $sections = $data[$langCode] ?? [];
     foreach ($sections as $section) {
         foreach ($section['definitions'] ?? [] as $defEntry) {
             $text = $defEntry['definition'] ?? '';
@@ -206,7 +242,7 @@ function fetchEnglishDefs(string $word): array {
 
 // ── Source 3: IPA from en.wiktionary parsed HTML ───────────────────
 
-function fetchIPA(string $word): ?string {
+function fetchIPA(string $word, string $sectionName = 'Spanish'): ?string {
     $url = "https://en.wiktionary.org/w/api.php?"
          . http_build_query([
              'action' => 'parse',
@@ -229,7 +265,7 @@ function fetchIPA(string $word): ?string {
     for ($i = 0; $i < count($sections); $i++) {
         if (strpos($sections[$i], 'mw-heading2') !== false) {
             $combined = $sections[$i] . ($sections[$i + 1] ?? '');
-            if (strpos($combined, '>Spanish<') !== false) {
+            if (strpos($combined, '>' . $sectionName . '<') !== false) {
                 // Collect everything until next h2
                 $spanishSection = $sections[$i + 1] ?? '';
                 for ($j = $i + 2; $j < count($sections); $j++) {
@@ -259,8 +295,22 @@ function fetchIPA(string $word): ?string {
 
 // ── Main enrichment loop ───────────────────────────────────────────
 
+// Look up the English name for the IPA section heading on en.wiktionary
+$langNameStmt = $pdo->prepare("SELECT name_en FROM dict_languages WHERE code = ?");
+$langNameStmt->execute([$langCode]);
+$langNameEn = $langNameStmt->fetchColumn() ?: 'Spanish';
+
+// en.wiktionary REST API uses specific section keys (often the lang code, but some differ)
+// Map our codes to the keys used in en.wiktionary REST API responses
+$enWiktApiKeyMap = [
+    'zh'    => 'zh',      // Chinese
+    'zh-tw' => 'zh',      // Traditional Chinese → same section
+    'no'    => 'nb',      // Norwegian Bokmål
+];
+$enWiktApiKey = $enWiktApiKeyMap[$langCode] ?? $langCode;
+
 $stats = [
-    'es_defs' => 0,
+    'native_defs' => 0,
     'en_defs' => 0,
     'ipa' => 0,
     'gender' => 0,
@@ -283,25 +333,25 @@ foreach ($words as $i => $row) {
 
     $gotAnything = false;
 
-    // 1. Spanish definitions + gender from es.wiktionary
-    $esResult = fetchSpanishDefs($word);
+    // 1. Native definitions + gender from {lang}.wiktionary
+    $nativeResult = fetchNativeDefs($word, $wiktLang);
     usleep(300000);
 
-    if ($esResult['defs']) {
-        foreach ($esResult['defs'] as $order => $def) {
-            $insertDef->execute([$wordId, 'es', $def, $order]);
-            $stats['es_defs']++;
+    if ($nativeResult['defs']) {
+        foreach ($nativeResult['defs'] as $order => $def) {
+            $insertDef->execute([$wordId, $langCode, $def, $order]);
+            $stats['native_defs']++;
         }
         $gotAnything = true;
     }
 
-    if ($esResult['gender'] && empty($row['gender'])) {
-        $updateGender->execute([$esResult['gender'], $wordId]);
+    if ($nativeResult['gender'] && empty($row['gender'])) {
+        $updateGender->execute([$nativeResult['gender'], $wordId]);
         $stats['gender']++;
     }
 
     // 2. English definitions from en.wiktionary REST API
-    $enDefs = fetchEnglishDefs($word);
+    $enDefs = fetchEnglishDefs($word, $enWiktApiKey);
     usleep(300000);
 
     if ($enDefs) {
@@ -314,7 +364,7 @@ foreach ($words as $i => $row) {
 
     // 3. IPA from en.wiktionary parsed HTML (if not already set)
     if (empty($row['pronunciation_ipa'])) {
-        $ipa = fetchIPA($word);
+        $ipa = fetchIPA($word, $langNameEn);
         usleep(300000);
 
         if ($ipa) {
@@ -337,23 +387,36 @@ $elapsed = time() - $startTime;
 $minutes = round($elapsed / 60, 1);
 
 echo "\n=== Enrichment Complete ({$minutes} min) ===\n";
+echo "  Language: {$langCode}\n";
 echo "  Words processed: " . count($words) . "\n";
-echo "  Spanish definitions added: {$stats['es_defs']}\n";
+echo "  Native definitions added: {$stats['native_defs']}\n";
 echo "  English definitions added: {$stats['en_defs']}\n";
 echo "  IPA pronunciations added: {$stats['ipa']}\n";
 echo "  Gender updates: {$stats['gender']}\n";
 echo "  Skipped (not in Wiktionary): {$stats['skipped']}\n";
 
 // Overall DB status
-$total = $pdo->query("SELECT COUNT(*) FROM dict_words WHERE lang_code = 'es'")->fetchColumn();
-$withEsDefs = $pdo->query("SELECT COUNT(DISTINCT word_id) FROM dict_definitions WHERE lang_code = 'es'")->fetchColumn();
-$withEnDefs = $pdo->query("SELECT COUNT(DISTINCT word_id) FROM dict_definitions WHERE lang_code = 'en'")->fetchColumn();
-$withIPA = $pdo->query("SELECT COUNT(*) FROM dict_words WHERE lang_code = 'es' AND pronunciation_ipa IS NOT NULL AND pronunciation_ipa != ''")->fetchColumn();
-$remaining = $total - $withEsDefs;
+$stmtTotal = $pdo->prepare("SELECT COUNT(*) FROM dict_words WHERE lang_code = ?");
+$stmtTotal->execute([$langCode]);
+$total = $stmtTotal->fetchColumn();
 
-echo "\n--- Overall Status ---\n";
-echo "  Total Spanish words: $total\n";
-echo "  With Spanish defs: $withEsDefs\n";
+$stmtNativeDefs = $pdo->prepare("SELECT COUNT(DISTINCT word_id) FROM dict_definitions WHERE lang_code = ?");
+$stmtNativeDefs->execute([$langCode]);
+$withNativeDefs = $stmtNativeDefs->fetchColumn();
+
+$stmtEnDefs = $pdo->prepare("SELECT COUNT(DISTINCT d.word_id) FROM dict_definitions d JOIN dict_words w ON d.word_id = w.id WHERE d.lang_code = 'en' AND w.lang_code = ?");
+$stmtEnDefs->execute([$langCode]);
+$withEnDefs = $stmtEnDefs->fetchColumn();
+
+$stmtIPA = $pdo->prepare("SELECT COUNT(*) FROM dict_words WHERE lang_code = ? AND pronunciation_ipa IS NOT NULL AND pronunciation_ipa != ''");
+$stmtIPA->execute([$langCode]);
+$withIPA = $stmtIPA->fetchColumn();
+
+$remaining = $total - $withNativeDefs;
+
+echo "\n--- Overall Status ({$langCode}) ---\n";
+echo "  Total words: $total\n";
+echo "  With native defs: $withNativeDefs\n";
 echo "  With English defs: $withEnDefs\n";
 echo "  With IPA: $withIPA\n";
 echo "  Remaining without defs: $remaining\n";
