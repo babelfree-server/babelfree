@@ -1,4 +1,4 @@
-const CACHE_NAME = 'babelfree-v6';
+const CACHE_NAME = 'babelfree-v7';
 const PRECACHE_URLS = [
   '/',
   '/services',
@@ -8,18 +8,28 @@ const PRECACHE_URLS = [
   '/blog',
   '/css/footer.css',
   '/css/blog.css',
+  '/luxury.css',
   '/assets/tower-logo.png',
   '/assets/logo.png',
   '/img/jaguar-hero-full.jpg',
   '/play.html',
   '/storymap.html',
+  '/cuaderno.html',
   '/offline.html',
+  '/js/jaguar-api.js',
   '/js/yaguara-engine.js',
   '/js/evidence-engine.js',
   '/js/adaptivity-engine.js',
   '/js/destination-router.js',
+  '/js/practice-engine.js',
+  '/js/personal-lexicon.js',
+  '/js/riddle-quest.js',
+  '/js/quest-journal.js',
+  '/js/audio-manager.js',
+  '/js/feedback-widget.js',
   '/css/yaguara-game.css',
-  '/ontology/ontology-api.js'
+  '/ontology/ontology-api.js',
+  '/content/busqueda-riddles.json'
 ];
 
 // Install: precache key pages and assets
@@ -62,7 +72,7 @@ self.addEventListener('fetch', event => {
   }
 
   // Static assets: cache-first with network fallback
-  if (/\.(css|js|png|jpg|jpeg|svg|woff2?)$/i.test(url.pathname)) {
+  if (/\.(css|js|png|jpg|jpeg|svg|woff2?|mp3)$/i.test(url.pathname)) {
     event.respondWith(
       caches.match(event.request)
         .then(cached => {
