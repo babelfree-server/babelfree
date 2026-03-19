@@ -123,13 +123,22 @@ foreach ($langs as $lang) {
         'iría','irías','iría','iríamos','irían','a','as','amos','an',
         'iendo','ido','ida','idos','idas'];
 
-    $updateStmt = $pdo->prepare("
+    // Two update statements:
+    // 1. Set rank for forms with no frequency data
+    // 2. Lower rank for forms whose current rank is worse than the lemma's derived rank
+    $updateNullStmt = $pdo->prepare("
         UPDATE dict_words
         SET frequency_rank = ?
         WHERE lang_code = ? AND word_normalized = ? AND frequency_rank IS NULL
     ");
+    $updateHighStmt = $pdo->prepare("
+        UPDATE dict_words
+        SET frequency_rank = ?
+        WHERE lang_code = ? AND word_normalized = ? AND frequency_rank > ?
+    ");
 
     $propagated = 0;
+    $lowered = 0;
     $checkedInf = 0;
 
     foreach ($infinitives as $inf) {
@@ -160,8 +169,13 @@ foreach ($langs as $lang) {
             $form = $stem . $suf;
             if ($form === $word) continue; // skip the infinitive itself
 
-            $updateStmt->execute([$derivedRank, $lang, $form]);
-            $propagated += $updateStmt->rowCount();
+            // Fill in missing ranks
+            $updateNullStmt->execute([$derivedRank, $lang, $form]);
+            $propagated += $updateNullStmt->rowCount();
+
+            // Lower ranks that are worse than the lemma's derived rank
+            $updateHighStmt->execute([$derivedRank, $lang, $form, $derivedRank]);
+            $lowered += $updateHighStmt->rowCount();
         }
 
         if ($checkedInf % 1000 === 0) {
@@ -170,7 +184,8 @@ foreach ($langs as $lang) {
     }
 
     echo "  Infinitives checked: {$checkedInf}\n";
-    echo "  Conjugated forms propagated: {$propagated}\n";
+    echo "  Conjugated forms propagated (new): {$propagated}\n";
+    echo "  Conjugated forms lowered (existing): {$lowered}\n";
 
     // Step 3: Noun/adjective plural and gender forms
     echo "\n  === Noun/adjective form propagation ===\n";
@@ -189,6 +204,7 @@ foreach ($langs as $lang) {
     echo "  Base words with frequency: " . count($baseWords) . "\n";
 
     $nounPropagated = 0;
+    $nounLowered = 0;
     foreach ($baseWords as $bw) {
         $w = $bw['word_normalized'];
         $rank = min($bw['best_rank'] + 200, 50000);
@@ -211,13 +227,18 @@ foreach ($langs as $lang) {
         // Diminutive: -ito/-ita (less common, skip for now)
 
         foreach (array_unique($forms) as $form) {
-            $updateStmt->execute([$rank, $lang, $form]);
-            $nounPropagated += $updateStmt->rowCount();
+            $updateNullStmt->execute([$rank, $lang, $form]);
+            $nounPropagated += $updateNullStmt->rowCount();
+
+            // Also lower existing high ranks
+            $updateHighStmt->execute([$rank, $lang, $form, $rank]);
+            $nounLowered += $updateHighStmt->rowCount();
         }
     }
 
-    echo "  Noun/adj forms propagated: {$nounPropagated}\n";
-    echo "  Total propagated for {$lang}: " . ($propagated + $nounPropagated) . "\n";
+    echo "  Noun/adj forms propagated (new): {$nounPropagated}\n";
+    echo "  Noun/adj forms lowered (existing): {$nounLowered}\n";
+    echo "  Total propagated for {$lang}: " . ($propagated + $nounPropagated) . " new, " . ($lowered + $nounLowered) . " lowered\n";
 }
 
 // Final stats
