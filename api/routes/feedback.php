@@ -155,9 +155,11 @@ function handleFeedbackRoutes(string $action, string $method): void {
             $countStmt->execute($params);
             $total = (int)$countStmt->fetchColumn();
 
-            // Fetch items
+            // Fetch items (LIMIT/OFFSET as bound parameters)
+            $params[] = $limit;
+            $params[] = $offset;
             $stmt = $pdo->prepare(
-                "SELECT * FROM feedback {$whereClause} ORDER BY created_at DESC LIMIT {$limit} OFFSET {$offset}"
+                "SELECT * FROM feedback {$whereClause} ORDER BY created_at DESC LIMIT ? OFFSET ?"
             );
             $stmt->execute($params);
             $items = $stmt->fetchAll();
@@ -239,6 +241,7 @@ function handleFeedbackRoutes(string $action, string $method): void {
 
             // PATCH /feedback/{id} — update status/notes
             if ($method === 'PATCH') {
+                validateCsrf();
                 $input = getJsonBody();
                 if (!$input) jsonError('Datos inválidos');
 

@@ -282,6 +282,12 @@
 
     var API_BASE = '/api/analytics/';
 
+    /* HTML escape to prevent XSS from API data */
+    function esc(s) {
+        if (typeof s !== 'string') s = String(s == null ? '' : s);
+        return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
     function fetchData(endpoint) {
         var token = '';
         try {
@@ -329,9 +335,9 @@
             var pct = (items[i].value / max * 100).toFixed(1);
             var color = colorFn ? colorFn(items[i]) : 'var(--gold)';
             html += '<div class="bar-row">' +
-                '<span class="bar-label">' + items[i].label + '</span>' +
+                '<span class="bar-label">' + esc(items[i].label) + '</span>' +
                 '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>' +
-                '<span class="bar-val">' + items[i].display + '</span>' +
+                '<span class="bar-val">' + esc(items[i].display) + '</span>' +
                 '</div>';
         }
         el.innerHTML = html;
@@ -403,9 +409,9 @@
             tbody.innerHTML = '';
             for (var i = 0; i < d.struggles.length; i++) {
                 var s = d.struggles[i];
-                var row = '<tr><td>' + s.destination_id + '</td><td>' + s.starts + '</td><td>' + s.completions + '</td>' +
-                    '<td class="' + rateClass(parseFloat(s.completion_rate)) + '">' + s.completion_rate + '%</td>' +
-                    '<td>' + s.avg_progress_pct + '%</td></tr>';
+                var row = '<tr><td>' + esc(s.destination_id) + '</td><td>' + esc(s.starts) + '</td><td>' + esc(s.completions) + '</td>' +
+                    '<td class="' + rateClass(parseFloat(s.completion_rate)) + '">' + esc(s.completion_rate) + '%</td>' +
+                    '<td>' + esc(s.avg_progress_pct) + '%</td></tr>';
                 tbody.innerHTML += row;
             }
 
