@@ -13,14 +13,19 @@ $searchPlaceholder = $landingI18n['search_placeholder'] ?? 'Search...';
 $urlPrefix = $landingI18n['url_prefix'] ?? '';
 
 // ── Stats ────────────────────────────────────────────────────────────
-$wordCount = (int) $pdo->prepare('SELECT COUNT(*) FROM dict_words WHERE lang_code = ?')
-    ->execute([$landingLang]) ? $pdo->query("SELECT COUNT(*) FROM dict_words WHERE lang_code = '{$landingLang}'")->fetchColumn() : 0;
+$stmt = $pdo->prepare('SELECT COUNT(*) FROM dict_words WHERE lang_code = ?');
+$stmt->execute([$landingLang]);
+$wordCount = (int) $stmt->fetchColumn();
 
-$defCount = (int) $pdo->query("SELECT COUNT(*) FROM dict_definitions WHERE lang_code = '{$landingLang}'")->fetchColumn();
+$stmt = $pdo->prepare('SELECT COUNT(*) FROM dict_definitions WHERE lang_code = ?');
+$stmt->execute([$landingLang]);
+$defCount = (int) $stmt->fetchColumn();
 
-$transCount = (int) $pdo->query(
-    "SELECT COUNT(*) FROM dict_translations t JOIN dict_words w ON t.source_word_id = w.id WHERE w.lang_code = '{$landingLang}'"
-)->fetchColumn();
+$stmt = $pdo->prepare(
+    'SELECT COUNT(*) FROM dict_translations t JOIN dict_words w ON t.source_word_id = w.id WHERE w.lang_code = ?'
+);
+$stmt->execute([$landingLang]);
+$transCount = (int) $stmt->fetchColumn();
 
 // ── Popular words (sample with definitions) ─────────────────────────
 $stmt = $pdo->prepare(
@@ -260,7 +265,6 @@ $langSeoContent = [
              'text' => 'Испанский онлайн — это просто с правильными инструментами. Babel Free помогает расширять словарный запас, изучать переводы и понимать грамматику. Узнайте, в каких странах говорят на испанском, выучите месяц на испанском и другие базовые слова. Идеально для тех, кто ищет курсы испанского или хочет учить испанский язык самостоятельно.'],
         ],
     ],
-];
 
     // ── New 12 languages added Mar 19 (total: 24) ─────────────────────
 

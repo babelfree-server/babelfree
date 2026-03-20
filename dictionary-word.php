@@ -72,7 +72,7 @@ if ($expectedPrefix && strpos($rawSlug, $expectedPrefix . '-') === 0) {
 
 // If no prefix or wrong prefix, 301 redirect to correct prefix URL
 if ($expectedPrefix && !$hasCorrectPrefix) {
-    $correctUrl = '/dictionary/' . $lang . '/' . $expectedPrefix . '-' . urlencode($wordSlug);
+    $correctUrl = '/dictionary/' . $lang . '/' . $expectedPrefix . '-' . rawurlencode($wordSlug);
     header('Location: ' . $correctUrl, true, 301);
     exit;
 }
@@ -88,21 +88,27 @@ $entry = $model->lookup($lang, $wordSlug);
 // ── Lemma redirect: plural/inflected → base form ────────────────────
 if ($entry && isset($entry['_redirect_to'])) {
     $lemma = $entry['_redirect_to'];
-    $lemmaSlug = $expectedPrefix
-        ? $expectedPrefix . '-' . urlencode(mb_strtolower($lemma, 'UTF-8'))
-        : urlencode(mb_strtolower($lemma, 'UTF-8'));
-    header('Location: /dictionary/' . $lang . '/' . $lemmaSlug, true, 301);
-    exit;
+    // Guard against self-redirect loops
+    if (mb_strtolower($lemma, 'UTF-8') !== mb_strtolower($wordSlug, 'UTF-8')) {
+        $lemmaSlug = $expectedPrefix
+            ? $expectedPrefix . '-' . rawurlencode(mb_strtolower($lemma, 'UTF-8'))
+            : rawurlencode(mb_strtolower($lemma, 'UTF-8'));
+        header('Location: /dictionary/' . $lang . '/' . $lemmaSlug, true, 301);
+        exit;
+    }
 }
 
 // ── "Did you mean?" redirect: fuzzy match → first suggestion ────────
 if ($entry && isset($entry['_did_you_mean'])) {
     $suggestion = $entry['_did_you_mean'][0];
-    $sugSlug = $expectedPrefix
-        ? $expectedPrefix . '-' . urlencode(mb_strtolower($suggestion, 'UTF-8'))
-        : urlencode(mb_strtolower($suggestion, 'UTF-8'));
-    header('Location: /dictionary/' . $lang . '/' . $sugSlug, true, 302);
-    exit;
+    // Guard against self-redirect loops
+    if (mb_strtolower($suggestion, 'UTF-8') !== mb_strtolower($wordSlug, 'UTF-8')) {
+        $sugSlug = $expectedPrefix
+            ? $expectedPrefix . '-' . rawurlencode(mb_strtolower($suggestion, 'UTF-8'))
+            : rawurlencode(mb_strtolower($suggestion, 'UTF-8'));
+        header('Location: /dictionary/' . $lang . '/' . $sugSlug, true, 302);
+        exit;
+    }
 }
 
 // ── Fallback: curated JSON for lang=es ──────────────────────────────
@@ -197,7 +203,7 @@ $metaDesc = htmlspecialchars(mb_substr(strip_tags(html_entity_decode($metaDesc))
 
 // Canonical URL
 $urlPrefix = $i18n['url_prefix'] ?? 'significado-de';
-$canonicalUrl = "https://babelfree.com/dictionary/{$lang}/{$urlPrefix}-" . urlencode($wordLower);
+$canonicalUrl = "https://babelfree.com/dictionary/{$lang}/{$urlPrefix}-" . rawurlencode($wordLower);
 
 // OG title
 $ogTitle = str_replace('{word}', $word, $i18n['og_title'] ?? "Meaning of {word} | Babel Free");
@@ -285,7 +291,7 @@ if (!empty($entry['translations'])) {
             $trWord = mb_strtolower($tr['word']);
             $hreflangLinks[] = [
                 'lang' => $trLang,
-                'url'  => "https://babelfree.com/dictionary/{$trLang}/{$trPrefix}-" . urlencode($trWord),
+                'url'  => "https://babelfree.com/dictionary/{$trLang}/{$trPrefix}-" . rawurlencode($trWord),
             ];
             $seenLangs[$trLang] = true;
         }
@@ -624,7 +630,7 @@ $breadcrumbLd = json_encode([
         <h2><?= htmlspecialchars($seeAlsoTitle, ENT_QUOTES, 'UTF-8') ?></h2>
         <div class="see-also-grid">
             <?php foreach ($neighbors as $n): ?>
-                <a href="/dictionary/<?= $lang ?>/<?= $urlPrefix ?>-<?= urlencode(mb_strtolower($n)) ?>" class="see-also-link">
+                <a href="/dictionary/<?= $lang ?>/<?= $urlPrefix ?>-<?= rawurlencode(mb_strtolower($n)) ?>" class="see-also-link">
                     <span class="link-word"><?= htmlspecialchars($n, ENT_QUOTES, 'UTF-8') ?></span>
                 </a>
             <?php endforeach; ?>

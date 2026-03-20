@@ -164,8 +164,8 @@ class Dictionary {
 
             $dist = levenshtein($normalized, $cn);
             $maxLen = max(mb_strlen($normalized), mb_strlen($cn));
-            // Only include if reasonably close (within 40% of word length)
-            if ($dist <= max(2, (int)($maxLen * 0.4))) {
+            // Only include if reasonably close (within 30% of word length, max 3)
+            if ($dist <= min(3, max(1, (int)($maxLen * 0.3)))) {
                 $scored[] = ['word' => $c['word'], 'distance' => $dist];
             }
         }
@@ -332,7 +332,7 @@ class Dictionary {
      */
     public function suggest(string $query, string $langCode, int $limit = 10): array {
         $normalized = $this->normalize($query);
-        if (strlen($normalized) < 1) return [];
+        if (mb_strlen($normalized, 'UTF-8') < 1) return [];
 
         $stmt = $this->pdo->prepare(
             'SELECT word, part_of_speech, cefr_level
@@ -437,7 +437,8 @@ class Dictionary {
             $sql .= ' AND cefr_level = ?';
             $params2[] = $cefrLevel;
         }
-        $sql .= ' ORDER BY id LIMIT 1 OFFSET ' . $offset;
+        $sql .= ' ORDER BY id LIMIT 1 OFFSET ?';
+        $params2[] = (int) $offset;
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params2);
         return $stmt->fetch() ?: null;
