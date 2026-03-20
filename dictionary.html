@@ -624,6 +624,12 @@
         var allLanguages = [];
         var langSelectorOpen = false;
 
+        // Supported language codes (must match dict_i18n.json keys)
+        var SUPPORTED_LANGS = {
+            es:1,en:1,fr:1,de:1,pt:1,it:1,zh:1,ja:1,ko:1,ru:1,ar:1,nl:1,
+            hi:1,tr:1,pl:1,sv:1,uk:1,cs:1,id:1,th:1,vi:1,el:1,he:1,fi:1
+        };
+
         // i18n state
         var allI18nData = {};
         var i18nStrings = {};
@@ -807,10 +813,14 @@
             // /dictionary/{lang} or /dictionary/{pair}
             if (parts.length === 2) {
                 if (/^[a-z]{2}-[a-z]{2,3}$/.test(parts[1])) {
-                    // Legacy pair format
-                    return { view: 'search', lang: parts[1].split('-')[0] };
+                    // Legacy pair format — validate source lang
+                    var pairLang = parts[1].split('-')[0];
+                    if (SUPPORTED_LANGS[pairLang]) return { view: 'search', lang: pairLang };
+                    return { view: 'search' };
                 }
-                return { view: 'search', lang: parts[1] };
+                // Validate language code
+                if (SUPPORTED_LANGS[parts[1]]) return { view: 'search', lang: parts[1] };
+                return { view: 'search' };
             }
             // /dictionary/{lang}/{prefix}-{word} or /dictionary/{pair}/{word}
             if (parts.length >= 3) {
@@ -833,9 +843,13 @@
                     }
                 }
                 if (/^[a-z]{2}-[a-z]{2,3}$/.test(langOrPair)) {
-                    // Legacy pair format — extract source lang
-                    return { view: 'word', lang: langOrPair.split('-')[0], word: word, legacyPair: langOrPair };
+                    // Legacy pair format — validate and extract source lang
+                    var srcLang = langOrPair.split('-')[0];
+                    if (SUPPORTED_LANGS[srcLang]) return { view: 'word', lang: srcLang, word: word, legacyPair: langOrPair };
+                    return { view: 'search' };
                 }
+                // Validate language code
+                if (!SUPPORTED_LANGS[langOrPair]) return { view: 'search' };
                 return { view: 'word', lang: langOrPair, word: word };
             }
             return { view: 'search' };

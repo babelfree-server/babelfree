@@ -3,11 +3,27 @@
 class Dictionary {
     private PDO $pdo;
     private array $i18n;
+    private array $supportedLangs;
 
     public function __construct(PDO $pdo) {
         $this->pdo = $pdo;
         $i18nFile = dirname(__DIR__) . '/scripts/data/dict_i18n.json';
         $this->i18n = file_exists($i18nFile) ? json_decode(file_get_contents($i18nFile), true) : [];
+        $this->supportedLangs = array_keys($this->i18n);
+    }
+
+    /**
+     * Check if a language code is supported.
+     */
+    public function isValidLang(string $lang): bool {
+        return in_array($lang, $this->supportedLangs, true);
+    }
+
+    /**
+     * Get the list of supported language codes.
+     */
+    public function getSupportedLangs(): array {
+        return $this->supportedLangs;
     }
 
     /**

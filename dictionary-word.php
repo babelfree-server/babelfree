@@ -39,6 +39,13 @@ if (count($segments) < 3 || $segments[0] !== 'dictionary') {
 $lang = $segments[1];
 $rawSlug = urldecode(implode('/', array_slice($segments, 2))); // rejoin in case of multi-segment
 
+// ── Validate language code ──────────────────────────────────────────
+if (!isset($allI18n[$lang])) {
+    // Unknown language code — fall back to SPA (handles its own 404)
+    readfile(__DIR__ . '/dictionary.html');
+    exit;
+}
+
 // ── i18n for this language ──────────────────────────────────────────
 $i18n = $allI18n[$lang] ?? $defaultI18n;
 $expectedPrefix = $i18n['url_prefix'] ?? null;

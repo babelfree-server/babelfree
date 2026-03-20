@@ -70,6 +70,10 @@ function handleDictionaryRoutes(string $action, string $method): void {
         }
         $lang = $lang ?: 'es';
 
+        if (!$model->isValidLang($lang)) {
+            jsonError('Idioma no soportado: ' . $lang, 400);
+        }
+
         if (strlen($q) < 1) {
             jsonSuccess(['suggestions' => []]);
         }
@@ -88,6 +92,11 @@ function handleDictionaryRoutes(string $action, string $method): void {
             $lang = $langParts[0] ?? 'es';
         }
         $lang = $lang ?: 'es';
+
+        if (!$model->isValidLang($lang)) {
+            jsonError('Idioma no soportado: ' . $lang, 400);
+        }
+
         $level = $_GET['level'] ?? null;
 
         $word = $model->getRandomWord($lang, $level);
@@ -128,8 +137,14 @@ function handleDictionaryRoutes(string $action, string $method): void {
             if (count($langParts) !== 2) {
                 jsonError('Par de idiomas inválido (ej: es-en)', 400);
             }
+            if (!$model->isValidLang($langParts[0]) || !$model->isValidLang($langParts[1])) {
+                jsonError('Idioma no soportado', 400);
+            }
             $result = $model->lookupByPair($langParts[0], $langParts[1], urldecode($word), $user);
         } else {
+            if (!$model->isValidLang($langOrPair)) {
+                jsonError('Idioma no soportado: ' . $langOrPair, 400);
+            }
             // New single-language format: es
             $result = $model->lookup($langOrPair, urldecode($word), $user);
         }
