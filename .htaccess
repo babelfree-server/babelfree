@@ -45,6 +45,10 @@ ErrorDocument 404 /404.html
     # Forum: listing page
     RewriteRule ^foro/?$ foro.html [L]
 
+    # E-E-A-T pages: server-rendered for SEO
+    RewriteRule ^about/?$ about.php [L]
+    RewriteRule ^privacy/?$ privacy.php [L]
+
     # Dictionary: ALL word-level URLs route to PHP (handles prefix validation + 301s)
     # Language index pages (e.g. /dictionary/ru/) are also handled in dictionary-word.php
     RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/(.+)$ dictionary-word.php [L]

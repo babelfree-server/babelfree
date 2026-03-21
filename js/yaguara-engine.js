@@ -204,6 +204,8 @@
     ========================================================== */
     var Audio = {
         _ctx: null,
+        _lastSpoken: null,
+        _lastOpts: null,
         _getCtx: function() {
             if (!this._ctx) {
                 try { this._ctx = new (window.AudioContext || window.webkitAudioContext)(); }
@@ -216,6 +218,9 @@
         speak: function(text, opts) {
             if (!window.speechSynthesis || !text) return;
             window.speechSynthesis.cancel();
+            this._lastSpoken = text;
+            this._lastOpts = opts || null;
+            this._showFloatingReplay();
             var u = new SpeechSynthesisUtterance(text);
             u.lang = (opts && opts.lang) || CONFIG.speechLang;
             u.rate = (opts && opts.rate) || this._spiralRate || CONFIG.speechRate.a2;
@@ -234,6 +239,16 @@
             if (window.speechSynthesis) {
                 try { speechSynthesis.cancel(); } catch(e) { /* silent */ }
             }
+        },
+        _showFloatingReplay: function() {
+            var btn = document.getElementById('ygFloatingReplay');
+            if (btn) { btn.style.display = 'flex'; btn.style.opacity = '0'; setTimeout(function() { btn.style.opacity = '1'; }, 50); }
+        },
+        hideFloatingReplay: function() {
+            var btn = document.getElementById('ygFloatingReplay');
+            if (btn) { btn.style.opacity = '0'; setTimeout(function() { btn.style.display = 'none'; }, 300); }
+            this._lastSpoken = null;
+            this._lastOpts = null;
         },
         silence: function(ms, cb) {
             setTimeout(cb || function(){}, ms || CONFIG.silenceDuration);
@@ -9216,6 +9231,12 @@
             /* Feedback widget — floating button for bug reports / suggestions */
             this._initFeedbackWidget();
 
+            /* Universal floating audio replay button */
+            this._initFloatingReplay();
+
+            /* Audio interaction prompt for autoplay policy */
+            this._initAudioPrompt();
+
             /* PersonalLexicon — singleton, created once */
             if (window.PersonalLexicon) {
                 this._lexicon = PersonalLexicon.getInstance();
@@ -9656,8 +9677,45 @@
             }
         },
 
+        _initFloatingReplay: function() {
+            if (document.getElementById('ygFloatingReplay')) return;
+            var btn = document.createElement('button');
+            btn.id = 'ygFloatingReplay';
+            btn.setAttribute('aria-label', 'Repetir audio');
+            btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg><span style="font-size:9px;font-weight:600;letter-spacing:0.5px;margin-top:2px">Repetir</span>';
+            btn.style.cssText = 'display:none;flex-direction:column;align-items:center;justify-content:center;position:fixed;bottom:100px;right:20px;z-index:900;width:60px;height:60px;border-radius:50%;border:2px solid rgba(201,162,39,0.3);background:rgba(30,25,18,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#c9a84c;cursor:pointer;padding:0;box-shadow:0 4px 20px rgba(0,0,0,0.4),inset 0 1px 0 rgba(201,162,39,0.15);transition:all 0.3s ease;opacity:0;';
+            btn.addEventListener('click', function(e) {
+                e.preventDefault(); e.stopPropagation();
+                if (Audio._lastSpoken) Audio.speak(Audio._lastSpoken, Audio._lastOpts);
+            });
+            btn.addEventListener('mouseenter', function() { this.style.borderColor = '#c9a84c'; this.style.transform = 'scale(1.1)'; });
+            btn.addEventListener('mouseleave', function() { this.style.borderColor = 'rgba(201,162,39,0.3)'; this.style.transform = 'scale(1)'; });
+            document.body.appendChild(btn);
+        },
+
+        _initAudioPrompt: function() {
+            if (document.getElementById('ygAudioPrompt')) return;
+            try { if (sessionStorage.getItem('ygAudioActivated')) return; } catch(e) {}
+            var banner = document.createElement('div');
+            banner.id = 'ygAudioPrompt';
+            banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:950;background:rgba(30,25,18,0.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(201,162,39,0.25);padding:12px 20px;text-align:center;color:#c9a84c;font-size:14px;font-weight:500;cursor:pointer;transition:all 0.4s ease;';
+            banner.innerHTML = '\ud83d\udd0a Toca la pantalla para activar el audio';
+            function dismiss() {
+                banner.style.opacity = '0'; banner.style.transform = 'translateY(100%)';
+                setTimeout(function() { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 400);
+                try { sessionStorage.setItem('ygAudioActivated', '1'); } catch(e) {}
+                document.removeEventListener('click', dismiss, true);
+                document.removeEventListener('touchstart', dismiss, true);
+            }
+            document.addEventListener('click', dismiss, true);
+            document.addEventListener('touchstart', dismiss, true);
+            document.body.appendChild(banner);
+        },
+
         _loadEncounter: function(index) {
             if (index < 0 || index >= this._games.length) return;
+            /* Hide floating replay from previous encounter */
+            Audio.hideFloatingReplay();
             this._currentIdx = index;
             var data = this._games[index];
             var state = this._gameStates[index];

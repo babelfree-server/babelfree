@@ -131,8 +131,8 @@
         /**
          * Register a new account
          */
-        register: function(email, password, displayName, userType, interfaceLang, detectedLang, role, gender, nativeLang) {
-            return _request('POST', '/auth/register', {
+        register: function(email, password, displayName, userType, interfaceLang, detectedLang, role, gender, nativeLang, marketingFields) {
+            const payload = {
                 email: email,
                 password: password,
                 display_name: displayName,
@@ -142,7 +142,28 @@
                 detected_lang: detectedLang || null,
                 gender: gender || 'X',
                 native_lang: nativeLang || null
-            }, true);
+            };
+            if (marketingFields && typeof marketingFields === 'object') {
+                if (marketingFields.dob) payload.dob = marketingFields.dob;
+                if (marketingFields.country) payload.country = marketingFields.country;
+                if (marketingFields.phone) payload.phone = marketingFields.phone;
+                if (marketingFields.source) payload.source = marketingFields.source;
+                if (marketingFields.goal) payload.goal = marketingFields.goal;
+                payload.marketing_consent = !!marketingFields.consent;
+                payload.data_consent = !!marketingFields.dataConsent;
+            }
+            return _request('POST', '/auth/register', payload, true);
+        },
+
+        updateProfile: function(data) {
+            return _request('POST', '/auth/update-profile', data);
+        },
+
+        changePassword: function(currentPassword, newPassword) {
+            return _request('POST', '/auth/change-password', {
+                current_password: currentPassword,
+                new_password: newPassword
+            });
         },
 
         /**

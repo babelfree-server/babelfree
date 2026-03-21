@@ -980,7 +980,7 @@
             body {
                 padding: 10px 0;
             }
-            
+
             .login-container {
                 padding: 40px 30px;
                 margin: 10px;
@@ -1005,11 +1005,11 @@
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
-            
+
             .version-option {
                 padding: 20px;
             }
-            
+
             .version-icon {
                 font-size: 2.5rem;
             }
@@ -1068,7 +1068,7 @@
                 max-height: 95vh;
                 overflow-y: auto;
             }
-            
+
             .form-group {
                 margin-bottom: 20px;
             }
@@ -1136,7 +1136,7 @@
 
     <div class="login-container">
         <a href="/elviajedeljaguar" class="back-button" id="backButton" data-ai-translate="nav.back" data-ai-context="navigation">← Volver</a>
-        
+
         <!-- Enhanced Language Selector -->
         <div class="language-selector">
             <button class="lang-toggle" id="langToggle">
@@ -1152,7 +1152,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="login-header">
             <div class="jaguar-logo" onclick="showJaguarInfo()">
                 <img src="img/jaguar-hero-full.jpg" alt="Yaguará el Jaguar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
@@ -1211,11 +1211,11 @@
         <form class="login-form" id="loginForm">
             <div class="form-group">
                 <label for="email" class="form-label" id="emailLabel" data-ai-translate="form.email-label">Dirección de email</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    class="form-input" 
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
                     placeholder="tu@email.com"
                     required
                     autocomplete="email"
@@ -1226,11 +1226,11 @@
             <div class="form-group">
                 <label for="password" class="form-label" id="passwordLabel" data-ai-translate="form.password-label">Contraseña</label>
                 <div style="position: relative;">
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        class="form-input" 
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-input"
                         placeholder="Tu contraseña"
                         required
                         autocomplete="current-password"
@@ -1275,7 +1275,8 @@
             </div>
             <div class="form-group">
                 <label for="regPassword" class="form-label" data-ai-translate="form.password-label">Contraseña</label>
-                <input type="password" id="regPassword" name="regPassword" class="form-input" placeholder="Mínimo 8 caracteres" required autocomplete="new-password" minlength="8">
+                <input type="password" id="regPassword" name="regPassword" class="form-input" placeholder="Mínimo 10 caracteres" required autocomplete="new-password" minlength="10">
+                <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:4px;" data-ai-translate="form.password-hint">Mínimo 10 caracteres. Debe incluir mayúscula, minúscula y número.</div>
             </div>
             <div class="form-group">
                 <label class="form-label" data-ai-translate="form.gender-label">Género</label>
@@ -1296,7 +1297,85 @@
             </div>
             <div class="form-group">
                 <label for="regPasswordConfirm" class="form-label" data-ai-translate="form.password-confirm-label">Confirmar contraseña</label>
-                <input type="password" id="regPasswordConfirm" name="regPasswordConfirm" class="form-input" placeholder="Repite tu contraseña" required autocomplete="new-password" minlength="8">
+                <input type="password" id="regPasswordConfirm" name="regPasswordConfirm" class="form-input" placeholder="Repite tu contraseña" required autocomplete="new-password" minlength="10">
+            </div>
+            <div class="form-group">
+                <label for="regDob" class="form-label" data-ai-translate="form.dob-label">Fecha de nacimiento</label>
+                <input type="date" id="regDob" name="regDob" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="regCountry" class="form-label" data-ai-translate="form.country-label">País</label>
+                <select id="regCountry" name="regCountry" class="form-input form-select">
+                    <option value="">— Seleccionar —</option>
+                    <option value="US">United States</option>
+                    <option value="BR">Brasil</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Deutschland</option>
+                    <option value="CO">Colombia</option>
+                    <option value="MX">México</option>
+                    <option value="ES">España</option>
+                    <option value="AR">Argentina</option>
+                    <option value="IT">Italia</option>
+                    <option value="AU">Australia</option>
+                    <option value="JP">日本</option>
+                    <option value="KR">대한민국</option>
+                    <option value="CN">中国</option>
+                    <option value="IN">भारत</option>
+                    <option value="NL">Nederland</option>
+                    <option value="PL">Polska</option>
+                    <option value="SE">Sverige</option>
+                    <option value="PT">Portugal</option>
+                    <option value="CL">Chile</option>
+                    <option value="PE">Perú</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="TR">Türkiye</option>
+                    <option value="RU">Россия</option>
+                    <option value="IE">Ireland</option>
+                    <option value="BE">België</option>
+                    <option value="CH">Schweiz</option>
+                    <option value="AT">Österreich</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="regPhone" class="form-label" data-ai-translate="form.phone-label">Teléfono</label>
+                <input type="tel" id="regPhone" name="regPhone" class="form-input" placeholder="+1 555 123 4567">
+            </div>
+            <div class="form-group">
+                <label for="regSource" class="form-label" data-ai-translate="form.source-label">¿Cómo nos encontraste?</label>
+                <select id="regSource" name="regSource" class="form-input form-select">
+                    <option value="">— Seleccionar —</option>
+                    <option value="search">Buscador / Search engine</option>
+                    <option value="social">Redes sociales / Social media</option>
+                    <option value="friend">Amigo o familiar / Friend or family</option>
+                    <option value="teacher">Profesor o escuela / Teacher or school</option>
+                    <option value="other">Otro / Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="regGoal" class="form-label" data-ai-translate="form.goal-label">¿Por qué aprendes español?</label>
+                <select id="regGoal" name="regGoal" class="form-input form-select">
+                    <option value="">— Seleccionar —</option>
+                    <option value="travel">Viajar / Travel</option>
+                    <option value="work">Trabajo / Work</option>
+                    <option value="school">Estudios / School</option>
+                    <option value="heritage">Hablante de herencia / Heritage speaker</option>
+                    <option value="curiosity">Curiosidad / Curiosity</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="gender-option" style="justify-content: flex-start; gap: 0.5rem;">
+                    <input type="checkbox" id="regConsent" name="regConsent">
+                    <span class="form-label" style="margin: 0; font-size: 0.85rem;" data-ai-translate="form.marketing-consent-label">Acepto recibir información sobre nuevas funciones y contenido</span>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="gender-option" style="justify-content: flex-start; gap: 0.5rem;">
+                    <input type="checkbox" id="regDataConsent" name="regDataConsent" required>
+                    <span class="form-label" style="margin: 0; font-size: 0.85rem;" data-ai-translate="form.data-consent-label">Acepto el tratamiento de mis datos personales de acuerdo con la <a href="/privacy" style="color:#F4A5A5;">política de privacidad</a></span>
+                </label>
             </div>
             <button type="submit" class="login-button" id="registerButton">
                 <span id="registerButtonText" data-ai-translate="auth.register-button">Crear cuenta</span>
@@ -1427,6 +1506,12 @@
                         'error.connection': 'Error de conexión. Intenta de nuevo.',
                         'register.check-email': 'Cuenta creada. Revisa tu correo para verificar tu cuenta.',
                         'forgot.check-email': 'Si el email existe, recibirás un enlace para restablecer tu contraseña.',
+                        'form.dob-label': 'Fecha de nacimiento',
+                        'form.country-label': 'País',
+                        'form.phone-label': 'Teléfono',
+                        'form.source-label': '¿Cómo nos encontraste?',
+                        'form.goal-label': '¿Por qué aprendes español?',
+                        'form.consent-label': 'Acepto recibir información sobre nuevas funciones y contenido',
                     },
                     'en': {
                         'form.name-label': 'Name',
@@ -1447,6 +1532,12 @@
                         'error.connection': 'Connection error. Please try again.',
                         'register.check-email': 'Account created. Check your email to verify your account.',
                         'forgot.check-email': 'If the email exists, you will receive a reset link.',
+                        'form.dob-label': 'Date of birth',
+                        'form.country-label': 'Country',
+                        'form.phone-label': 'Phone',
+                        'form.source-label': 'How did you find us?',
+                        'form.goal-label': 'Why are you learning Spanish?',
+                        'form.consent-label': 'I agree to receive information about new features and content',
                     },
                     'pt': {
                         'form.name-label': 'Nome',
@@ -1467,6 +1558,12 @@
                         'error.connection': 'Erro de conexão. Tente novamente.',
                         'register.check-email': 'Conta criada. Verifique seu email para confirmar.',
                         'forgot.check-email': 'Se o email existir, você receberá um link de redefinição.',
+                        'form.dob-label': 'Data de nascimento',
+                        'form.country-label': 'País',
+                        'form.phone-label': 'Telefone',
+                        'form.source-label': 'Como nos encontrou?',
+                        'form.goal-label': 'Por que está aprendendo espanhol?',
+                        'form.consent-label': 'Aceito receber informações sobre novos recursos e conteúdo',
                     },
                     'fr': {
                         'form.name-label': 'Nom',
@@ -1487,6 +1584,12 @@
                         'error.connection': 'Erreur de connexion. Veuillez réessayer.',
                         'register.check-email': 'Compte créé. Vérifiez votre email pour confirmer.',
                         'forgot.check-email': 'Si l\'email existe, vous recevrez un lien de réinitialisation.',
+                        'form.dob-label': 'Date de naissance',
+                        'form.country-label': 'Pays',
+                        'form.phone-label': 'Téléphone',
+                        'form.source-label': 'Comment nous avez-vous trouvés ?',
+                        'form.goal-label': 'Pourquoi apprenez-vous l\'espagnol ?',
+                        'form.consent-label': 'J\'accepte de recevoir des informations sur les nouvelles fonctionnalités et le contenu',
                     },
                 };
                 for (const lang in extra) {
@@ -1600,7 +1703,7 @@
             createFloatingElements() {
                 const elements = ['🍃', '🦋', '🌿', '🌳', '🌾', '🪶', '🌙', '✧'];
                 const container = document.getElementById('floatingElements');
-                
+
                 setInterval(() => {
                     if (Math.random() < 0.25) {
                         const element = document.createElement('div');
@@ -1611,7 +1714,7 @@
                         element.style.fontSize = (1.5 + Math.random() * 1) + 'em';
                         element.style.animationDelay = Math.random() * 2 + 's';
                         container.appendChild(element);
-                        
+
                         setTimeout(() => {
                             if (container.contains(element)) {
                                 container.removeChild(element);
@@ -1719,7 +1822,7 @@
                 window.addEventListener('beforeinstallprompt', (e) => {
                     e.preventDefault();
                     this.deferredPrompt = e;
-                    
+
                     setTimeout(() => {
                         this.showPWAInstallBanner();
                     }, 5000);
@@ -1748,12 +1851,12 @@
                         const focusableElements = document.querySelectorAll(
                             'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
                         );
-                        
+
                         if (focusableElements.length === 0) return;
-                        
+
                         const firstElement = focusableElements[0];
                         const lastElement = focusableElements[focusableElements.length - 1];
-                        
+
                         if (e.shiftKey && document.activeElement === firstElement) {
                             e.preventDefault();
                             lastElement.focus();
@@ -1771,9 +1874,9 @@
                     announcement.setAttribute('aria-atomic', 'true');
                     announcement.className = 'sr-only';
                     announcement.textContent = message;
-                    
+
                     document.body.appendChild(announcement);
-                    
+
                     setTimeout(() => {
                         document.body.removeChild(announcement);
                     }, 1000);
@@ -1786,7 +1889,7 @@
             loadLanguagePreferences() {
                 const savedInterfaceLanguage = localStorage.getItem('jaguarInterfaceLanguage');
                 const savedLearningLanguage = localStorage.getItem('jaguarLearningLanguage');
-                
+
                 if (savedInterfaceLanguage && savedInterfaceLanguage !== 'auto') {
                     this.userLanguagePreference = savedInterfaceLanguage;
                     this.isAutoMode = false;
@@ -1796,12 +1899,12 @@
                     this.currentLanguage = 'auto';
                     this.updateLanguageToggle('auto');
                     this.updateButtonStates('auto');
-                    
+
                     setTimeout(() => {
                         this.detectUserLanguage();
                     }, 1000);
                 }
-                
+
             }
 
             detectUserLanguage() {
@@ -1829,10 +1932,10 @@
             toggleLanguageDropdown() {
                 const dropdown = document.getElementById('langDropdown');
                 const toggle = document.getElementById('langToggle');
-                
+
                 dropdown.classList.toggle('show');
                 toggle.classList.toggle('active');
-                
+
                 if (dropdown.classList.contains('show')) {
                     setTimeout(() => {
                         document.addEventListener('click', this.closeDropdownOutside.bind(this));
@@ -1843,7 +1946,7 @@
             closeDropdownOutside(event) {
                 const dropdown = document.getElementById('langDropdown');
                 const toggle = document.getElementById('langToggle');
-                
+
                 if (!dropdown.contains(event.target) && !toggle.contains(event.target)) {
                     this.closeDropdowns();
                 }
@@ -1928,7 +2031,7 @@
                 document.querySelectorAll('.lang-btn').forEach(btn => {
                     btn.classList.remove('active');
                 });
-                
+
                 const activeBtn = document.getElementById(`${activeLang}Btn`);
                 if (activeBtn) {
                     activeBtn.classList.add('active');
@@ -1938,15 +2041,15 @@
             showLanguageDetection() {
                 const banner = document.getElementById('langDetectionBanner');
                 const detectionText = document.getElementById('detectionText');
-                
+
                 if (detectionText) {
                     detectionText.textContent = this.t('ui.lang-detected');
                 }
-                
+
                 if (banner) {
                     banner.style.display = 'block';
                 }
-                
+
                 if (!this.isAutoMode && this.detectedLanguage !== this.currentLanguage) {
                     setTimeout(() => {
                         this.showLanguageSwitchSuggestion();
@@ -1979,13 +2082,13 @@
             acceptLanguageSuggestion() {
                 if (this.detectedLanguage) {
                     this.setLanguage(this.detectedLanguage);
-                    
+
                     const suggestion = document.getElementById('langSwitchSuggestion');
                     const banner = document.getElementById('langDetectionBanner');
-                    
+
                     if (suggestion) suggestion.style.display = 'none';
                     if (banner) banner.style.display = 'none';
-                    
+
                 }
             }
 
@@ -2013,19 +2116,19 @@
 
             selectVersion(version) {
                 this.selectedVersion = version;
-                
+
                 document.querySelectorAll('.version-option').forEach(option => {
                     option.classList.remove('selected');
                 });
-                
+
                 document.querySelector(`.version-option.${version}`).classList.add('selected');
-                
+
                 // Clear form
                 const emailInput = document.getElementById('email');
                 const passwordInput = document.getElementById('password');
                 if (emailInput) emailInput.value = '';
                 if (passwordInput) passwordInput.value = '';
-                
+
                 const versionNames = {
                     'individual': this.t('version.individual-title'),
                     'classroom': this.t('version.classroom-title')
@@ -2125,7 +2228,7 @@
             togglePassword() {
                 const passwordInput = document.getElementById('password');
                 const toggleBtn = document.getElementById('passwordToggle');
-                
+
                 if (passwordInput && toggleBtn) {
                     if (passwordInput.type === 'password') {
                         passwordInput.type = 'text';
@@ -2201,13 +2304,20 @@
                 const genderEl = document.querySelector('input[name="regGender"]:checked');
                 const gender = genderEl ? genderEl.value : 'X';
                 const nativeLang = document.getElementById('regNativeLang').value || this.detectedLanguage || 'en';
+                const dob = document.getElementById('regDob') ? document.getElementById('regDob').value || null : null;
+                const country = document.getElementById('regCountry') ? document.getElementById('regCountry').value || null : null;
+                const phone = document.getElementById('regPhone') ? document.getElementById('regPhone').value || null : null;
+                const source = document.getElementById('regSource') ? document.getElementById('regSource').value || null : null;
+                const goal = document.getElementById('regGoal') ? document.getElementById('regGoal').value || null : null;
+                const marketingConsent = document.getElementById('regConsent') ? document.getElementById('regConsent').checked : false;
+                const dataConsent = document.getElementById('regDataConsent') ? document.getElementById('regDataConsent').checked : false;
 
                 if (!name || !email || !password || !confirm) {
                     this.showError(this.t('error.fill-all-fields'));
                     return;
                 }
-                if (password.length < 8) {
-                    this.showError(this.t('error.password-too-short') || 'La contraseña debe tener al menos 8 caracteres');
+                if (password.length < 10 || !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
+                    this.showError(this.t('error.password-too-short') || 'La contraseña debe tener al menos 10 caracteres, con mayúscula, minúscula y número');
                     return;
                 }
                 if (password !== confirm) {
@@ -2226,7 +2336,8 @@
                         this.detectedLanguage,
                         role,
                         gender,
-                        nativeLang
+                        nativeLang,
+                        { dob, country, phone, source, goal, consent: marketingConsent, dataConsent }
                     );
                     if (res.success) {
                         this.showSuccess(res.data.message || this.t('register.check-email') || 'Cuenta creada. Revisa tu correo para verificar tu cuenta.');
@@ -2268,8 +2379,8 @@
                 const token = this._resetToken;
 
                 if (!password || !confirm) { this.showError(this.t('error.fill-all-fields')); return; }
-                if (password.length < 8) {
-                    this.showError(this.t('error.password-too-short') || 'La contraseña debe tener al menos 8 caracteres');
+                if (password.length < 10 || !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
+                    this.showError(this.t('error.password-too-short') || 'La contraseña debe tener al menos 10 caracteres, con mayúscula, minúscula y número');
                     return;
                 }
                 if (password !== confirm) {
@@ -2401,7 +2512,7 @@
                         }
                         this.deferredPrompt = null;
                     });
-                    
+
                     this.hidePWAInstallBanner();
                 }
             }
@@ -2422,6 +2533,7 @@
                     successDiv.textContent = message;
                     successDiv.style.display = 'block';
                     successDiv.setAttribute('role', 'alert');
+                    successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             }
 
@@ -2435,12 +2547,12 @@
             showNotification(title, message, type = 'info') {
                 const existingNotifications = document.querySelectorAll('.notification');
                 existingNotifications.forEach(notif => notif.remove());
-                
+
                 const notification = document.createElement('div');
                 notification.className = `notification ${type}`;
                 notification.setAttribute('role', 'alert');
                 notification.setAttribute('aria-live', 'polite');
-                
+
                 const icons = {
                     info: '·',
                     success: '✓',
@@ -2456,13 +2568,13 @@
                     </div>
                     <div style="font-size: 0.9em; opacity: 0.9; line-height: 1.4;">${message}</div>
                 `;
-                
+
                 document.body.appendChild(notification);
-                
+
                 setTimeout(() => {
                     notification.classList.add('show');
                 }, 100);
-                
+
                 setTimeout(() => {
                     notification.classList.remove('show');
                     setTimeout(() => {
@@ -2488,15 +2600,15 @@
                 };
 
                 console.log('Login Analytics:', eventData);
-                
+
                 // Store analytics locally
                 const analytics = JSON.parse(localStorage.getItem('colombianLoginAnalytics') || '[]');
                 analytics.push(eventData);
-                
+
                 if (analytics.length > 100) {
                     analytics.splice(0, analytics.length - 100);
                 }
-                
+
                 localStorage.setItem('colombianLoginAnalytics', JSON.stringify(analytics));
             }
         }
@@ -2520,29 +2632,29 @@
         document.addEventListener('DOMContentLoaded', function() {
             try {
                 loginSystem = new ColombianLoginSystem();
-                
+
                 // Set default version selection
                 selectVersion('individual');
-                
+
                 // Auto-focus email field
                 const emailField = document.getElementById('email');
                 if (emailField) {
                     emailField.focus();
                 }
-                
+
                 // Add performance monitoring
                 if (window.performance && window.performance.mark) {
                     window.performance.mark('colombian-login-system-loaded');
                 }
-                
+
                 console.log('Yaguará Login System loaded');
                 console.log('Multilingual support active');
                 console.log('Dual path architecture enabled');
                 console.log('PWA ready');
-                
+
             } catch (error) {
                 console.error('Failed to initialize login system:', error);
-                
+
                 // Fallback notification
                 const fallbackNotification = document.createElement('div');
                 fallbackNotification.style.cssText = `
@@ -2552,7 +2664,7 @@
                 `;
                 fallbackNotification.textContent = 'Error al cargar el sistema. Recarga la página.';
                 document.body.appendChild(fallbackNotification);
-                
+
                 setTimeout(() => {
                     if (document.body.contains(fallbackNotification)) {
                         document.body.removeChild(fallbackNotification);
@@ -2577,7 +2689,7 @@
         // Performance and error monitoring
         window.addEventListener('error', (event) => {
             console.error('Login System Error:', event.error);
-            
+
             if (loginSystem) {
                 loginSystem.trackEvent('system_error', {
                     error: event.error.message,

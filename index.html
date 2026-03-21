@@ -62,17 +62,14 @@
         {
           "@type": "WebSite",
           "@id": "https://babelfree.com/#website",
-          "name": "Babel Free",
+          "name": "Babelfree — El Viaje del Jaguar",
           "url": "https://babelfree.com",
-          "description": "Modern language courses and professional translation services that preserve meaning and tone in the digital world.",
+          "description": "Learn Spanish through an immersive adventure across Colombian ecosystems. CEFR-aligned language learning from A1 to C2.",
           "publisher": {"@id": "https://babelfree.com/#organization"},
-          "inLanguage": "en",
+          "inLanguage": ["es", "en"],
           "potentialAction": {
             "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://babelfree.com/dictionary?q={search_term_string}"
-            },
+            "target": "https://babelfree.com/dictionary/{lang}/{search_term_string}",
             "query-input": "required name=search_term_string"
           }
         },
@@ -92,9 +89,61 @@
         },
         {
           "@type": ["EducationalOrganization", "Organization"],
-          "name": "Babel Free",
+          "name": "Babelfree",
           "url": "https://babelfree.com",
-          "logo": "https://babelfree.com/assets/tower-logo.png"
+          "logo": "https://babelfree.com/assets/tower-logo.png",
+          "description": "Immersive Spanish language learning platform using gamified storytelling across Colombian ecosystems",
+          "areaServed": "Worldwide",
+          "educationalCredentialAwarded": "CEFR A1-C2 Spanish proficiency",
+          "hasOfferingCatalog": {
+            "@type": "OfferingCatalog",
+            "name": "Spanish Language Courses",
+            "itemListElement": [
+              {
+                "@type": "Course",
+                "name": "El Viaje del Jaguar — Spanish A1-A2",
+                "description": "Beginner Spanish through an immersive adventure with Yaguará the jaguar across Colombian ecosystems",
+                "provider": {"@type": "Organization", "name": "Babelfree"},
+                "educationalLevel": "Beginner",
+                "inLanguage": "es",
+                "coursePrerequisites": "None",
+                "teaches": "Spanish language fundamentals, vocabulary, basic grammar",
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "online",
+                  "courseWorkload": "PT850H"
+                }
+              },
+              {
+                "@type": "Course",
+                "name": "El Viaje del Jaguar — Spanish B1-B2",
+                "description": "Intermediate Spanish immersion through Colombian cultural exploration and ecosystem adventures",
+                "provider": {"@type": "Organization", "name": "Babelfree"},
+                "educationalLevel": "Intermediate",
+                "inLanguage": "es",
+                "teaches": "Spanish fluency, complex grammar, cultural literacy",
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "online",
+                  "courseWorkload": "PT2550H"
+                }
+              },
+              {
+                "@type": "Course",
+                "name": "El Viaje del Jaguar — Spanish C1-C2",
+                "description": "Advanced Spanish mastery through literary analysis, debate, and full immersion in Colombian narratives",
+                "provider": {"@type": "Organization", "name": "Babelfree"},
+                "educationalLevel": "Advanced",
+                "inLanguage": "es",
+                "teaches": "Spanish mastery, literary analysis, academic discourse",
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "online",
+                  "courseWorkload": "PT1700H"
+                }
+              }
+            ]
+          }
         },
         {
           "@type": "Course",
@@ -1668,7 +1717,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Babel Free &middot; <a href="/privacy">Privacy</a></p>
+            <p>&copy; 2026 Babel Free &middot; <a href="/about">About</a> &middot; <a href="/privacy">Privacy</a></p>
         </div>
     </footer>
 

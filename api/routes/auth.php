@@ -34,6 +34,16 @@ function handleAuthRoutes(string $action, string $method): void {
                 ? sanitizeString($input['native_lang'], 10) : null;
             $gender = in_array($input['gender'] ?? '', ['M', 'F', 'X'])
                 ? $input['gender'] : null;
+            $dob = isset($input['dob']) && preg_match('/^\d{4}-\d{2}-\d{2}$/', $input['dob'])
+                ? $input['dob'] : null;
+            $country = isset($input['country']) ? sanitizeString($input['country'], 2) : null;
+            $phone = isset($input['phone']) ? sanitizeString($input['phone'], 30) : null;
+            $source = in_array($input['source'] ?? '', ['search', 'social', 'friend', 'teacher', 'other'])
+                ? $input['source'] : null;
+            $goal = in_array($input['goal'] ?? '', ['travel', 'work', 'school', 'heritage', 'curiosity'])
+                ? $input['goal'] : null;
+            $marketingConsent = !empty($input['marketing_consent']) ? 1 : 0;
+            $dataConsent = !empty($input['data_consent']) ? 1 : 0;
 
             if (!validateEmail($email)) jsonError('Email inválido');
             if (!validatePassword($password)) jsonError('La contraseña debe tener al menos 10 caracteres, con mayúscula, minúscula y número');
@@ -56,6 +66,13 @@ function handleAuthRoutes(string $action, string $method): void {
                 'detected_lang'  => $detectedLang,
                 'native_lang'    => $nativeLang,
                 'gender'         => $gender,
+                'dob'            => $dob,
+                'country'        => $country,
+                'phone'          => $phone,
+                'source'         => $source,
+                'goal'           => $goal,
+                'marketing_consent' => $marketingConsent,
+                'data_consent'   => $dataConsent,
                 'verify_token'   => $verifyToken,
                 'verify_expires' => $verifyExpires,
             ]);
@@ -275,6 +292,86 @@ function handleAuthRoutes(string $action, string $method): void {
             ];
 
             jsonSuccess($export);
+            break;
+
+        case 'update-profile':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+            $user = authenticateRequest();
+            $input = getJsonBody();
+            if (!$input) jsonError('Datos inválidos');
+
+            $updates = [];
+            $params = [];
+
+            if (isset($input['display_name'])) {
+                $dn = sanitizeString($input['display_name'], 100);
+                if (mb_strlen($dn) < 1) jsonError('El nombre es obligatorio');
+                $updates[] = 'display_name = ?';
+                $params[] = $dn;
+            }
+            if (isset($input['gender']) && in_array($input['gender'], ['M', 'F', 'X'])) {
+                $updates[] = 'gender = ?';
+                $params[] = $input['gender'];
+            }
+            if (isset($input['native_lang'])) {
+                $updates[] = 'native_lang = ?';
+                $params[] = sanitizeString($input['native_lang'], 10);
+            }
+            if (isset($input['dob'])) {
+                $updates[] = 'dob = ?';
+                $params[] = preg_match('/^\d{4}-\d{2}-\d{2}$/', $input['dob']) ? $input['dob'] : null;
+            }
+            if (isset($input['country'])) {
+                $updates[] = 'country = ?';
+                $params[] = sanitizeString($input['country'], 2);
+            }
+            if (isset($input['phone'])) {
+                $updates[] = 'phone = ?';
+                $params[] = sanitizeString($input['phone'], 30);
+            }
+            if (isset($input['interface_lang'])) {
+                $updates[] = 'interface_lang = ?';
+                $params[] = sanitizeString($input['interface_lang'], 10);
+            }
+            if (isset($input['marketing_consent'])) {
+                $updates[] = 'marketing_consent = ?';
+                $params[] = !empty($input['marketing_consent']) ? 1 : 0;
+            }
+
+            if (empty($updates)) jsonError('No hay cambios');
+
+            $params[] = $user['id'];
+            $sql = 'UPDATE users SET ' . implode(', ', $updates) . ' WHERE id = ?';
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute($params);
+
+            $updated = $userModel->findById($user['id']);
+            unset($updated['password_hash'], $updated['verify_token'], $updated['verify_expires'],
+                  $updated['reset_token'], $updated['reset_expires']);
+            jsonSuccess($updated);
+            break;
+
+        case 'change-password':
+            if ($method !== 'POST') jsonError('Método no permitido', 405);
+            $user = authenticateRequest();
+            checkRateLimit('general');
+            $input = getJsonBody();
+
+            $currentPw = $input['current_password'] ?? '';
+            $newPw = $input['new_password'] ?? '';
+
+            if (!$currentPw || !$newPw) jsonError('Ambas contraseñas son obligatorias');
+            if (!validatePassword($newPw)) jsonError('La nueva contraseña debe tener al menos 10 caracteres, con mayúscula, minúscula y número');
+
+            $fullUser = $userModel->findById($user['id']);
+            if (!$fullUser || !password_verify($currentPw, $fullUser['password_hash'])) {
+                jsonError('Contraseña actual incorrecta', 401);
+            }
+
+            $stmt = $pdo->prepare('UPDATE users SET password_hash = ? WHERE id = ?');
+            $stmt->execute([password_hash($newPw, PASSWORD_ARGON2ID), $user['id']]);
+
+            jsonSuccess(['message' => 'Contraseña actualizada correctamente']);
             break;
 
         default:

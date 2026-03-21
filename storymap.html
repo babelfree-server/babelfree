@@ -539,6 +539,28 @@
         .sm-welcome-title { font-size: 24px; }
     }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "El Viaje del Jaguar — Complete Spanish Course",
+      "description": "58-destination immersive Spanish course through Colombian ecosystems. 5,100 hours of CEFR-aligned content from A1 to C2.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Babelfree",
+        "url": "https://babelfree.com"
+      },
+      "educationalLevel": ["Beginner", "Intermediate", "Advanced"],
+      "inLanguage": "es",
+      "numberOfCredits": "5100",
+      "teaches": ["Spanish vocabulary", "Spanish grammar", "Colombian culture", "Literary analysis"],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT5100H"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -553,6 +575,7 @@
             <a href="cuaderno.html" class="sm-btn-free sm-btn-cuaderno" id="smCuadernoBtn" title="El cuaderno de Candelaria">&#128214;</a>
             <a href="play.html?mode=practice" class="sm-btn-free">Práctica</a>
             <a href="juegos.html" class="sm-btn-free">Juego libre</a>
+            <a href="#" onclick="showProfileView();return false" class="sm-btn-free" title="Mi perfil">&#9881;</a>
         </div>
     </header>
 
@@ -609,6 +632,8 @@
     <div class="sm-river" id="smRiver"></div>
 
 <script src="js/jaguar-api.js"></script>
+<script src="login_lang_data.js"></script>
+<script src="js/app-views.js"></script>
 <script>
     // Auth guard
     if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {

@@ -227,6 +227,12 @@ class Dictionary {
             $entry['definitions'] = $stmt->fetchAll();
         }
 
+        // If still empty, try English (many Kaikki imports store definitions in English)
+        if (empty($entry['definitions']) && $lang !== 'en' && $defLang !== 'en') {
+            $stmt->execute([$wordId, 'en']);
+            $entry['definitions'] = $stmt->fetchAll();
+        }
+
         // If still empty, try Spanish as last resort
         if (empty($entry['definitions']) && $lang !== 'es' && $defLang !== 'es') {
             $stmt->execute([$wordId, 'es']);

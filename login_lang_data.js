@@ -114,6 +114,8 @@ window.LOGIN_TRANSLATIONS["auto"] = window.LOGIN_TRANSLATIONS["es"];
 
 window.LOGIN_LANGUAGES = [
   { code: "auto", name: "Auto-Detect", native: "Auto", flag: "🌐", dir: "ltr" },
+  { code: "es-la", name: "Spanish (Latin America)", native: "Español (Latinoamérica)", flag: "🇨🇴", dir: "ltr" },
+  { code: "es-es", name: "Spanish (Spain)", native: "Castellano (España)", flag: "🇪🇸", dir: "ltr" },
   { code: "en", name: "English", native: "English", flag: "🇬🇧", dir: "ltr" },
   { code: "fr", name: "French", native: "Français", flag: "🇫🇷", dir: "ltr" },
   { code: "de", name: "German", native: "Deutsch", flag: "🇩🇪", dir: "ltr" },

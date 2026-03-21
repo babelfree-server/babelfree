@@ -200,37 +200,65 @@
             max-width: 550px; margin: 0 auto 1.5rem;
         }
 
-        /* ===== Language selector ===== */
+        /* ===== Hero search box (matches home page) ===== */
         .search-area { max-width: 640px; margin: 0 auto; }
+
+        .hero-search-box {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .hero-lang-toggle {
+            flex-shrink: 0;
+        }
+
+        .hero-lang-toggle .lang-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            height: 100%;
+            padding: 0 0.75rem;
+            border: 2px solid #e9ecef;
+            border-right: 1px solid #e9ecef;
+            border-radius: 16px 0 0 16px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: 'Lucida Sans', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+            white-space: nowrap;
+            backdrop-filter: none;
+        }
+        .hero-lang-toggle .lang-badge:hover {
+            border-color: #F4A5A5;
+            background: #fef5f5;
+        }
+        .hero-lang-toggle .lang-badge .flag { font-size: 1.2rem; }
+        .hero-lang-toggle .lang-badge .caret { color: #bbb; font-size: 0.75rem; margin-left: 0.1rem; }
+
+        /* Language selector dropdown (opens below the full search box) */
         .lang-selector-wrap {
-            position: relative; margin-bottom: 1rem;
+            position: relative; margin-bottom: 0.75rem;
         }
         .lang-search-input {
             width: 100%; padding: 0.7rem 1rem 0.7rem 2.5rem;
-            border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;
+            border: 2px solid #e9ecef; border-radius: 12px;
             font-family: 'Lucida Sans', Arial, sans-serif; font-size: 0.95rem;
-            background: rgba(255,255,255,0.08); color: #fff;
+            background: #fff; color: #333;
             transition: border-color 0.3s ease;
         }
         .lang-search-input:focus { outline: none; border-color: #F4A5A5; box-shadow: 0 0 0 3px rgba(244,165,165,0.15); }
-        .lang-search-input::placeholder { color: rgba(255,255,255,0.4); }
+        .lang-search-input::placeholder { color: #bbb; }
         .lang-search-icon {
             position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%);
-            color: rgba(255,255,255,0.4); font-size: 1rem;
+            color: #bbb; font-size: 1rem;
         }
-        .lang-current {
-            display: flex; align-items: center; gap: 0.5rem; justify-content: center;
-            margin-bottom: 0.75rem;
-        }
-        .lang-badge {
-            display: inline-flex; align-items: center; gap: 0.4rem;
-            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;
-            padding: 0.4rem 1rem; font-size: 0.95rem; cursor: pointer;
-            transition: all 0.3s ease; color: rgba(255,255,255,0.9);
-            backdrop-filter: blur(10px);
-        }
-        .lang-badge:hover { border-color: #F4A5A5; background: rgba(244,165,165,0.15); }
-        .lang-badge .flag { font-size: 1.2rem; }
         .lang-dropdown {
             position: absolute; top: 100%; left: 0; right: 0;
             background: #fff; border: 1px solid #e9ecef; border-radius: 12px;
@@ -250,25 +278,37 @@
         .lang-opt .name { flex: 1; }
         .lang-opt .native { color: #999; font-size: 0.8rem; }
 
-        .search-box { position: relative; width: 100%; }
+        /* Search input + button (right side of hero-search-box) */
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 0;
+            display: flex;
+        }
         .search-input {
-            width: 100%; padding: 1.1rem 3.5rem 1.1rem 1.4rem;
-            border: 2px solid rgba(255,255,255,0.15); border-radius: 16px;
-            font-family: 'Lucida Sans', Arial, sans-serif; font-size: 1.15rem;
-            color: #fff; transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
+            width: 100%;
+            flex: 1;
+            min-width: 0;
+            padding: 1rem 3.5rem 1rem 1.2rem;
+            border: 2px solid #e9ecef;
+            border-left: 1px solid #e9ecef;
+            border-radius: 0 16px 16px 0;
+            font-size: 1.05rem;
+            font-family: 'Lucida Sans', Arial, sans-serif;
+            background: #fff;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .search-input:focus {
-            outline: none; border-color: #F4A5A5;
-            box-shadow: 0 4px 30px rgba(244,165,165,0.25);
-            background: rgba(255,255,255,0.12);
+            outline: none;
+            border-color: #F4A5A5;
+            box-shadow: 0 4px 20px rgba(244, 165, 165, 0.15);
         }
-        .search-input::placeholder { color: rgba(255,255,255,0.4); }
+        .search-input::placeholder { color: #bbb; }
         .search-btn {
             position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
             background: #F4A5A5; border: none; border-radius: 12px;
-            width: 40px; height: 40px; cursor: pointer; display: flex;
+            padding: 0.55rem 0.75rem; cursor: pointer; display: flex;
             align-items: center; justify-content: center;
             transition: background 0.3s ease;
         }
@@ -279,7 +319,7 @@
         .autocomplete {
             position: absolute; top: 100%; left: 0; right: 0;
             background: #fff; border: 1px solid #e0e0e0; border-radius: 12px;
-            margin-top: 4px; box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+            margin-top: 4px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);
             z-index: 100; display: none; overflow: hidden;
         }
         .autocomplete.visible { display: block; }
@@ -519,6 +559,9 @@
             .dict-section { padding: 1.2rem 1.25rem; }
             .conj-table { font-size: 0.85rem; }
             .conj-table th, .conj-table td { padding: 0.4rem 0.6rem; }
+            .hero-search-box { max-width: 100%; }
+            .hero-lang-toggle .lang-badge { padding: 0 0.5rem; font-size: 0.8rem; }
+            .hero-lang-toggle .lang-badge #langName { display: none; }
         }
     </style>
 </head>
@@ -528,7 +571,7 @@
         <div class="nav-container">
             <a href="/" class="logo-brand">
                 <div class="main-logo"><img src="/assets/logo.png" alt="Babel Free Logo"></div>
-                
+
             </a>
             <ul class="nav-menu">
                 <li><a href="/" class="nav-link">Home</a></li>
@@ -561,24 +604,26 @@
             <h1 data-i18n="hero_title">Dictionaries</h1>
             <p class="intro" data-i18n="hero_intro">Look up words, equivalents, conjugations, and examples across 104 languages — with CEFR level tags for learners.</p>
             <div class="search-area">
-                <div class="lang-current">
-                    <span class="lang-badge" id="langBadge" title="Click to change language">
-                        <span class="flag" id="langFlag"></span>
-                        <span id="langName">Spanish</span>
-                        <span style="color:#bbb;font-size:0.8rem;">&#9662;</span>
-                    </span>
-                </div>
                 <div class="lang-selector-wrap" id="langSelectorWrap" style="display:none;">
                     <span class="lang-search-icon">&#128269;</span>
                     <input type="text" class="lang-search-input" id="langSearchInput" placeholder="Search languages..." autocomplete="off">
                     <div class="lang-dropdown" id="langDropdown"></div>
                 </div>
-                <div class="search-box">
-                    <input type="text" class="search-input" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Search for a word..." autocomplete="off" autofocus>
-                    <button class="search-btn" id="searchBtn">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </button>
-                    <div class="autocomplete" id="autocomplete"></div>
+                <div class="hero-search-box" id="heroSearchBox">
+                    <div class="hero-lang-toggle">
+                        <span class="lang-badge" id="langBadge" title="Click to change language">
+                            <span class="flag" id="langFlag"></span>
+                            <span id="langName">Spanish</span>
+                            <span class="caret">&#9662;</span>
+                        </span>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Search for a word..." autocomplete="off" autofocus>
+                        <button class="search-btn" id="searchBtn" aria-label="Search">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </button>
+                        <div class="autocomplete" id="autocomplete"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1421,7 +1466,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Babel Free &middot; <a href="/privacy">Privacy</a></p>
+            <p>&copy; 2026 Babel Free &middot; <a href="/about">About</a> &middot; <a href="/privacy">Privacy</a></p>
         </div>
     </footer>
 
