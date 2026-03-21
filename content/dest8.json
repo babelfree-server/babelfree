@@ -84,1455 +84,6 @@
     "imageAlt": "La familia de jaguares junto al río — madre, padre, hermana, hermano, todos juntos, el río sonando fuerte",
     "image": "img/destinations/dest8-arrival.jpg"
   },
-  "games": [
-    {
-      "type": "skit",
-      "label": "Escena",
-      "title": "La familia",
-      "instruction": "Escucha y aprende.",
-      "grammar": [
-        "family members",
-        "este/esta",
-        "¿quién?"
-      ],
-      "beats": [
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Junto al río, Yaguará mira a su familia."
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "enter-left",
-          "text": "Esta es mi mamá.",
-          "target": [
-            "Esta",
-            "mi"
-          ]
-        },
-        {
-          "speaker": "mama_jaguar",
-          "name": "Mamá Jaguar",
-          "animation": "enter-left",
-          "text": "Y este es Río. Es mi hijo.",
-          "target": [
-            "este",
-            "mi"
-          ]
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "bounce",
-          "text": "¡Hola! Yo soy el hermano de Yaguará.",
-          "target": [
-            "hermano"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "¿Quién es ella?",
-          "target": [
-            "Quién"
-          ]
-        },
-        {
-          "speaker": "mama_jaguar",
-          "name": "Mamá Jaguar",
-          "animation": "fade-in",
-          "text": "Ella es tu abuela. Vive en el árbol grande."
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Don Tomás está junto al fuego. Mira a la familia."
-        },
-        {
-          "speaker": "don_tomas",
-          "name": "Don Tomás",
-          "animation": "glow",
-          "text": "Mi familia es grande. Este es mi río.",
-          "target": [
-            "Mi familia",
-            "Este"
-          ]
-        },
-        {
-          "speaker": "mama_jaguar",
-          "name": "Mamá Jaguar",
-          "animation": "fade-in",
-          "text": "Los nombres no se pierden. Se olvidan."
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Río es mi hermano.",
-          "target": [
-            "mi hermano"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "mi hermano",
-              "mi mamá",
-              "mi abuela"
-            ],
-            "answer": "mi hermano"
-          }
-        }
-      ]
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "grammar": [
-        "family members"
-      ],
-      "vocabulary": [
-        "mamá",
-        "papá",
-        "hermano",
-        "hermana",
-        "abuelo",
-        "abuela"
-      ],
-      "instruction": "Encuentra los pares: <em>persona ↔ descripción</em>",
-      "pairs": [
-        [
-          "mamá",
-          "madre"
-        ],
-        [
-          "papá",
-          "padre"
-        ],
-        [
-          "hermano",
-          "un chico en tu familia"
-        ],
-        [
-          "abuela",
-          "mamá de tu mamá"
-        ],
-        [
-          "tío",
-          "hermano de tu mamá"
-        ],
-        [
-          "hermana",
-          "una chica en tu familia"
-        ]
-      ],
-      "image": "img/destinations/dest8-pair-1.jpg",
-      "imageAlt": "Dos huellas de jaguar conectadas por un hilo dorado en la tierra húmeda",
-      "tip": {
-        "title": "La familia",
-        "lines": [
-          "mamá / papá",
-          "hermano / hermana",
-          "hijo / hija",
-          "abuelo / abuela"
-        ]
-      }
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "grammar": [
-        "family members",
-        "gender"
-      ],
-      "vocabulary": [
-        "mamá",
-        "papá",
-        "hermano",
-        "hermana",
-        "abuelo",
-        "abuela",
-        "tío",
-        "tía"
-      ],
-      "instruction": "Clasifica: <em>¿masculino o femenino?</em>",
-      "categories": [
-        "Masculino",
-        "Femenino"
-      ],
-      "items": [
-        {
-          "text": "papá",
-          "category": "Masculino"
-        },
-        {
-          "text": "mamá",
-          "category": "Femenino"
-        },
-        {
-          "text": "hermano",
-          "category": "Masculino"
-        },
-        {
-          "text": "hermana",
-          "category": "Femenino"
-        },
-        {
-          "text": "abuelo",
-          "category": "Masculino"
-        },
-        {
-          "text": "abuela",
-          "category": "Femenino"
-        },
-        {
-          "text": "tío",
-          "category": "Masculino"
-        },
-        {
-          "text": "tía",
-          "category": "Femenino"
-        }
-      ],
-      "image": "img/destinations/dest8-category-1.jpg",
-      "imageAlt": "Cestas tejidas al estilo wayúu bajo la copa de un árbol, cada una etiquetada",
-      "tip": {
-        "title": "este / esta",
-        "lines": [
-          "masculino → este: Este es mi hermano.",
-          "femenino → esta: Esta es mi mamá.",
-          "plural → estos / estas"
-        ],
-        "gloss": "este/esta = this"
-      }
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "grammar": [
-        "family members",
-        "este/esta",
-        "¿quién?"
-      ],
-      "vocabulary": [
-        "este",
-        "esta",
-        "quién",
-        "mi"
-      ],
-      "instruction": "Completa las frases sobre la familia.",
-      "questions": [
-        {
-          "sentence": "___ es mi hermano. Se llama Carlos.",
-          "answer": "Este",
-          "options": [
-            "Este",
-            "Esta",
-            "El",
-            "La"
-          ]
-        },
-        {
-          "sentence": "___ es mi abuela. Ella pesca en el río.",
-          "answer": "Esta",
-          "options": [
-            "Este",
-            "Esta",
-            "El",
-            "Un"
-          ]
-        },
-        {
-          "sentence": "¿___ es ella? — Es mi mamá.",
-          "answer": "Quién",
-          "options": [
-            "Quién",
-            "Qué",
-            "Dónde",
-            "Cómo"
-          ]
-        },
-        {
-          "sentence": "Tengo un ___ y una hermana.",
-          "answer": "hermano",
-          "options": [
-            "hermano",
-            "abuelo",
-            "tío",
-            "papá"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-fill-1.jpg",
-      "imageAlt": "Hojas de la selva con espacios vacíos entre las venas, esperando ser completadas",
-      "tip": {
-        "title": "¿Quién?",
-        "lines": [
-          "¿Quién es ella? → Ella es mi mamá.",
-          "¿Quién es él? → Él es mi hermano.",
-          "¿Quién eres tú? → Yo soy Yaguará."
-        ],
-        "gloss": "¿quién? = who?"
-      }
-    },
-    {
-      "type": "narrative",
-      "label": "Narración",
-      "instruction": "Lee y escucha.",
-      "text": "Yaguará está junto al río con su familia. Su madre se llama Luna. Su padre se llama Sol. Su hermano se llama Río. Su hermana se llama Flor. El río es parte de la familia.",
-      "image": "img/destinations/dest8-narrative.jpg",
-      "imageAlt": "Claro del bosque al amanecer, luz dorada filtrándose entre la niebla"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une la persona con su nombre.",
-      "pairs": [
-        [
-          "la madre",
-          "Luna"
-        ],
-        [
-          "el padre",
-          "Sol"
-        ],
-        [
-          "el hermano",
-          "Río"
-        ],
-        [
-          "la hermana",
-          "Flor"
-        ]
-      ],
-      "image": "img/destinations/dest8-pair-2.jpg",
-      "imageAlt": "Hojas caídas sobre el agua, cada una reflejando su pareja en la superficie"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une la persona con la descripción.",
-      "pairs": [
-        [
-          "Luna",
-          "es bonita"
-        ],
-        [
-          "Sol",
-          "es fuerte"
-        ],
-        [
-          "Río",
-          "es pequeño"
-        ],
-        [
-          "Abuela Ceiba",
-          "es grande"
-        ]
-      ],
-      "image": "img/destinations/dest8-pair-3.jpg",
-      "imageAlt": "Luciérnagas emparejadas brillando entre las raíces de la ceiba"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une la frase.",
-      "pairs": [
-        [
-          "mi madre",
-          "se llama Luna"
-        ],
-        [
-          "mi padre",
-          "se llama Sol"
-        ],
-        [
-          "mi hermano",
-          "se llama Río"
-        ],
-        [
-          "la abuela",
-          "se llama Ceiba"
-        ]
-      ],
-      "image": "img/destinations/dest8-pair-4.jpg",
-      "imageAlt": "Mariposas morpho posadas sobre flores gemelas a orillas del río"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "Mi madre ___ bonita.",
-          "answer": "es",
-          "options": [
-            "es",
-            "soy",
-            "eres",
-            "son"
-          ]
-        },
-        {
-          "sentence": "Mi padre ___ fuerte.",
-          "answer": "es",
-          "options": [
-            "soy",
-            "es",
-            "somos",
-            "son"
-          ]
-        },
-        {
-          "sentence": "Yo ___ Yaguará.",
-          "answer": "soy",
-          "options": [
-            "es",
-            "soy",
-            "eres",
-            "son"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-fill-2.jpg",
-      "imageAlt": "Frutos del bosque dispuestos en fila, uno falta en la secuencia"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "Mi hermano se ___ Río.",
-          "answer": "llama",
-          "options": [
-            "llamo",
-            "llama",
-            "llamas",
-            "llaman"
-          ]
-        },
-        {
-          "sentence": "Yo me ___ Yaguará.",
-          "answer": "llamo",
-          "options": [
-            "llamo",
-            "llamas",
-            "llama",
-            "llaman"
-          ]
-        },
-        {
-          "sentence": "Mi hermana se ___ Flor.",
-          "answer": "llama",
-          "options": [
-            "llamo",
-            "llama",
-            "llamas",
-            "llaman"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-fill-3.jpg",
-      "imageAlt": "Piedras del río con palabras grabadas, una piedra vacía espera su inscripción"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "Yo ___ un hermano.",
-          "answer": "tengo",
-          "options": [
-            "tengo",
-            "tiene",
-            "tienes",
-            "tienen"
-          ]
-        },
-        {
-          "sentence": "Yaguará ___ una hermana.",
-          "answer": "tiene",
-          "options": [
-            "tengo",
-            "tienes",
-            "tiene",
-            "tienen"
-          ]
-        },
-        {
-          "sentence": "La Abuela Ceiba ___ muchos nombres.",
-          "answer": "tiene",
-          "options": [
-            "tengo",
-            "tienes",
-            "tiene",
-            "tienen"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-fill-4.jpg",
-      "imageAlt": "Musgo sobre corteza de árbol con huecos en forma de letras"
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "Ella es mi madre. Se llama Luna. Es bonita.",
-      "question": "¿Quién es Luna?",
-      "answer": "la madre",
-      "options": [
-        "la hermana",
-        "la madre",
-        "la abuela",
-        "la amiga"
-      ],
-      "image": "img/destinations/dest8-listening-1.jpg",
-      "imageAlt": "Yaguará con la oreja levantada, ondas de sonido doradas entre los árboles"
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "La Abuela Ceiba es muy grande. Es un árbol enorme.",
-      "question": "¿Cómo es la Abuela Ceiba?",
-      "answer": "grande",
-      "options": [
-        "pequeña",
-        "bonita",
-        "grande",
-        "nueva"
-      ],
-      "image": "img/destinations/dest8-listening-2.jpg",
-      "imageAlt": "El río murmurando entre las piedras, círculos de agua como notas musicales"
-    },
-    {
-      "type": "conjugation",
-      "label": "Conjugación",
-      "instruction": "Conjuga el verbo ser.",
-      "questions": [
-        {
-          "verb": "ser",
-          "subject": "yo",
-          "answer": "soy",
-          "options": [
-            "soy",
-            "es",
-            "eres",
-            "somos"
-          ]
-        },
-        {
-          "verb": "ser",
-          "subject": "ella",
-          "answer": "es",
-          "options": [
-            "soy",
-            "es",
-            "eres",
-            "son"
-          ]
-        },
-        {
-          "verb": "ser",
-          "subject": "nosotros",
-          "answer": "somos",
-          "options": [
-            "son",
-            "soy",
-            "somos",
-            "es"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-conjugation-1.jpg",
-      "imageAlt": "Raíces de ceiba que se ramifican en diferentes formas bajo la tierra",
-      "tip": {
-        "title": "ser (con familia)",
-        "lines": [
-          "Ella es mi mamá.",
-          "Él es mi hermano.",
-          "Ellos son mi familia.",
-          "Nosotros somos hermanos."
-        ]
-      }
-    },
-    {
-      "type": "conjugation",
-      "label": "Conjugación",
-      "instruction": "Conjuga el verbo llamarse.",
-      "questions": [
-        {
-          "verb": "llamarse",
-          "subject": "yo",
-          "answer": "me llamo",
-          "options": [
-            "me llamo",
-            "se llama",
-            "te llamas",
-            "nos llamamos"
-          ]
-        },
-        {
-          "verb": "llamarse",
-          "subject": "tú",
-          "answer": "te llamas",
-          "options": [
-            "me llamo",
-            "te llamas",
-            "se llama",
-            "se llaman"
-          ]
-        },
-        {
-          "verb": "llamarse",
-          "subject": "él",
-          "answer": "se llama",
-          "options": [
-            "me llamo",
-            "te llamas",
-            "se llama",
-            "se llaman"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-conjugation-2.jpg",
-      "imageAlt": "Un río que se divide en arroyos, cada corriente con un reflejo diferente"
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "instruction": "Clasifica las palabras.",
-      "categories": [
-        "Masculino",
-        "Femenino"
-      ],
-      "items": [
-        {
-          "text": "padre",
-          "category": "Masculino"
-        },
-        {
-          "text": "madre",
-          "category": "Femenino"
-        },
-        {
-          "text": "hermano",
-          "category": "Masculino"
-        },
-        {
-          "text": "hermana",
-          "category": "Femenino"
-        },
-        {
-          "text": "abuelo",
-          "category": "Masculino"
-        },
-        {
-          "text": "abuela",
-          "category": "Femenino"
-        }
-      ],
-      "image": "img/destinations/dest8-category-2.jpg",
-      "imageAlt": "Nidos de pájaros en diferentes ramas, cada uno con su etiqueta natural"
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "instruction": "Clasifica: ¿familia de Yaguará o no?",
-      "categories": [
-        "Familia de Yaguará",
-        "No es familia"
-      ],
-      "items": [
-        {
-          "text": "Luna",
-          "category": "Familia de Yaguará"
-        },
-        {
-          "text": "Sol",
-          "category": "Familia de Yaguará"
-        },
-        {
-          "text": "Río",
-          "category": "Familia de Yaguará"
-        },
-        {
-          "text": "Flor",
-          "category": "Familia de Yaguará"
-        },
-        {
-          "text": "Abuela Ceiba",
-          "category": "No es familia"
-        },
-        {
-          "text": "el pez",
-          "category": "No es familia"
-        }
-      ],
-      "image": "img/destinations/dest8-category-3.jpg",
-      "imageAlt": "Caminos del bosque que se bifurcan, cada sendero lleva un nombre de musgo"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "madre",
-        "Mi",
-        "llama",
-        "se",
-        "Luna"
-      ],
-      "answer": "Mi madre se llama Luna",
-      "image": "img/destinations/dest8-builder-1.jpg",
-      "imageAlt": "Piedras del río con palabras talladas, dispuestas en desorden sobre la orilla"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "es",
-        "Abuela",
-        "La",
-        "Ceiba",
-        "grande"
-      ],
-      "answer": "La Abuela Ceiba es grande",
-      "image": "img/destinations/dest8-builder-2.jpg",
-      "imageAlt": "Ramas caídas formando un camino por armar sobre el barro del sendero"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Abuela Ceiba",
-              "text": "¿Quién es tu familia?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Mi madre se llama Luna. Mi padre se llama Sol.",
-            "Tengo hambre.",
-            "El río es bonito.",
-            "Soy grande."
-          ],
-          "answer": "Mi madre se llama Luna. Mi padre se llama Sol."
-        }
-      ],
-      "image": "img/destinations/dest8-conversation-1.jpg",
-      "imageAlt": "Yaguará y el viajero junto a una fogata en la selva, diálogo flotando entre ellos"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Mamá Jaguar",
-              "text": "¿Cómo se llama tu hermano?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Se llama Río. Es pequeño.",
-            "Me gusta la fruta.",
-            "Mi madre es bonita.",
-            "Tengo sed."
-          ],
-          "answer": "Se llama Río. Es pequeño."
-        }
-      ],
-      "image": "img/destinations/dest8-conversation-2.jpg",
-      "imageAlt": "Dos figuras sentadas en la ribera del río, el agua lleva palabras doradas"
-    },
-    {
-      "type": "dictation",
-      "label": "Dictado",
-      "instruction": "Escucha y escribe.",
-      "audio": "Mi familia es grande.",
-      "answer": "Mi familia es grande.",
-      "image": "img/destinations/dest8-dictation.jpg",
-      "imageAlt": "Una hoja grande de plátano como pergamino extendida junto al río"
-    },
-    {
-      "type": "spaceman",
-      "label": "Spaceman",
-      "instruction": "Adivina la palabra.",
-      "phrases": [
-        {
-          "answer": "camino",
-          "hint": "por donde caminamos"
-        },
-        {
-          "answer": "estrella",
-          "hint": "brilla en la noche"
-        },
-        {
-          "answer": "lluvia",
-          "hint": "agua que cae del cielo"
-        },
-        {
-          "answer": "fuego",
-          "hint": "caliente y rojo"
-        }
-      ],
-      "image": "img/destinations/dest8-spaceman.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "susurro",
-      "label": "Susurro",
-      "instruction": "Escucha el susurro y elige la palabra.",
-      "questions": [
-        {
-          "audio": "mamá",
-          "question": "¿Qué palabra es?",
-          "answer": "mamá",
-          "options": [
-            "mamá",
-            "amigo",
-            "me llamo"
-          ]
-        },
-        {
-          "audio": "papá",
-          "question": "¿Qué palabra es?",
-          "answer": "papá",
-          "options": [
-            "la",
-            "papá",
-            "abuela"
-          ]
-        },
-        {
-          "audio": "quién",
-          "question": "¿Qué palabra es?",
-          "answer": "quién",
-          "options": [
-            "una chica en tu familia",
-            "abuelo",
-            "quién"
-          ]
-        },
-        {
-          "audio": "es pequeño",
-          "question": "¿Qué palabra es?",
-          "answer": "es pequeño",
-          "options": [
-            "en la selva",
-            "es pequeño",
-            "hermano de tu mamá"
-          ]
-        },
-        {
-          "audio": "mi madre",
-          "question": "¿Qué palabra es?",
-          "answer": "mi madre",
-          "options": [
-            "es bonita",
-            "hermano",
-            "mi madre"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "susurro_dest8"
-    },
-    {
-      "type": "eco_lejano",
-      "label": "Eco lejano",
-      "instruction": "Escucha el eco y completa la palabra que falta.",
-      "items": [
-        {
-          "audio": "Mi madre se llama Luna. Mi padre se llama Sol.",
-          "sentence": "Mi madre se llama Luna. Mi padre se ___ Sol.",
-          "answer": "llama",
-          "options": [
-            "llama",
-            "dice",
-            "tiene"
-          ]
-        },
-        {
-          "audio": "Se llama Río. Es pequeño.",
-          "sentence": "Se llama Río. Es ___",
-          "answer": "pequeño",
-          "options": [
-            "grande",
-            "bonito",
-            "pequeño"
-          ]
-        },
-        {
-          "audio": "Junto al río, Yaguará mira a su familia.",
-          "sentence": "Junto al río, Yaguará mira a su ___",
-          "answer": "familia",
-          "options": [
-            "madre",
-            "familia",
-            "casa"
-          ]
-        },
-        {
-          "audio": "Esta es mi mamá.",
-          "sentence": "___ es mi mamá.",
-          "answer": "Esta",
-          "options": [
-            "Ella",
-            "Esta",
-            "Esa"
-          ]
-        },
-        {
-          "audio": "Y este es Río. Es mi hijo.",
-          "sentence": "Y este es Río. Es mi ___",
-          "answer": "hijo",
-          "options": [
-            "hermano",
-            "padre",
-            "hijo"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "eco_lejano_dest8"
-    },
-    {
-      "type": "translation",
-      "label": "Traducir",
-      "instruction": "Elige la traducción.",
-      "questions": [
-        {
-          "prompt": "mom",
-          "answer": "mamá",
-          "options": [
-            "agua",
-            "río",
-            "mamá"
-          ]
-        },
-        {
-          "prompt": "family",
-          "answer": "familia",
-          "options": [
-            "agua",
-            "familia",
-            "es"
-          ]
-        },
-        {
-          "prompt": "is",
-          "answer": "es",
-          "options": [
-            "amigo",
-            "hermana",
-            "es"
-          ]
-        },
-        {
-          "prompt": "river",
-          "answer": "río",
-          "options": [
-            "familia",
-            "río",
-            "mamá"
-          ]
-        },
-        {
-          "prompt": "moon",
-          "answer": "luna",
-          "options": [
-            "luna",
-            "la",
-            "hermana"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "translation_dest8"
-    },
-    {
-      "type": "sombra",
-      "label": "Sombra",
-      "instruction": "Escucha y repite.",
-      "timeLimit": 5000,
-      "phrases": [
-        {
-          "audio": "Los nombres no se pierden. Se olvidan.",
-          "text": "Los nombres no se pierden. Se olvidan."
-        },
-        {
-          "audio": "Río es mi hermano.",
-          "text": "Río es mi hermano."
-        },
-        {
-          "audio": "Se llama Río. Es pequeño.",
-          "text": "Se llama Río. Es pequeño."
-        },
-        {
-          "audio": "Y este es Río. Es mi hijo.",
-          "text": "Y este es Río. Es mi hijo."
-        },
-        {
-          "audio": "¿Quién camina contigo? ¿Quién es tu familia?",
-          "text": "¿Quién camina contigo? ¿Quién es tu familia?"
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "sombra_dest8"
-    },
-    {
-      "type": "senda",
-      "label": "Senda",
-      "instruction": "Elige el camino correcto.",
-      "steps": [
-        {
-          "sentence": "Mi ___ se llama Luna. Mi padre se llama Sol.",
-          "answer": "madre",
-          "options": [
-            "madre",
-            "se llama luna",
-            "quién"
-          ]
-        },
-        {
-          "sentence": "Se llama Río. Es ___",
-          "answer": "pequeño",
-          "options": [
-            "mi familia",
-            "grande",
-            "pequeño"
-          ]
-        },
-        {
-          "sentence": "Junto al ___ Yaguará mira a su familia.",
-          "answer": "río",
-          "options": [
-            "se llama río",
-            "río",
-            "luna"
-          ]
-        },
-        {
-          "sentence": "Esta es mi ___",
-          "answer": "mamá",
-          "options": [
-            "se llama luna",
-            "mamá",
-            "la hermana"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "senda_dest8"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "Yo",
-        "de",
-        "soy",
-        "Yaguará.",
-        "el",
-        "hermano",
-        "¡Hola!"
-      ],
-      "answer": "¡Hola! Yo soy el hermano de Yaguará.",
-      "_generated": true,
-      "_generatorId": "builder_extra_dest8"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une cada palabra con su pareja.",
-      "pairs": [
-        [
-          "grande",
-          "pequeño"
-        ],
-        [
-          "soy",
-          "eres"
-        ],
-        [
-          "hermano",
-          "hermana"
-        ],
-        [
-          "mamá",
-          "papá"
-        ]
-      ],
-      "_generated": true,
-      "_generatorId": "pair_extra_dest8"
-    },
-    {
-      "type": "corrector",
-      "label": "Corrector",
-      "instruction": "Encuentra y corrige el error.",
-      "items": [
-        {
-          "sentence": "Mi madre se llama Luna. Padre Mi se llama Sol.",
-          "corrected": "Mi madre se llama Luna. Mi padre se llama Sol.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Se llama Es Río. Pequeño.",
-          "corrected": "Se llama Río. Es pequeño.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Junto río, al Yaguará mira a su familia.",
-          "corrected": "Junto al río, Yaguará mira a su familia.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Esta es mamá. Mi",
-          "corrected": "Esta es mi mamá.",
-          "errorType": "word order"
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "corrector_dest8"
-    },
-    {
-      "type": "escaperoom",
-      "label": "Sala de enigmas",
-      "instruction": "Resuelve los enigmas para abrir la puerta.",
-      "room": {
-        "name": "La cámara de la familia",
-        "description": "Una cueva junto al río, debajo de la Abuela Ceiba. En las paredes hay dibujos de una familia de jaguares junto al agua. Las raíces del árbol entran por el techo.",
-        "ambience": "heartbeat"
-      },
-      "puzzles": [
-        {
-          "puzzleType": "riddle",
-          "prompt": "Un dibujo en la pared pregunta:",
-          "riddle": "«Es un árbol muy viejo. Es muy grande. Sabe todos los nombres. Las raíces van a todos los lugares. ¿Quién es?»",
-          "clue": "Es la abuela del bosque.",
-          "answer": "Abuela Ceiba",
-          "options": [
-            "Abuela Ceiba",
-            "Mamá Jaguar",
-            "Luna",
-            "Flor"
-          ],
-          "onSolve": "Las raíces en el techo brillan."
-        },
-        {
-          "puzzleType": "cipher",
-          "prompt": "Letras están dibujadas en las raíces de la cueva.",
-          "clue": "Mamá, papá, hermano, hermana — todos juntos son una...",
-          "answer": "familia",
-          "scrambled": "ilaimfa",
-          "onSolve": "Los dibujos se iluminan."
-        },
-        {
-          "puzzleType": "wordlock",
-          "prompt": "Hay una cerradura en las raíces.",
-          "clue": "El agua que pasa por la selva. La familia vive junto a él. Tres letras.",
-          "answer": "rio",
-          "hint": "_ _ _",
-          "onSolve": "Las raíces se abren. La puerta está adentro. Se abre."
-        }
-      ],
-      "fragment": {
-        "text": "Un dibujo brilla: una raíz con forma de río.",
-        "questClue": "La familia es el agua que conecta todas las raíces.",
-        "item": "raiz-rio"
-      },
-      "image": "img/destinations/dest8-escaperoom.jpg",
-      "imageAlt": "Entrada de una cueva entre raíces de ceiba, símbolos dorados brillando"
-    },
-    {
-      "type": "cronica",
-      "label": "Crónica",
-      "prompt": "Escribe el nombre de alguien de tu familia.",
-      "placeholder": "Escribe una palabra...",
-      "minWords": 1,
-      "maxWords": 10,
-      "scaffoldType": "word",
-      "storyKey": "cronica_dest8",
-      "destination": "dest8",
-      "button": "Guardar en la crónica",
-      "image": "img/destinations/dest8-cronica.jpg",
-      "imageAlt": "Un códice abierto sobre una piedra musgosa, pluma de guacamaya al lado"
-    },
-    {
-      "type": "par_minimo",
-      "label": "Par mínimo",
-      "instruction": "Yaguará escucha dos sonidos en la selva. ¿Cuál es cuál?",
-      "pairs": [
-        {
-          "wordA": "peso",
-          "wordB": "beso",
-          "correct": "B",
-          "hint": "Labios juntos"
-        },
-        {
-          "wordA": "casa",
-          "wordB": "caza",
-          "correct": "A",
-          "hint": "Escucha la ese"
-        },
-        {
-          "wordA": "pata",
-          "wordB": "bata",
-          "correct": "A",
-          "hint": "Sonido fuerte al inicio"
-        },
-        {
-          "wordA": "mala",
-          "wordB": "malla",
-          "correct": "B",
-          "hint": "Escucha la elle"
-        },
-        {
-          "wordA": "caro",
-          "wordB": "carro",
-          "correct": "A",
-          "hint": "Una erre suave"
-        }
-      ],
-      "image": "img/destinations/dest8-par_minimo.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "brecha",
-      "label": "Brecha",
-      "instruction": "Yaguará sabe algo. Tú sabes algo. Juntos tienen la verdad completa.",
-      "cardA": {
-        "text": "Yaguará vive en la selva. Tiene cuatro patas. Es grande y fuerte.",
-        "facts": [
-          "vive en la selva",
-          "cuatro patas",
-          "grande y fuerte"
-        ]
-      },
-      "cardB": {
-        "text": "Yaguará come peces del río. Duerme en los árboles. Es un jaguar.",
-        "facts": [
-          "come peces",
-          "duerme en árboles",
-          "es un jaguar"
-        ]
-      },
-      "questions": [
-        {
-          "question": "¿Dónde vive Yaguará?",
-          "answer": "en la selva",
-          "source": "A",
-          "options": [
-            "en la selva",
-            "en la ciudad",
-            "en el mar"
-          ]
-        },
-        {
-          "question": "¿Qué come Yaguará?",
-          "answer": "peces del río",
-          "source": "B",
-          "options": [
-            "peces del río",
-            "frutas del árbol",
-            "pan"
-          ]
-        },
-        {
-          "question": "¿Qué animal es Yaguará?",
-          "answer": "un jaguar",
-          "source": "B",
-          "options": [
-            "un jaguar",
-            "un pájaro",
-            "un pez"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-brecha.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "descripcion",
-      "label": "Descripción",
-      "instruction": "Yaguará llega a un lugar nuevo. ¿Qué ves?",
-      "scene": "Un río grande. Árboles muy altos. El agua es azul y verde. Hay un pájaro rojo en un árbol. El sol es fuerte.",
-      "promptQuestion": "¿Cuál es la mejor descripción?",
-      "vocabulary": [
-        "río",
-        "árboles",
-        "agua",
-        "pájaro",
-        "sol"
-      ],
-      "modelAnswer": "Hay un río grande con árboles altos. El agua es azul.",
-      "options": [
-        "Hay un río grande con árboles altos y un pájaro rojo.",
-        "En la playa hay arena y un sol grande.",
-        "Hay un pueblo con casas de colores."
-      ],
-      "image": "img/destinations/dest8-descripcion.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "fill",
-      "label": "Fragmento literario",
-      "title": "Tomás Carrasquilla — La silla mágica",
-      "instruction": "La silla de Peralta tiene un poder especial. Completa.",
-      "grammar": [
-        "poder + infinitive",
-        "sentarse"
-      ],
-      "vocabulary": [
-        "silla",
-        "sentarse",
-        "levantarse",
-        "mágica"
-      ],
-      "questions": [
-        {
-          "sentence": "Peralta tiene una ___ junto a la puerta. Parece normal. No es normal.",
-          "answer": "silla",
-          "options": [
-            "silla",
-            "mesa",
-            "cama",
-            "olla"
-          ]
-        },
-        {
-          "sentence": "Si alguien se sienta, no se puede ___. Es la silla mágica.",
-          "answer": "levantar",
-          "options": [
-            "levantar",
-            "sentar",
-            "dormir",
-            "comer"
-          ]
-        },
-        {
-          "sentence": "La Muerte llega a la ___. Toc, toc, toc.",
-          "answer": "puerta",
-          "options": [
-            "puerta",
-            "silla",
-            "cocina",
-            "selva"
-          ]
-        },
-        {
-          "sentence": "— Siéntese, Doña Muerte — dice Peralta. Y la Muerte se ___.",
-          "answer": "sienta",
-          "options": [
-            "sienta",
-            "va",
-            "ríe",
-            "duerme"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ritmo",
-      "label": "Ritmo",
-      "instruction": "La selva tiene un ritmo. Las palabras también. ¿Dónde cae el golpe?",
-      "words": [
-        {
-          "word": "mamá",
-          "syllables": [
-            "ma",
-            "má"
-          ],
-          "stressIndex": 1,
-          "pattern": "aguda"
-        },
-        {
-          "word": "feliz",
-          "syllables": [
-            "fe",
-            "liz"
-          ],
-          "stressIndex": 1,
-          "pattern": "aguda"
-        },
-        {
-          "word": "árbol",
-          "syllables": [
-            "ár",
-            "bol"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "amigo",
-          "syllables": [
-            "a",
-            "mi",
-            "go"
-          ],
-          "stressIndex": 1,
-          "pattern": "llana"
-        },
-        {
-          "word": "agua",
-          "syllables": [
-            "a",
-            "gua"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        }
-      ],
-      "image": "img/destinations/dest8-ritmo.jpg",
-      "imageAlt": "Gotas de lluvia creando círculos rítmicos en un charco de la selva"
-    },
-    {
-      "type": "fill",
-      "label": "Eco del tiempo",
-      "title": "El camaleón — adivinanza de Capa Dura",
-      "instruction": "Una adivinanza del libro El superhéroe Capa Dura de Macías. ¿Cuál es la respuesta?",
-      "narrative": true,
-      "questions": [
-        {
-          "sentence": "«En el árbol, árbol; en la tierra, tierra; en el pasto, pasto y en la piedra, piedra.» La respuesta es el ___.",
-          "answer": "camaleón",
-          "options": [
-            "camaleón",
-            "árbol",
-            "viento",
-            "río"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest8-echo-chameleon.jpg",
-      "imageAlt": "Un camaleón en una rama, cambiando de color para mezclarse con las hojas"
-    }
-  ],
   "ecosystemGames": [
     {
       "_template": {
@@ -21191,6 +19742,774 @@
             "descansa",
             "..."
           ]
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "skit",
+      "label": "Escena",
+      "title": "Mi familia",
+      "instruction": "Escucha la historia.",
+      "grammar": [
+        "posesivos (mi/tu/su)",
+        "ir+a+infinitivo"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "text": "Yaguará tiene una familia. Su mamá es grande y fuerte. Su hermano Río es pequeño."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Mi mamá se llama Nakawe. Mi hermano se llama Río. Mi familia es pequeña pero bonita."
+        },
+        {
+          "speaker": "rio",
+          "text": "Mi hermana es Yaguará. Ella es mi amiga. Yo voy a jugar con ella."
+        },
+        {
+          "speaker": "mama_jaguar",
+          "text": "Mis hijos son Yaguará y Río. Yo soy su madre. Esta es nuestra casa."
+        },
+        {
+          "speaker": "narrator",
+          "text": "La abuela también está aquí. Se llama Abuela Ceiba. Es vieja pero fuerte como un árbol."
+        },
+        {
+          "speaker": "abuela",
+          "text": "Mi nieta es valiente. Su hermano es curioso. Sus padres son buenos."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "¿Tú tienes familia, viajero? ¿Tienes padre? ¿Tienes madre? ¿Tienes hermanos?"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Carrasquilla escribe sobre familias. En sus historias, la familia es lo más importante."
+        },
+        {
+          "speaker": "narrator",
+          "text": "La silla de la abuela es mágica. Quien se sienta en su silla, escucha historias de la familia."
+        },
+        {
+          "speaker": "rio",
+          "text": "¡Yo voy a sentarme en la silla! Voy a escuchar historias."
+        },
+        {
+          "speaker": "mama_jaguar",
+          "text": "Río va a escuchar. Yaguará va a escuchar. Todos vamos a escuchar juntos."
+        }
+      ]
+    },
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha y elige.",
+      "questions": [
+        {
+          "audio": "Mi mamá",
+          "answer": "mi",
+          "options": [
+            "mi",
+            "tu",
+            "su"
+          ]
+        },
+        {
+          "audio": "Tu hermano",
+          "answer": "tu",
+          "options": [
+            "tu",
+            "mi",
+            "su"
+          ]
+        },
+        {
+          "audio": "Su padre",
+          "answer": "su",
+          "options": [
+            "su",
+            "mi",
+            "tu"
+          ]
+        },
+        {
+          "audio": "Padre",
+          "answer": "padre",
+          "options": [
+            "padre",
+            "madre",
+            "hermano"
+          ]
+        },
+        {
+          "audio": "Madre",
+          "answer": "madre",
+          "options": [
+            "madre",
+            "padre",
+            "abuela"
+          ]
+        },
+        {
+          "audio": "Hermano",
+          "answer": "hermano",
+          "options": [
+            "hermano",
+            "hermana",
+            "hijo"
+          ]
+        },
+        {
+          "audio": "Abuela",
+          "answer": "abuela",
+          "options": [
+            "abuela",
+            "madre",
+            "hija"
+          ]
+        },
+        {
+          "audio": "Yo voy a comer",
+          "answer": "voy a",
+          "options": [
+            "voy a",
+            "voy",
+            "va a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "instruction": "Une cada familiar.",
+      "pairs": [
+        [
+          "padre",
+          "madre"
+        ],
+        [
+          "hermano",
+          "hermana"
+        ],
+        [
+          "hijo",
+          "hija"
+        ],
+        [
+          "abuelo",
+          "abuela"
+        ],
+        [
+          "mi",
+          "tu"
+        ],
+        [
+          "su",
+          "nuestro"
+        ]
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "¿Mi, tu o su?",
+      "categories": [
+        {
+          "name": "Mi (yo)",
+          "items": [
+            "mi mamá",
+            "mi casa",
+            "mi nombre"
+          ]
+        },
+        {
+          "name": "Tu (tú)",
+          "items": [
+            "tu hermano",
+            "tu libro",
+            "tu comida"
+          ]
+        },
+        {
+          "name": "Su (él/ella)",
+          "items": [
+            "su padre",
+            "su familia",
+            "su casa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con mi, tu, su o la forma correcta.",
+      "grammar": [
+        "posesivos",
+        "ir+a+infinitivo"
+      ],
+      "vocabulary": [
+        "mi",
+        "tu",
+        "su",
+        "padre",
+        "madre",
+        "hermano",
+        "hermana",
+        "hijo",
+        "hija",
+        "abuelo",
+        "abuela"
+      ],
+      "questions": [
+        {
+          "sentence": "___ mamá se llama Nakawe.",
+          "answer": "Mi",
+          "options": [
+            "Mi",
+            "Tu",
+            "Su",
+            "El"
+          ]
+        },
+        {
+          "sentence": "¿Cómo se llama ___ hermano?",
+          "answer": "tu",
+          "options": [
+            "tu",
+            "mi",
+            "su",
+            "el"
+          ]
+        },
+        {
+          "sentence": "___ hijos son Yaguará y Río.",
+          "answer": "Sus",
+          "options": [
+            "Sus",
+            "Mis",
+            "Tus",
+            "Los"
+          ]
+        },
+        {
+          "sentence": "Ella es mi ___. Se llama Nakawe.",
+          "answer": "madre",
+          "options": [
+            "madre",
+            "padre",
+            "hermana",
+            "abuela"
+          ]
+        },
+        {
+          "sentence": "Río es mi ___.",
+          "answer": "hermano",
+          "options": [
+            "hermano",
+            "hermana",
+            "padre",
+            "hijo"
+          ]
+        },
+        {
+          "sentence": "Yo ___ a escuchar la historia.",
+          "answer": "voy",
+          "options": [
+            "voy",
+            "vas",
+            "va",
+            "ir"
+          ]
+        },
+        {
+          "sentence": "Tú ___ a comer con la familia.",
+          "answer": "vas",
+          "options": [
+            "vas",
+            "voy",
+            "va",
+            "ir"
+          ]
+        },
+        {
+          "sentence": "Ella ___ a cocinar sopa.",
+          "answer": "va",
+          "options": [
+            "va",
+            "voy",
+            "vas",
+            "ir"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Ordena las palabras.",
+      "sentences": [
+        {
+          "target": "Mi hermano se llama Río",
+          "words": [
+            "Río",
+            "llama",
+            "Mi",
+            "se",
+            "hermano"
+          ]
+        },
+        {
+          "target": "Yo voy a escuchar historias",
+          "words": [
+            "historias",
+            "escuchar",
+            "Yo",
+            "a",
+            "voy"
+          ]
+        },
+        {
+          "target": "Su madre es grande y fuerte",
+          "words": [
+            "fuerte",
+            "y",
+            "grande",
+            "es",
+            "Su",
+            "madre"
+          ]
+        },
+        {
+          "target": "Tú vas a comer con tu familia",
+          "words": [
+            "familia",
+            "tu",
+            "con",
+            "comer",
+            "a",
+            "Tú",
+            "vas"
+          ]
+        },
+        {
+          "target": "Mi abuela es vieja pero fuerte",
+          "words": [
+            "fuerte",
+            "pero",
+            "vieja",
+            "es",
+            "Mi",
+            "abuela"
+          ]
+        },
+        {
+          "target": "Ella va a cocinar para todos",
+          "words": [
+            "todos",
+            "para",
+            "cocinar",
+            "a",
+            "Ella",
+            "va"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe.",
+      "sentences": [
+        {
+          "audio": "Mi mamá se llama Nakawe",
+          "text": "Mi mamá se llama Nakawe"
+        },
+        {
+          "audio": "Tu hermano es pequeño",
+          "text": "Tu hermano es pequeño"
+        },
+        {
+          "audio": "Su padre es fuerte",
+          "text": "Su padre es fuerte"
+        },
+        {
+          "audio": "Yo voy a escuchar",
+          "text": "Yo voy a escuchar"
+        },
+        {
+          "audio": "Mi familia es bonita",
+          "text": "Mi familia es bonita"
+        },
+        {
+          "audio": "Ella va a cocinar sopa",
+          "text": "Ella va a cocinar sopa"
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Elige la respuesta.",
+      "turns": [
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Cómo se llama tu mamá?",
+          "response": "Mi mamá se llama Nakawe.",
+          "options": [
+            "Mi mamá se llama Nakawe.",
+            "Tu mamá es grande.",
+            "Su mamá cocina."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Tienes hermanos?",
+          "response": "Sí, tengo una hermana.",
+          "options": [
+            "Sí, tengo una hermana.",
+            "No, voy al bosque.",
+            "Mi padre es fuerte."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Qué vas a hacer hoy?",
+          "response": "Voy a jugar con mi hermano.",
+          "options": [
+            "Voy a jugar con mi hermano.",
+            "Mi abuela es vieja.",
+            "Su casa es grande."
+          ]
+        },
+        {
+          "speaker": "mama_jaguar",
+          "prompt": "¿Dónde está tu padre?",
+          "response": "Mi padre está en el bosque.",
+          "options": [
+            "Mi padre está en el bosque.",
+            "Voy a comer.",
+            "Su madre cocina."
+          ]
+        },
+        {
+          "speaker": "abuela",
+          "prompt": "¿Quién va a escuchar la historia?",
+          "response": "Todos vamos a escuchar.",
+          "options": [
+            "Todos vamos a escuchar.",
+            "Mi hermano come.",
+            "Tu casa es bonita."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Escucha y repite.",
+      "sentences": [
+        {
+          "text": "Mi mamá se llama Nakawe.",
+          "speed": "slow"
+        },
+        {
+          "text": "Tu hermano es pequeño y curioso.",
+          "speed": "slow"
+        },
+        {
+          "text": "Su abuela es vieja pero fuerte.",
+          "speed": "slow"
+        },
+        {
+          "text": "Yo voy a escuchar historias.",
+          "speed": "slow"
+        },
+        {
+          "text": "Mi familia es pequeña pero bonita.",
+          "speed": "slow"
+        },
+        {
+          "text": "Ella va a cocinar para todos.",
+          "speed": "slow"
+        }
+      ]
+    },
+    {
+      "type": "corrector",
+      "label": "Corrector",
+      "instruction": "Encuentra y corrige el error.",
+      "items": [
+        {
+          "sentence": "Yo madre se llama Nakawe.",
+          "error": "Yo",
+          "correction": "Mi"
+        },
+        {
+          "sentence": "Ella voy a comer.",
+          "error": "voy",
+          "correction": "va"
+        },
+        {
+          "sentence": "Tu hermano se llama mi Río.",
+          "error": "mi",
+          "correction": ""
+        },
+        {
+          "sentence": "Yo va a la fiesta.",
+          "error": "va",
+          "correction": "voy"
+        },
+        {
+          "sentence": "Su padres son buenos.",
+          "error": "Su",
+          "correction": "Sus"
+        },
+        {
+          "sentence": "Tú vas a comer con su familia.",
+          "error": "su",
+          "correction": "tu"
+        }
+      ]
+    },
+    {
+      "type": "escaperoom",
+      "label": "Sala de enigmas",
+      "title": "La silla de la abuela",
+      "instruction": "Resuelve para sentarte en la silla mágica.",
+      "puzzles": [
+        {
+          "question": "___ mamá (posesivo, yo)",
+          "answer": "mi"
+        },
+        {
+          "question": "Yo ___ a comer (ir+a+inf)",
+          "answer": "voy"
+        },
+        {
+          "question": "Lo contrario de 'madre'",
+          "answer": "padre"
+        },
+        {
+          "question": "La madre de mi madre",
+          "answer": "abuela"
+        },
+        {
+          "question": "El hijo de mi madre (masculino)",
+          "answer": "hermano"
+        },
+        {
+          "question": "___ hijos son Yaguará y Río (posesivo, ella)",
+          "answer": "sus"
+        }
+      ]
+    },
+    {
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Mi familia: mi mamá se llama ___. Mi ___ se llama ___. Yo voy a ___.",
+      "placeholder": "Escribe sobre tu familia...",
+      "minWords": 8,
+      "maxWords": 40,
+      "scaffoldType": "sentence",
+      "storyKey": "cronica_dest8",
+      "destination": "dest8",
+      "button": "Guardar"
+    },
+    {
+      "type": "fill",
+      "label": "Fragmento literario",
+      "title": "Tomás Carrasquilla — La silla mágica",
+      "instruction": "La abuela cuenta historias de la familia. Tú ya tienes todas las palabras.",
+      "questions": [
+        {
+          "sentence": "La abuela tiene una silla. ___ silla es vieja pero mágica.",
+          "answer": "Su",
+          "options": [
+            "Su",
+            "Mi",
+            "Tu",
+            "La"
+          ]
+        },
+        {
+          "sentence": "«¡___! Siéntate aquí y escucha», dice la abuela.",
+          "answer": "Ven",
+          "options": [
+            "Ven",
+            "Voy",
+            "Va",
+            "Vengo"
+          ]
+        },
+        {
+          "sentence": "La abuela va a contar una historia de ___ familia.",
+          "answer": "su",
+          "options": [
+            "su",
+            "mi",
+            "tu",
+            "la"
+          ]
+        },
+        {
+          "sentence": "___ padre era bueno. ___ madre era fuerte. ___ hijos eran valientes.",
+          "answer": "Su",
+          "options": [
+            "Su",
+            "Mi",
+            "Tu",
+            "El"
+          ]
+        },
+        {
+          "sentence": "Todos ___ a escuchar juntos.",
+          "answer": "van",
+          "options": [
+            "van",
+            "voy",
+            "va",
+            "vas"
+          ]
+        },
+        {
+          "sentence": "La familia ___ juntos. Comen, hablan, escuchan.",
+          "answer": "está",
+          "options": [
+            "está",
+            "es",
+            "tiene",
+            "hay"
+          ]
+        },
+        {
+          "sentence": "Mi ___ cuenta las mejores historias.",
+          "answer": "abuela",
+          "options": [
+            "abuela",
+            "madre",
+            "hermana",
+            "hija"
+          ]
+        },
+        {
+          "sentence": "Comer ___ es bueno. Escuchar juntos es mejor.",
+          "answer": "juntos",
+          "options": [
+            "juntos",
+            "solo",
+            "mucho",
+            "siempre"
+          ]
+        },
+        {
+          "sentence": "Yo voy a ___ esta historia en mi crónica.",
+          "answer": "escribir",
+          "options": [
+            "escribir",
+            "comer",
+            "dormir",
+            "caminar"
+          ]
+        },
+        {
+          "sentence": "La familia es ___ que un nombre. Es un hogar.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "muy",
+            "poco"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ritmo",
+      "label": "Ritmo",
+      "instruction": "¿Dónde cae el golpe fuerte?",
+      "words": [
+        {
+          "word": "familia",
+          "syllables": [
+            "fa",
+            "mi",
+            "lia"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "hermano",
+          "syllables": [
+            "her",
+            "ma",
+            "no"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "abuela",
+          "syllables": [
+            "a",
+            "bue",
+            "la"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "padre",
+          "syllables": [
+            "pa",
+            "dre"
+          ],
+          "stressIndex": 0,
+          "pattern": "llana"
+        },
+        {
+          "word": "madre",
+          "syllables": [
+            "ma",
+            "dre"
+          ],
+          "stressIndex": 0,
+          "pattern": "llana"
+        },
+        {
+          "word": "historia",
+          "syllables": [
+            "his",
+            "to",
+            "ria"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "mágica",
+          "syllables": [
+            "má",
+            "gi",
+            "ca"
+          ],
+          "stressIndex": 0,
+          "pattern": "esdrújula"
+        },
+        {
+          "word": "escuchar",
+          "syllables": [
+            "es",
+            "cu",
+            "char"
+          ],
+          "stressIndex": 2,
+          "pattern": "aguda"
         }
       ]
     }

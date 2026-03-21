@@ -72,1357 +72,6 @@
     "imageAlt": "El amanecer sobre la selva — el sol naciente iluminando el río, marcando las siete de la mañana, enero",
     "image": "img/destinations/dest10-arrival.jpg"
   },
-  "games": [
-    {
-      "type": "skit",
-      "label": "Escena",
-      "title": "El tiempo pasa",
-      "instruction": "Escucha y cuenta.",
-      "grammar": [
-        "months",
-        "clock time",
-        "numbers 32-100",
-        "¿cuándo?"
-      ],
-      "beats": [
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Yaguará mira el cielo. El sol está alto."
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "enter-left",
-          "text": "¿Qué hora es?"
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "enter-right",
-          "text": "Son las tres de la tarde.",
-          "target": [
-            "Son las tres"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "¿Cuándo es tu cumpleaños?",
-          "target": [
-            "Cuándo"
-          ]
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "enter-right",
-          "text": "En mayo. ¿Y tú?",
-          "target": [
-            "mayo"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "En enero. El primer mes.",
-          "target": [
-            "enero"
-          ]
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Un hombre con lentes aparece junto al río. Tiene un libro."
-        },
-        {
-          "speaker": "maestro",
-          "name": "El maestro",
-          "animation": "glow",
-          "text": "Los números cuentan lo que falta.",
-          "target": [
-            "números",
-            "cuentan"
-          ]
-        },
-        {
-          "speaker": "maestro",
-          "name": "El maestro",
-          "animation": "fade-in",
-          "text": "La rana cantaba. Uno, dos, tres, cuatro meses sin cantar.",
-          "target": [
-            "rana",
-            "cuatro meses"
-          ]
-        },
-        {
-          "speaker": "maestro",
-          "name": "El maestro",
-          "animation": "fade-in",
-          "text": "Cuando una rana deja de cantar, no es porque se fue. Es porque nadie recuerda su canción.",
-          "target": [
-            "cantar",
-            "recuerda"
-          ]
-        },
-        {
-          "speaker": "maestro",
-          "name": "El maestro",
-          "animation": "fade-in",
-          "text": "Yo conozco una rana. Una rana sin dientes. No puede morder. No puede atrapar su nombre con la boca. Y si no puedes decir tu nombre... ¿existes?",
-          "target": [
-            "rana",
-            "nombre"
-          ]
-        },
-        {
-          "speaker": "maestro",
-          "name": "El maestro",
-          "animation": "fade-in",
-          "text": "La rana sin dientes abre la boca. Pero no sale nada. Ni un número. Ni una canción. Nombrar es crear. Y ella no puede nombrar.",
-          "target": [
-            "Nombrar",
-            "crear"
-          ]
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "bounce",
-          "text": "¡Cuarenta peces! ¡Cincuenta flores! ¡Cien estrellas!",
-          "target": [
-            "Cuarenta",
-            "Cincuenta",
-            "Cien"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Son las tres de la tarde.",
-          "target": [
-            "Son las tres"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "Es las tres",
-              "Son las tres",
-              "Está las tres"
-            ],
-            "answer": "Son las tres"
-          }
-        },
-        {
-          "speaker": "maestro",
-          "name": "El maestro",
-          "animation": "fade-out",
-          "text": "Nombrar es crear. Contar es recordar."
-        }
-      ]
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "grammar": [
-        "months",
-        "numbers 32-100"
-      ],
-      "vocabulary": [
-        "cuarenta",
-        "cincuenta",
-        "sesenta",
-        "enero",
-        "junio",
-        "diciembre"
-      ],
-      "instruction": "Encuentra los pares: <em>número ↔ palabra</em>",
-      "pairs": [
-        [
-          "40",
-          "cuarenta"
-        ],
-        [
-          "60",
-          "sesenta"
-        ],
-        [
-          "100",
-          "cien"
-        ],
-        [
-          "mes 1",
-          "enero"
-        ],
-        [
-          "mes 6",
-          "junio"
-        ],
-        [
-          "mes 12",
-          "diciembre"
-        ]
-      ],
-      "image": "img/destinations/dest10-pair-1.jpg",
-      "imageAlt": "Dos huellas de jaguar conectadas por un hilo dorado en la tierra húmeda",
-      "tip": {
-        "title": "Números 32-100",
-        "lines": [
-          "treinta y dos, treinta y tres...",
-          "cuarenta (40), cincuenta (50), sesenta (60)",
-          "setenta (70), ochenta (80), noventa (90)",
-          "cien (100)"
-        ]
-      }
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "grammar": [
-        "clock time",
-        "months",
-        "numbers"
-      ],
-      "vocabulary": [
-        "hora",
-        "meses",
-        "números"
-      ],
-      "instruction": "Completa las frases sobre el tiempo.",
-      "questions": [
-        {
-          "sentence": "¿Qué hora es? — ___ las tres.",
-          "answer": "Son",
-          "options": [
-            "Es",
-            "Son",
-            "Hay",
-            "Tiene"
-          ]
-        },
-        {
-          "sentence": "¿Qué hora es? — ___ la una.",
-          "answer": "Es",
-          "options": [
-            "Es",
-            "Son",
-            "Hay",
-            "Está"
-          ]
-        },
-        {
-          "sentence": "Mi cumpleaños es en ___. Es el mes cinco.",
-          "answer": "mayo",
-          "options": [
-            "marzo",
-            "mayo",
-            "julio",
-            "enero"
-          ]
-        },
-        {
-          "sentence": "Hay ___ árboles en la selva. (50)",
-          "answer": "cincuenta",
-          "options": [
-            "cuarenta",
-            "cincuenta",
-            "sesenta",
-            "cien"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest10-fill-1.jpg",
-      "imageAlt": "Hojas de la selva con espacios vacíos entre las venas, esperando ser completadas",
-      "tip": {
-        "title": "La hora",
-        "lines": [
-          "¿Qué hora es?",
-          "Es la una. (1:00)",
-          "Son las dos. Son las tres. (2:00, 3:00)",
-          "Son las diez de la mañana."
-        ],
-        "gloss": "¿qué hora es? = what time is it?"
-      }
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "grammar": [
-        "clock time",
-        "months",
-        "¿cuándo?"
-      ],
-      "vocabulary": [
-        "hora",
-        "mes",
-        "cuándo"
-      ],
-      "instruction": "Conversación sobre el tiempo.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Qué hora es?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Son las cinco de la tarde.",
-            "Tengo cinco.",
-            "Es mayo."
-          ],
-          "answer": "Son las cinco de la tarde."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Cuándo es tu cumpleaños?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Es en agosto.",
-            "Son las ocho.",
-            "Tengo años."
-          ],
-          "answer": "Es en agosto."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Cuántos animales hay en la selva?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Hay más de cien.",
-            "Son las cien.",
-            "Es cien."
-          ],
-          "answer": "Hay más de cien."
-        }
-      ],
-      "image": "img/destinations/dest10-conversation-1.jpg",
-      "imageAlt": "Yaguará y el viajero junto a una fogata en la selva, diálogo flotando entre ellos"
-    },
-    {
-      "type": "narrative",
-      "label": "Narración",
-      "instruction": "Lee y escucha.",
-      "text": "Yaguará cuenta las lunas. Cuatro lunas desde el silencio de la rana. Antes, la rana canta todas las noches. Ahora no canta. Yaguará cuenta: una luna, dos lunas, tres lunas, cuatro lunas de silencio.",
-      "image": "img/destinations/dest10-narrative.jpg",
-      "imageAlt": "Claro del bosque al amanecer, luz dorada filtrándose entre la niebla"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Elige el número correcto.",
-      "questions": [
-        {
-          "sentence": "30 + 5 = ___",
-          "answer": "treinta y cinco",
-          "options": [
-            "treinta y tres",
-            "treinta y cinco",
-            "cuarenta y cinco",
-            "veinticinco"
-          ]
-        },
-        {
-          "sentence": "50 + 50 = ___",
-          "answer": "cien",
-          "options": [
-            "noventa",
-            "cien",
-            "cincuenta",
-            "sesenta"
-          ]
-        },
-        {
-          "sentence": "60 + 2 = ___",
-          "answer": "sesenta y dos",
-          "options": [
-            "setenta y dos",
-            "cincuenta y dos",
-            "sesenta y dos",
-            "sesenta y tres"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest10-fill-2.jpg",
-      "imageAlt": "Frutos del bosque dispuestos en fila, uno falta en la secuencia"
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "La rana no canta. Cuatro lunas de silencio. El grillo no canta. Cuatro meses.",
-      "question": "¿Cuántas lunas de silencio hay?",
-      "answer": "cuatro",
-      "options": [
-        "dos",
-        "tres",
-        "cuatro",
-        "cinco"
-      ],
-      "image": "img/destinations/dest10-listening-1.jpg",
-      "imageAlt": "Yaguará con la oreja levantada, ondas de sonido doradas entre los árboles",
-      "tip": {
-        "title": "Los meses",
-        "lines": [
-          "enero, febrero, marzo, abril",
-          "mayo, junio, julio, agosto",
-          "septiembre, octubre, noviembre, diciembre"
-        ]
-      }
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "Son las tres de la tarde. Yaguará descansa junto al río.",
-      "question": "¿Qué hora es?",
-      "answer": "las tres",
-      "options": [
-        "las dos",
-        "las tres",
-        "las cinco",
-        "las ocho"
-      ],
-      "image": "img/destinations/dest10-listening-2.jpg",
-      "imageAlt": "El río murmurando entre las piedras, círculos de agua como notas musicales"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "las",
-        "Son",
-        "de",
-        "ocho",
-        "la",
-        "mañana"
-      ],
-      "answer": "Son las ocho de la mañana",
-      "image": "img/destinations/dest10-builder-1.jpg",
-      "imageAlt": "Piedras del río con palabras talladas, dispuestas en desorden sobre la orilla"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "es",
-        "Hoy",
-        "cinco",
-        "de",
-        "marzo"
-      ],
-      "answer": "Hoy es cinco de marzo",
-      "image": "img/destinations/dest10-builder-2.jpg",
-      "imageAlt": "Ramas caídas formando un camino por armar sobre el barro del sendero"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Río",
-              "text": "¿Qué hora es?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Son las tres de la tarde.",
-            "Tengo hambre.",
-            "Me llamo Yaguará.",
-            "Estoy bien."
-          ],
-          "answer": "Son las tres de la tarde."
-        }
-      ],
-      "image": "img/destinations/dest10-conversation-2.jpg",
-      "imageAlt": "Dos figuras sentadas en la ribera del río, el agua lleva palabras doradas"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Cuántos meses de silencio hay?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Hay cuatro meses de silencio.",
-            "Me gusta el río.",
-            "Son las ocho.",
-            "Mi casa es grande."
-          ],
-          "answer": "Hay cuatro meses de silencio."
-        }
-      ],
-      "image": "img/destinations/dest10-conversation-3.jpg",
-      "imageAlt": "Yaguará hablando bajo la copa de un árbol enorme, luciérnagas iluminando"
-    },
-    {
-      "type": "susurro",
-      "label": "Susurro",
-      "instruction": "Escucha el susurro y elige la palabra.",
-      "questions": [
-        {
-          "audio": "la",
-          "question": "¿Qué palabra es?",
-          "answer": "la",
-          "options": [
-            "la",
-            "treinta y cinco",
-            "amigo"
-          ]
-        },
-        {
-          "audio": "hoy",
-          "question": "¿Qué palabra es?",
-          "answer": "hoy",
-          "options": [
-            "cuarenta",
-            "una",
-            "hoy"
-          ]
-        },
-        {
-          "audio": "árboles",
-          "question": "¿Qué palabra es?",
-          "answer": "árboles",
-          "options": [
-            "árboles",
-            "las siete de la mañana",
-            "las"
-          ]
-        },
-        {
-          "audio": "noche",
-          "question": "¿Qué palabra es?",
-          "answer": "noche",
-          "options": [
-            "hay",
-            "cinco",
-            "noche"
-          ]
-        },
-        {
-          "audio": "siete",
-          "question": "¿Qué palabra es?",
-          "answer": "siete",
-          "options": [
-            "tarde",
-            "siete",
-            "octubre"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "susurro_dest10"
-    },
-    {
-      "type": "eco_lejano",
-      "label": "Eco lejano",
-      "instruction": "Escucha el eco y completa la palabra que falta.",
-      "items": [
-        {
-          "audio": "Son las cinco de la tarde.",
-          "sentence": "Son ___ cinco de la tarde.",
-          "answer": "las",
-          "options": [
-            "los",
-            "las",
-            "el"
-          ]
-        },
-        {
-          "audio": "Es en agosto.",
-          "sentence": "Es en ___",
-          "answer": "agosto",
-          "options": [
-            "enero",
-            "agosto",
-            "marzo"
-          ]
-        },
-        {
-          "audio": "Hay más de cien.",
-          "sentence": "___ más de cien.",
-          "answer": "Hay",
-          "options": [
-            "Son",
-            "Están",
-            "Hay"
-          ]
-        },
-        {
-          "audio": "Son las tres de la tarde.",
-          "sentence": "Son ___ tres de la tarde.",
-          "answer": "las",
-          "options": [
-            "los",
-            "las",
-            "el"
-          ]
-        },
-        {
-          "audio": "Hay cuatro meses de silencio.",
-          "sentence": "___ cuatro meses de silencio.",
-          "answer": "Hay",
-          "options": [
-            "Son",
-            "Están",
-            "Hay"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "eco_lejano_dest10"
-    },
-    {
-      "type": "translation",
-      "label": "Traducir",
-      "instruction": "Elige la traducción.",
-      "questions": [
-        {
-          "prompt": "there is",
-          "answer": "hay",
-          "options": [
-            "siete",
-            "agua",
-            "hay"
-          ]
-        },
-        {
-          "prompt": "three",
-          "answer": "tres",
-          "options": [
-            "tres",
-            "cinco",
-            "agua"
-          ]
-        },
-        {
-          "prompt": "river",
-          "answer": "río",
-          "options": [
-            "hay",
-            "la",
-            "río"
-          ]
-        },
-        {
-          "prompt": "four",
-          "answer": "cuatro",
-          "options": [
-            "agua",
-            "tres",
-            "cuatro"
-          ]
-        },
-        {
-          "prompt": "is",
-          "answer": "es",
-          "options": [
-            "es",
-            "amigo",
-            "cuatro"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "translation_dest10"
-    },
-    {
-      "type": "sombra",
-      "label": "Sombra",
-      "instruction": "Escucha y repite.",
-      "timeLimit": 5000,
-      "phrases": [
-        {
-          "audio": "Hay cuatro meses de silencio.",
-          "text": "Hay cuatro meses de silencio."
-        },
-        {
-          "audio": "En enero. El primer mes.",
-          "text": "En enero. El primer mes."
-        },
-        {
-          "audio": "¿Cuándo es tu cumpleaños?",
-          "text": "¿Cuándo es tu cumpleaños?"
-        },
-        {
-          "audio": "¿Qué hora es?",
-          "text": "¿Qué hora es?"
-        },
-        {
-          "audio": "En mayo. ¿Y tú?",
-          "text": "En mayo. ¿Y tú?"
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "sombra_dest10"
-    },
-    {
-      "type": "senda",
-      "label": "Senda",
-      "instruction": "Elige el camino correcto.",
-      "steps": [
-        {
-          "sentence": "Son las cinco de la ___",
-          "answer": "tarde",
-          "options": [
-            "tarde",
-            "julio",
-            "la"
-          ]
-        },
-        {
-          "sentence": "Hay más de ___",
-          "answer": "cien",
-          "options": [
-            "mayo",
-            "cien",
-            "meses"
-          ]
-        },
-        {
-          "sentence": "Son las tres de la ___",
-          "answer": "tarde",
-          "options": [
-            "tarde",
-            "mes 4",
-            "mes 12"
-          ]
-        },
-        {
-          "sentence": "Hay cuatro ___ de silencio.",
-          "answer": "meses",
-          "options": [
-            "mes 1",
-            "mayo",
-            "meses"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "senda_dest10"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "de",
-        "cien.",
-        "Hay",
-        "más"
-      ],
-      "answer": "Hay más de cien.",
-      "_generated": true,
-      "_generatorId": "builder_extra_dest10"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une cada palabra con su pareja.",
-      "pairs": [
-        [
-          "sol",
-          "luna"
-        ],
-        [
-          "tres",
-          "cuatro"
-        ],
-        [
-          "mamá",
-          "papá"
-        ],
-        [
-          "día",
-          "noche"
-        ]
-      ],
-      "_generated": true,
-      "_generatorId": "pair_extra_dest10"
-    },
-    {
-      "type": "corrector",
-      "label": "Corrector",
-      "instruction": "Encuentra y corrige el error.",
-      "items": [
-        {
-          "sentence": "Son las de cinco la tarde.",
-          "corrected": "Son las cinco de la tarde.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Es agosto. En",
-          "corrected": "Es en agosto.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Hay de más cien.",
-          "corrected": "Hay más de cien.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Son tres las de la tarde.",
-          "corrected": "Son las tres de la tarde.",
-          "errorType": "word order"
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "corrector_dest10"
-    },
-    {
-      "type": "escaperoom",
-      "label": "Sala de enigmas",
-      "instruction": "Resuelve los enigmas para abrir la puerta.",
-      "room": {
-        "name": "La cámara del calendario",
-        "description": "Una cueva redonda con un disco de piedra en el suelo. El disco tiene marcas, pero faltan números. La luz entra por un agujero en el techo y marca la hora.",
-        "ambience": "wind"
-      },
-      "puzzles": [
-        {
-          "puzzleType": "sequence",
-          "prompt": "El disco de piedra tiene meses escritos, pero faltan tres.",
-          "clue": "Enero, febrero, ___, abril, ___, junio, ___, agosto...",
-          "answer": "marzo mayo julio",
-          "options": [
-            "marzo mayo julio",
-            "abril junio agosto",
-            "febrero abril junio",
-            "marzo junio septiembre"
-          ],
-          "onSolve": "Los meses brillan en el disco."
-        },
-        {
-          "puzzleType": "cipher",
-          "prompt": "Hay letras escritas en la pared con luz de sol.",
-          "clue": "Yaguará cuenta las lunas. Cada luna es un... Tiene tres letras.",
-          "answer": "mes",
-          "scrambled": "sme",
-          "onSolve": "Las letras brillan."
-        },
-        {
-          "puzzleType": "wordlock",
-          "prompt": "Hay una cerradura en el centro del disco.",
-          "clue": "Yaguará escucha el silencio. Cuenta cuatro de estos. Son redondas en el cielo. Cuatro letras.",
-          "answer": "luna",
-          "hint": "_ _ _ _",
-          "onSolve": "El disco gira. La puerta se abre."
-        }
-      ],
-      "fragment": {
-        "text": "Un dibujo brilla: una raíz en forma de espiral de tiempo.",
-        "questClue": "El tiempo marca lo que desaparece y lo que queda.",
-        "item": "raiz-tiempo"
-      },
-      "image": "img/destinations/dest10-escaperoom.jpg",
-      "imageAlt": "Entrada de una cueva entre raíces de ceiba, símbolos dorados brillando"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une cada mes con su número.",
-      "pairs": [
-        [
-          "julio",
-          "mes 7"
-        ],
-        [
-          "octubre",
-          "mes 10"
-        ],
-        [
-          "marzo",
-          "mes 3"
-        ],
-        [
-          "diciembre",
-          "mes 12"
-        ],
-        [
-          "abril",
-          "mes 4"
-        ],
-        [
-          "septiembre",
-          "mes 9"
-        ]
-      ],
-      "image": "img/destinations/dest10-pair-2.jpg",
-      "imageAlt": "Hojas caídas sobre el agua, cada una reflejando su pareja en la superficie"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa con la hora o el mes.",
-      "questions": [
-        {
-          "sentence": "Son las ___ de la mañana. El sol sale. (7)",
-          "answer": "siete",
-          "options": [
-            "cinco",
-            "siete",
-            "diez",
-            "tres"
-          ]
-        },
-        {
-          "sentence": "Es ___. Mes número tres. Empieza la lluvia en la selva.",
-          "answer": "marzo",
-          "options": [
-            "enero",
-            "marzo",
-            "julio",
-            "noviembre"
-          ]
-        },
-        {
-          "sentence": "Yaguará cuenta: cuarenta y ___ árboles junto al río. (3)",
-          "answer": "tres",
-          "options": [
-            "tres",
-            "cinco",
-            "dos",
-            "seis"
-          ]
-        },
-        {
-          "sentence": "¿Qué hora es? — Es la ___. Solo una.",
-          "answer": "una",
-          "options": [
-            "una",
-            "dos",
-            "tres",
-            "diez"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest10-fill-3.jpg",
-      "imageAlt": "Piedras del río con palabras grabadas, una piedra vacía espera su inscripción",
-      "tip": {
-        "title": "¿Cuándo?",
-        "lines": [
-          "¿Cuándo es tu cumpleaños?",
-          "En enero. En mayo. En diciembre.",
-          "¿Cuándo? → pregunta de tiempo"
-        ],
-        "gloss": "¿cuándo? = when?"
-      }
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "instruction": "Clasifica: ¿es un mes o una hora?",
-      "categories": [
-        "Mes",
-        "Hora"
-      ],
-      "items": [
-        {
-          "text": "enero",
-          "category": "Mes"
-        },
-        {
-          "text": "son las tres",
-          "category": "Hora"
-        },
-        {
-          "text": "agosto",
-          "category": "Mes"
-        },
-        {
-          "text": "es la una",
-          "category": "Hora"
-        },
-        {
-          "text": "noviembre",
-          "category": "Mes"
-        },
-        {
-          "text": "son las diez de la noche",
-          "category": "Hora"
-        }
-      ],
-      "image": "img/destinations/dest10-category.jpg",
-      "imageAlt": "Cestas tejidas al estilo wayúu bajo la copa de un árbol, cada una etiquetada"
-    },
-    {
-      "type": "story",
-      "label": "Lectura",
-      "instruction": "Lee sobre el día de Yaguará y responde.",
-      "title": "Un día en la selva",
-      "text": "Son las siete de la mañana. Es marzo, el tercer mes del año. Yaguará camina junto al río. Cuenta los árboles: cuarenta y dos, cuarenta y tres, cuarenta y cuatro. A las tres de la tarde descansa. ¿Cuántos árboles hay? Más de cien. A las ocho de la noche, Yaguará duerme. Mañana es abril.",
-      "questions": [
-        {
-          "q": "¿Qué hora es cuando Yaguará camina?",
-          "options": [
-            "Las siete de la mañana",
-            "Las tres de la tarde",
-            "Las ocho de la noche",
-            "Las diez"
-          ],
-          "answer": "Las siete de la mañana"
-        },
-        {
-          "q": "¿Cuántos árboles hay junto al río?",
-          "options": [
-            "Cuarenta y dos",
-            "Cuarenta y cuatro",
-            "Más de cien",
-            "Treinta"
-          ],
-          "answer": "Más de cien"
-        },
-        {
-          "q": "¿Qué mes es mañana?",
-          "options": [
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Febrero"
-          ],
-          "answer": "Abril"
-        }
-      ],
-      "image": "img/destinations/dest10-story.jpg",
-      "imageAlt": "Sendero de la selva perdiéndose entre helechos gigantes y niebla baja"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "las",
-        "Son",
-        "cinco",
-        "de",
-        "la",
-        "tarde"
-      ],
-      "answer": "Son las cinco de la tarde",
-      "image": "img/destinations/dest10-builder-3.jpg",
-      "imageAlt": "Semillas esparcidas sobre una hoja gigante que forman una frase al alinearse"
-    },
-    {
-      "type": "dictation",
-      "label": "Dictado",
-      "instruction": "Escucha y escribe.",
-      "audio": "Son las ocho de la mañana. Es enero.",
-      "answer": "Son las ocho de la mañana. Es enero.",
-      "image": "img/destinations/dest10-dictation.jpg",
-      "imageAlt": "Una hoja grande de plátano como pergamino extendida junto al río"
-    },
-    {
-      "type": "flashnote",
-      "label": "Cápsula",
-      "instruction": "Recuerda esta regla.",
-      "note": "Hay = there is / there are. Es invariable: hay un gato, hay dos gatos.",
-      "question": "___ muchos árboles en la selva.",
-      "answer": "Hay",
-      "options": [
-        "Hay",
-        "Son",
-        "Están",
-        "Tienen"
-      ],
-      "image": "img/destinations/dest10-flashnote.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "cronica",
-      "label": "Crónica",
-      "prompt": "¿Qué hora es? Escribe la hora.",
-      "placeholder": "Escribe una palabra...",
-      "minWords": 1,
-      "maxWords": 10,
-      "scaffoldType": "word",
-      "storyKey": "cronica_dest10",
-      "destination": "dest10",
-      "button": "Guardar en la crónica",
-      "image": "img/destinations/dest10-cronica.jpg",
-      "imageAlt": "Un códice abierto sobre una piedra musgosa, pluma de guacamaya al lado"
-    },
-    {
-      "type": "par_minimo",
-      "label": "Par mínimo",
-      "instruction": "Yaguará escucha dos sonidos en la selva. ¿Cuál es cuál?",
-      "pairs": [
-        {
-          "wordA": "casa",
-          "wordB": "caza",
-          "correct": "A",
-          "hint": "Escucha la ese"
-        },
-        {
-          "wordA": "mala",
-          "wordB": "malla",
-          "correct": "B",
-          "hint": "Escucha la elle"
-        },
-        {
-          "wordA": "pata",
-          "wordB": "bata",
-          "correct": "A",
-          "hint": "Sonido fuerte al inicio"
-        },
-        {
-          "wordA": "peso",
-          "wordB": "beso",
-          "correct": "B",
-          "hint": "Labios juntos"
-        },
-        {
-          "wordA": "pero",
-          "wordB": "perro",
-          "correct": "B",
-          "hint": "Escucha la erre"
-        }
-      ],
-      "image": "img/destinations/dest10-par_minimo.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "brecha",
-      "label": "Brecha",
-      "instruction": "Yaguará sabe algo. Tú sabes algo. Juntos tienen la verdad completa.",
-      "cardA": {
-        "text": "Yaguará vive en la selva. Tiene cuatro patas. Es grande y fuerte.",
-        "facts": [
-          "vive en la selva",
-          "cuatro patas",
-          "grande y fuerte"
-        ]
-      },
-      "cardB": {
-        "text": "Yaguará come peces del río. Duerme en los árboles. Es un jaguar.",
-        "facts": [
-          "come peces",
-          "duerme en árboles",
-          "es un jaguar"
-        ]
-      },
-      "questions": [
-        {
-          "question": "¿Dónde vive Yaguará?",
-          "answer": "en la selva",
-          "source": "A",
-          "options": [
-            "en la selva",
-            "en la ciudad",
-            "en el mar"
-          ]
-        },
-        {
-          "question": "¿Qué come Yaguará?",
-          "answer": "peces del río",
-          "source": "B",
-          "options": [
-            "peces del río",
-            "frutas del árbol",
-            "pan"
-          ]
-        },
-        {
-          "question": "¿Qué animal es Yaguará?",
-          "answer": "un jaguar",
-          "source": "B",
-          "options": [
-            "un jaguar",
-            "un pájaro",
-            "un pez"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest10-brecha.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "descripcion",
-      "label": "Descripción",
-      "instruction": "Yaguará llega a un lugar nuevo. ¿Qué ves?",
-      "scene": "Un río grande. Árboles muy altos. El agua es azul y verde. Hay un pájaro rojo en un árbol. El sol es fuerte.",
-      "promptQuestion": "¿Cuál es la mejor descripción?",
-      "vocabulary": [
-        "río",
-        "árboles",
-        "agua",
-        "pájaro",
-        "sol"
-      ],
-      "modelAnswer": "Hay un río grande con árboles altos. El agua es azul.",
-      "options": [
-        "Hay un río grande con árboles altos y un pájaro rojo.",
-        "Hay una cueva con estalactitas y agua.",
-        "En la ciudad hay edificios altos y carros."
-      ],
-      "image": "img/destinations/dest10-descripcion.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "fill",
-      "label": "Fragmento literario",
-      "title": "Luis Fernando Macías — La rana sin dientes",
-      "instruction": "Una rana que no puede atrapar palabras. Completa su historia.",
-      "grammar": [
-        "poder + infinitive",
-        "negative"
-      ],
-      "vocabulary": [
-        "puede",
-        "nombre",
-        "boca",
-        "dientes"
-      ],
-      "questions": [
-        {
-          "sentence": "En un charco transparente vive una rana. No tiene ___.",
-          "answer": "dientes",
-          "options": [
-            "dientes",
-            "ojos",
-            "patas",
-            "agua"
-          ]
-        },
-        {
-          "sentence": "Las palabras pasan por su ___ como agua. No puede atraparlas.",
-          "answer": "boca",
-          "options": [
-            "boca",
-            "casa",
-            "mano",
-            "cola"
-          ]
-        },
-        {
-          "sentence": "Quiere decir su nombre, pero no ___. Las letras se escapan.",
-          "answer": "puede",
-          "options": [
-            "puede",
-            "come",
-            "sale",
-            "sabe"
-          ]
-        },
-        {
-          "sentence": "Sin nombre, la rana ___ un poco cada día. Como si no existiera.",
-          "answer": "desaparece",
-          "options": [
-            "desaparece",
-            "crece",
-            "canta",
-            "duerme"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ritmo",
-      "label": "Ritmo",
-      "instruction": "La selva tiene un ritmo. Las palabras también. ¿Dónde cae el golpe?",
-      "words": [
-        {
-          "word": "agua",
-          "syllables": [
-            "a",
-            "gua"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "mamá",
-          "syllables": [
-            "ma",
-            "má"
-          ],
-          "stressIndex": 1,
-          "pattern": "aguda"
-        },
-        {
-          "word": "amigo",
-          "syllables": [
-            "a",
-            "mi",
-            "go"
-          ],
-          "stressIndex": 1,
-          "pattern": "llana"
-        },
-        {
-          "word": "casa",
-          "syllables": [
-            "ca",
-            "sa"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "feliz",
-          "syllables": [
-            "fe",
-            "liz"
-          ],
-          "stressIndex": 1,
-          "pattern": "aguda"
-        }
-      ],
-      "image": "img/destinations/dest10-ritmo.jpg",
-      "imageAlt": "Gotas de lluvia creando círculos rítmicos en un charco de la selva"
-    }
-  ],
   "ecosystemGames": [
     {
       "_template": {
@@ -22182,6 +20831,637 @@
             "se llama",
             "..."
           ]
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "skit",
+      "label": "Escena",
+      "title": "La rana sin dientes",
+      "instruction": "Escucha la historia.",
+      "grammar": [
+        "comparativos",
+        "números grandes"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "text": "Yaguará y Río caminan por el bosque. Encuentran un charco pequeño y silencioso."
+        },
+        {
+          "speaker": "narrator",
+          "text": "En el charco hay una rana. Pero esta rana es diferente. No tiene dientes."
+        },
+        {
+          "speaker": "rana",
+          "text": "..."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Hola. ¿Cómo te llamas? ¿Estás bien?"
+        },
+        {
+          "speaker": "narrator",
+          "text": "La rana abre la boca. Quiere hablar. Pero las palabras pasan por su boca como agua. No puede atraparlas."
+        },
+        {
+          "speaker": "rio",
+          "text": "¿Por qué no habla? ¿Está enferma?"
+        },
+        {
+          "speaker": "yaguara",
+          "text": "No tiene dientes. Las palabras se escapan. No puede decir su nombre."
+        },
+        {
+          "speaker": "narrator",
+          "text": "Macías escribe: «Sin nombre, la rana desaparece un poco cada día. Como si no existiera.»"
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Si no puedes decir tu nombre, ¿existes? ¿Eres real?"
+        },
+        {
+          "speaker": "rio",
+          "text": "Yo puedo contar hasta cien. Treinta, cuarenta, cincuenta... Pero la rana no puede contar nada."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Ella es más triste que nosotros. Es menos fuerte que nosotros. Pero es tan valiente como nosotros."
+        },
+        {
+          "speaker": "narrator",
+          "text": "La rana sin dientes sabe algo: las palabras son más importantes que la comida. Sin palabras, desapareces."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Yo voy a ayudarla. Voy a darle mi voz. Voy a decir su nombre."
+        }
+      ]
+    },
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha y elige.",
+      "questions": [
+        {
+          "audio": "treinta",
+          "answer": "30",
+          "options": [
+            "30",
+            "20",
+            "40"
+          ]
+        },
+        {
+          "audio": "cincuenta",
+          "answer": "50",
+          "options": [
+            "50",
+            "40",
+            "60"
+          ]
+        },
+        {
+          "audio": "cien",
+          "answer": "100",
+          "options": [
+            "100",
+            "50",
+            "70"
+          ]
+        },
+        {
+          "audio": "más grande que",
+          "answer": "más...que",
+          "options": [
+            "más...que",
+            "menos...que",
+            "tan...como"
+          ]
+        },
+        {
+          "audio": "menos fuerte que",
+          "answer": "menos...que",
+          "options": [
+            "menos...que",
+            "más...que",
+            "tan...como"
+          ]
+        },
+        {
+          "audio": "tan valiente como",
+          "answer": "tan...como",
+          "options": [
+            "tan...como",
+            "más...que",
+            "menos...que"
+          ]
+        },
+        {
+          "audio": "desaparece",
+          "answer": "desaparece",
+          "options": [
+            "desaparece",
+            "descanso",
+            "después"
+          ]
+        },
+        {
+          "audio": "dientes",
+          "answer": "dientes",
+          "options": [
+            "dientes",
+            "dulces",
+            "dedos"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "instruction": "Une el número.",
+      "pairs": [
+        [
+          "30",
+          "treinta"
+        ],
+        [
+          "40",
+          "cuarenta"
+        ],
+        [
+          "50",
+          "cincuenta"
+        ],
+        [
+          "60",
+          "sesenta"
+        ],
+        [
+          "70",
+          "setenta"
+        ],
+        [
+          "80",
+          "ochenta"
+        ],
+        [
+          "90",
+          "noventa"
+        ],
+        [
+          "100",
+          "cien"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con más, menos o tan.",
+      "grammar": [
+        "comparativos"
+      ],
+      "vocabulary": [
+        "más",
+        "menos",
+        "tan",
+        "como",
+        "que"
+      ],
+      "questions": [
+        {
+          "sentence": "El río es ___ largo que el camino.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "tan",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "La rana es ___ grande que el perro.",
+          "answer": "menos",
+          "options": [
+            "menos",
+            "más",
+            "tan",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "Yaguará es ___ valiente como Río.",
+          "answer": "tan",
+          "options": [
+            "tan",
+            "más",
+            "menos",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "La selva es ___ bonita que el pueblo.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "tan",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "Yo soy ___ alto ___ tú.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "tan",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "Las palabras son ___ importantes que la comida.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "tan",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "Treinta es ___ que veinte.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "tan",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "La rana es ___ triste ___ Yaguará.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "tan",
+            "muy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Ordena las palabras.",
+      "sentences": [
+        {
+          "target": "La rana es más triste que Yaguará",
+          "words": [
+            "Yaguará",
+            "que",
+            "triste",
+            "más",
+            "es",
+            "La",
+            "rana"
+          ]
+        },
+        {
+          "target": "Yo soy tan valiente como tú",
+          "words": [
+            "tú",
+            "como",
+            "valiente",
+            "tan",
+            "soy",
+            "Yo"
+          ]
+        },
+        {
+          "target": "Treinta es más que veinte",
+          "words": [
+            "veinte",
+            "que",
+            "más",
+            "es",
+            "Treinta"
+          ]
+        },
+        {
+          "target": "Las palabras son importantes",
+          "words": [
+            "importantes",
+            "son",
+            "Las",
+            "palabras"
+          ]
+        },
+        {
+          "target": "La rana no puede hablar",
+          "words": [
+            "hablar",
+            "puede",
+            "no",
+            "La",
+            "rana"
+          ]
+        },
+        {
+          "target": "Sin nombre la rana desaparece",
+          "words": [
+            "desaparece",
+            "rana",
+            "la",
+            "nombre",
+            "Sin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Elige la respuesta.",
+      "turns": [
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Quién es más grande, el perro o el gato?",
+          "response": "El perro es más grande que el gato.",
+          "options": [
+            "El perro es más grande que el gato.",
+            "El gato es más grande.",
+            "Son iguales."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Cincuenta es más que treinta?",
+          "response": "Sí, cincuenta es más que treinta.",
+          "options": [
+            "Sí, cincuenta es más que treinta.",
+            "No, treinta es más.",
+            "Son iguales."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Por qué la rana no puede hablar?",
+          "response": "Porque no tiene dientes.",
+          "options": [
+            "Porque no tiene dientes.",
+            "Porque es grande.",
+            "Porque está feliz."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Qué pasa sin nombre?",
+          "response": "Sin nombre, desapareces.",
+          "options": [
+            "Sin nombre, desapareces.",
+            "Sin nombre, comes.",
+            "Sin nombre, duermes."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe.",
+      "sentences": [
+        {
+          "audio": "La rana no tiene dientes",
+          "text": "La rana no tiene dientes"
+        },
+        {
+          "audio": "Ella es más triste que yo",
+          "text": "Ella es más triste que yo"
+        },
+        {
+          "audio": "Treinta más veinte es cincuenta",
+          "text": "Treinta más veinte es cincuenta"
+        },
+        {
+          "audio": "Las palabras son importantes",
+          "text": "Las palabras son importantes"
+        },
+        {
+          "audio": "Sin nombre desapareces",
+          "text": "Sin nombre desapareces"
+        },
+        {
+          "audio": "Yo soy tan valiente como tú",
+          "text": "Yo soy tan valiente como tú"
+        }
+      ]
+    },
+    {
+      "type": "escaperoom",
+      "label": "Sala de enigmas",
+      "title": "El charco silencioso",
+      "instruction": "Ayuda a la rana.",
+      "puzzles": [
+        {
+          "question": "20 + 30 = ___ (en palabras)",
+          "answer": "cincuenta"
+        },
+        {
+          "question": "Más grande ___. (conector)",
+          "answer": "que"
+        },
+        {
+          "question": "Tan valiente ___. (conector)",
+          "answer": "como"
+        },
+        {
+          "question": "La rana no tiene ___.",
+          "answer": "dientes"
+        },
+        {
+          "question": "Sin nombre, la rana ___.",
+          "answer": "desaparece"
+        },
+        {
+          "question": "Lo contrario de 'aparecer'",
+          "answer": "desaparecer"
+        }
+      ]
+    },
+    {
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Yo soy más ___ que ___. Pero soy tan ___ como ___.",
+      "placeholder": "Compárate con algo...",
+      "minWords": 8,
+      "maxWords": 40,
+      "scaffoldType": "sentence",
+      "storyKey": "cronica_dest10",
+      "destination": "dest10",
+      "button": "Guardar"
+    },
+    {
+      "type": "fill",
+      "label": "Fragmento literario",
+      "title": "Luis Fernando Macías — La rana sin dientes",
+      "instruction": "Macías escribe sobre la rana sin dientes. Tú ya tienes todas las palabras.",
+      "questions": [
+        {
+          "sentence": "En un charco transparente vive una rana. No tiene ___.",
+          "answer": "dientes",
+          "options": [
+            "dientes",
+            "dedos",
+            "dulces",
+            "días"
+          ]
+        },
+        {
+          "sentence": "Las palabras pasan por su ___ como agua. No puede atraparlas.",
+          "answer": "boca",
+          "options": [
+            "boca",
+            "casa",
+            "cara",
+            "cama"
+          ]
+        },
+        {
+          "sentence": "Quiere decir su nombre, pero no ___.",
+          "answer": "puede",
+          "options": [
+            "puede",
+            "puedo",
+            "puedes",
+            "quiere"
+          ]
+        },
+        {
+          "sentence": "Sin nombre, la rana ___ un poco cada día.",
+          "answer": "desaparece",
+          "options": [
+            "desaparece",
+            "duerme",
+            "come",
+            "canta"
+          ]
+        },
+        {
+          "sentence": "Las palabras son ___ importantes que la comida.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "tan",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "La rana es ___ triste ___ el río sin agua.",
+          "answer": "tan",
+          "options": [
+            "tan",
+            "más",
+            "menos",
+            "muy"
+          ]
+        },
+        {
+          "sentence": "Sin ___, la rana no existe.",
+          "answer": "nombre",
+          "options": [
+            "nombre",
+            "comida",
+            "casa",
+            "agua"
+          ]
+        },
+        {
+          "sentence": "Nombrar es existir. No nombrar es ___.",
+          "answer": "desaparecer",
+          "options": [
+            "desaparecer",
+            "dormir",
+            "comer",
+            "caminar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ritmo",
+      "label": "Ritmo",
+      "instruction": "¿Dónde cae el golpe fuerte?",
+      "words": [
+        {
+          "word": "desaparece",
+          "syllables": [
+            "de",
+            "sa",
+            "pa",
+            "re",
+            "ce"
+          ],
+          "stressIndex": 3,
+          "pattern": "llana"
+        },
+        {
+          "word": "transparente",
+          "syllables": [
+            "trans",
+            "pa",
+            "ren",
+            "te"
+          ],
+          "stressIndex": 2,
+          "pattern": "llana"
+        },
+        {
+          "word": "cincuenta",
+          "syllables": [
+            "cin",
+            "cuen",
+            "ta"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "noventa",
+          "syllables": [
+            "no",
+            "ven",
+            "ta"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "importante",
+          "syllables": [
+            "im",
+            "por",
+            "tan",
+            "te"
+          ],
+          "stressIndex": 2,
+          "pattern": "llana"
+        },
+        {
+          "word": "valiente",
+          "syllables": [
+            "va",
+            "lien",
+            "te"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
         }
       ]
     }
