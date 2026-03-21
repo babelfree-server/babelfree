@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="9QIJ21Mt7DDL9LvJgSXvoGUmgZhC4Z9mEwHO0CIUvNU" />
     <title>Babel Free - Modern Language Courses & Translation Services</title>
-    <meta name="description" content="Learn languages and get professional translations with modern digital methods. Innovative courses and translation services that preserve meaning and tone in a world of constant change.">
+    <meta name="description" content="Free multilingual dictionary with 10M+ words in 100+ languages, CEFR-leveled definitions, and conjugations. Plus El Viaje del Jaguar: a free Spanish course from A1 to C2 through immersive storytelling.">
     <link rel="canonical" href="https://babelfree.com/">
     <link rel="alternate" hreflang="en" href="https://babelfree.com/">
     <link rel="alternate" hreflang="es" href="https://babelfree.com/aprender-espanol">
@@ -23,14 +23,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://babelfree.com/">
     <meta property="og:title" content="Babel Free - Modern Language Courses & Translation Services">
-    <meta property="og:description" content="Learn languages and get professional translations with modern digital methods. Innovative courses and translation services that preserve meaning and tone.">
+    <meta property="og:description" content="Free multilingual dictionary with 10M+ words in 100+ languages and CEFR levels. Plus El Viaje del Jaguar: a free immersive Spanish course from A1 to C2.">
     <meta property="og:site_name" content="Babel Free">
     <meta property="og:image" content="https://babelfree.com/assets/og-babel.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Babel Free - Modern Language Courses & Translation Services">
-    <meta name="twitter:description" content="Learn languages and get professional translations with modern digital methods.">
+    <meta name="twitter:description" content="Free multilingual dictionary with 10M+ words in 100+ languages and CEFR levels. Plus a free immersive Spanish course from A1 to C2.">
     <meta name="twitter:image" content="https://babelfree.com/assets/og-babel.png">
     <meta name="theme-color" content="#F4A5A5">
     <link rel="icon" type="image/png" href="/assets/tower-logo.png">
@@ -84,7 +84,7 @@
           "description": "Learn languages and get professional translations with modern digital methods. Innovative courses and translation services that preserve meaning and tone in a world of constant change.",
           "isPartOf": {"@id": "https://babelfree.com/#website"},
           "about": {"@id": "https://babelfree.com/#organization"},
-          "dateModified": "2026-02-24",
+          "dateModified": "2026-03-20",
           "primaryImageOfPage": {
             "@type": "ImageObject",
             "url": "https://babelfree.com/assets/og-babel.png"
@@ -111,7 +111,7 @@
           "numberOfCredits": 0,
           "image": "https://babelfree.com/img/og-jaguar.jpg",
           "dateCreated": "2026-01-01",
-          "dateModified": "2026-02-24",
+          "dateModified": "2026-03-20",
           "educationalAlignment": {
             "@type": "AlignmentObject",
             "alignmentType": "educationalLevel",
@@ -368,13 +368,43 @@
             width: 100%;
             max-width: 580px;
             margin-bottom: 2rem;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .hero-lang-select {
+            flex-shrink: 0;
+        }
+
+        .hero-lang-select select {
+            height: 100%;
+            padding: 0 0.5rem 0 0.75rem;
+            border: 2px solid #e9ecef;
+            border-right: 1px solid #e9ecef;
+            border-radius: 16px 0 0 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            font-family: 'Lucida Sans', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            cursor: pointer;
+            appearance: auto;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .hero-lang-select select:focus {
+            border-color: #F4A5A5;
         }
 
         .hero-search-input {
             width: 100%;
+            flex: 1;
+            min-width: 0;
             padding: 1rem 3.5rem 1rem 1.2rem;
             border: 2px solid #e9ecef;
-            border-radius: 16px;
+            border-left: 1px solid #e9ecef;
+            border-radius: 0 16px 16px 0;
             font-size: 1.05rem;
             font-family: 'Lucida Sans', Arial, sans-serif;
             background: #fff;
@@ -528,6 +558,145 @@
             background: #F4A5A5;
             color: white;
             transform: translateY(-3px);
+        }
+
+        /* Dictionary Showcase */
+        .dict-showcase {
+            padding: 4rem 2rem 5rem;
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .dict-showcase-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .dict-stats-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .dict-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dict-stat-number {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.8rem;
+            color: #1a1a1a;
+            line-height: 1;
+            letter-spacing: 1px;
+        }
+
+        .dict-stat-label {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.25rem;
+        }
+
+        .dict-stat-divider {
+            width: 1px;
+            height: 40px;
+            background: #ddd;
+        }
+
+        .dict-lang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 0.75rem;
+            margin: 2.5rem 0;
+        }
+
+        .dict-lang-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0.5rem;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid #e9ecef;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            gap: 0.3rem;
+        }
+
+        .dict-lang-tile:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(244, 165, 165, 0.2);
+            border-color: #F4A5A5;
+        }
+
+        .dict-lang-tile[data-family="romance"] { border-bottom: 3px solid #F4A5A5; }
+        .dict-lang-tile[data-family="germanic"] { border-bottom: 3px solid #5dade2; }
+        .dict-lang-tile[data-family="slavic"] { border-bottom: 3px solid #48c9b0; }
+        .dict-lang-tile[data-family="cjk"] { border-bottom: 3px solid #f39c12; }
+        .dict-lang-tile[data-family="semitic"] { border-bottom: 3px solid #8e44ad; }
+        .dict-lang-tile[data-family="turkic"] { border-bottom: 3px solid #e74c3c; }
+        .dict-lang-tile[data-family="hellenic"] { border-bottom: 3px solid #2980b9; }
+        .dict-lang-tile[data-family="uralic"] { border-bottom: 3px solid #27ae60; }
+        .dict-lang-tile[data-family="indic"] { border-bottom: 3px solid #e67e22; }
+        .dict-lang-tile[data-family="african"] { border-bottom: 3px solid #d35400; }
+
+        .dict-lang-flag {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .dict-lang-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #333;
+        }
+
+        .dict-lang-count {
+            font-size: 0.7rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .dict-showcase-cta {
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .dict-stats-bar {
+                gap: 1rem;
+            }
+            .dict-stat-number {
+                font-size: 2rem;
+            }
+            .dict-stat-divider {
+                height: 30px;
+            }
+            .dict-lang-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 0.5rem;
+            }
+            .dict-lang-tile {
+                padding: 0.75rem 0.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dict-stats-bar {
+                gap: 0.5rem;
+            }
+            .dict-stat-number {
+                font-size: 1.6rem;
+            }
+            .dict-stat-divider {
+                height: 25px;
+            }
         }
 
         /* Services Section */
@@ -1206,10 +1375,32 @@
     <section class="hero loading loaded" id="inicio">
         <div class="hero-container">
             <img src="/assets/tower-logo.png" alt="Babel Free" class="hero-tower-logo">
-            <h1 class="hero-title">Look up any Spanish word</h1>
-            <p class="hero-subtitle">Free dictionary with definitions, examples, conjugations &amp; CEFR levels</p>
+            <h1 class="hero-title">Look up any word in 100+ languages</h1>
+            <p class="hero-subtitle">Free multilingual dictionary with definitions, examples, conjugations &amp; CEFR levels</p>
             <div class="hero-search-box" id="heroSearchBox">
-                <input type="text" class="hero-search-input" id="heroSearchInput" placeholder="Type a Spanish word..." autocomplete="off" autofocus>
+                <div class="hero-lang-select">
+                    <select id="heroLangSelect" aria-label="Language">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                        <option value="de">DE</option>
+                        <option value="pt">PT</option>
+                        <option value="it">IT</option>
+                        <option value="la">LA</option>
+                        <option value="nl">NL</option>
+                        <option value="ru">RU</option>
+                        <option value="ja">JA</option>
+                        <option value="zh">ZH</option>
+                        <option value="ko">KO</option>
+                        <option value="ar">AR</option>
+                        <option value="el">EL</option>
+                        <option value="tr">TR</option>
+                        <option value="sv">SV</option>
+                        <option value="pl">PL</option>
+                        <option value="hi">HI</option>
+                    </select>
+                </div>
+                <input type="text" class="hero-search-input" id="heroSearchInput" placeholder="Type a word..." autocomplete="off" autofocus>
                 <button class="hero-search-btn" id="heroSearchBtn" aria-label="Search">
                     <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"/>
@@ -1219,8 +1410,69 @@
                 <div class="hero-autocomplete" id="heroAutocomplete"></div>
             </div>
             <div class="hero-cta">
-                <a href="/elviajedeljaguar" class="btn-primary">Explore Spanish Course</a>
-                <a href="/services" class="btn-secondary">Translation Services</a>
+                <a href="/elviajedeljaguar" class="btn-primary">Learn Spanish through adventure</a>
+                <a href="/dictionary" class="btn-secondary">Explore all dictionaries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dictionary Showcase -->
+    <section class="dict-showcase loading" id="diccionario">
+        <div class="dict-showcase-container">
+            <div class="dict-stats-bar">
+                <div class="dict-stat">
+                    <span class="dict-stat-number" id="statWords">11M+</span>
+                    <span class="dict-stat-label">words</span>
+                </div>
+                <div class="dict-stat-divider"></div>
+                <div class="dict-stat">
+                    <span class="dict-stat-number" id="statLangs">100+</span>
+                    <span class="dict-stat-label">languages</span>
+                </div>
+                <div class="dict-stat-divider"></div>
+                <div class="dict-stat">
+                    <span class="dict-stat-number">A1-C2</span>
+                    <span class="dict-stat-label">CEFR leveled</span>
+                </div>
+                <div class="dict-stat-divider"></div>
+                <div class="dict-stat">
+                    <span class="dict-stat-number">100%</span>
+                    <span class="dict-stat-label">free</span>
+                </div>
+            </div>
+
+            <h2 class="section-title">The world's languages at your fingertips</h2>
+            <p class="section-subtitle">Definitions in the native language, CEFR levels for learners, and hyperlinked equivalents across every language. Not just translations — a web of meaning.</p>
+
+            <div class="dict-lang-grid" id="dictLangGrid">
+                <a href="/dictionary/fr/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127467;&#127479;</span><span class="dict-lang-name">French</span><span class="dict-lang-count">1.7M</span></a>
+                <a href="/dictionary/en/" class="dict-lang-tile" data-family="germanic"><span class="dict-lang-flag">&#127468;&#127463;</span><span class="dict-lang-name">English</span><span class="dict-lang-count">1M</span></a>
+                <a href="/dictionary/de/" class="dict-lang-tile" data-family="germanic"><span class="dict-lang-flag">&#127465;&#127466;</span><span class="dict-lang-name">German</span><span class="dict-lang-count">1M</span></a>
+                <a href="/dictionary/la/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127481;&#127462;</span><span class="dict-lang-name">Latin</span><span class="dict-lang-count">852K</span></a>
+                <a href="/dictionary/el/" class="dict-lang-tile" data-family="hellenic"><span class="dict-lang-flag">&#127468;&#127479;</span><span class="dict-lang-name">Greek</span><span class="dict-lang-count">768K</span></a>
+                <a href="/dictionary/es/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127466;&#127480;</span><span class="dict-lang-name">Spanish</span><span class="dict-lang-count">687K</span></a>
+                <a href="/dictionary/nl/" class="dict-lang-tile" data-family="germanic"><span class="dict-lang-flag">&#127475;&#127473;</span><span class="dict-lang-name">Dutch</span><span class="dict-lang-count">672K</span></a>
+                <a href="/dictionary/ru/" class="dict-lang-tile" data-family="slavic"><span class="dict-lang-flag">&#127479;&#127482;</span><span class="dict-lang-name">Russian</span><span class="dict-lang-count">474K</span></a>
+                <a href="/dictionary/it/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127470;&#127481;</span><span class="dict-lang-name">Italian</span><span class="dict-lang-count">416K</span></a>
+                <a href="/dictionary/pt/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127463;&#127479;</span><span class="dict-lang-name">Portuguese</span><span class="dict-lang-count">403K</span></a>
+                <a href="/dictionary/tr/" class="dict-lang-tile" data-family="turkic"><span class="dict-lang-flag">&#127481;&#127479;</span><span class="dict-lang-name">Turkish</span><span class="dict-lang-count">313K</span></a>
+                <a href="/dictionary/sv/" class="dict-lang-tile" data-family="germanic"><span class="dict-lang-flag">&#127480;&#127466;</span><span class="dict-lang-name">Swedish</span><span class="dict-lang-count">303K</span></a>
+                <a href="/dictionary/fi/" class="dict-lang-tile" data-family="uralic"><span class="dict-lang-flag">&#127467;&#127470;</span><span class="dict-lang-name">Finnish</span><span class="dict-lang-count">261K</span></a>
+                <a href="/dictionary/pl/" class="dict-lang-tile" data-family="slavic"><span class="dict-lang-flag">&#127477;&#127473;</span><span class="dict-lang-name">Polish</span><span class="dict-lang-count">225K</span></a>
+                <a href="/dictionary/ja/" class="dict-lang-tile" data-family="cjk"><span class="dict-lang-flag">&#127471;&#127477;</span><span class="dict-lang-name">Japanese</span><span class="dict-lang-count">216K</span></a>
+                <a href="/dictionary/ca/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127466;&#127480;</span><span class="dict-lang-name">Catalan</span><span class="dict-lang-count">188K</span></a>
+                <a href="/dictionary/gl/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127466;&#127480;</span><span class="dict-lang-name">Galician</span><span class="dict-lang-count">187K</span></a>
+                <a href="/dictionary/eo/" class="dict-lang-tile" data-family="romance"><span class="dict-lang-flag">&#127758;</span><span class="dict-lang-name">Esperanto</span><span class="dict-lang-count">135K</span></a>
+                <a href="/dictionary/ko/" class="dict-lang-tile" data-family="cjk"><span class="dict-lang-flag">&#127472;&#127479;</span><span class="dict-lang-name">Korean</span><span class="dict-lang-count">122K</span></a>
+                <a href="/dictionary/zh/" class="dict-lang-tile" data-family="cjk"><span class="dict-lang-flag">&#127464;&#127475;</span><span class="dict-lang-name">Chinese</span><span class="dict-lang-count">115K</span></a>
+                <a href="/dictionary/ar/" class="dict-lang-tile" data-family="semitic"><span class="dict-lang-flag">&#127480;&#127462;</span><span class="dict-lang-name">Arabic</span><span class="dict-lang-count">91K</span></a>
+                <a href="/dictionary/ku/" class="dict-lang-tile" data-family="indic"><span class="dict-lang-flag">&#127470;&#127478;</span><span class="dict-lang-name">Kurdish</span><span class="dict-lang-count">72K</span></a>
+                <a href="/dictionary/mk/" class="dict-lang-tile" data-family="slavic"><span class="dict-lang-flag">&#127474;&#127472;</span><span class="dict-lang-name">Macedonian</span><span class="dict-lang-count">70K</span></a>
+                <a href="/dictionary/hi/" class="dict-lang-tile" data-family="indic"><span class="dict-lang-flag">&#127470;&#127475;</span><span class="dict-lang-name">Hindi</span><span class="dict-lang-count">31K</span></a>
+            </div>
+
+            <div class="dict-showcase-cta">
+                <a href="/dictionary" class="btn-primary">Browse all 100+ languages</a>
             </div>
         </div>
     </section>
@@ -1427,14 +1679,26 @@
         var ac = document.getElementById('heroAutocomplete');
         var btn = document.getElementById('heroSearchBtn');
         var box = document.getElementById('heroSearchBox');
+        var langSel = document.getElementById('heroLangSelect');
         var timer = null;
         var acIdx = -1;
         var acData = [];
 
+        /* URL prefix map per language (matches dict_i18n.json) */
+        var prefixes = {
+            es:'significado-de', en:'meaning-of', fr:'définition-de', de:'bedeutung-von',
+            pt:'significado-de', it:'significato-di', nl:'betekenis-van', ru:'значение',
+            ja:'意味', zh:'含义', ko:'뜻', ar:'معنى', el:'σημασία', tr:'anlam',
+            sv:'betydelse-av', pl:'znaczenie', fi:'merkitys', hi:'अर्थ', la:'meaning-of'
+        };
+
+        function getLang() { return langSel ? langSel.value : 'es'; }
+        function getPrefix() { return prefixes[getLang()] || 'meaning-of'; }
+
         function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
         function goToWord(w) {
-            window.location.href = '/dictionary/es/significado-de-' + encodeURIComponent(w.toLowerCase().trim());
+            window.location.href = '/dictionary/' + getLang() + '/' + getPrefix() + '-' + encodeURIComponent(w.toLowerCase().trim());
         }
 
         function renderAc(items) {
@@ -1462,7 +1726,7 @@
         }
 
         function fetchSuggestions(q) {
-            fetch('/api/dictionary/suggest?q=' + encodeURIComponent(q) + '&lang=es')
+            fetch('/api/dictionary/suggest?q=' + encodeURIComponent(q) + '&lang=' + getLang())
                 .then(function(r) { return r.json(); })
                 .then(function(res) {
                     if (!res.success || !res.data || !res.data.suggestions) { ac.classList.remove('visible'); acData = []; return; }

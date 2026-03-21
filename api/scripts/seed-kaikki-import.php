@@ -154,7 +154,14 @@ $targetLangs = [];
 if (isset($opts['all']) || in_array('--all', $argv ?? [])) {
     $targetLangs = array_keys($LANGUAGES);
 } elseif (isset($opts['lang'])) {
-    $targetLangs = is_array($opts['lang']) ? $opts['lang'] : [$opts['lang']];
+    $raw = is_array($opts['lang']) ? $opts['lang'] : [$opts['lang']];
+    $targetLangs = [];
+    foreach ($raw as $v) {
+        foreach (explode(',', $v) as $code) {
+            $code = trim($code);
+            if ($code !== '') $targetLangs[] = $code;
+        }
+    }
 } else {
     echo "Usage: php seed-kaikki-import.php --lang=XX | --all [--source=en|native] [--dry-run] [--skip-download]\n";
     exit(1);
