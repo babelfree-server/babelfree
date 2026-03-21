@@ -47,6 +47,7 @@ require_once __DIR__ . '/routes/forum.php';
 require_once __DIR__ . '/routes/validation.php';
 require_once __DIR__ . '/routes/busqueda.php';
 require_once __DIR__ . '/routes/analytics.php';
+require_once __DIR__ . '/routes/tracking.php';
 
 // CORS
 setCorsHeaders();
@@ -105,6 +106,9 @@ switch ($resource) {
         break;
     case 'analytics':
         handleAnalyticsRoutes($action, $method);
+        break;
+    case 'tracking':
+        handleTrackingRoutes($action, $method);
         break;
     default:
         jsonError('Ruta no encontrada', 404);

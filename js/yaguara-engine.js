@@ -250,6 +250,133 @@
             this._lastSpoken = null;
             this._lastOpts = null;
         },
+        /* ─── Speech Recognition: listen to student ─── */
+        _recognition: null,
+        _recognizing: false,
+
+        listen: function(expected, opts) {
+            var self = this;
+            var onResult = (opts && opts.onResult) || function() {};
+            var onError = (opts && opts.onError) || function() {};
+            var timeout = (opts && opts.timeout) || 8000;
+            /* Threshold is inversely proportional to CEFR level:
+               A1: 60% match is enough (beginners struggle with pronunciation)
+               A2: 65%  B1: 70%  B2: 75%  C1: 80%  C2: 85%
+               NEVER expect 100% — even native speakers vary */
+            var levelThresholds = { 'A1': 0.60, 'A2': 0.65, 'B1': 0.70, 'B2': 0.75, 'C1': 0.80, 'C2': 0.85 };
+            var userLevel = (window._userCefrLevel || 'A1').toUpperCase().substring(0, 2);
+            var defaultThreshold = levelThresholds[userLevel] || 0.70;
+            var threshold = (opts && opts.threshold) || defaultThreshold;
+
+            var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) { onError('not_supported'); return; }
+
+            if (self._recognizing && self._recognition) {
+                try { self._recognition.stop(); } catch(e) {}
+            }
+
+            var rec = new SpeechRecognition();
+            rec.lang = 'es';  /* Accept ALL Spanish, not just es-CO */
+            rec.continuous = false;
+            rec.interimResults = false;
+            rec.maxAlternatives = 3;
+            self._recognition = rec;
+            self._recognizing = true;
+
+            var timer = setTimeout(function() {
+                self._recognizing = false;
+                try { rec.stop(); } catch(e) {}
+                onError('timeout');
+            }, timeout);
+
+            rec.onresult = function(event) {
+                clearTimeout(timer);
+                self._recognizing = false;
+                var best = null;
+                var bestScore = 0;
+                /* Check all alternatives for best fuzzy match */
+                for (var i = 0; i < event.results[0].length; i++) {
+                    var transcript = event.results[0][i].transcript;
+                    var score = self._fuzzyMatch(expected, transcript);
+                    if (score > bestScore) { bestScore = score; best = transcript; }
+                }
+                onResult({
+                    transcript: best || event.results[0][0].transcript,
+                    score: bestScore,
+                    pass: bestScore >= threshold,
+                    expected: expected,
+                    level: bestScore >= 0.90 ? 'excellent' : bestScore >= threshold ? 'good' : bestScore >= 0.50 ? 'close' : 'retry'
+                });
+            };
+
+            rec.onerror = function(event) {
+                clearTimeout(timer);
+                self._recognizing = false;
+                onError(event.error || 'error');
+            };
+
+            rec.onend = function() { self._recognizing = false; };
+
+            /* Duck background audio */
+            if (window.AudioManager) AudioManager.duckForSpeech();
+            try { rec.start(); } catch(e) { onError('start_failed'); }
+        },
+
+        stopListening: function() {
+            if (this._recognition && this._recognizing) {
+                try { this._recognition.stop(); } catch(e) {}
+            }
+            this._recognizing = false;
+            if (window.AudioManager) AudioManager.unduckForSpeech();
+        },
+
+        _fuzzyMatch: function(expected, spoken) {
+            /* Normalize both strings: lowercase, strip accents, trim */
+            function norm(s) {
+                s = s.toLowerCase().trim();
+                s = s.replace(/[¡¿.,!?;:—«»""]/g, '');
+                /* Strip accents for comparison */
+                try { s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); } catch(e) {}
+                return s.replace(/\s+/g, ' ');
+            }
+            var a = norm(expected);
+            var b = norm(spoken);
+            if (a === b) return 1.0;
+
+            /* Word-level comparison: what percentage of expected words were spoken? */
+            var expectedWords = a.split(' ').filter(function(w) { return w.length > 0; });
+            var spokenWords = b.split(' ').filter(function(w) { return w.length > 0; });
+            if (expectedWords.length === 0) return 0;
+
+            var matched = 0;
+            var usedSpoken = {};
+            for (var i = 0; i < expectedWords.length; i++) {
+                for (var j = 0; j < spokenWords.length; j++) {
+                    if (!usedSpoken[j] && (spokenWords[j] === expectedWords[i] || self._levenshtein(spokenWords[j], expectedWords[i]) <= 1)) {
+                        matched++;
+                        usedSpoken[j] = true;
+                        break;
+                    }
+                }
+            }
+            return matched / expectedWords.length;
+        },
+
+        _levenshtein: function(a, b) {
+            if (a.length === 0) return b.length;
+            if (b.length === 0) return a.length;
+            var matrix = [];
+            for (var i = 0; i <= b.length; i++) matrix[i] = [i];
+            for (var j = 0; j <= a.length; j++) matrix[0][j] = j;
+            for (var i = 1; i <= b.length; i++) {
+                for (var j = 1; j <= a.length; j++) {
+                    var cost = b.charAt(i-1) === a.charAt(j-1) ? 0 : 1;
+                    matrix[i][j] = Math.min(matrix[i-1][j]+1, matrix[i][j-1]+1, matrix[i-1][j-1]+cost);
+                }
+            }
+            return matrix[b.length][a.length];
+        },
+
         silence: function(ms, cb) {
             setTimeout(cb || function(){}, ms || CONFIG.silenceDuration);
         },
