@@ -75,1505 +75,6 @@
     "imageAlt": "Yaguará y Río contando piedras junto al agua — un árbol, dos pájaros, tres piedras en la ribera del río",
     "image": "img/destinations/dest4-arrival.jpg"
   },
-  "games": [
-    {
-      "type": "skit",
-      "label": "Escena",
-      "title": "Contar el mundo",
-      "instruction": "Escucha y cuenta.",
-      "grammar": [
-        "numbers 0-31",
-        "tener + age",
-        "days of week",
-        "time of day"
-      ],
-      "beats": [
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Es la mañana. Yaguará está junto al río. Hay alguien más."
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "enter-right",
-          "text": "¡Hola! Yo soy Río.",
-          "target": [
-            "soy"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Hola, Río. Yo tengo tres años. ¿Cuántos años tienes tú?",
-          "target": [
-            "tengo",
-            "tienes"
-          ]
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "enter-right",
-          "text": "Yo tengo un año.",
-          "target": [
-            "tengo"
-          ]
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Un viajero camina por la selva. Tiene un cuaderno."
-        },
-        {
-          "speaker": "viajero",
-          "name": "El viajero",
-          "animation": "glow",
-          "text": "Uno... dos... tres.",
-          "target": [
-            "Uno",
-            "dos",
-            "tres"
-          ]
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "bounce",
-          "text": "¡Cuatro ranas, cinco pájaros, seis flores!",
-          "target": [
-            "Cuatro",
-            "cinco",
-            "seis"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Hoy es lunes. Por la mañana, yo cuento.",
-          "target": [
-            "lunes",
-            "mañana"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Yaguará tiene tres años.",
-          "target": [
-            "tres"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "Dos",
-              "Tres",
-              "Cinco"
-            ],
-            "answer": "Tres"
-          }
-        },
-        {
-          "speaker": "viajero",
-          "name": "El viajero",
-          "animation": "fade-out",
-          "text": "Tres. Sí. Tres años."
-        }
-      ]
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "grammar": [
-        "numbers"
-      ],
-      "vocabulary": [
-        "uno",
-        "dos",
-        "tres",
-        "cinco",
-        "diez",
-        "veinte"
-      ],
-      "instruction": "Encuentra los pares: <em>número ↔ palabra</em>",
-      "pairs": [
-        [
-          "1",
-          "uno"
-        ],
-        [
-          "5",
-          "cinco"
-        ],
-        [
-          "10",
-          "diez"
-        ],
-        [
-          "15",
-          "quince"
-        ],
-        [
-          "20",
-          "veinte"
-        ],
-        [
-          "31",
-          "treinta y uno"
-        ]
-      ],
-      "image": "img/destinations/dest4-pair-1.jpg",
-      "imageAlt": "Dos huellas de jaguar conectadas por un hilo dorado en la tierra húmeda",
-      "tip": {
-        "title": "Números 0-10",
-        "lines": [
-          "0 cero, 1 uno, 2 dos, 3 tres, 4 cuatro, 5 cinco",
-          "6 seis, 7 siete, 8 ocho, 9 nueve, 10 diez"
-        ]
-      }
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "grammar": [
-        "tener + age",
-        "numbers",
-        "days"
-      ],
-      "vocabulary": [
-        "tengo",
-        "tienes",
-        "tiene",
-        "lunes",
-        "viernes"
-      ],
-      "instruction": "Completa con <em>tener</em> y los números.",
-      "questions": [
-        {
-          "sentence": "Yo ___ doce años.",
-          "answer": "tengo",
-          "options": [
-            "soy",
-            "tengo",
-            "estoy",
-            "hay"
-          ]
-        },
-        {
-          "sentence": "¿Cuántos años ___?",
-          "answer": "tienes",
-          "options": [
-            "tengo",
-            "tienes",
-            "tiene",
-            "tienen"
-          ]
-        },
-        {
-          "sentence": "Ella ___ ocho años.",
-          "answer": "tiene",
-          "options": [
-            "tengo",
-            "tienes",
-            "tiene",
-            "es"
-          ]
-        },
-        {
-          "sentence": "Hoy es ___. Mañana es martes.",
-          "answer": "lunes",
-          "options": [
-            "lunes",
-            "miércoles",
-            "viernes",
-            "domingo"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-fill-1.jpg",
-      "imageAlt": "Hojas de la selva con espacios vacíos entre las venas, esperando ser completadas",
-      "tip": {
-        "title": "tener + años",
-        "lines": [
-          "Yo tengo tres años.",
-          "Tú tienes cinco años.",
-          "Él tiene diez años.",
-          "¡No soy tres años! → ¡Tengo tres años!"
-        ],
-        "gloss": "tener + años = to be ... years old"
-      }
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "grammar": [
-        "tener + age",
-        "numbers",
-        "days"
-      ],
-      "vocabulary": [
-        "cuántos años",
-        "tengo",
-        "qué día",
-        "hoy"
-      ],
-      "instruction": "Conversación: <em>números y tiempo</em>.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Cuántos años tienes?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Tengo quince años.",
-            "Soy quince.",
-            "Estoy años."
-          ],
-          "answer": "Tengo quince años."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Qué día es hoy?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Hoy es lunes.",
-            "Hoy tengo lunes.",
-            "Es de noche."
-          ],
-          "answer": "Hoy es lunes."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Cuántos jaguares hay en la selva?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Hay cinco jaguares.",
-            "Son cinco años.",
-            "Tengo jaguares."
-          ],
-          "answer": "Hay cinco jaguares."
-        }
-      ],
-      "image": "img/destinations/dest4-conversation-1.jpg",
-      "imageAlt": "Yaguará y el viajero junto a una fogata en la selva, diálogo flotando entre ellos",
-      "tip": {
-        "title": "Los días",
-        "lines": [
-          "lunes, martes, miércoles, jueves",
-          "viernes, sábado, domingo",
-          "Hoy es lunes. Mañana es martes."
-        ]
-      }
-    },
-    {
-      "type": "narrative",
-      "label": "Narración",
-      "instruction": "Lee y escucha.",
-      "text": "Soy Yaguará. Tengo una casa. Mi casa es una cueva. La cueva es grande. La cueva está en la selva.",
-      "image": "img/destinations/dest4-narrative.jpg",
-      "imageAlt": "Claro del bosque al amanecer, luz dorada filtrándose entre la niebla"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une el lugar con su descripción.",
-      "pairs": [
-        [
-          "la cueva",
-          "grande"
-        ],
-        [
-          "el río",
-          "bonito"
-        ],
-        [
-          "la selva",
-          "verde"
-        ],
-        [
-          "la casa",
-          "buena"
-        ]
-      ],
-      "image": "img/destinations/dest4-pair-2.jpg",
-      "imageAlt": "Hojas caídas sobre el agua, cada una reflejando su pareja en la superficie"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une la frase con el verbo.",
-      "pairs": [
-        [
-          "La cueva ___ grande.",
-          "es"
-        ],
-        [
-          "Yaguará ___ aquí.",
-          "está"
-        ],
-        [
-          "El río ___ bonito.",
-          "es"
-        ],
-        [
-          "La familia ___ en la cueva.",
-          "está"
-        ]
-      ],
-      "image": "img/destinations/dest4-pair-3.jpg",
-      "imageAlt": "Luciérnagas emparejadas brillando entre las raíces de la ceiba"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une las frases.",
-      "pairs": [
-        [
-          "Hay un río",
-          "en la selva"
-        ],
-        [
-          "Hay una cueva",
-          "en la selva"
-        ],
-        [
-          "Hay árboles",
-          "grandes"
-        ],
-        [
-          "Hay agua",
-          "en el río"
-        ]
-      ],
-      "image": "img/destinations/dest4-pair-4.jpg",
-      "imageAlt": "Mariposas morpho posadas sobre flores gemelas a orillas del río"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "La cueva ___ aquí.",
-          "answer": "está",
-          "options": [
-            "está",
-            "es",
-            "hay",
-            "son"
-          ]
-        },
-        {
-          "sentence": "Yaguará ___ en la cueva.",
-          "answer": "está",
-          "options": [
-            "es",
-            "está",
-            "soy",
-            "hay"
-          ]
-        },
-        {
-          "sentence": "Mi familia ___ en la selva.",
-          "answer": "está",
-          "options": [
-            "está",
-            "es",
-            "son",
-            "hay"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-fill-2.jpg",
-      "imageAlt": "Frutos del bosque dispuestos en fila, uno falta en la secuencia"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "___ un río grande.",
-          "answer": "Hay",
-          "options": [
-            "Hay",
-            "Es",
-            "Está",
-            "Son"
-          ]
-        },
-        {
-          "sentence": "___ árboles en la selva.",
-          "answer": "Hay",
-          "options": [
-            "Son",
-            "Están",
-            "Hay",
-            "Es"
-          ]
-        },
-        {
-          "sentence": "___ una cueva aquí.",
-          "answer": "Hay",
-          "options": [
-            "Está",
-            "Hay",
-            "Es",
-            "Son"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-fill-3.jpg",
-      "imageAlt": "Piedras del río con palabras grabadas, una piedra vacía espera su inscripción"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "La cueva ___ grande.",
-          "answer": "es",
-          "options": [
-            "es",
-            "está",
-            "hay",
-            "son"
-          ]
-        },
-        {
-          "sentence": "El río ___ bonito.",
-          "answer": "es",
-          "options": [
-            "está",
-            "es",
-            "soy",
-            "hay"
-          ]
-        },
-        {
-          "sentence": "La selva ___ verde.",
-          "answer": "es",
-          "options": [
-            "hay",
-            "está",
-            "es",
-            "son"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-fill-4.jpg",
-      "imageAlt": "Musgo sobre corteza de árbol con huecos en forma de letras"
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "La cueva es grande.",
-      "question": "¿Cómo es la cueva?",
-      "answer": "grande",
-      "options": [
-        "pequeña",
-        "grande",
-        "mala",
-        "nueva"
-      ],
-      "image": "img/destinations/dest4-listening-1.jpg",
-      "imageAlt": "Yaguará con la oreja levantada, ondas de sonido doradas entre los árboles",
-      "tip": {
-        "title": "El momento del día",
-        "lines": [
-          "la mañana (☀️ temprano)",
-          "el mediodía (☀️ alto)",
-          "la tarde (🌅)",
-          "la noche (🌙)"
-        ]
-      }
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "El río está en la selva.",
-      "question": "¿Dónde está el río?",
-      "answer": "en la selva",
-      "options": [
-        "en la cueva",
-        "en la selva",
-        "en la casa",
-        "en el árbol"
-      ],
-      "image": "img/destinations/dest4-listening-2.jpg",
-      "imageAlt": "El río murmurando entre las piedras, círculos de agua como notas musicales"
-    },
-    {
-      "type": "conjugation",
-      "label": "Conjugación",
-      "instruction": "Conjuga el verbo estar.",
-      "questions": [
-        {
-          "verb": "estar",
-          "subject": "yo",
-          "answer": "estoy",
-          "options": [
-            "estoy",
-            "estás",
-            "está",
-            "estamos"
-          ]
-        },
-        {
-          "verb": "estar",
-          "subject": "tú",
-          "answer": "estás",
-          "options": [
-            "estoy",
-            "estás",
-            "está",
-            "están"
-          ]
-        },
-        {
-          "verb": "estar",
-          "subject": "ella",
-          "answer": "está",
-          "options": [
-            "estoy",
-            "estás",
-            "está",
-            "estamos"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-conjugation-1.jpg",
-      "imageAlt": "Raíces de ceiba que se ramifican en diferentes formas bajo la tierra"
-    },
-    {
-      "type": "conjugation",
-      "label": "Conjugación",
-      "instruction": "Conjuga el verbo estar.",
-      "questions": [
-        {
-          "verb": "estar",
-          "subject": "nosotros",
-          "answer": "estamos",
-          "options": [
-            "estoy",
-            "están",
-            "estamos",
-            "está"
-          ]
-        },
-        {
-          "verb": "estar",
-          "subject": "ustedes",
-          "answer": "están",
-          "options": [
-            "estamos",
-            "están",
-            "está",
-            "estás"
-          ]
-        },
-        {
-          "verb": "estar",
-          "subject": "ellos",
-          "answer": "están",
-          "options": [
-            "estamos",
-            "está",
-            "estoy",
-            "están"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-conjugation-2.jpg",
-      "imageAlt": "Un río que se divide en arroyos, cada corriente con un reflejo diferente"
-    },
-    {
-      "type": "conjugation",
-      "label": "Conjugación",
-      "instruction": "Conjuga el verbo estar.",
-      "questions": [
-        {
-          "verb": "estar",
-          "subject": "yo",
-          "answer": "estoy",
-          "context": "Yo ___ en la cueva.",
-          "options": [
-            "estoy",
-            "está",
-            "estás",
-            "estamos"
-          ]
-        },
-        {
-          "verb": "estar",
-          "subject": "Yaguará",
-          "answer": "está",
-          "context": "Yaguará ___ feliz.",
-          "options": [
-            "estoy",
-            "estás",
-            "está",
-            "están"
-          ]
-        },
-        {
-          "verb": "estar",
-          "subject": "nosotros",
-          "answer": "estamos",
-          "context": "Nosotros ___ en la selva.",
-          "options": [
-            "están",
-            "estamos",
-            "estoy",
-            "está"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-conjugation-3.jpg",
-      "imageAlt": "Semillas brotando en diferentes etapas de crecimiento junto al sendero"
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "instruction": "Clasifica: ¿dentro o fuera de la cueva?",
-      "categories": [
-        "Dentro",
-        "Fuera"
-      ],
-      "items": [
-        {
-          "text": "Yaguará",
-          "category": "Dentro"
-        },
-        {
-          "text": "el río",
-          "category": "Fuera"
-        },
-        {
-          "text": "la familia",
-          "category": "Dentro"
-        },
-        {
-          "text": "los árboles",
-          "category": "Fuera"
-        },
-        {
-          "text": "la cueva",
-          "category": "Dentro"
-        },
-        {
-          "text": "la selva",
-          "category": "Fuera"
-        }
-      ],
-      "image": "img/destinations/dest4-category-1.jpg",
-      "imageAlt": "Cestas tejidas al estilo wayúu bajo la copa de un árbol, cada una etiquetada"
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "instruction": "Clasifica: ¿ser o estar?",
-      "categories": [
-        "Ser",
-        "Estar"
-      ],
-      "items": [
-        {
-          "text": "es grande",
-          "category": "Ser"
-        },
-        {
-          "text": "está aquí",
-          "category": "Estar"
-        },
-        {
-          "text": "es bonito",
-          "category": "Ser"
-        },
-        {
-          "text": "está en la selva",
-          "category": "Estar"
-        },
-        {
-          "text": "es buena",
-          "category": "Ser"
-        },
-        {
-          "text": "está feliz",
-          "category": "Estar"
-        }
-      ],
-      "image": "img/destinations/dest4-category-2.jpg",
-      "imageAlt": "Nidos de pájaros en diferentes ramas, cada uno con su etiqueta natural",
-      "tip": {
-        "title": "ser / estar",
-        "lines": [
-          "ser → identidad: Yo soy Yaguará.",
-          "estar → lugar: Yo estoy en la selva.",
-          "ser → descripción: La selva es grande.",
-          "estar → estado: Yo estoy bien."
-        ]
-      }
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "cueva",
-        "La",
-        "grande",
-        "es"
-      ],
-      "answer": "La cueva es grande",
-      "image": "img/destinations/dest4-builder-1.jpg",
-      "imageAlt": "Piedras del río con palabras talladas, dispuestas en desorden sobre la orilla"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "río",
-        "Hay",
-        "un",
-        "bonito"
-      ],
-      "answer": "Hay un río bonito",
-      "image": "img/destinations/dest4-builder-2.jpg",
-      "imageAlt": "Ramas caídas formando un camino por armar sobre el barro del sendero"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Luna",
-              "text": "¿Cómo es tu casa?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Mi casa es grande.",
-            "Tengo un hermano.",
-            "Soy feliz.",
-            "El río es malo."
-          ],
-          "answer": "Mi casa es grande."
-        }
-      ],
-      "image": "img/destinations/dest4-conversation-2.jpg",
-      "imageAlt": "Dos figuras sentadas en la ribera del río, el agua lleva palabras doradas"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Río",
-              "text": "¿Dónde está la cueva?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "La cueva es bonita.",
-            "Hay árboles.",
-            "La cueva está en la selva.",
-            "Soy grande."
-          ],
-          "answer": "La cueva está en la selva."
-        }
-      ],
-      "image": "img/destinations/dest4-conversation-3.jpg",
-      "imageAlt": "Yaguará hablando bajo la copa de un árbol enorme, luciérnagas iluminando"
-    },
-    {
-      "type": "crossword",
-      "label": "Crucigrama",
-      "instruction": "Escribe la palabra.",
-      "clues": [
-        {
-          "direction": "across",
-          "number": 1,
-          "clue": "Donde dormimos",
-          "answer": "casa"
-        },
-        {
-          "direction": "down",
-          "number": 1,
-          "clue": "Donde cocinamos",
-          "answer": "cocina"
-        },
-        {
-          "direction": "across",
-          "number": 3,
-          "clue": "Donde nos sentamos a comer",
-          "answer": "mesa"
-        },
-        {
-          "direction": "down",
-          "number": 2,
-          "clue": "Donde hay agua caliente",
-          "answer": "baño"
-        }
-      ],
-      "image": "img/destinations/dest4-crossword.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "susurro",
-      "label": "Susurro",
-      "instruction": "Escucha el susurro y elige la palabra.",
-      "questions": [
-        {
-          "audio": "treinta y uno",
-          "question": "¿Qué palabra es?",
-          "answer": "treinta y uno",
-          "options": [
-            "treinta y uno",
-            "feliz",
-            "buena"
-          ]
-        },
-        {
-          "audio": "tengo",
-          "question": "¿Qué palabra es?",
-          "answer": "tengo",
-          "options": [
-            "casa",
-            "uno",
-            "tengo"
-          ]
-        },
-        {
-          "audio": "diez",
-          "question": "¿Qué palabra es?",
-          "answer": "diez",
-          "options": [
-            "río",
-            "luna",
-            "diez"
-          ]
-        },
-        {
-          "audio": "15",
-          "question": "¿Qué palabra es?",
-          "answer": "15",
-          "options": [
-            "15",
-            "hay árboles",
-            "hay agua"
-          ]
-        },
-        {
-          "audio": "peces del río",
-          "question": "¿Qué palabra es?",
-          "answer": "peces del río",
-          "options": [
-            "están",
-            "cueva",
-            "peces del río"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "susurro_dest4"
-    },
-    {
-      "type": "eco_lejano",
-      "label": "Eco lejano",
-      "instruction": "Escucha el eco y completa la palabra que falta.",
-      "items": [
-        {
-          "audio": "Tengo quince años.",
-          "sentence": "Tengo ___ años.",
-          "answer": "quince",
-          "options": [
-            "quince",
-            "diez",
-            "veinte"
-          ]
-        },
-        {
-          "audio": "Hoy es lunes.",
-          "sentence": "Hoy es ___",
-          "answer": "lunes",
-          "options": [
-            "lunes",
-            "martes",
-            "viernes"
-          ]
-        },
-        {
-          "audio": "Hay cinco jaguares.",
-          "sentence": "Hay ___ jaguares.",
-          "answer": "cinco",
-          "options": [
-            "tres",
-            "cinco",
-            "diez"
-          ]
-        },
-        {
-          "audio": "Mi casa es grande.",
-          "sentence": "Mi casa es ___",
-          "answer": "grande",
-          "options": [
-            "pequeña",
-            "grande",
-            "bonita"
-          ]
-        },
-        {
-          "audio": "La cueva está en la selva.",
-          "sentence": "La cueva está en la ___",
-          "answer": "selva",
-          "options": [
-            "montaña",
-            "casa",
-            "selva"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "eco_lejano_dest4"
-    },
-    {
-      "type": "translation",
-      "label": "Traducir",
-      "instruction": "Elige la traducción.",
-      "questions": [
-        {
-          "prompt": "two",
-          "answer": "dos",
-          "options": [
-            "amigo",
-            "tres",
-            "dos"
-          ]
-        },
-        {
-          "prompt": "green",
-          "answer": "verde",
-          "options": [
-            "río",
-            "verde",
-            "casa"
-          ]
-        },
-        {
-          "prompt": "beautiful",
-          "answer": "bonito",
-          "options": [
-            "bonito",
-            "mamá",
-            "pájaro"
-          ]
-        },
-        {
-          "prompt": "sun",
-          "answer": "sol",
-          "options": [
-            "grande",
-            "sol",
-            "un"
-          ]
-        },
-        {
-          "prompt": "I am",
-          "answer": "soy",
-          "options": [
-            "bonito",
-            "agua",
-            "soy"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "translation_dest4"
-    },
-    {
-      "type": "sombra",
-      "label": "Sombra",
-      "instruction": "Escucha y repite.",
-      "timeLimit": 5000,
-      "phrases": [
-        {
-          "audio": "Uno... dos... tres.",
-          "text": "Uno... dos... tres."
-        },
-        {
-          "audio": "Tengo quince años.",
-          "text": "Tengo quince años."
-        },
-        {
-          "audio": "¿Cuántos días caminas? Contamos juntos.",
-          "text": "¿Cuántos días caminas? Contamos juntos."
-        },
-        {
-          "audio": "Yo tengo un año.",
-          "text": "Yo tengo un año."
-        },
-        {
-          "audio": "Hoy es lunes. Por la mañana, yo cuento.",
-          "text": "Hoy es lunes. Por la mañana, yo cuento."
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "sombra_dest4"
-    },
-    {
-      "type": "senda",
-      "label": "Senda",
-      "instruction": "Elige el camino correcto.",
-      "steps": [
-        {
-          "sentence": "Mi ___ es grande.",
-          "answer": "casa",
-          "options": [
-            "treinta y uno",
-            "uno",
-            "casa"
-          ]
-        },
-        {
-          "sentence": "La cueva está en la ___",
-          "answer": "selva",
-          "options": [
-            "selva",
-            "en la selva",
-            "hay una cueva"
-          ]
-        },
-        {
-          "sentence": "Es la mañana. Yaguará está junto al río. Hay ___ más.",
-          "answer": "alguien",
-          "options": [
-            "el río",
-            "alguien",
-            "20"
-          ]
-        },
-        {
-          "sentence": "¡Hola! Yo soy ___",
-          "answer": "Río",
-          "options": [
-            "estoy",
-            "Río",
-            "20"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "senda_dest4"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "cinco",
-        "Hay",
-        "jaguares."
-      ],
-      "answer": "Hay cinco jaguares.",
-      "_generated": true,
-      "_generatorId": "builder_extra_dest4"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une cada palabra con su pareja.",
-      "pairs": [
-        [
-          "tres",
-          "cuatro"
-        ],
-        [
-          "soy",
-          "eres"
-        ],
-        [
-          "sol",
-          "luna"
-        ],
-        [
-          "el",
-          "la"
-        ]
-      ],
-      "_generated": true,
-      "_generatorId": "pair_extra_dest4"
-    },
-    {
-      "type": "corrector",
-      "label": "Corrector",
-      "instruction": "Encuentra y corrige el error.",
-      "items": [
-        {
-          "sentence": "Tengo años. Quince",
-          "corrected": "Tengo quince años.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Hoy lunes. Es",
-          "corrected": "Hoy es lunes.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Cinco Hay jaguares.",
-          "corrected": "Hay cinco jaguares.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Casa Mi es grande.",
-          "corrected": "Mi casa es grande.",
-          "errorType": "word order"
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "corrector_dest4"
-    },
-    {
-      "type": "escaperoom",
-      "room": {
-        "name": "La cámara del tiempo",
-        "description": "Un reloj enorme en la pared. No tiene números. Solo letras.",
-        "ambience": "heartbeat"
-      },
-      "puzzles": [
-        {
-          "puzzleType": "wordlock",
-          "prompt": "El primer mes del año. Tiene 5 letras.",
-          "clue": "_ _ _ _ _",
-          "answer": "enero"
-        },
-        {
-          "puzzleType": "riddle",
-          "prompt": "El reloj muestra esta adivinanza:",
-          "riddle": "Tengo manos pero no puedo tocar. Tengo cara pero no puedo hablar. ¿Qué soy?",
-          "clue": "Mira la pared de la cámara...",
-          "answer": "el reloj",
-          "options": [
-            "el reloj",
-            "la luna",
-            "el espejo",
-            "la puerta"
-          ],
-          "onSolve": "Las manecillas del reloj empiezan a girar."
-        },
-        {
-          "puzzleType": "wordlock",
-          "prompt": "Las letras del reloj dicen: «Después del lunes viene el...»",
-          "clue": "El segundo día de la semana. _ _ _ _ _ _",
-          "answer": "martes",
-          "onSolve": "El reloj marca la hora correcta. La puerta se abre."
-        }
-      ],
-      "fragment": {
-        "text": "Detrás de la puerta, un fragmento de raíz brilla con luz dorada. Tiene forma de reloj de sol.",
-        "questClue": "El tiempo tiene nombre. Cada día, cada mes, cada hora: nombrar es medir.",
-        "item": "raiz-techo"
-      },
-      "label": "Sala de enigmas",
-      "instruction": "Resuelve los enigmas para abrir la puerta.",
-      "image": "img/destinations/dest4-escaperoom.jpg",
-      "imageAlt": "Entrada de una cueva entre raíces de ceiba, símbolos dorados brillando"
-    },
-    {
-      "type": "cronica",
-      "label": "Crónica",
-      "prompt": "Escribe un número. ¿Cuántos árboles hay?",
-      "placeholder": "Escribe una palabra...",
-      "minWords": 1,
-      "maxWords": 10,
-      "scaffoldType": "word",
-      "storyKey": "cronica_dest4",
-      "destination": "dest4",
-      "button": "Guardar en la crónica",
-      "image": "img/destinations/dest4-cronica.jpg",
-      "imageAlt": "Un códice abierto sobre una piedra musgosa, pluma de guacamaya al lado"
-    },
-    {
-      "type": "par_minimo",
-      "label": "Par mínimo",
-      "instruction": "Yaguará escucha dos sonidos en la selva. ¿Cuál es cuál?",
-      "pairs": [
-        {
-          "wordA": "pata",
-          "wordB": "bata",
-          "correct": "A",
-          "hint": "Sonido fuerte al inicio"
-        },
-        {
-          "wordA": "peso",
-          "wordB": "beso",
-          "correct": "B",
-          "hint": "Labios juntos"
-        },
-        {
-          "wordA": "casa",
-          "wordB": "caza",
-          "correct": "A",
-          "hint": "Escucha la ese"
-        },
-        {
-          "wordA": "pero",
-          "wordB": "perro",
-          "correct": "B",
-          "hint": "Escucha la erre"
-        },
-        {
-          "wordA": "mala",
-          "wordB": "malla",
-          "correct": "B",
-          "hint": "Escucha la elle"
-        }
-      ],
-      "image": "img/destinations/dest4-par_minimo.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "brecha",
-      "label": "Brecha",
-      "instruction": "Yaguará sabe algo. Tú sabes algo. Juntos tienen la verdad completa.",
-      "cardA": {
-        "text": "Yaguará vive en la selva. Tiene cuatro patas. Es grande y fuerte.",
-        "facts": [
-          "vive en la selva",
-          "cuatro patas",
-          "grande y fuerte"
-        ]
-      },
-      "cardB": {
-        "text": "Yaguará come peces del río. Duerme en los árboles. Es un jaguar.",
-        "facts": [
-          "come peces",
-          "duerme en árboles",
-          "es un jaguar"
-        ]
-      },
-      "questions": [
-        {
-          "question": "¿Dónde vive Yaguará?",
-          "answer": "en la selva",
-          "source": "A",
-          "options": [
-            "en la selva",
-            "en la ciudad",
-            "en el mar"
-          ]
-        },
-        {
-          "question": "¿Qué come Yaguará?",
-          "answer": "peces del río",
-          "source": "B",
-          "options": [
-            "peces del río",
-            "frutas del árbol",
-            "pan"
-          ]
-        },
-        {
-          "question": "¿Qué animal es Yaguará?",
-          "answer": "un jaguar",
-          "source": "B",
-          "options": [
-            "un jaguar",
-            "un pájaro",
-            "un pez"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest4-brecha.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "descripcion",
-      "label": "Descripción",
-      "instruction": "Yaguará llega a un lugar nuevo. ¿Qué ves?",
-      "scene": "Un río grande. Árboles muy altos. El agua es azul y verde. Hay un pájaro rojo en un árbol. El sol es fuerte.",
-      "promptQuestion": "¿Cuál es la mejor descripción?",
-      "vocabulary": [
-        "río",
-        "árboles",
-        "agua",
-        "pájaro",
-        "sol"
-      ],
-      "modelAnswer": "Hay un río grande con árboles altos. El agua es azul.",
-      "options": [
-        "Hay un río grande con árboles altos y un pájaro rojo.",
-        "Hay un desierto con arena y un sol grande.",
-        "En el parque hay flores rojas y un banco."
-      ],
-      "image": "img/destinations/dest4-descripcion.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "fill",
-      "label": "Fragmento literario",
-      "title": "José Eustasio Rivera — La Vorágine",
-      "instruction": "Completa las frases de la novela de Rivera sobre la selva.",
-      "grammar": [
-        "present tense",
-        "-AR verbs"
-      ],
-      "vocabulary": [
-        "camino",
-        "escucho",
-        "selva",
-        "habla"
-      ],
-      "questions": [
-        {
-          "sentence": "Yo ___ por la selva. La selva es grande y oscura.",
-          "answer": "camino",
-          "options": [
-            "camino",
-            "como",
-            "duermo",
-            "salgo"
-          ]
-        },
-        {
-          "sentence": "La selva ___. Dice cosas que nadie entiende.",
-          "answer": "habla",
-          "options": [
-            "habla",
-            "come",
-            "duerme",
-            "canta"
-          ]
-        },
-        {
-          "sentence": "Yo ___ lo que dice la selva. Pero no entiendo todo.",
-          "answer": "escucho",
-          "options": [
-            "escucho",
-            "miro",
-            "toco",
-            "huelo"
-          ]
-        },
-        {
-          "sentence": "La selva es la madre del silencio. Es la ___ de la soledad.",
-          "answer": "madre",
-          "options": [
-            "madre",
-            "hija",
-            "casa",
-            "puerta"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ritmo",
-      "label": "Ritmo",
-      "instruction": "La selva tiene un ritmo. Las palabras también. ¿Dónde cae el golpe?",
-      "words": [
-        {
-          "word": "mamá",
-          "syllables": [
-            "ma",
-            "má"
-          ],
-          "stressIndex": 1,
-          "pattern": "aguda"
-        },
-        {
-          "word": "agua",
-          "syllables": [
-            "a",
-            "gua"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "amigo",
-          "syllables": [
-            "a",
-            "mi",
-            "go"
-          ],
-          "stressIndex": 1,
-          "pattern": "llana"
-        },
-        {
-          "word": "feliz",
-          "syllables": [
-            "fe",
-            "liz"
-          ],
-          "stressIndex": 1,
-          "pattern": "aguda"
-        },
-        {
-          "word": "casa",
-          "syllables": [
-            "ca",
-            "sa"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        }
-      ],
-      "image": "img/destinations/dest4-ritmo.jpg",
-      "imageAlt": "Gotas de lluvia creando círculos rítmicos en un charco de la selva"
-    }
-  ],
   "ecosystemGames": [
     {
       "_template": {
@@ -18104,6 +16605,1602 @@
             "yo",
             "..."
           ]
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "skit",
+      "label": "Escena",
+      "title": "Contar el mundo",
+      "instruction": "Escucha la historia.",
+      "grammar": [
+        "números 1-20",
+        "¿cuántos?"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "text": "Yaguará camina por el bosque. Un jaguar pequeño aparece entre los árboles."
+        },
+        {
+          "speaker": "rio",
+          "text": "¡Hola! Yo soy Río. Yo soy el hermano de Yaguará."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "¡Río! Tú estás aquí. ¿Cómo estás?"
+        },
+        {
+          "speaker": "rio",
+          "text": "Estoy bien. Yo tengo tres años. ¿Cuántos años tienes tú?"
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Yo tengo cinco años. Tú eres pequeño. Yo soy grande."
+        },
+        {
+          "speaker": "rio",
+          "text": "¡Yo cuento todo! Uno, dos, tres, cuatro, cinco. Cinco árboles."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Seis, siete, ocho, nueve, diez. Diez flores rojas."
+        },
+        {
+          "speaker": "rio",
+          "text": "Once, doce, trece, catorce, quince. Quince pájaros en el cielo."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Dieciséis, diecisiete, dieciocho, diecinueve, veinte. Veinte estrellas."
+        },
+        {
+          "speaker": "rio",
+          "text": "¿Cuántos días tiene una semana? Siete días. Lunes, martes, miércoles, jueves, viernes, sábado, domingo."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Hoy es un día bonito. Mañana es otro día. Ayer fue un día largo."
+        },
+        {
+          "speaker": "narrator",
+          "text": "Rivera, el poeta de la selva, cuenta los días. Cuenta los árboles. Cuenta todo."
+        },
+        {
+          "speaker": "rio",
+          "text": "Yo cuento como Rivera. Uno, dos, tres... El mundo tiene muchos números."
+        }
+      ]
+    },
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha el número y elige.",
+      "questions": [
+        {
+          "audio": "uno",
+          "answer": "1",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "audio": "cinco",
+          "answer": "5",
+          "options": [
+            "5",
+            "4",
+            "6"
+          ]
+        },
+        {
+          "audio": "diez",
+          "answer": "10",
+          "options": [
+            "10",
+            "9",
+            "11"
+          ]
+        },
+        {
+          "audio": "quince",
+          "answer": "15",
+          "options": [
+            "15",
+            "14",
+            "16"
+          ]
+        },
+        {
+          "audio": "veinte",
+          "answer": "20",
+          "options": [
+            "20",
+            "19",
+            "12"
+          ]
+        },
+        {
+          "audio": "siete",
+          "answer": "7",
+          "options": [
+            "7",
+            "6",
+            "8"
+          ]
+        },
+        {
+          "audio": "doce",
+          "answer": "12",
+          "options": [
+            "12",
+            "11",
+            "13"
+          ]
+        },
+        {
+          "audio": "tres",
+          "answer": "3",
+          "options": [
+            "3",
+            "2",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "instruction": "Une el número con la palabra.",
+      "pairs": [
+        [
+          "1",
+          "uno"
+        ],
+        [
+          "5",
+          "cinco"
+        ],
+        [
+          "7",
+          "siete"
+        ],
+        [
+          "10",
+          "diez"
+        ],
+        [
+          "12",
+          "doce"
+        ],
+        [
+          "15",
+          "quince"
+        ],
+        [
+          "20",
+          "veinte"
+        ],
+        [
+          "3",
+          "tres"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con el número correcto.",
+      "vocabulary": [
+        "uno",
+        "dos",
+        "tres",
+        "cinco",
+        "siete",
+        "diez",
+        "quince",
+        "veinte"
+      ],
+      "questions": [
+        {
+          "sentence": "Yo tengo ___ ojos.",
+          "answer": "dos",
+          "options": [
+            "dos",
+            "uno",
+            "tres",
+            "cinco"
+          ]
+        },
+        {
+          "sentence": "Una mano tiene ___ dedos.",
+          "answer": "cinco",
+          "options": [
+            "cinco",
+            "tres",
+            "diez",
+            "dos"
+          ]
+        },
+        {
+          "sentence": "Una semana tiene ___ días.",
+          "answer": "siete",
+          "options": [
+            "siete",
+            "cinco",
+            "diez",
+            "seis"
+          ]
+        },
+        {
+          "sentence": "Yo tengo ___ nariz.",
+          "answer": "una",
+          "options": [
+            "una",
+            "dos",
+            "tres",
+            "cinco"
+          ]
+        },
+        {
+          "sentence": "Dos manos tienen ___ dedos.",
+          "answer": "diez",
+          "options": [
+            "diez",
+            "cinco",
+            "veinte",
+            "dos"
+          ]
+        },
+        {
+          "sentence": "Hay ___ árboles en el bosque. Son muchos.",
+          "answer": "veinte",
+          "options": [
+            "veinte",
+            "uno",
+            "tres",
+            "cinco"
+          ]
+        },
+        {
+          "sentence": "Río tiene ___ años. Es pequeño.",
+          "answer": "tres",
+          "options": [
+            "tres",
+            "cinco",
+            "diez",
+            "veinte"
+          ]
+        },
+        {
+          "sentence": "Yaguará tiene ___ años. Es más grande.",
+          "answer": "cinco",
+          "options": [
+            "cinco",
+            "tres",
+            "uno",
+            "dos"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Ordena las palabras.",
+      "sentences": [
+        {
+          "target": "Yo tengo cinco años",
+          "words": [
+            "años",
+            "cinco",
+            "Yo",
+            "tengo"
+          ]
+        },
+        {
+          "target": "Hay diez flores rojas",
+          "words": [
+            "rojas",
+            "flores",
+            "Hay",
+            "diez"
+          ]
+        },
+        {
+          "target": "Una semana tiene siete días",
+          "words": [
+            "días",
+            "tiene",
+            "Una",
+            "siete",
+            "semana"
+          ]
+        },
+        {
+          "target": "Río tiene tres años",
+          "words": [
+            "años",
+            "tres",
+            "Río",
+            "tiene"
+          ]
+        },
+        {
+          "target": "Hay veinte árboles grandes",
+          "words": [
+            "grandes",
+            "árboles",
+            "Hay",
+            "veinte"
+          ]
+        },
+        {
+          "target": "Yo tengo dos manos",
+          "words": [
+            "manos",
+            "dos",
+            "Yo",
+            "tengo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe el número en palabras.",
+      "sentences": [
+        {
+          "audio": "Yo tengo cinco años",
+          "text": "Yo tengo cinco años"
+        },
+        {
+          "audio": "Hay siete días",
+          "text": "Hay siete días"
+        },
+        {
+          "audio": "Diez flores rojas",
+          "text": "Diez flores rojas"
+        },
+        {
+          "audio": "Río tiene tres años",
+          "text": "Río tiene tres años"
+        },
+        {
+          "audio": "Hay veinte pájaros",
+          "text": "Hay veinte pájaros"
+        },
+        {
+          "audio": "Dos ojos verdes",
+          "text": "Dos ojos verdes"
+        }
+      ]
+    },
+    {
+      "type": "narrative",
+      "label": "Narración",
+      "title": "Los días de la semana",
+      "text": [
+        "Una semana tiene siete días: lunes, martes, miércoles, jueves, viernes, sábado y domingo.",
+        "Hoy es un día bonito. El sol es amarillo. El cielo es azul.",
+        "Mañana es otro día. ¿Mañana es lunes o martes?",
+        "La noche es oscura. La luna es blanca. Las estrellas brillan.",
+        "El día tiene sol. La noche tiene luna. El día es largo. La noche es corta.",
+        "Río cuenta los días. Lunes: uno. Martes: dos. Miércoles: tres. Jueves: cuatro. Viernes: cinco.",
+        "El sábado y el domingo son días bonitos. No hay escuela. Hay tiempo para jugar."
+      ]
+    },
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha y elige el día.",
+      "questions": [
+        {
+          "audio": "lunes",
+          "answer": "lunes",
+          "options": [
+            "lunes",
+            "martes",
+            "miércoles"
+          ]
+        },
+        {
+          "audio": "viernes",
+          "answer": "viernes",
+          "options": [
+            "viernes",
+            "jueves",
+            "sábado"
+          ]
+        },
+        {
+          "audio": "domingo",
+          "answer": "domingo",
+          "options": [
+            "domingo",
+            "sábado",
+            "lunes"
+          ]
+        },
+        {
+          "audio": "miércoles",
+          "answer": "miércoles",
+          "options": [
+            "miércoles",
+            "martes",
+            "jueves"
+          ]
+        },
+        {
+          "audio": "hoy",
+          "answer": "hoy",
+          "options": [
+            "hoy",
+            "mañana",
+            "noche"
+          ]
+        },
+        {
+          "audio": "mañana",
+          "answer": "mañana",
+          "options": [
+            "mañana",
+            "hoy",
+            "noche"
+          ]
+        },
+        {
+          "audio": "la noche",
+          "answer": "noche",
+          "options": [
+            "noche",
+            "día",
+            "sol"
+          ]
+        },
+        {
+          "audio": "el día",
+          "answer": "día",
+          "options": [
+            "día",
+            "noche",
+            "luna"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "instruction": "Une cada día con su número en la semana.",
+      "pairs": [
+        [
+          "1",
+          "lunes"
+        ],
+        [
+          "2",
+          "martes"
+        ],
+        [
+          "3",
+          "miércoles"
+        ],
+        [
+          "4",
+          "jueves"
+        ],
+        [
+          "5",
+          "viernes"
+        ],
+        [
+          "6",
+          "sábado"
+        ],
+        [
+          "7",
+          "domingo"
+        ]
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "¿Día o noche?",
+      "categories": [
+        {
+          "name": "Día",
+          "items": [
+            "sol",
+            "amarillo",
+            "azul",
+            "pájaro"
+          ]
+        },
+        {
+          "name": "Noche",
+          "items": [
+            "luna",
+            "estrellas",
+            "oscuro",
+            "blanca"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con la palabra correcta.",
+      "vocabulary": [
+        "hoy",
+        "mañana",
+        "día",
+        "noche",
+        "semana"
+      ],
+      "questions": [
+        {
+          "sentence": "Una ___ tiene siete días.",
+          "answer": "semana",
+          "options": [
+            "semana",
+            "día",
+            "noche",
+            "mes"
+          ]
+        },
+        {
+          "sentence": "___ es lunes. Mañana es martes.",
+          "answer": "Hoy",
+          "options": [
+            "Hoy",
+            "Mañana",
+            "Noche",
+            "Día"
+          ]
+        },
+        {
+          "sentence": "El ___ tiene sol. La noche tiene luna.",
+          "answer": "día",
+          "options": [
+            "día",
+            "noche",
+            "sol",
+            "luna"
+          ]
+        },
+        {
+          "sentence": "La ___ es oscura. Hay estrellas.",
+          "answer": "noche",
+          "options": [
+            "noche",
+            "día",
+            "luna",
+            "semana"
+          ]
+        },
+        {
+          "sentence": "Hoy es viernes. ___ es sábado.",
+          "answer": "Mañana",
+          "options": [
+            "Mañana",
+            "Hoy",
+            "Noche",
+            "Día"
+          ]
+        },
+        {
+          "sentence": "El sábado y el domingo son días de la ___.",
+          "answer": "semana",
+          "options": [
+            "semana",
+            "noche",
+            "día",
+            "casa"
+          ]
+        },
+        {
+          "sentence": "El ___ es largo y bonito.",
+          "answer": "día",
+          "options": [
+            "día",
+            "noche",
+            "sol",
+            "luna"
+          ]
+        },
+        {
+          "sentence": "Hay siete ___ en una semana.",
+          "answer": "días",
+          "options": [
+            "días",
+            "noches",
+            "casas",
+            "años"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Elige la respuesta correcta.",
+      "turns": [
+        {
+          "speaker": "rio",
+          "prompt": "¿Qué día es hoy?",
+          "response": "Hoy es lunes.",
+          "options": [
+            "Hoy es lunes.",
+            "Hoy es noche.",
+            "Hoy tengo cinco."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Cuántos días tiene una semana?",
+          "response": "Una semana tiene siete días.",
+          "options": [
+            "Una semana tiene siete días.",
+            "Una semana tiene cinco días.",
+            "Una semana tiene diez días."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Es de día o de noche?",
+          "response": "Es de día. Hay sol.",
+          "options": [
+            "Es de día. Hay sol.",
+            "Es de noche. Hay luna.",
+            "Es de día. Hay luna."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Qué día es mañana?",
+          "response": "Mañana es martes.",
+          "options": [
+            "Mañana es martes.",
+            "Mañana es hoy.",
+            "Mañana es noche."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Cuántos ojos tienes?",
+          "response": "Tengo dos ojos.",
+          "options": [
+            "Tengo dos ojos.",
+            "Tengo cinco ojos.",
+            "Tengo un ojo."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "narrative",
+      "label": "Narración",
+      "title": "¿Cuántos años tienes?",
+      "text": [
+        "Río tiene tres años. Es joven y pequeño. Yaguará tiene cinco años. Es más grande.",
+        "Un año tiene doce meses: enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre.",
+        "¿Cuántos años tienes tú? ¿Cuándo es tu cumpleaños?",
+        "La viejecita es vieja. Tiene muchos años. Pero es bonita y feliz.",
+        "Río es joven. La viejecita es vieja. Joven y viejo. Nuevo y antiguo.",
+        "Cada año tiene doce meses. Cada mes tiene cuatro semanas. Cada semana tiene siete días."
+      ]
+    },
+    {
+      "type": "susurro",
+      "label": "Susurro",
+      "instruction": "Escucha el susurro y elige el mes.",
+      "questions": [
+        {
+          "audio": "enero",
+          "answer": "enero",
+          "options": [
+            "enero",
+            "junio",
+            "marzo"
+          ]
+        },
+        {
+          "audio": "mayo",
+          "answer": "mayo",
+          "options": [
+            "mayo",
+            "marzo",
+            "abril"
+          ]
+        },
+        {
+          "audio": "agosto",
+          "answer": "agosto",
+          "options": [
+            "agosto",
+            "abril",
+            "octubre"
+          ]
+        },
+        {
+          "audio": "diciembre",
+          "answer": "diciembre",
+          "options": [
+            "diciembre",
+            "noviembre",
+            "septiembre"
+          ]
+        },
+        {
+          "audio": "año",
+          "answer": "año",
+          "options": [
+            "año",
+            "día",
+            "mes"
+          ]
+        },
+        {
+          "audio": "cumpleaños",
+          "answer": "cumpleaños",
+          "options": [
+            "cumpleaños",
+            "cansado",
+            "camino"
+          ]
+        },
+        {
+          "audio": "joven",
+          "answer": "joven",
+          "options": [
+            "joven",
+            "jueves",
+            "jugar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con la palabra correcta.",
+      "grammar": [
+        "¿cuántos?",
+        "tener + años"
+      ],
+      "vocabulary": [
+        "año",
+        "años",
+        "mes",
+        "meses",
+        "joven",
+        "cumpleaños"
+      ],
+      "questions": [
+        {
+          "sentence": "Río tiene tres ___.",
+          "answer": "años",
+          "options": [
+            "años",
+            "días",
+            "meses",
+            "ojos"
+          ]
+        },
+        {
+          "sentence": "Un ___ tiene doce meses.",
+          "answer": "año",
+          "options": [
+            "año",
+            "día",
+            "mes",
+            "semana"
+          ]
+        },
+        {
+          "sentence": "¿___ años tienes?",
+          "answer": "Cuántos",
+          "options": [
+            "Cuántos",
+            "Cómo",
+            "Qué",
+            "Dónde"
+          ]
+        },
+        {
+          "sentence": "Río es ___. Tiene tres años.",
+          "answer": "joven",
+          "options": [
+            "joven",
+            "viejo",
+            "grande",
+            "gordo"
+          ]
+        },
+        {
+          "sentence": "La viejecita es ___. Tiene muchos años.",
+          "answer": "vieja",
+          "options": [
+            "vieja",
+            "joven",
+            "pequeña",
+            "nueva"
+          ]
+        },
+        {
+          "sentence": "Mi ___ es en mayo.",
+          "answer": "cumpleaños",
+          "options": [
+            "cumpleaños",
+            "casa",
+            "nombre",
+            "amigo"
+          ]
+        },
+        {
+          "sentence": "Un año tiene ___ meses.",
+          "answer": "doce",
+          "options": [
+            "doce",
+            "siete",
+            "diez",
+            "veinte"
+          ]
+        },
+        {
+          "sentence": "Cada ___ tiene cuatro semanas.",
+          "answer": "mes",
+          "options": [
+            "mes",
+            "año",
+            "día",
+            "semana"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Ordena las palabras.",
+      "sentences": [
+        {
+          "target": "¿Cuántos años tienes?",
+          "words": [
+            "tienes",
+            "años",
+            "¿Cuántos"
+          ]
+        },
+        {
+          "target": "Yo tengo cinco años",
+          "words": [
+            "años",
+            "cinco",
+            "Yo",
+            "tengo"
+          ]
+        },
+        {
+          "target": "Un año tiene doce meses",
+          "words": [
+            "meses",
+            "tiene",
+            "Un",
+            "doce",
+            "año"
+          ]
+        },
+        {
+          "target": "Mi cumpleaños es en mayo",
+          "words": [
+            "mayo",
+            "es",
+            "Mi",
+            "en",
+            "cumpleaños"
+          ]
+        },
+        {
+          "target": "Río es joven y pequeño",
+          "words": [
+            "pequeño",
+            "y",
+            "Río",
+            "joven",
+            "es"
+          ]
+        },
+        {
+          "target": "La viejecita tiene muchos años",
+          "words": [
+            "años",
+            "tiene",
+            "La",
+            "muchos",
+            "viejecita"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "narrative",
+      "label": "Narración",
+      "title": "Siempre, a veces, nunca",
+      "text": [
+        "El sol siempre sale. La luna siempre sale. Eso nunca cambia.",
+        "A veces llueve. A veces hace sol. A veces es de día, a veces es de noche.",
+        "Río siempre cuenta. Cuenta los árboles, los pájaros, las flores. Siempre.",
+        "La viejecita nunca dice: «Tengo todo.» Siempre dice: «No tengo nada.»",
+        "¿Tú siempre estás feliz? No. A veces estás triste. A veces estás cansado.",
+        "Pero siempre hay un nuevo día. Siempre hay sol después de la noche."
+      ]
+    },
+    {
+      "type": "eco_lejano",
+      "label": "Eco lejano",
+      "instruction": "Escucha el eco y elige.",
+      "items": [
+        {
+          "echo": "El sol ___ sale",
+          "answer": "siempre",
+          "options": [
+            "siempre",
+            "nunca",
+            "poco"
+          ]
+        },
+        {
+          "echo": "___ llueve",
+          "answer": "a veces",
+          "options": [
+            "a veces",
+            "siempre",
+            "nunca"
+          ]
+        },
+        {
+          "echo": "Ella ___ dice «no tengo nada»",
+          "answer": "siempre",
+          "options": [
+            "siempre",
+            "nunca",
+            "poco"
+          ]
+        },
+        {
+          "echo": "Río ___ cambia",
+          "answer": "nunca",
+          "options": [
+            "nunca",
+            "siempre",
+            "mucho"
+          ]
+        },
+        {
+          "echo": "Yo ___ estoy feliz",
+          "answer": "a veces",
+          "options": [
+            "a veces",
+            "siempre",
+            "nunca"
+          ]
+        },
+        {
+          "echo": "La mañana es ___",
+          "answer": "temprano",
+          "options": [
+            "temprano",
+            "tarde",
+            "noche"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "label": "Traducir",
+      "instruction": "Elige la traducción.",
+      "questions": [
+        {
+          "source": "always",
+          "answer": "siempre",
+          "options": [
+            "siempre",
+            "nunca",
+            "a veces"
+          ]
+        },
+        {
+          "source": "never",
+          "answer": "nunca",
+          "options": [
+            "nunca",
+            "siempre",
+            "nada"
+          ]
+        },
+        {
+          "source": "sometimes",
+          "answer": "a veces",
+          "options": [
+            "a veces",
+            "siempre",
+            "nunca"
+          ]
+        },
+        {
+          "source": "today",
+          "answer": "hoy",
+          "options": [
+            "hoy",
+            "mañana",
+            "noche"
+          ]
+        },
+        {
+          "source": "tomorrow",
+          "answer": "mañana",
+          "options": [
+            "mañana",
+            "hoy",
+            "noche"
+          ]
+        },
+        {
+          "source": "night",
+          "answer": "noche",
+          "options": [
+            "noche",
+            "día",
+            "luna"
+          ]
+        },
+        {
+          "source": "young",
+          "answer": "joven",
+          "options": [
+            "joven",
+            "viejo",
+            "nuevo"
+          ]
+        },
+        {
+          "source": "birthday",
+          "answer": "cumpleaños",
+          "options": [
+            "cumpleaños",
+            "año",
+            "día"
+          ]
+        },
+        {
+          "source": "week",
+          "answer": "semana",
+          "options": [
+            "semana",
+            "mes",
+            "día"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con siempre, nunca o a veces.",
+      "vocabulary": [
+        "siempre",
+        "nunca",
+        "a veces"
+      ],
+      "questions": [
+        {
+          "sentence": "El sol ___ sale por la mañana.",
+          "answer": "siempre",
+          "options": [
+            "siempre",
+            "nunca",
+            "a veces",
+            "poco"
+          ]
+        },
+        {
+          "sentence": "Los peces ___ caminan. Viven en el agua.",
+          "answer": "nunca",
+          "options": [
+            "nunca",
+            "siempre",
+            "a veces",
+            "mucho"
+          ]
+        },
+        {
+          "sentence": "___ llueve, ___ hace sol.",
+          "answer": "a veces",
+          "options": [
+            "a veces",
+            "siempre",
+            "nunca",
+            "mucho"
+          ]
+        },
+        {
+          "sentence": "La viejecita ___ dice: «No tengo nada.»",
+          "answer": "siempre",
+          "options": [
+            "siempre",
+            "nunca",
+            "a veces",
+            "poco"
+          ]
+        },
+        {
+          "sentence": "Yo ___ estoy triste. Pero hoy estoy feliz.",
+          "answer": "a veces",
+          "options": [
+            "a veces",
+            "siempre",
+            "nunca",
+            "mucho"
+          ]
+        },
+        {
+          "sentence": "Río ___ cuenta. Le gusta contar.",
+          "answer": "siempre",
+          "options": [
+            "siempre",
+            "nunca",
+            "a veces",
+            "poco"
+          ]
+        },
+        {
+          "sentence": "Los pájaros ___ cantan de noche.",
+          "answer": "nunca",
+          "options": [
+            "nunca",
+            "siempre",
+            "a veces",
+            "mucho"
+          ]
+        },
+        {
+          "sentence": "___ hay un nuevo día.",
+          "answer": "Siempre",
+          "options": [
+            "Siempre",
+            "Nunca",
+            "A veces",
+            "Poco"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Escucha y repite en voz alta.",
+      "sentences": [
+        {
+          "text": "Yo tengo cinco años.",
+          "speed": "slow"
+        },
+        {
+          "text": "Una semana tiene siete días.",
+          "speed": "slow"
+        },
+        {
+          "text": "Hoy es un día bonito.",
+          "speed": "slow"
+        },
+        {
+          "text": "El sol siempre sale.",
+          "speed": "slow"
+        },
+        {
+          "text": "¿Cuántos años tienes?",
+          "speed": "slow"
+        },
+        {
+          "text": "Mi cumpleaños es en mayo.",
+          "speed": "slow"
+        },
+        {
+          "text": "A veces llueve, a veces hace sol.",
+          "speed": "slow"
+        },
+        {
+          "text": "La noche es oscura y bonita.",
+          "speed": "slow"
+        }
+      ]
+    },
+    {
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe.",
+      "sentences": [
+        {
+          "audio": "Yo tengo cinco años",
+          "text": "Yo tengo cinco años"
+        },
+        {
+          "audio": "Hoy es lunes",
+          "text": "Hoy es lunes"
+        },
+        {
+          "audio": "El sol siempre sale",
+          "text": "El sol siempre sale"
+        },
+        {
+          "audio": "Una semana tiene siete días",
+          "text": "Una semana tiene siete días"
+        },
+        {
+          "audio": "Río es joven",
+          "text": "Río es joven"
+        },
+        {
+          "audio": "A veces estoy triste",
+          "text": "A veces estoy triste"
+        }
+      ]
+    },
+    {
+      "type": "crossword",
+      "label": "Crucigrama",
+      "instruction": "Completa el crucigrama.",
+      "clues": [
+        {
+          "direction": "across",
+          "number": 1,
+          "clue": "Día después del lunes",
+          "answer": "martes"
+        },
+        {
+          "direction": "across",
+          "number": 3,
+          "clue": "Lo contrario de viejo",
+          "answer": "joven"
+        },
+        {
+          "direction": "across",
+          "number": 5,
+          "clue": "Lo contrario de nunca",
+          "answer": "siempre"
+        },
+        {
+          "direction": "down",
+          "number": 1,
+          "clue": "Mes número cinco",
+          "answer": "mayo"
+        },
+        {
+          "direction": "down",
+          "number": 2,
+          "clue": "7 días = 1 ___",
+          "answer": "semana"
+        },
+        {
+          "direction": "down",
+          "number": 4,
+          "clue": "Lo contrario de día",
+          "answer": "noche"
+        }
+      ]
+    },
+    {
+      "type": "corrector",
+      "label": "Corrector",
+      "instruction": "Encuentra y corrige el error.",
+      "items": [
+        {
+          "sentence": "Una semana tiene cinco días.",
+          "error": "cinco",
+          "correction": "siete"
+        },
+        {
+          "sentence": "Yo tiene tres años.",
+          "error": "tiene",
+          "correction": "tengo"
+        },
+        {
+          "sentence": "El sol nunca sale.",
+          "error": "nunca",
+          "correction": "siempre"
+        },
+        {
+          "sentence": "Un año tiene siete meses.",
+          "error": "siete",
+          "correction": "doce"
+        },
+        {
+          "sentence": "Hoy es mañana.",
+          "error": "mañana",
+          "correction": "lunes"
+        },
+        {
+          "sentence": "La noche tiene sol.",
+          "error": "sol",
+          "correction": "luna"
+        }
+      ]
+    },
+    {
+      "type": "escaperoom",
+      "label": "Sala de enigmas",
+      "title": "Contar para abrir",
+      "instruction": "Cuenta bien para abrir la puerta.",
+      "puzzles": [
+        {
+          "question": "Cinco + cinco = ___",
+          "answer": "diez",
+          "hint": "d___"
+        },
+        {
+          "question": "Día después del viernes",
+          "answer": "sábado",
+          "hint": "s_____"
+        },
+        {
+          "question": "Lo contrario de 'siempre'",
+          "answer": "nunca",
+          "hint": "n____"
+        },
+        {
+          "question": "12 meses = 1 ___",
+          "answer": "año",
+          "hint": "a__"
+        },
+        {
+          "question": "Río tiene tres ___",
+          "answer": "años",
+          "hint": "a___"
+        },
+        {
+          "question": "Lo contrario de 'viejo'",
+          "answer": "joven",
+          "hint": "j____"
+        }
+      ]
+    },
+    {
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Yo tengo ___ años. Mi cumpleaños es en ___. Hoy es ___.",
+      "placeholder": "Escribe tu edad, tu cumpleaños y qué día es hoy...",
+      "minWords": 5,
+      "maxWords": 30,
+      "scaffoldType": "sentence",
+      "storyKey": "cronica_dest4",
+      "destination": "dest4",
+      "button": "Guardar en la crónica"
+    },
+    {
+      "type": "fill",
+      "label": "Fragmento literario",
+      "title": "José Eustasio Rivera — La Vorágine",
+      "instruction": "Rivera cuenta los días en la selva. Tú ya tienes todas las palabras.",
+      "grammar": [
+        "presente",
+        "números",
+        "tiempo"
+      ],
+      "questions": [
+        {
+          "sentence": "Yo cuento los ___ en la selva. Uno, dos, tres...",
+          "answer": "días",
+          "options": [
+            "días",
+            "años",
+            "meses",
+            "ojos"
+          ]
+        },
+        {
+          "sentence": "La selva es ___ y verde. Tiene muchos árboles.",
+          "answer": "grande",
+          "options": [
+            "grande",
+            "pequeña",
+            "corta",
+            "baja"
+          ]
+        },
+        {
+          "sentence": "Hay ___ pájaros en los árboles. Cantan siempre.",
+          "answer": "muchos",
+          "options": [
+            "muchos",
+            "pocos",
+            "un",
+            "dos"
+          ]
+        },
+        {
+          "sentence": "El río es ___ y azul. Corre por la selva.",
+          "answer": "largo",
+          "options": [
+            "largo",
+            "corto",
+            "alto",
+            "bajo"
+          ]
+        },
+        {
+          "sentence": "De día hay ___. De noche hay luna y estrellas.",
+          "answer": "sol",
+          "options": [
+            "sol",
+            "luna",
+            "noche",
+            "agua"
+          ]
+        },
+        {
+          "sentence": "Yo estoy aquí. ___ estoy aquí. No voy a ir.",
+          "answer": "Siempre",
+          "options": [
+            "Siempre",
+            "Nunca",
+            "A veces",
+            "Hoy"
+          ]
+        },
+        {
+          "sentence": "¿Cuántos ___ tiene un año? Doce.",
+          "answer": "meses",
+          "options": [
+            "meses",
+            "días",
+            "semanas",
+            "años"
+          ]
+        },
+        {
+          "sentence": "La selva ___ cambia. Siempre es verde.",
+          "answer": "nunca",
+          "options": [
+            "nunca",
+            "siempre",
+            "a veces",
+            "hoy"
+          ]
+        },
+        {
+          "sentence": "Yo soy ___ pero la selva es vieja. Tiene muchos años.",
+          "answer": "joven",
+          "options": [
+            "joven",
+            "viejo",
+            "grande",
+            "alto"
+          ]
+        },
+        {
+          "sentence": "Cuento los días. Cuento los ___. Cuento todo.",
+          "answer": "árboles",
+          "options": [
+            "árboles",
+            "ojos",
+            "nombres",
+            "amigos"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ritmo",
+      "label": "Ritmo",
+      "instruction": "¿Dónde cae el golpe fuerte?",
+      "words": [
+        {
+          "word": "lunes",
+          "syllables": [
+            "lu",
+            "nes"
+          ],
+          "stressIndex": 0,
+          "pattern": "llana"
+        },
+        {
+          "word": "miércoles",
+          "syllables": [
+            "miér",
+            "co",
+            "les"
+          ],
+          "stressIndex": 0,
+          "pattern": "esdrújula"
+        },
+        {
+          "word": "sábado",
+          "syllables": [
+            "sá",
+            "ba",
+            "do"
+          ],
+          "stressIndex": 0,
+          "pattern": "esdrújula"
+        },
+        {
+          "word": "siempre",
+          "syllables": [
+            "siem",
+            "pre"
+          ],
+          "stressIndex": 0,
+          "pattern": "llana"
+        },
+        {
+          "word": "cumpleaños",
+          "syllables": [
+            "cum",
+            "ple",
+            "a",
+            "ños"
+          ],
+          "stressIndex": 2,
+          "pattern": "llana"
+        },
+        {
+          "word": "joven",
+          "syllables": [
+            "jo",
+            "ven"
+          ],
+          "stressIndex": 0,
+          "pattern": "llana"
+        },
+        {
+          "word": "diciembre",
+          "syllables": [
+            "di",
+            "ciem",
+            "bre"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "febrero",
+          "syllables": [
+            "fe",
+            "bre",
+            "ro"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "número",
+          "syllables": [
+            "nú",
+            "me",
+            "ro"
+          ],
+          "stressIndex": 0,
+          "pattern": "esdrújula"
+        },
+        {
+          "word": "semana",
+          "syllables": [
+            "se",
+            "ma",
+            "na"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
         }
       ]
     }
