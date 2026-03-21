@@ -72,1457 +72,6 @@
     "imageAlt": "Yaguará bebiendo agua fría del río mientras Río juega entre las raíces — el silencio inusual del bosque",
     "image": "img/destinations/dest5-arrival.jpg"
   },
-  "games": [
-    {
-      "type": "skit",
-      "label": "Escena",
-      "title": "Lo que nos gusta",
-      "instruction": "Escucha y responde.",
-      "grammar": [
-        "me gusta / no me gusta",
-        "negation",
-        "possessives (mi/tu/su)"
-      ],
-      "beats": [
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Yaguará y Río están junto al agua."
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "enter-right",
-          "text": "Me gusta el agua. Me gusta nadar.",
-          "target": [
-            "Me gusta"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "enter-left",
-          "text": "Me gusta la selva. Me gustan los árboles.",
-          "target": [
-            "Me gusta",
-            "Me gustan"
-          ]
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "enter-right",
-          "text": "¿Te gusta la lluvia?"
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "No. No me gusta la lluvia.",
-          "target": [
-            "No me gusta"
-          ]
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "El viajero escribe en su cuaderno."
-        },
-        {
-          "speaker": "viajero",
-          "name": "El viajero",
-          "animation": "glow",
-          "text": "Me gusta la selva. Mi selva.",
-          "target": [
-            "Me gusta",
-            "Mi"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Mi río. Tu selva. Su casa.",
-          "target": [
-            "Mi",
-            "Tu",
-            "Su"
-          ]
-        },
-        {
-          "speaker": "rio",
-          "name": "Río",
-          "animation": "enter-right",
-          "text": "No, no le gusta la lluvia.",
-          "target": [
-            "No",
-            "le gusta"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "Sí, le gusta",
-              "No, no le gusta"
-            ],
-            "answer": "No, no le gusta"
-          }
-        },
-        {
-          "speaker": "viajero",
-          "name": "El viajero",
-          "animation": "fade-out",
-          "text": "No me gusta el silencio."
-        }
-      ]
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "grammar": [
-        "me gusta",
-        "negation"
-      ],
-      "vocabulary": [
-        "gusta",
-        "gustan",
-        "no",
-        "favorito"
-      ],
-      "instruction": "Escucha y selecciona la respuesta correcta.",
-      "questions": [
-        {
-          "audio": "Me gusta la selva.",
-          "question": "¿Qué le gusta?",
-          "answer": "La selva",
-          "options": [
-            "El río",
-            "La selva",
-            "La ciudad",
-            "El mar"
-          ]
-        },
-        {
-          "audio": "No me gustan las serpientes.",
-          "question": "¿Le gustan las serpientes?",
-          "answer": "No",
-          "options": [
-            "Sí",
-            "No",
-            "Mucho",
-            "Bien"
-          ]
-        },
-        {
-          "audio": "Mi animal favorito es el jaguar.",
-          "question": "¿Cuál es su animal favorito?",
-          "answer": "El jaguar",
-          "options": [
-            "La rana",
-            "El mono",
-            "El jaguar",
-            "La guacamaya"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-listening-1.jpg",
-      "imageAlt": "Yaguará con la oreja levantada, ondas de sonido doradas entre los árboles",
-      "tip": {
-        "title": "gustar",
-        "lines": [
-          "me gusta + una cosa: Me gusta el río.",
-          "me gustan + muchas cosas: Me gustan los árboles.",
-          "no me gusta: No me gusta la lluvia."
-        ],
-        "gloss": "gustar = to like (lit. to please)"
-      }
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "grammar": [
-        "me gusta",
-        "negation",
-        "possessives"
-      ],
-      "vocabulary": [
-        "gusta",
-        "gustan",
-        "no",
-        "mi",
-        "tu",
-        "su"
-      ],
-      "instruction": "Completa las frases sobre gustos y posesiones.",
-      "questions": [
-        {
-          "sentence": "Me ___ los animales de la selva.",
-          "answer": "gustan",
-          "options": [
-            "gusta",
-            "gustan",
-            "gusto",
-            "gustas"
-          ]
-        },
-        {
-          "sentence": "___ me gusta la lluvia fría.",
-          "answer": "No",
-          "options": [
-            "No",
-            "Sí",
-            "Mi",
-            "Es"
-          ]
-        },
-        {
-          "sentence": "___ nombre es Yaguará.",
-          "answer": "Mi",
-          "options": [
-            "Mi",
-            "Tu",
-            "Su",
-            "El"
-          ]
-        },
-        {
-          "sentence": "¿Cuál es ___ animal favorito?",
-          "answer": "tu",
-          "options": [
-            "mi",
-            "tu",
-            "su",
-            "el"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-fill-1.jpg",
-      "imageAlt": "Hojas de la selva con espacios vacíos entre las venas, esperando ser completadas",
-      "tip": {
-        "title": "Posesivos",
-        "lines": [
-          "yo → mi: mi río, mi selva",
-          "tú → tu: tu casa, tu nombre",
-          "él/ella → su: su libro, su familia"
-        ],
-        "gloss": "mi = my, tu = your, su = his/her"
-      }
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "grammar": [
-        "me gusta"
-      ],
-      "vocabulary": [
-        "selva",
-        "flores",
-        "serpientes",
-        "lluvia",
-        "animales",
-        "frío"
-      ],
-      "instruction": "Clasifica según la conversación con Yaguará: <em>¿me gusta o no me gusta?</em>",
-      "categories": [
-        "Me gusta",
-        "No me gusta"
-      ],
-      "items": [
-        {
-          "text": "la selva",
-          "category": "Me gusta"
-        },
-        {
-          "text": "las flores bonitas",
-          "category": "Me gusta"
-        },
-        {
-          "text": "las serpientes",
-          "category": "No me gusta"
-        },
-        {
-          "text": "los animales",
-          "category": "Me gusta"
-        },
-        {
-          "text": "el frío",
-          "category": "No me gusta"
-        },
-        {
-          "text": "la lluvia fuerte",
-          "category": "No me gusta"
-        }
-      ],
-      "image": "img/destinations/dest5-category-1.jpg",
-      "imageAlt": "Cestas tejidas al estilo wayúu bajo la copa de un árbol, cada una etiquetada",
-      "tip": {
-        "title": "Negación",
-        "lines": [
-          "Sí → Me gusta el agua.",
-          "No → No me gusta la lluvia.",
-          "no + verbo: No camino. No como."
-        ]
-      }
-    },
-    {
-      "type": "narrative",
-      "label": "Narración",
-      "instruction": "Lee y escucha.",
-      "text": "Yaguará tiene hambre. Busca comida. Ve el río. Hay peces en el agua. Yaguará come un pez. El pez es bueno.",
-      "image": "img/destinations/dest5-narrative.jpg",
-      "imageAlt": "Claro del bosque al amanecer, luz dorada filtrándose entre la niebla"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une la comida con su nombre.",
-      "pairs": [
-        [
-          "pescado",
-          "fish"
-        ],
-        [
-          "fruta",
-          "fruit"
-        ],
-        [
-          "agua",
-          "water"
-        ],
-        [
-          "arroz",
-          "rice"
-        ]
-      ],
-      "image": "img/destinations/dest5-pair-1.jpg",
-      "imageAlt": "Dos huellas de jaguar conectadas por un hilo dorado en la tierra húmeda"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une la comida con la frase.",
-      "pairs": [
-        [
-          "el mango",
-          "es bueno"
-        ],
-        [
-          "el pescado",
-          "está en el río"
-        ],
-        [
-          "el plátano",
-          "es grande"
-        ],
-        [
-          "el agua",
-          "es buena"
-        ]
-      ],
-      "image": "img/destinations/dest5-pair-2.jpg",
-      "imageAlt": "Hojas caídas sobre el agua, cada una reflejando su pareja en la superficie"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une la frase con la comida.",
-      "pairs": [
-        [
-          "me gusta",
-          "el pescado"
-        ],
-        [
-          "tengo hambre",
-          "como arroz"
-        ],
-        [
-          "tengo sed",
-          "bebo agua"
-        ],
-        [
-          "me gustan",
-          "las frutas"
-        ]
-      ],
-      "image": "img/destinations/dest5-pair-3.jpg",
-      "imageAlt": "Luciérnagas emparejadas brillando entre las raíces de la ceiba"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "Me ___ el pescado.",
-          "answer": "gusta",
-          "options": [
-            "gusta",
-            "gustan",
-            "gusto",
-            "gustas"
-          ]
-        },
-        {
-          "sentence": "La fruta es ___.",
-          "answer": "buena",
-          "options": [
-            "bueno",
-            "buena",
-            "malo",
-            "mala"
-          ]
-        },
-        {
-          "sentence": "Yaguará ___ hambre.",
-          "answer": "tiene",
-          "options": [
-            "tengo",
-            "tienes",
-            "tiene",
-            "tienen"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-fill-2.jpg",
-      "imageAlt": "Frutos del bosque dispuestos en fila, uno falta en la secuencia"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "Me ___ las frutas.",
-          "answer": "gustan",
-          "options": [
-            "gusta",
-            "gustan",
-            "gusto",
-            "gustas"
-          ]
-        },
-        {
-          "sentence": "El arroz es ___.",
-          "answer": "bueno",
-          "options": [
-            "buena",
-            "bueno",
-            "mala",
-            "grande"
-          ]
-        },
-        {
-          "sentence": "Yo ___ agua.",
-          "answer": "bebo",
-          "options": [
-            "como",
-            "bebo",
-            "bebe",
-            "come"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-fill-3.jpg",
-      "imageAlt": "Piedras del río con palabras grabadas, una piedra vacía espera su inscripción"
-    },
-    {
-      "type": "fill",
-      "label": "Completar",
-      "instruction": "Completa la frase.",
-      "questions": [
-        {
-          "sentence": "No me ___ el mango.",
-          "answer": "gusta",
-          "options": [
-            "gusta",
-            "gustan",
-            "gusto",
-            "gustas"
-          ]
-        },
-        {
-          "sentence": "El pescado es ___.",
-          "answer": "bueno",
-          "options": [
-            "buena",
-            "bueno",
-            "bonita",
-            "grande"
-          ]
-        },
-        {
-          "sentence": "Yaguará ___ pescado.",
-          "answer": "come",
-          "options": [
-            "como",
-            "comes",
-            "come",
-            "comen"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-fill-4.jpg",
-      "imageAlt": "Musgo sobre corteza de árbol con huecos en forma de letras"
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "Me gusta el pescado.",
-      "question": "¿Qué le gusta?",
-      "answer": "el pescado",
-      "options": [
-        "el arroz",
-        "el pescado",
-        "el agua",
-        "la fruta"
-      ],
-      "image": "img/destinations/dest5-listening-2.jpg",
-      "imageAlt": "El río murmurando entre las piedras, círculos de agua como notas musicales"
-    },
-    {
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y elige la respuesta.",
-      "audio": "Tengo hambre. Como arroz.",
-      "question": "¿Qué come?",
-      "answer": "arroz",
-      "options": [
-        "pescado",
-        "arroz",
-        "fruta",
-        "mango"
-      ],
-      "image": "img/destinations/dest5-listening-3.jpg",
-      "imageAlt": "Pájaros en la copa del árbol, cada canto deja una estela de color"
-    },
-    {
-      "type": "conjugation",
-      "label": "Conjugación",
-      "instruction": "Elige la forma de gustar.",
-      "questions": [
-        {
-          "verb": "gustar",
-          "subject": "a mí (el pescado)",
-          "answer": "me gusta",
-          "options": [
-            "me gusta",
-            "me gustan",
-            "te gusta",
-            "te gustan"
-          ]
-        },
-        {
-          "verb": "gustar",
-          "subject": "a mí (las frutas)",
-          "answer": "me gustan",
-          "options": [
-            "me gusta",
-            "me gustan",
-            "te gusta",
-            "te gustan"
-          ]
-        },
-        {
-          "verb": "gustar",
-          "subject": "a ti (el arroz)",
-          "answer": "te gusta",
-          "options": [
-            "me gusta",
-            "me gustan",
-            "te gusta",
-            "te gustan"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-conjugation-1.jpg",
-      "imageAlt": "Raíces de ceiba que se ramifican en diferentes formas bajo la tierra",
-      "tip": {
-        "title": "gustar (formas)",
-        "lines": [
-          "me gusta / me gustan (yo)",
-          "te gusta / te gustan (tú)",
-          "le gusta / le gustan (él/ella)",
-          "nos gusta / nos gustan (nosotros)",
-          "les gusta / les gustan (ellos/ellas)"
-        ]
-      }
-    },
-    {
-      "type": "conjugation",
-      "label": "Conjugación",
-      "instruction": "Conjuga el verbo.",
-      "questions": [
-        {
-          "verb": "comer",
-          "subject": "yo",
-          "answer": "como",
-          "options": [
-            "como",
-            "comes",
-            "come",
-            "comen"
-          ]
-        },
-        {
-          "verb": "beber",
-          "subject": "yo",
-          "answer": "bebo",
-          "options": [
-            "bebo",
-            "bebes",
-            "bebe",
-            "beben"
-          ]
-        },
-        {
-          "verb": "comer",
-          "subject": "él",
-          "answer": "come",
-          "options": [
-            "como",
-            "comes",
-            "come",
-            "comen"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-conjugation-2.jpg",
-      "imageAlt": "Un río que se divide en arroyos, cada corriente con un reflejo diferente"
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "instruction": "Clasifica la comida.",
-      "categories": [
-        "Fruta",
-        "Carne",
-        "Bebida"
-      ],
-      "items": [
-        {
-          "text": "mango",
-          "category": "Fruta"
-        },
-        {
-          "text": "plátano",
-          "category": "Fruta"
-        },
-        {
-          "text": "pescado",
-          "category": "Carne"
-        },
-        {
-          "text": "pollo",
-          "category": "Carne"
-        },
-        {
-          "text": "agua",
-          "category": "Bebida"
-        },
-        {
-          "text": "jugo",
-          "category": "Bebida"
-        }
-      ],
-      "image": "img/destinations/dest5-category-2.jpg",
-      "imageAlt": "Nidos de pájaros en diferentes ramas, cada uno con su etiqueta natural"
-    },
-    {
-      "type": "category",
-      "label": "Clasificar",
-      "instruction": "Clasifica las frases.",
-      "categories": [
-        "Me gusta",
-        "No me gusta"
-      ],
-      "items": [
-        {
-          "text": "el mango es bueno",
-          "category": "Me gusta"
-        },
-        {
-          "text": "el pescado es malo",
-          "category": "No me gusta"
-        },
-        {
-          "text": "la fruta es buena",
-          "category": "Me gusta"
-        },
-        {
-          "text": "el arroz es malo",
-          "category": "No me gusta"
-        },
-        {
-          "text": "el plátano es bueno",
-          "category": "Me gusta"
-        },
-        {
-          "text": "el agua es mala",
-          "category": "No me gusta"
-        }
-      ],
-      "image": "img/destinations/dest5-category-3.jpg",
-      "imageAlt": "Caminos del bosque que se bifurcan, cada sendero lleva un nombre de musgo"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "gusta",
-        "Me",
-        "el",
-        "pescado"
-      ],
-      "answer": "Me gusta el pescado",
-      "image": "img/destinations/dest5-builder-1.jpg",
-      "imageAlt": "Piedras del río con palabras talladas, dispuestas en desorden sobre la orilla"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "es",
-        "La",
-        "buena",
-        "fruta"
-      ],
-      "answer": "La fruta es buena",
-      "image": "img/destinations/dest5-builder-2.jpg",
-      "imageAlt": "Ramas caídas formando un camino por armar sobre el barro del sendero"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Luna",
-              "text": "¿Te gusta el pescado?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Sí, me gusta.",
-            "Tengo un hermano.",
-            "Soy grande.",
-            "El río es bonito."
-          ],
-          "answer": "Sí, me gusta."
-        }
-      ],
-      "image": "img/destinations/dest5-conversation-1.jpg",
-      "imageAlt": "Yaguará y el viajero junto a una fogata en la selva, diálogo flotando entre ellos"
-    },
-    {
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta.",
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Río",
-              "text": "¿Tienes hambre?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Sí, tengo hambre.",
-            "Mi madre es bonita.",
-            "El agua es grande.",
-            "Soy un jaguar."
-          ],
-          "answer": "Sí, tengo hambre."
-        }
-      ],
-      "image": "img/destinations/dest5-conversation-2.jpg",
-      "imageAlt": "Dos figuras sentadas en la ribera del río, el agua lleva palabras doradas"
-    },
-    {
-      "type": "dictation",
-      "label": "Dictado",
-      "instruction": "Escucha y escribe.",
-      "audio": "Tengo hambre.",
-      "answer": "Tengo hambre.",
-      "image": "img/destinations/dest5-dictation.jpg",
-      "imageAlt": "Una hoja grande de plátano como pergamino extendida junto al río"
-    },
-    {
-      "type": "kloo",
-      "label": "Kloo",
-      "instruction": "Ordena las cartas.",
-      "cards": [
-        {
-          "color": "red",
-          "text": "A mí"
-        },
-        {
-          "color": "blue",
-          "text": "me gusta"
-        },
-        {
-          "color": "green",
-          "text": "el arroz"
-        },
-        {
-          "color": "orange",
-          "text": "con pollo"
-        }
-      ],
-      "answer": "A mí me gusta el arroz con pollo",
-      "image": "img/destinations/dest5-kloo.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "spaceman",
-      "label": "Spaceman",
-      "instruction": "Adivina la comida.",
-      "phrases": [
-        {
-          "answer": "arroz",
-          "hint": "blanco, pequeño, se cocina con agua"
-        },
-        {
-          "answer": "pollo",
-          "hint": "animal de la granja"
-        },
-        {
-          "answer": "fruta",
-          "hint": "dulce, natural, tiene semillas"
-        },
-        {
-          "answer": "pan",
-          "hint": "se hace con harina"
-        }
-      ],
-      "image": "img/destinations/dest5-spaceman.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "susurro",
-      "label": "Susurro",
-      "instruction": "Escucha el susurro y elige la palabra.",
-      "questions": [
-        {
-          "audio": "animales",
-          "question": "¿Qué palabra es?",
-          "answer": "animales",
-          "options": [
-            "serpientes",
-            "las frutas",
-            "animales"
-          ]
-        },
-        {
-          "audio": "favorito",
-          "question": "¿Qué palabra es?",
-          "answer": "favorito",
-          "options": [
-            "frío",
-            "mamá",
-            "favorito"
-          ]
-        },
-        {
-          "audio": "árboles",
-          "question": "¿Qué palabra es?",
-          "answer": "árboles",
-          "options": [
-            "bebo agua",
-            "hambre",
-            "árboles"
-          ]
-        },
-        {
-          "audio": "bebo agua",
-          "question": "¿Qué palabra es?",
-          "answer": "bebo agua",
-          "options": [
-            "peces del río",
-            "bebo agua",
-            "a"
-          ]
-        },
-        {
-          "audio": "amigo",
-          "question": "¿Qué palabra es?",
-          "answer": "amigo",
-          "options": [
-            "come",
-            "amigo",
-            "las frutas"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "susurro_dest5"
-    },
-    {
-      "type": "eco_lejano",
-      "label": "Eco lejano",
-      "instruction": "Escucha el eco y completa la palabra que falta.",
-      "items": [
-        {
-          "audio": "Sí, me gusta.",
-          "sentence": "Sí, me ___",
-          "answer": "gusta",
-          "options": [
-            "gustan",
-            "llamo",
-            "gusta"
-          ]
-        },
-        {
-          "audio": "Sí, tengo hambre.",
-          "sentence": "Sí, tengo ___",
-          "answer": "hambre",
-          "options": [
-            "sed",
-            "hambre",
-            "frío"
-          ]
-        },
-        {
-          "audio": "Yaguará y Río están junto al agua.",
-          "sentence": "Yaguará y ___ están junto al agua.",
-          "answer": "Río",
-          "options": [
-            "Río",
-            "Coco",
-            "Paloma"
-          ]
-        },
-        {
-          "audio": "Me gusta el agua. Me gusta nadar.",
-          "sentence": "Me ___ el agua. Me gusta nadar.",
-          "answer": "gusta",
-          "options": [
-            "gustan",
-            "gusta",
-            "llamo"
-          ]
-        },
-        {
-          "audio": "Me gusta la selva. Me gustan los árboles.",
-          "sentence": "Me gusta la selva. Me gustan los ___",
-          "answer": "árboles",
-          "options": [
-            "árboles",
-            "ríos",
-            "animales"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "eco_lejano_dest5"
-    },
-    {
-      "type": "translation",
-      "label": "Traducir",
-      "instruction": "Elige la traducción.",
-      "questions": [
-        {
-          "prompt": "the",
-          "answer": "la",
-          "options": [
-            "es",
-            "la",
-            "no"
-          ]
-        },
-        {
-          "prompt": "has",
-          "answer": "tiene",
-          "options": [
-            "casa",
-            "tiene",
-            "bueno"
-          ]
-        },
-        {
-          "prompt": "river",
-          "answer": "río",
-          "options": [
-            "río",
-            "la",
-            "sol"
-          ]
-        },
-        {
-          "prompt": "good",
-          "answer": "bueno",
-          "options": [
-            "bueno",
-            "es",
-            "la"
-          ]
-        },
-        {
-          "prompt": "friend",
-          "answer": "amigo",
-          "options": [
-            "río",
-            "pájaro",
-            "amigo"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "translation_dest5"
-    },
-    {
-      "type": "sombra",
-      "label": "Sombra",
-      "instruction": "Escucha y repite.",
-      "timeLimit": 5000,
-      "phrases": [
-        {
-          "audio": "Sí, me gusta.",
-          "text": "Sí, me gusta."
-        },
-        {
-          "audio": "Me gusta el agua. Me gusta nadar.",
-          "text": "Me gusta el agua. Me gusta nadar."
-        },
-        {
-          "audio": "Mi río. Tu selva. Su casa.",
-          "text": "Mi río. Tu selva. Su casa."
-        },
-        {
-          "audio": "Sí, tengo hambre.",
-          "text": "Sí, tengo hambre."
-        },
-        {
-          "audio": "Me gusta la selva. Me gustan los árboles.",
-          "text": "Me gusta la selva. Me gustan los árboles."
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "sombra_dest5"
-    },
-    {
-      "type": "senda",
-      "label": "Senda",
-      "instruction": "Elige el camino correcto.",
-      "steps": [
-        {
-          "sentence": "Yaguará y ___ están junto al agua.",
-          "answer": "Río",
-          "options": [
-            "mamá",
-            "tengo hambre",
-            "Río"
-          ]
-        },
-        {
-          "sentence": "Me gusta el ___ Me gusta nadar.",
-          "answer": "agua",
-          "options": [
-            "mamá",
-            "agua",
-            "bueno"
-          ]
-        },
-        {
-          "sentence": "Me gusta la selva. Me ___ los árboles.",
-          "answer": "gustan",
-          "options": [
-            "gustan",
-            "el",
-            "serpientes"
-          ]
-        },
-        {
-          "sentence": "¿Te ___ la lluvia?",
-          "answer": "gusta",
-          "options": [
-            "te gusta",
-            "gusta",
-            "come"
-          ]
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "senda_dest5"
-    },
-    {
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras.",
-      "words": [
-        "gusta",
-        "¿Te",
-        "lluvia?",
-        "la"
-      ],
-      "answer": "¿Te gusta la lluvia?",
-      "_generated": true,
-      "_generatorId": "builder_extra_dest5"
-    },
-    {
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une cada palabra con su pareja.",
-      "pairs": [
-        [
-          "mamá",
-          "papá"
-        ],
-        [
-          "sí",
-          "no"
-        ],
-        [
-          "bueno",
-          "malo"
-        ],
-        [
-          "el",
-          "la"
-        ]
-      ],
-      "_generated": true,
-      "_generatorId": "pair_extra_dest5"
-    },
-    {
-      "type": "corrector",
-      "label": "Corrector",
-      "instruction": "Encuentra y corrige el error.",
-      "items": [
-        {
-          "sentence": "Sí, gusta. Me",
-          "corrected": "Sí, me gusta.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Tengo Sí, hambre.",
-          "corrected": "Sí, tengo hambre.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Y Yaguará Río están junto al agua.",
-          "corrected": "Yaguará y Río están junto al agua.",
-          "errorType": "word order"
-        },
-        {
-          "sentence": "Me gusta el agua. Gusta Me nadar.",
-          "corrected": "Me gusta el agua. Me gusta nadar.",
-          "errorType": "word order"
-        }
-      ],
-      "_generated": true,
-      "_generatorId": "corrector_dest5"
-    },
-    {
-      "type": "escaperoom",
-      "label": "Sala de enigmas",
-      "instruction": "Resuelve los enigmas para abrir la puerta.",
-      "room": {
-        "name": "La cueva de las frutas",
-        "description": "Una cueva donde crecen plantas con frutas brillantes. Hay mangos dorados, plátanos verdes y cocos blancos.",
-        "ambience": "heartbeat"
-      },
-      "puzzles": [
-        {
-          "puzzleType": "riddle",
-          "prompt": "Un mango dorado pregunta:",
-          "riddle": "«Soy amarilla y dulce. Tengo piel que debes quitar. Crezco en árboles en el Chocó. Los niños me comen después de la comida. ¿Qué fruta soy?»",
-          "clue": "Es una fruta tropical muy común.",
-          "answer": "Un mango",
-          "options": [
-            "Un mango",
-            "Una manzana",
-            "Una naranja",
-            "Una fresa"
-          ],
-          "onSolve": "El mango brilla más fuerte."
-        },
-        {
-          "puzzleType": "cipher",
-          "prompt": "Las letras están escritas en las hojas de las plantas.",
-          "clue": "Es la comida que comes al mediodía. Tiene ocho letras.",
-          "answer": "almuerzo",
-          "scrambled": "mzoeluar",
-          "onSolve": "Las hojas se mueven."
-        },
-        {
-          "puzzleType": "wordlock",
-          "prompt": "Un coco tiene una cerradura.",
-          "clue": "Yaguará tiene hambre. Ella quiere ___. Cinco letras.",
-          "answer": "comer",
-          "hint": "_ _ _ _ _",
-          "onSolve": "El coco se abre. La puerta está adentro. Se abre."
-        }
-      ],
-      "fragment": {
-        "text": "Un dibujo brilla: una raíz con forma de fruta.",
-        "questClue": "La tierra da comida a quien la cuida.",
-        "item": "raiz-fruta"
-      },
-      "image": "img/destinations/dest5-escaperoom.jpg",
-      "imageAlt": "Entrada de una cueva entre raíces de ceiba, símbolos dorados brillando"
-    },
-    {
-      "type": "cronica",
-      "label": "Crónica",
-      "prompt": "Escribe una cosa. ¿Qué te gusta? \"Me gusta ___.\"",
-      "placeholder": "Escribe una palabra...",
-      "minWords": 1,
-      "maxWords": 10,
-      "scaffoldType": "word",
-      "storyKey": "cronica_dest5",
-      "destination": "dest5",
-      "button": "Guardar en la crónica",
-      "image": "img/destinations/dest5-cronica.jpg",
-      "imageAlt": "Un códice abierto sobre una piedra musgosa, pluma de guacamaya al lado"
-    },
-    {
-      "type": "par_minimo",
-      "label": "Par mínimo",
-      "instruction": "Yaguará escucha dos sonidos en la selva. ¿Cuál es cuál?",
-      "pairs": [
-        {
-          "wordA": "pata",
-          "wordB": "bata",
-          "correct": "A",
-          "hint": "Sonido fuerte al inicio"
-        },
-        {
-          "wordA": "peso",
-          "wordB": "beso",
-          "correct": "B",
-          "hint": "Labios juntos"
-        },
-        {
-          "wordA": "casa",
-          "wordB": "caza",
-          "correct": "A",
-          "hint": "Escucha la ese"
-        },
-        {
-          "wordA": "pero",
-          "wordB": "perro",
-          "correct": "B",
-          "hint": "Escucha la erre"
-        },
-        {
-          "wordA": "mala",
-          "wordB": "malla",
-          "correct": "B",
-          "hint": "Escucha la elle"
-        }
-      ],
-      "image": "img/destinations/dest5-par_minimo.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "brecha",
-      "label": "Brecha",
-      "instruction": "Yaguará sabe algo. Tú sabes algo. Juntos tienen la verdad completa.",
-      "cardA": {
-        "text": "Yaguará vive en la selva. Tiene cuatro patas. Es grande y fuerte.",
-        "facts": [
-          "vive en la selva",
-          "cuatro patas",
-          "grande y fuerte"
-        ]
-      },
-      "cardB": {
-        "text": "Yaguará come peces del río. Duerme en los árboles. Es un jaguar.",
-        "facts": [
-          "come peces",
-          "duerme en árboles",
-          "es un jaguar"
-        ]
-      },
-      "questions": [
-        {
-          "question": "¿Dónde vive Yaguará?",
-          "answer": "en la selva",
-          "source": "A",
-          "options": [
-            "en la selva",
-            "en la ciudad",
-            "en el mar"
-          ]
-        },
-        {
-          "question": "¿Qué come Yaguará?",
-          "answer": "peces del río",
-          "source": "B",
-          "options": [
-            "peces del río",
-            "frutas del árbol",
-            "pan"
-          ]
-        },
-        {
-          "question": "¿Qué animal es Yaguará?",
-          "answer": "un jaguar",
-          "source": "B",
-          "options": [
-            "un jaguar",
-            "un pájaro",
-            "un pez"
-          ]
-        }
-      ],
-      "image": "img/destinations/dest5-brecha.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "descripcion",
-      "label": "Descripción",
-      "instruction": "Yaguará llega a un lugar nuevo. ¿Qué ves?",
-      "scene": "Un río grande. Árboles muy altos. El agua es azul y verde. Hay un pájaro rojo en un árbol. El sol es fuerte.",
-      "promptQuestion": "¿Cuál es la mejor descripción?",
-      "vocabulary": [
-        "río",
-        "árboles",
-        "agua",
-        "pájaro",
-        "sol"
-      ],
-      "modelAnswer": "Hay un río grande con árboles altos. El agua es azul.",
-      "options": [
-        "Hay un río grande con árboles altos y un pájaro rojo.",
-        "Hay una montaña con nieve y un águila.",
-        "En la playa hay un barco y pescadores."
-      ],
-      "image": "img/destinations/dest5-descripcion.jpg",
-      "imageAlt": "Escena en la selva profunda, luz verde filtrándose entre las hojas"
-    },
-    {
-      "type": "fill",
-      "label": "Fragmento literario",
-      "title": "José Eustasio Rivera — Clemente Silva",
-      "instruction": "Clemente Silva busca a su hijo en la selva. Completa su historia.",
-      "grammar": [
-        "present tense",
-        "tener",
-        "buscar"
-      ],
-      "vocabulary": [
-        "busco",
-        "hijo",
-        "años",
-        "nombre"
-      ],
-      "questions": [
-        {
-          "sentence": "Yo ___ a mi hijo. Lo busco todos los días.",
-          "answer": "busco",
-          "options": [
-            "busco",
-            "como",
-            "miro",
-            "tengo"
-          ]
-        },
-        {
-          "sentence": "Mi hijo se llama Luciano. Pero aquí nadie tiene ___.",
-          "answer": "nombre",
-          "options": [
-            "nombre",
-            "hambre",
-            "casa",
-            "tiempo"
-          ]
-        },
-        {
-          "sentence": "Tengo muchos ___. Camino y camino. La selva no me deja salir.",
-          "answer": "años",
-          "options": [
-            "años",
-            "peces",
-            "libros",
-            "ríos"
-          ]
-        },
-        {
-          "sentence": "Si ___ tu nombre, la selva te atrapa para siempre.",
-          "answer": "olvidas",
-          "options": [
-            "olvidas",
-            "dices",
-            "escribes",
-            "cantas"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ritmo",
-      "label": "Ritmo",
-      "instruction": "La selva tiene un ritmo. Las palabras también. ¿Dónde cae el golpe?",
-      "words": [
-        {
-          "word": "casa",
-          "syllables": [
-            "ca",
-            "sa"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "agua",
-          "syllables": [
-            "a",
-            "gua"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "amigo",
-          "syllables": [
-            "a",
-            "mi",
-            "go"
-          ],
-          "stressIndex": 1,
-          "pattern": "llana"
-        },
-        {
-          "word": "árbol",
-          "syllables": [
-            "ár",
-            "bol"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "mamá",
-          "syllables": [
-            "ma",
-            "má"
-          ],
-          "stressIndex": 1,
-          "pattern": "aguda"
-        }
-      ],
-      "image": "img/destinations/dest5-ritmo.jpg",
-      "imageAlt": "Gotas de lluvia creando círculos rítmicos en un charco de la selva"
-    }
-  ],
   "ecosystemGames": [
     {
       "_template": {
@@ -18637,6 +17186,1473 @@
             "soy",
             "eres"
           ]
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "skit",
+      "label": "Escena",
+      "title": "Lo que me gusta",
+      "instruction": "Escucha la historia.",
+      "grammar": [
+        "gustar (me/te/le)",
+        "querer",
+        "infinitivos"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "text": "Yaguará y Río caminan por el bosque. Río tiene hambre."
+        },
+        {
+          "speaker": "rio",
+          "text": "Yaguará, tengo hambre. Me gusta comer. ¿A ti te gusta comer?"
+        },
+        {
+          "speaker": "yaguara",
+          "text": "Sí. Me gusta comer frutas. Me gusta beber agua del río."
+        },
+        {
+          "speaker": "rio",
+          "text": "A mí me gusta el arroz. Y me gusta la leche. Y me gusta el chocolate. ¡Me gusta todo!"
+        },
+        {
+          "speaker": "yaguara",
+          "text": "A mí me gusta caminar por el bosque. Me gusta nadar en el río. Me gusta correr."
+        },
+        {
+          "speaker": "rio",
+          "text": "A mí me gusta jugar. Y me gusta leer el libro de Pombo. Y me gusta cantar."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "¿Qué quieres hacer hoy, Río?"
+        },
+        {
+          "speaker": "rio",
+          "text": "Quiero nadar. Y quiero comer arroz con leche. ¡Es mi comida favorita!"
+        },
+        {
+          "speaker": "yaguara",
+          "text": "El arroz con leche es bueno. El café es malo para ti. Eres joven."
+        },
+        {
+          "speaker": "rio",
+          "text": "No me gusta el café. Me gusta más el chocolate. El chocolate es mejor."
+        },
+        {
+          "speaker": "narrator",
+          "text": "Rivera, el poeta, también camina por la selva. A Rivera le gusta la selva."
+        },
+        {
+          "speaker": "narrator",
+          "text": "A Clemente Silva le gusta caminar. Le gusta escuchar los pájaros. Le gusta el río porque es largo y bonito."
+        },
+        {
+          "speaker": "yaguara",
+          "text": "¿Qué te gusta a ti, viajero? ¿Qué quieres hacer?"
+        }
+      ]
+    },
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha y elige.",
+      "questions": [
+        {
+          "audio": "Me gusta comer",
+          "answer": "me gusta",
+          "options": [
+            "me gusta",
+            "te gusta",
+            "le gusta"
+          ]
+        },
+        {
+          "audio": "Te gusta el arroz",
+          "answer": "arroz",
+          "options": [
+            "arroz",
+            "agua",
+            "árbol"
+          ]
+        },
+        {
+          "audio": "Le gusta la leche",
+          "answer": "leche",
+          "options": [
+            "leche",
+            "luna",
+            "libro"
+          ]
+        },
+        {
+          "audio": "Me gusta el chocolate",
+          "answer": "chocolate",
+          "options": [
+            "chocolate",
+            "cielo",
+            "casa"
+          ]
+        },
+        {
+          "audio": "No me gusta el café",
+          "answer": "café",
+          "options": [
+            "café",
+            "cama",
+            "cara"
+          ]
+        },
+        {
+          "audio": "Me gusta beber agua",
+          "answer": "beber",
+          "options": [
+            "beber",
+            "bailar",
+            "bonito"
+          ]
+        },
+        {
+          "audio": "La comida es buena",
+          "answer": "comida",
+          "options": [
+            "comida",
+            "camino",
+            "casa"
+          ]
+        },
+        {
+          "audio": "Me gusta comer frutas",
+          "answer": "comer",
+          "options": [
+            "comer",
+            "correr",
+            "cantar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "instruction": "Une la imagen con la comida.",
+      "pairs": [
+        [
+          "🍚",
+          "arroz"
+        ],
+        [
+          "🥛",
+          "leche"
+        ],
+        [
+          "🍫",
+          "chocolate"
+        ],
+        [
+          "☕",
+          "café"
+        ],
+        [
+          "🍞",
+          "pan"
+        ],
+        [
+          "🍎",
+          "frutas"
+        ],
+        [
+          "💧",
+          "agua"
+        ],
+        [
+          "🍬",
+          "dulces"
+        ]
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Clasificar",
+      "instruction": "¿Me gusta o no me gusta?",
+      "categories": [
+        {
+          "name": "Me gusta ❤️",
+          "items": [
+            "frutas",
+            "chocolate",
+            "agua",
+            "arroz"
+          ]
+        },
+        {
+          "name": "No me gusta ❌",
+          "items": [
+            "café",
+            "comida mala",
+            "agua fría",
+            "pan viejo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con me gusta, te gusta o le gusta.",
+      "grammar": [
+        "gustar"
+      ],
+      "vocabulary": [
+        "me gusta",
+        "te gusta",
+        "le gusta",
+        "comer",
+        "beber",
+        "arroz",
+        "leche",
+        "chocolate",
+        "café"
+      ],
+      "questions": [
+        {
+          "sentence": "A mí ___ comer frutas.",
+          "answer": "me gusta",
+          "options": [
+            "me gusta",
+            "te gusta",
+            "le gusta",
+            "quiero"
+          ]
+        },
+        {
+          "sentence": "A ti ___ el chocolate.",
+          "answer": "te gusta",
+          "options": [
+            "te gusta",
+            "me gusta",
+            "le gusta",
+            "quieres"
+          ]
+        },
+        {
+          "sentence": "A ella ___ beber leche.",
+          "answer": "le gusta",
+          "options": [
+            "le gusta",
+            "me gusta",
+            "te gusta",
+            "quiere"
+          ]
+        },
+        {
+          "sentence": "No ___ el café. Es malo.",
+          "answer": "me gusta",
+          "options": [
+            "me gusta",
+            "te gusta",
+            "le gusta",
+            "quiero"
+          ]
+        },
+        {
+          "sentence": "A Río ___ el arroz con ___.",
+          "answer": "leche",
+          "options": [
+            "leche",
+            "café",
+            "agua",
+            "pan"
+          ]
+        },
+        {
+          "sentence": "La ___ de Mamá Jaguar es buena.",
+          "answer": "comida",
+          "options": [
+            "comida",
+            "casa",
+            "cama",
+            "cara"
+          ]
+        },
+        {
+          "sentence": "A mí me gusta ___ agua del río.",
+          "answer": "beber",
+          "options": [
+            "beber",
+            "comer",
+            "jugar",
+            "correr"
+          ]
+        },
+        {
+          "sentence": "A Yaguará ___ gusta ___ por el bosque.",
+          "answer": "le",
+          "options": [
+            "le",
+            "me",
+            "te",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe.",
+      "sentences": [
+        {
+          "audio": "Me gusta el chocolate",
+          "text": "Me gusta el chocolate"
+        },
+        {
+          "audio": "A Río le gusta el arroz",
+          "text": "A Río le gusta el arroz"
+        },
+        {
+          "audio": "No me gusta el café",
+          "text": "No me gusta el café"
+        },
+        {
+          "audio": "Me gusta comer frutas",
+          "text": "Me gusta comer frutas"
+        },
+        {
+          "audio": "Te gusta beber agua",
+          "text": "Te gusta beber agua"
+        },
+        {
+          "audio": "La comida es buena",
+          "text": "La comida es buena"
+        }
+      ]
+    },
+    {
+      "type": "narrative",
+      "label": "Narración",
+      "title": "Lo que me gusta hacer",
+      "text": [
+        "A Yaguará le gusta caminar. Le gusta correr por el bosque. Le gusta nadar en el río.",
+        "A Río le gusta jugar. Le gusta leer. Le gusta cantar canciones.",
+        "A la viejecita le gusta bailar. Le gusta dormir en su cama grande.",
+        "¿Qué te gusta hacer a ti? ¿Te gusta leer o cantar? ¿Te gusta nadar o correr?",
+        "A mí me gusta caminar y nadar. No me gusta dormir mucho. Me gusta jugar.",
+        "Cada animal tiene algo que le gusta. Al pájaro le gusta cantar. Al pez le gusta nadar. Al gato le gusta dormir."
+      ]
+    },
+    {
+      "type": "susurro",
+      "label": "Susurro",
+      "instruction": "Escucha el susurro y elige.",
+      "questions": [
+        {
+          "audio": "caminar",
+          "answer": "caminar",
+          "options": [
+            "caminar",
+            "cantar",
+            "comer"
+          ]
+        },
+        {
+          "audio": "correr",
+          "answer": "correr",
+          "options": [
+            "correr",
+            "comer",
+            "cocinar"
+          ]
+        },
+        {
+          "audio": "nadar",
+          "answer": "nadar",
+          "options": [
+            "nadar",
+            "nada",
+            "nombre"
+          ]
+        },
+        {
+          "audio": "jugar",
+          "answer": "jugar",
+          "options": [
+            "jugar",
+            "joven",
+            "juntos"
+          ]
+        },
+        {
+          "audio": "leer",
+          "answer": "leer",
+          "options": [
+            "leer",
+            "leche",
+            "largo"
+          ]
+        },
+        {
+          "audio": "cantar",
+          "answer": "cantar",
+          "options": [
+            "cantar",
+            "caminar",
+            "casa"
+          ]
+        },
+        {
+          "audio": "bailar",
+          "answer": "bailar",
+          "options": [
+            "bailar",
+            "bajo",
+            "bonito"
+          ]
+        },
+        {
+          "audio": "dormir",
+          "answer": "dormir",
+          "options": [
+            "dormir",
+            "dulces",
+            "día"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pair",
+      "label": "Emparejar",
+      "instruction": "Une el animal con lo que le gusta.",
+      "pairs": [
+        [
+          "pájaro",
+          "cantar"
+        ],
+        [
+          "pez",
+          "nadar"
+        ],
+        [
+          "gato",
+          "dormir"
+        ],
+        [
+          "perro",
+          "correr"
+        ],
+        [
+          "rana",
+          "saltar"
+        ],
+        [
+          "Río",
+          "jugar"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con la actividad correcta.",
+      "vocabulary": [
+        "caminar",
+        "correr",
+        "nadar",
+        "jugar",
+        "leer",
+        "cantar",
+        "bailar",
+        "dormir"
+      ],
+      "questions": [
+        {
+          "sentence": "Me gusta ___ por el bosque.",
+          "answer": "caminar",
+          "options": [
+            "caminar",
+            "nadar",
+            "dormir",
+            "leer"
+          ]
+        },
+        {
+          "sentence": "Al pájaro le gusta ___.",
+          "answer": "cantar",
+          "options": [
+            "cantar",
+            "nadar",
+            "dormir",
+            "comer"
+          ]
+        },
+        {
+          "sentence": "Al pez le gusta ___ en el río.",
+          "answer": "nadar",
+          "options": [
+            "nadar",
+            "caminar",
+            "correr",
+            "bailar"
+          ]
+        },
+        {
+          "sentence": "Al gato le gusta ___ en la cama.",
+          "answer": "dormir",
+          "options": [
+            "dormir",
+            "nadar",
+            "cantar",
+            "correr"
+          ]
+        },
+        {
+          "sentence": "A Río le gusta ___ con Yaguará.",
+          "answer": "jugar",
+          "options": [
+            "jugar",
+            "dormir",
+            "trabajar",
+            "cocinar"
+          ]
+        },
+        {
+          "sentence": "Me gusta ___ libros.",
+          "answer": "leer",
+          "options": [
+            "leer",
+            "beber",
+            "comer",
+            "cantar"
+          ]
+        },
+        {
+          "sentence": "A la viejecita le gusta ___.",
+          "answer": "bailar",
+          "options": [
+            "bailar",
+            "nadar",
+            "correr",
+            "trabajar"
+          ]
+        },
+        {
+          "sentence": "Me gusta ___ rápido por el bosque.",
+          "answer": "correr",
+          "options": [
+            "correr",
+            "dormir",
+            "cantar",
+            "leer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Elige la respuesta.",
+      "turns": [
+        {
+          "speaker": "rio",
+          "prompt": "¿Qué te gusta hacer?",
+          "response": "Me gusta nadar y correr.",
+          "options": [
+            "Me gusta nadar y correr.",
+            "Me gusta dormir siempre.",
+            "No me gusta nada."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Te gusta leer?",
+          "response": "Sí, me gusta leer libros.",
+          "options": [
+            "Sí, me gusta leer libros.",
+            "No, me gusta el café.",
+            "Sí, me gusta el pato."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Qué le gusta al pájaro?",
+          "response": "Al pájaro le gusta cantar.",
+          "options": [
+            "Al pájaro le gusta cantar.",
+            "Al pájaro le gusta nadar.",
+            "Al pájaro le gusta dormir."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Qué le gusta al gato?",
+          "response": "Al gato le gusta dormir.",
+          "options": [
+            "Al gato le gusta dormir.",
+            "Al gato le gusta nadar.",
+            "Al gato le gusta cantar."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Te gusta bailar?",
+          "response": "Sí, a veces me gusta bailar.",
+          "options": [
+            "Sí, a veces me gusta bailar.",
+            "No, nunca camino.",
+            "Sí, me gusta el sol."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "narrative",
+      "label": "Narración",
+      "title": "Yo quiero...",
+      "text": [
+        "Yo quiero comer. Tú quieres nadar. Ella quiere dormir.",
+        "El arroz con leche es bueno. El café es malo para los niños.",
+        "El chocolate es mejor que el café. El agua es mejor que la leche.",
+        "¿Qué es tu comida favorita? Mi comida favorita es el arroz con leche.",
+        "Lo bueno y lo malo. Lo mejor y lo peor. Cada uno tiene su favorito.",
+        "Yo quiero caminar. Tú quieres jugar. ¿Qué quieres hacer?"
+      ]
+    },
+    {
+      "type": "listening",
+      "label": "Escuchar",
+      "instruction": "Escucha y elige.",
+      "questions": [
+        {
+          "audio": "Yo quiero comer",
+          "answer": "quiero",
+          "options": [
+            "quiero",
+            "quieres",
+            "quiere"
+          ]
+        },
+        {
+          "audio": "Es bueno",
+          "answer": "bueno",
+          "options": [
+            "bueno",
+            "malo",
+            "mejor"
+          ]
+        },
+        {
+          "audio": "Es malo",
+          "answer": "malo",
+          "options": [
+            "malo",
+            "bueno",
+            "peor"
+          ]
+        },
+        {
+          "audio": "Es mejor",
+          "answer": "mejor",
+          "options": [
+            "mejor",
+            "peor",
+            "bueno"
+          ]
+        },
+        {
+          "audio": "Mi favorito",
+          "answer": "favorito",
+          "options": [
+            "favorito",
+            "fuerte",
+            "feliz"
+          ]
+        },
+        {
+          "audio": "Tú quieres nadar",
+          "answer": "quieres",
+          "options": [
+            "quieres",
+            "quiero",
+            "quiere"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa con quiero, quieres o quiere.",
+      "grammar": [
+        "querer"
+      ],
+      "vocabulary": [
+        "quiero",
+        "quieres",
+        "quiere",
+        "bueno",
+        "malo",
+        "mejor",
+        "peor",
+        "favorito"
+      ],
+      "questions": [
+        {
+          "sentence": "Yo ___ nadar en el río.",
+          "answer": "quiero",
+          "options": [
+            "quiero",
+            "quieres",
+            "quiere",
+            "gusto"
+          ]
+        },
+        {
+          "sentence": "¿Tú ___ comer chocolate?",
+          "answer": "quieres",
+          "options": [
+            "quieres",
+            "quiero",
+            "quiere",
+            "gustas"
+          ]
+        },
+        {
+          "sentence": "Ella ___ dormir. Está cansada.",
+          "answer": "quiere",
+          "options": [
+            "quiere",
+            "quiero",
+            "quieres",
+            "gusta"
+          ]
+        },
+        {
+          "sentence": "El arroz es ___. Me gusta.",
+          "answer": "bueno",
+          "options": [
+            "bueno",
+            "malo",
+            "peor",
+            "feo"
+          ]
+        },
+        {
+          "sentence": "El café es ___ para los niños.",
+          "answer": "malo",
+          "options": [
+            "malo",
+            "bueno",
+            "mejor",
+            "bonito"
+          ]
+        },
+        {
+          "sentence": "El chocolate es ___ que el café.",
+          "answer": "mejor",
+          "options": [
+            "mejor",
+            "peor",
+            "bueno",
+            "malo"
+          ]
+        },
+        {
+          "sentence": "Mi comida ___ es el arroz con leche.",
+          "answer": "favorita",
+          "options": [
+            "favorita",
+            "buena",
+            "grande",
+            "mejor"
+          ]
+        },
+        {
+          "sentence": "No ___ café. Quiero chocolate.",
+          "answer": "quiero",
+          "options": [
+            "quiero",
+            "quieres",
+            "quiere",
+            "gusta"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "label": "Traducir",
+      "instruction": "Elige la traducción.",
+      "questions": [
+        {
+          "source": "I want",
+          "answer": "quiero",
+          "options": [
+            "quiero",
+            "quieres",
+            "quiere"
+          ]
+        },
+        {
+          "source": "good",
+          "answer": "bueno",
+          "options": [
+            "bueno",
+            "malo",
+            "grande"
+          ]
+        },
+        {
+          "source": "bad",
+          "answer": "malo",
+          "options": [
+            "malo",
+            "bueno",
+            "feo"
+          ]
+        },
+        {
+          "source": "better",
+          "answer": "mejor",
+          "options": [
+            "mejor",
+            "peor",
+            "bueno"
+          ]
+        },
+        {
+          "source": "worse",
+          "answer": "peor",
+          "options": [
+            "peor",
+            "mejor",
+            "malo"
+          ]
+        },
+        {
+          "source": "favorite",
+          "answer": "favorito",
+          "options": [
+            "favorito",
+            "feliz",
+            "fuerte"
+          ]
+        },
+        {
+          "source": "to swim",
+          "answer": "nadar",
+          "options": [
+            "nadar",
+            "nada",
+            "nombre"
+          ]
+        },
+        {
+          "source": "to run",
+          "answer": "correr",
+          "options": [
+            "correr",
+            "comer",
+            "cantar"
+          ]
+        },
+        {
+          "source": "to sleep",
+          "answer": "dormir",
+          "options": [
+            "dormir",
+            "dulces",
+            "decir"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Elige la respuesta.",
+      "turns": [
+        {
+          "speaker": "rio",
+          "prompt": "¿Qué quieres hacer hoy?",
+          "response": "Quiero nadar en el río.",
+          "options": [
+            "Quiero nadar en el río.",
+            "Me llamo Río.",
+            "Estoy cansado."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿El arroz es bueno o malo?",
+          "response": "El arroz es bueno.",
+          "options": [
+            "El arroz es bueno.",
+            "El arroz es malo.",
+            "El arroz es grande."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Qué es mejor, el café o el chocolate?",
+          "response": "El chocolate es mejor.",
+          "options": [
+            "El chocolate es mejor.",
+            "El café es mejor.",
+            "Los dos son malos."
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "prompt": "¿Cuál es tu comida favorita?",
+          "response": "Mi comida favorita es el arroz con leche.",
+          "options": [
+            "Mi comida favorita es el arroz con leche.",
+            "Me gusta el pato.",
+            "No tengo comida."
+          ]
+        },
+        {
+          "speaker": "rio",
+          "prompt": "¿Quieres jugar?",
+          "response": "Sí, quiero jugar.",
+          "options": [
+            "Sí, quiero jugar.",
+            "No, soy un gato.",
+            "Sí, me llamo Río."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "narrative",
+      "label": "Narración",
+      "title": "Yo también, yo tampoco",
+      "text": [
+        "A Yaguará le gusta nadar. A Río también le gusta nadar. A los dos les gusta nadar.",
+        "A Yaguará no le gusta el café. A Río tampoco le gusta el café. A los dos no les gusta.",
+        "¿Por qué me gusta nadar? Porque el agua es bonita. Porque es divertido.",
+        "¿Por qué no me gusta el café? Porque es amargo. Porque es malo para los jóvenes.",
+        "Me gusta más nadar que correr. Me gusta menos dormir que jugar.",
+        "También me gusta cantar. Tampoco me gusta el pato. Porque es feo."
+      ]
+    },
+    {
+      "type": "eco_lejano",
+      "label": "Eco lejano",
+      "instruction": "Escucha el eco y elige.",
+      "items": [
+        {
+          "echo": "A mí ___ me gusta nadar",
+          "answer": "también",
+          "options": [
+            "también",
+            "tampoco",
+            "siempre"
+          ]
+        },
+        {
+          "echo": "A mí ___ me gusta el café",
+          "answer": "tampoco",
+          "options": [
+            "tampoco",
+            "también",
+            "nunca"
+          ]
+        },
+        {
+          "echo": "Me gusta nadar ___ es divertido",
+          "answer": "porque",
+          "options": [
+            "porque",
+            "pero",
+            "para"
+          ]
+        },
+        {
+          "echo": "Me gusta ___ nadar que correr",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "mucho"
+          ]
+        },
+        {
+          "echo": "Me gusta ___ dormir que jugar",
+          "answer": "menos",
+          "options": [
+            "menos",
+            "más",
+            "poco"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "label": "Completar",
+      "instruction": "Completa.",
+      "vocabulary": [
+        "también",
+        "tampoco",
+        "porque",
+        "más",
+        "menos"
+      ],
+      "questions": [
+        {
+          "sentence": "Me gusta nadar. A Río ___ le gusta nadar.",
+          "answer": "también",
+          "options": [
+            "también",
+            "tampoco",
+            "nunca",
+            "siempre"
+          ]
+        },
+        {
+          "sentence": "No me gusta el café. A Río ___ le gusta el café.",
+          "answer": "tampoco",
+          "options": [
+            "tampoco",
+            "también",
+            "nunca",
+            "siempre"
+          ]
+        },
+        {
+          "sentence": "Me gusta nadar ___ el agua es bonita.",
+          "answer": "porque",
+          "options": [
+            "porque",
+            "pero",
+            "para",
+            "por"
+          ]
+        },
+        {
+          "sentence": "Me gusta ___ nadar que correr.",
+          "answer": "más",
+          "options": [
+            "más",
+            "menos",
+            "mucho",
+            "poco"
+          ]
+        },
+        {
+          "sentence": "Me gusta ___ dormir que jugar.",
+          "answer": "menos",
+          "options": [
+            "menos",
+            "más",
+            "poco",
+            "mucho"
+          ]
+        },
+        {
+          "sentence": "Me gusta el chocolate ___ es dulce.",
+          "answer": "porque",
+          "options": [
+            "porque",
+            "pero",
+            "también",
+            "tampoco"
+          ]
+        },
+        {
+          "sentence": "A ella le gusta leer. A mí ___ me gusta leer.",
+          "answer": "también",
+          "options": [
+            "también",
+            "tampoco",
+            "más",
+            "menos"
+          ]
+        },
+        {
+          "sentence": "No me gusta el pato. A ella ___ le gusta.",
+          "answer": "tampoco",
+          "options": [
+            "tampoco",
+            "también",
+            "porque",
+            "pero"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sombra",
+      "label": "Sombra",
+      "instruction": "Escucha y repite.",
+      "sentences": [
+        {
+          "text": "Me gusta nadar porque es divertido.",
+          "speed": "slow"
+        },
+        {
+          "text": "A Río también le gusta el arroz.",
+          "speed": "slow"
+        },
+        {
+          "text": "A mí tampoco me gusta el café.",
+          "speed": "slow"
+        },
+        {
+          "text": "Me gusta más el chocolate que el café.",
+          "speed": "slow"
+        },
+        {
+          "text": "Mi comida favorita es el arroz con leche.",
+          "speed": "slow"
+        },
+        {
+          "text": "Quiero nadar y jugar.",
+          "speed": "slow"
+        },
+        {
+          "text": "¿Qué te gusta hacer?",
+          "speed": "slow"
+        },
+        {
+          "text": "El chocolate es mejor que el café.",
+          "speed": "slow"
+        }
+      ]
+    },
+    {
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe.",
+      "sentences": [
+        {
+          "audio": "A mí también me gusta",
+          "text": "A mí también me gusta"
+        },
+        {
+          "audio": "Me gusta nadar porque es bonito",
+          "text": "Me gusta nadar porque es bonito"
+        },
+        {
+          "audio": "No me gusta el café",
+          "text": "No me gusta el café"
+        },
+        {
+          "audio": "Quiero comer chocolate",
+          "text": "Quiero comer chocolate"
+        },
+        {
+          "audio": "Mi favorito es el arroz con leche",
+          "text": "Mi favorito es el arroz con leche"
+        },
+        {
+          "audio": "Me gusta más nadar que correr",
+          "text": "Me gusta más nadar que correr"
+        }
+      ]
+    },
+    {
+      "type": "corrector",
+      "label": "Corrector",
+      "instruction": "Encuentra y corrige el error.",
+      "items": [
+        {
+          "sentence": "Me gusta caminar.",
+          "error": "caminar",
+          "correction": "caminar"
+        },
+        {
+          "sentence": "A mí te gusta nadar.",
+          "error": "te",
+          "correction": "me"
+        },
+        {
+          "sentence": "El café es bueno para niños.",
+          "error": "bueno",
+          "correction": "malo"
+        },
+        {
+          "sentence": "Yo quieres nadar.",
+          "error": "quieres",
+          "correction": "quiero"
+        },
+        {
+          "sentence": "El chocolate es peor que el café.",
+          "error": "peor",
+          "correction": "mejor"
+        },
+        {
+          "sentence": "A Río también le gusta el café.",
+          "error": "también",
+          "correction": "tampoco"
+        }
+      ]
+    },
+    {
+      "type": "escaperoom",
+      "label": "Sala de enigmas",
+      "title": "Abre la puerta",
+      "instruction": "Resuelve los enigmas.",
+      "puzzles": [
+        {
+          "question": "Lo contrario de 'malo'",
+          "answer": "bueno"
+        },
+        {
+          "question": "A mí me ___ nadar (verbo)",
+          "answer": "gusta"
+        },
+        {
+          "question": "Yo ___ comer (querer, yo)",
+          "answer": "quiero"
+        },
+        {
+          "question": "Lo contrario de 'peor'",
+          "answer": "mejor"
+        },
+        {
+          "question": "No me gusta. A ti ___ (también/tampoco)",
+          "answer": "tampoco"
+        },
+        {
+          "question": "Me gusta ___ es divertido (conector)",
+          "answer": "porque"
+        }
+      ]
+    },
+    {
+      "type": "cronica",
+      "label": "Crónica",
+      "prompt": "Me gusta ___. No me gusta ___. Mi favorito es ___.",
+      "placeholder": "Escribe lo que te gusta y no te gusta...",
+      "minWords": 8,
+      "maxWords": 40,
+      "scaffoldType": "sentence",
+      "storyKey": "cronica_dest5",
+      "destination": "dest5",
+      "button": "Guardar en la crónica"
+    },
+    {
+      "type": "fill",
+      "label": "Fragmento literario",
+      "title": "José Eustasio Rivera — Clemente Silva",
+      "instruction": "Clemente Silva habla de la selva. Tú ya tienes todas las palabras.",
+      "grammar": [
+        "gustar",
+        "querer",
+        "porque"
+      ],
+      "questions": [
+        {
+          "sentence": "A Clemente Silva ___ gusta la selva.",
+          "answer": "le",
+          "options": [
+            "le",
+            "me",
+            "te",
+            "se"
+          ]
+        },
+        {
+          "sentence": "Le gusta ___ por los caminos largos.",
+          "answer": "caminar",
+          "options": [
+            "caminar",
+            "dormir",
+            "comer",
+            "bailar"
+          ]
+        },
+        {
+          "sentence": "Le gusta escuchar los ___. Cantan siempre.",
+          "answer": "pájaros",
+          "options": [
+            "pájaros",
+            "patos",
+            "perros",
+            "peces"
+          ]
+        },
+        {
+          "sentence": "La selva es bonita ___ tiene muchos colores.",
+          "answer": "porque",
+          "options": [
+            "porque",
+            "pero",
+            "también",
+            "tampoco"
+          ]
+        },
+        {
+          "sentence": "El río es su ___. Le gusta más que todo.",
+          "answer": "favorito",
+          "options": [
+            "favorito",
+            "feliz",
+            "fuerte",
+            "grande"
+          ]
+        },
+        {
+          "sentence": "Quiere ___ en el río azul y largo.",
+          "answer": "nadar",
+          "options": [
+            "nadar",
+            "dormir",
+            "comer",
+            "bailar"
+          ]
+        },
+        {
+          "sentence": "La comida de la selva es ___. Hay frutas y agua.",
+          "answer": "buena",
+          "options": [
+            "buena",
+            "mala",
+            "fea",
+            "grande"
+          ]
+        },
+        {
+          "sentence": "A Clemente ___ le gusta la selva. A mí ___ me gusta.",
+          "answer": "también",
+          "options": [
+            "también",
+            "tampoco",
+            "nunca",
+            "siempre"
+          ]
+        },
+        {
+          "sentence": "La selva es ___ que el pueblo. Tiene más colores.",
+          "answer": "mejor",
+          "options": [
+            "mejor",
+            "peor",
+            "grande",
+            "buena"
+          ]
+        },
+        {
+          "sentence": "¿Qué ___ gusta a ti? ¿La selva o el pueblo?",
+          "answer": "te",
+          "options": [
+            "te",
+            "me",
+            "le",
+            "se"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ritmo",
+      "label": "Ritmo",
+      "instruction": "¿Dónde cae el golpe fuerte?",
+      "words": [
+        {
+          "word": "chocolate",
+          "syllables": [
+            "cho",
+            "co",
+            "la",
+            "te"
+          ],
+          "stressIndex": 2,
+          "pattern": "llana"
+        },
+        {
+          "word": "favorito",
+          "syllables": [
+            "fa",
+            "vo",
+            "ri",
+            "to"
+          ],
+          "stressIndex": 2,
+          "pattern": "llana"
+        },
+        {
+          "word": "porque",
+          "syllables": [
+            "por",
+            "que"
+          ],
+          "stressIndex": 0,
+          "pattern": "llana"
+        },
+        {
+          "word": "también",
+          "syllables": [
+            "tam",
+            "bién"
+          ],
+          "stressIndex": 1,
+          "pattern": "aguda"
+        },
+        {
+          "word": "tampoco",
+          "syllables": [
+            "tam",
+            "po",
+            "co"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "caminar",
+          "syllables": [
+            "ca",
+            "mi",
+            "nar"
+          ],
+          "stressIndex": 2,
+          "pattern": "aguda"
+        },
+        {
+          "word": "escuela",
+          "syllables": [
+            "es",
+            "cue",
+            "la"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "mercado",
+          "syllables": [
+            "mer",
+            "ca",
+            "do"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "temprano",
+          "syllables": [
+            "tem",
+            "pra",
+            "no"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "después",
+          "syllables": [
+            "des",
+            "pués"
+          ],
+          "stressIndex": 1,
+          "pattern": "aguda"
         }
       ]
     }
