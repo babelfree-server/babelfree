@@ -1,4 +1,4 @@
-const CACHE_NAME = 'babelfree-v8';
+const CACHE_NAME = 'babelfree-v9';
 const PRECACHE_URLS = [
   '/',
   '/services',
@@ -26,8 +26,10 @@ const PRECACHE_URLS = [
   '/js/riddle-quest.js',
   '/js/quest-journal.js',
   '/js/audio-manager.js',
+  '/js/tts-fallback.js',
   '/js/feedback-widget.js',
   '/css/yaguara-game.css',
+  '/css/placeholder-illustrations.css',
   '/ontology/ontology-api.js',
   '/content/busqueda-riddles.json'
 ];

@@ -1,0 +1,784 @@
+/* ================================================================
+   PLACEHOLDER ILLUSTRATIONS — El Viaje del Jaguar
+   TEMPORARY CSS-only placeholders until real artwork arrives.
+
+   Provides:
+   1. Character avatar silhouettes (activate when no img src)
+   2. Ecosystem background gradients
+   3. Game type decorative icons
+   4. Narrative scene mood panels
+
+   These classes layer UNDER real images. Once an <img> loads
+   successfully, it covers the CSS placeholder. No JS needed.
+
+   Remove this file when final illustrations are delivered.
+   ================================================================ */
+
+/* ===== COMMON PLACEHOLDER BASE ===== */
+.yg-placeholder {
+    position: relative;
+    overflow: hidden;
+}
+
+.yg-placeholder::before,
+.yg-placeholder::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+/* ================================================================
+   1. CHARACTER AVATAR SILHOUETTES
+   Applied to avatar containers. Uses CSS shapes + emoji fallback.
+   When real <img> loads, it covers the placeholder via z-index.
+   ================================================================ */
+
+/* --- Base character circle --- */
+.yg-char-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Real image sits on top */
+.yg-char-placeholder img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fallback silhouette layer */
+.yg-char-placeholder::before {
+    content: attr(data-char-icon);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    line-height: 1;
+}
+
+/* Hide placeholder when img loaded successfully */
+.yg-char-placeholder img[src]:not([src=""]) ~ .yg-char-fallback,
+.yg-char-placeholder.has-image::before {
+    display: none;
+}
+
+/* --- Yaguara (jaguar) --- */
+.yg-char-yaguara {
+    background: linear-gradient(145deg, #c9a227 0%, #8b6914 50%, #3d2e0a 100%);
+    border: 2px solid rgba(201, 162, 39, 0.5);
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.2);
+}
+.yg-char-yaguara::before {
+    content: '\1F406';
+    font-size: 1.8em;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+/* Jaguar spot pattern overlay */
+.yg-char-yaguara::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(circle 3px at 25% 30%, rgba(0,0,0,0.3) 0%, transparent 100%),
+        radial-gradient(circle 2px at 60% 20%, rgba(0,0,0,0.25) 0%, transparent 100%),
+        radial-gradient(circle 3px at 40% 65%, rgba(0,0,0,0.3) 0%, transparent 100%),
+        radial-gradient(circle 2px at 75% 55%, rgba(0,0,0,0.25) 0%, transparent 100%),
+        radial-gradient(circle 2px at 15% 70%, rgba(0,0,0,0.2) 0%, transparent 100%),
+        radial-gradient(circle 3px at 80% 80%, rgba(0,0,0,0.3) 0%, transparent 100%);
+}
+
+/* --- Candelaria (elder woman, warm earth tones) --- */
+.yg-char-candelaria {
+    background: linear-gradient(145deg, #c67a4a 0%, #8b4513 50%, #5c2d0a 100%);
+    border: 2px solid rgba(198, 122, 74, 0.5);
+}
+.yg-char-candelaria::before {
+    content: '\1F9D3';
+    font-size: 1.6em;
+}
+/* Woven fabric pattern */
+.yg-char-candelaria::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.15;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,255,255,0.3) 3px, rgba(255,255,255,0.3) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(201,162,39,0.3) 6px, rgba(201,162,39,0.3) 7px);
+}
+
+/* --- Don Prospero (antagonist, dark/cold) --- */
+.yg-char-prospero {
+    background: linear-gradient(145deg, #4a4a5a 0%, #2a2a3a 50%, #15151f 100%);
+    border: 2px solid rgba(100, 100, 130, 0.5);
+}
+.yg-char-prospero::before {
+    content: '\1F3A9';
+    font-size: 1.5em;
+}
+.yg-char-prospero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        rgba(100,100,130,0.1) 4px,
+        rgba(100,100,130,0.1) 5px
+    );
+}
+
+/* --- Dona Asuncion (wise elder, purple/lavender) --- */
+.yg-char-asuncion {
+    background: linear-gradient(145deg, #7a5a8a 0%, #5a3a6a 50%, #3a1a4a 100%);
+    border: 2px solid rgba(122, 90, 138, 0.5);
+}
+.yg-char-asuncion::before {
+    content: '\1F9B6';
+    font-size: 1.6em;
+}
+
+/* --- Ceiba (tree spirit, green/brown) --- */
+.yg-char-ceiba {
+    background: linear-gradient(145deg, #5a6e4a 0%, #3d4a30 50%, #2a3520 100%);
+    border: 2px solid rgba(90, 110, 74, 0.5);
+}
+.yg-char-ceiba::before {
+    content: '\1F333';
+    font-size: 1.8em;
+}
+/* Root pattern */
+.yg-char-ceiba::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.2;
+    background:
+        radial-gradient(ellipse 40% 100% at 50% 100%, rgba(90,70,40,0.4) 0%, transparent 70%),
+        radial-gradient(ellipse 20% 80% at 30% 100%, rgba(90,70,40,0.3) 0%, transparent 60%),
+        radial-gradient(ellipse 20% 80% at 70% 100%, rgba(90,70,40,0.3) 0%, transparent 60%);
+}
+
+/* --- Condor (sky spirit) --- */
+.yg-char-condor {
+    background: linear-gradient(145deg, #6a7a8a 0%, #3a4a5a 50%, #1a2a3a 100%);
+    border: 2px solid rgba(106, 122, 138, 0.5);
+}
+.yg-char-condor::before {
+    content: '\1F985';
+    font-size: 1.7em;
+}
+
+/* --- Colibri (hummingbird spirit) --- */
+.yg-char-colibri {
+    background: linear-gradient(145deg, #2a8a6a 0%, #1a6a5a 50%, #0a4a3a 100%);
+    border: 2px solid rgba(42, 138, 106, 0.5);
+}
+.yg-char-colibri::before {
+    content: '\1F426';
+    font-size: 1.5em;
+}
+
+/* --- La Rana (the frog) --- */
+.yg-char-rana {
+    background: linear-gradient(145deg, #4a8a3a 0%, #2a6a1a 50%, #1a4a0a 100%);
+    border: 2px solid rgba(74, 138, 58, 0.5);
+}
+.yg-char-rana::before {
+    content: '\1F438';
+    font-size: 1.6em;
+}
+
+/* --- Generic NPC / narrator --- */
+.yg-char-narrator {
+    background: linear-gradient(145deg, var(--river-deep, #2a3d4a), #1a2530);
+    border: 2px solid rgba(42, 61, 74, 0.5);
+}
+.yg-char-narrator::before {
+    content: '\1F4DC';
+    font-size: 1.4em;
+}
+
+/* --- Literary authors --- */
+.yg-char-pombo {
+    background: linear-gradient(145deg, #6a5a3a 0%, #4a3a2a 50%, #2a2010 100%);
+    border: 2px solid rgba(106, 90, 58, 0.5);
+}
+.yg-char-pombo::before {
+    content: '\270D\FE0F';
+    font-size: 1.4em;
+}
+
+.yg-char-rivera {
+    background: linear-gradient(145deg, #4a6a3a 0%, #2a4a2a 50%, #1a3010 100%);
+    border: 2px solid rgba(74, 106, 58, 0.5);
+}
+.yg-char-rivera::before {
+    content: '\1F4D6';
+    font-size: 1.4em;
+}
+
+.yg-char-carrasquilla {
+    background: linear-gradient(145deg, #8a6a3a 0%, #6a4a2a 50%, #4a3010 100%);
+    border: 2px solid rgba(138, 106, 58, 0.5);
+}
+.yg-char-carrasquilla::before {
+    content: '\1F4DA';
+    font-size: 1.4em;
+}
+
+.yg-char-macias {
+    background: linear-gradient(145deg, #5a5a7a 0%, #3a3a5a 50%, #2a2a4a 100%);
+    border: 2px solid rgba(90, 90, 122, 0.5);
+}
+.yg-char-macias::before {
+    content: '\2712\FE0F';
+    font-size: 1.4em;
+}
+
+/* ================================================================
+   2. ECOSYSTEM BACKGROUND GRADIENTS
+   Applied to game panels or scene containers.
+   Each ecosystem gets a distinct gradient + subtle pattern.
+   ================================================================ */
+
+/* --- Base ecosystem panel --- */
+.yg-eco-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.yg-eco-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.15;
+    pointer-events: none;
+    transition: opacity 0.6s var(--ease-gentle, ease);
+}
+
+/* Content sits above the background */
+.yg-eco-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Bosque (forest: deep greens) --- */
+.yg-eco-bosque {
+    background: linear-gradient(170deg,
+        #0a1a0a 0%,
+        #1a2f15 25%,
+        #2a4520 50%,
+        #1a3018 75%,
+        #0a1a0a 100%
+    );
+}
+.yg-eco-bosque::before {
+    background:
+        radial-gradient(ellipse 60% 40% at 20% 80%, rgba(90,110,74,0.3) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 30% at 80% 60%, rgba(90,110,74,0.2) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 50% 30%, rgba(60,90,40,0.15) 0%, transparent 70%),
+        repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(90,110,74,0.05) 30px, rgba(90,110,74,0.05) 31px);
+    opacity: 0.25;
+}
+
+/* --- Costa (coast: blues + sandy gold) --- */
+.yg-eco-costa {
+    background: linear-gradient(170deg,
+        #0a1520 0%,
+        #1a3550 25%,
+        #2a5570 40%,
+        #3a6580 50%,
+        #2a4560 65%,
+        #c9a227 92%,
+        #a8861a 100%
+    );
+}
+.yg-eco-costa::before {
+    background:
+        repeating-linear-gradient(175deg,
+            transparent, transparent 8px,
+            rgba(255,255,255,0.03) 8px, rgba(255,255,255,0.03) 9px
+        ),
+        radial-gradient(ellipse 100% 20% at 50% 95%, rgba(201,162,39,0.3) 0%, transparent 70%);
+    opacity: 0.3;
+}
+
+/* --- Desierto (desert: amber + terracotta) --- */
+.yg-eco-desierto {
+    background: linear-gradient(170deg,
+        #2a1a08 0%,
+        #4a3010 25%,
+        #7a5520 45%,
+        #a87830 55%,
+        #6a4518 75%,
+        #2a1a08 100%
+    );
+}
+.yg-eco-desierto::before {
+    background:
+        radial-gradient(circle 100px at 80% 20%, rgba(255,200,100,0.15) 0%, transparent 70%),
+        repeating-linear-gradient(180deg,
+            transparent, transparent 2px,
+            rgba(200,160,80,0.04) 2px, rgba(200,160,80,0.04) 3px
+        );
+    opacity: 0.3;
+}
+
+/* --- Islas (islands: turquoise + coral) --- */
+.yg-eco-islas {
+    background: linear-gradient(170deg,
+        #0a2030 0%,
+        #1a4050 25%,
+        #2a7080 45%,
+        #30908a 55%,
+        #1a5060 75%,
+        #0a2535 100%
+    );
+}
+.yg-eco-islas::before {
+    background:
+        radial-gradient(circle 60px at 30% 70%, rgba(255,127,80,0.15) 0%, transparent 70%),
+        radial-gradient(circle 80px at 70% 40%, rgba(64,224,208,0.1) 0%, transparent 70%),
+        radial-gradient(circle 40px at 50% 85%, rgba(255,200,100,0.1) 0%, transparent 70%);
+    opacity: 0.3;
+}
+
+/* --- Llanos (plains: golden + vast sky) --- */
+.yg-eco-llanos {
+    background: linear-gradient(170deg,
+        #1a2030 0%,
+        #3a5570 20%,
+        #5a7a90 35%,
+        #8a9a50 55%,
+        #6a7a30 70%,
+        #3a4a15 100%
+    );
+}
+.yg-eco-llanos::before {
+    background:
+        linear-gradient(180deg, transparent 40%, rgba(138,154,80,0.1) 60%, rgba(106,122,48,0.15) 100%),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(138,154,80,0.04) 40px, rgba(138,154,80,0.04) 41px);
+    opacity: 0.25;
+}
+
+/* --- Nevada (snowy mountains: white + blue-grey) --- */
+.yg-eco-nevada {
+    background: linear-gradient(170deg,
+        #1a2530 0%,
+        #3a5060 20%,
+        #6a8090 40%,
+        #8aa0b0 50%,
+        #b0c0d0 65%,
+        #d0dae0 80%,
+        #8aa0b0 100%
+    );
+}
+.yg-eco-nevada::before {
+    background:
+        radial-gradient(circle 2px at 20% 15%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(circle 1px at 40% 25%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(circle 2px at 65% 10%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(circle 1px at 80% 30%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(circle 1px at 10% 35%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        linear-gradient(180deg, transparent 60%, rgba(255,255,255,0.08) 100%);
+    opacity: 0.35;
+}
+
+/* --- Selva (jungle: deep saturated greens) --- */
+.yg-eco-selva {
+    background: linear-gradient(170deg,
+        #050f05 0%,
+        #0a2a0a 20%,
+        #154015 40%,
+        #1a5518 50%,
+        #103510 70%,
+        #0a200a 100%
+    );
+}
+.yg-eco-selva::before {
+    background:
+        radial-gradient(ellipse 30% 60% at 15% 50%, rgba(20,80,20,0.3) 0%, transparent 70%),
+        radial-gradient(ellipse 25% 50% at 85% 40%, rgba(20,80,20,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 50% 80%, rgba(40,100,40,0.2) 0%, transparent 70%),
+        repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(20,60,20,0.08) 15px, rgba(20,60,20,0.08) 16px),
+        repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(20,60,20,0.05) 20px, rgba(20,60,20,0.05) 21px);
+    opacity: 0.3;
+}
+
+/* --- Sierra (mountain range: earth browns + rock grey) --- */
+.yg-eco-sierra {
+    background: linear-gradient(170deg,
+        #1a1510 0%,
+        #3a3020 20%,
+        #5a4a35 40%,
+        #7a6a50 55%,
+        #5a4a35 70%,
+        #2a2015 100%
+    );
+}
+.yg-eco-sierra::before {
+    background:
+        linear-gradient(160deg, transparent 30%, rgba(120,100,80,0.1) 50%, transparent 70%),
+        linear-gradient(200deg, transparent 40%, rgba(100,80,60,0.08) 60%, transparent 80%),
+        radial-gradient(ellipse 80% 30% at 50% 40%, rgba(90,80,60,0.1) 0%, transparent 70%);
+    opacity: 0.3;
+}
+
+/* ================================================================
+   3. GAME TYPE DECORATIVE BADGES
+   Small decorative indicators for game types. These supplement
+   the existing SVG icons in the engine with CSS-only alternatives.
+   ================================================================ */
+
+.yg-game-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    flex-shrink: 0;
+    border: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.yg-game-badge-vocabulario {
+    background: linear-gradient(135deg, rgba(90,110,74,0.3), rgba(90,110,74,0.1));
+}
+.yg-game-badge-vocabulario::before { content: '\1F4D6'; }
+
+.yg-game-badge-gramatica {
+    background: linear-gradient(135deg, rgba(42,61,74,0.3), rgba(42,61,74,0.1));
+}
+.yg-game-badge-gramatica::before { content: '\1F4DD'; }
+
+.yg-game-badge-conversacion {
+    background: linear-gradient(135deg, rgba(201,162,39,0.3), rgba(201,162,39,0.1));
+}
+.yg-game-badge-conversacion::before { content: '\1F4AC'; }
+
+.yg-game-badge-lectura {
+    background: linear-gradient(135deg, rgba(198,122,74,0.3), rgba(198,122,74,0.1));
+}
+.yg-game-badge-lectura::before { content: '\1F4D6'; }
+
+.yg-game-badge-escritura {
+    background: linear-gradient(135deg, rgba(138,106,58,0.3), rgba(138,106,58,0.1));
+}
+.yg-game-badge-escritura::before { content: '\270D\FE0F'; }
+
+.yg-game-badge-escucha {
+    background: linear-gradient(135deg, rgba(106,122,138,0.3), rgba(106,122,138,0.1));
+}
+.yg-game-badge-escucha::before { content: '\1F3B5'; }
+
+.yg-game-badge-cultura {
+    background: linear-gradient(135deg, rgba(122,90,138,0.3), rgba(122,90,138,0.1));
+}
+.yg-game-badge-cultura::before { content: '\1F3AD'; }
+
+.yg-game-badge-escape {
+    background: linear-gradient(135deg, rgba(180,60,60,0.3), rgba(180,60,60,0.1));
+}
+.yg-game-badge-escape::before { content: '\1F510'; }
+
+/* ================================================================
+   4. NARRATIVE SCENE MOOD PANELS
+   Full-width atmospheric panels for story moments.
+   Activated by data-mood attribute or class on scene containers.
+   ================================================================ */
+
+.yg-scene-mood {
+    position: relative;
+    min-height: 120px;
+    padding: 2rem;
+    border-radius: var(--border-radius, 18px);
+    overflow: hidden;
+}
+
+.yg-scene-mood > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animated shimmer overlay for all moods */
+.yg-scene-mood::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    animation: yg-mood-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes yg-mood-shimmer {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* --- Mood: dawn / awakening --- */
+.yg-mood-dawn {
+    background: linear-gradient(180deg,
+        #1a1530 0%,
+        #2a2050 20%,
+        #5a3060 40%,
+        #a05030 60%,
+        #c9a227 80%,
+        #e8d5b7 100%
+    );
+}
+.yg-mood-dawn::after {
+    background: radial-gradient(circle at 50% 70%, rgba(201,162,39,0.15) 0%, transparent 60%);
+}
+
+/* --- Mood: mystery / discovery --- */
+.yg-mood-mystery {
+    background: linear-gradient(180deg,
+        #0a0a15 0%,
+        #15152a 40%,
+        #1a2040 70%,
+        #2a3050 100%
+    );
+}
+.yg-mood-mystery::after {
+    background: radial-gradient(circle at 50% 40%, rgba(100,100,200,0.1) 0%, transparent 50%);
+}
+
+/* --- Mood: tension / danger --- */
+.yg-mood-tension {
+    background: linear-gradient(180deg,
+        #1a0808 0%,
+        #2a1010 40%,
+        #3a1515 70%,
+        #2a0a0a 100%
+    );
+}
+.yg-mood-tension::after {
+    background: radial-gradient(circle at 50% 50%, rgba(180,40,40,0.08) 0%, transparent 50%);
+}
+
+/* --- Mood: triumph / celebration --- */
+.yg-mood-triumph {
+    background: linear-gradient(180deg,
+        #1a1508 0%,
+        #2a2510 30%,
+        #3a3015 50%,
+        #c9a227 80%,
+        #e8d5b7 100%
+    );
+}
+.yg-mood-triumph::after {
+    background:
+        radial-gradient(circle at 30% 60%, rgba(201,162,39,0.15) 0%, transparent 40%),
+        radial-gradient(circle at 70% 40%, rgba(201,162,39,0.1) 0%, transparent 40%);
+}
+
+/* --- Mood: grey place (Prospero's domain) --- */
+.yg-mood-grey {
+    background: linear-gradient(180deg,
+        #0a0a0a 0%,
+        #1a1a1a 30%,
+        #2a2a2a 60%,
+        #1a1a1a 100%
+    );
+    filter: saturate(0.3);
+}
+.yg-mood-grey::after {
+    background: repeating-linear-gradient(
+        180deg,
+        transparent, transparent 3px,
+        rgba(100,100,100,0.03) 3px, rgba(100,100,100,0.03) 4px
+    );
+    opacity: 1;
+    animation: none;
+}
+
+/* --- Mood: portal (literary world entrance) --- */
+.yg-mood-portal {
+    background: linear-gradient(180deg,
+        #0a0a1a 0%,
+        #1a1a3a 30%,
+        #3a2a5a 60%,
+        #1a1a3a 100%
+    );
+}
+.yg-mood-portal::after {
+    background: radial-gradient(circle at 50% 50%, rgba(150,100,200,0.15) 0%, transparent 50%);
+}
+
+/* --- Mood: nature / peace --- */
+.yg-mood-nature {
+    background: linear-gradient(180deg,
+        #0a150a 0%,
+        #152a15 30%,
+        #1a3518 60%,
+        #0a200a 100%
+    );
+}
+.yg-mood-nature::after {
+    background:
+        radial-gradient(circle at 30% 70%, rgba(90,130,74,0.1) 0%, transparent 40%),
+        radial-gradient(circle at 70% 30%, rgba(100,140,80,0.08) 0%, transparent 40%);
+}
+
+/* --- Mood: finale --- */
+.yg-mood-finale {
+    background: linear-gradient(180deg,
+        #1a1508 0%,
+        #c9a227 30%,
+        #e8d5b7 50%,
+        #c9a227 70%,
+        #1a1508 100%
+    );
+}
+.yg-mood-finale::after {
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+}
+
+/* ================================================================
+   5. PLACEHOLDER IMAGE FALLBACK
+   For <img> elements that fail to load or have no src.
+   Provides a styled empty state instead of a broken image icon.
+   ================================================================ */
+
+/* Apply to any container that might hold a missing image */
+.yg-img-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass-earth, rgba(26, 18, 8, 0.6));
+    border: 1px dashed rgba(201, 162, 39, 0.15);
+    border-radius: var(--border-radius, 18px);
+    overflow: hidden;
+    min-height: 80px;
+}
+
+.yg-img-placeholder::before {
+    content: attr(data-placeholder-label);
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 0.9em;
+    color: var(--sand-muted, #b8a48a);
+    opacity: 0.5;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Subtle pattern for visual interest */
+.yg-img-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background:
+        repeating-linear-gradient(45deg,
+            transparent, transparent 10px,
+            rgba(201,162,39,0.1) 10px, rgba(201,162,39,0.1) 11px
+        );
+    pointer-events: none;
+}
+
+/* ================================================================
+   6. AUTO-ACTIVATE ON MISSING IMAGES
+   When an <img> inside a .yg-despertar-portrait or .yg-narrative-avatar
+   has no src or fails to load, show the character placeholder.
+   This uses CSS :not() — no JS needed.
+   ================================================================ */
+
+/* Portrait container without loaded image */
+.yg-despertar-portrait:not(:has(img[src]:not([src=""]))) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--ochre, #c9a227), var(--terracotta, #c67a4a));
+}
+
+.yg-despertar-portrait:not(:has(img[src]:not([src=""])))::before {
+    content: '\1F406';
+    font-size: 3rem;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+
+/* Hide broken image icon */
+.yg-despertar-portrait img[src=""],
+.yg-despertar-portrait img:not([src]) {
+    display: none;
+}
+
+/* ================================================================
+   7. SIZE VARIANTS
+   ================================================================ */
+
+/* Small (inline, 32px) */
+.yg-char-placeholder.yg-char-sm {
+    width: 32px;
+    height: 32px;
+}
+.yg-char-placeholder.yg-char-sm::before {
+    font-size: 1em;
+}
+
+/* Medium (avatar, 48px — default) */
+.yg-char-placeholder.yg-char-md {
+    width: 48px;
+    height: 48px;
+}
+
+/* Large (portrait, 96px) */
+.yg-char-placeholder.yg-char-lg {
+    width: 96px;
+    height: 96px;
+}
+.yg-char-placeholder.yg-char-lg::before {
+    font-size: 2.5em;
+}
+
+/* Extra large (scene, 128px) */
+.yg-char-placeholder.yg-char-xl {
+    width: 128px;
+    height: 128px;
+}
+.yg-char-placeholder.yg-char-xl::before {
+    font-size: 3.5em;
+}
+
+/* ================================================================
+   8. RESPONSIVE
+   ================================================================ */
+@media (max-width: 600px) {
+    .yg-char-placeholder.yg-char-lg {
+        width: 72px;
+        height: 72px;
+    }
+    .yg-char-placeholder.yg-char-lg::before {
+        font-size: 2em;
+    }
+    .yg-char-placeholder.yg-char-xl {
+        width: 96px;
+        height: 96px;
+    }
+    .yg-char-placeholder.yg-char-xl::before {
+        font-size: 2.5em;
+    }
+    .yg-scene-mood {
+        min-height: 80px;
+        padding: 1.2rem;
+    }
+}
