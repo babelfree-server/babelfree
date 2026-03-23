@@ -243,6 +243,32 @@
             .nav-menu { display: none; }
             .mobile-menu-toggle { display: flex; }
         }
+    
+        .blog-card-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            border-radius: 12px 12px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            line-height: 1;
+        }
+        .card-label {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+        }
     </style>
 </head>
 <body>
@@ -287,7 +313,7 @@
     <section class="blog-section">
         <div class="blog-grid">
             <a href="/blog/learn-spanish-through-stories" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #2c3e50, #3498db);">&#128214;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #2c3e50, #3498db);"><span class="card-icon">📖</span><span class="card-label">Storytelling</span></div>
                 <div class="blog-card-body">
                     <h2>Learn Spanish through stories: the science behind narrative immersion</h2>
                     <p>Why learning Spanish through stories works better than flashcards. The neuroscience of narrative immersion and how storytelling accelerates language acquisition.</p>
@@ -299,7 +325,7 @@
             </a>
 
             <a href="/blog/colombian-culture-language-learning" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">&#127758;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #27ae60, #2ecc71);"><span class="card-icon">🌿</span><span class="card-label">Culture</span></div>
                 <div class="blog-card-body">
                     <h2>Colombian culture in language learning: why context matters</h2>
                     <p>How Colombian ecosystems, literature, and traditions create deeper language acquisition than textbook drills.</p>
@@ -311,7 +337,7 @@
             </a>
 
             <a href="/blog/spanish-learning-mistakes" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">&#9888;&#65039;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #e74c3c, #c0392b);"><span class="card-icon">✗</span><span class="card-label">Mistakes</span></div>
                 <div class="blog-card-body">
                     <h2>5 mistakes to avoid when learning Spanish</h2>
                     <p>Practical tips on grammar traps, study habits, and cultural awareness that will accelerate your progress from day one.</p>
@@ -323,7 +349,7 @@
             </a>
 
             <a href="/blog/free-vs-paid-spanish-courses" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #f39c12, #e67e22);">&#128176;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #f39c12, #e67e22);"><span class="card-icon">⚖</span><span class="card-label">Compare</span></div>
                 <div class="blog-card-body">
                     <h2>Free vs paid Spanish courses: an honest comparison</h2>
                     <p>What you actually get at each price point, what matters for real progress, and where free courses hit their ceiling.</p>
@@ -335,7 +361,7 @@
             </a>
 
             <a href="/blog/aprender-espanhol" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #2a9d8f, #1a8d7f);">&#127463;&#127479;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #2a9d8f, #1a8d7f);"><span class="card-icon">🇧🇷</span><span class="card-label">Português</span></div>
                 <div class="blog-card-body">
                     <h2>Como aprender espanhol online gratis em 2026</h2>
                     <p>Guia completo para falantes de portugues: curso de espanhol gratis, dicionario com 26.000+ palavras e dicas para aprender sozinho.</p>
@@ -347,7 +373,7 @@
             </a>
 
             <a href="/blog/apprendre-espagnol" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #4a7fb5, #3a6fa5);">&#127467;&#127479;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #4a7fb5, #3a6fa5);"><span class="card-icon">🇫🇷</span><span class="card-label">Français</span></div>
                 <div class="blog-card-body">
                     <h2>Apprendre l'espagnol gratuitement en 2026</h2>
                     <p>Guide complet pour francophones : cours d'espagnol en ligne gratuit, dictionnaire et conseils pour apprendre rapidement.</p>
@@ -359,7 +385,7 @@
             </a>
 
             <a href="/blog/spanisch-lernen" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #1a1a2e, #333);">&#127465;&#127466;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #1a1a2e, #333);"><span class="card-icon">🇩🇪</span><span class="card-label">Deutsch</span></div>
                 <div class="blog-card-body">
                     <h2>Spanisch lernen kostenlos in 2026</h2>
                     <p>Der komplette Guide fur deutschsprachige Lerner: kostenlose Tools, CEFR-Stufen und Worterbuch mit 26.000+ Wortern.</p>
@@ -371,7 +397,7 @@
             </a>
 
             <a href="/blog/how-to-learn-spanish" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #1a1a2e, #0f3460);">&#127891;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #1a1a2e, #0f3460);"><span class="card-icon">A1→C2</span><span class="card-label">CEFR</span></div>
                 <div class="blog-card-body">
                     <h2>How to learn Spanish fast in 2026</h2>
                     <p>The complete guide: best way to learn Spanish online, free tools, realistic timelines, and proven methods from beginner to fluent.</p>
@@ -383,7 +409,7 @@
             </a>
 
             <a href="/blog/como-aprender-espanol" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #e07a5f, #c75d4a);">&#127758;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #e07a5f, #c75d4a);"><span class="card-icon">🇪🇸</span><span class="card-label">Español</span></div>
                 <div class="blog-card-body">
                     <h2>Como aprender espanol gratis en 2026</h2>
                     <p>Guia completa para aprender espanol desde cero: curso gratis, clases online, diccionario y recursos para extranjeros.</p>
@@ -395,7 +421,7 @@
             </a>
 
             <a href="/blog/spanish-greetings-guide" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #F7D794, #F4A5A5);">&#128075;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #F7D794, #F4A5A5);"><span class="card-icon">¡Hola!</span><span class="card-label">Greetings</span></div>
                 <div class="blog-card-body">
                     <h2>10 essential Spanish greetings</h2>
                     <p>Master the most common Spanish greetings used across Latin America — from casual "hola" to formal introductions.</p>
@@ -407,7 +433,7 @@
             </a>
 
             <a href="/blog/colombian-coffee-culture" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #8B4513, #D2691E);">&#9749;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #8B4513, #D2691E);"><span class="card-icon">☕</span><span class="card-label">Colombia</span></div>
                 <div class="blog-card-body">
                     <h2>Coffee & language: Colombian coffee culture</h2>
                     <p>How Colombia's coffee tradition shaped its language, hospitality, and the words you'll learn as a Spanish student.</p>
@@ -419,7 +445,7 @@
             </a>
 
             <a href="/blog/what-is-cefr" class="blog-card">
-                <div class="blog-card-image" style="background: linear-gradient(135deg, #2d6b2d, #27ae60);">&#128218;</div>
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #2d6b2d, #27ae60);"><span class="card-icon">📚</span><span class="card-label">Glossary</span></div>
                 <div class="blog-card-body">
                     <h2>What is CEFR? Language levels explained</h2>
                     <p>A clear guide to the Common European Framework of Reference — what A1 through C2 really mean for your learning.</p>
