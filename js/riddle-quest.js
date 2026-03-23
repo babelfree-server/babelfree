@@ -1,9 +1,9 @@
 /**
  * Busqueda — Riddle treasure hunt system for El Viaje del Jaguar
  *
- * Candelaria's cuaderno: 58 riddles woven through the journey.
+ * Candelaria's cuaderno: 89 riddles woven through the journey.
  * Each solved riddle reveals a bridge segment and brings the rana
- * closer to visibility. At destination 58, the student names the rana.
+ * closer to visibility. At destination 89, the student names the rana.
  *
  * Storage: localStorage key 'yaguara_busqueda'
  * Data:    content/busqueda-riddles.json
@@ -649,7 +649,7 @@
 
             // Update rana opacity (linear 0→1 over 58 riddles)
             state.ranaOpacity = Math.min(1.0,
-                Math.round((state.solvedRiddles.length / 58) * 100) / 100);
+                Math.round((state.solvedRiddles.length / 89) * 100) / 100);
 
             // Journal entry — use curated journalEntry from riddle data when available
             state.journalEntries.push({
@@ -706,8 +706,8 @@
             svg.appendChild(ropeBot);
 
             // Planks — one per segment, max 58 visible in the mini view
-            var plankWidth = 280 / 58;
-            for (var i = 0; i < Math.min(segment, 58); i++) {
+            var plankWidth = 280 / 89;
+            for (var i = 0; i < Math.min(segment, 89); i++) {
                 var plank = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
                 var x = 10 + i * plankWidth;
                 plank.setAttribute('x', String(x));
@@ -772,7 +772,7 @@
 
         // ── Check if all 58 riddles solved ───────────────────────────
         isComplete: function () {
-            return this.getState().solvedRiddles.length >= 58;
+            return this.getState().solvedRiddles.length >= 89;
         },
 
         // ── The naming ceremony — dest 58 when all solved ────────────

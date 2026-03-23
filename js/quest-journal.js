@@ -413,7 +413,7 @@
                 entryMap[entries[e].dest] = entries[e];
             }
 
-            // Render all 58 destinations
+            // Render all 89 destinations
             for (var d = 1; d <= TOTAL_DESTS; d++) {
                 var entry = entryMap[d];
                 var isSolved = !!solvedMap[d];

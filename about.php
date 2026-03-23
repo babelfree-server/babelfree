@@ -9,14 +9,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://babelfree.com/about">
     <meta property="og:title" content="About Babelfree — Methodology, Mission & Team">
-    <meta property="og:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 5,100 hours, 11.8M-word dictionary in 94 languages.">
+    <meta property="og:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 8,900 hours, 11.8M-word dictionary in 94 languages.">
     <meta property="og:site_name" content="Babel Free">
     <meta property="og:image" content="https://babelfree.com/assets/og-babel.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Babelfree — Methodology, Mission & Team">
-    <meta name="twitter:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 5,100 hours, 11.8M-word dictionary.">
+    <meta name="twitter:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 8,900 hours, 11.8M-word dictionary.">
     <meta name="twitter:image" content="https://babelfree.com/assets/og-babel.png">
     <meta name="theme-color" content="#F4A5A5">
     <link rel="icon" type="image/png" href="/assets/tower-logo.png">

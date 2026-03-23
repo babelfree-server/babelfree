@@ -734,7 +734,7 @@ $pages = [
             'Posso vedere il significato in italiano?' =>
                 "Si, Babel Free mostra traduzioni in {$langCount} lingue, incluso l'italiano. Puoi cercare qualsiasi parola spagnola e trovare la traduzione italiana, insieme a definizioni e frasi di esempio.",
             'Il dizionario insegna anche lo spagnolo?' =>
-                "Si! Oltre al dizionario, Babel Free offre il corso completo El Viaje del Jaguar — un viaggio interattivo dall'A1 al C2 con 58 destinazioni, attivita e giochi. Il corso e completamente gratuito e supporta l'interfaccia in italiano.",
+                "Si! Oltre al dizionario, Babel Free offre il corso completo El Viaje del Jaguar — un viaggio interattivo dall'A1 al C2 con 89 destinazioni, attivita e giochi. Il corso e completamente gratuito e supporta l'interfaccia in italiano.",
         ],
     ],
 
@@ -1192,7 +1192,7 @@ $pages = [
             'Posso ver o significado em portugues?' =>
                 "Sim, o Babel Free mostra traducoes em {$langCount} idiomas, incluindo portugues. Voce pode pesquisar qualquer palavra em espanhol e encontrar a traducao em portugues, junto com definicoes e frases de exemplo.",
             'O dicionario tambem ensina espanhol?' =>
-                "Sim! Alem do dicionario, o Babel Free oferece o curso completo El Viaje del Jaguar — uma jornada interativa do A1 ao C2 com 58 destinos, atividades e jogos. O curso e totalmente gratis e suporta interface em portugues.",
+                "Sim! Alem do dicionario, o Babel Free oferece o curso completo El Viaje del Jaguar — uma jornada interativa do A1 ao C2 com 89 destinos, atividades e jogos. O curso e totalmente gratis e suporta interface em portugues.",
         ],
     ],
 
