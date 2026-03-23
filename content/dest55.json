@@ -11,6 +11,7 @@
       "char_candelaria"
     ]
   },
+  "preArrival": [],
   "arrival": {
     "type": "skit",
     "label": "Llegada",
@@ -34,11 +35,6 @@
         "text": "Exacto. Cruzar este puente significa que ya no necesitamos que alguien nos guíe. Ahora somos nosotras las que guiamos nuestras palabras."
       }
     ]
-  },
-  "departure": {
-    "closingQuestion": "El puente entre mundos se ilumina. Candelaria cruza. Yaguará la sigue.",
-    "yaguaraLine": "Todo lo que has aprendido no es un peso. Es un puente. Cada palabra, cada estructura, cada conversación es un tablón de ese puente. Ahora: cruza.",
-    "button": "Continuar el viaje"
   },
   "games": [
     {
@@ -597,6 +593,48 @@
         "consolidación",
         "transición"
       ]
+    },
+    {
+      "type": "autoevaluacion",
+      "label": "Evaluación DELE B2",
+      "dele_level": "B2",
+      "invisible": true,
+      "sections": [
+        {
+          "skill": "comprensión lectora",
+          "weight": 0.25
+        },
+        {
+          "skill": "comprensión auditiva",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión escrita",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión oral",
+          "weight": 0.25
+        }
+      ],
+      "passingCriteria": {
+        "minScore": 0.6,
+        "minPerSection": 0.5
+      }
     }
-  ]
+  ],
+  "ecosystemGames": [],
+  "departure": {
+    "closingQuestion": "El puente entre mundos se ilumina. Candelaria cruza. Yaguará la sigue.",
+    "yaguaraLine": "Todo lo que has aprendido no es un peso. Es un puente. Cada palabra, cada estructura, cada conversación es un tablón de ese puente. Ahora: cruza.",
+    "button": "Continuar el viaje"
+  },
+  "characterMeta": {},
+  "characterLines": {},
+  "_expansionStats": {
+    "coreTemplates": 10,
+    "ecosystemVariants": 0,
+    "totalExpandedGames": 10,
+    "generatedAt": "2026-03-23T22:31:08.072Z"
+  }
 }

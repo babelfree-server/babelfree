@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El mapa del viaje — El Viaje del Jaguar</title>
-    <meta name="description" content="Mapa interactivo de El Viaje del Jaguar: 58 destinos desde A1 hasta C2. Aprende español a través de ecosistemas colombianos.">
+    <meta name="description" content="Mapa interactivo de El Viaje del Jaguar: 89 destinos desde A1 hasta C2. Aprende español a través de ecosistemas colombianos.">
     <link rel="canonical" href="https://babelfree.com/storymap">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://babelfree.com/storymap">
     <meta property="og:title" content="El mapa del viaje — El Viaje del Jaguar">
-    <meta property="og:description" content="58 destinos de aprendizaje inmersivo del español. Desde la selva amazónica hasta las cumbres andinas.">
+    <meta property="og:description" content="89 destinos de aprendizaje inmersivo del español. Desde la selva amazónica hasta las cumbres andinas.">
     <meta property="og:site_name" content="Babel Free">
     <meta property="og:image" content="https://babelfree.com/assets/og-babel.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="El mapa del viaje — El Viaje del Jaguar">
-    <meta name="twitter:description" content="58 destinos de aprendizaje inmersivo del español. Desde la selva amazónica hasta las cumbres andinas.">
+    <meta name="twitter:description" content="89 destinos de aprendizaje inmersivo del español. Desde la selva amazónica hasta las cumbres andinas.">
     <link rel="stylesheet" href="luxury.css">
     <link rel="stylesheet" href="css/yaguara-game.css">
     <link rel="manifest" href="/manifest.json">
@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
     /* ================================================================
-       STORY MAP — The vertical river of 58 destinations
+       STORY MAP — The vertical river of 89 destinations
        ================================================================ */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -555,7 +555,7 @@
       "@context": "https://schema.org",
       "@type": "Course",
       "name": "El Viaje del Jaguar — Complete Spanish Course",
-      "description": "58-destination immersive Spanish course through Colombian ecosystems. 5,100 hours of CEFR-aligned content from A1 to C2.",
+      "description": "89-destination immersive Spanish course through Colombian ecosystems. 5,100 hours of CEFR-aligned content from A1 to C2.",
       "provider": {
         "@type": "EducationalOrganization",
         "name": "Babelfree",
@@ -776,7 +776,7 @@
        Since the map renders top-down (dest58 → dest1), labels appear at the
        highest-numbered dest of each sub-level to introduce the group above. */
     var LEVEL_ENDS = {
-        58: 'C2 Avanzado', 53: 'C2 B\u00e1sico',
+        89: 'C2 Maestr\u00eda', 83: 'C2 Avanzado', 79: 'C2 B\u00e1sico',
         48: 'C1 Avanzado', 43: 'C1 B\u00e1sico',
         38: 'B2 Avanzado', 33: 'B2 B\u00e1sico',
         28: 'B1 Avanzado', 23: 'B1 B\u00e1sico',
@@ -865,7 +865,7 @@
         });
 
         /* Individual dest progress keys */
-        for (var d = 1; d <= 58; d++) {
+        for (var d = 1; d <= 89; d++) {
             try {
                 var dp = JSON.parse(localStorage.getItem('yaguara_dest' + d + '_progress') || 'null');
                 if (dp && dp.completedCount > 0 && dp.completedCount >= (dp.completedMap || []).length * 0.7) {
@@ -878,7 +878,7 @@
         if (journey.completedDestinations.length > 0) {
             var maxCompleted = journey.completedDestinations[journey.completedDestinations.length - 1];
             journey.currentDestination = Math.max(journey.currentDestination, maxCompleted + 1);
-            if (journey.currentDestination > 58) journey.currentDestination = 58;
+            if (journey.currentDestination > 89) journey.currentDestination = 89;
         }
         journey._migrated = true;
         saveJourney(journey);
@@ -894,9 +894,9 @@
         var current = journey.currentDestination || 1;
 
         /* Update header */
-        var pctComplete = Math.round((completedSet.size / 58) * 100);
+        var pctComplete = Math.round((completedSet.size / 89) * 100);
         document.getElementById('smProgress').textContent =
-            completedSet.size + '/58 destinos \u00b7 ' + pctComplete + '% completo';
+            completedSet.size + '/89 destinos \u00b7 ' + pctComplete + '% completo';
         document.getElementById('smProgressBar').style.width = pctComplete + '%';
 
         /* Bridge progress (riddle quest) */

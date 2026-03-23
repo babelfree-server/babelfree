@@ -11,6 +11,7 @@
       "char_candelaria"
     ]
   },
+  "preArrival": [],
   "arrival": {
     "type": "skit",
     "label": "Llegada",
@@ -34,11 +35,6 @@
         "text": "Mi español ya no imita. Crea. Ya no repite. Significa. Esta es la voz del futuro."
       }
     ]
-  },
-  "departure": {
-    "closingQuestion": "La cima se ilumina. Candelaria pronuncia una frase que nunca antes existió. Yaguará sonríe.",
-    "yaguaraLine": "La fluidez no es velocidad. La precisión no es rigidez. La espontaneidad no es descuido. La autonomía no es soledad. Tu voz es ahora la síntesis de todo lo que has vivido en este idioma. Úsala.",
-    "button": "Continuar el viaje"
   },
   "games": [
     {
@@ -601,6 +597,48 @@
         "maestría",
         "competencia"
       ]
+    },
+    {
+      "type": "autoevaluacion",
+      "label": "Evaluación DELE C1",
+      "dele_level": "C1",
+      "invisible": true,
+      "sections": [
+        {
+          "skill": "comprensión lectora",
+          "weight": 0.25
+        },
+        {
+          "skill": "comprensión auditiva",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión escrita",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión oral",
+          "weight": 0.25
+        }
+      ],
+      "passingCriteria": {
+        "minScore": 0.6,
+        "minPerSection": 0.5
+      }
     }
-  ]
+  ],
+  "ecosystemGames": [],
+  "departure": {
+    "closingQuestion": "La cima se ilumina. Candelaria pronuncia una frase que nunca antes existió. Yaguará sonríe.",
+    "yaguaraLine": "La fluidez no es velocidad. La precisión no es rigidez. La espontaneidad no es descuido. La autonomía no es soledad. Tu voz es ahora la síntesis de todo lo que has vivido en este idioma. Úsala.",
+    "button": "Continuar el viaje"
+  },
+  "characterMeta": {},
+  "characterLines": {},
+  "_expansionStats": {
+    "coreTemplates": 10,
+    "ecosystemVariants": 0,
+    "totalExpandedGames": 10,
+    "generatedAt": "2026-03-23T22:31:08.239Z"
+  }
 }

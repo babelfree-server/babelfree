@@ -11,6 +11,7 @@
       "char_candelaria"
     ]
   },
+  "preArrival": [],
   "arrival": {
     "type": "skit",
     "label": "Llegada",
@@ -34,11 +35,6 @@
         "text": "Tú no necesitas maleta. Pero yo sí. Voy a llevar ropa, mi pasaporte y un mapa."
       }
     ]
-  },
-  "departure": {
-    "closingQuestion": "La maleta está lista. Candelaria cierra la puerta de su casa.",
-    "yaguaraLine": "Prepararse es elegir. Cada cosa que llevas dice algo sobre el camino que esperas. Cada cosa que dejas dice algo sobre el lugar que dejas atrás.",
-    "button": "Continuar el viaje"
   },
   "games": [
     {
@@ -595,6 +591,48 @@
         "elegir",
         "camino"
       ]
+    },
+    {
+      "type": "autoevaluacion",
+      "label": "Evaluación DELE A2",
+      "dele_level": "A2",
+      "invisible": true,
+      "sections": [
+        {
+          "skill": "comprensión lectora",
+          "weight": 0.25
+        },
+        {
+          "skill": "comprensión auditiva",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión escrita",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión oral",
+          "weight": 0.25
+        }
+      ],
+      "passingCriteria": {
+        "minScore": 0.6,
+        "minPerSection": 0.5
+      }
     }
-  ]
+  ],
+  "ecosystemGames": [],
+  "departure": {
+    "closingQuestion": "La maleta está lista. Candelaria cierra la puerta de su casa.",
+    "yaguaraLine": "Prepararse es elegir. Cada cosa que llevas dice algo sobre el camino que esperas. Cada cosa que dejas dice algo sobre el lugar que dejas atrás.",
+    "button": "Continuar el viaje"
+  },
+  "characterMeta": {},
+  "characterLines": {},
+  "_expansionStats": {
+    "coreTemplates": 10,
+    "ecosystemVariants": 0,
+    "totalExpandedGames": 10,
+    "generatedAt": "2026-03-23T22:31:07.766Z"
+  }
 }

@@ -13,6 +13,7 @@
       "char_ceiba"
     ]
   },
+  "preArrival": [],
   "arrival": {
     "type": "skit",
     "label": "Llegada",
@@ -36,11 +37,6 @@
         "text": "¿Qué llevo? ¿Qué dejo? No quiero olvidar nada."
       }
     ]
-  },
-  "departure": {
-    "closingQuestion": "Yaguará mira el bosque una última vez. Cada árbol tiene nombre. Cada río tiene voz.",
-    "yaguaraLine": "No es un adiós. Es una promesa. Voy a recordar cada nombre. Y voy a volver.",
-    "button": "Continuar el viaje"
   },
   "games": [
     {
@@ -602,6 +598,48 @@
         "viaje",
         "crear"
       ]
+    },
+    {
+      "type": "autoevaluacion",
+      "label": "Evaluación DELE A1",
+      "dele_level": "A1",
+      "invisible": true,
+      "sections": [
+        {
+          "skill": "comprensión lectora",
+          "weight": 0.25
+        },
+        {
+          "skill": "comprensión auditiva",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión escrita",
+          "weight": 0.25
+        },
+        {
+          "skill": "expresión oral",
+          "weight": 0.25
+        }
+      ],
+      "passingCriteria": {
+        "minScore": 0.6,
+        "minPerSection": 0.5
+      }
     }
-  ]
+  ],
+  "ecosystemGames": [],
+  "departure": {
+    "closingQuestion": "Yaguará mira el bosque una última vez. Cada árbol tiene nombre. Cada río tiene voz.",
+    "yaguaraLine": "No es un adiós. Es una promesa. Voy a recordar cada nombre. Y voy a volver.",
+    "button": "Continuar el viaje"
+  },
+  "characterMeta": {},
+  "characterLines": {},
+  "_expansionStats": {
+    "coreTemplates": 10,
+    "ecosystemVariants": 0,
+    "totalExpandedGames": 10,
+    "generatedAt": "2026-03-23T22:31:07.638Z"
+  }
 }
