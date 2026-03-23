@@ -1645,6 +1645,10 @@
                 case 'cartografo': g = this.normalizeCartografo(g); break;
                 case 'skit': g = this.normalizeSkit(g); break;
                 case 'despertar': g = this.normalizeDespertar(g); break;
+                case 'lectura': g.type = 'listening'; g = this.normalizeListening(g); break;
+                case 'reading': g.type = 'listening'; g = this.normalizeListening(g); break;
+                case 'matching': g.type = 'pair'; g = this.normalizePairs(g); break;
+                case 'sorting': g.type = 'category'; g = this.normalizeCategory(g); break;
             }
 
             /* Tag ontology target on any game type (for tracking, not logic) */
