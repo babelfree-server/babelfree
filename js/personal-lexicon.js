@@ -51,7 +51,8 @@
   var ECOSYSTEMS = ['bosque', 'costa', 'desierto', 'islas', 'llanos', 'nevada', 'selva', 'sierra'];
 
   // Fibonacci intervals for spiral return (in destinations)
-  var FIBONACCI = [1, 1, 2, 3, 5, 8, 13, 21];
+  // Starting at 8: deeper imprint at A1, richer spiral at C2
+  var FIBONACCI = [1, 2, 3, 5, 8, 13, 21, 34];
 
   // ─── Storage helpers ─────────────────────────────────────────────
 

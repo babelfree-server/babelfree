@@ -563,7 +563,7 @@
             <p>We use CEFR levels as a guiding framework, not a rigid constraint. If a grammatical structure has already been introduced and practiced, it can reappear at any subsequent level. We call this the <strong>dependency chain</strong> philosophy &mdash; any structure is permissible once its prerequisites have been established.</p>
 
             <h3>Fibonacci spiral progression</h3>
-            <p>Vocabulary returns across levels with increasing depth: 5 contexts at A1, 8 at A2, 13 at B1, 21 at B2, 34 at C1, and 55 at C2. This spiral ensures that no word is ever truly &ldquo;finished&rdquo; &mdash; each encounter deepens understanding.</p>
+            <p>Vocabulary returns across levels with increasing depth: 8 contexts at A1, 13 at A2, 21 at B1, 34 at B2, 55 at C1, and 89 at C2. This spiral ensures that no word is ever truly &ldquo;finished&rdquo; &mdash; each encounter deepens understanding.</p>
 
             <div class="stats-bar">
                 <div class="stat-item">
@@ -613,7 +613,7 @@
             <p>Usamos los niveles del MCER como marco de referencia, no como restricci&oacute;n r&iacute;gida. Si una estructura gramatical ya fue introducida y practicada, puede reaparecer en cualquier nivel posterior. Llamamos a esto la filosof&iacute;a de <strong>cadena de dependencias</strong>: cualquier estructura es v&aacute;lida una vez que sus prerrequisitos han sido establecidos.</p>
 
             <h3>Progresi&oacute;n en espiral de Fibonacci</h3>
-            <p>El vocabulario reaparece a lo largo de los niveles con profundidad creciente: 5 contextos en A1, 8 en A2, 13 en B1, 21 en B2, 34 en C1 y 55 en C2. Esta espiral asegura que ninguna palabra est&eacute; realmente &laquo;terminada&raquo; &mdash; cada encuentro profundiza la comprensi&oacute;n.</p>
+            <p>El vocabulario reaparece a lo largo de los niveles con profundidad creciente: 8 contextos en A1, 13 en A2, 21 en B1, 34 en B2, 55 en C1 y 89 en C2. Esta espiral asegura que ninguna palabra est&eacute; realmente &laquo;terminada&raquo; &mdash; cada encuentro profundiza la comprensi&oacute;n.</p>
 
             <div class="stats-bar">
                 <div class="stat-item">

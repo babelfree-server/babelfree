@@ -282,7 +282,8 @@
 
   // ── Fibonacci Spiral Scheduler ───────────────────────────────────
 
-  var FIBONACCI = [1, 1, 2, 3, 5, 8, 13, 21];
+  // Starting at 8: deeper imprint at A1, richer spiral at C2
+  var FIBONACCI = [1, 2, 3, 5, 8, 13, 21, 34];
 
   /**
    * Given a template's spiral return config, generates spiral instances
