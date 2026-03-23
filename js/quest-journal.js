@@ -4,7 +4,7 @@
  * Renders the bridge progress, rana visibility, and chronological
  * journal entries from the Busqueda riddle treasure hunt.
  *
- * Used by cuaderno.html.  Depends on riddle-quest.js (Busqueda).
+ * Used by /cuaderno.  Depends on riddle-quest.js (Busqueda).
  * Storage: localStorage key 'yaguara_busqueda'
  */
 (function () {

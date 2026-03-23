@@ -62,7 +62,7 @@
 </head>
 <body>
     <nav class="profile-nav">
-        <a href="storymap.html">← Volver al mapa</a>
+        <a href="/storymap">← Volver al mapa</a>
         <a href="#" id="logoutLink">Cerrar sesión</a>
     </nav>
 
@@ -206,7 +206,7 @@
     <script>
     (function() {
         const session = JSON.parse(localStorage.getItem('jaguarUserSession') || 'null');
-        if (!session || !session.serverToken) { window.location.href = 'login.html'; return; }
+        if (!session || !session.serverToken) { window.location.href = '/login'; return; }
 
         const u = session.user || session;
 
@@ -320,7 +320,7 @@
         function doLogout() {
             JaguarAPI.logout().catch(() => {});
             localStorage.removeItem('jaguarUserSession');
-            window.location.href = 'login.html';
+            window.location.href = '/login';
         }
         document.getElementById('logoutBtn').addEventListener('click', doLogout);
         document.getElementById('logoutLink').addEventListener('click', function(e) { e.preventDefault(); doLogout(); });
@@ -357,7 +357,7 @@
                 if (res.success) {
                     localStorage.removeItem('jaguarUserSession');
                     alert('Cuenta eliminada. Hasta pronto.');
-                    window.location.href = 'login.html';
+                    window.location.href = '/login';
                 } else {
                     alert(res.error || 'Error');
                 }

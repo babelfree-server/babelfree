@@ -38,7 +38,7 @@
     function _handleSessionExpired() {
         localStorage.removeItem(SESSION_KEY);
         localStorage.removeItem('colombianStudentData');
-        window.location.href = '/login.html';
+        window.location.href = '/login';
     }
 
     function _request(method, path, body, opts401) {
@@ -185,7 +185,7 @@
             localStorage.removeItem('colombianStudentData');
             localStorage.removeItem(SYNC_QUEUE_KEY);
             return p.then(function() {
-                window.location.href = '/login.html';
+                window.location.href = '/login';
             });
         },
 

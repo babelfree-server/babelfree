@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu camino — La Aventura de Yaguará</title>
-    <script>window.location.replace('storymap.html');</script>
+    <script>window.location.replace('/storymap');</script>
     <meta name="description" content="Tu viaje de lengua y memoria con Yaguará por los mundos vivos de Colombia">
 
     <!-- PWA Support -->
@@ -830,7 +830,7 @@
             constructor() {
                 // Auth guard: redirect to login if no server token
                 if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
-                    window.location.href = 'login.html';
+                    window.location.href = '/login';
                     return;
                 }
 
@@ -849,7 +849,7 @@
                     // Validate session in background
                     JaguarAPI.validateSession().then(function(result) {
                         if (!result || !result.user) {
-                            window.location.href = 'login.html';
+                            window.location.href = '/login';
                         }
                     });
                 } else {
@@ -963,7 +963,7 @@
                         '<button class="play-btn">' + btnText + '</button>';
 
                     card.querySelector('.play-btn').addEventListener('click', function() {
-                        window.location.href = 'ecosystem.html?eco=' + key;
+                        window.location.href = '/ecosystem?eco=' + key;
                     });
 
                     grid.appendChild(card);
@@ -1099,7 +1099,7 @@
         var dashboardSystem;
 
         function navigateToEcosystem(ecoKey) {
-            window.location.href = 'ecosystem.html?eco=' + ecoKey;
+            window.location.href = '/ecosystem?eco=' + ecoKey;
         }
 
         function showDetailedStats(type) {
@@ -1218,7 +1218,7 @@
             } else {
                 localStorage.removeItem('jaguarUserSession');
                 localStorage.removeItem('colombianStudentData');
-                window.location.href = 'login.html';
+                window.location.href = '/login';
             }
         }
 

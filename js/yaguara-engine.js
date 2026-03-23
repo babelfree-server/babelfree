@@ -9418,7 +9418,7 @@
                     '<span>Mi progreso</span>' +
                 '</a>' +
                 '<div class="yg-res-divider"></div>' +
-                '<a href="cuaderno.html" class="yg-res-item">' +
+                '<a href="/cuaderno" class="yg-res-item">' +
                     ICONS.story +
                     '<span>Cuaderno de Candelaria</span>' +
                 '</a>';
@@ -10466,7 +10466,7 @@
                     /* Practice link */
                     var practiceLink = document.createElement('a');
                     practiceLink.className = 'yg-completion-link';
-                    practiceLink.href = 'play.html?mode=practice';
+                    practiceLink.href = '/play?mode=practice';
                     practiceLink.textContent = 'Practicar \u2192';
                     practiceLink.style.display = 'block';
                     practiceLink.style.marginTop = '0.75rem';
@@ -10494,7 +10494,7 @@
                     /* Practice link */
                     var practiceLink2 = document.createElement('a');
                     practiceLink2.className = 'yg-completion-link';
-                    practiceLink2.href = 'play.html?mode=practice';
+                    practiceLink2.href = '/play?mode=practice';
                     practiceLink2.textContent = 'Practicar \u2192';
                     practiceLink2.style.display = 'block';
                     practiceLink2.style.marginTop = '0.75rem';

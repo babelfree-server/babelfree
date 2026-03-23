@@ -192,7 +192,7 @@
 
 <div class="header">
     <div>
-        <a href="qa.html" class="back">&larr; QA Dashboard</a>
+        <a href="/qa" class="back">&larr; QA Dashboard</a>
         <h1>Analytics — El Viaje del Jaguar</h1>
     </div>
     <button class="refresh-btn" id="refreshBtn">Actualizar</button>
@@ -276,7 +276,7 @@
 
     // Auth guard
     if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
-        window.location.href = 'login.html';
+        window.location.href = '/login';
         return;
     }
 

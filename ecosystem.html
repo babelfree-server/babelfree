@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecosistema | El Viaje del Jaguar</title>
-    <script>window.location.replace('storymap.html');</script>
+    <script>window.location.replace('/storymap');</script>
     <link rel="canonical" href="https://babelfree.com/ecosystem">
     <script type="application/ld+json">
     {
@@ -636,7 +636,7 @@
 
     /* Auth guard */
     if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
-        window.location.href = 'login.html';
+        window.location.href = '/login';
         return;
     }
 
@@ -822,7 +822,7 @@
                     window.location.href = A2_LEGACY_ROUTES[ecoKey];
                     return;
                 }
-                window.location.href = 'play.html?eco=' + ecoKey + '&spiral=' + spiralKey;
+                window.location.href = '/play?eco=' + ecoKey + '&spiral=' + spiralKey;
             });
         })(s.key, isUnlocked);
 

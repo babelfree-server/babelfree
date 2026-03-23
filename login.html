@@ -2220,7 +2220,7 @@
 
                 // Redirect to story map
                 setTimeout(() => {
-                    window.location.href = 'storymap.html';
+                    window.location.href = '/storymap';
                 }, 2000);
             }
 
@@ -2422,7 +2422,7 @@
                         })
                         .catch(() => this.showError('Error de conexión'));
                     // Clean URL
-                    window.history.replaceState({}, '', '/login.html');
+                    window.history.replaceState({}, '', '/login');
                     return;
                 }
 
@@ -2434,7 +2434,7 @@
                     document.getElementById('signupLinkContainer').style.display = 'none';
                     document.getElementById('resetForm').style.display = '';
                     document.getElementById('resetPassword').focus();
-                    window.history.replaceState({}, '', '/login.html');
+                    window.history.replaceState({}, '', '/login');
                 }
             }
 
@@ -2461,14 +2461,14 @@
                         JaguarAPI.validateSession().then(result => {
                             if (result && result.user) {
                                 this.showSuccess(this.t('session.active-redirecting'));
-                                setTimeout(() => { window.location.href = 'storymap.html'; }, 1500);
+                                setTimeout(() => { window.location.href = '/storymap'; }, 1500);
                             } else {
                                 // Server rejected or unreachable — fallback to local timestamp
                                 const loginTime = new Date(userData.loginTime);
                                 const daysDiff = (Date.now() - loginTime.getTime()) / (1000 * 60 * 60 * 24);
                                 if (daysDiff < 30) {
                                     this.showSuccess(this.t('session.active-redirecting'));
-                                    setTimeout(() => { window.location.href = 'storymap.html'; }, 1500);
+                                    setTimeout(() => { window.location.href = '/storymap'; }, 1500);
                                 } else {
                                     localStorage.removeItem('jaguarUserSession');
                                 }

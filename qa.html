@@ -561,7 +561,7 @@ function renderGameExpanded(g,destNum,idx){
     html+=dups.map(d=>`<div class="dup-warn">Duplicate: answer "${d.answer}" found in options at same position</div>`).join('');
   }
 
-  html+=`<a class="play-btn" href="/play.html?dest=${destNum}" target="_blank">Play dest${destNum}</a>`;
+  html+=`<a class="play-btn" href="//play?dest=${destNum}" target="_blank">Play dest${destNum}</a>`;
   return html;
 }
 

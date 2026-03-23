@@ -206,13 +206,13 @@
         /* Build nextUrl — propagate eco param for B1+ */
         if (destNum < TOTAL_DESTINATIONS) {
             var nextDest = destNum + 1;
-            config.nextUrl = 'play.html?dest=' + nextDest;
+            config.nextUrl = '/play?dest=' + nextDest;
             if (eco && nextDest >= FIRST_DEST_B1) {
                 config.nextUrl += '&eco=' + eco;
             }
         } else {
             /* dest58 — final destination */
-            config.nextUrl = 'storymap.html';
+            config.nextUrl = '/storymap';
         }
 
         return config;
@@ -236,7 +236,7 @@
         /* Back link → story map */
         var backBtn = document.querySelector('.yg-back-btn');
         if (backBtn) {
-            backBtn.href = 'storymap.html';
+            backBtn.href = '/storymap';
             backBtn.textContent = '\u2190 Mapa';
         }
     }
@@ -307,7 +307,7 @@
                     world: world,
                     speechRate: CEFR_SPEECH[cefr] || 0.5,
                     storageKey: 'yaguara_' + branch.id + '_progress',
-                    backUrl: 'storymap.html',
+                    backUrl: '/storymap',
                     departure: branch.departure || {},
                     characters: characters,
                     characterLines: branch.characterLines || {},
@@ -432,7 +432,7 @@
                         ecosystem: eco || null,
                         speechRate: CEFR_SPEECH[cefr] || 0.5,
                         storageKey: 'yaguara_dest' + destNum + '_progress',
-                        backUrl: 'storymap.html',
+                        backUrl: '/storymap',
                         departure: departure,
                         characters: characters,
                         characterLines: data.characterLines || {},
@@ -464,7 +464,7 @@
         if (card) {
             card.innerHTML = '<div style="text-align:center;padding:3rem 1.5rem;">' +
                 '<p style="font-size:1.2rem;color:var(--sand-muted);margin-bottom:1.5rem;">' + msg + '</p>' +
-                '<a href="storymap.html" style="color:var(--ochre);text-decoration:underline;">Volver al mapa</a>' +
+                '<a href="/storymap" style="color:var(--ochre);text-decoration:underline;">Volver al mapa</a>' +
                 '</div>';
         }
     }

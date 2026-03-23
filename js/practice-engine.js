@@ -719,7 +719,7 @@
         if (stats.completedDestinations === 0) {
             html += '<div class="yg-practice-empty">';
             html += '<p>Completa tu primer destino para desbloquear la práctica.</p>';
-            html += '<a href="play.html?dest=1" class="yg-practice-start-link">Comenzar destino 1 →</a>';
+            html += '<a href="/play?dest=1" class="yg-practice-start-link">Comenzar destino 1 →</a>';
             html += '</div>';
         }
 

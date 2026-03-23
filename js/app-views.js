@@ -35,7 +35,7 @@
 
     window.showProfileView = function() {
         var session = getSession();
-        if (!session) { window.location.href = 'login.html'; return; }
+        if (!session) { window.location.href = '/login'; return; }
         var u = session.user || session;
         var name = u.display_name || session.displayName || 'Usuario';
         var initial = name.charAt(0).toUpperCase();
@@ -217,7 +217,7 @@
     window._pvLogout = function() {
         JaguarAPI.logout().catch(function() {});
         localStorage.removeItem('jaguarUserSession');
-        window.location.href = 'login.html';
+        window.location.href = '/login';
     };
 
     window._pvExport = async function() {
@@ -241,7 +241,7 @@
             if (res.success) {
                 localStorage.removeItem('jaguarUserSession');
                 alert('Cuenta eliminada.');
-                window.location.href = 'login.html';
+                window.location.href = '/login';
             } else { alert(res.error || 'Error'); }
         } catch(e) { alert('Error de conexión'); }
     };

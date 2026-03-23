@@ -583,9 +583,9 @@
             <div class="sm-header-progress" id="smProgress">Cargando...</div>
         </div>
         <div class="sm-header-actions">
-            <a href="cuaderno.html" class="sm-btn-free sm-btn-cuaderno" id="smCuadernoBtn" title="El cuaderno de Candelaria">&#128214;</a>
-            <a href="play.html?mode=practice" class="sm-btn-free">Práctica</a>
-            <a href="juegos.html" class="sm-btn-free">Juego libre</a>
+            <a href="/cuaderno" class="sm-btn-free sm-btn-cuaderno" id="smCuadernoBtn" title="El cuaderno de Candelaria">&#128214;</a>
+            <a href="/play?mode=practice" class="sm-btn-free">Práctica</a>
+            <a href="/juegos" class="sm-btn-free">Juego libre</a>
             <a href="#" onclick="showProfileView();return false" class="sm-btn-free" title="Mi perfil">&#9881;</a>
         </div>
     </header>
@@ -648,7 +648,7 @@
 <script>
     // Auth guard
     if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
-        window.location.href = 'login.html';
+        window.location.href = '/login';
     }
 </script>
 <script src="ontology/ontology-api.js"></script>
@@ -962,7 +962,7 @@
             }
 
             if (isCurrent) {
-                html += '<a href="play.html?dest=' + d.dest +
+                html += '<a href="/play?dest=' + d.dest +
                     (journey.ecosystemChoice && d.dest >= 19 ? '&eco=' + journey.ecosystemChoice : '') +
                     '" class="sm-continue">Continuar</a>';
             }
@@ -978,7 +978,7 @@
             destEls[j].addEventListener('click', function() {
                 var dest = this.getAttribute('data-dest');
                 var eco = journey.ecosystemChoice && parseInt(dest) >= 19 ? '&eco=' + journey.ecosystemChoice : '';
-                navigateSmooth('play.html?dest=' + dest + eco);
+                navigateSmooth('/play?dest=' + dest + eco);
             });
         }
 
