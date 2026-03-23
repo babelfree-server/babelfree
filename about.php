@@ -9,14 +9,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://babelfree.com/about">
     <meta property="og:title" content="About Babelfree — Methodology, Mission & Team">
-    <meta property="og:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 58 destinations, 5,100 hours, 11.8M-word dictionary in 94 languages.">
+    <meta property="og:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 5,100 hours, 11.8M-word dictionary in 94 languages.">
     <meta property="og:site_name" content="Babel Free">
     <meta property="og:image" content="https://babelfree.com/assets/og-babel.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Babelfree — Methodology, Mission & Team">
-    <meta name="twitter:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 58 destinations, 5,100 hours, 11.8M-word dictionary.">
+    <meta name="twitter:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 5,100 hours, 11.8M-word dictionary.">
     <meta name="twitter:image" content="https://babelfree.com/assets/og-babel.png">
     <meta name="theme-color" content="#F4A5A5">
     <link rel="icon" type="image/png" href="/assets/tower-logo.png">
@@ -860,7 +860,7 @@
             <p>El Viaje del Jaguar is designed to work both as a self-study course and as a classroom resource.</p>
             <ul>
                 <li><strong>CEFR-aligned curriculum</strong> &mdash; Every activity, vocabulary item, and grammatical structure is tagged with a precise CEFR level, making it easy to integrate into existing syllabi.</li>
-                <li><strong>Structured learning paths</strong> &mdash; 58 destinations organized into six CEFR levels provide a clear progression from absolute beginner (A1) to mastery (C2).</li>
+                <li><strong>Structured learning paths</strong> &mdash; 89 destinations organized into six CEFR levels provide a clear progression from absolute beginner (A1) to mastery (C2).</li>
                 <li><strong>Progress tracking</strong> &mdash; The personal lexicon system tracks each student&rsquo;s vocabulary mastery across all six levels, showing which words have been encountered, practiced, and acquired.</li>
                 <li><strong>Multiple input modes</strong> &mdash; Activities progress from multiple-choice to drag-and-drop to free typing to voice input, accommodating different learning styles and classroom setups.</li>
                 <li><strong>Cultural depth</strong> &mdash; Colombian literature, ecology, and geography provide authentic cultural content that meets curriculum requirements for cultural competency.</li>
@@ -874,7 +874,7 @@
             <p>El Viaje del Jaguar est&aacute; dise&ntilde;ado para funcionar tanto como curso de autoestudio como recurso para el aula.</p>
             <ul>
                 <li><strong>Curr&iacute;culo alineado al MCER</strong> &mdash; Cada actividad, elemento de vocabulario y estructura gramatical est&aacute; etiquetado con un nivel MCER preciso, facilitando la integraci&oacute;n en programas existentes.</li>
-                <li><strong>Rutas de aprendizaje estructuradas</strong> &mdash; 58 destinos organizados en seis niveles MCER proporcionan una progresi&oacute;n clara desde principiante absoluto (A1) hasta dominio (C2).</li>
+                <li><strong>Rutas de aprendizaje estructuradas</strong> &mdash; 89 destinos organizados en seis niveles MCER proporcionan una progresi&oacute;n clara desde principiante absoluto (A1) hasta dominio (C2).</li>
                 <li><strong>Seguimiento del progreso</strong> &mdash; El sistema de l&eacute;xico personal rastrea el dominio de vocabulario de cada estudiante en los seis niveles, mostrando qu&eacute; palabras han sido encontradas, practicadas y adquiridas.</li>
                 <li><strong>M&uacute;ltiples modos de entrada</strong> &mdash; Las actividades progresan desde selecci&oacute;n m&uacute;ltiple a arrastrar y soltar, escritura libre e entrada de voz, acomodando diferentes estilos de aprendizaje.</li>
                 <li><strong>Profundidad cultural</strong> &mdash; La literatura, ecolog&iacute;a y geograf&iacute;a colombianas proporcionan contenido cultural aut&eacute;ntico que cumple con los requisitos curriculares de competencia cultural.</li>
