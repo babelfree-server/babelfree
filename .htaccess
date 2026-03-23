@@ -33,6 +33,12 @@ ErrorDocument 404 /404.html
     RewriteRule ^privacy/?$ privacy.php [L]
     RewriteRule ^terms/?$ terms.php [L]
 
+    # Blog posts (PHP)
+    RewriteRule ^blog/([a-z0-9-]+)/?$ blog/$1.php [L]
+
+    # Admin pages (PHP)
+    RewriteRule ^analytics-admin/?$ analytics-admin.php [L]
+
     # Dictionary: word pages → PHP
     RewriteRule ^dictionary/([a-z]{2}(-[a-z]{2,3})?)/(.+)$ dictionary-word.php [L]
     RewriteRule ^dictionary/?$ dictionary.html [L]
@@ -109,15 +115,22 @@ ErrorDocument 404 /404.html
     RewriteCond %{DOCUMENT_ROOT}/es-$1.html -f
     RewriteRule ^el-viaje-del-jaguar/([a-z]{2,3}(-[a-z]{2,3})?)/?$ es-$1.html [L]
 
-    # Redirect .html URLs to clean URLs (301)
+    # Redirect .html and .php URLs to clean URLs (301)
     RewriteCond %{THE_REQUEST} \s/([^.?]+)\.html[\s?] [NC]
     RewriteRule ^ /%1 [R=301,L]
+    RewriteCond %{THE_REQUEST} \s/([^.?]+)\.php[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
 
-    # Clean URLs: /page → page.html (if file exists)
+    # Clean URLs: /page → page.html or page.php (if file exists)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}.html -f
     RewriteRule ^(.+)$ $1.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+)$ $1.php [L]
 </IfModule>
 
 # Enable compression
