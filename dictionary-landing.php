@@ -49,10 +49,12 @@ $stmt = $pdo->prepare(
 $stmt->execute([$landingLang]);
 $popularWords = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Fetch one definition per word (small set, fast)
+// Fetch one definition per word — try native lang first, then English fallback
 if (!empty($popularWords)) {
     $ids = array_column($popularWords, 'id');
     $placeholders = implode(',', array_fill(0, count($ids), '?'));
+
+    // Try definitions in native language first
     $stmt = $pdo->prepare(
         "SELECT word_id, definition FROM dict_definitions
          WHERE word_id IN ($placeholders) AND lang_code = ?
@@ -63,6 +65,22 @@ if (!empty($popularWords)) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $defs[$row['word_id']] = $row['definition'];
     }
+
+    // For words missing native defs, try English (Kaikki stores most defs in English)
+    $missingIds = array_diff($ids, array_keys($defs));
+    if (!empty($missingIds) && $landingLang !== 'en') {
+        $ph2 = implode(',', array_fill(0, count($missingIds), '?'));
+        $stmt2 = $pdo->prepare(
+            "SELECT word_id, definition FROM dict_definitions
+             WHERE word_id IN ($ph2) AND lang_code = 'en'
+             GROUP BY word_id"
+        );
+        $stmt2->execute(array_values($missingIds));
+        while ($row = $stmt2->fetch(PDO::FETCH_ASSOC)) {
+            $defs[$row['word_id']] = $row['definition'];
+        }
+    }
+
     foreach ($popularWords as &$pw) {
         $pw['definition'] = $defs[$pw['id']] ?? '';
     }
