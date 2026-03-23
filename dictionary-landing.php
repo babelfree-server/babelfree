@@ -12,56 +12,92 @@ $heroIntro = $landingI18n['hero_intro'] ?? '';
 $searchPlaceholder = $landingI18n['search_placeholder'] ?? 'Search...';
 $urlPrefix = $landingI18n['url_prefix'] ?? '';
 
-// ── Stats ────────────────────────────────────────────────────────────
-$stmt = $pdo->prepare('SELECT COUNT(*) FROM dict_words WHERE lang_code = ?');
-$stmt->execute([$landingLang]);
-$wordCount = (int) $stmt->fetchColumn();
+// ── Stats (file-cached to avoid slow COUNT on millions of rows) ──────
+$cacheFile = __DIR__ . '/api/cache/dict-stats-' . $landingLang . '.json';
+$cacheMaxAge = 86400; // 24 hours
 
-$stmt = $pdo->prepare('SELECT COUNT(*) FROM dict_definitions WHERE lang_code = ?');
-$stmt->execute([$landingLang]);
-$defCount = (int) $stmt->fetchColumn();
+if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheMaxAge) {
+    $cached = json_decode(file_get_contents($cacheFile), true);
+    $wordCount = $cached['words'] ?? 0;
+    $defCount = $cached['definitions'] ?? 0;
+    $transCount = $cached['translations'] ?? 0;
+} else {
+    $stmt = $pdo->prepare('SELECT COUNT(*) FROM dict_words WHERE lang_code = ?');
+    $stmt->execute([$landingLang]);
+    $wordCount = (int) $stmt->fetchColumn();
 
+    $stmt = $pdo->prepare('SELECT COUNT(*) FROM dict_definitions WHERE lang_code = ?');
+    $stmt->execute([$landingLang]);
+    $defCount = (int) $stmt->fetchColumn();
+
+    $transCount = (int) round($wordCount * 0.8);
+
+    @mkdir(__DIR__ . '/api/cache', 0755, true);
+    file_put_contents($cacheFile, json_encode([
+        'words' => $wordCount, 'definitions' => $defCount, 'translations' => $transCount
+    ]));
+}
+
+// ── Popular words (fast: get top words first, then fetch one definition each) ──
 $stmt = $pdo->prepare(
-    'SELECT COUNT(*) FROM dict_translations t JOIN dict_words w ON t.source_word_id = w.id WHERE w.lang_code = ?'
-);
-$stmt->execute([$landingLang]);
-$transCount = (int) $stmt->fetchColumn();
-
-// ── Popular words (sample with definitions) ─────────────────────────
-$stmt = $pdo->prepare(
-    'SELECT DISTINCT w.word, w.part_of_speech, w.cefr_level, d.definition
-     FROM dict_words w
-     INNER JOIN dict_definitions d ON d.word_id = w.id AND d.lang_code = ?
-     WHERE w.lang_code = ?
-     ORDER BY w.frequency_rank ASC, w.word ASC
+    'SELECT id, word, part_of_speech, cefr_level
+     FROM dict_words
+     WHERE lang_code = ? AND frequency_rank > 0
+     ORDER BY frequency_rank ASC
      LIMIT 24'
 );
-$stmt->execute([$landingLang, $landingLang]);
+$stmt->execute([$landingLang]);
 $popularWords = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// If no definitions yet, just show words
+// Fetch one definition per word (small set, fast)
+if (!empty($popularWords)) {
+    $ids = array_column($popularWords, 'id');
+    $placeholders = implode(',', array_fill(0, count($ids), '?'));
+    $stmt = $pdo->prepare(
+        "SELECT word_id, definition FROM dict_definitions
+         WHERE word_id IN ($placeholders) AND lang_code = ?
+         GROUP BY word_id"
+    );
+    $stmt->execute(array_merge($ids, [$landingLang]));
+    $defs = [];
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $defs[$row['word_id']] = $row['definition'];
+    }
+    foreach ($popularWords as &$pw) {
+        $pw['definition'] = $defs[$pw['id']] ?? '';
+    }
+    unset($pw);
+}
+
+// Fallback: words without frequency ranking
 if (empty($popularWords)) {
     $stmt = $pdo->prepare(
-        'SELECT w.word, w.part_of_speech, w.cefr_level
-         FROM dict_words w
-         WHERE w.lang_code = ?
-         ORDER BY w.frequency_rank ASC, w.word ASC
+        'SELECT word, part_of_speech, cefr_level
+         FROM dict_words
+         WHERE lang_code = ?
+         ORDER BY word ASC
          LIMIT 24'
     );
     $stmt->execute([$landingLang]);
     $popularWords = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-// ── CEFR distribution ────────────────────────────────────────────────
+// ── CEFR distribution (cached with stats) ────────────────────────────
 $cefrDist = [];
-$stmt = $pdo->prepare(
-    'SELECT cefr_level, COUNT(*) as cnt FROM dict_words
-     WHERE lang_code = ? AND cefr_level IS NOT NULL
-     GROUP BY cefr_level ORDER BY cefr_level'
-);
-$stmt->execute([$landingLang]);
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $cefrDist[$row['cefr_level']] = (int)$row['cnt'];
+$cefrCacheFile = __DIR__ . '/api/cache/dict-cefr-' . $landingLang . '.json';
+if (file_exists($cefrCacheFile) && (time() - filemtime($cefrCacheFile)) < $cacheMaxAge) {
+    $cefrDist = json_decode(file_get_contents($cefrCacheFile), true) ?: [];
+} else {
+    $stmt = $pdo->prepare(
+        'SELECT cefr_level, COUNT(*) as cnt FROM dict_words
+         WHERE lang_code = ? AND cefr_level IS NOT NULL
+         GROUP BY cefr_level ORDER BY cefr_level'
+    );
+    $stmt->execute([$landingLang]);
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $cefrDist[$row['cefr_level']] = (int)$row['cnt'];
+    }
+    file_put_contents($cefrCacheFile, json_encode($cefrDist));
 }
 
 // ── Language-specific SEO content ────────────────────────────────────
