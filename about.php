@@ -82,6 +82,55 @@
             {"@type": "ListItem", "position": 1, "name": "Babel Free", "item": "https://babelfree.com/"},
             {"@type": "ListItem", "position": 2, "name": "About", "item": "https://babelfree.com/about"}
           ]
+        },
+        {
+          "@type": "Person",
+          "name": "Rafael Pombo",
+          "birthDate": "1833-11-07",
+          "deathDate": "1912-05-05",
+          "nationality": "Colombian",
+          "jobTitle": "Poet",
+          "description": "Colombia's most beloved children's poet, author of Rinrín Renacuajo and La pobre viejecita. His works form the A1 literary foundation of El Viaje del Jaguar.",
+          "sameAs": "https://es.wikipedia.org/wiki/Rafael_Pombo"
+        },
+        {
+          "@type": "Person",
+          "name": "José Eustasio Rivera",
+          "birthDate": "1888-02-19",
+          "deathDate": "1928-12-01",
+          "nationality": "Colombian",
+          "jobTitle": "Novelist",
+          "description": "Author of La Vorágine, the great novel of the Colombian Amazon. His prose introduces students to Colombia's natural landscapes at A1-B2 levels.",
+          "sameAs": "https://es.wikipedia.org/wiki/Jos%C3%A9_Eustasio_Rivera"
+        },
+        {
+          "@type": "Person",
+          "name": "Tomás Carrasquilla",
+          "birthDate": "1858-01-17",
+          "deathDate": "1940-12-19",
+          "nationality": "Colombian",
+          "jobTitle": "Novelist",
+          "description": "Master of Antioqueño costumbrismo. His regional voice and cultural portraits guide students through A1-B1 levels of El Viaje del Jaguar.",
+          "sameAs": "https://es.wikipedia.org/wiki/Tom%C3%A1s_Carrasquilla"
+        },
+        {
+          "@type": "Person",
+          "name": "Luis Fernando Macías",
+          "nationality": "Colombian",
+          "jobTitle": "Author and literary scholar",
+          "description": "Contemporary Colombian author whose works — from Casa de bifloras to Las muertes de Jung — provide the philosophical spine of El Viaje del Jaguar from B1 through C2.",
+          "knowsAbout": ["Colombian literature", "Philosophy of language", "Literary pedagogy"]
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "CEFR A1-C2 Spanish Proficiency",
+          "description": "El Viaje del Jaguar prepares students for DELE certification (Instituto Cervantes) across all six CEFR levels through silent evaluation embedded in gameplay.",
+          "credentialCategory": "Language Proficiency",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Common European Framework of Reference for Languages (CEFR)",
+            "url": "https://www.coe.int/en/web/common-european-framework-reference-languages"
+          }
         }
       ]
     }
