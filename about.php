@@ -124,7 +124,7 @@
         {
           "@type": "EducationalOccupationalCredential",
           "name": "CEFR A1-C2 Spanish Proficiency",
-          "description": "El Viaje del Jaguar prepares students for DELE certification (Instituto Cervantes) across all six CEFR levels through silent evaluation embedded in gameplay.",
+          "description": "El Viaje del Jaguar prepares students for DELE certification (Instituto Cervantes) across all six CEFR levels through continuous assessment integrated into the learning experience.",
           "credentialCategory": "Language Proficiency",
           "recognizedBy": {
             "@type": "Organization",
