@@ -43,15 +43,17 @@ Disallow: /api/
 Disallow: /ontology/
 Disallow: /generator/
 
-# Block app/internal/game pages
+# Block internal/auth pages (not the game itself)
 Disallow: /login
 Disallow: /dashboard
-Disallow: /play
-Disallow: /ecosystem
-Disallow: /storymap
 Disallow: /content/
 Disallow: /elviajedeljaguar-preview
 Disallow: /*-exam
+
+# Allow game pages for indexing
+Allow: /elviajedeljaguar
+Allow: /storymap
+Allow: /play
 
 # Sitemaps
 Sitemap: https://babelfree.com/sitemap.xml
