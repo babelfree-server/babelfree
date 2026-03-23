@@ -17,8 +17,8 @@
     /* ==========================================================
        CONSTANTS
     ========================================================== */
-    var TOTAL_DESTINATIONS = 58;
-    var FIRST_DEST_B1 = 19;
+    var TOTAL_DESTINATIONS = 89;
+    var FIRST_DEST_B1 = 22;
 
     var WORLD_META = {
         mundoDeAbajo:  { name: 'Mundo de Abajo',  subtitle: 'Nombrar el mundo',  bodyClass: 'yg-mundo-de-abajo'  },
@@ -249,7 +249,7 @@
                 config.nextUrl += '&eco=' + eco;
             }
         } else {
-            /* dest58 — final destination */
+            /* dest89 — final destination */
             config.nextUrl = '/storymap';
         }
 

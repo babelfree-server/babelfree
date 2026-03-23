@@ -1,52 +1,50 @@
 {
   "meta": {
     "destination": "dest23",
-    "title": "La costa y la paciencia",
+    "title": "Las historias que escucho",
     "cefr": "B1",
     "world": "mundoDelMedio",
-    "campbellStage": "Allies — the four guides are gathered",
-    "rulingArcanum": "XIV — La Templanza",
+    "campbellStage": "Tests — Gathering Stories Is the Quest",
     "characters": [
       "char_yaguara",
-      "char_candelaria",
-      "char_tortuga_marina"
+      "char_candelaria"
     ],
-    "closingQuestion": "¿Cuánto tiempo necesita una historia para ser verdadera?",
+    "closingQuestion": "¿Qué historia te contaron?",
     "grammarTargets": [
-      "present perfect (he visto, ha dicho, hemos aprendido)",
-      "passive basic (fue destruido, se construyó)",
-      "temporal markers with perfect (ya, todavía no, nunca, alguna vez)",
-      "sustained narrative with perfect tense"
+      "indirect speech basic: dice que, dijo que, contó que",
+      "opinion expressions: creo que, pienso que, me parece que",
+      "reported speech in past",
+      "expressing agreement and disagreement"
     ],
     "coreVocabulary": [
-      "he visto",
-      "ha dicho",
-      "hemos aprendido",
-      "fue destruido",
-      "se construyó",
-      "paciencia",
-      "aliado",
-      "guía",
-      "ya",
-      "todavía no",
-      "nunca",
-      "alguna vez",
-      "tiempo",
-      "esperar"
+      "decir",
+      "contar",
+      "preguntar",
+      "responder",
+      "creer",
+      "pensar",
+      "parecer",
+      "opinión",
+      "historia",
+      "verdad",
+      "mentira",
+      "según",
+      "dice que",
+      "dijo que"
     ],
     "narrativeVocabulary": [
-      "Tortuga Marina",
-      "costa",
-      "coral",
-      "marea",
-      "oleaje",
-      "Colibrí",
-      "Cóndor",
-      "Delfín",
-      "Tortuga",
-      "aliado",
-      "guía",
-      "reunión"
+      "Yaguará",
+      "Candelaria",
+      "pescador",
+      "abuela",
+      "anciano",
+      "mercado",
+      "río",
+      "historia",
+      "memoria",
+      "comunidad",
+      "Don Próspero",
+      "promesa"
     ]
   },
   "ecosystemVocabulary": {
@@ -68,15 +66,14 @@
         "raíz",
         "musgo",
         "helecho",
-        "tierra",
-        "semilla"
+        "tierra"
       ],
       "place": [
         "bosque",
         "río",
-        "selva",
         "cueva",
-        "camino"
+        "camino",
+        "claro"
       ],
       "sound": [
         "lluvia",
@@ -111,14 +108,14 @@
         "palmera",
         "concha",
         "coral",
-        "marea"
+        "brisa"
       ],
       "place": [
         "playa",
         "mar",
         "puerto",
         "muelle",
-        "bahía"
+        "isla"
       ],
       "sound": [
         "ola",
@@ -391,566 +388,318 @@
   "templates": [
     {
       "_template": {
-        "id": "T01_skit_tortuga_arrives",
+        "id": "T01_skit_fisherman_story",
         "layer": "narrative",
         "order": 1,
-        "description": "Tortuga Marina arrives at the coast. She is ancient, patient. She has seen the world change many times.",
-        "spiralReturn": [
-          5,
-          10
-        ],
-        "inputModes": [
-          "choice"
-        ],
-        "ecosystemSlots": [
-          "animal",
-          "nature",
-          "place"
-        ]
-      },
-      "type": "skit",
-      "label": "Escena",
-      "title": "La que ha visto todo",
-      "instruction": "Escucha y responde.",
-      "grammar": [
-        "present perfect"
-      ],
-      "beats": [
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "La {pool:eco.place} se extiende hasta el {pool:eco.place}. Las olas llegan y se van. Yaguará y Candelaria caminan por la arena cuando algo emerge del {pool:eco.nature}."
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Es una {pool:eco.animal} enorme. Su caparazón está cubierto de algas y barnacles. Es más vieja que cualquier {pool:eco.nature}."
-        },
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "He viajado por todos los océanos. He visto imperios nacer y morir. He esperado siglos enteros.",
-          "target": [
-            "He viajado",
-            "He visto",
-            "He esperado"
-          ]
-        },
-        {
-          "speaker": "candelaria",
-          "name": "Candelaria",
-          "animation": "fade-in",
-          "text": "¿Quién eres?",
-          "target": [
-            "eres"
-          ]
-        },
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "Soy la cuarta guía. He esperado mucho tiempo para conocerlas. Ahora los cuatro aliados están reunidos.",
-          "target": [
-            "He esperado",
-            "están reunidos"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "{pool:eco.animal} nos enseñó velocidad. {pool:eco.animal} nos mostró perspectiva. {pool:eco.animal} nos dio juego. ¿Y tú?",
-          "target": [
-            "enseñó",
-            "mostró",
-            "dio"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "Yo enseño paciencia.",
-              "Yo enseño fuerza.",
-              "Yo enseño miedo."
-            ],
-            "answer": "Yo enseño paciencia."
-          }
-        },
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "Yo enseño paciencia. Lo más difícil de aprender. He visto que las cosas importantes toman tiempo.",
-          "target": [
-            "enseño",
-            "He visto"
-          ]
-        }
-      ]
-    },
-    {
-      "_template": {
-        "id": "T02_skit_four_guides",
-        "layer": "narrative",
-        "order": 2,
-        "description": "The four guides are gathered for the first time. Each speaks of what they have taught.",
-        "spiralReturn": [
-          4,
-          8
-        ],
-        "inputModes": [
-          "choice"
-        ],
-        "ecosystemSlots": [
-          "animal",
-          "nature",
-          "place"
-        ]
-      },
-      "type": "skit",
-      "label": "Escena",
-      "title": "Los cuatro aliados",
-      "instruction": "Escucha la reunión de los guías.",
-      "grammar": [
-        "present perfect",
-        "passive basic"
-      ],
-      "beats": [
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "En la {pool:eco.place}, bajo la {pool:eco.nature}, los cuatro guías se reúnen por primera vez. {pool:eco.animal}, {pool:eco.animal}, {pool:eco.animal} y {pool:eco.animal} Marina forman un círculo."
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Yaguará ha caminado mucho para llegar aquí. Ha cruzado {pool:eco.place}, {pool:eco.place} y {pool:eco.place}. Ahora los aliados han sido reunidos."
-        },
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "He esperado este momento. Las corrientes me han traído aquí. El círculo ha sido completado.",
-          "target": [
-            "He esperado",
-            "han traído",
-            "ha sido completado"
-          ]
-        },
-        {
-          "speaker": "candelaria",
-          "name": "Candelaria",
-          "animation": "fade-in",
-          "text": "Hemos aprendido mucho en este viaje. Pero todavía no hemos terminado.",
-          "target": [
-            "Hemos aprendido",
-            "hemos terminado"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "glow",
-          "text": "Cada guía nos ha dado algo diferente. La velocidad fue enseñada por {pool:eco.animal}. La visión fue dada por {pool:eco.animal}.",
-          "target": [
-            "ha dado",
-            "fue enseñada",
-            "fue dada"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "Y la alegría fue compartida por Delfín.",
-              "Y la tristeza fue traída por Delfín.",
-              "Y el miedo fue dado por Delfín."
-            ],
-            "answer": "Y la alegría fue compartida por Delfín."
-          }
-        },
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "Y yo les doy lo último: la paciencia. Sin paciencia, todo lo demás se pierde.",
-          "target": [
-            "doy",
-            "se pierde"
-          ]
-        }
-      ]
-    },
-    {
-      "_template": {
-        "id": "T03_skit_patience_lesson",
-        "layer": "narrative",
-        "order": 3,
-        "description": "Tortuga Marina teaches patience through the coral reef. Things built slowly are stronger.",
-        "spiralReturn": [
-          5,
-          9
-        ],
-        "inputModes": [
-          "choice"
-        ],
-        "ecosystemSlots": [
-          "nature",
-          "place"
-        ]
-      },
-      "type": "skit",
-      "label": "Escena",
-      "title": "La lección del coral",
-      "instruction": "Escucha la historia del {pool:eco.nature}.",
-      "grammar": [
-        "present perfect",
-        "passive basic"
-      ],
-      "beats": [
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "¿Ven ese {pool:eco.place}? Ha sido construido durante miles de años. Cada pequeño {pool:eco.nature} ha puesto su parte."
-        },
-        {
-          "speaker": "candelaria",
-          "name": "Candelaria",
-          "animation": "fade-in",
-          "text": "Pero parte del {pool:eco.place} fue destruido. ¿Qué pasó?",
-          "target": [
-            "fue destruido"
-          ]
-        },
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "El {pool:eco.nature} se calentó. Muchos corales fueron dañados. Pero los que quedaron han seguido creciendo. Lentamente.",
-          "target": [
-            "fueron dañados",
-            "han seguido"
-          ]
-        },
-        {
-          "speaker": "yaguara",
-          "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Entonces las cosas que se construyen con paciencia pueden sobrevivir.",
-          "target": [
-            "se construyen"
-          ]
-        },
-        {
-          "speaker": "tortuga_marina",
-          "name": "Tortuga Marina",
-          "animation": "glow",
-          "text": "Exacto. Lo que ha sido construido con paciencia no se destruye fácilmente. Las palabras son iguales. Lo que has aprendido bien, no lo olvidas.",
-          "target": [
-            "ha sido construido",
-            "se destruye",
-            "has aprendido"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "La paciencia es la base de todo.",
-              "La velocidad es más importante.",
-              "No importa cómo aprendas."
-            ],
-            "answer": "La paciencia es la base de todo."
-          }
-        }
-      ]
-    },
-    {
-      "_template": {
-        "id": "T04_conversation_perfect_tense",
-        "layer": "narrative",
-        "order": 4,
-        "description": "Conversation using present perfect. What have you seen? What have you learned? 5 turns.",
-        "spiralReturn": [
-          4,
-          8
-        ],
-        "inputModes": [
-          "choice",
-          "typing"
-        ],
-        "ecosystemSlots": [
-          "place"
-        ]
-      },
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta correcta.",
-      "tip": {
-        "title": "Pretérito perfecto",
-        "lines": [
-          "he + participio: he visto, he dicho",
-          "has + participio: has aprendido, has hecho",
-          "ha + participio: ha llegado, ha sido",
-          "hemos + participio: hemos caminado"
-        ]
-      },
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Tortuga Marina",
-              "text": "¿Alguna vez has visto el océano?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "No, nunca he visto el océano hasta ahora.",
-            "No, nunca vi el océano.",
-            "No, no veo el océano."
-          ],
-          "answer": "No, nunca he visto el océano hasta ahora."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Candelaria",
-              "text": "¿Qué hemos aprendido en este viaje?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Hemos aprendido a escuchar, a nombrar y a tener paciencia.",
-            "Aprendimos a escuchar.",
-            "Aprendemos a escuchar."
-          ],
-          "answer": "Hemos aprendido a escuchar, a nombrar y a tener paciencia."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "¿Ya has encontrado tu {pool:eco.place}?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Todavía no lo he encontrado, pero sigo buscando.",
-            "Todavía no lo encontré.",
-            "Ya lo encuentro."
-          ],
-          "answer": "Todavía no lo he encontrado, pero sigo buscando."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Tortuga Marina",
-              "text": "¿Qué ha cambiado desde que empezaste?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Todo ha cambiado. He crecido y he visto cosas nuevas.",
-            "Todo cambió ayer.",
-            "Todo cambia siempre."
-          ],
-          "answer": "Todo ha cambiado. He crecido y he visto cosas nuevas."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Candelaria",
-              "text": "Los cuatro guías han sido reunidos. ¿Qué sigue?"
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Ahora tenemos que seguir adelante juntos.",
-            "Ahora hemos que ir.",
-            "Ahora podemos ido."
-          ],
-          "answer": "Ahora tenemos que seguir adelante juntos."
-        }
-      ]
-    },
-    {
-      "_template": {
-        "id": "T05_conversation_passive",
-        "layer": "narrative",
-        "order": 5,
-        "description": "Conversation about things built and destroyed. Passive constructions in context.",
-        "spiralReturn": [
-          5,
-          9
-        ],
-        "inputModes": [
-          "choice",
-          "typing"
-        ],
-        "ecosystemSlots": [
-          "place"
-        ]
-      },
-      "type": "conversation",
-      "label": "Conversación",
-      "instruction": "Elige la respuesta correcta.",
-      "tip": {
-        "title": "Voz pasiva básica",
-        "lines": [
-          "fue + participio: fue construido, fue destruido",
-          "se + verbo: se construyó, se perdió",
-          "ha sido + participio: ha sido olvidado"
-        ]
-      },
-      "turns": [
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Tortuga Marina",
-              "text": "Este {pool:eco.place} fue construido durante miles de años."
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "¿Y parte fue destruido por el calor?",
-            "¿Y parte destruyó el calor?",
-            "¿Y parte se construyó el calor?"
-          ],
-          "answer": "¿Y parte fue destruido por el calor?"
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Candelaria",
-              "text": "Mi abuela dice que muchas historias se perdieron."
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Pero algunas fueron guardadas por los ancianos.",
-            "Pero algunas guardaron los ancianos.",
-            "Pero algunas se guardaban."
-          ],
-          "answer": "Pero algunas fueron guardadas por los ancianos."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Yaguará",
-              "text": "El {pool:eco.place} se abrió cuando cruzamos el umbral."
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Sí, y nuevas rutas han sido descubiertas desde entonces.",
-            "Sí, y nuevas rutas descubrieron.",
-            "Sí, y nuevas rutas se descubren ayer."
-          ],
-          "answer": "Sí, y nuevas rutas han sido descubiertas desde entonces."
-        },
-        {
-          "dialogue": [
-            {
-              "speaker": "A",
-              "name": "Tortuga Marina",
-              "text": "La paciencia no se aprende en un día."
-            },
-            {
-              "speaker": "B",
-              "name": "Tú",
-              "text": "???"
-            }
-          ],
-          "options": [
-            "Es verdad. Se necesita mucho tiempo.",
-            "Es verdad. Necesitó mucho tiempo.",
-            "Es verdad. Ha necesitando tiempo."
-          ],
-          "answer": "Es verdad. Se necesita mucho tiempo."
-        }
-      ]
-    },
-    {
-      "_template": {
-        "id": "T06_eco_lejano_coast",
-        "layer": "narrative",
-        "order": 6,
-        "description": "Distant echo from the coast. Sounds of the ocean carry memories of what has been lost and preserved.",
+        "description": "An old fisherman tells his story. The first voice Candelaria and Yaguará collect. Indirect speech naturally.",
         "spiralReturn": [
           3,
+          6
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "place"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "El pescador del río",
+      "instruction": "Escucha la historia del pescador.",
+      "grammar": [
+        "indirect speech",
+        "opinion expressions"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Junto al {pool:eco.place}, un hombre viejo reparaba su red. Candelaria se acercó."
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Buenos días, señor. ¿Usted vive aquí desde hace mucho tiempo?",
+          "target": [
+            "vive",
+            "desde hace"
+          ]
+        },
+        {
+          "speaker": "narrator",
+          "name": "Pescador",
+          "animation": "fade-in",
+          "text": "Toda mi vida. Mi padre vivía aquí. Mi abuelo también. Antes el {pool:eco.place} estaba lleno de {pool:eco.animal}. Ahora casi no hay.",
+          "target": [
+            "vivía",
+            "estaba",
+            "hay"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "¿Qué pasó?",
+          "target": [
+            "pasó"
+          ]
+        },
+        {
+          "speaker": "narrator",
+          "name": "Pescador",
+          "animation": "fade-in",
+          "text": "Llegó un hombre. Dijo que quería traer progreso. Yo le dije que no necesitábamos carreteras. Pero él no escuchó.",
+          "target": [
+            "Dijo",
+            "quería",
+            "dije",
+            "necesitábamos",
+            "escuchó"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "¿Qué piensas tú, Candelaria?",
+          "target": [
+            "piensas"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Creo que el pescador tiene razón.",
+              "Pienso que Don Próspero tiene razón.",
+              "No sé qué pensar."
+            ],
+            "answer": "Creo que el pescador tiene razón."
+          }
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Creo que el pescador tiene razón. Me parece que Don Próspero no escucha a la gente.",
+          "target": [
+            "Creo que",
+            "Me parece que"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T02_skit_grandmother_memory",
+        "layer": "narrative",
+        "order": 2,
+        "description": "An old woman shares memories of what the village used to be. Rich imperfect usage. Candelaria recognizes her own grandmother's words.",
+        "spiralReturn": [
+          4,
           7
         ],
         "inputModes": [
           "choice"
         ],
         "ecosystemSlots": [
-          "animal",
-          "nature",
+          "place",
           "sound"
         ]
       },
-      "type": "eco_lejano",
-      "label": "Eco lejano",
-      "title": "Voces del mar",
-      "instruction": "Escucha el eco del mar y responde.",
-      "text": "El {pool:eco.animal} nada entre los corales. El sonido del {pool:eco.sound} ha sido parte de esta costa desde siempre. Pero algo ha cambiado. El {pool:eco.nature} ya no es igual.",
-      "question": "¿Qué ha cambiado en la costa?",
-      "answer": "Algo en la naturaleza ya no es igual.",
-      "options": [
-        "Algo en la naturaleza ya no es igual.",
-        "Todo sigue exactamente como antes.",
-        "La costa nunca ha tenido vida."
+      "type": "skit",
+      "label": "Escena",
+      "title": "La abuela del mercado",
+      "instruction": "Escucha la memoria de la abuela.",
+      "grammar": [
+        "indirect speech",
+        "imperfect for memory"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "En el mercado del {pool:eco.place}, una abuela vendía frutas. Cuando vio a Candelaria, sonrió."
+        },
+        {
+          "speaker": "narrator",
+          "name": "Abuela",
+          "animation": "glow",
+          "text": "Tú me recuerdas a alguien. ¿De dónde vienes, niña?",
+          "target": [
+            "recuerdas",
+            "vienes"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Vengo del {pool:eco.place}, abuela. Mi abuela me contó que este {pool:eco.place} era hermoso.",
+          "target": [
+            "Vengo",
+            "contó",
+            "era"
+          ]
+        },
+        {
+          "speaker": "narrator",
+          "name": "Abuela",
+          "animation": "glow",
+          "text": "Tu abuela tenía razón. Antes aquí había {pool:eco.sound} todos los domingos. La gente bailaba en la plaza. Los niños nadaban en el {pool:eco.place}. Era otro mundo.",
+          "target": [
+            "tenía",
+            "había",
+            "bailaba",
+            "nadaban",
+            "Era"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "¿Y qué cambió?",
+          "target": [
+            "cambió"
+          ]
+        },
+        {
+          "speaker": "narrator",
+          "name": "Abuela",
+          "animation": "glow",
+          "text": "Llegó un hombre que decía que sabía lo que el {pool:eco.place} necesitaba. Pero yo pienso que él solo sabía lo que él necesitaba.",
+          "target": [
+            "decía",
+            "sabía",
+            "necesitaba",
+            "pienso"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "La abuela piensa que Don Próspero solo pensaba en sí mismo.",
+              "La abuela piensa que Don Próspero ayudó al pueblo.",
+              "La abuela no tiene opinión."
+            ],
+            "answer": "La abuela piensa que Don Próspero solo pensaba en sí mismo."
+          }
+        }
       ]
     },
     {
       "_template": {
-        "id": "T07_listening_perfect_tense",
+        "id": "T03_skit_candelaria_retells",
         "layer": "narrative",
-        "order": 7,
-        "description": "Listen to sentences with present perfect and identify the action completed.",
+        "order": 3,
+        "description": "Candelaria retells the stories she heard. Practicing indirect speech: 'El pescador dijo que...' 'La abuela contó que...'",
         "spiralReturn": [
-          4,
+          5,
+          8
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "sound"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "Candelaria cuenta",
+      "instruction": "Escucha cómo Candelaria cuenta las historias.",
+      "grammar": [
+        "indirect speech",
+        "reporting verbs"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Esa noche, junto a la fogata, Candelaria le contó a Yaguará lo que escuchó."
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "El pescador me dijo que antes el {pool:eco.place} estaba lleno de {pool:eco.animal}. Contó que un hombre llegó y todo cambió.",
+          "target": [
+            "dijo que",
+            "estaba",
+            "Contó que",
+            "llegó",
+            "cambió"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "La abuela del mercado me contó que antes había {pool:eco.sound} los domingos. Dijo que la gente bailaba en la plaza.",
+          "target": [
+            "contó que",
+            "había",
+            "Dijo que",
+            "bailaba"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "¿Y qué piensas tú de todo esto?",
+          "target": [
+            "piensas"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Pienso que estas historias son importantes. Me parece que la gente necesita que alguien escuche.",
+          "target": [
+            "Pienso que",
+            "Me parece que",
+            "necesita"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Las historias guardan la verdad.",
+              "Las historias no importan.",
+              "Mejor no escuchar."
+            ],
+            "answer": "Las historias guardan la verdad."
+          }
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Escuchar es el primer paso. Nombrar es el segundo. Las historias guardan la verdad.",
+          "target": [
+            "Escuchar",
+            "Nombrar",
+            "guardan"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T04_conversation_opinions",
+        "layer": "narrative",
+        "order": 4,
+        "description": "Practice giving opinions about what people said. Creo que, pienso que, me parece que in dialogue.",
+        "spiralReturn": [
+          3,
           8
         ],
         "inputModes": [
@@ -959,71 +708,285 @@
         ],
         "ecosystemSlots": [
           "animal",
-          "place"
+          "place",
+          "sound"
         ]
       },
-      "type": "listening",
-      "label": "Escuchar",
-      "instruction": "Escucha y responde.",
-      "questions": [
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Elige la respuesta correcta.",
+      "tip": {
+        "title": "Expresar opiniones",
+        "lines": [
+          "Creo que... = I believe that...",
+          "Pienso que... = I think that...",
+          "Me parece que... = It seems to me that...",
+          "En mi opinión... = In my opinion..."
+        ]
+      },
+      "turns": [
         {
-          "audio": "{pool:eco.animal} Marina ha viajado por todos los océanos. Ha visto muchas cosas.",
-          "question": "¿Qué ha hecho {pool:eco.animal} Marina?",
-          "answer": "Ha viajado y ha visto muchas cosas.",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "El pescador dijo que antes el {pool:eco.place} tenía muchos {pool:eco.animal}. ¿Qué piensas?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
           "options": [
-            "Ha viajado y ha visto muchas cosas.",
-            "Ha dormido mucho.",
-            "Ha olvidado todo."
-          ]
+            "Creo que el pescador dice la verdad.",
+            "Creo que el pescador miente.",
+            "No tengo opinión."
+          ],
+          "answer": "Creo que el pescador dice la verdad."
         },
         {
-          "audio": "El {pool:eco.place} ha sido construido durante miles de años.",
-          "question": "¿Cuánto tiempo ha tomado construir el {pool:eco.place}?",
-          "answer": "Miles de años.",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "Don Próspero dice que el progreso es bueno. ¿Estás de acuerdo?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
           "options": [
-            "Miles de años.",
-            "Unas semanas.",
-            "Un día."
-          ]
+            "No estoy de acuerdo. Me parece que el progreso no siempre es bueno.",
+            "Sí, estoy de acuerdo.",
+            "No sé."
+          ],
+          "answer": "No estoy de acuerdo. Me parece que el progreso no siempre es bueno."
         },
         {
-          "audio": "Hemos aprendido velocidad, perspectiva, juego y ahora paciencia.",
-          "question": "¿Cuántas cosas han aprendido?",
-          "answer": "Cuatro.",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "La abuela contó que antes había {pool:eco.sound} los domingos. ¿Qué opinas?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
           "options": [
-            "Cuatro.",
-            "Dos.",
-            "Una."
-          ]
+            "Pienso que la comunidad perdió algo importante.",
+            "Pienso que la música no importa.",
+            "No me importa."
+          ],
+          "answer": "Pienso que la comunidad perdió algo importante."
         },
         {
-          "audio": "Candelaria dice que todavía no han terminado el viaje.",
-          "question": "¿Han terminado el viaje?",
-          "answer": "No, todavía no.",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "¿Por qué es importante escuchar estas historias?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
           "options": [
-            "No, todavía no.",
-            "Sí, ya terminaron.",
-            "Nunca van a terminar."
-          ]
+            "Porque las historias guardan la verdad de lo que pasó.",
+            "Porque son divertidas.",
+            "No creo que sean importantes."
+          ],
+          "answer": "Porque las historias guardan la verdad de lo que pasó."
         }
       ]
     },
     {
       "_template": {
-        "id": "T08_listening_passive_context",
+        "id": "T05_conversation_reporting",
         "layer": "narrative",
-        "order": 8,
-        "description": "Listen to passive constructions and identify what happened to each thing.",
+        "order": 5,
+        "description": "Practice reporting what others said. Transforming direct speech to indirect speech in conversation.",
+        "spiralReturn": [
+          4,
+          9
+        ],
+        "inputModes": [
+          "choice",
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "conversation",
+      "label": "Conversación",
+      "instruction": "Cuenta lo que dijeron otros.",
+      "turns": [
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "¿Qué te dijo el pescador?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Me dijo que antes el río estaba lleno de peces.",
+            "Me dijo que antes el río está lleno de peces.",
+            "Me dijo que el río estuvo lleno de peces."
+          ],
+          "answer": "Me dijo que antes el río estaba lleno de peces."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "¿Qué contó la abuela sobre el {pool:eco.place}?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Contó que la gente bailaba en la plaza los domingos.",
+            "Contó que la gente baila en la plaza los domingos.",
+            "Contó que la gente bailó en la plaza."
+          ],
+          "answer": "Contó que la gente bailaba en la plaza los domingos."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Yaguará",
+              "text": "¿Qué dijo Don Próspero sobre la carretera?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Dijo que el pueblo necesitaba una carretera nueva.",
+            "Dijo que el pueblo necesita una carretera nueva.",
+            "Dijo que el pueblo necesitó una carretera nueva."
+          ],
+          "answer": "Dijo que el pueblo necesitaba una carretera nueva."
+        },
+        {
+          "dialogue": [
+            {
+              "speaker": "A",
+              "name": "Candelaria",
+              "text": "¿Qué piensa la abuela de Don Próspero?"
+            },
+            {
+              "speaker": "B",
+              "name": "Tú",
+              "text": "???"
+            }
+          ],
+          "options": [
+            "Piensa que él solo sabía lo que él mismo necesitaba.",
+            "Piensa que él es muy amable.",
+            "Piensa que él tiene razón."
+          ],
+          "answer": "Piensa que él solo sabía lo que él mismo necesitaba."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T06_eco_lejano_stories",
+        "layer": "narrative",
+        "order": 6,
+        "description": "The ecosystem tells its own story. What does the land remember? The biome as narrator.",
         "spiralReturn": [
           5,
           10
         ],
         "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "animal",
+          "nature",
+          "place",
+          "sound"
+        ]
+      },
+      "type": "eco_lejano",
+      "label": "Eco lejano",
+      "title": "La historia del lugar",
+      "instruction": "Escucha lo que el lugar recuerda.",
+      "grammar": [
+        "indirect speech",
+        "imperfect for background"
+      ],
+      "scenes": [
+        {
+          "text": "El {pool:eco.animal} recuerda. Antes aquí había {pool:eco.nature} por todas partes. Los ancianos dicen que era un lugar sagrado.",
+          "question": "¿Qué dicen los ancianos?",
+          "options": [
+            "Dicen que era un lugar sagrado.",
+            "Dicen que era un lugar peligroso.",
+            "Dicen que era un lugar vacío."
+          ],
+          "answer": "Dicen que era un lugar sagrado."
+        },
+        {
+          "text": "Un viejo {pool:eco.animal} le contó a Yaguará que antes no había ruido de máquinas. Solo se escuchaba el {pool:eco.sound}. Eso era suficiente.",
+          "question": "¿Qué contó el animal?",
+          "options": [
+            "Que antes solo se escuchaban sonidos naturales.",
+            "Que siempre hubo máquinas.",
+            "Que no recuerda nada."
+          ],
+          "answer": "Que antes solo se escuchaban sonidos naturales."
+        },
+        {
+          "text": "Candelaria piensa que el {pool:eco.place} todavía guarda historias. Me parece que las historias están en la tierra, esperando.",
+          "question": "¿Qué piensa Candelaria?",
+          "options": [
+            "Que el lugar todavía guarda historias.",
+            "Que no hay más historias.",
+            "Que las historias se perdieron."
+          ],
+          "answer": "Que el lugar todavía guarda historias."
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T07_listening_reported_speech",
+        "layer": "narrative",
+        "order": 7,
+        "description": "Hear people reporting what others said. Identify who said what and what was the opinion.",
+        "spiralReturn": [
+          3,
+          7
+        ],
+        "inputModes": [
           "choice",
           "typing"
         ],
         "ecosystemSlots": [
-          "nature",
           "place"
         ]
       },
@@ -1032,46 +995,143 @@
       "instruction": "Escucha y responde.",
       "questions": [
         {
-          "audio": "El {pool:eco.nature} fue dañado por el calor del {pool:eco.nature}.",
-          "question": "¿Qué le pasó al {pool:eco.nature}?",
-          "answer": "Fue dañado.",
+          "audio": "El pescador me dijo que antes había muchos peces. Contó que un hombre llegó y cambió todo.",
+          "question": "¿Qué dijo el pescador?",
+          "answer": "Que antes había muchos peces y un hombre cambió todo.",
           "options": [
-            "Fue dañado.",
-            "Fue construido.",
-            "Fue encontrado."
+            "Que antes había muchos peces y un hombre cambió todo.",
+            "Que siempre hubo pocos peces.",
+            "Que él quería una carretera."
           ]
         },
         {
-          "audio": "Las historias antiguas se contaron de generación en generación.",
-          "question": "¿Cómo se transmitieron las historias?",
-          "answer": "Se contaron de generación en generación.",
+          "audio": "La abuela contó que la gente bailaba los domingos. Dijo que antes el {pool:eco.place} era más feliz.",
+          "question": "Según la abuela, ¿cómo era el {pool:eco.place} antes?",
+          "answer": "Era más feliz.",
           "options": [
-            "Se contaron de generación en generación.",
-            "Se escribieron en libros.",
-            "Se olvidaron."
+            "Era más feliz.",
+            "Era más triste.",
+            "Era igual."
           ]
         },
         {
-          "audio": "El {pool:eco.place} fue abierto por los viajeros que vinieron antes.",
-          "question": "¿Quién abrió el {pool:eco.place}?",
-          "answer": "Los viajeros que vinieron antes.",
+          "audio": "Candelaria piensa que las historias son importantes. Cree que debemos escuchar a los ancianos.",
+          "question": "¿Qué piensa Candelaria?",
+          "answer": "Que las historias son importantes y debemos escuchar.",
           "options": [
-            "Los viajeros que vinieron antes.",
-            "Nadie.",
-            "Yaguará sola."
+            "Que las historias son importantes y debemos escuchar.",
+            "Que las historias no sirven.",
+            "Que los ancianos exageran."
+          ]
+        },
+        {
+          "audio": "Don Próspero dice que el {pool:eco.place} necesita progreso. Pero me parece que él no escucha a nadie.",
+          "question": "¿Qué opinión tiene el narrador de Don Próspero?",
+          "answer": "Que Don Próspero no escucha a nadie.",
+          "options": [
+            "Que Don Próspero no escucha a nadie.",
+            "Que Don Próspero tiene razón.",
+            "Que Don Próspero es amable."
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T09_flashnote_perfect",
-        "layer": "core",
-        "order": 9,
-        "description": "Quick recognition of present perfect forms. He/has/ha/hemos + participio.",
+        "id": "T08_skit_stories_matter",
+        "layer": "narrative",
+        "order": 8,
+        "description": "Closing scene. Yaguará understands that gathering stories is the quest. Each story is a piece of truth.",
         "spiralReturn": [
           4,
           8
+        ],
+        "inputModes": [
+          "choice"
+        ],
+        "ecosystemSlots": [
+          "place",
+          "sound"
+        ]
+      },
+      "type": "skit",
+      "label": "Escena",
+      "title": "Las historias importan",
+      "instruction": "Escucha la conclusión.",
+      "grammar": [
+        "indirect speech synthesis",
+        "opinion expressions"
+      ],
+      "beats": [
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "fade-in",
+          "text": "Yaguará y Candelaria caminaron por el {pool:eco.place} durante dos días. Escucharon muchas historias."
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "El pescador dijo que el {pool:eco.place} cambió. La abuela contó que la {pool:eco.sound} desapareció. Todos dicen que Don Próspero prometió algo que no cumplió.",
+          "target": [
+            "dijo que",
+            "contó que",
+            "dicen que",
+            "prometió"
+          ]
+        },
+        {
+          "speaker": "candelaria",
+          "name": "Candelaria",
+          "animation": "fade-in",
+          "text": "Creo que las historias son la verdadera riqueza de este {pool:eco.place}. Pienso que si las perdemos, perdemos todo.",
+          "target": [
+            "Creo que",
+            "Pienso que",
+            "perdemos"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Entonces nuestra misión es clara. ¿Qué tenemos que hacer, viajero?",
+          "target": [
+            "misión"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Escuchar, recordar y contar las historias.",
+              "Construir más carreteras.",
+              "Irnos del pueblo."
+            ],
+            "answer": "Escuchar, recordar y contar las historias."
+          }
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "glow",
+          "text": "Escuchar. Recordar. Contar. Las historias son el mapa verdadero.",
+          "target": [
+            "Escuchar",
+            "Recordar",
+            "Contar"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T09_flashnote_reporting",
+        "layer": "core",
+        "order": 9,
+        "description": "Quick recognition of reporting verbs: dice que, dijo que, contó que, piensa que.",
+        "spiralReturn": [
+          3,
+          7
         ],
         "inputModes": [
           "choice"
@@ -1083,24 +1143,24 @@
       "type": "flashnote",
       "label": "Palabras",
       "instruction": "Mira. Escucha. Recuerda en {pool:eco.place}.",
-      "note": "he visto = I have seen",
-      "question": "¿Qué significa 'hemos aprendido'?",
-      "answer": "we have learned",
+      "note": "Para contar lo que dijo otra persona usamos: dijo que, contó que, dice que.",
+      "question": "¿Cómo se dice 'He told me that the river changed'?",
+      "answer": "Me dijo que el río cambió.",
       "options": [
-        "we have learned",
-        "we learned",
-        "we are learning"
+        "Me dijo que el río cambió.",
+        "Me dice que el río cambió.",
+        "Me contó que el río cambia."
       ]
     },
     {
       "_template": {
-        "id": "T10_fill_present_perfect",
+        "id": "T10_fill_indirect_speech",
         "layer": "core",
         "order": 10,
-        "description": "Fill in present perfect forms. He/has/ha/hemos + participio.",
+        "description": "Transform direct speech to indirect speech. The core B1 skill of this destination.",
         "spiralReturn": [
-          3,
-          7
+          2,
+          5
         ],
         "inputModes": [
           "choice",
@@ -1109,81 +1169,161 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "animal",
-          "place"
+          "place",
+          "sound"
         ]
       },
       "type": "fill",
       "label": "Completar",
       "grammar": [
-        "present perfect"
+        "indirect speech"
       ],
-      "instruction": "Completa con el pretérito perfecto.",
+      "instruction": "Transforma a discurso indirecto.",
       "tip": {
-        "title": "Pretérito perfecto",
+        "title": "Discurso indirecto",
         "lines": [
-          "yo he + participio",
-          "tú has + participio",
-          "él/ella ha + participio",
-          "nosotros hemos + participio",
-          "Participios: -ado (hablar→hablado), -ido (aprender→aprendido)"
-        ],
-        "gloss": "he visto, has dicho, ha ido, hemos aprendido"
+          "'Quiero ayudar.' → Dijo que quería ayudar.",
+          "'No hay peces.' → Dijo que no había peces.",
+          "'El pueblo necesita una carretera.' → Contó que el pueblo necesitaba una carretera."
+        ]
       },
       "questions": [
         {
-          "sentence": "{pool:eco.animal} Marina ___ por todos los océanos. (viajar)",
-          "answer": "ha viajado",
+          "sentence": "El pescador: 'El {pool:eco.place} está vacío.' → El pescador dijo que el {pool:eco.place} ___ vacío.",
+          "answer": "estaba",
           "options": [
-            "ha viajado",
-            "viajó",
-            "viajaba"
+            "estaba",
+            "está",
+            "estuvo"
           ]
         },
         {
-          "sentence": "Yo nunca ___ el {pool:eco.place} antes. (ver)",
-          "answer": "he visto",
+          "sentence": "La abuela: 'Antes había {pool:eco.sound}.' → La abuela contó que antes ___ {pool:eco.sound}.",
+          "answer": "había",
           "options": [
-            "he visto",
-            "vi",
-            "veía"
+            "había",
+            "hay",
+            "hubo"
           ]
         },
         {
-          "sentence": "Nosotros ___ mucho en este viaje. (aprender)",
-          "answer": "hemos aprendido",
+          "sentence": "Don Próspero: 'Quiero traer progreso.' → Dijo que ___ traer progreso.",
+          "answer": "quería",
           "options": [
-            "hemos aprendido",
-            "aprendimos",
-            "aprendíamos"
+            "quería",
+            "quiere",
+            "quiso"
           ]
         },
         {
-          "sentence": "¿Tú ___ alguna vez a un guía? (conocer)",
-          "answer": "has conocido",
+          "sentence": "Candelaria: 'Este {pool:eco.place} es hermoso.' → Dijo que este {pool:eco.place} ___ hermoso.",
+          "answer": "era",
           "options": [
-            "has conocido",
-            "conociste",
-            "conocías"
+            "era",
+            "es",
+            "fue"
           ]
         },
         {
-          "sentence": "Los cuatro aliados ___ reunidos. (ser)",
-          "answer": "han sido",
+          "sentence": "El anciano: 'Los niños nadan en el {pool:eco.place}.' → Contó que los niños ___ en el {pool:eco.place}.",
+          "answer": "nadaban",
           "options": [
-            "han sido",
-            "fueron",
-            "eran"
+            "nadaban",
+            "nadan",
+            "nadaron"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T11_fill_passive",
+        "id": "T11_fill_opinions",
         "layer": "core",
         "order": 11,
-        "description": "Fill in passive constructions. Fue + participio, se + verbo.",
+        "description": "Fill in opinion expressions. Creo que, pienso que, me parece que.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "fill",
+      "label": "Completar",
+      "grammar": [
+        "opinion expressions"
+      ],
+      "instruction": "Completa con la expresión de opinión correcta.",
+      "tip": {
+        "title": "Expresar opiniones",
+        "lines": [
+          "Creo que + opinión = I believe that",
+          "Pienso que + opinión = I think that",
+          "Me parece que + opinión = It seems to me that",
+          "En mi opinión = In my opinion"
+        ]
+      },
+      "questions": [
+        {
+          "sentence": "___ las historias son importantes.",
+          "answer": "Creo que",
+          "options": [
+            "Creo que",
+            "Dijo que",
+            "Aunque"
+          ]
+        },
+        {
+          "sentence": "___ Don Próspero no escucha a la gente.",
+          "answer": "Me parece que",
+          "options": [
+            "Me parece que",
+            "Contó que",
+            "Antes de"
+          ]
+        },
+        {
+          "sentence": "___ debemos escuchar a los ancianos.",
+          "answer": "Pienso que",
+          "options": [
+            "Pienso que",
+            "Dijo que",
+            "Mientras"
+          ]
+        },
+        {
+          "sentence": "___, el {pool:eco.place} perdió algo valioso.",
+          "answer": "En mi opinión",
+          "options": [
+            "En mi opinión",
+            "Según yo dije",
+            "Después de que"
+          ]
+        },
+        {
+          "sentence": "___ la memoria de la comunidad está en peligro.",
+          "answer": "Creo que",
+          "options": [
+            "Creo que",
+            "Contó que",
+            "Porque"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T12_fill_reporting_verbs",
+        "layer": "core",
+        "order": 12,
+        "description": "Choose the correct reporting verb: decir, contar, preguntar, responder.",
         "spiralReturn": [
           4,
           9
@@ -1201,71 +1341,72 @@
       "type": "fill",
       "label": "Completar",
       "grammar": [
-        "passive basic"
+        "reporting verbs"
       ],
-      "instruction": "Completa con la forma pasiva correcta.",
+      "instruction": "Elige el verbo correcto.",
       "tip": {
-        "title": "Voz pasiva",
+        "title": "Verbos para reportar",
         "lines": [
-          "fue + participio: fue destruido, fue construido",
-          "se + verbo: se construyó, se perdió, se encontró"
-        ],
-        "gloss": "El arrecife fue construido. / El arrecife se construyó."
+          "decir = to say / to tell",
+          "contar = to tell (a story)",
+          "preguntar = to ask",
+          "responder = to answer"
+        ]
       },
       "questions": [
         {
-          "sentence": "El {pool:eco.place} ___ durante miles de años. (construir, pasiva)",
-          "answer": "fue construido",
+          "sentence": "El pescador me ___ que el {pool:eco.place} cambió.",
+          "answer": "dijo",
           "options": [
-            "fue construido",
-            "fue destruido",
-            "fue encontrado"
+            "dijo",
+            "preguntó",
+            "respondió"
           ]
         },
         {
-          "sentence": "Muchos corales ___ por el calor. (dañar, pasiva)",
-          "answer": "fueron dañados",
+          "sentence": "La abuela nos ___ una historia larga.",
+          "answer": "contó",
           "options": [
-            "fueron dañados",
-            "fueron construidos",
-            "fueron encontrados"
+            "contó",
+            "preguntó",
+            "respondió"
           ]
         },
         {
-          "sentence": "La historia ___ de generación en generación. (contar, se)",
-          "answer": "se contó",
+          "sentence": "Candelaria le ___ al pescador: '¿Qué pasó?'",
+          "answer": "preguntó",
           "options": [
-            "se contó",
-            "se perdió",
-            "se olvidó"
+            "dijo",
+            "contó",
+            "preguntó"
           ]
         },
         {
-          "sentence": "El {pool:eco.place} ___ por los viajeros. (abrir, pasiva)",
-          "answer": "fue abierto",
+          "sentence": "El pescador ___ que todo cambió cuando llegó Don Próspero.",
+          "answer": "respondió",
           "options": [
-            "fue abierto",
-            "fue cerrado",
-            "fue perdido"
+            "preguntó",
+            "respondió",
+            "contó"
           ]
         },
         {
-          "sentence": "Las palabras antiguas ___ en la memoria. (guardar, se)",
-          "answer": "se guardaron",
+          "sentence": "Don Próspero les ___ a todos que él quería ayudar.",
+          "answer": "dijo",
           "options": [
-            "se guardaron",
-            "se perdieron",
-            "se olvidaron"
+            "dijo",
+            "preguntó",
+            "respondió"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T12_fill_ya_todavia",
+        "id": "T13_fill_agree_disagree",
         "layer": "core",
-        "order": 12,
-        "description": "Temporal markers with present perfect: ya, todavía no, nunca, alguna vez.",
+        "order": 13,
+        "description": "Express agreement and disagreement. Estoy de acuerdo, no estoy de acuerdo, tienes razón.",
         "spiralReturn": [
           5,
           10
@@ -1277,129 +1418,63 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "animal"
+          "place"
         ]
       },
       "type": "fill",
       "label": "Completar",
       "grammar": [
-        "temporal markers with perfect"
+        "agreement and disagreement"
       ],
-      "instruction": "Completa con ya, todavía no, nunca o alguna vez.",
-      "tip": {
-        "title": "Marcadores temporales",
-        "lines": [
-          "ya = already: Ya he terminado.",
-          "todavía no = not yet: Todavía no he comido.",
-          "nunca = never: Nunca he viajado.",
-          "alguna vez = ever: ¿Has viajado alguna vez?"
-        ]
-      },
+      "instruction": "Completa con la expresión de acuerdo o desacuerdo.",
       "questions": [
         {
-          "sentence": "¿___ has visto el océano? (ever)",
-          "answer": "¿Alguna vez",
+          "sentence": "Don Próspero dice que el progreso es necesario. Yo ___ — el progreso no debe destruir.",
+          "answer": "no estoy de acuerdo",
           "options": [
-            "¿Alguna vez",
-            "¿Ya",
-            "¿Todavía no"
+            "no estoy de acuerdo",
+            "estoy de acuerdo",
+            "no sé"
           ]
         },
         {
-          "sentence": "___ he terminado el ejercicio. (already)",
-          "answer": "Ya",
+          "sentence": "La abuela piensa que antes era mejor. ___, el {pool:eco.place} era más feliz.",
+          "answer": "Tiene razón",
           "options": [
-            "Ya",
-            "Todavía no",
-            "Nunca"
+            "Tiene razón",
+            "Está equivocada",
+            "No importa"
           ]
         },
         {
-          "sentence": "___ hemos llegado al final. (not yet)",
-          "answer": "Todavía no",
+          "sentence": "Candelaria cree que debemos escuchar. ___ con ella, escuchar es importante.",
+          "answer": "Estoy de acuerdo",
           "options": [
-            "Ya",
-            "Todavía no",
-            "Nunca"
+            "Estoy de acuerdo",
+            "No estoy de acuerdo",
+            "Me da igual"
           ]
         },
         {
-          "sentence": "___ he visto una {pool:eco.animal} tan grande. (never)",
-          "answer": "Nunca",
+          "sentence": "El pescador dice que Don Próspero mintió. ___ que el pescador tiene razón.",
+          "answer": "Me parece",
           "options": [
-            "Ya",
-            "Todavía no",
-            "Nunca"
-          ]
-        },
-        {
-          "sentence": "Los guías ___ han reunido. (already)",
-          "answer": "ya se",
-          "options": [
-            "ya se",
-            "todavía no se",
-            "nunca se"
+            "Me parece",
+            "Dijo",
+            "Contó"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T13_pair_participles",
-        "layer": "core",
-        "order": 13,
-        "description": "Pair infinitives with their past participles.",
-        "spiralReturn": [
-          3,
-          7
-        ],
-        "inputModes": [
-          "choice",
-          "drag"
-        ],
-        "ecosystemSlots": [
-          "place"
-        ]
-      },
-      "type": "pair",
-      "label": "Emparejar",
-      "instruction": "Une cada verbo con su participio en {pool:eco.place}.",
-      "pairs": [
-        [
-          "ver",
-          "visto"
-        ],
-        [
-          "decir",
-          "dicho"
-        ],
-        [
-          "hacer",
-          "hecho"
-        ],
-        [
-          "escribir",
-          "escrito"
-        ],
-        [
-          "abrir",
-          "abierto"
-        ],
-        [
-          "volver",
-          "vuelto"
-        ]
-      ]
-    },
-    {
-      "_template": {
-        "id": "T14_pair_passive_active",
+        "id": "T14_pair_direct_indirect",
         "layer": "core",
         "order": 14,
-        "description": "Pair active sentences with their passive equivalents.",
+        "description": "Match direct speech with its indirect form. Core skill for reported speech.",
         "spiralReturn": [
-          4,
-          8
+          2,
+          5
         ],
         "inputModes": [
           "choice",
@@ -1411,71 +1486,91 @@
       },
       "type": "pair",
       "label": "Emparejar",
-      "instruction": "Une la forma activa con la pasiva en {pool:eco.place}.",
+      "instruction": "Une el discurso directo con el indirecto en {pool:eco.place}.",
       "pairs": [
         [
-          "Los corales construyeron el arrecife.",
-          "El arrecife fue construido por los corales."
+          "'Quiero ayudar.'",
+          "Dijo que quería ayudar."
         ],
         [
-          "El calor dañó los corales.",
-          "Los corales fueron dañados por el calor."
+          "'El río está vacío.'",
+          "Dijo que el río estaba vacío."
         ],
         [
-          "Los ancianos guardaron las historias.",
-          "Las historias fueron guardadas por los ancianos."
+          "'Antes había música.'",
+          "Contó que antes había música."
         ],
         [
-          "La gente contó la leyenda.",
-          "La leyenda se contó por generaciones."
+          "'No necesitamos carreteras.'",
+          "Dijo que no necesitaban carreteras."
         ],
         [
-          "Los viajeros abrieron el camino.",
-          "El camino fue abierto por los viajeros."
+          "'Los niños nadan aquí.'",
+          "Contó que los niños nadaban ahí."
+        ],
+        [
+          "'Yo vivo aquí.'",
+          "Dijo que él vivía ahí."
         ]
       ]
     },
     {
       "_template": {
-        "id": "T15_builder_perfect",
+        "id": "T15_pair_opinion_expressions",
         "layer": "core",
         "order": 15,
-        "description": "Build a present perfect sentence about the journey so far.",
+        "description": "Match opinion expressions with their English equivalents.",
         "spiralReturn": [
           3,
           7
         ],
         "inputModes": [
-          "drag",
-          "typing"
+          "choice",
+          "drag"
         ],
         "ecosystemSlots": [
           "place"
         ]
       },
-      "type": "builder",
-      "label": "Construir",
-      "instruction": "Ordena las palabras en {pool:eco.place}.",
-      "words": [
-        "he",
-        "Nunca",
-        "una",
-        "tan",
-        "tortuga",
-        "grande",
-        "visto"
-      ],
-      "answer": "Nunca he visto una tortuga tan grande"
+      "type": "pair",
+      "label": "Emparejar",
+      "instruction": "Une cada expresión con su significado en {pool:eco.place}.",
+      "pairs": [
+        [
+          "creo que",
+          "I believe that"
+        ],
+        [
+          "pienso que",
+          "I think that"
+        ],
+        [
+          "me parece que",
+          "it seems to me that"
+        ],
+        [
+          "en mi opinión",
+          "in my opinion"
+        ],
+        [
+          "estoy de acuerdo",
+          "I agree"
+        ],
+        [
+          "no estoy de acuerdo",
+          "I disagree"
+        ]
+      ]
     },
     {
       "_template": {
-        "id": "T16_builder_passive",
+        "id": "T16_builder_indirect",
         "layer": "core",
         "order": 16,
-        "description": "Build a passive sentence about the reef.",
+        "description": "Build an indirect speech sentence from scrambled words.",
         "spiralReturn": [
-          5,
-          9
+          2,
+          5
         ],
         "inputModes": [
           "drag",
@@ -1489,23 +1584,56 @@
       "label": "Construir",
       "instruction": "Ordena las palabras en {pool:eco.place}.",
       "words": [
-        "fue",
         "El",
-        "construido",
-        "arrecife",
-        "miles",
-        "durante",
-        "años",
-        "de"
+        "pescador",
+        "dijo",
+        "que",
+        "el",
+        "río",
+        "estaba",
+        "vacío"
       ],
-      "answer": "El arrecife fue construido durante miles de años"
+      "answer": "El pescador dijo que el río estaba vacío"
     },
     {
       "_template": {
-        "id": "T17_builder_ya_todavia",
+        "id": "T17_builder_opinion",
         "layer": "core",
         "order": 17,
-        "description": "Build a sentence with ya/todavía no.",
+        "description": "Build an opinion sentence.",
+        "spiralReturn": [
+          3,
+          6
+        ],
+        "inputModes": [
+          "drag",
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "builder",
+      "label": "Construir",
+      "instruction": "Ordena las palabras en {pool:eco.place}.",
+      "words": [
+        "Creo",
+        "que",
+        "las",
+        "historias",
+        "son",
+        "la",
+        "verdadera",
+        "riqueza"
+      ],
+      "answer": "Creo que las historias son la verdadera riqueza"
+    },
+    {
+      "_template": {
+        "id": "T18_builder_reporting",
+        "layer": "core",
+        "order": 18,
+        "description": "Build a reported speech sentence with contó que.",
         "spiralReturn": [
           4,
           8
@@ -1522,25 +1650,25 @@
       "label": "Construir",
       "instruction": "Ordena las palabras en {pool:eco.place}.",
       "words": [
-        "no",
-        "Todavía",
-        "terminado",
-        "hemos",
-        "viaje",
-        "el",
-        "pero",
-        "aprendido",
-        "hemos",
-        "mucho"
+        "La",
+        "abuela",
+        "contó",
+        "que",
+        "antes",
+        "la",
+        "gente",
+        "bailaba",
+        "los",
+        "domingos"
       ],
-      "answer": "Todavía no hemos terminado el viaje pero hemos aprendido mucho"
+      "answer": "La abuela contó que antes la gente bailaba los domingos"
     },
     {
       "_template": {
-        "id": "T18_category_perfect_vs_preterite",
+        "id": "T19_category_speech_types",
         "layer": "core",
-        "order": 18,
-        "description": "Sort sentences by tense: present perfect vs simple preterite.",
+        "order": 19,
+        "description": "Sort sentences into direct speech vs indirect speech.",
         "spiralReturn": [
           3,
           7
@@ -1550,49 +1678,58 @@
           "drag"
         ],
         "ecosystemSlots": [
-          "place"
+          "place",
+          "sound"
         ]
       },
       "type": "category",
       "label": "Clasificar",
-      "instruction": "¿Pretérito perfecto o pretérito indefinido? En {pool:eco.place}.",
+      "instruction": "¿Discurso directo o indirecto?",
       "categories": [
-        "Pretérito perfecto",
-        "Pretérito indefinido"
+        "Directo",
+        "Indirecto"
       ],
       "items": [
         {
-          "text": "He visto el océano.",
-          "category": "Pretérito perfecto"
+          "text": "'Quiero ayudar al {pool:eco.place}.'",
+          "category": "Directo"
         },
         {
-          "text": "Vi el océano ayer.",
-          "category": "Pretérito indefinido"
+          "text": "Dijo que quería ayudar al {pool:eco.place}.",
+          "category": "Indirecto"
         },
         {
-          "text": "Hemos aprendido paciencia.",
-          "category": "Pretérito perfecto"
+          "text": "'El {pool:eco.place} está vacío.'",
+          "category": "Directo"
         },
         {
-          "text": "Aprendimos a caminar.",
-          "category": "Pretérito indefinido"
+          "text": "Contó que el {pool:eco.place} estaba vacío.",
+          "category": "Indirecto"
         },
         {
-          "text": "Ha sido un viaje largo.",
-          "category": "Pretérito perfecto"
+          "text": "'Antes había {pool:eco.sound}.'",
+          "category": "Directo"
         },
         {
-          "text": "Fue un día difícil.",
-          "category": "Pretérito indefinido"
+          "text": "Me dijo que antes había {pool:eco.sound}.",
+          "category": "Indirecto"
+        },
+        {
+          "text": "'No necesitamos carreteras.'",
+          "category": "Directo"
+        },
+        {
+          "text": "Respondió que no necesitaban carreteras.",
+          "category": "Indirecto"
         }
       ]
     },
     {
       "_template": {
-        "id": "T19_category_active_passive",
+        "id": "T20_category_opinion_vs_fact",
         "layer": "core",
-        "order": 19,
-        "description": "Sort sentences into active voice vs passive voice.",
+        "order": 20,
+        "description": "Sort statements into opinions vs facts. Critical thinking in B1.",
         "spiralReturn": [
           4,
           9
@@ -1602,53 +1739,52 @@
           "drag"
         ],
         "ecosystemSlots": [
-          "animal",
           "place"
         ]
       },
       "type": "category",
       "label": "Clasificar",
-      "instruction": "¿Voz activa o voz pasiva?",
+      "instruction": "¿Es una opinión o un hecho?",
       "categories": [
-        "Activa",
-        "Pasiva"
+        "Opinión",
+        "Hecho"
       ],
       "items": [
         {
-          "text": "{pool:eco.animal} Marina enseña paciencia.",
-          "category": "Activa"
+          "text": "Creo que Don Próspero miente.",
+          "category": "Opinión"
         },
         {
-          "text": "El {pool:eco.place} fue construido.",
-          "category": "Pasiva"
+          "text": "Don Próspero llegó al {pool:eco.place} hace un año.",
+          "category": "Hecho"
         },
         {
-          "text": "Los guías han llegado.",
-          "category": "Activa"
+          "text": "Me parece que las historias son importantes.",
+          "category": "Opinión"
         },
         {
-          "text": "Las historias fueron guardadas.",
-          "category": "Pasiva"
+          "text": "El pescador vive junto al {pool:eco.place}.",
+          "category": "Hecho"
         },
         {
-          "text": "Yaguará ha caminado mucho.",
-          "category": "Activa"
+          "text": "Pienso que el {pool:eco.place} era más hermoso antes.",
+          "category": "Opinión"
         },
         {
-          "text": "El {pool:eco.place} se abrió.",
-          "category": "Pasiva"
+          "text": "La abuela vende frutas en el mercado.",
+          "category": "Hecho"
         }
       ]
     },
     {
       "_template": {
-        "id": "T20_translation_perfect",
+        "id": "T21_translation_indirect",
         "layer": "core",
-        "order": 20,
-        "description": "Translate present perfect and passive sentences.",
+        "order": 21,
+        "description": "Translate indirect speech and opinion structures.",
         "spiralReturn": [
-          3,
-          8
+          2,
+          5
         ],
         "inputModes": [
           "choice",
@@ -1664,107 +1800,107 @@
       "instruction": "Elige la traducción correcta en {pool:eco.place}.",
       "questions": [
         {
-          "prompt": "I have seen the ocean",
-          "answer": "he visto el océano",
+          "prompt": "He said that he wanted to help.",
+          "answer": "Dijo que quería ayudar.",
           "options": [
-            "he visto el océano",
-            "vi el océano",
-            "veo el océano"
+            "Dijo que quería ayudar.",
+            "Dijo que quiere ayudar.",
+            "Dice que quería ayudar."
           ]
         },
         {
-          "prompt": "we have learned patience",
-          "answer": "hemos aprendido paciencia",
+          "prompt": "She told me that there used to be music.",
+          "answer": "Me contó que antes había música.",
           "options": [
-            "hemos aprendido paciencia",
-            "aprendimos paciencia",
-            "aprendemos paciencia"
+            "Me contó que antes había música.",
+            "Me contó que hay música.",
+            "Me cuenta que había música."
           ]
         },
         {
-          "prompt": "it was built slowly",
-          "answer": "fue construido lentamente",
+          "prompt": "I think the stories are important.",
+          "answer": "Creo que las historias son importantes.",
           "options": [
-            "fue construido lentamente",
-            "construyó lentamente",
-            "se construye lentamente"
+            "Creo que las historias son importantes.",
+            "Dijo que las historias son importantes.",
+            "Contó que las historias eran importantes."
           ]
         },
         {
-          "prompt": "have you ever traveled?",
-          "answer": "¿alguna vez has viajado?",
+          "prompt": "It seems to me that he doesn't listen.",
+          "answer": "Me parece que él no escucha.",
           "options": [
-            "¿alguna vez has viajado?",
-            "¿viajaste alguna vez?",
-            "¿viajas alguna vez?"
+            "Me parece que él no escucha.",
+            "Dijo que él no escucha.",
+            "Creo que él escuchó."
           ]
         },
         {
-          "prompt": "the story was told",
-          "answer": "la historia fue contada",
+          "prompt": "The grandmother told us that people used to dance.",
+          "answer": "La abuela nos contó que la gente bailaba.",
           "options": [
-            "la historia fue contada",
-            "la historia contó",
-            "la historia se cuenta"
+            "La abuela nos contó que la gente bailaba.",
+            "La abuela nos contó que la gente baila.",
+            "La abuela dice que la gente bailó."
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T21_dictation_perfect",
-        "layer": "core",
-        "order": 21,
-        "description": "Write a present perfect sentence from dictation.",
-        "spiralReturn": [
-          4,
-          9
-        ],
-        "inputModes": [
-          "typing"
-        ],
-        "ecosystemSlots": [
-          "place"
-        ]
-      },
-      "type": "dictation",
-      "label": "Dictado",
-      "instruction": "Escucha y escribe en {pool:eco.place}.",
-      "audio": "Hemos aprendido mucho, pero todavía no hemos terminado el viaje.",
-      "answer": "Hemos aprendido mucho, pero todavía no hemos terminado el viaje."
-    },
-    {
-      "_template": {
-        "id": "T22_dictation_passive",
+        "id": "T22_dictation_reported",
         "layer": "core",
         "order": 22,
-        "description": "Write a passive sentence from dictation.",
+        "description": "Dictation with indirect speech structures.",
         "spiralReturn": [
-          5,
-          10
+          3,
+          7
         ],
         "inputModes": [
           "typing"
         ],
         "ecosystemSlots": [
-          "place"
+          "animal"
         ]
       },
       "type": "dictation",
       "label": "Dictado",
-      "instruction": "Escucha y escribe en {pool:eco.place}.",
-      "audio": "El arrecife fue construido durante miles de años por pequeños corales.",
-      "answer": "El arrecife fue construido durante miles de años por pequeños corales."
+      "instruction": "Escucha y escribe.",
+      "audio": "El pescador me dijo que antes el río estaba lleno de {pool:eco.animal}.",
+      "answer": "El pescador me dijo que antes el río estaba lleno de peces."
     },
     {
       "_template": {
-        "id": "T23_par_minimo_perfect",
+        "id": "T23_dictation_opinion",
         "layer": "core",
         "order": 23,
-        "description": "Minimal pairs: present perfect vs simple preterite.",
+        "description": "Dictation with opinion expression.",
         "spiralReturn": [
           4,
           8
+        ],
+        "inputModes": [
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "dictation",
+      "label": "Dictado",
+      "instruction": "Escucha y escribe en {pool:eco.place}.",
+      "audio": "Creo que las historias guardan la verdad de lo que pasó.",
+      "answer": "Creo que las historias guardan la verdad de lo que pasó."
+    },
+    {
+      "_template": {
+        "id": "T24_par_minimo_reporting",
+        "layer": "core",
+        "order": 24,
+        "description": "Minimal pairs: dice que vs dijo que, cuenta vs contó. Present vs past reporting.",
+        "spiralReturn": [
+          5,
+          10
         ],
         "inputModes": [
           "choice"
@@ -1778,66 +1914,43 @@
       "instruction": "Escucha y elige la forma correcta en {pool:eco.place}.",
       "pairs": [
         {
-          "wordA": "he visto",
-          "wordB": "vi",
+          "wordA": "dijo",
+          "wordB": "dice",
           "correct": "A",
-          "hint": "Alguna vez ___."
+          "hint": "Ayer me ___ algo."
         },
         {
-          "wordA": "ha dicho",
-          "wordB": "dijo",
+          "wordA": "contó",
+          "wordB": "cuenta",
           "correct": "A",
-          "hint": "Ella ___ muchas cosas en su vida."
+          "hint": "La abuela nos ___ una historia ayer."
         },
         {
-          "wordA": "aprendimos",
-          "wordB": "hemos aprendido",
+          "wordA": "preguntó",
+          "wordB": "pregunta",
           "correct": "B",
-          "hint": "Hasta ahora ___."
+          "hint": "Ahora me ___ qué pienso."
         },
         {
-          "wordA": "fue construido",
-          "wordB": "se construyó",
+          "wordA": "respondió",
+          "wordB": "responde",
           "correct": "A",
-          "hint": "___ por los corales."
+          "hint": "El pescador ___ con tristeza."
+        },
+        {
+          "wordA": "piensa",
+          "wordB": "pensó",
+          "correct": "A",
+          "hint": "Candelaria ___ que es importante."
         }
       ]
     },
     {
       "_template": {
-        "id": "T24_flashnote_passive",
-        "layer": "core",
-        "order": 24,
-        "description": "Quick recognition of passive forms.",
-        "spiralReturn": [
-          5,
-          9
-        ],
-        "inputModes": [
-          "choice"
-        ],
-        "ecosystemSlots": [
-          "place"
-        ]
-      },
-      "type": "flashnote",
-      "label": "Palabras",
-      "instruction": "Mira. Escucha. Recuerda en {pool:eco.place}.",
-      "note": "fue destruido = it was destroyed",
-      "question": "¿Qué significa 'fue construido'?",
-      "answer": "it was built",
-      "options": [
-        "it was built",
-        "it was destroyed",
-        "it builds"
-      ]
-    },
-    {
-      "_template": {
-        "id": "T25_cartografo_coast",
+        "id": "T25_cartografo_stories",
         "layer": "skill",
         "order": 25,
-        "description": "Map the coast. Where is each guide? Where was the reef built? Spatial memory.",
+        "description": "Map where each story was told. The fisherman by the river, the grandmother in the market.",
         "spiralReturn": [
           5,
           10
@@ -1846,52 +1959,60 @@
           "choice"
         ],
         "ecosystemSlots": [
-          "animal"
+          "place"
         ]
       },
       "type": "cartografo",
       "label": "Cartógrafo",
-      "instruction": "Recuerda dónde está cada cosa en la costa.",
-      "audio": "Tortuga Marina llegó desde el océano profundo. El arrecife fue construido cerca de la orilla. Los cuatro guías se reunieron en la playa bajo la luna. El {pool:eco.animal} nada entre los corales.",
+      "instruction": "Recuerda dónde escuchaste cada historia.",
+      "audio": "El pescador contó su historia junto al río. La abuela habló en el mercado. Don Próspero hablaba en la plaza. Candelaria recontó todo junto a la fogata.",
       "replayLimit": 3,
       "gridLabels": [
-        "océano",
-        "arrecife",
-        "orilla",
-        "playa",
-        "luna",
-        "corales",
-        "puerto",
-        "isla",
-        "bahía"
+        "río",
+        "mercado",
+        "plaza",
+        "fogata",
+        "bosque",
+        "camino",
+        "iglesia",
+        "{pool:eco.place}"
       ],
       "questions": [
         {
-          "q": "¿De dónde llegó Tortuga Marina?",
+          "q": "¿Dónde contó su historia el pescador?",
           "options": [
-            "Del océano profundo",
-            "De la playa",
-            "Del puerto"
+            "Junto al río",
+            "En la plaza",
+            "En el mercado"
           ],
-          "answer": "Del océano profundo"
+          "answer": "Junto al río"
         },
         {
-          "q": "¿Dónde se reunieron los guías?",
+          "q": "¿Dónde habló la abuela?",
           "options": [
-            "En la playa bajo la luna",
-            "En el puerto",
-            "En el arrecife"
+            "En el mercado",
+            "Junto al río",
+            "En la fogata"
           ],
-          "answer": "En la playa bajo la luna"
+          "answer": "En el mercado"
+        },
+        {
+          "q": "¿Dónde recontó Candelaria las historias?",
+          "options": [
+            "Junto a la fogata",
+            "En la plaza",
+            "En el río"
+          ],
+          "answer": "Junto a la fogata"
         }
       ]
     },
     {
       "_template": {
-        "id": "T26_ritmo_perfect_words",
+        "id": "T26_ritmo_reporting_words",
         "layer": "skill",
         "order": 26,
-        "description": "Rhythm of key B1 words: paciencia, arrecife, construido, destruido.",
+        "description": "Stress patterns of reporting and opinion words.",
         "spiralReturn": [
           4,
           9
@@ -1905,96 +2026,183 @@
       "instruction": "¿Dónde cae el golpe fuerte?",
       "words": [
         {
-          "word": "paciencia",
+          "word": "opinión",
           "syllables": [
-            "pa",
-            "cien",
-            "cia"
+            "o",
+            "pi",
+            "nión"
+          ],
+          "stressIndex": 2,
+          "pattern": "aguda"
+        },
+        {
+          "word": "historia",
+          "syllables": [
+            "his",
+            "to",
+            "ria"
           ],
           "stressIndex": 1,
           "pattern": "llana"
         },
         {
-          "word": "arrecife",
+          "word": "memoria",
           "syllables": [
-            "a",
-            "rre",
-            "ci",
-            "fe"
+            "me",
+            "mo",
+            "ria"
+          ],
+          "stressIndex": 1,
+          "pattern": "llana"
+        },
+        {
+          "word": "comunidad",
+          "syllables": [
+            "co",
+            "mu",
+            "ni",
+            "dad"
+          ],
+          "stressIndex": 3,
+          "pattern": "aguda"
+        },
+        {
+          "word": "verdadero",
+          "syllables": [
+            "ver",
+            "da",
+            "de",
+            "ro"
           ],
           "stressIndex": 2,
           "pattern": "llana"
-        },
-        {
-          "word": "construido",
-          "syllables": [
-            "cons",
-            "trui",
-            "do"
-          ],
-          "stressIndex": 1,
-          "pattern": "llana"
-        },
-        {
-          "word": "destruido",
-          "syllables": [
-            "des",
-            "trui",
-            "do"
-          ],
-          "stressIndex": 1,
-          "pattern": "llana"
-        },
-        {
-          "word": "océano",
-          "syllables": [
-            "o",
-            "cé",
-            "a",
-            "no"
-          ],
-          "stressIndex": 1,
-          "pattern": "esdrújula"
         }
       ]
     },
     {
       "_template": {
-        "id": "T27_susurro_tortuga",
+        "id": "T27_susurro_stories",
         "layer": "skill",
         "order": 27,
-        "description": "Tortuga Marina whispers wisdom about patience. Remember from the silence.",
+        "description": "The voices of the village fade. Remember the key words from each story.",
         "spiralReturn": [
-          5,
-          10
+          3,
+          8
         ],
         "inputModes": [
           "typing"
         ],
         "ecosystemSlots": [
-          "animal",
-          "sound"
+          "place"
         ]
       },
       "type": "susurro",
       "label": "Susurro",
-      "instruction": "Escucha el {pool:eco.sound} de {pool:eco.animal} Marina...",
-      "audio": "He esperado siglos. La paciencia es la base de todo.",
+      "instruction": "Escucha las voces que se desvanecen en {pool:eco.place}.",
+      "audio": "El río. Los peces. La música. Los domingos. Las historias. La verdad.",
       "keywords": [
-        "esperado",
-        "siglos",
-        "paciencia",
-        "base"
+        "río",
+        "peces",
+        "música",
+        "domingos",
+        "historias",
+        "verdad"
       ],
-      "minMatch": 3,
-      "silenceDuration": 5000
+      "minMatch": 4,
+      "silenceDuration": 6000
     },
     {
       "_template": {
-        "id": "T28_conjugation_perfect",
+        "id": "T28_conjugation_reporting",
         "layer": "skill",
         "order": 28,
-        "description": "Conjugate verbs in present perfect. Regular and irregular participles.",
+        "description": "Conjugate reporting verbs: decir, contar, preguntar, responder in different tenses.",
+        "spiralReturn": [
+          2,
+          5
+        ],
+        "inputModes": [
+          "choice",
+          "drag",
+          "typing",
+          "voice"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "conjugation",
+      "label": "Conjugar",
+      "instruction": "Completa la conjugación en {pool:eco.place}.",
+      "questions": [
+        {
+          "verb": "decir (pretérito)",
+          "subject": "él",
+          "answer": "dijo",
+          "options": [
+            "dijo",
+            "decía",
+            "dice"
+          ]
+        },
+        {
+          "verb": "contar (pretérito)",
+          "subject": "ella",
+          "answer": "contó",
+          "options": [
+            "contó",
+            "contaba",
+            "cuenta"
+          ]
+        },
+        {
+          "verb": "preguntar (pretérito)",
+          "subject": "Candelaria",
+          "answer": "preguntó",
+          "options": [
+            "preguntó",
+            "preguntaba",
+            "pregunta"
+          ]
+        },
+        {
+          "verb": "responder (pretérito)",
+          "subject": "el pescador",
+          "answer": "respondió",
+          "options": [
+            "respondió",
+            "respondía",
+            "responde"
+          ]
+        },
+        {
+          "verb": "creer (presente)",
+          "subject": "yo",
+          "answer": "creo",
+          "options": [
+            "creo",
+            "creí",
+            "creía"
+          ]
+        },
+        {
+          "verb": "parecer (presente)",
+          "subject": "me",
+          "answer": "parece",
+          "options": [
+            "parece",
+            "pareció",
+            "parecía"
+          ]
+        }
+      ]
+    },
+    {
+      "_template": {
+        "id": "T29_conjugation_opinion_verbs",
+        "layer": "skill",
+        "order": 29,
+        "description": "Conjugation of opinion verbs: creer, pensar, opinar, parecer.",
         "spiralReturn": [
           3,
           7
@@ -2011,66 +2219,66 @@
       },
       "type": "conjugation",
       "label": "Conjugar",
-      "instruction": "Completa la conjugación en pretérito perfecto en {pool:eco.place}.",
+      "instruction": "Completa la conjugación en {pool:eco.place}.",
       "questions": [
         {
-          "verb": "ver (pretérito perfecto)",
+          "verb": "pensar (presente)",
           "subject": "yo",
-          "answer": "he visto",
+          "answer": "pienso",
           "options": [
-            "he visto",
-            "he vido",
-            "he veído"
+            "pienso",
+            "pensé",
+            "pensaba"
           ]
         },
         {
-          "verb": "aprender (pretérito perfecto)",
+          "verb": "creer (presente)",
           "subject": "nosotros",
-          "answer": "hemos aprendido",
+          "answer": "creemos",
           "options": [
-            "hemos aprendido",
-            "hemos aprendo",
-            "hemos aprendemos"
+            "creemos",
+            "creímos",
+            "creíamos"
           ]
         },
         {
-          "verb": "decir (pretérito perfecto)",
-          "subject": "ella",
-          "answer": "ha dicho",
-          "options": [
-            "ha dicho",
-            "ha decido",
-            "ha dicido"
-          ]
-        },
-        {
-          "verb": "hacer (pretérito perfecto)",
+          "verb": "opinar (presente)",
           "subject": "tú",
-          "answer": "has hecho",
+          "answer": "opinas",
           "options": [
-            "has hecho",
-            "has hacido",
-            "has haceado"
+            "opinas",
+            "opinaste",
+            "opinabas"
           ]
         },
         {
-          "verb": "escribir (pretérito perfecto)",
-          "subject": "ellos",
-          "answer": "han escrito",
+          "verb": "parecer (presente)",
+          "subject": "le",
+          "answer": "parece",
           "options": [
-            "han escrito",
-            "han escribido",
-            "han escribo"
+            "parece",
+            "pareció",
+            "parecía"
+          ]
+        },
+        {
+          "verb": "pensar (pretérito)",
+          "subject": "la abuela",
+          "answer": "pensó",
+          "options": [
+            "pensó",
+            "pensaba",
+            "piensa"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T29_cultura_coral",
+        "id": "T30_cultura_oral_tradition",
         "layer": "skill",
-        "order": 29,
-        "description": "Colombian Pacific coast culture. Coral reefs, fishing communities, and patience as cultural value.",
+        "order": 30,
+        "description": "Oral tradition in Afro-Colombian communities. How stories are passed down. The role of the storyteller.",
         "spiralReturn": [
           6,
           12
@@ -2083,83 +2291,24 @@
       "type": "cultura",
       "label": "Cultura",
       "instruction": "Lee y responde.",
-      "text": "En el Pacífico colombiano, los pescadores han aprendido a leer el mar. Saben cuándo la marea sube y cuándo baja. Han heredado este conocimiento de sus abuelos. Los arrecifes de coral han sido protegidos por comunidades que entienden que la naturaleza necesita tiempo. La paciencia no es solo una virtud — es una forma de vida.",
-      "question": "¿Qué han heredado los pescadores de sus abuelos?",
-      "answer": "El conocimiento de leer el mar.",
+      "text": "En las comunidades afrocolombianas del Pacífico, la tradición oral es sagrada. Los ancianos cuentan historias para enseñar, para recordar y para proteger la identidad del pueblo. Estas historias se llaman 'cuentos de camino'. Dicen que si nadie escucha las historias, el pueblo pierde su alma. Por eso, escuchar es un acto de respeto y de resistencia.",
+      "question": "¿Por qué es importante escuchar las historias en estas comunidades?",
+      "answer": "Porque si nadie escucha, el pueblo pierde su alma.",
       "options": [
-        "El conocimiento de leer el mar.",
-        "Barcos nuevos.",
-        "Dinero para pescar."
+        "Porque si nadie escucha, el pueblo pierde su alma.",
+        "Porque las historias son divertidas.",
+        "Porque los ancianos se aburren."
       ]
     },
     {
       "_template": {
-        "id": "T30_cultura_guides",
-        "layer": "skill",
-        "order": 30,
-        "description": "The four animal guides in Colombian mythology. Animals as teachers.",
-        "spiralReturn": [
-          5,
-          11
-        ],
-        "inputModes": [
-          "choice"
-        ],
-        "ecosystemSlots": [
-          "animal"
-        ]
-      },
-      "type": "cultura",
-      "label": "Cultura",
-      "instruction": "Lee y responde.",
-      "text": "En muchas culturas indígenas de Colombia, los {pool:eco.animal} son maestros. El {pool:eco.animal} enseña que lo pequeño puede ser poderoso. El {pool:eco.animal} muestra que hay que ver desde arriba para entender. El {pool:eco.animal} recuerda que el juego es necesario para vivir. Y la {pool:eco.animal} enseña que las cosas importantes necesitan tiempo. Estos cuatro {pool:eco.animal} han sido guías espirituales durante siglos.",
-      "question": "¿Por qué la {pool:eco.animal} es un guía espiritual?",
-      "answer": "Porque enseña que las cosas importantes necesitan tiempo.",
-      "options": [
-        "Porque enseña que las cosas importantes necesitan tiempo.",
-        "Porque es el animal más grande.",
-        "Porque vive en el mar."
-      ]
-    },
-    {
-      "_template": {
-        "id": "T31_susurro_ocean",
+        "id": "T31_cartografo_story_map",
         "layer": "skill",
         "order": 31,
-        "description": "The ocean whispers about what has been built and what has been lost.",
+        "description": "Map the stories to their themes. What did each person talk about?",
         "spiralReturn": [
           4,
           8
-        ],
-        "inputModes": [
-          "typing"
-        ],
-        "ecosystemSlots": [
-          "sound"
-        ]
-      },
-      "type": "susurro",
-      "label": "Susurro",
-      "instruction": "Escucha el {pool:eco.sound} del océano...",
-      "audio": "Lo que ha sido construido con paciencia no se destruye fácilmente.",
-      "keywords": [
-        "construido",
-        "paciencia",
-        "destruye",
-        "fácilmente"
-      ],
-      "minMatch": 3,
-      "silenceDuration": 5000
-    },
-    {
-      "_template": {
-        "id": "T32_cartografo_guides",
-        "layer": "skill",
-        "order": 32,
-        "description": "Map where each of the four guides was found during the journey.",
-        "spiralReturn": [
-          5,
-          10
         ],
         "inputModes": [
           "choice"
@@ -2170,47 +2319,85 @@
       },
       "type": "cartografo",
       "label": "Cartógrafo",
-      "instruction": "¿Dónde encontraste a cada guía? En {pool:eco.place}.",
-      "audio": "Colibrí apareció en las montañas. Cóndor voló desde las alturas del páramo. Delfín nadó en el río. Tortuga Marina emergió del océano.",
+      "instruction": "Relaciona cada persona con su historia.",
+      "audio": "El pescador habló del río y los peces. La abuela habló de la música y la plaza. Don Próspero habló de progreso y carreteras. Candelaria habló de la memoria y la verdad.",
       "replayLimit": 3,
       "gridLabels": [
-        "montañas",
-        "páramo",
         "río",
-        "océano",
+        "música",
+        "progreso",
+        "memoria",
         "bosque",
-        "costa",
-        "llano",
-        "selva",
-        "desierto"
+        "carretera",
+        "{pool:eco.place}"
       ],
       "questions": [
         {
-          "q": "¿Dónde apareció Colibrí?",
+          "q": "¿De qué habló el pescador?",
           "options": [
-            "En las montañas",
-            "En el río",
-            "En el océano"
+            "Del río y los peces",
+            "De la música",
+            "Del progreso"
           ],
-          "answer": "En las montañas"
+          "answer": "Del río y los peces"
         },
         {
-          "q": "¿De dónde emergió Tortuga Marina?",
+          "q": "¿De qué habló la abuela?",
           "options": [
-            "Del océano",
+            "De la música y la plaza",
             "Del río",
-            "Del bosque"
+            "De la memoria"
           ],
-          "answer": "Del océano"
+          "answer": "De la música y la plaza"
+        },
+        {
+          "q": "¿De qué habló Candelaria?",
+          "options": [
+            "De la memoria y la verdad",
+            "Del progreso",
+            "De los peces"
+          ],
+          "answer": "De la memoria y la verdad"
         }
       ]
     },
     {
       "_template": {
-        "id": "T33_cronica_patience",
+        "id": "T32_susurro_opinions",
+        "layer": "skill",
+        "order": 32,
+        "description": "Whispered opinions fade. Remember who believes what.",
+        "spiralReturn": [
+          5,
+          10
+        ],
+        "inputModes": [
+          "typing"
+        ],
+        "ecosystemSlots": [
+          "place"
+        ]
+      },
+      "type": "susurro",
+      "label": "Susurro",
+      "instruction": "Escucha las opiniones que se desvanecen en {pool:eco.place}.",
+      "audio": "Creo que las historias son la verdadera riqueza. Pienso que debemos escuchar. Me parece que la verdad está en la memoria.",
+      "keywords": [
+        "historias",
+        "riqueza",
+        "escuchar",
+        "verdad",
+        "memoria"
+      ],
+      "minMatch": 3,
+      "silenceDuration": 6000
+    },
+    {
+      "_template": {
+        "id": "T33_cronica_stories",
         "layer": "advanced",
         "order": 33,
-        "description": "Write about what you have learned about patience. Use present perfect and passive.",
+        "description": "Write about the stories you heard. Report what others said and give your opinion.",
         "spiralReturn": [],
         "inputModes": [
           "typing"
@@ -2218,38 +2405,37 @@
       },
       "type": "cronica",
       "label": "Crónica",
-      "prompt": "Escribe sobre la paciencia. ¿Qué has aprendido en este viaje? ¿Qué ha sido construido con tiempo? ¿Qué ha sido destruido por la prisa? Escribe 4-6 oraciones usando el pretérito perfecto y la voz pasiva.",
-      "placeholder": "He aprendido que la paciencia...",
-      "minWords": 25,
+      "prompt": "Escribe sobre las historias que escuchaste en el pueblo. ¿Qué te dijo el pescador? ¿Qué contó la abuela? ¿Qué piensas tú? Usa 'dijo que', 'contó que', 'creo que', 'me parece que'. Escribe 4-6 oraciones.",
+      "placeholder": "El pescador me dijo que...",
+      "minWords": 30,
       "maxWords": 100,
       "scaffoldType": "sentence",
-      "storyKey": "cronica_dest23",
+      "storyKey": "cronica_dest20",
       "vocabularyHints": [
-        "he aprendido",
-        "ha sido",
-        "fue construido",
-        "se perdió",
-        "paciencia",
-        "tiempo",
-        "arrecife",
-        "coral",
-        "guía",
-        "aliado",
-        "todavía no",
-        "ya",
-        "nunca"
+        "dijo que",
+        "contó que",
+        "creo que",
+        "pienso que",
+        "me parece que",
+        "estoy de acuerdo",
+        "el pescador",
+        "la abuela",
+        "Don Próspero",
+        "historias",
+        "verdad",
+        "memoria"
       ],
       "button": "Guardar en la crónica"
     },
     {
       "_template": {
-        "id": "T34_oraculo_guides",
+        "id": "T34_oraculo_stories",
         "layer": "advanced",
         "order": 34,
-        "description": "Predict what the four guides together can accomplish that none could alone.",
+        "description": "Predict what will happen with the stories. Will they be lost? Will someone save them?",
         "spiralReturn": [
-          5,
-          10
+          4,
+          9
         ],
         "inputModes": [
           "choice"
@@ -2260,92 +2446,94 @@
       },
       "type": "oraculo",
       "label": "Oráculo",
-      "instruction": "¿Qué pueden lograr los cuatro guías juntos? En {pool:eco.place}.",
+      "instruction": "¿Qué va a pasar con las historias del {pool:eco.place}?",
       "scene": [
         {
-          "speaker": "Tortuga Marina",
-          "text": "Solos, cada uno de nosotros ha enseñado algo diferente."
+          "speaker": "Candelaria",
+          "text": "El pescador me dijo que ya casi nadie escucha. La abuela contó que los jóvenes se van."
         },
         {
           "speaker": "Yaguará",
-          "text": "Velocidad, perspectiva, juego y paciencia. Cuatro lecciones."
+          "text": "Si nadie escucha, las historias mueren. Y con ellas, la verdad."
         },
         {
           "speaker": "Candelaria",
-          "text": "Pero juntos, ¿qué significan las cuatro lecciones?"
+          "text": "Pero nosotros escuchamos. Nosotros podemos contar."
         }
       ],
       "options": [
-        "Juntas, las cuatro lecciones forman sabiduría.",
-        "Juntas, las cuatro lecciones no sirven para nada.",
-        "Juntas, las cuatro lecciones solo traen confusión."
+        "Las historias van a sobrevivir porque alguien las escuchó y las va a contar.",
+        "Las historias van a desaparecer para siempre.",
+        "Don Próspero va a escribir las historias."
       ],
-      "answer": "Juntas, las cuatro lecciones forman sabiduría.",
-      "explanation": "La velocidad sin paciencia es prisa. La perspectiva sin juego es frialdad. Pero juntas, las cuatro se convierten en sabiduría."
+      "answer": "Las historias van a sobrevivir porque alguien las escuchó y las va a contar.",
+      "explanation": "Escuchar y contar es lo que mantiene vivas las historias. Esa es la misión."
     },
     {
       "_template": {
-        "id": "T35_explorador_reef",
+        "id": "T35_explorador_voices",
         "layer": "advanced",
         "order": 35,
-        "description": "Explore the coral reef. Discover what has been built, what has been damaged, what survives.",
+        "description": "Explore three places in the village to hear more voices and stories.",
         "spiralReturn": [
           5,
-          11
+          12
         ],
         "inputModes": [
           "choice"
         ],
-        "ecosystemSlots": 2
+        "ecosystemSlots": [
+          "animal"
+        ]
       },
       "type": "explorador",
       "label": "Explorador",
-      "instruction": "Explora el arrecife de coral.",
+      "instruction": "Explora el pueblo y escucha más historias.",
       "locations": [
         {
-          "name": "La parte construida",
-          "text": "Esta sección del arrecife ha sido construida durante miles de años. Cada capa fue puesta por un pequeño coral. Es un monumento a la paciencia.",
-          "question": "¿Cómo fue construido el arrecife?",
-          "answer": "Lentamente, capa por capa, durante miles de años.",
+          "name": "La tienda del pueblo",
+          "text": "El tendero contó que antes vendía productos del bosque: miel, frutas, hierbas. Dijo que ahora solo vende cosas que llegan por la carretera. Me parece que extraña lo de antes.",
+          "question": "¿Qué cambió para el tendero?",
+          "answer": "Antes vendía productos del bosque, ahora solo vende cosas de la carretera.",
           "options": [
-            "Lentamente, capa por capa, durante miles de años.",
-            "Rápidamente, en unos pocos días.",
-            "Fue construido por los humanos."
+            "Antes vendía productos del bosque, ahora solo vende cosas de la carretera.",
+            "Siempre vendió lo mismo.",
+            "Ahora vende más que antes."
           ]
         },
         {
-          "name": "La parte dañada",
-          "text": "Aquí el coral fue dañado. El agua se calentó y los colores desaparecieron. Fue destruido por algo que los corales no pudieron controlar.",
-          "question": "¿Qué destruyó esta parte?",
-          "answer": "El calor del agua.",
+          "name": "La escuela",
+          "text": "Una maestra dijo que los niños ya no conocen los nombres de los árboles. Contó que antes los abuelos les enseñaban, pero ahora los abuelos se fueron. Pienso que es una pérdida enorme.",
+          "question": "Según la maestra, ¿qué perdieron los niños?",
+          "answer": "Ya no conocen los nombres de los árboles.",
           "options": [
-            "El calor del agua.",
-            "Un terremoto.",
-            "Los pescadores."
+            "Ya no conocen los nombres de los árboles.",
+            "Ya no van a la escuela.",
+            "Ya no tienen amigos."
           ]
         },
         {
-          "name": "La parte que crece",
-          "text": "Pero aquí, nuevos corales han empezado a crecer. Son pequeños todavía. Han sido protegidos por la corriente fría. La vida vuelve, pero necesita tiempo.",
-          "question": "¿Qué pasa con los nuevos corales?",
-          "answer": "Están creciendo lentamente, protegidos por la corriente.",
+          "name": "El cementerio",
+          "text": "Un anciano contó que en las tumbas viejas hay nombres de personas que conocían el bosque mejor que nadie. Dijo que esas personas le hablaban al {pool:eco.animal} como si fuera familia. Creo que esas memorias no deberían perderse.",
+          "question": "¿Qué dice el anciano sobre las personas enterradas ahí?",
+          "answer": "Conocían el bosque mejor que nadie y hablaban con los animales.",
           "options": [
-            "Están creciendo lentamente, protegidos por la corriente.",
-            "Ya son tan grandes como los antiguos.",
-            "No van a sobrevivir."
+            "Conocían el bosque mejor que nadie y hablaban con los animales.",
+            "Eran comerciantes ricos.",
+            "No sabían nada del bosque."
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T36_guardian_perfect_passive",
+        "id": "T36_guardian_stories",
         "layer": "advanced",
         "order": 36,
-        "description": "Speed test on present perfect and passive. All the grammar of dest23.",
+        "description": "Speed test on indirect speech and opinions. All the reporting skills of dest20.",
         "spiralReturn": [
-          4,
-          9
+          3,
+          8
         ],
         "inputModes": [
           "choice",
@@ -2353,94 +2541,95 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "place"
+          "place",
+          "sound"
         ]
       },
       "type": "guardian",
       "label": "Guardián",
-      "instruction": "¡Demuestra lo que has aprendido!",
+      "instruction": "¡Demuestra que escuchaste bien!",
       "timeLimit": 8,
       "questions": [
         {
-          "prompt": "Yo (ver) el océano. Pretérito perfecto:",
-          "answer": "he visto",
+          "prompt": "El pescador (decir, pretérito) que el {pool:eco.place} cambió.",
+          "answer": "dijo",
           "options": [
-            "he visto",
-            "vi",
-            "veía"
+            "dijo",
+            "decía",
+            "dice"
           ]
         },
         {
-          "prompt": "Nosotros (aprender) paciencia. Pretérito perfecto:",
-          "answer": "hemos aprendido",
+          "prompt": "La abuela (contar, pretérito) que antes había {pool:eco.sound}.",
+          "answer": "contó",
           "options": [
-            "hemos aprendido",
-            "aprendimos",
-            "aprendíamos"
+            "contó",
+            "contaba",
+            "cuenta"
           ]
         },
         {
-          "prompt": "El {pool:eco.place} (construir). Pasiva:",
-          "answer": "fue construido",
+          "prompt": "___ que las historias son importantes.",
+          "answer": "Creo",
           "options": [
-            "fue construido",
-            "construyó",
-            "se construye"
+            "Creo",
+            "Dijo",
+            "Contó"
           ]
         },
         {
-          "prompt": "Las historias (guardar) por los ancianos. Pasiva:",
-          "answer": "fueron guardadas",
+          "prompt": "Me ___ que Don Próspero no escucha.",
+          "answer": "parece",
           "options": [
-            "fueron guardadas",
-            "guardaron",
-            "se guardan"
+            "parece",
+            "dijo",
+            "contó"
           ]
         },
         {
-          "prompt": "¿___ has viajado por el océano? (ever)",
-          "answer": "Alguna vez",
+          "prompt": "'Quiero ayudar.' → Dijo que ___ ayudar.",
+          "answer": "quería",
           "options": [
-            "Alguna vez",
-            "Ya",
-            "Todavía no"
+            "quería",
+            "quiere",
+            "quiso"
           ]
         },
         {
-          "prompt": "___ no hemos terminado. (not yet)",
-          "answer": "Todavía",
+          "prompt": "¿Quién vive junto al {pool:eco.place}?",
+          "answer": "El pescador",
           "options": [
-            "Todavía",
-            "Ya",
-            "Nunca"
+            "El pescador",
+            "La abuela",
+            "Don Próspero"
           ]
         },
         {
-          "prompt": "Ella ha ___ muchas cosas. (decir)",
-          "answer": "dicho",
+          "prompt": "No ___ de acuerdo con Don Próspero.",
+          "answer": "estoy",
           "options": [
-            "dicho",
-            "decido",
-            "dicido"
+            "estoy",
+            "soy",
+            "tengo"
           ]
         },
         {
-          "prompt": "El {pool:eco.place} ___ abierto por los viajeros.",
-          "answer": "fue",
+          "prompt": "¿Qué vendía el tendero antes?",
+          "answer": "Productos del bosque",
           "options": [
-            "fue",
-            "ha",
-            "se"
+            "Productos del bosque",
+            "Cosas de la carretera",
+            "Nada"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T37_autoevaluacion_b1_patience",
+        "id": "T37_autoevaluacion_stories",
         "layer": "meta",
         "order": 37,
-        "description": "Self-assessment: present perfect, passive, and the concept of patience in learning.",
+        "description": "Self-assessment for indirect speech and opinion skills.",
         "spiralReturn": [],
         "inputModes": [
           "choice"
@@ -2448,35 +2637,35 @@
       },
       "type": "autoevaluacion",
       "label": "¿Qué sé?",
-      "instruction": "Piensa en lo que has aprendido en este destino.",
+      "instruction": "Piensa en lo que puedes hacer ahora.",
       "statements": [
         {
-          "text": "Puedo hablar de experiencias con el pretérito perfecto: he visto, has dicho, hemos aprendido."
+          "text": "Puedo contar lo que dijo otra persona: 'Dijo que quería ayudar.'"
         },
         {
-          "text": "Puedo usar la voz pasiva básica: fue construido, fue destruido, se perdió."
+          "text": "Puedo expresar mi opinión: 'Creo que...', 'Pienso que...', 'Me parece que...'"
         },
         {
-          "text": "Puedo usar marcadores temporales: ya, todavía no, nunca, alguna vez."
+          "text": "Puedo distinguir entre un hecho y una opinión."
         },
         {
-          "text": "Conozco participios irregulares: visto, dicho, hecho, escrito, abierto."
+          "text": "Puedo reportar historias que escuché, usando discurso indirecto."
         },
         {
-          "text": "Entiendo que la paciencia es una forma de aprender."
+          "text": "Puedo expresar acuerdo y desacuerdo con respeto."
         },
         {
-          "text": "Sé que los cuatro guías ahora están reunidos."
+          "text": "Puedo entender la importancia de escuchar las historias de otros."
         }
       ],
-      "reflection": "Escribe una oración sobre algo que has aprendido con paciencia."
+      "reflection": "¿Qué historia del pueblo te impactó más? Escribe una oración."
     },
     {
       "_template": {
-        "id": "T38_portafolio_guides",
+        "id": "T38_portafolio_retelling",
         "layer": "meta",
         "order": 38,
-        "description": "Record your voice describing the four guides and what each has taught.",
+        "description": "Record yourself retelling a story you heard and giving your opinion.",
         "spiralReturn": [],
         "inputModes": [
           "voice"
@@ -2485,21 +2674,21 @@
       "type": "portafolio",
       "label": "Mi voz",
       "instruction": "Graba tu voz.",
-      "prompt": "Habla de los cuatro guías. ¿Qué te ha enseñado cada uno? ¿Qué has aprendido sobre la paciencia? Usa el pretérito perfecto. Habla por 30 segundos.",
+      "prompt": "Cuenta una de las historias que escuchaste en el pueblo. Usa 'dijo que' o 'contó que'. Después da tu opinión: '¿Qué piensas?' Habla por 30 segundos.",
       "guidingQuestions": [
-        "¿Qué te ha enseñado Colibrí?",
-        "¿Qué te ha mostrado Cóndor?",
-        "¿Qué te ha dado Delfín?",
-        "¿Qué has aprendido de Tortuga Marina?"
+        "¿Qué te dijo el pescador?",
+        "¿Qué contó la abuela?",
+        "¿Qué opinas de Don Próspero?",
+        "¿Por qué son importantes las historias?"
       ],
       "minWords": 25
     },
     {
       "_template": {
-        "id": "T39_escaperoom_patience",
+        "id": "T39_escaperoom_stories",
         "layer": "meta",
         "order": 39,
-        "description": "Escape room: the chamber of patience. Solve puzzles about what has been built and lost.",
+        "description": "Escape room: the chamber of stories. Each puzzle requires remembering what someone said.",
         "spiralReturn": [],
         "inputModes": [
           "choice",
@@ -2508,104 +2697,103 @@
       },
       "type": "escaperoom",
       "label": "Sala de enigmas",
-      "instruction": "Resuelve los enigmas de la sala de la paciencia.",
+      "instruction": "Resuelve los enigmas de las historias.",
       "room": {
-        "name": "La sala del coral",
-        "description": "Una sala submarina. Las paredes son de coral vivo. En el centro hay cuatro pedestales, uno para cada guía. El agua brilla con una luz azul. Para abrir la puerta, necesitas recordar lo que cada guía ha enseñado.",
-        "ambience": "underwater"
+        "name": "La sala de las voces",
+        "description": "Una sala redonda con paredes que susurran. En cada pared hay una boca de piedra que repite una historia. En el centro, un libro abierto con páginas en blanco. Las historias deben escribirse para que la puerta se abra.",
+        "ambience": "whisper"
       },
       "puzzles": [
         {
           "puzzleType": "riddle",
-          "prompt": "Primer enigma. Completa: 'He ___ por todos los océanos.' ¿Qué participio irregular necesitas?",
-          "clue": "El verbo es 'viajar'. Es regular.",
-          "answer": "viajado",
+          "prompt": "La primera boca susurra: 'Antes estaba lleno. Ahora está vacío. No es una casa, no es un vaso. Fluye por el pueblo.' ¿De qué habla?",
+          "clue": "El pescador hablaba de este lugar.",
+          "answer": "el río",
           "options": [
-            "viajado",
-            "viajido",
-            "visto",
-            "ido"
+            "el río",
+            "el mercado",
+            "la plaza",
+            "el bosque"
           ],
-          "onSolve": "El primer pedestal brilla. La luz del Colibrí aparece."
+          "onSolve": "La primera historia se escribe en el libro."
         },
         {
-          "puzzleType": "riddle",
-          "prompt": "Segundo enigma. ¿Cuál es el participio irregular de 'ver'?",
-          "clue": "No es 'veído'. Piensa en 'he ___'.",
-          "answer": "visto",
+          "puzzleType": "extract",
+          "prompt": "La segunda boca dice: 'Dijo que el pueblo necesitaba algo. Contó que quería traer algo. Las dos palabras empiezan con la misma letra.' ¿Cuáles son?",
+          "clue": "Don Próspero las prometía. Una es lo que construyó. Otra es lo que prometió.",
+          "answer": "progreso, carretera",
           "options": [
-            "visto",
-            "veído",
-            "vido",
-            "vedo"
+            "progreso, carretera",
+            "paz, casa",
+            "poder, camino"
           ],
-          "onSolve": "El segundo pedestal brilla. La luz del Cóndor aparece."
+          "onSolve": "La segunda historia aparece en el libro."
         },
         {
           "puzzleType": "wordlock",
-          "prompt": "Tercer enigma. Tortuga Marina dice: 'Lo que ha sido construido con ___ no se destruye fácilmente.' ¿Cuál es la palabra? Nueve letras.",
-          "clue": "La lección de la tortuga.",
-          "answer": "paciencia",
+          "prompt": "La tercera boca calla. En la página del libro falta una palabra. 'Creo que las ___ son la verdadera riqueza.' Ocho letras.",
+          "clue": "Lo que el pescador, la abuela y Candelaria compartieron.",
+          "answer": "historias",
           "hint": "_ _ _ _ _ _ _ _ _",
-          "onSolve": "Los cuatro pedestales brillan. La puerta de coral se abre lentamente. El agua se llena de luz."
+          "onSolve": "El libro se cierra. La puerta se abre. Las voces cantan."
         }
       ],
       "fragment": {
-        "text": "Los cuatro pedestales brillan juntos. Cuatro luces — rojo, azul, verde y dorado — se unen en el centro de la sala. El coral crece ante tus ojos, formando un arco. La puerta se abre. Al otro lado, el mar profundo espera.",
-        "questClue": "Cuatro guías. Cuatro lecciones. Un arrecife que crece con paciencia. La puerta se abre hacia lo profundo.",
-        "item": "coral-paciencia"
+        "text": "El libro absorbe las tres historias y brilla con luz azul. Las bocas de piedra dejan de susurrar y empiezan a cantar. La puerta se abre hacia un camino que sube. En tu mano, el libro guarda las voces que escuchaste.",
+        "questClue": "Tres historias. Tres voces. Un libro que las guarda. Escuchar es el primer acto de resistencia.",
+        "item": "libro-voces"
       }
     },
     {
       "_template": {
-        "id": "T40_conjuro_patience",
+        "id": "T40_conjuro_voices",
         "layer": "meta",
         "order": 40,
-        "description": "Speak the words of patience. The final conjuro that seals the alliance of the four guides.",
+        "description": "Speak the words that summarize what you learned about stories and opinions.",
         "spiralReturn": [
-          5,
-          11
+          4,
+          10
         ],
         "inputModes": [
           "voice"
         ],
         "ecosystemSlots": [
-          "animal"
+          "place"
         ]
       },
       "type": "conjuro",
       "label": "Conjuro",
-      "instruction": "Di las palabras para sellar la alianza de los cuatro guías.",
+      "instruction": "Di las palabras para guardar las historias en {pool:eco.place}.",
       "spells": [
         {
-          "prompt": "Lo que ha enseñado {pool:eco.animal} Marina.",
-          "answer": "He aprendido paciencia",
-          "hint": "He a-pren-di-do pa-cien-cia."
+          "prompt": "Lo que dijo el pescador.",
+          "answer": "Dijo que antes el río estaba lleno de peces",
+          "hint": "Di-jo que an-tes el rí-o..."
         },
         {
-          "prompt": "Lo que ha sido construido.",
-          "answer": "El arrecife fue construido con tiempo",
-          "hint": "El a-rre-ci-fe fue cons-trui-do con tiem-po."
+          "prompt": "Lo que contó la abuela.",
+          "answer": "Contó que antes había música los domingos",
+          "hint": "Con-tó que an-tes ha-bí-a..."
         },
         {
-          "prompt": "Lo que todavía no has terminado.",
-          "answer": "Todavía no he terminado el viaje",
-          "hint": "To-da-ví-a no he ter-mi-na-do el via-je."
+          "prompt": "Tu opinión.",
+          "answer": "Creo que las historias son la verdadera riqueza",
+          "hint": "Cre-o que las his-to-rias..."
         },
         {
-          "prompt": "La unión de los cuatro guías.",
-          "answer": "Los cuatro aliados han sido reunidos",
-          "hint": "Los cua-tro a-lia-dos han si-do reu-ni-dos."
+          "prompt": "La misión.",
+          "answer": "Escuchar, recordar y contar",
+          "hint": "Es-cu-char, re-cor-dar y con-tar."
         }
       ]
     }
   ],
   "departure": {
     "type": "narrative",
-    "closingQuestion": "¿Cuánto tiempo necesita una historia para ser verdadera?",
-    "yaguaraLine": "He aprendido paciencia. Los cuatro guías han sido reunidos. Lo que ha sido construido con tiempo no se destruye. Viajero, ¿estás listo para lo que viene?",
-    "button": "→ Destino 24",
-    "nextUrl": "play.html?dest=24"
+    "closingQuestion": "¿Qué historia te contaron?",
+    "yaguaraLine": "Escuchamos al pescador, a la abuela, al tendero. Cada historia es un pedazo de verdad. Creo que si las perdemos, perdemos el mapa. Viajero, ¿qué historia te contaron?",
+    "button": "→ Destino 21",
+    "nextUrl": "play.html?dest=21"
   },
   "characterMeta": {
     "char_yaguara": {
@@ -2613,7 +2801,7 @@
       "name": "Yaguará",
       "avatar": "img/characters/yaguara.jpg",
       "voice": "warm",
-      "description": "Un jaguar joven que viaja para nombrar el mundo. Ha cruzado montañas, ríos y llanos."
+      "description": "El jaguar joven. Aprende que escuchar es tan importante como nombrar."
     },
     "char_candelaria": {
       "id": "char_candelaria",
@@ -2621,14 +2809,7 @@
       "realName": "Candelaria Arango",
       "avatar": "img/characters/candelaria.jpg",
       "voice": "clear",
-      "description": "Una niña afro-colombiana. Compañera de viaje. Ha crecido mucho desde que empezó el viaje."
-    },
-    "char_tortuga_marina": {
-      "id": "char_tortuga_marina",
-      "name": "Tortuga Marina",
-      "avatar": "img/characters/tortuga-marina.jpg",
-      "voice": "ancient",
-      "description": "La cuarta guía. Más vieja que cualquier árbol. Ha viajado por todos los océanos. Enseña paciencia."
+      "description": "Niña afro-colombiana. Recolectora de historias. Su abuela le enseñó a escuchar."
     }
   }
 }

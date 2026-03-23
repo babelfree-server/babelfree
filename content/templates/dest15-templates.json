@@ -1,53 +1,53 @@
 {
   "meta": {
     "destination": "dest15",
-    "title": "Lo que necesito, lo que quiero",
+    "title": "Contar lo que pasó",
     "cefr": "A2",
     "world": "mundoDeAbajo",
-    "campbellStage": "Call Deepens",
-    "rulingArcanum": "XVII — La Estrella",
+    "campbellStage": "The Call Crystallizes",
+    "rulingArcanum": "VI — Los Enamorados",
     "characters": [
       "char_yaguara",
       "char_candelaria"
     ],
-    "closingQuestion": "¿Qué necesitas para seguir?",
+    "closingQuestion": "¿Qué pasó ayer?",
     "grammarTargets": [
-      "querer/poder/necesitar + infinitive",
-      "comparatives (más que, menos que, mejor, peor)",
-      "indirect objects (basic)"
+      "preterite (pretérito indefinido) -AR/-ER/-IR regular",
+      "preterite irregular: ir/ser (fue), ver (vi)",
+      "time markers: ayer, la semana pasada, hace un año"
     ],
     "coreVocabulary": [
-      "querer",
-      "poder",
-      "necesitar",
-      "ayudar",
-      "traer",
-      "llevar",
-      "decir",
-      "entender",
-      "más que",
-      "menos que",
-      "mejor",
-      "peor",
-      "para",
-      "gracias",
-      "por favor"
+      "ayer",
+      "pasó",
+      "llegó",
+      "cantó",
+      "vi",
+      "fue",
+      "cambió",
+      "entre",
+      "encontró",
+      "primero",
+      "después",
+      "entonces",
+      "algo",
+      "alguien",
+      "nunca"
     ],
     "narrativeVocabulary": [
-      "agua",
-      "hoja",
-      "frío",
-      "hambre",
+      "rana",
+      "cantar",
       "cuaderno",
-      "escribir",
-      "palabra",
-      "jaguar",
+      "dibujar",
+      "claro",
+      "mirar",
+      "niña",
       "Candelaria",
-      "voz",
-      "dibujo",
-      "comunicar",
-      "dar",
-      "recibir"
+      "ojos",
+      "valiente",
+      "terrified",
+      "notebook",
+      "aparecer",
+      "bosque"
     ]
   },
   "ecosystemVocabulary": {
@@ -455,10 +455,10 @@
   "templates": [
     {
       "_template": {
-        "id": "T01_skit_quiero_ayudar",
+        "id": "T01_skit_rana_ayer",
         "layer": "narrative",
         "order": 1,
-        "description": "Candelaria is cold and hungry. Yaguará wants to help but cannot speak to her. The grammar of desire meets the limit of communication.",
+        "description": "The frog sang yesterday. Today, silence. The preterite is born from absence.",
         "spiralReturn": [
           2,
           4
@@ -467,101 +467,91 @@
           "choice"
         ],
         "ecosystemSlots": [
+          "animal",
           "nature",
           "place",
-          "texture"
+          "sound"
         ]
       },
       "type": "skit",
       "label": "Escena",
-      "title": "Quiero ayudarla",
+      "title": "Ayer, la rana cantó",
       "instruction": "Escucha y responde.",
       "grammar": [
-        "querer + infinitive",
-        "poder + infinitive"
+        "preterite -AR (cantó)",
+        "ayer"
       ],
       "beats": [
         {
           "speaker": "narrator",
           "name": "Narrador",
           "animation": "fade-in",
-          "text": "La niña está en el claro. Tiene {pool:eco.texture}. Tiene hambre."
+          "text": "El {pool:eco.place} está en {pool:eco.sound}. Algo falta."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "enter-left",
-          "text": "Yo quiero ayudarla. Pero no puedo hablar con ella.",
+          "text": "Ayer, la {pool:eco.animal} cantó. Hoy, no canta.",
           "target": [
-            "quiero",
-            "puedo"
+            "Ayer",
+            "cantó"
           ]
         },
         {
           "speaker": "narrator",
           "name": "Narrador",
           "animation": "fade-in",
-          "text": "Yaguará camina al {pool:eco.place}. Toma una {pool:eco.nature} grande. La llena de {pool:eco.nature}."
+          "text": "Yaguará mira el {pool:eco.nature}. Algo cambió."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "glow",
-          "text": "Puedo traer {pool:eco.nature}. No puedo hablar. Pero puedo dar.",
+          "text": "Ayer caminé por aquí. Vi algo diferente. Algo pasó.",
           "target": [
-            "Puedo",
-            "puedo",
-            "puedo"
+            "caminé",
+            "Vi",
+            "pasó"
           ]
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "fade-in",
-          "text": "Yaguará deja la {pool:eco.nature} con {pool:eco.nature} junto a la niña. La niña mira. Mira el {pool:eco.nature}. Mira a Yaguará."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "fade-in",
-          "text": "¿Ella quiere el {pool:eco.nature}? ¿Necesita ayuda?",
+          "text": "¿Tú lo viste? ¿Qué pasó ayer?",
           "target": [
-            "quiere",
-            "Necesita"
+            "viste",
+            "pasó"
           ],
           "interaction": {
             "type": "pick",
             "options": [
-              "Sí, ella necesita agua.",
-              "No, ella no quiere nada.",
+              "Algo cambió.",
+              "No vi nada.",
               "No sé."
             ],
-            "answer": "Sí, ella necesita agua."
+            "answer": "Algo cambió."
           }
         },
         {
-          "speaker": "narrator",
-          "name": "Narrador",
+          "speaker": "yaguara",
+          "name": "Yaguará",
           "animation": "glow",
-          "text": "La niña bebe. Después, mira a Yaguará y dice una sola palabra."
-        },
-        {
-          "speaker": "candelaria",
-          "name": "Candelaria",
-          "animation": "glow",
-          "text": "Gracias.",
+          "text": "Sí. Algo cambió. Y hoy... hay alguien aquí.",
           "target": [
-            "Gracias"
+            "cambió",
+            "alguien"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T02_skit_candelaria_writes",
+        "id": "T02_skit_candelaria_aparece",
         "layer": "narrative",
         "order": 2,
-        "description": "Candelaria labels her drawings. 'Agua.' 'Hoja.' 'Jaguar.' The first written words Yaguará sees. Language is born.",
+        "description": "Candelaria appears. Two creatures see each other. She draws Yaguará in her notebook. 'La vi. Ella me vio.'",
         "spiralReturn": [
           3,
           5
@@ -571,95 +561,93 @@
         ],
         "ecosystemSlots": [
           "animal",
-          "nature",
           "place"
         ]
       },
       "type": "skit",
       "label": "Escena",
-      "title": "Las primeras palabras escritas",
-      "instruction": "Escucha. Las palabras nacen.",
+      "title": "La niña del cuaderno",
+      "instruction": "Escucha. Algo importante pasa.",
       "grammar": [
-        "necesitar + infinitive",
-        "indirect objects"
+        "preterite irregular: vi, vio, fue",
+        "preterite -AR: llegó, miró"
       ],
       "beats": [
         {
           "speaker": "narrator",
           "name": "Narrador",
           "animation": "fade-in",
-          "text": "Candelaria abre su cuaderno. Mira sus dibujos. Y empieza a escribir."
-        },
-        {
-          "speaker": "narrator",
-          "name": "Narrador",
-          "animation": "glow",
-          "text": "Debajo del dibujo del {pool:eco.place}, escribe: '{pool:eco.nature}'. Debajo de la {pool:eco.nature}: '{pool:eco.nature}'. Debajo del {pool:eco.animal}: '{pool:eco.animal}'."
+          "text": "En un claro del {pool:eco.place}, hay alguien. Una niña. Tiene un cuaderno."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
-          "animation": "fade-in",
-          "text": "Ella escribe palabras. Necesito entender. ¿Qué dicen?",
+          "animation": "enter-left",
+          "text": "La vi. Ella me vio. Las dos nos miramos.",
           "target": [
-            "Necesito",
-            "entender"
+            "vi",
+            "vio",
+            "miramos"
           ]
         },
         {
           "speaker": "narrator",
           "name": "Narrador",
           "animation": "fade-in",
-          "text": "Candelaria le muestra el cuaderno a Yaguará. Señala el dibujo del {pool:eco.nature}."
+          "text": "La niña no corrió. No gritó. Abrió su cuaderno. Y dibujó."
         },
         {
           "speaker": "candelaria",
           "name": "Candelaria",
+          "animation": "enter-right",
+          "text": "...",
+          "target": []
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
           "animation": "glow",
-          "text": "{pool:eco.nature}.",
-          "target": [
-            "Agua"
-          ]
+          "text": "En el cuaderno: un dibujo. Un {pool:eco.animal} con ojos grandes. Ella dibujó a Yaguará."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "glow",
-          "text": "¡{pool:eco.nature}! Ella dice '{pool:eco.nature}'. Yo puedo entender eso. Necesito aprender más palabras.",
+          "text": "No habló. Pero dibujó. Me vio y me dibujó. Nadie hizo eso antes.",
           "target": [
-            "puedo",
-            "Necesito",
-            "aprender"
+            "habló",
+            "dibujó",
+            "vio",
+            "hizo"
           ],
           "interaction": {
             "type": "pick",
             "options": [
-              "Las palabras los conectan.",
-              "Ella necesita más dibujos.",
-              "Yaguará no entiende."
+              "Ella es valiente.",
+              "Ella tiene miedo.",
+              "Ella se fue."
             ],
-            "answer": "Las palabras los conectan."
+            "answer": "Ella es valiente."
           }
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "fade-in",
-          "text": "Ella puede decir '{pool:eco.nature}'. Yo puedo traer {pool:eco.nature}. Juntas, podemos más.",
+          "text": "Se llama... no sé cómo se llama. Pero llegó. Y algo cambió.",
           "target": [
-            "puede",
-            "puedo",
-            "podemos"
+            "llegó",
+            "cambió"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T03_conversation_needs",
+        "id": "T03_conversation_que_paso",
         "layer": "narrative",
         "order": 3,
-        "description": "What do you need? What do you want? The student expresses desires and needs. 5 turns.",
+        "description": "What happened? Tell the story. The student narrates past events in conversation. 4-5 turns.",
         "spiralReturn": [
           2,
           5
@@ -669,20 +657,19 @@
           "typing"
         ],
         "ecosystemSlots": [
-          "nature",
-          "place"
+          "animal"
         ]
       },
       "type": "conversation",
       "label": "Conversación",
-      "instruction": "Responde sobre lo que necesitas y quieres.",
+      "instruction": "Cuenta lo que pasó.",
       "tip": {
-        "title": "Querer, poder, necesitar + infinitivo",
+        "title": "El pretérito",
         "lines": [
-          "quiero ayudar = I want to help",
-          "puedo traer = I can bring",
-          "necesito aprender = I need to learn",
-          "ella quiere agua = she wants water"
+          "cantar → cantó (he/she sang)",
+          "llegar → llegó (he/she arrived)",
+          "ver → vi (I saw) / vio (he/she saw)",
+          "ir → fue (he/she went)"
         ]
       },
       "turns": [
@@ -691,7 +678,7 @@
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "La niña tiene hambre. ¿Qué necesita?"
+              "text": "¿Qué pasó ayer? ¿Tú viste algo?"
             },
             {
               "speaker": "B",
@@ -700,18 +687,18 @@
             }
           ],
           "options": [
-            "Necesita comer.",
-            "Necesita dormir.",
-            "Necesita cantar."
+            "Sí, vi a una niña.",
+            "No vi nada.",
+            "Ayer me desperté temprano."
           ],
-          "answer": "Necesita comer."
+          "answer": "Sí, vi a una niña."
         },
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "Yo quiero ayudarla. ¿Tú quieres ayudar también?"
+              "text": "¿Qué hizo la niña?"
             },
             {
               "speaker": "B",
@@ -720,18 +707,18 @@
             }
           ],
           "options": [
-            "Sí, quiero ayudar.",
-            "No, no puedo.",
-            "No sé cómo."
+            "Dibujó en su cuaderno.",
+            "Cantó una canción.",
+            "Se fue corriendo."
           ],
-          "answer": "Sí, quiero ayudar."
+          "answer": "Dibujó en su cuaderno."
         },
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "¿Puedes traer {pool:eco.nature} del {pool:eco.place}?"
+              "text": "¿La niña habló?"
             },
             {
               "speaker": "B",
@@ -740,18 +727,18 @@
             }
           ],
           "options": [
-            "Sí, puedo traer agua.",
-            "No, no puedo.",
-            "No quiero."
+            "No, no habló.",
+            "Sí, dijo hola.",
+            "No sé."
           ],
-          "answer": "Sí, puedo traer agua."
+          "answer": "No, no habló."
         },
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "Ella necesita aprender a hablar con nosotros. ¿Qué necesitamos?"
+              "text": "¿Qué pasó primero? ¿Ella llegó o la {pool:eco.animal} cantó?"
             },
             {
               "speaker": "B",
@@ -760,18 +747,18 @@
             }
           ],
           "options": [
-            "Necesitamos aprender palabras juntos.",
-            "Necesitamos irnos.",
-            "No necesitamos nada."
+            "Primero la rana cantó. Después ella llegó.",
+            "Primero ella llegó.",
+            "No recuerdo."
           ],
-          "answer": "Necesitamos aprender palabras juntos."
+          "answer": "Primero la rana cantó. Después ella llegó."
         },
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "¿Qué quieres hacer ahora?"
+              "text": "¿Crees que ella va a volver?"
             },
             {
               "speaker": "B",
@@ -780,20 +767,20 @@
             }
           ],
           "options": [
-            "Quiero quedarme con Candelaria.",
-            "Quiero irme.",
-            "Quiero dormir."
+            "Sí, creo que va a volver.",
+            "No sé.",
+            "No, se fue para siempre."
           ],
-          "answer": "Quiero quedarme con Candelaria."
+          "answer": "Sí, creo que va a volver."
         }
       ]
     },
     {
       "_template": {
-        "id": "T04_conversation_comparatives",
+        "id": "T04_conversation_present_vs_past",
         "layer": "narrative",
         "order": 4,
-        "description": "Comparisons. The forest is bigger than before. Candelaria is braver than she looks. 4 turns.",
+        "description": "Contrast present and past. Before vs. now. The river sang, now it doesn't. 4 turns.",
         "spiralReturn": [
           3,
           6
@@ -808,14 +795,14 @@
       },
       "type": "conversation",
       "label": "Conversación",
-      "instruction": "Compara y responde.",
+      "instruction": "Antes y ahora. ¿Qué cambió?",
       "turns": [
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "El bosque es más grande que antes. ¿Tú lo notas?"
+              "text": "Antes, la rana cantaba. Ayer, cantó por última vez. ¿Y hoy?"
             },
             {
               "speaker": "B",
@@ -824,18 +811,18 @@
             }
           ],
           "options": [
-            "Sí, es más grande que antes.",
-            "No, es igual.",
-            "Es más pequeño."
+            "Hoy no canta.",
+            "Hoy cantó otra vez.",
+            "No escuché nada."
           ],
-          "answer": "Sí, es más grande que antes."
+          "answer": "Hoy no canta."
         },
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "¿Quién es más valiente: la niña o yo?"
+              "text": "El {pool:eco.animal} siempre estaba aquí. ¿Lo viste ayer?"
             },
             {
               "speaker": "B",
@@ -844,18 +831,18 @@
             }
           ],
           "options": [
-            "Las dos son valientes.",
-            "La niña es más valiente.",
-            "Tú eres más valiente."
+            "Sí, lo vi ayer.",
+            "No, no lo vi.",
+            "No sé qué es."
           ],
-          "answer": "Las dos son valientes."
+          "answer": "Sí, lo vi ayer."
         },
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "El río canta menos que antes. ¿Es mejor o peor?"
+              "text": "Ayer caminé mucho. ¿Y tú? ¿Caminaste?"
             },
             {
               "speaker": "B",
@@ -864,18 +851,18 @@
             }
           ],
           "options": [
-            "Es peor. El río necesita cantar.",
-            "Es mejor así.",
-            "No importa."
+            "Sí, caminé contigo.",
+            "No, me quedé aquí.",
+            "Caminé un poco."
           ],
-          "answer": "Es peor. El río necesita cantar."
+          "answer": "Sí, caminé contigo."
         },
         {
           "dialogue": [
             {
               "speaker": "A",
               "name": "Yaguará",
-              "text": "El {pool:eco.animal} corre más rápido que yo. ¿Tú puedes correr rápido?"
+              "text": "La niña llegó ayer. Hoy no está. ¿Qué crees?"
             },
             {
               "speaker": "B",
@@ -884,20 +871,20 @@
             }
           ],
           "options": [
-            "Puedo correr, pero no más rápido que un {pool:eco.animal}.",
-            "Sí, soy muy rápido.",
-            "No puedo correr."
+            "Creo que va a volver.",
+            "Se fue para siempre.",
+            "No sé."
           ],
-          "answer": "Puedo correr, pero no más rápido que un {pool:eco.animal}."
+          "answer": "Creo que va a volver."
         }
       ]
     },
     {
       "_template": {
-        "id": "T05_eco_lejano_needs",
+        "id": "T05_eco_lejano_preterite",
         "layer": "narrative",
         "order": 5,
-        "description": "Ecosystem echoes with needs and wants. What does the world need?",
+        "description": "Ecosystem echoes in the past tense. What happened here yesterday?",
         "spiralReturn": [
           3,
           7
@@ -907,7 +894,8 @@
         ],
         "ecosystemSlots": [
           "animal",
-          "nature"
+          "nature",
+          "place"
         ]
       },
       "type": "eco_lejano",
@@ -915,43 +903,43 @@
       "instruction": "Escucha y completa.",
       "items": [
         {
-          "audio": "El {pool:eco.animal} necesita ___ para vivir.",
-          "sentence": "El {pool:eco.animal} necesita ___ para vivir.",
-          "answer": "agua",
+          "audio": "Ayer, el {pool:eco.animal} ___ al río y bebió agua.",
+          "sentence": "Ayer, el {pool:eco.animal} ___ al río y bebió agua.",
+          "answer": "fue",
           "options": [
-            "agua",
-            "libros",
-            "música"
+            "fue",
+            "va",
+            "ir"
           ]
         },
         {
-          "audio": "La {pool:eco.nature} quiere ___ para crecer.",
-          "sentence": "La {pool:eco.nature} quiere ___ para crecer.",
-          "answer": "lluvia",
+          "audio": "La semana pasada, ___ mucha lluvia en el {pool:eco.place}.",
+          "sentence": "La semana pasada, ___ mucha lluvia en el {pool:eco.place}.",
+          "answer": "cayó",
           "options": [
-            "lluvia",
-            "arena",
-            "fuego"
+            "cayó",
+            "cae",
+            "caer"
           ]
         },
         {
-          "audio": "Candelaria necesita ___ más que nada.",
-          "sentence": "Candelaria necesita ___ más que nada.",
-          "answer": "ayuda",
+          "audio": "Ayer encontré una {pool:eco.nature} en el ___.",
+          "sentence": "Ayer encontré una {pool:eco.nature} en el ___.",
+          "answer": "{pool:eco.place}",
           "options": [
-            "ayuda",
-            "dinero",
-            "silencio"
+            "{pool:eco.place}",
+            "cielo",
+            "cuaderno"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T06_skit_giving_receiving",
+        "id": "T06_skit_candelaria_draws",
         "layer": "narrative",
         "order": 6,
-        "description": "Yaguará gives. Candelaria receives. Then Candelaria gives something back — a word. Reciprocity.",
+        "description": "Candelaria returns. She draws more. Yaguará watches. The silence between them is language.",
         "spiralReturn": [
           4,
           8
@@ -960,86 +948,84 @@
           "choice"
         ],
         "ecosystemSlots": [
-          "nature"
+          "nature",
+          "place"
         ]
       },
       "type": "skit",
       "label": "Escena",
-      "title": "Dar y recibir",
+      "title": "El cuaderno de Candelaria",
       "instruction": "Escucha la historia.",
       "beats": [
         {
           "speaker": "narrator",
           "name": "Narrador",
           "animation": "fade-in",
-          "text": "Yaguará trae fruta. La deja junto a Candelaria."
+          "text": "La niña volvió. Se sentó en el mismo {pool:eco.place}."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "fade-in",
-          "text": "Quiero darle comida. Ella necesita comer más que yo.",
+          "text": "Volvió. Ayer la vi. Hoy la veo otra vez. Se sentó y abrió su cuaderno.",
           "target": [
-            "Quiero",
-            "necesita",
-            "más que"
+            "Volvió",
+            "vi",
+            "veo",
+            "sentó",
+            "abrió"
           ]
         },
         {
           "speaker": "narrator",
           "name": "Narrador",
           "animation": "fade-in",
-          "text": "Candelaria come. Después, abre su cuaderno. Escribe algo."
-        },
-        {
-          "speaker": "candelaria",
-          "name": "Candelaria",
-          "animation": "glow",
-          "text": "Gracias. Por favor... más {pool:eco.nature}.",
-          "target": [
-            "Gracias",
-            "Por favor"
-          ]
+          "text": "La niña dibujó el {pool:eco.place}. Dibujó un {pool:eco.nature}. Dibujó la {pool:eco.nature}."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "glow",
-          "text": "¡Habló! Dijo 'gracias' y 'por favor'. Ahora puedo entenderla mejor.",
+          "text": "Ella no habla. Pero dibuja lo que ve. Su cuaderno es su voz.",
           "target": [
-            "puedo",
-            "mejor"
-          ],
-          "interaction": {
-            "type": "pick",
-            "options": [
-              "Las palabras crean puentes.",
-              "Ella necesita más comida.",
-              "Yaguará no entiende."
-            ],
-            "answer": "Las palabras crean puentes."
-          }
+            "habla",
+            "dibuja",
+            "ve"
+          ]
+        },
+        {
+          "speaker": "narrator",
+          "name": "Narrador",
+          "animation": "glow",
+          "text": "La niña miró a Yaguará. Yaguará la miró a ella. Entonces la niña sonrió."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "fade-in",
-          "text": "Ella me da palabras. Yo le doy {pool:eco.nature}. Es mejor juntas que solas.",
+          "text": "Sonrió. Eso fue todo. Pero fue suficiente.",
           "target": [
-            "da",
-            "doy",
-            "mejor",
-            "que"
-          ]
+            "Sonrió",
+            "fue"
+          ],
+          "interaction": {
+            "type": "pick",
+            "options": [
+              "Una sonrisa dice mucho.",
+              "Ella debería hablar.",
+              "No entiendo."
+            ],
+            "answer": "Una sonrisa dice mucho."
+          }
         }
       ]
     },
     {
       "_template": {
-        "id": "T07_skit_comparatives",
+        "id": "T07_skit_chronology",
         "layer": "narrative",
         "order": 7,
-        "description": "The world in comparisons. More, less, better, worse. The student sees contrast.",
+        "description": "The story in order. Primero, después, entonces. Sequencing the narrative.",
         "spiralReturn": [
           3,
           6
@@ -1048,80 +1034,88 @@
           "choice"
         ],
         "ecosystemSlots": [
+          "animal",
+          "nature",
           "place",
           "sound"
         ]
       },
       "type": "skit",
       "label": "Escena",
-      "title": "Más y menos",
-      "instruction": "Escucha las comparaciones.",
+      "title": "Primero, después, entonces",
+      "instruction": "Escucha la historia en orden.",
       "beats": [
         {
           "speaker": "narrator",
           "name": "Narrador",
           "animation": "fade-in",
-          "text": "El {pool:eco.place} cambia. Yaguará mira todo con ojos nuevos."
+          "text": "Vamos a contar lo que pasó. En orden."
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "fade-in",
-          "text": "Hay más {pool:eco.sound} que antes. El {pool:eco.place} canta menos que ayer.",
+          "text": "Primero, la {pool:eco.animal} cantó. Era de noche.",
           "target": [
-            "más",
-            "que",
-            "menos que"
+            "Primero",
+            "cantó"
           ]
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "fade-in",
-          "text": "Pero con Candelaria, todo es mejor. Mejor que estar sola.",
+          "text": "Después, salió el {pool:eco.nature}. Yo caminé al {pool:eco.place}.",
           "target": [
-            "mejor",
-            "que"
+            "Después",
+            "salió",
+            "caminé"
+          ]
+        },
+        {
+          "speaker": "yaguara",
+          "name": "Yaguará",
+          "animation": "fade-in",
+          "text": "Entonces, vi a la niña. Ella llegó al claro.",
+          "target": [
+            "Entonces",
+            "vi",
+            "llegó"
           ]
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "glow",
-          "text": "El {pool:eco.sound} es peor que el {pool:eco.sound} del {pool:eco.place}. Necesitamos el {pool:eco.sound}.",
-          "target": [
-            "peor",
-            "que",
-            "Necesitamos"
-          ],
+          "text": "¿Qué pasó primero?",
           "interaction": {
             "type": "pick",
             "options": [
-              "El canto es más importante que el silencio.",
-              "El silencio es mejor.",
-              "No importa."
+              "La rana cantó.",
+              "La niña llegó.",
+              "Yaguará caminó."
             ],
-            "answer": "El canto es más importante que el silencio."
+            "answer": "La rana cantó."
           }
         },
         {
           "speaker": "yaguara",
           "name": "Yaguará",
           "animation": "fade-in",
-          "text": "Dos es más que uno. Juntas podemos hacer más que solas.",
+          "text": "Sí. Primero la {pool:eco.animal} cantó. Todo empieza con un {pool:eco.sound}.",
           "target": [
-            "más que",
-            "podemos"
+            "Primero",
+            "cantó"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T08_flashnote_modal_verbs",
+        "id": "T08_flashnote_preterite",
         "layer": "narrative",
         "order": 8,
-        "description": "Flash vocabulary for modal verbs. Querer, poder, necesitar — the verbs of agency.",
+        "description": "Flash vocabulary for preterite markers. Ayer, pasó, fue, vi — words of the past.",
         "spiralReturn": [
           2,
           5
@@ -1136,21 +1130,21 @@
       "type": "flashnote",
       "label": "Palabras",
       "instruction": "Mira. Escucha. Recuerda en {pool:eco.place}.",
-      "note": "querer = to want, poder = to be able to, necesitar = to need. Siempre van con otro verbo: quiero ayudar, puedo traer, necesito aprender.",
-      "question": "¿Qué significa 'necesito aprender'?",
-      "answer": "I need to learn",
+      "note": "Palabras del pasado: ayer, pasó, llegó, cantó, vi, fue, cambió.",
+      "question": "¿Qué significa 'ayer'?",
+      "answer": "yesterday",
       "options": [
-        "I need to learn",
-        "I want to help",
-        "I can bring"
+        "yesterday",
+        "tomorrow",
+        "today"
       ]
     },
     {
       "_template": {
-        "id": "T09_fill_querer_poder_necesitar",
+        "id": "T09_fill_preterite_ar",
         "layer": "core",
         "order": 9,
-        "description": "Modal verb fill. Choose between querer, poder, necesitar + infinitive.",
+        "description": "Regular -AR preterite. The simplest past tense fill. -é, -aste, -ó.",
         "spiralReturn": [
           2,
           4
@@ -1162,78 +1156,78 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "nature",
+          "animal",
           "place"
         ]
       },
       "type": "fill",
       "label": "Completar",
       "grammar": [
-        "querer/poder/necesitar + infinitive"
+        "preterite -AR"
       ],
-      "instruction": "Completa con quiero, puedo o necesito.",
+      "instruction": "Completa con el pretérito.",
       "tip": {
-        "title": "Verbos modales + infinitivo",
+        "title": "Pretérito -AR",
         "lines": [
-          "quiero + ayudar = I want to help",
-          "puedo + traer = I can bring",
-          "necesito + aprender = I need to learn"
+          "yo caminé",
+          "tú caminaste",
+          "él/ella caminó"
         ]
       },
       "questions": [
         {
-          "sentence": "Yo ___ ayudar a Candelaria. (want)",
-          "answer": "quiero",
+          "sentence": "Ayer, la {pool:eco.animal} ___. (cantar)",
+          "answer": "cantó",
           "options": [
-            "quiero",
-            "puedo",
-            "necesito"
+            "cantó",
+            "canta",
+            "cantar"
           ]
         },
         {
-          "sentence": "No ___ hablar con ella. (can)",
-          "answer": "puedo",
+          "sentence": "Yo ___ al {pool:eco.place}. (caminar)",
+          "answer": "caminé",
           "options": [
-            "quiero",
-            "puedo",
-            "necesito"
+            "caminé",
+            "camino",
+            "caminar"
           ]
         },
         {
-          "sentence": "Ella ___ comer. Tiene hambre. (need)",
-          "answer": "necesita",
+          "sentence": "La niña ___ al claro. (llegar)",
+          "answer": "llegó",
           "options": [
-            "quiere",
-            "puede",
-            "necesita"
+            "llegó",
+            "llega",
+            "llegar"
           ]
         },
         {
-          "sentence": "¿Tú ___ traer {pool:eco.nature} del {pool:eco.place}? (can)",
-          "answer": "puedes",
+          "sentence": "¿Tú ___ el dibujo? (mirar)",
+          "answer": "miraste",
           "options": [
-            "quieres",
-            "puedes",
-            "necesitas"
+            "miraste",
+            "miras",
+            "mirar"
           ]
         },
         {
-          "sentence": "Yo ___ aprender más palabras. (need)",
-          "answer": "necesito",
+          "sentence": "Ella ___ a Yaguará. (dibujar)",
+          "answer": "dibujó",
           "options": [
-            "quiero",
-            "puedo",
-            "necesito"
+            "dibujó",
+            "dibuja",
+            "dibujar"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T10_fill_modal_conjugation",
+        "id": "T10_fill_preterite_er_ir",
         "layer": "core",
         "order": 10,
-        "description": "Conjugated modal verbs. Quiero/quieres/quiere, puedo/puedes/puede.",
+        "description": "-ER/-IR preterite. The past tense expands. -í, -iste, -ió.",
         "spiralReturn": [
           3,
           5
@@ -1245,77 +1239,79 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "nature"
+          "animal",
+          "place",
+          "sound"
         ]
       },
       "type": "fill",
       "label": "Completar",
       "grammar": [
-        "modal verb conjugation"
+        "preterite -ER/-IR"
       ],
-      "instruction": "Completa con la forma correcta.",
+      "instruction": "Completa con el pretérito.",
       "tip": {
-        "title": "Conjugación",
+        "title": "Pretérito -ER/-IR",
         "lines": [
-          "yo quiero / puedo / necesito",
-          "tú quieres / puedes / necesitas",
-          "él/ella quiere / puede / necesita"
+          "yo comí / viví",
+          "tú comiste / viviste",
+          "él/ella comió / vivió"
         ]
       },
       "questions": [
         {
-          "sentence": "Yo ___ ayudar. (querer)",
-          "answer": "quiero",
+          "sentence": "Algo ___ en el {pool:eco.place}. (pasar → pasó, but: ocurrir)",
+          "answer": "ocurrió",
           "options": [
-            "quiero",
-            "quieres",
-            "quiere"
+            "ocurrió",
+            "ocurre",
+            "ocurrir"
           ]
         },
         {
-          "sentence": "¿Tú ___ traer {pool:eco.nature}? (poder)",
-          "answer": "puedes",
+          "sentence": "Yo ___ a la niña en el claro. (ver → irregular)",
+          "answer": "vi",
           "options": [
-            "puedo",
-            "puedes",
-            "puede"
+            "vi",
+            "veo",
+            "ver"
           ]
         },
         {
-          "sentence": "Candelaria ___ comer. (necesitar)",
-          "answer": "necesita",
+          "sentence": "La niña ___ su cuaderno. (abrir)",
+          "answer": "abrió",
           "options": [
-            "necesito",
-            "necesitas",
-            "necesita"
+            "abrió",
+            "abre",
+            "abrir"
           ]
         },
         {
-          "sentence": "Ella ___ hablar. (querer)",
-          "answer": "quiere",
+          "sentence": "¿Tú ___ el {pool:eco.sound} de la {pool:eco.animal}? (oír → irregular)",
+          "answer": "oíste",
           "options": [
-            "quiero",
-            "quieres",
-            "quiere"
+            "oíste",
+            "oyes",
+            "oír"
           ]
         },
         {
-          "sentence": "Nosotros ___ aprender juntos. (poder)",
-          "answer": "podemos",
+          "sentence": "El {pool:eco.place} ___ más despacio. (correr)",
+          "answer": "corrió",
           "options": [
-            "puedo",
-            "puedes",
-            "podemos"
+            "corrió",
+            "corre",
+            "correr"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T11_fill_comparatives",
+        "id": "T11_fill_preterite_irregular",
         "layer": "core",
         "order": 11,
-        "description": "Comparative fill-ins. Más que, menos que, mejor, peor.",
+        "description": "Irregular preterite: ir/ser (fue), ver (vi/vio). The most important irregulars.",
         "spiralReturn": [
           2,
           5
@@ -1327,79 +1323,76 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "place",
-          "sound"
+          "place"
         ]
       },
       "type": "fill",
       "label": "Completar",
       "grammar": [
-        "comparatives"
+        "preterite irregular: ir, ser, ver"
       ],
-      "instruction": "Completa la comparación.",
+      "instruction": "Completa con fue, vi o vio.",
       "tip": {
-        "title": "Comparaciones",
+        "title": "Irregulares",
         "lines": [
-          "más + adj + que = more... than",
-          "menos + adj + que = less... than",
-          "mejor que = better than",
-          "peor que = worse than"
+          "ir/ser → fui, fuiste, fue",
+          "ver → vi, viste, vio"
         ]
       },
       "questions": [
         {
-          "sentence": "El {pool:eco.place} es ___ grande que antes.",
-          "answer": "más",
+          "sentence": "La niña ___ al {pool:eco.place}. (ir)",
+          "answer": "fue",
           "options": [
-            "más",
-            "menos",
-            "mejor"
+            "fue",
+            "va",
+            "ir"
           ]
         },
         {
-          "sentence": "El {pool:eco.place} canta ___ que ayer.",
-          "answer": "menos",
+          "sentence": "Yo ___ a la niña. (ver)",
+          "answer": "vi",
           "options": [
-            "más",
-            "menos",
-            "peor"
+            "vi",
+            "veo",
+            "ver"
           ]
         },
         {
-          "sentence": "Juntas es ___ que solas.",
-          "answer": "mejor",
+          "sentence": "Ella me ___. (ver)",
+          "answer": "vio",
           "options": [
-            "mejor",
-            "peor",
-            "más"
+            "vio",
+            "vi",
+            "ve"
           ]
         },
         {
-          "sentence": "El {pool:eco.sound} es ___ que el {pool:eco.sound}.",
-          "answer": "peor",
+          "sentence": "Ayer ___ un día diferente. (ser)",
+          "answer": "fue",
           "options": [
-            "mejor",
-            "peor",
-            "menos"
+            "fue",
+            "es",
+            "ser"
           ]
         },
         {
-          "sentence": "Candelaria dibuja ___ que escribe.",
-          "answer": "más",
+          "sentence": "¿Tú ___ lo que pasó? (ver)",
+          "answer": "viste",
           "options": [
-            "más",
-            "menos",
-            "mejor"
+            "viste",
+            "vi",
+            "vio"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T12_fill_para",
+        "id": "T12_fill_time_markers",
         "layer": "core",
         "order": 12,
-        "description": "Purpose with 'para'. Why? To help. To eat. To learn. The grammar of intention.",
+        "description": "Time markers for the past. Ayer, la semana pasada, hace un año. When did it happen?",
         "spiralReturn": [
           3,
           6
@@ -1411,77 +1404,79 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "animal"
+          "animal",
+          "place"
         ]
       },
       "type": "fill",
       "label": "Completar",
       "grammar": [
-        "para + infinitive"
+        "time markers"
       ],
-      "instruction": "¿Para qué? Completa.",
+      "instruction": "¿Cuándo pasó? Completa.",
       "tip": {
-        "title": "Para + infinitivo",
+        "title": "Marcadores de tiempo",
         "lines": [
-          "para ayudar = in order to help",
-          "para comer = in order to eat",
-          "para aprender = in order to learn"
+          "ayer = yesterday",
+          "la semana pasada = last week",
+          "hace un año = a year ago",
+          "anoche = last night"
         ]
       },
       "questions": [
         {
-          "sentence": "Yaguará trae agua ___ darle a Candelaria.",
-          "answer": "para",
+          "sentence": "___, la {pool:eco.animal} cantó por última vez.",
+          "answer": "Ayer",
           "options": [
-            "para",
-            "por",
-            "con"
+            "Ayer",
+            "Hoy",
+            "Mañana"
           ]
         },
         {
-          "sentence": "Candelaria escribe ___ comunicarse.",
-          "answer": "para",
+          "sentence": "___ pasada, todo cambió.",
+          "answer": "La semana",
           "options": [
-            "para",
-            "por",
-            "con"
+            "La semana",
+            "El día",
+            "La hora"
           ]
         },
         {
-          "sentence": "El {pool:eco.animal} va al río ___ beber.",
-          "answer": "para",
+          "sentence": "Hace ___, Yaguará era pequeña.",
+          "answer": "un año",
           "options": [
-            "para",
-            "por",
-            "con"
+            "un año",
+            "un día",
+            "ahora"
           ]
         },
         {
-          "sentence": "Necesito palabras ___ entender.",
-          "answer": "para",
+          "sentence": "___ no dormí. Escuché el {pool:eco.place} toda la noche.",
+          "answer": "Anoche",
           "options": [
-            "para",
-            "por",
-            "con"
+            "Anoche",
+            "Ayer",
+            "Hoy"
           ]
         },
         {
-          "sentence": "Ella dibuja ___ recordar.",
-          "answer": "para",
+          "sentence": "La niña llegó ___. Hoy ya no está.",
+          "answer": "ayer",
           "options": [
-            "para",
-            "por",
-            "con"
+            "ayer",
+            "hoy",
+            "mañana"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T13_pair_modal_meanings",
+        "id": "T13_pair_present_past",
         "layer": "core",
         "order": 13,
-        "description": "Pair modal verbs with their meanings. Want, can, need — the verbs of agency.",
+        "description": "Pair present with past forms. The student sees the transformation.",
         "spiralReturn": [
           2,
           4
@@ -1496,40 +1491,40 @@
       },
       "type": "pair",
       "label": "Emparejar",
-      "instruction": "Une cada verbo con su significado en {pool:eco.place}.",
+      "instruction": "Une el presente con el pasado en {pool:eco.place}.",
       "pairs": [
         [
-          "querer",
-          "to want"
+          "canta",
+          "cantó"
         ],
         [
-          "poder",
-          "to be able to"
+          "llega",
+          "llegó"
         ],
         [
-          "necesitar",
-          "to need"
+          "camina",
+          "caminó"
         ],
         [
-          "ayudar",
-          "to help"
+          "ve",
+          "vio"
         ],
         [
-          "traer",
-          "to bring"
+          "va",
+          "fue"
         ],
         [
-          "entender",
-          "to understand"
+          "es",
+          "fue"
         ]
       ]
     },
     {
       "_template": {
-        "id": "T14_pair_comparatives",
+        "id": "T14_pair_sequence_words",
         "layer": "core",
         "order": 14,
-        "description": "Pair comparative opposites. More/less, better/worse.",
+        "description": "Pair sequence words with their order. First, then, finally.",
         "spiralReturn": [
           3,
           7
@@ -1544,40 +1539,40 @@
       },
       "type": "pair",
       "label": "Emparejar",
-      "instruction": "Une cada palabra con su opuesto en {pool:eco.place}.",
+      "instruction": "Une cada palabra con su posición en {pool:eco.place}.",
       "pairs": [
         [
-          "más",
-          "menos"
+          "primero",
+          "1°"
         ],
         [
-          "mejor",
-          "peor"
+          "después",
+          "2°"
         ],
         [
-          "grande",
-          "pequeño"
+          "entonces",
+          "3°"
         ],
         [
-          "dar",
-          "recibir"
+          "al final",
+          "4°"
         ],
         [
-          "querer",
-          "no querer"
+          "ayer",
+          "pasado"
         ],
         [
-          "gracias",
-          "por favor"
+          "hoy",
+          "presente"
         ]
       ]
     },
     {
       "_template": {
-        "id": "T15_builder_quiero_ayudar",
+        "id": "T15_builder_ayer_canto",
         "layer": "core",
         "order": 15,
-        "description": "Build 'Yo quiero ayudarla.' Modal + infinitive construction.",
+        "description": "Build 'Ayer, la rana cantó.' The student constructs the past.",
         "spiralReturn": [
           2,
           4
@@ -1594,18 +1589,19 @@
       "label": "Construir",
       "instruction": "Ordena las palabras en {pool:eco.place}.",
       "words": [
-        "quiero",
-        "Yo",
-        "ayudarla"
+        "la",
+        "Ayer,",
+        "rana",
+        "cantó"
       ],
-      "answer": "Yo quiero ayudarla"
+      "answer": "Ayer, la rana cantó"
     },
     {
       "_template": {
-        "id": "T16_builder_puedo_traer",
+        "id": "T16_builder_vi_nina",
         "layer": "core",
         "order": 16,
-        "description": "Build 'Puedo traer agua del río.' Ability in action.",
+        "description": "Build 'Vi a una niña en el claro.' Irregular verb in context.",
         "spiralReturn": [
           2,
           5
@@ -1622,20 +1618,22 @@
       "label": "Construir",
       "instruction": "Ordena las palabras en {pool:eco.place}.",
       "words": [
-        "traer",
-        "Puedo",
-        "agua",
-        "río",
-        "del"
+        "a",
+        "Vi",
+        "niña",
+        "una",
+        "el",
+        "en",
+        "claro"
       ],
-      "answer": "Puedo traer agua del río"
+      "answer": "Vi a una niña en el claro"
     },
     {
       "_template": {
-        "id": "T17_builder_comparative",
+        "id": "T17_builder_sequence",
         "layer": "core",
         "order": 17,
-        "description": "Build a comparative sentence. Structure: más/menos + adj + que.",
+        "description": "Build a sequenced narrative. Primero... después... entonces.",
         "spiralReturn": [
           3,
           6
@@ -1652,22 +1650,23 @@
       "label": "Construir",
       "instruction": "Ordena las palabras en {pool:eco.place}.",
       "words": [
-        "es",
-        "El",
-        "bosque",
-        "grande",
-        "más",
-        "antes",
-        "que"
+        "cantó,",
+        "Primero",
+        "la",
+        "rana",
+        "la",
+        "después",
+        "niña",
+        "llegó"
       ],
-      "answer": "El bosque es más grande que antes"
+      "answer": "Primero la rana cantó, después la niña llegó"
     },
     {
       "_template": {
-        "id": "T18_listening_modals",
+        "id": "T18_listening_preterite",
         "layer": "core",
         "order": 18,
-        "description": "Hear modal verbs. Distinguish want from can from need.",
+        "description": "Hear preterite verbs. Distinguish past from present by ear.",
         "spiralReturn": [
           2,
           4
@@ -1677,6 +1676,7 @@
           "typing"
         ],
         "ecosystemSlots": [
+          "animal",
           "place"
         ]
       },
@@ -1685,53 +1685,53 @@
       "instruction": "Escucha y responde.",
       "questions": [
         {
-          "audio": "Quiero ayudarla, pero no puedo hablar con ella.",
-          "question": "¿Qué quiere hacer?",
-          "answer": "Ayudarla",
+          "audio": "Ayer la {pool:eco.animal} cantó.",
+          "question": "¿Cuándo cantó?",
+          "answer": "Ayer",
           "options": [
-            "Ayudarla",
-            "Hablar",
-            "Cantar"
+            "Ayer",
+            "Hoy",
+            "Siempre"
           ]
         },
         {
-          "audio": "Ella necesita comer. Tiene hambre.",
-          "question": "¿Qué necesita?",
-          "answer": "Comer",
+          "audio": "Vi a una niña en el {pool:eco.place}.",
+          "question": "¿Qué vio?",
+          "answer": "A una niña",
           "options": [
-            "Comer",
-            "Dormir",
-            "Hablar"
+            "A una niña",
+            "A un jaguar",
+            "A una rana"
           ]
         },
         {
-          "audio": "Puedo traer agua del {pool:eco.place}.",
-          "question": "¿Qué puede hacer?",
-          "answer": "Traer agua",
+          "audio": "La niña llegó al claro y se sentó.",
+          "question": "¿Qué hizo la niña?",
+          "answer": "Llegó y se sentó",
           "options": [
-            "Traer agua",
-            "Cantar",
-            "Dibujar"
+            "Llegó y se sentó",
+            "Cantó",
+            "Se fue"
           ]
         },
         {
-          "audio": "Necesitamos aprender palabras juntos.",
-          "question": "¿Qué necesitan?",
-          "answer": "Aprender palabras",
+          "audio": "Algo cambió en el {pool:eco.place}.",
+          "question": "¿Qué pasó?",
+          "answer": "Algo cambió",
           "options": [
-            "Aprender palabras",
-            "Irse",
-            "Dormir"
+            "Algo cambió",
+            "Nada pasó",
+            "Todo está igual"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T19_listening_comparatives",
+        "id": "T19_listening_sequence",
         "layer": "core",
         "order": 19,
-        "description": "Listen for comparisons. More than, less than, better, worse.",
+        "description": "Listen for sequence. What happened first? Then? After?",
         "spiralReturn": [
           3,
           5
@@ -1741,51 +1741,51 @@
           "typing"
         ],
         "ecosystemSlots": [
-          "place"
+          "animal"
         ]
       },
       "type": "listening",
       "label": "Escuchar",
-      "instruction": "Escucha y elige.",
+      "instruction": "Escucha el orden de los eventos.",
       "questions": [
         {
-          "audio": "El {pool:eco.place} es más grande que antes.",
-          "question": "¿Cómo es el {pool:eco.place}?",
-          "answer": "Más grande",
+          "audio": "Primero caminé al río. Después vi a la niña.",
+          "question": "¿Qué pasó primero?",
+          "answer": "Caminé al río",
           "options": [
-            "Más grande",
-            "Más pequeño",
-            "Igual"
+            "Caminé al río",
+            "Vi a la niña",
+            "La rana cantó"
           ]
         },
         {
-          "audio": "Juntas es mejor que solas.",
-          "question": "¿Qué es mejor?",
-          "answer": "Estar juntas",
+          "audio": "La niña llegó, se sentó y dibujó.",
+          "question": "¿Qué hizo al final?",
+          "answer": "Dibujó",
           "options": [
-            "Estar juntas",
-            "Estar solas",
-            "Estar lejos"
+            "Llegó",
+            "Se sentó",
+            "Dibujó"
           ]
         },
         {
-          "audio": "El {pool:eco.place} canta menos que ayer.",
-          "question": "¿Cuánto canta el {pool:eco.place}?",
-          "answer": "Menos que ayer",
+          "audio": "Anoche la {pool:eco.animal} cantó. Hoy no canta.",
+          "question": "¿Cuándo cantó la {pool:eco.animal}?",
+          "answer": "Anoche",
           "options": [
-            "Menos que ayer",
-            "Más que ayer",
-            "Igual que ayer"
+            "Anoche",
+            "Hoy",
+            "Ahora"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T20_listening_eco_needs",
+        "id": "T20_listening_eco_past",
         "layer": "core",
         "order": 20,
-        "description": "Ecosystem animals and their needs. What does each creature need?",
+        "description": "Ecosystem sounds in past tense. What happened in the ecosystem yesterday?",
         "spiralReturn": [
           4,
           8
@@ -1803,43 +1803,43 @@
       "instruction": "Escucha y responde.",
       "questions": [
         {
-          "audio": "El {pool:eco.animal} necesita agua para vivir.",
-          "question": "¿Qué necesita?",
-          "answer": "Agua",
+          "audio": "Ayer, el {pool:eco.animal} caminó hasta el río y bebió agua.",
+          "question": "¿Qué hizo el {pool:eco.animal}?",
+          "answer": "Caminó al río y bebió",
           "options": [
-            "Agua",
-            "Fuego",
-            "Libros"
+            "Caminó al río y bebió",
+            "Se acostó",
+            "Cantó"
           ]
         },
         {
-          "audio": "El {pool:eco.animal} puede nadar mejor que caminar.",
-          "question": "¿Qué hace mejor?",
-          "answer": "Nadar",
+          "audio": "La semana pasada vi un {pool:eco.animal} cerca del camino.",
+          "question": "¿Cuándo lo vio?",
+          "answer": "La semana pasada",
           "options": [
-            "Nadar",
-            "Caminar",
-            "Volar"
+            "La semana pasada",
+            "Hoy",
+            "Siempre"
           ]
         },
         {
-          "audio": "El {pool:eco.animal} quiere comer más que dormir.",
-          "question": "¿Qué quiere más?",
-          "answer": "Comer",
+          "audio": "El {pool:eco.animal} fue al bosque y no volvió.",
+          "question": "¿Volvió?",
+          "answer": "No, no volvió",
           "options": [
-            "Comer",
-            "Dormir",
-            "Cantar"
+            "No, no volvió",
+            "Sí, volvió",
+            "No sé"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T21_category_needs_wants",
+        "id": "T21_category_present_past",
         "layer": "core",
         "order": 21,
-        "description": "Sort: need vs. want. The difference between necessity and desire.",
+        "description": "Sort verbs: present or past? The student builds tense awareness.",
         "spiralReturn": [
           2,
           5
@@ -1849,49 +1849,49 @@
           "drag"
         ],
         "ecosystemSlots": [
-          "nature"
+          "place"
         ]
       },
       "type": "category",
       "label": "Clasificar",
-      "instruction": "¿Necesidad o deseo?",
+      "instruction": "¿Presente o pasado? En {pool:eco.place}.",
       "categories": [
-        "Necesito",
-        "Quiero"
+        "Presente",
+        "Pasado"
       ],
       "items": [
         {
-          "text": "comer (tiene hambre)",
-          "category": "Necesito"
+          "text": "canta",
+          "category": "Presente"
         },
         {
-          "text": "beber {pool:eco.nature} (tiene sed)",
-          "category": "Necesito"
+          "text": "cantó",
+          "category": "Pasado"
         },
         {
-          "text": "dormir (está cansada)",
-          "category": "Necesito"
+          "text": "llega",
+          "category": "Presente"
         },
         {
-          "text": "dibujar",
-          "category": "Quiero"
+          "text": "llegó",
+          "category": "Pasado"
         },
         {
-          "text": "cantar",
-          "category": "Quiero"
+          "text": "veo",
+          "category": "Presente"
         },
         {
-          "text": "ayudar a un amigo",
-          "category": "Quiero"
+          "text": "vi",
+          "category": "Pasado"
         }
       ]
     },
     {
       "_template": {
-        "id": "T22_category_comparatives",
+        "id": "T22_category_sequence",
         "layer": "core",
         "order": 22,
-        "description": "Sort comparative expressions. More/less, better/worse categorization.",
+        "description": "Sort events in chronological order. First, then, finally.",
         "spiralReturn": [
           2,
           4
@@ -1901,50 +1901,52 @@
           "drag"
         ],
         "ecosystemSlots": [
+          "animal",
           "nature",
-          "sound"
+          "place"
         ]
       },
       "type": "category",
       "label": "Clasificar",
-      "instruction": "¿Más o menos?",
+      "instruction": "Ordena: ¿qué pasó primero, después, al final?",
       "categories": [
-        "Más / Mejor",
-        "Menos / Peor"
+        "Primero",
+        "Después",
+        "Al final"
       ],
       "items": [
         {
-          "text": "más grande",
-          "category": "Más / Mejor"
+          "text": "La {pool:eco.animal} cantó",
+          "category": "Primero"
         },
         {
-          "text": "menos {pool:eco.nature}",
-          "category": "Menos / Peor"
+          "text": "Yaguará caminó al {pool:eco.place}",
+          "category": "Después"
         },
         {
-          "text": "mejor juntas",
-          "category": "Más / Mejor"
+          "text": "La niña apareció",
+          "category": "Al final"
         },
         {
-          "text": "peor solas",
-          "category": "Menos / Peor"
+          "text": "Salió el {pool:eco.nature}",
+          "category": "Primero"
         },
         {
-          "text": "más palabras",
-          "category": "Más / Mejor"
+          "text": "Yaguará vio a la niña",
+          "category": "Después"
         },
         {
-          "text": "menos {pool:eco.sound}",
-          "category": "Menos / Peor"
+          "text": "La niña dibujó",
+          "category": "Al final"
         }
       ]
     },
     {
       "_template": {
-        "id": "T23_translation_modals",
+        "id": "T23_translation_preterite",
         "layer": "core",
         "order": 23,
-        "description": "Translation for modal verbs and comparatives. The bridge for A2 Basic.",
+        "description": "Translation bridge for past tense. Still available at A2 Basic.",
         "spiralReturn": [
           2,
           5
@@ -1963,67 +1965,67 @@
       "instruction": "Elige la traducción en {pool:eco.place}.",
       "questions": [
         {
-          "prompt": "I want to help",
-          "answer": "quiero ayudar",
+          "prompt": "yesterday",
+          "answer": "ayer",
           "options": [
-            "quiero ayudar",
-            "puedo ayudar",
-            "necesito ayudar"
+            "hoy",
+            "ayer",
+            "mañana"
           ]
         },
         {
-          "prompt": "I can bring",
-          "answer": "puedo traer",
+          "prompt": "I saw",
+          "answer": "vi",
           "options": [
-            "puedo traer",
-            "quiero traer",
-            "necesito traer"
+            "veo",
+            "vi",
+            "ver"
           ]
         },
         {
-          "prompt": "she needs to eat",
-          "answer": "ella necesita comer",
+          "prompt": "she arrived",
+          "answer": "llegó",
           "options": [
-            "ella necesita comer",
-            "ella quiere comer",
-            "ella puede comer"
+            "llega",
+            "llegó",
+            "llegar"
           ]
         },
         {
-          "prompt": "better than",
-          "answer": "mejor que",
+          "prompt": "he/she sang",
+          "answer": "cantó",
           "options": [
-            "mejor que",
-            "peor que",
-            "más que"
+            "canta",
+            "cantó",
+            "cantar"
           ]
         },
         {
-          "prompt": "thank you",
-          "answer": "gracias",
+          "prompt": "it was / he/she went",
+          "answer": "fue",
           "options": [
-            "gracias",
-            "por favor",
-            "de nada"
+            "es",
+            "fue",
+            "va"
           ]
         },
         {
-          "prompt": "please",
-          "answer": "por favor",
+          "prompt": "something happened",
+          "answer": "algo pasó",
           "options": [
-            "por favor",
-            "gracias",
-            "de nada"
+            "algo pasa",
+            "algo pasó",
+            "nada pasó"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T24_dictation_modal",
+        "id": "T24_dictation_past",
         "layer": "core",
         "order": 24,
-        "description": "Dictation with modal verb sentence. Write desire, ability, necessity.",
+        "description": "Dictation with preterite sentence. Write what you heard about yesterday.",
         "spiralReturn": [
           3,
           6
@@ -2032,21 +2034,21 @@
           "typing"
         ],
         "ecosystemSlots": [
-          "nature"
+          "place"
         ]
       },
       "type": "dictation",
       "label": "Dictado",
-      "instruction": "Escucha y escribe.",
-      "audio": "Quiero ayudarla. Puedo traer {pool:eco.nature}. Necesito aprender más palabras.",
-      "answer": "Quiero ayudarla. Puedo traer agua. Necesito aprender más palabras."
+      "instruction": "Escucha y escribe en {pool:eco.place}.",
+      "audio": "Ayer, la rana cantó. Hoy, no canta.",
+      "answer": "Ayer, la rana cantó. Hoy, no canta."
     },
     {
       "_template": {
-        "id": "T25_par_minimo_modals",
+        "id": "T25_par_minimo_present_past",
         "layer": "skill",
         "order": 25,
-        "description": "Minimal pairs for modal verbs. Quiero/quiere, puedo/puede. Person distinctions.",
+        "description": "Minimal pairs: present vs. past. Canta/cantó, llega/llegó. The accent mark changes everything.",
         "spiralReturn": [
           4,
           8
@@ -2060,40 +2062,40 @@
       },
       "type": "par_minimo",
       "label": "Par mínimo",
-      "instruction": "Escucha y elige la palabra correcta en {pool:eco.place}.",
+      "instruction": "Escucha y elige: ¿presente o pasado?",
       "pairs": [
         {
-          "wordA": "quiero",
-          "wordB": "quiere",
+          "wordA": "cantó",
+          "wordB": "canta",
           "correct": "A",
-          "hint": "Yo ___."
+          "hint": "Ayer, la rana ___."
         },
         {
-          "wordA": "puede",
-          "wordB": "puedo",
+          "wordA": "llega",
+          "wordB": "llegó",
           "correct": "A",
-          "hint": "Ella ___."
+          "hint": "Hoy, la niña ___."
         },
         {
-          "wordA": "necesitas",
-          "wordB": "necesita",
+          "wordA": "vi",
+          "wordB": "veo",
           "correct": "A",
-          "hint": "Tú ___."
+          "hint": "Ayer ___ algo."
         },
         {
-          "wordA": "mejor",
-          "wordB": "peor",
+          "wordA": "fue",
+          "wordB": "va",
           "correct": "A",
-          "hint": "Juntas es ___."
+          "hint": "Ayer, ella ___ al {pool:eco.place}."
         }
       ]
     },
     {
       "_template": {
-        "id": "T26_sombra_needs",
+        "id": "T26_sombra_past_narrative",
         "layer": "skill",
         "order": 26,
-        "description": "Shadow speech for modal verbs. Express what you want, can, and need.",
+        "description": "Shadow speech for past tense narrative. Tell the story of yesterday.",
         "spiralReturn": [
           2,
           5
@@ -2102,7 +2104,7 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "nature"
+          "animal"
         ]
       },
       "type": "sombra",
@@ -2110,15 +2112,15 @@
       "instruction": "Escucha y repite.",
       "timeMultiplier": 2,
       "replayLimit": 3,
-      "audio": "Quiero ayudarla. Puedo traer {pool:eco.nature}. Necesito aprender más palabras.",
-      "answer": "Quiero ayudarla. Puedo traer agua. Necesito aprender más palabras."
+      "audio": "Ayer, la rana cantó. Vi a una niña. Ella dibujó un {pool:eco.animal}.",
+      "answer": "Ayer, la rana cantó. Vi a una niña. Ella dibujó un jaguar."
     },
     {
       "_template": {
-        "id": "T27_cartografo_needs",
+        "id": "T27_cartografo_events",
         "layer": "skill",
         "order": 27,
-        "description": "Map where needs can be met. Water is at the river. Food is in the forest. Spatial problem-solving.",
+        "description": "Map where events happened. The clearing, the river, the path. Spatial past tense.",
         "spiralReturn": [
           5,
           10
@@ -2127,52 +2129,52 @@
           "choice"
         ],
         "ecosystemSlots": [
-          "place"
+          "nature"
         ]
       },
       "type": "cartografo",
       "label": "Cartógrafo",
       "instruction": "Escucha y encuentra.",
-      "audio": "Candelaria necesita agua. Puedo encontrar agua en el río. Necesita comida. Puedo buscar fruta cerca del {pool:eco.place}.",
+      "audio": "Primero, la rana cantó en el río. Después, caminé al claro. Allí vi a la niña. Ella se sentó junto a un {pool:eco.nature}.",
       "replayLimit": 3,
       "gridLabels": [
         "río",
-        "{pool:eco.place}",
         "claro",
-        "cueva",
+        "{pool:eco.nature}",
         "camino",
+        "cueva",
         "orilla",
         "bosque",
-        "cascada",
-        "montaña"
+        "montaña",
+        "cascada"
       ],
       "questions": [
         {
-          "q": "¿Dónde puede encontrar agua?",
+          "q": "¿Dónde cantó la rana?",
           "options": [
             "En el río",
-            "En la cueva",
-            "En el camino"
+            "En el claro",
+            "En la cueva"
           ],
           "answer": "En el río"
         },
         {
-          "q": "¿Dónde puede buscar fruta?",
+          "q": "¿Dónde vio a la niña?",
           "options": [
-            "Cerca del {pool:eco.place}",
-            "En el cielo",
-            "En la cueva"
+            "En el claro",
+            "En el río",
+            "En el camino"
           ],
-          "answer": "Cerca del {pool:eco.place}"
+          "answer": "En el claro"
         }
       ]
     },
     {
       "_template": {
-        "id": "T28_ritmo_modals",
+        "id": "T28_ritmo_preterite",
         "layer": "skill",
         "order": 28,
-        "description": "Feel the rhythm of modal verbs. Where does the stress fall?",
+        "description": "Feel the rhythm of the preterite. The accent on the last syllable: cantó, llegó, pasó.",
         "spiralReturn": [
           4,
           9
@@ -2186,61 +2188,60 @@
       "instruction": "¿Dónde cae el golpe fuerte?",
       "words": [
         {
-          "word": "quiero",
+          "word": "cantó",
           "syllables": [
-            "quie",
-            "ro"
-          ],
-          "stressIndex": 0,
-          "pattern": "llana"
-        },
-        {
-          "word": "necesitar",
-          "syllables": [
-            "ne",
-            "ce",
-            "si",
-            "tar"
-          ],
-          "stressIndex": 3,
-          "pattern": "aguda"
-        },
-        {
-          "word": "ayudar",
-          "syllables": [
-            "a",
-            "yu",
-            "dar"
-          ],
-          "stressIndex": 2,
-          "pattern": "aguda"
-        },
-        {
-          "word": "mejor",
-          "syllables": [
-            "me",
-            "jor"
+            "can",
+            "tó"
           ],
           "stressIndex": 1,
           "pattern": "aguda"
         },
         {
-          "word": "gracias",
+          "word": "llegó",
           "syllables": [
-            "gra",
-            "cias"
+            "lle",
+            "gó"
           ],
-          "stressIndex": 0,
+          "stressIndex": 1,
+          "pattern": "aguda"
+        },
+        {
+          "word": "caminé",
+          "syllables": [
+            "ca",
+            "mi",
+            "né"
+          ],
+          "stressIndex": 2,
+          "pattern": "aguda"
+        },
+        {
+          "word": "después",
+          "syllables": [
+            "des",
+            "pués"
+          ],
+          "stressIndex": 1,
+          "pattern": "aguda"
+        },
+        {
+          "word": "entonces",
+          "syllables": [
+            "en",
+            "ton",
+            "ces"
+          ],
+          "stressIndex": 1,
           "pattern": "llana"
         }
       ]
     },
     {
       "_template": {
-        "id": "T29_susurro_needs",
+        "id": "T29_susurro_past",
         "layer": "skill",
         "order": 29,
-        "description": "The forest whispers what is needed. Hold the needs in memory.",
+        "description": "The forest whispers what happened. Hold the past in memory.",
         "spiralReturn": [
           3,
           7
@@ -2249,31 +2250,31 @@
           "typing"
         ],
         "ecosystemSlots": [
-          "place",
+          "animal",
           "sound"
         ]
       },
       "type": "susurro",
       "label": "Susurro",
-      "instruction": "Escucha el {pool:eco.sound} del {pool:eco.place}...",
-      "audio": "Quiero ayudar. Puedo traer agua. Necesita comer. Gracias. Por favor.",
+      "instruction": "Escucha el {pool:eco.sound} de la memoria...",
+      "audio": "Ayer la {pool:eco.animal} cantó. Vi a una niña. Ella me vio. Dibujó.",
       "keywords": [
-        "quiero",
-        "ayudar",
-        "puedo",
-        "agua",
-        "necesita",
-        "gracias"
+        "ayer",
+        "cantó",
+        "vi",
+        "niña",
+        "vio",
+        "dibujó"
       ],
       "minMatch": 3,
       "silenceDuration": 5000
     },
     {
       "_template": {
-        "id": "T30_flashnote_gracias",
+        "id": "T30_flashnote_fue",
         "layer": "skill",
         "order": 30,
-        "description": "Quick recognition — gracias and por favor. The most human words in any language.",
+        "description": "Quick recognition — fue. The most important irregular. It means 'went' AND 'was.'",
         "spiralReturn": [
           2,
           4
@@ -2288,21 +2289,21 @@
       "type": "flashnote",
       "label": "Palabra rápida",
       "instruction": "¿Qué significa? En {pool:eco.place}.",
-      "note": "gracias / por favor",
-      "question": "Candelaria dice 'gracias'. ¿Qué significa?",
-      "answer": "thank you",
+      "note": "fue",
+      "question": "'Fue' puede significar dos cosas. ¿Cuáles?",
+      "answer": "he/she went AND he/she was",
       "options": [
-        "thank you",
-        "please",
-        "goodbye"
+        "he/she went AND he/she was",
+        "he/she sings",
+        "he/she sees"
       ]
     },
     {
       "_template": {
-        "id": "T31_conjugation_querer",
+        "id": "T31_conjugation_cantar_preterite",
         "layer": "skill",
         "order": 31,
-        "description": "Conjugate querer. The verb of desire. Irregular stem change: e → ie.",
+        "description": "Conjugate cantar in the preterite. The first past tense conjugation table.",
         "spiralReturn": [
           2,
           4
@@ -2319,66 +2320,66 @@
       },
       "type": "conjugation",
       "label": "Conjugar",
-      "instruction": "Completa la conjugación de 'querer' en {pool:eco.place}.",
+      "instruction": "Completa la conjugación de 'cantar' en pretérito en {pool:eco.place}.",
       "questions": [
         {
-          "verb": "querer",
+          "verb": "cantar (pretérito)",
           "subject": "yo",
-          "answer": "quiero",
+          "answer": "canté",
           "options": [
-            "quiero",
-            "quieres",
-            "quiere"
+            "canté",
+            "cantaste",
+            "cantó"
           ]
         },
         {
-          "verb": "querer",
+          "verb": "cantar (pretérito)",
           "subject": "tú",
-          "answer": "quieres",
+          "answer": "cantaste",
           "options": [
-            "quiero",
-            "quieres",
-            "quiere"
+            "canté",
+            "cantaste",
+            "cantó"
           ]
         },
         {
-          "verb": "querer",
+          "verb": "cantar (pretérito)",
           "subject": "él",
-          "answer": "quiere",
+          "answer": "cantó",
           "options": [
-            "quiero",
-            "quieres",
-            "quiere"
+            "canté",
+            "cantaste",
+            "cantó"
           ]
         },
         {
-          "verb": "querer",
+          "verb": "cantar (pretérito)",
           "subject": "ella",
-          "answer": "quiere",
+          "answer": "cantó",
           "options": [
-            "quiero",
-            "quieres",
-            "quiere"
+            "canté",
+            "cantaste",
+            "cantó"
           ]
         },
         {
-          "verb": "querer",
-          "subject": "nosotros",
-          "answer": "queremos",
+          "verb": "cantar (pretérito)",
+          "subject": "la rana",
+          "answer": "cantó",
           "options": [
-            "quiero",
-            "quieren",
-            "queremos"
+            "canté",
+            "cantaste",
+            "cantó"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T32_cultura_giving",
+        "id": "T32_cultura_oral_tradition",
         "layer": "skill",
         "order": 32,
-        "description": "Colombian culture of giving. Hospitality, sharing food, community. 'Mi casa es tu casa.'",
+        "description": "Colombian oral tradition. Stories are told in the past tense. The culture of 'contar.'",
         "spiralReturn": [
           5,
           12
@@ -2393,21 +2394,21 @@
       "type": "cultura",
       "label": "Cultura",
       "instruction": "Lee y responde.",
-      "text": "En Colombia, compartir es muy importante. Si alguien tiene hambre, le das comida. Si alguien necesita ayuda, le ayudas. Los colombianos dicen: 'Mi casa es tu casa.' En el Pacífico, donde vive Candelaria, las familias comparten todo: la comida, el agua, las historias. Dar es más importante que tener.",
-      "question": "¿Qué dicen los colombianos sobre compartir?",
-      "answer": "Mi casa es tu casa.",
+      "text": "En Colombia, la tradición oral es muy importante. Los abuelos cuentan historias a los niños. Dicen: 'Había una vez...' o 'Hace mucho tiempo, pasó algo...' Las historias se cuentan por la noche, después de cenar. Candelaria aprendió a dibujar porque su abuela le contó historias del río.",
+      "question": "¿Cuándo se cuentan las historias?",
+      "answer": "Por la noche, después de cenar.",
       "options": [
-        "Mi casa es tu casa.",
-        "Cada uno por su lado.",
-        "No comparto nada."
+        "Por la noche, después de cenar.",
+        "Por la mañana.",
+        "Nunca se cuentan."
       ]
     },
     {
       "_template": {
-        "id": "T33_cronica_necesito",
+        "id": "T33_cronica_que_paso",
         "layer": "advanced",
         "order": 33,
-        "description": "Write what you need and want. Sentence-level crónica with modal verbs.",
+        "description": "Write what happened. Sentence-level crónica in past tense. The student becomes a storyteller.",
         "spiralReturn": [],
         "inputModes": [
           "typing"
@@ -2415,31 +2416,31 @@
       },
       "type": "cronica",
       "label": "Crónica",
-      "prompt": "Yaguará dice: '¿Qué necesitas para seguir el viaje? ¿Qué quieres aprender? Escribe.'",
-      "placeholder": "Necesito...",
+      "prompt": "Yaguará dice: 'Ayer, algo pasó. Escribe lo que viste. ¿Qué pasó en el bosque?'",
+      "placeholder": "Ayer...",
       "minWords": 10,
       "maxWords": 50,
       "scaffoldType": "sentence",
-      "storyKey": "cronica_dest15",
+      "storyKey": "cronica_dest14",
       "vocabularyHints": [
-        "quiero",
-        "puedo",
-        "necesito",
-        "ayudar",
-        "aprender",
-        "más",
-        "mejor",
-        "para",
-        "gracias"
+        "ayer",
+        "vi",
+        "llegó",
+        "cantó",
+        "primero",
+        "después",
+        "entonces",
+        "la niña",
+        "la rana"
       ],
       "button": "Guardar en la crónica"
     },
     {
       "_template": {
-        "id": "T34_oraculo_needs",
+        "id": "T34_oraculo_story_order",
         "layer": "advanced",
         "order": 34,
-        "description": "Predict what Candelaria needs next. Pragmatic problem-solving.",
+        "description": "Predict the next event in the story. Pragmatic narrative sequencing.",
         "spiralReturn": [
           4,
           8
@@ -2448,40 +2449,40 @@
           "choice"
         ],
         "ecosystemSlots": [
-          "texture"
+          "place"
         ]
       },
       "type": "oraculo",
       "label": "Oráculo",
-      "instruction": "¿Qué viene después?",
+      "instruction": "¿Qué viene después? En {pool:eco.place}.",
       "scene": [
         {
           "speaker": "Narrador",
-          "text": "Candelaria tiene {pool:eco.texture}."
+          "text": "La niña llegó al claro."
         },
         {
           "speaker": "Narrador",
-          "text": "Yaguará quiere ayudarla."
+          "text": "Vio a Yaguará."
         },
         {
           "speaker": "Narrador",
-          "text": "¿Qué puede hacer Yaguará?"
+          "text": "Abrió su cuaderno."
         }
       ],
       "options": [
-        "Puede traer hojas para cubrirla.",
-        "Puede cantar una canción.",
-        "Puede irse."
+        "Dibujó a Yaguará.",
+        "Corrió hacia el río.",
+        "Dijo adiós."
       ],
-      "answer": "Puede traer hojas para cubrirla.",
-      "explanation": "Candelaria tiene {pool:eco.texture}. Necesita algo para cubrirse. Yaguará puede traer hojas grandes."
+      "answer": "Dibujó a Yaguará.",
+      "explanation": "La niña no habla. Dibuja. Su cuaderno es su voz."
     },
     {
       "_template": {
-        "id": "T35_autoevaluacion_needs",
+        "id": "T35_autoevaluacion_pasado",
         "layer": "advanced",
         "order": 35,
-        "description": "Self-evaluation for dest15. Can you express needs, wants, and ability? Can you compare?",
+        "description": "Self-evaluation for dest14. Can you narrate what happened? Do you know the preterite?",
         "spiralReturn": [],
         "inputModes": [
           "choice"
@@ -2492,29 +2493,29 @@
       "instruction": "Piensa en lo que sabes ahora.",
       "statements": [
         {
-          "text": "Puedo decir lo que quiero: quiero ayudar."
+          "text": "Puedo decir qué pasó ayer."
         },
         {
-          "text": "Puedo decir lo que puedo hacer: puedo traer agua."
+          "text": "Sé la diferencia entre canta y cantó."
         },
         {
-          "text": "Puedo decir lo que necesito: necesito aprender."
+          "text": "Puedo contar una historia en orden: primero, después, entonces."
         },
         {
-          "text": "Sé comparar: más que, menos que, mejor, peor."
+          "text": "Conozco los verbos irregulares vi, vio, fue."
         },
         {
-          "text": "Puedo decir 'gracias' y 'por favor'."
+          "text": "Puedo describir lo que hizo la niña."
         }
       ],
-      "reflection": "Escribe una cosa que necesitas para seguir aprendiendo."
+      "reflection": "Escribe una cosa que pasó ayer."
     },
     {
       "_template": {
-        "id": "T36_portafolio_needs",
+        "id": "T36_portafolio_story",
         "layer": "advanced",
         "order": 36,
-        "description": "Record what you need and want. Voice portfolio — the student speaks their desires.",
+        "description": "Record a past-tense story. Voice portfolio — the student narrates the past.",
         "spiralReturn": [],
         "inputModes": [
           "voice"
@@ -2523,20 +2524,20 @@
       "type": "portafolio",
       "label": "Mi voz",
       "instruction": "Graba tu voz.",
-      "prompt": "¿Qué quieres? ¿Qué necesitas? ¿Qué puedes hacer para ayudar? Habla con la voz del bosque.",
+      "prompt": "Cuenta lo que pasó. ¿Qué viste? ¿Quién llegó? Usa las palabras: ayer, vi, llegó, cantó.",
       "guidingQuestions": [
-        "¿Qué quieres aprender?",
-        "¿Qué necesitas para seguir?",
-        "¿Qué puedes hacer ahora que antes no podías?"
+        "¿Qué pasó primero?",
+        "¿Quién llegó?",
+        "¿Qué hizo la niña?"
       ],
       "minWords": 10
     },
     {
       "_template": {
-        "id": "T37_escaperoom_needs",
+        "id": "T37_escaperoom_chronology",
         "layer": "meta",
         "order": 37,
-        "description": "Escape room: match needs to solutions. Riddle puzzle. Arcanum XVII — La Estrella.",
+        "description": "Escape room: put the story in chronological order. Cipher puzzle. Arcanum VI — Los Enamorados.",
         "spiralReturn": [],
         "inputModes": [
           "choice",
@@ -2547,52 +2548,47 @@
       "label": "Sala de enigmas",
       "instruction": "Resuelve los enigmas para abrir la puerta.",
       "room": {
-        "name": "La cueva de las estrellas",
-        "description": "Una cueva abierta al cielo. Las estrellas brillan arriba. En la pared hay un dibujo: una mujer arrodillada junto al agua, vertiendo dos jarras bajo las estrellas. La Estrella.",
-        "ambience": "starlight"
+        "name": "La cueva de la memoria",
+        "description": "Una cueva con dibujos en las paredes. Están desordenados — eventos del pasado mezclados. En una esquina, dos figuras se miran: una humana y un animal. Los Enamorados.",
+        "ambience": "charcoal-drawing"
       },
       "puzzles": [
         {
-          "puzzleType": "riddle",
-          "prompt": "Las estrellas hacen una pregunta:",
-          "riddle": "Tiene hambre. Tiene frío. Tiene un cuaderno. ¿Qué necesita más que nada?",
-          "clue": "No es comida. No es calor. Es algo que conecta a dos personas.",
-          "answer": "palabras",
+          "puzzleType": "cipher",
+          "prompt": "Los dibujos en la pared cuentan una historia. Ponlos en orden:",
+          "riddle": "1. ___ 2. ___ 3. ___",
+          "clue": "¿Qué pasó primero? ¿Qué pasó después? ¿Qué pasó al final?",
+          "answer": "cantó, llegó, dibujó",
           "options": [
-            "palabras",
-            "comida",
-            "agua",
-            "fuego"
+            "cantó",
+            "llegó",
+            "dibujó",
+            "corrió",
+            "durmió"
           ],
-          "onSolve": "Las estrellas brillan más fuerte."
+          "onSolve": "Los dibujos brillan en orden."
         },
         {
-          "puzzleType": "riddle",
-          "prompt": "Otra estrella pregunta:",
-          "riddle": "Yaguará puede traer agua. Candelaria puede escribir. Juntas, ¿qué pueden hacer?",
-          "clue": "Algo que una sola no puede hacer.",
-          "answer": "comunicarse",
-          "options": [
-            "comunicarse",
-            "dormir",
-            "cantar",
-            "correr"
-          ],
-          "onSolve": "La puerta se abre. Una estrella cae y se convierte en una gota de agua sobre una hoja."
+          "puzzleType": "wordlock",
+          "prompt": "Una cerradura con cuatro letras. La niña lo tiene en las manos.",
+          "clue": "Ella dibuja aquí. Tiene hojas. No es un libro — es más personal.",
+          "answer": "nota",
+          "hint": "_ _ _ _",
+          "onSolve": "La puerta se abre. Detrás: dos figuras dibujadas, mirándose. Los Enamorados."
         }
       ],
       "fragment": {
-        "text": "La estrella cae suavemente. Se convierte en una gota sobre una hoja — el primer regalo. En la pared: una mujer vierte agua bajo las estrellas. La esperanza nunca se agota. La Estrella.",
-        "questClue": "¿Qué necesitas para seguir? La respuesta es: al otro.",
-        "item": "gota-estrella"
+        "text": "Los dibujos cobran vida. Dos figuras se miran: una humana y un jaguar. La elección de mirarse. Los Enamorados.",
+        "questClue": "La vi. Ella me vio. Eso fue el principio.",
+        "item": "mirada-enamorados"
       }
     },
     {
       "_template": {
-        "id": "T38_explorador_needs_world",
+        "id": "T38_explorador_past_events",
         "layer": "meta",
         "order": 38,
-        "description": "Explore the ecosystem through needs. What does each place offer? What is missing?",
+        "description": "Explore the ecosystem for traces of the past. What happened here?",
         "spiralReturn": [
           5,
           12
@@ -2601,54 +2597,54 @@
           "choice"
         ],
         "ecosystemSlots": [
-          "nature"
+          "animal"
         ]
       },
       "type": "explorador",
       "label": "Explorador",
-      "instruction": "Explora y descubre lo que necesitas.",
+      "instruction": "Explora y descubre lo que pasó.",
       "locations": [
         {
-          "name": "El río",
-          "text": "El río tiene agua limpia. Candelaria necesita agua. Yaguará puede traerla en una hoja.",
-          "question": "¿Para qué necesitan el río?",
-          "answer": "Para tener agua",
+          "name": "El claro",
+          "text": "Hay marcas en la tierra. Alguien se sentó aquí. Hay trozos de papel con dibujos.",
+          "question": "¿Quién estuvo aquí?",
+          "answer": "La niña del cuaderno",
           "options": [
-            "Para tener agua",
-            "Para cantar",
-            "Para dibujar"
+            "La niña del cuaderno",
+            "Un {pool:eco.animal}",
+            "El poeta"
           ]
         },
         {
-          "name": "El árbol de frutas",
-          "text": "Hay fruta en los árboles. La {pool:eco.nature} crece aquí. Candelaria necesita comer.",
-          "question": "¿Qué puede encontrar aquí?",
-          "answer": "Comida",
+          "name": "La orilla del río",
+          "text": "Hay huellas de un {pool:eco.animal} en el barro. Ayer pasó por aquí.",
+          "question": "¿Qué dejó el {pool:eco.animal}?",
+          "answer": "Huellas en el barro",
           "options": [
-            "Comida",
-            "Un cuaderno",
+            "Huellas en el barro",
+            "Un dibujo",
             "Una canción"
           ]
         },
         {
-          "name": "El claro",
-          "text": "El claro es el lugar donde Candelaria se sienta. Es más seguro que el bosque profundo. Aquí pueden estar juntas.",
-          "question": "¿Por qué el claro es mejor?",
-          "answer": "Es más seguro que el bosque profundo",
+          "name": "El árbol grande",
+          "text": "Alguien talló algo en la corteza. Es un dibujo pequeño: un jaguar.",
+          "question": "¿Quién talló el dibujo?",
+          "answer": "Candelaria",
           "options": [
-            "Es más seguro que el bosque profundo",
-            "Tiene más agua",
-            "Es más grande"
+            "Candelaria",
+            "Yaguará",
+            "El poeta"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T39_guardian_modals",
+        "id": "T39_guardian_preterite",
         "layer": "meta",
         "order": 39,
-        "description": "Choose the right modal verb before time runs out. Speed decision-making.",
+        "description": "Convert present to past before time runs out. Speed transformation.",
         "spiralReturn": [
           3,
           8
@@ -2664,71 +2660,71 @@
       },
       "type": "guardian",
       "label": "Guardián",
-      "instruction": "¡Elige el verbo correcto antes de que desaparezca!",
+      "instruction": "¡Di el pasado antes de que desaparezca! En {pool:eco.place}.",
       "timeLimit": 8,
       "questions": [
         {
-          "prompt": "Tiene hambre. ___ comer.",
-          "answer": "Necesita",
+          "prompt": "canta → ...",
+          "answer": "cantó",
           "options": [
-            "Necesita",
-            "Puede",
-            "Quiere"
+            "cantó",
+            "canta",
+            "cantará"
           ]
         },
         {
-          "prompt": "Yo ___ ayudarla. Es mi deseo.",
-          "answer": "quiero",
+          "prompt": "llega → ...",
+          "answer": "llegó",
           "options": [
-            "quiero",
-            "puedo",
-            "necesito"
+            "llegó",
+            "llega",
+            "llegará"
           ]
         },
         {
-          "prompt": "No ___ hablar con ella. No sé cómo.",
-          "answer": "puedo",
+          "prompt": "camina → ...",
+          "answer": "caminó",
           "options": [
-            "quiero",
-            "puedo",
-            "necesito"
+            "caminó",
+            "camina",
+            "caminará"
           ]
         },
         {
-          "prompt": "Juntas es ___ que solas.",
-          "answer": "mejor",
+          "prompt": "ve → ...",
+          "answer": "vio",
           "options": [
-            "mejor",
-            "peor",
-            "más"
+            "vio",
+            "ve",
+            "verá"
           ]
         },
         {
-          "prompt": "El {pool:eco.place} canta ___ que antes.",
-          "answer": "menos",
+          "prompt": "va → ...",
+          "answer": "fue",
           "options": [
-            "más",
-            "menos",
-            "mejor"
+            "fue",
+            "va",
+            "irá"
           ]
         },
         {
-          "prompt": "'Thank you' en español...",
-          "answer": "gracias",
+          "prompt": "dibuja → ...",
+          "answer": "dibujó",
           "options": [
-            "gracias",
-            "por favor",
-            "de nada"
+            "dibujó",
+            "dibuja",
+            "dibujará"
           ]
         }
       ]
     },
     {
       "_template": {
-        "id": "T40_conjuro_needs",
+        "id": "T40_conjuro_past",
         "layer": "meta",
         "order": 40,
-        "description": "Speak what you need. Voice-activated modal verbs. Say it, and the star responds.",
+        "description": "Speak the past tense. Voice-activated preterite. Say the word and the memory appears.",
         "spiralReturn": [
           4,
           10
@@ -2737,47 +2733,49 @@
           "voice"
         ],
         "ecosystemSlots": [
-          "nature"
+          "animal",
+          "place",
+          "sound"
         ]
       },
       "type": "conjuro",
       "label": "Conjuro",
-      "instruction": "Di la palabra para que la {pool:eco.nature} responda.",
+      "instruction": "Di la palabra para que la memoria aparezca.",
       "spells": [
         {
-          "prompt": "Desear algo. 'Yo ___ ayudar.'",
-          "answer": "quiero",
-          "hint": "quie-ro"
+          "prompt": "La {pool:eco.animal} hizo un {pool:eco.sound}. En pasado: la {pool:eco.animal} ___.",
+          "answer": "cantó",
+          "hint": "can-tó"
         },
         {
-          "prompt": "Tener la capacidad. 'Yo ___ traer {pool:eco.nature}.'",
-          "answer": "puedo",
-          "hint": "pue-do"
+          "prompt": "El día antes de hoy.",
+          "answer": "ayer",
+          "hint": "a-yer"
         },
         {
-          "prompt": "Tener la obligación. 'Yo ___ aprender.'",
-          "answer": "necesito",
-          "hint": "ne-ce-si-to"
+          "prompt": "Yo miré con los ojos. Yo la ___.",
+          "answer": "vi",
+          "hint": "vi"
         },
         {
-          "prompt": "La primera palabra de Candelaria para Yaguará.",
-          "answer": "gracias",
-          "hint": "gra-cias"
+          "prompt": "La niña vino al {pool:eco.place}. Ella ___.",
+          "answer": "llegó",
+          "hint": "lle-gó"
         },
         {
-          "prompt": "¿Qué es lo opuesto de peor?",
-          "answer": "mejor",
-          "hint": "me-jor"
+          "prompt": "Cuenta la historia: 'Primero ___, después ___.'",
+          "answer": "primero",
+          "hint": "pri-me-ro"
         }
       ]
     }
   ],
   "departure": {
     "type": "narrative",
-    "closingQuestion": "¿Qué necesitas para seguir?",
-    "yaguaraLine": "Ella dijo 'gracias'. Una sola palabra. Pero fue suficiente. ¿Qué necesitas tú para seguir, viajero?",
+    "closingQuestion": "¿Qué pasó ayer?",
+    "yaguaraLine": "Ayer, la rana cantó. Una niña llegó. Me vio. La vi. Algo empezó, viajero.",
     "button": "→",
-    "nextUrl": "play.html?dest=16"
+    "nextUrl": "play.html?dest=15"
   },
   "characterMeta": {
     "char_candelaria": {
@@ -2785,8 +2783,8 @@
       "name": "Candelaria",
       "realName": "Candelaria Arango",
       "avatar": "img/characters/candelaria.jpg",
-      "voice": "quiet",
-      "description": "Una niña afrocolombiana de doce años. Tiene un cuaderno donde dibuja y ahora escribe. Dijo su primera palabra a Yaguará: 'Gracias'. Etiqueta sus dibujos: agua, hoja, jaguar."
+      "voice": "silent",
+      "description": "Una niña afrocolombiana de doce años. Tiene un cuaderno donde dibuja todo lo que ve. No habla — todavía. Pero sus ojos dicen mucho."
     }
   }
 }
