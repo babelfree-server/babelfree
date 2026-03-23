@@ -163,6 +163,44 @@
             }
         }
 
+        /* 6. Dynamic spiral return — Fibonacci-scheduled word revisits.
+           Queries PersonalLexicon for words due for spiral return at this
+           destination, generates reinforcement games on the fly. */
+        if (window.PersonalLexicon) {
+            try {
+                var lex = new PersonalLexicon();
+                var destNum = data.meta && data.meta.destination ? parseInt(data.meta.destination.replace('dest', ''), 10) : 0;
+                if (destNum > 0) {
+                    var dueWords = lex.getSpiralWords(destNum);
+                    if (dueWords.length > 0) {
+                        /* Build a fill game from the first 6 due words */
+                        var spiralWords = dueWords.slice(0, 6);
+                        var spiralGame = {
+                            type: 'fill',
+                            label: 'Retorno espiral',
+                            title: 'Palabras que regresan',
+                            instruction: 'Estas palabras vuelven a ti. ¿Las recuerdas?',
+                            _spiral: true,
+                            questions: []
+                        };
+                        for (var sw = 0; sw < spiralWords.length; sw++) {
+                            var w = spiralWords[sw].word;
+                            spiralGame.questions.push({
+                                sentence: '¿Recuerdas la palabra «___»? (Escríbela)',
+                                answer: w,
+                                options: [w]
+                            });
+                        }
+                        if (spiralGame.questions.length > 0) {
+                            games.push(spiralGame);
+                        }
+                    }
+                }
+            } catch (e) {
+                /* Spiral generation failed — continue without it */
+            }
+        }
+
         /* Escape rooms are now inline in games[] — no standalone escapeRoom key.
            Departure is NOT added as a game — the engine renders it
            natively in _showWorldRestored() via config.departure */
@@ -394,8 +432,7 @@
                                 if (!vocab.length) continue;
                                 var total = 0;
                                 for (var vi = 0; vi < vocab.length; vi++) {
-                                    var entry = lexicon.getEntry ? lexicon.getEntry(vocab[vi]) : null;
-                                    total += entry ? (entry.mastery || 0) : 0;
+                                    total += lexicon.getMastery ? lexicon.getMastery(vocab[vi]) : 0;
                                 }
                                 var avg = total / vocab.length;
                                 if (avg >= 0.85) g._inputMode = 'voice';

@@ -10092,6 +10092,22 @@
                 this._lexicon.recordBatch(vocab, lexSource, lexMode, this._currentEco || null);
             }
 
+            /* Server tracking — send game performance data for DELE evaluation */
+            if (window.JaguarAPI && JaguarAPI.isAuthenticated && JaguarAPI.isAuthenticated()) {
+                try {
+                    JaguarAPI.trackGame({
+                        destination_id: self._config.destinationId || '',
+                        game_type: data.type || '',
+                        game_index: idx,
+                        success: !!success,
+                        attempts: self._encounterAttempts || 1,
+                        time_ms: (self._timings && self._timings[idx]) ? self._timings[idx].elapsed : 0,
+                        vocabulary: vocab.slice(0, 20),
+                        cefr_level: self._config.cefrLevel || ''
+                    });
+                } catch (e) { /* tracking failure should never block gameplay */ }
+            }
+
             /* Evidence pipeline */
             if (window.EvidenceEngine && EvidenceEngine._ready) {
                 EvidenceEngine.recordEvidence(data, !!success, self._config.destinationId || '');

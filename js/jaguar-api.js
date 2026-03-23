@@ -417,6 +417,14 @@
         flushQueue: flushQueue,
 
         /**
+         * Track game performance (silent DELE evaluation data)
+         */
+        trackGame: function(data) {
+            if (!_getToken()) return Promise.resolve();
+            return _request('POST', '/tracking/game', data).catch(function() { /* silent */ });
+        },
+
+        /**
          * Check if user is authenticated (has server token)
          */
         isAuthenticated: function() {

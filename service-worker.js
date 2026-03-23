@@ -1,4 +1,4 @@
-const CACHE_NAME = 'babelfree-v7';
+const CACHE_NAME = 'babelfree-v8';
 const PRECACHE_URLS = [
   '/',
   '/services',
@@ -12,9 +12,9 @@ const PRECACHE_URLS = [
   '/assets/tower-logo.png',
   '/assets/logo.png',
   '/img/jaguar-hero-full.jpg',
-  '//play',
-  '//storymap',
-  '//cuaderno',
+  '/play',
+  '/storymap',
+  '/cuaderno',
   '/offline.html',
   '/js/jaguar-api.js',
   '/js/yaguara-engine.js',
