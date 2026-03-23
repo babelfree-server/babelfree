@@ -927,7 +927,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Babel Free &middot; <a href="/privacy">Privacy</a> &middot; <a href="/about">About</a></p>
+            <p>&copy; 2026 Babel Free &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/about">About</a></p>
         </div>
     </footer>
 
