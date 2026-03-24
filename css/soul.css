@@ -1,0 +1,166 @@
+/* ═══════════════════════════════════════════════════
+   SOUL — The emotional layer
+   No scores. No numbers. Only breath.
+═══════════════════════════════════════════════════ */
+
+/* ─── Breathing Paddle (between games) ─── */
+.soul-paddle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.soul-paddle-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.soul-paddle-exit {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.soul-paddle-inner {
+    text-align: center;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.soul-paddle-avatar {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: soulBreathe 3s ease-in-out infinite;
+}
+
+.soul-paddle-text {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #e8d5b7;
+    line-height: 1.6;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+@keyframes soulBreathe {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* ─── El Maestro Loading Screen ─── */
+.soul-maestro-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background: radial-gradient(ellipse at center, rgba(201,162,39,0.08) 0%, transparent 70%);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.soul-maestro-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.soul-maestro-exit {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.soul-maestro-inner {
+    text-align: center;
+    max-width: 500px;
+    padding: 3rem 2rem;
+}
+
+.soul-maestro-quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    color: #c9a54e;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.soul-maestro-attribution {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(201,162,39,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ─── Ecosystem body overlay ─── */
+body[data-ecosystem="bosque"] { --eco-accent: #2D5016; }
+body[data-ecosystem="costa"] { --eco-accent: #1B6B8A; }
+body[data-ecosystem="desierto"] { --eco-accent: #C49A3C; }
+body[data-ecosystem="islas"] { --eco-accent: #1AA5A5; }
+body[data-ecosystem="llanos"] { --eco-accent: #D4A843; }
+body[data-ecosystem="nevada"] { --eco-accent: #a0aec0; }
+body[data-ecosystem="selva"] { --eco-accent: #1a5a1a; }
+body[data-ecosystem="sierra"] { --eco-accent: #8B6914; }
+
+/* Subtle top border that shifts with ecosystem */
+body[data-ecosystem]::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--eco-accent, #c9a54e);
+    z-index: 9999;
+    opacity: 0.6;
+    transition: background 1.5s ease;
+}
+
+/* ─── Rana visibility (grows with riddle progress) ─── */
+.soul-rana {
+    opacity: 0.05;
+    filter: saturate(0%);
+    transition: opacity 2s ease, filter 2s ease;
+}
+
+.soul-rana.awakening {
+    opacity: 0.3;
+    filter: saturate(30%);
+}
+
+.soul-rana.visible {
+    opacity: 0.7;
+    filter: saturate(70%);
+}
+
+.soul-rana.golden {
+    opacity: 1;
+    filter: saturate(100%) brightness(1.1);
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+    .soul-paddle,
+    .soul-maestro-screen {
+        transition: opacity 0.3s ease;
+        transform: none;
+    }
+    .soul-paddle-avatar {
+        animation: none;
+    }
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 600px) {
+    .soul-paddle-text {
+        font-size: 1.1rem;
+    }
+    .soul-maestro-quote {
+        font-size: 1.2rem;
+    }
+}
