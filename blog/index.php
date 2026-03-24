@@ -312,6 +312,42 @@
 
     <section class="blog-section">
         <div class="blog-grid">
+            <a href="/blog/el-espanol-que-no-ensenan-las-apps" class="blog-card">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #8B4513, #D4A843);"><span class="card-icon">🇨🇴</span><span class="card-label">Español vivo</span></div>
+                <div class="blog-card-body">
+                    <h2>El español que no enseñan las apps</h2>
+                    <p>Lo que ninguna aplicación te va a enseñar: el tinto, la madrugada, la pena ajena, y el arte de decir no sin decir no.</p>
+                    <div class="blog-meta">
+                        <span>23 mar 2026</span>
+                        <span>ES</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/por-que-colombia" class="blog-card">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #27ae60, #1a8d7f);"><span class="card-icon">🌿</span><span class="card-label">Colombia</span></div>
+                <div class="blog-card-body">
+                    <h2>¿Por qué aprender español con Colombia?</h2>
+                    <p>Por qué Colombia es el mejor salón de clases del mundo. Los acentos, la literatura, los ecosistemas como vocabulario.</p>
+                    <div class="blog-meta">
+                        <span>23 mar 2026</span>
+                        <span>ES</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/nombrar-es-crear" class="blog-card">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #1a1a2e, #c9a227);"><span class="card-icon">✦</span><span class="card-label">Filosofía</span></div>
+                <div class="blog-card-body">
+                    <h2>Nombrar es crear: la filosofía detrás del juego</h2>
+                    <p>Por qué creemos que nombrar es crear. La conexión entre adquirir un idioma y construir una identidad.</p>
+                    <div class="blog-meta">
+                        <span>23 mar 2026</span>
+                        <span>ES</span>
+                    </div>
+                </div>
+            </a>
+
             <a href="/blog/learn-spanish-through-stories" class="blog-card">
                 <div class="blog-card-image" style="background: linear-gradient(135deg, #2c3e50, #3498db);"><span class="card-icon">📖</span><span class="card-label">Storytelling</span></div>
                 <div class="blog-card-body">
