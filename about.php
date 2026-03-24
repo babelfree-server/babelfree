@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Babelfree — Methodology, Mission & Team | El Viaje del Jaguar</title>
-    <meta name="description" content="Learn about Babelfree's CEFR-aligned methodology, our immersive Spanish course El Viaje del Jaguar, and our multilingual dictionary with 11.8M words in 94 languages.">
+    <meta name="description" content="Learn about Babelfree's CEFR-aligned methodology, our immersive Spanish course El Viaje del Jaguar, and our multilingual dictionary with 11.8M words in 97 languages.">
     <link rel="canonical" href="https://babelfree.com/about">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://babelfree.com/about">
     <meta property="og:title" content="About Babelfree — Methodology, Mission & Team">
-    <meta property="og:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 8,900 hours, 11.8M-word dictionary in 94 languages.">
+    <meta property="og:description" content="CEFR-aligned immersive Spanish learning through Colombian ecosystems. 89 destinations, 8,900 hours, 11.8M-word dictionary in 97 languages.">
     <meta property="og:site_name" content="Babel Free">
     <meta property="og:image" content="https://babelfree.com/assets/og-babel.png">
     <meta property="og:image:width" content="1200">
@@ -51,7 +51,7 @@
             "@type": "EducationalOrganization",
             "name": "Babel Free",
             "url": "https://babelfree.com",
-            "description": "Language education platform specializing in CEFR-aligned immersive Spanish learning through Colombian ecosystems, and a multilingual dictionary covering 94 languages with 11.8 million words.",
+            "description": "Language education platform specializing in CEFR-aligned immersive Spanish learning through Colombian ecosystems, and a multilingual dictionary covering 97 languages with 11.8 million words.",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
             "knowsAbout": ["Spanish language education", "CEFR methodology", "Immersive language learning", "Colombian ecosystems", "Multilingual lexicography"],
@@ -69,7 +69,7 @@
                 {
                   "@type": "WebApplication",
                   "name": "Babel Free Multilingual Dictionary",
-                  "description": "Free dictionary with 11.8 million words across 94 languages, CEFR-leveled definitions, and native-first approach.",
+                  "description": "Free dictionary with 11.8 million words across 97 languages, CEFR-leveled definitions, and native-first approach.",
                   "isAccessibleForFree": true
                 }
               ]

@@ -277,7 +277,7 @@
         <section class="policy-section" id="dictionary">
             <h2>4. Dictionary Services</h2>
             <ul>
-                <li>The Babel Free multilingual dictionary is freely accessible and covers 94 languages with over 11 million entries.</li>
+                <li>The Babel Free multilingual dictionary is freely accessible and covers 97 languages with over 11 million entries.</li>
                 <li>Dictionary data is sourced from open lexicographic resources (including Wiktionary) and original content. Attribution is maintained per applicable licenses.</li>
                 <li>Dictionary content is provided &ldquo;as is&rdquo; and may contain errors. We continuously improve accuracy through automated and manual review.</li>
                 <li>Bulk scraping, automated downloading, or commercial redistribution of dictionary data is prohibited.</li>
