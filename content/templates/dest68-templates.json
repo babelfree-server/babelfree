@@ -366,8 +366,25 @@
             "En el número de palabras por minuto",
             "En la cantidad de vocabulario conocido"
           ]
+        },
+        {
+          "audio": "¿Qué animal vive en este ecosistema?",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "dragón",
+            "unicornio"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T01_listening_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "susurro",
@@ -383,8 +400,19 @@
         "coherencia",
         "cohesión",
         "registro",
-        "adecuación"
-      ]
+        "adecuación",
+        "{pool:eco.animal}",
+        "{pool:eco.nature}",
+        "{pool:eco.place}"
+      ],
+      "_template": {
+        "id": "T02_susurro_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "pair",
@@ -415,8 +443,24 @@
         {
           "left": "autonomía",
           "right": "capacidad de usar el idioma sin depender de otros"
+        },
+        {
+          "left": "{pool:eco.animal}",
+          "right": "un animal del {pool:eco.place}"
+        },
+        {
+          "left": "{pool:eco.nature}",
+          "right": "parte de la naturaleza del {pool:eco.place}"
         }
-      ]
+      ],
+      "_template": {
+        "id": "T03_pair_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -486,8 +530,36 @@
             "montaña",
             "receta"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T04_fill_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -557,8 +629,36 @@
             "sombrero",
             "zapato"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T05_fill_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "builder",
@@ -604,8 +704,27 @@
             "orquesta"
           ],
           "answer": "Cada registro es un instrumento de la misma orquesta"
+        },
+        {
+          "words": [
+            "El",
+            "{pool:eco.animal}",
+            "vive",
+            "en",
+            "el",
+            "{pool:eco.place}"
+          ],
+          "answer": "El {pool:eco.animal} vive en el {pool:eco.place}"
         }
-      ]
+      ],
+      "_template": {
+        "id": "T06_builder_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "category",
@@ -642,8 +761,24 @@
             "registro",
             "dominio"
           ]
+        },
+        {
+          "name": "Ecosistema",
+          "words": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "{pool:eco.place}"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T07_category_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "translation",
@@ -661,8 +796,17 @@
         {
           "source": "Linguistic autonomy means you no longer need anyone to tell you how to express what you think.",
           "answer": "La autonomía lingüística significa que ya no necesitas que nadie te diga cómo expresar lo que piensas."
-        }
-      ]
+        },
+        "El {pool:eco.animal} descansa junto al {pool:eco.place}."
+      ],
+      "_template": {
+        "id": "T08_translation_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "dictation",
@@ -671,8 +815,17 @@
       "sentences": [
         "La maestría no se alcanza; se habita.",
         "Cada registro debe funcionar como un instrumento de la misma orquesta.",
-        "La autonomía lingüística es el resultado de la práctica y la reflexión."
-      ]
+        "La autonomía lingüística es el resultado de la práctica y la reflexión.",
+        "El {pool:eco.animal} descansa junto al {pool:eco.place}."
+      ],
+      "_template": {
+        "id": "T09_dictation_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -741,8 +894,36 @@
             "vende",
             "duerme"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T10_fill_d68",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     }
   ],
   "departure": {

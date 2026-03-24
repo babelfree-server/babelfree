@@ -366,8 +366,25 @@
             "Mamá Jaguar",
             "La Abuela Ceiba"
           ]
+        },
+        {
+          "audio": "¿Qué animal vive en este ecosistema?",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "dragón",
+            "unicornio"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T01_listening_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "susurro",
@@ -381,8 +398,19 @@
         "olvidar",
         "valiente",
         "comenzar",
-        "viaje"
-      ]
+        "viaje",
+        "{pool:eco.animal}",
+        "{pool:eco.nature}",
+        "{pool:eco.place}"
+      ],
+      "_template": {
+        "id": "T02_susurro_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "pair",
@@ -413,8 +441,24 @@
         {
           "left": "viaje",
           "right": "ir de un lugar a otro"
+        },
+        {
+          "left": "{pool:eco.animal}",
+          "right": "un animal del {pool:eco.place}"
+        },
+        {
+          "left": "{pool:eco.nature}",
+          "right": "parte de la naturaleza del {pool:eco.place}"
         }
-      ]
+      ],
+      "_template": {
+        "id": "T03_pair_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -484,8 +528,36 @@
             "comer",
             "llorar"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T04_fill_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -555,8 +627,36 @@
             "tiene",
             "hay"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T05_fill_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "builder",
@@ -597,8 +697,27 @@
             "hermana"
           ],
           "answer": "Río quiere ir con su hermana"
+        },
+        {
+          "words": [
+            "El",
+            "{pool:eco.animal}",
+            "vive",
+            "en",
+            "el",
+            "{pool:eco.place}"
+          ],
+          "answer": "El {pool:eco.animal} vive en el {pool:eco.place}"
         }
-      ]
+      ],
+      "_template": {
+        "id": "T06_builder_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "category",
@@ -641,8 +760,24 @@
             "viaje",
             "adiós"
           ]
+        },
+        {
+          "name": "Ecosistema",
+          "words": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "{pool:eco.place}"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T07_category_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "translation",
@@ -660,8 +795,17 @@
         {
           "source": "I am brave.",
           "answer": "Soy valiente."
-        }
-      ]
+        },
+        "El {pool:eco.animal} descansa junto al {pool:eco.place}."
+      ],
+      "_template": {
+        "id": "T08_translation_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "dictation",
@@ -670,8 +814,17 @@
       "sentences": [
         "Yaguará prepara su mochila.",
         "No quiero olvidar los nombres.",
-        "Soy valiente y estoy lista."
-      ]
+        "Soy valiente y estoy lista.",
+        "El {pool:eco.animal} descansa junto al {pool:eco.place}."
+      ],
+      "_template": {
+        "id": "T09_dictation_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -740,8 +893,36 @@
             "comer",
             "correr"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T10_fill_d13",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     }
   ],
   "departure": {

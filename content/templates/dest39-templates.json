@@ -402,8 +402,25 @@
             "observar",
             "medir"
           ]
+        },
+        {
+          "audio": "¿Qué animal vive en este ecosistema?",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "dragón",
+            "unicornio"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T01_listening_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "susurro",
@@ -464,7 +481,15 @@
             "clasificar"
           ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T02_susurro_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "pair",
@@ -494,8 +519,24 @@
         [
           "sexto",
           "publicar el descubrimiento"
+        ],
+        {
+          "left": "{pool:eco.animal}",
+          "right": "un animal del {pool:eco.place}"
+        },
+        {
+          "left": "{pool:eco.nature}",
+          "right": "parte de la naturaleza del {pool:eco.place}"
+        }
+      ],
+      "_template": {
+        "id": "T03_pair_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
         ]
-      ]
+      }
     },
     {
       "type": "pair",
@@ -525,8 +566,24 @@
         [
           "meteorología",
           "estudio del clima"
+        ],
+        {
+          "left": "{pool:eco.animal}",
+          "right": "un animal del {pool:eco.place}"
+        },
+        {
+          "left": "{pool:eco.nature}",
+          "right": "parte de la naturaleza del {pool:eco.place}"
+        }
+      ],
+      "_template": {
+        "id": "T04_pair_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
         ]
-      ]
+      }
     },
     {
       "type": "fill",
@@ -595,8 +652,36 @@
             "estuvo",
             "estará"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T05_fill_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -670,8 +755,36 @@
             "accidente",
             "sueño"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T06_fill_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "builder",
@@ -747,8 +860,27 @@
             "hay",
             "No"
           ]
+        },
+        {
+          "words": [
+            "El",
+            "{pool:eco.animal}",
+            "vive",
+            "en",
+            "el",
+            "{pool:eco.place}"
+          ],
+          "answer": "El {pool:eco.animal} vive en el {pool:eco.place}"
         }
-      ]
+      ],
+      "_template": {
+        "id": "T07_builder_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "category",
@@ -776,8 +908,24 @@
             "dato",
             "especie"
           ]
+        },
+        {
+          "name": "Ecosistema",
+          "words": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "{pool:eco.place}"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T08_category_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "translation",
@@ -855,8 +1003,25 @@
             "ecosistema",
             "especie"
           ]
+        },
+        {
+          "audio": "¿Qué animal vive en este ecosistema?",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "dragón",
+            "unicornio"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T09_translation_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "dictation",
@@ -886,8 +1051,17 @@
         {
           "audio": "Conservar la naturaleza es urgente",
           "text": "Conservar la naturaleza es urgente"
-        }
-      ]
+        },
+        "El {pool:eco.animal} descansa junto al {pool:eco.place}."
+      ],
+      "_template": {
+        "id": "T10_dictation_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -956,8 +1130,36 @@
             "color",
             "dueño"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T11_fill_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -1031,8 +1233,36 @@
             "peso",
             "color"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T12_fill_d39",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     }
   ],
   "departure": {

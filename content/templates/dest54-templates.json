@@ -366,8 +366,25 @@
             "Más dinero y trabajo",
             "Una nueva escuela"
           ]
+        },
+        {
+          "audio": "¿Qué animal vive en este ecosistema?",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "dragón",
+            "unicornio"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T01_listening_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "susurro",
@@ -383,8 +400,19 @@
         "dignidad",
         "tribunal",
         "conflicto",
-        "paz"
-      ]
+        "paz",
+        "{pool:eco.animal}",
+        "{pool:eco.nature}",
+        "{pool:eco.place}"
+      ],
+      "_template": {
+        "id": "T02_susurro_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "pair",
@@ -415,8 +443,24 @@
         {
           "left": "dignidad",
           "right": "respeto fundamental de toda persona"
+        },
+        {
+          "left": "{pool:eco.animal}",
+          "right": "un animal del {pool:eco.place}"
+        },
+        {
+          "left": "{pool:eco.nature}",
+          "right": "parte de la naturaleza del {pool:eco.place}"
         }
-      ]
+      ],
+      "_template": {
+        "id": "T03_pair_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -486,8 +530,36 @@
             "habríamos",
             "hayamos"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T04_fill_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -557,8 +629,36 @@
             "flor",
             "roca"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T05_fill_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "builder",
@@ -601,8 +701,27 @@
             "negocian"
           ],
           "answer": "Los derechos humanos no se negocian"
+        },
+        {
+          "words": [
+            "El",
+            "{pool:eco.animal}",
+            "vive",
+            "en",
+            "el",
+            "{pool:eco.place}"
+          ],
+          "answer": "El {pool:eco.animal} vive en el {pool:eco.place}"
         }
-      ]
+      ],
+      "_template": {
+        "id": "T06_builder_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "category",
@@ -639,8 +758,24 @@
             "convivencia",
             "paz"
           ]
+        },
+        {
+          "name": "Ecosistema",
+          "words": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "{pool:eco.place}"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T07_category_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "translation",
@@ -658,8 +793,17 @@
         {
           "source": "Although the conflict has ended, the wounds are still open.",
           "answer": "Aunque el conflicto haya terminado, las heridas siguen abiertas."
-        }
-      ]
+        },
+        "El {pool:eco.animal} descansa junto al {pool:eco.place}."
+      ],
+      "_template": {
+        "id": "T08_translation_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "dictation",
@@ -668,8 +812,17 @@
       "sentences": [
         "La justicia empieza cuando alguien escucha.",
         "Si hubiéramos tenido un tribunal justo, todo sería diferente.",
-        "La reconciliación no es olvido; es memoria con dignidad."
-      ]
+        "La reconciliación no es olvido; es memoria con dignidad.",
+        "El {pool:eco.animal} descansa junto al {pool:eco.place}."
+      ],
+      "_template": {
+        "id": "T09_dictation_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     },
     {
       "type": "fill",
@@ -738,8 +891,36 @@
             "mercado",
             "fiesta"
           ]
+        },
+        {
+          "sentence": "En este ecosistema hay un {pool:eco.animal} cerca del {pool:eco.place}.",
+          "answer": "{pool:eco.animal}",
+          "options": [
+            "{pool:eco.animal}",
+            "{pool:eco.nature}",
+            "piedra",
+            "nube"
+          ]
+        },
+        {
+          "sentence": "El {pool:eco.nature} crece junto al {pool:eco.place}.",
+          "answer": "{pool:eco.nature}",
+          "options": [
+            "{pool:eco.nature}",
+            "{pool:eco.animal}",
+            "libro",
+            "mesa"
+          ]
         }
-      ]
+      ],
+      "_template": {
+        "id": "T10_fill_d54",
+        "ecosystemSlots": [
+          "animal",
+          "place",
+          "nature"
+        ]
+      }
     }
   ],
   "departure": {
