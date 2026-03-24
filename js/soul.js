@@ -285,3 +285,101 @@
   }
 
 })(window);
+
+/* ═══════════════════════════════════════════════════
+   8. THE FINAL MOMENT — "Ahora, nombra."
+   After dest89, the student becomes a guardian.
+   They choose one word. It becomes a star.
+═══════════════════════════════════════════════════ */
+
+Soul.showFinalMoment = function (container, callback) {
+  if (!container) return;
+
+  container.innerHTML = '';
+  container.style.background = '#000';
+  container.style.minHeight = '100vh';
+  container.style.display = 'flex';
+  container.style.alignItems = 'center';
+  container.style.justifyContent = 'center';
+  container.style.transition = 'background 3s ease';
+
+  /* Phase 1: Black silence — 3 seconds */
+  setTimeout(function () {
+    /* Phase 2: "Ahora, nombra." fades in */
+    var prompt = document.createElement('div');
+    prompt.className = 'soul-final';
+    prompt.innerHTML =
+      '<div class="soul-final-prompt" id="soulFinalPrompt">Ahora, nombra.</div>' +
+      '<div class="soul-final-input-wrap" id="soulFinalWrap" style="opacity:0">' +
+        '<input type="text" class="soul-final-input" id="soulFinalInput" ' +
+          'placeholder="Una palabra..." autocomplete="off" maxlength="30" lang="es">' +
+      '</div>' +
+      '<div class="soul-final-star" id="soulFinalStar" style="opacity:0"></div>';
+    container.appendChild(prompt);
+
+    requestAnimationFrame(function () {
+      document.getElementById('soulFinalPrompt').classList.add('visible');
+    });
+
+    /* Phase 3: Input appears after 2 seconds */
+    setTimeout(function () {
+      var wrap = document.getElementById('soulFinalWrap');
+      wrap.style.transition = 'opacity 1.5s ease';
+      wrap.style.opacity = '1';
+      var input = document.getElementById('soulFinalInput');
+      input.focus();
+
+      /* Phase 4: When they type and press Enter */
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && input.value.trim()) {
+          var word = input.value.trim();
+          input.disabled = true;
+          wrap.style.opacity = '0';
+
+          /* The word becomes a star */
+          var star = document.getElementById('soulFinalStar');
+          star.textContent = word;
+          star.style.transition = 'opacity 2s ease, transform 2s ease, text-shadow 2s ease';
+          star.style.opacity = '1';
+
+          setTimeout(function () {
+            star.classList.add('soul-star-glow');
+          }, 100);
+
+          /* Save their word */
+          try {
+            var guardianWords = JSON.parse(localStorage.getItem('yaguara_guardian_words') || '[]');
+            guardianWords.push({
+              word: word,
+              date: new Date().toISOString(),
+              destination: 89
+            });
+            localStorage.setItem('yaguara_guardian_words', JSON.stringify(guardianWords));
+          } catch (ex) {}
+
+          /* After the star glows, dissolve into constellation */
+          setTimeout(function () {
+            star.classList.add('soul-star-dissolve');
+
+            setTimeout(function () {
+              /* Final message */
+              container.innerHTML =
+                '<div class="soul-final">' +
+                  '<div class="soul-final-coda visible">' +
+                    '<div class="soul-coda-line">Nombrar es crear.</div>' +
+                    '<div class="soul-coda-line soul-coda-small">El viaje continúa.</div>' +
+                    '<a href="/storymap" class="soul-coda-link">Volver al mapa</a>' +
+                  '</div>' +
+                '</div>';
+
+              container.style.background =
+                'radial-gradient(ellipse at center, rgba(201,162,39,0.15) 0%, #000 70%)';
+
+              if (callback) callback(word);
+            }, 2000);
+          }, 3000);
+        }
+      });
+    }, 2000);
+  }, 3000);
+};

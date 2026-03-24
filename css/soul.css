@@ -164,3 +164,125 @@ body[data-ecosystem]::before {
         font-size: 1.2rem;
     }
 }
+
+/* ═══════════════════════════════════════════════════
+   THE FINAL MOMENT — "Ahora, nombra."
+═══════════════════════════════════════════════════ */
+
+.soul-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.soul-final-prompt {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: #c9a54e;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.soul-final-prompt.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.soul-final-input-wrap {
+    margin-top: 2rem;
+}
+
+.soul-final-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(201,162,39,0.4);
+    color: #e8d5b7;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-align: center;
+    width: 300px;
+    padding: 0.5rem;
+    outline: none;
+    caret-color: #c9a54e;
+}
+
+.soul-final-input::placeholder {
+    color: rgba(201,162,39,0.3);
+}
+
+.soul-final-input:focus {
+    border-bottom-color: #c9a54e;
+}
+
+.soul-final-star {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem;
+    color: #c9a54e;
+    margin-top: 3rem;
+    text-shadow: 0 0 0 transparent;
+}
+
+.soul-star-glow {
+    text-shadow: 0 0 30px rgba(201,162,39,0.8), 0 0 60px rgba(201,162,39,0.4);
+    transform: scale(1.1);
+}
+
+.soul-star-dissolve {
+    opacity: 0 !important;
+    transform: scale(0.5) translateY(-50px) !important;
+    text-shadow: 0 0 100px rgba(201,162,39,1), 0 0 200px rgba(201,162,39,0.6) !important;
+    transition: all 2s ease !important;
+}
+
+.soul-final-coda {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.soul-final-coda.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.soul-coda-line {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #c9a54e;
+    margin-bottom: 0.5rem;
+}
+
+.soul-coda-small {
+    font-size: 1.1rem;
+    color: rgba(201,162,39,0.6);
+    margin-bottom: 2rem;
+}
+
+.soul-coda-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: rgba(232,213,183,0.5);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+.soul-coda-link:hover {
+    color: #c9a54e;
+}
+
+@media (max-width: 600px) {
+    .soul-final-prompt { font-size: 1.8rem; }
+    .soul-final-input { font-size: 1.4rem; width: 250px; }
+    .soul-final-star { font-size: 2.2rem; }
+    .soul-coda-line { font-size: 1.5rem; }
+}
