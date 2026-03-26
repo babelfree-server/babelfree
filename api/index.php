@@ -46,6 +46,7 @@ require_once __DIR__ . '/routes/feedback.php';
 require_once __DIR__ . '/routes/forum.php';
 require_once __DIR__ . '/routes/validation.php';
 require_once __DIR__ . '/routes/busqueda.php';
+require_once __DIR__ . '/routes/adventure.php';
 require_once __DIR__ . '/routes/analytics.php';
 require_once __DIR__ . '/routes/tracking.php';
 
@@ -103,6 +104,9 @@ switch ($resource) {
         break;
     case 'busqueda':
         handleBusquedaRoutes($action, $method);
+        break;
+    case 'adventure':
+        handleAdventureRoutes($action, $method);
         break;
     case 'analytics':
         handleAnalyticsRoutes($action, $method);

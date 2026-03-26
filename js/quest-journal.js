@@ -11,7 +11,7 @@
     'use strict';
 
     var STORAGE_KEY = 'yaguara_busqueda';
-    var TOTAL_DESTS = 58;
+    var TOTAL_DESTS = 89;
 
     // ── SVG namespace ────────────────────────────────────────────────
     var NS = 'http://www.w3.org/2000/svg';

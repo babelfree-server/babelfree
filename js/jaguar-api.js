@@ -563,6 +563,35 @@
         },
 
         /**
+         * Sync "Mi aventura por Colombia" composition progress to server
+         */
+        syncAdventureProgress: function(state) {
+            if (!_getToken()) return Promise.resolve();
+            var payload = {
+                chapters:              state.chapters || {},
+                earned_letters:        state.earnedLetters || [],
+                earned_words:          state.earnedWords || [],
+                earned_sentences:      state.earnedSentences || [],
+                composition_revealed:  state.compositionRevealed || false,
+                total_words_written:   state.totalWordsWritten || 0,
+                started_at:            state.startedAt || null
+            };
+            return _request('POST', '/adventure/progress', payload).catch(function() {
+                _enqueue('POST', '/adventure/progress', payload);
+            });
+        },
+
+        /**
+         * Get adventure progress from server (cross-device sync)
+         */
+        getAdventureProgress: function() {
+            if (!_getToken()) return Promise.resolve(null);
+            return _request('GET', '/adventure/progress').then(function(res) {
+                return res.success ? res.data.progress : null;
+            }).catch(function() { return null; });
+        },
+
+        /**
          * Get collected escape room fragments (meta-quest)
          */
         getFragments: function() {
@@ -624,11 +653,24 @@
         deleteAccount: function(password) {
             return _request('POST', '/auth/delete-account', { password: password }).then(function(res) {
                 if (res.success) {
-                    localStorage.removeItem(SESSION_KEY);
-                    localStorage.removeItem('colombianStudentData');
-                    localStorage.removeItem(SYNC_QUEUE_KEY);
-                    localStorage.removeItem('jaguarA1Progress');
-                    localStorage.removeItem('jaguarEscapeRoomProgress');
+                    // Remove ALL student data from localStorage (GDPR compliance)
+                    var keys = [
+                        SESSION_KEY, 'colombianStudentData', SYNC_QUEUE_KEY,
+                        'jaguarA1Progress', 'jaguarEscapeRoomProgress',
+                        'yaguara_aventura', 'yaguara_cronica', 'yaguara_busqueda',
+                        'yaguara_lexicon', 'yaguara_eco_affinity', 'yaguara_harvest',
+                        'yaguara_evidence', 'yaguara_srs', 'yaguara_journey',
+                        'yaguara_guardian_words', 'yaguara_latinkb_tip'
+                    ];
+                    keys.forEach(function(k) { localStorage.removeItem(k); });
+                    // Clear any per-destination keys
+                    for (var i = 0; i < localStorage.length; i++) {
+                        var key = localStorage.key(i);
+                        if (key && (key.indexOf('yaguara_') === 0 || key.indexOf('jaguar') === 0)) {
+                            localStorage.removeItem(key);
+                            i--; // adjust index after removal
+                        }
+                    }
                     window.location.href = '/';
                 }
                 return res;

@@ -4532,6 +4532,12 @@
                     lex.harvest(text, data.destination || null);
                 }
 
+                /* CompositionBuilder — feed crónica into "Mi aventura por Colombia" */
+                if (window.CompositionBuilder) {
+                    var destNum = (data.destination || '').replace(/\D/g, '');
+                    CompositionBuilder.recordCronica(destNum, text);
+                }
+
                 WorldReaction.harmony(container, textarea, function() { onComplete(true); });
             });
 

@@ -578,7 +578,7 @@
 
             card.appendChild(wrap);
 
-            // Delay before calling back — chain naming ceremony if all 58 solved
+            // Delay before calling back — chain naming ceremony if all 89 solved
             setTimeout(function () {
                 if (self.isComplete() && !state.ranaName) {
                     // All riddles solved — trigger the naming ceremony
@@ -647,7 +647,7 @@
             // Increment bridge
             state.bridgeSegments = state.solvedRiddles.length;
 
-            // Update rana opacity (linear 0→1 over 58 riddles)
+            // Update rana opacity (linear 0→1 over 89 riddles)
             state.ranaOpacity = Math.min(1.0,
                 Math.round((state.solvedRiddles.length / 89) * 100) / 100);
 
@@ -676,6 +676,11 @@
             }
 
             this._saveState();
+
+            // Feed to CompositionBuilder — "Mi aventura por Colombia"
+            if (window.CompositionBuilder) {
+                CompositionBuilder.recordRiddleSolve(destNum, answer);
+            }
 
             // Audio: bridge plank + rana shimmer
             if (window.AudioManager) {
@@ -760,7 +765,7 @@
             return this.getState().journalEntries;
         },
 
-        // ── Get bridge progress (0-58) ───────────────────────────────
+        // ── Get bridge progress (0-89) ───────────────────────────────
         getBridgeProgress: function () {
             return this.getState().bridgeSegments;
         },
@@ -770,12 +775,12 @@
             return this.getState().ranaOpacity;
         },
 
-        // ── Check if all 58 riddles solved ───────────────────────────
+        // ── Check if all 89 riddles solved ───────────────────────────
         isComplete: function () {
             return this.getState().solvedRiddles.length >= 89;
         },
 
-        // ── The naming ceremony — dest 58 when all solved ────────────
+        // ── The naming ceremony — dest 89 when all solved ────────────
         namingCeremony: function (container, onDone) {
             _injectCSS();
             var self = this;

@@ -27,7 +27,7 @@ class BusquedaProgress {
     public function upsert(int $userId, array $data): void {
         $solvedRiddles  = json_encode($data['solved_riddles'] ?? []);
         $journalEntries = json_encode($data['journal_entries'] ?? []);
-        $bridgeSegments = min(58, max(0, (int) ($data['bridge_segments'] ?? 0)));
+        $bridgeSegments = min(89, max(0, (int) ($data['bridge_segments'] ?? 0)));
         $ranaOpacity    = min(1.0, max(0.0, (float) ($data['rana_opacity'] ?? 0.0)));
         $ranaName       = isset($data['rana_name']) && $data['rana_name'] !== ''
             ? mb_substr($data['rana_name'], 0, 30) : null;
