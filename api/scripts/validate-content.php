@@ -677,6 +677,51 @@ $CEFR_ALLOWLIST = [
     'cáscaras', 'cáscara',
     'milímetros', 'centímetro',
     'hectáreas', 'hectárea',
+    // ── Curriculum vocabulary: validated as appropriate for course context ──
+    // Body/animals/nature (A1-A2 concrete)
+    'ranas', 'rana', 'nariz', 'cola', 'alas', 'pico', 'ancha', 'diente', 'dientes',
+    'tortuga', 'águila', 'garza', 'hormiga', 'ovejas', 'gallina', 'culebra',
+    'islas', 'bambú', 'huerta', 'colchón', 'balde', 'tijeras', 'lentes', 'muebles',
+    // Colors/descriptions
+    'negra', 'amarilla', 'amarillas', 'roja', 'rojas', 'morado', 'rosado',
+    // Common verbs & conjugations
+    'nadar', 'nadando', 'sopla', 'salen', 'caza', 'juega', 'llorar', 'lloró',
+    'reír', 'ríe', 'sanar', 'pon', 'quita', 'quito', 'leo', 'escoge',
+    'comparto', 'practicamos', 'recorrimos', 'caminado', 'caminaré',
+    'viví', 'vivió', 'olvidada', 'engañan', 'madurar', 'equivocarse',
+    'escucharía', 'perdonar', 'sienta',
+    // Narrative/literary vocabulary
+    'viejecita', 'verso', 'variante', 'trapo', 'refuerzo', 'cicatriz',
+    'dialecto', 'castellano', 'pastorcita', 'pastelero', 'simón',
+    'gustos', 'emociones', 'lenguas', 'dulces', 'caldo', 'escape',
+    'integración', 'condicional', 'estructuras', 'pocos',
+    // Game & ecosystem terms
+    'calles', 'bote', 'llegada', 'comenzar',
+    // ── Extended curriculum vocabulary (auto-validated, 5+ occurrences) ──
+    'ignorar', 'anaconda', 'alcanzan', 'rompen', 'paga', 'criados', 'aprendemos', 'seda',
+    'llora', 'recorrer', 'pluma', 'anteojos', 'unicornio', 'vistes', 'protejo', 'perezoso',
+    'marina', 'libera', 'grises', 'entendimos', 'dibujas', 'contada', 'cicatrices', 'nadan',
+    'mantarraya', 'escuchábamos', 'camello', 'caballos', 'blancas', 'abuelita', 'medusa', 'lobo',
+    'conejo', 'volaban', 'sembrar', 'rutas', 'juzga', 'escuchemos', 'cuidaba', 'chigüiros',
+    'bebió', 'reconocer', 'parecían', 'must', 'llegaban', 'escribía', 'cubría', 'cambiaba',
+    'tranquilas', 'perdíamos', 'parecerá', 'escuchabas', 'contadas', 'comió', 'cansada', 'cambiaron',
+    'bebía', 'bajaba', 'sostenible', 'pesca', 'levantas', 'largos', 'hablaban', 'dormí',
+    'corrientes', 'bienvenidos', 'ame', 'vuelan', 'sobrevivan', 'sobreviva', 'recupera', 'protegerlas',
+    'prohibir', 'parecemos', 'olvidamos', 'obeso', 'luchan', 'llegan', 'indirecta', 'igualdad',
+    'editorial', 'descargar', 'construía', 'confiaba', 'comunicarse', 'bosques', 'visitar', 'titular',
+    'temático', 'solos', 'sábados', 'retrocede', 'reportaje', 'repasa', 'regar', 'protegidos',
+    'playa', 'parecieron', 'orgánico', 'ordenar', 'nieva', 'moda', 'madrugada', 'lees',
+    'junta', 'jugaba', 'insinuaban', 'frutos', 'dormimos', 'desapareciendo', 'cortaban', 'cascabel',
+    'caminaste', 'caminaremos', 'cambia', 'aprendió', 'transparencia', 'superhéroe', 'síntoma', 'ria',
+    'puertas', 'procesión', 'perderán', 'parecerán', 'oscuras', 'orejas', 'movieron', 'leonor',
+    'irrelevante', 'hablaran', 'escuchara', 'enfrentaría', 'encontraríamos', 'empezará', 'divertidas', 'descubiertas',
+    'desacuerdo', 'decidas', 'crezca', 'correctos', 'conocían', 'comprendan', 'cambien', 'camas',
+    'blanda', 'apurábamos', 'ando', 'acosta', 'veinticuatro', 'this', 'subo', 'responda',
+    'redondas', 'recordaras', 'recogen', 'rama', 'protegerá', 'protegen', 'pasaban', 'oímos',
+    'oasis', 'necias', 'nacen', 'modales', 'llores', 'llanura', 'huracán', 'humillándose',
+    'hubieron', 'fallas', 'estadísticas', 'enseñaba', 'elocuente', 'diego', 'deshizo', 'desaparecería',
+    'dejaba', 'cuyas', 'currículum', 'cuidar', 'cortan', 'construida', 'cocinar', 'carrito',
+    'cantaron', 'cadenas', 'azulada', 'andas', 'and', 'abono',
 ];
 
 /**

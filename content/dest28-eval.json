@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "destination": "dest28-eval",
+    "title": "Autoevaluación B1",
+    "cefr": "B1",
+    "cefrSubLevel": "B1 evaluación",
+    "type": "autoevaluacion",
+    "sections": 4,
+    "timeLimit": 90,
+    "scoring": {
+      "type": "percentage_per_section",
+      "display": "bar_chart",
+      "sections": [
+        "Comprensión de lectura",
+        "Comprensión auditiva",
+        "Expresión escrita",
+        "Expresión oral"
+      ],
+      "descriptors": {
+        "90-100": "Dominas este nivel. Estás listo/a para B2.",
+        "75-89": "Buen nivel. Pocas áreas que reforzar.",
+        "60-74": "Nivel aceptable. Repasa los temas señalados.",
+        "40-59": "Necesitas más práctica.",
+        "0-39": "Repasa y vuelve a intentar."
+      },
+      "noPassFail": true
+    }
+  },
+  "sections": [
+    {
+      "section": 1,
+      "title": "Comprensión de lectura",
+      "skill": "reading",
+      "timeLimit": 25,
+      "games": [
+        {
+          "type": "fill",
+          "title": "Artículo de periódico",
+          "instruction": "Lee y responde.",
+          "text": "MEDELLÍN — El alcalde anunció ayer la construcción de un nuevo parque en el barrio Laureles. 'Esperamos que este proyecto beneficie a más de 50.000 personas', dijo. Los vecinos pidieron que se incluyeran árboles nativos y una zona para niños. El proyecto costará 2.000 millones de pesos y se espera que esté listo en diciembre. Algunos residentes dudaron que se terminara a tiempo.",
+          "items": [
+            {
+              "text": "¿Qué anunció el alcalde? La ___ de un parque.",
+              "answer": "construcción",
+              "options": [
+                "construcción",
+                "destrucción",
+                "venta"
+              ]
+            },
+            {
+              "text": "¿Cuántas personas se beneficiarán? Más de ___.",
+              "answer": "50.000",
+              "options": [
+                "50.000",
+                "5.000",
+                "500"
+              ]
+            },
+            {
+              "text": "¿Qué pidieron los vecinos? Que se ___ árboles nativos.",
+              "answer": "incluyeran",
+              "options": [
+                "incluyeran",
+                "cortaran",
+                "vendieran"
+              ]
+            },
+            {
+              "text": "¿Cuánto costará? ___ millones.",
+              "answer": "2.000",
+              "options": [
+                "2.000",
+                "200",
+                "20"
+              ]
+            },
+            {
+              "text": "¿Algunos residentes dudaron que...? Se ___ a tiempo.",
+              "answer": "terminara",
+              "options": [
+                "terminara",
+                "empezara",
+                "vendiera"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "fill",
+          "title": "Lee un blog de viajes",
+          "instruction": "Lee y completa.",
+          "items": [
+            {
+              "text": "El bloguero recomienda que los turistas ___ Medellín.",
+              "answer": "visiten",
+              "options": [
+                "visiten",
+                "visitan",
+                "visitaron"
+              ]
+            },
+            {
+              "text": "Ojalá que el clima ___ bueno durante el viaje.",
+              "answer": "sea",
+              "options": [
+                "sea",
+                "es",
+                "será"
+              ]
+            },
+            {
+              "text": "Si pudiera, ___ por toda Colombia.",
+              "answer": "viajaría",
+              "options": [
+                "viajaría",
+                "viajo",
+                "viajé"
+              ]
+            },
+            {
+              "text": "Es necesario que los viajeros ___ agua.",
+              "answer": "lleven",
+              "options": [
+                "lleven",
+                "llevan",
+                "llevaron"
+              ]
+            },
+            {
+              "text": "Dudo que el hotel ___ tan barato como dice.",
+              "answer": "sea",
+              "options": [
+                "sea",
+                "es",
+                "fue"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "corrector",
+          "title": "Subjuntivo en contexto",
+          "instruction": "¿Es correcto?",
+          "items": [
+            {
+              "text": "Espero que tengas un buen viaje.",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "Quiero que tú vienes mañana.",
+              "error": "vienes",
+              "correction": "vengas",
+              "correct": false
+            },
+            {
+              "text": "No creo que haya problema.",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "Es importante que todos participan.",
+              "error": "participan",
+              "correction": "participen",
+              "correct": false
+            },
+            {
+              "text": "Si tuviera dinero, viajaría.",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "Me pidieron que llegue temprano.",
+              "error": "llegue",
+              "correction": "llegara",
+              "correct": false
+            },
+            {
+              "text": "He vivido aquí cinco años.",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "La escuela fue construida en 1990.",
+              "error": null,
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": 2,
+      "title": "Comprensión auditiva",
+      "skill": "listening",
+      "timeLimit": 20,
+      "games": [
+        {
+          "type": "listening",
+          "title": "Noticias y opiniones",
+          "instruction": "Escucha y responde.",
+          "items": [
+            {
+              "audio": "El gobierno espera que la nueva ley proteja los bosques. Sin embargo, muchos creen que no será suficiente.",
+              "options": [
+                "La ley protegerá los bosques, pero algunos dudan.",
+                "Todos están contentos.",
+                "No hay nueva ley."
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Si pudiera volver al pasado, cambiaría muchas cosas. Pero como no puedo, intento hacer mejor las cosas ahora.",
+              "options": [
+                "Querría cambiar el pasado pero se enfoca en el presente.",
+                "Puede volver al pasado.",
+                "No quiere cambiar nada."
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Mi abuela siempre me decía que escuchara con atención. Decía que las palabras tenían poder.",
+              "options": [
+                "La abuela valoraba escuchar.",
+                "La abuela no hablaba.",
+                "No le gustaban las palabras."
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Es necesario que protejamos la naturaleza. Si no lo hacemos ahora, será demasiado tarde.",
+              "options": [
+                "Hay urgencia de proteger la naturaleza.",
+                "No hay urgencia.",
+                "Ya es tarde."
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "type": "listening",
+          "title": "Conversaciones con opiniones",
+          "instruction": "Escucha y responde.",
+          "items": [
+            {
+              "audio": "Me preocupa que la deforestación continúe. Es necesario que el gobierno actúe.",
+              "options": [
+                "Pide acción del gobierno.",
+                "Apoya la deforestación.",
+                "No le importa."
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Si hubiera estudiado más, habría pasado el examen. Pero no me arrepiento.",
+              "options": [
+                "No estudió suficiente pero no se arrepiente.",
+                "Pasó el examen.",
+                "Se arrepiente."
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Mis abuelos me contaron que antes el río era limpio. Ahora está contaminado.",
+              "options": [
+                "El río antes era limpio, ahora no.",
+                "El río siempre fue limpio.",
+                "El río siempre estuvo contaminado."
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Le recomiendo que pruebe la comida típica. Espero que le guste.",
+              "options": [
+                "Recomienda comida típica.",
+                "No le gusta la comida.",
+                "No tiene recomendación."
+              ],
+              "correct": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": 3,
+      "title": "Expresión escrita",
+      "skill": "writing",
+      "timeLimit": 25,
+      "games": [
+        {
+          "type": "cronica",
+          "title": "Carta de opinión",
+          "instruction": "Escribe una carta al periódico sobre un tema que te importa. Usa subjuntivo: 'Espero que...', 'Es necesario que...', 'Dudo que...'",
+          "prompts": [
+            "¿Sobre qué tema escribes?",
+            "¿Cuál es tu opinión?",
+            "¿Qué esperas que pase? (subjuntivo)",
+            "¿Qué recomiendas? (subjuntivo)",
+            "¿Cómo sería el mundo si...? (condicional)",
+            "Despedida"
+          ]
+        },
+        {
+          "type": "dictation",
+          "title": "Dictado B1 avanzado",
+          "instruction": "Escucha y escribe.",
+          "items": [
+            {
+              "audio": "Es importante que protejamos el medio ambiente.",
+              "answer": "Es importante que protejamos el medio ambiente."
+            },
+            {
+              "audio": "Si pudiera cambiar algo, escucharía más.",
+              "answer": "Si pudiera cambiar algo, escucharía más."
+            },
+            {
+              "audio": "Mi abuela me dijo que nunca olvidara mis raíces.",
+              "answer": "Mi abuela me dijo que nunca olvidara mis raíces."
+            },
+            {
+              "audio": "Hemos aprendido mucho en este viaje.",
+              "answer": "Hemos aprendido mucho en este viaje."
+            },
+            {
+              "audio": "Ojalá que las próximas generaciones cuiden el bosque.",
+              "answer": "Ojalá que las próximas generaciones cuiden el bosque."
+            },
+            {
+              "audio": "La carretera fue construida sin consultar a la comunidad.",
+              "answer": "La carretera fue construida sin consultar a la comunidad."
+            },
+            {
+              "audio": "No creo que sea justo destruir para construir.",
+              "answer": "No creo que sea justo destruir para construir."
+            },
+            {
+              "audio": "Le pedí que me ayudara y lo hizo con gusto.",
+              "answer": "Le pedí que me ayudara y lo hizo con gusto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": 4,
+      "title": "Expresión oral",
+      "skill": "speaking",
+      "timeLimit": 15,
+      "games": [
+        {
+          "type": "conversation",
+          "title": "Debate",
+          "instruction": "Responde con opiniones y argumentos.",
+          "items": [
+            {
+              "prompt": "¿Es importante proteger la naturaleza? ¿Por qué?",
+              "hint": "Es importante que... porque...",
+              "accepts": []
+            },
+            {
+              "prompt": "Si pudieras cambiar algo en el mundo, ¿qué cambiarías?",
+              "hint": "Si pudiera, cambiaría...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Qué le dirías a alguien que destruye el bosque?",
+              "hint": "Le diría que...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Qué has aprendido en este viaje con Yaguará?",
+              "hint": "He aprendido que...",
+              "accepts": []
+            }
+          ]
+        },
+        {
+          "type": "sombra",
+          "title": "Lee textos B1 en voz alta",
+          "instruction": "Lee con fluidez.",
+          "items": [
+            {
+              "text": "Es necesario que protejamos lo que amamos.",
+              "audio": "necesario"
+            },
+            {
+              "text": "Si pudiera volver al pasado, escucharía con más atención.",
+              "audio": "si-pudiera"
+            },
+            {
+              "text": "Me pidieron que llegara temprano y lo hice.",
+              "audio": "me-pidieron"
+            },
+            {
+              "text": "Hemos recorrido un largo camino juntos.",
+              "audio": "hemos-recorrido"
+            },
+            {
+              "text": "Ojalá que todo lo que nombramos siga vivo.",
+              "audio": "ojala"
+            },
+            {
+              "text": "La herida sana cuando la familia la cuida.",
+              "audio": "herida-sana"
+            },
+            {
+              "text": "No creo que el silencio pueda ganar.",
+              "audio": "no-creo"
+            },
+            {
+              "text": "Nombrar es proteger. Escuchar es amar.",
+              "audio": "nombrar-escuchar"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

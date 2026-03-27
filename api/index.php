@@ -32,6 +32,7 @@ require_once __DIR__ . '/models/Dictionary.php';
 require_once __DIR__ . '/models/Glossary.php';
 require_once __DIR__ . '/models/BusquedaProgress.php';
 require_once __DIR__ . '/models/Analytics.php';
+require_once __DIR__ . '/models/LexiconProgress.php';
 
 // Routes
 require_once __DIR__ . '/routes/auth.php';
@@ -49,6 +50,7 @@ require_once __DIR__ . '/routes/busqueda.php';
 require_once __DIR__ . '/routes/adventure.php';
 require_once __DIR__ . '/routes/analytics.php';
 require_once __DIR__ . '/routes/tracking.php';
+require_once __DIR__ . '/routes/lexicon.php';
 
 // CORS
 setCorsHeaders();
@@ -113,6 +115,9 @@ switch ($resource) {
         break;
     case 'tracking':
         handleTrackingRoutes($action, $method);
+        break;
+    case 'lexicon':
+        handleLexiconRoutes($action, $method);
         break;
     default:
         jsonError('Ruta no encontrada', 404);

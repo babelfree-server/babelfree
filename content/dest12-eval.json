@@ -1,0 +1,621 @@
+{
+  "meta": {
+    "destination": "dest12-eval",
+    "title": "Autoevaluación A1",
+    "cefr": "A1",
+    "cefrSubLevel": "A1 evaluación",
+    "type": "autoevaluacion",
+    "sections": 4,
+    "timeLimit": 60,
+    "scoring": {
+      "type": "percentage_per_section",
+      "display": "bar_chart",
+      "sections": [
+        "Comprensión de lectura",
+        "Comprensión auditiva",
+        "Expresión escrita",
+        "Expresión oral"
+      ],
+      "descriptors": {
+        "90-100": "Dominas este nivel. Estás listo/a para el siguiente.",
+        "75-89": "Buen nivel. Pocas áreas que reforzar.",
+        "60-74": "Nivel aceptable. Repasa los temas señalados.",
+        "40-59": "Necesitas más práctica. Revisa las destinaciones recomendadas.",
+        "0-39": "Este nivel necesita más trabajo. No te preocupes — repasa y vuelve a intentar."
+      },
+      "sectionFeedback": true,
+      "showPercentage": true,
+      "showRecommendations": true,
+      "noPassFail": true
+    }
+  },
+  "sections": [
+    {
+      "section": 1,
+      "title": "Comprensión de lectura",
+      "skill": "reading",
+      "timeLimit": 15,
+      "games": [
+        {
+          "type": "fill",
+          "title": "Lee y completa",
+          "instruction": "Lee el texto y completa con la palabra correcta.",
+          "text": "Yaguará es un jaguar. Ella vive en un bosque grande y verde. Tiene una mamá que se llama Nakawe y un hermano que se llama Río. Su abuela es la Ceiba, un árbol enorme. A Yaguará le gusta nadar en el río y comer frutas. No le gusta el silencio gris.",
+          "items": [
+            {
+              "text": "Yaguará es un ___.",
+              "answer": "jaguar",
+              "options": [
+                "jaguar",
+                "pájaro",
+                "pez"
+              ]
+            },
+            {
+              "text": "Ella ___ en un bosque.",
+              "answer": "vive",
+              "options": [
+                "vive",
+                "come",
+                "duerme"
+              ]
+            },
+            {
+              "text": "Su hermano se llama ___.",
+              "answer": "Río",
+              "options": [
+                "Río",
+                "Pombo",
+                "David"
+              ]
+            },
+            {
+              "text": "A Yaguará le gusta ___.",
+              "answer": "nadar",
+              "options": [
+                "nadar",
+                "llorar",
+                "el gris"
+              ]
+            },
+            {
+              "text": "No le gusta el silencio ___.",
+              "answer": "gris",
+              "options": [
+                "gris",
+                "verde",
+                "azul"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "fill",
+          "title": "El menú de la viejecita",
+          "instruction": "Lee el menú y responde.",
+          "text": "MENÚ DEL DÍA\nComida: carnes, frutas, dulces, tortas, huevos, pan y pez.\nBebida: caldo, chocolate, leche, vino, té y café.\nPrecio: gratis (la viejecita dice que no tiene nada).",
+          "items": [
+            {
+              "text": "¿Qué comida tiene el menú? Tiene carnes, frutas, dulces, tortas, ___ y pan.",
+              "answer": "huevos",
+              "options": [
+                "huevos",
+                "sillas",
+                "árboles"
+              ]
+            },
+            {
+              "text": "¿Qué bebida hay? Hay caldo, chocolate, leche, vino, ___ y café.",
+              "answer": "té",
+              "options": [
+                "té",
+                "pan",
+                "carnes"
+              ]
+            },
+            {
+              "text": "¿Cuánto cuesta? Es ___.",
+              "answer": "gratis",
+              "options": [
+                "gratis",
+                "caro",
+                "nuevo"
+              ]
+            },
+            {
+              "text": "La viejecita dice que no tiene ___.",
+              "answer": "nada",
+              "options": [
+                "nada",
+                "todo",
+                "mucho"
+              ]
+            },
+            {
+              "text": "¿La viejecita es realmente pobre? ___.",
+              "answer": "No",
+              "options": [
+                "No",
+                "Sí",
+                "No sé"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "corrector",
+          "title": "¿Es correcto?",
+          "instruction": "Lee cada frase. ¿Está bien o tiene un error?",
+          "items": [
+            {
+              "text": "Yo soy un estudiante.",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "Ella tiene veinte año.",
+              "error": "año",
+              "correction": "años",
+              "correct": false
+            },
+            {
+              "text": "Me gusta las frutas.",
+              "error": "gusta",
+              "correction": "gustan",
+              "correct": false
+            },
+            {
+              "text": "¿Cómo te llamas?",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "Ella es contenta hoy.",
+              "error": "es",
+              "correction": "está",
+              "correct": false
+            },
+            {
+              "text": "Hay un río en el bosque.",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "Yo tengo una hermana.",
+              "error": null,
+              "correct": true
+            },
+            {
+              "text": "Los pájaros es azules.",
+              "error": "es",
+              "correction": "son",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": 2,
+      "title": "Comprensión auditiva",
+      "skill": "listening",
+      "timeLimit": 10,
+      "games": [
+        {
+          "type": "listening",
+          "title": "Escucha y responde",
+          "instruction": "Escucha la conversación y escoge la respuesta correcta.",
+          "items": [
+            {
+              "audio": "Hola. Yo soy María. Tengo quince años. Vivo en Medellín.",
+              "options": [
+                "María tiene 15 años.",
+                "María tiene 50 años.",
+                "María tiene 5 años."
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Me gusta nadar y correr. No me gusta dormir.",
+              "options": [
+                "Le gusta dormir.",
+                "Le gusta nadar y correr.",
+                "No le gusta nadar."
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Hace frío hoy. Hay nubes. Va a llover.",
+              "options": [
+                "Hace calor.",
+                "Hace frío y va a llover.",
+                "Hace sol."
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Mi mamá cocina los sábados. Mi papá cocina los domingos.",
+              "options": [
+                "Mamá cocina los domingos.",
+                "Papá cocina los sábados.",
+                "Mamá cocina los sábados."
+              ],
+              "correct": 2
+            },
+            {
+              "audio": "El bus sale a las ocho de la mañana. Llega a las diez.",
+              "options": [
+                "El bus sale a las diez.",
+                "El bus sale a las ocho.",
+                "El bus no sale."
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Yo quiero ir en bote. Mi hermano quiere caminar.",
+              "options": [
+                "Los dos quieren caminar.",
+                "Yo quiero el bote, mi hermano quiere caminar.",
+                "Nadie quiere ir."
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Necesito agua. ¿Puedes ayudarme? Estoy cansada.",
+              "options": [
+                "Necesita comida.",
+                "Necesita agua y está cansada.",
+                "No necesita nada."
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "En mi casa hay tres dormitorios, una cocina y un baño.",
+              "options": [
+                "Hay dos dormitorios.",
+                "Hay tres dormitorios.",
+                "No hay cocina."
+              ],
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "type": "listening",
+          "title": "¿Qué número/día/hora?",
+          "instruction": "Escucha y escoge.",
+          "items": [
+            {
+              "audio": "Son las tres de la tarde.",
+              "options": [
+                "3:00 PM",
+                "3:00 AM",
+                "13:00"
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "Hoy es miércoles.",
+              "options": [
+                "lunes",
+                "miércoles",
+                "viernes"
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Tengo veinticinco años.",
+              "options": [
+                "15",
+                "25",
+                "35"
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Mi hermano tiene ocho años.",
+              "options": [
+                "8",
+                "18",
+                "80"
+              ],
+              "correct": 0
+            },
+            {
+              "audio": "El avión sale en marzo.",
+              "options": [
+                "enero",
+                "marzo",
+                "mayo"
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Hay cincuenta personas.",
+              "options": [
+                "15",
+                "50",
+                "500"
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "La clase es a las nueve.",
+              "options": [
+                "8:00",
+                "9:00",
+                "10:00"
+              ],
+              "correct": 1
+            },
+            {
+              "audio": "Estamos en diciembre.",
+              "options": [
+                "octubre",
+                "noviembre",
+                "diciembre"
+              ],
+              "correct": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": 3,
+      "title": "Expresión escrita",
+      "skill": "writing",
+      "timeLimit": 15,
+      "games": [
+        {
+          "type": "cronica",
+          "title": "Preséntate",
+          "instruction": "Escribe sobre ti. Responde todas las preguntas.",
+          "prompts": [
+            "¿Cómo te llamas?",
+            "¿Cuántos años tienes?",
+            "¿Dónde vives?",
+            "¿Con quién vives? (familia)",
+            "¿Qué te gusta hacer?",
+            "¿Qué no te gusta?",
+            "¿Cómo estás hoy?"
+          ]
+        },
+        {
+          "type": "builder",
+          "title": "Escribe oraciones",
+          "instruction": "Ordena las palabras para formar oraciones correctas.",
+          "items": [
+            {
+              "words": [
+                "Me",
+                "llamo",
+                "Ana",
+                "y",
+                "tengo",
+                "veinte",
+                "años"
+              ],
+              "answer": "Me llamo Ana y tengo veinte años."
+            },
+            {
+              "words": [
+                "Mi",
+                "familia",
+                "es",
+                "grande",
+                "y",
+                "bonita"
+              ],
+              "answer": "Mi familia es grande y bonita."
+            },
+            {
+              "words": [
+                "Yo",
+                "vivo",
+                "en",
+                "una",
+                "casa",
+                "con",
+                "jardín"
+              ],
+              "answer": "Yo vivo en una casa con jardín."
+            },
+            {
+              "words": [
+                "Me",
+                "gusta",
+                "nadar",
+                "pero",
+                "no",
+                "me",
+                "gusta",
+                "correr"
+              ],
+              "answer": "Me gusta nadar pero no me gusta correr."
+            },
+            {
+              "words": [
+                "Hay",
+                "tres",
+                "sillas",
+                "en",
+                "la",
+                "cocina"
+              ],
+              "answer": "Hay tres sillas en la cocina."
+            },
+            {
+              "words": [
+                "Estoy",
+                "contenta",
+                "porque",
+                "estoy",
+                "con",
+                "mi",
+                "familia"
+              ],
+              "answer": "Estoy contenta porque estoy con mi familia."
+            },
+            {
+              "words": [
+                "¿Qué",
+                "hora",
+                "es?",
+                "Son",
+                "las",
+                "cinco"
+              ],
+              "answer": "¿Qué hora es? Son las cinco."
+            },
+            {
+              "words": [
+                "El",
+                "lunes",
+                "yo",
+                "camino",
+                "por",
+                "el",
+                "bosque"
+              ],
+              "answer": "El lunes yo camino por el bosque."
+            }
+          ]
+        },
+        {
+          "type": "dictation",
+          "title": "Dictado",
+          "instruction": "Escucha y escribe exactamente lo que oyes.",
+          "items": [
+            {
+              "audio": "Yo soy Yaguará.",
+              "answer": "Yo soy Yaguará."
+            },
+            {
+              "audio": "Me gusta el bosque.",
+              "answer": "Me gusta el bosque."
+            },
+            {
+              "audio": "Mi mamá se llama Nakawe.",
+              "answer": "Mi mamá se llama Nakawe."
+            },
+            {
+              "audio": "Ella tiene una casa grande.",
+              "answer": "Ella tiene una casa grande."
+            },
+            {
+              "audio": "¿Cómo estás hoy?",
+              "answer": "¿Cómo estás hoy?"
+            },
+            {
+              "audio": "Hace frío y llueve.",
+              "answer": "Hace frío y llueve."
+            },
+            {
+              "audio": "Si nombras las cosas, no desaparecen.",
+              "answer": "Si nombras las cosas, no desaparecen."
+            },
+            {
+              "audio": "¿Quién eres tú?",
+              "answer": "¿Quién eres tú?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": 4,
+      "title": "Expresión oral",
+      "skill": "speaking",
+      "timeLimit": 10,
+      "games": [
+        {
+          "type": "conversation",
+          "title": "Habla sobre ti",
+          "instruction": "Responde en voz alta. Graba tu respuesta.",
+          "items": [
+            {
+              "prompt": "Buenos días. ¿Cómo te llamas?",
+              "hint": "Me llamo...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Cuántos años tienes?",
+              "hint": "Tengo...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Dónde vives?",
+              "hint": "Vivo en...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Qué te gusta hacer?",
+              "hint": "Me gusta...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Cómo es tu familia?",
+              "hint": "Mi familia es...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Cómo estás hoy?",
+              "hint": "Estoy...",
+              "accepts": []
+            },
+            {
+              "prompt": "¿Qué haces los sábados?",
+              "hint": "Los sábados yo...",
+              "accepts": []
+            },
+            {
+              "prompt": "Describe tu casa.",
+              "hint": "Mi casa tiene...",
+              "accepts": []
+            }
+          ]
+        },
+        {
+          "type": "sombra",
+          "title": "Lee en voz alta",
+          "instruction": "Lee el texto siguiendo el ritmo. Graba tu lectura.",
+          "items": [
+            {
+              "text": "Érase una viejecita",
+              "audio": "erase-una-viejecita"
+            },
+            {
+              "text": "Sin nadita que comer",
+              "audio": "sin-nadita-que-comer"
+            },
+            {
+              "text": "Sino carnes, frutas, dulces",
+              "audio": "sino-carnes-frutas-dulces"
+            },
+            {
+              "text": "Tortas, huevos, pan y pez",
+              "audio": "tortas-huevos-pan-y-pez"
+            },
+            {
+              "text": "El hijo de rana, Rinrín renacuajo",
+              "audio": "el-hijo-de-rana"
+            },
+            {
+              "text": "Salió esta mañana muy tieso y muy majo",
+              "audio": "salio-esta-manana"
+            },
+            {
+              "text": "Pastorcita perdió sus ovejas",
+              "audio": "pastorcita-perdio"
+            },
+            {
+              "text": "Simón el bobito llamó al pastelero",
+              "audio": "simon-el-bobito"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

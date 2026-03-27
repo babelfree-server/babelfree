@@ -592,6 +592,31 @@
         },
 
         /**
+         * Sync personal lexicon to server
+         */
+        syncLexiconProgress: function(state) {
+            if (!_getToken()) return Promise.resolve();
+            var words = state.words || {};
+            var payload = {
+                lexicon_data: words,
+                word_count: Object.keys(words).length
+            };
+            return _request('POST', '/lexicon/progress', payload).catch(function() {
+                _enqueue('POST', '/lexicon/progress', payload);
+            });
+        },
+
+        /**
+         * Get personal lexicon from server (cross-device sync)
+         */
+        getLexiconProgress: function() {
+            if (!_getToken()) return Promise.resolve(null);
+            return _request('GET', '/lexicon/progress').then(function(res) {
+                return res.success ? res.data.progress : null;
+            }).catch(function() { return null; });
+        },
+
+        /**
          * Get collected escape room fragments (meta-quest)
          */
         getFragments: function() {

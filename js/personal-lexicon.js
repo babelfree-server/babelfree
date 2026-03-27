@@ -358,6 +358,7 @@
     this._harvested = { entities: [], preferences: [], pets: [], favorites: [] };
     this._loaded    = false;
     this._load();
+    this._pullFromServer();
   }
 
   var P = PersonalLexicon.prototype;
@@ -381,6 +382,30 @@
     _save(STORAGE_KEY, { v: VERSION, words: this._words, ts: _now() });
     _save(AFFINITY_KEY, this._affinity);
     _save(HARVEST_KEY, this._harvested);
+
+    // Push to server if authenticated
+    if (typeof window !== 'undefined' && window.JaguarAPI && JaguarAPI.syncLexiconProgress) {
+      JaguarAPI.syncLexiconProgress({ words: this._words, version: VERSION });
+    }
+  };
+
+  /**
+   * Pull lexicon from server on init (cross-device sync).
+   * Server data is merged via loadFromServer — server wins on conflicts.
+   */
+  P._pullFromServer = function () {
+    var self = this;
+    if (typeof window === 'undefined' || !window.JaguarAPI || !JaguarAPI.getLexiconProgress) return;
+    if (!JaguarAPI.isAuthenticated()) return;
+
+    JaguarAPI.getLexiconProgress().then(function (serverProgress) {
+      if (serverProgress && serverProgress.lexicon_data) {
+        self.loadFromServer({
+          words: serverProgress.lexicon_data,
+          version: VERSION
+        });
+      }
+    }).catch(function () { /* silent — offline or not logged in */ });
   };
 
   // ── Word Recording ──

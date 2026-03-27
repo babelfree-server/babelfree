@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Upload</title>
+<style>
+body{font-family:Georgia,serif;max-width:520px;margin:100px auto;text-align:center;background:#f9f7f2;color:#333}
+h2{color:#1a5c2a}
+input[type=text]{padding:8px;width:300px;font-size:14px}
+button{background:#1a5c2a;color:#fff;border:none;padding:14px 32px;font-size:16px;cursor:pointer;border-radius:6px;margin-top:15px}
+button:hover{background:#257a38}
+label{display:block;margin:10px 0 5px;font-size:14px}
+.result{margin-top:20px;padding:15px;background:#e8f5e9;border-radius:8px;display:none}
+</style></head>
+<body>
+<h2>Upload file</h2>
+<form id="uploadForm" enctype="multipart/form-data">
+<label>Filename:</label>
+<input type="text" id="filename" name="filename" value="uploaded-file.txt"><br>
+<label>Destination folder:</label>
+<select id="folder" style="padding:8px;font-size:14px">
+<option value="macias">macias/</option>
+<option value="carroll">carroll/</option>
+<option value="dickinson">dickinson/</option>
+<option value="whitman">whitman/</option>
+<option value="pombo">pombo/</option>
+<option value="rivera">rivera/</option>
+<option value="carrasquilla">carrasquilla/</option>
+<option value="mejia">mejia/</option>
+<option value="obeso">obeso/</option>
+<option value="acosta">acosta/</option>
+</select><br>
+<input type="file" name="file" id="file"><br>
+<button type="submit">Upload</button>
+</form>
+<div class="result" id="result"></div>
+<script>
+document.getElementById('uploadForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('file', document.getElementById('file').files[0]);
+    formData.append('filename', document.getElementById('filename').value);
+    formData.append('folder', document.getElementById('folder').value);
+    try {
+        const resp = await fetch('/api/upload-literary.php', {method:'POST', body: formData});
+        const data = await resp.json();
+        const el = document.getElementById('result');
+        el.style.display = 'block';
+        if (data.success) {
+            el.innerHTML = '<b>Uploaded!</b> ' + data.path + ' (' + data.size + ' bytes)';
+            el.style.background = '#e8f5e9';
+        } else {
+            el.innerHTML = '<b>Error:</b> ' + data.error;
+            el.style.background = '#fce4ec';
+        }
+    } catch(err) {
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('result').innerHTML = 'Error: ' + err.message;
+    }
+});
+</script>
+</body></html>
