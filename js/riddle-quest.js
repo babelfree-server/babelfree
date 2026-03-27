@@ -619,8 +619,9 @@
                     Busqueda._saveState();
 
                     // Feed to PersonalLexicon if available
-                    if (window.PersonalLexicon && window.PersonalLexicon.harvestCreativeText) {
-                        window.PersonalLexicon.harvestCreativeText(text, 'busqueda_create');
+                    if (window.PersonalLexicon && PersonalLexicon.getInstance) {
+                        var lex = PersonalLexicon.getInstance();
+                        if (lex && lex.harvest) lex.harvest(text, 'busqueda_create');
                     }
 
                     textarea.disabled = true;
@@ -651,8 +652,9 @@
             state.ranaOpacity = Math.min(1.0,
                 Math.round((state.solvedRiddles.length / 89) * 100) / 100);
 
-            // Journal entry — use curated journalEntry from riddle data when available
-            state.journalEntries.push({
+            // Journal entry — guard against duplicates
+            var alreadyLogged = state.journalEntries.some(function (e) { return e.dest === destNum; });
+            if (!alreadyLogged) state.journalEntries.push({
                 dest:           destNum,
                 destName:       riddle.destName || riddle.title || ('Destino ' + destNum),
                 verse:          riddle.verse,
@@ -665,12 +667,12 @@
 
             // Feed vocabulary to PersonalLexicon
             if (window.PersonalLexicon && riddle.vocabulary) {
-                for (var i = 0; i < riddle.vocabulary.length; i++) {
-                    var word = riddle.vocabulary[i];
-                    if (typeof word === 'string') {
-                        window.PersonalLexicon.encounter(word, 'busqueda');
-                    } else if (word && word.word) {
-                        window.PersonalLexicon.encounter(word.word, 'busqueda');
+                var lex = PersonalLexicon.getInstance ? PersonalLexicon.getInstance() : null;
+                if (lex && lex.record) {
+                    for (var i = 0; i < riddle.vocabulary.length; i++) {
+                        var word = riddle.vocabulary[i];
+                        var w = (typeof word === 'string') ? word : (word && word.word ? word.word : null);
+                        if (w) lex.record(w, 'busqueda:riddle', 'encountered');
                     }
                 }
             }
@@ -710,7 +712,7 @@
             ropeBot.setAttribute('stroke', '#8B4513'); ropeBot.setAttribute('stroke-width', '2');
             svg.appendChild(ropeBot);
 
-            // Planks — one per segment, max 58 visible in the mini view
+            // Planks — one per segment, max 89 visible in the mini view
             var plankWidth = 280 / 89;
             for (var i = 0; i < Math.min(segment, 89); i++) {
                 var plank = document.createElementNS('http://www.w3.org/2000/svg', 'rect');

@@ -3158,7 +3158,7 @@
             },
             "questions": [
                 {
-                    "sentence": "Yo como ___. (fish)",
+                    "sentence": "Yo como ___. (pez)",
                     "answer": "pescado",
                     "options": [
                         "pescado",
@@ -3233,7 +3233,7 @@
             },
             "questions": [
                 {
-                    "sentence": "Yo como ___. (fish)",
+                    "sentence": "Yo como ___. (pez)",
                     "answer": "pescado",
                     "_inputMode": "typing"
                 },
@@ -3283,7 +3283,7 @@
             },
             "questions": [
                 {
-                    "sentence": "Yo como ___. (fish)",
+                    "sentence": "Yo como ___. (pez)",
                     "answer": "pescado",
                     "_inputMode": "voice"
                 },
@@ -7429,26 +7429,26 @@
                     "text": "___ mamá está cocinando. (my)",
                     "answer": "Mi",
                     "options": [
-                        "Mi",
                         "Tu",
-                        "Su"
+                        "Su",
+                        "Mi"
                     ]
                 },
                 {
                     "text": "Río come ___ pescado. (his)",
                     "answer": "su",
                     "options": [
-                        "mi",
+                        "su",
                         "tu",
-                        "su"
+                        "mi"
                     ]
                 },
                 {
                     "text": "___ hermano tiene hambre. (my)",
                     "answer": "Mi",
                     "options": [
-                        "Mi",
                         "Tu",
+                        "Mi",
                         "Su"
                     ]
                 },
@@ -7456,35 +7456,35 @@
                     "text": "Yaguará pone ___ plato en la mesa. (her)",
                     "answer": "su",
                     "options": [
-                        "mi",
+                        "su",
                         "tu",
-                        "su"
+                        "mi"
                     ]
                 },
                 {
                     "text": "¿Dónde está ___ agua? (your)",
                     "answer": "tu",
                     "options": [
+                        "su",
                         "mi",
-                        "tu",
-                        "su"
+                        "tu"
                     ]
                 },
                 {
                     "text": "___ familia come junta. (my)",
                     "answer": "Mi",
                     "options": [
+                        "Su",
                         "Mi",
-                        "Tu",
-                        "Su"
+                        "Tu"
                     ]
                 },
                 {
                     "text": "La abuela habla desde ___ árbol. (her)",
                     "answer": "su",
                     "options": [
-                        "mi",
                         "tu",
+                        "mi",
                         "su"
                     ]
                 }
@@ -7525,8 +7525,8 @@
                     "text": "Yo ___ a comer.",
                     "answer": "voy",
                     "options": [
-                        "voy",
                         "vas",
+                        "voy",
                         "va"
                     ]
                 },
@@ -7553,16 +7553,16 @@
                     "answer": "vamos",
                     "options": [
                         "voy",
-                        "vamos",
-                        "van"
+                        "van",
+                        "vamos"
                     ]
                 },
                 {
                     "text": "Río ___ a beber agua.",
                     "answer": "va",
                     "options": [
-                        "voy",
                         "vas",
+                        "voy",
                         "va"
                     ]
                 },
@@ -7571,16 +7571,16 @@
                     "answer": "vas",
                     "options": [
                         "voy",
-                        "vas",
-                        "va"
+                        "va",
+                        "vas"
                     ]
                 },
                 {
                     "text": "___ a dar las gracias.",
                     "answer": "Vamos",
                     "options": [
-                        "Voy",
                         "Vas",
+                        "Voy",
                         "Vamos"
                     ]
                 },
@@ -7588,9 +7588,9 @@
                     "text": "Yo ___ a compartir mi pan.",
                     "answer": "voy",
                     "options": [
-                        "voy",
                         "vas",
-                        "va"
+                        "va",
+                        "voy"
                     ]
                 }
             ]
@@ -7788,28 +7788,19 @@
             "items": [
                 {
                     "text": "Yaguará dice: «___».",
-                    "answer": "",
-                    "options": [
-                        "",
-                        "di",
-                        "gracias"
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
                     "answer": "di",
                     "options": [
                         "di",
-                        "gracias",
-                        "comer"
+                        "comer",
+                        "gracias"
                     ]
                 },
                 {
                     "text": "Yaguará dice: «___».",
                     "answer": "gracias",
                     "options": [
-                        "gracias",
                         "comer",
+                        "gracias",
                         "espera"
                     ]
                 },
@@ -7817,9 +7808,9 @@
                     "text": "Yaguará dice: «___».",
                     "answer": "comer",
                     "options": [
+                        "pon tu plato aquí.",
                         "comer",
-                        "espera",
-                        "pon tu plato aquí."
+                        "espera"
                     ]
                 },
                 {
@@ -7844,8 +7835,84 @@
                     "text": "Yaguará dice: «___».",
                     "answer": "comparten",
                     "options": [
+                        "plato",
                         "comparten",
+                        "mi"
+                    ]
+                },
+                {
+                    "text": "Yaguará dice: «___».",
+                    "answer": "mi",
+                    "options": [
+                        "tu",
+                        "plato",
+                        "mi"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fill",
+            "label": "Completar",
+            "title": "Refuerzo — Comer juntos",
+            "instruction": "Completa con la palabra correcta.",
+            "grammar": [
+                "imperative tú",
+                "possessives (mi/tu/su)",
+                "ir+a+inf"
+            ],
+            "items": [
+                {
+                    "text": "Yaguará dice: «___».",
+                    "answer": "di",
+                    "options": [
+                        "comer",
+                        "di",
+                        "gracias"
+                    ]
+                },
+                {
+                    "text": "Yaguará dice: «___».",
+                    "answer": "gracias",
+                    "options": [
+                        "comer",
+                        "espera",
+                        "gracias"
+                    ]
+                },
+                {
+                    "text": "Yaguará dice: «___».",
+                    "answer": "comer",
+                    "options": [
+                        "comer",
+                        "pon tu plato aquí.",
+                        "espera"
+                    ]
+                },
+                {
+                    "text": "Yaguará dice: «___».",
+                    "answer": "espera",
+                    "options": [
+                        "espera",
+                        "pon tu plato aquí.",
+                        "comparten"
+                    ]
+                },
+                {
+                    "text": "Yaguará dice: «___».",
+                    "answer": "pon tu plato aquí.",
+                    "options": [
+                        "pon tu plato aquí.",
                         "mi",
+                        "comparten"
+                    ]
+                },
+                {
+                    "text": "Yaguará dice: «___».",
+                    "answer": "comparten",
+                    "options": [
+                        "mi",
+                        "comparten",
                         "plato"
                     ]
                 },
@@ -7853,8 +7920,8 @@
                     "text": "Yaguará dice: «___».",
                     "answer": "mi",
                     "options": [
-                        "mi",
                         "plato",
+                        "mi",
                         "tu"
                     ]
                 }
@@ -7873,20 +7940,11 @@
             "items": [
                 {
                     "text": "Yaguará dice: «___».",
-                    "answer": "",
-                    "options": [
-                        "",
-                        "di",
-                        "gracias"
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
                     "answer": "di",
                     "options": [
-                        "di",
                         "gracias",
-                        "comer"
+                        "comer",
+                        "di"
                     ]
                 },
                 {
@@ -7894,110 +7952,25 @@
                     "answer": "gracias",
                     "options": [
                         "gracias",
-                        "comer",
-                        "espera"
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
-                    "answer": "comer",
-                    "options": [
-                        "comer",
                         "espera",
-                        "pon tu plato aquí."
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
-                    "answer": "espera",
-                    "options": [
-                        "espera",
-                        "pon tu plato aquí.",
-                        "comparten"
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
-                    "answer": "pon tu plato aquí.",
-                    "options": [
-                        "pon tu plato aquí.",
-                        "comparten",
-                        "mi"
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
-                    "answer": "comparten",
-                    "options": [
-                        "comparten",
-                        "mi",
-                        "plato"
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
-                    "answer": "mi",
-                    "options": [
-                        "mi",
-                        "plato",
-                        "tu"
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "fill",
-            "label": "Completar",
-            "title": "Refuerzo — Comer juntos",
-            "instruction": "Completa con la palabra correcta.",
-            "grammar": [
-                "imperative tú",
-                "possessives (mi/tu/su)",
-                "ir+a+inf"
-            ],
-            "items": [
-                {
-                    "text": "Yaguará dice: «___».",
-                    "answer": "",
-                    "options": [
-                        "",
-                        "di",
-                        "gracias"
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
-                    "answer": "di",
-                    "options": [
-                        "di",
-                        "gracias",
                         "comer"
                     ]
                 },
                 {
                     "text": "Yaguará dice: «___».",
-                    "answer": "gracias",
+                    "answer": "comer",
                     "options": [
-                        "gracias",
+                        "pon tu plato aquí.",
                         "comer",
                         "espera"
                     ]
                 },
                 {
                     "text": "Yaguará dice: «___».",
-                    "answer": "comer",
-                    "options": [
-                        "comer",
-                        "espera",
-                        "pon tu plato aquí."
-                    ]
-                },
-                {
-                    "text": "Yaguará dice: «___».",
                     "answer": "espera",
                     "options": [
-                        "espera",
                         "pon tu plato aquí.",
+                        "espera",
                         "comparten"
                     ]
                 },
@@ -8005,27 +7978,27 @@
                     "text": "Yaguará dice: «___».",
                     "answer": "pon tu plato aquí.",
                     "options": [
-                        "pon tu plato aquí.",
                         "comparten",
-                        "mi"
+                        "mi",
+                        "pon tu plato aquí."
                     ]
                 },
                 {
                     "text": "Yaguará dice: «___».",
                     "answer": "comparten",
                     "options": [
-                        "comparten",
                         "mi",
-                        "plato"
+                        "plato",
+                        "comparten"
                     ]
                 },
                 {
                     "text": "Yaguará dice: «___».",
                     "answer": "mi",
                     "options": [
+                        "tu",
                         "mi",
-                        "plato",
-                        "tu"
+                        "plato"
                     ]
                 }
             ]
@@ -8334,17 +8307,17 @@
                     "text": "Río pone ___ plato al lado.",
                     "answer": "su",
                     "options": [
-                        "mi",
+                        "su",
                         "tu",
-                        "su"
+                        "mi"
                     ]
                 },
                 {
                     "text": "Vamos a ___ juntos.",
                     "answer": "comer",
                     "options": [
-                        "comer",
                         "dormir",
+                        "comer",
                         "correr"
                     ]
                 },
@@ -8352,17 +8325,17 @@
                     "text": "Mamá dice: «Come ___.»",
                     "answer": "despacio",
                     "options": [
+                        "solo",
                         "despacio",
-                        "rápido",
-                        "solo"
+                        "rápido"
                     ]
                 },
                 {
                     "text": "Yo voy a ___ mi pan con Río.",
                     "answer": "compartir",
                     "options": [
-                        "compartir",
                         "comer",
+                        "compartir",
                         "esconder"
                     ]
                 },
@@ -8370,9 +8343,9 @@
                     "text": "Las cosas que se ___ no desaparecen.",
                     "answer": "comparten",
                     "options": [
+                        "pierden",
                         "comparten",
-                        "olvidan",
-                        "pierden"
+                        "olvidan"
                     ]
                 },
                 {
@@ -8388,8 +8361,8 @@
                     "text": "El gris no puede entrar donde hay ___.",
                     "answer": "familia",
                     "options": [
-                        "familia",
                         "silencio",
+                        "familia",
                         "noche"
                     ]
                 },
@@ -8397,8 +8370,8 @@
                     "text": "___ es nombrar. Nombrar es cuidar.",
                     "answer": "Compartir",
                     "options": [
-                        "Compartir",
                         "Comer",
+                        "Compartir",
                         "Dormir"
                     ]
                 }

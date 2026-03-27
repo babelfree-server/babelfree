@@ -297,6 +297,7 @@ function handleAuthRoutes(string $action, string $method): void {
         case 'update-profile':
             if ($method !== 'POST') jsonError('Método no permitido', 405);
             $user = authenticateRequest();
+            validateCsrf();
             $input = getJsonBody();
             if (!$input) jsonError('Datos inválidos');
 
@@ -354,6 +355,7 @@ function handleAuthRoutes(string $action, string $method): void {
         case 'change-password':
             if ($method !== 'POST') jsonError('Método no permitido', 405);
             $user = authenticateRequest();
+            validateCsrf();
             checkRateLimit('general');
             $input = getJsonBody();
 

@@ -84,11 +84,16 @@
     }
 
     function _saveQueue(queue) {
-        localStorage.setItem(SYNC_QUEUE_KEY, JSON.stringify(queue));
+        try { localStorage.setItem(SYNC_QUEUE_KEY, JSON.stringify(queue)); }
+        catch (e) {
+            while (queue.length > 10) queue.shift();
+            try { localStorage.setItem(SYNC_QUEUE_KEY, JSON.stringify(queue)); } catch (e2) {}
+        }
     }
 
     function _enqueue(method, path, body) {
         var queue = _getQueue();
+        if (queue.length >= 100) queue.shift();
         queue.push({ method: method, path: path, body: body, ts: Date.now() });
         _saveQueue(queue);
     }

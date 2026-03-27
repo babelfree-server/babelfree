@@ -1208,6 +1208,7 @@
 
         normalizePairs: function(data) {
             /* Canonical: pairs = [['a','b'], ...] */
+            if (!data.pairs && data.items) data.pairs = data.items;
             if (!data.pairs || !data.pairs.length) return data;
             if (typeof data.pairs[0] === 'object' && !Array.isArray(data.pairs[0])) {
                 data.pairs = data.pairs.map(function(p) {

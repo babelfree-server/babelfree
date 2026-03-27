@@ -28,7 +28,7 @@ function handleAnalyticsRoutes(string $action, string $method): void {
         return;
     }
 
-    $pdo = getDbConnection();
+    $pdo = getDB();
     $analytics = new Analytics($pdo);
 
     switch ($action) {

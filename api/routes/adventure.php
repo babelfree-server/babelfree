@@ -16,6 +16,8 @@ function handleAdventureRoutes(string $action, string $method): void {
                 checkRateLimit('general');
                 $input = getJsonBody();
                 if (!$input) jsonError('Datos inválidos');
+                $rawSize = strlen(json_encode($input));
+                if ($rawSize > 2 * 1024 * 1024) jsonError('Payload demasiado grande', 413);
 
                 $model = new AdventureProgress($pdo);
                 $model->upsert($user['id'], [

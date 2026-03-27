@@ -290,8 +290,10 @@
      */
     recordCronica: function (dest, text) {
       if (!dest || !text) return;
+      var d = parseInt(dest, 10) || 0;
+      if (d < 1 || d > 89) return;
       var state = _load();
-      var key = 'dest' + (parseInt(dest, 10) || 0);
+      var key = 'dest' + d;
 
       if (!state.chapters[key]) {
         state.chapters[key] = {};
@@ -332,9 +334,13 @@
      */
     recordRiddleSolve: function (dest, riddleAnswer) {
       if (!dest || !riddleAnswer) return;
-      var state = _load();
       var d = parseInt(dest, 10) || 0;
+      if (d < 1 || d > 89) return;
+      var state = _load();
       var key = 'dest' + d;
+
+      // Guard against duplicate recording
+      if (state.chapters[key] && state.chapters[key].riddleReward) return;
 
       // Get student's crónica for this dest (if any)
       var cronicaText = (state.chapters[key] || {}).cronica || '';

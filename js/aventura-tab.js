@@ -53,6 +53,14 @@
     return el;
   }
 
+  // Escape HTML to prevent XSS from user-generated content
+  function _esc(str) {
+    if (!str) return '';
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
   function _icon(name) {
     return ICONS[name] || ICONS['default'];
   }
@@ -173,7 +181,7 @@
               var cronicaEl = _el('div', 'av-landmark-cronica', '');
               cronicaEl.innerHTML =
                 '<div class="av-landmark-cronica-label">Lo que escribiste</div>' +
-                entry.cronica;
+                _esc(entry.cronica);
               card.appendChild(cronicaEl);
             }
 
@@ -181,11 +189,11 @@
             if (entry.reward) {
               var rewardEl = _el('div', 'av-landmark-reward', '');
               if (entry.reward.type === 'letter') {
-                rewardEl.innerHTML = 'Letra ganada: <strong>' + entry.reward.letter + '</strong>';
+                rewardEl.innerHTML = 'Letra ganada: <strong>' + _esc(entry.reward.letter) + '</strong>';
               } else if (entry.reward.type === 'word') {
-                rewardEl.innerHTML = 'Palabra ganada: <em>' + entry.reward.word + '</em>';
+                rewardEl.innerHTML = 'Palabra ganada: <em>' + _esc(entry.reward.word) + '</em>';
               } else if (entry.reward.type === 'sentence') {
-                rewardEl.innerHTML = entry.reward.sentence;
+                rewardEl.innerHTML = _esc(entry.reward.sentence);
               }
               card.appendChild(rewardEl);
             }

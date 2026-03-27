@@ -14,6 +14,8 @@ function handleTrackingRoutes(string $action, string $method): void {
     case 'game':
         if ($method !== 'POST') jsonError('Método no permitido', 405);
         $user = authenticateRequest();
+        validateCsrf();
+        checkRateLimit('general');
         $input = getJsonBody();
         if (!$input) jsonError('Datos inválidos');
 

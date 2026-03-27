@@ -4,6 +4,14 @@
  * All requests routed through here via .htaccess
  */
 
+set_exception_handler(function (Throwable $e) {
+    http_response_code(500);
+    header('Content-Type: application/json');
+    echo json_encode(['success' => false, 'error' => 'Error interno del servidor']);
+    error_log('[API] Uncaught: ' . $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine());
+    exit;
+});
+
 // Autoload PHPMailer
 require_once __DIR__ . '/vendor/autoload.php';
 

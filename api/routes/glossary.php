@@ -80,6 +80,7 @@ function handleGlossaryRoutes(string $action, string $method): void {
 
     // POST /api/glossary/encounter
     if ($method === 'POST' && $subAction === 'encounter') {
+        validateCsrf();
         $body = getJsonBody();
         if (!$body) {
             jsonError('Cuerpo JSON requerido', 400);
