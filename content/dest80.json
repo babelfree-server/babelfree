@@ -802,25 +802,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El taller del escritor",
-            "instruction": "Resuelve los enigmas de la escritura creativa.",
+            "label": "Sala de escape",
+            "title": "La cámara del oráculo",
+            "instruction": "Estás en Selva de Matavén, Vichada. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Figura retórica que traslada significado por semejanza:",
-                    "answer": "metáfora"
+                    "type": "riddle",
+                    "prompt": "La puerta de Selva de Matavén, Vichada",
+                    "riddle": "Estás en Selva de Matavén, Vichada. Escribir con el cuerpo. Selva de transición, seis pueblos indígenas, arte corporal. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "metáfora",
+                    "options": [
+                        "metáfora",
+                        "narrador",
+                        "prosa"
+                    ],
+                    "hint": "Mira a tu alrededor en Selva de Matavén, Vichada."
                 },
                 {
-                    "question": "Momento de máxima tensión dramática en una narración:",
-                    "answer": "clímax"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «C». ¿Cuál es?",
+                    "answer": "clímax",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Resolución final del conflicto narrativo:",
-                    "answer": "desenlace"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Selva de Matavén, Vichada hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "estilo,estrella,hojarascas,ponientes",
+                    "options": [
+                        "hojarascas",
+                        "ponientes",
+                        "estilo",
+                        "estrella"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "Combinación irrepetible de ritmo, léxico y sintaxis propia de un autor:",
-                    "answer": "estilo"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Selva de Matavén, Vichada, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "trama",
+                    "options": [
+                        "trama",
+                        "elegido",
+                        "conozcan"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «DE».",
+                    "answer": "descubra",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

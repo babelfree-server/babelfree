@@ -522,29 +522,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El despacho cerrado",
-            "instruction": "Resuelve para abrir el despacho profesional.",
+            "label": "Sala de escape",
+            "title": "El jardín de las lenguas",
+            "instruction": "Estás en Barranquilla, Atlántico. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "type": "wordlock",
-                    "clue": "Conjunto de documentos que conforman un caso legal o administrativo.",
-                    "answer": "expediente"
-                },
-                {
-                    "type": "cipher",
-                    "clue": "nóiculoser → ___",
-                    "answer": "resolución"
-                },
-                {
                     "type": "riddle",
-                    "clue": "No soy ley, pero las leyes me obedecen. No soy juez, pero los jueces me consultan. Soy el conjunto de reglas que rige una sociedad.",
-                    "answer": "normativa"
+                    "prompt": "La puerta de Barranquilla, Atlántico",
+                    "riddle": "Estás en Barranquilla, Atlántico. El idioma como profesión. Carnaval, industria, comercio, Puerta de Oro. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "condiscípulo",
+                    "options": [
+                        "condiscípulo",
+                        "hacienda",
+                        "exclamó"
+                    ],
+                    "hint": "Mira a tu alrededor en Barranquilla, Atlántico."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 9 letras que empieza con «N». ¿Cuál es?",
+                    "answer": "normativa",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
                     "type": "sequence",
-                    "clue": "demanda → expediente → dictamen → ___",
-                    "answer": "resolución"
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Barranquilla, Atlántico hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "acta,diagnóstico,dictamen,resolución",
+                    "options": [
+                        "diagnóstico",
+                        "dictamen",
+                        "resolución",
+                        "acta"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
+                },
+                {
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Barranquilla, Atlántico decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "informe",
+                    "options": [
+                        "informe",
+                        "protocolo",
+                        "cuadros"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 11 letras.",
+                    "answer": "personnages",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

@@ -19024,33 +19024,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "Las constelaciones se alinean",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "El templo del silencio elocuente",
+            "instruction": "Estás en Santuario de Las Lajas, Nariño. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de Santuario de Las Lajas, Nariño",
+                    "riddle": "Estás en Santuario de Las Lajas, Nariño. Las constelaciones se alinean. Iglesia construida sobre un puente, dentro de un cañón. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "ruido",
+                    "options": [
+                        "ruido",
+                        "redundancia",
+                        "crepúsculo"
+                    ],
+                    "hint": "Mira a tu alrededor en Santuario de Las Lajas, Nariño."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «S». ¿Cuál es?",
+                    "answer": "signo",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Santuario de Las Lajas, Nariño hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "canal,código,emisor,mensaje",
+                    "options": [
+                        "emisor",
+                        "mensaje",
+                        "canal",
+                        "código"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Santuario de Las Lajas, Nariño, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "receptor",
+                    "options": [
+                        "receptor",
+                        "consecuencia",
+                        "muchedumbre"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «AL».",
+                    "answer": "almendra",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

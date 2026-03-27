@@ -524,29 +524,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El diccionario imposible",
-            "instruction": "Resuelve para abrir el diccionario de lo intraducible.",
+            "label": "Sala de escape",
+            "title": "La fragua del significado",
+            "instruction": "Estás en San Basilio de Palenque, Bolívar. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "type": "wordlock",
-                    "clue": "Tomar una palabra de otro idioma sin traducirla.",
-                    "answer": "préstamo"
-                },
-                {
-                    "type": "cipher",
-                    "clue": "nóiccudart → ___",
-                    "answer": "traducción"
-                },
-                {
                     "type": "riddle",
-                    "clue": "Tengo dos idiomas pero una sola mente. Vivo entre dos mundos sin pertenecer del todo a ninguno. ¿Qué soy?",
-                    "answer": "bilingüismo"
+                    "prompt": "La puerta de San Basilio de Palenque, Bolívar",
+                    "riddle": "Estás en San Basilio de Palenque, Bolívar. Traducir lo intraducible. Primer pueblo libre de América. Lengua palenquera viva. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "clarirá",
+                    "options": [
+                        "clarirá",
+                        "canción",
+                        "probe"
+                    ],
+                    "hint": "Mira a tu alrededor en San Basilio de Palenque, Bolívar."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «T». ¿Cuál es?",
+                    "answer": "trite",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
                     "type": "sequence",
-                    "clue": "leer → interpretar → parafrasear → ___",
-                    "answer": "mediar"
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de San Basilio de Palenque, Bolívar hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "Ella,intraducible,localización,préstamo",
+                    "options": [
+                        "intraducible",
+                        "localización",
+                        "préstamo",
+                        "Ella"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
+                },
+                {
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de San Basilio de Palenque, Bolívar decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "equivalente",
+                    "options": [
+                        "equivalente",
+                        "adaptación",
+                        "constancio"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 5 letras.",
+                    "answer": "viene",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

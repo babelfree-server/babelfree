@@ -523,29 +523,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "La cima de la voz",
-            "instruction": "Resuelve para alcanzar la cima.",
+            "label": "Sala de escape",
+            "title": "El observatorio de estrellas",
+            "instruction": "Estás en Isla Fuerte, Córdoba. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "type": "wordlock",
-                    "clue": "Capacidad de usar el idioma sin depender de nadie.",
-                    "answer": "autonomía"
-                },
-                {
-                    "type": "cipher",
-                    "clue": "aírtseam → ___",
-                    "answer": "maestría"
-                },
-                {
                     "type": "riddle",
-                    "clue": "No soy velocidad, pero me confunden con ella. No soy perfección, pero me exigen como tal. Soy el arte de decir lo correcto en el momento preciso.",
-                    "answer": "fluidez"
+                    "prompt": "La puerta de Isla Fuerte, Córdoba",
+                    "riddle": "Estás en Isla Fuerte, Córdoba. La voz del futuro. Isla coralina sin carros, con energía solar. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "fluidez",
+                    "options": [
+                        "fluidez",
+                        "orillas",
+                        "resplandores"
+                    ],
+                    "hint": "Mira a tu alrededor en Isla Fuerte, Córdoba."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 11 letras que empieza con «P». ¿Cuál es?",
+                    "answer": "pandeazúcar",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
                     "type": "sequence",
-                    "clue": "aprender → practicar → dominar → ___",
-                    "answer": "crear"
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Isla Fuerte, Córdoba hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "abriendo,criterio,espontaneidad,redonda",
+                    "options": [
+                        "abriendo",
+                        "redonda",
+                        "espontaneidad",
+                        "criterio"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
+                },
+                {
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Isla Fuerte, Córdoba decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "autonomía",
+                    "options": [
+                        "autonomía",
+                        "dominio",
+                        "cristalina"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 7 letras.",
+                    "answer": "levanta",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

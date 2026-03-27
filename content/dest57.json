@@ -10284,33 +10284,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "La fragua del significado",
+            "instruction": "Estás en Puerto Nariño, Amazonas. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "interlinguistic awareness"
+                    "type": "riddle",
+                    "prompt": "La puerta de Puerto Nariño, Amazonas",
+                    "riddle": "Estás en Puerto Nariño, Amazonas. El árbol de las lenguas. Pueblo sin carros, sin motos. Solo el río y la selva. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "ceiba",
+                    "options": [
+                        "ceiba",
+                        "muestra",
+                        "otras"
+                    ],
+                    "hint": "Mira a tu alrededor en Puerto Nariño, Amazonas."
                 },
                 {
-                    "clue": "___",
-                    "answer": " translation theory"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «R». ¿Cuál es?",
+                    "answer": "ramas",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "ceiba"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Puerto Nariño, Amazonas hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "idiomas,lenguas,otros,árbol",
+                    "options": [
+                        "idiomas",
+                        "árbol",
+                        "lenguas",
+                        "otros"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "muestra"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Puerto Nariño, Amazonas decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "guardias",
+                    "options": [
+                        "guardias",
+                        "babel",
+                        "gramática"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "otras"
-                },
-                {
-                    "clue": "___",
-                    "answer": "ramas"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 15 letras.",
+                    "answer": "interlinguistic",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

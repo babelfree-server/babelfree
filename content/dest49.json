@@ -940,33 +940,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "El palacio de coral",
+            "instruction": "Estás en Caño Cristales, Meta. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 300,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "philosophical discourse"
+                    "type": "riddle",
+                    "prompt": "La puerta de Caño Cristales, Meta",
+                    "riddle": "Estás en Caño Cristales, Meta. El nombre que contiene todo. El río de cinco colores. Rojo, amarillo, verde, azul, negro. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "hay",
+                    "options": [
+                        "hay",
+                        "una",
+                        "palabra"
+                    ],
+                    "hint": "Mira a tu alrededor en Caño Cristales, Meta."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Hay"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 3 letras que empieza con «Q». ¿Cuál es?",
+                    "answer": "que",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "una"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Caño Cristales, Meta hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "contiene,las,nombre,todas",
+                    "options": [
+                        "nombre",
+                        "contiene",
+                        "las",
+                        "todas"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "palabra"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En Caño Cristales, Meta, hay una verdad escondida entre las sombras. Solo quien nombra las cosas correctamente puede encontrarla. ¿Cuál es la palabra clave?",
+                    "answer": "todo",
+                    "options": [
+                        "todo",
+                        "demás",
+                        "búsqueda"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "que"
-                },
-                {
-                    "clue": "___",
-                    "answer": "contiene"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «E».",
+                    "answer": "empieza",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

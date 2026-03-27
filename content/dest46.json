@@ -886,33 +886,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "El templo sumergido",
+            "instruction": "Estás en Santuario de Flamencos, La Guajira. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 300,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "text cohesion"
+                    "type": "riddle",
+                    "prompt": "La puerta de Santuario de Flamencos, La Guajira",
+                    "riddle": "Estás en Santuario de Flamencos, La Guajira. El mapa de las voces. Flamencos rosados sobre el agua salada. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "mapa",
+                    "options": [
+                        "mapa",
+                        "las",
+                        "voces"
+                    ],
+                    "hint": "Mira a tu alrededor en Santuario de Flamencos, La Guajira."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Mapa"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 7 letras que empieza con «M». ¿Cuál es?",
+                    "answer": "muestra",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "las"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Santuario de Flamencos, La Guajira hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "cómo,lenguas,mapa,voces",
+                    "options": [
+                        "mapa",
+                        "cómo",
+                        "lenguas",
+                        "voces"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Voces"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En Santuario de Flamencos, La Guajira, hay una verdad escondida entre las sombras. Solo quien nombra las cosas correctamente puede encontrarla. ¿Cuál es la palabra clave?",
+                    "answer": "colombianas",
+                    "options": [
+                        "colombianas",
+                        "estaban",
+                        "conectadas"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "muestra"
-                },
-                {
-                    "clue": "___",
-                    "answer": "cómo"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «G».",
+                    "answer": "gramática",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

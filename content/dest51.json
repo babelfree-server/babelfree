@@ -885,33 +885,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "La cámara de los ecos",
+            "instruction": "Estás en Popayán, Cauca. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 300,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "metafiction"
+                    "type": "riddle",
+                    "prompt": "La puerta de Popayán, Cauca",
+                    "riddle": "Estás en Popayán, Cauca. Escribir en las paredes. La Ciudad Blanca. Procesiones y poesía. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "metafiction",
+                    "options": [
+                        "metafiction",
+                        "gloria",
+                        "dejó"
+                    ],
+                    "hint": "Mira a tu alrededor en Popayán, Cauca."
                 },
                 {
-                    "clue": "___",
-                    "answer": " self-referential language"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 10 letras que empieza con «A». ¿Cuál es?",
+                    "answer": "abandonada",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Gloria"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Popayán, Cauca hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "castillo,escribir,gloria,paredes",
+                    "options": [
+                        "castillo",
+                        "paredes",
+                        "gloria",
+                        "escribir"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "dejó"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En Popayán, Cauca, hay una verdad escondida entre las sombras. Solo quien nombra las cosas correctamente puede encontrarla. ¿Cuál es la palabra clave?",
+                    "answer": "niña",
+                    "options": [
+                        "niña",
+                        "puede",
+                        "rescatar"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "abandonada"
-                },
-                {
-                    "clue": "___",
-                    "answer": "castillo"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «A».",
+                    "answer": "abandonó",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

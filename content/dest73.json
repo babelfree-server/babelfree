@@ -18280,33 +18280,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El guardián despierta",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "La cámara de ecos eternos",
+            "instruction": "Estás en Laguna de la Cocha, Nariño. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de Laguna de la Cocha, Nariño",
+                    "riddle": "Estás en Laguna de la Cocha, Nariño. El guardián despierta. Lago andino con la Isla de La Corota en su centro. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "significado",
+                    "options": [
+                        "significado",
+                        "intención",
+                        "aviación"
+                    ],
+                    "hint": "Mira a tu alrededor en Laguna de la Cocha, Nariño."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 14 letras que empieza con «I». ¿Cuál es?",
+                    "answer": "interpretación",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Laguna de la Cocha, Nariño hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "comprensión,contexto,explicación,sentido",
+                    "options": [
+                        "explicación",
+                        "contexto",
+                        "comprensión",
+                        "sentido"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Laguna de la Cocha, Nariño, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "texto",
+                    "options": [
+                        "texto",
+                        "acontecimiento",
+                        "pensamientos"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «DE».",
+                    "answer": "definitivo",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

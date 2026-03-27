@@ -885,33 +885,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "La cámara de los ecos",
+            "instruction": "Estás en Valledupar, Cesar. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 300,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "nuanced modal expressions"
+                    "type": "riddle",
+                    "prompt": "La puerta de Valledupar, Cesar",
+                    "riddle": "Estás en Valledupar, Cesar. Dime mi nombre. La tierra del vallenato, donde las canciones nombran a la gente. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "cuando",
+                    "options": [
+                        "cuando",
+                        "ceiba",
+                        "olvida"
+                    ],
+                    "hint": "Mira a tu alrededor en Valledupar, Cesar."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Cuando"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «N». ¿Cuál es?",
+                    "answer": "nombre",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Ceiba"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Valledupar, Cesar hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "Yaguará,ceiba,cuando,dime",
+                    "options": [
+                        "ceiba",
+                        "dime",
+                        "Yaguará",
+                        "cuando"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "olvida"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En Valledupar, Cesar, hay una verdad escondida entre las sombras. Solo quien nombra las cosas correctamente puede encontrarla. ¿Cuál es la palabra clave?",
+                    "answer": "yaguará",
+                    "options": [
+                        "yaguará",
+                        "dice",
+                        "luciérnagas"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "nombre"
-                },
-                {
-                    "clue": "___",
-                    "answer": "Yaguará"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «E».",
+                    "answer": "encienden",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

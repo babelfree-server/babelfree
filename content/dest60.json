@@ -21973,33 +21973,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "La cicatriz del camino",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "El telar de las historias",
+            "instruction": "Estás en San José del Guaviare. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de San José del Guaviare",
+                    "riddle": "Estás en San José del Guaviare. La cicatriz del camino. Puerta de la Amazonía, pinturas rupestres de 12.000 años. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "disolución",
+                    "options": [
+                        "disolución",
+                        "separación",
+                        "conjunción"
+                    ],
+                    "hint": "Mira a tu alrededor en San José del Guaviare."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 13 letras que empieza con «T». ¿Cuál es?",
+                    "answer": "transmutación",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de San José del Guaviare hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "calcinación,coagulación,destilación,sublimación",
+                    "options": [
+                        "calcinación",
+                        "sublimación",
+                        "coagulación",
+                        "destilación"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de San José del Guaviare decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "enmudecían",
+                    "options": [
+                        "enmudecían",
+                        "celebridad",
+                        "mosquitero"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 6 letras.",
+                    "answer": "alivio",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

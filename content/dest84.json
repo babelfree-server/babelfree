@@ -783,25 +783,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "La plaza del debate",
-            "instruction": "Resuelve los enigmas de la argumentación.",
+            "label": "Sala de escape",
+            "title": "La cámara de ecos eternos",
+            "instruction": "Estás en Socorro, Santander. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Proposición central que se defiende con argumentos y evidencia:",
-                    "answer": "tesis"
+                    "type": "riddle",
+                    "prompt": "La puerta de Socorro, Santander",
+                    "riddle": "Estás en Socorro, Santander. El debate y la persuasión. Aquí empezó la revolución comunera de 1781. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "tesis",
+                    "options": [
+                        "tesis",
+                        "falacia",
+                        "premisa"
+                    ],
+                    "hint": "Mira a tu alrededor en Socorro, Santander."
                 },
                 {
-                    "question": "Error de razonamiento que parece válido pero no lo es:",
-                    "answer": "falacia"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 9 letras que empieza con «C». ¿Cuál es?",
+                    "answer": "concesión",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Estrategia que reconoce la verdad del adversario para superarla:",
-                    "answer": "concesión"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Socorro, Santander hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "Bueno,Permiso,momento,piñolera",
+                    "options": [
+                        "piñolera",
+                        "Permiso",
+                        "momento",
+                        "Bueno"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "Razonamiento que invalida la posición contraria con evidencia:",
-                    "answer": "refutación"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Socorro, Santander, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "refutación",
+                    "options": [
+                        "refutación",
+                        "debate",
+                        "persuadir"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «SE».",
+                    "answer": "sea",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

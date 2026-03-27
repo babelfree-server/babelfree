@@ -798,25 +798,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El baúl de la memoria",
-            "instruction": "Resuelve los enigmas de la historia.",
+            "label": "Sala de escape",
+            "title": "La sala del último acertijo",
+            "instruction": "Estás en Río Amazonas (triple frontera). Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Documento producido en la época que se estudia:",
-                    "answer": "fuente primaria"
+                    "type": "riddle",
+                    "prompt": "La puerta de Río Amazonas (triple frontera)",
+                    "riddle": "Estás en Río Amazonas (triple frontera). La historia que nos cuenta. Tres países beben del mismo río. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "crónica",
+                    "options": [
+                        "crónica",
+                        "patrimonio",
+                        "legado"
+                    ],
+                    "hint": "Mira a tu alrededor en Río Amazonas (triple frontera)."
                 },
                 {
-                    "question": "Sistema de transmisión cultural de generación en generación:",
-                    "answer": "tradición oral"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 10 letras que empieza con «T». ¿Cuál es?",
+                    "answer": "testimonio",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Herencia cultural que una comunidad transmite al futuro:",
-                    "answer": "legado"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Río Amazonas (triple frontera) hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "hechizo,monstruo,siempre,torrentes",
+                    "options": [
+                        "hechizo",
+                        "siempre",
+                        "torrentes",
+                        "monstruo"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "Proceso de imposición cultural, lingüística y política sobre un territorio:",
-                    "answer": "colonización"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Río Amazonas (triple frontera), donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "colonización",
+                    "options": [
+                        "colonización",
+                        "época",
+                        "reconocimiento"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «FA».",
+                    "answer": "fascinador",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

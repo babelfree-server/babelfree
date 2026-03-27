@@ -21889,33 +21889,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El sueño de Abuela Ceiba",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "La sala de los ancestros",
+            "instruction": "Estás en Inírida, Guainía. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de Inírida, Guainía",
+                    "riddle": "Estás en Inírida, Guainía. El sueño de Abuela Ceiba. Flor de Inírida, cerros de Mavicure, ríos de aguas negras. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "dormir",
+                    "options": [
+                        "dormir",
+                        "olvidar",
+                        "metáfora"
+                    ],
+                    "hint": "Mira a tu alrededor en Inírida, Guainía."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 9 letras que empieza con «M». ¿Cuál es?",
+                    "answer": "metonimia",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Inírida, Guainía hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "antítesis,oxímoron,paradoja,sinécdoque",
+                    "options": [
+                        "oxímoron",
+                        "sinécdoque",
+                        "antítesis",
+                        "paradoja"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Inírida, Guainía decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "hipérbole",
+                    "options": [
+                        "hipérbole",
+                        "litotes",
+                        "contesta"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 10 letras.",
+                    "answer": "arrancando",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

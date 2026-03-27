@@ -22321,33 +22321,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "Río, el héroe inesperado",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "La cripta de las raíces",
+            "instruction": "Estás en Mocoa, Putumayo. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de Mocoa, Putumayo",
+                    "riddle": "Estás en Mocoa, Putumayo. Río, el héroe inesperado. Cascada del Fin del Mundo, 75m de caída libre. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "púlsar",
+                    "options": [
+                        "púlsar",
+                        "negro",
+                        "callar"
+                    ],
+                    "hint": "Mira a tu alrededor en Mocoa, Putumayo."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 12 letras que empieza con «C». ¿Cuál es?",
+                    "answer": "constelación",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Mocoa, Putumayo hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "agujero,cuásar,nebulosa,supernova",
+                    "options": [
+                        "cuásar",
+                        "nebulosa",
+                        "agujero",
+                        "supernova"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Mocoa, Putumayo decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "materia",
+                    "options": [
+                        "materia",
+                        "dormida",
+                        "hablar"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 6 letras.",
+                    "answer": "dormir",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

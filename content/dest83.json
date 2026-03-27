@@ -789,25 +789,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El texto y sus sombras",
-            "instruction": "Resuelve los enigmas de la lectura crítica.",
+            "label": "Sala de escape",
+            "title": "La bóveda celeste",
+            "instruction": "Estás en Monguí, Boyacá. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Deducción de información no expresada explícitamente en el texto:",
-                    "answer": "inferencia"
+                    "type": "riddle",
+                    "prompt": "La puerta de Monguí, Boyacá",
+                    "riddle": "Estás en Monguí, Boyacá. Leer entre líneas. Pueblo de los balones. Se hacen a mano desde hace un siglo. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "inferencia",
+                    "options": [
+                        "inferencia",
+                        "subtexto",
+                        "presuposición"
+                    ],
+                    "hint": "Mira a tu alrededor en Monguí, Boyacá."
                 },
                 {
-                    "question": "Mensaje oculto que corre bajo la superficie del discurso:",
-                    "answer": "subtexto"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «S». ¿Cuál es?",
+                    "answer": "sesgo",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Información que el hablante da por sentada sin enunciarla:",
-                    "answer": "presuposición"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Monguí, Boyacá hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "fiabilidad,implícito,quiero,taburete",
+                    "options": [
+                        "taburete",
+                        "implícito",
+                        "quiero",
+                        "fiabilidad"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "Tendencia a interpretar según las creencias previas del lector:",
-                    "answer": "sesgo"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Monguí, Boyacá, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "tostado",
+                    "options": [
+                        "tostado",
+                        "identifique",
+                        "parezca"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «PR».",
+                    "answer": "primo",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

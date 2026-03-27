@@ -789,25 +789,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El atlas dialectal",
-            "instruction": "Resuelve los enigmas de la variación.",
+            "label": "Sala de escape",
+            "title": "La biblioteca infinita",
+            "instruction": "Estás en Girón, Santander. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Fenómeno por el cual se usa «vos» en lugar de «tú»:",
-                    "answer": "voseo"
+                    "type": "riddle",
+                    "prompt": "La puerta de Girón, Santander",
+                    "riddle": "Estás en Girón, Santander. El español de América nació entre calles como estas. Patrimonio colonial. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "voseo",
+                    "options": [
+                        "voseo",
+                        "regionalismo",
+                        "yeísmo"
+                    ],
+                    "hint": "Mira a tu alrededor en Girón, Santander."
                 },
                 {
-                    "question": "Jerga rioplatense nacida de la inmigración italiana y gallega:",
-                    "answer": "lunfardo"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 7 letras que empieza con «M». ¿Cuál es?",
+                    "answer": "modismo",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Pronunciación de la «c» ante «e/i» y la «z» como /s/:",
-                    "answer": "seseo"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Girón, Santander hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "implorando,lunfardo,rioplatense,seseo",
+                    "options": [
+                        "lunfardo",
+                        "seseo",
+                        "rioplatense",
+                        "implorando"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "Fenómeno fonético que neutraliza la distinción entre /ʎ/ y /y/:",
-                    "answer": "yeísmo"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Girón, Santander, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "tuteo",
+                    "options": [
+                        "tuteo",
+                        "hayan",
+                        "jerga"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «CO».",
+                    "answer": "coloquial",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

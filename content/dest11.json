@@ -10382,85 +10382,63 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Las preguntas de la rana",
-            "instruction": "Resuelve.",
-            "items": [
-                {
-                    "clue": "¿___ es un diente? (What)",
-                    "answer": "Qué"
-                },
-                {
-                    "clue": "¿___ vive la rana? (Where)",
-                    "answer": "Dónde"
-                },
-                {
-                    "clue": "¿___ no tengo dientes? (Why)",
-                    "answer": "Por qué"
-                },
-                {
-                    "clue": "¿___ estás? (How)",
-                    "answer": "Cómo"
-                },
-                {
-                    "clue": "¿___ es el maestro? (Who)",
-                    "answer": "Quién"
-                },
-                {
-                    "clue": "Preguntar es ___ lo que no sabes.",
-                    "answer": "nombrar"
-                }
-            ],
+            "label": "Sala de escape",
+            "title": "La escalera infinita",
+            "instruction": "Estás en Universidad de Antioquia. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 360,
             "puzzles": [
                 {
                     "type": "riddle",
-                    "prompt": "Adivinanza",
-                    "riddle": "Estoy en este destino. Soy una palabra de 3 letras. Empieza con «Q».",
-                    "answer": "Qué",
+                    "prompt": "La puerta de Universidad de Antioquia",
+                    "riddle": "Estás en Universidad de Antioquia. Todos los verbos del mundo se conjugan aquí. Ciudad dentro de la ciudad. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "trapo",
                     "options": [
-                        "qué",
-                        "hablar",
-                        "quién"
+                        "trapo",
+                        "hablan",
+                        "rojos"
                     ],
-                    "hint": "Piensa en el vocabulario de este destino."
+                    "hint": "Mira a tu alrededor en Universidad de Antioquia."
                 },
                 {
                     "type": "wordlock",
-                    "prompt": "Completa la palabra: ra__",
-                    "answer": "rana",
-                    "hint": "Tiene 4 letras."
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 4 letras que empieza con «C». ¿Cuál es?",
+                    "answer": "cuál",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
                     "type": "sequence",
-                    "prompt": "Ordena estas palabras por número de letras (de menor a mayor)",
-                    "answer": [
-                        "rojos",
-                        "hablan",
-                        "nombrar",
-                        "caminar"
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Universidad de Antioquia hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "Dónde,Quién,Qué,cómo",
+                    "options": [
+                        "cómo",
+                        "Quién",
+                        "Dónde",
+                        "Qué"
                     ],
-                    "hint": "Cuenta las letras de cada palabra."
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
                     "type": "riddle",
-                    "prompt": "Segunda adivinanza",
-                    "riddle": "Soy lo opuesto del silencio en este lugar. ¿Qué palabra del destino me describe?",
-                    "answer": "beber",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Soy algo que todos necesitan pero nadie puede ver. Estoy en el aire de Universidad de Antioquia. ¿Qué palabra me describe?",
+                    "answer": "cómo",
                     "options": [
-                        "beber",
-                        "dientes",
-                        "cuándo"
+                        "cómo",
+                        "nombrar",
+                        "rana"
                     ],
-                    "hint": "Está en el vocabulario de este destino."
+                    "hint": "Piensa en el tema de «."
                 },
                 {
                     "type": "wordlock",
-                    "prompt": "La última llave. Escribe la palabra que falta: Q_____",
-                    "answer": "querer",
-                    "hint": "Es una palabra de este destino."
+                    "prompt": "La llave final",
+                    "riddle": "La última puerta. Yaguará te mira. Di la palabra que aprendiste aquí.",
+                    "answer": "cuál",
+                    "hint": "Es la última palabra de este destino."
                 }
-            ],
-            "timeLimit": 300
+            ]
         },
         {
             "type": "fill",

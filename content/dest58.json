@@ -9941,33 +9941,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "El observatorio de estrellas",
+            "instruction": "Estás en Parque Amacayacu, Amazonas. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "C2 integration: the student becomes the author"
+                    "type": "riddle",
+                    "prompt": "La puerta de Parque Amacayacu, Amazonas",
+                    "riddle": "Estás en Parque Amacayacu, Amazonas. Tú escribes tu historia. Selva primaria donde cada planta tiene nombre en tikuna. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "escribes",
+                    "options": [
+                        "escribes",
+                        "historia",
+                        "porque"
+                    ],
+                    "hint": "Mira a tu alrededor en Parque Amacayacu, Amazonas."
                 },
                 {
-                    "clue": "___",
-                    "answer": "escribes"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 3 letras que empieza con «L». ¿Cuál es?",
+                    "answer": "las",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "historia"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Parque Amacayacu, Amazonas hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "escuchar,palabras,porque,viven",
+                    "options": [
+                        "porque",
+                        "palabras",
+                        "escuchar",
+                        "viven"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Porque"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Parque Amacayacu, Amazonas decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "nombrar",
+                    "options": [
+                        "nombrar",
+                        "proteger",
+                        "crear"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "las"
-                },
-                {
-                    "clue": "___",
-                    "answer": "palabras"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 9 letras.",
+                    "answer": "gramática",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

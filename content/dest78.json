@@ -18260,33 +18260,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "El espíritu completo",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "El umbral entre mundos",
+            "instruction": "Estás en Nevado del Cocuy, Boyacá. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de Nevado del Cocuy, Boyacá",
+                    "riddle": "Estás en Nevado del Cocuy, Boyacá. El espíritu completo. Glaciares eternos de la cordillera oriental. Picos como catedrales de hielo. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "encontrará",
+                    "options": [
+                        "encontrará",
+                        "habitación",
+                        "logos"
+                    ],
+                    "hint": "Mira a tu alrededor en Nevado del Cocuy, Boyacá."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «V». ¿Cuál es?",
+                    "answer": "verbum",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Nevado del Cocuy, Boyacá hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "hygge,ikigai,namasté,ubuntu",
+                    "options": [
+                        "hygge",
+                        "ikigai",
+                        "ubuntu",
+                        "namasté"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Nevado del Cocuy, Boyacá, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "saudade",
+                    "options": [
+                        "saudade",
+                        "duende",
+                        "jaguar"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «CO».",
+                    "answer": "color",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

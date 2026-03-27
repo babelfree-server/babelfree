@@ -6723,85 +6723,63 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Encuentra las ovejas",
-            "instruction": "Resuelve los acertijos para encontrar las ovejas de Pastorcita.",
-            "items": [
-                {
-                    "clue": "Pastorcita ___ sus ovejas.",
-                    "answer": "perdió"
-                },
-                {
-                    "clue": "Ella ___. Está triste.",
-                    "answer": "llora"
-                },
-                {
-                    "clue": "Se queda ___.",
-                    "answer": "dormida"
-                },
-                {
-                    "clue": "Niña que llora, bien pronto la oímos ___ y cantar.",
-                    "answer": "reír"
-                },
-                {
-                    "clue": "Me ___ nadar. (singular)",
-                    "answer": "gusta"
-                },
-                {
-                    "clue": "Me ___ las estrellas. (plural)",
-                    "answer": "gustan"
-                }
-            ],
+            "label": "Sala de escape",
+            "title": "El jardín secreto",
+            "instruction": "Estás en Plaza Botero, Medellín. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 360,
             "puzzles": [
                 {
                     "type": "riddle",
-                    "prompt": "Adivinanza",
-                    "riddle": "Estoy en este destino. Soy una palabra de 6 letras. Empieza con «G».",
-                    "answer": "gustan",
+                    "prompt": "La puerta de Plaza Botero, Medellín",
+                    "riddle": "Estás en Plaza Botero, Medellín. La plaza donde todo el mundo dice lo que le gusta. 23 esculturas de Botero al aire libre. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "gusta",
                     "options": [
+                        "gusta",
                         "gustan",
-                        "pastorcita",
-                        "vendrán"
+                        "reír"
                     ],
-                    "hint": "Piensa en el vocabulario de este destino."
+                    "hint": "Mira a tu alrededor en Plaza Botero, Medellín."
                 },
                 {
                     "type": "wordlock",
-                    "prompt": "Completa la palabra: ba____",
-                    "answer": "bailar",
-                    "hint": "Tiene 6 letras."
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 7 letras que empieza con «D». ¿Cuál es?",
+                    "answer": "dormida",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
                     "type": "sequence",
-                    "prompt": "Ordena estas palabras por número de letras (de menor a mayor)",
-                    "answer": [
-                        "ríe",
-                        "correr",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Plaza Botero, Medellín hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "cantar,comer,correr,llorar",
+                    "options": [
+                        "cantar",
                         "llorar",
-                        "ovejita"
+                        "comer",
+                        "correr"
                     ],
-                    "hint": "Cuenta las letras de cada palabra."
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
                     "type": "riddle",
-                    "prompt": "Segunda adivinanza",
-                    "riddle": "Soy lo opuesto del silencio en este lugar. ¿Qué palabra del destino me describe?",
-                    "answer": "vuelven",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Soy algo que todos necesitan pero nadie puede ver. Estoy en el aire de Plaza Botero, Medellín. ¿Qué palabra me describe?",
+                    "answer": "dormir",
                     "options": [
-                        "vuelven",
-                        "comer",
-                        "encontrar"
+                        "dormir",
+                        "perdió",
+                        "llora"
                     ],
-                    "hint": "Está en el vocabulario de este destino."
+                    "hint": "Piensa en el tema de «."
                 },
                 {
                     "type": "wordlock",
-                    "prompt": "La última llave. Escribe la palabra que falta: D________",
-                    "answer": "despierta",
-                    "hint": "Es una palabra de este destino."
+                    "prompt": "La llave final",
+                    "riddle": "La última puerta. Yaguará te mira. Di la palabra que aprendiste aquí.",
+                    "answer": "nadar",
+                    "hint": "Es la última palabra de este destino."
                 }
-            ],
-            "timeLimit": 300
+            ]
         },
         {
             "type": "susurro",

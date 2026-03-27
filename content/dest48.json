@@ -884,33 +884,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "La bóveda del silencio",
+            "instruction": "Estás en Providencia, Archipiélago. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 300,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "C1 integration: full register control"
+                    "type": "riddle",
+                    "prompt": "La puerta de Providencia, Archipiélago",
+                    "riddle": "Estás en Providencia, Archipiélago. Cuidar la palabra. Isla donde el creole, el español y el inglés se trenzan. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "cuidar",
+                    "options": [
+                        "cuidar",
+                        "palabra",
+                        "oficio"
+                    ],
+                    "hint": "Mira a tu alrededor en Providencia, Archipiélago."
                 },
                 {
-                    "clue": "___",
-                    "answer": " rhetoric"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «C». ¿Cuál es?",
+                    "answer": "cuidar",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": " literary analysis"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Providencia, Archipiélago hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "escuchar,nombrar,proteger,yaguará",
+                    "options": [
+                        "nombrar",
+                        "proteger",
+                        "yaguará",
+                        "escuchar"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Cuidar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En Providencia, Archipiélago, hay una verdad escondida entre las sombras. Solo quien nombra las cosas correctamente puede encontrarla. ¿Cuál es la palabra clave?",
+                    "answer": "gramática",
+                    "options": [
+                        "gramática",
+                        "integration",
+                        "full"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "palabra"
-                },
-                {
-                    "clue": "___",
-                    "answer": "oficio"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «R».",
+                    "answer": "register",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

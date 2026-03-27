@@ -798,25 +798,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "La partitura del idioma",
-            "instruction": "Resuelve los enigmas de la poesía.",
+            "label": "Sala de escape",
+            "title": "El laboratorio del nombre",
+            "instruction": "Estás en Arauca, Arauca. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Composición de catorce versos endecasílabos en cuartetos y tercetos:",
-                    "answer": "soneto"
+                    "type": "riddle",
+                    "prompt": "La puerta de Arauca, Arauca",
+                    "riddle": "Estás en Arauca, Arauca. La música de las palabras. Arpa, cuatro y maracas. El joropo nace aquí. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "soneto",
+                    "options": [
+                        "soneto",
+                        "métrica",
+                        "aliteración"
+                    ],
+                    "hint": "Mira a tu alrededor en Arauca, Arauca."
                 },
                 {
-                    "question": "Estrofa de diez versos octosílabos con rima abbaaccddc:",
-                    "answer": "décima"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 7 letras que empieza con «E». ¿Cuál es?",
+                    "answer": "estrofa",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Repetición de consonantes para crear textura sonora:",
-                    "answer": "aliteración"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Arauca, Arauca hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "acento,desesperación,décima,rima",
+                    "options": [
+                        "rima",
+                        "décima",
+                        "desesperación",
+                        "acento"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "Rima que solo repite las vocales a partir de la última acentuada:",
-                    "answer": "asonancia"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Arauca, Arauca, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "asonancia",
+                    "options": [
+                        "asonancia",
+                        "sepamos",
+                        "sílaba"
+                    ],
+                    "hint": "Piensa en el tema de «."
+                },
+                {
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «EN».",
+                    "answer": "encuentra",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

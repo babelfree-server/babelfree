@@ -9058,29 +9058,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "El jardín de las lenguas",
+            "instruction": "Estás en Leticia, Amazonas. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "the unsayable — limits of language"
+                    "type": "riddle",
+                    "prompt": "La puerta de Leticia, Amazonas",
+                    "riddle": "Estás en Leticia, Amazonas. La Palabra del Corazón. Triple frontera: Colombia, Brasil, Perú. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "palabra",
+                    "options": [
+                        "palabra",
+                        "del",
+                        "corazón"
+                    ],
+                    "hint": "Mira a tu alrededor en Leticia, Amazonas."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Palabra"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 8 letras que empieza con «E». ¿Cuál es?",
+                    "answer": "escuchar",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "del"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Leticia, Amazonas hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "corazón,escuchar,palabra,única",
+                    "options": [
+                        "única",
+                        "corazón",
+                        "palabra",
+                        "escuchar"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Corazón"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Leticia, Amazonas decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "contiene",
+                    "options": [
+                        "contiene",
+                        "todas",
+                        "demás"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "ESCUCHAR"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 9 letras.",
+                    "answer": "gramática",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

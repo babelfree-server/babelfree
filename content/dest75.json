@@ -18851,33 +18851,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "Crónica de los mundos",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "La sala del último acertijo",
+            "instruction": "Estás en Tumaco, Nariño. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de Tumaco, Nariño",
+                    "riddle": "Estás en Tumaco, Nariño. Crónica de los mundos. Puerto del Pacífico sur, marimba y resistencia. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "contractualismo",
+                    "options": [
+                        "contractualismo",
+                        "comunitarismo",
+                        "republicanismo"
+                    ],
+                    "hint": "Mira a tu alrededor en Tumaco, Nariño."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «B». ¿Cuál es?",
+                    "answer": "brilla",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Tumaco, Nariño hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "cosmopolitismo,deontología,liberalismo,utilitarismo",
+                    "options": [
+                        "cosmopolitismo",
+                        "liberalismo",
+                        "deontología",
+                        "utilitarismo"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En el corazón de Tumaco, Nariño, donde las voces convergen, hay una palabra que contiene todas las demás. ¿Cuál es?",
+                    "answer": "cañasgordas",
+                    "options": [
+                        "cañasgordas",
+                        "entonces",
+                        "adolescencia"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "El jaguar nombra por última vez. La palabra que cierra este capítulo empieza con «AM».",
+                    "answer": "amasando",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

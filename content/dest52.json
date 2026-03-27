@@ -887,33 +887,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "El observatorio secreto",
+            "instruction": "Estás en Silvia, Cauca. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 300,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "poetic composition"
+                    "type": "riddle",
+                    "prompt": "La puerta de Silvia, Cauca",
+                    "riddle": "Estás en Silvia, Cauca. El eco y el caracol. Mercado guambiano los martes. Colores azules contra la montaña. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "del",
+                    "options": [
+                        "del",
+                        "sonido",
+                        "mar"
+                    ],
+                    "hint": "Mira a tu alrededor en Silvia, Cauca."
                 },
                 {
-                    "clue": "___",
-                    "answer": "sonido"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «D». ¿Cuál es?",
+                    "answer": "dentro",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "del"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Silvia, Cauca hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "cantó,caracol,mundo,repite",
+                    "options": [
+                        "cantó",
+                        "mundo",
+                        "repite",
+                        "caracol"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "mar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En Silvia, Cauca, hay una verdad escondida entre las sombras. Solo quien nombra las cosas correctamente puede encontrarla. ¿Cuál es la palabra clave?",
+                    "answer": "gramática",
+                    "options": [
+                        "gramática",
+                        "poetic",
+                        "composition"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "dentro"
-                },
-                {
-                    "clue": "___",
-                    "answer": "del"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «M».",
+                    "answer": "meter",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

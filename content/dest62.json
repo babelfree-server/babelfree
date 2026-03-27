@@ -20793,33 +20793,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Sala de enigmas",
-            "title": "Las palabras de Doña Asunción",
-            "instruction": "Resuelve los enigmas del Maestro.",
+            "label": "Sala de escape",
+            "title": "El santuario de la voz",
+            "instruction": "Estás en Mitú, Vaupés. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 240,
             "puzzles": [
                 {
-                    "question": "Nombrar es ___",
-                    "answer": "crear"
+                    "type": "riddle",
+                    "prompt": "La puerta de Mitú, Vaupés",
+                    "riddle": "Estás en Mitú, Vaupés. Las palabras de Doña Asunción. Selva profunda, 27 lenguas indígenas. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "asgard",
+                    "options": [
+                        "asgard",
+                        "alegría",
+                        "collar"
+                    ],
+                    "hint": "Mira a tu alrededor en Mitú, Vaupés."
                 },
                 {
-                    "question": "Crear es ___",
-                    "answer": "amar"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 9 letras que empieza con «C». ¿Cuál es?",
+                    "answer": "compasión",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "question": "Amar es ___",
-                    "answer": "vivir"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Mitú, Vaupés hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "cosmogonía,cuidado,panteón,teogonía",
+                    "options": [
+                        "cosmogonía",
+                        "teogonía",
+                        "cuidado",
+                        "panteón"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "question": "El silencio es el ___ de las palabras",
-                    "answer": "hogar"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "Los antiguos de Mitú, Vaupés decían que una sola palabra podía cambiar el destino de un viajero. Esa palabra está en este destino. ¿Cuál es?",
+                    "answer": "olimpo",
+                    "options": [
+                        "olimpo",
+                        "valhalla",
+                        "hades"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "question": "La palabra del corazón no se dice, se ___",
-                    "answer": "vive"
-                },
-                {
-                    "question": "Un nombre es la ___ entre lo que existe y lo que podría existir",
-                    "answer": "frontera"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Doña Asunción cierra los ojos y dice: «La respuesta siempre estuvo en el nombre.» La palabra tiene 10 letras.",
+                    "answer": "inframundo",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },

@@ -859,29 +859,61 @@
         },
         {
             "type": "escaperoom",
-            "label": "Escape",
-            "title": "Escape",
-            "instruction": "Resuelve.",
-            "items": [
+            "label": "Sala de escape",
+            "title": "El observatorio secreto",
+            "instruction": "Estás en Río Guatapurí, Cesar. Resuelve cinco acertijos para escapar.",
+            "timeLimit": 300,
+            "puzzles": [
                 {
-                    "clue": "___",
-                    "answer": "advanced idiomatic expressions"
+                    "type": "riddle",
+                    "prompt": "La puerta de Río Guatapurí, Cesar",
+                    "riddle": "Estás en Río Guatapurí, Cesar. La risa de Río. Aguas frías de la Sierra Nevada que bajan al valle. Para entrar, di la primera palabra que ves en este lugar.",
+                    "answer": "alegría",
+                    "options": [
+                        "alegría",
+                        "río",
+                        "protegió"
+                    ],
+                    "hint": "Mira a tu alrededor en Río Guatapurí, Cesar."
                 },
                 {
-                    "clue": "___",
-                    "answer": "alegría"
+                    "type": "wordlock",
+                    "prompt": "La cerradura de letras",
+                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «C». ¿Cuál es?",
+                    "answer": "claro",
+                    "hint": "Es una palabra importante de este destino."
                 },
                 {
-                    "clue": "___",
-                    "answer": "Río"
+                    "type": "sequence",
+                    "prompt": "El código del muro",
+                    "riddle": "En el muro de Río Guatapurí, Cesar hay cuatro símbolos. Ordénalos alfabéticamente para abrir el pasaje.",
+                    "answer": "bosque,mantuvo,risa,silencio",
+                    "options": [
+                        "mantuvo",
+                        "risa",
+                        "silencio",
+                        "bosque"
+                    ],
+                    "hint": "Orden alfabético: A, B, C..."
                 },
                 {
-                    "clue": "___",
-                    "answer": "protegió"
+                    "type": "riddle",
+                    "prompt": "El acertijo del guardián",
+                    "riddle": "En Río Guatapurí, Cesar, hay una verdad escondida entre las sombras. Solo quien nombra las cosas correctamente puede encontrarla. ¿Cuál es la palabra clave?",
+                    "answer": "alej",
+                    "options": [
+                        "alej",
+                        "alejado",
+                        "gramática"
+                    ],
+                    "hint": "Piensa en el tema de «."
                 },
                 {
-                    "clue": "___",
-                    "answer": "claro"
+                    "type": "wordlock",
+                    "prompt": "La llave final",
+                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «A».",
+                    "answer": "advanced",
+                    "hint": "Es la última palabra de este destino."
                 }
             ]
         },
