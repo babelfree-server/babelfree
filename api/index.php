@@ -59,6 +59,7 @@ require_once __DIR__ . '/routes/adventure.php';
 require_once __DIR__ . '/routes/analytics.php';
 require_once __DIR__ . '/routes/tracking.php';
 require_once __DIR__ . '/routes/lexicon.php';
+require_once __DIR__ . '/routes/admin.php';
 
 // CORS
 setCorsHeaders();
@@ -117,6 +118,9 @@ switch ($resource) {
         break;
     case 'adventure':
         handleAdventureRoutes($action, $method);
+        break;
+    case 'admin':
+        handleAdminRoutes($action, $method);
         break;
     case 'analytics':
         handleAnalyticsRoutes($action, $method);

@@ -95,6 +95,16 @@ ErrorDocument 404 /404.html
     RewriteRule ^قاموس-عربي-عبري/?$ dictionary-seo.php?seo_page=قاموس-عربي-عبري [L,QSA]
     RewriteRule ^พจนานุกรม-ราชบัณฑิตยสถาน/?$ dictionary-seo.php?seo_page=พจนานุกรม-ราชบัณฑิตยสถาน [L,QSA]
 
+    # El Viaje del Jaguar — namespaced routes
+    RewriteRule ^elviajedeljaguar/login/?$ login.html [L]
+    RewriteRule ^elviajedeljaguar/play/?$ play.html [L,QSA]
+    RewriteRule ^elviajedeljaguar/storymap/?$ storymap.html [L]
+    RewriteRule ^elviajedeljaguar/cuaderno/?$ cuaderno.html [L]
+    RewriteRule ^elviajedeljaguar/dashboard/?$ dashboard.html [L]
+    RewriteRule ^elviajedeljaguar/admin/?$ jaguar-admin.html [L]
+    RewriteRule ^elviajedeljaguar/qa/?$ qa.html [L]
+    RewriteRule ^elviajedeljaguar/?$ elviajedeljaguar.html [L]
+
     # Glossary
     RewriteRule ^glossary/?$ glossary.html [L]
 
