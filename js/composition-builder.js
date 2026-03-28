@@ -22,7 +22,7 @@
   'use strict';
 
   var STORAGE_KEY  = 'yaguara_aventura';
-  var LANDMARK_URL = 'content/landmarks-colombia.json';
+  var LANDMARK_URL = '/content/landmarks-colombia.json';
   var VERSION      = 1;
 
   // ── Phase boundaries ──────────────────────────────────────────────

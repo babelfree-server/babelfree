@@ -52,7 +52,7 @@
         if (!eco) { callback(null); return; }
         if (_overlayCache) { callback(_overlayCache[eco] || null); return; }
 
-        fetch('content/eco-overlays.json')
+        fetch('/content/eco-overlays.json')
             .then(function(res) { return res.ok ? res.json() : null; })
             .then(function(data) {
                 _overlayCache = data || {};
@@ -286,7 +286,7 @@
        BRANCH LOADER — story-driven sub-journeys from a1-branches.json
     ========================================================== */
     function loadBranch(branchId) {
-        fetch('content/a1-branches.json')
+        fetch('/content/a1-branches.json')
             .then(function(res) { return res.ok ? res.json() : null; })
             .then(function(data) {
                 if (!data || !data.branches) { showError('Rama no encontrada.'); return; }
@@ -388,7 +388,7 @@
             ontologyPromise = Promise.resolve(null);
         }
 
-        var destPromise = fetch('content/dest' + destNum + '.json')
+        var destPromise = fetch('/content/dest' + destNum + '.json')
             .then(function(res) {
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 return res.json();

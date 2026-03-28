@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Viaje del Jaguar</title>
-    <link rel="stylesheet" href="css/yaguara-game.css?v=20260228e">
-    <link rel="stylesheet" href="css/placeholder-illustrations.css?v=20260323">
-    <link rel="stylesheet" href="css/soul.css?v=20260324">
-    <link rel="stylesheet" href="luxury.css">
+    <link rel="stylesheet" href="/css/yaguara-game.css?v=20260228e">
+    <link rel="stylesheet" href="/css/placeholder-illustrations.css?v=20260323">
+    <link rel="stylesheet" href="/css/soul.css?v=20260324">
+    <link rel="stylesheet" href="/luxury.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#c9a227">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -15,7 +15,7 @@
 <body class="yg-body yg-mundo-de-abajo">
 
     <header class="yg-header">
-        <a href="/dashboard" class="yg-back-btn">&#8592; Volver</a>
+        <a href="/elviajedeljaguar/storymap" class="yg-back-btn">&#8592; Volver</a>
         <div class="yg-header-info">
             <h1 class="yg-header-title">El viaje del jaguar</h1>
             <div class="yg-header-subtitle"></div>
@@ -37,28 +37,28 @@
 
     <div class="ad-slot ad-slot-compact" id="adPlay"></div>
 
-<script src="js/jaguar-api.js"></script>
+<script src="/js/jaguar-api.js"></script>
 <script>
     // Auth guard
     if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
-        window.location.href = '/login';
+        window.location.href = '/elviajedeljaguar/login';
     }
 </script>
-<script src="ontology/ontology-api.js"></script>
-<script src="js/personal-lexicon.js"></script>
-<script src="js/template-generator.js"></script>
-<script src="js/evidence-engine.js"></script>
-<script src="js/adaptivity-engine.js"></script>
-<script src="js/yaguara-engine.js?v=20260311"></script>
-<script src="js/practice-engine.js?v=20260311"></script>
-<script src="js/riddle-quest.js"></script>
-<script src="js/composition-builder.js"></script>
-<script src="js/quest-journal.js"></script>
-<script src="js/audio-manager.js"></script>
+<script src="/ontology/ontology-api.js"></script>
+<script src="/js/personal-lexicon.js"></script>
+<script src="/js/template-generator.js"></script>
+<script src="/js/evidence-engine.js"></script>
+<script src="/js/adaptivity-engine.js"></script>
+<script src="/js/yaguara-engine.js?v=20260311"></script>
+<script src="/js/practice-engine.js?v=20260311"></script>
+<script src="/js/riddle-quest.js"></script>
+<script src="/js/composition-builder.js"></script>
+<script src="/js/quest-journal.js"></script>
+<script src="/js/audio-manager.js"></script>
 <script>if(window.AudioManager)AudioManager.init();</script>
-<script src="js/tts-fallback.js"></script>
-<script src="js/soul.js"></script>
-<script src="js/ad-manager.js"></script>
+<script src="/js/tts-fallback.js"></script>
+<script src="/js/soul.js"></script>
+<script src="/js/ad-manager.js"></script>
 <script>if(window.AdManager)AdManager.init();</script>
 <script>
     // Tri routing: ?mode=practice → practice picker, ?dest=N → destination router, else → legacy

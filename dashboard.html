@@ -640,7 +640,7 @@
         .modal-btn.cancel { background: rgba(184, 168, 138, 0.3); color: white; }
         .modal-btn:hover { transform: translateY(-2px); }
     </style>
-    <link rel="stylesheet" href="luxury.css">
+    <link rel="stylesheet" href="/luxury.css">
 </head>
 <body>
     <div class="bg-graphics">
@@ -654,7 +654,7 @@
     <nav class="nav-bar">
         <div class="nav-brand">
             <div class="logo" onclick="showYaguaraInfo()">
-                <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                <img src="/img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
             </div>
             <div class="brand-text">
                 <h1>La Aventura de Yaguar&aacute;</h1>
@@ -689,7 +689,7 @@
         <section class="yaguara-status">
             <div class="yaguara-header">
                 <div class="yaguara-avatar" data-stage="Explorador" id="yaguaraAvatar">
-                    <img src="img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    <img src="/img/jaguar-hero-full.jpg" alt="Yaguara" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                 </div>
 
                 <div class="yaguara-info">
@@ -821,7 +821,7 @@
         </div>
     </main>
 
-    <script src="js/jaguar-api.js"></script>
+    <script src="/js/jaguar-api.js"></script>
     <script>
         // ============================================================
         // Colombian Student Dashboard System
@@ -830,7 +830,7 @@
             constructor() {
                 // Auth guard: redirect to login if no server token
                 if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
-                    window.location.href = '/login';
+                    window.location.href = '/elviajedeljaguar/login';
                     return;
                 }
 
@@ -849,7 +849,7 @@
                     // Validate session in background
                     JaguarAPI.validateSession().then(function(result) {
                         if (!result || !result.user) {
-                            window.location.href = '/login';
+                            window.location.href = '/elviajedeljaguar/login';
                         }
                     });
                 } else {
@@ -1218,7 +1218,7 @@
             } else {
                 localStorage.removeItem('jaguarUserSession');
                 localStorage.removeItem('colombianStudentData');
-                window.location.href = '/login';
+                window.location.href = '/elviajedeljaguar/login';
             }
         }
 
@@ -1232,7 +1232,7 @@
             }
         });
     </script>
-    <link rel="stylesheet" href="css/yaguara-game.css">
-    <script src="js/feedback-widget.js"></script>
+    <link rel="stylesheet" href="/css/yaguara-game.css">
+    <script src="/js/feedback-widget.js"></script>
 </body>
 </html>

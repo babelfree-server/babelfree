@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El cuaderno de Candelaria — El Viaje del Jaguar</title>
-    <link rel="stylesheet" href="luxury.css">
+    <link rel="stylesheet" href="/luxury.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#c9a227">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -444,13 +444,13 @@
         .av-landmark-top { gap: 8px; }
     }
     </style>
-    <link rel="stylesheet" href="css/placeholder-illustrations.css?v=20260323">
+    <link rel="stylesheet" href="/css/placeholder-illustrations.css?v=20260323">
 </head>
 <body>
 
     <!-- Header -->
     <header class="cn-header">
-        <a href="/storymap" class="cn-back" aria-label="Volver al mapa">&#8592;</a>
+        <a href="/elviajedeljaguar/storymap" class="cn-back" aria-label="Volver al mapa">&#8592;</a>
         <div class="cn-header-info">
             <h1 class="cn-header-title">El cuaderno de Candelaria</h1>
             <div class="cn-header-sub">Las adivinanzas del viaje</div>
@@ -511,19 +511,19 @@
 
     </div>
 
-<script src="js/jaguar-api.js"></script>
+<script src="/js/jaguar-api.js"></script>
 <script>
     // Auth guard
     if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
-        window.location.href = '/login';
+        window.location.href = '/elviajedeljaguar/login';
     }
 </script>
-<script src="js/audio-manager.js"></script>
+<script src="/js/audio-manager.js"></script>
 <script>if(window.AudioManager)AudioManager.init();</script>
-<script src="js/tts-fallback.js"></script>
-<script src="js/composition-builder.js"></script>
-<script src="js/quest-journal.js"></script>
-<script src="js/aventura-tab.js"></script>
+<script src="/js/tts-fallback.js"></script>
+<script src="/js/composition-builder.js"></script>
+<script src="/js/quest-journal.js"></script>
+<script src="/js/aventura-tab.js"></script>
 <script>
 // Tab switching
 (function () {
@@ -550,6 +550,6 @@
     }
 })();
 </script>
-<script src="js/feedback-widget.js"></script>
+<script src="/js/feedback-widget.js"></script>
 </body>
 </html>

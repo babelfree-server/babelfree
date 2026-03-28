@@ -12,7 +12,7 @@
     'use strict';
 
     var STORAGE_KEY = 'yaguara_busqueda';
-    var RIDDLE_URL  = 'content/busqueda-riddles.json';
+    var RIDDLE_URL  = '/content/busqueda-riddles.json';
 
     // ── Normalize for answer comparison ──────────────────────────────
     // Local copy so we don't depend on engine load order.

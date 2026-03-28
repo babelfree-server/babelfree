@@ -15,8 +15,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="El mapa del viaje — El Viaje del Jaguar">
     <meta name="twitter:description" content="89 destinos de aprendizaje inmersivo del español. Desde la selva amazónica hasta las cumbres andinas.">
-    <link rel="stylesheet" href="luxury.css">
-    <link rel="stylesheet" href="css/yaguara-game.css">
+    <link rel="stylesheet" href="/luxury.css">
+    <link rel="stylesheet" href="/css/yaguara-game.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#c9a227">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -577,7 +577,7 @@
 
     <!-- Header -->
     <header class="sm-header">
-        <img src="img/jaguar-hero-full.jpg" alt="Yaguará" class="sm-avatar">
+        <img src="/img/jaguar-hero-full.jpg" alt="Yaguará" class="sm-avatar">
         <div class="sm-header-info">
             <h1 class="sm-header-title">El viaje del jaguar</h1>
             <div class="sm-header-progress" id="smProgress">Cargando...</div>
@@ -615,7 +615,7 @@
     <!-- First-time welcome overlay -->
     <div class="sm-welcome-overlay" id="smWelcomeOverlay">
         <div class="sm-welcome-inner">
-            <img src="img/jaguar-hero-full.jpg" alt="Yaguará" class="sm-welcome-avatar">
+            <img src="/img/jaguar-hero-full.jpg" alt="Yaguará" class="sm-welcome-avatar">
             <div class="sm-welcome-title" id="smWelcomeTitle">Bienvenido al viaje</div>
             <div class="sm-welcome-text" id="smWelcomeText">
                 Este río es tu camino. Cada destino te lleva más lejos en el español
@@ -642,19 +642,19 @@
     <!-- River of destinations -->
     <div class="sm-river" id="smRiver"></div>
 
-<script src="js/jaguar-api.js"></script>
-<script src="login_lang_data.js"></script>
-<script src="js/app-views.js"></script>
+<script src="/js/jaguar-api.js"></script>
+<script src="/login_lang_data.js"></script>
+<script src="/js/app-views.js"></script>
 <script>
     // Auth guard
     if (window.JaguarAPI && !JaguarAPI.isAuthenticated()) {
         window.location.href = '/login';
     }
 </script>
-<script src="ontology/ontology-api.js"></script>
-<script src="js/evidence-engine.js"></script>
-<script src="js/riddle-quest.js"></script>
-<script src="js/ad-manager.js"></script>
+<script src="/ontology/ontology-api.js"></script>
+<script src="/js/evidence-engine.js"></script>
+<script src="/js/riddle-quest.js"></script>
+<script src="/js/ad-manager.js"></script>
 <script>if(window.AdManager)AdManager.init();</script>
 <script>
 (function() {
@@ -1171,6 +1171,6 @@
     }
 })();
 </script>
-<script src="js/feedback-widget.js"></script>
+<script src="/js/feedback-widget.js"></script>
 </body>
 </html>
