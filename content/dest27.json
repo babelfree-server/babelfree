@@ -1974,47 +1974,53 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_dona_asuncion": {
             "name": "Doña Asunción",
             "avatar": "🧓",
             "voice": "Serena, profunda, escuchadora. Habla con la calma de quien ha oído todas las historias.",
-            "role": "Mentora — la última escuchadora, guarda la memoria del territorio"
+            "role": "Mentora — la última escuchadora, guarda la memoria del territorio",
+            "id": "char_dona_asuncion"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Mi comunidad lleva generaciones aquí.",
-            "Las palabras bonitas a veces esconden mentiras.",
-            "Yo sé quién es ese hombre. No confío en él.",
-            "Mira cómo cambia el color del agua.",
-            "Mi mamá siempre decía: primero escucha, después habla.",
-            "No tengas miedo. Yo estoy aquí contigo.",
-            "Este bosque tiene memoria. Yo lo siento.",
-            "Hay cosas que no se dicen con palabras.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó a leer el río.",
-            "El río es sagrado para mi pueblo.",
-            "No le creas todo lo que dice.",
-            "Aquí las cosas no son lo que parecen."
+            "Lo que más me gusta de Barichara, Santander es lo que no esperaba encontrar.",
+            "¿Por qué la gente de Santander habla de esa manera?",
+            "Hay cosas en Santander que solo se entienden cuando las vives.",
+            "Mi abuela me contó algo sobre lugares como Barichara, Santander.",
+            "Barichara, Santander me recuerda algo que mi mamá contaba.",
+            "Cada lugar como Barichara, Santander tiene un secreto. Solo hay que saber preguntar.",
+            "Las palabras cambian según quién las dice aquí en Barichara, Santander.",
+            "Las historias de la gente de Santander son más interesantes que los monumentos.",
+            "Cada vez que aprendo algo en Santander, me doy cuenta de lo poco que sabía.",
+            "A veces pienso que viajar por Santander es como aprender otro idioma."
         ],
         "char_dona_asuncion": [
-            "Las historias que no se cuentan se convierten en olvido.",
-            "Mi abuela me enseñó que escuchar es más difícil que hablar.",
-            "El río me cuenta cosas que los libros no saben.",
-            "Cada persona que pasa por aquí deja una historia en el agua.",
-            "No tengas prisa por entender. La comprensión llega sola.",
-            "Las raíces más profundas son las que sostienen el árbol en la tormenta.",
-            "Escuchar no es oír. Escuchar es sentir con todo el cuerpo.",
-            "Hija, tú llevas las historias de todos los que conociste.",
-            "Te he esperado, hija.",
-            "Escucha lo que el bosque dice cuando crees que no habla.",
-            "Hay una palabra que no tiene traducción en ningún idioma.",
-            "Las palabras tienen memoria. Cada una recuerda quién la dijo primero.",
-            "Todo tiene su tiempo. Las prisas rompen las historias.",
-            "Yo escuché las voces de tres generaciones junto a este río."
+            "Los nombres de Barichara, Santander son la memoria de los que ya no están.",
+            "Mi abuela decía que las montañas de Santander escuchan lo que la gente ya no dice.",
+            "Mi madre me enseñó en Santander que escuchar es más difícil que hablar.",
+            "Cuando yo era niña, Barichara, Santander tenía otro rostro. El tiempo cambia todo.",
+            "Hay historias de Barichara, Santander que se cuentan solo cuando se está listo para escucharlas.",
+            "La gente de antes en Barichara, Santander no tenía menos: tenía diferente.",
+            "Los ríos de Santander han visto más que cualquier libro de historia.",
+            "Cuando la memoria de Barichara, Santander se pierde, el pueblo se pierde.",
+            "Lo más valioso de Santander no es lo que se ve sino lo que se siente.",
+            "Cada proverbio de Santander es una lección que costó generaciones aprender."
+        ],
+        "char_yaguara": [
+            "Viajero, algo nuevo nos espera. Multiple voices converge. Doña Asunción's last words. Candelaria starts to becom",
+            "Hoy aprendemos: reported speech advanced (me pidió que, le dije que). El español crece con nosotras."
         ]
     },
     "_expansionStats": {
@@ -8014,6 +8020,48 @@
                     "hint": "Me siento...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué pasa cuando las historias se encuentran?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste hoy?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Yo creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías tú?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante de esta historia?",
+                    "hint": "Lo más importante es...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué necesita el mundo?",
+                    "hint": "El mundo necesita que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes ahora?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -8381,7 +8429,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 11 letras que empieza con «E». ¿Cuál es?",
+                    "riddle": "Una tabla de madera en Barichara, Santander muestra una palabra borrosa. 11 letras, comienza con «E».",
                     "answer": "escuchadora",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -8408,12 +8456,12 @@
                         "recorrimos",
                         "porque"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Las voces que se cruzan»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 7 letras.",
+                    "riddle": "El reloj de Barichara, Santander se detuvo en una palabra. ¿Cuál?",
                     "answer": "azulada",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -8422,14 +8470,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Cuenta — Las voces que se cruzan",
-            "instruction": "Escribe tu reflexión.",
+            "title": "La piedra tallada de Barichara",
+            "instruction": "Candelaria abre su cuaderno y te mira. Cada piedra de Barichara fue puesta a mano.",
             "prompts": [
-                "¿Qué pasa cuando las historias se encuentran?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?",
-                "¿Qué es lo más importante?"
+                "¿Por qué Barichara es considerado el pueblo más lindo de Colombia? ¿Qué lo hace especial?",
+                "Compara el Camino Real de Guane con un sendero o camino antiguo que conozcas.",
+                "Un turista te pregunta sobre los artesanos de Barichara. ¿Qué trabajan? ¿Cómo viven?",
+                "Si las piedras del Camino Real pudieran hablar, ¿qué historias contarían de los viajeros que pasaron?"
+            ],
+            "vocabulary": [
+                "piedra",
+                "tallar",
+                "artesano",
+                "camino",
+                "capilla",
+                "tapia",
+                "antiguo",
+                "oficio",
+                "bello",
+                "sendero"
             ]
         },
         {

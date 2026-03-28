@@ -1974,47 +1974,53 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
-        "char_delfin_rosado": {
-            "name": "Delfín Rosado",
+        "char_rio": {
+            "name": "Río",
             "avatar": "🐬",
             "voice": "Juguetón, irónico, cambia de forma. Doble sentido, preguntas retóricas.",
-            "role": "Guía del doble sentido — enseña que las palabras pueden engañar"
+            "role": "Guía del doble sentido — enseña que las palabras pueden engañar",
+            "id": "char_rio"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Mi abuela me enseñó a leer el río.",
-            "El río es sagrado para mi pueblo.",
-            "No le creas todo lo que dice.",
-            "Aquí las cosas no son lo que parecen.",
-            "Vamos por este lado, es más seguro.",
-            "Escucha bien, Yaguará. Esto es importante.",
-            "Mi comunidad lleva generaciones aquí.",
-            "Las palabras bonitas a veces esconden mentiras.",
-            "Yo sé quién es ese hombre. No confío en él.",
-            "Mira cómo cambia el color del agua.",
-            "Mi mamá siempre decía: primero escucha, después habla.",
-            "No tengas miedo. Yo estoy aquí contigo.",
-            "Este bosque tiene memoria. Yo lo siento.",
-            "Hay cosas que no se dicen con palabras."
+            "Lo que más me gusta de Yopal, Casanare es lo que no esperaba encontrar.",
+            "¿Por qué la gente de Casanare habla de esa manera?",
+            "Mi abuela me contó algo sobre lugares como Yopal, Casanare.",
+            "Yopal, Casanare me recuerda algo que mi mamá contaba.",
+            "Las palabras cambian según quién las dice aquí en Yopal, Casanare.",
+            "Quiero escribir sobre Yopal, Casanare algún día.",
+            "A veces pienso que viajar por Casanare es como aprender otro idioma.",
+            "Cada vez que aprendo algo en Casanare, me doy cuenta de lo poco que sabía.",
+            "Las historias de la gente de Casanare son más interesantes que los monumentos.",
+            "Cada lugar como Yopal, Casanare tiene un secreto. Solo hay que saber preguntar."
         ],
-        "char_delfin_rosado": [
-            "¿Estás seguro de lo que oíste? Yo escuché otra cosa.",
-            "A veces la verdad se esconde en la broma.",
-            "El río cambia de forma, pero siempre es el mismo río.",
-            "Yo he sido pez, he sido hombre, he sido sueño.",
-            "Cuidado con las sonrisas que no llegan a los ojos.",
-            "Lo que ves en la superficie no es lo que hay abajo.",
-            "La ironía es el idioma de los que ven demasiado.",
-            "¿Quieres la verdad? Primero aprende a nadar en la mentira.",
-            "Cada reflejo en el agua cuenta una historia diferente.",
-            "Yo juego con las palabras porque las palabras juegan con todos.",
-            "No me busques donde me viste. Ya cambié de forma.",
-            "Las mejores preguntas no tienen una sola respuesta.",
-            "El que ríe último entiende más. Confía en mí.",
-            "Si pudieras ver lo que yo veo debajo del agua..."
+        "char_rio": [
+            "Cada sonido bajo el agua de Yopal, Casanare cuenta una historia ancestral.",
+            "Lo que se esconde bajo la superficie de Yopal, Casanare es lo más real.",
+            "El agua de Yopal, Casanare me conoce mejor que yo mismo.",
+            "Mi cola dibuja mapas en el río de Yopal, Casanare que nadie puede leer.",
+            "Las aguas oscuras cerca de Yopal, Casanare guardan los secretos más luminosos.",
+            "Lo que el río arrastra cerca de Yopal, Casanare no lo pierde: lo redistribuye.",
+            "Yo no navego el río de Yopal, Casanare. El río me navega a mí.",
+            "Los ancestros dicen que fui humano antes de ser río cerca de Yopal, Casanare.",
+            "Yo nado entre mundos cerca de Yopal, Casanare: el río y el mito.",
+            "El río de Yopal, Casanare tiene un latido. Yo nado al ritmo de ese latido."
+        ],
+        "char_yaguara": [
+            "Viajero, algo nuevo nos espera. Don Próspero reveals he had indigenous roots he denied. 'Si hubiera escuchado...",
+            "Hoy aprendemos: imperfect subjunctive introduction (si pudiera, si tuviera). El español crece con nosotras."
         ]
     },
     "_expansionStats": {
@@ -8080,6 +8086,48 @@
                     "hint": "Me siento...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué harías si pudieras cambiar algo?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste hoy?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Yo creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías tú?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante de esta historia?",
+                    "hint": "Lo más importante es...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué necesita el mundo?",
+                    "hint": "El mundo necesita que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes ahora?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -8447,7 +8495,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «S». ¿Cuál es?",
+                    "riddle": "En una roca antigua de Yopal, Casanare hay una inscripción. Una palabra de 6 letras que empieza con «S». ¿Cuál es?",
                     "answer": "sabría",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -8474,12 +8522,12 @@
                         "recorrimos",
                         "quedan"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Si pudiera cambiar algo»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 10 letras.",
+                    "riddle": "Candelaria encontró la llave en Yopal, Casanare. La grabó en su cuaderno.",
                     "answer": "apurábamos",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -8488,14 +8536,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Cuenta — Si pudiera cambiar algo",
-            "instruction": "Escribe tu reflexión.",
+            "title": "El amanecer llanero de Yopal",
+            "instruction": "Candelaria abre su cuaderno y te mira. Los llanos se extienden hasta el horizonte.",
             "prompts": [
-                "¿Qué harías si pudieras cambiar algo?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?",
-                "¿Qué es lo más importante?"
+                "¿Por qué son importantes los llanos orientales para Colombia? ¿Qué vida hay en esta inmensidad?",
+                "Compara los llanos de Yopal con un paisaje plano de tu país. ¿En qué se parecen?",
+                "Un turista quiere vivir la experiencia llanera. ¿Qué le recomiendas? Menciona el joropo, el coleo, el hato.",
+                "Si un caballo llanero pudiera hablar, ¿qué diría sobre los amaneceres de Yopal?"
+            ],
+            "vocabulary": [
+                "llano",
+                "horizonte",
+                "caballo",
+                "joropo",
+                "coleo",
+                "amanecer",
+                "hato",
+                "llanero",
+                "ganado",
+                "inmensidad"
             ]
         },
         {

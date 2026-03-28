@@ -1910,47 +1910,51 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_dona_asuncion": {
             "name": "Doña Asunción",
             "avatar": "🧓",
             "voice": "Serena, profunda, escuchadora. Habla con la calma de quien ha oído todas las historias.",
-            "role": "Mentora — la última escuchadora, guarda la memoria del territorio"
+            "role": "Mentora — la última escuchadora, guarda la memoria del territorio",
+            "id": "char_dona_asuncion"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "No le creas todo lo que dice.",
-            "Aquí las cosas no son lo que parecen.",
-            "Vamos por este lado, es más seguro.",
-            "Escucha bien, Yaguará. Esto es importante.",
-            "Mi comunidad lleva generaciones aquí.",
-            "Las palabras bonitas a veces esconden mentiras.",
-            "Yo sé quién es ese hombre. No confío en él.",
-            "Mira cómo cambia el color del agua.",
-            "Mi mamá siempre decía: primero escucha, después habla.",
-            "No tengas miedo. Yo estoy aquí contigo.",
-            "Este bosque tiene memoria. Yo lo siento.",
-            "Hay cosas que no se dicen con palabras.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre."
+            "Me niego a aceptar que el progreso en San Agustín, Huila tenga que destruir la memoria.",
+            "La gente de San Agustín, Huila tiene una dignidad que no necesita aplausos.",
+            "Lo que la gente dice de San Agustín, Huila suena bonito, pero esconde algo.",
+            "San Agustín, Huila me obliga a cuestionar lo que creía saber sobre Colombia.",
+            "Quiero que mi escritura capture lo que vi en San Agustín, Huila.",
+            "El silencio de esta comunidad en San Agustín, Huila es una forma de resistencia.",
+            "San Agustín, Huila nos recuerda, en el destino 31, que el viaje es la respuesta.",
+            "Hay una tensión en el destino 31 que refleja Las dos caras del progreso."
         ],
         "char_dona_asuncion": [
-            "Todo tiene su tiempo. Las prisas rompen las historias.",
-            "Yo escuché las voces de tres generaciones junto a este río.",
-            "El silencio entre las palabras es donde vive la verdad.",
-            "Cuando yo me vaya, alguien tiene que seguir escuchando.",
-            "Las historias que no se cuentan se convierten en olvido.",
-            "Mi abuela me enseñó que escuchar es más difícil que hablar.",
-            "El río me cuenta cosas que los libros no saben.",
-            "Cada persona que pasa por aquí deja una historia en el agua.",
-            "No tengas prisa por entender. La comprensión llega sola.",
-            "Las raíces más profundas son las que sostienen el árbol en la tormenta.",
-            "Escuchar no es oír. Escuchar es sentir con todo el cuerpo.",
-            "Hija, tú llevas las historias de todos los que conociste.",
-            "Te he esperado, hija.",
-            "Escucha lo que el bosque dice cuando crees que no habla."
+            "He visto llegar muchos hombres como Don Próspero a San Agustín, Huila. Todos prometían lo mismo.",
+            "Lo que se construye rápido en San Agustín, Huila se derrumba rápido.",
+            "Lo peor de la ignorancia en San Agustín, Huila no es lo que no sabe sino lo que cree saber.",
+            "Los pueblos de Huila que olvidan de dónde vienen no saben a dónde van.",
+            "Hay en Huila un tipo de riqueza que no se mide con dinero.",
+            "La tradición de Huila no es repetir el pasado: es renovar su significado.",
+            "La tierra de Huila tiene una gramática propia. Quien no la lee, la destruye.",
+            "Lo que San Agustín, Huila necesita no es más caminos sino más memoria.",
+            "El progreso en Huila no siempre avanza. A veces retrocede disfrazado.",
+            "Cada árbol que cae en Huila se lleva una conversación de siglos con el viento."
+        ],
+        "char_yaguara": [
+            "Viajero, estamos en B2. Las palabras son más profundas. El progreso que destruye lo que ama no es progreso. Es olvid",
+            "¿Se puede progresar sin destruir?"
         ]
     },
     "_expansionStats": {
@@ -9353,6 +9357,48 @@
                     "hint": "Lo más importante es que...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Se puede progresar sin destruir?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué cambiarías?",
+                    "hint": "Cambiaría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante?",
+                    "hint": "Lo más importante es que...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -9720,7 +9766,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 8 letras que empieza con «H». ¿Cuál es?",
+                    "riddle": "La piedra angular de San Agustín, Huila tiene un código: 8 letras que empiezan con «H».",
                     "answer": "herencia",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -9747,12 +9793,12 @@
                         "recorrimos",
                         "desayunado"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Las dos caras del progreso»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 8 letras.",
+                    "riddle": "El guardián de San Agustín, Huila pide una contraseña. La aprendiste en este destino.",
                     "answer": "concluye",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -9761,13 +9807,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "Las estatuas que nadie entiende",
+            "instruction": "El cuaderno se abre solo. San Agustín guarda un misterio de piedra.",
             "prompts": [
-                "¿Se puede progresar sin destruir?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?"
+                "¿Deben las estatuas de San Agustín quedarse en el parque o deberían estar en un museo de Bogotá? Argumenta.",
+                "Escribe la historia de una estatua de San Agustín desde su propia perspectiva. Lleva siglos observando.",
+                "¿Qué perdería Colombia si nadie visitara San Agustín? ¿Qué perdería el mundo?",
+                "Inventa una leyenda sobre quiénes tallaron las estatuas y por qué las dejaron aquí."
+            ],
+            "vocabulary": [
+                "estatua",
+                "misterio",
+                "civilización",
+                "tallar",
+                "arqueología",
+                "precolombino",
+                "tumba",
+                "sagrado",
+                "patrimonio",
+                "piedra"
             ]
         },
         {

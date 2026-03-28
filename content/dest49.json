@@ -636,6 +636,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Existe una palabra que lo contenga todo?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Existe una palabra que lo contenga todo?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Existe una palabra que lo contenga todo?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Existe una palabra que lo contenga todo?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -960,7 +1002,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 3 letras que empieza con «Q». ¿Cuál es?",
+                    "riddle": "En una roca antigua de Caño Cristales, Meta hay una inscripción. Una palabra de 3 letras que empieza con «Q». ¿Cuál es?",
                     "answer": "que",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -987,12 +1029,12 @@
                         "demás",
                         "búsqueda"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «El nombre que contiene todo»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «E».",
+                    "riddle": "Los guardianes de Caño Cristales, Meta piden la palabra que nadie quiere decir.",
                     "answer": "empieza",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -1001,12 +1043,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "El río de cinco colores",
+            "instruction": "Las palabras son tuyas. El jaguar espera.",
             "prompts": [
-                "¿Existe una palabra que lo contenga todo?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Escribe un poema sobre Caño Cristales: el río que se vuelve rojo, amarillo, verde, azul y negro.",
+                "Caño Cristales como metáfora. ¿De qué? ¿De la diversidad? ¿De lo efímero? ¿De lo sagrado?",
+                "Escribe el monólogo interior de la Macarenia clavigera, la planta que pinta el río de rojo.",
+                "En cien palabras, crea un mito fundacional para Caño Cristales: ¿por qué el río tiene cinco colores?"
+            ],
+            "vocabulary": [
+                "clavigera",
+                "efímero",
+                "pigmento",
+                "serranía",
+                "endémico",
+                "cromático",
+                "metamorfosis",
+                "cauce",
+                "sagrado",
+                "espectro"
             ]
         },
         {
@@ -2395,51 +2450,54 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_don_prospero": {
             "name": "Don Próspero",
             "avatar": "👨‍💼",
             "voice": "Encantador, persuasivo, registro formal. Cita poesía pero construye carreteras. Oraciones complejas.",
-            "role": "Antagonista ambiguo — trae progreso pero destruye el bosque"
+            "role": "Antagonista ambiguo — trae progreso pero destruye el bosque",
+            "id": "char_don_prospero"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "El problema no es el progreso. El problema es quién decide qué es progreso.",
-            "Cada árbol que cae es una historia que se pierde para siempre.",
-            "Yo no necesito que me protejan. Necesito que me escuchen.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó que el silencio también habla.",
-            "El río es sagrado para mi pueblo, y nadie va a cambiar eso.",
-            "No le creas todo lo que dice. Las palabras bonitas son su arma.",
-            "Aquí las cosas no son lo que parecen. Hay que mirar más profundo.",
-            "Cada generación de mi familia protegió este territorio.",
-            "Escucha bien, Yaguará. Lo que está en juego es más grande que nosotras.",
-            "Mi comunidad ha resistido durante siglos. No vamos a rendirnos ahora.",
-            "Las promesas de Don Próspero son como la niebla: desaparecen con el sol.",
-            "Yo aprendí a leer las intenciones detrás de las palabras.",
-            "Cuando el río cambia de color, algo malo está pasando arriba.",
-            "Mi mamá siempre decía: la tierra no nos pertenece, nosotros pertenecemos a la tierra."
+            "La crónica perfecta de Caño Cristales, Meta sería aquella que hace hablar al silencio sin romperlo.",
+            "Lo que busco en mi escritura sobre Caño Cristales, Meta no es la belleza sino la exactitud.",
+            "Caño Cristales, Meta es un palimpsesto donde cada generación escribe sobre los trazos de la anterior.",
+            "Cada palabra que aprendí en Meta ha reorganizado todas las demás.",
+            "Mi lengua materna y el español de Meta han dejado de ser idiomas separados.",
+            "Escribir sobre Caño Cristales, Meta es aceptar que toda representación es una traición necesaria.",
+            "Lo intraducible de Caño Cristales, Meta no es un fracaso del lenguaje sino su máxima expresión.",
+            "El texto que escribo sobre Caño Cristales, Meta no es mío: es de todas las voces que me lo dictaron.",
+            "Si pudiera escribir la historia de Caño Cristales, Meta, empezaría por el silencio que precede a toda palabra.",
+            "Mi crónica de Meta no documenta un viaje sino que constituye uno."
         ],
         "char_don_prospero": [
-            "La pobreza también destruye el bosque. La gente sin opciones corta árboles para sobrevivir.",
-            "No me juzguen por las palabras de otros. Juzguen por lo que ven.",
-            "Yo podría estar en la ciudad ganando más dinero. Estoy aquí porque me importa.",
-            "La nostalgia es un lujo que los pobres no pueden permitirse.",
-            "Si no actuamos ahora, otros vendrán con menos cuidado que yo.",
-            "Cada peso que invierto aquí es un peso que no gano en otra parte.",
-            "Les doy mi palabra: cuando termine, van a agradecerme.",
-            "El progreso necesita sacrificio, pero ese sacrificio tiene que valer la pena.",
-            "Yo también amo estos árboles. Mi madre me enseñó sus nombres.",
-            "Permítanme explicarles mi visión. Es más compleja de lo que parece.",
-            "No vengo a destruir. Vengo a transformar. Hay una diferencia.",
-            "¿Han pensado en lo que pasa cuando no hay caminos? El aislamiento mata más que el progreso.",
-            "Confíen en mí. He construido caminos en veinte pueblos. Todos están mejor ahora.",
-            "Entiendo sus preocupaciones. Por eso estoy aquí: para escuchar.",
-            "El futuro no espera a nadie. O lo construimos nosotros, o alguien más lo hará.",
-            "Les propongo algo: participen en las decisiones. Que sea un proyecto de todos."
+            "Mi tragedia en Caño Cristales, Meta no es ser villano sino descubrir que el villano tenía algo de razón.",
+            "He aprendido en Caño Cristales, Meta, demasiado tarde quizás, que hay riquezas que no puedo medir.",
+            "Lo que empezó como un proyecto en Meta se ha convertido en una meditación sobre el poder.",
+            "El capítulo final de mi historia en Meta no lo escribo yo.",
+            "He construido puentes en Meta. Y he destruido cosas que no tienen precio.",
+            "Lo que Candelaria me enseñó en Meta, sin proponérselo, es que escuchar es poder.",
+            "Mi mayor contribución a Caño Cristales, Meta no será lo que construí sino el debate que provoqué.",
+            "Si pudiera empezar de nuevo en Meta, escucharía más antes de actuar.",
+            "La mayor lección de Meta: el poder que no se autocuestiona es tiranía.",
+            "Mis críticos en Caño Cristales, Meta tienen razón en lo esencial, pero equivocan la escala."
+        ],
+        "char_yaguara": [
+            "Hay una palabra que contiene todas las demás. La búsqueda empieza.",
+            "Escucha, viajero. Estamos cerca del final.",
+            "¿Existe una palabra que lo contenga todo?"
         ]
     },
     "_expansionStats": {

@@ -581,6 +581,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué eliges cuando el camino se divide?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué eliges cuando el camino se divide?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué eliges cuando el camino se divide?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué eliges cuando el camino se divide?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -905,7 +947,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «L». ¿Cuál es?",
+                    "riddle": "Las raíces de un árbol en Punta Gallinas, La Guajira forman letras. 5 letras, la primera es «L».",
                     "answer": "leyes",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -932,12 +974,12 @@
                         "armas",
                         "gramática"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Candelaria elige»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «S».",
+                    "riddle": "El archivo de Punta Gallinas, La Guajira contiene un documento sellado. La clave empieza con «11».",
                     "answer": "subjunctive",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -946,12 +988,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "Las dunas que caen al mar",
+            "instruction": "El jaguar espera tu voz. Estás en el punto más al norte de Sudamérica.",
             "prompts": [
-                "¿Qué eliges cuando el camino se divide?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Analiza qué significa Punta Gallinas como límite geográfico: el punto más septentrional de Sudamérica.",
+                "Escribe una crónica periodística sobre las dunas de Taroa, que caen directamente al mar Caribe.",
+                "¿Cómo se cruzan el fin del mapa y el comienzo de algo nuevo en un lugar como Punta Gallinas?",
+                "Si fueras guía de Punta Gallinas, ¿qué historia contarías sobre la comunidad wayúu que vive en el extremo?"
+            ],
+            "vocabulary": [
+                "duna",
+                "extremo",
+                "septentrional",
+                "faro",
+                "límite",
+                "arena",
+                "Caribe",
+                "wayúu",
+                "aislamiento",
+                "frontera"
             ]
         },
         {
@@ -2192,71 +2247,53 @@
         "button": "Continuar el viaje"
     },
     "characterMeta": {
-        "myth_sombra_yaguara": {
-            "name": "La Sombra de Yaguará",
+        "char_yaguara": {
+            "name": "La Yaguará",
             "avatar": "🌑",
             "voice": "Gramática rota, palabras equivocadas, confusión. Es el reflejo invertido de Yaguará.",
-            "role": "Sombra — el doble oscuro que muestra lo que Yaguará aún no domina"
+            "role": "Sombra — el doble oscuro que muestra lo que Yaguará aún no domina",
+            "id": "char_yaguara"
         },
         "char_candelaria": {
             "name": "Candelaria",
-            "role": "support"
-        },
-        "char_yaguara": {
-            "name": "Yaguará",
-            "role": "support"
+            "role": "support",
+            "id": "char_candelaria"
         }
     },
     "characterLines": {
-        "myth_sombra_yaguara": [
-            "¿Qué es real? ¿La sombra o la luz?",
-            "Yo soy la parte de ti que todavía no entiende.",
-            "Error... no, era... ¿o es?",
-            "Cuando aprendas lo que yo no sé, seré libre.",
-            "Las sombras también quieren hablar, pero les falta gramática.",
-            "Yo tengo tus miedos. Tú tienes mis palabras.",
-            "Yo... no soy... ¿quién soy?",
-            "Las palabras se me escapan como peces.",
-            "Todo está al revés aquí.",
-            "Tú eres yo, pero yo no soy tú.",
-            "Las sombras no mienten. Solo muestran lo que escondes.",
-            "¿Por qué... las palabras... se rompen?",
-            "Yo caminar... no, yo caminé... no, yo camino...",
-            "El espejo muestra lo que no quieres ver.",
-            "Si me miras, te ves. Si me escuchas, te oyes.",
-            "Las palabras correctas están aquí... en algún lugar..."
+        "char_yaguara": [
+            "Yo soy el silencio que Punta Gallinas, La Guajira no quiere escuchar.",
+            "Cada nombre que dices en Punta Gallinas, La Guajira me debilita.",
+            "Punta Gallinas, La Guajira se oscurece con cada palabra que olvidas.",
+            "El gris de Punta Gallinas, La Guajira es mi lengua.",
+            "Punta Gallinas, La Guajira tenía color. Yo se lo quité.",
+            "Cuando Punta Gallinas, La Guajira se quede sin nombres, yo seré su único habitante.",
+            "No me temas. Solo olvida Punta Gallinas, La Guajira.",
+            "Cuando Punta Gallinas, La Guajira pierda su último nombre, seré todo.",
+            "Yo soy lo que Punta Gallinas, La Guajira olvidó.",
+            "El olvido de Punta Gallinas, La Guajira es mi banquete.",
+            "El silencio de Punta Gallinas, La Guajira habla más que todas mis palabras juntas.",
+            "Lo inefable de Punta Gallinas, La Guajira no es lo que las palabras no alcanzan sino lo que las excede.",
+            "La verdadera elocuencia en La Guajira reside en saber cuándo el lenguaje debe ceder.",
+            "El verdadero regreso desde Punta Gallinas, La Guajira no es al punto de partida sino a una versión más profunda.",
+            "Hay una gramática oculta en la arena de La Guajira que solo el caminante descifra.",
+            "Cada decisión lingüística que tomo en Punta Gallinas, La Guajira es también una decisión ética.",
+            "Lo que el sol erosiona en Punta Gallinas, La Guajira, la memoria lo reconstruye con otro material.",
+            "Cada lugar que visito, incluido Punta Gallinas, La Guajira, reorganiza mi comprensión de los anteriores.",
+            "Lo que busco no es dominar el español de La Guajira sino habitar en él.",
+            "Punta Gallinas, La Guajira demuestra que la realidad siempre excede nuestra capacidad de nombrarla."
         ],
         "char_candelaria": [
-            "Yaguará, ¿qué es eso? No me gusta lo que veo.",
-            "Esa cosa se parece a ti, pero no es igual.",
-            "No te acerques. Algo no está bien aquí.",
-            "Mi abuela decía que los espejos no siempre dicen la verdad.",
-            "Tengo miedo, pero no voy a dejarte sola.",
-            "¿Por qué habla con tu voz pero dice cosas diferentes?",
-            "Quédate conmigo. Juntas somos más fuertes.",
-            "Esa sombra crece cuando tú dudas. ¿Lo notas?",
-            "No la escuches. Tú sabes quién eres.",
-            "Recuerda lo que hemos vivido. Eso es real.",
-            "Los miedos se hacen grandes cuando les damos espacio.",
-            "Mírame a mí, no a ella. Yo soy real.",
-            "Todas las cosas hablan. También las sombras.",
-            "Pero las sombras solo repiten. No crean nada nuevo."
-        ],
-        "char_yaguara": [
-            "Esa sombra conoce mis pensamientos. Es como un espejo roto.",
-            "Cada vez que dudo, ella se hace más fuerte.",
-            "¿Y si ella tiene razón? ¿Y si no soy suficiente?",
-            "No. He llegado hasta aquí. No voy a parar ahora.",
-            "La sombra dice lo que pienso en mis peores momentos.",
-            "Tengo que enfrentarla. No puedo seguir huyendo.",
-            "Es parte de mí. Pero no es todo lo que soy.",
-            "Candelaria, gracias por quedarte. Necesitaba escuchar tu voz.",
-            "La sombra no tiene nombre. Por eso no tiene poder real.",
-            "Yo sí tengo nombre. Yo sí tengo historia.",
-            "Lo que como son sueños. Los sueños no mueren.",
-            "No me detengo. Porque las palabras viven.",
-            "Voy a caminar hacia ella. Voy a mirarla a los ojos.",
-            "No soy mi miedo. Soy lo que hago con él."
+            "Lo que estas comunidades de La Guajira saben sobre la lengua supera cualquier lingüística formal.",
+            "He llegado a la conclusión de que escribir sobre La Guajira es un acto de justicia.",
+            "Mi cuaderno sobre Punta Gallinas, La Guajira ya no es un registro sino un diálogo con lo que me transforma.",
+            "Hay comunidades en La Guajira que llevan siglos practicando lo que la academia acaba de descubrir.",
+            "Lo que Punta Gallinas, La Guajira me revela es que la geografía moldea el lenguaje.",
+            "El español que hablo ahora en La Guajira no es el mismo que hablaba al empezar el viaje.",
+            "Lo que antes en Punta Gallinas, La Guajira me parecía exótico ahora me resulta profundamente familiar.",
+            "Cada historia que recojo en La Guajira me impone una responsabilidad: contarla sin distorsionarla.",
+            "Lo que quiero es que mi escritura sobre Punta Gallinas, La Guajira sea un puente, no un muro.",
+            "La escritura me ha enseñado que nombrar Punta Gallinas, La Guajira con precisión es un acto revolucionario."
         ]
     },
     "_expansionStats": {

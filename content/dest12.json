@@ -2355,9 +2355,9 @@
         "button": "Continuar el viaje → A2"
     },
     "characterMeta": {
-        "char_abuela_ceiba": {
-            "id": "char_abuela_ceiba",
-            "name": "Abuela Ceiba",
+        "char_dona_asuncion": {
+            "id": "char_dona_asuncion",
+            "name": "Doña Asunción",
             "avatar": "img/characters/abuela_ceiba.jpg",
             "voice": "whisper",
             "role": "oracle",
@@ -2399,15 +2399,6 @@
             "role": "storyteller",
             "description": "Un hombre viejo junto al fuego. Habla poco. Cuando habla, todos escuchan. Sus historias huelen a tierra mojada."
         },
-        "char_maestro": {
-            "id": "char_maestro",
-            "name": "El maestro",
-            "realName": "Luis Fernando Macías",
-            "avatar": "img/characters/maestro.jpg",
-            "voice": "gentle",
-            "role": "language-philosopher",
-            "description": "Un hombre con lentes y un libro. Lee los números como si fueran poemas. Cree que nombrar es crear."
-        },
         "char_yaguara": {
             "id": "char_yaguara",
             "name": "Yaguará",
@@ -2419,40 +2410,40 @@
     },
     "characterLines": {
         "char_mama_jaguar": [
-            "Ve, hija.",
-            "El mundo necesita tus ojos.",
-            "Camina con fuerza.",
-            "No olvides de dónde vienes.",
-            "El río te guía.",
-            "Come cuando tengas hambre.",
-            "Duerme cuando estés cansada.",
-            "Yo estoy aquí siempre.",
-            "Las palabras te protegen.",
-            "Vuelve cuando quieras."
+            "Hijo, ven. Guatapé, Antioquia es seguro.",
+            "Hijo, mira Guatapé, Antioquia. Es bonito.",
+            "Yo soy tu madre. Guatapé, Antioquia es nuestro.",
+            "Yo conozco lugares como Guatapé, Antioquia.",
+            "El aire de Guatapé, Antioquia es bueno.",
+            "Guatapé, Antioquia es un buen lugar para ti.",
+            "Camina despacio por Guatapé, Antioquia.",
+            "Cuidado con el agua cerca de Guatapé, Antioquia.",
+            "Este lugar, Guatapé, Antioquia, es tu casa.",
+            "Duerme tranquilo. Guatapé, Antioquia es seguro."
         ],
-        "char_abuela_ceiba": [
-            "Las raíces te acompañan.",
-            "Lo que aprendiste no se pierde.",
-            "El camino te espera.",
-            "Lleva las palabras contigo.",
-            "Lo que siembras, crece.",
-            "El viento sabe adónde vas.",
-            "No olvides las raíces.",
-            "La semilla viaja lejos.",
-            "Regresa cuando quieras.",
-            "Mis ramas te recuerdan."
+        "char_dona_asuncion": [
+            "Yo estaba aquí antes que Guatapé, Antioquia tuviera nombre.",
+            "Guatapé, Antioquia crece conmigo.",
+            "Escucha, criatura. Esto es Guatapé, Antioquia.",
+            "Mira mis raíces aquí en Guatapé, Antioquia.",
+            "Guatapé, Antioquia es mi hijo. Y tú también.",
+            "La tierra de Guatapé, Antioquia es sabia.",
+            "La raíz de Guatapé, Antioquia sabe cosas.",
+            "Todo en Guatapé, Antioquia está conectado.",
+            "El árbol de Guatapé, Antioquia recuerda todo.",
+            "Siéntate a mi sombra en Guatapé, Antioquia."
         ],
         "char_yaguara": [
-            "Algo cambia.",
-            "Siento algo nuevo.",
-            "El camino sigue.",
-            "Tengo que ir.",
-            "Mamá, voy a caminar.",
-            "La ceiba me despide.",
-            "El mundo es más grande.",
-            "Yo quiero saber más.",
-            "Escucho algo lejos.",
-            "Es hora de ir."
+            "Ven. Camina. Mira la cumbre en Guatapé, Antioquia.",
+            "Todo es nuevo aquí en Guatapé, Antioquia.",
+            "El sonido de Guatapé, Antioquia es nuevo.",
+            "Escucha. la piedra habla en Guatapé, Antioquia.",
+            "Aquí hay vida. Mira la piedra en Guatapé, Antioquia.",
+            "Guatapé, Antioquia es grande.",
+            "Toca los escalones. Es real.",
+            "la roca está aquí.",
+            "Es bonito. Mira los escalones.",
+            "Huele bonito en Guatapé, Antioquia."
         ]
     },
     "_expansionStats": {
@@ -10291,20 +10282,72 @@
                     "hint": "Yo soy...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Cómo te llamas?",
+                    "hint": "Me llamo...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cuántos años tienes?",
+                    "hint": "Tengo...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Dónde vives?",
+                    "hint": "Vivo en...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué te gusta?",
+                    "hint": "Me gusta...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué no te gusta?",
+                    "hint": "No me gusta...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo estás hoy?",
+                    "hint": "Estoy...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Quién es tu familia?",
+                    "hint": "Mi familia es...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Quién eres tú?",
+                    "hint": "Yo soy...",
+                    "accepts": []
+                }
             ]
         },
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Mi historia",
-            "instruction": "Escribe tu historia. Usa todo lo que sabes.",
+            "title": "Los 740 escalones de Guatapé",
+            "instruction": "Yaguará te pide que escribas en tu cuaderno. Sube con nosotros.",
             "prompts": [
-                "¿Quién eres?",
-                "¿Dónde vives?",
-                "¿Qué te gusta?",
-                "¿Cómo es tu familia?",
-                "¿Cómo te sientes hoy?",
-                "¿Qué quieres hacer?"
+                "La Piedra de Guatapé tiene 740 escalones. Subes y subes. Escribe tres cosas que sientes.",
+                "¿Cómo es Guatapé? Usa: alto, colorido, azul, verde, impresionante.",
+                "Llegas a la cima. Ves agua, islas y montañas. Escribe una postal: \"Desde arriba veo...\"",
+                "El pueblo de Guatapé tiene casas con dibujos en las paredes. ¿Qué dibujos ves? Escribe cinco."
+            ],
+            "vocabulary": [
+                "piedra",
+                "escalón",
+                "subir",
+                "cima",
+                "lago",
+                "isla",
+                "zócalo",
+                "colorido",
+                "cansado",
+                "impresionante"
             ]
         },
         {
@@ -10329,7 +10372,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 4 letras que empieza con «S». ¿Cuál es?",
+                    "riddle": "Las raíces de un árbol en Guatapé, Antioquia forman letras. 4 letras, la primera es «S».",
                     "answer": "solo",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -10356,12 +10399,12 @@
                         "porque",
                         "cuando"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «¿Quién soy yo?»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "La última puerta. Yaguará te mira. Di la palabra que aprendiste aquí.",
+                    "riddle": "El espejo de Guatapé, Antioquia refleja una palabra al revés.",
                     "answer": "palabra",
                     "hint": "Es la última palabra de este destino."
                 }

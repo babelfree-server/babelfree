@@ -1974,57 +1974,64 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_don_prospero": {
             "name": "Don Próspero",
-            "role": "support"
+            "role": "support",
+            "id": "char_don_prospero"
         },
-        "char_colibri": {
-            "name": "Colibrí",
-            "role": "support"
+        "char_rio": {
+            "name": "Río",
+            "role": "support",
+            "id": "char_rio"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Mi mamá siempre decía: primero escucha, después habla.",
-            "No tengas miedo. Yo estoy aquí contigo.",
-            "Este bosque tiene memoria. Yo lo siento.",
-            "Hay cosas que no se dicen con palabras.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó a leer el río.",
-            "El río es sagrado para mi pueblo.",
-            "No le creas todo lo que dice.",
-            "Aquí las cosas no son lo que parecen.",
-            "Vamos por este lado, es más seguro.",
-            "Escucha bien, Yaguará. Esto es importante.",
-            "Mi comunidad lleva generaciones aquí.",
-            "Las palabras bonitas a veces esconden mentiras."
+            "Tunja, Boyacá me recuerda algo que mi mamá contaba.",
+            "Mi abuela me contó algo sobre lugares como Tunja, Boyacá.",
+            "Cada lugar como Tunja, Boyacá tiene un secreto. Solo hay que saber preguntar.",
+            "En mi pueblo es diferente. Allá no tenemos la montaña como en Tunja, Boyacá.",
+            "Lo que más me gusta de Tunja, Boyacá es lo que no esperaba encontrar.",
+            "Quiero escribir sobre Tunja, Boyacá algún día.",
+            "Las palabras cambian según quién las dice aquí en Tunja, Boyacá.",
+            "Lo que aprendemos en el destino 23 cambia nuestra perspectiva."
         ],
         "char_don_prospero": [
-            "Buenos días. ¿Ustedes viven aquí? Qué lugar tan bonito.",
-            "Yo tengo un plan para mejorar este pueblo.",
-            "Mi madre era de un lugar como este.",
-            "El camino nuevo va a traer escuelas y hospitales.",
-            "No soy el enemigo. Solo quiero ayudar.",
-            "¿Quién no quiere una vida mejor para sus hijos?",
-            "Confíen en mí. Yo conozco estas tierras.",
-            "El progreso es necesario. No se puede vivir en el pasado.",
-            "Les doy mi palabra: nadie va a perder nada.",
-            "Miren a su alrededor. Merecen más que esto."
+            "Les doy mi palabra: nadie en Tunja, Boyacá va a salir perdiendo.",
+            "¿Quién en Tunja, Boyacá no quiere trabajo y escuelas?",
+            "Lo que ofrezco a Tunja, Boyacá es simple: empleo, educación, carreteras.",
+            "El camino nuevo va a conectar Tunja, Boyacá con el mundo.",
+            "No soy el enemigo de Boyacá. Soy el que trae soluciones.",
+            "Buenos días, Tunja, Boyacá. Vengo a hablar de oportunidades.",
+            "Cuando este proyecto en Tunja, Boyacá esté terminado, todos me van a agradecer.",
+            "Cada paso en el destino 23, Tunja, Boyacá, tiene significado."
         ],
-        "char_colibri": [
-            "Mira los detalles. Lo pequeño importa.",
-            "No te fíes de las palabras bonitas.",
-            "Escucha lo que no dice, no solo lo que dice.",
-            "Una palabra exacta vale más que cien vagas.",
-            "Yo veo lo que los ojos grandes no ven.",
-            "Hay algo raro en ese hombre. Observa bien.",
-            "Las cosas grandes empiezan con detalles pequeños.",
-            "Ese hombre habla mucho pero escucha poco.",
-            "Piensa rápido. Habla claro. Actúa con precisión.",
-            "Cuidado. Las promesas fáciles esconden trampas."
+        "char_rio": [
+            "Las alas de un colibrí en Tunja, Boyacá pesan menos que una palabra, pero llegan más lejos.",
+            "Mi corazón late con cada color de Tunja, Boyacá.",
+            "Yo conozco Tunja, Boyacá flor por flor.",
+            "La velocidad en Tunja, Boyacá no es prisa: es precisión.",
+            "Lo que zumba en Tunja, Boyacá tiene más que decir que lo que ruge.",
+            "Lo pequeño en Tunja, Boyacá tiene su propia grandeza.",
+            "No necesito ser grande para ser esencial en Tunja, Boyacá.",
+            "Las flores de Tunja, Boyacá me cuentan secretos que los árboles ignoran.",
+            "Yo polinizo las ideas de Tunja, Boyacá igual que las flores.",
+            "Cada flor que visito en Tunja, Boyacá me transforma y la transforma."
+        ],
+        "char_yaguara": [
+            "Viajero, algo nuevo nos espera. Don Próspero's road advances. Yaguará confronts: 'No has escuchado al bosque.' P",
+            "Hoy aprendemos: present perfect (he caminado, ha vivido). El español crece con nosotras."
         ]
     },
     "_expansionStats": {
@@ -8558,6 +8565,48 @@
                     "hint": "Me siento...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué has aprendido hasta ahora?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste hoy?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Yo creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías tú?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante de esta historia?",
+                    "hint": "Lo más importante es...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué necesita el mundo?",
+                    "hint": "El mundo necesita que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes ahora?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -8925,7 +8974,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 7 letras que empieza con «S». ¿Cuál es?",
+                    "riddle": "La piedra angular de Tunja, Boyacá tiene un código: 7 letras que empiezan con «S».",
                     "answer": "sigamos",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -8952,12 +9001,12 @@
                         "ocasioncita",
                         "pelegrinos"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Lo que fue y lo que será»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 9 letras.",
+                    "riddle": "Río dice: «La respuesta en Tunja, Boyacá es más simple de lo que parece.»",
                     "answer": "atencioso",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -8966,14 +9015,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Cuenta — Lo que fue y lo que será",
-            "instruction": "Escribe tu reflexión.",
+            "title": "Los techos pintados de Tunja",
+            "instruction": "Candelaria abre su cuaderno y te mira. En Tunja, hasta los techos cuentan historias.",
             "prompts": [
-                "¿Qué has aprendido hasta ahora?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?",
-                "¿Qué es lo más importante?"
+                "¿Por qué son importantes las casas coloniales de Tunja? ¿Qué nos dicen los techos pintados?",
+                "Compara Tunja con Bogotá. Las dos son ciudades de la cordillera, pero ¿en qué se diferencian?",
+                "Un turista te pregunta sobre la historia de Tunja. Cuéntale sobre la Batalla de Boyacá que ocurrió cerca.",
+                "Si los techos pintados de sol y luna de Tunja pudieran hablar, ¿qué dirían sobre el paso del tiempo?"
+            ],
+            "vocabulary": [
+                "techo",
+                "colonial",
+                "pintura",
+                "fundador",
+                "templo",
+                "batalla",
+                "independencia",
+                "sol",
+                "luna",
+                "cordillera"
             ]
         },
         {

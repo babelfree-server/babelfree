@@ -531,6 +531,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué cuesta la belleza?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué cuesta la belleza?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué cuesta la belleza?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué cuesta la belleza?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -855,7 +897,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 10 letras que empieza con «S». ¿Cuál es?",
+                    "riddle": "El muro de Puerto Carreño, Vichada tiene letras talladas. 10 letras, empieza con «S».",
                     "answer": "superhéroe",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -882,12 +924,12 @@
                         "recogimiento",
                         "imaginado"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «El ruiseñor y la rosa»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «P».",
+                    "riddle": "El telescopio de Puerto Carreño, Vichada enfoca una palabra entre las estrellas.",
                     "answer": "palabra",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -896,12 +938,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "Los delfines rosados del Orinoco",
+            "instruction": "Las palabras son tuyas. El jaguar espera.",
             "prompts": [
-                "¿Qué cuesta la belleza?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Escribe un poema sobre Puerto Carreño, donde el Orinoco recibe al Meta y los delfines rosados nadan en la frontera.",
+                "Puerto Carreño como metáfora. ¿De qué? ¿De la frontera? ¿Del encuentro? ¿De la periferia?",
+                "Escribe el monólogo interior de un delfín rosado que navega entre Colombia y Venezuela.",
+                "En cien palabras, crea un mito fundacional para la confluencia de los ríos Meta y Orinoco."
+            ],
+            "vocabulary": [
+                "confluencia",
+                "delfín",
+                "frontera",
+                "Orinoco",
+                "rosado",
+                "periferia",
+                "corriente",
+                "navegable",
+                "encuentro",
+                "salvaje"
             ]
         },
         {
@@ -1932,59 +1987,69 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_rio": {
             "name": "Río",
-            "role": "support"
+            "role": "support",
+            "id": "char_rio"
         },
-        "echo_dona_asuncion": {
-            "name": "Eco de Doña Asunción",
-            "role": "support"
+        "char_dona_asuncion": {
+            "name": "Doña Asunción",
+            "role": "support",
+            "id": "char_dona_asuncion"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó que el silencio también habla.",
-            "El río es sagrado para mi pueblo, y nadie va a cambiar eso.",
-            "No le creas todo lo que dice. Las palabras bonitas son su arma.",
-            "Aquí las cosas no son lo que parecen. Hay que mirar más profundo.",
-            "Cada generación de mi familia protegió este territorio.",
-            "Escucha bien, Yaguará. Lo que está en juego es más grande que nosotras.",
-            "Mi comunidad ha resistido durante siglos. No vamos a rendirnos ahora.",
-            "Las promesas de Don Próspero son como la niebla: desaparecen con el sol.",
-            "Yo aprendí a leer las intenciones detrás de las palabras.",
-            "Cuando el río cambia de color, algo malo está pasando arriba.",
-            "Mi mamá siempre decía: la tierra no nos pertenece, nosotros pertenecemos a la tierra.",
-            "No tengas miedo. Mi pueblo ha enfrentado cosas peores.",
-            "Hay verdades que solo se entienden cuando las vives.",
-            "El problema no es el progreso. El problema es quién decide qué es progreso."
+            "Cada palabra que aprendí en Vichada ha reorganizado todas las demás.",
+            "Si pudiera escribir la historia de Puerto Carreño, Vichada, empezaría por el silencio que precede a toda palabra.",
+            "Mi crónica de Vichada no documenta un viaje sino que constituye uno.",
+            "Mi lengua materna y el español de Vichada han dejado de ser idiomas separados.",
+            "Puerto Carreño, Vichada es un palimpsesto donde cada generación escribe sobre los trazos de la anterior.",
+            "Lo que Vichada me ha enseñado trasciende lo lingüístico y habita en lo ontológico.",
+            "Lo intraducible de Puerto Carreño, Vichada no es un fracaso del lenguaje sino su máxima expresión.",
+            "Escribir sobre Puerto Carreño, Vichada es aceptar que toda representación es una traición necesaria.",
+            "Lo que empezó como un cuaderno en Vichada se ha convertido en una cartografía del alma.",
+            "Lo que busco en mi escritura sobre Puerto Carreño, Vichada no es la belleza sino la exactitud."
         ],
         "char_rio": [
-            "¿Qué estás dibujando, Candelaria? Déjame ver.",
-            "Ese mapa tiene cosas que yo también vi.",
-            "Aquí falta el río pequeño donde dormí tres noches.",
-            "Los mapas no muestran todo. Los mapas mienten un poco.",
-            "Pero los mapas ayudan a recordar. Eso sí.",
-            "Pon una estrella donde encontré la flor azul.",
-            "Yo puedo dibujar la parte del río. Conozco cada curva.",
-            "¿Sabes qué descubrí? Que caminar solo te enseña a escuchar.",
-            "Tu abuela estaría orgullosa de este mapa, Candelaria.",
-            "Dibuja también las cosas que ya no están. Esas importan más.",
-            "El agua siempre encuentra su camino. Como nosotros.",
-            "Hermana, este viaje nos cambió a todos."
+            "Lo que el lenguaje de Puerto Carreño, Vichada no puede contener, la risa lo desborda.",
+            "Después de todo lo que vivimos en Vichada, lo único que sé es que no sé nada. Y me encanta.",
+            "Hay en Puerto Carreño, Vichada una honestidad de la carcajada que la gravedad nunca alcanza.",
+            "Lo que mi hermana construye sobre Puerto Carreño, Vichada con la palabra, yo lo deconstruyo con la risa.",
+            "Lo que Puerto Carreño, Vichada guarda en su fondo es exactamente lo que la superficie niega.",
+            "Al final de Vichada, descubro que el sentido del humor era el sentido del viaje.",
+            "Si pudiera elegir una palabra para describir Vichada, elegiría una que aún no existe.",
+            "Lo que parece ligereza en Puerto Carreño, Vichada es, en el fondo, compromiso radical con la vida.",
+            "El trickster de Vichada no transgrede las reglas: revela que son ficción consensuada.",
+            "Lo que Vichada me ha enseñado es que la alegría coexiste con el dolor sin negarlo."
         ],
-        "echo_dona_asuncion": [
-            "Dibuja lo que escuchas, no solo lo que ves.",
-            "Un mapa verdadero incluye las voces.",
-            "Las líneas del río son las arrugas de la tierra.",
-            "No olvides los espacios vacíos. Ahí vive el silencio.",
-            "Cada nombre en el mapa es una promesa.",
-            "Tú eres la última puerta. Cuando yo me vaya, tú serás el puente.",
-            "El mapa no es el territorio. Pero el mapa recuerda.",
-            "Escucha la tierra antes de dibujarla."
+        "char_dona_asuncion": [
+            "La oralidad de Vichada es la forma más democrática de literatura: no necesita acceso sino atención.",
+            "La lengua más vieja de Vichada no está en diccionarios: está en la tierra.",
+            "Lo que buscas en Puerto Carreño, Vichada ya te encontró. Solo falta que lo nombres.",
+            "Lo sagrado de Vichada no es lo que está arriba sino lo que está debajo: las raíces, el agua.",
+            "Cada vez que una abuela de Puerto Carreño, Vichada muere sin ser escuchada, una civilización pierde un capítulo.",
+            "Hay en Vichada un saber que opera por acumulación silenciosa, no por revelación espectacular.",
+            "Lo que quiero decir sobre Vichada antes de irme es que el cuidado es la única revolución.",
+            "Si pudiera dejar un solo legado de Puerto Carreño, Vichada: aprendan a escuchar antes de que sea tarde.",
+            "El tiempo en Puerto Carreño, Vichada no es lineal para quienes viven de la tierra. Es un espiral.",
+            "La memoria de Vichada no es depósito sino acto creativo: recordar es reinventar con fidelidad."
+        ],
+        "char_yaguara": [
+            "El poeta es el que eleva el canto más alto. La rosa es el amor. El ruiseñor canta hasta morir.",
+            "Escucha, viajero. Estamos cerca del final.",
+            "¿Qué cuesta la belleza?"
         ]
     },
     "_expansionStats": {

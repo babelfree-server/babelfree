@@ -554,6 +554,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Se puede curar sin volver atrás?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Se puede curar sin volver atrás?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Se puede curar sin volver atrás?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Se puede curar sin volver atrás?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -878,7 +920,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 4 letras que empieza con «P». ¿Cuál es?",
+                    "riddle": "Una tabla de madera en Cabo de la Vela, La Guajira muestra una palabra borrosa. 4 letras, comienza con «P».",
                     "answer": "pero",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -905,12 +947,12 @@
                         "gramática",
                         "complex"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «La cicatriz verde»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «C».",
+                    "riddle": "En el corazón de Cabo de la Vela, La Guajira, las voces convergen en una sola palabra.",
                     "answer": "conditional",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -919,12 +961,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "El desierto wayúu",
+            "instruction": "El jaguar espera tu voz. Donde el desierto toca el mar.",
             "prompts": [
-                "¿Se puede curar sin volver atrás?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Analiza la relación entre el Cabo de la Vela y la cosmogonía wayúu. ¿Qué significa Jepirra para los muertos?",
+                "Escribe una crónica periodística sobre el Cabo de la Vela: kitesurf y rancherías, turismo y tradición.",
+                "¿Cómo se cruzan el turismo de aventura y la vida wayúu en el Cabo de la Vela? ¿Coexisten o se contradicen?",
+                "Si fueras guía del Cabo de la Vela, ¿qué historia contarías sobre Jepirra que los turistas no conocen?"
+            ],
+            "vocabulary": [
+                "desierto",
+                "wayúu",
+                "ranchería",
+                "kitesurf",
+                "Jepirra",
+                "alma",
+                "pilón",
+                "atardecer",
+                "cosmogonía",
+                "viento"
             ]
         },
         {
@@ -2053,101 +2108,78 @@
         "button": "Continuar el viaje"
     },
     "characterMeta": {
-        "char_colibri": {
-            "name": "Colibrí",
+        "char_rio": {
+            "name": "Río",
             "avatar": "🐦",
             "voice": "Rápido, preciso, enfocado en lo pequeño. Frases cortas y exactas.",
-            "role": "Guía de la precisión — enseña que lo pequeño tiene poder"
+            "role": "Guía de la precisión — enseña que lo pequeño tiene poder",
+            "id": "char_rio"
         },
-        "char_condor_viejo": {
-            "name": "Cóndor Viejo",
+        "char_dona_asuncion": {
+            "name": "Doña Asunción",
             "avatar": "🦅",
             "voice": "Silencioso, sabio, un ojo nublado. Habla poco pero cada palabra pesa.",
-            "role": "Guía de la perspectiva — ve desde arriba, conoce el panorama"
+            "role": "Guía de la perspectiva — ve desde arriba, conoce el panorama",
+            "id": "char_dona_asuncion"
         },
-        "char_delfin_rosado": {
-            "name": "Delfín Rosado",
-            "avatar": "🐬",
-            "voice": "Juguetón, irónico, cambia de forma. Doble sentido, preguntas retóricas.",
-            "role": "Guía del doble sentido — enseña que las palabras pueden engañar"
-        },
-        "char_tortuga_marina": {
-            "name": "Tortuga Marina",
-            "avatar": "🐢",
-            "voice": "Paciente, oceánica, ancestral. Habla despacio, con la sabiduría de los siglos.",
-            "role": "Guía de la paciencia — enseña que las historias necesitan tiempo"
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
-        "char_colibri": [
-            "¿Ves esa flor? Tiene tres significados diferentes.",
-            "Vuela conmigo. Te muestro algo que nadie más ve.",
-            "El néctar más dulce está en la flor más pequeña.",
-            "Piensa rápido. Habla claro. Actúa con precisión.",
-            "Las cosas grandes empiezan con detalles pequeños.",
-            "Un error de una letra cambia todo el significado.",
-            "Yo veo lo que los ojos grandes no pueden ver.",
-            "La velocidad sin dirección es solo ruido.",
-            "Mira otra vez. Hay algo que no viste.",
-            "Una palabra exacta vale más que cien vagas.",
-            "Mira los detalles. Lo pequeño importa.",
-            "Lo pequeño importa más de lo que crees.",
-            "¡Rápido! La respuesta está aquí.",
-            "Cada flor tiene un nombre. Cada nombre tiene poder.",
-            "No necesitas muchas palabras. Necesitas las correctas.",
-            "La precisión es una forma de respeto."
+        "char_rio": [
+            "Mis alas se mueven más rápido que tus pensamientos sobre Cabo de la Vela, La Guajira.",
+            "En Cabo de la Vela, La Guajira, cada pétalo es una historia diminuta.",
+            "Las flores de Cabo de la Vela, La Guajira me cuentan secretos que los árboles ignoran.",
+            "Cada flor que visito en Cabo de la Vela, La Guajira me transforma y la transforma.",
+            "Lo pequeño en Cabo de la Vela, La Guajira tiene su propia grandeza.",
+            "Yo polinizo las ideas de Cabo de la Vela, La Guajira igual que las flores.",
+            "Mi vuelo por Cabo de la Vela, La Guajira es un mapa invisible de lo bello.",
+            "Soy el mensajero más pequeño de Cabo de la Vela, La Guajira, pero el más preciso.",
+            "Vuelo sobre Cabo de la Vela, La Guajira buscando lo que nadie más busca.",
+            "No necesito ser grande para ser esencial en Cabo de la Vela, La Guajira.",
+            "En la oscuridad del agua de Cabo de la Vela, La Guajira, la intuición reemplaza a la visión.",
+            "Nado en Cabo de la Vela, La Guajira con los ojos cerrados y veo más que con ellos abiertos.",
+            "Los ancestros dicen que fui humano antes de ser río cerca de Cabo de la Vela, La Guajira.",
+            "Las corrientes de Cabo de la Vela, La Guajira me susurran nombres olvidados.",
+            "Cada atardecer en Cabo de la Vela, La Guajira, el río y yo tenemos una conversación.",
+            "Lo que brilla en las aguas de Cabo de la Vela, La Guajira no es oro: es memoria.",
+            "Yo no navego el río de Cabo de la Vela, La Guajira. El río me navega a mí.",
+            "El río de Cabo de la Vela, La Guajira tiene un latido. Yo nado al ritmo de ese latido.",
+            "Cada meandro del río cerca de Cabo de la Vela, La Guajira es una decisión del agua.",
+            "Lo que el río arrastra cerca de Cabo de la Vela, La Guajira no lo pierde: lo redistribuye."
         ],
-        "char_condor_viejo": [
-            "El viento dice la verdad que los hombres callan.",
-            "He visto esto antes. Muchas veces.",
-            "La paciencia del cóndor es su mayor fuerza.",
-            "Mira más lejos. El horizonte tiene la respuesta.",
-            "Los que vuelan alto ven las conexiones que otros no ven.",
-            "El silencio del cóndor no es vacío. Es sabiduría.",
-            "Cada montaña tiene dos lados. No olvides el otro.",
-            "El tiempo enseña lo que las palabras no pueden.",
-            "No todo lo que brilla en la distancia es oro.",
-            "La nieve de la cumbre recuerda lo que el valle olvida.",
-            "Un ojo ve el presente. El otro ve lo que fue.",
-            "Desde arriba, el camino se ve diferente.",
-            "La misma historia cambia según quién la cuenta.",
-            "La montaña no habla. Pero escucha todo."
+        "char_dona_asuncion": [
+            "La altura sobre Cabo de la Vela, La Guajira enseña perspectiva, no superioridad.",
+            "Volar sobre Cabo de la Vela, La Guajira no es escapar: es ver sin obstáculos.",
+            "Lo que Cabo de la Vela, La Guajira esconde en sus valles, yo lo revelo desde las nubes.",
+            "Mis alas conocen cada rincón del cielo sobre Cabo de la Vela, La Guajira.",
+            "Los que vuelan alto sobre Cabo de la Vela, La Guajira ven lejos pero sienten frío.",
+            "Vuelo en círculos sobre Cabo de la Vela, La Guajira buscando lo que la tierra esconde.",
+            "He volado sobre guerras olvidadas cerca de Cabo de la Vela, La Guajira.",
+            "Lo que parece laberinto cerca de Cabo de la Vela, La Guajira desde abajo es camino desde arriba.",
+            "Lo que el viento de Cabo de la Vela, La Guajira me dice, yo se lo traduzco a la tierra.",
+            "Mis plumas guardan el polvo de Cabo de la Vela, La Guajira.",
+            "Las estrellas me guían hacia Cabo de la Vela, La Guajira. Antes de los barcos, ya había tortugas.",
+            "Mi caparazón es mi historia cerca de Cabo de la Vela, La Guajira: cada marca es un año.",
+            "La arena de Cabo de la Vela, La Guajira donde nací me espera cada vez que regreso.",
+            "He nadado más lento que nadie hacia Cabo de la Vela, La Guajira, y por eso he llegado más lejos.",
+            "La corriente más fuerte cerca de Cabo de la Vela, La Guajira no es la del agua sino la de la paciencia.",
+            "Mi caparazón ha tocado las aguas de Cabo de la Vela, La Guajira cientos de veces.",
+            "Cada ola que rompe en Cabo de la Vela, La Guajira tiene mil años de viaje.",
+            "Lo más sabio que hace el mar cerca de Cabo de la Vela, La Guajira es esperar.",
+            "Las mareas de Cabo de la Vela, La Guajira marcan un calendario más antiguo que el humano.",
+            "He visto el mar cerca de Cabo de la Vela, La Guajira antes de que tuviera este nombre."
         ],
-        "char_delfin_rosado": [
-            "Lo que ves en la superficie no es lo que hay abajo.",
-            "La ironía es el idioma de los que ven demasiado.",
-            "¿Quieres la verdad? Primero aprende a nadar en la mentira.",
-            "Cada reflejo en el agua cuenta una historia diferente.",
-            "Yo juego con las palabras porque las palabras juegan con todos.",
-            "No me busques donde me viste. Ya cambié de forma.",
-            "Las mejores preguntas no tienen una sola respuesta.",
-            "El que ríe último entiende más. Confía en mí.",
-            "Si pudieras ver lo que yo veo debajo del agua...",
-            "No todo es lo que parece, amigo.",
-            "Las palabras pueden mentir. El agua no.",
-            "¿Estás seguro de lo que oíste? Yo escuché otra cosa.",
-            "A veces la verdad se esconde en la broma.",
-            "El río cambia de forma, pero siempre es el mismo río.",
-            "Yo he sido pez, he sido hombre, he sido sueño.",
-            "Cuidado con las sonrisas que no llegan a los ojos."
-        ],
-        "char_tortuga_marina": [
-            "El coral crece un centímetro por año. Y construye arrecifes enteros.",
-            "Las corrientes más profundas son las más fuertes.",
-            "Yo puse mis huevos en esta playa hace cien años.",
-            "La memoria del mar es más larga que la memoria de los hombres.",
-            "Cuando el mar se calla, es cuando más dice.",
-            "Cada ola que rompe en la costa trae un mensaje antiguo.",
-            "La prisa es enemiga de la comprensión.",
-            "El agua recuerda cada barco que la cruzó.",
-            "Respira. El mar te enseñará si lo dejas.",
-            "Algunas historias necesitan toda una vida para contarse.",
-            "El mar no tiene prisa. Tú tampoco deberías.",
-            "He nadado por todos los océanos. Todo está conectado.",
-            "La paciencia no es esperar. Es saber que todo llega.",
-            "Las olas vienen y van. Las historias también.",
-            "Cada grano de arena fue una montaña hace millones de años.",
-            "No corras. El camino largo enseña más que el corto."
+        "char_yaguara": [
+            "La carretera es una cicatriz. Pero en las cicatrices crece lo nuevo.",
+            "Escucha, viajero. Estamos cerca del final.",
+            "¿Se puede curar sin volver atrás?"
         ]
     },
     "_expansionStats": {

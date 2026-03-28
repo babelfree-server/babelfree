@@ -581,6 +581,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Se puede rescatar lo que se abandonó?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Se puede rescatar lo que se abandonó?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Se puede rescatar lo que se abandonó?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Se puede rescatar lo que se abandonó?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -905,7 +947,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 10 letras que empieza con «A». ¿Cuál es?",
+                    "riddle": "Una tabla de madera en Popayán, Cauca muestra una palabra borrosa. 10 letras, comienza con «A».",
                     "answer": "abandonada",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -932,12 +974,12 @@
                         "puede",
                         "rescatar"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Escribir en las paredes»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «A».",
+                    "riddle": "Don Próspero cerró la puerta de Popayán, Cauca. Solo una palabra la vence.",
                     "answer": "abandonó",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -946,12 +988,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "La Ciudad Blanca",
+            "instruction": "Las palabras son tuyas. El jaguar espera.",
             "prompts": [
-                "¿Se puede rescatar lo que se abandonó?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Escribe un poema sobre Popayán: paredes blancas, procesiones lentas, poesía que se lee en voz alta.",
+                "Popayán como metáfora. ¿De qué? ¿De la pureza? ¿De la máscara? ¿De la tradición que pesa?",
+                "Escribe el monólogo interior de una pared blanca de Popayán que ha visto 500 años de procesiones.",
+                "En cien palabras, crea un mito fundacional para Popayán: ¿por qué la ciudad decidió ser blanca?"
+            ],
+            "vocabulary": [
+                "blanco",
+                "procesión",
+                "colonial",
+                "gastronomía",
+                "silencio",
+                "tradición",
+                "máscara",
+                "recogimiento",
+                "devoto",
+                "claustro"
             ]
         },
         {
@@ -2196,47 +2251,54 @@
             "name": "Río",
             "avatar": "🌊",
             "voice": "Fluido, antiguo, testigo de todo. Habla como corriente: continuo, profundo.",
-            "role": "Voz del territorio — conecta montaña con mar, pasado con presente"
+            "role": "Voz del territorio — conecta montaña con mar, pasado con presente",
+            "id": "char_rio"
         },
         "char_candelaria": {
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_rio": [
-            "No me detengas. Yo siempre encuentro otro camino.",
-            "Cada piedra en mi lecho tiene una historia que contar.",
-            "Yo fui testigo de todo lo que pasó en estas tierras.",
-            "Las lágrimas también son agua. Yo las recibo todas.",
-            "Cuando me contaminas, contaminas tu propia memoria.",
-            "Yo soy más viejo que cualquier pueblo en mis orillas.",
-            "El que bebe de mis aguas nunca olvida de dónde viene.",
-            "Mis aguas oscuras guardan secretos que la luz no puede ver.",
-            "Yo canto de noche. Solo los que escuchan con el corazón me oyen.",
-            "Yo llevo las voces de todos los que me cruzaron.",
-            "El agua no tiene forma propia. Se adapta a todo.",
-            "Mis corrientes conectan montaña con mar, pasado con presente."
+            "Lo que parece ligereza en Popayán, Cauca es, en el fondo, compromiso radical con la vida.",
+            "Lo cómico y lo trágico en Popayán, Cauca son la misma fuerza vista desde ángulos opuestos.",
+            "El trickster de Cauca no transgrede las reglas: revela que son ficción consensuada.",
+            "Después de todo lo que vivimos en Cauca, lo único que sé es que no sé nada. Y me encanta.",
+            "Lo que Cauca me ha enseñado es que la alegría coexiste con el dolor sin negarlo.",
+            "Si el viaje por Cauca fuera un río, yo sería la corriente que arrastra las certezas.",
+            "Hay en Popayán, Cauca una honestidad de la carcajada que la gravedad nunca alcanza.",
+            "Si pudiera elegir una palabra para describir Cauca, elegiría una que aún no existe.",
+            "Lo que mi hermana construye sobre Popayán, Cauca con la palabra, yo lo deconstruyo con la risa.",
+            "Al final de Cauca, descubro que el sentido del humor era el sentido del viaje."
         ],
         "char_candelaria": [
-            "El río es sagrado para mi pueblo, y nadie va a cambiar eso.",
-            "No le creas todo lo que dice. Las palabras bonitas son su arma.",
-            "Aquí las cosas no son lo que parecen. Hay que mirar más profundo.",
-            "Cada generación de mi familia protegió este territorio.",
-            "Escucha bien, Yaguará. Lo que está en juego es más grande que nosotras.",
-            "Mi comunidad ha resistido durante siglos. No vamos a rendirnos ahora.",
-            "Las promesas de Don Próspero son como la niebla: desaparecen con el sol.",
-            "Yo aprendí a leer las intenciones detrás de las palabras.",
-            "Cuando el río cambia de color, algo malo está pasando arriba.",
-            "Mi mamá siempre decía: la tierra no nos pertenece, nosotros pertenecemos a la tierra.",
-            "No tengas miedo. Mi pueblo ha enfrentado cosas peores.",
-            "Hay verdades que solo se entienden cuando las vives.",
-            "El problema no es el progreso. El problema es quién decide qué es progreso.",
-            "Cada árbol que cae es una historia que se pierde para siempre.",
-            "Yo no necesito que me protejan. Necesito que me escuchen.",
-            "Yo conozco este lugar mejor que nadie."
+            "Si pudiera escribir la historia de Popayán, Cauca, empezaría por el silencio que precede a toda palabra.",
+            "Lo que Cauca me ha enseñado trasciende lo lingüístico y habita en lo ontológico.",
+            "Escribir sobre Popayán, Cauca es aceptar que toda representación es una traición necesaria.",
+            "Lo intraducible de Popayán, Cauca no es un fracaso del lenguaje sino su máxima expresión.",
+            "Lo que busco en mi escritura sobre Popayán, Cauca no es la belleza sino la exactitud.",
+            "Lo que empezó como un cuaderno en Cauca se ha convertido en una cartografía del alma.",
+            "Popayán, Cauca es un palimpsesto donde cada generación escribe sobre los trazos de la anterior.",
+            "Mi crónica de Cauca no documenta un viaje sino que constituye uno.",
+            "Cada palabra que aprendí en Cauca ha reorganizado todas las demás.",
+            "La crónica perfecta de Popayán, Cauca sería aquella que hace hablar al silencio sin romperlo."
+        ],
+        "char_yaguara": [
+            "Gloria dejó abandonada en el castillo a la niña que era. ¿Se puede rescatar lo que se abandonó?",
+            "Escucha, viajero. Estamos cerca del final.",
+            "¿Se puede rescatar lo que se abandonó?"
         ]
     },
     "_expansionStats": {

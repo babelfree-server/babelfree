@@ -2373,9 +2373,9 @@
             "role": "mother-wisdom",
             "description": "Madre de Yaguará. Habla en verdades cortas. Cada frase es una semilla antigua que germina en silencio."
         },
-        "char_abuela_ceiba": {
-            "id": "char_abuela_ceiba",
-            "name": "Abuela Ceiba",
+        "char_dona_asuncion": {
+            "id": "char_dona_asuncion",
+            "name": "Doña Asunción",
             "avatar": "img/characters/abuela_ceiba.jpg",
             "voice": "whisper",
             "role": "oracle",
@@ -2401,52 +2401,52 @@
     },
     "characterLines": {
         "char_mama_jaguar": [
-            "La ceiba cuida a todos.",
-            "Las raíces son profundas.",
-            "Un lugar seguro es un regalo.",
-            "El hogar no es un lugar.",
-            "Donde hay amor, hay casa.",
-            "Descansa bajo el árbol.",
-            "Las paredes no hacen un hogar.",
-            "El bosque es nuestra casa.",
-            "La tierra es el piso.",
-            "Cuida tu lugar."
+            "No te alejes mucho de Santa Elena, Antioquia.",
+            "No hay prisa aquí en Santa Elena, Antioquia.",
+            "Escucha a tu hermano cerca de Santa Elena, Antioquia.",
+            "Yo conozco lugares como Santa Elena, Antioquia.",
+            "El aire de Santa Elena, Antioquia es bueno.",
+            "Mañana exploramos más de Santa Elena, Antioquia.",
+            "Todo está bien aquí en Santa Elena, Antioquia.",
+            "Cuidado con el agua cerca de Santa Elena, Antioquia.",
+            "Quédate cerca de mí en Santa Elena, Antioquia.",
+            "Santa Elena, Antioquia es un buen lugar para ti."
         ],
         "char_rio": [
-            "¡Mi casa es el agua!",
-            "¡Mira esa cueva!",
-            "Yo duermo en la orilla.",
-            "¡Cuatro cuevas grandes!",
-            "El río es mi camino.",
-            "¡Hay un nido ahí arriba!",
-            "¡Seis pájaros en el árbol!",
-            "Mi lugar favorito es aquí.",
-            "¡Ven a mi casa de agua!",
-            "El río no tiene puertas."
+            "¡Ja! ¡Aquí en Santa Elena, Antioquia!",
+            "¡Yo gano en Santa Elena, Antioquia!",
+            "¡Santa Elena, Antioquia es el mejor lugar!",
+            "¡Me gusta Santa Elena, Antioquia!",
+            "¡Más, más! ¡Santa Elena, Antioquia!",
+            "¡Santa Elena, Antioquia es divertido!",
+            "¡Yo primero en Santa Elena, Antioquia!",
+            "¡Otra vez! ¡Más en Santa Elena, Antioquia!",
+            "¡Ja! ¡Santa Elena, Antioquia!",
+            "¡Sígueme por Santa Elena, Antioquia!"
         ],
-        "char_abuela_ceiba": [
-            "Las raíces recuerdan.",
-            "El viento trae mensajes.",
-            "Yo he visto muchas lunas.",
-            "Todo lo que cae, regresa.",
-            "El que tiene raíces, no cae.",
-            "Escucha la tierra.",
-            "Las hojas caen. Las raíces quedan.",
-            "El silencio también es una casa.",
-            "Mis ramas son tu techo.",
-            "Lo que olvidas, yo recuerdo."
+        "char_dona_asuncion": [
+            "Santa Elena, Antioquia es mi hijo. Y tú también.",
+            "Mis hojas cubren Santa Elena, Antioquia.",
+            "Aquí en Santa Elena, Antioquia, yo soy la más antigua.",
+            "Escucha, criatura. Esto es Santa Elena, Antioquia.",
+            "Siéntate a mi sombra en Santa Elena, Antioquia.",
+            "Todo en Santa Elena, Antioquia está conectado.",
+            "Calla y escucha Santa Elena, Antioquia.",
+            "Yo soy vieja. Más vieja que Santa Elena, Antioquia.",
+            "El tiempo de Santa Elena, Antioquia es largo y lento.",
+            "La luz de Santa Elena, Antioquia pasa por mis ramas."
         ],
         "char_yaguara": [
-            "Esta es mi casa.",
-            "La selva es grande.",
-            "Aquí hay muchos árboles.",
-            "Mi casa está cerca del río.",
-            "La ceiba es muy vieja.",
-            "Escucha las raíces.",
-            "El árbol habla.",
-            "Aquí estamos seguros.",
-            "Las hojas son el techo.",
-            "Mi casa no tiene paredes."
+            "Este lugar tiene nombre: Santa Elena, Antioquia.",
+            "Huele bonito en Santa Elena, Antioquia.",
+            "Es bonito. Mira los pétalos.",
+            "Mira. Santa Elena, Antioquia.",
+            "Ven. Camina. Mira la cumbre en Santa Elena, Antioquia.",
+            "Yo quiero ver más de Santa Elena, Antioquia.",
+            "Santa Elena, Antioquia es grande.",
+            "El aire aquí en Santa Elena, Antioquia es diferente.",
+            "Yo veo las flores. ¿Y tú?",
+            "Todo es nuevo aquí en Santa Elena, Antioquia."
         ]
     },
     "_expansionStats": {
@@ -9414,6 +9414,62 @@
                     "hint": "Mi familia es...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Cómo se llama tu mamá/papá?",
+                    "hint": "Se llama...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Tienes hermanos?",
+                    "hint": "Sí/No, tengo...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo es tu familia?",
+                    "hint": "Mi familia es...",
+                    "accepts": [
+                        "grande",
+                        "pequeña",
+                        "bonita"
+                    ]
+                },
+                {
+                    "prompt": "¿Qué sabe hacer tu mamá/papá?",
+                    "hint": "Sabe...",
+                    "accepts": [
+                        "cocinar",
+                        "trabajar"
+                    ]
+                },
+                {
+                    "prompt": "¿Qué quieres hacer con tu familia?",
+                    "hint": "Quiero...",
+                    "accepts": [
+                        "comer juntos",
+                        "jugar",
+                        "hablar"
+                    ]
+                },
+                {
+                    "prompt": "¿Por qué es importante la familia?",
+                    "hint": "Porque...",
+                    "accepts": [
+                        "te quieren",
+                        "te protegen"
+                    ]
+                },
+                {
+                    "prompt": "¿Qué no puedes hacer solo/sola?",
+                    "hint": "No puedo...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Quién es tu familia?",
+                    "hint": "Mi familia es...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -9488,7 +9544,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «P». ¿Cuál es?",
+                    "riddle": "Una mariposa en Santa Elena, Antioquia lleva una palabra en sus alas. 5 letras: «P...».",
                     "answer": "pocos",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -9515,12 +9571,12 @@
                         "puede",
                         "nakawe"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «La familia junto al río»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "La última puerta. Yaguará te mira. Di la palabra que aprendiste aquí.",
+                    "riddle": "El viento de Santa Elena, Antioquia trae la última respuesta.",
                     "answer": "río",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -9634,25 +9690,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Mi familia",
-            "instruction": "Escribe sobre las personas importantes en tu vida.",
+            "title": "Las flores de Santa Elena",
+            "instruction": "Yaguará te pide que escribas en tu cuaderno. Las flores cuentan historias.",
             "prompts": [
-                "¿Quién es tu familia?",
-                "¿Cómo se llaman?",
-                "¿Cómo son?",
-                "¿Qué hacen juntos?"
+                "En Santa Elena, las familias llevan flores en la espalda. Se llaman silleteros. Escribe tres cosas sobre ellos.",
+                "¿Cómo es una silleta de flores? Usa: pesada, colorida, grande, hermosa, fragante.",
+                "Escribe una carta desde Santa Elena: \"Aquí las familias hacen algo increíble con flores...\"",
+                "¿Qué flores pones tú en una silleta? Escribe una lista de cinco flores y sus colores."
             ],
             "vocabulary": [
-                "mamá",
-                "papá",
-                "hermano",
-                "hermana",
-                "abuelo",
-                "abuela",
+                "flor",
+                "silleta",
+                "silletero",
                 "familia",
-                "juntos",
-                "querer",
-                "amar"
+                "espalda",
+                "pesado",
+                "color",
+                "tradición",
+                "caminar",
+                "orgullo"
             ]
         },
         {

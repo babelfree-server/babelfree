@@ -527,6 +527,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Quién eres cuando te miras de verdad?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Quién eres cuando te miras de verdad?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Quién eres cuando te miras de verdad?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Quién eres cuando te miras de verdad?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -851,7 +893,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 7 letras que empieza con «Y». ¿Cuál es?",
+                    "riddle": "La piedra angular de San Andrés, Archipiélago tiene un código: 7 letras que empiezan con «Y».",
                     "answer": "yaguará",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -878,12 +920,12 @@
                         "stylistic",
                         "analysis"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «El espejo de Yaguará»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «T».",
+                    "riddle": "El viento del desierto en San Andrés, Archipiélago borra todo excepto una palabra.",
                     "answer": "tone",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -892,12 +934,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "El mar de siete colores",
+            "instruction": "El jaguar espera tu voz. San Andrés refleja otra Colombia.",
             "prompts": [
-                "¿Quién eres cuando te miras de verdad?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Analiza la relación entre San Andrés, la cultura raizal y la identidad colombiana. ¿Es Colombia caribeña?",
+                "Escribe una crónica periodística sobre San Andrés: mar de siete colores, creole, turismo de masa.",
+                "¿Cómo se cruzan la identidad raizal, el turismo masivo y la sobreexplotación en San Andrés?",
+                "Si fueras guía raizal de San Andrés, ¿qué historia contarías que los turistas de todo incluido no conocen?"
+            ],
+            "vocabulary": [
+                "raizal",
+                "creole",
+                "archipiélago",
+                "coral",
+                "sobrepoblación",
+                "identidad",
+                "turismo",
+                "multilingüe",
+                "insular",
+                "resistencia"
             ]
         },
         {
@@ -1918,63 +1973,73 @@
             "name": "Mamá Jaguar",
             "avatar": "🐆",
             "voice": "Maternal pero firme. Voz de la selva ancestral.",
-            "role": "Madre espiritual de Yaguará — fuerza y origen"
+            "role": "Madre espiritual de Yaguará — fuerza y origen",
+            "id": "char_mama_jaguar"
         },
         "char_rio": {
             "name": "Río",
             "avatar": "🌊",
             "voice": "Fluido, antiguo, testigo de todo. Habla como corriente: continuo, profundo.",
-            "role": "Voz del territorio — conecta montaña con mar, pasado con presente"
+            "role": "Voz del territorio — conecta montaña con mar, pasado con presente",
+            "id": "char_rio"
         },
-        "char_abuela_ceiba": {
-            "name": "Abuela Ceiba",
+        "char_dona_asuncion": {
+            "name": "Doña Asunción",
             "avatar": "🌳",
             "voice": "Inmóvil, ancestral, paciente. Raíces en el mundo de abajo, ramas en el cielo.",
-            "role": "Eje cósmico — conecta los tres mundos, centro del bosque"
+            "role": "Eje cósmico — conecta los tres mundos, centro del bosque",
+            "id": "char_dona_asuncion"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_mama_jaguar": [
-            "Hija, la fuerza no está en los colmillos. Está en la voz.",
-            "Yo caminé por estos mismos senderos antes que tú.",
-            "La noche no te da miedo porque yo te enseñé a ver en la oscuridad.",
-            "Cada marca en tu piel cuenta una historia de supervivencia.",
-            "No necesitas ser la más fuerte. Necesitas ser la más sabia.",
-            "El jaguar que escucha vive más que el jaguar que solo ruge.",
-            "Yo estuve donde tú estás ahora. Y sobreviví.",
-            "La selva cambia, pero el instinto permanece.",
-            "Recuerda: somos guardianas, no cazadoras.",
-            "Yo te di la fuerza. Ahora úsala.",
-            "La selva te enseñó a caminar. No olvides el camino.",
-            "Cuando rujas, que sea con verdad."
+            "Cuando el miedo llegue en San Andrés y Providencia, recuerda de dónde vienes.",
+            "El amor de una madre en San Andrés, Archipiélago no protege: prepara.",
+            "Cada madre de San Andrés, Archipiélago da lo que tiene. Yo te di el bosque.",
+            "Vuelve a San Andrés y Providencia cuando necesites recordar quién eres.",
+            "Los jaguares que nombran San Andrés, Archipiélago primero escuchan el mundo.",
+            "Mi territorio en San Andrés, Archipiélago es tu territorio. Siempre.",
+            "Lo que te enseñé en San Andrés y Providencia no fue solo cazar: fue observar.",
+            "Lo que aprendiste conmigo en San Andrés y Providencia es la raíz. Lo demás es rama.",
+            "No te olvidé. Te solté para que crecieras en San Andrés y Providencia.",
+            "Lo que parece abandono en San Andrés, Archipiélago a veces es confianza."
         ],
         "char_rio": [
-            "No me detengas. Yo siempre encuentro otro camino.",
-            "Cada piedra en mi lecho tiene una historia que contar.",
-            "Yo fui testigo de todo lo que pasó en estas tierras.",
-            "Las lágrimas también son agua. Yo las recibo todas.",
-            "Cuando me contaminas, contaminas tu propia memoria.",
-            "Yo soy más viejo que cualquier pueblo en mis orillas.",
-            "El que bebe de mis aguas nunca olvida de dónde viene.",
-            "Mis aguas oscuras guardan secretos que la luz no puede ver.",
-            "Yo canto de noche. Solo los que escuchan con el corazón me oyen.",
-            "Yo llevo las voces de todos los que me cruzaron.",
-            "El agua no tiene forma propia. Se adapta a todo.",
-            "Mis corrientes conectan montaña con mar, pasado con presente."
+            "Lo que San Andrés, Archipiélago me enseña es que la ligereza es una forma sofisticada de profundidad.",
+            "Lo más serio que he hecho en San Andrés y Providencia es reírme cuando todo parecía perdido.",
+            "El juego en San Andrés y Providencia es la forma más antigua de conocimiento. Anterior a la escritura.",
+            "Lo que mi hermana busca en las palabras de San Andrés y Providencia, yo lo encuentro en las pausas.",
+            "El humor en San Andrés, Archipiélago es el último recurso del pensamiento cuando la lógica fracasa.",
+            "Lo que parece caos en San Andrés, Archipiélago visto de cerca es coreografía visto desde arriba.",
+            "El agua de San Andrés, Archipiélago no resiste: rodea. Esa es toda mi filosofía.",
+            "Mi función en San Andrés y Providencia no es aligerar la carga sino mostrar que la gravedad tiene grietas.",
+            "Mi hermana nombra San Andrés, Archipiélago. Yo desnombro San Andrés, Archipiélago. Ambos son actos creativos.",
+            "Cada vez que me río de algo en San Andrés, Archipiélago, lo libero de su peso."
         ],
-        "char_abuela_ceiba": [
-            "Los pájaros me cuentan lo que pasa en otros bosques.",
-            "Cortar una ceiba es cortar la conexión entre los mundos.",
-            "Yo no me muevo, pero mis semillas viajan por todo el continente.",
-            "El viento me habla. La lluvia me lava. El sol me alimenta.",
-            "Cada rama mía es un camino diferente hacia la misma verdad.",
-            "Los que se sientan bajo mi sombra encuentran respuestas.",
-            "Mi madera es demasiado sagrada para ser cortada.",
-            "Yo soy el centro del bosque. Todo gira alrededor de mis raíces.",
-            "La paciencia de un árbol es infinita. Yo puedo esperar.",
-            "Mis raíces tocan el mundo de abajo. Mis ramas tocan el cielo.",
-            "He vivido quinientos años. He visto pasar cien generaciones.",
-            "Todo lo que sube por mi tronco baja transformado."
+        "char_dona_asuncion": [
+            "Yo soy la memoria viva de San Andrés, Archipiélago.",
+            "Soy el puente entre el cielo y lo subterráneo de San Andrés, Archipiélago.",
+            "Las lenguas del bosque de San Andrés, Archipiélago son más antiguas que las del hombre.",
+            "Lo que necesitas saber de San Andrés, Archipiélago ya está en mis raíces.",
+            "El verdadero conocimiento de San Andrés, Archipiélago crece despacio, como un árbol.",
+            "He visto civilizaciones nacer y morir en San Andrés, Archipiélago.",
+            "Mis raíces bajo San Andrés, Archipiélago tocan aguas que ningún mapa registra.",
+            "Lo que el río de San Andrés, Archipiélago no puede llevar, mis raíces lo sostienen.",
+            "La sabiduría de San Andrés, Archipiélago no se busca: se cultiva.",
+            "Lo que el fuego destruye en San Andrés, Archipiélago, la semilla reconstruye."
+        ],
+        "char_yaguara": [
+            "Yaguará se mira en el espejo. Ya no es la jaguar pequeña que dejó el bosque.",
+            "Escucha, viajero. Estamos cerca del final.",
+            "¿Quién eres cuando te miras de verdad?"
         ]
     },
     "_expansionStats": {

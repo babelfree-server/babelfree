@@ -1975,47 +1975,51 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_don_prospero": {
             "name": "Don Próspero",
             "avatar": "👨‍💼",
             "voice": "Encantador, persuasivo, registro formal. Cita poesía pero construye carreteras. Oraciones complejas.",
-            "role": "Antagonista ambiguo — trae progreso pero destruye el bosque"
+            "role": "Antagonista ambiguo — trae progreso pero destruye el bosque",
+            "id": "char_don_prospero"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Mira cómo cambia el color del agua.",
-            "Mi mamá siempre decía: primero escucha, después habla.",
-            "No tengas miedo. Yo estoy aquí contigo.",
-            "Este bosque tiene memoria. Yo lo siento.",
-            "Hay cosas que no se dicen con palabras.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó a leer el río.",
-            "El río es sagrado para mi pueblo.",
-            "No le creas todo lo que dice.",
-            "Aquí las cosas no son lo que parecen.",
-            "Vamos por este lado, es más seguro.",
-            "Escucha bien, Yaguará. Esto es importante.",
-            "Mi comunidad lleva generaciones aquí."
+            "Quiero escribir sobre Cañón del Chicamocha, Santander algún día.",
+            "Mi abuela me contó algo sobre lugares como Cañón del Chicamocha, Santander.",
+            "Cañón del Chicamocha, Santander me recuerda algo que mi mamá contaba.",
+            "Cada lugar como Cañón del Chicamocha, Santander tiene un secreto. Solo hay que saber preguntar.",
+            "Las palabras cambian según quién las dice aquí en Cañón del Chicamocha, Santander.",
+            "En mi pueblo es diferente. Allá no tenemos el desierto como en Cañón del Chicamocha, Santander.",
+            "Lo que más me gusta de Cañón del Chicamocha, Santander es lo que no esperaba encontrar.",
+            "Lo que aprendemos en el destino 28 cambia nuestra perspectiva."
         ],
         "char_don_prospero": [
-            "Confíen en mí. Yo sé lo que este pueblo necesita.",
-            "Las escuelas, los hospitales... todo eso necesita un camino.",
-            "No soy el enemigo. Soy el que trae soluciones.",
-            "¿Quién no quiere trabajo para sus hijos?",
-            "El pasado es hermoso, pero no se puede vivir en él.",
-            "Yo hago lo que el gobierno no hace.",
-            "Miren cómo viven. Merecen algo mejor.",
-            "Les doy mi palabra: nadie va a perder su casa.",
-            "La naturaleza es generosa, pero hay que saber usarla.",
-            "El progreso necesita sacrificio, amigos míos.",
-            "Yo también amo estos árboles, pero hay que ser prácticos.",
-            "Mi madre era de aquí. Conozco esta tierra.",
-            "Buenos días. Vengo a traer oportunidades.",
-            "El camino nuevo va a cambiar la vida de todos."
+            "¿Quién en Cañón del Chicamocha, Santander no quiere trabajo y escuelas?",
+            "Buenos días, Cañón del Chicamocha, Santander. Vengo a hablar de oportunidades.",
+            "Miren cómo vive la gente de Santander. Yo puedo traer algo mejor.",
+            "Les doy mi palabra: nadie en Cañón del Chicamocha, Santander va a salir perdiendo.",
+            "Yo también amo Santander. Por eso quiero mejorarla.",
+            "Cuando este proyecto en Cañón del Chicamocha, Santander esté terminado, todos me van a agradecer.",
+            "El camino nuevo va a conectar Cañón del Chicamocha, Santander con el mundo.",
+            "Los que se oponen al cambio en Santander le tienen miedo al futuro.",
+            "No soy el enemigo de Santander. Soy el que trae soluciones.",
+            "Lo que ofrezco a Cañón del Chicamocha, Santander es simple: empleo, educación, carreteras."
+        ],
+        "char_yaguara": [
+            "Viajero, algo nuevo nos espera. B1 integration. Don Próspero's road vs. the forest. Doña Asunción dies (off-scre",
+            "Hoy aprendemos: B1 integration — all subjunctive, compound tenses, passive, reported speech. El español crece con nosotras."
         ]
     },
     "_expansionStats": {
@@ -7571,6 +7575,48 @@
                     "hint": "Me siento...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Puede una persona buena hacer daño?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste hoy?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Yo creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías tú?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante de esta historia?",
+                    "hint": "Lo más importante es...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué necesita el mundo?",
+                    "hint": "El mundo necesita que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes ahora?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -7936,7 +7982,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 5 letras que empieza con «N». ¿Cuál es?",
+                    "riddle": "Las raíces de un árbol en Cañón del Chicamocha, Santander forman letras. 5 letras, la primera es «N».",
                     "answer": "nuevo",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -7963,12 +8009,12 @@
                         "sea",
                         "avance"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «La herida y el nombre»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 4 letras.",
+                    "riddle": "Los pescadores de Cañón del Chicamocha, Santander conocen un secreto. Tiene 4 letras.",
                     "answer": "dure",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -7977,14 +8023,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Cuenta — La herida y el nombre",
-            "instruction": "Escribe tu reflexión.",
+            "title": "La herida del Chicamocha",
+            "instruction": "Candelaria abre su cuaderno y te mira. La tierra se abrió aquí.",
             "prompts": [
-                "¿Puede una persona buena hacer daño?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?",
-                "¿Qué es lo más importante?"
+                "¿Por qué el Cañón del Chicamocha impresiona a todos los que lo ven? ¿Qué nos dice sobre la fuerza de la tierra?",
+                "Compara el Cañón del Chicamocha con el Gran Cañón u otro cañón que conozcas. ¿Qué sienten al verlos?",
+                "Un turista tiene miedo de cruzar el teleférico del cañón. Convéncelo de que vale la pena.",
+                "Si el cañón pudiera hablar, ¿qué diría sobre los millones de años que tardó el río en abrirlo?"
+            ],
+            "vocabulary": [
+                "cañón",
+                "profundo",
+                "teleférico",
+                "río",
+                "roca",
+                "parapente",
+                "vértigo",
+                "erosión",
+                "tierra",
+                "miedo"
             ]
         },
         {

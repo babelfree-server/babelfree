@@ -583,6 +583,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué repite el eco?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué repite el eco?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué repite el eco?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué repite el eco?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -907,7 +949,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «D». ¿Cuál es?",
+                    "riddle": "Las raíces de un árbol en Silvia, Cauca forman letras. 6 letras, la primera es «D».",
                     "answer": "dentro",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -934,12 +976,12 @@
                         "poetic",
                         "composition"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «El eco y el caracol»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «M».",
+                    "riddle": "La sombra de Silvia, Cauca esconde la última verdad. Tiene 5 letras.",
                     "answer": "meter",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -948,12 +990,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "El azul misak de Silvia",
+            "instruction": "Las palabras son tuyas. El jaguar espera.",
             "prompts": [
-                "¿Qué repite el eco?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Escribe un poema sobre Silvia: el mercado guambiano de los martes, colores azules contra la montaña verde.",
+                "Silvia como metáfora. ¿De qué? ¿Del eco? ¿Del caracol? ¿De lo que resiste sin gritar?",
+                "Escribe el monólogo interior de una falda azul misak colgada en el tendedero después del mercado.",
+                "En cien palabras, crea un mito fundacional para el mercado de Silvia: ¿por qué los misak eligieron el martes?"
+            ],
+            "vocabulary": [
+                "misak",
+                "guambiano",
+                "azul",
+                "mercado",
+                "páramo",
+                "resistencia",
+                "ancestral",
+                "espiral",
+                "tejido",
+                "identidad"
             ]
         },
         {
@@ -2198,141 +2253,99 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_rio": {
             "name": "Río",
             "avatar": "🌊",
             "voice": "Fluido, antiguo, testigo de todo. Habla como corriente: continuo, profundo.",
-            "role": "Voz del territorio — conecta montaña con mar, pasado con presente"
+            "role": "Voz del territorio — conecta montaña con mar, pasado con presente",
+            "id": "char_rio"
         },
-        "char_colibri": {
-            "name": "Colibrí",
-            "avatar": "🐦",
-            "voice": "Rápido, preciso, enfocado en lo pequeño. Frases cortas y exactas.",
-            "role": "Guía de la precisión — enseña que lo pequeño tiene poder"
-        },
-        "char_condor_viejo": {
-            "name": "Cóndor Viejo",
+        "char_dona_asuncion": {
+            "name": "Doña Asunción",
             "avatar": "🦅",
             "voice": "Silencioso, sabio, un ojo nublado. Habla poco pero cada palabra pesa.",
-            "role": "Guía de la perspectiva — ve desde arriba, conoce el panorama"
+            "role": "Guía de la perspectiva — ve desde arriba, conoce el panorama",
+            "id": "char_dona_asuncion"
         },
-        "char_delfin_rosado": {
-            "name": "Delfín Rosado",
-            "avatar": "🐬",
-            "voice": "Juguetón, irónico, cambia de forma. Doble sentido, preguntas retóricas.",
-            "role": "Guía del doble sentido — enseña que las palabras pueden engañar"
-        },
-        "char_tortuga_marina": {
-            "name": "Tortuga Marina",
-            "avatar": "🐢",
-            "voice": "Paciente, oceánica, ancestral. Habla despacio, con la sabiduría de los siglos.",
-            "role": "Guía de la paciencia — enseña que las historias necesitan tiempo"
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Cada generación de mi familia protegió este territorio.",
-            "Escucha bien, Yaguará. Lo que está en juego es más grande que nosotras.",
-            "Mi comunidad ha resistido durante siglos. No vamos a rendirnos ahora.",
-            "Las promesas de Don Próspero son como la niebla: desaparecen con el sol.",
-            "Yo aprendí a leer las intenciones detrás de las palabras.",
-            "Cuando el río cambia de color, algo malo está pasando arriba.",
-            "Mi mamá siempre decía: la tierra no nos pertenece, nosotros pertenecemos a la tierra.",
-            "No tengas miedo. Mi pueblo ha enfrentado cosas peores.",
-            "Hay verdades que solo se entienden cuando las vives.",
-            "El problema no es el progreso. El problema es quién decide qué es progreso.",
-            "Cada árbol que cae es una historia que se pierde para siempre.",
-            "Yo no necesito que me protejan. Necesito que me escuchen.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó que el silencio también habla.",
-            "El río es sagrado para mi pueblo, y nadie va a cambiar eso."
+            "Escribir sobre Silvia, Cauca es aceptar que toda representación es una traición necesaria.",
+            "Lo intraducible de Silvia, Cauca no es un fracaso del lenguaje sino su máxima expresión.",
+            "La crónica perfecta de Silvia, Cauca sería aquella que hace hablar al silencio sin romperlo.",
+            "Lo que busco en mi escritura sobre Silvia, Cauca no es la belleza sino la exactitud.",
+            "Silvia, Cauca es un palimpsesto donde cada generación escribe sobre los trazos de la anterior.",
+            "El texto que escribo sobre Silvia, Cauca no es mío: es de todas las voces que me lo dictaron.",
+            "Mi lengua materna y el español de Cauca han dejado de ser idiomas separados.",
+            "Si pudiera escribir la historia de Silvia, Cauca, empezaría por el silencio que precede a toda palabra."
         ],
         "char_rio": [
-            "Las lágrimas también son agua. Yo las recibo todas.",
-            "Cuando me contaminas, contaminas tu propia memoria.",
-            "Yo soy más viejo que cualquier pueblo en mis orillas.",
-            "El que bebe de mis aguas nunca olvida de dónde viene.",
-            "Mis aguas oscuras guardan secretos que la luz no puede ver.",
-            "Yo canto de noche. Solo los que escuchan con el corazón me oyen.",
-            "Yo llevo las voces de todos los que me cruzaron.",
-            "El agua no tiene forma propia. Se adapta a todo.",
-            "Mis corrientes conectan montaña con mar, pasado con presente.",
-            "No me detengas. Yo siempre encuentro otro camino.",
-            "Cada piedra en mi lecho tiene una historia que contar.",
-            "Yo fui testigo de todo lo que pasó en estas tierras."
+            "Lo cómico y lo trágico en Silvia, Cauca son la misma fuerza vista desde ángulos opuestos.",
+            "Hay en Silvia, Cauca una honestidad de la carcajada que la gravedad nunca alcanza.",
+            "Lo que parece ligereza en Silvia, Cauca es, en el fondo, compromiso radical con la vida.",
+            "Lo que Silvia, Cauca guarda en su fondo es exactamente lo que la superficie niega.",
+            "Lo que el lenguaje de Silvia, Cauca no puede contener, la risa lo desborda.",
+            "Lo que mi hermana construye sobre Silvia, Cauca con la palabra, yo lo deconstruyo con la risa.",
+            "En el destino 52, Silvia, Cauca se revela como palimpsesto de El eco y el caracol.",
+            "Lo que el destino 52 inscribe en Silvia, Cauca pertenece al orden de lo inefable.",
+            "Mis alas se mueven más rápido que tus pensamientos sobre Silvia, Cauca.",
+            "El néctar más dulce de Silvia, Cauca está en la flor más escondida.",
+            "Lo pequeño en Silvia, Cauca tiene su propia grandeza.",
+            "En Silvia, Cauca, cada pétalo es una historia diminuta.",
+            "Cada flor que visito en Silvia, Cauca me transforma y la transforma.",
+            "Vuelo sobre Silvia, Cauca buscando lo que nadie más busca.",
+            "Las flores de Silvia, Cauca me cuentan secretos que los árboles ignoran.",
+            "Soy el mensajero más pequeño de Silvia, Cauca, pero el más preciso.",
+            "Mi vuelo por Silvia, Cauca es un mapa invisible de lo bello.",
+            "Yo polinizo las ideas de Silvia, Cauca igual que las flores.",
+            "Nado en Silvia, Cauca con los ojos cerrados y veo más que con ellos abiertos.",
+            "Las aguas oscuras cerca de Silvia, Cauca guardan los secretos más luminosos.",
+            "Lo que el río arrastra cerca de Silvia, Cauca no lo pierde: lo redistribuye.",
+            "Yo nado entre mundos cerca de Silvia, Cauca: el río y el mito.",
+            "Cada meandro del río cerca de Silvia, Cauca es una decisión del agua.",
+            "Cada atardecer en Silvia, Cauca, el río y yo tenemos una conversación.",
+            "Yo soy el guardián rosado de Silvia, Cauca.",
+            "Lo que se esconde bajo la superficie de Silvia, Cauca es lo más real.",
+            "Cada sonido bajo el agua de Silvia, Cauca cuenta una historia ancestral.",
+            "Mi cola dibuja mapas en el río de Silvia, Cauca que nadie puede leer."
         ],
-        "char_colibri": [
-            "Lo pequeño importa más de lo que crees.",
-            "¡Rápido! La respuesta está aquí.",
-            "Cada flor tiene un nombre. Cada nombre tiene poder.",
-            "No necesitas muchas palabras. Necesitas las correctas.",
-            "La precisión es una forma de respeto.",
-            "¿Ves esa flor? Tiene tres significados diferentes.",
-            "Vuela conmigo. Te muestro algo que nadie más ve.",
-            "El néctar más dulce está en la flor más pequeña.",
-            "Piensa rápido. Habla claro. Actúa con precisión.",
-            "Las cosas grandes empiezan con detalles pequeños.",
-            "Un error de una letra cambia todo el significado.",
-            "Yo veo lo que los ojos grandes no pueden ver.",
-            "La velocidad sin dirección es solo ruido.",
-            "Mira otra vez. Hay algo que no viste.",
-            "Una palabra exacta vale más que cien vagas.",
-            "Mira los detalles. Lo pequeño importa."
+        "char_dona_asuncion": [
+            "He volado sobre guerras olvidadas cerca de Silvia, Cauca.",
+            "Llevo la memoria de Silvia, Cauca en mis plumas.",
+            "Lo que el cóndor ve sobre Silvia, Cauca, ningún caminante lo imagina.",
+            "Desde arriba, las fronteras cerca de Silvia, Cauca no existen.",
+            "El silencio a esta altura sobre Silvia, Cauca es la voz más clara.",
+            "Lo que Silvia, Cauca esconde en sus valles, yo lo revelo desde las nubes.",
+            "La cumbre más alta cerca de Silvia, Cauca no es la más visible.",
+            "Mis alas conocen cada rincón del cielo sobre Silvia, Cauca.",
+            "Mis plumas guardan el polvo de Silvia, Cauca.",
+            "Cada corriente de aire sobre Silvia, Cauca enseña paciencia.",
+            "He nadado más lento que nadie hacia Silvia, Cauca, y por eso he llegado más lejos.",
+            "Cada grano de arena de Silvia, Cauca conoce mi nombre.",
+            "La profundidad del mar cerca de Silvia, Cauca guarda lo que la superficie olvida.",
+            "Lo que el mar de Silvia, Cauca me enseñó es que todo regresa.",
+            "Mi caparazón ha tocado las aguas de Silvia, Cauca cientos de veces.",
+            "La corriente más fuerte cerca de Silvia, Cauca no es la del agua sino la de la paciencia.",
+            "Yo fui testigo del primer amanecer sobre Silvia, Cauca.",
+            "Las estrellas me guían hacia Silvia, Cauca. Antes de los barcos, ya había tortugas.",
+            "Cada ola que rompe en Silvia, Cauca tiene mil años de viaje.",
+            "Lo que parece fragilidad cerca de Silvia, Cauca es resistencia acumulada."
         ],
-        "char_condor_viejo": [
-            "La montaña no habla. Pero escucha todo.",
-            "El viento dice la verdad que los hombres callan.",
-            "He visto esto antes. Muchas veces.",
-            "La paciencia del cóndor es su mayor fuerza.",
-            "Mira más lejos. El horizonte tiene la respuesta.",
-            "Los que vuelan alto ven las conexiones que otros no ven.",
-            "El silencio del cóndor no es vacío. Es sabiduría.",
-            "Cada montaña tiene dos lados. No olvides el otro.",
-            "El tiempo enseña lo que las palabras no pueden.",
-            "No todo lo que brilla en la distancia es oro.",
-            "La nieve de la cumbre recuerda lo que el valle olvida.",
-            "Un ojo ve el presente. El otro ve lo que fue.",
-            "Desde arriba, el camino se ve diferente.",
-            "La misma historia cambia según quién la cuenta."
-        ],
-        "char_delfin_rosado": [
-            "¿Estás seguro de lo que oíste? Yo escuché otra cosa.",
-            "A veces la verdad se esconde en la broma.",
-            "El río cambia de forma, pero siempre es el mismo río.",
-            "Yo he sido pez, he sido hombre, he sido sueño.",
-            "Cuidado con las sonrisas que no llegan a los ojos.",
-            "Lo que ves en la superficie no es lo que hay abajo.",
-            "La ironía es el idioma de los que ven demasiado.",
-            "¿Quieres la verdad? Primero aprende a nadar en la mentira.",
-            "Cada reflejo en el agua cuenta una historia diferente.",
-            "Yo juego con las palabras porque las palabras juegan con todos.",
-            "No me busques donde me viste. Ya cambié de forma.",
-            "Las mejores preguntas no tienen una sola respuesta.",
-            "El que ríe último entiende más. Confía en mí.",
-            "Si pudieras ver lo que yo veo debajo del agua...",
-            "No todo es lo que parece, amigo.",
-            "Las palabras pueden mentir. El agua no."
-        ],
-        "char_tortuga_marina": [
-            "He nadado por todos los océanos. Todo está conectado.",
-            "La paciencia no es esperar. Es saber que todo llega.",
-            "Las olas vienen y van. Las historias también.",
-            "Cada grano de arena fue una montaña hace millones de años.",
-            "No corras. El camino largo enseña más que el corto.",
-            "El coral crece un centímetro por año. Y construye arrecifes enteros.",
-            "Las corrientes más profundas son las más fuertes.",
-            "Yo puse mis huevos en esta playa hace cien años.",
-            "La memoria del mar es más larga que la memoria de los hombres.",
-            "Cuando el mar se calla, es cuando más dice.",
-            "Cada ola que rompe en la costa trae un mensaje antiguo.",
-            "La prisa es enemiga de la comprensión.",
-            "El agua recuerda cada barco que la cruzó.",
-            "Respira. El mar te enseñará si lo dejas.",
-            "Algunas historias necesitan toda una vida para contarse.",
-            "El mar no tiene prisa. Tú tampoco deberías."
+        "char_yaguara": [
+            "El sonido del mar dentro del caracol. El eco repite lo que el mundo cantó.",
+            "Escucha, viajero. Estamos cerca del final.",
+            "¿Qué repite el eco?"
         ]
     },
     "_expansionStats": {

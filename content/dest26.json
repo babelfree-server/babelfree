@@ -1973,47 +1973,51 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
-        "char_tortuga_marina": {
-            "name": "Tortuga Marina",
+        "char_dona_asuncion": {
+            "name": "Doña Asunción",
             "avatar": "🐢",
             "voice": "Paciente, oceánica, ancestral. Habla despacio, con la sabiduría de los siglos.",
-            "role": "Guía de la paciencia — enseña que las historias necesitan tiempo"
+            "role": "Guía de la paciencia — enseña que las historias necesitan tiempo",
+            "id": "char_dona_asuncion"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Aquí las cosas no son lo que parecen.",
-            "Vamos por este lado, es más seguro.",
-            "Escucha bien, Yaguará. Esto es importante.",
-            "Mi comunidad lleva generaciones aquí.",
-            "Las palabras bonitas a veces esconden mentiras.",
-            "Yo sé quién es ese hombre. No confío en él.",
-            "Mira cómo cambia el color del agua.",
-            "Mi mamá siempre decía: primero escucha, después habla.",
-            "No tengas miedo. Yo estoy aquí contigo.",
-            "Este bosque tiene memoria. Yo lo siento.",
-            "Hay cosas que no se dicen con palabras.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó a leer el río."
+            "Mi abuela me contó algo sobre lugares como Chicaque, Cundinamarca.",
+            "Cada lugar como Chicaque, Cundinamarca tiene un secreto. Solo hay que saber preguntar.",
+            "Chicaque, Cundinamarca me recuerda algo que mi mamá contaba.",
+            "Las palabras cambian según quién las dice aquí en Chicaque, Cundinamarca.",
+            "Quiero escribir sobre Chicaque, Cundinamarca algún día.",
+            "En mi pueblo es diferente. Allá no tenemos el bosque como en Chicaque, Cundinamarca.",
+            "Lo que más me gusta de Chicaque, Cundinamarca es lo que no esperaba encontrar.",
+            "Cada paso en el destino 26, Chicaque, Cundinamarca, tiene significado."
         ],
-        "char_tortuga_marina": [
-            "Cada grano de arena fue una montaña hace millones de años.",
-            "No corras. El camino largo enseña más que el corto.",
-            "El coral crece un centímetro por año. Y construye arrecifes enteros.",
-            "Las corrientes más profundas son las más fuertes.",
-            "Yo puse mis huevos en esta playa hace cien años.",
-            "La memoria del mar es más larga que la memoria de los hombres.",
-            "Cuando el mar se calla, es cuando más dice.",
-            "Cada ola que rompe en la costa trae un mensaje antiguo.",
-            "La prisa es enemiga de la comprensión.",
-            "El agua recuerda cada barco que la cruzó.",
-            "Respira. El mar te enseñará si lo dejas.",
-            "Algunas historias necesitan toda una vida para contarse.",
-            "El mar no tiene prisa. Tú tampoco deberías.",
-            "He nadado por todos los océanos. Todo está conectado."
+        "char_dona_asuncion": [
+            "Cada grano de arena de Chicaque, Cundinamarca conoce mi nombre.",
+            "La profundidad del mar cerca de Chicaque, Cundinamarca guarda lo que la superficie olvida.",
+            "Mi caparazón ha tocado las aguas de Chicaque, Cundinamarca cientos de veces.",
+            "Lo que parece fragilidad cerca de Chicaque, Cundinamarca es resistencia acumulada.",
+            "Lo que Chicaque, Cundinamarca no puede enseñarte con prisa, yo te lo enseño con lentitud.",
+            "He nadado más lento que nadie hacia Chicaque, Cundinamarca, y por eso he llegado más lejos.",
+            "La corriente más fuerte cerca de Chicaque, Cundinamarca no es la del agua sino la de la paciencia.",
+            "La arena de Chicaque, Cundinamarca donde nací me espera cada vez que regreso.",
+            "Lo que el mar de Chicaque, Cundinamarca me enseñó es que todo regresa.",
+            "Las estrellas me guían hacia Chicaque, Cundinamarca. Antes de los barcos, ya había tortugas."
+        ],
+        "char_yaguara": [
+            "Viajero, algo nuevo nos espera. The forest shows its scars — passive voice. 'Los árboles fueron cortados. La car",
+            "Hoy aprendemos: passive voice (fue construido, se destruyó). El español crece con nosotras."
         ]
     },
     "_expansionStats": {
@@ -8390,6 +8394,48 @@
                     "hint": "Me siento...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Quién hizo esto? ¿Quién lo deshizo?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste hoy?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Yo creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías tú?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante de esta historia?",
+                    "hint": "Lo más importante es...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué necesita el mundo?",
+                    "hint": "El mundo necesita que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes ahora?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -8757,7 +8803,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 4 letras que empieza con «D». ¿Cuál es?",
+                    "riddle": "El muro de Chicaque, Cundinamarca tiene letras talladas. 4 letras, empieza con «D».",
                     "answer": "dure",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -8784,12 +8830,12 @@
                         "consecuencia",
                         "candelabros"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «La voz pasiva del bosque»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 11 letras.",
+                    "riddle": "Los caminantes de Chicaque, Cundinamarca dejan una palabra en cada piedra del camino.",
                     "answer": "encendieran",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -8798,14 +8844,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Cuenta — La voz pasiva del bosque",
-            "instruction": "Escribe tu reflexión.",
+            "title": "El silencio de Chicaque",
+            "instruction": "Candelaria abre su cuaderno y te mira. El bosque de niebla escucha.",
             "prompts": [
-                "¿Quién hizo esto? ¿Quién lo deshizo?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?",
-                "¿Qué es lo más importante?"
+                "¿Por qué es importante proteger un bosque de niebla como Chicaque? ¿Qué pasaría si desapareciera?",
+                "Compara el silencio de Chicaque con el ruido de Bogotá, que está a solo una hora. ¿Qué necesitamos más?",
+                "Un turista te pregunta por qué los árboles de Chicaque están cubiertos de musgo. Explícale.",
+                "Si el musgo de Chicaque pudiera hablar, ¿qué diría sobre la humedad, la luz y el tiempo?"
+            ],
+            "vocabulary": [
+                "bosque",
+                "niebla",
+                "musgo",
+                "silencio",
+                "colibrí",
+                "húmedo",
+                "reserva",
+                "proteger",
+                "sendero",
+                "canopy"
             ]
         },
         {

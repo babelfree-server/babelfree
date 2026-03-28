@@ -1974,47 +1974,53 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
-        "char_condor_viejo": {
-            "name": "Cóndor Viejo",
+        "char_dona_asuncion": {
+            "name": "Doña Asunción",
             "avatar": "🦅",
             "voice": "Silencioso, sabio, un ojo nublado. Habla poco pero cada palabra pesa.",
-            "role": "Guía de la perspectiva — ve desde arriba, conoce el panorama"
+            "role": "Guía de la perspectiva — ve desde arriba, conoce el panorama",
+            "id": "char_dona_asuncion"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Hay cosas que no se dicen con palabras.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó a leer el río.",
-            "El río es sagrado para mi pueblo.",
-            "No le creas todo lo que dice.",
-            "Aquí las cosas no son lo que parecen.",
-            "Vamos por este lado, es más seguro.",
-            "Escucha bien, Yaguará. Esto es importante.",
-            "Mi comunidad lleva generaciones aquí.",
-            "Las palabras bonitas a veces esconden mentiras.",
-            "Yo sé quién es ese hombre. No confío en él.",
-            "Mira cómo cambia el color del agua.",
-            "Mi mamá siempre decía: primero escucha, después habla."
+            "Quiero escribir sobre Mompox, Bolívar algún día.",
+            "A veces pienso que viajar por Bolívar es como aprender otro idioma.",
+            "Cada lugar como Mompox, Bolívar tiene un secreto. Solo hay que saber preguntar.",
+            "Lo que más me gusta de Mompox, Bolívar es lo que no esperaba encontrar.",
+            "En mi pueblo es diferente. Allá no tenemos la costa como en Mompox, Bolívar.",
+            "Hay cosas en Bolívar que solo se entienden cuando las vives.",
+            "Las historias de la gente de Bolívar son más interesantes que los monumentos.",
+            "¿Por qué la gente de Bolívar habla de esa manera?",
+            "Mi abuela me contó algo sobre lugares como Mompox, Bolívar.",
+            "Mompox, Bolívar me recuerda algo que mi mamá contaba."
         ],
-        "char_condor_viejo": [
-            "Los que vuelan alto ven las conexiones que otros no ven.",
-            "El silencio del cóndor no es vacío. Es sabiduría.",
-            "Cada montaña tiene dos lados. No olvides el otro.",
-            "El tiempo enseña lo que las palabras no pueden.",
-            "No todo lo que brilla en la distancia es oro.",
-            "La nieve de la cumbre recuerda lo que el valle olvida.",
-            "Un ojo ve el presente. El otro ve lo que fue.",
-            "Desde arriba, el camino se ve diferente.",
-            "La misma historia cambia según quién la cuenta.",
-            "La montaña no habla. Pero escucha todo.",
-            "El viento dice la verdad que los hombres callan.",
-            "He visto esto antes. Muchas veces.",
-            "La paciencia del cóndor es su mayor fuerza.",
-            "Mira más lejos. El horizonte tiene la respuesta."
+        "char_dona_asuncion": [
+            "La distancia entre el cielo y Mompox, Bolívar es la distancia entre ver y comprender.",
+            "Vuelo en círculos sobre Mompox, Bolívar buscando lo que la tierra esconde.",
+            "Lo que el cóndor ve sobre Mompox, Bolívar, ningún caminante lo imagina.",
+            "El aire de Mompox, Bolívar tiene una historia que solo el cóndor lee.",
+            "Lo que parece laberinto cerca de Mompox, Bolívar desde abajo es camino desde arriba.",
+            "La altura sobre Mompox, Bolívar enseña perspectiva, no superioridad.",
+            "El silencio a esta altura sobre Mompox, Bolívar es la voz más clara.",
+            "Lo que Mompox, Bolívar esconde en sus valles, yo lo revelo desde las nubes.",
+            "He volado sobre guerras olvidadas cerca de Mompox, Bolívar.",
+            "La cumbre más alta cerca de Mompox, Bolívar no es la más visible."
+        ],
+        "char_yaguara": [
+            "Viajero, algo nuevo nos espera. Doña Asunción speaks in memories. Reported speech: 'Mi abuela dijo que escuchara",
+            "Hoy aprendemos: reported speech (dijo que, me contó que). El español crece con nosotras."
         ]
     },
     "_expansionStats": {
@@ -8131,6 +8137,48 @@
                     "hint": "Me siento...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué te dijeron que recordaras?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste hoy?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Yo creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías tú?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante de esta historia?",
+                    "hint": "Lo más importante es...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué necesita el mundo?",
+                    "hint": "El mundo necesita que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes ahora?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -8498,7 +8546,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 7 letras que empieza con «S». ¿Cuál es?",
+                    "riddle": "Una mariposa en Mompox, Bolívar lleva una palabra en sus alas. 7 letras: «S...».",
                     "answer": "sigamos",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -8525,12 +8573,12 @@
                         "mapaná",
                         "cotante"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Lo que otros dijeron»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 6 letras.",
+                    "riddle": "El puente sobre Mompox, Bolívar necesita una palabra para cruzar.",
                     "answer": "ejcura",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -8539,14 +8587,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Cuenta — Lo que otros dijeron",
-            "instruction": "Escribe tu reflexión.",
+            "title": "El río que se abre en Mompox",
+            "instruction": "Candelaria abre su cuaderno y te mira. El río Magdalena se divide aquí.",
             "prompts": [
-                "¿Qué te dijeron que recordaras?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?",
-                "¿Qué es lo más importante?"
+                "¿Por qué Mompox es Patrimonio de la Humanidad? ¿Qué la hace diferente de otras ciudades coloniales?",
+                "Compara Mompox con un pueblo colonial de tu país. ¿Qué los conecta? ¿Qué los separa?",
+                "Un turista quiere comprar filigrana momposina. Explícale qué es y por qué es especial.",
+                "Si el río Magdalena pudiera hablar al pasar por Mompox, ¿qué historia contaría?"
+            ],
+            "vocabulary": [
+                "filigrana",
+                "río",
+                "patrimonio",
+                "colonial",
+                "joyería",
+                "Semana Santa",
+                "brazo",
+                "artesano",
+                "oro",
+                "calor"
             ]
         },
         {

@@ -1910,47 +1910,53 @@
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
         },
         "char_don_prospero": {
             "name": "Don Próspero",
             "avatar": "👨‍💼",
             "voice": "Encantador, persuasivo, registro formal. Cita poesía pero construye carreteras. Oraciones complejas.",
-            "role": "Antagonista ambiguo — trae progreso pero destruye el bosque"
+            "role": "Antagonista ambiguo — trae progreso pero destruye el bosque",
+            "id": "char_don_prospero"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_candelaria": [
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó a leer el río.",
-            "El río es sagrado para mi pueblo.",
-            "No le creas todo lo que dice.",
-            "Aquí las cosas no son lo que parecen.",
-            "Vamos por este lado, es más seguro.",
-            "Escucha bien, Yaguará. Esto es importante.",
-            "Mi comunidad lleva generaciones aquí.",
-            "Las palabras bonitas a veces esconden mentiras.",
-            "Yo sé quién es ese hombre. No confío en él.",
-            "Mira cómo cambia el color del agua.",
-            "Mi mamá siempre decía: primero escucha, después habla.",
-            "No tengas miedo. Yo estoy aquí contigo.",
-            "Este bosque tiene memoria. Yo lo siento."
+            "Lo que otros llaman pobreza en Huila, yo lo llamo otra forma de riqueza.",
+            "Lo que la gente dice de Desierto de la Tatacoa, Huila suena bonito, pero esconde algo.",
+            "Yo creo que el poder más grande es contar tu propia historia sobre Huila.",
+            "El silencio de esta comunidad en Desierto de la Tatacoa, Huila es una forma de resistencia.",
+            "Hay una historia detrás de cada silencio en Huila.",
+            "Lo que más me frustra de Huila es no tener las palabras exactas para lo que siento.",
+            "La diferencia entre un turista y un viajero en Huila es la capacidad de escuchar.",
+            "Quiero que mi escritura capture lo que vi en Desierto de la Tatacoa, Huila.",
+            "Me niego a aceptar que el progreso en Desierto de la Tatacoa, Huila tenga que destruir la memoria.",
+            "He estado pensando en lo que significa pertenecer a un lugar como Huila."
         ],
         "char_don_prospero": [
-            "Miren cómo viven. Merecen algo mejor.",
-            "Les doy mi palabra: nadie va a perder su casa.",
-            "La naturaleza es generosa, pero hay que saber usarla.",
-            "El progreso necesita sacrificio, amigos míos.",
-            "Yo también amo estos árboles, pero hay que ser prácticos.",
-            "Mi madre era de aquí. Conozco esta tierra.",
-            "Buenos días. Vengo a traer oportunidades.",
-            "El camino nuevo va a cambiar la vida de todos.",
-            "Confíen en mí. Yo sé lo que este pueblo necesita.",
-            "Las escuelas, los hospitales... todo eso necesita un camino.",
-            "No soy el enemigo. Soy el que trae soluciones.",
-            "¿Quién no quiere trabajo para sus hijos?",
-            "El pasado es hermoso, pero no se puede vivir en él.",
-            "Yo hago lo que el gobierno no hace."
+            "Lo que no les dicen sobre Desierto de la Tatacoa, Huila los ambientalistas es cuánta gente muere de pobreza.",
+            "Lo que ven como ambición en Desierto de la Tatacoa, Huila, yo lo veo como responsabilidad.",
+            "Mi proyecto en Huila incluye compensación ambiental y reubicación digna.",
+            "Las comunidades de Huila merecen elegir su futuro, no que otros lo elijan.",
+            "La complejidad del desarrollo de Huila no se resuelve con slogans ecológicos.",
+            "El ambientalismo romántico de Desierto de la Tatacoa, Huila es una posición cómoda para el que tiene el estómago lleno.",
+            "Hay dos tipos de personas en Desierto de la Tatacoa, Huila: las que construyen y las que critican.",
+            "Yo no destruyo Desierto de la Tatacoa, Huila. Lo transformo en oportunidades.",
+            "¿Saben cuánto vale Desierto de la Tatacoa, Huila en el mercado internacional?",
+            "Lo que Huila necesita no es preservación sino transformación inteligente."
+        ],
+        "char_yaguara": [
+            "Viajero, estamos en B2. Las palabras son más profundas. Hay un lugar donde van las cosas olvidadas. Pero si las nomb",
+            "¿Qué pasa cuando olvidas un nombre?"
         ]
     },
     "_expansionStats": {
@@ -9278,6 +9284,48 @@
                     "hint": "Lo más importante es que...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Qué pasa cuando olvidas un nombre?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "Creo que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué harías?",
+                    "hint": "Yo haría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Estás de acuerdo?",
+                    "hint": "Sí/No, porque...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué aprendiste?",
+                    "hint": "Aprendí que...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo te sientes?",
+                    "hint": "Me siento...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué cambiarías?",
+                    "hint": "Cambiaría...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué es lo más importante?",
+                    "hint": "Lo más importante es que...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -9642,7 +9690,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 8 letras que empieza con «S». ¿Cuál es?",
+                    "riddle": "Un pergamino enterrado en Desierto de la Tatacoa, Huila dice: _ _ _ . 8 letras, la primera es «S».",
                     "answer": "silencio",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -9669,12 +9717,12 @@
                         "salvar",
                         "recorrimos"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «La habitación donde se olvida»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "El río susurra un nombre. Escucha bien. La palabra tiene 10 letras.",
+                    "riddle": "El oráculo de Desierto de la Tatacoa, Huila habla solo una vez. Empieza con «10».",
                     "answer": "abandonada",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -9683,13 +9731,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "Las estrellas de la Tatacoa",
+            "instruction": "El cuaderno se abre solo. El desierto tiene la noche más clara.",
             "prompts": [
-                "¿Qué pasa cuando olvidas un nombre?",
-                "¿Qué aprendiste?",
-                "¿Cómo te sientes?",
-                "¿Qué harías diferente?"
+                "¿Debe el Desierto de la Tatacoa cambiar para recibir más turistas, o debe quedarse como está? Argumenta.",
+                "Escribe la historia del desierto desde la perspectiva de un astrónomo que mira las estrellas cada noche.",
+                "¿Qué perdería Colombia si la Tatacoa se convirtiera en una zona urbana? Piensa en el cielo, la tierra, el silencio.",
+                "Inventa una leyenda sobre cómo el desierto de la Tatacoa se volvió rojo y gris."
+            ],
+            "vocabulary": [
+                "desierto",
+                "estrella",
+                "rojo",
+                "gris",
+                "observatorio",
+                "astronomía",
+                "fantasma",
+                "cielo",
+                "nocturno",
+                "erosión"
             ]
         },
         {

@@ -580,6 +580,48 @@
                     "hint": "...",
                     "accepts": []
                 }
+            ],
+            "exchanges": [
+                {
+                    "prompt": "¿Cómo se cuida una palabra?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo se cuida una palabra?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo se cuida una palabra?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Cómo se cuida una palabra?",
+                    "hint": "...",
+                    "accepts": []
+                },
+                {
+                    "prompt": "¿Qué opinas?",
+                    "hint": "...",
+                    "accepts": []
+                }
             ]
         },
         {
@@ -904,7 +946,7 @@
                 {
                     "type": "wordlock",
                     "prompt": "La cerradura de letras",
-                    "riddle": "En la pared hay letras talladas. Una palabra de 6 letras que empieza con «C». ¿Cuál es?",
+                    "riddle": "Una mariposa en Providencia, Archipiélago lleva una palabra en sus alas. 6 letras: «C...».",
                     "answer": "cuidar",
                     "hint": "Es una palabra importante de este destino."
                 },
@@ -931,12 +973,12 @@
                         "integration",
                         "full"
                     ],
-                    "hint": "Piensa en el tema de «."
+                    "hint": "Piensa en el tema de «Cuidar la palabra»."
                 },
                 {
                     "type": "wordlock",
                     "prompt": "La llave final",
-                    "riddle": "Don Próspero bloquea la salida. Solo una palabra lo vence. Empieza con «R».",
+                    "riddle": "La marea en Providencia, Archipiélago sube y baja. La palabra queda en la arena.",
                     "answer": "register",
                     "hint": "Es la última palabra de este destino."
                 }
@@ -945,12 +987,25 @@
         {
             "type": "cronica",
             "label": "Crónica",
-            "title": "Reflexión",
-            "instruction": "Escribe.",
+            "title": "Tres lenguas en Providencia",
+            "instruction": "El jaguar espera tu voz. Aquí tres idiomas se trenzan como la corriente.",
             "prompts": [
-                "¿Cómo se cuida una palabra?",
-                "¿Qué aprendiste?",
-                "¿Cómo te transformaste?"
+                "Analiza qué significa que en Providencia convivan el creole, el español y el inglés. ¿Qué dice sobre Colombia?",
+                "Escribe una crónica periodística sobre la reconstrucción de Providencia después del huracán Iota.",
+                "¿Cómo se cruzan la destrucción (huracán Iota) y la reconstrucción en la identidad de Providencia?",
+                "Si fueras guía de Providencia, ¿qué historia contarías sobre cómo la isla renació después de la tormenta?"
+            ],
+            "vocabulary": [
+                "creole",
+                "huracán",
+                "reconstrucción",
+                "coral",
+                "barrera",
+                "trilingüe",
+                "resiliencia",
+                "pico",
+                "isla",
+                "identidad"
             ]
         },
         {
@@ -2195,51 +2250,53 @@
             "name": "Doña Asunción",
             "avatar": "🧓",
             "voice": "Serena, profunda, escuchadora. Habla con la calma de quien ha oído todas las historias.",
-            "role": "Mentora — la última escuchadora, guarda la memoria del territorio"
+            "role": "Mentora — la última escuchadora, guarda la memoria del territorio",
+            "id": "char_dona_asuncion"
         },
         "char_candelaria": {
             "name": "Candelaria",
             "avatar": "👩🏿",
             "voice": "Directa, protectora, conocedora del territorio. Habla español completo. Guía y traductora.",
-            "role": "Guía y puente — traduce entre mundos, protege a Yaguará"
+            "role": "Guía y puente — traduce entre mundos, protege a Yaguará",
+            "id": "char_candelaria"
+        },
+        "char_yaguara": {
+            "id": "char_yaguara",
+            "name": "Yaguará",
+            "avatar": "img/characters/yaguara.jpg",
+            "voice": "quiet-strong",
+            "role": "protagonist",
+            "description": "Jaguar hembra. Habla poco pero cada palabra tiene peso."
         }
     },
     "characterLines": {
         "char_dona_asuncion": [
-            "El silencio entre las palabras es donde vive la verdad.",
-            "Cuando yo me vaya, alguien tiene que seguir escuchando.",
-            "Las historias que no se cuentan se convierten en olvido.",
-            "Mi abuela me enseñó que escuchar es más difícil que hablar.",
-            "El río me cuenta cosas que los libros no saben.",
-            "Cada persona que pasa por aquí deja una historia en el agua.",
-            "No tengas prisa por entender. La comprensión llega sola.",
-            "Las raíces más profundas son las que sostienen el árbol en la tormenta.",
-            "Escuchar no es oír. Escuchar es sentir con todo el cuerpo.",
-            "Hija, tú llevas las historias de todos los que conociste.",
-            "Te he esperado, hija.",
-            "Escucha lo que el bosque dice cuando crees que no habla.",
-            "Hay una palabra que no tiene traducción en ningún idioma.",
-            "Las palabras tienen memoria. Cada una recuerda quién la dijo primero.",
-            "Todo tiene su tiempo. Las prisas rompen las historias.",
-            "Yo escuché las voces de tres generaciones junto a este río."
+            "La tradición de San Andrés y Providencia es una conversación entre los muertos, los vivos y los que vendrán.",
+            "Lo que Don Próspero no comprende es que la riqueza de Providencia, Archipiélago se destruye al extraerla.",
+            "Cada generación en San Andrés y Providencia pierde una palabra. Nosotros decidimos cuál recuperamos.",
+            "Hay un silencio en San Andrés y Providencia que contiene más información que todos los libros.",
+            "Lo que me preocupa de San Andrés y Providencia no es morir sino que lo que sé muera conmigo.",
+            "La resistencia más poderosa en Providencia, Archipiélago es la persistencia de la memoria.",
+            "Yo no cuento historias de Providencia, Archipiélago por nostalgia. Las cuento porque el futuro las necesita.",
+            "El verdadero progreso en Providencia, Archipiélago no elimina lo antiguo: lo integra.",
+            "La sabiduría ancestral de Providencia, Archipiélago no es reliquia: es código que la modernidad no descifra.",
+            "La oralidad de San Andrés y Providencia no es una forma inferior: es una forma distinta de verdad."
         ],
         "char_candelaria": [
-            "Mi mamá siempre decía: la tierra no nos pertenece, nosotros pertenecemos a la tierra.",
-            "No tengas miedo. Mi pueblo ha enfrentado cosas peores.",
-            "Hay verdades que solo se entienden cuando las vives.",
-            "El problema no es el progreso. El problema es quién decide qué es progreso.",
-            "Cada árbol que cae es una historia que se pierde para siempre.",
-            "Yo no necesito que me protejan. Necesito que me escuchen.",
-            "Yo conozco este lugar mejor que nadie.",
-            "Ten cuidado con lo que dice ese hombre.",
-            "Mi abuela me enseñó que el silencio también habla.",
-            "El río es sagrado para mi pueblo, y nadie va a cambiar eso.",
-            "No le creas todo lo que dice. Las palabras bonitas son su arma.",
-            "Aquí las cosas no son lo que parecen. Hay que mirar más profundo.",
-            "Cada generación de mi familia protegió este territorio.",
-            "Escucha bien, Yaguará. Lo que está en juego es más grande que nosotras.",
-            "Mi comunidad ha resistido durante siglos. No vamos a rendirnos ahora.",
-            "Las promesas de Don Próspero son como la niebla: desaparecen con el sol."
+            "He aprendido en Providencia, Archipiélago a desconfiar de las narrativas simples sobre lugares complejos.",
+            "Hay comunidades en San Andrés y Providencia que llevan siglos practicando lo que la academia acaba de descubrir.",
+            "Cada historia que recojo en San Andrés y Providencia me impone una responsabilidad: contarla sin distorsionarla.",
+            "La escritura me ha enseñado que nombrar Providencia, Archipiélago con precisión es un acto revolucionario.",
+            "El español que hablo ahora en San Andrés y Providencia no es el mismo que hablaba al empezar el viaje.",
+            "Lo que estas comunidades de San Andrés y Providencia saben sobre la lengua supera cualquier lingüística formal.",
+            "Mi cuaderno sobre Providencia, Archipiélago ya no es un registro sino un diálogo con lo que me transforma.",
+            "Lo que Providencia, Archipiélago me revela es que la geografía moldea el lenguaje.",
+            "Las palabras que no existen para Providencia, Archipiélago señalan lo que San Andrés y Providencia protege con el silencio.",
+            "Lo que quiero es que mi escritura sobre Providencia, Archipiélago sea un puente, no un muro."
+        ],
+        "char_yaguara": [
+            "Cuidar la palabra es el oficio de Yaguará. Nombrar. Proteger. Escuchar. Cuidar.",
+            "¿Cómo se cuida una palabra?"
         ]
     },
     "_expansionStats": {
