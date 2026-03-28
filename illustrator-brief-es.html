@@ -423,6 +423,19 @@
             margin-top: 12px;
         }
 
+        .ai-note {
+            background: linear-gradient(135deg, #1A1A4E 0%, #2C1654 100%);
+            color: #C0C0D0;
+            border-left: 4px solid #7C4DFF;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .ai-note strong { color: #B388FF; }
+        .ai-note::before { content: '🤖 '; }
+
         /* --- ENVIRONMENT CARDS --- */
         .env-card {
             border-radius: 12px;
@@ -990,6 +1003,8 @@
 
     <p>Cada personaje se entrega como un <strong>sprite independiente</strong> sobre fondo transparente, 800px de alto. El motor del juego los posiciona sobre los fondos de ecosistema. Cada personaje necesita <strong>tres poses</strong> que cubran su rango emocional. No son ilustraciones de escena &mdash; son sprites vers&aacute;tiles que funcionan en muchos contextos.</p>
 
+    <div class="ai-note"><strong>Flujo asistido por IA:</strong> Los generadores de im&aacute;genes con IA tienen dificultades con el dise&ntilde;o consistente de personajes entre poses. Recomendamos dibujar personajes de forma tradicional (o en Procreate/Photoshop). Sin embargo, la IA puede ayudar con: (1) generar poses de referencia y lenguaje corporal, (2) probar variaciones de color en vestimenta, (3) crear sprites limpios sin fondo a partir de bocetos mediante herramientas como remove.bg o Photoshop AI.</div>
+
     <!-- Yaguar&aacute; -->
     <div class="character-card protagonist">
         <div class="character-name">Yaguar&aacute;</div>
@@ -1143,6 +1158,8 @@
     </div>
 
     <p><strong>Estilo:</strong> Rico, atmosf&eacute;rico, pictórico. Cada uno debe evocar el paisaje colombiano REAL. Sin personajes en los fondos &mdash; estos se componen encima. Dejar &ldquo;zonas de personaje&rdquo; naturales (áreas despejadas en primer plano donde se colocar&aacute;n los sprites).</p>
+
+    <div class="ai-note"><strong>Flujo asistido por IA:</strong> Puedes usar Midjourney, DALL-E o Stable Diffusion para generar borradores iniciales de paisajes o explorar ambientes, y luego pintar encima para lograr la calidad final. La IA es excelente para bocetos r&aacute;pidos de composici&oacute;n y pruebas de paleta de color. El entregable final debe ser tu trabajo terminado a mano &mdash; la IA es la herramienta de boceto, no el pincel final.</div>
 
     <div class="env-card env-selva">
         <h4>1. Selva (Choc&oacute; / Amazonas)</h4>
@@ -1343,6 +1360,8 @@
 
     <h3>Capa 4: Filtros de ambiente</h3>
     <p>Tres filtros de color transl&uacute;cidos que transforman cualquier fondo de ecosistema en un mundo espec&iacute;fico. Se aplican usando <strong>modo de mezcla multiplicar</strong> en el motor del juego. Cada filtro es un PNG de 1920&times;1080 con transparencia alfa.</p>
+
+    <div class="ai-note"><strong>Flujo asistido por IA:</strong> Los filtros de ambiente son ideales para generaci&oacute;n con IA. Usa el relleno generativo de Photoshop para crear superposiciones de gradiente, o gen&eacute;ralos program&aacute;ticamente (gradientes CSS exportados como PNG). Estos son los entregables m&aacute;s simples y pueden iterarse r&aacute;pidamente con herramientas de color IA como Khroma o Coolors.</div>
 
     <div class="palette-group">
         <div class="palette-title">Filtro del Mundo de Abajo (A1&ndash;A2)</div>
@@ -1556,6 +1575,8 @@
     <div class="section-subtitle">Capa 3 &mdash; 25 objetos ilustrados + 4 estados de la rana</div>
 
     <p>Peque&ntilde;as ilustraciones detalladas y preciosas &mdash; utilería de juego e &iacute;conos de interfaz usados en los 34 tipos de juego. Cada uno es un objeto independiente sobre fondo transparente, entregado en tres formatos: PNG de 128&times;128, PNG de 256&times;256 y SVG. Estilo: org&aacute;nico, ilustrado, c&aacute;lido &mdash; coherente con el lenguaje visual de los fondos y personajes. <strong>No son &iacute;conos planos.</strong> Deben sentirse como objetos dibujados a mano de un c&oacute;dice bot&aacute;nico.</p>
+
+    <div class="ai-note"><strong>Flujo asistido por IA:</strong> Los &iacute;conos son un excelente caso de uso para generaci&oacute;n con IA. Herramientas como Midjourney pueden producir ilustraciones de objetos estilo c&oacute;dice bot&aacute;nico r&aacute;pidamente. Genera 3-5 variantes por &iacute;cono, luego selecciona y refina la mejor. La conversi&oacute;n a SVG puede hacerse con herramientas de vectorizaci&oacute;n (Adobe Illustrator Image Trace o Vectorizer.ai). El pulido final (peso de línea consistente, armon&iacute;a de color) debe ser manual.</div>
 
     <div class="icon-grid">
         <div class="icon-item"><strong>1. Libro (abierto)</strong> &mdash; <em>cumbres literarias, juegos de lectura</em></div>

@@ -423,6 +423,19 @@
             margin-top: 12px;
         }
 
+        .ai-note {
+            background: linear-gradient(135deg, #1A1A4E 0%, #2C1654 100%);
+            color: #C0C0D0;
+            border-left: 4px solid #7C4DFF;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .ai-note strong { color: #B388FF; }
+        .ai-note::before { content: '🤖 '; }
+
         /* --- ENVIRONMENT CARDS --- */
         .env-card {
             border-radius: 12px;
@@ -990,6 +1003,8 @@
 
     <p>Each character is delivered as a <strong>standalone sprite</strong> on a transparent background, 800px tall. The game engine positions them over the ecosystem backgrounds. Each character needs <strong>three poses</strong> that cover their emotional range. These are not scene illustrations &mdash; they are versatile sprites that work across many contexts.</p>
 
+    <div class="ai-note"><strong>AI-assisted workflow:</strong> AI image generators struggle with consistent character design across poses. We recommend drawing characters traditionally (or in Procreate/Photoshop). However, AI can help with: (1) generating reference poses and body language, (2) testing costume color variations, (3) creating background-removed clean sprites from rough sketches via tools like remove.bg or Photoshop AI.</div>
+
     <!-- Yaguará -->
     <div class="character-card protagonist">
         <div class="character-name">Yaguar&aacute;</div>
@@ -1143,6 +1158,8 @@
     </div>
 
     <p><strong>Style:</strong> Rich, atmospheric, painterly. Each must evoke the REAL Colombian landscape. No characters in the backgrounds &mdash; those are composited on top. Leave natural "character zones" (clear foreground areas where sprites can be placed).</p>
+
+    <div class="ai-note"><strong>AI-assisted workflow:</strong> You can use Midjourney, DALL-E, or Stable Diffusion to generate initial landscape drafts or mood explorations, then paint over them to achieve the final quality. AI is excellent for rapid composition sketches and color palette testing. The final deliverable must be your hand-finished work &mdash; AI is the sketch tool, not the final brush.</div>
 
     <div class="env-card env-selva">
         <h4>1. Selva (Choc&oacute; / Amazon)</h4>
@@ -1343,6 +1360,8 @@
 
     <h3>Layer 4: Mood Overlays</h3>
     <p>Three translucent color overlays that transform any ecosystem background into a specific world. Applied using <strong>multiply blend mode</strong> in the game engine. Each overlay is 1920&times;1080 PNG with alpha transparency.</p>
+
+    <div class="ai-note"><strong>AI-assisted workflow:</strong> Mood overlays are ideal for AI generation. Use Photoshop's AI generative fill to create gradient overlays, or generate them programmatically (CSS gradients exported as PNG). These are the simplest deliverables and can be iterated quickly with AI color tools like Khroma or Coolors.</div>
 
     <div class="palette-group">
         <div class="palette-title">Mundo de Abajo Overlay (A1&ndash;A2)</div>
@@ -1557,6 +1576,8 @@
 
     <p>Small, detailed, precious illustrations &mdash; game props and UI icons used across all 34 game types. Each is a standalone object on a transparent background, delivered in three formats: 128&times;128 PNG, 256&times;256 PNG, and SVG. Style: organic, illustrated, warm &mdash; consistent with the visual language of the backgrounds and characters. <strong>Not flat icons.</strong> These should feel like hand-drawn objects from a botanical codex.</p>
 
+    <div class="ai-note"><strong>AI-assisted workflow:</strong> Icons are an excellent use case for AI generation. Tools like Midjourney can produce botanical-codex-style object illustrations rapidly. Generate 3-5 variants per icon, then select and refine the best one. SVG conversion can be done with vectorization tools (Adobe Illustrator Image Trace, or Vectorizer.ai). The final polish (consistent line weight, color harmony) should be manual.</div>
+
     <div class="icon-grid">
         <div class="icon-item"><strong>1. Book (open)</strong> &mdash; <em>literary peaks, reading games</em></div>
         <div class="icon-item"><strong>2. Book (closed, golden)</strong> &mdash; <em>cuaderno, journal</em></div>
@@ -1605,6 +1626,8 @@
     <h3>&ldquo;Mi aventura por Colombia&rdquo; &mdash; Landmark Photography</h3>
     <p>The 89 Colombian landmark cards in the cuaderno (journal) use <strong>real photographs, not illustrations</strong>. These will be sourced from Unsplash, Pexels, and Wikimedia Commons &mdash; free, high-quality photography of real Colombian places. Format: 400&times;300 cropped cards.</p>
     <p><strong>This is NOT part of your deliverables.</strong> We mention it here so you understand that the landmark art is handled separately from your illustration work. Your scope is the 51 pieces described in this brief &mdash; no landmark drawings needed.</p>
+
+    <div class="ai-note"><strong>AI-assisted workflow (for our team, not the illustrator):</strong> AI image enhancement tools (Topaz Gigapixel, Adobe Enhance) can upscale Unsplash photos for high-DPI displays. AI can also generate consistent color grading across all 89 photos to match the game's visual language. For photos that don't exist (e.g., Selva de Matavén), AI can generate photorealistic landscape images as placeholders until real photos are sourced.</div>
 </section>
 
 <!-- ============================== 8. STYLE REFERENCES ============================== -->
