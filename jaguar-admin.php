@@ -1,3 +1,66 @@
+<?php
+// Server-side admin gate — page never renders for non-admins
+require_once __DIR__ . '/api/config/database.php';
+
+$token = null;
+if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+    $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
+} elseif (isset($_COOKIE['jaguarToken'])) {
+    $token = $_COOKIE['jaguarToken'];
+}
+
+// Also check the session from localStorage via a query param or cookie
+// But since this is a page load (not API), we rely on JS to pass the token
+// The real gate: if someone guesses the URL, they see a login prompt, not the data
+// All DATA is protected by the API (admin role check on /api/admin/*)
+// This PHP gate adds an extra password layer for the page itself
+
+$adminPassword = 'yaguara2026';  // Simple page-access password
+$inputPassword = $_POST['admin_pass'] ?? $_COOKIE['jaguar_admin_gate'] ?? null;
+
+if ($inputPassword !== $adminPassword) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['admin_pass'])) {
+        $error = 'Contraseña incorrecta';
+    }
+    ?>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin — Acceso restringido</title>
+        <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Inter',sans-serif; background:#0d0d0d; color:#e8d5b7; min-height:100vh; display:flex; align-items:center; justify-content:center; }
+        .gate { background:rgba(26,18,8,0.5); border:1px solid rgba(201,162,39,0.15); border-radius:16px; padding:40px; max-width:360px; width:100%; text-align:center; }
+        .gate h2 { color:#c9a227; font-size:18px; margin-bottom:8px; }
+        .gate p { font-size:13px; color:#b8a48a; margin-bottom:24px; }
+        .gate input { width:100%; padding:12px 16px; background:rgba(0,0,0,0.3); border:1px solid rgba(201,162,39,0.2); border-radius:8px; color:#e8d5b7; font-size:14px; margin-bottom:12px; }
+        .gate input:focus { outline:none; border-color:#c9a227; }
+        .gate button { width:100%; padding:12px; background:rgba(201,162,39,0.15); border:1px solid rgba(201,162,39,0.3); border-radius:8px; color:#c9a227; font-size:14px; font-weight:600; cursor:pointer; }
+        .gate button:hover { background:rgba(201,162,39,0.25); }
+        .error { color:#ef5350; font-size:13px; margin-bottom:12px; }
+        </style>
+    </head>
+    <body>
+        <div class="gate">
+            <h2>Panel de administración</h2>
+            <p>Ingresa la contraseña de administrador</p>
+            <?php if (!empty($error)): ?><div class="error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
+            <form method="POST">
+                <input type="password" name="admin_pass" placeholder="Contraseña" autofocus>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    <?php
+    exit;
+}
+
+// Set cookie so they don't need to re-enter on refresh (24h)
+setcookie('jaguar_admin_gate', $adminPassword, time() + 86400, '/elviajedeljaguar/admin', '', true, true);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
