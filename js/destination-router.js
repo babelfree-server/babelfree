@@ -415,6 +415,7 @@
                 var needsOverlay = eco && destNum >= FIRST_DEST_B1;
 
                 function proceed() {
+                  try {
                     updateChrome(meta, worldMeta);
 
                     var games = assembleGames(data, eco);
@@ -484,6 +485,10 @@
                         characterMeta: data.characterMeta || {},
                         ontology: ontology
                     });
+                  } catch (initErr) {
+                    showError('Error al iniciar: ' + (initErr.message || initErr));
+                    console.error('DestinationRouter proceed() error:', initErr);
+                  }
                 }
 
                 if (needsOverlay) {
