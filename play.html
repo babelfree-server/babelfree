@@ -67,7 +67,7 @@
         if (params.get('branch')) {
             /* Branch routing — handled by destination-router */
             var branchScript = document.createElement('script');
-            branchScript.src = 'js/destination-router.js?v=20260311';
+            branchScript.src = '/js/destination-router.js?v=20260311';
             document.body.appendChild(branchScript);
         } else if (params.get('mode') === 'practice') {
             /* Practice mode — show picker UI or launch dest-specific practice */
@@ -114,9 +114,9 @@
         } else {
             var script = document.createElement('script');
             if (params.get('dest')) {
-                script.src = 'js/destination-router.js?v=20260311';
+                script.src = '/js/destination-router.js?v=20260311';
             } else {
-                script.src = 'js/content-loader.js';
+                script.src = '/js/content-loader.js';
             }
             document.body.appendChild(script);
         }

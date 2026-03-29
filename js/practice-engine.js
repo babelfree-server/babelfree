@@ -760,7 +760,7 @@
     }
 
     function _loadAndLaunchReview(destNum, srs) {
-        fetch('content/dest' + destNum + '.json')
+        fetch('/content/dest' + destNum + '.json')
             .then(function(res) { return res.ok ? res.json() : null; })
             .then(function(data) {
                 if (!data) return;
@@ -782,7 +782,7 @@
         var promises = [];
         for (var i = 0; i < completed.length; i++) {
             promises.push(
-                fetch('content/dest' + completed[i] + '.json')
+                fetch('/content/dest' + completed[i] + '.json')
                     .then(function(res) { return res.ok ? res.json() : null; })
                     .catch(function() { return null; })
             );
@@ -813,7 +813,7 @@
         var promises = [];
         for (var i = 0; i < completed.length; i++) {
             promises.push(
-                fetch('content/dest' + completed[i] + '.json')
+                fetch('/content/dest' + completed[i] + '.json')
                     .then(function(res) { return res.ok ? res.json() : null; })
                     .catch(function() { return null; })
             );
