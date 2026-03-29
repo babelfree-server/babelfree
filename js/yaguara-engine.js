@@ -241,12 +241,12 @@
             }
         },
         _showFloatingReplay: function() {
-            var btn = document.getElementById('ygFloatingReplay');
-            if (btn) { btn.style.display = 'flex'; btn.style.opacity = '0'; setTimeout(function() { btn.style.opacity = '1'; }, 50); }
+            var btn = document.getElementById('ygRepeatNav') || document.getElementById('ygFloatingReplay');
+            if (btn) { btn.style.display = ''; btn.style.opacity = '1'; }
         },
         hideFloatingReplay: function() {
-            var btn = document.getElementById('ygFloatingReplay');
-            if (btn) { btn.style.opacity = '0'; setTimeout(function() { btn.style.display = 'none'; }, 300); }
+            var btn = document.getElementById('ygRepeatNav') || document.getElementById('ygFloatingReplay');
+            if (btn) { btn.style.display = 'none'; }
             this._lastSpoken = null;
             this._lastOpts = null;
         },
@@ -9828,19 +9828,15 @@
         },
 
         _initFloatingReplay: function() {
-            if (document.getElementById('ygFloatingReplay')) return;
-            var btn = document.createElement('button');
-            btn.id = 'ygFloatingReplay';
-            btn.setAttribute('aria-label', 'Repetir audio');
-            btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg><span style="font-size:9px;font-weight:600;letter-spacing:0.5px;margin-top:2px">Repetir</span>';
-            btn.style.cssText = 'display:none;flex-direction:column;align-items:center;justify-content:center;position:fixed;bottom:20px;right:20px;z-index:900;width:56px;height:56px;border-radius:50%;border:2px solid rgba(201,162,39,0.3);background:rgba(30,25,18,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#c9a84c;cursor:pointer;padding:0;box-shadow:0 4px 20px rgba(0,0,0,0.4),inset 0 1px 0 rgba(201,162,39,0.15);transition:all 0.3s ease;opacity:0;';
+            /* Use the inline nav repeat button instead of a floating one */
+            var btn = document.getElementById('ygRepeatNav');
+            if (!btn) return;
             btn.addEventListener('click', function(e) {
                 e.preventDefault(); e.stopPropagation();
                 if (Audio._lastSpoken) Audio.speak(Audio._lastSpoken, Audio._lastOpts);
             });
-            btn.addEventListener('mouseenter', function() { this.style.borderColor = '#c9a84c'; this.style.transform = 'scale(1.1)'; });
-            btn.addEventListener('mouseleave', function() { this.style.borderColor = 'rgba(201,162,39,0.3)'; this.style.transform = 'scale(1)'; });
-            document.body.appendChild(btn);
+            /* Store ref so showFloatingReplay/hideFloatingReplay can toggle it */
+            this._replayBtn = btn;
         },
 
         _initAudioPrompt: function() {
