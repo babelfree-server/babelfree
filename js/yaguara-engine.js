@@ -9017,7 +9017,9 @@
             var stage = document.getElementById('ygSkitStage');
             if (!stage) return;
             var self = this;
-            var text = (beat.text || '').replace(/\{nombre\}/g, state._nameStr);
+            var text = (beat.interaction === 'name_input')
+                ? (beat.text || '')
+                : (beat.text || '').replace(/\{nombre\}/g, state._nameStr);
 
             /* Build display text with target-word highlights */
             var displayText = text;
