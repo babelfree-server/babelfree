@@ -496,14 +496,13 @@
                 }
             })
             .catch(function(err) {
-                var msg = 'No se pudo cargar el destino. Intenta de nuevo.';
-                if (err.message && (err.message.indexOf('conexión') !== -1 || err.message.indexOf('offline') !== -1 || err.message.indexOf('Sin conexión') !== -1)) {
-                    msg = null; // Use offline-specific display
+                var errDetail = err ? (err.message || err.toString()) : 'unknown';
+                console.error('DestinationRouter FULL ERROR:', errDetail, err);
+                if (errDetail.indexOf('conexión') !== -1 || errDetail.indexOf('offline') !== -1 || errDetail.indexOf('Sin conexión') !== -1) {
                     showOffline();
                 } else {
-                    showError(msg);
+                    showError('No se pudo cargar el destino: ' + errDetail);
                 }
-                console.error('DestinationRouter:', err);
             });
     }
 
