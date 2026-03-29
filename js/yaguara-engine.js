@@ -9833,7 +9833,7 @@
             btn.id = 'ygFloatingReplay';
             btn.setAttribute('aria-label', 'Repetir audio');
             btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg><span style="font-size:9px;font-weight:600;letter-spacing:0.5px;margin-top:2px">Repetir</span>';
-            btn.style.cssText = 'display:none;flex-direction:column;align-items:center;justify-content:center;position:fixed;bottom:100px;right:20px;z-index:900;width:60px;height:60px;border-radius:50%;border:2px solid rgba(201,162,39,0.3);background:rgba(30,25,18,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#c9a84c;cursor:pointer;padding:0;box-shadow:0 4px 20px rgba(0,0,0,0.4),inset 0 1px 0 rgba(201,162,39,0.15);transition:all 0.3s ease;opacity:0;';
+            btn.style.cssText = 'display:none;flex-direction:column;align-items:center;justify-content:center;position:fixed;bottom:20px;right:20px;z-index:900;width:56px;height:56px;border-radius:50%;border:2px solid rgba(201,162,39,0.3);background:rgba(30,25,18,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#c9a84c;cursor:pointer;padding:0;box-shadow:0 4px 20px rgba(0,0,0,0.4),inset 0 1px 0 rgba(201,162,39,0.15);transition:all 0.3s ease;opacity:0;';
             btn.addEventListener('click', function(e) {
                 e.preventDefault(); e.stopPropagation();
                 if (Audio._lastSpoken) Audio.speak(Audio._lastSpoken, Audio._lastOpts);
