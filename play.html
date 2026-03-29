@@ -70,7 +70,7 @@
             branchScript.src = 'js/destination-router.js?v=20260311';
             document.body.appendChild(branchScript);
         } else if (params.get('mode') === 'practice') {
-            /* Practice mode — show picker UI */
+            /* Practice mode — show picker UI or launch dest-specific practice */
             var nav = document.getElementById('yaguaraNav');
             if (nav) nav.style.display = 'none';
             var progress = document.getElementById('yaguaraProgress');
@@ -78,7 +78,37 @@
             var titleEl = document.querySelector('.yg-header-title');
             if (titleEl) titleEl.textContent = 'Práctica';
             document.title = 'Práctica — El Viaje del Jaguar';
-            if (window.PracticeEngine) {
+
+            var practiceDest = params.get('dest');
+            if (practiceDest && window.PracticeEngine) {
+                /* Dest-specific practice: student came from the suggestion popup */
+                /* Load that destination's content and generate targeted practice */
+                var destNum = parseInt(practiceDest, 10);
+                if (destNum >= 1 && destNum <= 89) {
+                    var card = document.getElementById('yaguaraCard');
+                    card.innerHTML = '<div style="text-align:center;padding:2rem;color:#b8a48a;">Preparando práctica para destino ' + destNum + '...</div>';
+                    fetch('/content/dest' + destNum + '.json')
+                        .then(function(r) { return r.ok ? r.json() : null; })
+                        .then(function(data) {
+                            if (!data || !window.PracticeEngine) return;
+                            var srs = PracticeEngine._loadSRS ? PracticeEngine._loadSRS() : {};
+                            var games = PracticeEngine.generateDestinationReview
+                                ? PracticeEngine.generateDestinationReview(data, destNum, srs)
+                                : null;
+                            if (games && games.length > 0) {
+                                PracticeEngine._startEngine(games, data.meta || {}, 'review', destNum);
+                            } else {
+                                /* Fallback: show the picker with dest pre-selected */
+                                PracticeEngine.renderPicker(card);
+                            }
+                        })
+                        .catch(function() {
+                            PracticeEngine.renderPicker(document.getElementById('yaguaraCard'));
+                        });
+                } else {
+                    PracticeEngine.renderPicker(document.getElementById('yaguaraCard'));
+                }
+            } else if (window.PracticeEngine) {
                 PracticeEngine.renderPicker(document.getElementById('yaguaraCard'));
             }
         } else {

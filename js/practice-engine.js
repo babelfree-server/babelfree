@@ -915,6 +915,8 @@
         /* UI */
         renderPicker: renderPicker,
         launch: _launchPractice,
+        _startEngine: _startEngine,
+        _loadSRS: _loadSRS,
 
         /* Lifecycle */
         completeSession: function(mode, destNum) {

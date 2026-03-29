@@ -10020,8 +10020,10 @@
             }
 
             /* Build the suggestion card */
-            var level = (this._config && this._config.cefrLevel) || 'A1';
-            var practiceUrl = '/play?mode=practice&level=' + encodeURIComponent(level);
+            var level = (this._config && this._config.cefr) || (this._config && this._config.cefrLevel) || 'A1';
+            var destNum = (this._config && this._config.destNum) || '';
+            var practiceUrl = '/play?mode=practice&level=' + encodeURIComponent(level) +
+                (destNum ? '&dest=' + destNum : '');
 
             var card = document.createElement('div');
             card.className = 'yg-practice-suggestion';
