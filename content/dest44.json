@@ -4,10 +4,14 @@
         "title": "Candelaria elige",
         "cefr": "C1",
         "cefrSubLevel": "C1",
-        "closingQuestion": "¿Qué eliges cuando el camino se divide?",
+        "closingQuestion": "Si pudieras interpretar los sonidos de Punta Gallinas, La Guajira, ¿qué historia contarían?",
         "characters": [
             "char_yaguara",
-            "char_candelaria"
+            "char_candelaria",
+            "char_rio",
+            "char_mama_jaguar",
+            "char_dona_asuncion",
+            "char_don_prospero"
         ],
         "world": "mundoDeArriba",
         "campbellStage": "Reward — the choice that defines"
@@ -54,27 +58,31 @@
         "beats": [
             {
                 "speaker": "narrator",
-                "text": "C1: Candelaria elige. Candelaria elige estudiar leyes. Va a pelear contra Don Próspero con sus propias"
+                "text": "Manizales se asoma al borde del abismo. La ciudad se sostiene sobre laderas que desafían la gravedad y la lógica."
+            },
+            {
+                "speaker": "candelaria",
+                "text": "Aquí los caminos siempre se dividen. Uno sube al nevado, otro baja al café. ¿Cuál elijo? ¿Cuál me elige a mí?"
             },
             {
                 "speaker": "yaguara",
-                "text": "Candelaria elige estudiar leyes. Va a pelear contra Don Próspero con sus propias armas."
+                "text": "Elegir no es perder el otro camino, Candelaria. Es darle nombre al que tomas."
+            },
+            {
+                "speaker": "dona_asuncion",
+                "text": "Escucha bien, hija. El camino no se divide. Tú te divides. Y luego aprendes a ser entera de nuevo."
             },
             {
                 "speaker": "narrator",
-                "text": "Gramática: subjunctive in independent clauses (¡Ojalá!, ¡Que viva!, Quienquiera que)"
+                "text": "Desde la catedral, la ciudad se ve envuelta en un velo gris de nubes bajas. Pero el Nevado del Ruiz brilla arriba."
             },
             {
-                "speaker": "narrator",
-                "text": "El gris sigue presente. Pero la palabra de Yaguará también."
-            },
-            {
-                "speaker": "yaguara",
-                "text": "Escucha, viajero. Estamos cerca del final."
+                "speaker": "candelaria",
+                "text": "Entonces elijo las dos cosas: la montaña y el valle. El silencio y la palabra. El miedo y el paso."
             },
             {
                 "speaker": "yaguara",
-                "text": "¿Qué eliges cuando el camino se divide?"
+                "text": "Esa es la respuesta que el gris nunca entenderá. Porque el Silencio solo conoce la resta, no la suma."
             }
         ]
     },
@@ -2266,7 +2274,7 @@
         }
     ],
     "departure": {
-        "closingQuestion": "¿Qué eliges cuando el camino se divide?",
+        "closingQuestion": "Si pudieras interpretar los sonidos de Punta Gallinas, La Guajira, ¿qué historia contarían?",
         "yaguaraLine": "Candelaria elige estudiar leyes. Va a pelear contra Don Próspero con sus propias armas.",
         "button": "Continuar el viaje"
     },
@@ -2282,6 +2290,38 @@
             "name": "Candelaria",
             "role": "support",
             "id": "char_candelaria"
+        },
+        "char_rio": {
+            "id": "char_rio",
+            "name": "Río",
+            "avatar": "img/characters/rio.jpg",
+            "voice": "playful",
+            "role": "trickster-brother",
+            "description": "Hermano jaguar travieso."
+        },
+        "char_mama_jaguar": {
+            "id": "char_mama_jaguar",
+            "name": "Mamá Jaguar",
+            "avatar": "img/characters/mama_jaguar.jpg",
+            "voice": "ancient",
+            "role": "mother-wisdom",
+            "description": "Madre de Yaguará. Verdades cortas."
+        },
+        "char_dona_asuncion": {
+            "id": "char_dona_asuncion",
+            "name": "Doña Asunción",
+            "avatar": "img/characters/dona_asuncion.jpg",
+            "voice": "elderly-wise",
+            "role": "elder",
+            "description": "Anciana sabia del río."
+        },
+        "char_don_prospero": {
+            "id": "char_don_prospero",
+            "name": "Don Próspero",
+            "avatar": "img/characters/don_prospero.jpg",
+            "voice": "smooth-dangerous",
+            "role": "antagonist",
+            "description": "El que compra lo que no tiene precio."
         }
     },
     "characterLines": {
@@ -2318,6 +2358,42 @@
             "Cada historia que recojo en La Guajira me impone una responsabilidad: contarla sin distorsionarla.",
             "Lo que quiero es que mi escritura sobre Punta Gallinas, La Guajira sea un puente, no un muro.",
             "La escritura me ha enseñado que nombrar Punta Gallinas, La Guajira con precisión es un acto revolucionario."
+        ],
+        "char_rio": [
+            "En Punta Gallinas descubrí que la ironía es el último refugio de la inteligencia.",
+            "Jugar en Punta Gallinas no es evasión. Es la forma más directa de enfrentar lo real.",
+            "En Punta Gallinas, «Candelaria elige» es una verdad disfrazada de juego. Como todo lo que importa.",
+            "Lo absurdo de Punta Gallinas tiene más lógica que todo lo que llaman sentido común.",
+            "En Punta Gallinas la risa no es frivolidad: es la forma más valiente de resistir.",
+            "Punta Gallinas y «Candelaria elige» — dos formas de decir que lo importante nunca es obvio.",
+            "El paisaje de Punta Gallinas es una broma cósmica que tardé años en entender."
+        ],
+        "char_mama_jaguar": [
+            "La paradoja de Punta Gallinas es que cuanto más profundamente vas, más ligero te vuelves.",
+            "Las montañas de Punta Gallinas me enseñaron que la permanencia no es rigidez: es adaptación profunda.",
+            "En Punta Gallinas descubrí que la maternidad es la primera filosofía y la última poesía.",
+            "Aquí en Punta Gallinas comprendí que el amor maternal no protege del mundo: transforma al que lo recibe.",
+            "En Punta Gallinas, «Candelaria elige» me recordó que cada madre es un puente entre lo que fue y lo posible.",
+            "Aquí en Punta Gallinas comprendí que soltar es la forma más exigente de amar.",
+            "El paisaje de Punta Gallinas contiene una verdad incómoda: lo que no cuidamos, lo perdemos para siempre."
+        ],
+        "char_dona_asuncion": [
+            "En Punta Gallinas, la memoria colectiva es un río subterráneo que alimenta todo lo que se ve en la superficie.",
+            "La paradoja de Punta Gallinas es que solo valoramos genuinamente lo perdido cuando ya no podemos recuperarlo.",
+            "Aquí en Punta Gallinas, «Candelaria elige» contiene una crítica implícita a todo lo que llamamos progreso.",
+            "En La Guajira, la tradición oral es la forma más sofisticada e invisible de resistencia cultural.",
+            "Las generaciones de Punta Gallinas no se suceden linealmente: se superponen como capas geológicas complejas.",
+            "En Punta Gallinas, la historia oficial es una versión editada de lo que realmente pasó. Yo estuve allí.",
+            "El patrimonio intangible de Punta Gallinas es más frágil y más valioso que cualquier monumento de piedra."
+        ],
+        "char_don_prospero": [
+            "¿Crees que el lenguaje en Punta Gallinas es realmente libre? Todo tiene un precio, incluso las palabras.",
+            "Punta Gallinas me fascina genuinamente. Tanta belleza sin monetizar. Es casi un crimen ecológico.",
+            "Lo que Punta Gallinas no entiende es que la globalización no pide permiso cultural. Solo entra.",
+            "La ironía de Punta Gallinas es que cuanto más protegen su cultura, más valiosa la hacen para mí.",
+            "En La Guajira, la gente cree en la comunidad solidaria. Yo creo en los contratos individuales.",
+            "En Punta Gallinas descubrí que la autenticidad es el recurso natural más codiciado del siglo XXI.",
+            "En Punta Gallinas, el patrimonio intangible es el último mercado frontera verdaderamente virgen."
         ]
     },
     "_expansionStats": {

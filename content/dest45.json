@@ -4,10 +4,14 @@
         "title": "Los Antiguos hablan",
         "cefr": "C1",
         "cefrSubLevel": "C1",
-        "closingQuestion": "¿Qué significa lo que no se dice?",
+        "closingQuestion": "¿Qué hipótesis harías sobre lo que este lugar significa para los que viven aquí?",
         "characters": [
             "char_yaguara",
-            "char_candelaria"
+            "char_candelaria",
+            "char_rio",
+            "char_mama_jaguar",
+            "char_dona_asuncion",
+            "char_don_prospero"
         ],
         "world": "mundoDeArriba",
         "campbellStage": "Reward — the elders speak"
@@ -63,27 +67,35 @@
         "beats": [
             {
                 "speaker": "narrator",
-                "text": "C1: Los Antiguos hablan. Los Antiguos hablan en metáfora y poesía. Nunca en respuestas directas."
+                "text": "Tierradentro abre sus hipogeos como bocas en la montaña. Escaleras de piedra bajan hacia cámaras pintadas de rojo y negro."
             },
             {
                 "speaker": "yaguara",
-                "text": "Los Antiguos hablan en metáfora y poesía. Nunca en respuestas directas."
+                "text": "Los Antiguos hablaron aquí. Sus voces están en las paredes, en espirales que nadie ha terminado de descifrar."
+            },
+            {
+                "speaker": "dona_asuncion",
+                "text": "Lo que no se dice con palabras se dice con colores. Escucha las paredes, viajero. Tienen más que decir que cualquier libro."
+            },
+            {
+                "speaker": "candelaria",
+                "text": "Bajo tierra, el silencio pesa diferente. No es gris: es rojo. Es negro. Es el silencio que significa."
+            },
+            {
+                "speaker": "rio",
+                "text": "¿Los Antiguos pintaban bajo tierra? Sin luz, sin público... Tal vez el arte más honesto es el que nadie ve."
             },
             {
                 "speaker": "narrator",
-                "text": "Gramática: literary analysis vocabulary (metáfora, símbolo, alegoría, ironía)"
+                "text": "En las cámaras más profundas, la sombra gris del olvido lucha contra los pigmentos que llevan dos mil años resistiendo."
+            },
+            {
+                "speaker": "yaguara",
+                "text": "Escucha, viajero: lo que los Antiguos dijeron sigue vivo. Las palabras que pintas hoy también sobrevivirán si les das raíz."
             },
             {
                 "speaker": "narrator",
-                "text": "El gris sigue presente. Pero la palabra de Yaguará también."
-            },
-            {
-                "speaker": "yaguara",
-                "text": "Escucha, viajero. Estamos cerca del final."
-            },
-            {
-                "speaker": "yaguara",
-                "text": "¿Qué significa lo que no se dice?"
+                "text": "Al salir del hipogeo, la luz del sol parece un idioma nuevo. Los ojos tienen que aprender a leerlo otra vez."
             }
         ]
     },
@@ -2297,7 +2309,7 @@
         }
     ],
     "departure": {
-        "closingQuestion": "¿Qué significa lo que no se dice?",
+        "closingQuestion": "¿Qué hipótesis harías sobre lo que este lugar significa para los que viven aquí?",
         "yaguaraLine": "Los Antiguos hablan en metáfora y poesía. Nunca en respuestas directas.",
         "button": "Continuar el viaje"
     },
@@ -2313,6 +2325,38 @@
             "name": "La Sombra",
             "role": "support",
             "id": "char_yaguara"
+        },
+        "char_rio": {
+            "id": "char_rio",
+            "name": "Río",
+            "avatar": "img/characters/rio.jpg",
+            "voice": "playful",
+            "role": "trickster-brother",
+            "description": "Hermano jaguar travieso."
+        },
+        "char_mama_jaguar": {
+            "id": "char_mama_jaguar",
+            "name": "Mamá Jaguar",
+            "avatar": "img/characters/mama_jaguar.jpg",
+            "voice": "ancient",
+            "role": "mother-wisdom",
+            "description": "Madre de Yaguará. Verdades cortas."
+        },
+        "char_dona_asuncion": {
+            "id": "char_dona_asuncion",
+            "name": "Doña Asunción",
+            "avatar": "img/characters/dona_asuncion.jpg",
+            "voice": "elderly-wise",
+            "role": "elder",
+            "description": "Anciana sabia del río."
+        },
+        "char_don_prospero": {
+            "id": "char_don_prospero",
+            "name": "Don Próspero",
+            "avatar": "img/characters/don_prospero.jpg",
+            "voice": "smooth-dangerous",
+            "role": "antagonist",
+            "description": "El que compra lo que no tiene precio."
         }
     },
     "characterLines": {
@@ -2337,6 +2381,42 @@
             "Tú nombras Riohacha, La Guajira. Yo lo borro.",
             "Lo innombrable de Riohacha, La Guajira es mi territorio.",
             "El gris de Riohacha, La Guajira es mi lengua."
+        ],
+        "char_rio": [
+            "Lo que Riohacha enseña sobre el juego aplica a la vida: las reglas las escribes tú.",
+            "Riohacha me reveló algo incómodo: el humor es una forma de honestidad radical.",
+            "La paradoja de Riohacha es que cuanto más juegas, más en serio te lo tomas.",
+            "En La Guajira hay verdades que solo se dicen en broma. Esas son las importantes.",
+            "Riohacha y «Los Antiguos hablan» — dos formas de decir que lo importante nunca es obvio.",
+            "El paisaje de Riohacha es una broma cósmica que tardé años en entender.",
+            "En Riohacha descubrí que la ironía es el último refugio de la inteligencia."
+        ],
+        "char_mama_jaguar": [
+            "Las montañas de Riohacha me enseñaron que la permanencia no es rigidez: es adaptación profunda.",
+            "Aquí en Riohacha comprendí que soltar es la forma más exigente de amar.",
+            "El dolor ancestral de Riohacha tiene raíces tan profundas que ya son parte del suelo mismo.",
+            "Lo que Riohacha revela sobre la naturaleza humana no se encuentra en ningún libro escrito.",
+            "En Riohacha, «Los Antiguos hablan» me recordó que cada madre es un puente entre lo que fue y lo posible.",
+            "En Riohacha, cada especie que desaparece deja un silencio que ensordece al que sabe escuchar.",
+            "En Riohacha descubrí que la maternidad es la primera filosofía y la última poesía."
+        ],
+        "char_dona_asuncion": [
+            "Las generaciones de Riohacha no se suceden linealmente: se superponen como capas geológicas complejas.",
+            "La paradoja de Riohacha es que solo valoramos genuinamente lo perdido cuando ya no podemos recuperarlo.",
+            "En Riohacha, la memoria colectiva es un río subterráneo que alimenta todo lo que se ve en la superficie.",
+            "En Riohacha descubrí que la sabiduría popular contiene más epistemología que toda la academia formal.",
+            "«Los Antiguos hablan» en Riohacha es una síntesis de todo lo que la modernidad cree haber superado.",
+            "Aquí en Riohacha, «Los Antiguos hablan» contiene una crítica implícita a todo lo que llamamos progreso.",
+            "Lo que Riohacha me enseñó es que el olvido es tan creativamente poderoso como el recuerdo."
+        ],
+        "char_don_prospero": [
+            "La ironía de Riohacha es que cuanto más protegen su cultura, más valiosa la hacen para mí.",
+            "Riohacha me fascina genuinamente. Tanta belleza sin monetizar. Es casi un crimen ecológico.",
+            "¿Crees que el lenguaje en Riohacha es realmente libre? Todo tiene un precio, incluso las palabras.",
+            "Cada palabra que Riohacha pierde por desuso es una oportunidad que yo capitalizo.",
+            "«Los Antiguos hablan» en Riohacha es una narrativa que puedo vender a turistas de cinco continentes.",
+            "Lo que Riohacha no entiende es que la globalización no pide permiso cultural. Solo entra.",
+            "En Riohacha descubrí algo perturbador: la gente prefiere una mentira cómoda a una verdad que incomode."
         ]
     },
     "_expansionStats": {
