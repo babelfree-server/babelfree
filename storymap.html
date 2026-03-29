@@ -894,6 +894,26 @@
         var completedSet = new Set(journey.completedDestinations || []);
         var current = journey.currentDestination || 1;
 
+        /* Safety: if currentDestination is ahead of actual progress, reset to the
+           first uncompleted destination. This prevents orphaned states where dests
+           before current show as locked (e.g., stale migration, corrupted localStorage,
+           or placement test that skips destinations forward). */
+        if (current > 1) {
+            var firstGap = 1;
+            while (firstGap < current && completedSet.has(firstGap)) {
+                firstGap++;
+            }
+            if (firstGap < current && !completedSet.has(firstGap)) {
+                /* There's a gap — dests before current are not completed.
+                   Check if this is a placement skip (has _placementSkip flag). */
+                if (!journey._placementSkip) {
+                    current = firstGap;
+                    journey.currentDestination = firstGap;
+                    saveJourney(journey);
+                }
+            }
+        }
+
         /* Update header */
         var pctComplete = Math.round((completedSet.size / 89) * 100);
         document.getElementById('smProgress').textContent =

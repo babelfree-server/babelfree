@@ -1117,6 +1117,186 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        /* ── Placement Test Modal ── */
+        .placement-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 7, 3, 0.92);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(8px);
+        }
+        .placement-overlay.visible { display: flex; }
+
+        .placement-card {
+            background: rgba(26, 18, 8, 0.95);
+            border: 2px solid rgba(201, 162, 39, 0.3);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(25px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .placement-card h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            color: var(--ochre);
+            font-size: 1.6rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .placement-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .placement-choice-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 0;
+        }
+
+        .placement-choice-btn {
+            background: rgba(201, 162, 39, 0.12);
+            border: 2px solid rgba(201, 162, 39, 0.25);
+            border-radius: 14px;
+            padding: 18px 24px;
+            color: var(--text-light);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .placement-choice-btn:hover {
+            background: rgba(201, 162, 39, 0.22);
+            border-color: var(--ochre);
+            transform: translateY(-2px);
+        }
+        .placement-choice-btn small {
+            display: block;
+            font-weight: 400;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Quiz phase */
+        .placement-question {
+            margin-bottom: 1.5rem;
+        }
+        .placement-question .pq-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+        .placement-question .pq-sentence {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.35rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        .placement-options {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .placement-opt {
+            background: rgba(201, 162, 39, 0.1);
+            border: 2px solid rgba(201, 162, 39, 0.2);
+            border-radius: 12px;
+            padding: 12px 24px;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 90px;
+        }
+        .placement-opt:hover {
+            background: rgba(201, 162, 39, 0.22);
+            border-color: var(--ochre);
+        }
+        .placement-opt.correct {
+            background: rgba(90, 110, 74, 0.4);
+            border-color: var(--success-green);
+            color: #b5d4a0;
+        }
+        .placement-opt.wrong {
+            background: rgba(166, 66, 50, 0.3);
+            border-color: var(--error-red);
+            color: #e8a49b;
+        }
+        .placement-opt[disabled] {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        .placement-progress {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+        .placement-pip {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(201, 162, 39, 0.2);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            transition: var(--transition);
+        }
+        .placement-pip.done-correct { background: var(--success-green); border-color: var(--success-green); }
+        .placement-pip.done-wrong { background: var(--error-red); border-color: var(--error-red); }
+        .placement-pip.active { background: var(--ochre); border-color: var(--ochre); transform: scale(1.3); }
+
+        .placement-result {
+            margin-top: 1rem;
+        }
+        .placement-result .pr-level {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            color: var(--ochre);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .placement-result .pr-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.4;
+        }
+        .placement-start-btn {
+            background: linear-gradient(135deg, var(--ochre), var(--amber));
+            color: var(--earth-deep);
+            border: none;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .placement-start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.3);
+        }
+
+        @media (max-width: 480px) {
+            .placement-card { padding: 28px 20px; }
+            .placement-card h2 { font-size: 1.3rem; }
+            .placement-options { flex-direction: column; }
+            .placement-opt { min-width: auto; }
+        }
     </style>
     <link rel="stylesheet" href="/luxury.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -1417,6 +1597,45 @@
                 <span data-ai-translate="auth.reset-password-button">Restablecer contraseña</span>
             </button>
         </form>
+    </div>
+
+    <!-- Placement Test Modal -->
+    <div class="placement-overlay" id="placementOverlay">
+        <div class="placement-card" id="placementCard">
+            <!-- Phase 1: Choice -->
+            <div id="placementChoice">
+                <h2>Tu viaje empieza aqu&iacute;</h2>
+                <p>Bienvenido. Antes de comenzar, una pregunta:</p>
+                <div class="placement-choice-btns">
+                    <button class="placement-choice-btn" id="placementFromZero">
+                        Empezar desde el principio (A1)
+                        <small>No s&eacute; nada de espa&ntilde;ol o muy poco</small>
+                    </button>
+                    <button class="placement-choice-btn" id="placementTakeTest">
+                        Ya s&eacute; algo de espa&ntilde;ol
+                        <small>Hacer una prueba r&aacute;pida de nivel (5 preguntas)</small>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Phase 2: Quiz -->
+            <div id="placementQuiz" style="display:none;">
+                <h2>Prueba de nivel</h2>
+                <div class="placement-progress" id="placementPips"></div>
+                <div class="placement-question" id="placementQ"></div>
+                <div class="placement-options" id="placementOpts"></div>
+            </div>
+
+            <!-- Phase 3: Result -->
+            <div id="placementResult" style="display:none;">
+                <div class="placement-result">
+                    <h2>Resultado</h2>
+                    <div class="pr-level" id="placementLevel"></div>
+                    <div class="pr-desc" id="placementDesc"></div>
+                    <button class="placement-start-btn" id="placementGo">Comenzar el viaje</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="/login_lang_data.js"></script>
@@ -2221,10 +2440,19 @@
                 localStorage.setItem('jaguarUserSession', JSON.stringify(userData));
                 this.trackEvent('login_success', { userType, version: this.selectedVersion });
 
-                // Redirect to story map
-                setTimeout(() => {
-                    window.location.href = '/storymap';
-                }, 2000);
+                // Check if this is a first-time login (no journey data yet)
+                var existingJourney = null;
+                try { existingJourney = JSON.parse(localStorage.getItem('yaguara_journey') || 'null'); } catch(e) {}
+
+                if (!existingJourney && typeof PlacementTest !== 'undefined') {
+                    // First login — offer placement test
+                    setTimeout(() => { PlacementTest.show(); }, 1500);
+                } else {
+                    // Returning user — go straight to storymap
+                    setTimeout(() => {
+                        window.location.href = '/storymap';
+                    }, 2000);
+                }
             }
 
 
@@ -2344,7 +2572,14 @@
                     );
                     if (res.success) {
                         this.showSuccess(res.data.message || this.t('register.check-email') || 'Cuenta creada. Revisa tu correo para verificar tu cuenta.');
-                        setTimeout(() => this.showLoginForm(), 3000);
+                        /* Show placement test after brief success message */
+                        setTimeout(() => {
+                            if (typeof PlacementTest !== 'undefined') {
+                                PlacementTest.show();
+                            } else {
+                                this.showLoginForm();
+                            }
+                        }, 2000);
                     } else {
                         this.showError(res.error || 'Error al crear la cuenta');
                     }
@@ -2723,6 +2958,183 @@
         if (typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined') {
             console.log('Audio context available for nature sounds');
         }
+
+        /* ================================================================
+           PLACEMENT TEST — 5-question progressive quiz (A1 to C1)
+           Sets yaguara_journey in localStorage with the starting destination.
+           ================================================================ */
+        var PlacementTest = (function() {
+            var QUESTIONS = [
+                { level: 'A1', sentence: 'Yo ___ de Colombia.', answer: 'soy', options: ['soy', 'es', 'ser'] },
+                { level: 'A2', sentence: 'Ayer ___ al mercado.', answer: 'fui', options: ['fui', 'voy', 'ir'] },
+                { level: 'B1', sentence: 'Quiero que ___ la verdad.', answer: 'digas', options: ['digas', 'dices', 'decir'] },
+                { level: 'B2', sentence: 'Si hubiera sabido, no ___ venido.', answer: 'habr\u00eda', options: ['habr\u00eda', 'hab\u00eda', 'ha'] },
+                { level: 'C1', sentence: 'Es menester que se ___ las consecuencias.', answer: 'analicen', options: ['analicen', 'analizan', 'analizar'] }
+            ];
+
+            /* Map correct count to starting destination and CEFR level */
+            var LEVEL_MAP = [
+                { correct: 0, dest: 1,  level: 'A1', desc: 'Empiezas desde el principio. Yaguar\u00e1 te guiar\u00e1 paso a paso.' },
+                { correct: 1, dest: 1,  level: 'A1', desc: 'Empiezas desde el principio. Yaguar\u00e1 te guiar\u00e1 paso a paso.' },
+                { correct: 2, dest: 13, level: 'A2', desc: 'Tienes una base s\u00f3lida. Empiezas en A2, donde el viaje se hace m\u00e1s profundo.' },
+                { correct: 3, dest: 22, level: 'B1', desc: 'Buen nivel intermedio. Empiezas en B1, el Mundo del Medio.' },
+                { correct: 4, dest: 39, level: 'B2', desc: 'Nivel intermedio alto. Empiezas en B2, donde las ideas se vuelven m\u00e1s complejas.' },
+                { correct: 5, dest: 56, level: 'C1', desc: 'Nivel avanzado. Empiezas en C1, el Mundo de Arriba.' }
+            ];
+
+            var correctCount = 0;
+            var currentQ = 0;
+            var answers = [];
+
+            function show() {
+                var overlay = document.getElementById('placementOverlay');
+                overlay.classList.add('visible');
+                document.getElementById('placementChoice').style.display = '';
+                document.getElementById('placementQuiz').style.display = 'none';
+                document.getElementById('placementResult').style.display = 'none';
+                correctCount = 0;
+                currentQ = 0;
+                answers = [];
+            }
+
+            function hide() {
+                document.getElementById('placementOverlay').classList.remove('visible');
+            }
+
+            function setJourney(startDest, placementSkip) {
+                var completedDests = [];
+                /* If placement puts them ahead of dest1, mark all prior dests as "skipped" (completed)
+                   so the storymap shows them as completed rather than locked. */
+                for (var d = 1; d < startDest; d++) {
+                    completedDests.push(d);
+                }
+                var journey = {
+                    currentDestination: startDest,
+                    completedDestinations: completedDests,
+                    ecosystemChoice: null,
+                    escapeRoomFragments: [],
+                    lastPlayedAt: new Date().toISOString(),
+                    _placementSkip: placementSkip || false,
+                    _migrated: true
+                };
+                try {
+                    localStorage.setItem('yaguara_journey', JSON.stringify(journey));
+                } catch(e) {}
+            }
+
+            function startQuiz() {
+                document.getElementById('placementChoice').style.display = 'none';
+                document.getElementById('placementQuiz').style.display = '';
+                /* Build progress pips */
+                var pipsHtml = '';
+                for (var i = 0; i < QUESTIONS.length; i++) {
+                    pipsHtml += '<div class="placement-pip" id="pip' + i + '"></div>';
+                }
+                document.getElementById('placementPips').innerHTML = pipsHtml;
+                renderQuestion();
+            }
+
+            function renderQuestion() {
+                if (currentQ >= QUESTIONS.length) {
+                    showResult();
+                    return;
+                }
+                var q = QUESTIONS[currentQ];
+                var pip = document.getElementById('pip' + currentQ);
+                if (pip) pip.classList.add('active');
+
+                document.getElementById('placementQ').innerHTML =
+                    '<div class="pq-label">Pregunta ' + (currentQ + 1) + ' de ' + QUESTIONS.length + ' (' + q.level + ')</div>' +
+                    '<div class="pq-sentence">' + q.sentence.replace('___', '<span style="border-bottom:2px solid var(--ochre);padding:0 8px;">___</span>') + '</div>';
+
+                /* Shuffle options */
+                var opts = q.options.slice();
+                for (var i = opts.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
+                }
+
+                var optsHtml = '';
+                for (var k = 0; k < opts.length; k++) {
+                    optsHtml += '<button class="placement-opt" data-val="' + opts[k] + '">' + opts[k] + '</button>';
+                }
+                document.getElementById('placementOpts').innerHTML = optsHtml;
+
+                /* Bind click handlers */
+                var btns = document.getElementById('placementOpts').querySelectorAll('.placement-opt');
+                for (var b = 0; b < btns.length; b++) {
+                    btns[b].addEventListener('click', handleAnswer);
+                }
+            }
+
+            function handleAnswer(e) {
+                var chosen = e.target.getAttribute('data-val');
+                var q = QUESTIONS[currentQ];
+                var isCorrect = (chosen === q.answer);
+
+                /* Disable all buttons */
+                var btns = document.getElementById('placementOpts').querySelectorAll('.placement-opt');
+                for (var b = 0; b < btns.length; b++) {
+                    btns[b].setAttribute('disabled', 'true');
+                    btns[b].removeEventListener('click', handleAnswer);
+                    if (btns[b].getAttribute('data-val') === q.answer) {
+                        btns[b].classList.add('correct');
+                    } else if (btns[b] === e.target && !isCorrect) {
+                        btns[b].classList.add('wrong');
+                    }
+                }
+
+                if (isCorrect) correctCount++;
+                answers.push({ question: currentQ, correct: isCorrect });
+
+                /* Update pip */
+                var pip = document.getElementById('pip' + currentQ);
+                if (pip) {
+                    pip.classList.remove('active');
+                    pip.classList.add(isCorrect ? 'done-correct' : 'done-wrong');
+                }
+
+                /* Advance after brief pause */
+                currentQ++;
+                setTimeout(renderQuestion, 800);
+            }
+
+            function showResult() {
+                document.getElementById('placementQuiz').style.display = 'none';
+                document.getElementById('placementResult').style.display = '';
+
+                var result = LEVEL_MAP[correctCount] || LEVEL_MAP[0];
+                document.getElementById('placementLevel').textContent = result.level + ' — Destino ' + result.dest;
+                document.getElementById('placementDesc').textContent = result.desc + ' (' + correctCount + '/' + QUESTIONS.length + ' correctas)';
+            }
+
+            function init() {
+                document.getElementById('placementFromZero').addEventListener('click', function() {
+                    setJourney(1, false);
+                    hide();
+                    /* Redirect to storymap — registration is already done */
+                    window.location.href = '/storymap';
+                });
+
+                document.getElementById('placementTakeTest').addEventListener('click', startQuiz);
+
+                document.getElementById('placementGo').addEventListener('click', function() {
+                    var result = LEVEL_MAP[correctCount] || LEVEL_MAP[0];
+                    setJourney(result.dest, result.dest > 1);
+                    hide();
+                    window.location.href = '/storymap';
+                });
+            }
+
+            /* Initialize when DOM is ready */
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+
+            return { show: show, hide: hide };
+        })();
     </script>
 </body>
 </html>

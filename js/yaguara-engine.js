@@ -10552,7 +10552,7 @@
                             journey.completedDestinations.sort(function(a, b) { return a - b; });
                         }
                         journey.currentDestination = Math.max(journey.currentDestination || 1, destNum + 1);
-                        if (journey.currentDestination > 58) journey.currentDestination = 58;
+                        if (journey.currentDestination > 89) journey.currentDestination = 89;
                         journey.lastPlayedAt = new Date().toISOString();
 
                         /* Collect portafolio + autoevaluacion data for this destination */
