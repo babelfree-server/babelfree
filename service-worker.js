@@ -1,21 +1,11 @@
-const CACHE_NAME = 'babelfree-v9';
+const CACHE_NAME = 'babelfree-v10';
+
+// Only cache ASSETS (fast loading) — NOT game content (requires connection)
 const PRECACHE_URLS = [
-  '/',
-  '/services',
-  '/elviajedeljaguar',
-  '/juegos',
-  '/contact',
-  '/blog',
-  '/css/footer.css',
-  '/css/blog.css',
   '/luxury.css',
   '/assets/tower-logo.png',
   '/assets/logo.png',
   '/img/jaguar-hero-full.jpg',
-  '/play',
-  '/storymap',
-  '/cuaderno',
-  '/offline.html',
   '/js/jaguar-api.js',
   '/js/yaguara-engine.js',
   '/js/evidence-engine.js',
@@ -23,18 +13,23 @@ const PRECACHE_URLS = [
   '/js/destination-router.js',
   '/js/practice-engine.js',
   '/js/personal-lexicon.js',
+  '/js/template-generator.js',
   '/js/riddle-quest.js',
   '/js/quest-journal.js',
+  '/js/composition-builder.js',
+  '/js/aventura-tab.js',
   '/js/audio-manager.js',
   '/js/tts-fallback.js',
   '/js/feedback-widget.js',
+  '/js/soul.js',
+  '/js/ad-manager.js',
   '/css/yaguara-game.css',
   '/css/placeholder-illustrations.css',
   '/ontology/ontology-api.js',
-  '/content/busqueda-riddles.json'
+  '/offline.html'
 ];
 
-// Install: precache key pages and assets
+// Install: precache assets only
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -52,14 +47,38 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch: network-first for HTML, cache-first for static assets
+// Fetch strategy:
+// - Static assets (CSS/JS/images): cache-first (fast loading)
+// - HTML pages: network-first, offline.html fallback
+// - Game content JSON: network-ONLY (requires connection for ads + tracking)
+// - API calls: network-only (always need server)
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
-  // Only handle same-origin requests
+  // Only handle same-origin
   if (url.origin !== location.origin) return;
 
-  // HTML pages: network-first with cache fallback
+  // API calls: always network
+  if (url.pathname.startsWith('/api/')) return;
+
+  // Game content JSON: NETWORK ONLY — no offline play
+  // This ensures students must be online (ads load, progress syncs)
+  if (/\/content\/.*\.json$/i.test(url.pathname)) {
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        return new Response(JSON.stringify({
+          error: 'offline',
+          message: 'Necesitas conexión a internet para jugar.'
+        }), {
+          status: 503,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      })
+    );
+    return;
+  }
+
+  // HTML pages: network-first with offline.html fallback
   if (event.request.mode === 'navigate' || event.request.headers.get('accept')?.includes('text/html')) {
     event.respondWith(
       fetch(event.request)
@@ -73,8 +92,8 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Static assets: cache-first with network fallback
-  if (/\.(css|js|png|jpg|jpeg|svg|woff2?|mp3)$/i.test(url.pathname)) {
+  // Static assets: cache-first (CSS, JS, images, fonts)
+  if (/\.(css|js|png|jpg|jpeg|svg|webp|woff2?|mp3|ico)$/i.test(url.pathname)) {
     event.respondWith(
       caches.match(event.request)
         .then(cached => {
@@ -85,20 +104,6 @@ self.addEventListener('fetch', event => {
             return response;
           });
         })
-    );
-    return;
-  }
-
-  // JSON content/ontology: network-first with cache fallback (offline play)
-  if (/\.(json)$/i.test(url.pathname) && (/\/content\//.test(url.pathname) || /\/ontology\//.test(url.pathname))) {
-    event.respondWith(
-      fetch(event.request)
-        .then(response => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
-          return response;
-        })
-        .catch(() => caches.match(event.request))
     );
     return;
   }

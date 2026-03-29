@@ -390,7 +390,15 @@
 
         var destPromise = fetch('/content/dest' + destNum + '.json')
             .then(function(res) {
-                if (!res.ok) throw new Error('HTTP ' + res.status);
+                if (!res.ok) {
+                    // Check if this is the offline response from service worker
+                    if (res.status === 503) {
+                        return res.json().then(function(err) {
+                            throw new Error(err.message || 'Sin conexión');
+                        });
+                    }
+                    throw new Error('HTTP ' + res.status);
+                }
                 return res.json();
             });
 
@@ -488,9 +496,41 @@
                 }
             })
             .catch(function(err) {
-                showError('No se pudo cargar el destino. Intenta de nuevo.');
+                var msg = 'No se pudo cargar el destino. Intenta de nuevo.';
+                if (err.message && (err.message.indexOf('conexión') !== -1 || err.message.indexOf('offline') !== -1 || err.message.indexOf('Sin conexión') !== -1)) {
+                    msg = null; // Use offline-specific display
+                    showOffline();
+                } else {
+                    showError(msg);
+                }
                 console.error('DestinationRouter:', err);
             });
+    }
+
+    /* ==========================================================
+       OFFLINE DISPLAY
+    ========================================================== */
+    function showOffline() {
+        var card = document.getElementById('yaguaraCard');
+        if (!card) return;
+        card.innerHTML =
+            '<div style="text-align:center;padding:3rem 1.5rem;max-width:400px;margin:0 auto;">' +
+                '<div style="font-size:3rem;margin-bottom:1rem;opacity:0.5;">📡</div>' +
+                '<h2 style="font-family:Cormorant Garamond,Georgia,serif;font-size:1.5rem;color:#c9a227;margin-bottom:0.8rem;">' +
+                    'Yaguará necesita internet' +
+                '</h2>' +
+                '<p style="font-size:1rem;color:#b8a48a;line-height:1.6;margin-bottom:1.5rem;">' +
+                    'El viaje continúa cuando te conectes. Mientras tanto, el jaguar descansa.' +
+                '</p>' +
+                '<button onclick="location.reload()" style="' +
+                    'padding:12px 28px;background:rgba(201,162,39,0.15);border:1px solid rgba(201,162,39,0.3);' +
+                    'border-radius:8px;color:#c9a227;font-size:14px;font-weight:600;cursor:pointer;">' +
+                    'Reintentar' +
+                '</button>' +
+                '<p style="font-size:0.8rem;color:#666;margin-top:1rem;">' +
+                    'Tu progreso está guardado. No perderás nada.' +
+                '</p>' +
+            '</div>';
     }
 
     /* ==========================================================
