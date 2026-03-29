@@ -9087,7 +9087,7 @@
                     input.type = 'text';
                     input.placeholder = beat.placeholder || 'Tu nombre...';
                     input.style.cssText = 'padding:10px 16px;background:rgba(0,0,0,0.3);border:2px solid rgba(201,162,39,0.3);border-radius:8px;color:#e8d5b7;font-size:16px;width:180px;text-align:center;font-family:inherit;';
-                    input.autocomplete = 'name';
+                    input.autocomplete = 'off';
                     var submitBtn = document.createElement('button');
                     submitBtn.textContent = '→';
                     submitBtn.style.cssText = 'padding:10px 16px;background:rgba(201,162,39,0.15);border:1px solid rgba(201,162,39,0.3);border-radius:8px;color:#c9a227;font-size:18px;cursor:pointer;';
