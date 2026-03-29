@@ -9057,7 +9057,11 @@
             var textEl = document.createElement('div');
             textEl.className = 'yg-skit-text';
 
-            if (beat.interaction) {
+            if (beat.interaction === 'name_input') {
+                /* Show "Yo soy ___" for name input */
+                var prefix = text.replace(/\{nombre\}/g, '').trim();
+                textEl.innerHTML = prefix + ' <span style="border-bottom:2px dashed rgba(201,162,39,0.5);padding:0 12px;">___</span>';
+            } else if (beat.interaction) {
                 textEl.textContent = '???';
                 bubble.classList.add('yg-skit-mystery');
             } else {
@@ -9103,7 +9107,7 @@
                             var session = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
                             if (session) { session.playerName = name; localStorage.setItem('jaguarUserSession', JSON.stringify(session)); }
                         } catch(e) {}
-                        textEl.textContent = name;
+                        textEl.textContent = (beat.text || '').replace(/\{nombre\}/g, name);
                         bubble.classList.remove('yg-skit-mystery');
                         inputDiv.remove();
                         state.beatIdx++;
