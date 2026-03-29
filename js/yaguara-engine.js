@@ -434,6 +434,9 @@
             clearTimeout(this._harmonyTimer);
             clearTimeout(this._dimTimer);
 
+            /* Reset consecutive-wrong counter on correct answer */
+            Engine._consecutiveWrong = 0;
+
             if (targetEl) targetEl.classList.add('yg-glow');
             if (containerEl) document.body.classList.add('yg-world-harmony');
 
@@ -462,6 +465,13 @@
 
             /* Track retry attempts for growth data */
             if (Engine._encounterStartTime) Engine._encounterAttempts++;
+
+            /* Track consecutive wrong answers — show practice suggestion after 3 */
+            Engine._consecutiveWrong++;
+            if (Engine._consecutiveWrong >= 3 && !Engine._practiceSuggestionShown) {
+                Engine._practiceSuggestionShown = true;
+                Engine._showPracticeSuggestion(containerEl);
+            }
 
             /* Accessibility: announce incorrect answer */
             A11y.announce('Intenta otra vez');
@@ -9301,6 +9311,8 @@
         _vocabularyLog: [],
         _encounterStartTime: 0,
         _encounterAttempts: 0,
+        _consecutiveWrong: 0,
+        _practiceSuggestionShown: false,
         _lexicon: null,
         _currentEco: null,
 
@@ -9869,6 +9881,12 @@
 
                 this._encounterStartTime = Date.now();
                 this._encounterAttempts = 0;
+                this._consecutiveWrong = 0;
+                this._practiceSuggestionShown = false;
+
+                /* Remove any lingering practice suggestion card */
+                var oldSuggestion = document.querySelector('.yg-practice-suggestion');
+                if (oldSuggestion) oldSuggestion.remove();
 
                 /* Build cluster wrapper */
                 this._container.style.opacity = '0';
@@ -9947,11 +9965,92 @@
             /* Start timing for this encounter */
             this._encounterStartTime = Date.now();
             this._encounterAttempts = 0;
+            this._consecutiveWrong = 0;
+            this._practiceSuggestionShown = false;
+
+            /* Remove any lingering practice suggestion card */
+            var oldSuggestion = document.querySelector('.yg-practice-suggestion');
+            if (oldSuggestion) oldSuggestion.remove();
 
             _applyInputMode(data);
             runEncounter(data, this._container, state, function(success) {
                 self._onEncounterComplete(success);
             });
+        },
+
+        _showPracticeSuggestion: function(containerEl) {
+            /* Inject CSS once */
+            if (!document.getElementById('yg-practice-suggestion-css')) {
+                var style = document.createElement('style');
+                style.id = 'yg-practice-suggestion-css';
+                style.textContent =
+                    '.yg-practice-suggestion {' +
+                    '  margin: 1.2rem auto; max-width: 480px; padding: 1.2rem 1.5rem;' +
+                    '  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);' +
+                    '  border: 2px solid #d4a017; border-radius: 12px;' +
+                    '  box-shadow: 0 4px 16px rgba(212,160,23,0.15);' +
+                    '  text-align: center; font-family: inherit;' +
+                    '  animation: ygPracticeSlideIn 0.4s ease-out;' +
+                    '}' +
+                    '@keyframes ygPracticeSlideIn {' +
+                    '  from { opacity: 0; transform: translateY(12px); }' +
+                    '  to { opacity: 1; transform: translateY(0); }' +
+                    '}' +
+                    '.yg-practice-suggestion p {' +
+                    '  margin: 0 0 0.5rem; color: #78350f; font-size: 1.05rem;' +
+                    '}' +
+                    '.yg-practice-suggestion .yg-practice-hint {' +
+                    '  font-size: 0.9rem; color: #92400e; font-style: italic;' +
+                    '}' +
+                    '.yg-practice-actions {' +
+                    '  display: flex; gap: 0.75rem; justify-content: center; margin-top: 0.8rem;' +
+                    '}' +
+                    '.yg-practice-actions button {' +
+                    '  padding: 0.5rem 1.2rem; border-radius: 8px; font-size: 0.95rem;' +
+                    '  cursor: pointer; border: none; font-weight: 600; transition: transform 0.15s, box-shadow 0.15s;' +
+                    '}' +
+                    '.yg-practice-actions button:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }' +
+                    '.yg-practice-go {' +
+                    '  background: linear-gradient(135deg, #d4a017, #b8860b); color: #fff;' +
+                    '}' +
+                    '.yg-practice-stay {' +
+                    '  background: #fff; color: #78350f; border: 1px solid #d4a017 !important;' +
+                    '}';
+                document.head.appendChild(style);
+            }
+
+            /* Build the suggestion card */
+            var level = (this._config && this._config.cefrLevel) || 'A1';
+            var practiceUrl = '/play?mode=practice&level=' + encodeURIComponent(level);
+
+            var card = document.createElement('div');
+            card.className = 'yg-practice-suggestion';
+            card.innerHTML =
+                '<p>\u00bfNecesitas m\u00e1s pr\u00e1ctica?</p>' +
+                '<p class="yg-practice-hint">No te preocupes \u2014 todos aprendemos a nuestro ritmo.</p>' +
+                '<div class="yg-practice-actions">' +
+                    '<button class="yg-practice-go">Ir a Pr\u00e1ctica</button>' +
+                    '<button class="yg-practice-stay">Seguir aqu\u00ed</button>' +
+                '</div>';
+
+            card.querySelector('.yg-practice-go').addEventListener('click', function() {
+                window.open(practiceUrl, '_blank');
+            });
+            card.querySelector('.yg-practice-stay').addEventListener('click', function() {
+                card.style.transition = 'opacity 0.3s, transform 0.3s';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(-8px)';
+                setTimeout(function() { card.remove(); }, 300);
+            });
+
+            /* Insert BELOW the game container, not inside it */
+            var target = containerEl || this._container;
+            if (target && target.parentNode) {
+                target.parentNode.insertBefore(card, target.nextSibling);
+            } else {
+                /* Fallback: append to body */
+                document.body.appendChild(card);
+            }
         },
 
         _extractVocabulary: function(data) {
