@@ -215,9 +215,9 @@
         },
         _spiralRate: null,
         setSpiralRate: function(rate) { this._spiralRate = rate; },
-        speak: function(text, opts) {
-            if (!window.speechSynthesis || !text) return;
-            window.speechSynthesis.cancel();
+        speak: function(text, opts, onDone) {
+            if (!window.speechSynthesis || !text) { if (onDone) onDone(); return; }
+            if (!(opts && opts.noCancel)) window.speechSynthesis.cancel();
             this._lastSpoken = text;
             this._lastOpts = opts || null;
             this._showFloatingReplay();
@@ -229,11 +229,16 @@
             /* Duck background music during speech */
             if (window.AudioManager) AudioManager.duckForSpeech();
             var userOnEnd = (opts && opts.onEnd) || null;
-            u.onend = function() {
+            var done = false;
+            var finish = function() {
+                if (done) return; done = true;
                 if (window.AudioManager) AudioManager.unduckForSpeech();
                 if (userOnEnd) userOnEnd();
+                if (onDone) onDone();
             };
-            try { speechSynthesis.speak(u); } catch(e) { /* silent */ }
+            u.onend = finish;
+            u.onerror = finish;
+            try { speechSynthesis.speak(u); } catch(e) { finish(); }
         },
         cancel: function() {
             if (window.speechSynthesis) {
@@ -9087,11 +9092,17 @@
                         if (normalize(el.dataset.val) === normalize(beat.interaction.answer)) {
                             textEl.innerHTML = displayText;
                             bubble.classList.remove('yg-skit-mystery');
-                            if (beat.tts !== false && text) Audio.speak(text);
                             WorldReaction.harmony(container, el, function() {
                                 optDiv.remove();
-                                state.beatIdx++;
-                                setTimeout(function() { self._playBeat(data, container, state, onComplete); }, 800);
+                                if (beat.tts !== false && text) {
+                                    Audio.speak(text, { noCancel: true }, function() {
+                                        state.beatIdx++;
+                                        setTimeout(function() { self._playBeat(data, container, state, onComplete); }, 400);
+                                    });
+                                } else {
+                                    state.beatIdx++;
+                                    setTimeout(function() { self._playBeat(data, container, state, onComplete); }, 400);
+                                }
                             });
                         } else {
                             WorldReaction.desequilibrio(container, el, function() {
@@ -9105,26 +9116,36 @@
             }
 
             /* ---------- NARRATIVE BEAT (auto-advance) ---------- */
-            if (beat.tts !== false && text) {
-                setTimeout(function() { Audio.speak(text); }, 200);
-            }
+            /* Minimum visual delay so students can read the bubble */
+            var minDelay = Math.max(text.length * 55 + 800, 1500);
 
-            var advDelay = Math.max(text.length * 55 + 800, 1500);
-
-            if (isExit || isFadeOut) {
-                /* Show line, then animate bubble out */
-                setTimeout(function() {
+            var advanceToNext = function() {
+                if (isExit || isFadeOut) {
                     bubble.classList.add('yg-skit-leaving');
                     setTimeout(function() {
                         state.beatIdx++;
                         self._playBeat(data, container, state, onComplete);
                     }, 600);
-                }, advDelay);
-            } else {
-                setTimeout(function() {
+                } else {
                     state.beatIdx++;
                     self._playBeat(data, container, state, onComplete);
-                }, advDelay);
+                }
+            };
+
+            if (beat.tts !== false && text) {
+                var speechDone = false, timerDone = false;
+                var tryAdvance = function() {
+                    if (speechDone && timerDone) advanceToNext();
+                };
+                setTimeout(function() {
+                    Audio.speak(text, { noCancel: true }, function() {
+                        speechDone = true;
+                        tryAdvance();
+                    });
+                }, 200);
+                setTimeout(function() { timerDone = true; tryAdvance(); }, minDelay);
+            } else {
+                setTimeout(advanceToNext, minDelay);
             }
         }
     };
