@@ -248,19 +248,18 @@
     /* Hook into destination load to apply ecosystem */
     var originalInit = engine.init;
     if (originalInit) {
-      var wrappedInit = function (games, container, opts) {
-        /* Apply ecosystem background */
-        var eco = opts.ecosystem || null;
-        var world = opts.world || '_default';
+      engine.init = function (opts) {
+        /* opts is a single config object: {games, container, ecosystem, world, ...} */
+        var eco = (opts && opts.ecosystem) || null;
+        var world = (opts && opts.world) || '_default';
         applyEcosystemBackground(eco, world);
 
         /* Update rana visibility */
         updateRanaVisibility();
 
         /* Call original init */
-        return originalInit.call(engine, games, container, opts);
+        return originalInit.call(engine, opts);
       };
-      engine.init = wrappedInit;
     }
   }
 
