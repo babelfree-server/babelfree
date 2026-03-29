@@ -9064,6 +9064,48 @@
             stage.appendChild(bubble);
             stage.scrollTop = stage.scrollHeight;
 
+            /* ---------- NAME INPUT BEAT ---------- */
+            if (beat.interaction === 'name_input') {
+                setTimeout(function() {
+                    var inputDiv = document.createElement('div');
+                    inputDiv.className = 'yg-skit-options';
+                    inputDiv.style.cssText = 'display:flex;gap:8px;align-items:center;justify-content:center;';
+                    var input = document.createElement('input');
+                    input.type = 'text';
+                    input.placeholder = beat.placeholder || 'Tu nombre...';
+                    input.style.cssText = 'padding:10px 16px;background:rgba(0,0,0,0.3);border:2px solid rgba(201,162,39,0.3);border-radius:8px;color:#e8d5b7;font-size:16px;width:180px;text-align:center;font-family:inherit;';
+                    input.autocomplete = 'name';
+                    var submitBtn = document.createElement('button');
+                    submitBtn.textContent = '→';
+                    submitBtn.style.cssText = 'padding:10px 16px;background:rgba(201,162,39,0.15);border:1px solid rgba(201,162,39,0.3);border-radius:8px;color:#c9a227;font-size:18px;cursor:pointer;';
+                    inputDiv.appendChild(input);
+                    inputDiv.appendChild(submitBtn);
+                    stage.appendChild(inputDiv);
+                    stage.scrollTop = stage.scrollHeight;
+                    input.focus();
+
+                    function submitName() {
+                        var name = input.value.trim();
+                        if (!name) return;
+                        /* Store the student's name for {nombre} replacement */
+                        state._nameStr = name;
+                        /* Also save to session for persistence */
+                        try {
+                            var session = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
+                            if (session) { session.playerName = name; localStorage.setItem('jaguarUserSession', JSON.stringify(session)); }
+                        } catch(e) {}
+                        textEl.textContent = name;
+                        bubble.classList.remove('yg-skit-mystery');
+                        inputDiv.remove();
+                        state.beatIdx++;
+                        setTimeout(function() { self._playBeat(data, container, state, onComplete); }, 400);
+                    }
+                    submitBtn.addEventListener('click', submitName);
+                    input.addEventListener('keydown', function(e) { if (e.key === 'Enter') submitName(); });
+                }, 300);
+                return;
+            }
+
             /* ---------- INTERACTION BEAT ---------- */
             if (beat.interaction) {
                 setTimeout(function() {
