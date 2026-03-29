@@ -2326,7 +2326,7 @@
                 if (!b.text) b.text = '';
                 if (b.tts === undefined) b.tts = true;
                 if (b.target && !Array.isArray(b.target)) b.target = [b.target];
-                if (b.interaction) {
+                if (b.interaction && typeof b.interaction === 'object') {
                     if (!b.interaction.type) b.interaction.type = 'pick';
                     if (!b.interaction.options) b.interaction.options = [];
                     if (!b.interaction.answer) b.interaction.answer = '';
