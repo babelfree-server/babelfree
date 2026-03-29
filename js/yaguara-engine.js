@@ -9038,10 +9038,19 @@
             bubble.className = 'yg-skit-bubble yg-skit-enter';
             bubble.setAttribute('data-speaker', beat.speaker || '');
 
-            /* Speaker label */
+            /* Speaker label — map IDs to proper display names */
+            var _speakerNames = {
+                'yaguara': 'Yaguará', 'rinrin': 'Rinrín', 'rio': 'Río',
+                'candelaria': 'Candelaria', 'mama_jaguar': 'Mamá Jaguar',
+                'dona_asuncion': 'Doña Asunción', 'don_prospero': 'Don Próspero',
+                'ceiba': 'Ceiba', 'narrator': 'Narrador', 'student': '',
+                'pombo': 'Pombo', 'macias': 'Macías', 'rivera': 'Rivera',
+                'carrasquilla': 'Carrasquilla', 'condor_viejo': 'Cóndor Viejo',
+                'colibri': 'Colibrí'
+            };
             var nameEl = document.createElement('div');
             nameEl.className = 'yg-skit-speaker';
-            nameEl.textContent = beat.name || beat.speaker || '';
+            nameEl.textContent = beat.name || _speakerNames[beat.speaker] || beat.speaker || '';
             bubble.appendChild(nameEl);
 
             /* Text */
