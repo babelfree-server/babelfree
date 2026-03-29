@@ -3,13 +3,13 @@
     "destination": "dest48-eval",
     "title": "Autoevaluación C1",
     "cefr": "C1",
+    "cefrSubLevel": "C1 evaluación",
     "type": "autoevaluacion",
     "sections": 4,
-    "timeLimit": 120,
+    "timeLimit": 90,
     "scoring": {
       "type": "percentage_per_section",
       "display": "bar_chart",
-      "noPassFail": true,
       "sections": [
         "Comprensión de lectura",
         "Comprensión auditiva",
@@ -17,12 +17,16 @@
         "Expresión oral"
       ],
       "descriptors": {
-        "90-100": "Dominas C1.",
-        "75-89": "Buen nivel.",
-        "60-74": "Aceptable.",
-        "40-59": "Más práctica.",
-        "0-39": "Repasa."
-      }
+        "90-100": "Dominas C1. Estás listo/a para C2.",
+        "75-89": "Buen nivel. Pocas áreas que reforzar.",
+        "60-74": "Nivel aceptable. Repasa los temas señalados.",
+        "40-59": "Necesitas más práctica. Revisa las destinaciones recomendadas.",
+        "0-39": "Este nivel necesita más trabajo. No te preocupes — repasa y vuelve a intentar."
+      },
+      "sectionFeedback": true,
+      "showPercentage": true,
+      "showRecommendations": true,
+      "noPassFail": true
     }
   },
   "sections": [
@@ -30,91 +34,145 @@
       "section": 1,
       "title": "Comprensión de lectura",
       "skill": "reading",
-      "timeLimit": 30,
+      "timeLimit": 25,
       "games": [
         {
           "type": "fill",
-          "title": "Lectura C1",
-          "instruction": "Lee y completa.",
+          "title": "Ensayo: la lengua como patrimonio",
+          "instruction": "Lee el texto y completa con la opción correcta.",
+          "text": "Convendría que las instituciones académicas revisaran su postura ante las variantes dialectales. Lo que durante siglos se consideró una desviación de la norma culta constituye, en rigor, un patrimonio lingüístico de valor incalculable. Cabe señalar que los dialectos no son formas empobrecidas del idioma sino manifestaciones plenas de sistemas gramaticales paralelos. Habría sido preferible que la academia colombiana reconociera antes el valor literario del habla popular. No obstante, escritores como Candelario Obeso demostraron que el dialecto podía alcanzar las más altas cumbres de la expresión poética. Por consiguiente, es menester que las nuevas generaciones comprendan que cuidar la diversidad lingüística es cuidar la memoria colectiva.",
           "items": [
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "Según el texto, los dialectos son manifestaciones ___ de sistemas gramaticales paralelos.",
+              "answer": "plenas",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "plenas",
+                "empobrecidas",
+                "deficientes"
               ]
             },
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "El autor considera que habría sido preferible que la academia ___ el valor del habla popular.",
+              "answer": "reconociera",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "reconociera",
+                "rechazara",
+                "ignorara"
               ]
             },
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "Candelario Obeso demostró que el dialecto podía alcanzar las más altas ___ de la expresión poética.",
+              "answer": "cumbres",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "cumbres",
+                "normas",
+                "debilidades"
               ]
             },
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "Es menester que las nuevas generaciones ___ la diversidad lingüística.",
+              "answer": "cuiden",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "cuiden",
+                "cuidan",
+                "cuidaron"
               ]
             },
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "Lo que durante siglos se consideró una desviación ___, en rigor, un patrimonio.",
+              "answer": "constituye",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "constituye",
+                "destruye",
+                "excluye"
               ]
             },
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "Convendría que las instituciones ___ su postura ante las variantes dialectales.",
+              "answer": "revisaran",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "revisaran",
+                "revisan",
+                "revisarán"
               ]
             },
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "Cabe ___ que los dialectos no son formas empobrecidas.",
+              "answer": "señalar",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "señalar",
+                "negar",
+                "dudar"
               ]
             },
             {
-              "text": "C1 reading ___",
-              "answer": "test",
+              "text": "Por ___, es menester que las nuevas generaciones comprendan esta realidad.",
+              "answer": "consiguiente",
               "options": [
-                "test",
-                "exam",
-                "quiz"
+                "consiguiente",
+                "ejemplo",
+                "desgracia"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "fill",
+          "title": "Análisis literario: metaficción en Macías",
+          "instruction": "Lee y completa.",
+          "text": "En la narrativa de Luis Fernando Macías, la metaficción opera como mecanismo central: los personajes son conscientes de habitar un relato. En El superhéroe Capa Dura, David viaja en el caballo del tiempo y encuentra a Shakespeare escribiendo Hamlet, a Dante conversando con Borges y a Andersen cantando en un embarcadero. La lectura de cuentos populares abre puertas literales entre mundos ficticios. Esta técnica, lejos de ser un mero recurso decorativo, plantea una reflexión profunda sobre el acto de leer: ¿quién habita a quién, el lector al libro o el libro al lector?",
+          "items": [
+            {
+              "text": "En Macías, la metaficción opera como mecanismo ___.",
+              "answer": "central",
+              "options": [
+                "central",
+                "secundario",
+                "decorativo"
+              ]
+            },
+            {
+              "text": "Los personajes son ___ de habitar un relato.",
+              "answer": "conscientes",
+              "options": [
+                "conscientes",
+                "incapaces",
+                "indiferentes"
+              ]
+            },
+            {
+              "text": "La lectura de cuentos populares abre puertas ___ entre mundos.",
+              "answer": "literales",
+              "options": [
+                "literales",
+                "metafóricas",
+                "cerradas"
+              ]
+            },
+            {
+              "text": "La técnica plantea una reflexión profunda sobre el acto de ___.",
+              "answer": "leer",
+              "options": [
+                "leer",
+                "escribir",
+                "olvidar"
+              ]
+            },
+            {
+              "text": "David encuentra a Shakespeare escribiendo ___.",
+              "answer": "Hamlet",
+              "options": [
+                "Hamlet",
+                "Macbeth",
+                "Otelo"
               ]
             }
           ]
         },
         {
           "type": "corrector",
-          "title": "Registro y cohesión",
-          "instruction": "¿Es apropiado?",
+          "title": "Registro formal y cohesión textual",
+          "instruction": "¿La oración es apropiada para un registro formal escrito? Si no, identifica el error.",
           "items": [
             {
               "text": "Convendría que se revisaran las políticas ambientales.",
@@ -133,7 +191,7 @@
               "correct": true
             },
             {
-              "text": "Por consiguiente, la propuesta fue rechazada.",
+              "text": "Por consiguiente, la propuesta fue rechazada por unanimidad.",
               "error": null,
               "correct": true
             },
@@ -143,18 +201,18 @@
               "correct": true
             },
             {
-              "text": "La cosa es que nadie escuchó.",
+              "text": "La cosa es que nadie escuchó la advertencia.",
               "error": "La cosa es que",
               "correction": "El hecho es que",
               "correct": false
             },
             {
-              "text": "No obstante los obstáculos, el proyecto avanzó.",
+              "text": "No obstante los obstáculos, el proyecto avanzó significativamente.",
               "error": null,
               "correct": true
             },
             {
-              "text": "En definitiva, la palabra es la herramienta más poderosa.",
+              "text": "En definitiva, la palabra es la herramienta más poderosa que poseemos.",
               "error": null,
               "correct": true
             }
@@ -166,82 +224,82 @@
       "section": 2,
       "title": "Comprensión auditiva",
       "skill": "listening",
-      "timeLimit": 25,
+      "timeLimit": 20,
       "games": [
         {
           "type": "listening",
-          "title": "Auditiva C1",
-          "instruction": "Escucha.",
+          "title": "Conferencia: la tradición oral colombiana",
+          "instruction": "Escucha los fragmentos de una conferencia y responde.",
           "items": [
             {
-              "audio": "C1 audio",
+              "audio": "Convendría que los críticos revisaran la obra de Macías con más detenimiento. Su narrativa entrelaza metaficción y tradición oral de una manera que no tiene precedentes en la literatura colombiana contemporánea.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "El ponente sugiere revisar a Macías más a fondo.",
+                "El ponente critica duramente a Macías.",
+                "El ponente considera que Macías no tiene relevancia."
               ],
               "correct": 0
             },
             {
-              "audio": "C1 audio",
+              "audio": "Habría sido preferible que la academia colombiana reconociera antes el valor del dialecto como recurso literario. No obstante, autores como Obeso abrieron el camino sin esperar permiso institucional.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "La academia debió reconocer el dialecto antes, pero Obeso actuó sin esperar.",
+                "La academia reconoció el dialecto a tiempo.",
+                "Obeso esperó la aprobación de la academia."
               ],
               "correct": 0
             },
             {
-              "audio": "C1 audio",
+              "audio": "Por consiguiente, la metáfora de la ceiba trasciende su función narrativa y se convierte en un símbolo de la memoria colectiva. No es solo un árbol: es el archivo vivo de todo lo nombrado.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "La ceiba es símbolo de la memoria colectiva, un archivo vivo.",
+                "La ceiba es solo un elemento decorativo.",
+                "La metáfora no funciona fuera de la narrativa."
               ],
               "correct": 0
             },
             {
-              "audio": "C1 audio",
+              "audio": "Es menester que las nuevas generaciones comprendan que cuidar la palabra es cuidar el mundo. La lengua no es solo un instrumento de comunicación; es el tejido mismo de la realidad compartida.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "Cuidar la palabra es cuidar el mundo porque la lengua es el tejido de la realidad.",
+                "Las palabras no tienen relación con la realidad.",
+                "Solo las generaciones pasadas entienden el valor del lenguaje."
               ],
               "correct": 0
             },
             {
-              "audio": "C1 audio",
+              "audio": "Cabe señalar que la tradición oral precede y enriquece la escritura. Antes de que existieran los libros, las comunidades narraban, cantaban y transmitían su saber de boca en boca.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "La tradición oral precedió y enriqueció la escritura.",
+                "La escritura fue siempre superior a la tradición oral.",
+                "La tradición oral surgió después de la escritura."
               ],
               "correct": 0
             },
             {
-              "audio": "C1 audio",
+              "audio": "La antítesis entre construir y destruir revela la paradoja del progreso. No se puede edificar sin alterar, pero es menester que esa alteración no implique aniquilación.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "El progreso implica una paradoja: construir sin aniquilar.",
+                "Construir y destruir son lo mismo.",
+                "El progreso no tiene paradojas."
               ],
               "correct": 0
             },
             {
-              "audio": "C1 audio",
+              "audio": "Habría sido preferible cuidar antes que lamentar después. No obstante, el acto de lamentar también es una forma de nombrar lo perdido, y nombrar es el primer paso para recuperar.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "Lamentar es nombrar lo perdido, y nombrar es el primer paso para recuperar.",
+                "Lamentar es inútil.",
+                "No hay forma de recuperar lo perdido."
               ],
               "correct": 0
             },
             {
-              "audio": "C1 audio",
+              "audio": "En definitiva, escuchar no es un acto pasivo sino el más revolucionario. Quien escucha transforma tanto como quien habla, porque la comprensión exige una entrega que la mera audición no requiere.",
               "options": [
-                "a",
-                "b",
-                "c"
+                "Escuchar es un acto revolucionario que transforma tanto como hablar.",
+                "Escuchar es un acto pasivo.",
+                "Hablar es siempre más importante que escuchar."
               ],
               "correct": 0
             }
@@ -250,77 +308,77 @@
         {
           "type": "listening",
           "title": "Análisis literario auditivo",
-          "instruction": "Escucha.",
+          "instruction": "Escucha el análisis literario y responde.",
           "items": [
             {
-              "audio": "Convendría que los críticos revisaran la obra de Macías con más detenimiento. Su narrativa entrelaza metaficción y tradición oral de una manera que no tiene precedentes.",
+              "audio": "La ironía en Pombo funciona en capas: a nivel superficial provoca risa, pero a nivel profundo revela la hipocresía social. La viejecita que dice no tener nada mientras posee todo es una radiografía del autoengaño colectivo.",
               "options": [
-                "Sugiere revisar a Macías más a fondo.",
-                "Critica a Macías.",
-                "No hay sugerencia."
+                "La ironía de Pombo opera en múltiples niveles, desde el humor hasta la crítica social.",
+                "La ironía de Pombo solo funciona para niños.",
+                "No hay ironía en la obra de Pombo."
               ],
               "correct": 0
             },
             {
-              "audio": "Habría sido preferible que la academia colombiana reconociera antes el valor del dialecto como recurso literario.",
+              "audio": "Rivera personifica la selva como si fuera una diosa: esposa del silencio, madre de la soledad. Esta personificación alcanza un registro casi místico que trasciende la narrativa convencional del realismo.",
               "options": [
-                "La academia debió reconocer el dialecto antes.",
-                "La academia lo reconoció a tiempo.",
-                "El dialecto no tiene valor."
+                "Rivera personifica la selva como una diosa con un registro místico.",
+                "Rivera describe la selva de manera realista y objetiva.",
+                "La personificación de Rivera es convencional."
               ],
               "correct": 0
             },
             {
-              "audio": "Por consiguiente, la metáfora de la ceiba trasciende su función narrativa y se convierte en un símbolo de la memoria colectiva.",
+              "audio": "El uso del dialecto en Obeso constituye un acto político: escribir en la lengua del pueblo es conferirle dignidad literaria a lo que la academia rechazaba. No obstante, Obeso dominaba ambos registros.",
               "options": [
-                "La ceiba es símbolo de memoria colectiva.",
-                "La ceiba es solo un árbol.",
-                "No hay metáfora."
+                "El dialecto en Obeso es un acto político que dignifica el habla popular.",
+                "Obeso usaba el dialecto porque no dominaba el castellano estándar.",
+                "La academia siempre aceptó el dialecto."
               ],
               "correct": 0
             },
             {
-              "audio": "Es menester que las nuevas generaciones comprendan que cuidar la palabra es cuidar el mundo.",
+              "audio": "Macías construye una narrativa donde el padre lee cuentos al hijo y esos cuentos abren puertas literales a otros mundos. Es metaficción en estado puro: la lectura como viaje, el libro como portal.",
               "options": [
-                "Cuidar la palabra es cuidar el mundo.",
-                "Las palabras no importan.",
-                "Solo importan las acciones."
+                "En Macías la lectura es literalmente un viaje: metaficción pura.",
+                "Los cuentos de Macías son realistas.",
+                "No hay metaficción en la obra de Macías."
               ],
               "correct": 0
             },
             {
-              "audio": "Convendría que los críticos revisaran la obra de Macías con más detenimiento. Su narrativa entrelaza metaficción y tradición oral de una manera que no tiene precedentes.",
+              "audio": "Soledad Acosta de Samper desafió las convenciones de su época al publicar novelas históricas desde una perspectiva femenina. Su obra constituye un acto de resistencia intelectual en un siglo dominado por voces masculinas.",
               "options": [
-                "Sugiere revisar a Macías más a fondo.",
-                "Critica a Macías.",
-                "No hay sugerencia."
+                "Acosta de Samper resistió las convenciones con novelas históricas feministas.",
+                "Acosta de Samper siguió las convenciones de su época.",
+                "Su obra no tiene relevancia histórica."
               ],
               "correct": 0
             },
             {
-              "audio": "Habría sido preferible que la academia colombiana reconociera antes el valor del dialecto como recurso literario.",
+              "audio": "Epifanio Mejía encontró en la naturaleza antioqueña no solo un tema sino un lenguaje. Sus versos convierten el paisaje en gramática: el río es verbo, la montaña es sustantivo, el viento es adverbio.",
               "options": [
-                "La academia debió reconocer el dialecto antes.",
-                "La academia lo reconoció a tiempo.",
-                "El dialecto no tiene valor."
+                "Mejía convierte el paisaje en lenguaje poético: río-verbo, montaña-sustantivo.",
+                "Mejía escribía sobre temas urbanos.",
+                "El paisaje es solo decoración en Mejía."
               ],
               "correct": 0
             },
             {
-              "audio": "Por consiguiente, la metáfora de la ceiba trasciende su función narrativa y se convierte en un símbolo de la memoria colectiva.",
+              "audio": "La narrativa de Carrasquilla captura el habla paisa con una fidelidad que trasciende el costumbrismo. No documenta: recrea. No transcribe: transforma el habla cotidiana en materia literaria.",
               "options": [
-                "La ceiba es símbolo de memoria colectiva.",
-                "La ceiba es solo un árbol.",
-                "No hay metáfora."
+                "Carrasquilla transforma el habla cotidiana en literatura, más allá del costumbrismo.",
+                "Carrasquilla solo documenta el habla paisa.",
+                "El costumbrismo de Carrasquilla es superficial."
               ],
               "correct": 0
             },
             {
-              "audio": "Es menester que las nuevas generaciones comprendan que cuidar la palabra es cuidar el mundo.",
+              "audio": "Por consiguiente, la literatura colombiana que este curso recorre no es un canon estático sino una conversación viva entre voces que se complementan: la ironía de Pombo, la fuerza de Rivera, la metaficción de Macías.",
               "options": [
-                "Cuidar la palabra es cuidar el mundo.",
-                "Las palabras no importan.",
-                "Solo importan las acciones."
+                "La literatura colombiana del curso es una conversación viva entre voces complementarias.",
+                "El canon literario colombiano es estático.",
+                "Las voces literarias no se relacionan entre sí."
               ],
               "correct": 0
             }
@@ -332,23 +390,26 @@
       "section": 3,
       "title": "Expresión escrita",
       "skill": "writing",
-      "timeLimit": 35,
+      "timeLimit": 25,
       "games": [
         {
           "type": "cronica",
-          "title": "Escrita C1",
-          "instruction": "Escribe un ensayo.",
+          "title": "Ensayo académico: lengua e identidad",
+          "instruction": "Escribe un ensayo de 250+ palabras sobre: «¿Puede una lengua definir la identidad de un pueblo?» Usa registro formal: convendría que, es menester que, cabe señalar, no obstante, por consiguiente, habría sido preferible.",
           "prompts": [
-            "Tema",
-            "Opinión",
-            "Argumentos",
-            "Conclusión"
+            "Introduce el tema con una tesis clara",
+            "Desarrollo: ¿Qué relación hay entre lengua e identidad? (Usa: cabe señalar que...)",
+            "Ejemplo literario: ¿Cómo lo demuestra Obeso o Rivera? (Usa: por consiguiente...)",
+            "Contraargumento: ¿Puede la identidad existir sin lengua propia? (Usa: no obstante...)",
+            "Hipótesis: ¿Qué habría pasado si...? (Usa: habría sido preferible...)",
+            "Propuesta: ¿Qué conviene hacer? (Usa: convendría que... es menester que...)",
+            "Conclusión: En definitiva..."
           ]
         },
         {
           "type": "dictation",
           "title": "Dictado C1",
-          "instruction": "Escucha y escribe.",
+          "instruction": "Escucha y escribe con precisión.",
           "items": [
             {
               "audio": "Convendría que la sociedad reflexionara sobre el valor de las palabras.",
@@ -390,59 +451,59 @@
       "section": 4,
       "title": "Expresión oral",
       "skill": "speaking",
-      "timeLimit": 25,
+      "timeLimit": 20,
       "games": [
         {
           "type": "conversation",
-          "title": "Oral C1",
-          "instruction": "Habla.",
+          "title": "Exposición y debate formal",
+          "instruction": "Responde con argumentos estructurados usando registro formal.",
           "items": [
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "¿Convendría que las escuelas enseñaran dialectos regionales además del castellano estándar? Argumenta.",
+              "hint": "Convendría que... porque cabe señalar que...",
               "accepts": []
             },
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "¿Habría sido preferible que la literatura colombiana mantuviera un solo registro? ¿Por qué?",
+              "hint": "Habría sido preferible... No obstante...",
               "accepts": []
             },
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "¿Es menester que un escritor domine el registro formal para ser considerado literato? Discute con ejemplos.",
+              "hint": "Es menester... Sin embargo, cabe señalar que Obeso...",
               "accepts": []
             },
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "¿Qué diferencia hay entre escuchar y oír? Reflexiona desde tu experiencia en este viaje.",
+              "hint": "Cabe señalar que escuchar... Por consiguiente...",
               "accepts": []
             },
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "Si pudieras entrevistar a uno de los autores del curso, ¿a quién elegirías y qué le preguntarías?",
+              "hint": "Elegiría a... porque convendría que...",
               "accepts": []
             },
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "¿Cómo ha cambiado tu relación con la lengua española a lo largo de este viaje?",
+              "hint": "Al principio... No obstante... En definitiva...",
               "accepts": []
             },
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "Analiza la metáfora de la ceiba como símbolo de memoria colectiva.",
+              "hint": "La ceiba representa... Por consiguiente... Cabe señalar...",
               "accepts": []
             },
             {
-              "prompt": "¿Qué opinas?",
-              "hint": "...",
+              "prompt": "¿La sombra de Yaguará es una debilidad o una fortaleza? Argumenta.",
+              "hint": "Aunque parezca... Habría sido preferible... No obstante...",
               "accepts": []
             }
           ]
         },
         {
           "type": "sombra",
-          "title": "Lee con registro formal",
-          "instruction": "Lee con entonación de conferencia.",
+          "title": "Lee con registro formal de conferencia",
+          "instruction": "Lee con entonación de conferencia académica: pausas en comas, énfasis en conectores.",
           "items": [
             {
               "text": "Convendría que revisáramos nuestras prioridades como sociedad.",
