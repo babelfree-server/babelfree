@@ -947,8 +947,13 @@
         var html = '';
         var prevWorld = '';
 
+        /* Resolve {nombre} from session */
+        var _smNombre = '...';
+        try { var _smS = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}'); _smNombre = (_smS && _smS.displayName) || (_smS && _smS.user && _smS.user.display_name) || '...'; } catch(e) {}
+
         for (var i = DESTINATIONS.length - 1; i >= 0; i--) {
             var d = DESTINATIONS[i];
+            var dTitle = d.title.replace(/\{nombre\}/g, _smNombre);
             var isCompleted = completedSet.has(d.dest);
             var isCurrent = d.dest === current;
             var isLocked = !isCompleted && !isCurrent;
@@ -976,7 +981,7 @@
             var stateClass = isCompleted ? 'completed' : (isCurrent ? 'current' : 'locked');
             var ariaAttrs = isLocked
                 ? ' aria-hidden="true"'
-                : ' role="button" tabindex="0" aria-label="Destino ' + d.dest + ': ' + d.title + (isCompleted ? ' (completado)' : ' (actual)') + '"';
+                : ' role="button" tabindex="0" aria-label="Destino ' + d.dest + ': ' + dTitle + (isCompleted ? ' (completado)' : ' (actual)') + '"';
             html += '<div class="sm-dest ' + side + ' ' + stateClass + '" data-dest="' + d.dest + '"' + ariaAttrs + '>';
             html += '<div class="sm-dot"></div>';
             html += '<div class="sm-card">';
@@ -986,7 +991,7 @@
             }
 
             html += '<div class="sm-dest-num">Destino ' + d.dest + '</div>';
-            html += '<div class="sm-dest-title">' + d.title + '</div>';
+            html += '<div class="sm-dest-title">' + dTitle + '</div>';
 
             if (isCompleted && d.question) {
                 html += '<div class="sm-dest-question">' + d.question + '</div>';

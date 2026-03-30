@@ -1444,7 +1444,11 @@
         <form class="login-form" id="registerForm" style="display:none;">
             <div class="form-group">
                 <label for="regName" class="form-label" data-ai-translate="form.name-label">Nombre</label>
-                <input type="text" id="regName" name="regName" class="form-input" placeholder="Tu nombre" required autocomplete="name">
+                <input type="text" id="regName" name="regName" class="form-input" placeholder="Tu nombre" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+                <label for="regLastName" class="form-label" data-ai-translate="form.lastname-label">Apellido</label>
+                <input type="text" id="regLastName" name="regLastName" class="form-input" placeholder="Tu apellido" required autocomplete="family-name">
             </div>
             <div class="form-group">
                 <label for="regNativeLang" class="form-label" data-ai-translate="form.native-lang-label">Tu idioma nativo</label>
@@ -2528,7 +2532,9 @@
                 e.preventDefault();
                 this.hideMessages();
 
-                const name = document.getElementById('regName').value.trim();
+                const firstName = document.getElementById('regName').value.trim();
+                const lastName = document.getElementById('regLastName').value.trim();
+                const name = firstName + (lastName ? ' ' + lastName : '');
                 const email = document.getElementById('regEmail').value.trim();
                 const password = document.getElementById('regPassword').value;
                 const confirm = document.getElementById('regPasswordConfirm').value;
