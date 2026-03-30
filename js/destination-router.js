@@ -260,12 +260,17 @@
        PAGE CHROME
     ========================================================== */
     function updateChrome(meta, worldMeta) {
+        /* Resolve {nombre} in title */
+        var _nombre = '...';
+        try { var _u = window.JaguarAPI && JaguarAPI.getUser(); _nombre = (_u && (_u.display_name || _u.name)) || '...'; } catch(e) {}
+        var resolvedTitle = (meta.title || '').replace(/\{nombre\}/g, _nombre);
+
         /* Header */
         var titleEl = document.querySelector('.yg-header-title');
         var subtitleEl = document.querySelector('.yg-header-subtitle');
-        if (titleEl) titleEl.textContent = meta.title || '';
+        if (titleEl) titleEl.textContent = resolvedTitle;
         if (subtitleEl) subtitleEl.textContent = worldMeta.name + ' \u2014 ' + (meta.cefrSubLevel || meta.cefr || '');
-        document.title = (meta.title || 'Destino') + ' \u2014 El Viaje del Jaguar';
+        document.title = resolvedTitle + ' \u2014 El Viaje del Jaguar';
 
         /* Body world class */
         document.body.classList.remove('yg-mundo-de-abajo', 'yg-mundo-del-medio', 'yg-mundo-de-arriba');
