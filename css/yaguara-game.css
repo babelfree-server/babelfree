@@ -467,9 +467,15 @@
 }
 
 .yg-fib-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
+}
+.yg-fib-options > * {
+    flex: 1 1 auto;
+    min-width: 100px;
+    max-width: 200px;
 }
 
 .yg-fib-option {
@@ -729,9 +735,15 @@
 }
 
 .yg-listen-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
+}
+.yg-listen-options > * {
+    flex: 1 1 auto;
+    min-width: 100px;
+    max-width: 200px;
 }
 
 .yg-listen-option {
