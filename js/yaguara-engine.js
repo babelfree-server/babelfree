@@ -9512,14 +9512,9 @@
                     '<span>Diccionario</span>' +
                 '</a>' +
                 '<div class="yg-res-divider"></div>' +
-                '<a href="/elviajedeljaguar" target="_blank" class="yg-res-item">' +
+                '<a href="/elviajedeljaguar/storymap" class="yg-res-item">' +
                     ICONS.narrative +
-                    '<span>Mi progreso</span>' +
-                '</a>' +
-                '<div class="yg-res-divider"></div>' +
-                '<a href="/cuaderno" class="yg-res-item">' +
-                    ICONS.story +
-                    '<span>Cuaderno de Candelaria</span>' +
+                    '<span>Mapa</span>' +
                 '</a>';
 
             btn.appendChild(dropdown);
