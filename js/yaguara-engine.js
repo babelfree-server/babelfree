@@ -1388,6 +1388,8 @@
 
         normalizeListening: function(data) {
             /* Canonical: {audio, question, answer, options} — single question per game */
+            /* Map items → questions if questions not present */
+            if (data.items && data.items.length && !data.questions) data.questions = data.items;
             /* Map audioText/audio_text/listenText/sentence → audio */
             if (data.audioText && !data.audio) data.audio = data.audioText;
             if (data.audio_text && !data.audio) data.audio = data.audio_text;
