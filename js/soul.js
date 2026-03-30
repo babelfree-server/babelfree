@@ -367,7 +367,7 @@ Soul.showFinalMoment = function (container, callback) {
                   '<div class="soul-final-coda visible">' +
                     '<div class="soul-coda-line">Nombrar es crear.</div>' +
                     '<div class="soul-coda-line soul-coda-small">El viaje continúa.</div>' +
-                    '<a href="/storymap" class="soul-coda-link">Volver al mapa</a>' +
+                    '<a href="/elviajedeljaguar/storymap" class="soul-coda-link">Volver al mapa</a>' +
                   '</div>' +
                 '</div>';
 

@@ -250,7 +250,7 @@
             }
         } else {
             /* dest89 — final destination */
-            config.nextUrl = '/storymap';
+            config.nextUrl = '/elviajedeljaguar/storymap';
         }
 
         return config;
@@ -284,7 +284,7 @@
         /* Back link → story map */
         var backBtn = document.querySelector('.yg-back-btn');
         if (backBtn) {
-            backBtn.href = '/storymap';
+            backBtn.href = '/elviajedeljaguar/storymap';
             backBtn.textContent = '\u2190 Mapa';
         }
     }
@@ -355,7 +355,7 @@
                     world: world,
                     speechRate: CEFR_SPEECH[cefr] || 0.5,
                     storageKey: 'yaguara_' + branch.id + '_progress',
-                    backUrl: '/storymap',
+                    backUrl: '/elviajedeljaguar/storymap',
                     departure: branch.departure || {},
                     characters: characters,
                     characterLines: branch.characterLines || {},
@@ -488,7 +488,7 @@
                         ecosystem: eco || null,
                         speechRate: CEFR_SPEECH[cefr] || 0.5,
                         storageKey: 'yaguara_dest' + destNum + '_progress',
-                        backUrl: '/storymap',
+                        backUrl: '/elviajedeljaguar/storymap',
                         departure: departure,
                         characters: characters,
                         characterLines: data.characterLines || {},
@@ -555,7 +555,7 @@
         if (card) {
             card.innerHTML = '<div style="text-align:center;padding:3rem 1.5rem;">' +
                 '<p style="font-size:1.2rem;color:var(--sand-muted);margin-bottom:1.5rem;">' + msg + '</p>' +
-                '<a href="/storymap" style="color:var(--ochre);text-decoration:underline;">Volver al mapa</a>' +
+                '<a href="/elviajedeljaguar/storymap" style="color:var(--ochre);text-decoration:underline;">Volver al mapa</a>' +
                 '</div>';
         }
     }
