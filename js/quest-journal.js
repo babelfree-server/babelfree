@@ -493,8 +493,9 @@
         }
     };
 
-    // ── Auto-init on DOM ready (after server sync if available) ──────
+    // ── Auto-init ONLY on cuaderno page (not play page) ──────
     document.addEventListener('DOMContentLoaded', function () {
+        if (!document.getElementById('journal-root') && !document.querySelector('.yg-cuaderno-bridge')) return;
         if (window.Busqueda && Busqueda.pullServerState) {
             Busqueda.pullServerState(function () {
                 Journal.init();
