@@ -260,9 +260,14 @@
        PAGE CHROME
     ========================================================== */
     function updateChrome(meta, worldMeta) {
-        /* Resolve {nombre} in title */
+        /* Resolve {nombre} in title — check multiple session locations */
         var _nombre = '...';
-        try { var _u = window.JaguarAPI && JaguarAPI.getUser(); _nombre = (_u && (_u.display_name || _u.name)) || '...'; } catch(e) {}
+        try {
+            var _session = JSON.parse(localStorage.getItem('jaguarUserSession') || '{}');
+            _nombre = (_session && _session.displayName) ||
+                       (_session && _session.user && _session.user.display_name) ||
+                       '...';
+        } catch(e) {}
         var resolvedTitle = (meta.title || '').replace(/\{nombre\}/g, _nombre);
 
         /* Header */
